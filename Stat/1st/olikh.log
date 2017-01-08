@@ -1,0 +1,131 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=latex 2015.12.6)  7 JAN 2017 16:43
+entering extended mode
+**olikh.tex
+(olikh.tex
+LaTeX2e <2015/10/01> patch level 2
+Babel <3.9m> and hyphenation patterns for 2 languages loaded.
+(iopart.cls
+Document Class: iopart 1996/06/10 v0.0 IOP Journals LaTeX article class
+(iopart12.clo
+File: iopart12.clo 1997/01/15 v1.0 LaTeX2e file (size option)
+)
+\c@jnl=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\indentedwidth=\skip43
+\mathindent=\dimen102
+\c@eqnval=\count87
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: dvips.def on input line 94.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\dvips.def"
+File: dvips.def 2014/10/14 v3.0j Driver-dependent file (DPC,SPQR)
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+) (olikh.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+
+Underfull \hbox (badness 2753) in paragraph at lines 13--23
+[][]\OT1/cmr/bx/n/10 Abstract. \OT1/cmr/m/n/10 Abstract Abstract Abstract Abstr
+act Abstract Abstract Abstract
+ []
+
+[1
+
+]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 55.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 55.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 55.
+ [2]
+File: olikhFig1.eps Graphic file (type eps)
+ <olikhFig1.eps>
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 124.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 124.
+
+
+LaTeX Warning: Reference `figIVT' on page 3 undefined on input line 147.
+
+Missing character: There is no – in font cmr12!
+Missing character: There is no – in font cmr12!
+[3]
+Missing character: There is no – in font cmr12!
+ (olikh.bbl
+Underfull \hbox (badness 3354) in paragraph at lines 22--28
+[][]\OT1/cmr/m/n/10 Lindroos J, Savin H.  Re-view of light-induced degra-da-tio
+n in crys-talline sil-i-con so-
+ []
+
+
+Underfull \hbox (badness 5637) in paragraph at lines 22--28
+\OT1/cmr/m/n/10 lar cells.  \OT1/cmr/m/it/10 So-lar En-ergy Ma-te-ri-als & So-l
+ar Cells \OT1/cmr/bx/n/10 147\OT1/cmr/m/n/10 , 2016: 115--126.  DOI:
+ []
+
+[4]
+Underfull \hbox (badness 1960) in paragraph at lines 39--45
+[][]\OT1/cmr/m/n/10 Hoffmann S, Koehl M.  Effect of humidity and temperature on
+ the potential-induced
+ []
+
+
+Underfull \hbox (badness 3557) in paragraph at lines 61--67
+\OT1/cmr/m/it/10 Applied Physics A: Materials Science & Processing \OT1/cmr/bx/
+n/10 69\OT1/cmr/m/n/10 (2), 1999: 225--232.  DOI:
+ []
+
+Missing character: There is no – in font cmr10!
+Missing character: There is no – in font cmr10!
+[5]) [6] (olikh.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 859 strings out of 495020
+ 7987 string characters out of 3178537
+ 66643 words of memory out of 3000000
+ 4184 multiletter control sequences out of 15000+200000
+ 8458 words of font info for 30 fonts, out of 3000000 for 9000
+ 198 hyphenation exceptions out of 8191
+ 25i,8n,19p,250b,331s stack positions out of 5000i,500n,10000p,200000b,50000s
+
+Output written on olikh.dvi (6 pages, 23416 bytes).
