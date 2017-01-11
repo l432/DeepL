@@ -167,12 +167,35 @@ Schenka A, Krumbein U.
 \newblock \emph{Journal of Applied Physics} \textbf{78}(5), 1995: 3185--3192.
 \newblock \doi{10.1063/1.360007}.
 
+\bibitem{Schroder2006}
+Schroder DK.
+\newblock \emph{Semiconductor Material and Device Characterization}.
+\newblock New Jersey: John Wiley \& Sons, third edition, 2006.
+
+\bibitem{Markvart}
+McEvoy A, Markvart T, Castaner L, editors.
+\newblock \emph{Solar Cells. Materials, Manufacture and Operation}.
+\newblock Oxford: Academic Press, second edition, 2013.
+
 \bibitem{DEWang}
 Wang K, Ye M.
 \newblock Parameter determination of {S}chottky--barrier diode model using
   differential evolution.
 \newblock \emph{Solid-State Electron} \textbf{53}(2), 2009: 234--240.
 \newblock \doi{10.1016/j.sse.2008.11.010}.
+
+\bibitem{Razeghi}
+Razeghi M, Rogalski A.
+\newblock Semiconductor ultraviolet detectors.
+\newblock \emph{Journal of Applied Physics} \textbf{79}(10), 1996: 7433--7473.
+\newblock \doi{10.1063/1.362677}.
+
+\bibitem{GreenOptic}
+Green MA, Keevers MJ.
+\newblock Optical properties of intrinsic silicon at 300 K.
+\newblock \emph{Progress in Photovoltaics: Research and Applications}
+  \textbf{3}(3), 1995: 189--192.
+\newblock \doi{10.1002/pip.4670030303}.
 
 \bibitem{Rhoderick1988}
 Rhoderick EH, Williams RH.

@@ -72,36 +72,31 @@ The samples with area of $1.5$ to $2.1$~cm$^{2}$ used in our experiments were cu
 The dark and illuminated forward current-voltage ($I$--$V$) characteristics of the samples were measured over a temperature range 290--340~K.
 The sample temperature was controlled by differential copper-constantan thermocouple.
 Some curves are shown in \Fref{figIV}.
-The classical double-diode model of SSC $I$--$V$ characteristics expressed in the following form:
+
+The classical double-diode model of n$^+$--p SSC $I$--$V$ characteristics expressed in the following form:
 \begin{eqnarray}
 \label{eqIV}
-\nonumber I(V,T)&=&-I_{ph}+I_{01}\left\{\exp \left[\frac{q(V-IR_s)}{kT}\right]-1\right\}\\ 
-&&+I_{0n}\left\{\exp \left[\frac{q(V-IR_s)}{nkT}\right]-1\right\}+\frac{V-IR_s}{R_{sh}}\,,
+\nonumber I(V,T)&=&-AJ_{ph}+\frac{qAn_iW}{2\tau_{g}}\left\{\exp \left[\frac{q(V-IR_s)}{nkT}\right]-1\right\}\\
+&&+\frac{qAn_i^2}{p_p}\sqrt{\frac{\mu_nkT}{\tau_n}}\left\{\exp \left[\frac{q(V-IR_s)}{kT}\right]-1\right\}+\frac{V-IR_s}{R_{sh}}\,,
 \end{eqnarray}
-where $I_{01}$ and $I_{0n}$ are the saturation current densities of the ideal and nonideal components, 
-$n$ is the ideality factor of the nonideal current components, 
-$R_s$ and $R_{sh}$ are the series and shunt resistances of the device,
-$I_{ph}$ is the photocurrent. 
-The current-voltage  equation that models the solar cell by  an equivalent electrical circuit contains several parameters related to physical phenomena occurring in  the device.
-It is commonly believed that $I_{01}$ is closely related to recombination in the quasi-neutral region and in an n$^+$--p diode can be written as follows:
-\begin{equation}
-\label{eqI01}
-    I_{01}=\frac{qAn_i^2}{N_A}\sqrt{\frac{\mu_nkT}{\tau_n}}\,,
-\end{equation}
-where $A$ is the cell area,
+where $A$ is the cell area, 
+$J_{ph}$ is the photocurrent density,
 $n_i$ is the intrinsic carrier concentration,
-$N_A$ is the doping density in the p side,
-$\mu_n$ and $\tau_n$ are the electron (minority carrier) mobility and lifetime outside space charge region (SCR).
-$I_{0n}$ reflects the overall recombination in the SCR and may be expressed as
+$\tau_{g}$ is the carrier lifetime in the space charge region (SCR),
+$W$ is the  SCR thickness:
 \begin{equation}
-\label{eqI0n}
-    I_{0n}=\frac{qAWn_i}{2\tau_{g}}\,,
+\label{eqW}
+    W(V,T)=\sqrt{\frac{2 \varepsilon \varepsilon_0(p_p+n_n)}{q p_p n_n}\left[\frac{E_g}{q}-\frac{kT}{q}\ln\left(\frac{N_vN_c}{p_pn_n}\right)-\frac{2kT}{q}-V\right]} \,,
 \end{equation}
-where $tau_{g}$ is the carrier lifetime in the SCR,
-$W$ is the thickness of the recombination region:
-\label{eqI0n}
-   q \,,
-\end{equation}
+$\varepsilon$ is the permittivity (11.7 for Si),
+$p_p$ and $n_n$ are the majority carrier concentration in the $p$-- and $n$--type regions,
+$E_g$ is the semiconductor band gap,
+$N_c$ and $N_v$ are the the effective density of states in the conduction and valence bands.
+$n$ is the ideality factor of the nonideal current components,
+$R_s$ and $R_{sh}$ are the series and shunt resistances of the device,
+$\mu_n$ and $\tau_n$ are the electron (minority carrier) mobility and lifetime outside SCR in the diode base.
+The current-voltage  equation that models the solar cell by  an equivalent electrical circuit contains several parameters related to physical phenomena occurring in  the device.
+It is commonly believed that $I_{01}=(qAn_i^2/n_n)\sqrt{\mu_nkT/\tau_n}$ is closely related to recombination in the quasi-neutral region, while $I_{0n}=(qAWn_i/2\tau_{g})$ reflects the overall recombination in the SCR.
 
 
 
@@ -114,9 +109,38 @@ SSC dark $I$--$V$ characteristics measured at 301~K (curves 1, 3) and 341~K (cur
 with (2, 4) and without(1, 3) USL.
 $W_{U\!S}^T=0.40$~W/cm$^2$.
 Inset: Parts of illuminated $I$--$V$ characteristics in the voltage range from 0 to $V_{oc}$.
-Lines are the fitted curves using Eq. (1).
+The lines are the fitted curves using Eq.~(\ref{eqIV}).
 }%
 \end{figure}
+
+We used Eqs. (\ref{eqIV}) and (\ref{eqW}) to fit the experimental data and the $\tau_g$, $\tau_n$, $n$, $R_sh$, $R_s$ and $I_{ph}$ (for illuminated $I$--$V$ curves only) were taken as the  fittings parameters.
+It was supposed that the temperature dependencies of $E_g$ and $\mu_n$ followed an Varshni equation 
+\begin{equation}
+\label{eqEg}
+E_g(T) = 1.169 - 7.021\cdot10^{-4} T^2 /(T + 1108)\,,
+\end{equation}
+and Caughey–Thomas form \cite{Schroder2006,Markvart}
+\begin{equation}
+\label{eqMu}
+\mu_n(T) = \mu_{min}+\frac{\mu_0}{1+(p_p/N_{ref})^{\alpha}}\,.
+\end{equation}
+The temperature dependence of the various parameters in Eq.~(\ref{eqMu}) has the form $P=P_0(T/300)^{\gamma}$ and parameters value are given in the \cite{Schroder2006}, Table~A8.2.
+The fitting were done by using the differential evolution method \cite{DEWang} and extremely good fit to the experimental data was obtained --- see \Fref{figIV}.
+
+The monochromatic light with the wavelength of $\lambda=900$~nm and intensity of $W_{ph}=2$~W/m$^2$ was used for SSC illumination.
+In that case, the photocurrent defined  by the electron–-hole pair generation in the base mainly.
+If the base is several minority carrier diffusion lengths $L_n=\sqrt{\mu_nkT\tau_n/q}$, the $J_{ph}$ is given by \cite{Markvart,Razeghi}
+\begin{equation}
+\label{eqIph}
+J_{ph} = \frac{W_{ph}(1-r)q\beta\lambda}{hc}\frac{\alpha L_n}{1+ \alpha L_n}\,,
+\end{equation}
+where $\alpha$ is the absorption coefficient,
+$r$ is the reflection coefficient,
+$\beta$ is the coefficient of quantum yield.
+We taken $\alpha$ value at $T=300$~K in \cite{GreenOptic} and temperature dependence in \cite{Markvart} (Eq.~(18), p.39), and supposed $r=0$, $\beta=1$.
+Then Eq.~(\ref{eqIph}) were used by taking $L_n$ as fitting parameter to fit the experimental temperature dependence $j_{ph}$.
+Besides the open-circuit voltage $V_{oc}$, the short-current density $J_{sc}$ and the fill factor $FF$ were estimated from illuminated $I$--$V$ curves by the conventional mode.
+
 
 
 The revers current-voltage ($I$--$V$) characteristics of the samples both with and without US loading were measured in the temperature range from 130 to 330~K.
@@ -138,7 +162,7 @@ The data non-linear fitting were done by using the differential evolution method
 \subsection{Ultrasound influence on reverse current}
 
 
-\Fref{figIVT} shows the complete $I$-–$V$-–$T$ characteristics that were measured without US loading.
+\Fref{figIV} shows the complete $I$-–$V$-–$T$ characteristics that were measured without US loading.
 To avoid a busy looking graph, the selection of measured $I$--$V$ characteristics is shown in this figure.
 Below the reverse branches only are under consideration .
 It is  a universal observation that the current from any SD never truly saturates at large reverse bias.

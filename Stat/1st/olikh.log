@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=latex 2015.12.6)  7 JAN 2017 16:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9) (preloaded format=latex 2015.6.15)  11 JAN 2017 12:38
 entering extended mode
 **olikh.tex
 (olikh.tex
-LaTeX2e <2015/10/01> patch level 2
-Babel <3.9m> and hyphenation patterns for 2 languages loaded.
+LaTeX2e <2015/01/01>
+Babel <3.9l> and hyphenation patterns for 4 languages loaded.
 (iopart.cls
 Document Class: iopart 1996/06/10 v0.0 IOP Journals LaTeX article class
 (iopart12.clo
@@ -77,18 +77,16 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 File: olikhFig1.eps Graphic file (type eps)
  <olikhFig1.eps>
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 124.
+(Font)              <7> on input line 113.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 124.
-
-
-LaTeX Warning: Reference `figIVT' on page 3 undefined on input line 147.
-
+(Font)              <5> on input line 113.
 Missing character: There is no – in font cmr12!
 Missing character: There is no – in font cmr12!
-[3]
+ [3]
 Missing character: There is no – in font cmr12!
- (olikh.bbl
+Missing character: There is no – in font cmr12!
+Missing character: There is no – in font cmr12!
+ [4] (olikh.bbl
 Underfull \hbox (badness 3354) in paragraph at lines 22--28
 [][]\OT1/cmr/m/n/10 Lindroos J, Savin H.  Re-view of light-induced degra-da-tio
 n in crys-talline sil-i-con so-
@@ -100,7 +98,7 @@ Underfull \hbox (badness 5637) in paragraph at lines 22--28
 ar Cells \OT1/cmr/bx/n/10 147\OT1/cmr/m/n/10 , 2016: 115--126.  DOI:
  []
 
-[4]
+
 Underfull \hbox (badness 1960) in paragraph at lines 39--45
 [][]\OT1/cmr/m/n/10 Hoffmann S, Koehl M.  Effect of humidity and temperature on
  the potential-induced
@@ -112,20 +110,17 @@ Underfull \hbox (badness 3557) in paragraph at lines 61--67
 n/10 69\OT1/cmr/m/n/10 (2), 1999: 225--232.  DOI:
  []
 
+[5]
 Missing character: There is no – in font cmr10!
 Missing character: There is no – in font cmr10!
-[5]) [6] (olikh.aux)
-
-LaTeX Warning: There were undefined references.
-
- ) 
+) [6] (olikh.aux) ) 
 Here is how much of TeX's memory you used:
- 859 strings out of 495020
- 7987 string characters out of 3178537
- 66643 words of memory out of 3000000
- 4184 multiletter control sequences out of 15000+200000
+ 863 strings out of 495031
+ 8029 string characters out of 3177571
+ 67581 words of memory out of 3000000
+ 4157 multiletter control sequences out of 15000+200000
  8458 words of font info for 30 fonts, out of 3000000 for 9000
  198 hyphenation exceptions out of 8191
  25i,8n,19p,250b,331s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on olikh.dvi (6 pages, 23416 bytes).
+Output written on olikh.dvi (6 pages, 27400 bytes).
