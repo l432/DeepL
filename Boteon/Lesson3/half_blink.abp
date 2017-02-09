@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cb:CODEBLOCKS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://education.mit.edu/openblocks/ns http://education.mit.edu/openblocks/codeblocks.xsd" xmlns:cb="http://education.mit.edu/openblocks/ns">
+<Pages collapsible-pages="yes" drawer-with-page="yes">
+<Page page-color="160 160 160" page-drawer="Main" page-infullview="yes" page-name="Main" page-width="1024">
+<PageBlocks>
+<Block genus-name="subtraction" id="327">
+<Location>
+<X>568</X>
+<Y>162</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="323" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="337" connector-kind="socket" connector-type="number" init-type="number" label="" position-type="bottom"/>
+<BlockConnector con-block-id="338" connector-kind="socket" connector-type="number" init-type="number" label="" position-type="bottom"/>
+</Sockets>
+</Block>
+<Block genus-name="number" id="338">
+<Location>
+<X>658</X>
+<Y>165</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="327" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="variable_number" id="337">
+<Label>i</Label>
+<Location>
+<X>578</X>
+<Y>165</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="327" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="delay" id="339">
+<Location>
+<X>370</X>
+<Y>193</Y>
+</Location>
+<BeforeBlockId>323</BeforeBlockId>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="340" connector-kind="socket" connector-type="number" init-type="number" label="милисекунд" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="number" id="340">
+<Label>20</Label>
+<Location>
+<X>566</X>
+<Y>196</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="339" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="pin-write-analog" id="323">
+<Location>
+<X>370</X>
+<Y>135</Y>
+</Location>
+<BeforeBlockId>314</BeforeBlockId>
+<AfterBlockId>339</AfterBlockId>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="324" connector-kind="socket" connector-type="number" init-type="number" label="#" position-type="single"/>
+<BlockConnector con-block-id="327" connector-kind="socket" connector-type="number" init-type="number" label="" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="number" id="324">
+<Label>11</Label>
+<Location>
+<X>568</X>
+<Y>138</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="323" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="repeat" id="314">
+<Location>
+<X>145</X>
+<Y>79</Y>
+</Location>
+<BeforeBlockId>312</BeforeBlockId>
+<Sockets num-sockets="3">
+<BlockConnector con-block-id="315" connector-kind="socket" connector-type="number" init-type="number" label="переменная" position-type="single"/>
+<BlockConnector con-block-id="316" connector-kind="socket" connector-type="number" init-type="number" label="times" position-type="single"/>
+<BlockConnector con-block-id="323" connector-kind="socket" connector-type="cmd" init-type="cmd" label="commands" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="number" id="316">
+<Label>256</Label>
+<Location>
+<X>373</X>
+<Y>106</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="314" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="variable_number" id="315">
+<Label>i</Label>
+<Location>
+<X>373</X>
+<Y>82</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="314" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="program" id="312">
+<Location>
+<X>27</X>
+<Y>36</Y>
+</Location>
+<Sockets num-sockets="2">
+<BlockConnector connector-kind="socket" connector-type="cmd" init-type="cmd" label="setup" position-type="single"/>
+<BlockConnector con-block-id="314" connector-kind="socket" connector-type="cmd" init-type="cmd" label="loop" position-type="single"/>
+</Sockets>
+</Block>
+</PageBlocks>
+</Page>
+</Pages>
+</cb:CODEBLOCKS>
