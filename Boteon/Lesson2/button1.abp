@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <cb:CODEBLOCKS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://education.mit.edu/openblocks/ns http://education.mit.edu/openblocks/codeblocks.xsd" xmlns:cb="http://education.mit.edu/openblocks/ns">
 <Pages collapsible-pages="yes" drawer-with-page="yes">
-<Page page-color="160 160 160" page-drawer="Main" page-infullview="yes" page-name="Main" page-width="1280">
+<Page page-color="160 160 160" page-drawer="Main" page-infullview="yes" page-name="Main" page-width="1920">
 <PageBlocks>
 <Block genus-name="number" id="337">
 <Label>100</Label>
@@ -46,7 +46,7 @@
 </Sockets>
 </Block>
 <Block genus-name="number" id="325">
-<Label>6</Label>
+<Label>13</Label>
 <Location>
 <X>475</X>
 <Y>141</Y>
@@ -68,7 +68,7 @@
 </Sockets>
 </Block>
 <Block genus-name="number" id="334">
-<Label>5</Label>
+<Label>2</Label>
 <Location>
 <X>701</X>
 <Y>111</Y>
