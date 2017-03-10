@@ -1,0 +1,342 @@
+> SCAPS version 2.9.03, August 2010, ELIS - UGent: 
+> SCAPS All SCAPS Settings file, saved on 	16-08-2010 at 09:44:22
+> problem definition file loaded :
+> c:\SCAPS versions\SCAPS 2903 werkversie\def\CdTe-base.def
+> last saved: 	22-05-2009 at 15:06:06
+> 
+> test to save/load all CdTe settings in one
+> 
+> 
+
+
+>> begin of problem definition file
+
+> SCAPS version 2.9.03, August 2010, ELIS - UGent: Problem definition file
+> last saved by SCAPS: 	16-08-2010 at 09:44:42
+> 
+> file 04_79_06_goed_final.def by Peter Nollet, 4 august 2003
+> simulates ANTEC cell 04-79-01-6 (?)
+> CdTe thickness 5 micrometer (+ - 0.5 micrometer) 
+> CdCl2 treatment in air
+> Contact: 8 s standard NP etch - Au
+> Used in doctorate Peter (Ch. 7) and paper EPVSEC19 (Paris 2004)
+> 
+convergence
+
+clamp_psi :  1.00e+00 units kT
+clamp_n :  1.00e+00 units kT
+clamp_p :  1.00e+00 units kT
+termination_psi :  1.00e-03 units kT
+termination_Fn :  1.00e-03 units kT
+termination_Fp :  1.00e-03 units kT
+maxiter :   500
+defectdiscretisations :     7
+QE calculation mode:  1 (0: cst. # of photons, 1: cst. incident power)
+number of photons :  1.00e+16
+incident power :  1.00e+03
+recalculate mesh :  1 (0: fixed mesh, 1: adaptive mesh)
+maximum ratio between neighbouring points :  1.60e+00
+minimum ratio between neighbouring points :  1.05e+00
+generation limit :  1.00e+00 microA/cm2
+recombination limit :  1.00e-03 microA/cm2
+Mott-Schottky analysis epsilon of sheet # :  2
+Mott-Schottky analysis epsilon of sheet side :  1	(left side = -1; right side = +1)
+Mott-Schottky analysis number of points :  3	(3 or 5 as of december 2008)
+Mott-Schottky analysis polynomial order middle :  2	(1 or 2 as of december 2008)
+Mott-Schottky analysis polynomial order edges:  1	(1 or 2 as of december 2008)
+
+
+back contact
+
+flatband : 0 (1: flatband contact imposed; 0: fixed Phi_m value)
+recalculate : 0 (1 = do or 0 = do not recalculate phi_m to set flatband in each batch step)
+Fi_m :   5.0000 [eV]
+Sn :  1.000e+05 [m/s]
+Sp :  1.000e+05 [m/s]
+optical filter : transmission
+wavelength independent: 0
+filterfile : 80%mirror.ftr
+
+layer
+
+name : CdTe
+d : 4.000e-06 [m]
+composition grading :	  0.00000	  1.00000	  0.00000	  0.00000	  0.00000	  0.00000	  0.00000	0	0	[-]
+v_th_n :	 1.000e+05	 1.000e+05	 1.000e+05	 1.000e+00	 1.000e+00	 1.000e+05	 1.000e+05	0	0	[m/s]
+v_th_p :	 1.000e+05	 1.000e+05	 1.000e+05	 1.000e+00	 1.000e+00	 1.000e+05	 1.000e+05	0	0	[m/s]
+eps :	     9.400000	     9.400000	     9.400000	     1.000000	     1.000000	     9.400000	     9.400000	0	0	[-]
+chi :	  3.900000	  3.900000	  3.900000	  1.000000	  1.000000	  3.900000	  3.900000	0	0	[eV]
+Eg :	  1.500000	  1.500000	  1.500000	  1.000000	  1.000000	  1.500000	  1.500000	0	0	[eV]
+Nc :	 8.000000e+23	 8.000000e+23	 8.000000e+23	 1.000000e+00	 1.000000e+00	 8.000000e+23	 8.000000e+23	0	0	[/m^3]
+Nv :	 1.800000e+25	 1.800000e+25	 1.800000e+25	 1.000000e+00	 1.000000e+00	 1.800000e+25	 1.800000e+25	0	0	[/m^3]
+mu_n :	 3.200000e-02	 3.200000e-02	 3.200000e-02	 1.000000e+00	 1.000000e+00	 3.200000e-02	 3.200000e-02	0	0	[m^2/Vs]
+mu_p :	 4.000000e-03	 4.000000e-03	 4.000000e-03	 1.000000e+00	 1.000000e+00	 4.000000e-03	 4.000000e-03	0	0	[m^2/Vs]
+K_rad :	 0.000000e+00	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 0.000000e+00	 0.000000e+00	0	0	[m^3/s]
+c_n_auger :	 0.000000e+00	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 0.000000e+00	 0.000000e+00	0	0	[m^6/s]
+c_p_auger :	 0.000000e+00	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 0.000000e+00	 0.000000e+00	0	0	[m^6/s]
+Na(y) :	 2.000000e+20	 2.000000e+20	 2.000000e+20	 1.000000e+00	 1.000000e+00	 2.000000e+20	 2.000000e+20	0	0	[/m^3]
+Nd(y) :	 0.000000e+00	 0.000000e+00	 0.000000e+00	 1.000000e+00	 1.000000e+00	 0.000000e+00	 0.000000e+00	0	0	[/m^3]
+absorption grading :	  826.65	  826.65	  250.00	  250.00	    0.00	    1.20	    1.20	0	0	[nm]
+absorptionmodel pure A material (y=0) : from file
+absorptionfile pure A material (y=0) : CdTe-base.abs
+absorption pure B material (y=1), model : from file
+absorption pure B material (y=1), file : CdTe-base.abs
+
+srhrecombination
+
+type : donor ( 1 level(s) )
+energy distribution : single
+Reference for defect energy :  0 ; 0 = above EV (SCAPS<2.7); 1 = above Ei; 2 = below EC
+Ekar :  0.1000 [eV]
+Nt(x) :	 2.000e+20	 2.000e+20	 2.000e+20	 1.000e+00	 1.000e+00	 2.000e+20	 2.000e+20	0	1	[1/m3]
+profile : homogenous
+Lkar : 1.000e+00 [m]
+Nleft : 2.000e+20 [/m^3]
+Nright : 2.000e+20 [/m^3]
+leveltype : +/0	
+sigma_n : 1.000e-16	[m^2]
+sigma_p : 1.000e-19	[m^2]
+Et :   0.750	[eV]
+
+interface properties
+
+interfacename : 
+Intraband tunneling : 0 (0: no tunneling, 1: with tunneling)
+Relative electron mass :  1.00
+Relative hole mass :  1.00
+
+
+layer
+
+name : CdS
+d : 2.500e-08 [m]
+composition grading :	  0.00000	  1.00000	  0.00000	  0.00000	  0.00000	  0.00000	  0.00000	0	0	[-]
+v_th_n :	 1.000e+05	 1.000e+05	 1.000e+05	 1.000e+00	 1.000e+00	 1.000e+05	 1.000e+05	0	0	[m/s]
+v_th_p :	 1.000e+05	 1.000e+05	 1.000e+05	 1.000e+00	 1.000e+00	 1.000e+05	 1.000e+05	0	0	[m/s]
+eps :	    10.000000	    10.000000	    10.000000	     1.000000	     1.000000	    10.000000	    10.000000	0	0	[-]
+chi :	  4.000000	  4.000000	  4.000000	  1.000000	  1.000000	  4.000000	  4.000000	0	0	[eV]
+Eg :	  2.400000	  2.400000	  2.400000	  1.000000	  1.000000	  2.400000	  2.400000	0	0	[eV]
+Nc :	 2.200000e+24	 2.200000e+24	 2.200000e+24	 1.000000e+00	 1.000000e+00	 2.200000e+24	 2.200000e+24	0	0	[/m^3]
+Nv :	 1.800000e+25	 1.800000e+25	 1.800000e+25	 1.000000e+00	 1.000000e+00	 1.800000e+25	 1.800000e+25	0	0	[/m^3]
+mu_n :	 1.000000e-02	 1.000000e-02	 1.000000e-02	 1.000000e+00	 1.000000e+00	 1.000000e-02	 1.000000e-02	0	0	[m^2/Vs]
+mu_p :	 2.500000e-03	 2.500000e-03	 2.500000e-03	 1.000000e+00	 1.000000e+00	 2.500000e-03	 2.500000e-03	0	0	[m^2/Vs]
+K_rad :	 0.000000e+00	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 0.000000e+00	 0.000000e+00	0	0	[m^3/s]
+c_n_auger :	 0.000000e+00	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 0.000000e+00	 0.000000e+00	0	0	[m^6/s]
+c_p_auger :	 0.000000e+00	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 0.000000e+00	 0.000000e+00	0	0	[m^6/s]
+Na(y) :	 0.000000e+00	 0.000000e+00	 0.000000e+00	 1.000000e+00	 1.000000e+00	 0.000000e+00	 0.000000e+00	0	0	[/m^3]
+Nd(y) :	 1.100000e+24	 1.100000e+24	 1.100000e+24	 1.000000e+00	 1.000000e+00	 1.100000e+24	 1.100000e+24	0	0	[/m^3]
+absorption grading :	  516.66	  516.66	  250.00	  250.00	    0.00	    1.20	    1.20	0	0	[nm]
+absorptionmodel pure A material (y=0) : from file
+absorptionfile pure A material (y=0) : CdS-base.abs
+absorption pure B material (y=1), model : from file
+absorption pure B material (y=1), file : CdS-base.abs
+
+srhrecombination
+
+type : acceptor ( 1 level(s) )
+energy distribution : single
+Reference for defect energy :  0 ; 0 = above EV (SCAPS<2.7); 1 = above Ei; 2 = below EC
+Ekar :  0.1000 [eV]
+Nt(x) :	 1.000e+24	 1.000e+24	 1.000e+24	 1.000e+00	 1.000e+00	 1.000e+24	 1.000e+24	0	1	[1/m3]
+profile : homogenous
+Lkar : 1.000e+00 [m]
+Nleft : 1.000e+24 [/m^3]
+Nright : 1.000e+24 [/m^3]
+leveltype : 0/-	
+sigma_n : 1.000e-21	[m^2]
+sigma_p : 1.000e-16	[m^2]
+Et :   1.200	[eV]
+
+interface properties
+
+interfacename : 
+Intraband tunneling : 0 (0: no tunneling, 1: with tunneling)
+Relative electron mass :  1.00
+Relative hole mass :  1.00
+
+
+layer
+
+name : SnOx
+d : 5.000e-07 [m]
+composition grading :	  0.00000	  1.00000	  0.00000	  0.00000	  0.00000	  0.00000	  0.00000	0	0	[-]
+v_th_n :	 1.000e+05	 1.000e+05	 1.000e+05	 1.000e+00	 1.000e+00	 1.000e+05	 1.000e+05	0	0	[m/s]
+v_th_p :	 1.000e+05	 1.000e+05	 1.000e+05	 1.000e+00	 1.000e+00	 1.000e+05	 1.000e+05	0	0	[m/s]
+eps :	     9.000000	     9.000000	     9.000000	     1.000000	     1.000000	     9.000000	     9.000000	0	0	[-]
+chi :	  4.000000	  4.000000	  4.000000	  1.000000	  1.000000	  4.000000	  4.000000	0	0	[eV]
+Eg :	  3.600000	  3.600000	  3.600000	  1.000000	  1.000000	  3.600000	  3.600000	0	0	[eV]
+Nc :	 2.200000e+24	 2.200000e+24	 2.200000e+24	 1.000000e+00	 1.000000e+00	 2.200000e+24	 2.200000e+24	0	0	[/m^3]
+Nv :	 1.800000e+25	 1.800000e+25	 1.800000e+25	 1.000000e+00	 1.000000e+00	 1.800000e+25	 1.800000e+25	0	0	[/m^3]
+mu_n :	 1.000000e-02	 1.000000e-02	 1.000000e-02	 1.000000e+00	 1.000000e+00	 1.000000e-02	 1.000000e-02	0	0	[m^2/Vs]
+mu_p :	 2.500000e-03	 2.500000e-03	 2.500000e-03	 1.000000e+00	 1.000000e+00	 2.500000e-03	 2.500000e-03	0	0	[m^2/Vs]
+K_rad :	 0.000000e+00	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 0.000000e+00	 0.000000e+00	0	0	[m^3/s]
+c_n_auger :	 0.000000e+00	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 0.000000e+00	 0.000000e+00	0	0	[m^6/s]
+c_p_auger :	 0.000000e+00	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 0.000000e+00	 0.000000e+00	0	0	[m^6/s]
+Na(y) :	 0.000000e+00	 0.000000e+00	 0.000000e+00	 1.000000e+00	 1.000000e+00	 0.000000e+00	 0.000000e+00	0	0	[/m^3]
+Nd(y) :	 1.000000e+23	 1.000000e+23	 1.000000e+23	 1.000000e+00	 1.000000e+00	 1.000000e+23	 1.000000e+23	0	0	[/m^3]
+absorption grading :	  344.44	  344.44	  250.00	  250.00	    0.00	    1.20	    1.20	0	0	[nm]
+absorptionmodel pure A material (y=0) : from file
+absorptionfile pure A material (y=0) : SnOx-base.abs
+absorption pure B material (y=1), model : from file
+absorption pure B material (y=1), file : SnOx-base.abs
+
+srhrecombination
+
+type : donor ( 1 level(s) )
+energy distribution : single
+Reference for defect energy :  0 ; 0 = above EV (SCAPS<2.7); 1 = above Ei; 2 = below EC
+Ekar :  0.1000 [eV]
+Nt(x) :	 1.000e+21	 1.000e+21	 1.000e+21	 1.000e+00	 1.000e+00	 1.000e+21	 1.000e+21	0	1	[1/m3]
+profile : homogenous
+Lkar : 1.000e+00 [m]
+Nleft : 1.000e+21 [/m^3]
+Nright : 1.000e+21 [/m^3]
+leveltype : +/0	
+sigma_n : 1.000e-16	[m^2]
+sigma_p : 1.000e-19	[m^2]
+Et :   1.800	[eV]
+
+
+front contact
+
+flatband : 0 (1: flatband contact imposed; 0: fixed Phi_m value)
+recalculate : 0 (1 = do or 0 = do not recalculate phi_m to set flatband in each batch step)
+Fi_m :  4.10 [eV]
+Sn : 1.000e+05 [m/s]
+Sp : 1.000e+05 [m/s]
+optical filter : reflection
+wavelength independent: 0
+filterfile : 10%mirror.ftr
+
+working point
+
+illuminated from : right
+internal Rfront :   0.00000000
+internal Tfront :  1.0000e+00
+
+>> end of problem definition file
+
+
+>> begin of action list file
+
+Temperature :   300.00 K
+Voltage :     0.0000 V
+Frequency :   1.0000e+05 Hz
+Number of points :   5
+dark :  0
+generation from file :  0
+spectrum file :AM1_5G 1 sun.spe
+spectrum cut off :  0
+short wavelength cut off :     0.00 nm
+long wavelength cut off :  2000.00 nm
+neutral density :     0.0000
+transmission :     1.0000 %
+generation file :*.gen
+attenuation :   100.0000 %
+pause :  0
+IV_startV :     0.0000 V
+IV_stopV :     0.9000 V
+IV_points :  46
+IV_increment :     0.020000 V
+IV_calculate :  1
+stop after Voc :  1
+CV_startV :    -1.0000 V
+CV_stopV :     0.7000 V
+CV_points :  86
+CV_increment :     0.020000 V
+CV_calculate :  0
+Cf_startf :    1.000e+02 Hz
+Cf_stopf :    1.000e+06 Hz
+Cf_total points :  21
+Cf_points per decade :   5
+Cf_calculate :  0
+QE_startlambda :   300 nm
+QE_stoplambda :   900 nm
+QE_points :  61
+QE_increment :    10 nm
+QE_calculate :  0
+do batch calculation :  0
+do recording :  0
+
+>> end of action list file
+
+
+>> begin of batch settings file
+
+variation of definition files :  1
+number of definition files :   3
+definition filename   0:CdTe-base.def
+definition filename   1:CdTe air activated.def
+definition filename   2:CdTe vacuum activated.def
+
+Batch parameter 0 :
+
+Label 1 : illumination
+Label 2 : spectrum file
+Label 3 : nihil
+Label 4 : nihil
+simultaneous :  0
+values from a list :  1
+values are file names :  1
+number of file names :    6
+list of filenames saved :  1
+filepath : c:\SCAPS versions\SCAPS 2903 werkversie\bdf\monochromatic spectra CdTe.bdf
+filename : monochromatic spectra CdTe.bdf
+file   0:400nm fixed JL.spe
+file   1:500nm fixed JL.spe
+file   2:600nm fixed JL.spe
+file   3:700nm fixed JL.spe
+file   4:800nm fixed JL.spe
+file   5:850nm fixed JL.spe
+
+>> end of batch settings file
+
+
+>> begin of recorder settings file
+
+
+Recorder parameter   0 :
+
+recorder type :cell characterisctics
+recorder property :efficiency
+
+Recorder parameter   1 :
+
+recorder type :cell characterisctics
+recorder property :open circuit voltage
+
+Recorder parameter   2 :
+
+recorder type :cell characterisctics
+recorder property :short circuit current
+
+Recorder parameter   3 :
+
+recorder type :cell characterisctics
+recorder property :fill factor
+
+Recorder parameter   4 :
+
+recorder type :cell characterisctics
+recorder property :voltage at maximum power
+
+Recorder parameter   5 :
+
+recorder type :cell characterisctics
+recorder property :current at maximum power
+
+Recorder type flag : 	 1	 0	 0	 0	 0	 0	 0
+
+>> end of recorder settings file
+
+
+>> begin of general SCAPS settings file
+
+
+handling of error messages :  0 ; 0=to screen and wait for ackowledgement; 1=append to log file; 2=overwrite log file
+output list after a convergence error :  0 ; 0=truncate; 1=fill with zero's; 2=fill with white space
+maximum voltage for the recording of solar cell characteristics (V) :     2.000000
+minimum voltage increment for the recording of solar cell characteristics (V) :   0.05000000
+number of energy levels in a distribution :  7 (a defect band is discretised into  separate single levels)
+
+>> end of general SCAPS settings file

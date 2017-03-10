@@ -1,0 +1,82 @@
+// MB 25-5-2011
+// A script just meant to illustrate some of the possibilities of the set, get and math commands
+// calculate the space charge layer (SCL) with in two ways:
+// once from the inverse of the capacitance
+// and once from an estimated position of the feft and right edges of the SCL
+
+clear all
+load definitionfile simple pn.def
+clear actions
+action cv.docv 
+action dark 
+action cv.startv 0
+action cv.stopv 0
+action cv.points 2 // do a CV simulation from 0 V to 0 V // 2 points is the minimum in SCAPS ;-(
+
+set layer1.thickness 5 // make it a little thicker
+set layer2.nd 1E18 // a little more n+ type
+
+set scriptvariable.maxiteration 8
+
+math filllogarithmicperdecade u 1E13 1E18 4 // will serve as NA // also sets nu
+set scriptvariable.maxiteration nu
+set scriptvariable.nv maxiteration
+set scriptvariable.nw maxiteration
+
+set scriptvariable.uname NA (1/cm3)
+set scriptvariable.vname W from C (µm)
+set scriptvariable.wname W from edges SCL (µm)
+
+set scriptvariable.xvalue 8.85E-14 // eps_0 in F/cm
+get layer1.epsilon yvalue // eps_s (relative)
+set scriptvariable.zvalue 1E13 // to get W in µ when C is in nF and eps in F/cm
+math scalarmultiply zzy
+math scalarmultiply zzx // now multiplication with zvalue will convert 1/C (in 1/nF) into W (in µm)
+
+set scriptvariable.yvalue 0.50 // criterion for "edge of SCL": p=yvalue*NA (left edge) and n = yvalue*ND (right edge)
+// 0.5 seems to give a nice result; you can play with this criterion
+
+//show scriptvariables
+ 
+loop start
+
+set layer1.na uvector[loopcounter]
+
+//show scriptvariables 
+calculate
+// determine the left edge of the SCL: find x where p(x) = yvalye*NA
+get energybands.p xy // now p(x) is in yvector
+get layer1.na uvalue
+math scalarmultiply uyu // now xvalue contains yvalue*NA(layer1)
+math interpolate xXuY // finds xvalue for which xvector (=position x) would correspond to 
+// (by interpolation) a value of uvalue (=yvalue*NA) in yvector (=p(x)
+set scriptvariable.wvalue xvalue // now wvalue contains the left edge of the SCL
+
+// determine the right edge of the SCL: find x where n(x) = yvalye*ND
+get energybands.n xy // now n(x) is in yvector
+get layer2.nd uvalue
+math scalarmultiply uyu // now xvalue contains yvalue*ND(layer2)
+math interpolate xXuY // finds xvalue for which xvector (=position x) would correspond to 
+// (by interpolation) a value of uvalue (=yvalue*ND) in yvector (=n(x) 
+// now xvalue contains the right edge of the SCL
+
+math scalarsubtract xxw // xvalue contains the difference between the right and left edge of the SCL, thus the total SCL width
+set scriptvariable.wvector[loopcounter] xvalue // wvector contains the SCL position calculated with p = NA/2
+//show scriptvariables 
+
+get cv xy // x contains V (two values startv=stopv=0) and y the corresponding capacity // redefinition of x and y
+set scriptvariable.vvalue yvector[0] // contains C in nF/cm2
+math scalarreciproque vv // now vvalue contains 1/C in 1/nF
+math scalarmultiply vzv // now uvalue contains W in µm from the capacity
+set scriptvariable.vvector[loopcounter] vvalue // and place it in vvector
+//show scriptvariables 
+
+loop stop
+
+set scriptvariable.zname delta_W (relative)
+math vectorsubtract zvw
+math vectorabs zz
+math vectordivide zzw // now zvactor contains |W(from C) - W(from edge SCL)|/W(from edge SCL)
+plot draw uv
+plot draw uw
+plot draw uz

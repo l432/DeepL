@@ -1,0 +1,22 @@
+> SCAPS 3.3.03 ELIS-UGent: Version scaps3303.exe, dated 17-02-2016, 12:00:14
+> SCAPS Batch Settings file, saved on 	24-10-2016 at 10:56:54
+> problem definition file loaded :
+> c:\Диплом Полупроводниковые панели\Установка\def\2 problemo.def
+> last saved: 	24-10-2016 at 10:55:57
+> 
+
+
+Batch parameter 0 :
+
+Label 1 : illumination
+Label 2 : monochromator
+Label 3 : photon power
+Label 4 : nihil
+simultaneous :  0
+values from a list :  1
+logarithmic variation :  0
+values are file names :  0
+number of parameters :    2
+list of parameters saved :  0
+parameter   0:   1.00000000e+00
+parameter   1:   2.00000000e+00

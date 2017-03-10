@@ -1,0 +1,15 @@
+> SCAPS version 2.9.03, August 2010, ELIS - UGent: 
+> SCAPS SCAPS file with filenames for a batch parameter, saved on 	14-08-2010 at 11:42:02
+> no problem definition file loaded 
+> 
+> A set of monochromatic spectra relevant for CIGS
+> All spectra have the same number of photons
+> and all give JL(ideal) = 20 mA/cm2
+
+
+file: 400nm fixed JL.spe
+file: 600nm fixed JL.spe
+file: 800nm fixed JL.spe
+file: 900nm fixed JL.spe
+file: 1000nm fixed JL.spe
+file: 1100nm fixed JL.spe

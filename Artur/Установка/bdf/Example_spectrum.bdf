@@ -1,0 +1,10 @@
+> Example of a bdf-file with spectrum files (KD 6-2010)
+> five different spectra simulations
+> The keyword indicating a non-comment line is "file:"
+> The spectra should be stored in the folder "spectrum" of your SCAPS instalation folder
+
+file: 300nm.spe
+file: 400nm.spe
+file: 600nm.spe
+file: 700nm.spe
+file: 900nm.spe
