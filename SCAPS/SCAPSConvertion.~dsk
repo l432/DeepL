@@ -57,12 +57,12 @@ BottomMiddelPanelData=0000080001000100000009000000446F636B5369746530361900000000
 [View0]
 CustomEditViewType=TEditView
 Module=D:\Samples\DeepL\SCAPS\main.pas
-CursorX=54
-CursorY=307
-TopLine=283
+CursorX=1
+CursorY=106
+TopLine=93
 LeftCol=1
 Elisions=
-Bookmarks={1,109,1}
+Bookmarks={1,135,1}
 EditViewName=D:\Samples\DeepL\SCAPS\main.pas
 
 [Watches]

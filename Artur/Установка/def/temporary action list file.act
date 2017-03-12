@@ -1,11 +1,11 @@
 
-Temperature :   280.00 K
+Temperature :   300.00 K
 Voltage :     0.0000 V
 Frequency :   1.0000e+06 Hz
 Number of points :   5
-dark :  0
+dark :  1
 generation from file :  0
-spectrum file :old AM1_5G 1 sun.spe
+spectrum file :AM1_5G 1 sun.spe
 spectrum cut off :  0
 short wavelength cut off :   200.00 nm
 long wavelength cut off :  4000.00 nm
@@ -28,9 +28,9 @@ Secondworkpoint generation file :*.gen
 Secondworkpoint attenuation :   100.0000 %
 pause :  0
 IV_startV :     0.0000 V
-IV_stopV :     0.8000 V
-IV_points :  41
-IV_increment :     0.020000 V
+IV_stopV :     0.6000 V
+IV_points :  61
+IV_increment :     0.010000 V
 IV_calculate :  1
 stop after Voc :  0
 CV_startV :    -0.8000 V

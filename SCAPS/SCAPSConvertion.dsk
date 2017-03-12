@@ -57,12 +57,12 @@ BottomMiddelPanelData=0000080001000100000009000000446F636B5369746530361900000000
 [View0]
 CustomEditViewType=TEditView
 Module=D:\Samples\DeepL\SCAPS\main.pas
-CursorX=1
-CursorY=106
-TopLine=93
+CursorX=26
+CursorY=47
+TopLine=27
 LeftCol=1
 Elisions=
-Bookmarks={1,135,1}
+Bookmarks={1,136,1}
 EditViewName=D:\Samples\DeepL\SCAPS\main.pas
 
 [Watches]
@@ -580,7 +580,7 @@ Dockable=1
 StayOnTop=0
 TabPosition=1
 ActiveTabID=RefactoringForm
-TabDockClients=RefactoringForm,FindReferencsForm,ToDo List,QAView,MetricsView,RefactoringsView,UsagesView
+TabDockClients=RefactoringForm,FindReferencsForm,ToDo List,RefactoringsView,UsagesView,QAView,MetricsView
 
 [DockSite1]
 HostDockSite=DockBottomPanel

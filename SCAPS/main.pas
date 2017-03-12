@@ -41,6 +41,7 @@ begin
 end;
 
 procedure TMainForm.BtDoneClick(Sender: TObject);
+ const Izoom=1e-5;
  var Row:Int64;
      Task,FileNumber:word;
      Comments,SCparam,DatFile:TStringList;
@@ -102,7 +103,7 @@ begin
        0:tempData:=tempData+FloatToStrF(T,ffGeneral,4,1)+' '+
          IntToStr(FileNumber)+'_'+IntToStr(Round(T))+' '+
          FloatToStrF(1/T/Kb,ffGeneral,5,2)+' ';
-       1,5:V:=10*V;
+       1,5:V:=Izoom*V;
        2,3:V:=0.01*V;
        end;
       tempData:=tempData+FloatToStrF(V,ffExponent,4,0)+' ';
@@ -130,11 +131,11 @@ begin
         try
          V:=StrToFloat(Copy(tempStr, 1, AnsiPos (' ', tempStr)-1));
          Delete(tempStr, 1, AnsiPos (' ', tempStr));
-         I:=10*StrToFloat(Copy(tempStr, 1, AnsiPos (' ', tempStr)-1));
+         I:=Izoom*StrToFloat(Copy(tempStr, 1, AnsiPos (' ', tempStr)-1));
         except
         end;
         DatFile.Add((FloatToStrF(V,ffExponent,4,0)+' '+
-                     FloatToStrF(I,ffExponent,4,0)));
+                     FloatToStr(I)));
         Row:=ROW+1;
        end;
 
@@ -185,7 +186,7 @@ begin
  if Comments.Count>0 then
       Comments.SaveToFile(DatFileLocation+'comments');
  Comments.Free;
- if SCparam.Count>0 then
+ if SCparam.Count>1 then
       SCparam.SaveToFile(DatFileLocation+'SCparam.dat');
  SCparam.Free;
  DatFile.Free;
