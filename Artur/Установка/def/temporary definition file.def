@@ -1,6 +1,6 @@
 
-> SCAPS 3.3.03 ELIS-UGent: Version scaps3303.exe, dated 17-02-2016, 11:00:14 Problem definition file
-> last saved by SCAPS: 	20-03-2017 at 21:47:37
+> SCAPS 3.3.03 ELIS-UGent: Version scaps3303.exe, dated 10-03-2017, 19:27:02 Problem definition file
+> last saved by SCAPS: 	12-03-2017 at 21:14:57
 > 
 > 
 > Comments (to be) included in the def file
@@ -47,12 +47,6 @@
 > No doping type nor extrinsic doping is set! (NA = ND = 1E10/cm3 = about ni)
 > 
 > Should be OK for low doped silicon. For higher doping, the mobilities should be set to an appropriate lower value; th
-> 
-> > end of problem definition file
-> 
-> > end of problem definition file
-> 
-> > end of problem definition file
 > 
 > > end of problem definition file
 > 
@@ -134,22 +128,6 @@ absorption pure B material (y=1), model : coefficients A and B
 pure B material (y=1), A : 1.000e+07 [/(m*sqrt(eV))]
 pure B material (y=1), B : 0.000e+00 [sqrt(eV)/m]
 
-srhrecombination
-
-type : neutral ( 1 level(s) )
-energy distribution : single
-Reference for defect energy :  0 ; 0 = above EV (SCAPS<2.7); 1 = above Ei; 2 = below EC
-Ekar :  0.1000 [eV]
-Nt(uniform) :	 1.000000e+19	 1.000000e+20	 1.000000e+20	 1.000000e+00	 1.000000e+00	 1.000000e+19	 1.000000e+19	 0	 2	[
-profile : homogenous
-Lkar : 1.000e+00 [m]
-Nleft : 1.000e+19 [/m^3]
-Nright : 1.000e+19 [/m^3]
-leveltype : neutral	
-sigma_n : 1.000e-19	[m^2]
-sigma_p : 1.000e-19	[m^2]
-Et :   0.600	[eV]
-
 interface properties
 
 interfacename : 
@@ -186,22 +164,6 @@ absorptionfile pure A material (y=0) : Si.abs
 absorption pure B material (y=1), model : coefficients A and B
 pure B material (y=1), A : 1.000e+07 [/(m*sqrt(eV))]
 pure B material (y=1), B : 0.000e+00 [sqrt(eV)/m]
-
-srhrecombination
-
-type : neutral ( 1 level(s) )
-energy distribution : single
-Reference for defect energy :  0 ; 0 = above EV (SCAPS<2.7); 1 = above Ei; 2 = below EC
-Ekar :  0.1000 [eV]
-Nt(uniform) :	 1.000000e+19	 1.000000e+20	 1.000000e+20	 1.000000e+00	 1.000000e+00	 1.000000e+19	 1.000000e+19	 0	 2	[
-profile : homogenous
-Lkar : 1.000e+00 [m]
-Nleft : 1.000e+19 [/m^3]
-Nright : 1.000e+19 [/m^3]
-leveltype : neutral	
-sigma_n : 1.000e-19	[m^2]
-sigma_p : 1.000e-19	[m^2]
-Et :   0.600	[eV]
 
 
 front contact
