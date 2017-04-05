@@ -54,7 +54,7 @@ Frequently the crystal and device properties recover after stopping of ultrasoun
 
 This article presents the result of experimentally investigation of the acoustic strain field influence on the electrical characteristic of the n$^+$--p SSC.
 Ultrasound has been found to result the decrease of carriers lifetime and, accordingly, solar cell efficiency.
-The USWs intensity did not exceed $0.5$~W/cm$^2$ and the full recovery of cell characteristics was observed.
+The USWs intensity did not exceed $0.5$~W/cm$^2$ and the full recovery of cell characteristics was observed after the stop of an acoustic wave propagation.
 Dependencies of such sound induced degradation on USW type and intensity are presented.
 %Features of such sound induced degradation are presented.
 The findings are discussed by using model of coupled defect level recombination \cite{CDLR:JAP,CDLR:JAP1995}.
@@ -64,12 +64,12 @@ The findings are discussed by using model of coupled defect level recombination 
 \section{Experimental and calculation details}
 
 The investigated solar cell was created on 2 inch p-type CZ-Si:B wafers with doping level of $1.4\times10^{15}$~cm$^{-3}$ and thickness of 300~$\mu$m.
-The n$^+$--layer with carrier concentration of about $10^{19}$~cm$^{-3}$ and thickness of 0.5~$\mu$m was created by phosphorus implantation.
+The n$^+$ emitter with carrier concentration of about $10^{19}$~cm$^{-3}$ and thickness of 0.5~$\mu$m was formed by phosphorus implantation.
 Then wafer surface were passivated by Al$_2$O$_3$ film and further capped by TiO$_x$ as antireflective coating.
-Finally the aluminium solid contact and metal grid was fabricated on p-- and n--surface respectively.
+Finally the aluminium front (metal grid) and rear (solid contact) electrodes were deposited by screen printing before rapid annealing.
 The samples with area of $1.5$ to $2.1$~cm$^{2}$ used in our experiments were cut from the central part of the wafer.
 
-The dark and illuminated forward current-voltage ($I$--$V$) characteristics of the samples were measured over a temperature range 290--340~K.
+The dark and illuminated forward current-voltage ($I$--$V$) characteristics of the samples both with and without ultrasound loading (USL)  were measured over a temperature range 290--340~K.
 The sample temperature was controlled by differential copper-constantan thermocouple.
 Some curves are shown in \Fref{figIV}.
 
@@ -79,7 +79,7 @@ The classical double-diode model of n$^+$--p SSC $I$--$V$ characteristics expres
 \nonumber I(V,T)&=&-AJ_{ph}+\frac{qAn_iW}{2\tau_{g}}\left\{\exp \left[\frac{q(V-IR_s)}{nkT}\right]-1\right\}\\
 &&+\frac{qAn_i^2}{p_p}\sqrt{\frac{\mu_nkT}{\tau_n}}\left\{\exp \left[\frac{q(V-IR_s)}{kT}\right]-1\right\}+\frac{V-IR_s}{R_{sh}}\,,
 \end{eqnarray}
-where $A$ is the cell area, 
+where $A$ is the cell area,
 $J_{ph}$ is the photocurrent density,
 $n_i$ is the intrinsic carrier concentration,
 $\tau_{g}$ is the carrier lifetime in the space charge region (SCR),
@@ -98,8 +98,6 @@ $\mu_n$ and $\tau_n$ are the electron (minority carrier) mobility and lifetime o
 The current-voltage  equation that models the solar cell by  an equivalent electrical circuit contains several parameters related to physical phenomena occurring in  the device.
 It is commonly believed that $I_{01}=(qAn_i^2/n_n)\sqrt{\mu_nkT/\tau_n}$ is closely related to recombination in the quasi-neutral region, while $I_{0n}=(qAWn_i/2\tau_{g})$ reflects the overall recombination in the SCR.
 
-
-
 \begin{figure}
 \begin{center}
 \includegraphics[width=7.5cm]{olikhFig1}%
@@ -107,13 +105,13 @@ It is commonly believed that $I_{01}=(qAn_i^2/n_n)\sqrt{\mu_nkT/\tau_n}$ is clos
 \caption{\label{figIV}
 SSC dark $I$--$V$ characteristics measured at 301~K (curves 1, 3) and 341~K (curves 2, 4)
 with (2, 4) and without(1, 3) USL.
-$W_{U\!S}^T=0.40$~W/cm$^2$.
+$W_{U\!S}=0.40$~W/cm$^2$.
 Inset: Parts of illuminated $I$--$V$ characteristics in the voltage range from 0 to $V_{oc}$.
 The lines are the fitted curves using Eq.~(\ref{eqIV}).
 }%
 \end{figure}
 
-We used Eqs. (\ref{eqIV}) and (\ref{eqW}) to fit the experimental data and the $I_{ph}$ (for illuminated $I$--$V$ curves only), $\tau_g$, $\tau_n$, $n$, $R_sh$, and $R_s$ were taken as the  fittings parameters.
+We used Eqs. (\ref{eqIV}) and (\ref{eqW}) to fit the experimental data and the $I_{ph}$ (for illuminated $I$--$V$ curves only), $\tau_g$, $\tau_n$, $n$, $R_{sh}$, and $R_s$ were taken as the  fittings parameters.
 It was supposed that the temperature dependencies of $E_g$ and $\mu_n$ followed an Varshni equation
 \begin{equation}
 \label{eqEg}
@@ -122,48 +120,106 @@ E_g(T) = 1.169 - 7.021\cdot10^{-4} T^2 /(T + 1108)\,,
 and Caughey–Thomas form \cite{Schroder2006,Markvart}
 \begin{equation}
 \label{eqMu}
-\mu_n(T) = \mu_{min}+\frac{\mu_0}{1+(p_p/N_{ref})^{\alpha}}\,.
+\mu_n(T) = \mu_{min}+\frac{\mu_0}{1+(p_p/N_{ref})^{\zeta}}\,.
 \end{equation}
-The temperature dependence of the various parameters in Eq.~(\ref{eqMu}) has the form $P=P_0(T/300)^{\gamma}$ and parameters value are given in the \cite{Schroder2006}, Table~A8.2.
+The temperature dependence of the $\mu_{min}$, $\mu_0$, $N_{ref}$ and $\zeta$ 
+%various parameters in Eq.~(\ref{eqMu}) 
+has the form $P=P_0(T/300)^{\gamma}$ and parameters value are given in the \cite{Schroder2006}, Table~A8.2.
 The fitting were done by using the differential evolution method \cite{DEWang} and extremely good fit to the experimental data was obtained --- see \Fref{figIV}.
 
-The monochromatic light with the wavelength of $\lambda=900$~nm and intensity of $W_{ph}=2$~W/m$^2$ was used for SSC illumination.
-In that case, the photocurrent defined  by the electron–-hole pair generation in the $p$-region mainly.
-If the base is several minority carrier diffusion lengths $L_n=\sqrt{\mu_nkT\tau_n/q}$, the $J_{ph}$ can be written as \cite{Markvart,Razeghi}
-\begin{equation}
-\label{eqIph}
-J_{ph} = \frac{W_{ph}(1-r)q\beta\lambda}{hc}\frac{\alpha L_n}{1+ \alpha L_n}\,,
-\end{equation}
-where $\alpha$ is the absorption coefficient,
-$r$ is the reflection coefficient,
-$\beta$ is the coefficient of quantum yield.
-We taken $\alpha$ value at $T=300$~K in \cite{GreenOptic} and temperature dependence in \cite{Markvart} (p.39, Eq.~(18)), and supposed $r=0$, $\beta=1$.
-Then Eq.~(\ref{eqIph}) were used by taking $L_n$ as fitting parameter to fit the experimental temperature dependence of $J_{ph}$.
-It should be noted that the short-circuit current density $J_{sc}\approx J_{ph}R_{sh}/(R_{sh}+R_{s})$.
+The monochromatic light was used for SSC illumination.
+was chosen to avoid
+The light  wavelength of $\lambda=900$~nm ensured the electron–-hole pair generation in the $p$-region mainly and low light intensity of $W_{ph}=2$~W/m$^2$ was chosen to avoid any LID processes.
+%The monochromatic light with the wavelength of $\lambda=900$~nm and intensity of $W_{ph}=2$~W/m$^2$ %was used for SSC illumination.
+%In that case, the photocurrent defined  by the electron–-hole pair generation in the $p$-region mainly.
+%If the base is several minority carrier diffusion lengths $L_n=\sqrt{\mu_nkT\tau_n/q}$, the $J_{ph}$ can be written as \cite{Markvart,Razeghi}
+%\begin{equation}
+%\label{eqIph}
+%J_{ph} = \frac{W_{ph}(1-r)q\beta\lambda}{hc}\frac{\alpha L_n}{1+ \alpha L_n}\,,
+%\end{equation}
+%where $\alpha$ is the absorption coefficient,
+%$r$ is the reflection coefficient,
+%$\beta$ is the coefficient of quantum yield.
+%We taken $\alpha$ value at $T=300$~K in \cite{GreenOptic} and temperature dependence in \cite{Markvart} (p.39, Eq.~(18)), and supposed $r=0$, $\beta=1$.
+%Then Eq.~(\ref{eqIph}) were used by taking $L_n$ as fitting parameter to fit the experimental temperature dependence of $J_{ph}$.
+The short-circuit current density $J_{sc}$, open-circuit voltage $V_{oc}$ and the fill factor $FF$ were estimated from illuminated $I$--$V$ curves by the conventional mode.
+It should be noted that $J_{sc}\approx J_{ph}R_{sh}/(R_{sh}+R_{s})$.
 In the case of the samples under investigation, $R_s$ was defined by contact resistance and was about 1~$\Omega$, $R_{sh}$ overrode 2~k$\Omega$.
-Therefore $J_{sc}\approx J_{ph}$.
-The open-circuit voltage $V_{oc}$ and the fill factor $FF$ were estimated from illuminated $I$--$V$ curves by the conventional mode.
+Therefore it is expected that $J_{sc}\approx J_{ph}$.
+Really such relation was observed for the $J_{ph}$, which was obtained by whole $I$--$V$ curve fitting, and $J_{sc}$, which was obtained as a point of intersection of a $I$--$V$ curve with a current axis.
 
 
-
-The revers current-voltage ($I$--$V$) characteristics of the samples both with and without US loading were measured in the temperature range from 130 to 330~K.
-In case of US loading, the longitudinal waves excited in the samples were $4.1$ and $8.4$~MHz in frequency $f_{U\!S}$ and had the intensity of $W_{U\!S} < 0.8$~ W/cm$^2$.
-It was reported previously \cite{Ostapenko1995,Olikh:Ultras,Olikh2011Sem,Ostrovskii2001} that a characteristic time of change in the silicon structure parameters under the ultrasound action  did not exceed $2\cdot10^3$~s.
+In the USL case, the acoustic waves were exited with help of a piezoelectric transducer and were injected in the samples from the base side.
+The longitudinal (L), $8.0$~MHz in the frequency and $0.18$~W/cm$^2$ in the intensity $W_{U\!S}$, and transverse (T, $4.2$~MHz, $W_{U\!S}\leq0.4$~W/cm$^2$) waves were used.
+It was reported previously \cite{Ostapenko1995,Olikh:Ultras,Ostrovskii2001} that a characteristic time of change in the silicon structure parameters under the ultrasound action  did not exceed $2\cdot10^3$~s.
 In order to wait till the acoustically induced transitional period the following experimental procedure was used.
-After USL start the sample was kept at room temperature during 30 min.
-Then the sample was cooled to 130~K.
-The cooling time was about a half of hour.
-After cooling the $I$--$V$ measurements and the sample heating were started.
-The sample temperature was controlled by differential copper-constantan thermocouple.
+After USL start the sample was kept at room temperature during 60 min and then the $I$--$V$ measurements and the sample heating were started.
+In order to avoid the effect of piezoelectric field on $I$--$V$ characteristics, the piezoelectric cell was shielded.
 
-In order to avoid the effect of piezoelectric field on $I$--$V$ characteristics, the piezoelectric cell was shielded and aluminium acoustic line was used.
-The more details about the experimental setup are presented elsewhere \cite{OlikhJAP}.
+The samples from the investigated set differed in the shunt resistance mainly. 
+In the article the typical results for the samples with low (~$\sim10^4$~$\Omega$ at room temperature) and high ($>10^{15}$~$\Omega$) $R_{sh}$ value are presented.
+The samples were labeled as SC-R4 and SC-R15 respectively.
 
-The data non-linear fitting were done by using the differential evolution method \cite{DEWang}.
 
 \section{Results and Discussion}
-\subsection{Ultrasound influence on reverse current}
+\subsection{Ultrasound influence on the recombination in the SCR}
 
+\Fref{figDUS}(a) and \Fref{figDUS}(b) presents the USL influence on SCR carrier lifetime and ideality factor respectively.
+One can see that USL leads to $\tau_{g}$ decrease and $n$ increase.
+The extent of acoustic effect is weakly depend on both ultrasound intensity and wave type in the sample with a low $R_{sh}$ value.
+So, 0.025
+
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=15cm]{olikhFig2abcd}%
+\end{center}
+\caption{\label{figDUS}
+Temperature dependences of SCR carrier lifetime (a), ideality factor (b), base  carrier lifetime (c) and shunt resistance (d) with (curves 2--4 and 6--8) and without (1 and 5) USL of the SC-R15 (squares, curves 1--4) and SC-R4 (circles, curves 5--8).
+The longitudinal (2, 6) and transverse (3, 4, 7, 8) ultrasound waves were used.
+$W_{U\!S}$=0.40~W/cm$^2$ (2,6);
+$W_{U\!S}$,W/cm$^2$: 0.18 (2, 6), 0.19 (3), 0.22 (7), 0.40 (4, 8).
+}%
+\end{figure}
+
+
+\begin{table}
+\caption{\label{tab}Extracted parameters for the Mo/$n$--Si Schottky structures with and without ultrasonic loading.}
+\begin{center}
+%\begin{ruledtabular}
+\begin{tabular}{lcccccc}
+\hline
+\hline
+Sample& \multicolumn{3}{c}{SC-R4}&\multicolumn{3}{c}{SC-R15}\\
+wave type& L & T &  T & L & T &  T\\
+$W_{U\!S}$  (W/cm$^2$) &0.18&0.22&0.40&0.18&0.19&0.40\\
+\hline
+$\Delta$n ($\pm0.005$) &0.016&0.024&0.028&0.010&0.022&0.043\\
+$\varepsilon_{\tau g}$ ($\pm3$\%)&-12&-14&-17&-5&-18&-30\\
+$\varepsilon_{\tau r}$ ($\pm10$\%)&-11&-43&-58&-13&-71&-85\\
+\hline
+\hline
+%$\alpha$ (mV/K) &$-0.22\pm0.02$&$-0.30\pm0.02$\\
+%$\Phi_{b,F}(0)$ (mV), Fig.~\ref{figFf} &$817\pm4$ & $839\pm5$\\
+%$\Phi_{b,F}(0)$ (mV), Fig.~\ref{figRich} &$821\pm4$ & $845\pm5$\\
+%$A^*$ (~A$\,$cm$^{-2}$K$^{-2}$) &$116\pm5$ & $111\pm5$\\
+%$\rho_1$ &$0.9995$ & $0.998$\\
+%$\rho_2$ &$5\cdot10^{-4}$ & $2\cdot10^{-3}$\\
+%$\sigma_{\Phi,1}$ (mV)&$18\pm2$ & $48\pm4$\\
+%$\sigma_{\Phi,2}$ (mV)&$118\pm5$ & $127\pm5$\\
+%$\overline{\Phi}_{b,1}(0)$ (mV)&$775\pm8$ & $809\pm8$\\
+%$\overline{\Phi}_{b,2}(0)$ (mV)&$1070\pm50$ & $1170\pm50$\\
+%$T_{0,H}$ (K)&$14\pm1$&$18\pm1$\\
+%$T_{0,L}$ (K)&$130\pm5$&$143\pm5$\\
+%$\gamma$ ($10^{-5}$ m$^{2/3}$V$^{1/3}$)&$2.7\pm0.1$&$2.5\pm0.1$\\
+%$C_p$ ($10^{5}$ m$^{-2}$)&$2.2\pm0.4$&$21\pm3$
+\end{tabular}
+%\end{ruledtabular}
+\end{center}
+\end{table}
+
+
+in Table~\ref{tab}.
 
 \Fref{figIV} shows the complete $I$-–$V$-–$T$ characteristics that were measured without US loading.
 To avoid a busy looking graph, the selection of measured $I$--$V$ characteristics is shown in this figure.

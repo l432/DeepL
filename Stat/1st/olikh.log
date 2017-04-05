@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9) (preloaded format=latex 2015.6.15)  11 JAN 2017 12:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9) (preloaded format=latex 2015.6.15)  4 APR 2017 14:08
 entering extended mode
 **olikh.tex
 (olikh.tex
@@ -64,6 +64,80 @@ Underfull \hbox (badness 2753) in paragraph at lines 13--23
 act Abstract Abstract Abstract
  []
 
+
+LaTeX Warning: Citation `LID:BothePP' on page 1 undefined on input line 38.
+
+
+LaTeX Warning: Citation `LID:SchmidtJMR' on page 1 undefined on input line 38.
+
+
+LaTeX Warning: Citation `LIDRev' on page 1 undefined on input line 38.
+
+
+LaTeX Warning: Citation `PID:SEMSC' on page 1 undefined on input line 39.
+
+
+LaTeX Warning: Citation `PID:PP' on page 1 undefined on input line 39.
+
+
+LaTeX Warning: Citation `Bhat' on page 1 undefined on input line 40.
+
+
+LaTeX Warning: Citation `Karazhanov' on page 1 undefined on input line 40.
+
+
+LaTeX Warning: Citation `Ostapenko1999' on page 1 undefined on input line 49.
+
+
+LaTeX Warning: Citation `Ostrovskii2001' on page 1 undefined on input line 49.
+
+
+LaTeX Warning: Citation `OlikhJAP' on page 1 undefined on input line 50.
+
+
+LaTeX Warning: Citation `Olikh2011Sem' on page 1 undefined on input line 50.
+
+
+LaTeX Warning: Citation `Davletova2009' on page 1 undefined on input line 50.
+
+
+LaTeX Warning: Citation `Davletova2008' on page 1 undefined on input line 50.
+
+
+LaTeX Warning: Citation `YOlikh2005' on page 1 undefined on input line 50.
+
+
+LaTeX Warning: Citation `Olikh:Ultras' on page 1 undefined on input line 50.
+
+
+LaTeX Warning: Citation `Korotchenkov1995' on page 1 undefined on input line 51
+.
+
+
+LaTeX Warning: Citation `Ostapenko1995' on page 1 undefined on input line 51.
+
+
+LaTeX Warning: Citation `Olikh2009Sem' on page 1 undefined on input line 51.
+
+
+LaTeX Warning: Citation `Zaver:2008' on page 1 undefined on input line 52.
+
+
+LaTeX Warning: Citation `Mirsagatov' on page 1 undefined on input line 52.
+
+
+LaTeX Warning: Citation `Ostapenko1999' on page 1 undefined on input line 53.
+
+
+LaTeX Warning: Citation `Ostrovskii2001' on page 1 undefined on input line 53.
+
+
+LaTeX Warning: Citation `OlikhJAP' on page 1 undefined on input line 53.
+
+
+LaTeX Warning: Citation `Korotchenkov1995' on page 1 undefined on input line 53
+.
+
 [1
 
 ]
@@ -73,54 +147,75 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 55.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 55.
- [2]
+
+
+LaTeX Warning: Citation `CDLR:JAP' on page 2 undefined on input line 60.
+
+
+LaTeX Warning: Citation `CDLR:JAP1995' on page 2 undefined on input line 60.
+
+[2]
 File: olikhFig1.eps Graphic file (type eps)
  <olikhFig1.eps>
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 113.
+(Font)              <7> on input line 111.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 113.
+(Font)              <5> on input line 111.
+Missing character: There is no – in font cmr12!
+
+
+LaTeX Warning: Citation `Schroder2006' on page 3 undefined on input line 120.
+
+
+LaTeX Warning: Citation `Markvart' on page 3 undefined on input line 120.
+
+
+LaTeX Warning: Citation `Schroder2006' on page 3 undefined on input line 127.
+
+
+LaTeX Warning: Citation `DEWang' on page 3 undefined on input line 128.
+
+Missing character: There is no – in font cmr12!
+
+LaTeX Warning: Citation `Ostapenko1995' on page 3 undefined on input line 154.
+
+
+LaTeX Warning: Citation `Olikh:Ultras' on page 3 undefined on input line 154.
+
+
+LaTeX Warning: Citation `Ostrovskii2001' on page 3 undefined on input line 154.
+
+
+[3]
+File: olikhFig2abcd.eps Graphic file (type eps)
+ <olikhFig2abcd.eps>
 Missing character: There is no – in font cmr12!
 Missing character: There is no – in font cmr12!
- [3]
+ [4]
+
+LaTeX Warning: Citation `Rhoderick1988' on page 5 undefined on input line 240.
+
+
+LaTeX Warning: Citation `Aboelfotoh' on page 5 undefined on input line 241.
+
+
+LaTeX Warning: Citation `Zhua' on page 5 undefined on input line 241.
+
 Missing character: There is no – in font cmr12!
-Missing character: There is no – in font cmr12!
-Missing character: There is no – in font cmr12!
- [4] (olikh.bbl
-Underfull \hbox (badness 3354) in paragraph at lines 22--28
-[][]\OT1/cmr/m/n/10 Lindroos J, Savin H.  Re-view of light-induced degra-da-tio
-n in crys-talline sil-i-con so-
- []
-
-
-Underfull \hbox (badness 5637) in paragraph at lines 22--28
-\OT1/cmr/m/n/10 lar cells.  \OT1/cmr/m/it/10 So-lar En-ergy Ma-te-ri-als & So-l
-ar Cells \OT1/cmr/bx/n/10 147\OT1/cmr/m/n/10 , 2016: 115--126.  DOI:
- []
-
-
-Underfull \hbox (badness 1960) in paragraph at lines 39--45
-[][]\OT1/cmr/m/n/10 Hoffmann S, Koehl M.  Effect of humidity and temperature on
- the potential-induced
- []
-
-
-Underfull \hbox (badness 3557) in paragraph at lines 61--67
-\OT1/cmr/m/it/10 Applied Physics A: Materials Science & Processing \OT1/cmr/bx/
-n/10 69\OT1/cmr/m/n/10 (2), 1999: 225--232.  DOI:
- []
-
 [5]
-Missing character: There is no – in font cmr10!
-Missing character: There is no – in font cmr10!
-) [6] (olikh.aux) ) 
-Here is how much of TeX's memory you used:
- 863 strings out of 495031
- 8029 string characters out of 3177571
- 67581 words of memory out of 3000000
- 4157 multiletter control sequences out of 15000+200000
- 8458 words of font info for 30 fonts, out of 3000000 for 9000
- 198 hyphenation exceptions out of 8191
- 25i,8n,19p,250b,331s stack positions out of 5000i,500n,10000p,200000b,50000s
+No file olikh.bbl.
+[6] (olikh.aux)
 
-Output written on olikh.dvi (6 pages, 27400 bytes).
+LaTeX Warning: There were undefined references.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 858 strings out of 495031
+ 7998 string characters out of 3177571
+ 67581 words of memory out of 3000000
+ 4154 multiletter control sequences out of 15000+200000
+ 8112 words of font info for 29 fonts, out of 3000000 for 9000
+ 198 hyphenation exceptions out of 8191
+ 25i,9n,21p,263b,331s stack positions out of 5000i,500n,10000p,200000b,50000s
+
+Output written on olikh.dvi (6 pages, 19736 bytes).
