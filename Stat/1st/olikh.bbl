@@ -152,6 +152,13 @@ Mirsagatov SA, Sapaeva IB, Nazarov Z.
 \newblock \emph{Inorganic Materials} \textbf{51}(1), 2015: 1--4.
 \newblock \doi{10.1134/S0020168515010148}.
 
+\bibitem{CDLR:JAP1995}
+Schenka A, Krumbein U.
+\newblock Coupled defect-level recombination: Theory and application to
+  anomalous diode characteristics.
+\newblock \emph{Journal of Applied Physics} \textbf{78}(5), 1995: 3185--3192.
+\newblock \doi{10.1063/1.360007}.
+
 \bibitem{CDLR:JAP}
 Steingrube S, Breitenstein O, Ramspeck K, Glunz S, Schenk A, Altermatt PP.
 \newblock Explanation of commonly observed shunt currents in c-Si solar cells
@@ -159,13 +166,6 @@ Steingrube S, Breitenstein O, Ramspeck K, Glunz S, Schenk A, Altermatt PP.
   approximation.
 \newblock \emph{Journal of Applied Physics} \textbf{110}(1), 2011: 014515.
 \newblock \doi{10.1063/1.3607310}.
-
-\bibitem{CDLR:JAP1995}
-Schenka A, Krumbein U.
-\newblock Coupled defect-level recombination: Theory and application to
-  anomalous diode characteristics.
-\newblock \emph{Journal of Applied Physics} \textbf{78}(5), 1995: 3185--3192.
-\newblock \doi{10.1063/1.360007}.
 
 \bibitem{Schroder2006}
 Schroder DK.
@@ -220,23 +220,39 @@ Kaminski A, Marchand JJ, Omari HE, Laugier A, Le QN, Sarti D.
   Conference}. 1996, 573--576.
 \newblock Washington, DC, USA.
 
-\bibitem{Rhoderick1988}
-Rhoderick EH, Williams RH.
-\newblock \emph{Metal Semiconductor Contacts}.
-\newblock Oxford: Clarendon Press, second edition, 1988.
+\bibitem{CDLR:SSP}
+Breitenstein O, Bauer J, Altermatt PP, Ramspeck K.
+\newblock Influence of Defects on Solar Cell Characteristics.
+\newblock \emph{Solid State Phenomena} \textbf{156--158}, 2010: 1--10.
+\newblock \doi{10.4028/www.scientific.net/SSP.156-158.1}.
 
-\bibitem{Aboelfotoh}
-Aboelfotoh M.
-\newblock Electrical characteristics of {W}--{S}i(100) {S}chottky barrier
-  junctions.
-\newblock \emph{J Appl Phys} \textbf{66}(1), 1989: 262--272.
-\newblock \doi{10.1063/1.343867}.
+\bibitem{Bube}
+Fahrenbruch A, Bube R.
+\newblock \emph{Fundamentals of Solar Cells: Photovoltaic Solar Energy
+  Conversion}.
+\newblock Academic Press, 1983.
 
-\bibitem{Zhua}
-Zhua S, Meirhaeghea RLV, Detaverniera C, Rub GP, Lib BZ, Cardon F.
-\newblock A {BEEM} study of the temperature dependence of the barrier height
-  distribution in {P}t{S}i/n--{S}i {S}chottky diodes.
-\newblock \emph{Solid State Communications} \textbf{112}(11), 1999: 611--615.
-\newblock \doi{10.1016/S0038-1098(99)00404-4}.
+\bibitem{Sachenko}
+Sachenko A, Kostylyov V, Korkishko R, Kulish M, Sokolovskyi I, Vlasiuk V,
+  Khomenko D.
+\newblock Peculiarities of the temperature dependences of silicon solar cells
+  illuminated with light simulator.
+\newblock \emph{Semiconductor Physics, Quantum Electronics \& Optoelectronics}
+  \textbf{18}(3), 2015: 259--266.
+\newblock \doi{10.15407/spqeo18.03.259}.
+
+\bibitem{MirzadeJAP2011}
+Mirzade F.
+\newblock Elastic wave propagation in a solid layer with laser-induced point
+  defects.
+\newblock \emph{J Appl Phys} \textbf{110}(6), 2011: 064906.
+\newblock \doi{10.1063/1.3633524}.
+
+\bibitem{PeleshchakUJF2016}
+Peleshchak R, Kuzyk O, Dan'kiv O.
+\newblock Formation of Periodic Structures under the Influence of an Acousti
+  Wave in Semiconductors with a Two-Component Defect Subsystem.
+\newblock \emph{Ukr J Phys} \textbf{61}(8), 2016: 741--746.
+\newblock \doi{10.15407/ujpe61.08.0741}.
 
 \end{thebibliography}

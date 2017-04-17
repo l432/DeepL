@@ -57,7 +57,7 @@ Ultrasound has been found to result the decrease of carriers lifetime and, accor
 The USWs intensity did not exceed $0.5$~W/cm$^2$ and the full recovery of cell characteristics was observed after the stop of an acoustic wave propagation.
 Dependencies of such sound induced degradation on USW type and intensity are presented.
 %Features of such sound induced degradation are presented.
-The findings are discussed by using model of coupled defect level recombination \cite{CDLR:JAP,CDLR:JAP1995}.
+The findings are discussed by using model of coupled defect level recombination \cite{CDLR:JAP1995,CDLR:JAP}.
 
 
 
@@ -149,7 +149,7 @@ Therefore it is expected that $J_{sc}\approx J_{ph}$.
 Really such relation was observed for the $J_{ph}$, which was obtained by whole $I$--$V$ curve fitting, and $J_{sc}$, which was obtained as a point of intersection of a $I$--$V$ curve with a current axis.
 
 
-In the USL case, the acoustic waves were exited with help of a piezoelectric transducer and were injected in the samples from the base side.
+In the USL case, the acoustic waves were exited with help of a piezoelectric transducer and were injected in the samples from the base side in the [111]-direction.
 The longitudinal (L), $8.0$~MHz in the frequency $f_{U\!S}$ and $0.18$~W/cm$^2$ in the intensity $W_{U\!S}$, and transverse (T, $f_{U\!S}=4.2$~MHz, $W_{U\!S}\leq0.4$~W/cm$^2$) waves were used.
 It was reported previously \cite{Ostapenko1995,Olikh:Ultras,Ostrovskii2001} that a characteristic time of change in the silicon structure parameters under the ultrasound action  did not exceed $2\cdot10^3$~s.
 In order to wait till the acoustically induced transitional period the following experimental procedure was used.
@@ -197,8 +197,8 @@ Sample& \multicolumn{3}{c}{SC-R4}&\multicolumn{3}{c}{SC-R15}\\
 Wave type& L & T &  T & L & T &  T\\
 $W_{U\!S}$  (W/cm$^2$) &0.18&0.22&0.40&0.18&0.19&0.40\\
 \hline
-$\Delta n$ ($\pm0.007$) &0.016&0.024&0.028&0.010&0.022&0.043\\
-$\varepsilon_{\tau g}$ ($\pm3$\%)&-12&-14&-17&-5&-18&-30\\
+$\Delta n$ ($\pm0.010$) &0.016&0.024&0.028&0.010&0.022&0.043\\
+$\varepsilon_{\tau g}$ ($\pm5$\%)&-12&-14&-17&-5&-18&-30\\
 $\varepsilon_{\tau r}$ ($\pm12$\%)&-11&-43&-58&-13&-71&-85\\
 \hline
 \hline
@@ -218,14 +218,58 @@ However, this theory is unable to explain the magnitude of the recombination cur
 The high ideality factor was attributed to deep-level-assisted tunneling \cite{Shah,Kaminski_n} too.
 But according to this model, the ideality factor is  fairly  constant  versus temperature, whereas such dependencies are observed experimentally --- see \Fref{figDUS}(b).
 
-On the other hand, large $n$ and small $\tau_{g}$ can be explained by the model of coupled defect level recombination \cite{CDLR:JAP,CDLR:JAP1995}.
-This model provides a rapid  direct  charge  transfer  between  defect levels therefore recombination cannot be described by the SRH theory.
-Initially \cite{CDLR:JAP1995}, it was suggested, that at least one shallow level participates.
+At the same time, the experimentally observed large $n$ and small $\tau_{g}$ can be explained by the model of coupled defect level recombination \cite{CDLR:JAP,CDLR:JAP1995}.
+This model provides a rapid  direct  charge  transfer  between  defect levels.
+Initially \cite{CDLR:JAP1995}, it was suggested, that at least one shallow level participated.
 Subsequently the model of the donor-acceptor-pair (DAP) recombination (via deep levels) was proposed \cite{CDLR:JAP}.
 
-The findings are discussed by using model of coupled defect level recombination \cite{CDLR:JAP,CDLR:JAP1995}.
+According to the DAP recombination model both $n$ and $\tau_{g}$ depend on the hole and electron capture cross sections ($\sigma_p$ and $\sigma_n$) as well as on coupling parameter $r_{DA}$.
+By-turn, $\sigma_{n,p}$ and $r_{DA}$ depend on the distance between donor and acceptor $r$ and in the simplified case can be expressed as \cite{CDLR:JAP}:
+\begin{eqnarray}
+\label{eqSigma}
+\sigma_{n,p} = \sigma_{n,p}^0\left(\frac{r}{r_0}\right)^2\,,\\
+\label{eqRda}
+r_{DA} = c_{DA}^0N_DN_AL(r)=c_{DA}^0N_DN_A\left[1+\frac{r}{a_0}+\frac{1}{3}\left(\frac{r}{a_0}\right)^2\right]\exp\left(-\frac{r}{a_0}\right)\,,
+\end{eqnarray}
+where
+$\sigma_{n,p}^0$ are capture the cross sections of the isolated donor and acceptor,
+$N_D$ and $N_A$ are the donor and acceptor concentration,
+$a_0$ is the defect Bohr radius,
+$r_0$ and $c_{DA}^0$ are some constant.
+In particular \cite{CDLR:JAP1995}, if no carrier  exchange  between  the  donor level  and  the valence  band as well as between the  acceptor level  and  the conduction band are assumed then the total recombination rate
+\begin{equation}
+\label{eqR}
+R=R_{12}-\sqrt{R_{12}^{\,2}-\frac{np-n_i^2}{\tau_{D,n}\tau_{A,p}(1-\epsilon)}}
+\end{equation}
+with
+\begin{equation}
+\label{eqR12}
+R_{12}=\frac{(n+n_D)(p+p_A)}{2r_{DA}\tau_{D,n}\tau_{A,p}(1-\epsilon)}+\frac{\tau_{D,n}(p+p_D)+\tau_{A,p}(n+n_A)}{2\tau_{D,n}\tau_{A,p}(1-\epsilon)}\,.
+\end{equation}
+$\tau_{D,n}\sim 1/\sigma_{n}^{0,D}$ and $\tau_{A,p}\sim 1/\sigma_{p}^{0,A}$ are the electron and hole  lifetimes  for  the non-coupled donor and acceptor respectively,
+$n_D$, $p_D$, $n_A$, $p_A$ and $\epsilon$ depend on the energy positions and degeneracy  factors  of  the defect levels \cite{CDLR:JAP1995}.
+It is known, that $\tau_{g}\sim R^{-1}$.
+Unfortunately, the functional relation between ideality factor and DAP recombination parameters is absent,
+but $n$ is shown \cite{CDLR:JAP1995,CDLR:SSP} to increase with the $r$ and $r_{DA}$ decrement and with the $\sigma_{n,p}$ increment.
 
-in Table~\ref{tab}.
+The capture cross section is known \cite{Bube,Sachenko} to depend on temperature as $T^{-1}$ up to $T^{-3}$ for the attractive centers.
+On our opinion, the decrease of $\sigma_{n}^{0,D}$ and $\sigma_{p}^{0,A}$ determines the observed temperature dependencies of both $n$ and $\tau_{g}$.
+
+
+On the other hand, according to \cite{MirzadeJAP2011,PeleshchakUJF2016}, the force acting on the point defect during USL can be expressed as
+\begin{equation}
+\label{eqFd}
+F_d=K\,\Delta\Omega_d\frac{\partial \xi(x,t)}{\partial x}\,,
+\end{equation}
+where $K$ is the bulk elasticity modulus,
+$\Delta\Omega_d$ is volume elastic strain caused by the relaxation of the defect volume ($\Delta\Omega_d<0$ and $\Delta\Omega_d>0$ for the defects
+whose volumes are smaller or greater than the volumes of the matrix atoms, respectively),
+$\xi$ is the crystal lattice deformation,
+and acoustic wave propagates along $x$ direction.
+$\partial \xi(x,t)/\partial x$ linear depend on the deformation amplitude $\xi_0=\sqrt{2W_{U\!S}/\rho_{Si}\,\vartheta_{U\!S}^3}$ 
+(where $\rho_{Si}=2.33$~g/m$^3$ is the silicon density, $\vartheta_{U\!S}$ is the ultrasound velocity, $\vartheta_{U\!S}^L=9850$~m/s,  $\vartheta_{U\!S}^T=5840$~m/s)
+
+
 
 
 \section{Conclusion}
