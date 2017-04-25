@@ -150,7 +150,9 @@ Really such relation was observed for the $J_{ph}$, which was obtained by whole 
 
 
 In the USL case, the acoustic waves were exited with help of a piezoelectric transducer and were injected in the samples from the base side in the [111]-direction.
-The longitudinal (L), $8.0$~MHz in the frequency $f_{U\!S}$ and $0.18$~W/cm$^2$ in the intensity $W_{U\!S}$, and transverse (T, $f_{U\!S}=4.2$~MHz, $W_{U\!S}\leq0.4$~W/cm$^2$) waves were used.
+The longitudinal (L-USL) and transverse (T-USL)  waves were used.
+The ultrasound frequency $f_{U\!S}$ and intensity $W_{U\!S}$ were $8.0$~MHz and $0.18$~W/cm$^2$ (in the L-USL case) and $4.2$~MHz and up to $0.4$~W/cm$^2$ (in the T-USL case).
+%The longitudinal (L), $8.0$~MHz in the frequency $f_{U\!S}$ and $0.18$~W/cm$^2$ in the intensity $W_{U\!S}$, and transverse (T, $f_{U\!S}=4.2$~MHz, $W_{U\!S}\leq0.4$~W/cm$^2$) waves were used.
 It was reported previously \cite{Ostapenko1995,Olikh:Ultras,Ostrovskii2001} that a characteristic time of change in the silicon structure parameters under the ultrasound action  did not exceed $2\cdot10^3$~s.
 In order to wait till the acoustically induced transitional period the following experimental procedure was used.
 After USL start the sample was kept at room temperature during 60 min and then the $I$--$V$ measurements and the sample heating were started.
@@ -167,9 +169,9 @@ The samples were labeled as SC-R4 and SC-R15 respectively.
 \Fref{figDUS}(a) and \Fref{figDUS}(b) show the USL influence on SCR carrier lifetime and ideality factor respectively.
 One can see that USL leads to $\tau_{g}$ decrease and $n$ increase.
 The relative change of SCR carrier lifetime $\varepsilon_{\tau g}$ and absolute change of ideality factor $\Delta n$ does not depend practically on the temperature over the investigated range and are presented in Table~\ref{tab}.
-The extent of acoustically induced effect is weakly depend on both ultrasound intensity and wave type and becomes more apparent in the sample with a low $R_{sh}$ value.
-The longitudinal and transverse USL differed by $f_{U\!S}$ too, but it was shown previously \cite{Olikh2011Sem,Olikh:Ultras2016}, that ultrasound influence on the silicon structures had arose with wave frequency.
-$f_{U\!S}$ of the longitudinal USL (L-USL) is greater than in the case of transverse wave using (T-USL) , but  T-USL is more effective (see \Fref{figDUS}, Table~\ref{tab}).
+The extent of acoustically induced effect is weakly depend on both ultrasound intensity and wave type and becomes more apparent in the sample with a high $R_{sh}$ value.
+The L-USL and T-USL differed by $f_{U\!S}$ too, but it was shown previously \cite{Olikh2011Sem,Olikh:Ultras2016}, that ultrasound influence on the silicon structures had arose with wave frequency.
+$f_{U\!S}$ of the L-USL is greater than in the case of transverse wave using, but  T-USL is more effective (see \Fref{figDUS}, Table~\ref{tab}).
 Therefore the crucial factor of the ultrasound influence on the SSC parameters is the wave type.
 
 
@@ -196,6 +198,7 @@ $W_{U\!S}$,W/cm$^2$: 0.18 (2, 6), 0.19 (3), 0.22 (7), 0.40 (4, 8).
 Sample& \multicolumn{3}{c}{SC-R4}&\multicolumn{3}{c}{SC-R15}\\
 Wave type& L & T &  T & L & T &  T\\
 $W_{U\!S}$  (W/cm$^2$) &0.18&0.22&0.40&0.18&0.19&0.40\\
+$\xi_0$  ($10^{-6}$) &1.3&3.1&4.2&1.3&2.8&4.2\\
 \hline
 $\Delta n$ ($\pm0.010$) &0.016&0.024&0.028&0.010&0.022&0.043\\
 $\varepsilon_{\tau g}$ ($\pm5$\%)&-12&-14&-17&-5&-18&-30\\
@@ -218,7 +221,7 @@ However, this theory is unable to explain the magnitude of the recombination cur
 The high ideality factor was attributed to deep-level-assisted tunneling \cite{Shah,Kaminski_n} too.
 But according to this model, the ideality factor is  fairly  constant  versus temperature, whereas such dependencies are observed experimentally --- see \Fref{figDUS}(b).
 
-At the same time, the experimentally observed large $n$ and small $\tau_{g}$ can be explained by the model of coupled defect level recombination \cite{CDLR:JAP,CDLR:JAP1995}.
+At the same time, the experimentally observed large $n$ and small $\tau_{g}$ can be explained by the model of coupled defect level recombination \cite{CDLR:JAP1995,CDLR:JAP}.
 This model provides a rapid  direct  charge  transfer  between  defect levels.
 Initially \cite{CDLR:JAP1995}, it was suggested, that at least one shallow level participated.
 Subsequently the model of the donor-acceptor-pair (DAP) recombination (via deep levels) was proposed \cite{CDLR:JAP}.
@@ -227,15 +230,15 @@ According to the DAP recombination model both $n$ and $\tau_{g}$ depend on the h
 By-turn, $\sigma_{n,p}$ and $r_{DA}$ depend on the distance between donor and acceptor $r$ and in the simplified case can be expressed as \cite{CDLR:JAP}:
 \begin{eqnarray}
 \label{eqSigma}
-\sigma_{n,p} = \sigma_{n,p}^0\left(\frac{r}{r_0}\right)^2\,,\\
+\sigma_{n,p} (r)= \sigma_{n,p}^0\left(\frac{r}{C_r}\right)^2\,,\\
 \label{eqRda}
-r_{DA} = c_{DA}^0N_DN_AL(r)=c_{DA}^0N_DN_A\left[1+\frac{r}{a_0}+\frac{1}{3}\left(\frac{r}{a_0}\right)^2\right]\exp\left(-\frac{r}{a_0}\right)\,,
+r_{DA} (r)= c_{DA}^0N_DN_AL(r)=c_{DA}^0N_DN_A\left[1+\frac{r}{a_0}+\frac{1}{3}\left(\frac{r}{a_0}\right)^2\right]\exp\left(-\frac{r}{a_0}\right)\,,
 \end{eqnarray}
 where
 $\sigma_{n,p}^0$ are capture the cross sections of the isolated donor and acceptor,
 $N_D$ and $N_A$ are the donor and acceptor concentration,
 $a_0$ is the defect Bohr radius,
-$r_0$ and $c_{DA}^0$ are some constant.
+$C_r$ and $c_{DA}^0$ are some constant.
 In particular \cite{CDLR:JAP1995}, if no carrier  exchange  between  the  donor level  and  the valence  band as well as between the  acceptor level  and  the conduction band are assumed then the total recombination rate
 \begin{equation}
 \label{eqR}
@@ -249,25 +252,45 @@ R_{12}=\frac{(n+n_D)(p+p_A)}{2r_{DA}\tau_{D,n}\tau_{A,p}(1-\epsilon)}+\frac{\tau
 $\tau_{D,n}\sim 1/\sigma_{n}^{0,D}$ and $\tau_{A,p}\sim 1/\sigma_{p}^{0,A}$ are the electron and hole  lifetimes  for  the non-coupled donor and acceptor respectively,
 $n_D$, $p_D$, $n_A$, $p_A$ and $\epsilon$ depend on the energy positions and degeneracy  factors  of  the defect levels \cite{CDLR:JAP1995}.
 It is known, that $\tau_{g}\sim R^{-1}$.
-Unfortunately, the functional relation between ideality factor and DAP recombination parameters is absent,
-but $n$ is shown \cite{CDLR:JAP1995,CDLR:SSP} to increase with the $r$ and $r_{DA}$ decrement and with the $\sigma_{n,p}$ increment.
+Unfortunately, the functional relation between ideality factor and DAP recombination parameters doesn't suggested,
+but $n$ is shown \cite{CDLR:JAP1995,CDLR:SSP} to increase with the $r_{DA}$ and lifetime decrement.
 
-The capture cross section is known \cite{Bube,Sachenko} to depend on temperature as $T^{-1}$ up to $T^{-3}$ for the attractive centers.
-On our opinion, the decrease of $\sigma_{n}^{0,D}$ and $\sigma_{p}^{0,A}$ determines the observed temperature dependencies of both $n$ and $\tau_{g}$.
+DAP model permit to explain the observed temperature dependencies of both $n$ and $\tau_{g}$ -- see \Fref{figDUS}(a) and \Fref{figDUS}(b).
+Actually, the capture cross section of the attractive centers is known \cite{Bube,Sachenko} to depend on temperature as $T^{-1}$ up to $T^{-3}$.
+Therefore $\sigma_{n}^{0,D}$ and $\sigma_{p}^{0,A}$ reduce due to the temperature increase and cause the observed changes of the ideality factor and  carrier lifetime.
 
-
-On the other hand, according to \cite{MirzadeJAP2011,PeleshchakUJF2016}, the force acting on the point defect during USL can be expressed as
+On our opinion, the reversible ultrasound influence is deals with the alteration of the distance between donor and acceptor.
+Really, according to \cite{MirzadeJAP2011,PeleshchakUJF2016}, the force acting on the point defect during USL can be expressed as
 \begin{equation}
 \label{eqFd}
 F_d=K\,\Delta\Omega_d\frac{\partial \xi(x,t)}{\partial x}\,,
 \end{equation}
 where $K$ is the bulk elasticity modulus,
-$\Delta\Omega_d$ is volume elastic strain caused by the relaxation of the defect volume ($\Delta\Omega_d<0$ and $\Delta\Omega_d>0$ for the defects
-whose volumes are smaller or greater than the volumes of the matrix atoms, respectively),
+$\Delta\Omega_d$ is volume elastic strain caused by the relaxation of the defect volume (e.g. $\Delta\Omega_d<0$ and $\Delta\Omega_d>0$ for  vacancies and interstitial atoms, respectively),
 $\xi$ is the crystal lattice deformation,
 and acoustic wave propagates along $x$ direction.
-$\partial \xi(x,t)/\partial x$ linear depend on the deformation amplitude $\xi_0=\sqrt{2W_{U\!S}/\rho_{Si}\,\vartheta_{U\!S}^3}$ 
-(where $\rho_{Si}=2.33$~g/m$^3$ is the silicon density, $\vartheta_{U\!S}$ is the ultrasound velocity, $\vartheta_{U\!S}^L=9850$~m/s,  $\vartheta_{U\!S}^T=5840$~m/s)
+$\partial \xi(x,t)/\partial x$ linearly depends on the deformation amplitude $\xi_0=\sqrt{2W_{U\!S}/\rho_{Si}\,\vartheta_{U\!S}^3}$
+(where $\rho_{Si}=2.33$~g/m$^3$ is the silicon density, 
+$\vartheta_{U\!S}$ is the ultrasound velocity, equals to $9850$~m/s and $5840$~m/s for longitudinal and transverse wave respectively).
+Therefore, a point defect oscillates under USL condition and oscillation amplitude and phase are determined by both defect character and acoustic wave intensity and type.
+
+Let's consider a simplest model, which is shown on \Fref{figModel}.
+Two point defect, donor (D) and acceptor (A) are situated at distance $r_0$.
+During USL defects would vibrate with amplitudes $u_D$ and $u_A$.
+%Two point defect, donor (D) and acceptor (A) vibrates under ultrasound action with amplitudes $u_D$ and $u_A$.
+The amplitudes depend on $\xi_0$, defect elastic strain ($\Delta\Omega_D$ and $\Delta\Omega_A$), defect coupling  and can be different.
+$\delta$ is the phase shift between donor and acceptor vibration.
+If no ultrasound energy absorption by defect is assumed,
+then $\delta$ equals to $0^\circ$ and $180^\circ$ in the case of $\Delta\Omega_D\cdot\Delta\Omega_A>0$ and  $\Delta\Omega_D\cdot\Delta\Omega_A<0$ respectively.
+$\varphi$ is the angle between the defect pair axis and the forced displacement.
+
+In general case,  the distance $r$ between donor and acceptor would not equal to $r_0$ during vibration.
+\Fref{figR2L} shows relative change of capture cross section $\varepsilon_{\sigma}=[\sigma(r)-\sigma(r_0)]/\sigma(r_0)$ and coupling parameter $\varepsilon_{r_{AD}}=[r_{AD}(r)-r_{AD}(r_0)]/r_{AD}(r_0)$.
+$\varepsilon_{\sigma}$ and $\varepsilon_{r_{AD}}$ are averaged over the ultrasound wave period.
+Under simulation 
+(i)~it was assumed, that relaxation time in the recombination sub-system was considerably less than $f_{U\!S}^{-1}$;
+(ii)~the Eqs. (\ref{eqSigma}) and (\ref{eqRda}) were used;
+(iii)~the value $a_0=3.23$~nm from the \cite{CDLR:JAP} was utilized.
 
 
 
