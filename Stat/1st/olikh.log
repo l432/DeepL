@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9) (preloaded format=latex 2015.6.15)  25 APR 2017 14:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=latex 2015.12.6)  27 APR 2017 23:51
 entering extended mode
 **olikh.tex
 (olikh.tex
-LaTeX2e <2015/01/01>
-Babel <3.9l> and hyphenation patterns for 4 languages loaded.
+LaTeX2e <2015/10/01> patch level 2
+Babel <3.9m> and hyphenation patterns for 2 languages loaded.
 (iopart.cls
 Document Class: iopart 1996/06/10 v0.0 IOP Journals LaTeX article class
 (iopart12.clo
@@ -85,20 +85,15 @@ Missing character: There is no – in font cmr12!
  [3]
 File: olikhFig2abcd.eps Graphic file (type eps)
  <olikhFig2abcd.eps> [4] [5] [6]
+File: olikhFig3.eps Graphic file (type eps)
+ <olikhFig3.eps>
+File: olikhFig4ab.eps Graphic file (type eps)
 
-LaTeX Warning: Reference `figModel' on page 7 undefined on input line 278.
-
-
-LaTeX Warning: Reference `figR2L' on page 7 undefined on input line 289.
-
-
-LaTeX Warning: Reference `figLnew' on page 7 undefined on input line 289.
-
-
-LaTeX Warning: Reference `figR2L' on page 7 undefined on input line 303.
-
+<olikhFig4ab.eps>
+File: olikhFig5ab.eps Graphic file (type eps)
+ <olikhFig5ab.eps> [7] [8]
 Missing character: There is no – in font cmr12!
-[7] (olikh.bbl
+ (olikh.bbl
 Underfull \hbox (badness 3354) in paragraph at lines 22--28
 [][]\OT1/cmr/m/n/10 Lindroos J, Savin H.  Re-view of light-induced degra-da-tio
 n in crys-talline sil-i-con so-
@@ -116,27 +111,22 @@ Underfull \hbox (badness 1960) in paragraph at lines 39--45
  the potential-induced
  []
 
-
+[9]
 Underfull \hbox (badness 3557) in paragraph at lines 61--67
 \OT1/cmr/m/it/10 Applied Physics A: Materials Science & Processing \OT1/cmr/bx/
 n/10 69\OT1/cmr/m/n/10 (2), 1999: 225--232.  DOI:
  []
 
 Missing character: There is no – in font cmr10!
-[8]
 Missing character: There is no – in font cmr10!
- [9]) [10] (olikh.aux)
-
-LaTeX Warning: There were undefined references.
-
- ) 
+[10]) [11] (olikh.aux) ) 
 Here is how much of TeX's memory you used:
- 879 strings out of 495031
- 8190 string characters out of 3177571
- 69581 words of memory out of 3000000
- 4172 multiletter control sequences out of 15000+200000
+ 885 strings out of 495020
+ 8276 string characters out of 3178537
+ 69643 words of memory out of 3000000
+ 4206 multiletter control sequences out of 15000+200000
  8458 words of font info for 30 fonts, out of 3000000 for 9000
  198 hyphenation exceptions out of 8191
  25i,9n,19p,263b,331s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on olikh.dvi (10 pages, 41076 bytes).
+Output written on olikh.dvi (11 pages, 43940 bytes).
