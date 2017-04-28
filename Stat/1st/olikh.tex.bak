@@ -76,17 +76,17 @@ Some curves are shown in \Fref{figIV}.
 The classical double-diode model of n$^+$--p SSC $I$--$V$ characteristics expressed in the following form:
 \begin{eqnarray}
 \label{eqIV}
-\nonumber I(V,T)&=&-AJ_{ph}+\frac{qAn_iW}{2\tau_{g}}\left\{\exp \left[\frac{q(V-IR_s)}{nkT}\right]-1\right\}\\
+\nonumber I(V,T)&=&-AJ_{ph}+\frac{qAn_id}{2\tau_{g}}\left\{\exp \left[\frac{q(V-IR_s)}{nkT}\right]-1\right\}\\
 &&+\frac{qAn_i^2}{p_p}\sqrt{\frac{\mu_nkT}{\tau_n}}\left\{\exp \left[\frac{q(V-IR_s)}{kT}\right]-1\right\}+\frac{V-IR_s}{R_{sh}}\,,
 \end{eqnarray}
 where $A$ is the cell area,
 $J_{ph}$ is the photocurrent density,
 $n_i$ is the intrinsic carrier concentration,
 $\tau_{g}$ is the carrier lifetime in the space charge region (SCR),
-$W$ is the  SCR thickness:
+$d$ is the  SCR thickness:
 \begin{equation}
 \label{eqW}
-    W(V,T)=\sqrt{\frac{2 \varepsilon \varepsilon_0(p_p+n_n)}{q p_p n_n}\left[\frac{E_g}{q}-\frac{kT}{q}\ln\left(\frac{N_vN_c}{p_pn_n}\right)-\frac{2kT}{q}-V\right]} \,,
+    d(V,T)=\sqrt{\frac{2 \varepsilon \varepsilon_0(p_p+n_n)}{q p_p n_n}\left[\frac{E_g}{q}-\frac{kT}{q}\ln\left(\frac{N_vN_c}{p_pn_n}\right)-\frac{2kT}{q}-V\right]} \,,
 \end{equation}
 $\varepsilon$ is the permittivity (11.7 for Si),
 $p_p$ and $n_n$ are the majority carrier concentration in the $p$-- and $n$--type regions,
@@ -96,7 +96,7 @@ $n$ is the ideality factor of the nonideal current components,
 $R_s$ and $R_{sh}$ are the series and shunt resistances of the device,
 $\mu_n$ and $\tau_n$ are the electron (minority carrier) mobility and lifetime outside SCR in the diode base.
 The current-voltage  equation that models the solar cell by  an equivalent electrical circuit contains several parameters related to physical phenomena occurring in  the device.
-It is commonly believed that $I_{01}=(qAn_i^2/n_n)\sqrt{\mu_nkT/\tau_n}$ is closely related to recombination in the quasi-neutral region, while $I_{0n}=(qAWn_i/2\tau_{g})$ reflects the overall recombination in the SCR.
+It is commonly believed that $I_{01}=(qAn_i^2/n_n)\sqrt{\mu_nkT/\tau_n}$ is closely related to recombination in the quasi-neutral region, while $I_{0n}=(qAdn_i/2\tau_{g})$ reflects the overall recombination in the SCR.
 
 \begin{figure}
 \begin{center}
@@ -202,7 +202,8 @@ $u_{U\!S}$  (nm) &0.3&0.7&0.9&0.3&0.6&0.9\\
 \hline
 $\Delta n$ ($\pm0.010$) &0.016&0.024&0.028&0.010&0.022&0.043\\
 $\varepsilon_{\tau g}$ ($\pm5$\%)&-12&-14&-17&-5&-18&-30\\
-$\varepsilon_{\tau r}$ ($\pm12$\%)&-11&-43&-58&-13&-71&-85\\
+$\varepsilon_{\tau n}$ ($\pm12$\%)&-11&-43&-58&-13&-71&-85\\
+$K_{U\!S}$ ($10^{6}$ W/cm$^{2}$s$\pm12$\%)&0.2&\multicolumn{2}{c}{1.0}&0.3&\multicolumn{2}{c}{6.5}\\
 \hline
 \hline
 \end{tabular}
@@ -210,6 +211,8 @@ $\varepsilon_{\tau r}$ ($\pm12$\%)&-11&-43&-58&-13&-71&-85\\
 \end{center}
 \end{table}
 
+
+Initially, we want to stress, that reversibility of the acoustically driven effects testifies that ultrasound doesn't make change in defect concentration as well as doesn't cause defect diffusion.
 Before the causes of ultrasound influence would be discussed, the recombination mechanism must be identified.
 Firstly the large ideality factor and small carrier lifetime (about $10^{-8}$~s at room temperature) must be accentuated.
 An ideality factor larger than 2 cannot be explained by classical  SRH-theory.
@@ -258,6 +261,8 @@ but $n$ is shown \cite{CDLR:JAP1995,CDLR:SSP} to increase with the $r_{DA}$ and 
 DAP model permit to explain the observed temperature dependencies of both $n$ and $\tau_{g}$ -- see \Fref{figDUS}(a) and \Fref{figDUS}(b).
 Actually, the capture cross section of the attractive centers is known \cite{Bube,Sachenko} to depend on temperature as $T^{-1}$ up to $T^{-3}$.
 Therefore $\sigma_{n}^{0,D}$ and $\sigma_{p}^{0,A}$ reduce due to the temperature increase and cause the observed changes of the ideality factor and  carrier lifetime.
+In addition, the difference in initial $\tau_{g}$ and $n$ values for SC-R15 and SC-R4 (\Fref{figDUS},(a),(b) curves 1 and 5) can be deal with large distance between coupled defects.
+
 
 On our opinion, the reversible ultrasound influence is deals with the alteration of the distance between donor and acceptor.
 Really, according to \cite{MirzadeJAP2011,PeleshchakUJF2016}, the force acting on the point defect during USL can be expressed as
@@ -323,7 +328,7 @@ Under simulation
 (iv)~the chosen $u_D$ and $u_A$ values were commensurate with the atom displacement $u_{U\!S}$ in acoustic wave (see Table~\ref{tab}).
 Simulations show that the extent of ultrasound influence on both $r_{DA}$ and $\sigma$ increases with $r_0$ decrease.
 In simple cases $\delta=0^\circ$ or $\delta=180^\circ$,
-the amplitude dependencies of $\varepsilon_{\sigma}$ and $\varepsilon_{r_{DA}}$ are determined by $|u_D-u_A|$ and $(u_D+u_A)$ respectively. 
+the amplitude dependencies of $\varepsilon_{\sigma}$ and $\varepsilon_{r_{DA}}$ are determined by $|u_D-u_A|$ and $(u_D+u_A)$ respectively.
 In particular
 \begin{equation}
 \label{eqEpsSig}
@@ -335,12 +340,48 @@ In particular
 AI alteration of coupling parameter is more complicated and sign of $\varepsilon_{r_{DA}}$ depends on $\varphi$ and $r_0$ - see \Fref{figR2L}(b) and \Fref{figLnew}.
 But in the case of low $r_0/a_0$ value, DAP recombination is expected \cite{CDLR:JAP1995,CDLR:JAP} to be effective and the AI $r_{DA}$ reduction is forecasted by \Fref{figLnew} even through  $\varphi=0^\circ$.
 
-According to the DAP recombination theory,  the $\sigma$ increase and the $r_{DA}$ decrease must cause a lifetime reduction and an ideality factor rise.
+According to the DAP recombination theory,  $\sigma$ increase and the $r_{DA}$ decrease must cause a lifetime reduction and an ideality factor rise.
 Just so effects are observed under USL condition.
 Under equal $W_{{U\!S}}$ value conditions T-USL is more effective due to the larger $\varepsilon_{U\!S}$ value (see Table~\ref{tab}).
-In addition, initial $\tau_{g}$ and $n$ values in sample SC-R15 is greater than in sample SC-R4 -- see \Fref{figDUS},(a-b) curves 1 and 5.
-The
+As mentioned above, the $r_0$ is probably smaller in SC-R15 than in SC-R4.
+On our opinion, it is a reason of the more remarkable AI effect in SC-R15.
 
+\subsection{Ultrasound influence on recombination in the SSC base}
+
+\Fref{figDUS}(c) shows the USL influence on the minority carrier lifetime in the $p$--region of SSC.
+One can see that $\tau_n$ decreases down to 20\% of its initial value under ultrasound action.
+The relative change of an electron lifetime $\varepsilon_{\tau n}$ is presented in Table~\ref{tab}.
+
+Ordinary the lifetime reduction under radiation action is described by the Messenger–-Spratt equation \cite{Markvart}:
+\begin{equation}
+\label{eqMS}
+\frac{1}{\tau_n}=\frac{1}{\tau_{n0}}+K\Phi\,,
+\end{equation}
+where $\tau_{n0}$ is the minority carrier lifetime in the unirradiated cell, 
+$\Phi$f is the integrated flux, 
+and $K$ is a lifetime damage constant characteristic for the material and the type of irradiation.
+The dependencies of reciprocal lifetime on ultrasound intensity is shown on \Fref{figMS}.
+As one can recognize, the linear dependence of $1/\tau_n$ on $W_{{U\!S}}$  is observed.
+Therefore the modified Messenger–-Spratt equation can be used to describe the AI reversible change of the lifetime:
+\begin{equation}
+\label{eqMS_Us}
+\frac{1}{\tau_n}=\frac{1}{\tau_{n0}}+K_{U\!S}W_{{U\!S}}\,,
+\end{equation}
+where $\tau_{n0}$ is the lifetime without USL condition and
+$K_{U\!S}$ characterizes ultrasound influence and depends on acoustic wave type and sample state.
+The defined $K_{U\!S}$ values are listed in Table~\ref{tab}.
+
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=7.5cm]{olikhFig6}%
+\end{center}
+\caption{\label{figMS}
+Dependencies of reciprocal electron lifetime in the SSC base on ultrasound intensity for SC-R4 (circles, left axis) and SC-R15 (squares, right axis) at 320~K.
+Symbol filling is defined by the intensity and type of ultrasound waves and coincides with \Fref{figDUS} notation.
+Lines is linear fitting of T-USL data.
+}%
+\end{figure}
 
 
 \section{Conclusion}
