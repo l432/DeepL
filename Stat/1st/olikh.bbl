@@ -22,8 +22,7 @@ Schmidt J, Bothe K, Macdonald D, Adey J, Jones R, Palmer D.
 Lindroos J, Savin H.
 \newblock Review of light-induced degradation in crystalline silicon solar
   cells.
-\newblock \emph{Solar Energy Materials \& Solar Cells} \textbf{147}, 2016:
-  115--126.
+\newblock \emph{Sol Energy Mater Sol Cells} \textbf{147}, 2016: 115--126.
 \newblock \doi{http://dx.doi.org/10.1016/j.solmat.2015.11.047}.
 
 \bibitem{PID:SEMSC}
@@ -31,8 +30,7 @@ Naumann V, Lausch D, Hahnel A, Bauer J, Breitenstein O, Graff A, Werner M,
   Swatek S, Grober S, Bagdahn J, Hagendorf C.
 \newblock Explanation of potential-induced degradation of the shunting type by
   Na decoration of stacking faults in Si solar cells.
-\newblock \emph{Solar Energy Materials \& Solar Cells} \textbf{120}, 2014:
-  383--389.
+\newblock \emph{Sol Energy Mater Sol Cells} \textbf{120}, 2014: 383--389.
 \newblock \doi{10.1016/j.solmat.2013.06.015}.
 
 \bibitem{PID:PP}
@@ -47,8 +45,7 @@ Hoffmann S, Koehl M.
 Bhat S, Rao A, Krishnan S, Sanjeev G, Puthanveettil SE.
 \newblock A study on the variation of c-Si solar cell parameters under 8 MeV
   electron irradiation.
-\newblock \emph{Solar Energy Materials \& Solar Cells} \textbf{120}, 2014:
-  191--196.
+\newblock \emph{Sol Energy Mater Sol Cells} \textbf{120}, 2014: 191--196.
 \newblock \doi{10.1016/j.solmat.2013.08.043}.
 
 \bibitem{Karazhanov}
@@ -167,6 +164,13 @@ Steingrube S, Breitenstein O, Ramspeck K, Glunz S, Schenk A, Altermatt PP.
 \newblock \emph{Journal of Applied Physics} \textbf{110}(1), 2011: 014515.
 \newblock \doi{10.1063/1.3607310}.
 
+\bibitem{ni:Green}
+Sproul AB, Green MA.
+\newblock Intrinsic carrier concentration and minority-carrier mobility of
+  silicon from 77 to 300~K.
+\newblock \emph{J Appl Phys} \textbf{73}(3), 1993: 1214--1225.
+\newblock \doi{10.1063/1.353288}.
+
 \bibitem{Schroder2006}
 Schroder DK.
 \newblock \emph{Semiconductor Material and Device Characterization}.
@@ -254,5 +258,83 @@ Peleshchak R, Kuzyk O, Dan'kiv O.
   Wave in Semiconductors with a Two-Component Defect Subsystem.
 \newblock \emph{Ukr J Phys} \textbf{61}(8), 2016: 741--746.
 \newblock \doi{10.15407/ujpe61.08.0741}.
+
+\bibitem{CDLR:R2}
+Thomas DG, Hopfield J, Augistyniak WM.
+\newblock Kinetics of Radiative Recombination at Randomly Distributed Donors
+  and Acceptors.
+\newblock \emph{Phys Rev} \textbf{140}(1A), 1965: A202--A220.
+\newblock \doi{10.1103/PhysRev.140.A202}.
+
+\bibitem{Rsh:Breitenstein}
+Breitenstein O, Rakotoniaina JP, Al~Rifai MH, Werner M.
+\newblock Shunt Types in Crystalline Silicon Solar Cells.
+\newblock \emph{Progress in Photovoltaics: Research and Applications}
+  \textbf{12}(7), 2004: 529--538.
+\newblock \doi{10.1002/pip.544}.
+
+\bibitem{TAT:Gopal}
+Gopal V.
+\newblock A new approach to investigate leakage current mechanisms in infrared
+  photodiodes from illuminated current-voltage characteristics.
+\newblock \emph{J Appl Phys} \textbf{116}(8), 2014: 084502.
+\newblock \doi{10.1063/1.4893899}.
+
+\bibitem{Rsh:Baker}
+Baker I, Maxey C.
+\newblock Summary of {H}g{C}d{T}e 2{D} Array Technology in the {U}.{K}.
+\newblock \emph{J Electron Mater} \textbf{30}(6), 2001: 682--689.
+\newblock \doi{10.1007/BF02665856}.
+
+\bibitem{Rsh:Gopal2003}
+Gopal V, Gupta S.
+\newblock Effect of Dislocations on the Zero-Bias Resistance-Area Product,
+  Quantum Efficiency, and Spectral Response of {LWIR} {H}g{C}d{T}e Photovoltaic
+  Detectors.
+\newblock \emph{IEEE Trans Electron Devices} \textbf{50}(5), 2003: 1220--1226.
+\newblock \doi{10.1109/TED.2003.813230}.
+
+\bibitem{Rsh:Gopal2004}
+Gopal V, Gupta S.
+\newblock Contribution of Dislocations to the Zero-Bias Resistance-Area Product
+  of {LWIR} {H}g{C}d{T}e Photodiodes at Low Temperatures.
+\newblock \emph{IEEE Trans Electron Devices} \textbf{51}(7), 2004: 1078--1083.
+\newblock \doi{10.1109/TED.2004.829857}.
+
+\bibitem{RshT}
+Barth N, Jovanovic R, Ahzi S, Khaleel MA.
+\newblock PV panel single and double diode models: Optimization of the
+  parameters and temperature dependence.
+\newblock \emph{Sol Energy Mater Sol Cells} \textbf{148}, 2016: 87--98.
+\newblock \doi{10.1016/j.solmat.2015.09.003}.
+
+\bibitem{Edis:Evans}
+Evans-Freeman J, Emiroglu D, Vernon-Parry K, Murphy J, Wilshaw PR.
+\newblock High resolution deep level transient spectroscopy applied to extended
+  defects in silicon.
+\newblock \emph{J Phys: Condens Matter} \textbf{17}(22), 2005: S2219--S2227.
+\newblock \doi{10.1088/0953-8984/17/22/009}.
+
+\bibitem{Edis:Castaldini}
+Castaldini A, Cavalcoli D, Cavallini A, Pizzini S.
+\newblock Experimental Evidence of Dislocation Related Shallow States in p-Type
+  {S}i.
+\newblock \emph{Phys Rev Lett} \textbf{95}(7), 2005: 076401.
+\newblock \doi{10.1103/PhysRevLett.95.076401}.
+
+\bibitem{Edis:Omling}
+Omling P, Weber ER, Montelius L, Alexander H, Michel J.
+\newblock Electrical properties of dislocations and point defects in
+  plastically deformed silicon.
+\newblock \emph{Phys Rev B} \textbf{32}(10), 1985: 6571--6581.
+\newblock \doi{10.1103/PhysRevB.32.6571}.
+
+\bibitem{Edis:Ogawa}
+Ogawa M, Kamiya S, Izumi H, Tokuda Y.
+\newblock Electronic properties of dislocations introduced mechanically at room
+  temperature on a single crystal silicon surface.
+\newblock \emph{Physica B: Physics of Condensed Matter} \textbf{407}(15), 2012:
+  3034--3037.
+\newblock \doi{doi:10.1016/j.physb.2011.09.139}.
 
 \end{thebibliography}

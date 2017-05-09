@@ -112,16 +112,22 @@ The lines are the fitted curves using Eq.~(\ref{eqIV}).
 \end{figure}
 
 We used Eqs. (\ref{eqIV}) and (\ref{eqW}) to fit the experimental data and the $I_{ph}$ (for illuminated $I$--$V$ curves only), $\tau_g$, $\tau_n$, $n$, $R_{sh}$, and $R_s$ were taken as the  fittings parameters.
-It was supposed that the temperature dependencies of $E_g$ and $\mu_n$ followed an Varshni equation
-\begin{equation}
+It was supposed that $n_i=1.64\times10^{15}\,T^{1.706}\exp(-E_g/2kT)$ \cite{ni:Green} and temperature dependencies of $E_g$ and $\mu_n$ followed Varshni and Caughey--Thomas equations \cite{Schroder2006,Markvart}
+\begin{eqnarray}
 \label{eqEg}
-E_g(T) = 1.169 - 7.021\cdot10^{-4} T^2 /(T + 1108)\,,
-\end{equation}
-and Caughey–Thomas form \cite{Schroder2006,Markvart}
-\begin{equation}
+E_g(T) = 1.169 - 7.021\cdot10^{-4} T^2 /(T + 1108)\,,\\
 \label{eqMu}
 \mu_n(T) = \mu_{min}+\frac{\mu_0}{1+(p_p/N_{ref})^{\zeta}}\,.
-\end{equation}
+\end{eqnarray}
+%\begin{equation}
+%\label{eqEg}
+%E_g(T) = 1.169 - 7.021\cdot10^{-4} T^2 /(T + 1108)\,,
+%\end{equation}
+%and a Caughey--Thomas form \cite{Schroder2006,Markvart}
+%\begin{equation}
+%\label{eqMu}
+%\mu_n(T) = \mu_{min}+\frac{\mu_0}{1+(p_p/N_{ref})^{\zeta}}\,.
+%\end{equation}
 The temperature dependence of the $\mu_{min}$, $\mu_0$, $N_{ref}$ and $\zeta$
 %various parameters in Eq.~(\ref{eqMu})
 has the form $P=P_0(T/300)^{\gamma}$ and parameters value are given in the \cite{Schroder2006}, Table~A8.2.
@@ -164,7 +170,8 @@ The samples were labeled as SC-R4 and SC-R15 respectively.
 
 
 \section{Results and Discussion}
-\subsection{Ultrasound influence on the SCR recombination}
+\subsection{Ultrasound influence on the SCR recombination
+\label{P1}}
 
 \Fref{figDUS}(a) and \Fref{figDUS}(b) show the USL influence on SCR carrier lifetime and ideality factor respectively.
 One can see that USL leads to $\tau_{g}$ decrease and $n$ increase.
@@ -177,10 +184,12 @@ Therefore the crucial factor of the ultrasound influence on the SSC parameters i
 
 \begin{figure}
 \begin{center}
-\includegraphics[width=15cm]{olikhFig2abcd}%
+\includegraphics[width=15cm]{olikhFig2ab}%
 \end{center}
 \caption{\label{figDUS}
-Temperature dependences of SCR carrier lifetime (a), ideality factor (b), base  carrier lifetime (c) and shunt resistance (d) with (curves 2--4 and 6--8) and without (1 and 5) USL of the SC-R15 (squares, curves 1--4) and SC-R4 (circles, curves 5--8).
+%Temperature dependences of SCR carrier lifetime (a), ideality factor (b), base  carrier lifetime (c)
+%and shunt resistance (d) with (curves 2--4 and 6--8) and without (1 and 5) USL of
+Temperature dependences of SCR carrier lifetime (a) and  ideality factor (b) for the SC-R15 (squares, curves 1--4) and SC-R4 (circles, curves 5--8) with (curves 2--4 and 6--8) and without (1 and 5) USL.
 The longitudinal (2, 6) and transverse (3, 4, 7, 8) ultrasound waves were used.
 $W_{U\!S}$,W/cm$^2$: 0.18 (2, 6), 0.19 (3), 0.22 (7), 0.40 (4, 8).
 }%
@@ -200,10 +209,14 @@ $W_{U\!S}$  (W/cm$^2$) &0.18&0.22&0.40&0.18&0.19&0.40\\
 $\xi_{U\!S}$  ($10^{-6}$) &1.3&3.1&4.2&1.3&2.8&4.2\\
 $u_{U\!S}$  (nm) &0.3&0.7&0.9&0.3&0.6&0.9\\
 \hline
-$\Delta n$ ($\pm0.010$) &0.016&0.024&0.028&0.010&0.022&0.043\\
-$\varepsilon_{\tau g}$ ($\pm5$\%)&-12&-14&-17&-5&-18&-30\\
-$\varepsilon_{\tau n}$ ($\pm12$\%)&-11&-43&-58&-13&-71&-85\\
-$K_{U\!S}$ ($10^{6}$ W/cm$^{2}$s$\pm12$\%)&0.2&\multicolumn{2}{c}{1.0}&0.3&\multicolumn{2}{c}{6.5}\\
+$\Delta n$ ($10^{-3}$) &$16\pm10$&$24\pm10$&$28\pm10$&$10\pm10$&$22\pm10$&$43\pm10$\\
+%$\Delta n$ ($\pm0.010$) &0.016&0.024&0.028&0.010&0.022&0.043\\
+%$\varepsilon_{\tau g}$ ($\pm5$\%)&-12&-14&-17&-5&-18&-30\\
+$-\varepsilon_{\tau g}$ (\%)&$12\pm5$&$14\pm5$&$17\pm5$&$5\pm5$&$18\pm5$&$30\pm5$\\
+$-\varepsilon_{\tau n}$ (\%)&$11\pm12$&$43\pm12$&$58\pm12$&$13\pm12$&$71\pm12$&$85\pm12$\\
+%$\varepsilon_{\tau n}$ ($\pm12$\%)&-11&-43&-58&-13&-71&-85\\
+$K_{U\!S}$ ($10^{6}$ W/cm$^{2}$s)&$0.2\pm0.1$&\multicolumn{2}{c}{$1.0\pm0.2$}&$0.3\pm0.1$&\multicolumn{2}{c}{$6.5\pm0.5$}\\
+$-\varepsilon_{Rdis}$ (\%)&--&--&--&0&$23\pm15$&$40\pm15$\\
 \hline
 \hline
 \end{tabular}
@@ -348,40 +361,148 @@ On our opinion, it is a reason of the more remarkable AI effect in SC-R15.
 
 \subsection{Ultrasound influence on recombination in the SSC base}
 
-\Fref{figDUS}(c) shows the USL influence on the minority carrier lifetime in the $p$--region of SSC.
-One can see that $\tau_n$ decreases down to 20\% of its initial value under ultrasound action.
-The relative change of an electron lifetime $\varepsilon_{\tau n}$ is presented in Table~\ref{tab}.
-
-Ordinary the lifetime reduction under radiation action is described by the Messenger–-Spratt equation \cite{Markvart}:
-\begin{equation}
-\label{eqMS}
-\frac{1}{\tau_n}=\frac{1}{\tau_{n0}}+K\Phi\,,
-\end{equation}
-where $\tau_{n0}$ is the minority carrier lifetime in the unirradiated cell, 
-$\Phi$f is the integrated flux, 
-and $K$ is a lifetime damage constant characteristic for the material and the type of irradiation.
-The dependencies of reciprocal lifetime on ultrasound intensity is shown on \Fref{figMS}.
-As one can recognize, the linear dependence of $1/\tau_n$ on $W_{{U\!S}}$  is observed.
-Therefore the modified Messenger–-Spratt equation can be used to describe the AI reversible change of the lifetime:
-\begin{equation}
-\label{eqMS_Us}
-\frac{1}{\tau_n}=\frac{1}{\tau_{n0}}+K_{U\!S}W_{{U\!S}}\,,
-\end{equation}
-where $\tau_{n0}$ is the lifetime without USL condition and
-$K_{U\!S}$ characterizes ultrasound influence and depends on acoustic wave type and sample state.
-The defined $K_{U\!S}$ values are listed in Table~\ref{tab}.
-
-
 \begin{figure}
 \begin{center}
 \includegraphics[width=7.5cm]{olikhFig6}%
 \end{center}
+\caption{\label{figDUS_Tau}
+Temperature dependencies of base  carrier lifetime for
+the SC-R15 (squares, 1--4) and SC-R4 (circles, 5--8) with (2--4 and 6--8) and without (1 and 5) USL.
+%The longitudinal (2, 6) and transverse (3, 4, 7, 8) ultrasound waves were used.
+$W_{U\!S}$,W/cm$^2$: 0.18 (2, 6), 0.19 (3), 0.22 (7), 0.40 (4, 8).
+}%
+\end{figure}
+
+Temperature dependencies of the minority carrier lifetime in the p--region of SSC are shown in \Fref{figDUS_Tau}.
+The SRH lifetime due a defect in p--type material at low injection level can be written as
+\begin{equation}
+\label{eqSRH_tau}
+\tau_n=(N_d\sigma_n\nu_{th})^{-1}\,,
+\end{equation}
+where $N_d$ is the concentration of the defect, $\nu_{th}$ is the thermal velocity.
+To our mind, the slight increment of $\tau_n$ with $T$ results from the $\sigma_n$ temperature dependency, which is mentioned above.
+As one can see, the USL causes the lifetime $\tau_n$ decrease, that run down to 20\% of $\tau_n$ initial value.
+The relative AI change of an electron lifetime $\varepsilon_{\tau n}$ is presented in Table~\ref{tab}.
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=7.5cm]{olikhFig7}%
+\end{center}
 \caption{\label{figMS}
-Dependencies of reciprocal electron lifetime in the SSC base on ultrasound intensity for SC-R4 (circles, left axis) and SC-R15 (squares, right axis) at 320~K.
-Symbol filling is defined by the intensity and type of ultrasound waves and coincides with \Fref{figDUS} notation.
+Dependencies of reciprocal lifetime in the SSC base on ultrasound intensity for the SC-R4 (circles, left axis) and SC-R15 (squares, right axis) at 320~K.
+Symbol filling is defined by the intensity and type of ultrasound waves and coincides with \Fref{figDUS_Tau} notation.
 Lines is linear fitting of T-USL data.
 }%
 \end{figure}
+
+Ordinary the lifetime reduction under radiation action is described by the Messenger–-Spratt equation \cite{Markvart}:
+\begin{equation}
+\label{eqMS}
+\tau_n^{-1}=\tau_{n0}^{-1}+K\Phi\,,
+\end{equation}
+where $\tau_{n0}$ is the minority carrier lifetime in the unirradiated cell,
+$\Phi$ is the integrated flux,
+and $K$ is a lifetime damage constant characteristic for the material and the type of irradiation.
+The dependencies of reciprocal lifetime on ultrasound intensity are shown on \Fref{figMS}.
+As one can recognize, the linear dependence of $1/\tau_n$ on $W_{{U\!S}}$  is observed.
+Therefore the modified Messenger–-Spratt equation can be used to describe the acoustically driven  change of the lifetime:
+\begin{equation}
+\label{eqMS_Us}
+\tau_n^{-1}=\tau_{n0}^{-1}+K_{U\!S}W_{U\!S}\,,
+\end{equation}
+where $\tau_{n0}$ is the lifetime in the ultrasound-free cell and
+$K_{U\!S}$ depends on a wave type and a sample state.
+The defined $K_{U\!S}$ values are listed in Table~\ref{tab}.
+Taking into account Eq.~(\ref{eqSRH_tau}) and reversibility of ultrasound influence, we assume the observed decrement in lifetime to be evident of AI change of $\sigma_n$.
+In this case the following relation can be obtained by using Eqs.~(\ref{eqSRH_tau}) and (\ref{eqMS_Us}):
+\begin{equation}
+\label{eqTau}
+\frac{\varepsilon_{\sigma}}{\tau_{n0}W_{U\!S}}=K_{U\!S}\,.
+\end{equation}
+
+The most recombination centers in the silicon is known to be a complex defect, which is composed of non-equivalent components.
+For example, the complexes of two point defects with an opposite charge occur quite often.
+Following the empirical relation proposed in \cite{CDLR:R2}, we believe, that the capture cross section of such pair depends on distance between complex's component and Eq.~(\ref{eqR}) is true.
+Hence the introduced in Sec.~\ref{P1} model of AI increase of $\sigma$ is applicable to account for $\tau_{n}$ decrease.
+Really, according to the model $\varepsilon_{\sigma}\sim u_{D,A}^2\sim \xi_{U\!S}^2\sim W_{U\!S}$, i.e. the linear $\tau_n^{-1}$--$W_{U\!S}$ relation is expected and is observed --- see \Fref{figMS}.
+The $K_{U\!S}$ increment in the T-USL and SC-R15  cases (Table~\ref{tab}) relates to the larger $\xi_{U\!S}$--$W_{U\!S}$ proportionality coefficient and smaller $\tau_{n0}$ value respectively.
+It should be noted that an initial distance between components of recombination center is much smaller than a distance between participants of DAP recombination;
+therefore according to Eq.~(\ref{eqEpsSig}), the more effective ultrasound influence is expected.
+
+\subsection{Light and annealing influence on the SSC parameters
+\label{P3}}
+
+However, this will not be further discussed since this is beyond scope of our study.
+
+\subsection{Ultrasound influence on shunt resistance}
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=7.5cm]{olikhFig8}%
+\end{center}
+\caption{\label{figDUS_Rsh}
+Plot of $R_{sh}$ as a function of $kT$ for the SC--R4 with and without USL.
+%$W_{U\!S}$,W/cm$^2$: 0.18 (2), 0.22 (3), 0.40 (4).
+Lines are the fitted curves using Eq.~(\ref{eqRsh})
+}%
+\end{figure}
+
+\Fref{figDUS_Rsh} illustrates $R_{sh}$ modification for the sample under USL condition.
+One can see that the T-USL leads to the not great $R_{sh}$ decrease whereas the L-USL does not change shunt resistance practically.
+
+
+Several non-mechanical reasons of SSC shunt resistance appearance are known \cite{Rsh:Breitenstein}.
+They are aluminum particles, macroscopic Si$_3$N$_4$ inclusions, inversion layers at precipitates.
+During firing Al will alloy in, leading to a p$^+$--doped region around the particle, which may compensate the emitter and may be in ohmic contact with the
+base.
+Subsequent annealing had to increase this p$^+$--region and to decrease $R_{sh}$.
+Such a behavior  conflicts with data, which are presented Sec.~\ref{P3}.
+Inversion layers and Si$_3$N$_4$ inclusions occur in multicrystalline silicon cells mainly \cite{Rsh:Breitenstein} and cannot cause a shunt resistance of the investigated samples too.
+On the other hand, dislocations, which intersect the junction, are generally held responsible as a possible source of ohmic current \cite{Rsh:Breitenstein,TAT:Gopal,Rsh:Baker}.
+Dislocations should be strongly recombinative, its recombination current may become strong enough for it to act as a shunt.
+For this reason they should be decorated by impurities \cite{Rsh:Breitenstein}.
+
+Gopal and Gupta \cite{Rsh:Gopal2003,Rsh:Gopal2004} introduced the model of dislocation-induced impedance of photovoltaic detector.
+According to this model, the $R_{sh}$ can be given by
+\begin{equation}
+\label{eqRsh}
+R_{sh}=kTR_{dis}\,\cosh\left(\frac{E_{dis}-E_i+U_s}{2kT}\right)\cosh\left(\frac{E_{dis}-E_i-U_s}{2kT}\right)\,,
+\end{equation}
+with
+\begin{equation}
+\label{eqRdis}
+R_{dis}^{-1}=\rho_{dis}Aq^2A_{dis}\sqrt{K_nK_p}N_{dis}(n_p+p_p)\,,
+\end{equation}
+%
+%\begin{eqnarray}
+%\nonumber
+%R_{sh}&=&\frac{kT\cosh\left(\frac{E_{dis}-E_i+U_s}{2kT}\right)\cosh\left(\frac{E_{dis}-E_i-U_s}{2kT}\right)}{\rho_{dis}Aq^2A_{dis}\sqrt{K_nK_p}N_{dis}(n_p+p_p)}\\
+%\label{eqRsh}
+%&=&R_{sh,0}kT\cosh\left(\frac{E_{dis}-E_i+U_s}{2kT}\right)\cosh\left(\frac{E_{dis}-E_i-U_s}{2kT}\right)\,,
+%\end{eqnarray}
+where
+$E_{dis}$ is the energy level which significantly contributes to the dislocation recombination current,
+$E_i$ is the is the intrinsic Fermi level,
+$U_s$ is the potential at the surface of the dislocation core,
+$\rho_{dis}$ and $A_{dis}$ are the dislocation density and surface area, respectively,
+$K_n$ and $K_p$ are are the capture probabilities for electrons and holes by the dislocation states,
+$N_{dis}$ is the density of surface states at each dislocation.
+Eq.~(\ref{eqRsh}) is reduced for the simplified case $K_p=K_n$.
+It should be noted that a similar temperature dependence of a SSC shunt resistance is used elsewhere \cite{} too.
+
+We use Eq.~(\ref{eqRsh}) to fit the experimental $R_{sh}$ data and the $(E_{dis}-E_i)$, $U_s$ and $R_{dis}$ are taken as the fitting parameters.
+It was established that the good agreement of the experimental data with the fitting curves is observed (see \Fref{figDUS_Rsh}) for values $(E_{dis}-E_i)=(0.34\pm0.02)$~eV and $U_s=(5\pm4)\times10^{-8}$~eV, which are independent of USL.
+The obtained value $(E_{dis}-E_i)$ corresponds to the carrier activation energy $E_a\simeq 0.5E_g-(E_{dis}-E_i)\simeq 0.22$~eV, which is comparable to the values reported by other researcher.
+Thus activation energies $0.22\div0.25$~eV \cite{Edis:Evans}, $0.28$~eV \cite{Edis:Castaldini}, $0.19$~eV \cite{Edis:Omling} and $0.23$~eV \cite{Edis:Ogawa}  are associated with an impurity at the dislocation or with an intrinsic dislocstion levels.
+
+%are in quite good agreement with
+The $R_{dis}$ value decreases in the  case of T-USL and the its relative changes $\varepsilon_{Rdis}$ are shown in Table~\ref{tab}.
+
+
+
+
+
+\subsection{Ultrasound influence on foto-electric conversion parameters}
 
 
 \section{Conclusion}

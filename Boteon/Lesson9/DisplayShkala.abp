@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cb:CODEBLOCKS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://education.mit.edu/openblocks/ns http://education.mit.edu/openblocks/codeblocks.xsd" xmlns:cb="http://education.mit.edu/openblocks/ns">
+<Pages collapsible-pages="yes" drawer-with-page="yes">
+<Page page-color="160 160 160" page-drawer="Main" page-infullview="yes" page-name="Main" page-width="1920">
+<PageBlocks>
+<Block genus-name="delay" id="1694">
+<Location>
+<X>131</X>
+<Y>253</Y>
+</Location>
+<BeforeBlockId>312</BeforeBlockId>
+<AfterBlockId>655</AfterBlockId>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="1695" connector-kind="socket" connector-type="number" init-type="number" label="милисекунд" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="number" id="1695">
+<Label>50</Label>
+<Location>
+<X>327</X>
+<Y>256</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="1694" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="LCD_I2C_Sainsmart_20by4" id="1688">
+<Location>
+<X>496</X>
+<Y>789</Y>
+</Location>
+<BeforeBlockId>1676</BeforeBlockId>
+<Sockets num-sockets="4">
+<BlockConnector con-block-id="1689" connector-kind="socket" connector-type="string" init-type="string" label="print" position-type="single"/>
+<BlockConnector con-block-id="1691" connector-kind="socket" connector-type="number" init-type="number" label="line#" position-type="single"/>
+<BlockConnector con-block-id="1692" connector-kind="socket" connector-type="number" init-type="number" label="char#" position-type="single"/>
+<BlockConnector con-block-id="1693" connector-kind="socket" connector-type="number-list" init-type="number-list" label="address 0x" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="number-single" id="1693">
+<Label>3F</Label>
+<Location>
+<X>762</X>
+<Y>864</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="1688" connector-kind="plug" connector-type="number-list" init-type="number-list" label="" position-type="single"/>
+</Plug>
+</Block>
+<Block genus-name="variable_number" id="1692">
+<Label>CharNumber</Label>
+<Location>
+<X>762</X>
+<Y>840</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="1688" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="number" id="1691">
+<Label>2</Label>
+<Location>
+<X>762</X>
+<Y>816</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="1688" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="glue_poly" id="1689">
+<Location>
+<X>762</X>
+<Y>792</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="1688" connector-kind="plug" connector-type="string" init-type="string" label="" position-type="single"/>
+</Plug>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="1690" connector-kind="socket" connector-type="poly" init-type="poly" label="" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="char" id="1690">
+<Label>.</Label>
+<Location>
+<X>822</X>
+<Y>792</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="1689" connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="glue_poly" id="1686">
+<Location>
+<X>763</X>
+<Y>678</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="1680" connector-kind="plug" connector-type="string" init-type="string" label="" position-type="single"/>
+</Plug>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="1687" connector-kind="socket" connector-type="poly" init-type="poly" label="" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="char" id="1687">
+<Label>&gt;</Label>
+<Location>
+<X>823</X>
+<Y>678</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="1686" connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="variable_number" id="1685">
+<Label>CharNumber</Label>
+<Location>
+<X>763</X>
+<Y>726</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="1680" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="LCD_I2C_Sainsmart_20by4" id="1680">
+<Location>
+<X>497</X>
+<Y>675</Y>
+</Location>
+<BeforeBlockId>1676</BeforeBlockId>
+<Sockets num-sockets="4">
+<BlockConnector con-block-id="1686" connector-kind="socket" connector-type="string" init-type="string" label="print" position-type="single"/>
+<BlockConnector con-block-id="1682" connector-kind="socket" connector-type="number" init-type="number" label="line#" position-type="single"/>
+<BlockConnector con-block-id="1685" connector-kind="socket" connector-type="number" init-type="number" label="char#" position-type="single"/>
+<BlockConnector con-block-id="1684" connector-kind="socket" connector-type="number-list" init-type="number-list" label="address 0x" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="number-single" id="1684">
+<Label>3F</Label>
+<Location>
+<X>763</X>
+<Y>750</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="1680" connector-kind="plug" connector-type="number-list" init-type="number-list" label="" position-type="single"/>
+</Plug>
+</Block>
+<Block genus-name="number" id="1682">
+<Label>2</Label>
+<Location>
+<X>763</X>
+<Y>702</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="1680" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="variable_number" id="1679">
+<Label>LastChar</Label>
+<Location>
+<X>670</X>
+<Y>645</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="1677" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="variable_number" id="1678">
+<Label>CharNumber</Label>
+<Location>
+<X>510</X>
+<Y>645</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="1677" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="less_equal" id="1677">
+<Location>
+<X>500</X>
+<Y>642</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="1676" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
+</Plug>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="1678" connector-kind="socket" connector-type="number" init-type="number" label="" position-type="bottom"/>
+<BlockConnector con-block-id="1679" connector-kind="socket" connector-type="number" init-type="number" label="" position-type="bottom"/>
+</Sockets>
+</Block>
+<Block genus-name="ifelse" id="1676">
+<Location>
+<X>340</X>
+<Y>639</Y>
+</Location>
+<BeforeBlockId>325</BeforeBlockId>
+<Sockets num-sockets="3">
+<BlockConnector con-block-id="1677" connector-kind="socket" connector-type="boolean" init-type="boolean" label="условие" position-type="single"/>
+<BlockConnector con-block-id="1680" connector-kind="socket" connector-type="cmd" init-type="cmd" label="то" position-type="single"/>
+<BlockConnector con-block-id="1688" connector-kind="socket" connector-type="cmd" init-type="cmd" label="иначе" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="number" id="1675">
+<Label>16</Label>
+<Location>
+<X>343</X>
+<Y>586</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="325" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="number" id="1674">
+<Location>
+<X>343</X>
+<Y>562</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="325" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="variable_number" id="1673">
+<Label>CharNumber</Label>
+<Location>
+<X>343</X>
+<Y>538</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="325" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="repeat_control" id="325">
+<Location>
+<X>131</X>
+<Y>535</Y>
+</Location>
+<BeforeBlockId>1660</BeforeBlockId>
+<Sockets num-sockets="5">
+<BlockConnector con-block-id="1673" connector-kind="socket" connector-type="number" init-type="number" label="переменная" position-type="single"/>
+<BlockConnector con-block-id="1674" connector-kind="socket" connector-type="number" init-type="number" label="start" position-type="single"/>
+<BlockConnector con-block-id="1675" connector-kind="socket" connector-type="number" init-type="number" label="stop" position-type="single"/>
+<BlockConnector con-block-id="329" connector-kind="socket" connector-type="number" init-type="number" label="steps of" position-type="single"/>
+<BlockConnector con-block-id="1676" connector-kind="socket" connector-type="cmd" init-type="cmd" label="commands" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="number" id="329">
+<Location>
+<X>343</X>
+<Y>610</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="325" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="number" id="1658">
+<Location>
+<X>555</X>
+<Y>484</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="1657" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="variable_number" id="1672">
+<Label>LastChar</Label>
+<Location>
+<X>555</X>
+<Y>460</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="1657" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="constrain" id="1657">
+<Location>
+<X>391</X>
+<Y>460</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="1660" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="single"/>
+</Plug>
+<Sockets num-sockets="3">
+<BlockConnector con-block-id="1672" connector-kind="socket" connector-type="number" init-type="number" label="значение" position-type="single"/>
+<BlockConnector con-block-id="1658" connector-kind="socket" connector-type="number" init-type="number" label="ниже" position-type="single"/>
+<BlockConnector con-block-id="1659" connector-kind="socket" connector-type="number" init-type="number" label="ниже" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="number" id="1659">
+<Label>16</Label>
+<Location>
+<X>555</X>
+<Y>508</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="1657" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="variable_number" id="1671">
+<Label>LastChar</Label>
+<Location>
+<X>391</X>
+<Y>436</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="1660" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="setter_variable_number" id="1660">
+<Location>
+<X>131</X>
+<Y>433</Y>
+</Location>
+<BeforeBlockId>655</BeforeBlockId>
+<AfterBlockId>325</AfterBlockId>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="1671" connector-kind="socket" connector-type="number" init-type="number" label="переменная" position-type="single"/>
+<BlockConnector con-block-id="1657" connector-kind="socket" connector-type="number" init-type="number" label="значение" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="LCD_I2C_Sainsmart_20by4" id="1652">
+<Location>
+<X>132</X>
+<Y>139</Y>
+</Location>
+<BeforeBlockId>1647</BeforeBlockId>
+<Sockets num-sockets="4">
+<BlockConnector con-block-id="1653" connector-kind="socket" connector-type="string" init-type="string" label="print" position-type="single"/>
+<BlockConnector con-block-id="1654" connector-kind="socket" connector-type="number" init-type="number" label="line#" position-type="single"/>
+<BlockConnector con-block-id="1655" connector-kind="socket" connector-type="number" init-type="number" label="char#" position-type="single"/>
+<BlockConnector con-block-id="1656" connector-kind="socket" connector-type="number-list" init-type="number-list" label="address 0x" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="number-single" id="1656">
+<Label>3F</Label>
+<Location>
+<X>398</X>
+<Y>214</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="1652" connector-kind="plug" connector-type="number-list" init-type="number-list" label="" position-type="single"/>
+</Plug>
+</Block>
+<Block genus-name="number" id="1655">
+<Label>2</Label>
+<Location>
+<X>398</X>
+<Y>190</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="1652" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="number" id="1654">
+<Location>
+<X>398</X>
+<Y>166</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="1652" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="message" id="1653">
+<Label>Illumination</Label>
+<Location>
+<X>398</X>
+<Y>142</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="1652" connector-kind="plug" connector-type="string" init-type="string" label="" position-type="single"/>
+</Plug>
+<Sockets num-sockets="1">
+<BlockConnector connector-kind="socket" connector-type="string" init-type="string" label="" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="number" id="679">
+<Label>16</Label>
+<Location>
+<X>507</X>
+<Y>406</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="677" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="number" id="678">
+<Location>
+<X>507</X>
+<Y>382</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="677" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="variable_number" id="1651">
+<Label>MaxSignal</Label>
+<Location>
+<X>507</X>
+<Y>358</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="677" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="variable_number" id="1650">
+<Label>MinSignal</Label>
+<Location>
+<X>507</X>
+<Y>334</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="677" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="setter_variable_number" id="655">
+<Location>
+<X>131</X>
+<Y>283</Y>
+</Location>
+<BeforeBlockId>1694</BeforeBlockId>
+<AfterBlockId>1660</AfterBlockId>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="656" connector-kind="socket" connector-type="number" init-type="number" label="переменная" position-type="single"/>
+<BlockConnector con-block-id="677" connector-kind="socket" connector-type="number" init-type="number" label="значение" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="map" id="677">
+<Location>
+<X>391</X>
+<Y>310</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="655" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="single"/>
+</Plug>
+<Sockets num-sockets="5">
+<BlockConnector con-block-id="685" connector-kind="socket" connector-type="number" init-type="number" label="значение" position-type="single"/>
+<BlockConnector con-block-id="1650" connector-kind="socket" connector-type="number" init-type="number" label="от" position-type="single"/>
+<BlockConnector con-block-id="1651" connector-kind="socket" connector-type="number" init-type="number" label="" position-type="single"/>
+<BlockConnector con-block-id="678" connector-kind="socket" connector-type="number" init-type="number" label="до" position-type="single"/>
+<BlockConnector con-block-id="679" connector-kind="socket" connector-type="number" init-type="number" label="" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="pin-read-analog" id="685">
+<Location>
+<X>507</X>
+<Y>310</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="677" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="single"/>
+</Plug>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="686" connector-kind="socket" connector-type="number" init-type="number" label="#" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="number" id="686">
+<Label>0</Label>
+<Location>
+<X>671</X>
+<Y>310</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="685" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="variable_number" id="656">
+<Label>LastChar</Label>
+<Location>
+<X>391</X>
+<Y>286</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="655" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="variable_number" id="1648">
+<Label>MinSignal</Label>
+<Location>
+<X>392</X>
+<Y>88</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="1647" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="setter_variable_number" id="1647">
+<Location>
+<X>132</X>
+<Y>85</Y>
+</Location>
+<BeforeBlockId>1644</BeforeBlockId>
+<AfterBlockId>1652</AfterBlockId>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="1648" connector-kind="socket" connector-type="number" init-type="number" label="переменная" position-type="single"/>
+<BlockConnector con-block-id="1649" connector-kind="socket" connector-type="number" init-type="number" label="значение" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="number" id="1649">
+<Label>5</Label>
+<Location>
+<X>392</X>
+<Y>112</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="1647" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="setter_variable_number" id="1644">
+<Location>
+<X>132</X>
+<Y>31</Y>
+</Location>
+<BeforeBlockId>312</BeforeBlockId>
+<AfterBlockId>1647</AfterBlockId>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="1645" connector-kind="socket" connector-type="number" init-type="number" label="переменная" position-type="single"/>
+<BlockConnector con-block-id="1646" connector-kind="socket" connector-type="number" init-type="number" label="значение" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="number" id="1646">
+<Label>45</Label>
+<Location>
+<X>392</X>
+<Y>58</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="1644" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="variable_number" id="1645">
+<Label>MaxSignal</Label>
+<Location>
+<X>392</X>
+<Y>34</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="1644" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="program" id="312">
+<Location>
+<X>13</X>
+<Y>23</Y>
+</Location>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="1644" connector-kind="socket" connector-type="cmd" init-type="cmd" label="setup" position-type="single"/>
+<BlockConnector con-block-id="1694" connector-kind="socket" connector-type="cmd" init-type="cmd" label="loop" position-type="single"/>
+</Sockets>
+</Block>
+</PageBlocks>
+</Page>
+</Pages>
+</cb:CODEBLOCKS>

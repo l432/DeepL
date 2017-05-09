@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9) (preloaded format=latex 2015.6.15)  28 APR 2017 15:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=latex 2015.12.6)  7 MAY 2017 19:00
 entering extended mode
 **olikh.tex
 (olikh.tex
-LaTeX2e <2015/01/01>
-Babel <3.9l> and hyphenation patterns for 4 languages loaded.
+LaTeX2e <2015/10/01> patch level 2
+Babel <3.9m> and hyphenation patterns for 2 languages loaded.
 (iopart.cls
 Document Class: iopart 1996/06/10 v0.0 IOP Journals LaTeX article class
 (iopart12.clo
@@ -81,10 +81,9 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 111.
 Missing character: There is no – in font cmr12!
-Missing character: There is no – in font cmr12!
  [3]
-File: olikhFig2abcd.eps Graphic file (type eps)
- <olikhFig2abcd.eps> [4] [5] [6]
+File: olikhFig2ab.eps Graphic file (type eps)
+ <olikhFig2ab.eps> [4] [5] [6]
 File: olikhFig3.eps Graphic file (type eps)
  <olikhFig3.eps>
 File: olikhFig4ab.eps Graphic file (type eps)
@@ -92,51 +91,56 @@ File: olikhFig4ab.eps Graphic file (type eps)
 <olikhFig4ab.eps>
 File: olikhFig5ab.eps Graphic file (type eps)
  <olikhFig5ab.eps> [7] [8]
+File: olikhFig6.eps Graphic file (type eps)
+ <olikhFig6.eps>
+File: olikhFig7.eps Graphic file (type eps)
+ <olikhFig7.eps>
 Missing character: There is no – in font cmr12!
 
-Underfull \hbox (badness 1024) in paragraph at lines 355--356
+Underfull \hbox (badness 1024) in paragraph at lines 398--399
 [][]\OT1/cmr/m/n/12 Ordinary the lifetime reduction under radiation action is d
 escribed by the
  []
 
 Missing character: There is no – in font cmr12!
-File: olikhFig6.eps Graphic file (type eps)
-<olikhFig6.eps>
+[9]
+File: olikhFig8.eps Graphic file (type eps)
+ <olikhFig8.eps> [10] [11]
 Missing character: There is no – in font cmr12!
- [9] (olikh.bbl
-Underfull \hbox (badness 3354) in paragraph at lines 22--28
-[][]\OT1/cmr/m/n/10 Lindroos J, Savin H.  Re-view of light-induced degra-da-tio
-n in crys-talline sil-i-con so-
- []
-
-
-Underfull \hbox (badness 5637) in paragraph at lines 22--28
-\OT1/cmr/m/n/10 lar cells.  \OT1/cmr/m/it/10 So-lar En-ergy Ma-te-ri-als & So-l
-ar Cells \OT1/cmr/bx/n/10 147\OT1/cmr/m/n/10 , 2016: 115--126.  DOI:
- []
-
-[10]
-Underfull \hbox (badness 1960) in paragraph at lines 39--45
+ (olikh.bbl
+Underfull \hbox (badness 1960) in paragraph at lines 37--43
 [][]\OT1/cmr/m/n/10 Hoffmann S, Koehl M.  Effect of humidity and temperature on
  the potential-induced
  []
 
-
-Underfull \hbox (badness 3557) in paragraph at lines 61--67
+[12]
+Underfull \hbox (badness 3557) in paragraph at lines 58--64
 \OT1/cmr/m/it/10 Applied Physics A: Materials Science & Processing \OT1/cmr/bx/
 n/10 69\OT1/cmr/m/n/10 (2), 1999: 225--232.  DOI:
  []
 
 Missing character: There is no – in font cmr10!
 Missing character: There is no – in font cmr10!
-[11]) [12] (olikh.aux) ) 
+[13]
+Underfull \hbox (badness 2644) in paragraph at lines 263--268
+\OT1/cmr/m/n/10 Distributed Donors and Acceptors.  \OT1/cmr/m/it/10 Phys Rev \O
+T1/cmr/bx/n/10 140\OT1/cmr/m/n/10 (1A), 1965: A202--A220.  DOI:
+ []
+
+[14]
+Underfull \hbox (badness 1622) in paragraph at lines 319--324
+\OT1/cmr/m/n/10 Related Shallow States in p-Type Si.  \OT1/cmr/m/it/10 Phys Rev
+ Lett \OT1/cmr/bx/n/10 95\OT1/cmr/m/n/10 (7), 2005: 076401.  DOI:
+ []
+
+) [15] (olikh.aux) ) 
 Here is how much of TeX's memory you used:
- 891 strings out of 495031
- 8335 string characters out of 3177571
- 70581 words of memory out of 3000000
- 4180 multiletter control sequences out of 15000+200000
+ 914 strings out of 495020
+ 8586 string characters out of 3178537
+ 71643 words of memory out of 3000000
+ 4232 multiletter control sequences out of 15000+200000
  8458 words of font info for 30 fonts, out of 3000000 for 9000
  198 hyphenation exceptions out of 8191
- 25i,9n,19p,263b,331s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 25i,9n,19p,279b,332s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on olikh.dvi (12 pages, 47152 bytes).
+Output written on olikh.dvi (15 pages, 59328 bytes).
