@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=latex 2015.12.6)  7 MAY 2017 19:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=latex 2015.12.6)  11 MAY 2017 10:13
 entering extended mode
 **olikh.tex
 (olikh.tex
@@ -107,13 +107,13 @@ Missing character: There is no – in font cmr12!
 File: olikhFig8.eps Graphic file (type eps)
  <olikhFig8.eps> [10] [11]
 Missing character: There is no – in font cmr12!
- (olikh.bbl
+ (olikh.bbl [12]
 Underfull \hbox (badness 1960) in paragraph at lines 37--43
 [][]\OT1/cmr/m/n/10 Hoffmann S, Koehl M.  Effect of humidity and temperature on
  the potential-induced
  []
 
-[12]
+
 Underfull \hbox (badness 3557) in paragraph at lines 58--64
 \OT1/cmr/m/it/10 Applied Physics A: Materials Science & Processing \OT1/cmr/bx/
 n/10 69\OT1/cmr/m/n/10 (2), 1999: 225--232.  DOI:
@@ -143,4 +143,4 @@ Here is how much of TeX's memory you used:
  198 hyphenation exceptions out of 8191
  25i,9n,19p,279b,332s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on olikh.dvi (15 pages, 59328 bytes).
+Output written on olikh.dvi (15 pages, 59808 bytes).

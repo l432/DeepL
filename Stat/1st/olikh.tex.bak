@@ -488,7 +488,7 @@ $\rho_{dis}$ and $A_{dis}$ are the dislocation density and surface area, respect
 $K_n$ and $K_p$ are are the capture probabilities for electrons and holes by the dislocation states,
 $N_{dis}$ is the density of surface states at each dislocation.
 Eq.~(\ref{eqRsh}) is reduced for the simplified case $K_p=K_n$.
-It should be noted that a similar temperature dependence of a SSC shunt resistance is used elsewhere \cite{} too.
+It should be noted that a similar temperature dependence of a SSC shunt resistance is used elsewhere \cite{RshT} too.
 
 We use Eq.~(\ref{eqRsh}) to fit the experimental $R_{sh}$ data and the $(E_{dis}-E_i)$, $U_s$ and $R_{dis}$ are taken as the fitting parameters.
 It was established that the good agreement of the experimental data with the fitting curves is observed (see \Fref{figDUS_Rsh}) for values $(E_{dis}-E_i)=(0.34\pm0.02)$~eV and $U_s=(5\pm4)\times10^{-8}$~eV, which are independent of USL.
@@ -497,7 +497,7 @@ Thus activation energies $0.22\div0.25$~eV \cite{Edis:Evans}, $0.28$~eV \cite{Ed
 
 %are in quite good agreement with
 The $R_{dis}$ value decreases in the  case of T-USL and the its relative changes $\varepsilon_{Rdis}$ are shown in Table~\ref{tab}.
-
+On our opinion the dislocation vibration under ultrasound action causes the increase of an effective surface area $A_{dis}$.
 
 
 
