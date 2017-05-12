@@ -496,11 +496,11 @@ The obtained value $(E_{dis}-E_i)$ corresponds to the carrier activation energy 
 Thus activation energies $0.22\div0.25$~eV \cite{Edis:Evans}, $0.28$~eV \cite{Edis:Castaldini}, $0.19$~eV \cite{Edis:Omling} and $0.23$~eV \cite{Edis:Ogawa}  are associated with an impurity at the dislocation or with an intrinsic dislocstion levels.
 
 %are in quite good agreement with
-The $R_{dis}$ value decreases in the  case of T-USL and the its relative changes $\varepsilon_{Rdis}$ are shown in Table~\ref{tab}.
-On our opinion the dislocation vibration under ultrasound action causes the increase of an effective surface area $A_{dis}$.
-
-
-
+The $R_{dis}$ value decreases in the T-USL case and its relative changes $\varepsilon_{Rdis}$ are shown in Table~\ref{tab}.
+On our opinion this is caused by an augmentation of  $A_{dis}$ in Eq.~(\ref{eqRdis}).
+A dislocation core atom displacement  is  parallel and normal to the  current direction in the  L-USL  case and T-USL case respectively.
+As a result, in the T-USL case carriers are captured by dislocation levels from an enlarged volume.
+It induces an effective surface area increase and the shunt resistance decrease.
 
 \subsection{Ultrasound influence on foto-electric conversion parameters}
 
