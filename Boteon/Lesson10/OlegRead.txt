@@ -1,0 +1,6 @@
+папка DHT містить стару бібліотеку DHT.h,
+файл DHT-sensor.zip - новішу, але для її компіляції потрібна ще одна бібліотека, 
+яка знаходиться в  Adafruit_Sensor.zip
+
+Ще один варіант цієї бібліотеки, на неї посилання на 
+https://arduino-info.wikispaces.com/DHT11-Humidity-TempSensor?responseToken=83e4f3d48aaa26c0f734183d12924a34
