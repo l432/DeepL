@@ -2,5 +2,7 @@
 файл DHT-sensor.zip - новішу, але для її компіляції потрібна ще одна бібліотека, 
 яка знаходиться в  Adafruit_Sensor.zip
 
-Ще один варіант цієї бібліотеки, на неї посилання на 
+Ще один варіант цієї бібліотеки DHT-lib.zip, на неї посилання на 
 https://arduino-info.wikispaces.com/DHT11-Humidity-TempSensor?responseToken=83e4f3d48aaa26c0f734183d12924a34
+
+з Ardublock-ом працює EDU_DHT_Grove.zip
