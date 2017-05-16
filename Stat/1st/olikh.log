@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9) (preloaded format=latex 2015.6.15)  12 MAY 2017 16:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9) (preloaded format=latex 2015.6.15)  16 MAY 2017 16:11
 entering extended mode
 **olikh.tex
 (olikh.tex
@@ -65,6 +65,8 @@ act Abstract Abstract Abstract
  []
 
 [1
+! I can't write on file `olikh.dvi'.
+Please type another file name for output: 
 
 ]
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -97,17 +99,24 @@ File: olikhFig7.eps Graphic file (type eps)
  <olikhFig7.eps>
 Missing character: There is no – in font cmr12!
 
-Underfull \hbox (badness 1024) in paragraph at lines 397--398
+Underfull \hbox (badness 1024) in paragraph at lines 401--402
 [][]\OT1/cmr/m/n/12 Ordinary the lifetime reduction under radiation action is d
 escribed by the
  []
 
 Missing character: There is no – in font cmr12!
-[9]
+[9] [10]
 File: olikhFig8.eps Graphic file (type eps)
- <olikhFig8.eps> [10] [11]
+ <olikhFig8.eps> [11]
+File: olikhFig9abc.eps Graphic file (type eps)
+ <olikhFig9abc.eps>
+File: olikhFig10ab.eps Graphic file (type eps)
+ <olikhFig10ab.eps>
+File: olikhFig11ab.eps Graphic file (type eps)
+
+<olikhFig11ab.eps>
 Missing character: There is no – in font cmr12!
- (olikh.bbl [12]
+ (olikh.bbl [12] [13]
 Underfull \hbox (badness 1960) in paragraph at lines 37--43
 [][]\OT1/cmr/m/n/10 Hoffmann S, Koehl M.  Effect of humidity and temperature on
  the potential-induced
@@ -119,28 +128,29 @@ Underfull \hbox (badness 3557) in paragraph at lines 58--64
 n/10 69\OT1/cmr/m/n/10 (2), 1999: 225--232.  DOI:
  []
 
+[14]
 Missing character: There is no – in font cmr10!
 Missing character: There is no – in font cmr10!
-[13]
+ [15]
 Underfull \hbox (badness 2644) in paragraph at lines 263--268
 \OT1/cmr/m/n/10 Distributed Donors and Acceptors.  \OT1/cmr/m/it/10 Phys Rev \O
 T1/cmr/bx/n/10 140\OT1/cmr/m/n/10 (1A), 1965: A202--A220.  DOI:
  []
 
-[14]
+
 Underfull \hbox (badness 1622) in paragraph at lines 319--324
 \OT1/cmr/m/n/10 Related Shallow States in p-Type Si.  \OT1/cmr/m/it/10 Phys Rev
  Lett \OT1/cmr/bx/n/10 95\OT1/cmr/m/n/10 (7), 2005: 076401.  DOI:
  []
 
-) [15] (olikh.aux) ) 
+[16]) [17] (olikh.aux) ) 
 Here is how much of TeX's memory you used:
- 914 strings out of 495031
- 8586 string characters out of 3177571
- 70581 words of memory out of 3000000
- 4201 multiletter control sequences out of 15000+200000
+ 923 strings out of 495031
+ 8704 string characters out of 3177571
+ 72581 words of memory out of 3000000
+ 4207 multiletter control sequences out of 15000+200000
  8458 words of font info for 30 fonts, out of 3000000 for 9000
  198 hyphenation exceptions out of 8191
  25i,9n,19p,279b,332s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on olikh.dvi (15 pages, 59780 bytes).
+Output written on .dvi (17 pages, 62312 bytes).

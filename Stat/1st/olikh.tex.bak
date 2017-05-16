@@ -134,8 +134,7 @@ has the form $P=P_0(T/300)^{\gamma}$ and parameters value are given in the \cite
 The fitting were done by using the differential evolution method \cite{DEWang} and extremely good fit to the experimental data was obtained --- see \Fref{figIV}.
 
 The monochromatic light was used for SSC illumination.
-was chosen to avoid
-The light  wavelength of $\lambda=900$~nm ensured the electron–-hole pair generation in the $p$-region mainly and low light intensity of $W_{ph}=2$~W/m$^2$ was chosen to avoid any LID processes.
+The light  wavelength of $\lambda=900$~nm ensured the electron–-hole pair generation in the $p$-region mainly and low light intensity of $W_{ph}=2$~W/m$^2.5$ was chosen to avoid any LID processes.
 %The monochromatic light with the wavelength of $\lambda=900$~nm and intensity of $W_{ph}=2$~W/m$^2$ %was used for SSC illumination.
 %In that case, the photocurrent defined  by the electron–-hole pair generation in the $p$-region mainly.
 %If the base is several minority carrier diffusion lengths $L_n=\sqrt{\mu_nkT\tau_n/q}$, the $J_{ph}$ can be written as \cite{Markvart,Razeghi}
@@ -214,6 +213,7 @@ $\Delta n$ ($10^{-3}$) &$16\pm10$&$24\pm10$&$28\pm10$&$10\pm10$&$22\pm10$&$43\pm
 %$\varepsilon_{\tau g}$ ($\pm5$\%)&-12&-14&-17&-5&-18&-30\\
 $-\varepsilon_{\tau g}$ (\%)&$12\pm5$&$14\pm5$&$17\pm5$&$5\pm5$&$18\pm5$&$30\pm5$\\
 $-\varepsilon_{\tau n}$ (\%)&$11\pm12$&$43\pm12$&$58\pm12$&$13\pm12$&$71\pm12$&$85\pm12$\\
+$-\varepsilon_{\tau n}^{Isc}$ (\%)&$11\pm12$&$43\pm12$&$58\pm12$&$13\pm12$&$71\pm12$&$85\pm12$\\
 %$\varepsilon_{\tau n}$ ($\pm12$\%)&-11&-43&-58&-13&-71&-85\\
 $K_{U\!S}$ ($10^{6}$ W/cm$^{2}$s)&$0.2\pm0.1$&\multicolumn{2}{c}{$1.0\pm0.2$}&$0.3\pm0.1$&\multicolumn{2}{c}{$6.5\pm0.5$}\\
 $-\varepsilon_{Rdis}$ (\%)&--&--&--&0&$23\pm15$&$40\pm15$\\
