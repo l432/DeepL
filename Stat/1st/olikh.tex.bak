@@ -135,18 +135,6 @@ The fitting were done by using the differential evolution method \cite{DEWang} a
 
 The monochromatic light was used for SSC illumination.
 The light  wavelength of $\lambda=900$~nm ensured the electron–-hole pair generation in the $p$-region mainly and low light intensity of $W_{ph}=2$~W/m$^2.5$ was chosen to avoid any LID processes.
-%The monochromatic light with the wavelength of $\lambda=900$~nm and intensity of $W_{ph}=2$~W/m$^2$ %was used for SSC illumination.
-%In that case, the photocurrent defined  by the electron–-hole pair generation in the $p$-region mainly.
-%If the base is several minority carrier diffusion lengths $L_n=\sqrt{\mu_nkT\tau_n/q}$, the $J_{ph}$ can be written as \cite{Markvart,Razeghi}
-%\begin{equation}
-%\label{eqIph}
-%J_{ph} = \frac{W_{ph}(1-r)q\beta\lambda}{hc}\frac{\alpha L_n}{1+ \alpha L_n}\,,
-%\end{equation}
-%where $\alpha$ is the absorption coefficient,
-%$r$ is the reflection coefficient,
-%$\beta$ is the coefficient of quantum yield.
-%We taken $\alpha$ value at $T=300$~K in \cite{GreenOptic} and temperature dependence in \cite{Markvart} (p.39, Eq.~(18)), and supposed $r=0$, $\beta=1$.
-%Then Eq.~(\ref{eqIph}) were used by taking $L_n$ as fitting parameter to fit the experimental temperature dependence of $J_{ph}$.
 The short-circuit current density $J_{sc}$, open-circuit voltage $V_{oc}$ and the fill factor $FF$ were estimated from illuminated $I$--$V$ curves by the conventional mode.
 It should be noted that $J_{sc}\approx J_{ph}R_{sh}/(R_{sh}+R_{s})$.
 In the case of the samples under investigation, $R_s$ was defined by contact resistance and was about 1~$\Omega$, $R_{sh}$ overrode 2~k$\Omega$.
@@ -164,7 +152,7 @@ After USL start the sample was kept at room temperature during 60 min and then t
 In order to avoid the effect of piezoelectric field on $I$--$V$ characteristics, the piezoelectric cell was shielded.
 
 The samples from the investigated set differed in the shunt resistance mainly.
-In the article the typical results for the samples with low (~$\sim10^4$~$\Omega$ at room temperature) and high ($>10^{15}$~$\Omega$) $R_{sh}$ value are presented.
+In the article the typical results for the samples with low (about~$10^4$~$\Omega$ at room temperature) and high ($>10^{15}$~$\Omega$) $R_{sh}$ value are presented.
 The samples were labeled as SC-R4 and SC-R15 respectively.
 
 
@@ -213,10 +201,13 @@ $\Delta n$ ($10^{-3}$) &$16\pm10$&$24\pm10$&$28\pm10$&$10\pm10$&$22\pm10$&$43\pm
 %$\varepsilon_{\tau g}$ ($\pm5$\%)&-12&-14&-17&-5&-18&-30\\
 $-\varepsilon_{\tau g}$ (\%)&$12\pm5$&$14\pm5$&$17\pm5$&$5\pm5$&$18\pm5$&$30\pm5$\\
 $-\varepsilon_{\tau n}$ (\%)&$11\pm12$&$43\pm12$&$58\pm12$&$13\pm12$&$71\pm12$&$85\pm12$\\
-$-\varepsilon_{\tau n}^{Isc}$ (\%)&$11\pm12$&$43\pm12$&$58\pm12$&$13\pm12$&$71\pm12$&$85\pm12$\\
+$-\varepsilon_{\tau n}^{Jph}$ (\%)&$2\pm15$&&$39\pm15$&$14\pm15$&&$54\pm15$\\
 %$\varepsilon_{\tau n}$ ($\pm12$\%)&-11&-43&-58&-13&-71&-85\\
 $K_{U\!S}$ ($10^{6}$ W/cm$^{2}$s)&$0.2\pm0.1$&\multicolumn{2}{c}{$1.0\pm0.2$}&$0.3\pm0.1$&\multicolumn{2}{c}{$6.5\pm0.5$}\\
 $-\varepsilon_{Rdis}$ (\%)&--&--&--&0&$23\pm15$&$40\pm15$\\
+$-\varepsilon_{Jph}$ (\%)&$0\pm1$&&$9\pm1$&$0\pm1$&&$4\pm1$\\
+$-\varepsilon_{Voc}$ (\%)&$3\pm2$&$4\pm2$&$13\pm2$&$2\pm2$&$6\pm2$&$11\pm2$\\
+$-\varepsilon_{FF}$ (\%)&$2\pm2$&$2\pm2$&$5\pm2$&$2\pm2$&$3\pm2$&$4\pm2$\\
 \hline
 \hline
 \end{tabular}
@@ -432,6 +423,9 @@ therefore according to Eq.~(\ref{eqEpsSig}), the more effective ultrasound influ
 \subsection{Light and annealing influence on the SSC parameters
 \label{P3}}
 
+Any concrete defect title was not referred as an recombination center in the discussion above.
+It is known that the main recombination centers in the SSC bulk are the  boron-oxygen related defects, iron-boron pairs (or another Fe--related trap in the $n^+p$--junctions \cite{TeimurazPSS,TeimurazJAP}), and oxide precipitates \cite{MurphySC2014,Oxide_Schon}.
+
 However, this will not be further discussed since this is beyond scope of our study.
 
 \subsection{Ultrasound influence on shunt resistance}
@@ -502,7 +496,80 @@ A dislocation core atom displacement  is  parallel and normal to the  current di
 As a result, in the T-USL case carriers are captured by dislocation levels from an enlarged volume.
 It induces an effective surface area increase and the shunt resistance decrease.
 
-\subsection{Ultrasound influence on foto-electric conversion parameters}
+\subsection{Ultrasound influence on SSC conversion parameters}
+\Fref{figDUS_Isc} depicts an acoustically driven degradation of photocurrent current, open-circuit voltage and the fill factor.
+The relative changes of these parameters are listed in the Table~\ref{tab}.
+ 
+\begin{figure}
+\begin{center}
+\includegraphics[width=15cm]{olikhFig9abc}%
+\end{center}
+\caption{\label{figDUS_Isc}
+Temperature dependencies of photocurrent density (a),  open-circuit voltage (b) and  fill factor (c) for the SC-R15 (squares) and SC-R4 (circles) with (2--4 and 6--8) and without (1 and 5) USL.
+$W_{U\!S}$,W/cm$^2$: 0.18 (2, 6), 0.19 (3), 0.22 (7), 0.40 (4, 8).
+Lines are the fitted curves using Eq.~(\ref{eqIph}).
+}%
+\end{figure}
+
+In the case of used illumination  wavelength of $\lambda=900$~nm, the photocurrent defined  by the electron–-hole pair generation in the $p$--region mainly.
+If the base is several minority carrier diffusion lengths $L_n=\sqrt{\mu_nkT\tau_n/q}$, the $J_{ph}$ can be written as \cite{Markvart,Razeghi}
+\begin{equation}
+\label{eqIph}
+J_{ph} = \frac{W_{ph}(1-M)q\beta\lambda}{hc}\frac{\alpha L_n}{1+ \alpha L_n}\,,
+\end{equation}
+where $\alpha$ is the absorption coefficient,
+$M$ is the reflection coefficient,
+$\beta$ is the coefficient of quantum yield.
+Thereby $J_{ph}$ strongly depends on $\tau_n$.
+On the other hand, the minority carrier lifetime can be estimated from a photocurrent temperature dependence.
+We taken $\alpha$ temperature dependence from \cite{Markvart} (p.39, Eq.~(18)), and supposed $M=0$, $\beta=1$, $L_n\sim T^{0.5}$. 
+The last dependence was obtained from \Fref{figDUS_Tau}.
+Then Eq.~(\ref{eqIph}) was used by taking $L_n$ as fitting parameter to fit the experimental temperature dependence of $J_{ph}$.
+The fitting results are shown on  \Fref{figDUS_Isc}(a) by curves.
+
+The $L_n$ values, which is obtained from a recombination current in the quasi-neutral region ($106\pm10$~$\mu$m and $88\pm10$~$\mu$m for SC--R4 and SC--R15 respectively at 320~K without USL) and from a photocurrent temperature dependence ($125\pm15$~$\mu$m and $99\pm15$~$\mu$m for SC--R4 and SC--R15), are comparable.
+The relative changes of lifetime, obtained from $J_{ph}$,  $\varepsilon_{\tau n}^{Jph}$ are listed in the Table~\ref{tab}.
+The values of $\varepsilon_{\tau n}^{Jph}$ and $\varepsilon_{\tau n}$ agree qualitatively.
+The slight quantitative difference, which is observed in the T-USL case, can be deals with the AI change of $L_n$ temperature dependence probably.
+Thus the ultrasound influence on photocurrent (and short-circuit current) is due to AI change of minority carrier lifetime, which is discussed above.
+
+Unfortunately the analytical expressions for $V_{oc}$ and $FF$ is absent in the double-diode model case.
+To show $V_{oc}$ and $FF$ dependencies on $\tau_n$, $n$, $\tau_g$, and $R_{sh}$ we simulated $I$--$V$ characteristics at different parameters value by using Eqs.~(\ref{eqIV}) and (\ref{eqIph}).
+The values, that are close to investigated SSCs parameters, are used for simulation.
+The results are shown on \Fref{figVoc} and \Fref{figFF}.
+
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=15cm]{olikhFig10ab}%
+\end{center}
+\caption{\label{figVoc}
+Simulated open-circuit voltage dependencies on SCR carrier lifetime and base  carrier lifetime (a) and on ideality factor and shunt resistance (b).
+The constant values $n=2.55$ (a), $R_{sh}=5\cdot10^3$~$\Omega$ (a), $\tau_n=3\cdot10^{-6}$~s (b), $\tau_g=5\cdot10^{-8}$~s (b), and $T=320$~K were used.
+}%
+\end{figure}
+
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=15cm]{olikhFig11ab}%
+\end{center}
+\caption{\label{figFF}
+Simulated fill factor dependencies on SCR carrier lifetime and base  carrier lifetime (a) and on ideality factor and shunt resistance (b).
+The constant values $n=2.55$ (a), $R_{sh}=5\cdot10^3$~$\Omega$ (a), $\tau_n=3\cdot10^{-6}$~s (b), $\tau_g=5\cdot10^{-8}$~s (b), and $T=320$~K were used.
+}%
+\end{figure}
+
+One can see on \Fref{figVoc}(a) and \Fref{figFF}(a) that $\tau_g$ decrease should lead to a decrement of both $V_{oc}$ and $FF$.
+At the same time the open-circuit voltage and the fill factor dependencies on $\tau_n$ are weak for the investigated SSC.
+\Fref{figVoc}(b) and \Fref{figFF}(b) show that the influence of $n$ and $R_{sh}$  on $V_{oc}$ and $FF$ depend on substantially on shunt resistance value.
+Thus if $R_{sh}>10^5$~$\Omega$ (SC--R15 case) then $V_{oc}$ increases with an ideality factor increment and both $V_{oc}$ and $FF$ don't depend on shunt resistance value practically.
+Whereas if $R_{sh}\leq10^4$~$\Omega$ (SC--R4 case) then  the open-circuit voltage and the fill factor decrease with shunt resistance decrement, but $FF$ only depends on $n$ weakly.
+
+Thereby the discussed above AI decrease of $\tau_g$ leads to degradation of open-circuit voltage and the fill factor in the USL case.
+This effect is enhanced by AI $R_{sh}$ decrease in the SC--R4 and is recovered partially by AI $n$ increase in the SC--R15.
+ 
+
 
 
 \section{Conclusion}

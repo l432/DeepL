@@ -266,6 +266,82 @@ Thomas DG, Hopfield J, Augistyniak WM.
 \newblock \emph{Phys Rev} \textbf{140}(1A), 1965: A202--A220.
 \newblock \doi{10.1103/PhysRev.140.A202}.
 
+\bibitem{MurphyJAP2011}
+Murphy JD, Bothe K, Olmo M, Voronkov VV, Falster RJ.
+\newblock The effect of oxide precipitates on minority carrier lifetime in
+  p--type silicon.
+\newblock \emph{J Appl Phys} \textbf{110}(5), 2011: 053713.
+\newblock \doi{10.1063/1.3632067}.
+
+\bibitem{Kim}
+Kim M, Abbott M, Nampalli N, Wenham S, Stefani B, Hallam B.
+\newblock Modulating the extent of fast and slow boron-oxygen related
+  degradation in {C}zochralski silicon by thermal annealing: {E}vidence of a
+  single defect.
+\newblock \emph{J Appl Phys} \textbf{121}(5), 2017: 053106.
+\newblock \doi{10.1063/1.4975685}.
+
+\bibitem{FeB:Vahanissi}
+Vahanissi V, Haarahiltunen A, Talvitie H, Yli-Koski M, Savin H.
+\newblock Impact of phosphorus gettering parameters and initial iron level on
+  silicon solar cell properties.
+\newblock \emph{Progress in Photovoltaics: Research and Applications}
+  \textbf{21}(5), 2012: 1127--1135.
+\newblock \doi{10.1002/pip.2215}.
+
+\bibitem{FeB:Schmidt}
+Schmidt J.
+\newblock Effect of Dissociation of Iron--Boron Pairs in Crystalline Silicon on
+  Solar Cell Properties.
+\newblock \emph{Progress in Photovoltaics: Research and Applications}
+  \textbf{13}, 2005: 325--331.
+\newblock \doi{10.1002/pip.594}.
+
+\bibitem{TeimurazPSS}
+Mchedlidze T, Weber J.
+\newblock Iron--related carrier traps near the n$^+$p--junctions of crystalline
+  silicon solar cells: impacts of feedstock and of the fabrication processes.
+\newblock \emph{Phys Status Solidi B} \textbf{251}(8), 2014: 1608--1613.
+\newblock \doi{10.1002/pssb.201451021}.
+
+\bibitem{TeimurazJAP}
+Mchedlidze T, Scheffler L, Weber J, Herms M, Neusel J, Osinniy V, Moller C,
+  Lauer K.
+\newblock Local detection of deep carrier traps in the pn-junction of silicon
+  solar cells.
+\newblock \emph{J Appl Phys} \textbf{103}(01), 2013: 013901.
+\newblock \doi{10.1063/1.4807142}.
+
+\bibitem{MurphySC2014}
+Murphy J, McGuire J, Bothe K, Voronkov V, Falster R.
+\newblock Minority carrier lifetime in silicon photovoltaics: The effect of
+  oxygen precipitation.
+\newblock \emph{Sol Energy Mater Sol Cells} \textbf{120}, 2014: 402--411.
+\newblock \doi{10.1016/j.solmat.2013.06.018}.
+
+\bibitem{Oxide_Schon}
+Schon J, Youssef A, Park S, Mundt LE, Niewelt T, Mack S, Nakajima K, Morishita
+  K, Murai R, Jensen MA, Buonassisi T, Schubert MC.
+\newblock Identification of lifetime limiting defects by temperature-- and
+  injection-dependent photoluminescence imaging.
+\newblock \emph{J Appl Phys} \textbf{120}(10), 2016: 105703.
+\newblock \doi{10.1063/1.4961465}.
+
+\bibitem{MurphyJAP2012}
+Murphy JD, Bothe K, Krain R, Voronkov VV, Falster RJ.
+\newblock Parameterisation of injection-dependent lifetime measurements in
+  semiconductors in terms of {S}hockley--{R}ead--{H}all statistics: {A}n
+  application to oxide precipitates in silicon.
+\newblock \emph{J Appl Phys} \textbf{111}(11), 2012: 113709.
+\newblock \doi{10.1063/1.4725475}.
+
+\bibitem{Oxide:Chen}
+Chen L, Yu X, Chen P, Wang P, Gu X, Lu J, Yang D.
+\newblock Effect of oxygen precipitation on the performance of {C}zochralski
+  silicon solar cells.
+\newblock \emph{Sol Energy Mater Sol Cells} \textbf{95}(11), 2011: 3148--3151.
+\newblock \doi{10.1016/j.solmat.2011.06.044}.
+
 \bibitem{Rsh:Breitenstein}
 Breitenstein O, Rakotoniaina JP, Al~Rifai MH, Werner M.
 \newblock Shunt Types in Crystalline Silicon Solar Cells.
@@ -303,7 +379,7 @@ Gopal V, Gupta S.
 
 \bibitem{RshT}
 Barth N, Jovanovic R, Ahzi S, Khaleel MA.
-\newblock PV panel single and double diode models: Optimization of the
+\newblock {P}{V} panel single and double diode models: Optimization of the
   parameters and temperature dependence.
 \newblock \emph{Sol Energy Mater Sol Cells} \textbf{148}, 2016: 87--98.
 \newblock \doi{10.1016/j.solmat.2015.09.003}.
@@ -336,5 +412,11 @@ Ogawa M, Kamiya S, Izumi H, Tokuda Y.
 \newblock \emph{Physica B: Physics of Condensed Matter} \textbf{407}(15), 2012:
   3034--3037.
 \newblock \doi{doi:10.1016/j.physb.2011.09.139}.
+
+\bibitem{Razeghi}
+Razeghi M, Rogalski A.
+\newblock Semiconductor ultraviolet detectors.
+\newblock \emph{Journal of Applied Physics} \textbf{79}(10), 1996: 7433--7473.
+\newblock \doi{10.1063/1.362677}.
 
 \end{thebibliography}
