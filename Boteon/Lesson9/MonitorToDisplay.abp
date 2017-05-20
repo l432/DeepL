@@ -4,7 +4,7 @@
 <Page page-color="160 160 160" page-drawer="Main" page-infullview="yes" page-name="Main" page-width="1920">
 <PageBlocks>
 <Block genus-name="char" id="397">
-<Label>-</Label>
+<Label>.</Label>
 <Location>
 <X>779</X>
 <Y>308</Y>
