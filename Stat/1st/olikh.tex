@@ -35,8 +35,8 @@ Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract
 The silicon solar cells (SSC) are still dominant in the photovoltaic (PV) field due to their high efficiency, low selling price and process maturity.
 Therefore, understanding the way of material properties modification is a top priority for  most of PV device manufacturers.
 It is known, for example, the loss in the SSC efficiency is observed in consequence of
-excess carrier injection by above-bandgap illumination or forward biasing \cite{LID:BothePP,LID:SchmidtJMR,LIDRev} (so-called light-induced degradation or LID),
-high voltage stress \cite{PID:SEMSC,PID:PP} (potential-induced degradation or PID),
+excess carrier injection by above-bandgap illumination or forward biasing \cite{LID:BothePP,LID:SchmidtJMR,LIDRev,LID:JAP2017II} (so-called light-induced degradation or LID),
+high voltage stress \cite{PID:SEMSC,PID:PP,PID:2017} (potential-induced degradation or PID),
 or radiation treatment \cite{Bhat,Karazhanov} (irradiation-induced degradation or IID).
 Degradation reasons are processes in crystal defect sub-system under external influence.
 It is may be a transformation of the boron-oxygen or copper-contained complex (for the LID case),
@@ -426,13 +426,33 @@ therefore according to Eq.~(\ref{eqEpsSig}), the more effective ultrasound influ
 Any concrete defect title was not referred as an recombination center in the discussion above.
 It is known that the most harmful recombination centers in boron--doped Czochralski--grown SSC are the  boron--oxygen related defects \cite{MurphyJAP2011,Kim,LID:BothePP,LIDRev}, iron--boron pairs \cite{MurphyJAP2011,FeB:Vahanissi,FeB:Schmidt} (or another Fe--related trap in the $n^+p$--junctions \cite{TeimurazPSS,TeimurazJAP}), and oxide precipitates \cite{MurphySC2014,Oxide_Schon,MurphyJAP2011,MurphyJAP2012,Oxide:Chen}.
 
+\begin{figure}
+\begin{center}
+\includegraphics[width=15cm]{olikhFig8abcd}%
+\end{center}
+\caption{\label{figFF}
+Simulated fill factor dependencies on SCR carrier lifetime and base  carrier lifetime (a) and on ideality factor and shunt resistance (b).
+The constant values $n=2.55$ (a), $R_{sh}=5\cdot10^3$~$\Omega$ (a), $\tau_n=3\cdot10^{-6}$~s (b), $\tau_g=5\cdot10^{-8}$~s (b), and $T=320$~K were used.
+}%
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=7.5cm]{olikhFig9abcd}%
+\end{center}
+\caption{\label{figFF}
+Simulated fill factor dependencies on SCR carrier lifetime and base  carrier lifetime (a) and on ideality factor and shunt resistance (b).
+The constant values $n=2.55$ (a), $R_{sh}=5\cdot10^3$~$\Omega$ (a), $\tau_n=3\cdot10^{-6}$~s (b), $\tau_g=5\cdot10^{-8}$~s (b), and $T=320$~K were used.
+}%
+\end{figure}
+
 However, this will not be further discussed since this is beyond scope of our study.
 
 \subsection{Ultrasound influence on shunt resistance}
 
 \begin{figure}
 \begin{center}
-\includegraphics[width=7.5cm]{olikhFig8}%
+\includegraphics[width=7.5cm]{olikhFig10}%
 \end{center}
 \caption{\label{figDUS_Rsh}
 Plot of $R_{sh}$ as a function of $kT$ for the SC--R4 with and without USL.
@@ -499,10 +519,10 @@ It induces an effective surface area increase and the shunt resistance decrease.
 \subsection{Ultrasound influence on SSC conversion parameters}
 \Fref{figDUS_Isc} depicts an acoustically driven degradation of photocurrent current, open-circuit voltage and the fill factor.
 The relative changes of these parameters are listed in the Table~\ref{tab}.
- 
+
 \begin{figure}
 \begin{center}
-\includegraphics[width=15cm]{olikhFig9abc}%
+\includegraphics[width=15cm]{olikhFig11abc}%
 \end{center}
 \caption{\label{figDUS_Isc}
 Temperature dependencies of photocurrent density (a),  open-circuit voltage (b) and  fill factor (c) for the SC-R15 (squares) and SC-R4 (circles) with (2--4 and 6--8) and without (1 and 5) USL.
@@ -522,7 +542,7 @@ $M$ is the reflection coefficient,
 $\beta$ is the coefficient of quantum yield.
 Thereby $J_{ph}$ strongly depends on $\tau_n$.
 On the other hand, the minority carrier lifetime can be estimated from a photocurrent temperature dependence.
-We taken $\alpha$ temperature dependence from \cite{Markvart} (p.39, Eq.~(18)), and supposed $M=0$, $\beta=1$, $L_n\sim T^{0.5}$. 
+We taken $\alpha$ temperature dependence from \cite{Markvart} (p.39, Eq.~(18)), and supposed $M=0$, $\beta=1$, $L_n\sim T^{0.5}$.
 The last dependence was obtained from \Fref{figDUS_Tau}.
 Then Eq.~(\ref{eqIph}) was used by taking $L_n$ as fitting parameter to fit the experimental temperature dependence of $J_{ph}$.
 The fitting results are shown on  \Fref{figDUS_Isc}(a) by curves.
@@ -541,7 +561,7 @@ The results are shown on \Fref{figVoc} and \Fref{figFF}.
 
 \begin{figure}
 \begin{center}
-\includegraphics[width=15cm]{olikhFig10ab}%
+\includegraphics[width=15cm]{olikhFig12ab}%
 \end{center}
 \caption{\label{figVoc}
 Simulated open-circuit voltage dependencies on SCR carrier lifetime and base  carrier lifetime (a) and on ideality factor and shunt resistance (b).
@@ -552,7 +572,7 @@ The constant values $n=2.55$ (a), $R_{sh}=5\cdot10^3$~$\Omega$ (a), $\tau_n=3\cd
 
 \begin{figure}
 \begin{center}
-\includegraphics[width=15cm]{olikhFig11ab}%
+\includegraphics[width=15cm]{olikhFig13ab}%
 \end{center}
 \caption{\label{figFF}
 Simulated fill factor dependencies on SCR carrier lifetime and base  carrier lifetime (a) and on ideality factor and shunt resistance (b).
@@ -568,7 +588,7 @@ Whereas if $R_{sh}\leq10^4$~$\Omega$ (SC--R4 case) then  the open-circuit voltag
 
 Thereby the discussed above AI decrease of $\tau_g$ leads to degradation of open-circuit voltage and the fill factor in the USL case.
 This effect is enhanced by AI $R_{sh}$ decrease in the SC--R4 and is recovered partially by AI $n$ increase in the SC--R15.
- 
+
 
 
 

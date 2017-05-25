@@ -25,6 +25,13 @@ Lindroos J, Savin H.
 \newblock \emph{Sol Energy Mater Sol Cells} \textbf{147}, 2016: 115--126.
 \newblock \doi{http://dx.doi.org/10.1016/j.solmat.2015.11.047}.
 
+\bibitem{LID:JAP2017II}
+Vahlman H, Haarahiltunen A, Kwapil W, Schon J, Inglese A, Savin H.
+\newblock Modeling of light-induced degradation due to {C}u precipitation in
+  p--type silicon. II. Comparison of simulations and experiments.
+\newblock \emph{J Appl Phys} \textbf{121}(19), 2017: 195704.
+\newblock \doi{10.1063/1.4983455}.
+
 \bibitem{PID:SEMSC}
 Naumann V, Lausch D, Hahnel A, Bauer J, Breitenstein O, Graff A, Werner M,
   Swatek S, Grober S, Bagdahn J, Hagendorf C.
@@ -40,6 +47,13 @@ Hoffmann S, Koehl M.
 \newblock \emph{Progress in Photovoltaics: Research and Applications}
   \textbf{22}(2), 2012: 173--179.
 \newblock \doi{10.1002/pip.2238}.
+
+\bibitem{PID:2017}
+Hara K, Ogawa K, Okabayashi Y, Matsuzaki H, Masuda A.
+\newblock Influence of surface structure of n--type single--crystalline {S}i
+  solar cells on potential--induced deInfluence.
+\newblock \emph{Sol Energy Mater Sol Cells} \textbf{166}, 2017: 132--139.
+\newblock \doi{10.1016/j.solmat.2017.03.018}.
 
 \bibitem{Bhat}
 Bhat S, Rao A, Krishnan S, Sanjeev G, Puthanveettil SE.
@@ -294,7 +308,7 @@ Schmidt J.
 \newblock Effect of Dissociation of Iron--Boron Pairs in Crystalline Silicon on
   Solar Cell Properties.
 \newblock \emph{Progress in Photovoltaics: Research and Applications}
-  \textbf{13}, 2005: 325--331.
+  \textbf{13}(4), 2005: 325--331.
 \newblock \doi{10.1002/pip.594}.
 
 \bibitem{TeimurazPSS}
