@@ -48,7 +48,7 @@ On the other hand, it has been shown experimentally that ultrasonic  waves (USWs
 In particular, ultrasound is used
 to affect a carrier diffusion length \cite{Ostapenko1999,Ostrovskii2001},
 to vary a current in  p--n structures and Schottky diodes \cite{OlikhJAP,Olikh2011Sem,Davletova2009,Davletova2008,YOlikh2005,Olikh:Ultras},
-to transform an impurity defect \cite{Korotchenkov1995,Ostapenko1995,Olikh2009Sem},
+to transform an impurity defect \cite{Korotchenkov1995,Ostapenko1995,Olikh2009Sem,UST:Medvid},
 to change a spectrum  \cite{Zaver:2008} and density \cite{Mirsagatov} of surface states.
 Frequently the crystal and device properties recover after stopping of ultrasound action at room temperature even \cite{Ostapenko1999,Ostrovskii2001,OlikhJAP,Korotchenkov1995}.
 
@@ -152,7 +152,7 @@ After USL start the sample was kept at room temperature during 60 min and then t
 In order to avoid the effect of piezoelectric field on $I$--$V$ characteristics, the piezoelectric cell was shielded.
 
 The samples from the investigated set differed in the shunt resistance mainly.
-In the article the typical results for the samples with low (about~$10^4$~$\Omega$ at room temperature) and high ($>10^{15}$~$\Omega$) $R_{sh}$ value are presented.
+In the article the typical results for the samples with low (approximately $10^4$~$\Omega$ at room temperature) and high ($>10^{15}$~$\Omega$) $R_{sh}$ value are presented.
 The samples were labeled as SC-R4 and SC-R15 respectively.
 
 
@@ -424,15 +424,49 @@ therefore according to Eq.~(\ref{eqEpsSig}), the more effective ultrasound influ
 \label{P3}}
 
 Any concrete defect title was not referred as an recombination center in the discussion above.
+The additional investigations are necessary to define a type of defects, which are involved in both an recombination process and a acousto--defect interaction.
+
 It is known that the most harmful recombination centers in boron--doped Czochralski--grown SSC are the  boron--oxygen related defects \cite{MurphyJAP2011,Kim,LID:BothePP,LIDRev}, iron--boron pairs \cite{MurphyJAP2011,FeB:Vahanissi,FeB:Schmidt} (or another Fe--related trap in the $n^+p$--junctions \cite{TeimurazPSS,TeimurazJAP}), and oxide precipitates \cite{MurphySC2014,Oxide_Schon,MurphyJAP2011,MurphyJAP2012,Oxide:Chen}.
+The first two defects are sensitive to an intensive illumination at room temperature.
+Thus transformation of boron--oxygen defects by an illumination leads to minority--carrier lifetime degradation (down to as 5 times as small \cite{LIDRev}).
+Full lifetime recovery is observed after annealing at 200~$^\circ$C for $10$~min in the dark.
+The degradation--recovery cycle can be reiterated \cite{Kim}.
+On the other hand, at room temperature, the vast majority of iron exists in iron--boron pairs, which can be readily dissociated under intense illumination to release interstitial iron.
+This gives a lifetime change which depends on doping concentration and excess carrier concentration \cite{FeB:Schmidt}.
+After the dissociation procedure, the concentration of Fe$_i$ decreases according to \cite{MurphyJAP2011}
+\begin{equation}
+\label{eqFeB}
+N_{Fe}(t)=(N_{Fe,0}-N_{Fe,eq})\exp\left[-1.3\cdot10^{-3}p_p^{\,2/3}\exp\left(-\frac{0.68}{kT}\right)t\right]+N_{Fe,eq}\,,
+\end{equation}
+where 
+$N_{Fe,0}$ and $N_{Fe,eq}$ are the concentration after dissociation immediately and equilibrium
+concentration which remains a long time after dissociation respectively.
+The characteristic time $\left[1.3\cdot10^{-3}p_p^{\,2/3}\exp\left(-\frac{0.68}{kT}\right)\right]^{-1}$ equals to $2.53\cdot10^4$~s for samples under investigation at 295~K.
+ 
+
+To inspect an availability of boron--oxygen defects and iron--boron pairs the following experimental procedure was used.
+The samples were light soaked under halogen lamp (2 Suns) illumination at approximately 305~K.
+The illumination time varied from 1~h to 8~h.
+After illumination samples are stored in the dark at room temperature.
+To determine the kinetics of SSC parameters the dark $I$--$V$ characteristics were measured with interval 10--15~min at room temperature over a period 5~h after illumination stopping.
+To determine the permanent LID of SSC parameters the dark $I$--$V$ characteristics were measured in a 48~h after illumination.
+After accumulated time under illumination had reached 10--15~h the samples were annealed at 200~$^\circ$C for $10$~min in the dark and SSC parameters was determined at room temperature.
+After that, the illumination--annealing cycle was repeated.
+
+The results of residual influence of both illumination and annealing on an equilibrium value of SSC parameters are presented on \Fref{figLight}.
+One can see that the illumination does not affect a SCR carrier lifetime as well as a base  carrier lifetime neither before annealing, nor after.
+Illumination induced decrease of ideality factor is commensurable with an accuracy of $n$ determination.
+Changes of shunt resistance is most considerable
+
 
 \begin{figure}
 \begin{center}
 \includegraphics[width=15cm]{olikhFig8abcd}%
 \end{center}
-\caption{\label{figFF}
-Simulated fill factor dependencies on SCR carrier lifetime and base  carrier lifetime (a) and on ideality factor and shunt resistance (b).
-The constant values $n=2.55$ (a), $R_{sh}=5\cdot10^3$~$\Omega$ (a), $\tau_n=3\cdot10^{-6}$~s (b), $\tau_g=5\cdot10^{-8}$~s (b), and $T=320$~K were used.
+\caption{\label{figLight}
+Dependencies of SCR carrier lifetime (a), ideality factor (b), base  carrier lifetime (c), and shunt resistance (d) on accumulated illumination time and annealing.
+Data were obtained from $I$--$V$ curves which had measured in a 48~h after illumination or annealing at $T=295$~K.
+Lines only serve as guide to the eye.
 }%
 \end{figure}
 
@@ -440,9 +474,11 @@ The constant values $n=2.55$ (a), $R_{sh}=5\cdot10^3$~$\Omega$ (a), $\tau_n=3\cd
 \begin{center}
 \includegraphics[width=7.5cm]{olikhFig9abcd}%
 \end{center}
-\caption{\label{figFF}
-Simulated fill factor dependencies on SCR carrier lifetime and base  carrier lifetime (a) and on ideality factor and shunt resistance (b).
-The constant values $n=2.55$ (a), $R_{sh}=5\cdot10^3$~$\Omega$ (a), $\tau_n=3\cdot10^{-6}$~s (b), $\tau_g=5\cdot10^{-8}$~s (b), and $T=320$~K were used.
+\caption{\label{figAfter}
+SCR carrier lifetime (a), ideality factor (b), base  carrier lifetime (c), and shunt resistance (d) as a function of time since illumination stoping.
+Sample SC--R4.
+$T=295$~K.
+Lines are plotted by using Eq.~(\ref{eqFeB}) and characteristic time $2.53\cdot10^4$~s. 
 }%
 \end{figure}
 
