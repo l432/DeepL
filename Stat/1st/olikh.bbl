@@ -170,21 +170,6 @@ Mirsagatov SA, Sapaeva IB, Nazarov Z.
 \newblock \emph{Inorganic Materials} \textbf{51}(1), 2015: 1--4.
 \newblock \doi{10.1134/S0020168515010148}.
 
-\bibitem{CDLR:JAP1995}
-Schenka A, Krumbein U.
-\newblock Coupled defect-level recombination: Theory and application to
-  anomalous diode characteristics.
-\newblock \emph{Journal of Applied Physics} \textbf{78}(5), 1995: 3185--3192.
-\newblock \doi{10.1063/1.360007}.
-
-\bibitem{CDLR:JAP}
-Steingrube S, Breitenstein O, Ramspeck K, Glunz S, Schenk A, Altermatt PP.
-\newblock Explanation of commonly observed shunt currents in c-Si solar cells
-  by means of recombination statistics beyond the Shockley-Read-Hall
-  approximation.
-\newblock \emph{Journal of Applied Physics} \textbf{110}(1), 2011: 014515.
-\newblock \doi{10.1063/1.3607310}.
-
 \bibitem{ni:Green}
 Sproul AB, Green MA.
 \newblock Intrinsic carrier concentration and minority-carrier mobility of
@@ -244,6 +229,21 @@ Kaminski A, Marchand JJ, Omari HE, Laugier A, Le QN, Sarti D.
 \newblock In \emph{Proceedings of the 1996 25th IEEE Photovoltaic Specialists
   Conference}. 1996, 573--576.
 \newblock Washington, DC, USA.
+
+\bibitem{CDLR:JAP1995}
+Schenka A, Krumbein U.
+\newblock Coupled defect-level recombination: Theory and application to
+  anomalous diode characteristics.
+\newblock \emph{Journal of Applied Physics} \textbf{78}(5), 1995: 3185--3192.
+\newblock \doi{10.1063/1.360007}.
+
+\bibitem{CDLR:JAP}
+Steingrube S, Breitenstein O, Ramspeck K, Glunz S, Schenk A, Altermatt PP.
+\newblock Explanation of commonly observed shunt currents in c-Si solar cells
+  by means of recombination statistics beyond the Shockley-Read-Hall
+  approximation.
+\newblock \emph{Journal of Applied Physics} \textbf{110}(1), 2011: 014515.
+\newblock \doi{10.1063/1.3607310}.
 
 \bibitem{CDLR:SSP}
 Breitenstein O, Bauer J, Altermatt PP, Ramspeck K.
