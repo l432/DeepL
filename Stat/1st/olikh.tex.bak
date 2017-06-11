@@ -13,15 +13,10 @@
 \begin{abstract}
 The experimental investigation of ultrasound influence on the silicon solar cell current-voltage characteristic has been carried out.
 The experiments were carried out by  using  longitudinal and transverse ultrasound waves  in the temperature range from 290 to 340~K.
-The investigation has revealed the acoustically driven reversible increment of an ideality factor and decrement of a carrier lifetime both in the space charge region and in the solar cell base, a a photocurrent, an open--circuit voltage,  a fill factor, and a shunt resistance.
+The investigation has revealed the acoustically driven reversible increment of an ideality factor and decrement of a carrier lifetime both in the space charge region and in the solar cell base, a photocurrent, an open--circuit voltage,  a fill factor, and a shunt resistance.
 The models of coupled defect level recombination, Shockley--Read--Hall recombination, and dislocation--induced impedance were used to describe the processes in the space charge region,  in the solar cell base, and shunt resistance respectively.
-
-It has been found out that the transverse ultrasound waves are more effective tools to affect silicon structure parameters than longitudinal ones.
-It has been given evidence of the degradation is due to the recombination amplification under the ultrasound wave action.
-The analysis has shown that the acoustically induced increase of carrier capture coefficient of point or extended defects is a reason of observed effects.
-The qualitative model of ultrasound influence, which is based on a change of a distance between defects or between components of defect complex under an alternating deformation action, is proposed.
-It has been shown that the oxide precipitates are likely defects, which takes part in a acousto--defect interaction.
-Thus, ultrasound can be an effective tool for controlling silicon structure characteristics.
+The role of oxide precipitates in an recombination and in an acousto--defect interaction has been discussed.
+It has been shown that the acoustically induced increase of carrier capture coefficient of point or extended defects is a reason of observed effects and qualitative model of ultrasound influence has been proposed.
 \end{abstract}
 
 %\pacs{73.30.+y, 43.35.Ty, 43.35.+d, 72.20.-i, 73.40.-c}
@@ -67,7 +62,7 @@ The findings are discussed by using models of coupled defect level recombination
 
 The investigated solar cell was created on 2 inch p-type CZ-Si:B wafers with doping level of $1.4\times10^{15}$~cm$^{-3}$ and thickness of 300~$\mu$m.
 The n$^+$ emitter with carrier concentration of about $10^{19}$~cm$^{-3}$ and thickness of 0.5~$\mu$m was formed by phosphorus implantation.
-Then wafer surface were passivated by Al$_2$O$_3$ film and further capped by TiO$_x$ as antireflective coating.
+Then wafer surface was passivated by Al$_2$O$_3$ film and further capped by TiO$_x$ as antireflective coating.
 Finally the aluminium front (metal grid) and rear (solid contact) electrodes were deposited by screen printing before rapid annealing.
 The samples with area of $1.5$ to $2.1$~cm$^{2}$ used in our experiments were cut from the central part of the wafer.
 
@@ -93,7 +88,7 @@ $d$ is the  SCR thickness:
 $\varepsilon$ is the permittivity (11.7 for Si),
 $p_p$ and $n_n$ are the majority carrier concentration in the $p$-- and $n$--type regions,
 $E_g$ is the semiconductor band gap,
-$N_c$ and $N_v$ are the the effective density of states in the conduction and valence bands.
+$N_c$ and $N_v$ are the effective density of states in the conduction and valence bands;
 $n$ is the ideality factor of the nonideal current components,
 $R_s$ and $R_{sh}$ are the series and shunt resistances of the device,
 $\mu_n$ and $\tau_n$ are the electron (minority carrier) mobility and lifetime outside SCR in the diode base.
@@ -664,7 +659,7 @@ It has been found out that the transverse ultrasound waves are more effective to
 It has been given evidence of the degradation is due to the recombination amplification under the ultrasound wave action.
 The analysis has shown that the acoustically induced increase of carrier capture coefficient of point or extended defects is a reason of observed effects.
 The qualitative model of ultrasound influence, which is based on a change of a distance between defects or between components of defect complex under an alternating deformation action, is proposed.
-It has been shown that the oxide precipitates are likely defects, which takes part in a acousto--defect interaction.
+It has been shown that the oxide precipitates are most likely defects, which takes part in an acousto--defect interaction.
 Thus, ultrasound can be an effective tool for controlling silicon structure characteristics.
 
 \section*{References}
