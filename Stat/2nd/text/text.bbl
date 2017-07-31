@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{50}%
+\begin{thebibliography}{52}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -388,21 +388,6 @@
   {Nucl. Instrum. Methods Phys. Res., Sect. A}\ }\textbf {\bibinfo {volume}
   {388}},\ \bibinfo {pages} {335} (\bibinfo {year} {1997})}\BibitemShut
   {NoStop}%
-\bibitem [{\citenamefont {Arutyunov}\ \emph {et~al.}(2016)\citenamefont
-  {Arutyunov}, \citenamefont {Bennett}, \citenamefont {Wight}, \citenamefont
-  {Krause-Rehberg}, \citenamefont {Emtsev}, \citenamefont {Abrosimov},\ and\
-  \citenamefont {Kozlovski}}]{Neutron:Arutyunov}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {N.}~\bibnamefont
-  {Arutyunov}}, \bibinfo {author} {\bibfnamefont {N.}~\bibnamefont {Bennett}},
-  \bibinfo {author} {\bibfnamefont {N.}~\bibnamefont {Wight}}, \bibinfo
-  {author} {\bibfnamefont {R.}~\bibnamefont {Krause-Rehberg}}, \bibinfo
-  {author} {\bibfnamefont {V.}~\bibnamefont {Emtsev}}, \bibinfo {author}
-  {\bibfnamefont {N.}~\bibnamefont {Abrosimov}}, \ and\ \bibinfo {author}
-  {\bibfnamefont {V.}~\bibnamefont {Kozlovski}},\ }\href {\doibase
-  10.1002/pssb.201600644} {\bibfield  {journal} {\bibinfo  {journal} {phys.
-  stat. sol. (b)}\ }\textbf {\bibinfo {volume} {253}},\ \bibinfo {pages} {2175}
-  (\bibinfo {year} {2016})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Srour}, \citenamefont {Marshall},\ and\ \citenamefont
   {Marshall}(2003)}]{Rew:Srour}%
   \BibitemOpen
@@ -424,6 +409,21 @@
   {journal} {Nucl. Instrum. Methods Phys. Res., Sect. A}\ }\textbf {\bibinfo
   {volume} {611}},\ \bibinfo {pages} {52} (\bibinfo {year} {2009})}\BibitemShut
   {NoStop}%
+\bibitem [{\citenamefont {Arutyunov}\ \emph {et~al.}(2016)\citenamefont
+  {Arutyunov}, \citenamefont {Bennett}, \citenamefont {Wight}, \citenamefont
+  {Krause-Rehberg}, \citenamefont {Emtsev}, \citenamefont {Abrosimov},\ and\
+  \citenamefont {Kozlovski}}]{Neutron:Arutyunov}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {N.}~\bibnamefont
+  {Arutyunov}}, \bibinfo {author} {\bibfnamefont {N.}~\bibnamefont {Bennett}},
+  \bibinfo {author} {\bibfnamefont {N.}~\bibnamefont {Wight}}, \bibinfo
+  {author} {\bibfnamefont {R.}~\bibnamefont {Krause-Rehberg}}, \bibinfo
+  {author} {\bibfnamefont {V.}~\bibnamefont {Emtsev}}, \bibinfo {author}
+  {\bibfnamefont {N.}~\bibnamefont {Abrosimov}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {V.}~\bibnamefont {Kozlovski}},\ }\href {\doibase
+  10.1002/pssb.201600644} {\bibfield  {journal} {\bibinfo  {journal} {phys.
+  stat. sol. (b)}\ }\textbf {\bibinfo {volume} {253}},\ \bibinfo {pages} {2175}
+  (\bibinfo {year} {2016})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Londos}, \citenamefont {Antonaras},\ and\
   \citenamefont {Chroneos}(2013)}]{neutron:Londos}%
   \BibitemOpen
@@ -472,6 +472,29 @@
   }\href {\doibase 10.1109/TED.2004.829857} {\bibfield  {journal} {\bibinfo
   {journal} {IEEE Trans. Electron Devices}\ }\textbf {\bibinfo {volume} {51}},\
   \bibinfo {pages} {1078} (\bibinfo {year} {2004})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Akkerman}\ \emph {et~al.}(2001)\citenamefont
+  {Akkerman}, \citenamefont {Barak}, \citenamefont {Chadwick}, \citenamefont
+  {Levinson}, \citenamefont {Murat},\ and\ \citenamefont
+  {Lifshitz}}]{NIEL:Akkerman}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Akkerman}}, \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Barak}},
+  \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Chadwick}}, \bibinfo
+  {author} {\bibfnamefont {J.}~\bibnamefont {Levinson}}, \bibinfo {author}
+  {\bibfnamefont {M.}~\bibnamefont {Murat}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {Y.}~\bibnamefont {Lifshitz}},\ }\href {\doibase
+  10.1016/S0969-806X(01)00207-9} {\bibfield  {journal} {\bibinfo  {journal}
+  {Radiat Phys Chem}\ }\textbf {\bibinfo {volume} {62}},\ \bibinfo {pages}
+  {301} (\bibinfo {year} {2001})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Bra\"{a}unig}\ and\ \citenamefont
+  {Wulf}(1994)}]{Brauning}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.}~\bibnamefont
+  {Bra\"{a}unig}}\ and\ \bibinfo {author} {\bibfnamefont {F.}~\bibnamefont
+  {Wulf}},\ }\href {\doibase 10.1016/0969-806X(94)90205-4} {\bibfield
+  {journal} {\bibinfo  {journal} {Radiat. Phys. Chem.}\ }\textbf {\bibinfo
+  {volume} {43}},\ \bibinfo {pages} {105} (\bibinfo {year} {1994})}\BibitemShut
+  {NoStop}%
 \bibitem [{\citenamefont {Rhoderick}\ and\ \citenamefont
   {Williams}(1988)}]{Rhoderick1988}%
   \BibitemOpen
