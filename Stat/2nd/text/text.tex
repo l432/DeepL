@@ -1,16 +1,21 @@
 
 
 %\documentclass[aip,graphicx]{revtex4-1}
-\documentclass[aip,jap,reprint]{revtex4-1}
+\documentclass[aip,jap, amsmath,amssymb,reprint]{revtex4-1}
+
 \usepackage{graphicx}% Include figure files
-\usepackage{dcolumn}
-\usepackage{multirow}
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+%\usepackage[mathlines]{lineno}% Enable numbering of text and display math
+%\linenumbers\relax % Commence numbering lines
 %\draft % marks overfull lines with a black rule on the right
+\usepackage{multirow}
 
 \begin{document}
 
+\preprint{AIP/123-QED}
 
-\title{Irradiation influence on  acousto--defect interaction in silicon $p-n$--structure}
+\title{Irradiation influence on  acousto--defect interaction in silicon $n^+$-$p$--structure}
 \author{O.~Ya. Olikh}
 \email{olikh@univ.kiev.ua}
 
@@ -30,14 +35,6 @@
 \date{\today}
 
 \begin{abstract}
-Abstract. Abstract. Abstract. Abstract. Abstract. Abstract. Abstract.
-Abstract. Abstract. Abstract. Abstract. Abstract.
-Abstract. Abstract. Abstract. Abstract. Abstract.
-Abstract. Abstract. Abstract.
-Abstract. Abstract. Abstract. Abstract.
-Abstract. Abstract. Abstract. Abstract. Abstract.
-Abstract. Abstract. Abstract.
-Abstract. Abstract. Abstract.
 Abstract. Abstract. Abstract. Abstract.
 Abstract.
 Abstract. Abstract. Abstract. Abstract. Abstract. Abstract. Abstract.
@@ -58,6 +55,7 @@ PIN photodiodes were studied systematically to understand the radiation toleranc
 \end{abstract}
 
 %\pacs{73.30.+y}
+\keywords{acousto--defect interaction, silicon, irradiation}
 
 \maketitle %\maketitle must follow title, authors, abstract and \pacs
 
@@ -91,7 +89,7 @@ One of a top--ranked cause of  this situation is a lack of experimental works, w
 
 Not all silicon defects are acoustically active and are subjected to modification under US action.
 The ADI efficiency depends on the defects centers type and structure \cite{Medvids}.
-Thus, for example, according to \cite{MirzadeJAP2011,PeleshchakUJF2016}, the force acting on the point defect during US loading (USL) is proportionate to volume elastic strain caused by the relaxation of the defect volume $\Delta\Omega_d$.
+Thus, for example according to \cite{MirzadeJAP2011,PeleshchakUJF2016}, the force acting on the point defect during US loading (USL) is proportionate to volume elastic strain caused by the relaxation of the defect volume $\Delta\Omega_d$.
 The irradiation is most widespread and studied methods of alteration of semiconductor defects.
 On the one hand, it is shown \cite{YOlikh2007TPL,Parchinskii2006,Gorb2010,Podolian2012}, that high--power US treatment leads to residual changes of the irradiated silicon structure properties.
 This effect deals with AI annealing of radiation defects (RDs).
@@ -104,7 +102,7 @@ Irradiation was carried by reactor neutrons and a $^{60}$Co--gamma source.
 It is expected that $\gamma$--radiation introduces vacancy--impurity point defects (VO$_i$ complex predominantly) \cite{NIEL:Jafari,Gamma:Prabhakara,NIEL:Moll}
 whereas neutrons create cluster defects \cite{Rew:Srour,Pintilie}, disordered regions \cite{Neutron:Arutyunov} and C$_i$O$_i$ complex  \cite{NIEL:Moll,neutron:Londos} mainly.
 This work represents distinctions of AI changes in silicon structures with different RDs.
-The used US intensity was not very high ($<0.5$~W/cm$^2$) to avoid the irreversible defect subsystem modification, which can be deals with a new defect creation, a RDs annealing or a long distance (a great many interatomic distance) AI diffusion.
+The used US intensity ($W_{U\!S}$) was not very high ($<0.5$~W/cm$^2$) to avoid the irreversible defect subsystem modification, which can be deals with a new defect creation, a RDs annealing or a long distance (a great many interatomic distance) AI diffusion.
 As a result, the full recovery of $n^+$-$p$--Si structure characteristics was observed after the stop of an AW propagation.
 The models of coupled defect level recombination \cite{CDLR:JAP1995,CDLR:JAP}, Shockley--Read--Hall (SRH) recombination, and dislocation--induced impedance \cite{Rsh:Gopal2003,Rsh:Gopal2004} were used to describe the processes in the space charge region,  in the diode base, and shunt resistance respectively.
 The interaction of defects with an inhomogeneous USW strain field \cite{MirzadeJAP2011,PeleshchakUJF2016} was recruited to explain the observed AI phenomena.
@@ -119,149 +117,99 @@ The n$^+$ emitter with carrier concentration of about $10^{19}$~cm$^{-3}$ and th
 Then wafer surface was passivated by Al$_2$O$_3$ film and further capped by TiO$_x$ as antireflective coating.
 Finally the aluminium front (metal grid) and rear (solid contact) electrodes were deposited by screen printing before rapid annealing.
 The samples with area of about $2$~cm$^{2}$ used in experiments were cut from the central part of the wafer.
-
-1 sample  was  irradiated  with  neutrons  in  the fluence  of $\Psi_n=4\cdot10^{11}$~n/cm$^2$  and was denoted as SCn.
-2 samples were irradiated  with  $^{60}$Co $\gamma$--rays in the  dose  $D_{\gamma1}=10^6$~rad and $D_{\gamma2}=10^7$~rad and were denoted as SCg6 and SCg7 respectively.
-The label SCi was used for non--irradiated sample.
+1 sample  was  irradiated  with  neutrons  in  the fluence  of $\Psi_n=4\cdot10^{11}$~n/cm$^2$  and was denoted as nSC.
+2 samples were irradiated  with  $^{60}$Co $\gamma$--rays in the  dose  $D_{\gamma1}=10^6$~rad and $D_{\gamma2}=10^7$~rad and were denoted as g6SC and g7SC respectively.
+The label iSC was used for non--irradiated sample.
 To avoid an impact of  long--term annealing, which are typical to neutron damaged structure especially \cite{NIEL:Moll,Rew:Srour}, irradiated samples were stored  for  5 years  at  room  temperature before measuring.
-
-According to data \cite{NIEL:Akkerman,Brauning} the neutron dose and gamma fluences can be calculated as $D_n=4.6\cdot10^3$~rad and $\Psi_{\gamma1}=1.6\cdot10^{15}$~$\gamma$/cm$^2$ and $\Psi_{\gamma2}=1.6\cdot10^{16}$~$\gamma$/cm$^2$ respectively. 
-The non--ionizing energy losses (NIEL) and lifetime damage--constants ($K_\tau$) for neutron 
-differ from $\gamma^{60}$Co ones by four order of magnitude \cite{NIEL:Akkerman,NIEL:Jafari}: 
-NIEL$_n=2.04\cdot10^{-3}$~MeV~cm$^2$/g, NIEL$_\gamma=1.07\cdot10^{-7}$~MeV~cm$^2$/g, $K_{\tau n}=10^{-7}$~cm$^2$/s, $K_{\tau \gamma}=5\cdot10^{-12}$~cm$^2$/s.
-
-
+According to data \cite{NIEL:Akkerman,Brauning} the neutron dose and gamma fluences can be calculated as $D_n=4.6\cdot10^3$~rad and $\Psi_{\gamma1}=1.6\cdot10^{15}$~$\gamma$/cm$^2$ and $\Psi_{\gamma2}=1.6\cdot10^{16}$~$\gamma$/cm$^2$ respectively.
+The non--ionizing energy losses (NIEL) and lifetime damage--constants ($K_\tau$) for neutron
+differ from $\gamma$--$^{60}$Co ones by four order of magnitude \cite{NIEL:Akkerman,NIEL:Jafari}:
+NIEL$_n=2.04\cdot10^{-3}$~MeV~cm$^2$/g, NIEL$_\gamma=1.07\cdot10^{-7}$~MeV~cm$^2$/g, $K_{\tau,n}=10^{-7}$~cm$^2$/s, $K_{\tau,\gamma}=5\cdot10^{-12}$~cm$^2$/s.
+Therefore neutrons and $\gamma$-rays are expected to produce a similar damage ($\Psi_{\gamma1}\cdot K_{\tau,\gamma}<\Psi_{n}\cdot K_{\tau,n}<\Psi_{\gamma2}\cdot K_{\tau,\gamma}$).
 
 
+The dark forward current--voltage ($I$--$V$) characteristics of the samples both with and without USL were measured over a temperature range 290--340~K.
+The temperature was controlled by differential copper--constantan thermocouple.
+Some curves are shown in Fig.~\ref{figIV}.
 
 
-The Schottky diode (SD) is one of the most commonly used semiconductor devices.
-It has advantages of low forward voltage drop, fast response and low resistance.
-SDs are widely applied in high-speed logic circuits, integrated and optoelectronic technologies, including microwave diodes field-effect transistors, various detectors, solar cells.
-Determining the SD parameters, which must be taken into account in practical application, plays an important role in the designing and manufacturing process.
+\begin{figure*}
+\includegraphics[width=0.9\textwidth]{olikhFig1}%
+\caption{\label{figIV}
+Dark $I$--$V$ characteristics measured (a) at 306~K for non--irradiated (circles), neutron--irradiated (squares) and gamma--irradiated (diamonds and triangles) structures without USL;
+(b) at 301~K (circles) and 341~K (asterisks) with (filled marks, $W_{U\!S}=0.40$~W/cm$^2$) and without(open marks) USL for the iSC.
+The marks are the experimental results, the solid lines are the fitted curves using Eqs.~(\ref{eqIV})--(\ref{eqW}).
+The dashed, dot--dashed and dotted lines in (a) are the base, SCR and shunt components of iSC current, respectively.
+}%
+\end{figure*}
 
-The forward bias current-voltage ($I$--$V$) characteristics, according to the thermionic emission SD model, can be expressed as\cite{Rhoderick1988}
+The double--diode model of n$^+$--p structure $I$--$V$ characteristics expressed in the following form:
 \begin{eqnarray}
-\label{eqSD}
-I&=&I_s\left\{\exp\left[\frac{q(V-IR_s)}{nkT}\right]-1\right\}\\
-\label{eqIs}
-I_s&=&AA^*\,T^2\exp\left(-\frac{q\Phi_b}{kT}\right)
+I(V,T)&=&I_{SCR}+I_{base}+I_{sh}\;,\label{eqIV}\\
+I_{SCR}&=&\frac{qAn_id}{2\tau_{g}}\left\{\exp \left[\frac{q(V-IR_s)}{nkT}\right]-1\right\}\,,\label{eqIscr}\\
+I_{base}&=&\frac{qAn_i^2}{p_p}\sqrt{\frac{\mu_nkT}{\tau_n}}\left\{\exp \left[\frac{q(V-IR_s)}{kT}\right]-1\right\},\label{eqIbase}\\
+I_{sh}&=&(V-IR_s)/R_{sh}\,,\label{eqIsh}
 \end{eqnarray}
 where
-$I_s$ is the saturation current,
-$q$ is the electron charge,
-$R_s$ is the series resistance,
-$n$ is the ideality factor,
-$k$ is the Boltzmann constant,
-$T$ is the absolute temperature,
-$A$ is the diode area,
-$A^*$ is the effective Richardson constant,
-$\Phi_b$ is zero bias Schottky barrier height (SBH).
-$\Phi_b$ (or $I_s$), $n$ and $R_s$ are the fundamental parameters of the SD model and should be determined as accurately as possible from experimental $I$--$V$ characteristics.
-
-
-
-\subsection{Synthetic data\label{SubData}}
-
-We wanted to test methods at various values of parameters and thereto data were generated in the temperature range from 130 to 330~K.
-At the same time we try to synthesize data, which are close to real diode.
-The temperature dependences of $\Phi_b$, $n$ and $R_s$ were selected for following reasons.
-It is predicted theoretically \cite{Rhoderick1988} and observed
-experimentally \cite{Aboelfotoh,Zhua}, that, in the case of homogeneous Schottky contact, the SBH decreases with temperature increase in the way similar to semiconductor band gap.
-Therefore the Varshni equation \cite{SiEg2012} can be used to fit the SBH temperature dependence
+$I_{SCR}$ reflects the overall recombination in the space charge region (SCR),
+$I_{base}$ is closely related to recombination in the quasi-neutral region,
+$I_{sh}$ is the shunt current,
+$A$ is the sample area,
+$n_i$ is the intrinsic carrier concentration,
+$\tau_{g}$ is the SCR carrier lifetime,
+$d$ is the  SCR thickness:
 \begin{equation}
-\label{eqFbT}
-\Phi_b(T) = \Phi_b(0) - 7.021\cdot10^{-4} T^2 /(T + 1108),
+\label{eqW}
+    d=\sqrt{\frac{2 \varepsilon \varepsilon_0(p_p+n_n)}{q^2 p_p n_n}\left[E_g-kT\ln\!\left(\frac{N_vN_c}{p_pn_n}\right)-2kT\!-\!Vq\right]},
 \end{equation}
-where zero temperature SBH $\Phi_b(0)$ was chosen of $0.75$~eV.
-The temperature dependence of the ideality factor is often described as follows
-\begin{equation}
-\label{eqnT}
-n=1+T_0/T,
-\end{equation}
-where $T_0$ is within $20\div50$~K to silicon case.\cite{T0:Lee,T0:McCafferty,T0:Saxena,Aboelfotoh}
-The value of $T_0=35$~K was used when data were synthesizing.
-
-The Norde method accuracy dependence on $\gamma$ value was calculated --- see Fig.~\ref{figNorde}.
-The value $\gamma=1.8$ was used to minimize the method error.
-
-\begin{figure}
-\includegraphics[width=0.45\textwidth]{fig_1}%
-\caption{\label{figNorde}
-Dependences of the $\Phi_b$ (a) and $R_s$ (b) determination accuracy on $\gamma$.
-Norde method is applied to sets of ideal synthetic data (solid line) and noisy synthetic data (dotted and dashed lines).
-}
-\end{figure}
+$\varepsilon$ is the permittivity (11.7 for Si),
+$p_p$ and $n_n$ are the majority carrier concentration in the $p$-- and $n$--type regions,
+$E_g$ is the semiconductor band gap,
+$N_c$ and $N_v$ are the effective density of states in the conduction and valence bands;
+$n$ is the ideality factor of the nonideal current components,
+$R_s$ and $R_{sh}$ are the series and shunt resistances of the structure,
+$\mu_n$ and $\tau_n$ are the electron (minority carrier) mobility and lifetime in the diode base.
 
 
-\begin{table*}
-\caption{\label{tabIF}The influencing factors of the Schottky diode parameters extraction.
-\footnote{The presence of $R_s$ or $I_s$ or $n$ in the cell indicates the impact on extracted parameter accuracy;
-the subscript and inside bracket symbol deal with extraction error behavior with influencing factor increasing --- see details in the text.}
-}
-\begin{ruledtabular}
-\begin{tabular}{lccc}
-&\multicolumn{3}{c}{Extracted parameter}\\
-Method &$R_s$&$\Phi_b$&$n$\\
-\hline
-%\multirow{2}{\hsize}{\centering{1974}}&1&2&3\\
-%&4&5&6\\
-Norde &$n^w(\vee)$&$I_s(\downarrow)$&---\\
-Werner &$R_s(\vee)$&$R_s(\downarrow)$, $I_s^w(\downarrow)$, $n^w(\downarrow)$&$R_s(\uparrow)$, $n^w(\downarrow)$\\
-Werner* &&$R_s(\vee)$, $I_s(\uparrow)$, $n(\uparrow)$&$R_s(\vee)$, $I_s(\uparrow)$, $n^w(\uparrow)$\\
-Cibils &$R_s(\vee)$, $n(\uparrow)$&$R_s(\uparrow)$, $n(\vee)$& $R_s(\uparrow)$, $n(\vee)$\\
-Cibils* &&$R_s(\vee)$, $I_s(\uparrow)$, $n(\uparrow)$& $R_s(\vee)$, $I_s(\uparrow)$, $n(\uparrow)$\\
-Kaminskii I&$R_s(\leftharpoonup)$, $n^w(\downarrow)$&$R_s(\vee)$, $I_s(\downarrow)$, $n(\downarrow)$& $R_s(\vee)$, $I_s^w(\downarrow)$, $n(\downarrow)$\\
-Kaminskii* I&&$R_s(\uparrow)$, $I_s(\uparrow)$, $n(\uparrow)$& $R_s(\uparrow)$, $I_s(\uparrow)$, $n(\uparrow)$\\
-Kaminskii II&$R_s(\downarrow)$, $I_s(\rightharpoonup)$, $n^w(\uparrow)$&$I_s(\rightharpoonup)$, $n^w(\uparrow)$& $I_s(\rightharpoonup)$\\
-Kaminskii* II&&$I_s(\uparrow)$, $n(\uparrow)$& $I_s(\uparrow)$, $n(\uparrow)$\\
-Bohlin &$I_s(\rightharpoondown)$&$I_s(\downarrow)$, $n(\wedge)$& $I_s(\rightharpoondown)$, $n(\wedge)$\\
-Lee &$R_s(\downarrow)$, $I_s(\uparrow)$, $n(\uparrow)$&$I_s(\uparrow)$, $n(\uparrow)$& $I_s(\uparrow)$, $n(\uparrow)$\\
-Gromov &$R_s(\downarrow)$, $I_s(\uparrow)$&$R_s(\uparrow)$, $I_s(\uparrow)$, $n^w(\downarrow)$&$R_s(\uparrow)$, $I_s(\uparrow)$, $n^w(\downarrow)$\\
-Cheung &$R_s^w(\vee)$&$R_s(N)$, $I_s(\downarrow)$, $n(\downarrow)$&$R_s^w(N)$, $I_s(\rightharpoondown)$, $n(\downarrow)$\\
-Mikhelashvili &$R_s(\uparrow)$, $I_s(\downarrow)$, $n^w(\downarrow)$&$R_s(\uparrow)$, $I_s(\wedge)$, $n^w(\downarrow)$&$R_s(\uparrow)$, $I_s(\wedge)$, $n^w(\downarrow)$\\
-Ordinary LS &$R_s(\downarrow)$&$R_s(\uparrow)$, $I_s^w(\downarrow)$, $n^w(\downarrow)$&$R_s(\uparrow)$, $n^w(\downarrow)$\\
-Lambert LS &$R_s(\downarrow)$&$I_s^w(\downarrow)$&$n^w(\downarrow)$\\
-EAs &$R_s(\downarrow)$, $I_s^w(\uparrow)$&$R_s(\uparrow)$, $I_s(\vee)$, $n^w(\downarrow)$&$R_s(\uparrow)$, $I_s(\vee)$, $n^w(\downarrow)$\\
-\end{tabular}
-\end{ruledtabular}
-\end{table*}
+We used Eqs. (\ref{eqIV})--(\ref{eqW}) to fit the experimental data and $\tau_g$, $\tau_n$, $n$, $R_{sh}$, and $R_s$ were taken as the  fittings parameters.
+The known \cite{ni:Green,Schroder2006,Markvart} temperature dependencies of $n_i$, $E_g$, and $\mu_n$ were used.
+The extremely good fit to the experimental data was obtained --- see Fig.~\ref{figIV}.
+In particular, the $R_s$ value 1~$\Omega$ was determined for all samples.
 
 
-The precision of Werner*, Cibils* and Kaminskii* methods are more susceptible to parameters value then non-asterisk ones.
-The most weak dependence of parameter extraction accuracy is observed in the numerical  (especially Lambert LS) methods  cases.
-
+In the USL case, the transverse acoustic waves with frequency of $4.2$~MHz were exited with help of a piezoelectric transducer and were injected in the samples from the base side in the [111]-direction.
+The USLs parameters of different samples are listed in the Table~\ref{tabUSL}.
+It was reported previously \cite{Ostapenko1995,Olikh:Ultras,Ostrovskii2001} that a characteristic time of change in the silicon structure parameters under the ultrasound action  did not exceed $2\cdot10^3$~s.
+In order to wait till the acoustically induced (AI) transitional period the following experimental procedure has been used.
+After USL start the sample was kept at room temperature during 60 min and then the $I$--$V$ measurements and the sample heating were started.
+In order to avoid the effect of piezoelectric field on $I$--$V$ characteristics, the piezoelectric transducer has been shielded.
 
 
 \begin{table}
-\caption{\label{tab}Estimated running time of the parameters determination by different methods from a single $I$--$V$ curve.}
+\caption{\label{tabUSL}The parameters of ultrasound loadings.
+}
 \begin{ruledtabular}
-\begin{tabular}{lcc}
-Method &\multicolumn{2}{c}{Running time, s}\\
- &max&min\\
+\begin{tabular}{lcr}
+Sample&$W_{U\!S}$, W/cm$^2$&Label\\
 \hline
-Norde &$3.7\cdot10^{-5}$&$2.6\cdot10^{-5}$\\
-Werner\footnotemark[1] &$4.5\cdot10^{-5}$&$4.0\cdot10^{-5}$\\
-Cibils\footnotemark[1] &$5.3\cdot10^{-3}$&$1.9\cdot10^{-4}$\\
-Kaminskii I\footnotemark[1] &$8.0\cdot10^{-5}$&$4.5\cdot10^{-5}$\\
-Kaminskii II\footnotemark[1] &$2.6\cdot10^{-3}$&$3.0\cdot10^{-4}$\\
-Bohlin &$6.3\cdot10^{-5}$&$4.0\cdot10^{-5}$\\
-Lee &$3.6\cdot10^{-3}$&$1.8\cdot10^{-4}$\\
-Gromov &$2.2\cdot10^{-2}$&$2.2\cdot10^{-2}$\\
-Gromov\footnotemark[2] &$4.6\cdot10^{-5}$&$2.7\cdot10^{-5}$\\
-Cheung &$3.2\cdot10^{-5}$&$2.0\cdot10^{-5}$\\
-Mikhelashvili &$4.7\cdot10^{-5}$&$2.9\cdot10^{-5}$\\
-Ordinary LS &$460$&$1.8$\\
-Lambert LS &$540$&$7.6$\\
-DE &$0.73$&$0.36$\\
-PSO &$0.35$&$0.14$\\
-MABC &$0.20$&$5.7\cdot10^{-2}$\\
-TLBO &$19.2$&$5.4$
+\multirow{2}{*}{iSC}&0.22&USL--i--1\\
+&0.40&USL--i--2\\
+\multirow{2}{*}{nSC}&0.21&USL--n--1\\
+&0.36&USL--n--2\\
+g6SC&0.32&USL--g6--2\\
+\multirow{2}{*}{g7SC}&0.24&USL--g7--1\\
+&0.40&USL--g7--2\\
 \end{tabular}
 \end{ruledtabular}
-\footnotetext[1]{The time of $I$--$V$ curve correction and linear fitting is $1.8\cdot10^{-5}$~s (max) or $1.4\cdot10^{-5}$~s (min).}
-\footnotetext[2]{If adaptive procedure is not used.}
 \end{table}
+
+
+The linear and non-linear fitting were done by using the least-squares and differential evolution \cite{DEWang} method, respectively.
+
+
+\section{Results and Discussion}
+\subsection{Ultrasound influence on the SCR recombination
+\label{P1}}
 
 
 

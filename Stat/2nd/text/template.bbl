@@ -1,0 +1,2211 @@
+%merlin.mbs aipnum4-1.bst 2010-07-25 4.21a (PWD, AO, DPC) hacked
+%Control: key (0)
+%Control: author (8) initials jnrlst
+%Control: editor formatted (1) identically to author
+%Control: production of article title (-1) disabled
+%Control: page (0) single
+%Control: year (1) truncated
+%Control: production of eprint (0) enabled
+\begin{thebibliography}{212}%
+\makeatletter
+\providecommand \@ifxundefined [1]{%
+ \@ifx{#1\undefined}
+}%
+\providecommand \@ifnum [1]{%
+ \ifnum #1\expandafter \@firstoftwo
+ \else \expandafter \@secondoftwo
+ \fi
+}%
+\providecommand \@ifx [1]{%
+ \ifx #1\expandafter \@firstoftwo
+ \else \expandafter \@secondoftwo
+ \fi
+}%
+\providecommand \natexlab [1]{#1}%
+\providecommand \enquote  [1]{``#1''}%
+\providecommand \bibnamefont  [1]{#1}%
+\providecommand \bibfnamefont [1]{#1}%
+\providecommand \citenamefont [1]{#1}%
+\providecommand \href@noop [0]{\@secondoftwo}%
+\providecommand \href [0]{\begingroup \@sanitize@url \@href}%
+\providecommand \@href[1]{\@@startlink{#1}\@@href}%
+\providecommand \@@href[1]{\endgroup#1\@@endlink}%
+\providecommand \@sanitize@url [0]{\catcode `\\12\catcode `\$12\catcode
+  `\&12\catcode `\#12\catcode `\^12\catcode `\_12\catcode `\%12\relax}%
+\providecommand \@@startlink[1]{}%
+\providecommand \@@endlink[0]{}%
+\providecommand \url  [0]{\begingroup\@sanitize@url \@url }%
+\providecommand \@url [1]{\endgroup\@href {#1}{\urlprefix }}%
+\providecommand \urlprefix  [0]{URL }%
+\providecommand \Eprint [0]{\href }%
+\providecommand \doibase [0]{http://dx.doi.org/}%
+\providecommand \selectlanguage [0]{\@gobble}%
+\providecommand \bibinfo  [0]{\@secondoftwo}%
+\providecommand \bibfield  [0]{\@secondoftwo}%
+\providecommand \translation [1]{[#1]}%
+\providecommand \BibitemOpen [0]{}%
+\providecommand \bibitemStop [0]{}%
+\providecommand \bibitemNoStop [0]{.\EOS\space}%
+\providecommand \EOS [0]{\spacefactor3000\relax}%
+\providecommand \BibitemShut  [1]{\csname bibitem#1\endcsname}%
+\let\auto@bib@innerbib\@empty
+%</preamble>
+\bibitem [{Note1()}]{Note1}%
+  \BibitemOpen
+  \bibinfo {note} {Automatically placing footnotes into the bibliography
+  requires using BibTeX to compile the bibliography.}\BibitemShut {Stop}%
+\bibitem [{\citenamefont {Aboelfotoh}(1989)}]{Aboelfotoh}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Aboelfotoh}},\ }\href {\doibase 10.1063/1.343867} {\bibfield  {journal}
+  {\bibinfo  {journal} {J. Appl. Phys.}\ }\textbf {\bibinfo {volume} {66}},\
+  \bibinfo {pages} {262} (\bibinfo {year} {1989})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Abu-Samaha}, \citenamefont {Darwish},\ and\
+  \citenamefont {Mansour}(2013)}]{Abu-Samaha}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {F.~S.}\ \bibnamefont
+  {Abu-Samaha}}, \bibinfo {author} {\bibfnamefont {A.~A.~A.}\ \bibnamefont
+  {Darwish}}, \ and\ \bibinfo {author} {\bibfnamefont {A.~N.}\ \bibnamefont
+  {Mansour}},\ }\href {\doibase 10.1016/j.mssp.2013.07.036} {\bibfield
+  {journal} {\bibinfo  {journal} {Mater. Sci. Semicond. Process.}\ }\textbf
+  {\bibinfo {volume} {16}},\ \bibinfo {pages} {1988} (\bibinfo {year}
+  {2013})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Akkerman}\ \emph {et~al.}(2001)\citenamefont
+  {Akkerman}, \citenamefont {Barak}, \citenamefont {Chadwick}, \citenamefont
+  {Levinson}, \citenamefont {Murat},\ and\ \citenamefont
+  {Lifshitz}}]{NIEL:Akkerman}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Akkerman}}, \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Barak}},
+  \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Chadwick}}, \bibinfo
+  {author} {\bibfnamefont {J.}~\bibnamefont {Levinson}}, \bibinfo {author}
+  {\bibfnamefont {M.}~\bibnamefont {Murat}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {Y.}~\bibnamefont {Lifshitz}},\ }\href {\doibase
+  10.1016/S0969-806X(01)00207-9} {\bibfield  {journal} {\bibinfo  {journal}
+  {Radiat Phys Chem}\ }\textbf {\bibinfo {volume} {62}},\ \bibinfo {pages}
+  {301} (\bibinfo {year} {2001})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Aldemir}, \citenamefont {Kokce},\ and\ \citenamefont
+  {Ozdemir}(2012)}]{Aldemir}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.~A.}\ \bibnamefont
+  {Aldemir}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Kokce}}, \
+  and\ \bibinfo {author} {\bibfnamefont {A.~F.}\ \bibnamefont {Ozdemir}},\
+  }\href {\doibase 10.1016/j.mee.2012.04.012} {\bibfield  {journal} {\bibinfo
+  {journal} {Microelectron. Eng.}\ }\textbf {\bibinfo {volume} {98}},\ \bibinfo
+  {pages} {6} (\bibinfo {year} {2012})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Andrews}\ and\ \citenamefont
+  {Lepselter}(1970)}]{Andrews}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {Andrews}}\ and\ \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Lepselter}},\ }\href {\doibase 10.1016/0038-1101(70)90098-5} {\bibfield
+  {journal} {\bibinfo  {journal} {Solid-State Electron.}\ }\textbf {\bibinfo
+  {volume} {13}},\ \bibinfo {pages} {1011} (\bibinfo {year}
+  {1970})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Arutyunov}\ \emph {et~al.}(2016)\citenamefont
+  {Arutyunov}, \citenamefont {Bennett}, \citenamefont {Wight}, \citenamefont
+  {Krause-Rehberg}, \citenamefont {Emtsev}, \citenamefont {Abrosimov},\ and\
+  \citenamefont {Kozlovski}}]{Neutron:Arutyunov}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {N.}~\bibnamefont
+  {Arutyunov}}, \bibinfo {author} {\bibfnamefont {N.}~\bibnamefont {Bennett}},
+  \bibinfo {author} {\bibfnamefont {N.}~\bibnamefont {Wight}}, \bibinfo
+  {author} {\bibfnamefont {R.}~\bibnamefont {Krause-Rehberg}}, \bibinfo
+  {author} {\bibfnamefont {V.}~\bibnamefont {Emtsev}}, \bibinfo {author}
+  {\bibfnamefont {N.}~\bibnamefont {Abrosimov}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {V.}~\bibnamefont {Kozlovski}},\ }\href {\doibase
+  10.1002/pssb.201600644} {\bibfield  {journal} {\bibinfo  {journal} {phys.
+  stat. sol. (b)}\ }\textbf {\bibinfo {volume} {253}},\ \bibinfo {pages} {2175}
+  (\bibinfo {year} {2016})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Aubry}\ and\ \citenamefont {Meyer}(1994)}]{Aubry}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {V.}~\bibnamefont
+  {Aubry}}\ and\ \bibinfo {author} {\bibfnamefont {F.}~\bibnamefont {Meyer}},\
+  }\href {\doibase 10.1063/1.357909} {\bibfield  {journal} {\bibinfo  {journal}
+  {J. Appl. Phys.}\ }\textbf {\bibinfo {volume} {76}},\ \bibinfo {pages} {7973}
+  (\bibinfo {year} {1994})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Baker}\ and\ \citenamefont
+  {Maxey}(2001)}]{Rsh:Baker}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {I.}~\bibnamefont
+  {Baker}}\ and\ \bibinfo {author} {\bibfnamefont {C.}~\bibnamefont {Maxey}},\
+  }\href {\doibase 10.1007/BF02665856} {\bibfield  {journal} {\bibinfo
+  {journal} {J. Electron. Mater.}\ }\textbf {\bibinfo {volume} {30}},\ \bibinfo
+  {pages} {682} (\bibinfo {year} {2001})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Barth}\ \emph {et~al.}(2016)\citenamefont {Barth},
+  \citenamefont {Jovanovic}, \citenamefont {Ahzi},\ and\ \citenamefont
+  {Khaleel}}]{RshT}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {N.}~\bibnamefont
+  {Barth}}, \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont {Jovanovic}},
+  \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Ahzi}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {M.~A.}\ \bibnamefont {Khaleel}},\ }\href {\doibase
+  10.1016/j.solmat.2015.09.003} {\bibfield  {journal} {\bibinfo  {journal}
+  {Sol. Energy Mater. Sol. Cells}\ }\textbf {\bibinfo {volume} {148}},\
+  \bibinfo {pages} {87} (\bibinfo {year} {2016})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Beier}\ and\ \citenamefont {Voss}(1993)}]{Beier}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {Beier}}\ and\ \bibinfo {author} {\bibfnamefont {B.}~\bibnamefont {Voss}},\
+  }in\ \href@noop {} {\emph {\bibinfo {booktitle} {Proceedings of the 23rd IEEE
+  Photovoltaic Specialists Conference}}}\ (\bibinfo {year} {1993})\ pp.\
+  \bibinfo {pages} {321--326},\ \bibinfo {note} {louisville, KY,
+  USA}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Bhat}\ \emph {et~al.}(2014)\citenamefont {Bhat},
+  \citenamefont {Rao}, \citenamefont {Krishnan}, \citenamefont {Sanjeev},\ and\
+  \citenamefont {Puthanveettil}}]{Bhat}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+  {Bhat}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Rao}}, \bibinfo
+  {author} {\bibfnamefont {S.}~\bibnamefont {Krishnan}}, \bibinfo {author}
+  {\bibfnamefont {G.}~\bibnamefont {Sanjeev}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {S.~E.}\ \bibnamefont {Puthanveettil}},\ }\href {\doibase
+  10.1016/j.solmat.2013.08.043} {\bibfield  {journal} {\bibinfo  {journal}
+  {Sol. Energy Mater. Sol. Cells}\ }\textbf {\bibinfo {volume} {120}},\
+  \bibinfo {pages} {191} (\bibinfo {year} {2014})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Bohlin}(1986)}]{Bohlin}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.~E.}\ \bibnamefont
+  {Bohlin}},\ }\href {\doibase 10.1063/1.337372} {\bibfield  {journal}
+  {\bibinfo  {journal} {J. Appl. Phys.}\ }\textbf {\bibinfo {volume} {60}},\
+  \bibinfo {pages} {1223} (\bibinfo {year} {1986})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Bothe}, \citenamefont {Sinton},\ and\ \citenamefont
+  {Schmidt}(2005)}]{LID:BothePP}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
+  {Bothe}}, \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont {Sinton}}, \
+  and\ \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Schmidt}},\ }\href
+  {\doibase 10.1002/pip.586} {\bibfield  {journal} {\bibinfo  {journal}
+  {Progress in Photovoltaics: Research and Applications}\ }\textbf {\bibinfo
+  {volume} {13}},\ \bibinfo {pages} {287} (\bibinfo {year} {2005})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Bra\"{a}unig}\ and\ \citenamefont
+  {Wulf}(1994)}]{Brauning}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.}~\bibnamefont
+  {Bra\"{a}unig}}\ and\ \bibinfo {author} {\bibfnamefont {F.}~\bibnamefont
+  {Wulf}},\ }\href {\doibase 10.1016/0969-806X(94)90205-4} {\bibfield
+  {journal} {\bibinfo  {journal} {Radiat. Phys. Chem.}\ }\textbf {\bibinfo
+  {volume} {43}},\ \bibinfo {pages} {105} (\bibinfo {year} {1994})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Brailsford}(1961)}]{Brailsford}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.~D.}\ \bibnamefont
+  {Brailsford}},\ }\href {\doibase 10.1103/PhysRev.122.778} {\bibfield
+  {journal} {\bibinfo  {journal} {Phys. Rev.}\ }\textbf {\bibinfo {volume}
+  {122}},\ \bibinfo {pages} {778} (\bibinfo {year} {1961})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Breitenstein}\ \emph {et~al.}(2010)\citenamefont
+  {Breitenstein}, \citenamefont {Bauer}, \citenamefont {Altermatt},\ and\
+  \citenamefont {Ramspeck}}]{CDLR:SSP}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {O.}~\bibnamefont
+  {Breitenstein}}, \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Bauer}},
+  \bibinfo {author} {\bibfnamefont {P.~P.}\ \bibnamefont {Altermatt}}, \ and\
+  \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont {Ramspeck}},\ }\href
+  {\doibase 10.4028/www.scientific.net/SSP.156-158.1} {\bibfield  {journal}
+  {\bibinfo  {journal} {Solid State Phenomena}\ }\textbf {\bibinfo {volume}
+  {156--158}},\ \bibinfo {pages} {1} (\bibinfo {year} {2010})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Breitenstein}\ \emph {et~al.}(2004)\citenamefont
+  {Breitenstein}, \citenamefont {Rakotoniaina}, \citenamefont {Al~Rifai},\ and\
+  \citenamefont {Werner}}]{Rsh:Breitenstein}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {O.}~\bibnamefont
+  {Breitenstein}}, \bibinfo {author} {\bibfnamefont {J.~P.}\ \bibnamefont
+  {Rakotoniaina}}, \bibinfo {author} {\bibfnamefont {M.~H.}\ \bibnamefont
+  {Al~Rifai}}, \ and\ \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Werner}},\ }\href {\doibase 10.1002/pip.544} {\bibfield  {journal} {\bibinfo
+   {journal} {Progress in Photovoltaics: Research and Applications}\ }\textbf
+  {\bibinfo {volume} {12}},\ \bibinfo {pages} {529} (\bibinfo {year}
+  {2004})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Bulyarskii}\ and\ \citenamefont
+  {Zhukov}(2001)}]{Bulyarskii2001}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.~V.}\ \bibnamefont
+  {Bulyarskii}}\ and\ \bibinfo {author} {\bibfnamefont {A.~V.}\ \bibnamefont
+  {Zhukov}},\ }\href {\doibase 10.1134/1.1371618} {\bibfield  {journal}
+  {\bibinfo  {journal} {Semiconductors}\ }\textbf {\bibinfo {volume} {35}},\
+  \bibinfo {pages} {539} (\bibinfo {year} {2001})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Buyanova}\ \emph {et~al.}(1994)\citenamefont
+  {Buyanova}, \citenamefont {Ostapenko}, \citenamefont {Sheinkman},\ and\
+  \citenamefont {Murrikov}}]{Ostapenko1994}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {I.~A.}\ \bibnamefont
+  {Buyanova}}, \bibinfo {author} {\bibfnamefont {S.~S.}\ \bibnamefont
+  {Ostapenko}}, \bibinfo {author} {\bibfnamefont {M.~K.}\ \bibnamefont
+  {Sheinkman}}, \ and\ \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Murrikov}},\ }\href {\doibase 10.1088/0268-1242/9/2/005} {\bibfield
+  {journal} {\bibinfo  {journal} {Semicond. Sci. Technol.}\ }\textbf {\bibinfo
+  {volume} {9}},\ \bibinfo {pages} {158} (\bibinfo {year} {1994})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Buyukkose}\ \emph {et~al.}(2013)\citenamefont
+  {Buyukkose}, \citenamefont {Vratzov}, \citenamefont {van~der Veen},
+  \citenamefont {Santos},\ and\ \citenamefont {van~der Wiel}}]{Buyukkose:2013}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+  {Buyukkose}}, \bibinfo {author} {\bibfnamefont {B.}~\bibnamefont {Vratzov}},
+  \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {van~der Veen}}, \bibinfo
+  {author} {\bibfnamefont {P.~V.}\ \bibnamefont {Santos}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {W.~G.}\ \bibnamefont {van~der Wiel}},\ }\href
+  {\doibase 10.1063/1.4774388} {\bibfield  {journal} {\bibinfo  {journal}
+  {Appl. Phys. Lett.}\ }\textbf {\bibinfo {volume} {102}},\ \bibinfo {pages}
+  {013112} (\bibinfo {year} {2013})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Castaldini}\ \emph {et~al.}(2005)\citenamefont
+  {Castaldini}, \citenamefont {Cavalcoli}, \citenamefont {Cavallini},\ and\
+  \citenamefont {Pizzini}}]{Edis:Castaldini}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Castaldini}}, \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont
+  {Cavalcoli}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Cavallini}}, \ and\ \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+  {Pizzini}},\ }\href {\doibase 10.1103/PhysRevLett.95.076401} {\bibfield
+  {journal} {\bibinfo  {journal} {Phys. Rev. Lett.}\ }\textbf {\bibinfo
+  {volume} {95}},\ \bibinfo {pages} {076401} (\bibinfo {year}
+  {2005})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Chand}\ and\ \citenamefont {Kumar}(1995)}]{Em:Chand}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+  {Chand}}\ and\ \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Kumar}},\
+  }\href {\doibase 10.1088/0268-1242/10/12/019} {\bibfield  {journal} {\bibinfo
+   {journal} {Semicond. Sci. Technol.}\ }\textbf {\bibinfo {volume} {10}},\
+  \bibinfo {pages} {1680} (\bibinfo {year} {1995})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Cheeke}(2002)}]{Cheeke}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~D.~N.}\
+  \bibnamefont {Cheeke}},\ }\href@noop {} {\emph {\bibinfo {title}
+  {Fundamentals and Applications of Ultrasonic Waves}}}\ (\bibinfo  {publisher}
+  {CRC Press LLC},\ \bibinfo {year} {2002})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Chen}\ \emph {et~al.}(2011)\citenamefont {Chen},
+  \citenamefont {Yu}, \citenamefont {Chen}, \citenamefont {Wang}, \citenamefont
+  {Gu}, \citenamefont {Lu},\ and\ \citenamefont {Yang}}]{Oxide:Chen}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {L.}~\bibnamefont
+  {Chen}}, \bibinfo {author} {\bibfnamefont {X.}~\bibnamefont {Yu}}, \bibinfo
+  {author} {\bibfnamefont {P.}~\bibnamefont {Chen}}, \bibinfo {author}
+  {\bibfnamefont {P.}~\bibnamefont {Wang}}, \bibinfo {author} {\bibfnamefont
+  {X.}~\bibnamefont {Gu}}, \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {Lu}}, \ and\ \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont {Yang}},\
+  }\href {\doibase 10.1016/j.solmat.2011.06.044} {\bibfield  {journal}
+  {\bibinfo  {journal} {Sol. Energy Mater. Sol. Cells}\ }\textbf {\bibinfo
+  {volume} {95}},\ \bibinfo {pages} {3148} (\bibinfo {year}
+  {2011})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Cheung}\ and\ \citenamefont {Cheung}(1986)}]{Cheung}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+  {Cheung}}\ and\ \bibinfo {author} {\bibfnamefont {N.~W.}\ \bibnamefont
+  {Cheung}},\ }\href {\doibase 10.1063/1.97359} {\bibfield  {journal} {\bibinfo
+   {journal} {Appl. Phys. Lett.}\ }\textbf {\bibinfo {volume} {49}},\ \bibinfo
+  {pages} {85} (\bibinfo {year} {1986})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Cibils}\ and\ \citenamefont
+  {Buitrago}(1985)}]{Cibils}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.~M.}\ \bibnamefont
+  {Cibils}}\ and\ \bibinfo {author} {\bibfnamefont {R.~H.}\ \bibnamefont
+  {Buitrago}},\ }\href {\doibase 10.1063/1.336222} {\bibfield  {journal}
+  {\bibinfo  {journal} {J. Appl. Phys.}\ }\textbf {\bibinfo {volume} {58}},\
+  \bibinfo {pages} {1075} (\bibinfo {year} {1985})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Davletova}\ and\ \citenamefont
+  {Karazhanov}(2009)}]{Davletova2009}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Davletova}}\ and\ \bibinfo {author} {\bibfnamefont {S.~Z.}\ \bibnamefont
+  {Karazhanov}},\ }\href {\doibase 10.1016/j.jpcs.2009.05.009} {\bibfield
+  {journal} {\bibinfo  {journal} {Journal of Physics and Chemistry of Solids}\
+  }\textbf {\bibinfo {volume} {70}},\ \bibinfo {pages} {989} (\bibinfo {year}
+  {2009})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Davletova}\ and\ \citenamefont
+  {Karazhanov}(2008)}]{Davletova2008}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Davletova}}\ and\ \bibinfo {author} {\bibfnamefont {S.~Z.}\ \bibnamefont
+  {Karazhanov}},\ }\href {\doibase 10.1088/0022-3727/41/16/165107} {\bibfield
+  {journal} {\bibinfo  {journal} {Journal of Physics D: Applied Physics}\
+  }\textbf {\bibinfo {volume} {41}},\ \bibinfo {pages} {165107} (\bibinfo
+  {year} {2008})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Dermircioglu}\ \emph {et~al.}(2011)\citenamefont
+  {Dermircioglu}, \citenamefont {Karatas}, \citenamefont {Yildirim},\ and\
+  \citenamefont {Bakkaloglu}}]{Dermircioglu:Norde}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {O.}~\bibnamefont
+  {Dermircioglu}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+  {Karatas}}, \bibinfo {author} {\bibfnamefont {N.}~\bibnamefont {Yildirim}}, \
+  and\ \bibinfo {author} {\bibfnamefont {O.}~\bibnamefont {Bakkaloglu}},\
+  }\href {\doibase 10.1016/j.mee.2011.04.060} {\bibfield  {journal} {\bibinfo
+  {journal} {Microelectron. Eng.}\ }\textbf {\bibinfo {volume} {88}},\ \bibinfo
+  {pages} {2997} (\bibinfo {year} {2011})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Dirnstorfer}\ \emph {et~al.}(2000)\citenamefont
+  {Dirnstorfer}, \citenamefont {Burkhardt}, \citenamefont {Meyer},
+  \citenamefont {Ostapenko},\ and\ \citenamefont {Karg}}]{OstapSC}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {I.}~\bibnamefont
+  {Dirnstorfer}}, \bibinfo {author} {\bibfnamefont {W.}~\bibnamefont
+  {Burkhardt}}, \bibinfo {author} {\bibfnamefont {B.~K.}\ \bibnamefont
+  {Meyer}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Ostapenko}}, \
+  and\ \bibinfo {author} {\bibfnamefont {F.}~\bibnamefont {Karg}},\ }\href
+  {\doibase 10.1016/S0038-1098(00)00276-3} {\bibfield  {journal} {\bibinfo
+  {journal} {Solid State Commun.}\ }\textbf {\bibinfo {volume} {116}},\
+  \bibinfo {pages} {87} (\bibinfo {year} {2000})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Dokme}\ and\ \citenamefont
+  {Altindal}(2006)}]{Rs:Dokme}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {I.}~\bibnamefont
+  {Dokme}}\ and\ \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+  {Altindal}},\ }\href {\doibase 10.1088/0268-1242/21/8/012} {\bibfield
+  {journal} {\bibinfo  {journal} {Semicond. Sci. Technol.}\ }\textbf {\bibinfo
+  {volume} {21}},\ \bibinfo {pages} {1053} (\bibinfo {year}
+  {2006})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Donoval}\ \emph {et~al.}(1989)\citenamefont
+  {Donoval}, \citenamefont {de~Sousa~Pires}, \citenamefont {Tove},\ and\
+  \citenamefont {Harman}}]{Donoval}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.}~\bibnamefont
+  {Donoval}}, \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {de~Sousa~Pires}}, \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont
+  {Tove}}, \ and\ \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
+  {Harman}},\ }\href {\doibase 10.1016/0038-1101(89)90156-1} {\bibfield
+  {journal} {\bibinfo  {journal} {Solid-State Electron.}\ }\textbf {\bibinfo
+  {volume} {32}},\ \bibinfo {pages} {961} (\bibinfo {year} {1989})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Durmus}\ and\ \citenamefont {Atav}(2011)}]{Durmus}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.}~\bibnamefont
+  {Durmus}}\ and\ \bibinfo {author} {\bibfnamefont {U.}~\bibnamefont {Atav}},\
+  }\href {\doibase 10.1063/1.3633116} {\bibfield  {journal} {\bibinfo
+  {journal} {Appl. Phys. Lett.}\ }\textbf {\bibinfo {volume} {99}},\ \bibinfo
+  {pages} {093505} (\bibinfo {year} {2011})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {El-Bahar}\ \emph {et~al.}(2003)\citenamefont
+  {El-Bahar}, \citenamefont {Stolyarova}, \citenamefont {Chack}, \citenamefont
+  {Weil}, \citenamefont {Beserman},\ and\ \citenamefont
+  {Nemirovsky}}]{Bahar2003}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {El-Bahar}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+  {Stolyarova}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Chack}},
+  \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont {Weil}}, \bibinfo {author}
+  {\bibfnamefont {R.}~\bibnamefont {Beserman}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {Y.}~\bibnamefont {Nemirovsky}},\ }\href {\doibase
+  10.1002/pssa.200306521} {\bibfield  {journal} {\bibinfo  {journal} {phys.
+  stat. sol. (a)}\ }\textbf {\bibinfo {volume} {197}},\ \bibinfo {pages} {340}
+  (\bibinfo {year} {2003})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Evangelou}\ \emph {et~al.}(1993)\citenamefont
+  {Evangelou}, \citenamefont {Papadimitriou}, \citenamefont {Dimitriades},\
+  and\ \citenamefont {Giakoumakis}}]{Evangelou}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.}~\bibnamefont
+  {Evangelou}}, \bibinfo {author} {\bibfnamefont {L.}~\bibnamefont
+  {Papadimitriou}}, \bibinfo {author} {\bibfnamefont {C.}~\bibnamefont
+  {Dimitriades}}, \ and\ \bibinfo {author} {\bibfnamefont {G.}~\bibnamefont
+  {Giakoumakis}},\ }\href {\doibase 10.1016/0038-1101(93)90037-Q} {\bibfield
+  {journal} {\bibinfo  {journal} {Solid-State Electron.}\ }\textbf {\bibinfo
+  {volume} {36}},\ \bibinfo {pages} {1633} (\bibinfo {year}
+  {1993})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Evans-Freeman}\ \emph {et~al.}(2005)\citenamefont
+  {Evans-Freeman}, \citenamefont {Emiroglu}, \citenamefont {Vernon-Parry},
+  \citenamefont {Murphy},\ and\ \citenamefont {Wilshaw}}]{Edis:Evans}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {Evans-Freeman}}, \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont
+  {Emiroglu}}, \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
+  {Vernon-Parry}}, \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {Murphy}}, \ and\ \bibinfo {author} {\bibfnamefont {P.~R.}\ \bibnamefont
+  {Wilshaw}},\ }\href {\doibase 10.1088/0953-8984/17/22/009} {\bibfield
+  {journal} {\bibinfo  {journal} {J. Phys.: Condens. Matter.}\ }\textbf
+  {\bibinfo {volume} {17}},\ \bibinfo {pages} {S2219} (\bibinfo {year}
+  {2005})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Fahrenbruch}\ and\ \citenamefont
+  {Bube}(1983)}]{Bube}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Fahrenbruch}}\ and\ \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
+  {Bube}},\ }\href@noop {} {\emph {\bibinfo {title} {Fundamentals of Solar
+  Cells: Photovoltaic Solar Energy Conversion}}}\ (\bibinfo  {publisher}
+  {Academic Press},\ \bibinfo {year} {1983})\ p.\ \bibinfo {pages}
+  {580}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Ferhat-Hamida}\ \emph {et~al.}(2002)\citenamefont
+  {Ferhat-Hamida}, \citenamefont {Ouennoughi}, \citenamefont {Hoffmann},\ and\
+  \citenamefont {Weiss}}]{Ferhat}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Ferhat-Hamida}}, \bibinfo {author} {\bibfnamefont {Z.}~\bibnamefont
+  {Ouennoughi}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Hoffmann}}, \ and\ \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
+  {Weiss}},\ }\href {\doibase 10.1016/S0038-1101(01)00337-9} {\bibfield
+  {journal} {\bibinfo  {journal} {Solid-State Electron.}\ }\textbf {\bibinfo
+  {volume} {46}},\ \bibinfo {pages} {615} (\bibinfo {year} {2002})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Gabibov}\ \emph {et~al.}(2015)\citenamefont
+  {Gabibov}, \citenamefont {Zobov}, \citenamefont {Zobov}, \citenamefont
+  {Kramynin}, \citenamefont {Pashuk},\ and\ \citenamefont
+  {Khalilov}}]{Zobov2015}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {F.~S.}\ \bibnamefont
+  {Gabibov}}, \bibinfo {author} {\bibfnamefont {E.~M.}\ \bibnamefont {Zobov}},
+  \bibinfo {author} {\bibfnamefont {M.~E.}\ \bibnamefont {Zobov}}, \bibinfo
+  {author} {\bibfnamefont {S.~P.}\ \bibnamefont {Kramynin}}, \bibinfo {author}
+  {\bibfnamefont {E.~G.}\ \bibnamefont {Pashuk}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {S.~A.}\ \bibnamefont {Khalilov}},\ }\href {\doibase
+  10.1134/S1063785015040239} {\bibfield  {journal} {\bibinfo  {journal} {Tech.
+  Phys. Lett.}\ }\textbf {\bibinfo {volume} {41}},\ \bibinfo {pages} {362}
+  (\bibinfo {year} {2015})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Gammon}\ \emph {et~al.}(2012)\citenamefont {Gammon},
+  \citenamefont {Donchev}, \citenamefont {Perez-Tomas}, \citenamefont {Shah},
+  \citenamefont {Pang}, \citenamefont {Petrov}, \citenamefont {Jennings},
+  \citenamefont {Fisher}, \citenamefont {Mawby}, \citenamefont {Leadley},\ and\
+  \citenamefont {Alford}}]{Gammon2012}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.~M.}\ \bibnamefont
+  {Gammon}}, \bibinfo {author} {\bibfnamefont {E.}~\bibnamefont {Donchev}},
+  \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Perez-Tomas}}, \bibinfo
+  {author} {\bibfnamefont {V.~A.}\ \bibnamefont {Shah}}, \bibinfo {author}
+  {\bibfnamefont {J.~S.}\ \bibnamefont {Pang}}, \bibinfo {author}
+  {\bibfnamefont {P.~K.}\ \bibnamefont {Petrov}}, \bibinfo {author}
+  {\bibfnamefont {M.~R.}\ \bibnamefont {Jennings}}, \bibinfo {author}
+  {\bibfnamefont {C.~A.}\ \bibnamefont {Fisher}}, \bibinfo {author}
+  {\bibfnamefont {P.~A.}\ \bibnamefont {Mawby}}, \bibinfo {author}
+  {\bibfnamefont {D.~R.}\ \bibnamefont {Leadley}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {N.~M.}\ \bibnamefont {Alford}},\ }\href {\doibase
+  10.1063/1.4768718} {\bibfield  {journal} {\bibinfo  {journal} {J. Appl.
+  Phys.}\ }\textbf {\bibinfo {volume} {112}},\ \bibinfo {pages} {114513}
+  (\bibinfo {year} {2012})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Gammon}\ \emph {et~al.}(2013)\citenamefont {Gammon},
+  \citenamefont {Perez-Tomas}, \citenamefont {Shah}, \citenamefont {Vavasour},
+  \citenamefont {Donchev}, \citenamefont {Pang}, \citenamefont {Myronov},
+  \citenamefont {Fisher}, \citenamefont {Jennings}, \citenamefont {Leadley},\
+  and\ \citenamefont {Mawby}}]{Gammon2013}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.~M.}\ \bibnamefont
+  {Gammon}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Perez-Tomas}},
+  \bibinfo {author} {\bibfnamefont {V.~A.}\ \bibnamefont {Shah}}, \bibinfo
+  {author} {\bibfnamefont {O.}~\bibnamefont {Vavasour}}, \bibinfo {author}
+  {\bibfnamefont {E.}~\bibnamefont {Donchev}}, \bibinfo {author} {\bibfnamefont
+  {J.~S.}\ \bibnamefont {Pang}}, \bibinfo {author} {\bibfnamefont
+  {M.}~\bibnamefont {Myronov}}, \bibinfo {author} {\bibfnamefont {C.~A.}\
+  \bibnamefont {Fisher}}, \bibinfo {author} {\bibfnamefont {M.~R.}\
+  \bibnamefont {Jennings}}, \bibinfo {author} {\bibfnamefont {D.~R.}\
+  \bibnamefont {Leadley}}, \ and\ \bibinfo {author} {\bibfnamefont {P.~A.}\
+  \bibnamefont {Mawby}},\ }\href {\doibase 10.1063/1.4842096]} {\bibfield
+  {journal} {\bibinfo  {journal} {J. Appl. Phys.}\ }\textbf {\bibinfo {volume}
+  {114}},\ \bibinfo {pages} {223704} (\bibinfo {year} {2013})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Ganichev}\ \emph {et~al.}(2000)\citenamefont
+  {Ganichev}, \citenamefont {Ziemann}, \citenamefont {Prettl}, \citenamefont
+  {Yassievichand}, \citenamefont {Istratov},\ and\ \citenamefont
+  {Weber}}]{Ganichev:2000}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.~D.}\ \bibnamefont
+  {Ganichev}}, \bibinfo {author} {\bibfnamefont {E.}~\bibnamefont {Ziemann}},
+  \bibinfo {author} {\bibfnamefont {W.}~\bibnamefont {Prettl}}, \bibinfo
+  {author} {\bibfnamefont {I.~N.}\ \bibnamefont {Yassievichand}}, \bibinfo
+  {author} {\bibfnamefont {A.~A.}\ \bibnamefont {Istratov}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {E.~R.}\ \bibnamefont {Weber}},\ }\href {\doibase
+  10.1103/PhysRevB.61.10361} {\bibfield  {journal} {\bibinfo  {journal} {Phys.
+  Rev. B}\ }\textbf {\bibinfo {volume} {61}},\ \bibinfo {pages} {10361}
+  (\bibinfo {year} {2000})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Gopal}(2014)}]{TAT:Gopal}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {V.}~\bibnamefont
+  {Gopal}},\ }\href {\doibase 10.1063/1.4893899} {\bibfield  {journal}
+  {\bibinfo  {journal} {J. Appl. Phys.}\ }\textbf {\bibinfo {volume} {116}},\
+  \bibinfo {pages} {084502} (\bibinfo {year} {2014})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Gopal}\ and\ \citenamefont
+  {Gupta}(2004)}]{Rsh:Gopal2004}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {V.}~\bibnamefont
+  {Gopal}}\ and\ \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Gupta}},\
+  }\href {\doibase 10.1109/TED.2004.829857} {\bibfield  {journal} {\bibinfo
+  {journal} {IEEE Trans. Electron Devices}\ }\textbf {\bibinfo {volume} {51}},\
+  \bibinfo {pages} {1078} (\bibinfo {year} {2004})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Gopal}\ and\ \citenamefont
+  {Gupta}(2003)}]{Rsh:Gopal2003}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {V.}~\bibnamefont
+  {Gopal}}\ and\ \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Gupta}},\
+  }\href {\doibase 10.1109/TED.2003.813230} {\bibfield  {journal} {\bibinfo
+  {journal} {IEEE Trans. Electron Devices}\ }\textbf {\bibinfo {volume} {50}},\
+  \bibinfo {pages} {1220} (\bibinfo {year} {2003})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Gorb}\ \emph {et~al.}(2010)\citenamefont {Gorb},
+  \citenamefont {Korotchenkov}, \citenamefont {Olikh},\ and\ \citenamefont
+  {Podolian}}]{Gorb2010}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Gorb}}, \bibinfo {author} {\bibfnamefont {O.}~\bibnamefont {Korotchenkov}},
+  \bibinfo {author} {\bibfnamefont {O.}~\bibnamefont {Olikh}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {A.}~\bibnamefont {Podolian}},\ }\href {\doibase
+  10.1109/TNS.2010.2047655} {\bibfield  {journal} {\bibinfo  {journal} {IEEE
+  Trans. Nucl. Sci.}\ }\textbf {\bibinfo {volume} {57}},\ \bibinfo {pages}
+  {1632} (\bibinfo {year} {2010})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Green}\ and\ \citenamefont
+  {Keevers}(1995)}]{GreenOptic}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.~A.}\ \bibnamefont
+  {Green}}\ and\ \bibinfo {author} {\bibfnamefont {M.~J.}\ \bibnamefont
+  {Keevers}},\ }\href {\doibase 10.1002/pip.4670030303} {\bibfield  {journal}
+  {\bibinfo  {journal} {Progress in Photovoltaics: Research and Applications}\
+  }\textbf {\bibinfo {volume} {3}},\ \bibinfo {pages} {189} (\bibinfo {year}
+  {1995})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Gromov}\ and\ \citenamefont
+  {Pugachevich}(1994)}]{Gromov}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.}~\bibnamefont
+  {Gromov}}\ and\ \bibinfo {author} {\bibfnamefont {V.}~\bibnamefont
+  {Pugachevich}},\ }\href {\doibase 10.1007/BF00348239} {\bibfield  {journal}
+  {\bibinfo  {journal} {Appl. Phys. A}\ }\textbf {\bibinfo {volume} {59}},\
+  \bibinfo {pages} {331} (\bibinfo {year} {1994})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Gullu}\ \emph {et~al.}(2008)\citenamefont {Gullu},
+  \citenamefont {Cankaya}, \citenamefont {Biber},\ and\ \citenamefont
+  {Turut}}]{Gullu:2008}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {O.}~\bibnamefont
+  {Gullu}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Cankaya}},
+  \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Biber}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {A.}~\bibnamefont {Turut}},\ }\href {\doibase
+  10.1088/0022-3727/41/13/135103} {\bibfield  {journal} {\bibinfo  {journal} {J
+  Phys D: Appl Phys}\ }\textbf {\bibinfo {volume} {41}},\ \bibinfo {pages}
+  {135103} (\bibinfo {year} {2008})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Guseynov}, \citenamefont {Olikh},\ and\ \citenamefont
+  {Askerov}(2007)}]{YOlikh2007TPL}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {N.}~\bibnamefont
+  {Guseynov}}, \bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont {Olikh}}, \
+  and\ \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Askerov}},\ }\href
+  {\doibase 10.1134/S1063785007010063} {\bibfield  {journal} {\bibinfo
+  {journal} {Tech. Phys. Lett.}\ }\textbf {\bibinfo {volume} {33}},\ \bibinfo
+  {pages} {18} (\bibinfo {year} {2007})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Hara}\ \emph {et~al.}(2017)\citenamefont {Hara},
+  \citenamefont {Ogawa}, \citenamefont {Okabayashi}, \citenamefont
+  {Matsuzaki},\ and\ \citenamefont {Masuda}}]{PID:2017}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
+  {Hara}}, \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont {Ogawa}},
+  \bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont {Okabayashi}}, \bibinfo
+  {author} {\bibfnamefont {H.}~\bibnamefont {Matsuzaki}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {A.}~\bibnamefont {Masuda}},\ }\href {\doibase
+  10.1016/j.solmat.2017.03.018} {\bibfield  {journal} {\bibinfo  {journal}
+  {Sol. Energy Mater. Sol. Cells}\ }\textbf {\bibinfo {volume} {166}},\
+  \bibinfo {pages} {132} (\bibinfo {year} {2017})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {He}, \citenamefont {Gao},\ and\ \citenamefont
+  {Guo}(2010)}]{He:2010}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.-H.}\ \bibnamefont
+  {He}}, \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Gao}}, \ and\
+  \bibinfo {author} {\bibfnamefont {H.-Z.}\ \bibnamefont {Guo}},\ }\href
+  {\doibase 10.1063/1.3491287} {\bibfield  {journal} {\bibinfo  {journal}
+  {Appl. Phys. Lett.}\ }\textbf {\bibinfo {volume} {97}},\ \bibinfo {pages}
+  {122107} (\bibinfo {year} {2010})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {van~der Heide}\ \emph {et~al.}(2005)\citenamefont
+  {van~der Heide}, \citenamefont {Schonecker}, \citenamefont {Bultman},\ and\
+  \citenamefont {Sinke}}]{Heide}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.~S.~H.}\
+  \bibnamefont {van~der Heide}}, \bibinfo {author} {\bibfnamefont
+  {A.}~\bibnamefont {Schonecker}}, \bibinfo {author} {\bibfnamefont {J.~H.}\
+  \bibnamefont {Bultman}}, \ and\ \bibinfo {author} {\bibfnamefont {W.~C.}\
+  \bibnamefont {Sinke}},\ }\href {\doibase 10.1002/pip.556} {\bibfield
+  {journal} {\bibinfo  {journal} {Progress in Photovoltaics: Research and
+  Applications}\ }\textbf {\bibinfo {volume} {13}},\ \bibinfo {pages} {3}
+  (\bibinfo {year} {2005})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Hoffmann}\ and\ \citenamefont
+  {Koehl}(2012)}]{PID:PP}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+  {Hoffmann}}\ and\ \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Koehl}},\ }\href {\doibase 10.1002/pip.2238} {\bibfield  {journal} {\bibinfo
+   {journal} {Progress in Photovoltaics: Research and Applications}\ }\textbf
+  {\bibinfo {volume} {22}},\ \bibinfo {pages} {173} (\bibinfo {year}
+  {2012})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Huaguo}\ \emph {et~al.}(2014)\citenamefont {Huaguo},
+  \citenamefont {Hui}, \citenamefont {Zhengfeng},\ and\ \citenamefont
+  {Maoxiang}}]{Referi1}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {L.}~\bibnamefont
+  {Huaguo}}, \bibinfo {author} {\bibfnamefont {X.}~\bibnamefont {Hui}},
+  \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Zhengfeng}}, \ and\
+  \bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont {Maoxiang}},\ }\href
+  {\doibase 10.1088/1674-4926/35/1/015009} {\bibfield  {journal} {\bibinfo
+  {journal} {Journal of Semiconductors}\ }\textbf {\bibinfo {volume} {35}},\
+  \bibinfo {pages} {015009} (\bibinfo {year} {2014})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Huhtinen}(2002)}]{NIEL:Huhtinen}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Huhtinen}},\ }\href {\doibase 10.1016/S0168-9002(02)01227-5} {\bibfield
+  {journal} {\bibinfo  {journal} {Nucl. Instrum. Methods Phys. Res., Sect. A}\
+  }\textbf {\bibinfo {volume} {491}},\ \bibinfo {pages} {194} (\bibinfo {year}
+  {2002})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Ishaque}\ \emph {et~al.}(2011)\citenamefont
+  {Ishaque}, \citenamefont {Salam}, \citenamefont {Taheri},\ and\ \citenamefont
+  {Shamsudin}}]{P-DE_Ishaque}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
+  {Ishaque}}, \bibinfo {author} {\bibfnamefont {Z.}~\bibnamefont {Salam}},
+  \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Taheri}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {A.}~\bibnamefont {Shamsudin}},\ }\href {\doibase
+  10.1016/j.solener.2011.04.015} {\bibfield  {journal} {\bibinfo  {journal}
+  {Solar Energy}\ }\textbf {\bibinfo {volume} {85}},\ \bibinfo {pages} {1768}
+  (\bibinfo {year} {2011})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Iucolano}\ \emph
+  {et~al.}(2007{\natexlab{a}})\citenamefont {Iucolano}, \citenamefont
+  {Roccaforte}, \citenamefont {Giannazzo},\ and\ \citenamefont
+  {Raineri}}]{Iucolano2007APL}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {F.}~\bibnamefont
+  {Iucolano}}, \bibinfo {author} {\bibfnamefont {F.}~\bibnamefont
+  {Roccaforte}}, \bibinfo {author} {\bibfnamefont {F.}~\bibnamefont
+  {Giannazzo}}, \ and\ \bibinfo {author} {\bibfnamefont {V.}~\bibnamefont
+  {Raineri}},\ }\href {\doibase 10.1063/1.2710770} {\bibfield  {journal}
+  {\bibinfo  {journal} {Appl. Phys. Lett.}\ }\textbf {\bibinfo {volume} {90}},\
+  \bibinfo {pages} {092119} (\bibinfo {year} {2007}{\natexlab{a}})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Iucolano}\ \emph
+  {et~al.}(2007{\natexlab{b}})\citenamefont {Iucolano}, \citenamefont
+  {Roccaforte}, \citenamefont {Giannazzo},\ and\ \citenamefont
+  {Raineri}}]{Iucolano2007JAP}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {F.}~\bibnamefont
+  {Iucolano}}, \bibinfo {author} {\bibfnamefont {F.}~\bibnamefont
+  {Roccaforte}}, \bibinfo {author} {\bibfnamefont {F.}~\bibnamefont
+  {Giannazzo}}, \ and\ \bibinfo {author} {\bibfnamefont {V.}~\bibnamefont
+  {Raineri}},\ }\href {\doibase 10.1063/1.2817647} {\bibfield  {journal}
+  {\bibinfo  {journal} {J. Appl. Phys.}\ }\textbf {\bibinfo {volume} {102}},\
+  \bibinfo {pages} {113701} (\bibinfo {year} {2007}{\natexlab{b}})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Ivanov}\ \emph {et~al.}(2011)\citenamefont {Ivanov},
+  \citenamefont {Grekhov}, \citenamefont {Kon’kov}, \citenamefont {Potapov},
+  \citenamefont {Samsonova},\ and\ \citenamefont {Semenov}}]{Em:Ivanov}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.~A.}\ \bibnamefont
+  {Ivanov}}, \bibinfo {author} {\bibfnamefont {I.~V.}\ \bibnamefont {Grekhov}},
+  \bibinfo {author} {\bibfnamefont {O.~I.}\ \bibnamefont {Kon’kov}}, \bibinfo
+  {author} {\bibfnamefont {A.~S.}\ \bibnamefont {Potapov}}, \bibinfo {author}
+  {\bibfnamefont {T.~P.}\ \bibnamefont {Samsonova}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {T.~V.}\ \bibnamefont {Semenov}},\ }\href {\doibase
+  10.1134/S1063782611100095} {\bibfield  {journal} {\bibinfo  {journal}
+  {Semiconductors}\ }\textbf {\bibinfo {volume} {45}},\ \bibinfo {pages} {1374}
+  (\bibinfo {year} {2011})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Jafar}(2003)}]{Jafar}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.~M. A.-G.}\
+  \bibnamefont {Jafar}},\ }\href {\doibase 10.1088/0268-1242/18/1/302}
+  {\bibfield  {journal} {\bibinfo  {journal} {Semicond. Sci. Technol.}\
+  }\textbf {\bibinfo {volume} {18}},\ \bibinfo {pages} {7} (\bibinfo {year}
+  {2003})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Jafari}\ and\ \citenamefont
+  {Feghhi}(2016)}]{NIEL:Jafari}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.}~\bibnamefont
+  {Jafari}}\ and\ \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+  {Feghhi}},\ }\href {\doibase 10.1016/j.nima.2016.01.079} {\bibfield
+  {journal} {\bibinfo  {journal} {Nucl. Instrum. Methods Phys. Res., Sect. A}\
+  }\textbf {\bibinfo {volume} {816}},\ \bibinfo {pages} {62} (\bibinfo {year}
+  {2016})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Jain}\ and\ \citenamefont
+  {Kapoor}(2005)}]{LambertSC_Jain}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Jain}}\ and\ \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Kapoor}},\
+  }\href {\doibase 10.1016/j.solmat.2004.05.022} {\bibfield  {journal}
+  {\bibinfo  {journal} {Sol. Energy Mater. Sol. Cells}\ }\textbf {\bibinfo
+  {volume} {85}},\ \bibinfo {pages} {391} (\bibinfo {year} {2005})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Jiang}\ \emph {et~al.}(2002)\citenamefont {Jiang},
+  \citenamefont {Ru}, \citenamefont {Lu}, \citenamefont {Qu}, \citenamefont
+  {Li}, \citenamefont {Li},\ and\ \citenamefont {Li}}]{Jiang:DG}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Y.-L.}\ \bibnamefont
+  {Jiang}}, \bibinfo {author} {\bibfnamefont {G.-P.}\ \bibnamefont {Ru}},
+  \bibinfo {author} {\bibfnamefont {F.}~\bibnamefont {Lu}}, \bibinfo {author}
+  {\bibfnamefont {X.-P.}\ \bibnamefont {Qu}}, \bibinfo {author} {\bibfnamefont
+  {B.-Z.}\ \bibnamefont {Li}}, \bibinfo {author} {\bibfnamefont
+  {W.}~\bibnamefont {Li}}, \ and\ \bibinfo {author} {\bibfnamefont {A.-Z.}\
+  \bibnamefont {Li}},\ }\href {\doibase 10.1088/0256-307X/19/4/332} {\bibfield
+  {journal} {\bibinfo  {journal} {Chin. Phys. Lett.}\ }\textbf {\bibinfo
+  {volume} {19}},\ \bibinfo {pages} {553} (\bibinfo {year} {2002})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Jiang}\ \emph {et~al.}(2003)\citenamefont {Jiang},
+  \citenamefont {Ru}, \citenamefont {Lu}, \citenamefont {Qu}, \citenamefont
+  {Li},\ and\ \citenamefont {Yang}}]{Jiang:DGJap}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Y.-L.}\ \bibnamefont
+  {Jiang}}, \bibinfo {author} {\bibfnamefont {G.-P.}\ \bibnamefont {Ru}},
+  \bibinfo {author} {\bibfnamefont {F.}~\bibnamefont {Lu}}, \bibinfo {author}
+  {\bibfnamefont {X.-P.}\ \bibnamefont {Qu}}, \bibinfo {author} {\bibfnamefont
+  {B.-Z.}\ \bibnamefont {Li}}, \ and\ \bibinfo {author} {\bibfnamefont
+  {S.}~\bibnamefont {Yang}},\ }\href {\doibase 10.1063/1.1527714} {\bibfield
+  {journal} {\bibinfo  {journal} {J. Appl. Phys.}\ }\textbf {\bibinfo {volume}
+  {93}},\ \bibinfo {pages} {866} (\bibinfo {year} {2003})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Jivanescu}, \citenamefont {Romanyuk},\ and\
+  \citenamefont {Stesmans}(2010)}]{Roman:2010JAP}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Jivanescu}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Romanyuk}},
+  \ and\ \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Stesmans}},\
+  }\href {\doibase 10.1063/1.3369041} {\bibfield  {journal} {\bibinfo
+  {journal} {J. Appl. Phys.}\ }\textbf {\bibinfo {volume} {107}},\ \bibinfo
+  {pages} {114307} (\bibinfo {year} {2010})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Jung}\ and\ \citenamefont
+  {Guziewicz}(2009)}]{Lambert_Jung}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {W.}~\bibnamefont
+  {Jung}}\ and\ \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Guziewicz}},\ }\href {\doibase 10.1016/j.mseb.2009.02.013} {\bibfield
+  {journal} {\bibinfo  {journal} {Materials Science and Engineering B}\
+  }\textbf {\bibinfo {volume} {165}},\ \bibinfo {pages} {57} (\bibinfo {year}
+  {2009})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Junkes}\ \emph {et~al.}(2012)\citenamefont {Junkes},
+  \citenamefont {Pintilie}, \citenamefont {Fretwurst},\ and\ \citenamefont
+  {Eckstein}}]{Junkes}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Junkes}}, \bibinfo {author} {\bibfnamefont {I.}~\bibnamefont {Pintilie}},
+  \bibinfo {author} {\bibfnamefont {E.}~\bibnamefont {Fretwurst}}, \ and\
+  \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont {Eckstein}},\ }\href
+  {\doibase 10.1016/j.physb.2011.08.090} {\bibfield  {journal} {\bibinfo
+  {journal} {Physica B}\ }\textbf {\bibinfo {volume} {407}},\ \bibinfo {pages}
+  {3013} (\bibinfo {year} {2012})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Kaminski}, \citenamefont {Marchand},\ and\
+  \citenamefont {Laugier}(1999)}]{Kaminski}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Kaminski}}, \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Marchand}},
+  \ and\ \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Laugier}},\ }\href
+  {\doibase 10.1016/S0038-1101(98)00338-4} {\bibfield  {journal} {\bibinfo
+  {journal} {Solid-State Electron.}\ }\textbf {\bibinfo {volume} {43}},\
+  \bibinfo {pages} {741} (\bibinfo {year} {1999})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Kaminski}\ \emph {et~al.}(1996)\citenamefont
+  {Kaminski}, \citenamefont {Marchand}, \citenamefont {Omari}, \citenamefont
+  {Laugier}, \citenamefont {Le},\ and\ \citenamefont {Sarti}}]{Kaminski_n}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Kaminski}}, \bibinfo {author} {\bibfnamefont {J.~J.}\ \bibnamefont
+  {Marchand}}, \bibinfo {author} {\bibfnamefont {H.~E.}\ \bibnamefont {Omari}},
+  \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Laugier}}, \bibinfo
+  {author} {\bibfnamefont {Q.~N.}\ \bibnamefont {Le}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {D.}~\bibnamefont {Sarti}},\ }in\ \href@noop {} {\emph
+  {\bibinfo {booktitle} {Proceedings of the 1996 25th IEEE Photovoltaic
+  Specialists Conference}}}\ (\bibinfo {year} {1996})\ pp.\ \bibinfo {pages}
+  {573--576},\ \bibinfo {note} {washington, DC, USA}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Kang}\ \emph {et~al.}(1995)\citenamefont {Kang},
+  \citenamefont {Davidson}, \citenamefont {Gurbuz},\ and\ \citenamefont
+  {Kerns}}]{Rs:Kang}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {W.~P.}\ \bibnamefont
+  {Kang}}, \bibinfo {author} {\bibfnamefont {J.~L.}\ \bibnamefont {Davidson}},
+  \bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont {Gurbuz}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {D.~V.}\ \bibnamefont {Kerns}},\ }\href {\doibase
+  10.1063/1.360343} {\bibfield  {journal} {\bibinfo  {journal} {J. Appl.
+  Phys.}\ }\textbf {\bibinfo {volume} {78}},\ \bibinfo {pages} {1101} (\bibinfo
+  {year} {1995})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Karaboga}, \citenamefont {Kockanat},\ and\
+  \citenamefont {Dogan}(2013)}]{MABC}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {N.}~\bibnamefont
+  {Karaboga}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Kockanat}},
+  \ and\ \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Dogan}},\ }\href
+  {\doibase 10.1007/s10489-012-0372-x} {\bibfield  {journal} {\bibinfo
+  {journal} {Appl. Intell.}\ }\textbf {\bibinfo {volume} {38}},\ \bibinfo
+  {pages} {279} (\bibinfo {year} {2013})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Karatas}\ and\ \citenamefont
+  {Turut}(2006)}]{Karatas:2006NIMA}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+  {Karatas}}\ and\ \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Turut}},\ }\href {\doibase 10.1016/j.nima.2006.07.054} {\bibfield  {journal}
+  {\bibinfo  {journal} {Nucl. Instrum. Methods Phys. Res., Sect. A}\ }\textbf
+  {\bibinfo {volume} {566}},\ \bibinfo {pages} {584} (\bibinfo {year}
+  {2006})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Karatas}, \citenamefont {Turut},\ and\ \citenamefont
+  {Altindal}(2005)}]{Karatas:2005NIMA}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+  {Karatas}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Turut}}, \
+  and\ \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Altindal}},\ }\href
+  {\doibase 10.1016/j.nima.2005.09.017} {\bibfield  {journal} {\bibinfo
+  {journal} {Nucl. Instrum. Methods Phys. Res., Sect. A}\ }\textbf {\bibinfo
+  {volume} {555}},\ \bibinfo {pages} {260} (\bibinfo {year}
+  {2005})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Karazhanov}(2000)}]{Karazhanov}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.~Z.}\ \bibnamefont
+  {Karazhanov}},\ }\href {\doibase 10.1063/1.126445} {\bibfield  {journal}
+  {\bibinfo  {journal} {Applied Physics Letters}\ }\textbf {\bibinfo {volume}
+  {76}},\ \bibinfo {pages} {2689} (\bibinfo {year} {2000})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Kim}\ \emph {et~al.}(2017)\citenamefont {Kim},
+  \citenamefont {Abbott}, \citenamefont {Nampalli}, \citenamefont {Wenham},
+  \citenamefont {Stefani},\ and\ \citenamefont {Hallam}}]{Kim}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Kim}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Abbott}},
+  \bibinfo {author} {\bibfnamefont {N.}~\bibnamefont {Nampalli}}, \bibinfo
+  {author} {\bibfnamefont {S.}~\bibnamefont {Wenham}}, \bibinfo {author}
+  {\bibfnamefont {B.}~\bibnamefont {Stefani}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {B.}~\bibnamefont {Hallam}},\ }\href {\doibase
+  10.1063/1.4975685} {\bibfield  {journal} {\bibinfo  {journal} {J. Appl.
+  Phys.}\ }\textbf {\bibinfo {volume} {121}},\ \bibinfo {pages} {053106}
+  (\bibinfo {year} {2017})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Kiveris}, \citenamefont {Kudzmauskas},\ and\
+  \citenamefont {Pipinys}(1976)}]{Kiveris}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Kiveris}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+  {Kudzmauskas}}, \ and\ \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont
+  {Pipinys}},\ }\href {\doibase 10.1002/pssa.2210370140} {\bibfield  {journal}
+  {\bibinfo  {journal} {phys. stat. sol. (a)}\ }\textbf {\bibinfo {volume}
+  {37}},\ \bibinfo {pages} {321} (\bibinfo {year} {1976})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Korkut}, \citenamefont {Yildirim},\ and\
+  \citenamefont {Turut}(2009)}]{Korkut}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.}~\bibnamefont
+  {Korkut}}, \bibinfo {author} {\bibfnamefont {N.}~\bibnamefont {Yildirim}}, \
+  and\ \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Turut}},\ }\href
+  {\doibase 10.1016/j.mee.2008.10.005} {\bibfield  {journal} {\bibinfo
+  {journal} {Microelectron. Eng.}\ }\textbf {\bibinfo {volume} {86}},\ \bibinfo
+  {pages} {111–} (\bibinfo {year} {2009})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Korotchenkov}\ and\ \citenamefont
+  {Grimmliss}(1995)}]{Korotchenkov1995}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {O.}~\bibnamefont
+  {Korotchenkov}}\ and\ \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont
+  {Grimmliss}},\ }\href {\doibase 10.1103/PhysRevB.52.14598} {\bibfield
+  {journal} {\bibinfo  {journal} {Physical Review B}\ }\textbf {\bibinfo
+  {volume} {52}},\ \bibinfo {pages} {14598} (\bibinfo {year}
+  {1995})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Korucu}, \citenamefont {Turut},\ and\ \citenamefont
+  {Efeoglu}(2013)}]{Korucu2013}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.}~\bibnamefont
+  {Korucu}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Turut}}, \
+  and\ \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Efeoglu}},\ }\href
+  {\doibase 10.1016/j.physb.2013.01.010} {\bibfield  {journal} {\bibinfo
+  {journal} {Physica B}\ }\textbf {\bibinfo {volume} {414}},\ \bibinfo {pages}
+  {35} (\bibinfo {year} {2013})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Krevchik}, \citenamefont {Muminov},\ and\
+  \citenamefont {Yafasov}(1981)}]{Krevchik}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {V.~D.}\ \bibnamefont
+  {Krevchik}}, \bibinfo {author} {\bibfnamefont {R.~A.}\ \bibnamefont
+  {Muminov}}, \ and\ \bibinfo {author} {\bibfnamefont {A.~Y.}\ \bibnamefont
+  {Yafasov}},\ }\href {\doibase 10.1002/pssa.2210630254} {\bibfield  {journal}
+  {\bibinfo  {journal} {phys. stat. sol. (a)}\ }\textbf {\bibinfo {volume}
+  {63}},\ \bibinfo {pages} {K159} (\bibinfo {year} {1981})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Kropman}\ \emph
+  {et~al.}(2016{\natexlab{a}})\citenamefont {Kropman}, \citenamefont {Seeman},
+  \citenamefont {Dolgov},\ and\ \citenamefont {Medvids}}]{Medvids}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.}~\bibnamefont
+  {Kropman}}, \bibinfo {author} {\bibfnamefont {V.}~\bibnamefont {Seeman}},
+  \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Dolgov}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {A.}~\bibnamefont {Medvids}},\ }\href {\doibase
+  10.1002/pssc.201600052} {\bibfield  {journal} {\bibinfo  {journal} {phys.
+  stat. sol. (c)}\ }\textbf {\bibinfo {volume} {13}},\ \bibinfo {pages} {793}
+  (\bibinfo {year} {2016}{\natexlab{a}})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Kropman}\ \emph
+  {et~al.}(2016{\natexlab{b}})\citenamefont {Kropman}, \citenamefont {Seeman},
+  \citenamefont {Dolgov},\ and\ \citenamefont {Medvids}}]{UST:Medvid}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.}~\bibnamefont
+  {Kropman}}, \bibinfo {author} {\bibfnamefont {V.}~\bibnamefont {Seeman}},
+  \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Dolgov}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {A.}~\bibnamefont {Medvids}},\ }\href {\doibase
+  10.1002/pssc.201600052} {\bibfield  {journal} {\bibinfo  {journal} {phys.
+  stat. sol. (c)}\ }\textbf {\bibinfo {volume} {13}},\ \bibinfo {pages} {793}
+  (\bibinfo {year} {2016}{\natexlab{b}})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Kulakova}\ \emph {et~al.}(2012)\citenamefont
+  {Kulakova}, \citenamefont {Gorelov}, \citenamefont {Lutetskiy},\ and\
+  \citenamefont {Averkiev}}]{Kulakova:2012SSC}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {L.}~\bibnamefont
+  {Kulakova}}, \bibinfo {author} {\bibfnamefont {V.}~\bibnamefont {Gorelov}},
+  \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Lutetskiy}}, \ and\
+  \bibinfo {author} {\bibfnamefont {N.~S.}\ \bibnamefont {Averkiev}},\ }\href
+  {\doibase 10.1016/j.ssc.2012.04.065} {\bibfield  {journal} {\bibinfo
+  {journal} {Solid State Commun.}\ }\textbf {\bibinfo {volume} {152}},\
+  \bibinfo {pages} {1690} (\bibinfo {year} {2012})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Kumar}\ \emph {et~al.}(2012)\citenamefont {Kumar},
+  \citenamefont {Asokan}, \citenamefont {Kumar},\ and\ \citenamefont
+  {Singh}}]{KumarJAP2012}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Kumar}}, \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont {Asokan}},
+  \bibinfo {author} {\bibfnamefont {V.}~\bibnamefont {Kumar}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {R.}~\bibnamefont {Singh}},\ }\href {\doibase
+  /10.1063/1.4737258} {\bibfield  {journal} {\bibinfo  {journal} {J. Appl.
+  Phys.}\ }\textbf {\bibinfo {volume} {112}},\ \bibinfo {pages} {024507}
+  (\bibinfo {year} {2012})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Lee}\ and\ \citenamefont {Lim}(1999)}]{VRH:Lee}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.~H.}\ \bibnamefont
+  {Lee}}\ and\ \bibinfo {author} {\bibfnamefont {K.~S.}\ \bibnamefont {Lim}},\
+  }\href {\doibase 10.1063/1.124444} {\bibfield  {journal} {\bibinfo  {journal}
+  {Appl. Phys. Lett.}\ }\textbf {\bibinfo {volume} {75}},\ \bibinfo {pages}
+  {569} (\bibinfo {year} {1999})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Lee}\ \emph {et~al.}(1995)\citenamefont {Lee},
+  \citenamefont {Chen}, \citenamefont {Au}, \citenamefont {Fung},\ and\
+  \citenamefont {Beling}}]{T0:Lee}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {T.~C.}\ \bibnamefont
+  {Lee}}, \bibinfo {author} {\bibfnamefont {T.~P.}\ \bibnamefont {Chen}},
+  \bibinfo {author} {\bibfnamefont {H.~L.}\ \bibnamefont {Au}}, \bibinfo
+  {author} {\bibfnamefont {S.}~\bibnamefont {Fung}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {C.~D.}\ \bibnamefont {Beling}},\ }\href {\doibase
+  10.1002/pssa.2211520225} {\bibfield  {journal} {\bibinfo  {journal} {phys.
+  stat. sol. (a)}\ }\textbf {\bibinfo {volume} {152}},\ \bibinfo {pages} {563}
+  (\bibinfo {year} {1995})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Lee}\ \emph {et~al.}(1992)\citenamefont {Lee},
+  \citenamefont {Fung}, \citenamefont {Beling},\ and\ \citenamefont
+  {Au}}]{Lee}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {T.~C.}\ \bibnamefont
+  {Lee}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Fung}}, \bibinfo
+  {author} {\bibfnamefont {C.}~\bibnamefont {Beling}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {H.}~\bibnamefont {Au}},\ }\href {\doibase 10.1063/1.352082}
+  {\bibfield  {journal} {\bibinfo  {journal} {J. Appl. Phys.}\ }\textbf
+  {\bibinfo {volume} {72}},\ \bibinfo {pages} {4739} (\bibinfo {year}
+  {1992})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Li}(2007)}]{GA_Li}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont
+  {Li}},\ }\href {\doibase 10.1016/j.mee.2006.02.010} {\bibfield  {journal}
+  {\bibinfo  {journal} {Microelectron. Eng.}\ }\textbf {\bibinfo {volume}
+  {84}},\ \bibinfo {pages} {260} (\bibinfo {year} {2007})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Lien}, \citenamefont {So},\ and\ \citenamefont
+  {Nicolet}(1984)}]{Lien}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.~D.}\ \bibnamefont
+  {Lien}}, \bibinfo {author} {\bibfnamefont {F.}~\bibnamefont {So}}, \ and\
+  \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Nicolet}},\ }\href
+  {\doibase 10.1109/T-ED.1984.21739} {\bibfield  {journal} {\bibinfo  {journal}
+  {IEEE Trans. Electron Devices}\ }\textbf {\bibinfo {volume} {ED-31}},\
+  \bibinfo {pages} {1502} (\bibinfo {year} {1984})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Lin}\ \emph {et~al.}(2002)\citenamefont {Lin},
+  \citenamefont {Lu}, \citenamefont {Ranade}, \citenamefont {King},\ and\
+  \citenamefont {Hu}}]{MoWF2002}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
+  {Lin}}, \bibinfo {author} {\bibfnamefont {Q.}~\bibnamefont {Lu}}, \bibinfo
+  {author} {\bibfnamefont {P.}~\bibnamefont {Ranade}}, \bibinfo {author}
+  {\bibfnamefont {T.-J.}\ \bibnamefont {King}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {C.}~\bibnamefont {Hu}},\ }\href {\doibase 10.1109/55.974809}
+  {\bibfield  {journal} {\bibinfo  {journal} {IEEE Electron Device Letters}\
+  }\textbf {\bibinfo {volume} {23}},\ \bibinfo {pages} {49} (\bibinfo {year}
+  {2002})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Lindroos}\ and\ \citenamefont
+  {Savin}(2016)}]{LIDRev}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {Lindroos}}\ and\ \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont
+  {Savin}},\ }\href {\doibase http://dx.doi.org/10.1016/j.solmat.2015.11.047}
+  {\bibfield  {journal} {\bibinfo  {journal} {Sol. Energy Mater. Sol. Cells}\
+  }\textbf {\bibinfo {volume} {147}},\ \bibinfo {pages} {115} (\bibinfo {year}
+  {2016})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Londos}, \citenamefont {Antonaras},\ and\
+  \citenamefont {Chroneos}(2013)}]{neutron:Londos}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.~A.}\ \bibnamefont
+  {Londos}}, \bibinfo {author} {\bibfnamefont {G.}~\bibnamefont {Antonaras}}, \
+  and\ \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Chroneos}},\ }\href
+  {\doibase 10.1063/1.4831963} {\bibfield  {journal} {\bibinfo  {journal} {J.
+  Appl. Phys.}\ }\textbf {\bibinfo {volume} {114}},\ \bibinfo {pages} {193513}
+  (\bibinfo {year} {2013})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Lukjanitsa}(2003)}]{Lukjanitsa}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {V.~V.}\ \bibnamefont
+  {Lukjanitsa}},\ }\href {\doibase 10.1134/1.1568459} {\bibfield  {journal}
+  {\bibinfo  {journal} {Semiconductors}\ }\textbf {\bibinfo {volume} {37}},\
+  \bibinfo {pages} {404} (\bibinfo {year} {2003})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Lyakas}, \citenamefont {Zaharia},\ and\ \citenamefont
+  {Eizenberg}(1995)}]{Lyakas}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Lyakas}}, \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont {Zaharia}}, \
+  and\ \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Eizenberg}},\ }\href
+  {\doibase 10.1063/1.359664} {\bibfield  {journal} {\bibinfo  {journal} {J.
+  Appl. Phys.}\ }\textbf {\bibinfo {volume} {78}},\ \bibinfo {pages} {5481}
+  (\bibinfo {year} {1995})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Lysyuk}\ \emph {et~al.}(2014)\citenamefont {Lysyuk},
+  \citenamefont {Olikh}, \citenamefont {Olikh},\ and\ \citenamefont
+  {Beketov}}]{Lysyuk}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {I.}~\bibnamefont
+  {Lysyuk}}, \bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont {Olikh}},
+  \bibinfo {author} {\bibfnamefont {O.}~\bibnamefont {Olikh}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {G.}~\bibnamefont {Beketov}},\ }\href@noop {}
+  {\bibfield  {journal} {\bibinfo  {journal} {Ukr. J. Phys.}\ }\textbf
+  {\bibinfo {volume} {59}},\ \bibinfo {pages} {50} (\bibinfo {year}
+  {2014})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Manifacier}\ \emph {et~al.}(1988)\citenamefont
+  {Manifacier}, \citenamefont {Brortryb}, \citenamefont {Ardebili},\ and\
+  \citenamefont {Charles}}]{Manifacier}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.-C.}\ \bibnamefont
+  {Manifacier}}, \bibinfo {author} {\bibfnamefont {N.}~\bibnamefont
+  {Brortryb}}, \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont {Ardebili}},
+  \ and\ \bibinfo {author} {\bibfnamefont {J.-P.}\ \bibnamefont {Charles}},\
+  }\href {\doibase 10.1063/1.341632} {\bibfield  {journal} {\bibinfo  {journal}
+  {J. Appl. Phys.}\ }\textbf {\bibinfo {volume} {64}},\ \bibinfo {pages} {2502}
+  (\bibinfo {year} {1988})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {McCafferty}\ \emph {et~al.}(1996)\citenamefont
+  {McCafferty}, \citenamefont {Sellai}, \citenamefont {Dawson},\ and\
+  \citenamefont {Elabd}}]{T0:McCafferty}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.~G.}\ \bibnamefont
+  {McCafferty}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Sellai}},
+  \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {Dawson}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {H.}~\bibnamefont {Elabd}},\ }\href {\doibase
+  10.1016/0038-1101(95)00162-X} {\bibfield  {journal} {\bibinfo  {journal}
+  {Solid-State Electron.}\ }\textbf {\bibinfo {volume} {39}},\ \bibinfo {pages}
+  {583} (\bibinfo {year} {1996})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Mchedlidze}\ \emph {et~al.}(2013)\citenamefont
+  {Mchedlidze}, \citenamefont {Scheffler}, \citenamefont {Weber}, \citenamefont
+  {Herms}, \citenamefont {Neusel}, \citenamefont {Osinniy}, \citenamefont
+  {Moller},\ and\ \citenamefont {Lauer}}]{TeimurazJAP}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {T.}~\bibnamefont
+  {Mchedlidze}}, \bibinfo {author} {\bibfnamefont {L.}~\bibnamefont
+  {Scheffler}}, \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Weber}},
+  \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Herms}}, \bibinfo
+  {author} {\bibfnamefont {J.}~\bibnamefont {Neusel}}, \bibinfo {author}
+  {\bibfnamefont {V.}~\bibnamefont {Osinniy}}, \bibinfo {author} {\bibfnamefont
+  {C.}~\bibnamefont {Moller}}, \ and\ \bibinfo {author} {\bibfnamefont
+  {K.}~\bibnamefont {Lauer}},\ }\href {\doibase 10.1063/1.4807142} {\bibfield
+  {journal} {\bibinfo  {journal} {J. Appl. Phys.}\ }\textbf {\bibinfo {volume}
+  {103}},\ \bibinfo {pages} {013901} (\bibinfo {year} {2013})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Mchedlidze}\ and\ \citenamefont
+  {Weber}(2014)}]{TeimurazPSS}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {T.}~\bibnamefont
+  {Mchedlidze}}\ and\ \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {Weber}},\ }\href {\doibase 10.1002/pssb.201451021} {\bibfield  {journal}
+  {\bibinfo  {journal} {phys. stat. sol. (b)}\ }\textbf {\bibinfo {volume}
+  {251}},\ \bibinfo {pages} {1608} (\bibinfo {year} {2014})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Melnik}\ \emph {et~al.}(2005)\citenamefont {Melnik},
+  \citenamefont {Olikh}, \citenamefont {Popov}, \citenamefont {Romanyuk},
+  \citenamefont {Goltvyanskii},\ and\ \citenamefont {Evtukh}}]{YOlikh2005}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {V.}~\bibnamefont
+  {Melnik}}, \bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont {Olikh}},
+  \bibinfo {author} {\bibfnamefont {V.}~\bibnamefont {Popov}}, \bibinfo
+  {author} {\bibfnamefont {B.}~\bibnamefont {Romanyuk}}, \bibinfo {author}
+  {\bibfnamefont {Y.}~\bibnamefont {Goltvyanskii}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {A.}~\bibnamefont {Evtukh}},\ }\href {\doibase
+  10.1016/j.mseb.2005.08.039} {\bibfield  {journal} {\bibinfo  {journal}
+  {Materials Science \& Engineering, B: Solid-State Materials for Advanced
+  Technology}\ }\textbf {\bibinfo {volume} {124--125}},\ \bibinfo {pages} {327}
+  (\bibinfo {year} {2005})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Meyaard}\ \emph {et~al.}(2013)\citenamefont
+  {Meyaard}, \citenamefont {Cho}, \citenamefont {Schubert}, \citenamefont
+  {Han}, \citenamefont {Kim},\ and\ \citenamefont {Sone}}]{Rs:Meyaard}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.~S.}\ \bibnamefont
+  {Meyaard}}, \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Cho}},
+  \bibinfo {author} {\bibfnamefont {E.~F.}\ \bibnamefont {Schubert}}, \bibinfo
+  {author} {\bibfnamefont {S.-H.}\ \bibnamefont {Han}}, \bibinfo {author}
+  {\bibfnamefont {M.-H.}\ \bibnamefont {Kim}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {C.}~\bibnamefont {Sone}},\ }\href {\doibase
+  10.1063/1.4821538} {\bibfield  {journal} {\bibinfo  {journal} {Appl. Phys.
+  Lett.}\ }\textbf {\bibinfo {volume} {103}},\ \bibinfo {pages} {121103}
+  (\bibinfo {year} {2013})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Mikhelashvili}\ \emph {et~al.}(1999)\citenamefont
+  {Mikhelashvili}, \citenamefont {Eisenstein}, \citenamefont {Garber},
+  \citenamefont {Fainleib}, \citenamefont {Bahir}, \citenamefont {Ritter},
+  \citenamefont {Orenstein},\ and\ \citenamefont {Peer}}]{Mikhelashvili}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {V.}~\bibnamefont
+  {Mikhelashvili}}, \bibinfo {author} {\bibfnamefont {G.}~\bibnamefont
+  {Eisenstein}}, \bibinfo {author} {\bibfnamefont {V.}~\bibnamefont {Garber}},
+  \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Fainleib}}, \bibinfo
+  {author} {\bibfnamefont {G.}~\bibnamefont {Bahir}}, \bibinfo {author}
+  {\bibfnamefont {D.}~\bibnamefont {Ritter}}, \bibinfo {author} {\bibfnamefont
+  {M.}~\bibnamefont {Orenstein}}, \ and\ \bibinfo {author} {\bibfnamefont
+  {A.}~\bibnamefont {Peer}},\ }\href {\doibase 10.1063/1.370206} {\bibfield
+  {journal} {\bibinfo  {journal} {J. Appl. Phys.}\ }\textbf {\bibinfo {volume}
+  {85}},\ \bibinfo {pages} {6873} (\bibinfo {year} {1999})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Mirsagatov}, \citenamefont {Sapaeva},\ and\
+  \citenamefont {Nazarov}(2015)}]{Mirsagatov}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.~A.}\ \bibnamefont
+  {Mirsagatov}}, \bibinfo {author} {\bibfnamefont {I.~B.}\ \bibnamefont
+  {Sapaeva}}, \ and\ \bibinfo {author} {\bibfnamefont {Z.}~\bibnamefont
+  {Nazarov}},\ }\href {\doibase 10.1134/S0020168515010148} {\bibfield
+  {journal} {\bibinfo  {journal} {Inorganic Materials}\ }\textbf {\bibinfo
+  {volume} {51}},\ \bibinfo {pages} {1} (\bibinfo {year} {2015})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Mirzade}(2011)}]{MirzadeJAP2011}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {F.}~\bibnamefont
+  {Mirzade}},\ }\href {\doibase 10.1063/1.3633524} {\bibfield  {journal}
+  {\bibinfo  {journal} {J. Appl. Phys.}\ }\textbf {\bibinfo {volume} {110}},\
+  \bibinfo {pages} {064906} (\bibinfo {year} {2011})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Mirzade}(2005)}]{MirzadeJAP2005}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {F.}~\bibnamefont
+  {Mirzade}},\ }\href {\doibase 10.1063/1.1861516} {\bibfield  {journal}
+  {\bibinfo  {journal} {J. Appl. Phys.}\ }\textbf {\bibinfo {volume} {97}},\
+  \bibinfo {pages} {084911} (\bibinfo {year} {2005})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Mirzade}(2006)}]{Mirzade}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {F.~K.}\ \bibnamefont
+  {Mirzade}},\ }\href {\doibase 10.1134/S1063782606030031} {\bibfield
+  {journal} {\bibinfo  {journal} {Semiconductors}\ }\textbf {\bibinfo {volume}
+  {40}},\ \bibinfo {pages} {262} (\bibinfo {year} {2006})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Mitrofanov}\ and\ \citenamefont
+  {Manfra}(2004)}]{PF:Mitrofanov}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {O.}~\bibnamefont
+  {Mitrofanov}}\ and\ \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Manfra}},\ }\href {\doibase 10.1063/1.1719264} {\bibfield  {journal}
+  {\bibinfo  {journal} {J. Appl. Phys.}\ }\textbf {\bibinfo {volume} {95}},\
+  \bibinfo {pages} {6414} (\bibinfo {year} {2004})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Moll}\ \emph {et~al.}(1997)\citenamefont {Moll},
+  \citenamefont {Feick}, \citenamefont {Fretwurst}, \citenamefont
+  {Lindstr\"{o}m},\ and\ \citenamefont {Sch\"{u}tze}}]{NIEL:Moll}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Moll}}, \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Feick}},
+  \bibinfo {author} {\bibfnamefont {E.}~\bibnamefont {Fretwurst}}, \bibinfo
+  {author} {\bibfnamefont {G.}~\bibnamefont {Lindstr\"{o}m}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {C.}~\bibnamefont {Sch\"{u}tze}},\ }\href {\doibase
+  10.1016/S0168-9002(97)00003-X} {\bibfield  {journal} {\bibinfo  {journal}
+  {Nucl. Instrum. Methods Phys. Res., Sect. A}\ }\textbf {\bibinfo {volume}
+  {388}},\ \bibinfo {pages} {335} (\bibinfo {year} {1997})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Munguia}\ \emph {et~al.}(2012)\citenamefont
+  {Munguia}, \citenamefont {Bluet}, \citenamefont {Marty}, \citenamefont
+  {Bremond}, \citenamefont {Mermoux},\ and\ \citenamefont
+  {Rouchon}}]{SiEg2012}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {Munguia}}, \bibinfo {author} {\bibfnamefont {J.-M.}\ \bibnamefont {Bluet}},
+  \bibinfo {author} {\bibfnamefont {O.}~\bibnamefont {Marty}}, \bibinfo
+  {author} {\bibfnamefont {G.}~\bibnamefont {Bremond}}, \bibinfo {author}
+  {\bibfnamefont {M.}~\bibnamefont {Mermoux}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {D.}~\bibnamefont {Rouchon}},\ }\href {\doibase
+  10.1063/1.3691955} {\bibfield  {journal} {\bibinfo  {journal} {Appl. Phys.
+  Lett.}\ }\textbf {\bibinfo {volume} {100}},\ \bibinfo {pages} {102107}
+  (\bibinfo {year} {2012})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Murphy}\ \emph {et~al.}(2014)\citenamefont {Murphy},
+  \citenamefont {McGuire}, \citenamefont {Bothe}, \citenamefont {Voronkov},\
+  and\ \citenamefont {Falster}}]{MurphySC2014}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {Murphy}}, \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {McGuire}},
+  \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont {Bothe}}, \bibinfo
+  {author} {\bibfnamefont {V.}~\bibnamefont {Voronkov}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {R.}~\bibnamefont {Falster}},\ }\href {\doibase
+  10.1016/j.solmat.2013.06.018} {\bibfield  {journal} {\bibinfo  {journal}
+  {Sol. Energy Mater. Sol. Cells}\ }\textbf {\bibinfo {volume} {120}},\
+  \bibinfo {pages} {402} (\bibinfo {year} {2014})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Murphy}\ \emph {et~al.}(2012)\citenamefont {Murphy},
+  \citenamefont {Bothe}, \citenamefont {Krain}, \citenamefont {Voronkov},\ and\
+  \citenamefont {Falster}}]{MurphyJAP2012}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~D.}\ \bibnamefont
+  {Murphy}}, \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont {Bothe}},
+  \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont {Krain}}, \bibinfo
+  {author} {\bibfnamefont {V.~V.}\ \bibnamefont {Voronkov}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {R.~J.}\ \bibnamefont {Falster}},\ }\href {\doibase
+  10.1063/1.4725475} {\bibfield  {journal} {\bibinfo  {journal} {J. Appl.
+  Phys.}\ }\textbf {\bibinfo {volume} {111}},\ \bibinfo {pages} {113709}
+  (\bibinfo {year} {2012})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Murphy}\ \emph {et~al.}(2011)\citenamefont {Murphy},
+  \citenamefont {Bothe}, \citenamefont {Olmo}, \citenamefont {Voronkov},\ and\
+  \citenamefont {Falster}}]{MurphyJAP2011}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~D.}\ \bibnamefont
+  {Murphy}}, \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont {Bothe}},
+  \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Olmo}}, \bibinfo {author}
+  {\bibfnamefont {V.~V.}\ \bibnamefont {Voronkov}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {R.~J.}\ \bibnamefont {Falster}},\ }\href {\doibase
+  10.1063/1.3632067} {\bibfield  {journal} {\bibinfo  {journal} {J. Appl.
+  Phys.}\ }\textbf {\bibinfo {volume} {110}},\ \bibinfo {pages} {053713}
+  (\bibinfo {year} {2011})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Naumann}\ \emph {et~al.}(2014)\citenamefont
+  {Naumann}, \citenamefont {Lausch}, \citenamefont {Hahnel}, \citenamefont
+  {Bauer}, \citenamefont {Breitenstein}, \citenamefont {Graff}, \citenamefont
+  {Werner}, \citenamefont {Swatek}, \citenamefont {Grober}, \citenamefont
+  {Bagdahn},\ and\ \citenamefont {Hagendorf}}]{PID:SEMSC}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {V.}~\bibnamefont
+  {Naumann}}, \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont {Lausch}},
+  \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Hahnel}}, \bibinfo
+  {author} {\bibfnamefont {J.}~\bibnamefont {Bauer}}, \bibinfo {author}
+  {\bibfnamefont {O.}~\bibnamefont {Breitenstein}}, \bibinfo {author}
+  {\bibfnamefont {A.}~\bibnamefont {Graff}}, \bibinfo {author} {\bibfnamefont
+  {M.}~\bibnamefont {Werner}}, \bibinfo {author} {\bibfnamefont
+  {S.}~\bibnamefont {Swatek}}, \bibinfo {author} {\bibfnamefont
+  {S.}~\bibnamefont {Grober}}, \bibinfo {author} {\bibfnamefont
+  {J.}~\bibnamefont {Bagdahn}}, \ and\ \bibinfo {author} {\bibfnamefont
+  {C.}~\bibnamefont {Hagendorf}},\ }\href {\doibase
+  10.1016/j.solmat.2013.06.015} {\bibfield  {journal} {\bibinfo  {journal}
+  {Sol. Energy Mater. Sol. Cells}\ }\textbf {\bibinfo {volume} {120}},\
+  \bibinfo {pages} {383} (\bibinfo {year} {2014})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Norde}(1979)}]{Norde}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.}~\bibnamefont
+  {Norde}},\ }\href {\doibase 10.1063/1.325607} {\bibfield  {journal} {\bibinfo
+   {journal} {J. Appl. Phys.}\ }\textbf {\bibinfo {volume} {50}},\ \bibinfo
+  {pages} {5052} (\bibinfo {year} {1979})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Novikov}(2009)}]{Novikov2009}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Y.~N.}\ \bibnamefont
+  {Novikov}},\ }\href {\doibase 10.1134/S1063782609080144} {\bibfield
+  {journal} {\bibinfo  {journal} {Semiconductors}\ }\textbf {\bibinfo {volume}
+  {43}},\ \bibinfo {pages} {1040} (\bibinfo {year} {2009})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Ogawa}\ \emph {et~al.}(2012)\citenamefont {Ogawa},
+  \citenamefont {Kamiya}, \citenamefont {Izumi},\ and\ \citenamefont
+  {Tokuda}}]{Edis:Ogawa}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Ogawa}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Kamiya}},
+  \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Izumi}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {Y.}~\bibnamefont {Tokuda}},\ }\href {\doibase
+  doi:10.1016/j.physb.2011.09.139} {\bibfield  {journal} {\bibinfo  {journal}
+  {Physica B: Physics of Condensed Matter}\ }\textbf {\bibinfo {volume}
+  {407}},\ \bibinfo {pages} {3034} (\bibinfo {year} {2012})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Olikh}(2015)}]{Olikh:Ultras}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {O.}~\bibnamefont
+  {Olikh}},\ }\href {\doibase 10.1016/j.ultras.2014.10.008} {\bibfield
+  {journal} {\bibinfo  {journal} {Ultrasonics}\ }\textbf {\bibinfo {volume}
+  {56}},\ \bibinfo {pages} {545} (\bibinfo {year} {2015})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Olikh}(2013{\natexlab{a}})}]{Olikh2013Sem}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {O.}~\bibnamefont
+  {Olikh}},\ }\href {\doibase 10.1134/S106378261307018X} {\bibfield  {journal}
+  {\bibinfo  {journal} {Semiconductors}\ }\textbf {\bibinfo {volume} {47}},\
+  \bibinfo {pages} {987} (\bibinfo {year} {2013}{\natexlab{a}})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Olikh}(2011)}]{Olikh2011Sem}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {O.}~\bibnamefont
+  {Olikh}},\ }\href {\doibase 10.1134/S1063782611060170} {\bibfield  {journal}
+  {\bibinfo  {journal} {Semiconductors}\ }\textbf {\bibinfo {volume} {45}},\
+  \bibinfo {pages} {798} (\bibinfo {year} {2011})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Olikh}\ and\ \citenamefont
+  {Pinchuk}(2006)}]{Olikh2006TPL}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {O.}~\bibnamefont
+  {Olikh}}\ and\ \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont
+  {Pinchuk}},\ }\href {\doibase 10.1134/S1063785006060204} {\bibfield
+  {journal} {\bibinfo  {journal} {Tech. Phys. Lett.}\ }\textbf {\bibinfo
+  {volume} {32}},\ \bibinfo {pages} {517} (\bibinfo {year} {2006})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Olikh}\ and\ \citenamefont
+  {Voytenko}(2016)}]{Olikh:Ultras2016}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {O.}~\bibnamefont
+  {Olikh}}\ and\ \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
+  {Voytenko}},\ }\href {\doibase 10.1016/j.ultras.2015.12.001} {\bibfield
+  {journal} {\bibinfo  {journal} {Ultrasonics}\ }\textbf {\bibinfo {volume}
+  {66}},\ \bibinfo {pages} {1} (\bibinfo {year} {2016})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Olikh}(2013{\natexlab{b}})}]{Olikh:2013IEEE}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {O.~Y.}\ \bibnamefont
+  {Olikh}},\ }\href {\doibase 10.1109/TNS.2012.2234137} {\bibfield  {journal}
+  {\bibinfo  {journal} {IEEE Trans. Nucl. Sci.}\ }\textbf {\bibinfo {volume}
+  {60}},\ \bibinfo {pages} {394} (\bibinfo {year}
+  {2013}{\natexlab{b}})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Olikh}(2009)}]{Olikh2009Sem}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {O.~Y.}\ \bibnamefont
+  {Olikh}},\ }\href {\doibase 10.1134/S1063782609060116} {\bibfield  {journal}
+  {\bibinfo  {journal} {Semiconductors}\ }\textbf {\bibinfo {volume} {43}},\
+  \bibinfo {pages} {745} (\bibinfo {year} {2009})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Olikh}\ and\ \citenamefont
+  {Ostrovskii}(2002)}]{OlikhPSS}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {O.~Y.}\ \bibnamefont
+  {Olikh}}\ and\ \bibinfo {author} {\bibfnamefont {I.~V.}\ \bibnamefont
+  {Ostrovskii}},\ }\href {\doibase 10.1134/1.1494617} {\bibfield  {journal}
+  {\bibinfo  {journal} {Phys. Solid State}\ }\textbf {\bibinfo {volume} {44}},\
+  \bibinfo {pages} {1249} (\bibinfo {year} {2002})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Olikh}, \citenamefont {Voytenko},\ and\ \citenamefont
+  {Burbelo}(2015)}]{OlikhJAP}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {O.~Y.}\ \bibnamefont
+  {Olikh}}, \bibinfo {author} {\bibfnamefont {K.~V.}\ \bibnamefont {Voytenko}},
+  \ and\ \bibinfo {author} {\bibfnamefont {R.~M.}\ \bibnamefont {Burbelo}},\
+  }\href {\doibase 10.1063/1.4906844} {\bibfield  {journal} {\bibinfo
+  {journal} {Journal of Applied Physics}\ }\textbf {\bibinfo {volume} {117}},\
+  \bibinfo {pages} {044505} (\bibinfo {year} {2015})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Olikh}\ \emph {et~al.}(2016)\citenamefont {Olikh},
+  \citenamefont {Voytenko}, \citenamefont {Burbelo},\ and\ \citenamefont
+  {Olikh}}]{Olikh2016JSem}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {O.~Y.}\ \bibnamefont
+  {Olikh}}, \bibinfo {author} {\bibfnamefont {K.~V.}\ \bibnamefont {Voytenko}},
+  \bibinfo {author} {\bibfnamefont {R.~M.}\ \bibnamefont {Burbelo}}, \ and\
+  \bibinfo {author} {\bibfnamefont {J.~M.}\ \bibnamefont {Olikh}},\ }\href
+  {\doibase 10.1088/1674-4926/37/12/122002} {\bibfield  {journal} {\bibinfo
+  {journal} {Journal of Semiconductors}\ }\textbf {\bibinfo {volume} {37}},\
+  \bibinfo {pages} {122002} (\bibinfo {year} {2016})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Olikh}\ and\ \citenamefont
+  {Tymochko}(2011)}]{YOlikhTPL2011}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont
+  {Olikh}}\ and\ \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Tymochko}},\ }\href {\doibase 10.1134/S106378501101007X} {\bibfield
+  {journal} {\bibinfo  {journal} {Tech. Phys. Lett.}\ }\textbf {\bibinfo
+  {volume} {37}},\ \bibinfo {pages} {37} (\bibinfo {year} {2011})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Olikh}, \citenamefont {Tymochko},\ and\ \citenamefont
+  {Dolgolenko}(2006)}]{YOlikh2006TPL}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont
+  {Olikh}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Tymochko}}, \
+  and\ \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Dolgolenko}},\
+  }\href {\doibase 10.1134/S106378500607011X} {\bibfield  {journal} {\bibinfo
+  {journal} {Tech. Phys. Lett.}\ }\textbf {\bibinfo {volume} {32}},\ \bibinfo
+  {pages} {586} (\bibinfo {year} {2006})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Omling}\ \emph {et~al.}(1985)\citenamefont {Omling},
+  \citenamefont {Weber}, \citenamefont {Montelius}, \citenamefont {Alexander},\
+  and\ \citenamefont {Michel}}]{Edis:Omling}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.}~\bibnamefont
+  {Omling}}, \bibinfo {author} {\bibfnamefont {E.~R.}\ \bibnamefont {Weber}},
+  \bibinfo {author} {\bibfnamefont {L.}~\bibnamefont {Montelius}}, \bibinfo
+  {author} {\bibfnamefont {H.}~\bibnamefont {Alexander}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {J.}~\bibnamefont {Michel}},\ }\href {\doibase
+  10.1103/PhysRevB.32.6571} {\bibfield  {journal} {\bibinfo  {journal} {Phys.
+  Rev. B}\ }\textbf {\bibinfo {volume} {32}},\ \bibinfo {pages} {6571}
+  (\bibinfo {year} {1985})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Ortiz-Conde}\ \emph {et~al.}(1995)\citenamefont
+  {Ortiz-Conde}, \citenamefont {Garsia~Sanchez}, \citenamefont {Liou},
+  \citenamefont {Andrian}, \citenamefont {Laurence},\ and\ \citenamefont
+  {Schmidt}}]{Ortiz1995}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Ortiz-Conde}}, \bibinfo {author} {\bibfnamefont {F.}~\bibnamefont
+  {Garsia~Sanchez}}, \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {Liou}}, \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Andrian}},
+  \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont {Laurence}}, \ and\
+  \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {Schmidt}},\ }\href
+  {\doibase 10.1016/0038-1101(94)00141-2} {\bibfield  {journal} {\bibinfo
+  {journal} {Solid-State Electron.}\ }\textbf {\bibinfo {volume} {38}},\
+  \bibinfo {pages} {265} (\bibinfo {year} {1995})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Ortiz-Conde}\ \emph {et~al.}(1999)\citenamefont
+  {Ortiz-Conde}, \citenamefont {Ma}, \citenamefont {Thomson}, \citenamefont
+  {Santos}, \citenamefont {Liou}, \citenamefont {Garsia~Sanchez}, \citenamefont
+  {Lei}, \citenamefont {Finol},\ and\ \citenamefont {Layman}}]{Ortiz1999}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Ortiz-Conde}}, \bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont {Ma}},
+  \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Thomson}}, \bibinfo
+  {author} {\bibfnamefont {E.}~\bibnamefont {Santos}}, \bibinfo {author}
+  {\bibfnamefont {J.}~\bibnamefont {Liou}}, \bibinfo {author} {\bibfnamefont
+  {F.}~\bibnamefont {Garsia~Sanchez}}, \bibinfo {author} {\bibfnamefont
+  {M.}~\bibnamefont {Lei}}, \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {Finol}}, \ and\ \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont
+  {Layman}},\ }\href {\doibase 10.1016/S0038-1101(99)00044-1} {\bibfield
+  {journal} {\bibinfo  {journal} {Solid-State Electron.}\ }\textbf {\bibinfo
+  {volume} {43}},\ \bibinfo {pages} {845} (\bibinfo {year} {1999})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Ortiz-Conde}\ and\ \citenamefont
+  {Sanchez}(2005)}]{Ortiz2005}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Ortiz-Conde}}\ and\ \bibinfo {author} {\bibfnamefont {F.~J.~G.}\
+  \bibnamefont {Sanchez}},\ }\href {\doibase 10.1016/j.sse.2004.12.001}
+  {\bibfield  {journal} {\bibinfo  {journal} {Solid-State Electron.}\ }\textbf
+  {\bibinfo {volume} {49}},\ \bibinfo {pages} {465} (\bibinfo {year}
+  {2005})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Ostapenko}(1999)}]{Ostapenko1999}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+  {Ostapenko}},\ }\href {\doibase 10.1007/s003390050994} {\bibfield  {journal}
+  {\bibinfo  {journal} {Applied Physics A: Materials Science \& Processing}\
+  }\textbf {\bibinfo {volume} {69}},\ \bibinfo {pages} {225} (\bibinfo {year}
+  {1999})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Ostapenko}, \citenamefont {~},\ and\ \citenamefont
+  {Sopori}(1995)}]{Ostapenko1995SST}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.~S.}\ \bibnamefont
+  {Ostapenko}}, \bibinfo {author} {\bibfnamefont {L.}~\bibnamefont {~},
+  \bibfnamefont {Jastrzebski}}, \ and\ \bibinfo {author} {\bibfnamefont
+  {B.}~\bibnamefont {Sopori}},\ }\href {\doibase 10.1088/0268-1242/10/11/011}
+  {\bibfield  {journal} {\bibinfo  {journal} {Semicond. Sci. Technol.}\
+  }\textbf {\bibinfo {volume} {10}},\ \bibinfo {pages} {1494} (\bibinfo {year}
+  {1995})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Ostapenko}\ and\ \citenamefont
+  {Bell}(1995)}]{Ostapenko1995}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.~S.}\ \bibnamefont
+  {Ostapenko}}\ and\ \bibinfo {author} {\bibfnamefont {R.~E.}\ \bibnamefont
+  {Bell}},\ }\href {\doibase 10.1063/1.359243} {\bibfield  {journal} {\bibinfo
+  {journal} {Journal of Applied Physics}\ }\textbf {\bibinfo {volume} {77}},\
+  \bibinfo {pages} {5458} (\bibinfo {year} {1995})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Ostrovskii}\ and\ \citenamefont
+  {Korotchenkov}(1992)}]{OstrovKor92}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {I.}~\bibnamefont
+  {Ostrovskii}}\ and\ \bibinfo {author} {\bibfnamefont {O.}~\bibnamefont
+  {Korotchenkov}},\ }\href {\doibase 10.1016/0038-1098(92)90639-Q} {\bibfield
+  {journal} {\bibinfo  {journal} {Solid State Commun.}\ }\textbf {\bibinfo
+  {volume} {82}},\ \bibinfo {pages} {267} (\bibinfo {year} {1992})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Ostrovskii}\ \emph {et~al.}(2001)\citenamefont
+  {Ostrovskii}, \citenamefont {Korotchenkov}, \citenamefont {Olikh},
+  \citenamefont {Podolyan}, \citenamefont {Chupryna},\ and\ \citenamefont
+  {Torres-Cisneros}}]{Ostrovskii2001}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {I.}~\bibnamefont
+  {Ostrovskii}}, \bibinfo {author} {\bibfnamefont {O.}~\bibnamefont
+  {Korotchenkov}}, \bibinfo {author} {\bibfnamefont {O.}~\bibnamefont {Olikh}},
+  \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Podolyan}}, \bibinfo
+  {author} {\bibfnamefont {R.}~\bibnamefont {Chupryna}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {M.}~\bibnamefont {Torres-Cisneros}},\ }\href
+  {\doibase 10.1088/1464-4258/3/4/364} {\bibfield  {journal} {\bibinfo
+  {journal} {J. Opt. A: Pure Appl. Opt.}\ }\textbf {\bibinfo {volume} {3}},\
+  \bibinfo {pages} {S82} (\bibinfo {year} {2001})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Pandey}\ \emph {et~al.}(2014)\citenamefont {Pandey},
+  \citenamefont {Maiti}, \citenamefont {Palanisamy}, \citenamefont {Nikolaev},\
+  and\ \citenamefont {Arepalli}}]{Pandey:2014}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+  {Pandey}}, \bibinfo {author} {\bibfnamefont {U.~N.}\ \bibnamefont {Maiti}},
+  \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont {Palanisamy}}, \bibinfo
+  {author} {\bibfnamefont {P.}~\bibnamefont {Nikolaev}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {S.}~\bibnamefont {Arepalli}},\ }\href
+  {10.1063/1.4882278} {\bibfield  {journal} {\bibinfo  {journal} {Appl. Phys.
+  Lett.}\ }\textbf {\bibinfo {volume} {104}},\ \bibinfo {pages} {233902}
+  (\bibinfo {year} {2014})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Parchinskii}, \citenamefont {Vlasov},\ and\
+  \citenamefont {Ligai}(2006)}]{Parchinskii2006}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.}~\bibnamefont
+  {Parchinskii}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Vlasov}},
+  \ and\ \bibinfo {author} {\bibfnamefont {L.}~\bibnamefont {Ligai}},\ }\href
+  {\doibase 10.1134/S106378260607013X} {\bibfield  {journal} {\bibinfo
+  {journal} {Semiconductors}\ }\textbf {\bibinfo {volume} {40}},\ \bibinfo
+  {pages} {808} (\bibinfo {year} {2006})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Parker}\ \emph {et~al.}(1968)\citenamefont {Parker},
+  \citenamefont {McGill}, \citenamefont {Mead},\ and\ \citenamefont
+  {Hoffman}}]{Em:Parker}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {G.}~\bibnamefont
+  {Parker}}, \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont {McGill}},
+  \bibinfo {author} {\bibfnamefont {C.}~\bibnamefont {Mead}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {D.}~\bibnamefont {Hoffman}},\ }\href {\doibase
+  10.1016/0038-1101(68)90079-8} {\bibfield  {journal} {\bibinfo  {journal}
+  {Solid-State Electron.}\ }\textbf {\bibinfo {volume} {11}},\ \bibinfo {pages}
+  {201} (\bibinfo {year} {1968})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Pashaev}(2014)}]{Pashaev2014}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {I.~G.}\ \bibnamefont
+  {Pashaev}},\ }\href {\doibase 10.1134/S1063782614100224} {\bibfield
+  {journal} {\bibinfo  {journal} {Semiconductors}\ }\textbf {\bibinfo {volume}
+  {48}},\ \bibinfo {pages} {1391} (\bibinfo {year} {2014})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Patel}, \citenamefont {Panchal},\ and\ \citenamefont
+  {Kheraj}(2014)}]{TLBO_Patel}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.~J.}\ \bibnamefont
+  {Patel}}, \bibinfo {author} {\bibfnamefont {A.~K.}\ \bibnamefont {Panchal}},
+  \ and\ \bibinfo {author} {\bibfnamefont {V.}~\bibnamefont {Kheraj}},\ }\href
+  {\doibase 10.1016/j.apenergy.2014.01.027} {\bibfield  {journal} {\bibinfo
+  {journal} {Applied Energy}\ }\textbf {\bibinfo {volume} {119}},\ \bibinfo
+  {pages} {384} (\bibinfo {year} {2014})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Pavlovich}(1993)}]{Pavlovich}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {V.~N.}\ \bibnamefont
+  {Pavlovich}},\ }\href {\doibase 10.1002/pssb.2221800108} {\bibfield
+  {journal} {\bibinfo  {journal} {phys. stat. sol. (b)}\ }\textbf {\bibinfo
+  {volume} {180}},\ \bibinfo {pages} {97} (\bibinfo {year} {1993})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Peleshchak}, \citenamefont {Kuzyk},\ and\
+  \citenamefont {Dan'kiv}(2016)}]{PeleshchakUJF2016}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
+  {Peleshchak}}, \bibinfo {author} {\bibfnamefont {O.}~\bibnamefont {Kuzyk}}, \
+  and\ \bibinfo {author} {\bibfnamefont {O.}~\bibnamefont {Dan'kiv}},\ }\href
+  {\doibase 10.15407/ujpe61.08.0741} {\bibfield  {journal} {\bibinfo  {journal}
+  {Ukr. J. Phys.}\ }\textbf {\bibinfo {volume} {61}},\ \bibinfo {pages} {741}
+  (\bibinfo {year} {2016})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Peleshchak}, \citenamefont {Kuzyk},\ and\
+  \citenamefont {Dan'kiv}(2014)}]{Peleshchak}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
+  {Peleshchak}}, \bibinfo {author} {\bibfnamefont {O.}~\bibnamefont {Kuzyk}}, \
+  and\ \bibinfo {author} {\bibfnamefont {O.}~\bibnamefont {Dan'kiv}},\ }\href
+  {\doibase 10.5488/CMP.17.23601} {\bibfield  {journal} {\bibinfo  {journal}
+  {Condensed Matter Physics}\ }\textbf {\bibinfo {volume} {17}},\ \bibinfo
+  {pages} {23601:1} (\bibinfo {year} {2014})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Pintilie}\ \emph {et~al.}(2009)\citenamefont
+  {Pintilie}, \citenamefont {Lindstroem}, \citenamefont {Junkes},\ and\
+  \citenamefont {Fretwurst}}]{Pintilie}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {I.}~\bibnamefont
+  {Pintilie}}, \bibinfo {author} {\bibfnamefont {G.}~\bibnamefont
+  {Lindstroem}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Junkes}},
+  \ and\ \bibinfo {author} {\bibfnamefont {E.}~\bibnamefont {Fretwurst}},\
+  }\href {\doibase 10.1016/j.nima.2009.09.065} {\bibfield  {journal} {\bibinfo
+  {journal} {Nucl. Instrum. Methods Phys. Res., Sect. A}\ }\textbf {\bibinfo
+  {volume} {611}},\ \bibinfo {pages} {52} (\bibinfo {year} {2009})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Pipinys}\ and\ \citenamefont
+  {Lapeika}(2006)}]{Pipinys2006}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.}~\bibnamefont
+  {Pipinys}}\ and\ \bibinfo {author} {\bibfnamefont {V.}~\bibnamefont
+  {Lapeika}},\ }\href {\doibase 10.1063/1.2199980} {\bibfield  {journal}
+  {\bibinfo  {journal} {J. Appl. Phys.}\ }\textbf {\bibinfo {volume} {99}},\
+  \bibinfo {pages} {093709} (\bibinfo {year} {2006})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Pipinys}, \citenamefont {Pipiniene},\ and\
+  \citenamefont {Rimeika}(1999)}]{Pipinys1999}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.}~\bibnamefont
+  {Pipinys}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Pipiniene}},
+  \ and\ \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Rimeika}},\ }\href
+  {\doibase 10.1063/1.371766} {\bibfield  {journal} {\bibinfo  {journal} {J.
+  Appl. Phys.}\ }\textbf {\bibinfo {volume} {86}},\ \bibinfo {pages} {6875}
+  (\bibinfo {year} {1999})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Podolian}, \citenamefont {Nadtochiy},\ and\
+  \citenamefont {Korotchenkov}(2012)}]{Podolian2012}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.~O.}\ \bibnamefont
+  {Podolian}}, \bibinfo {author} {\bibfnamefont {A.~B.}\ \bibnamefont
+  {Nadtochiy}}, \ and\ \bibinfo {author} {\bibfnamefont {O.~A.}\ \bibnamefont
+  {Korotchenkov}},\ }\href {\doibase 10.1134/S1063785012050124} {\bibfield
+  {journal} {\bibinfo  {journal} {Tech. Phys. Lett.}\ }\textbf {\bibinfo
+  {volume} {38}},\ \bibinfo {pages} {405} (\bibinfo {year} {2012})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Raeymaekers}, \citenamefont {Pantea},\ and\
+  \citenamefont {Sinha}(2011)}]{Bart:2011}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {B.}~\bibnamefont
+  {Raeymaekers}}, \bibinfo {author} {\bibfnamefont {C.}~\bibnamefont {Pantea}},
+  \ and\ \bibinfo {author} {\bibfnamefont {D.~N.}\ \bibnamefont {Sinha}},\
+  }\href {\doibase :10.1063/1.3530670} {\bibfield  {journal} {\bibinfo
+  {journal} {J. Appl. Phys.}\ }\textbf {\bibinfo {volume} {109}},\ \bibinfo
+  {pages} {014317} (\bibinfo {year} {2011})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Ranade}\ \emph {et~al.}(2001)\citenamefont {Ranade},
+  \citenamefont {Takeuchi}, \citenamefont {King},\ and\ \citenamefont
+  {Hu}}]{MoWF2001}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.}~\bibnamefont
+  {Ranade}}, \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Takeuchi}},
+  \bibinfo {author} {\bibfnamefont {T.-J.}\ \bibnamefont {King}}, \ and\
+  \bibinfo {author} {\bibfnamefont {C.}~\bibnamefont {Hu}},\ }\href {\doibase
+  10.1149/1.1403216} {\bibfield  {journal} {\bibinfo  {journal} {Electrochem.
+  Solid-State Lett.}\ }\textbf {\bibinfo {volume} {4}},\ \bibinfo {pages} {G85}
+  (\bibinfo {year} {2001})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Rao}\ \emph {et~al.}(2013)\citenamefont {Rao},
+  \citenamefont {Praveen}, \citenamefont {Rani}, \citenamefont {Tripathi},\
+  and\ \citenamefont {Prakash}}]{Gamma:Prabhakara}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Y.~P.}\ \bibnamefont
+  {Rao}}, \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont {Praveen}},
+  \bibinfo {author} {\bibfnamefont {Y.~R.}\ \bibnamefont {Rani}}, \bibinfo
+  {author} {\bibfnamefont {A.}~\bibnamefont {Tripathi}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {A.~G.}\ \bibnamefont {Prakash}},\ }\href {\doibase
+  10.1016/j.nimb.2013.09.011} {\bibfield  {journal} {\bibinfo  {journal} {Nucl.
+  Instrum. Methods Phys. Res., Sect. B}\ }\textbf {\bibinfo {volume} {316}},\
+  \bibinfo {pages} {205} (\bibinfo {year} {2013})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Razeghi}\ and\ \citenamefont
+  {Rogalski}(1996)}]{Razeghi}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Razeghi}}\ and\ \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Rogalski}},\ }\href {\doibase 10.1063/1.362677} {\bibfield  {journal}
+  {\bibinfo  {journal} {Journal of Applied Physics}\ }\textbf {\bibinfo
+  {volume} {79}},\ \bibinfo {pages} {7433} (\bibinfo {year}
+  {1996})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Rhoderick}\ and\ \citenamefont
+  {Williams}(1988)}]{Rhoderick1988}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.~H.}\ \bibnamefont
+  {Rhoderick}}\ and\ \bibinfo {author} {\bibfnamefont {R.~H.}\ \bibnamefont
+  {Williams}},\ }\href@noop {} {\emph {\bibinfo {title} {Metal Semiconductor
+  Contacts}}},\ \bibinfo {edition} {2nd}\ ed.\ (\bibinfo  {publisher}
+  {Clarendon Press},\ \bibinfo {address} {Oxford},\ \bibinfo {year}
+  {1988})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Romanyuk}\ \emph {et~al.}(2010)\citenamefont
+  {Romanyuk}, \citenamefont {Melnik}, \citenamefont {Olikh}, \citenamefont
+  {Biskupek}, \citenamefont {Kaiser}, \citenamefont {Feneberg}, \citenamefont
+  {Thonke},\ and\ \citenamefont {Oelhafen}}]{YOlikh2010JL}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Romanyuk}}, \bibinfo {author} {\bibfnamefont {V.}~\bibnamefont {Melnik}},
+  \bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont {Olikh}}, \bibinfo
+  {author} {\bibfnamefont {J.}~\bibnamefont {Biskupek}}, \bibinfo {author}
+  {\bibfnamefont {U.}~\bibnamefont {Kaiser}}, \bibinfo {author} {\bibfnamefont
+  {M.}~\bibnamefont {Feneberg}}, \bibinfo {author} {\bibfnamefont
+  {K.}~\bibnamefont {Thonke}}, \ and\ \bibinfo {author} {\bibfnamefont
+  {P.}~\bibnamefont {Oelhafen}},\ }\href {\doibase
+  10.1016/j.jlumin.2009.07.021} {\bibfield  {journal} {\bibinfo  {journal} {J.
+  Lumin.}\ }\textbf {\bibinfo {volume} {130}},\ \bibinfo {pages} {87–}
+  (\bibinfo {year} {2010})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Romanyuk}\ \emph {et~al.}(2007)\citenamefont
+  {Romanyuk}, \citenamefont {Oelhafen}, \citenamefont {Kurps},\ and\
+  \citenamefont {Melnik}}]{Roman:2007APL}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Romanyuk}}, \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {Oelhafen}},
+  \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont {Kurps}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {V.}~\bibnamefont {Melnik}},\ }\href {\doibase
+  10.1063/1.2430055} {\bibfield  {journal} {\bibinfo  {journal} {Appl. Phys.
+  Lett.}\ }\textbf {\bibinfo {volume} {90}},\ \bibinfo {pages} {013118}
+  (\bibinfo {year} {2007})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Romanyuk}, \citenamefont {Spassov},\ and\
+  \citenamefont {Melnik}(2006)}]{Roman:2006JAP}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Romanyuk}}, \bibinfo {author} {\bibfnamefont {V.}~\bibnamefont {Spassov}}, \
+  and\ \bibinfo {author} {\bibfnamefont {V.}~\bibnamefont {Melnik}},\ }\href
+  {\doibase 10.1063/1.2171773} {\bibfield  {journal} {\bibinfo  {journal} {J.
+  Appl. Phys.}\ }\textbf {\bibinfo {volume} {99}},\ \bibinfo {pages} {034314}
+  (\bibinfo {year} {2006})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Sachenko}\ \emph {et~al.}(2015)\citenamefont
+  {Sachenko}, \citenamefont {Kostylyov}, \citenamefont {Korkishko},
+  \citenamefont {Kulish}, \citenamefont {Sokolovskyi}, \citenamefont
+  {Vlasiuk},\ and\ \citenamefont {Khomenko}}]{Sachenko}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Sachenko}}, \bibinfo {author} {\bibfnamefont {V.}~\bibnamefont {Kostylyov}},
+  \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont {Korkishko}}, \bibinfo
+  {author} {\bibfnamefont {M.}~\bibnamefont {Kulish}}, \bibinfo {author}
+  {\bibfnamefont {I.}~\bibnamefont {Sokolovskyi}}, \bibinfo {author}
+  {\bibfnamefont {V.}~\bibnamefont {Vlasiuk}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {D.}~\bibnamefont {Khomenko}},\ }\href {\doibase
+  10.15407/spqeo18.03.259} {\bibfield  {journal} {\bibinfo  {journal}
+  {Semiconductor Physics, Quantum Electronics \& Optoelectronics}\ }\textbf
+  {\bibinfo {volume} {18}},\ \bibinfo {pages} {259} (\bibinfo {year}
+  {2015})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Sanada}\ \emph {et~al.}(2011)\citenamefont {Sanada},
+  \citenamefont {Sogawa}, \citenamefont {Gotoh}, \citenamefont {Onomitsu},
+  \citenamefont {Kohda}, \citenamefont {Nitta},\ and\ \citenamefont
+  {Santos}}]{Sanada:2011}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.}~\bibnamefont
+  {Sanada}}, \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont {Sogawa}},
+  \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Gotoh}}, \bibinfo
+  {author} {\bibfnamefont {K.}~\bibnamefont {Onomitsu}}, \bibinfo {author}
+  {\bibfnamefont {M.}~\bibnamefont {Kohda}}, \bibinfo {author} {\bibfnamefont
+  {J.}~\bibnamefont {Nitta}}, \ and\ \bibinfo {author} {\bibfnamefont
+  {P.}~\bibnamefont {Santos}},\ }\href {\doibase
+  10.1103/PhysRevLett.106.216602} {\bibfield  {journal} {\bibinfo  {journal}
+  {Phys. Rev. Lett.}\ }\textbf {\bibinfo {volume} {106}},\ \bibinfo {pages}
+  {216602} (\bibinfo {year} {2011})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Sarpatwari}, \citenamefont {Mohney},\ and\
+  \citenamefont {Awadelkarim}(2011)}]{Sarpatwari}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
+  {Sarpatwari}}, \bibinfo {author} {\bibfnamefont {S.~E.}\ \bibnamefont
+  {Mohney}}, \ and\ \bibinfo {author} {\bibfnamefont {O.~O.}\ \bibnamefont
+  {Awadelkarim}},\ }\href {\doibase 10.1063/1.3530868} {\bibfield  {journal}
+  {\bibinfo  {journal} {J. Appl. Phys.}\ }\textbf {\bibinfo {volume} {109}},\
+  \bibinfo {pages} {014510} (\bibinfo {year} {2011})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Sathaiya}\ and\ \citenamefont
+  {Karmalkar}(2006)}]{Sathaiya}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.~M.}\ \bibnamefont
+  {Sathaiya}}\ and\ \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+  {Karmalkar}},\ }\href {\doibase 10.1063/1.2191620} {\bibfield  {journal}
+  {\bibinfo  {journal} {J. Appl. Phys.}\ }\textbf {\bibinfo {volume} {99}},\
+  \bibinfo {pages} {093701} (\bibinfo {year} {2006})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Sato}\ and\ \citenamefont {Yasumura}(1985)}]{Sato}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
+  {Sato}}\ and\ \bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont
+  {Yasumura}},\ }\href {\doibase 10.1063/1.335750} {\bibfield  {journal}
+  {\bibinfo  {journal} {J. Appl. Phys.}\ }\textbf {\bibinfo {volume} {58}},\
+  \bibinfo {pages} {3655} (\bibinfo {year} {1985})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Savkina}\ \emph {et~al.}(2015)\citenamefont
+  {Savkina}, \citenamefont {Smirnov}, \citenamefont {Kryshtab},\ and\
+  \citenamefont {Kryvko}}]{Savkina2015}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
+  {Savkina}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Smirnov}},
+  \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont {Kryshtab}}, \ and\
+  \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Kryvko}},\ }\href
+  {\doibase 10.1016/j.mssp.2015.02.066} {\bibfield  {journal} {\bibinfo
+  {journal} {Mater. Sci. Semicond. Process.}\ }\textbf {\bibinfo {volume}
+  {37}},\ \bibinfo {pages} {179} (\bibinfo {year} {2015})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Savkina}, \citenamefont {Smirnov},\ and\
+  \citenamefont {Sizov}(2007)}]{Savkina:SST07}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.~K.}\ \bibnamefont
+  {Savkina}}, \bibinfo {author} {\bibfnamefont {A.~B.}\ \bibnamefont
+  {Smirnov}}, \ and\ \bibinfo {author} {\bibfnamefont {F.}~\bibnamefont
+  {Sizov}},\ }\href {\doibase 10.1088/0268-1242/22/2/016} {\bibfield  {journal}
+  {\bibinfo  {journal} {Semicond. Sci. Technol.}\ }\textbf {\bibinfo {volume}
+  {22}},\ \bibinfo {pages} {97} (\bibinfo {year} {2007})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Saxena}(1969)}]{T0:Saxena}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Saxena}},\ }\href {\doibase 10.1016/0039-6028(69)90245-3} {\bibfield
+  {journal} {\bibinfo  {journal} {Surf. Sci.}\ }\textbf {\bibinfo {volume}
+  {13}},\ \bibinfo {pages} {151} (\bibinfo {year} {1969})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Schenka}\ and\ \citenamefont
+  {Krumbein}(1995)}]{CDLR:JAP1995}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Schenka}}\ and\ \bibinfo {author} {\bibfnamefont {U.}~\bibnamefont
+  {Krumbein}},\ }\href {\doibase 10.1063/1.360007} {\bibfield  {journal}
+  {\bibinfo  {journal} {Journal of Applied Physics}\ }\textbf {\bibinfo
+  {volume} {78}},\ \bibinfo {pages} {3185} (\bibinfo {year}
+  {1995})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Schiefele}\ \emph {et~al.}(2013)\citenamefont
+  {Schiefele}, \citenamefont {Pedros}, \citenamefont {Sols}, \citenamefont
+  {Calle},\ and\ \citenamefont {Guinea}}]{Schiefele:2011}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {Schiefele}}, \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Pedros}},
+  \bibinfo {author} {\bibfnamefont {F.}~\bibnamefont {Sols}}, \bibinfo {author}
+  {\bibfnamefont {F.}~\bibnamefont {Calle}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {F.}~\bibnamefont {Guinea}},\ }\href {\doibase
+  10.1103/PhysRevLett.111.237405} {\bibfield  {journal} {\bibinfo  {journal}
+  {Phys. Rev. Lett.}\ }\textbf {\bibinfo {volume} {111}},\ \bibinfo {pages}
+  {237405} (\bibinfo {year} {2013})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Schmidt}(2005)}]{FeB:Schmidt}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {Schmidt}},\ }\href {\doibase 10.1002/pip.594} {\bibfield  {journal}
+  {\bibinfo  {journal} {Progress in Photovoltaics: Research and Applications}\
+  }\textbf {\bibinfo {volume} {13}},\ \bibinfo {pages} {325} (\bibinfo {year}
+  {2005})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Schmidt}\ \emph {et~al.}(2006)\citenamefont
+  {Schmidt}, \citenamefont {Bothe}, \citenamefont {Macdonald}, \citenamefont
+  {Adey}, \citenamefont {Jones},\ and\ \citenamefont
+  {Palmer}}]{LID:SchmidtJMR}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {Schmidt}}, \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont {Bothe}},
+  \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont {Macdonald}}, \bibinfo
+  {author} {\bibfnamefont {J.}~\bibnamefont {Adey}}, \bibinfo {author}
+  {\bibfnamefont {R.}~\bibnamefont {Jones}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {D.}~\bibnamefont {Palmer}},\ }\href {\doibase
+  10.1557/JMR.2006.0012} {\bibfield  {journal} {\bibinfo  {journal} {Journal of
+  Materials Research}\ }\textbf {\bibinfo {volume} {21}},\ \bibinfo {pages} {5}
+  (\bibinfo {year} {2006})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Schon}\ \emph {et~al.}(2016)\citenamefont {Schon},
+  \citenamefont {Youssef}, \citenamefont {Park}, \citenamefont {Mundt},
+  \citenamefont {Niewelt}, \citenamefont {Mack}, \citenamefont {Nakajima},
+  \citenamefont {Morishita}, \citenamefont {Murai}, \citenamefont {Jensen},
+  \citenamefont {Buonassisi},\ and\ \citenamefont {Schubert}}]{Oxide_Schon}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {Schon}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Youssef}},
+  \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Park}}, \bibinfo {author}
+  {\bibfnamefont {L.~E.}\ \bibnamefont {Mundt}}, \bibinfo {author}
+  {\bibfnamefont {T.}~\bibnamefont {Niewelt}}, \bibinfo {author} {\bibfnamefont
+  {S.}~\bibnamefont {Mack}}, \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
+  {Nakajima}}, \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont {Morishita}},
+  \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont {Murai}}, \bibinfo
+  {author} {\bibfnamefont {M.~A.}\ \bibnamefont {Jensen}}, \bibinfo {author}
+  {\bibfnamefont {T.}~\bibnamefont {Buonassisi}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {M.~C.}\ \bibnamefont {Schubert}},\ }\href {\doibase
+  10.1063/1.4961465} {\bibfield  {journal} {\bibinfo  {journal} {J. Appl.
+  Phys.}\ }\textbf {\bibinfo {volume} {120}},\ \bibinfo {pages} {105703}
+  (\bibinfo {year} {2016})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Schroder}(2006)}]{Schroder2006}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.~K.}\ \bibnamefont
+  {Schroder}},\ }\href@noop {} {\emph {\bibinfo {title} {Semiconductor Material
+  and Device Characterization}}},\ \bibinfo {edition} {3rd}\ ed.\ (\bibinfo
+  {publisher} {John Wiley \& Sons},\ \bibinfo {address} {New Jersey},\ \bibinfo
+  {year} {2006})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Seebauer}\ and\ \citenamefont
+  {Kratzer}(2006)}]{Seebauer}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.~G.}\ \bibnamefont
+  {Seebauer}}\ and\ \bibinfo {author} {\bibfnamefont {M.~C.}\ \bibnamefont
+  {Kratzer}},\ }\href {\doibase 10.1016/j.mser.2006.01.002} {\bibfield
+  {journal} {\bibinfo  {journal} {Materials Science and Engineering: R}\
+  }\textbf {\bibinfo {volume} {55}},\ \bibinfo {pages} {57} (\bibinfo {year}
+  {2006})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Sellai}\ and\ \citenamefont
+  {Ouennoughi}(2005)}]{GA_Schottky}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Sellai}}\ and\ \bibinfo {author} {\bibfnamefont {Z.}~\bibnamefont
+  {Ouennoughi}},\ }\href {\doibase 10.1142/S0129183105007704} {\bibfield
+  {journal} {\bibinfo  {journal} {Int. J. Mod. Phys. C}\ }\textbf {\bibinfo
+  {volume} {16}},\ \bibinfo {pages} {1043} (\bibinfo {year}
+  {2005})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Shah}\ \emph {et~al.}(2003)\citenamefont {Shah},
+  \citenamefont {Li}, \citenamefont {Gessmann},\ and\ \citenamefont
+  {Schubert}}]{Shah}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~M.}\ \bibnamefont
+  {Shah}}, \bibinfo {author} {\bibfnamefont {Y.-L.}\ \bibnamefont {Li}},
+  \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont {Gessmann}}, \ and\
+  \bibinfo {author} {\bibfnamefont {E.~F.}\ \bibnamefont {Schubert}},\ }\href
+  {\doibase 10.1063/1.1593218} {\bibfield  {journal} {\bibinfo  {journal} {J.
+  Appl. Phys.}\ }\textbf {\bibinfo {volume} {94}},\ \bibinfo {pages} {2627}
+  (\bibinfo {year} {2003})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Shan}\ \emph {et~al.}(2011)\citenamefont {Shan},
+  \citenamefont {Meyaard}, \citenamefont {Dai}, \citenamefont {Cho},
+  \citenamefont {Schubert}, \citenamefont {Son},\ and\ \citenamefont
+  {Sone}}]{VRH:Shan}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Q.}~\bibnamefont
+  {Shan}}, \bibinfo {author} {\bibfnamefont {D.~S.}\ \bibnamefont {Meyaard}},
+  \bibinfo {author} {\bibfnamefont {Q.}~\bibnamefont {Dai}}, \bibinfo {author}
+  {\bibfnamefont {J.}~\bibnamefont {Cho}}, \bibinfo {author} {\bibfnamefont
+  {E.~F.}\ \bibnamefont {Schubert}}, \bibinfo {author} {\bibfnamefont {J.~K.}\
+  \bibnamefont {Son}}, \ and\ \bibinfo {author} {\bibfnamefont
+  {C.}~\bibnamefont {Sone}},\ }\href {\doibase 10.1063/1.3668104} {\bibfield
+  {journal} {\bibinfo  {journal} {Appl. Phys. Lett.}\ }\textbf {\bibinfo
+  {volume} {99}},\ \bibinfo {pages} {253506} (\bibinfo {year}
+  {2011})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Song}, \citenamefont {Benson},\ and\ \citenamefont
+  {Watkins}(1987)}]{Song1987}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {L.}~\bibnamefont
+  {Song}}, \bibinfo {author} {\bibfnamefont {B.}~\bibnamefont {Benson}}, \ and\
+  \bibinfo {author} {\bibfnamefont {G.}~\bibnamefont {Watkins}},\ }\href
+  {\doibase 10.1063/1.98717} {\bibfield  {journal} {\bibinfo  {journal} {Appl.
+  Phys. Lett.}\ }\textbf {\bibinfo {volume} {51}},\ \bibinfo {pages} {1155}
+  (\bibinfo {year} {1987})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Sproul}\ and\ \citenamefont
+  {Green}(1993)}]{ni:Green}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.~B.}\ \bibnamefont
+  {Sproul}}\ and\ \bibinfo {author} {\bibfnamefont {M.~A.}\ \bibnamefont
+  {Green}},\ }\href {\doibase 10.1063/1.353288} {\bibfield  {journal} {\bibinfo
+   {journal} {J. Appl. Phys.}\ }\textbf {\bibinfo {volume} {73}},\ \bibinfo
+  {pages} {1214} (\bibinfo {year} {1993})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Srour}, \citenamefont {Marshall},\ and\ \citenamefont
+  {Marshall}(2003)}]{Rew:Srour}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {Srour}}, \bibinfo {author} {\bibfnamefont {C.}~\bibnamefont {Marshall}}, \
+  and\ \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {Marshall}},\ }\href
+  {\doibase 10.1109/TNS.2003.813197} {\bibfield  {journal} {\bibinfo  {journal}
+  {IEEE Trans. Nucl. Sci.}\ }\textbf {\bibinfo {volume} {50}},\ \bibinfo
+  {pages} {653} (\bibinfo {year} {2003})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Steingrube}\ \emph {et~al.}(2011)\citenamefont
+  {Steingrube}, \citenamefont {Breitenstein}, \citenamefont {Ramspeck},
+  \citenamefont {Glunz}, \citenamefont {Schenk},\ and\ \citenamefont
+  {Altermatt}}]{CDLR:JAP}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+  {Steingrube}}, \bibinfo {author} {\bibfnamefont {O.}~\bibnamefont
+  {Breitenstein}}, \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
+  {Ramspeck}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Glunz}},
+  \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Schenk}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {P.~P.}\ \bibnamefont {Altermatt}},\ }\href {\doibase
+  10.1063/1.3607310} {\bibfield  {journal} {\bibinfo  {journal} {Journal of
+  Applied Physics}\ }\textbf {\bibinfo {volume} {110}},\ \bibinfo {pages}
+  {014515} (\bibinfo {year} {2011})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Sukach}\ and\ \citenamefont
+  {Teterkin}(2009)}]{Teterkin2009}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Sukach}}\ and\ \bibinfo {author} {\bibfnamefont {V.}~\bibnamefont
+  {Teterkin}},\ }\href {\doibase 10.1134/S1063785009060108} {\bibfield
+  {journal} {\bibinfo  {journal} {Tech. Phys. Lett.}\ }\textbf {\bibinfo
+  {volume} {35}},\ \bibinfo {pages} {514} (\bibinfo {year} {2009})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Sze}(1985)}]{Sze1985}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.~M.}\ \bibnamefont
+  {Sze}},\ }\href@noop {} {\emph {\bibinfo {title} {Semiconductor Devices:
+  Physics and Technology}}}\ (\bibinfo  {publisher} {Wiley},\ \bibinfo
+  {address} {New York},\ \bibinfo {year} {1985})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Tascioglu}, \citenamefont {Aydemir},\ and\
+  \citenamefont {Altindal}(2010)}]{Tascioglu2010}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {I.}~\bibnamefont
+  {Tascioglu}}, \bibinfo {author} {\bibfnamefont {U.}~\bibnamefont {Aydemir}},
+  \ and\ \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Altindal}},\
+  }\href {\doibase 10.1063/1.3468376} {\bibfield  {journal} {\bibinfo
+  {journal} {J. Appl. Phys.}\ }\textbf {\bibinfo {volume} {108}},\ \bibinfo
+  {pages} {064506} (\bibinfo {year} {2010})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Tataroglu}\ and\ \citenamefont
+  {Antindal}(2009)}]{Tataroglu:2009}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Tataroglu}}\ and\ \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+  {Antindal}},\ }\href {\doibase 10.1016/j.sna.2009.02.035} {\bibfield
+  {journal} {\bibinfo  {journal} {Sens. Actuators, A}\ }\textbf {\bibinfo
+  {volume} {151}},\ \bibinfo {pages} {168} (\bibinfo {year}
+  {2009})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Tataroglu}\ and\ \citenamefont
+  {Antindal}(2007)}]{Tataroglu:2007NIMA}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Tataroglu}}\ and\ \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+  {Antindal}},\ }\href {\doibase 10.1016/j.nima.2007.07.027} {\bibfield
+  {journal} {\bibinfo  {journal} {Nucl. Instrum. Methods Phys. Res., Sect. A}\
+  }\textbf {\bibinfo {volume} {580}},\ \bibinfo {pages} {1588} (\bibinfo {year}
+  {2007})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Thomas}, \citenamefont {Hopfield},\ and\
+  \citenamefont {Augistyniak}(1965)}]{CDLR:R2}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.~G.}\ \bibnamefont
+  {Thomas}}, \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Hopfield}}, \
+  and\ \bibinfo {author} {\bibfnamefont {W.~M.}\ \bibnamefont {Augistyniak}},\
+  }\href {\doibase 10.1103/PhysRev.140.A202} {\bibfield  {journal} {\bibinfo
+  {journal} {Phys. Rev.}\ }\textbf {\bibinfo {volume} {140}},\ \bibinfo {pages}
+  {A202} (\bibinfo {year} {1965})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Tung}(2001)}]{Tung:MSE}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.~T.}\ \bibnamefont
+  {Tung}},\ }\href {\doibase 10.1016/S0927-796X(01)00037-7} {\bibfield
+  {journal} {\bibinfo  {journal} {Mater. Sci. Eng., R}\ }\textbf {\bibinfo
+  {volume} {35}},\ \bibinfo {pages} {1} (\bibinfo {year} {2001})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Tung}(1992)}]{Tung:PhysRev}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.~T.}\ \bibnamefont
+  {Tung}},\ }\href {\doibase 10.1103/PhysRevB.45.13509} {\bibfield  {journal}
+  {\bibinfo  {journal} {Phys. Rev. B}\ }\textbf {\bibinfo {volume} {45}},\
+  \bibinfo {pages} {13509} (\bibinfo {year} {1992})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Unewisse}\ and\ \citenamefont
+  {Storey}(1993)}]{Unewisse}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.~H.}\ \bibnamefont
+  {Unewisse}}\ and\ \bibinfo {author} {\bibfnamefont {J.~W.~V.}\ \bibnamefont
+  {Storey}},\ }\href {\doibase 10.1063/1.352899} {\bibfield  {journal}
+  {\bibinfo  {journal} {J. Appl. Phys.}\ }\textbf {\bibinfo {volume} {73}},\
+  \bibinfo {pages} {3873} (\bibinfo {year} {1993})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Vahanissi}\ \emph {et~al.}(2012)\citenamefont
+  {Vahanissi}, \citenamefont {Haarahiltunen}, \citenamefont {Talvitie},
+  \citenamefont {Yli-Koski},\ and\ \citenamefont {Savin}}]{FeB:Vahanissi}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {V.}~\bibnamefont
+  {Vahanissi}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Haarahiltunen}}, \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont
+  {Talvitie}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Yli-Koski}},
+  \ and\ \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Savin}},\ }\href
+  {\doibase 10.1002/pip.2215} {\bibfield  {journal} {\bibinfo  {journal}
+  {Progress in Photovoltaics: Research and Applications}\ }\textbf {\bibinfo
+  {volume} {21}},\ \bibinfo {pages} {1127} (\bibinfo {year}
+  {2012})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Vahlman}\ \emph {et~al.}(2017)\citenamefont
+  {Vahlman}, \citenamefont {Haarahiltunen}, \citenamefont {Kwapil},
+  \citenamefont {Schon}, \citenamefont {Inglese},\ and\ \citenamefont
+  {Savin}}]{LID:JAP2017II}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.}~\bibnamefont
+  {Vahlman}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Haarahiltunen}}, \bibinfo {author} {\bibfnamefont {W.}~\bibnamefont
+  {Kwapil}}, \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Schon}},
+  \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Inglese}}, \ and\
+  \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Savin}},\ }\href
+  {\doibase 10.1063/1.4983455} {\bibfield  {journal} {\bibinfo  {journal} {J.
+  Appl. Phys.}\ }\textbf {\bibinfo {volume} {121}},\ \bibinfo {pages} {195704}
+  (\bibinfo {year} {2017})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Vavilov}, \citenamefont {Kiselev},\ and\
+  \citenamefont {Mukashev}(1990)}]{Vavilov1990}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {V.~S.}\ \bibnamefont
+  {Vavilov}}, \bibinfo {author} {\bibfnamefont {V.~F.}\ \bibnamefont
+  {Kiselev}}, \ and\ \bibinfo {author} {\bibfnamefont {B.~N.}\ \bibnamefont
+  {Mukashev}},\ }\href@noop {} {\emph {\bibinfo {title} {Defects in the Bulk
+  and at the Surface of Silicon}}}\ (\bibinfo  {publisher} {Nauka},\ \bibinfo
+  {address} {Moscow},\ \bibinfo {year} {1990})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Virot}\ \emph {et~al.}(2012)\citenamefont {Virot},
+  \citenamefont {Pflieger}, \citenamefont {Skorb}, \citenamefont {Ravaux},
+  \citenamefont {Zemb},\ and\ \citenamefont {Mohwald}}]{Virot}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Virot}}, \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont {Pflieger}},
+  \bibinfo {author} {\bibfnamefont {E.~V.}\ \bibnamefont {Skorb}}, \bibinfo
+  {author} {\bibfnamefont {J.}~\bibnamefont {Ravaux}}, \bibinfo {author}
+  {\bibfnamefont {T.}~\bibnamefont {Zemb}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {H.}~\bibnamefont {Mohwald}},\ }\href {\doibase
+  10.1021/jp305375r} {\bibfield  {journal} {\bibinfo  {journal} {J. Phys. Chem.
+  C}\ }\textbf {\bibinfo {volume} {119}},\ \bibinfo {pages} {15493} (\bibinfo
+  {year} {2012})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Vlasenko}, \citenamefont {Olikh},\ and\ \citenamefont
+  {Savkina}(2000)}]{Vlasenko2000}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.~I.}\ \bibnamefont
+  {Vlasenko}}, \bibinfo {author} {\bibfnamefont {Y.~M.}\ \bibnamefont {Olikh}},
+  \ and\ \bibinfo {author} {\bibfnamefont {R.~K.}\ \bibnamefont {Savkina}},\
+  }\href {\doibase 10.1134/1.1188046} {\bibfield  {journal} {\bibinfo
+  {journal} {Semiconductors}\ }\textbf {\bibinfo {volume} {34}},\ \bibinfo
+  {pages} {644} (\bibinfo {year} {2000})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Vlasov}, \citenamefont {Ovsyannikov},\ and\
+  \citenamefont {Zaveryukhin}(2009)}]{Vlasov2009}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.~I.}\ \bibnamefont
+  {Vlasov}}, \bibinfo {author} {\bibfnamefont {A.~V.}\ \bibnamefont
+  {Ovsyannikov}}, \ and\ \bibinfo {author} {\bibfnamefont {B.~N.}\ \bibnamefont
+  {Zaveryukhin}},\ }\href {\doibase 10.1134/S1063785009040075} {\bibfield
+  {journal} {\bibinfo  {journal} {Tech. Phys. Lett.}\ }\textbf {\bibinfo
+  {volume} {35}},\ \bibinfo {pages} {312} (\bibinfo {year} {2009})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Wang}\ and\ \citenamefont
+  {Ye}(2009{\natexlab{a}})}]{DEWang}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
+  {Wang}}\ and\ \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Ye}},\
+  }\href {\doibase 10.1016/j.sse.2008.11.010} {\bibfield  {journal} {\bibinfo
+  {journal} {Solid-State Electron.}\ }\textbf {\bibinfo {volume} {53}},\
+  \bibinfo {pages} {234} (\bibinfo {year} {2009}{\natexlab{a}})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Wang}\ and\ \citenamefont
+  {Ye}(2009{\natexlab{b}})}]{PSOWang}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
+  {Wang}}\ and\ \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Ye}},\
+  }\href {\doibase 10.1142/S0129183109013911} {\bibfield  {journal} {\bibinfo
+  {journal} {Int. J. Mod. Phys. C}\ }\textbf {\bibinfo {volume} {20}},\
+  \bibinfo {pages} {687} (\bibinfo {year} {2009}{\natexlab{b}})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Wang}\ \emph {et~al.}(2008)\citenamefont {Wang},
+  \citenamefont {Huang}, \citenamefont {Xia},\ and\ \citenamefont
+  {Wang}}]{Wang:JLum}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {W.}~\bibnamefont
+  {Wang}}, \bibinfo {author} {\bibfnamefont {F.}~\bibnamefont {Huang}},
+  \bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont {Xia}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {A.}~\bibnamefont {Wang}},\ }\href {\doibase
+  10.1016/j.jlumin.2007.07.003} {\bibfield  {journal} {\bibinfo  {journal} {J.
+  Lumin.}\ }\textbf {\bibinfo {volume} {128}},\ \bibinfo {pages} {199}
+  (\bibinfo {year} {2008})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Werner}(1988)}]{Werner}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~H.}\ \bibnamefont
+  {Werner}},\ }\href {\doibase 10.1007/BF00615935} {\bibfield  {journal}
+  {\bibinfo  {journal} {Appl. Phys. A}\ }\textbf {\bibinfo {volume} {47}},\
+  \bibinfo {pages} {291} (\bibinfo {year} {1988})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Wittmer}\ \emph {et~al.}(1981)\citenamefont
+  {Wittmer}, \citenamefont {Luthy}, \citenamefont {Studer},\ and\ \citenamefont
+  {Melchior}}]{Wittmer}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Wittmer}}, \bibinfo {author} {\bibfnamefont {W.}~\bibnamefont {Luthy}},
+  \bibinfo {author} {\bibfnamefont {B.}~\bibnamefont {Studer}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {H.}~\bibnamefont {Melchior}},\ }\href {\doibase
+  10.1016/0038-1101(81)90009-5} {\bibfield  {journal} {\bibinfo  {journal}
+  {Solid-State Electron.}\ }\textbf {\bibinfo {volume} {24}},\ \bibinfo {pages}
+  {141} (\bibinfo {year} {1981})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Wosinski}, \citenamefont {Makosa},\ and\
+  \citenamefont {Witczak}(1994)}]{Wosinski}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {T.}~\bibnamefont
+  {Wosinski}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Makosa}}, \
+  and\ \bibinfo {author} {\bibfnamefont {Z.}~\bibnamefont {Witczak}},\ }\href
+  {\doibase 10.1088/0268-1242/9/11/003} {\bibfield  {journal} {\bibinfo
+  {journal} {Semicond. Sci. Technol.}\ }\textbf {\bibinfo {volume} {9}},\
+  \bibinfo {pages} {2047} (\bibinfo {year} {1994})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Xiuwen}\ \emph {et~al.}(2015)\citenamefont {Xiuwen},
+  \citenamefont {Hailian}, \citenamefont {Xiaofeng},\ and\ \citenamefont
+  {Long}}]{Referi2}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {B.}~\bibnamefont
+  {Xiuwen}}, \bibinfo {author} {\bibfnamefont {L.}~\bibnamefont {Hailian}},
+  \bibinfo {author} {\bibfnamefont {G.}~\bibnamefont {Xiaofeng}}, \ and\
+  \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Long}},\ }\href {\doibase
+  10.1088/1674-4926/36/12/124007} {\bibfield  {journal} {\bibinfo  {journal}
+  {Journal of Semiconductors}\ }\textbf {\bibinfo {volume} {36}},\ \bibinfo
+  {pages} {124007} (\bibinfo {year} {2015})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Ye}, \citenamefont {Wang},\ and\ \citenamefont
+  {Xu}(2009)}]{PSO_Ye}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Ye}}, \bibinfo {author} {\bibfnamefont {X.}~\bibnamefont {Wang}}, \ and\
+  \bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont {Xu}},\ }\href {\doibase
+  10.1063/1.3122082} {\bibfield  {journal} {\bibinfo  {journal} {J. Appl.
+  Phys.}\ }\textbf {\bibinfo {volume} {105}},\ \bibinfo {pages} {094502}
+  (\bibinfo {year} {2009})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Yildirim}, \citenamefont {Turut},\ and\ \citenamefont
+  {Turut}(2010)}]{Yildirima:DG}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {N.}~\bibnamefont
+  {Yildirim}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Turut}}, \
+  and\ \bibinfo {author} {\bibfnamefont {V.}~\bibnamefont {Turut}},\ }\href
+  {\doibase 10.1016/j.mee.2010.02.007} {\bibfield  {journal} {\bibinfo
+  {journal} {Microelectron. Eng.}\ }\textbf {\bibinfo {volume} {87}},\ \bibinfo
+  {pages} {2225} (\bibinfo {year} {2010})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Zaveryukhin}, \citenamefont {Zaveryukhina},\ and\
+  \citenamefont {Tursunkulov}(2002)}]{Zaveryukhin2002}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {B.}~\bibnamefont
+  {Zaveryukhin}}, \bibinfo {author} {\bibfnamefont {N.}~\bibnamefont
+  {Zaveryukhina}}, \ and\ \bibinfo {author} {\bibfnamefont {O.~M.}\
+  \bibnamefont {Tursunkulov}},\ }\href {\doibase 10.1134/1.1511774} {\bibfield
+  {journal} {\bibinfo  {journal} {Tech. Phys. Lett.}\ }\textbf {\bibinfo
+  {volume} {28}},\ \bibinfo {pages} {752} (\bibinfo {year} {2002})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Zaveryukhina}\ \emph {et~al.}(2008)\citenamefont
+  {Zaveryukhina}, \citenamefont {Zaveryukhina}, \citenamefont {Vlasov},\ and\
+  \citenamefont {Zaveryukhin}}]{Zaver:2008}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {N.}~\bibnamefont
+  {Zaveryukhina}}, \bibinfo {author} {\bibfnamefont {E.}~\bibnamefont
+  {Zaveryukhina}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+  {Vlasov}}, \ and\ \bibinfo {author} {\bibfnamefont {B.}~\bibnamefont
+  {Zaveryukhin}},\ }\href {\doibase 10.1134/S106378500803019X} {\bibfield
+  {journal} {\bibinfo  {journal} {Technical Physics Letters}\ }\textbf
+  {\bibinfo {volume} {34}},\ \bibinfo {pages} {241} (\bibinfo {year}
+  {2008})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Zhang}\ \emph {et~al.}(2011)\citenamefont {Zhang},
+  \citenamefont {Zhang}, \citenamefont {Hao}, \citenamefont {Lin},\ and\
+  \citenamefont {Zhu}}]{LambertSC_Zhang}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.}~\bibnamefont
+  {Zhang}}, \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Zhang}},
+  \bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont {Hao}}, \bibinfo {author}
+  {\bibfnamefont {Z.}~\bibnamefont {Lin}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {C.}~\bibnamefont {Zhu}},\ }\href {\doibase 10.1063/1.3632971}
+  {\bibfield  {journal} {\bibinfo  {journal} {J. Appl. Phys.}\ }\textbf
+  {\bibinfo {volume} {110}},\ \bibinfo {pages} {064504} (\bibinfo {year}
+  {2011})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Zhdanova}\ \emph {et~al.}(1995)\citenamefont
+  {Zhdanova}, \citenamefont {Kagan}, \citenamefont {Landsberg}, \citenamefont
+  {Levkin},\ and\ \citenamefont {Petrishchev}}]{PF:Zhdanova}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {N.~G.}\ \bibnamefont
+  {Zhdanova}}, \bibinfo {author} {\bibfnamefont {M.~S.}\ \bibnamefont {Kagan}},
+  \bibinfo {author} {\bibfnamefont {E.~G.}\ \bibnamefont {Landsberg}}, \bibinfo
+  {author} {\bibfnamefont {L.~V.}\ \bibnamefont {Levkin}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {V.}~\bibnamefont {Petrishchev}},\ }\href@noop {}
+  {\bibfield  {journal} {\bibinfo  {journal} {JETP Lett.}\ }\textbf {\bibinfo
+  {volume} {62}},\ \bibinfo {pages} {119} (\bibinfo {year} {1995})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Zhua}\ \emph {et~al.}(1999)\citenamefont {Zhua},
+  \citenamefont {Meirhaeghea}, \citenamefont {Detaverniera}, \citenamefont
+  {Rub}, \citenamefont {Lib},\ and\ \citenamefont {Cardon}}]{Zhua}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+  {Zhua}}, \bibinfo {author} {\bibfnamefont {R.~L.~V.}\ \bibnamefont
+  {Meirhaeghea}}, \bibinfo {author} {\bibfnamefont {C.}~\bibnamefont
+  {Detaverniera}}, \bibinfo {author} {\bibfnamefont {G.-P.}\ \bibnamefont
+  {Rub}}, \bibinfo {author} {\bibfnamefont {B.-Z.}\ \bibnamefont {Lib}}, \ and\
+  \bibinfo {author} {\bibfnamefont {F.}~\bibnamefont {Cardon}},\ }\href
+  {\doibase 10.1016/S0038-1098(99)00404-4} {\bibfield  {journal} {\bibinfo
+  {journal} {Solid State Communications}\ }\textbf {\bibinfo {volume} {112}},\
+  \bibinfo {pages} {611} (\bibinfo {year} {1999})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Zobov}\ \emph {et~al.}(2008)\citenamefont {Zobov},
+  \citenamefont {Zobov}, \citenamefont {Gabibov}, \citenamefont {Kamilov},
+  \citenamefont {Manyakhin},\ and\ \citenamefont {Naimi}}]{Zobov2008}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.}~\bibnamefont
+  {Zobov}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Zobov}},
+  \bibinfo {author} {\bibfnamefont {F.}~\bibnamefont {Gabibov}}, \bibinfo
+  {author} {\bibfnamefont {I.}~\bibnamefont {Kamilov}}, \bibinfo {author}
+  {\bibfnamefont {F.}~\bibnamefont {Manyakhin}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {E.}~\bibnamefont {Naimi}},\ }\href {\doibase
+  10.1134/S1063782608030068} {\bibfield  {journal} {\bibinfo  {journal}
+  {Semiconductors}\ }\textbf {\bibinfo {volume} {42}},\ \bibinfo {pages} {277}
+  (\bibinfo {year} {2008})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {McEvoy}, \citenamefont {Markvart},\ and\
+  \citenamefont {Castaner}(2013)}]{Markvart}%
+  \BibitemOpen
+  \bibinfo {editor} {\bibfnamefont {A.}~\bibnamefont {McEvoy}}, \bibinfo
+  {editor} {\bibfnamefont {T.}~\bibnamefont {Markvart}}, \ and\ \bibinfo
+  {editor} {\bibfnamefont {L.}~\bibnamefont {Castaner}},\ eds.,\ \href@noop {}
+  {\emph {\bibinfo {title} {Solar Cells. Materials, Manufacture and
+  Operation}}},\ \bibinfo {edition} {2nd}\ ed.\ (\bibinfo  {publisher}
+  {Academic Press},\ \bibinfo {address} {Oxford},\ \bibinfo {year}
+  {2013})\BibitemShut {NoStop}%
+\end{thebibliography}%

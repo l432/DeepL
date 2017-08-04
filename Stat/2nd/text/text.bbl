@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{52}%
+\begin{thebibliography}{49}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -486,85 +486,45 @@
   10.1016/S0969-806X(01)00207-9} {\bibfield  {journal} {\bibinfo  {journal}
   {Radiat Phys Chem}\ }\textbf {\bibinfo {volume} {62}},\ \bibinfo {pages}
   {301} (\bibinfo {year} {2001})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Bra\"{a}unig}\ and\ \citenamefont
+\bibitem [{\citenamefont {Br\"{a}unig}\ and\ \citenamefont
   {Wulf}(1994)}]{Brauning}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.}~\bibnamefont
-  {Bra\"{a}unig}}\ and\ \bibinfo {author} {\bibfnamefont {F.}~\bibnamefont
+  {Br\"{a}unig}}\ and\ \bibinfo {author} {\bibfnamefont {F.}~\bibnamefont
   {Wulf}},\ }\href {\doibase 10.1016/0969-806X(94)90205-4} {\bibfield
   {journal} {\bibinfo  {journal} {Radiat. Phys. Chem.}\ }\textbf {\bibinfo
   {volume} {43}},\ \bibinfo {pages} {105} (\bibinfo {year} {1994})}\BibitemShut
   {NoStop}%
-\bibitem [{\citenamefont {Rhoderick}\ and\ \citenamefont
-  {Williams}(1988)}]{Rhoderick1988}%
+\bibitem [{\citenamefont {Sproul}\ and\ \citenamefont
+  {Green}(1993)}]{ni:Green}%
   \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.~H.}\ \bibnamefont
-  {Rhoderick}}\ and\ \bibinfo {author} {\bibfnamefont {R.~H.}\ \bibnamefont
-  {Williams}},\ }\href@noop {} {\emph {\bibinfo {title} {Metal Semiconductor
-  Contacts}}},\ \bibinfo {edition} {2nd}\ ed.\ (\bibinfo  {publisher}
-  {Clarendon Press},\ \bibinfo {address} {Oxford},\ \bibinfo {year}
-  {1988})\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Aboelfotoh}(1989)}]{Aboelfotoh}%
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.~B.}\ \bibnamefont
+  {Sproul}}\ and\ \bibinfo {author} {\bibfnamefont {M.~A.}\ \bibnamefont
+  {Green}},\ }\href {\doibase 10.1063/1.353288} {\bibfield  {journal} {\bibinfo
+   {journal} {J. Appl. Phys.}\ }\textbf {\bibinfo {volume} {73}},\ \bibinfo
+  {pages} {1214} (\bibinfo {year} {1993})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Schroder}(2006)}]{Schroder2006}%
   \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
-  {Aboelfotoh}},\ }\href {\doibase 10.1063/1.343867} {\bibfield  {journal}
-  {\bibinfo  {journal} {J. Appl. Phys.}\ }\textbf {\bibinfo {volume} {66}},\
-  \bibinfo {pages} {262} (\bibinfo {year} {1989})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Zhua}\ \emph {et~al.}(1999)\citenamefont {Zhua},
-  \citenamefont {Meirhaeghea}, \citenamefont {Detaverniera}, \citenamefont
-  {Rub}, \citenamefont {Lib},\ and\ \citenamefont {Cardon}}]{Zhua}%
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.~K.}\ \bibnamefont
+  {Schroder}},\ }\href@noop {} {\emph {\bibinfo {title} {Semiconductor Material
+  and Device Characterization}}},\ \bibinfo {edition} {3rd}\ ed.\ (\bibinfo
+  {publisher} {John Wiley \& Sons},\ \bibinfo {address} {New Jersey},\ \bibinfo
+  {year} {2006})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {McEvoy}, \citenamefont {Markvart},\ and\
+  \citenamefont {Castaner}(2013)}]{Markvart}%
   \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
-  {Zhua}}, \bibinfo {author} {\bibfnamefont {R.~L.~V.}\ \bibnamefont
-  {Meirhaeghea}}, \bibinfo {author} {\bibfnamefont {C.}~\bibnamefont
-  {Detaverniera}}, \bibinfo {author} {\bibfnamefont {G.-P.}\ \bibnamefont
-  {Rub}}, \bibinfo {author} {\bibfnamefont {B.-Z.}\ \bibnamefont {Lib}}, \ and\
-  \bibinfo {author} {\bibfnamefont {F.}~\bibnamefont {Cardon}},\ }\href
-  {\doibase 10.1016/S0038-1098(99)00404-4} {\bibfield  {journal} {\bibinfo
-  {journal} {Solid State Communications}\ }\textbf {\bibinfo {volume} {112}},\
-  \bibinfo {pages} {611} (\bibinfo {year} {1999})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Munguia}\ \emph {et~al.}(2012)\citenamefont
-  {Munguia}, \citenamefont {Bluet}, \citenamefont {Marty}, \citenamefont
-  {Bremond}, \citenamefont {Mermoux},\ and\ \citenamefont
-  {Rouchon}}]{SiEg2012}%
+  \bibinfo {editor} {\bibfnamefont {A.}~\bibnamefont {McEvoy}}, \bibinfo
+  {editor} {\bibfnamefont {T.}~\bibnamefont {Markvart}}, \ and\ \bibinfo
+  {editor} {\bibfnamefont {L.}~\bibnamefont {Castaner}},\ eds.,\ \href@noop {}
+  {\emph {\bibinfo {title} {Solar Cells. Materials, Manufacture and
+  Operation}}},\ \bibinfo {edition} {2nd}\ ed.\ (\bibinfo  {publisher}
+  {Academic Press},\ \bibinfo {address} {Oxford},\ \bibinfo {year}
+  {2013})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Wang}\ and\ \citenamefont {Ye}(2009)}]{DEWang}%
   \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
-  {Munguia}}, \bibinfo {author} {\bibfnamefont {J.-M.}\ \bibnamefont {Bluet}},
-  \bibinfo {author} {\bibfnamefont {O.}~\bibnamefont {Marty}}, \bibinfo
-  {author} {\bibfnamefont {G.}~\bibnamefont {Bremond}}, \bibinfo {author}
-  {\bibfnamefont {M.}~\bibnamefont {Mermoux}}, \ and\ \bibinfo {author}
-  {\bibfnamefont {D.}~\bibnamefont {Rouchon}},\ }\href {\doibase
-  10.1063/1.3691955} {\bibfield  {journal} {\bibinfo  {journal} {Appl. Phys.
-  Lett.}\ }\textbf {\bibinfo {volume} {100}},\ \bibinfo {pages} {102107}
-  (\bibinfo {year} {2012})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Lee}\ \emph {et~al.}(1995)\citenamefont {Lee},
-  \citenamefont {Chen}, \citenamefont {Au}, \citenamefont {Fung},\ and\
-  \citenamefont {Beling}}]{T0:Lee}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {T.~C.}\ \bibnamefont
-  {Lee}}, \bibinfo {author} {\bibfnamefont {T.~P.}\ \bibnamefont {Chen}},
-  \bibinfo {author} {\bibfnamefont {H.~L.}\ \bibnamefont {Au}}, \bibinfo
-  {author} {\bibfnamefont {S.}~\bibnamefont {Fung}}, \ and\ \bibinfo {author}
-  {\bibfnamefont {C.~D.}\ \bibnamefont {Beling}},\ }\href {\doibase
-  10.1002/pssa.2211520225} {\bibfield  {journal} {\bibinfo  {journal} {phys.
-  stat. sol. (a)}\ }\textbf {\bibinfo {volume} {152}},\ \bibinfo {pages} {563}
-  (\bibinfo {year} {1995})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {McCafferty}\ \emph {et~al.}(1996)\citenamefont
-  {McCafferty}, \citenamefont {Sellai}, \citenamefont {Dawson},\ and\
-  \citenamefont {Elabd}}]{T0:McCafferty}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.~G.}\ \bibnamefont
-  {McCafferty}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Sellai}},
-  \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {Dawson}}, \ and\ \bibinfo
-  {author} {\bibfnamefont {H.}~\bibnamefont {Elabd}},\ }\href {\doibase
-  10.1016/0038-1101(95)00162-X} {\bibfield  {journal} {\bibinfo  {journal}
-  {Solid-State Electron.}\ }\textbf {\bibinfo {volume} {39}},\ \bibinfo {pages}
-  {583} (\bibinfo {year} {1996})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Saxena}(1969)}]{T0:Saxena}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
-  {Saxena}},\ }\href {\doibase 10.1016/0039-6028(69)90245-3} {\bibfield
-  {journal} {\bibinfo  {journal} {Surf. Sci.}\ }\textbf {\bibinfo {volume}
-  {13}},\ \bibinfo {pages} {151} (\bibinfo {year} {1969})}\BibitemShut
-  {NoStop}%
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
+  {Wang}}\ and\ \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Ye}},\
+  }\href {\doibase 10.1016/j.sse.2008.11.010} {\bibfield  {journal} {\bibinfo
+  {journal} {Solid-State Electron.}\ }\textbf {\bibinfo {volume} {53}},\
+  \bibinfo {pages} {234} (\bibinfo {year} {2009})}\BibitemShut {NoStop}%
 \end{thebibliography}%
