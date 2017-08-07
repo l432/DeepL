@@ -121,7 +121,7 @@ The samples with area of about $2$~cm$^{2}$ used in experiments were cut from th
 2 samples were irradiated  with  $^{60}$Co $\gamma$--rays in the  dose  $D_{\gamma1}=10^6$~rad and $D_{\gamma2}=10^7$~rad and were denoted as g6SC and g7SC respectively.
 The label iSC was used for non--irradiated sample.
 To avoid an impact of  long--term annealing, which are typical to neutron damaged structure especially \cite{NIEL:Moll,Rew:Srour}, irradiated samples were stored  for  5 years  at  room  temperature before measuring.
-According to data \cite{NIEL:Akkerman,Brauning} the neutron dose and gamma fluences can be calculated as $D_n=4.6\cdot10^3$~rad and $\Psi_{\gamma1}=1.6\cdot10^{15}$~$\gamma$/cm$^2$ and $\Psi_{\gamma2}=1.6\cdot10^{16}$~$\gamma$/cm$^2$ respectively.
+According to data \cite{NIEL:Akkerman,Brauning} the neutron dose and gamma fluences can be calculated as $D_n=4.5\cdot10^3$~rad and $\Psi_{\gamma1}=1.6\cdot10^{15}$~$\gamma$/cm$^2$ and $\Psi_{\gamma2}=1.6\cdot10^{16}$~$\gamma$/cm$^2$ respectively.
 The non--ionizing energy losses (NIEL) and lifetime damage--constants ($K_\tau$) for neutron
 differ from $\gamma$--$^{60}$Co ones by four order of magnitude \cite{NIEL:Akkerman,NIEL:Jafari}:
 NIEL$_n=2.04\cdot10^{-3}$~MeV~cm$^2$/g, NIEL$_\gamma=1.07\cdot10^{-7}$~MeV~cm$^2$/g, $K_{\tau,n}=10^{-7}$~cm$^2$/s, $K_{\tau,\gamma}=5\cdot10^{-12}$~cm$^2$/s.
@@ -134,10 +134,10 @@ Some curves are shown in Fig.~\ref{figIV}.
 
 
 \begin{figure*}
-\includegraphics[width=0.9\textwidth]{olikhFig1}%
+\includegraphics[width=0.7\textwidth]{olikhFig1}%
 \caption{\label{figIV}
 Dark $I$--$V$ characteristics measured (a) at 306~K for non--irradiated (circles), neutron--irradiated (squares) and gamma--irradiated (diamonds and triangles) structures without USL;
-(b) at 301~K (circles) and 341~K (asterisks) with (filled marks, $W_{U\!S}=0.40$~W/cm$^2$) and without(open marks) USL for the iSC.
+(b) at 301~K (circles) and 341~K (asterisks) with (filled marks, Ui--2) and without (open marks) USL for the iSC.
 The marks are the experimental results, the solid lines are the fitted curves using Eqs.~(\ref{eqIV})--(\ref{eqW}).
 The dashed, dot--dashed and dotted lines in (a) are the base, SCR and shunt components of iSC current, respectively.
 }%
@@ -192,13 +192,13 @@ In order to avoid the effect of piezoelectric field on $I$--$V$ characteristics,
 \begin{tabular}{lcr}
 Sample&$W_{U\!S}$, W/cm$^2$&Label\\
 \hline
-\multirow{2}{*}{iSC}&0.22&USL--i--1\\
-&0.40&USL--i--2\\
-\multirow{2}{*}{nSC}&0.21&USL--n--1\\
-&0.36&USL--n--2\\
-g6SC&0.32&USL--g6--2\\
-\multirow{2}{*}{g7SC}&0.24&USL--g7--1\\
-&0.40&USL--g7--2\\
+\multirow{2}{*}{iSC}&0.22&Ui--1\\
+&0.40&Ui--2\\
+\multirow{2}{*}{nSC}&0.21&Un--1\\
+&0.36&Un--2\\
+g6SC&0.32&Ug6--2\\
+\multirow{2}{*}{g7SC}&0.24&Ug7--1\\
+&0.40&Ug7--2\\
 \end{tabular}
 \end{ruledtabular}
 \end{table}
@@ -208,9 +208,127 @@ The linear and non-linear fitting were done by using the least-squares and diffe
 
 
 \section{Results and Discussion}
-\subsection{Ultrasound influence on the SCR recombination
-\label{P1}}
+\subsection{Space charge region\label{P1}}
+The $I$--$V$ characteristics parameters, which deal with SCR phenomena, are $n$ and $\tau_{g}$.
+The finding temperature dependences of ideality factor and SCR lifetime are shown in Fig.~\ref{fig_n} and Fig.~\ref{fig_TAUg} respectively.
 
+\begin{figure*}
+\includegraphics[width=0.7\textwidth]{olikhFig2}%
+\caption{\label{fig_n}
+Temperature dependences of ideality factor for non--irradiated (curves 1--3, circles),
+neutron--irradiated (4--6, squares) and $\gamma$--irradiated (7--11, diamonds and triangles) samples.
+The curves 1, 4, 7 and 9 (open marks) are obtained without USL,
+curves 2, 3, 5, 6, 8, 10, and 11 correspond to
+Ui--1, Ui--2, Un--1, Un--2, Ug6--2, Ug7--1, and Ug7--2 respectively.
+The marks are the experimental results, the lines are the fitted curves using Eq.~(\ref{eq_nT}).
+}%
+\end{figure*}
+
+\begin{figure*}
+\includegraphics[width=0.7\textwidth]{olikhFig3}%
+\caption{\label{fig_TAUg}
+Temperature dependences of SCR lifetime for non--irradiated (curves 1--3, circles),
+neutron--irradiated (4--6, squares) and $\gamma$--irradiated (7--11, diamonds and triangles) samples.
+The curves 1, 4, 7 and 9 (open marks) are obtained without USL,
+curves 2, 3, 5, 6, 8, 10, and 11 correspond to
+Ui--1, Ui--2, Un--1, Un--2, Ug6--2, Ug7--1, and Ug7--2 respectively.
+The marks are the experimental results, the lines are the fitted curves using Eq.~(\ref{eq_TAUgT}).
+}%
+\end{figure*}
+
+As one can recognize, ideality factor decreases with temperature increase and plots $n$ vs $1/T$  are close to linear.
+Thus dependence $n(T)$ can be expressed as
+\begin{equation}
+\label{eq_nT}
+    n(T)=n_{\infty}+T_0/T\:.
+\end{equation}
+On the other hand, the thermoactivated SCR carrier lifetime growth  is observed over the explored temperature range - see Fig.~\ref{fig_TAUg}.
+The following equation allows to describe sufficiently $\tau_{g}$ temperature dependence:
+\begin{equation}
+\label{eq_TAUgT}
+    \tau_{g}(T)=\tau_{g0}\exp\left(-\frac{E_{\tau g}}{kT}\right)\:.
+\end{equation}
+The $T_0$ and $E_{\tau g}$ values, which were determined for both non-irradiated and irradiated samples with as well as without USL are listed in the Table~\ref{tabTpar}.
+
+\begin{table}
+\caption{\label{tabTpar}Characteristics of temperature dependences of $n^+$-$p$--Si structure parameters.
+}
+\begin{ruledtabular}
+\begin{tabular}{lccc}
+Sample&USL&$T_0$ (K)&$E_{\tau g}$ (eV)\\
+\hline
+\multirow{3}{*}{iSC}&non&$330\pm30$&$0.24\pm0.01$\\
+&Ui--1&$310\pm30$&$0.24\pm0.01$\\
+&Ui--2&$360\pm30$&$0.24\pm0.01$\\
+\multirow{3}{*}{nSC}&non&$1610\pm70$&$0.45\pm0.02$\\
+&Un--1&$1600\pm70$&$0.44\pm0.02$\\
+&Un--2&$1680\pm70$&$0.44\pm0.02$\\
+\multirow{2}{*}{g6SC}&non&$610\pm40$&$0.28\pm0.01$\\
+&Ug6--2&$1080\pm50$&$0.33\pm0.02$\\
+\multirow{3}{*}{g7SC}&non&$770\pm50$&$0.29\pm0.01$\\
+&Ug7--1&$1260\pm60$&$0.34\pm0.02$\\
+&Ug7--2&$1270\pm60$&$0.35\pm0.02$\\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+We want to stress, that
+(i)~irradiation leads to $T_0$ and $E_{\tau g}$ changes, the g6SC's ideality factor characteristic temperature and SCR lifetime characteristic energy values are closely related to g7SC ones at similar conditions;
+(ii)~USL results in both $T_0$ and $E_{\tau g}$ increase in $\gamma$--irradiated samples --- see Fig.~\ref{fig_n}(b) and Fig.~\ref{fig_TAUg}(b), but same effect is not observed in non--irradiated and neutron--irradiated samples --- see Fig.~\ref{fig_n}(a) and Fig.~\ref{fig_TAUg}(a);
+(iii)~USL affects $n$ and $\tau_g$ values, absolute AI changes of ideality factor $\Delta n=n_{U\!S}-n_{in}$ and
+relative AI changes of SCR lifetime $\varepsilon_{\tau g}=(\tau_{g,U\!S}-\tau_{g,in})/\tau_{g,in}$
+(where subscripts "$U\!S$" and "$in$" identify with values,
+%$n_{U\!S}(T)$ and $n_{in}(T)$ are the ideality factor,
+which obtained at the same temperature with and without USL respectively)
+are listed in the Table~\ref{tabAIchange};
+(iv)~$\Delta n$ and $\varepsilon_{\tau g}$ have an opposite sign for non--irradiated and irradiated samples
+(for SCg6 not in whole temperature range);
+(v)~ideality factor is varied by USL more effectively in irradiated samples;
+(vi)~US influence efficiency for $\gamma$--irradiated samples rises with dose;
+(vii)~AI $n$ and $\tau_g$ changes increase with $W_{U\!S}$ enhancement whereas $T_0$ and $E_{\tau g}$ values do not depend on ultrasound intensity practically.
+
+
+
+\begin{table}
+\caption{\label{tabAIchange}Acoustically induced change of $n^+$-$p$--Si structure parameters (at 330~K).
+}
+\begin{ruledtabular}
+\begin{tabular}{lccccc}
+Sample&USL&$\Delta n$ &$\varepsilon_{\tau g}$ &$\varepsilon_{\tau r}$ &$\varepsilon_{Rsh}$ \\
+&&\mbox{($\pm0.01$)}&($\pm5$\%)&($\pm12$\%)&($\pm5$\%)\\
+\hline
+\multirow{2}{*}{iSC}&Ui--1&0.02&-14&-43&-15\\
+&Ui--2&0.03&-17&-58&-32\\
+\multirow{2}{*}{nSC}&Un--1&-0.13&5&-60&-19\\
+&Un--2&-0.26&13&-75&-34\\
+g6SC&Ug6--2&-0.15&2&-67&-3\\
+\multirow{2}{*}{g7SC}&Ug7--1&-0.26&49&-39&-5\\
+&Ug7--2&-0.36&70&-58&-8\\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+
+For purpose of the present consideration, it is important to discuss an recombination mechanism in the SCR of the investigated samples.
+According to classical SRH theory, an ideality factor must be less than 2 and 
+$\tau_g$ temperature dependence is expected \cite{TAUg:Schroder,TAUg:Aharoni} to be described by the relation  $\tau_g\simeq2\tau_n\sqrt{\sigma_n/\sigma_p}\cosh\left[\left(E_t-E_i\right)/kT\right]$
+(where $\sigma_n$, $\sigma_p$, and  $E_t$ are the electron and hole capture cross sections and the energy  level of  the  recombination  center,
+$E_i$  is the  intrinsic  energy level).
+In the our case, $n$ is lager than 2 and $\tau_g$ increases with temperature.
+Therefore SRH theory is inapplicable to the investigated samples.
+Several attempts to explain large $n$ have been made with various models \cite{Heide,Beier,Shah,Kaminski_n}.
+But all observed features of SCR recombination (large value, light intensity independence, temperature dependence of ideality factor 
+as well as small value and thermoactivated behavior of carrier lifetime) can be explained by the model of coupled defect level or
+donor--acceptor--pair (DAP) recombination \cite{CDLR:JAP1995,CDLR:JAP} only.
+This model provides a rapid  direct  charge  transfer  between  defect levels.
+Such phenomenon have been observed experimentally firstly \cite{DAPR:Chen1991,DAPR:Chen1994} and then it was recruited to explain process in semiconductor diodes \cite{CDLR:JAP1995,CDLR:JAP,CDLR:SSP}.
+
+
+
+
+
+
+Fig. 4 shows the  series resistance  over the explored temperature range.
 
 
 \section{Conclusion}
@@ -225,7 +343,7 @@ The most reliable and preferred methods seem to be evolutionary algorithms (spec
 The first one is reasonable in the case of
 a small $R_s$ value (a few ohms) or a large $I_s$ value (high temperature).
 
-This work of review, test and comparative analysis of different techniques for determination of Schottky diode parameters should be useful for further research and development on metal-semiconductor devices.
+Thus, ultrasound can be an effective tool for controlling silicon structure characteristics.
 
 \bibliography{olikh}
 

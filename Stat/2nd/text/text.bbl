@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{49}%
+\begin{thebibliography}{58}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -527,4 +527,106 @@
   }\href {\doibase 10.1016/j.sse.2008.11.010} {\bibfield  {journal} {\bibinfo
   {journal} {Solid-State Electron.}\ }\textbf {\bibinfo {volume} {53}},\
   \bibinfo {pages} {234} (\bibinfo {year} {2009})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Schroder}(1982)}]{TAUg:Schroder}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.}~\bibnamefont
+  {Schroder}},\ }\href {\doibase 10.1109/T-ED.1982.20879} {\bibfield  {journal}
+  {\bibinfo  {journal} {IEEE Trans. Electron Devices}\ }\textbf {\bibinfo
+  {volume} {29}},\ \bibinfo {pages} {1336} (\bibinfo {year}
+  {1982})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Aharoni}\ \emph {et~al.}(1997)\citenamefont
+  {Aharoni}, \citenamefont {Ohmi}, \citenamefont {Oka}, \citenamefont
+  {Nakada},\ and\ \citenamefont {Tamai}}]{TAUg:Aharoni}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.}~\bibnamefont
+  {Aharoni}}, \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont {Ohmi}},
+  \bibinfo {author} {\bibfnamefont {M.~M.}\ \bibnamefont {Oka}}, \bibinfo
+  {author} {\bibfnamefont {A.}~\bibnamefont {Nakada}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {Y.}~\bibnamefont {Tamai}},\ }\href {\doibase
+  10.1063/1.364442} {\bibfield  {journal} {\bibinfo  {journal} {J. Appl.
+  Phys.}\ }\textbf {\bibinfo {volume} {81}},\ \bibinfo {pages} {1270} (\bibinfo
+  {year} {1997})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {van~der Heide}\ \emph {et~al.}(2005)\citenamefont
+  {van~der Heide}, \citenamefont {Schonecker}, \citenamefont {Bultman},\ and\
+  \citenamefont {Sinke}}]{Heide}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.~S.~H.}\
+  \bibnamefont {van~der Heide}}, \bibinfo {author} {\bibfnamefont
+  {A.}~\bibnamefont {Schonecker}}, \bibinfo {author} {\bibfnamefont {J.~H.}\
+  \bibnamefont {Bultman}}, \ and\ \bibinfo {author} {\bibfnamefont {W.~C.}\
+  \bibnamefont {Sinke}},\ }\href {\doibase 10.1002/pip.556} {\bibfield
+  {journal} {\bibinfo  {journal} {Progress in Photovoltaics: Research and
+  Applications}\ }\textbf {\bibinfo {volume} {13}},\ \bibinfo {pages} {3}
+  (\bibinfo {year} {2005})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Beier}\ and\ \citenamefont {Voss}(1993)}]{Beier}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {Beier}}\ and\ \bibinfo {author} {\bibfnamefont {B.}~\bibnamefont {Voss}},\
+  }in\ \href@noop {} {\emph {\bibinfo {booktitle} {Proceedings of the 23rd IEEE
+  Photovoltaic Specialists Conference}}}\ (\bibinfo {year} {1993})\ pp.\
+  \bibinfo {pages} {321--326},\ \bibinfo {note} {{L}ouisville, KY,
+  USA}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Shah}\ \emph {et~al.}(2003)\citenamefont {Shah},
+  \citenamefont {Li}, \citenamefont {Gessmann},\ and\ \citenamefont
+  {Schubert}}]{Shah}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~M.}\ \bibnamefont
+  {Shah}}, \bibinfo {author} {\bibfnamefont {Y.-L.}\ \bibnamefont {Li}},
+  \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont {Gessmann}}, \ and\
+  \bibinfo {author} {\bibfnamefont {E.~F.}\ \bibnamefont {Schubert}},\ }\href
+  {\doibase 10.1063/1.1593218} {\bibfield  {journal} {\bibinfo  {journal} {J.
+  Appl. Phys.}\ }\textbf {\bibinfo {volume} {94}},\ \bibinfo {pages} {2627}
+  (\bibinfo {year} {2003})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Kaminski}\ \emph {et~al.}(1996)\citenamefont
+  {Kaminski}, \citenamefont {Marchand}, \citenamefont {Omari}, \citenamefont
+  {Laugier}, \citenamefont {Le},\ and\ \citenamefont {Sarti}}]{Kaminski_n}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Kaminski}}, \bibinfo {author} {\bibfnamefont {J.~J.}\ \bibnamefont
+  {Marchand}}, \bibinfo {author} {\bibfnamefont {H.~E.}\ \bibnamefont {Omari}},
+  \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Laugier}}, \bibinfo
+  {author} {\bibfnamefont {Q.~N.}\ \bibnamefont {Le}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {D.}~\bibnamefont {Sarti}},\ }in\ \href@noop {} {\emph
+  {\bibinfo {booktitle} {Proceedings of the 25th IEEE Photovoltaic Specialists
+  Conference}}}\ (\bibinfo {year} {1996})\ pp.\ \bibinfo {pages} {573--576},\
+  \bibinfo {note} {{W}ashington, DC, USA}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Chen}\ \emph {et~al.}(1991)\citenamefont {Chen},
+  \citenamefont {Monemar}, \citenamefont {Janz\'{e}n},\ and\ \citenamefont
+  {Lindstr\"{o}m}}]{DAPR:Chen1991}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {W.~M.}\ \bibnamefont
+  {Chen}}, \bibinfo {author} {\bibfnamefont {B.}~\bibnamefont {Monemar}},
+  \bibinfo {author} {\bibfnamefont {E.}~\bibnamefont {Janz\'{e}n}}, \ and\
+  \bibinfo {author} {\bibfnamefont {J.~L.}\ \bibnamefont {Lindstr\"{o}m}},\
+  }\href {\doibase 10.1103/PhysRevLett.67.1914} {\bibfield  {journal} {\bibinfo
+   {journal} {Phys. Rev. Lett.}\ }\textbf {\bibinfo {volume} {67}},\ \bibinfo
+  {pages} {1914} (\bibinfo {year} {1991})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Frens}\ \emph {et~al.}(1994)\citenamefont {Frens},
+  \citenamefont {Bennebroek}, \citenamefont {Zakrzewski}, \citenamefont
+  {Schmidt}, \citenamefont {Chen}, \citenamefont {Janz\'{e}n}, \citenamefont
+  {Lindstr\"{o}m},\ and\ \citenamefont {Monemar}}]{DAPR:Chen1994}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.~M.}\ \bibnamefont
+  {Frens}}, \bibinfo {author} {\bibfnamefont {M.~T.}\ \bibnamefont
+  {Bennebroek}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Zakrzewski}}, \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Schmidt}},
+  \bibinfo {author} {\bibfnamefont {W.~M.}\ \bibnamefont {Chen}}, \bibinfo
+  {author} {\bibfnamefont {E.}~\bibnamefont {Janz\'{e}n}}, \bibinfo {author}
+  {\bibfnamefont {J.~L.}\ \bibnamefont {Lindstr\"{o}m}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {B.}~\bibnamefont {Monemar}},\ }\href {\doibase
+  10.1103/PhysRevLett.72.2939} {\bibfield  {journal} {\bibinfo  {journal}
+  {Phys. Rev. Lett.}\ }\textbf {\bibinfo {volume} {72}},\ \bibinfo {pages}
+  {2939} (\bibinfo {year} {1994})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Breitenstein}\ \emph {et~al.}(2010)\citenamefont
+  {Breitenstein}, \citenamefont {Bauer}, \citenamefont {Altermatt},\ and\
+  \citenamefont {Ramspeck}}]{CDLR:SSP}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {O.}~\bibnamefont
+  {Breitenstein}}, \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Bauer}},
+  \bibinfo {author} {\bibfnamefont {P.~P.}\ \bibnamefont {Altermatt}}, \ and\
+  \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont {Ramspeck}},\ }\href
+  {\doibase 10.4028/www.scientific.net/SSP.156-158.1} {\bibfield  {journal}
+  {\bibinfo  {journal} {Solid State Phenomena}\ }\textbf {\bibinfo {volume}
+  {156--158}},\ \bibinfo {pages} {1} (\bibinfo {year} {2010})}\BibitemShut
+  {NoStop}%
 \end{thebibliography}%
