@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{58}%
+\begin{thebibliography}{59}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -121,7 +121,7 @@
   \bibinfo {pages} {S82} (\bibinfo {year} {2001})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Kropman}\ \emph {et~al.}(2016)\citenamefont
   {Kropman}, \citenamefont {Seeman}, \citenamefont {Dolgov},\ and\
-  \citenamefont {Medvids}}]{Medvids}%
+  \citenamefont {Medvids}}]{UST:Medvid}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.}~\bibnamefont
   {Kropman}}, \bibinfo {author} {\bibfnamefont {V.}~\bibnamefont {Seeman}},
@@ -629,4 +629,13 @@
   {\bibinfo  {journal} {Solid State Phenomena}\ }\textbf {\bibinfo {volume}
   {156--158}},\ \bibinfo {pages} {1} (\bibinfo {year} {2010})}\BibitemShut
   {NoStop}%
+\bibitem [{\citenamefont {Wosinski}, \citenamefont {Makosa},\ and\
+  \citenamefont {Witczak}(1994)}]{Wosinski}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {T.}~\bibnamefont
+  {Wosinski}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Makosa}}, \
+  and\ \bibinfo {author} {\bibfnamefont {Z.}~\bibnamefont {Witczak}},\ }\href
+  {\doibase 10.1088/0268-1242/9/11/003} {\bibfield  {journal} {\bibinfo
+  {journal} {Semicond. Sci. Technol.}\ }\textbf {\bibinfo {volume} {9}},\
+  \bibinfo {pages} {2047} (\bibinfo {year} {1994})}\BibitemShut {NoStop}%
 \end{thebibliography}%
