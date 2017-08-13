@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{59}%
+\begin{thebibliography}{77}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -397,9 +397,10 @@
   {\doibase 10.1109/TNS.2003.813197} {\bibfield  {journal} {\bibinfo  {journal}
   {IEEE Trans. Nucl. Sci.}\ }\textbf {\bibinfo {volume} {50}},\ \bibinfo
   {pages} {653} (\bibinfo {year} {2003})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Pintilie}\ \emph {et~al.}(2009)\citenamefont
-  {Pintilie}, \citenamefont {Lindstroem}, \citenamefont {Junkes},\ and\
-  \citenamefont {Fretwurst}}]{Pintilie}%
+\bibitem [{\citenamefont {Pintilie}\ \emph
+  {et~al.}(2009{\natexlab{a}})\citenamefont {Pintilie}, \citenamefont
+  {Lindstroem}, \citenamefont {Junkes},\ and\ \citenamefont
+  {Fretwurst}}]{Pintilie}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {I.}~\bibnamefont
   {Pintilie}}, \bibinfo {author} {\bibfnamefont {G.}~\bibnamefont
@@ -407,8 +408,8 @@
   \ and\ \bibinfo {author} {\bibfnamefont {E.}~\bibnamefont {Fretwurst}},\
   }\href {\doibase 10.1016/j.nima.2009.09.065} {\bibfield  {journal} {\bibinfo
   {journal} {Nucl. Instrum. Methods Phys. Res., Sect. A}\ }\textbf {\bibinfo
-  {volume} {611}},\ \bibinfo {pages} {52} (\bibinfo {year} {2009})}\BibitemShut
-  {NoStop}%
+  {volume} {611}},\ \bibinfo {pages} {52} (\bibinfo {year}
+  {2009}{\natexlab{a}})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Arutyunov}\ \emph {et~al.}(2016)\citenamefont
   {Arutyunov}, \citenamefont {Bennett}, \citenamefont {Wight}, \citenamefont
   {Krause-Rehberg}, \citenamefont {Emtsev}, \citenamefont {Abrosimov},\ and\
@@ -638,4 +639,390 @@
   {\doibase 10.1088/0268-1242/9/11/003} {\bibfield  {journal} {\bibinfo
   {journal} {Semicond. Sci. Technol.}\ }\textbf {\bibinfo {volume} {9}},\
   \bibinfo {pages} {2047} (\bibinfo {year} {1994})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Ganagona}\ \emph {et~al.}(2012)\citenamefont
+  {Ganagona}, \citenamefont {Raeissi}, \citenamefont {Vines}, \citenamefont
+  {Monakhov},\ and\ \citenamefont {Svensson}}]{IrrCzpSi:Ganagona}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {N.}~\bibnamefont
+  {Ganagona}}, \bibinfo {author} {\bibfnamefont {B.}~\bibnamefont {Raeissi}},
+  \bibinfo {author} {\bibfnamefont {L.}~\bibnamefont {Vines}}, \bibinfo
+  {author} {\bibfnamefont {E.~V.}\ \bibnamefont {Monakhov}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {B.~G.}\ \bibnamefont {Svensson}},\ }\href {\doibase
+  10.1002/pssc.201200217} {\bibfield  {journal} {\bibinfo  {journal} {phys.
+  stat. sol. (c)}\ }\textbf {\bibinfo {volume} {9}},\ \bibinfo {pages} {2009}
+  (\bibinfo {year} {2012})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Vines}\ \emph {et~al.}(2008)\citenamefont {Vines},
+  \citenamefont {Monakhov}, \citenamefont {Kuznetsov}, \citenamefont
+  {Koz{\l}owski}, \citenamefont {Kaminski},\ and\ \citenamefont
+  {Svensson}}]{IrrCzpSi:Vines}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {L.}~\bibnamefont
+  {Vines}}, \bibinfo {author} {\bibfnamefont {E.~V.}\ \bibnamefont {Monakhov}},
+  \bibinfo {author} {\bibfnamefont {A.~Y.}\ \bibnamefont {Kuznetsov}}, \bibinfo
+  {author} {\bibfnamefont {R.}~\bibnamefont {Koz{\l}owski}}, \bibinfo {author}
+  {\bibfnamefont {P.}~\bibnamefont {Kaminski}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {B.~G.}\ \bibnamefont {Svensson}},\ }\href {\doibase
+  10.1103/PhysRevB.78.085205} {\bibfield  {journal} {\bibinfo  {journal} {Phys.
+  Rev. B}\ }\textbf {\bibinfo {volume} {78}},\ \bibinfo {pages} {085205}
+  (\bibinfo {year} {2008})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Coffa}\ \emph {et~al.}(1997)\citenamefont {Coffa},
+  \citenamefont {Privitera}, \citenamefont {Priolo}, \citenamefont
+  {Libertino},\ and\ \citenamefont {Mannino}}]{IrrCzpSi:Coffa}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+  {Coffa}}, \bibinfo {author} {\bibfnamefont {V.}~\bibnamefont {Privitera}},
+  \bibinfo {author} {\bibfnamefont {F.}~\bibnamefont {Priolo}}, \bibinfo
+  {author} {\bibfnamefont {S.}~\bibnamefont {Libertino}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {G.}~\bibnamefont {Mannino}},\ }\href {\doibase
+  10.1063/1.364019} {\bibfield  {journal} {\bibinfo  {journal} {J. Appl.
+  Phys.}\ }\textbf {\bibinfo {volume} {81}},\ \bibinfo {pages} {1639} (\bibinfo
+  {year} {1997})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Benton}\ \emph {et~al.}(1997)\citenamefont {Benton},
+  \citenamefont {Libertino}, \citenamefont {Kringh{\o}j}, \citenamefont
+  {Eaglesham}, \citenamefont {Poate},\ and\ \citenamefont
+  {Coffa}}]{IrrCzpSi:Benton}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~L.}\ \bibnamefont
+  {Benton}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Libertino}},
+  \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {Kringh{\o}j}}, \bibinfo
+  {author} {\bibfnamefont {D.~J.}\ \bibnamefont {Eaglesham}}, \bibinfo {author}
+  {\bibfnamefont {J.~M.}\ \bibnamefont {Poate}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {S.}~\bibnamefont {Coffa}},\ }\href {\doibase
+  10.1063/1.365583} {\bibfield  {journal} {\bibinfo  {journal} {J. Appl.
+  Phys.}\ }\textbf {\bibinfo {volume} {82}},\ \bibinfo {pages} {120} (\bibinfo
+  {year} {1997})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Bleichner}\ \emph {et~al.}(1996)\citenamefont
+  {Bleichner}, \citenamefont {Jonsson}, \citenamefont {Keskitalo},\ and\
+  \citenamefont {Nordlander}}]{A:Bleicher}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.}~\bibnamefont
+  {Bleichner}}, \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {Jonsson}},
+  \bibinfo {author} {\bibfnamefont {N.}~\bibnamefont {Keskitalo}}, \ and\
+  \bibinfo {author} {\bibfnamefont {E.}~\bibnamefont {Nordlander}},\ }\href
+  {\doibase 10.1063/1.362585} {\bibfield  {journal} {\bibinfo  {journal} {J.
+  Appl. Phys.}\ }\textbf {\bibinfo {volume} {79}},\ \bibinfo {pages} {9142}
+  (\bibinfo {year} {1996})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Brotherton}\ and\ \citenamefont
+  {Bradley}(1982)}]{A:Brothe}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.~D.}\ \bibnamefont
+  {Brotherton}}\ and\ \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont
+  {Bradley}},\ }\href {\doibase 10.1063/1.331460} {\bibfield  {journal}
+  {\bibinfo  {journal} {J. Appl. Phys.}\ }\textbf {\bibinfo {volume} {53}},\
+  \bibinfo {pages} {5720} (\bibinfo {year} {1982})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Kolkovskii}, \citenamefont {Lugakov},\ and\
+  \citenamefont {Shusha}(1984)}]{gamma:Kolkov}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {I.~I.}\ \bibnamefont
+  {Kolkovskii}}, \bibinfo {author} {\bibfnamefont {P.~F.}\ \bibnamefont
+  {Lugakov}}, \ and\ \bibinfo {author} {\bibfnamefont {V.~V.}\ \bibnamefont
+  {Shusha}},\ }\href {\doibase 10.1002/pssa.2210830133} {\bibfield  {journal}
+  {\bibinfo  {journal} {phys. stat. sol. (a)}\ }\textbf {\bibinfo {volume}
+  {83}},\ \bibinfo {pages} {299} (\bibinfo {year} {1984})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Stahl}\ \emph {et~al.}(2003)\citenamefont {Stahl},
+  \citenamefont {Fretwurst}, \citenamefont {Lindstr\"{o}m},\ and\ \citenamefont
+  {Pintilie}}]{gamma:Stahl}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {Stahl}}, \bibinfo {author} {\bibfnamefont {E.}~\bibnamefont {Fretwurst}},
+  \bibinfo {author} {\bibfnamefont {G.}~\bibnamefont {Lindstr\"{o}m}}, \ and\
+  \bibinfo {author} {\bibfnamefont {I.}~\bibnamefont {Pintilie}},\ }\href
+  {\doibase 10.1016/S0168-9002(03)01884-9} {\bibfield  {journal} {\bibinfo
+  {journal} {Nucl. Instrum. Methods Phys. Res., Sect. A}\ }\textbf {\bibinfo
+  {volume} {512}},\ \bibinfo {pages} {111} (\bibinfo {year}
+  {2003})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Gaubas}, \citenamefont {Uleckas},\ and\ \citenamefont
+  {Vaitkus}(2009)}]{n:Gaubas}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.}~\bibnamefont
+  {Gaubas}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Uleckas}}, \
+  and\ \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Vaitkus}},\ }\href
+  {\doibase 10.1016/j.nima.2009.03.136} {\bibfield  {journal} {\bibinfo
+  {journal} {Nucl. Instrum. Methods Phys. Res., Sect. A}\ }\textbf {\bibinfo
+  {volume} {607}},\ \bibinfo {pages} {92} (\bibinfo {year} {2009})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Pintilie}\ \emph
+  {et~al.}(2009{\natexlab{b}})\citenamefont {Pintilie}, \citenamefont
+  {Lindstroem}, \citenamefont {Junkes},\ and\ \citenamefont
+  {Fretwurst}}]{n:gamma}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {I.}~\bibnamefont
+  {Pintilie}}, \bibinfo {author} {\bibfnamefont {G.}~\bibnamefont
+  {Lindstroem}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Junkes}},
+  \ and\ \bibinfo {author} {\bibfnamefont {E.}~\bibnamefont {Fretwurst}},\
+  }\href {\doibase 10.1016/j.nima.2009.09.065} {\bibfield  {journal} {\bibinfo
+  {journal} {Nucl. Instrum. Methods Phys. Res., Sect. A}\ }\textbf {\bibinfo
+  {volume} {611}},\ \bibinfo {pages} {52} (\bibinfo {year}
+  {2009}{\natexlab{b}})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Fretwurst}\ \emph {et~al.}(2007)\citenamefont
+  {Fretwurst}, \citenamefont {H\"{o}nniger}, \citenamefont {Kramberger},
+  \citenamefont {Lindstr\"{o}m}, \citenamefont {Pintilie},\ and\ \citenamefont
+  {R\"{o}der}}]{BD:Fret}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.}~\bibnamefont
+  {Fretwurst}}, \bibinfo {author} {\bibfnamefont {F.}~\bibnamefont
+  {H\"{o}nniger}}, \bibinfo {author} {\bibfnamefont {G.}~\bibnamefont
+  {Kramberger}}, \bibinfo {author} {\bibfnamefont {G.}~\bibnamefont
+  {Lindstr\"{o}m}}, \bibinfo {author} {\bibfnamefont {I.}~\bibnamefont
+  {Pintilie}}, \ and\ \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
+  {R\"{o}der}},\ }\href {\doibase 10.1016/j.nima.2007.08.194} {\bibfield
+  {journal} {\bibinfo  {journal} {Nucl. Instrum. Methods Phys. Res., Sect. A}\
+  }\textbf {\bibinfo {volume} {583}},\ \bibinfo {pages} {58} (\bibinfo {year}
+  {2007})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Lindstr\"{o}m}\ \emph {et~al.}(2001)\citenamefont
+  {Lindstr\"{o}m}, \citenamefont {Ahmed}, \citenamefont {Albergo},
+  \citenamefont {Allport}, \citenamefont {Anderson}, \citenamefont {Andricek},
+  \citenamefont {Angarano}, \citenamefont {Augelli}, \citenamefont {Bacchetta},
+  \citenamefont {Bartalini}, \citenamefont {Bates}, \citenamefont {Biggeri},
+  \citenamefont {Bilei}, \citenamefont {Bisello}, \citenamefont {Boemi},
+  \citenamefont {Borchi}, \citenamefont {Botila}, \citenamefont {Brodbeck},
+  \citenamefont {Bruzzi}, \citenamefont {Budzynski}, \citenamefont {Burger},
+  \citenamefont {Campabadal}, \citenamefont {Casse}, \citenamefont
+  {Catacchini}, \citenamefont {Chilingarov}, \citenamefont {Ciampolini},
+  \citenamefont {Cindro}, \citenamefont {Costa}, \citenamefont {Creanza},
+  \citenamefont {Clauws}, \citenamefont {Da~Via}, \citenamefont {Davies},
+  \citenamefont {De~Boer}, \citenamefont {Dell’Orso}, \citenamefont {De~Palma},
+  \citenamefont {Dezillie}, \citenamefont {Eremin}, \citenamefont {Evrard},
+  \citenamefont {Fallica}, \citenamefont {Fanouraki}, \citenamefont {Feick},
+  \citenamefont {Focardi}, \citenamefont {Fonseca}, \citenamefont {Fretwurst},
+  \citenamefont {Fuster}, \citenamefont {Gabathuler}, \citenamefont {Glaser},
+  \citenamefont {Grabiec}, \citenamefont {Grigorievt}, \citenamefont {Hall},
+  \citenamefont {Hanlond}, \citenamefont {Hauler}, \citenamefont {Heising},
+  \citenamefont {~}, \citenamefont {Horisberger}, \citenamefont {Hughes},
+  \citenamefont {Huhtinen}, \citenamefont {Ilyashenko}, \citenamefont {Ivanov},
+  \citenamefont {Jones}, \citenamefont {Jungermann}, \citenamefont {Kaminsky},
+  \citenamefont {Kohout}, \citenamefont {Kramberger}, \citenamefont {Kuhnke},
+  \citenamefont {Kwan}, \citenamefont {Lemeilleur}, \citenamefont {Leroy},
+  \citenamefont {Letheren}, \citenamefont {Li}, \citenamefont {Ligonzo},
+  \citenamefont {Linhart}, \citenamefont {Litovchenko}, \citenamefont {Loukas},
+  \citenamefont {Lozano}, \citenamefont {Luczynski}, \citenamefont {Lutz},
+  \citenamefont {MacEvoy}, \citenamefont {Manolopoulos}, \citenamefont
+  {Markou}, \citenamefont {Martinez}, \citenamefont {Messineo}, \citenamefont
+  {Miku\v{z}}, \citenamefont {Moll}, \citenamefont {Nossarzewska},
+  \citenamefont {Ottaviani}, \citenamefont {Oshea}, \citenamefont {Parrini},
+  \citenamefont {Passeri}, \citenamefont {Petre}, \citenamefont {Pickford},
+  \citenamefont {Pintilie}, \citenamefont {Pintilie}, \citenamefont {Pospisil},
+  \citenamefont {Potenza}, \citenamefont {Raine}, \citenamefont {Rafi},
+  \citenamefont {Ratoff}, \citenamefont {Richter}, \citenamefont {Riedler},
+  \citenamefont {Roe}, \citenamefont {Roy}, \citenamefont {Ruzin},
+  \citenamefont {Ryazanov}, \citenamefont {Santocchia}, \citenamefont
+  {Schiavulli}, \citenamefont {Sicho}, \citenamefont {Siotis}, \citenamefont
+  {Sloan}, \citenamefont {Slysz}, \citenamefont {Smith}, \citenamefont
+  {Solanky}, \citenamefont {Sopko}, \citenamefont {K.}, \citenamefont
+  {Sundby~Avset}, \citenamefont {B.}, \citenamefont {Tivarus}, \citenamefont
+  {Tonelli}, \citenamefont {Tricomi}, \citenamefont {Tzamarias}, \citenamefont
+  {Valvo}, \citenamefont {Vasilescu}, \citenamefont {Vayaki}, \citenamefont
+  {Verbitskaya}, \citenamefont {Verdini}, \citenamefont {Vrba}, \citenamefont
+  {Watts}, \citenamefont {Weber}, \citenamefont {Wegrzecki}, \citenamefont
+  {Wegrzecka}, \citenamefont {Weilhammer}, \citenamefont {Wheadon},
+  \citenamefont {Wilburn}, \citenamefont {Wilhelm}, \citenamefont {Wunstorf},
+  \citenamefont {W\"{u}stenfeld}, \citenamefont {Wyss}, \citenamefont {Zankel},
+  \citenamefont {Zabierowski},\ and\ \citenamefont {\v{Z}ontar}}]{n:long}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {G.}~\bibnamefont
+  {Lindstr\"{o}m}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Ahmed}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Albergo}},
+  \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {Allport}}, \bibinfo
+  {author} {\bibfnamefont {D.}~\bibnamefont {Anderson}}, \bibinfo {author}
+  {\bibfnamefont {L.}~\bibnamefont {Andricek}}, \bibinfo {author}
+  {\bibfnamefont {M.}~\bibnamefont {Angarano}}, \bibinfo {author}
+  {\bibfnamefont {V.}~\bibnamefont {Augelli}}, \bibinfo {author} {\bibfnamefont
+  {N.}~\bibnamefont {Bacchetta}}, \bibinfo {author} {\bibfnamefont
+  {P.}~\bibnamefont {Bartalini}}, \bibinfo {author} {\bibfnamefont
+  {R.}~\bibnamefont {Bates}}, \bibinfo {author} {\bibfnamefont
+  {U.}~\bibnamefont {Biggeri}}, \bibinfo {author} {\bibfnamefont
+  {G.}~\bibnamefont {Bilei}}, \bibinfo {author} {\bibfnamefont
+  {D.}~\bibnamefont {Bisello}}, \bibinfo {author} {\bibfnamefont
+  {D.}~\bibnamefont {Boemi}}, \bibinfo {author} {\bibfnamefont
+  {E.}~\bibnamefont {Borchi}}, \bibinfo {author} {\bibfnamefont
+  {T.}~\bibnamefont {Botila}}, \bibinfo {author} {\bibfnamefont
+  {T.}~\bibnamefont {Brodbeck}}, \bibinfo {author} {\bibfnamefont
+  {M.}~\bibnamefont {Bruzzi}}, \bibinfo {author} {\bibfnamefont
+  {T.}~\bibnamefont {Budzynski}}, \bibinfo {author} {\bibfnamefont
+  {P.}~\bibnamefont {Burger}}, \bibinfo {author} {\bibfnamefont
+  {F.}~\bibnamefont {Campabadal}}, \bibinfo {author} {\bibfnamefont
+  {G.}~\bibnamefont {Casse}}, \bibinfo {author} {\bibfnamefont
+  {E.}~\bibnamefont {Catacchini}}, \bibinfo {author} {\bibfnamefont
+  {A.}~\bibnamefont {Chilingarov}}, \bibinfo {author} {\bibfnamefont
+  {P.}~\bibnamefont {Ciampolini}}, \bibinfo {author} {\bibfnamefont
+  {V.}~\bibnamefont {Cindro}}, \bibinfo {author} {\bibfnamefont
+  {M.}~\bibnamefont {Costa}}, \bibinfo {author} {\bibfnamefont
+  {D.}~\bibnamefont {Creanza}}, \bibinfo {author} {\bibfnamefont
+  {P.}~\bibnamefont {Clauws}}, \bibinfo {author} {\bibfnamefont
+  {C.}~\bibnamefont {Da~Via}}, \bibinfo {author} {\bibfnamefont
+  {G.}~\bibnamefont {Davies}}, \bibinfo {author} {\bibfnamefont
+  {W.}~\bibnamefont {De~Boer}}, \bibinfo {author} {\bibfnamefont
+  {R.}~\bibnamefont {Dell’Orso}}, \bibinfo {author} {\bibfnamefont
+  {M.}~\bibnamefont {De~Palma}}, \bibinfo {author} {\bibfnamefont
+  {B.}~\bibnamefont {Dezillie}}, \bibinfo {author} {\bibfnamefont
+  {V.}~\bibnamefont {Eremin}}, \bibinfo {author} {\bibfnamefont
+  {O.}~\bibnamefont {Evrard}}, \bibinfo {author} {\bibfnamefont
+  {G.}~\bibnamefont {Fallica}}, \bibinfo {author} {\bibfnamefont
+  {G.}~\bibnamefont {Fanouraki}}, \bibinfo {author} {\bibfnamefont
+  {H.}~\bibnamefont {Feick}}, \bibinfo {author} {\bibfnamefont
+  {E.}~\bibnamefont {Focardi}}, \bibinfo {author} {\bibfnamefont
+  {L.}~\bibnamefont {Fonseca}}, \bibinfo {author} {\bibfnamefont
+  {E.}~\bibnamefont {Fretwurst}}, \bibinfo {author} {\bibfnamefont
+  {J.}~\bibnamefont {Fuster}}, \bibinfo {author} {\bibfnamefont
+  {K.}~\bibnamefont {Gabathuler}}, \bibinfo {author} {\bibfnamefont
+  {M.}~\bibnamefont {Glaser}}, \bibinfo {author} {\bibfnamefont
+  {P.}~\bibnamefont {Grabiec}}, \bibinfo {author} {\bibfnamefont
+  {E.}~\bibnamefont {Grigorievt}}, \bibinfo {author} {\bibfnamefont
+  {G.}~\bibnamefont {Hall}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Hanlond}}, \bibinfo {author} {\bibfnamefont {F.}~\bibnamefont {Hauler}},
+  \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Heising}}, \bibinfo
+  {author} {\bibfnamefont {A.}~\bibnamefont {~}, \bibfnamefont
+  {Holmes-Siedle}}, \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
+  {Horisberger}}, \bibinfo {author} {\bibfnamefont {G.}~\bibnamefont {Hughes}},
+  \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Huhtinen}}, \bibinfo
+  {author} {\bibfnamefont {I.}~\bibnamefont {Ilyashenko}}, \bibinfo {author}
+  {\bibfnamefont {A.}~\bibnamefont {Ivanov}}, \bibinfo {author} {\bibfnamefont
+  {B.}~\bibnamefont {Jones}}, \bibinfo {author} {\bibfnamefont
+  {L.}~\bibnamefont {Jungermann}}, \bibinfo {author} {\bibfnamefont
+  {A.}~\bibnamefont {Kaminsky}}, \bibinfo {author} {\bibfnamefont
+  {Z.}~\bibnamefont {Kohout}}, \bibinfo {author} {\bibfnamefont
+  {G.}~\bibnamefont {Kramberger}}, \bibinfo {author} {\bibfnamefont
+  {M.}~\bibnamefont {Kuhnke}}, \bibinfo {author} {\bibfnamefont
+  {S.}~\bibnamefont {Kwan}}, \bibinfo {author} {\bibfnamefont {F.}~\bibnamefont
+  {Lemeilleur}}, \bibinfo {author} {\bibfnamefont {C.}~\bibnamefont {Leroy}},
+  \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Letheren}}, \bibinfo
+  {author} {\bibfnamefont {Z.}~\bibnamefont {Li}}, \bibinfo {author}
+  {\bibfnamefont {T.}~\bibnamefont {Ligonzo}}, \bibinfo {author} {\bibfnamefont
+  {V.}~\bibnamefont {Linhart}}, \bibinfo {author} {\bibfnamefont
+  {P.}~\bibnamefont {Litovchenko}}, \bibinfo {author} {\bibfnamefont
+  {D.}~\bibnamefont {Loukas}}, \bibinfo {author} {\bibfnamefont
+  {M.}~\bibnamefont {Lozano}}, \bibinfo {author} {\bibfnamefont
+  {Z.}~\bibnamefont {Luczynski}}, \bibinfo {author} {\bibfnamefont
+  {G.}~\bibnamefont {Lutz}}, \bibinfo {author} {\bibfnamefont {G.}~\bibnamefont
+  {MacEvoy}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+  {Manolopoulos}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Markou}}, \bibinfo {author} {\bibfnamefont {C.}~\bibnamefont {Martinez}},
+  \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Messineo}}, \bibinfo
+  {author} {\bibfnamefont {M.}~\bibnamefont {Miku\v{z}}}, \bibinfo {author}
+  {\bibfnamefont {M.}~\bibnamefont {Moll}}, \bibinfo {author} {\bibfnamefont
+  {E.}~\bibnamefont {Nossarzewska}}, \bibinfo {author} {\bibfnamefont
+  {G.}~\bibnamefont {Ottaviani}}, \bibinfo {author} {\bibfnamefont
+  {V.}~\bibnamefont {Oshea}}, \bibinfo {author} {\bibfnamefont
+  {G.}~\bibnamefont {Parrini}}, \bibinfo {author} {\bibfnamefont
+  {D.}~\bibnamefont {Passeri}}, \bibinfo {author} {\bibfnamefont
+  {D.}~\bibnamefont {Petre}}, \bibinfo {author} {\bibfnamefont
+  {A.}~\bibnamefont {Pickford}}, \bibinfo {author} {\bibfnamefont
+  {I.}~\bibnamefont {Pintilie}}, \bibinfo {author} {\bibfnamefont
+  {L.}~\bibnamefont {Pintilie}}, \bibinfo {author} {\bibfnamefont
+  {S.}~\bibnamefont {Pospisil}}, \bibinfo {author} {\bibfnamefont
+  {R.}~\bibnamefont {Potenza}}, \bibinfo {author} {\bibfnamefont
+  {C.}~\bibnamefont {Raine}}, \bibinfo {author} {\bibfnamefont
+  {J.}~\bibnamefont {Rafi}}, \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont
+  {Ratoff}}, \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Richter}},
+  \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {Riedler}}, \bibinfo
+  {author} {\bibfnamefont {S.}~\bibnamefont {Roe}}, \bibinfo {author}
+  {\bibfnamefont {P.}~\bibnamefont {Roy}}, \bibinfo {author} {\bibfnamefont
+  {A.}~\bibnamefont {Ruzin}}, \bibinfo {author} {\bibfnamefont
+  {A.}~\bibnamefont {Ryazanov}}, \bibinfo {author} {\bibfnamefont
+  {A.}~\bibnamefont {Santocchia}}, \bibinfo {author} {\bibfnamefont
+  {L.}~\bibnamefont {Schiavulli}}, \bibinfo {author} {\bibfnamefont
+  {P.}~\bibnamefont {Sicho}}, \bibinfo {author} {\bibfnamefont
+  {I.}~\bibnamefont {Siotis}}, \bibinfo {author} {\bibfnamefont
+  {T.}~\bibnamefont {Sloan}}, \bibinfo {author} {\bibfnamefont
+  {W.}~\bibnamefont {Slysz}}, \bibinfo {author} {\bibfnamefont
+  {K.}~\bibnamefont {Smith}}, \bibinfo {author} {\bibfnamefont
+  {M.}~\bibnamefont {Solanky}}, \bibinfo {author} {\bibfnamefont
+  {B.}~\bibnamefont {Sopko}}, \bibinfo {author} {\bibfnamefont
+  {S.}~\bibnamefont {K.}}, \bibinfo {author} {\bibfnamefont {B.}~\bibnamefont
+  {Sundby~Avset}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {B.}},
+  \bibinfo {author} {\bibfnamefont {C.}~\bibnamefont {Tivarus}}, \bibinfo
+  {author} {\bibfnamefont {G.}~\bibnamefont {Tonelli}}, \bibinfo {author}
+  {\bibfnamefont {A.}~\bibnamefont {Tricomi}}, \bibinfo {author} {\bibfnamefont
+  {S.}~\bibnamefont {Tzamarias}}, \bibinfo {author} {\bibfnamefont
+  {G.}~\bibnamefont {Valvo}}, \bibinfo {author} {\bibfnamefont
+  {A.}~\bibnamefont {Vasilescu}}, \bibinfo {author} {\bibfnamefont
+  {A.}~\bibnamefont {Vayaki}}, \bibinfo {author} {\bibfnamefont
+  {E.}~\bibnamefont {Verbitskaya}}, \bibinfo {author} {\bibfnamefont
+  {P.}~\bibnamefont {Verdini}}, \bibinfo {author} {\bibfnamefont
+  {V.}~\bibnamefont {Vrba}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+  {Watts}}, \bibinfo {author} {\bibfnamefont {E.}~\bibnamefont {Weber}},
+  \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Wegrzecki}}, \bibinfo
+  {author} {\bibfnamefont {I.}~\bibnamefont {Wegrzecka}}, \bibinfo {author}
+  {\bibfnamefont {P.}~\bibnamefont {Weilhammer}}, \bibinfo {author}
+  {\bibfnamefont {R.}~\bibnamefont {Wheadon}}, \bibinfo {author} {\bibfnamefont
+  {C.}~\bibnamefont {Wilburn}}, \bibinfo {author} {\bibfnamefont
+  {I.}~\bibnamefont {Wilhelm}}, \bibinfo {author} {\bibfnamefont
+  {R.}~\bibnamefont {Wunstorf}}, \bibinfo {author} {\bibfnamefont
+  {J.}~\bibnamefont {W\"{u}stenfeld}}, \bibinfo {author} {\bibfnamefont
+  {J.}~\bibnamefont {Wyss}}, \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
+  {Zankel}}, \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {Zabierowski}},
+  \ and\ \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont {\v{Z}ontar}},\
+  }\href {\doibase 10.1016/S0168-9002(01)00560-5} {\bibfield  {journal}
+  {\bibinfo  {journal} {Nucl. Instrum. Methods Phys. Res., Sect. A}\ }\textbf
+  {\bibinfo {volume} {406}},\ \bibinfo {pages} {308} (\bibinfo {year}
+  {2001})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Kolkovskii}\ and\ \citenamefont
+  {Luk’yanitsa}(1997)}]{gamma:Kolk}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {I.~I.}\ \bibnamefont
+  {Kolkovskii}}\ and\ \bibinfo {author} {\bibfnamefont {V.}~\bibnamefont
+  {Luk’yanitsa}},\ }\href {\doibase 10.1134/1.1187183} {\bibfield  {journal}
+  {\bibinfo  {journal} {Semiconductors}\ }\textbf {\bibinfo {volume} {31}},\
+  \bibinfo {pages} {340} (\bibinfo {year} {1997})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Song}\ \emph {et~al.}(1990)\citenamefont {Song},
+  \citenamefont {Zhan}, \citenamefont {Benson},\ and\ \citenamefont
+  {Watkins}}]{CiCs:Song}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {L.~W.}\ \bibnamefont
+  {Song}}, \bibinfo {author} {\bibfnamefont {X.~D.}\ \bibnamefont {Zhan}},
+  \bibinfo {author} {\bibfnamefont {B.~W.}\ \bibnamefont {Benson}}, \ and\
+  \bibinfo {author} {\bibfnamefont {G.~D.}\ \bibnamefont {Watkins}},\ }\href
+  {\doibase 10.1103/PhysRevB.42.5765} {\bibfield  {journal} {\bibinfo
+  {journal} {Phys. Rev. B}\ }\textbf {\bibinfo {volume} {42}},\ \bibinfo
+  {pages} {5765} (\bibinfo {year} {1990})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Markevich}\ \emph {et~al.}(2009)\citenamefont
+  {Markevich}, \citenamefont {Peaker}, \citenamefont {Lastovskii},
+  \citenamefont {Murin}, \citenamefont {Coutinho}, \citenamefont {Torres},
+  \citenamefont {Briddon}, \citenamefont {Dobaczewski}, \citenamefont
+  {Monakhov},\ and\ \citenamefont {Svensson}}]{V3:Markevich}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {V.~P.}\ \bibnamefont
+  {Markevich}}, \bibinfo {author} {\bibfnamefont {A.~R.}\ \bibnamefont
+  {Peaker}}, \bibinfo {author} {\bibfnamefont {S.~B.}\ \bibnamefont
+  {Lastovskii}}, \bibinfo {author} {\bibfnamefont {L.~I.}\ \bibnamefont
+  {Murin}}, \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Coutinho}},
+  \bibinfo {author} {\bibfnamefont {V.~J.~B.}\ \bibnamefont {Torres}}, \bibinfo
+  {author} {\bibfnamefont {P.~R.}\ \bibnamefont {Briddon}}, \bibinfo {author}
+  {\bibfnamefont {L.}~\bibnamefont {Dobaczewski}}, \bibinfo {author}
+  {\bibfnamefont {E.~V.}\ \bibnamefont {Monakhov}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {B.~G.}\ \bibnamefont {Svensson}},\ }\href {\doibase
+  10.1103/PhysRevB.80.235207} {\bibfield  {journal} {\bibinfo  {journal} {Phys.
+  Rev. B}\ }\textbf {\bibinfo {volume} {80}},\ \bibinfo {pages} {235207}
+  (\bibinfo {year} {2009})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Siemieniec}, \citenamefont {Sudkamp},\ and\
+  \citenamefont {Lutz}(2002)}]{A:Caracas}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
+  {Siemieniec}}, \bibinfo {author} {\bibfnamefont {W.}~\bibnamefont {Sudkamp}},
+  \ and\ \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Lutz}},\ }in\
+  \href {\doibase 10.1109/ICCDCS.2002.1004041} {\emph {\bibinfo {booktitle}
+  {Proceedings of the Fourth IEEE International Caracas Conference on Devices,
+  Circuits and Systems}}}\ (\bibinfo {address} {{O}ranjestad, {A}ruba,
+  {N}etherlands},\ \bibinfo {year} {2002})\ pp.\ \bibinfo {pages}
+  {D029--1--D029--6}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Kimerling}\ \emph {et~al.}(1989)\citenamefont
+  {Kimerling}, \citenamefont {Asom}, \citenamefont {Benton}, \citenamefont
+  {Drevinsky},\ and\ \citenamefont {Caefer}}]{SiIntDef}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {L.~C.}\ \bibnamefont
+  {Kimerling}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Asom}},
+  \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Benton}}, \bibinfo
+  {author} {\bibfnamefont {P.}~\bibnamefont {Drevinsky}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {C.}~\bibnamefont {Caefer}},\ }\href {\doibase
+  10.4028/www.scientific.net/MSF.38-41.141} {\bibfield  {journal} {\bibinfo
+  {journal} {Materials Science Forum}\ }\textbf {\bibinfo {volume} {38--41}},\
+  \bibinfo {pages} {141} (\bibinfo {year} {1989})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Moll}(1999)}]{Moll:PhD}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Moll}},\ }\emph {\bibinfo {title} {Radiation damage in silicon particle
+  detectors: {M}icroscopic defects and macroscopic properties}},\ \href@noop {}
+  {Ph.D. thesis},\ \bibinfo  {school} {Universit\"{a}t Hamburg} (\bibinfo
+  {year} {1999})\BibitemShut {NoStop}%
 \end{thebibliography}%
