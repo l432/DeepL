@@ -115,8 +115,9 @@ The investigation would provide not only better ADI understanding but could also
 
 The 2 inch (300~$\mu$m thick) p--type boron doped, $<$111$>$ orientation, Czochralski (Cz) silicon wafer having resistivity of 10~$\Omega\cdot$cm was used for fabrication of  $n^+$-$p$--Si structure.
 The n$^+$ emitter with carrier concentration of about $10^{19}$~cm$^{-3}$ and thickness of 0.5~$\mu$m was formed by phosphorus implantation.
-Then wafer surface was passivated by Al$_2$O$_3$ film and further capped by TiO$_x$ as antireflective coating.
-Finally the aluminium front (metal grid) and rear (solid contact) electrodes were deposited by screen printing before rapid annealing.
+Aluminium front and rear electrodes were deposited by screen printing before rapid annealing.
+%Then wafer surface was passivated by Al$_2$O$_3$ film and further capped by TiO$_x$ as antireflective coating.
+%Finally the aluminium front (metal grid) and rear (solid contact) electrodes were deposited by screen printing before rapid annealing.
 Samples with area of about $2$~cm$^{2}$ used in experiments were cut from the central part of the wafer.
 Samples were irradiated by reactor neutrons or by $^{60}$Co $\gamma$--rays.
 Doses $D$, fluences $\Psi$, and sample labels are listed in Table~\ref{tabSample}.
@@ -539,8 +540,8 @@ does not depend on $\varphi$:
 \varepsilon_{\sigma}=(u_\mathtt{D}\pm u_\mathtt{A})^2/2\,r_{in}^2=K_\mathtt{US}^\mathtt{DA}W_{\mathtt{US}}\,,
 \end{equation}
 where``$+$'' and ``$-$'' correspond to $\delta=180^\circ$ and $\delta=0^\circ$ respectively,
-$K_\mathtt{US}^\mathtt{DA}$ characterizes defect couple--ultrasound interaction and depends on properties both defects and crystal matrix.
-This is taken into account in Eq.~(\ref{eqEpsSig}), that $u_\mathtt{D},u_\mathtt{A}\propto \xi_\mathtt{US}\propto\sqrt{W_\mathtt{US}}$.
+$K_\mathtt{US}^\mathtt{DA}$ characterizes defect couple--ultrasound interaction and depends on properties defects as well as crystal matrix.
+It is taken into account in Eq.~(\ref{eqEpsSig}), that $u_\mathtt{D},u_\mathtt{A}\propto \xi_\mathtt{US}\propto\sqrt{W_\mathtt{US}}$.
 
 Before analysing, it is worth keeping in mind, that
 CLDR current flows locally in the locations of extended defects\cite{CDLR:JAP,CDLR:SSP}.
@@ -608,10 +609,10 @@ The defect configuration are discussed below, in Section~\ref{DefectType}.
 
 Base lifetime mirrors the processes, which occur in the quasi--neutral region  of $p$-$n$--structure.
 Fig.~(\ref{fig_TAUr}) shows the  $\tau_n$  over the explored temperature range.
-One can see, that minority carrier lifetime rises with temperature,
-while USL result in $\tau_n$ decrease.
-Relative AI changes of lifetime $\varepsilon_{\tau r}$ is calculated in the same as above
-and are listed in Table~\ref{tabAIchange}.
+Minority carrier lifetime expectedly rises with temperature increase and
+$\tau_n$ values equal to $2\div5$~$\mu$s for different samples at 320~K.
+These values correspond to $80\div130$~$\mu$m range of diffusion length.
+In our opinion, the observed $\tau_n$ dispersion is not defined by irradiation is connected to sample--ancestor wafer inhomogeneity, which is revealed quite often \cite{Oxide:Chen,Oxide_Schon}.
 
 \begin{figure*}
 \includegraphics[width=0.7\textwidth]{olikhFig6}%
@@ -624,6 +625,17 @@ Ui--1, Ui--2, Un--1, Un--2, Ug6--2, Ug7--1, and Ug7--2 respectively.
 }%
 \end{figure*}
 
+Really, the irradiation induced lifetime reduction is described by the Messenger–-Spratt equation \cite{Markvart}:
+\begin{equation}
+\label{eqMS}
+\tau_n^{-1}=\tau_{n0}^{-1}+K_\tau\Psi\,,
+\end{equation}
+where $\tau_{n0}$ is the minority carrier lifetime in the non--irradiated sample,
+and $K_\tau$ is a lifetime damage--constants.
+The known $K_\tau$ values and estimated changes of reciprocal base lifetime $K_\tau\Psi$ are shown in Table~\ref{tabTAUn}.
+One can see, that expected radiation--induced $\tau_n^{-1}$ change equals to ($8\div17$), 4, and 29~\% of
+the measured value for samples nSC, g6SC, and g7SC respectively, and cannot to explain the observed dispersion.
+Calculated lifetime changes $K_\tau\Psi$ are in quite good agreement with those, which expected from RDs production --- see Section~\ref{DefectType}.
 
 \begin{table}
 \caption{\label{tabTAUn}Measured and estimated base lifetime parameters.
@@ -644,15 +656,95 @@ g7SC&2.8&(Refs.~\onlinecite{NIEL:Jafari}, \onlinecite{gamma:Kolkov})&8&4.7\\
 \end{ruledtabular}
 \end{table}
 
+Base life time can be expressed as following \cite{MurphyJAP2011}:
+\begin{equation}
+\label{eqTAUsum}
+\tau_n^{-1}=\tau_\mathtt{bb}^{-1}+\tau_\mathtt{CE\,Auger}^{-1}+\tau_\mathtt{SRH}^{-1}\,,
+\end{equation}
+where
+$\tau_\mathtt{bb}$, $\tau_\mathtt{CE\,Auger}$, $\tau_\mathtt{SRH}$ are the lifetime due to band--to--band, Coloumb--enhanced Auger, and
+SRH recombination, respectively.
+%In our case, $\tau_\mathtt{bb}^{-1}=14$~s$^-1$, $\tau_\mathtt{CE\,Auger}=6$~s$^-1$.
+Calculation shows, that $\tau_\mathtt{bb}^{-1}=14$~s$^{-1}$, $\tau_\mathtt{CE\,Auger}^{-1}=6$~s$^{-1}$,
+%therefore $\tau_n=\tau_\mathtt{SRH}$.
+therefore $\tau_\mathtt{SRH}$ should be under consideration only.
+In the cases of low injection level and single recombination centre, SRH lifetime is described by Eq.~(\ref{eqTAU}).
+If several centers are present, then
+\begin{equation}
+\label{eqTAUSHRsum}
+\tau_n^{-1}=\sum_i^{M_d}\tau_{n,i}^{-1}=\sum_i^{M_d}N_{d,i},\sigma_{n,i}\,\upsilon_{\mathrm{th},n}\,,
+\end{equation}
+where
+$M_d$ is total number of center,
+$\tau_{n,i}$ characterizes lifetime due to recombination by $i$--th defect,
+$N_{d,i}$ and $\sigma_{n,i}$ are concentration and electron CCS of $i$--th defect, recpectivelly.
+
+Fig.~(\ref{fig_TAUr}) shows, that USL result in $\tau_n$ decrease.
+Relative AI changes of base lifetime $\varepsilon_{\tau r}=(\tau_{n,in}-\tau_{n,\mathtt{US}})/\tau_{n,\mathtt{US}}$
+are listed in Table~\ref{tabAIchange}.
+As AI changes is reversible, in our opinion, this effect is deal with increase of $\sigma_n$ under US action.
+Following the empirical relation  proposed by Ref.~\onlinecite{CDLR:R2}, we assume that Eq.~(\ref{eqSigma})
+is correct for complex point defect too.
+But in this case, $r$ is the distance between complex component.
+According to suggested in Section~\ref{SCR} model, USL leads to both $r$ variation
+and $\sigma_n$ change in line with Eq.~(\ref{eqEpsSig}).
+In CDLR case, AI change of donor (or/and acceptor) SSC is supplemental to variation of
+both coupling parameter and couple distance.
+In the base lifetime case, this effect is main.
+
+On the other hand, not all defects take part in acousto--defect interaction effectively.
+If  $M_d^\mathtt{AA}$ and $M_d^\mathtt{nonAA}$ is total numbers of acoustically active (AA) and non--AA center,
+then, using Eq~(\ref{eqTAUSHRsum}), base lifetime in sample without and with USL can be expressed as
+\begin{eqnarray}
+\tau_{n,in}^{-1}&=&\sum_j^{M_d^\mathtt{AA}}N_{d,j},\sigma_{n,j}^{in}\,\upsilon_{\mathrm{th},n}+
+\sum_l^{M_d^\mathtt{nonAA}}N_{d,l},\sigma_{n,l}\,\upsilon_{\mathrm{th},n}\,,\nonumber\\
+\tau_{n,\mathtt{US}}^{-1}&=&\sum_j^{M_d^\mathtt{AA}}N_{d,j},\sigma_{n,j}^\mathtt{US}\,\upsilon_{\mathrm{th},n}+
+\sum_l^{M_d^\mathtt{nonAA}}N_{d,l},\sigma_{n,l}\,\upsilon_{\mathrm{th},n}\,.\nonumber
+\end{eqnarray}
+Using Eq~(\ref{eqEpsSig}), $\tau_n$ relative change results in
+\begin{equation}
+\label{eqEpsTAU}
+\varepsilon_{\tau r}=K_\mathtt{US}^\mathtt{eff}W_\mathtt{US}\,,
+\end{equation}
+where $K_\mathtt{US}^\mathtt{eff}$ characterizes ADI in the sample
+and depends on, in particulary, concentration of both AA and non--AA recombination centers
+\begin{equation}
+\label{eqKeff}
+K_\mathtt{US}^\mathtt{eff}=\sum_j^{M_d^\mathtt{AA}}\frac{\tau_{n,in}}{\tau_{n,j,in}}K_\mathtt{US,j}\,,
+\end{equation}
+$K_\mathtt{US,j}$ deals with $j$--th defect--ultrasound interaction.
+
+The obtained dependences $\varepsilon_{\tau r}$ vs $W_\mathtt{US}$ are shown in Fif.~(\ref{fig_Kus}).
+Dependences linearity is evidence of our assumption correctness.
+The determined $K_\mathtt{US}^\mathtt{eff}$ values are listed in Table~\ref{tabTAUn}.
+The non--monotonic $K_\mathtt{US}^\mathtt{eff}$ alteration with $\gamma$ dose may be witness of non--AA of gamma-induced defects and
+is under consideration in Section \ref{DefectType} in detail.
+
 \begin{figure}
 \includegraphics[width=0.45\textwidth]{olikhFig7}%
 \caption{\label{fig_Kus}
 Dependencies of relative base lifetime change on US intensity for non--irradiated (circles), neutron--irradiated (squares), and $\gamma$--irradiated
 (triangles and diamonds) samples.
-Lines are linear fitting.
+Lines are the fitted curves using Eq.~(\ref{eqEpsTAU}).
 }%
 \end{figure}
 
+\subsection{Shunt resistance\label{Rsh}}
+Fig.~\ref{fig_Rsh} shows the  shunt resistance  over the explored temperature range.
+
+\begin{figure*}
+\includegraphics[width=0.7\textwidth]{olikhFig8}%
+\caption{\label{fig_Rsh}
+Temperature dependences of shunt resistance for non--irradiated (curves 1--3, circles),
+neutron--irradiated (4--6, squares) and $\gamma$--irradiated (7--11, diamonds and triangles) samples.
+The curves 1, 4, 7 and 9 (open marks) are obtained without USL,
+curves 2, 3, 5, 6, 8, 10, and 11 correspond to
+Ui--1, Ui--2, Un--1, Un--2, Ug6--2, Ug7--1, and Ug7--2 respectively.
+The marks are the experimental results, the lines are the fitted curves using Eq.~(\ref{hh}).
+}%
+\end{figure*}
+
+\subsection{Defect type speculation\label{DefectType}}
 
 
 \begin{table}
@@ -684,29 +776,19 @@ VO$_i$&2.4 (Ref.~\onlinecite{A:Caracas})&0.52&7$\cdot$10$^5$~rad$^{-1}$cm$^{-3}$
 & C$_i$O$_i$ & V$_2$ & V$_3$ & VO$_i$ & C$_i$O$_i$ & V$_2$ & V$_3$ \\
 \hline
 nSC&5.5&4.8&1.5&2&$0.8\div1$&$2.2\div3.3$&0.7\\
-g6SC&6&3&--&$6\div7$&$0.9\div1.1$&$0.1\div0.2$&--\\
-g7SC&60&3&--&$60\div70$&$9\div11$&$1\div2$&--\\
+g6SC&6&0.3&0&$6\div7$&$0.9\div1.1$&$0.1\div0.2$&0\\
+g7SC&60&3&0&$60\div70$&$9\div11$&$1\div2$&0\\
 \end{tabular}
 \end{ruledtabular}
 \end{table*}
 
-\begin{figure*}
-\includegraphics[width=0.7\textwidth]{olikhFig8}%
-\caption{\label{fig_Rsh}
-Temperature dependences of shunt resistance for non--irradiated (curves 1--3, circles),
-neutron--irradiated (4--6, squares) and $\gamma$--irradiated (7--11, diamonds and triangles) samples.
-The curves 1, 4, 7 and 9 (open marks) are obtained without USL,
-curves 2, 3, 5, 6, 8, 10, and 11 correspond to
-Ui--1, Ui--2, Un--1, Un--2, Ug6--2, Ug7--1, and Ug7--2 respectively.
-The marks are the experimental results, the lines are the fitted curves using Eq.~(\ref{hh}).
-}%
-\end{figure*}
+
 
 Fig. 4 shows the  series resistance  over the explored temperature range.
-\cite{Oxide_Schon,Oxide:Porrini,LIDRev2}
+\cite{disl10:Isakova,disl10:Trushin,disl10:Kveder,disl10:Castaldini,disl10:Yu}
 
 
-Following the empirical \emph{relation} proposed by Ref. 25, we assume
+
 
 
 A remarkable coupling between the
@@ -723,9 +805,9 @@ distance between the defects of 10 nm.
 
 
 
-\subsection{Defect type speculation\label{DefectType}}
 
-\subsection{Shunt resistance\label{Rsh}}
+
+
 
 
 \section{Conclusion}
