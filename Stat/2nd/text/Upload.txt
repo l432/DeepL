@@ -1,0 +1,21 @@
+Acousto-defect interaction in irradiated and non-irradiated silicon n<sup>+</sup>-p-structure
+
+The experimental investigation of ultrasound influence on the electrical characteristics of silicon n<sup>+</sup>-p-structure has been carried out.
+The effects of reactor neutrons and <sup>60</sup>Co gamma radiation on ultrasound influence were studied.
+It has been found out that the ultrasound loading leads to reversible change of shunt resistance, carrier lifetime in both space charge and quasi--neutral regions, ideality factor.
+Acoustically induced alteration of last two parameters depends on irradiation considerably.
+The models of coupled defect level recombination, Shockley-Read-Hall recombination, and dislocation-induced impedance were used to describe findings.
+It has been shown that the observed phenomena can deal with the increase of distance between coupled defects as well as an extension of carrier capture coefficient of complex point defect and dislocation.
+It has been shown that divacancy and pair vacancy-interstitial oxygen are effectively modified by ultrasound in contrast to complex interstitial carbon-interstitial oxygen.
+
+Authors are asked to provide a brief explanation of the significance and originality of their contribution as well as how it advances the field
+
+Зараз:
+
+The irradiation influence on acousto-defect interaction in silicon p-n structures has been experimentally investigated for the first time. It has been shown that vacancy related radiation defects can be effectivelly modificated by ultrasound in contrast to interstitial complex. Thus, ultrasound can be an effective tool for selective controlling of silicon defect.
+
+Раніше було:
+
+The ultrasound influence on silicon Schottky barrier structure has been investigated experimentally in the wide temperature range. It has been shown that the barrier height, the patch density and parameter have been reversible affected by the ultrasonic wave. Thus, ultrasound can be an effective tool for controlling metal--semiconductor structure characteristics.
+
+The precise determination of the model parameters based on measured I-V-curves is a major task when characterizing Schottky diodes. This paper is devoted to review and test of 16 method for parameters extraction. The obtained results allow to select the most reliable and preferred method.

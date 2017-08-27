@@ -1,0 +1,100 @@
+NVAEjvms7IEV
+NVAEp7DesZ56 - Aeros
+
+Bonne journee! 30/01/2013 a 19h20 J'ai commande le code 20$Pass. Je l'ai eu - SP2RK1eBbU.Malheureusement, le code a ete classe "Code non vendable, pas valide ou deja utilise" en http://www.codes-discount.com. S'il vous plait envoyer un bon code. Cordialement, Sergay
+
+Hi! Your first evaluation was "positif". Then you written about incorrect code. Okey. I bought a new code "cagxtXrATXY" and sent to you. What's wrong? 
+Sincerely, L432
+
+cagette   cag2gVO8DIV
+Fermocode NVFCbGjetdeW
+Banco  BkoQqgTunEa
+
+OS7Lt9QTmd
+
+
+WMR-кошелёк R203414361352
+Z151457463970
+U300602430668
+
+cd D:/Samples/DeepL/
+cd D:/Literat/
+cd D:/oleg/Delphi2007/
+cd D:/oleg/IVchar/
+cd D:/Samples/LH/LH1/Stat3/
+
+git fetch
+git commit -am ''
+git add -A .
+
+USB\VID_18D1&PID_4E42&MI_00\6&248ED3D5&0&0000
+
+;Device is identified by Microsoft OS descriptor
+;If your device does not support it, use specific VID & PID for identification
+;
+[Generic.NTx86]
+%GenericMTP.DeviceDesc%=MTP, USB\MS_COMP_MTP
+%GenericMTP.DeviceDesc%=MTP, USB\VID_18D1&PID_4E42&MI_00\6&248ED3D5&0&0000
+
+[Generic.NTamd64]
+%GenericMTP.DeviceDesc%=MTP, USB\MS_COMP_MTP
+%GenericMTP.DeviceDesc%=MTP, USB\VID_18D1&PID_4E42&MI_00\6&248ED3D5&0&0000
+
+
+The manuscript represents solid experimental work that is of great interest for the scientific community working with effects of ultrasound on semiconductor materials. To my opinion the manuscript should be published as it is.
+
+The author has corrected the article according all my comments so I recommend the article for publication in Journal of Applied Physics.
+
+
+
+ Dear colleague,
+ I have read the abstract of your paper "Review and test of methods for 
+ determination of the Schottky diode parameters" which appeared in  
+ Journal of Applied Physics, Volume 118, Issue 2. I found it very 
+ interesting. I would be therefore very pleased if you could send me a 
+ copy.
+ Kind regards
+
+
+http://files2.genymotion.com/dists/X.X.X/ova/
+Google Nexus 7 - 5.1.0 - API 22 - 800x1280
+Samsung Galaxy S6 - 5.1.0 - API 22 - 1440x2560
+
+Thanks a lot for the article!  I found it very  interesting to me.
+ Kind regards
+Olikh Oleg
+
+ORCID iD
+0000-0003-0633-5429
+
+У рахунку за травень (гаряча вода) поточні показання вказані 123,00, попередні - 118,00, різниця 5,00, нарановано - 415,50. Це неправильно, так як у минулому місяці (квітні) я вже заплатила за 4 м3 (з 118,00 до 122,00). Тобто, у травні має бути рахунок на 83,10 грн. Прошу враховувати правильні цифри при надсиланні квитанцій.
+
+
+Ти виграв 2-тижневу підписку на перегляд відеохітів від OLL.TV. Твій код для активації:
+9948935814829
+Ти також береш участь у щоденному розіграші екшен-камери, а щотижня – маєш шанс виграти подорож на свій смак.
+Очікуй на результати розіграшів!
+
+
+Если исходить из программы занятий,
+то в ближайщее время нужны
+
+- моторы постоянного тока - 12 шт
+(например -  https://arduino-ua.com/prod662-Motor_s_redyktorom_1_k_48)
+
+- аккумуляторы, что-то похожее на   LI-ion 3.7V 14500 1200mAh - 36 шт
+(https://prom.ua/Akkumulyator-37v-li-ion-lc-14500.html)
+
+- батарейный отсек 3xAA - 12 шт
+(https://arduino-ua.com/prod1575-batareinii-otsek-s-vikluchatelem-3xaa)
+
+- зарядные устройства для аккумуляторов - 2-3 шт
+(https://velozip.co.ua/p248757571-zaryadnoe-ustrojstvo-ion.html)
+
+- ультразвуковой датчик расстояния - 12 шт
+(https://arduino-ua.com/prod182-Yltrazvykovoi_datchik_rasstoyaniya)
+
+А лучше всего просто привести машинки - все равно они по плану нужны и из них 
+можно достать практически все нужное. Если же машинки привозится не будут,
+то нужно хоть немного менять программу.
+
