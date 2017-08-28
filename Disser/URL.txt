@@ -1,0 +1,3 @@
+https://github.com/AndreyAkinshin/Russian-Phd-LaTeX-Dissertation-Template
+
+http://dkhramov.dp.ua/Comp.LaTeXBibliography
