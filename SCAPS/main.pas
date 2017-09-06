@@ -213,6 +213,7 @@ begin
          begin
          SCAPSFile.Clear;
          SCAPSFile.LoadFromFile(OpenDialog1.FileName);
+//         showmessage(inttostr(SCAPSFile.Count));
          end;
        end;
 end;
