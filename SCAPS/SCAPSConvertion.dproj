@@ -29,6 +29,7 @@
     <DelphiCompile Include="SCAPSConvertion.dpr">
       <MainSource>MainSource</MainSource>
     </DelphiCompile>
+    <DCCReference Include="IV_Class.pas" />
     <DCCReference Include="main.pas">
       <Form>MainForm</Form>
     </DCCReference>

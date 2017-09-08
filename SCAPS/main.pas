@@ -32,6 +32,9 @@ var
 
 implementation
 
+uses
+  IV_Class;
+
 {$R *.dfm}
 
 
@@ -41,15 +44,17 @@ begin
 end;
 
 procedure TMainForm.BtDoneClick(Sender: TObject);
- const Izoom=1e-5;
+// const Izoom=1e-5;
  var Row:Int64;
-     Task,FileNumber:word;
+//     Task,FileNumber:word;
      Comments,SCparam,DatFile:TStringList;
-     IlluminatedChar:boolean;
-     T,V,I:double;
-     tempStr,DatFileName,DatFileLocation,tempData:string;
+//     IlluminatedChar:boolean;
+     V,I:double;
+     tempStr,DatFileName,DatFileLocation:string;
      j: byte;
+     IVparameter:TIVparameter;
 begin
+
  if LFile.Font.Color<>clBlue then Exit;
 
  if not(SetCurrentDir(Directory)) then
@@ -69,119 +74,70 @@ begin
  DecimalSeparator:='.';
  Comments:=TStringList.Create;
  SCparam:=TStringList.Create;
- SCparam.Add('T file kT1 Voc Jsc FF eta Vmpp Jmpp');
  DatFile:=TStringList.Create;
 
+ IVparameter:=TIVparameter.Create;
+ IVparameter.ParameterTitleDetermination(SCAPSFile);
+
+
+ if IVparameter.fName.Count>0 then
+  begin
+   SCparam.Add(IVparameter.Title);
+   for j := 0 to IVparameter.fName.Count - 1 do
+    if IVparameter.fUnit[j]<>''
+     then Comments.Add(IVparameter.fName[j]+' - '+IVparameter.fUnit[j])
+     else Comments.Add(IVparameter.fName[j]+' - '+IVparameter.fDescription[j]);
+   Comments.Add('');
+  end;
+
+
+
  Row:=0;
- Task:=0;
- FileNumber:=0;
- T:=300;
- IlluminatedChar:=False;
+ while (Row<SCAPSFile.Count) do
+  begin
+   if AnsiStartsStr ('SCAPS', SCAPSFile[ROW]) then
+    begin
+      if Row<>0 then SCparam.Add(IVparameter.DataString);
+      IVparameter.Empty;
+      Inc(Row);
+      Continue;
+    end;
 
- repeat
+   IVparameter.ParameterDetermination(SCAPSFile[ROW]);
 
-  if AnsiStartsStr ('SCAPS', SCAPSFile[ROW]) then
-   begin
-     Task:=1;
-     Inc(FileNumber);
-     Inc(Row);
-     Continue;
-   end;
-
-  if  ((Task=4)and
-     (AnsiContainsStr(SCAPSFile[ROW],'Voc ='))) then
-   begin
-    tempData:='';
-    for j := 0 to 5 do
-     begin
-      tempStr:=SCAPSFile[ROW];
-      tempStr:=TwoSpaceToOne(tempStr);
-      Delete(tempStr, 1, AnsiPos (' ', tempStr));
-      Delete(tempStr, 1, AnsiPos (' ', tempStr));
-      V:=StrToFloat(Copy(tempStr, 1, AnsiPos (' ', tempStr)-1));
-      case j of
-       0:tempData:=tempData+FloatToStrF(T,ffGeneral,4,1)+' '+
-         IntToStr(FileNumber)+'_'+IntToStr(Round(T))+' '+
-         FloatToStrF(1/T/Kb,ffGeneral,5,2)+' ';
-       1,5:V:=Izoom*V;
-       2,3:V:=0.01*V;
-       end;
-      tempData:=tempData+FloatToStrF(V,ffExponent,4,0)+' ';
-      Inc(ROW);
-     end;
-    SCparam.Add(tempData);
-    Task:=5;
-    Continue;
-   end;
-
-  if  ((Task=3)and
-     (AnsiContainsStr(SCAPSFile[ROW],'v(V)'))and
-     (AnsiContainsStr(SCAPSFile[ROW],'jtot(mA/cm2)'))) then
+  if ((AnsiContainsStr(SCAPSFile[ROW],'v(V)'))and
+      (AnsiContainsStr(SCAPSFile[ROW],'jtot(mA/cm2)'))) then
    begin
      ROW:=ROW+2;
      DatFile.Clear;
-     V:=0;
-     I:=0;
      while SCAPSFile[ROW]<>'' do
        begin
+        SCAPSFile[ROW]:=SomeSpaceToOne(SCAPSFile[ROW]);
         tempStr:=SCAPSFile[ROW];
-        tempStr:=TwoSpaceToOne(tempStr);
-        if AnsiPos (' ', tempStr)=1 then
-             Delete(tempStr, 1, 1);
+        if AnsiStartsStr(' ',tempStr) then Delete(tempStr, 1, 1);
         try
          V:=StrToFloat(Copy(tempStr, 1, AnsiPos (' ', tempStr)-1));
          Delete(tempStr, 1, AnsiPos (' ', tempStr));
-         I:=Izoom*StrToFloat(Copy(tempStr, 1, AnsiPos (' ', tempStr)-1));
+         I:=10*SampleArea*StrToFloat(Copy(tempStr, 1, AnsiPos (' ', tempStr)-1));
         except
+         V:=0;
+         I:=0;
         end;
         DatFile.Add((FloatToStrF(V,ffExponent,4,0)+' '+
                      FloatToStr(I)));
         Row:=ROW+1;
        end;
 
-     DatFileName:=IntToStr(FileNumber)+'_'+IntToStr(Round(T))+'.dat';
-     if FileNumber<10 then DatFileName:='0'+DatFileName;
-     if IlluminatedChar then  DatFileName:='L'+DatFileName
-                        else  DatFileName:='T'+DatFileName;
+     DatFileName:=IVparameter.FileName+'.dat';
      DatFile.SaveToFile(DatFileLocation+DatFileName);
      Comments.Add(DatFileName);
-     Comments.Add('T='+FloatToStrF(T,ffGeneral,4,1));
+     Comments.Add('T='+FloatToStrF(IVparameter.fTemperatura,ffGeneral,4,1));
      Comments.Add('');
-     Task:=4;
      Continue;
    end;
 
-  if  (Task=2)and
-     (AnsiStartsStr ('Temperature', SCAPSFile[ROW])) then
-   begin
-     tempStr:=SCAPSFile[ROW];
-     tempStr:=TwoSpaceToOne(tempStr);
-
-     Delete(tempStr, 1, AnsiPos (' ', tempStr));
-     try
-       T:=StrToFloat(Copy(tempStr, 1, AnsiPos (' ', tempStr)-1));
-       Task:=3;
-     except
-
-     end;
-     Inc(Row);
-     Continue;
-   end;
-
-  if  (Task=1)and
-     (AnsiContainsStr (SCAPSFile[ROW],'in dark')or
-      AnsiContainsStr (SCAPSFile[ROW],'under illumination')) then
-   begin
-     Task:=2;
-     IlluminatedChar:=AnsiContainsStr (SCAPSFile[ROW],'under illumination');
-     Inc(Row);
-     Continue;
-   end;
-
-
-  Inc(Row);
- until (Row>=SCAPSFile.Count);
-
+   Inc(Row);
+  end;
 
  if Comments.Count>0 then
       Comments.SaveToFile(DatFileLocation+'comments');
@@ -190,6 +146,7 @@ begin
       SCparam.SaveToFile(DatFileLocation+'SCparam.dat');
  SCparam.Free;
  DatFile.Free;
+   IVparameter.Free;
 
  LAction.Caption:='Extraction is done';
  LAction.Font.Color:=clGreen;

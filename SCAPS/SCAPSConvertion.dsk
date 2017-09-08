@@ -1,23 +1,29 @@
 [Closed Files]
-File_0=TSourceModule,'c:\program files\codegear\source\Win32\rtl\common\StrUtils.pas',0,1,338,1,360,0,0,,
-File_1=TSourceModule,'D:\oleg\I_V_Rs\I_V_Rs.pas',0,1,49,37,73,0,0,,
-File_2=TSourceModule,'D:\oleg\Delphi2007\Unit1.pas',0,1,3570,1,3572,0,0,,{0
-File_3=TSourceModule,'D:\oleg\Delphi2007\OlegMaterialSamples.pas',0,1,450,2,472,0,0,,{0
-File_4=TSourceModule,'D:\oleg\Delphi2007\OlegApprox.pas',0,1,4678,2,4721,0,0,,{1
-File_5=TSourceModule,'D:\oleg\Delphi2007\OlegMath.pas',0,1,2500,20,2512,0,0,,{0
-File_6=TSourceModule,'D:\oleg\Delphi2007\OlegType.pas',0,1,1,1,11,0,0,,{5
-File_7=TSourceModule,'D:\oleg\Delphi2007\OlegGraph.pas',0,1,1128,1,1138,0,0,,{0
-File_8=TSourceModule,'D:\oleg\Delphi2007\FormSelectFit.pas',0,1,5,3,27,0,0,,
+File_0=TSourceModule,'c:\program files\codegear\SOURCE\WIN32\RTL\SYS\System.pas',0,1,8812,1,8829,0,0,,
+File_1=TSourceModule,'c:\program files\codegear\source\Win32\rtl\common\StrUtils.pas',0,1,338,1,360,0,0,,
+File_2=TSourceModule,'D:\oleg\I_V_Rs\I_V_Rs.pas',0,1,49,37,73,0,0,,
+File_3=TSourceModule,'D:\oleg\Delphi2007\Unit1.pas',0,1,3570,1,3572,0,0,,{0
+File_4=TSourceModule,'D:\oleg\Delphi2007\OlegMaterialSamples.pas',0,1,450,2,472,0,0,,{0
+File_5=TSourceModule,'D:\oleg\Delphi2007\OlegApprox.pas',0,1,4678,2,4721,0,0,,{1
+File_6=TSourceModule,'D:\oleg\Delphi2007\OlegMath.pas',0,1,2500,20,2512,0,0,,{0
+File_7=TSourceModule,'D:\oleg\Delphi2007\OlegType.pas',0,1,1,1,11,0,0,,{5
+File_8=TSourceModule,'D:\oleg\Delphi2007\OlegGraph.pas',0,1,1128,1,1138,0,0,,{0
 
 [Modules]
 Module0=D:\Samples\DeepL\SCAPS\main.pas
-Module1=D:\oleg\Delphi2007\OlegFunction.pas
-Count=2
+Module1=D:\Samples\DeepL\SCAPS\IV_Class.pas
+Module2=D:\oleg\Delphi2007\OlegFunction.pas
+Count=3
 EditWindowCount=1
 
 [D:\Samples\DeepL\SCAPS\main.pas]
 ModuleType=TSourceModule
 FormState=1
+FormOnTop=0
+
+[D:\Samples\DeepL\SCAPS\IV_Class.pas]
+ModuleType=TSourceModule
+FormState=0
 FormOnTop=0
 
 [D:\oleg\Delphi2007\OlegFunction.pas]
@@ -26,10 +32,11 @@ FormState=0
 FormOnTop=0
 
 [EditWindow0]
-ViewCount=2
+ViewCount=3
 CurrentEditView=D:\Samples\DeepL\SCAPS\main.pas
 View0=0
 View1=1
+View2=2
 PercentageSizes=1
 Create=1
 Visible=1
@@ -63,9 +70,9 @@ BottomMiddelPanelData=0000080001000100000009000000446F636B5369746530361900000000
 [View0]
 CustomEditViewType=TEditView
 Module=D:\Samples\DeepL\SCAPS\main.pas
-CursorX=22
-CursorY=100
-TopLine=158
+CursorX=1
+CursorY=90
+TopLine=94
 LeftCol=1
 Elisions=
 Bookmarks=
@@ -73,10 +80,21 @@ EditViewName=D:\Samples\DeepL\SCAPS\main.pas
 
 [View1]
 CustomEditViewType=TEditView
+Module=D:\Samples\DeepL\SCAPS\IV_Class.pas
+CursorX=7
+CursorY=53
+TopLine=34
+LeftCol=1
+Elisions=
+Bookmarks=
+EditViewName=D:\Samples\DeepL\SCAPS\IV_Class.pas
+
+[View2]
+CustomEditViewType=TEditView
 Module=D:\oleg\Delphi2007\OlegFunction.pas
-CursorX=1
-CursorY=223
-TopLine=221
+CursorX=52
+CursorY=237
+TopLine=225
 LeftCol=1
 Elisions=
 Bookmarks=
@@ -395,11 +413,6 @@ Dockable=1
 StayOnTop=0
 SplitPos=111
 
-[PropInspDesignerSelection]
-ArrangeBy=Category
-SelectedItem=Action.Caption,Input.OnClick
-ExpandedItems=Action=1,"Drag Drop/Docking=1","Help and Hints=1",Input=1,Layout=1,Legacy=1,Linkage=1,Locale=1,Localizable=1,Miscellaneous=1,Visual=1,Layout.Anchors=0,Layout.Constraints=0,Layout.Margins=0
-
 [ModelViewTool]
 PercentageSizes=1
 Create=1
@@ -602,7 +615,7 @@ Dockable=1
 StayOnTop=0
 TabPosition=1
 ActiveTabID=RefactoringForm
-TabDockClients=RefactoringForm,FindReferencsForm,ToDo List,RefactoringsView,UsagesView,QAView,MetricsView
+TabDockClients=RefactoringForm,FindReferencsForm,ToDo List,QAView,MetricsView,RefactoringsView,UsagesView
 
 [DockSite1]
 HostDockSite=DockBottomPanel
