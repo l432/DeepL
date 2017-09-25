@@ -83,7 +83,7 @@ begin
      Result:=FloatToStrF(fTemperatura,ffGeneral,4,1)+' '+
              FileName+' '+FloatToStrF(1/fTemperatura/Kb,ffGeneral,5,2);
      for I := 0 to fName.Count - 1 do
-       Result:=Result+' '+FloatToStrF(fData[i],ffExponent,4,0);
+       Result:=Result+' '+FloatToStrF(fData[i],ffExponent,7,0);
     end
                else
     Result:='';
@@ -149,7 +149,8 @@ begin
         if AnsiEndsStr(' ',DataString) then DataString:=Copy(DataString,1,Length(DataString)-1);
         if fUnit[i]<>'' then
          begin
-            Delete(DataString,AnsiPos(fUnit[i], DataString),Length(fUnit[i]));
+//            Delete(DataString,AnsiPos(fUnit[i], DataString),Length(fUnit[i]));
+            Delete(DataString,AnsiPos(fUnit[i], DataString),Length(DataString)-AnsiPos(fUnit[i], DataString)+1);
             if AnsiEndsStr(' ',DataString) then DataString:=Copy(DataString,1,Length(DataString)-1);
          end;
          try
