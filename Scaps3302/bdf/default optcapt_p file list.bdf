@@ -1,0 +1,16 @@
+> SCAPS version 2.9.03, August 2010, ELIS - UGent: 
+> SCAPS SCAPS file with filenames for a batch parameter, saved on 	25-08-2010 at 12:11:36
+> problem definition file loaded :
+> c:\SCAPS versions\SCAPS 2903 werkversie\def\CdTe-base.def
+> last saved: 	22-05-2009 at 15:06:06
+> 
+> A list of hole optical capture cross section files to be used as default
+> We choose opt. capt. files that are distributed with the SCAPS installation
+> Replace with more appropriate files when desired
+> When this file "default optcapt file list.bdf" is not found in the /bdf directory, 
+> (or when the files contained in it are not found)
+> SCAPS takes the first two .opt files found in your optcapt-directory
+
+
+file: Si(0.30)_p.opt
+file: Green Si_p.opt

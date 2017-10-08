@@ -1,0 +1,1 @@
+scaps3303.exe which Nt gives Voc=0.500V.script

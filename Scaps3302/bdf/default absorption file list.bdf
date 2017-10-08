@@ -1,0 +1,16 @@
+> SCAPS version 2.9.03, August 2010, ELIS - UGent: 
+> SCAPS SCAPS file with filenames for a batch parameter, saved on 	25-08-2010 at 12:09:04
+> problem definition file loaded :
+> c:\SCAPS versions\SCAPS 2903 werkversie\def\CdTe-base.def
+> last saved: 	22-05-2009 at 15:06:06
+> 
+> A list of absorption files to be used as default
+> (upon first clicking of "set list of absorption files" in the batch set-up)
+> We choose the "gray" files, as these are distributed with the SCAPS installation, and not material related
+> Replace with more appropriate files when desired
+> When this file "default absorption file list.bdf" is not found in the /bdf directory, 
+> (or when the files contained in it are not found in your absorption-directory
+
+
+file: gray 5E5.abs
+file: gray 1E4.abs

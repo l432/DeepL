@@ -50,7 +50,7 @@ procedure TMainForm.BtDoneClick(Sender: TObject);
      Comments,SCparam,DatFile:TStringList;
 //     IlluminatedChar:boolean;
      V,I:double;
-     tempStr,DatFileName,DatFileLocation:string;
+     tempStr,DatFileName,DatFileLocation,DatFileLocation2:string;
      j: byte;
      IVparameter:TIVparameter;
 begin
@@ -63,6 +63,7 @@ begin
     Exit;
    end;
  DatFileLocation:=AnsiReplaceStr (FileName, '.', '_');
+ DatFileLocation2:=DatFileLocation;
  try
   MkDir(DatFileLocation);
  except
@@ -139,11 +140,15 @@ begin
    Inc(Row);
   end;
 
+ SCparam.Add(IVparameter.DataString);
+
  if Comments.Count>0 then
       Comments.SaveToFile(DatFileLocation+'comments');
  Comments.Free;
  if SCparam.Count>1 then
-      SCparam.SaveToFile(DatFileLocation+'SCparam.dat');
+//      SCparam.SaveToFile(DatFileLocation+'SCparam.dat');
+      SCparam.SaveToFile(DatFileLocation+DatFileLocation2+'.dat');
+
  SCparam.Free;
  DatFile.Free;
    IVparameter.Free;
