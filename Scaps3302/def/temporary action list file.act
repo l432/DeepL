@@ -5,7 +5,7 @@ Frequency :   1.0000e+06 Hz
 Number of points :   5
 dark :  0
 generation from file :  0
-spectrum file :AM1_5G 1 sun.spe
+spectrum file :old AM1_5G 1 sun.spe
 spectrum cut off :  0
 short wavelength cut off :   200.00 nm
 long wavelength cut off :  4000.00 nm

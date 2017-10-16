@@ -166,7 +166,7 @@ Some curves are shown in Fig.~\ref{figIV}.
 Dark $I$--$V$ characteristics measured (a) at 306~K for non--irradiated (circles), neutron--irradiated (squares) and gamma--irradiated (diamonds and triangles) structures without USL;
 (b) at 301~K (circles) and 341~K (asterisks) with (filled marks, Ui--2) and without (open marks) USL for the iSC.
 The marks are the experimental results, the solid lines are the fitted curves using Eqs.~(\ref{eqIV})--(\ref{eqW}).
-The dashed, dotted and dot--dashed lines in (a) are the base, SCR and shunt components of iSC current, respectively.
+The dashed, dotted and dot--dashed lines in (a) represent the calculated base, SCR and shunt components of full (black solid line) iSC current.
 }%
 \end{figure*}
 
@@ -203,7 +203,7 @@ We used Eqs. (\ref{eqIV})--(\ref{eqW}) to fit the experimental data and $\tau_g$
 The known \cite{ni:Green,Schroder2006,Markvart} temperature dependencies of $n_i$, $E_g$, and $\mu_n$ were used.
 The extremely good fit to the experimental data was obtained --- see Fig.~\ref{figIV}.
 In particular, the $R_s$ value about 1~$\Omega$ was determined for all samples.
-
+Broken lines in Fig.~\ref{figIV}(a) demonstrate the example of calculated contributions of $I_{SCR}$, $I_{base}$, and $I_{sh}$ to full current.
 
 In the USL case, the transverse AWs with frequency of $4.2$~MHz were exited with help of a piezoelectric transducer and were injected in samples from the base side in the [111]--direction.
 The US intensities $W_{\mathtt{US}}$, amplitudes of lattice deformation $\xi_{\mathtt{US}}$ and lattice atom
@@ -235,6 +235,24 @@ g7SC&0.19&2.9&0.63&Ug7--1\\
 \end{tabular}
 \end{ruledtabular}
 \end{table}
+
+Fig.~\ref{fig_Reverse} illustrates the reversibility of AI effects.
+The time interval between USL starting and "during" measurement was larger than 60~min,
+the time interval between USL stopping and "after" measurement was about 24~h.
+Data for nSC and g6SC are similar to those, which are presented for iSC and g7SC.
+
+\begin{figure*}
+\includegraphics[width=0.7\textwidth]{olikhFigRel}%
+\caption{\label{fig_Reverse}
+SCR lifetime (a, left axis, open marks),
+base lifetime (a, right axis, filled marks),
+ideality factor (b, left axis, open marks) and
+shunt resistance (b, right axis, filled marks),
+obtained before, during and after USL at 330~K.
+Data for iSC (circles) and g7SC (triangles) are presented.
+}%
+\end{figure*}
+
 
 
 The non-linear fittings were done by using the differential evolution method.\cite{DEWang}
@@ -527,7 +545,7 @@ The typical simulation results are shown in  Fig.~\ref{fig_Erda}.
 \includegraphics[width=0.45\textwidth]{olikhFig5}%
 \caption{\label{fig_Erda}
 Simulated dependencies of AI changes of coupling parameter on the vibration amplitudes.
-Axis $|u_\mathtt{D}+u_\mathtt{A}|$ corresponds to $\delta=0^\circ$ case, whereas axis $|u_\mathtt{D}+u_\mathtt{A}|$ corresponds to $\delta=180^\circ$ case.
+Axis $|u_\mathtt{D}-u_\mathtt{A}|$ corresponds to $\delta=0^\circ$ case, whereas axis $|u_\mathtt{D}+u_\mathtt{A}|$ corresponds to $\delta=180^\circ$ case.
 The parameters are set to $a_0=3.23$~nm,
 $r_{in}=5$~nm (open marks), $15$~nm (semi--filled marks), and $25$~nm (filled marks),
 $\varphi=0^\circ$ (circles), $90^\circ$ (squares).
@@ -686,7 +704,7 @@ $\tau_{n,i}$ characterizes lifetime due to recombination by $i$--th defect,
 $N_{d,i}$ and $\sigma_{n,i}$ are concentration and electron CCS of $i$--th defect, recpectivelly.
 
 Fig.~\ref{fig_TAUr} shows, that USL results in $\tau_n$ decrease.
-Relative AI changes of reciprocal base lifetime $\varepsilon_{\tau r}=(\tau_{n,in}-\tau_{n,\mathtt{US}})/\tau_{n,\mathtt{US}}$
+Relative AI changes of reciprocal base lifetime $\varepsilon_{\tau n}=(\tau_{n,in}-\tau_{n,\mathtt{US}})/\tau_{n,\mathtt{US}}$
 are listed in Table~\ref{tabAIchange}.
 As AI changes is reversible, in our opinion, this effect deals with increase of $\sigma_n$ under US action.
 Following the empirical relation  proposed by Ref.~\onlinecite{CDLR:R2}, we assume that Eq.~(\ref{eqSigma})
@@ -707,10 +725,10 @@ then using Eq~(\ref{eqTAUSHRsum}) base lifetime in sample without and with USL c
 \tau_{n,\mathtt{US}}^{-1}&=&\sum_j^{M_d^\mathtt{AA}}N_{d,j},\sigma_{n,j}^\mathtt{US}\,\upsilon_{\mathrm{th},n}+
 \sum_l^{M_d^\mathtt{nonAA}}N_{d,l},\sigma_{n,l}\,\upsilon_{\mathrm{th},n}\,.\nonumber
 \end{eqnarray}
-Using Eq~(\ref{eqEpsSig}), $\varepsilon_{\tau r}$  results in
+Using Eq~(\ref{eqEpsSig}), $\varepsilon_{\tau n}$  results in
 \begin{equation}
 \label{eqEpsTAU}
-\varepsilon_{\tau r}=K_\mathtt{US}^\mathtt{eff}W_\mathtt{US}\,,
+\varepsilon_{\tau n}=K_\mathtt{US}^\mathtt{eff}W_\mathtt{US}\,,
 \end{equation}
 where $K_\mathtt{US}^\mathtt{eff}$ characterizes ADI in the sample
 and depends on concentration of both AA and non--AA centers
@@ -720,7 +738,7 @@ K_\mathtt{US}^\mathtt{eff}=\sum_j^{M_d^\mathtt{AA}}\frac{\tau_{n,in}}{\tau_{n,j,
 \end{equation}
 $K_\mathtt{US,j}$ deals with $j$--th defect--ultrasound interaction.
 
-The obtained dependences $\varepsilon_{\tau r}$ vs $W_\mathtt{US}$ are shown in Fig.~\ref{fig_Kus}.
+The obtained dependences $\varepsilon_{\tau n}$ vs $W_\mathtt{US}$ are shown in Fig.~\ref{fig_Kus}.
 Dependences linearity is evidence of our assumption correctness.
 The determined $K_\mathtt{US}^\mathtt{eff}$ values are listed in Table~\ref{tabTAUn}.
 The non--monotonic $K_\mathtt{US}^\mathtt{eff}$ alteration with $\gamma$ dose
@@ -949,7 +967,7 @@ VO$_i$ is not active recombination center in $p$--Si.\cite{gamma:Kolkov,IrrCzpSi
 %It is taking into account, that VO$_i$ is not recombination center in $p$--Si \cite{gamma:Kolkov,IrrCzpSi:Benton,IrrCzpSi:Coffa,IrrCzpSi:Ganagona,IrrCzpSi:Vines}.
 Estimated $\tau_{n,\mathtt{RD}}$ for C$_i$O$_i$, V$_2$, and  V$_3$ are shown in Table~\ref{tabDefect}.
 One can recognize, that $\tau_n$ effected mainly by C$_i$O$_i$ and vacancy clusters in $\gamma$-- and neutron--irradiated samples, respectively.
-We want to note, that nSc, g6Sc, g7SC sums of $\tau_{n,\mathtt{RD}}$ are in quite good agreement with $(K_\tau\cdot\Psi)$ values.
+We want to note, that nSC, g6SC, g7SC sums of $\tau_{n,\mathtt{RD}}$ are in quite good agreement with $(K_\tau\cdot\Psi)$ values.
 
 Lets pay attention to $K_\mathtt{US}^\mathtt{eff}$ and assume, that
 $M_d^\mathtt{AA}=1$, $M_d^\mathtt{nonAA}=1$ in non--irradiated sample and

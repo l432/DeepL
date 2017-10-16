@@ -1,3 +1,16 @@
 
 
+Batch parameter 0 :
+
+Label 1 : layer 1
+Label 2 : defect 1
+Label 3 : Nt total
+Label 4 : nihil
+simultaneous :  0
+values from a list :  0
+logarithmic variation :  1
+startvalue :   1.00000000e+11
+stopvalue :   1.00000000e+14
+number of steps :   32
+
 >> end of batch settings file
