@@ -870,9 +870,10 @@ After that, the illumination and measurements were repeated.
 
 
 \begin{figure}
-\includegraphics[width=0.45\textwidth]{olikhFigIllumin}%
+\includegraphics[width=0.46\textwidth]{olikhFigIllumin}%
 \caption{\label{fig_Illum}
-Permanent changes of iSC SCR lifetime (a, squares), ideality factor (b, circles), base lifetime (c, triangles), and shunt resistance (d, asterics) versus accumulated illumination time.
+Permanent changes of iSC SCR lifetime (a, squares), ideality factor (b, circles), base lifetime (c, triangles), and shunt resistance (d, asterisks) versus accumulated illumination time.
+$T=295$~K.
 Filled, semi--filled and open marks correspond to sample before annealing, after first $10$~min 200~$^\circ$C annealing, and after second $10$~min 200~$^\circ$C annealing, respectively.
 }%
 \end{figure}
@@ -885,36 +886,43 @@ Fig.~\ref{fig_Illum} show changes of structure parameters in comparison with tho
 One can see that illumination did not result in considerable permanent change of either of $\tau_g$, $\tau_n$, $n_{\mathrm{id}}$ before as well as after annealing.
 Therefore BO influence on recombination in both SCR and base can be neglected.
 
-On the other hand, at room temperature, the vast majority of iron exists in iron--boron pairs, which can be readily dissociated under intense illumination to release interstitial iron.
-This gives a lifetime change which depends on doping concentration and excess carrier concentration \cite{FeB:Schmidt}.
-After the dissociation procedure, the concentration of Fe$_i$ decreases according to \cite{MurphyJAP2011}
+On the other hand, the vast majority of impurity iron exists in iron--boron pairs.
+Fe$_i$B$_s$ can be readily dissociated under intense illumination to release interstitial iron.
+This gives a lifetime change.
+In dark Fe$_i$B$_s$ repairing takes place and Fe$_i$ concentration decreases according to \cite{MurphyJAP2011,Wijaranakula}
 \begin{equation}
 \label{eqFeB}
-N_{Fe}(t)=(N_{Fe,0}-N_{Fe,eq})\exp\left[-1.3\cdot10^{-3}p_p^{\,2/3}\exp\left(-\frac{0.68}{kT}\right)t\right]+N_{Fe,eq}\,,
+N_{Fe}(t)=(N_{Fe,0}-N_{Fe,eq})\exp\left[-\frac{t}{\tau_{\mathtt{rep}}}\right]+N_{Fe,eq}\,,
 \end{equation}
 where
-$N_{Fe,0}$ and $N_{Fe,eq}$ are the concentration after dissociation immediately and equilibrium
-concentration which remains a long time after dissociation respectively.
+$N_{Fe,0}$ and $N_{Fe,eq}$ are the concentration after illumination immediately and equilibrium
+concentration which remains a long time after dissociation respectively,
+and characteristic time of repairing $\tau_{\mathtt{rep}}$ depends on doping level
+\begin{equation}
+\label{eqTrep}
+\tau_{\mathtt{rep}}=770\cdot p_p^{\,-2/3}\exp\left(\frac{E_{\mathtt{D,Fe}}}{kT}\right)\,,
+\end{equation}
+$E_{\mathtt{D,Fe}}=0.68$~eV is the activation energy of Fe$_i$ diffusion.
 
 \begin{figure}
 %\includegraphics[width=0.7\textwidth]{olikhFigTime}%
 \includegraphics[width=0.47\textwidth]{olikhFigTime}%
 \caption{\label{fig_Time}
-Temperature dependences of shunt resistance for non--irradiated (curves 1--3, circles),
-neutron--irradiated (4--6, squares) and $\gamma$--irradiated (7--11, diamonds and triangles) samples.
-The curves 1, 4, 7 and 9 (open marks) are obtained without USL,
-curves 2, 3, 5, 6, 8, 10, and 11 correspond to
-Ui--1, Ui--2, Un--1, Un--2, Ug6--2, Ug7--1, and Ug7--2 respectively.
-The marks are the experimental results, the lines are the fitted curves using Eq.~(\ref{eqRshFull})-(\ref{eqRsh}).
+SCR lifetime (a, squares, left axis), ideality factor (a, circles, right axis), base  lifetime (b, triangles, left axis), and shunt resistance (b, asterisks, right axis) as a function of time since illumination stoping.
+$T=295$~K.
+Lines are calculated by using Eqs.(\ref{eqFeB})--(\ref{eqTrep}) and $E_{\mathtt{D,Fe}}=0.63$~eV (dash--dotted lines), 0.68~eV (solid lines), and 0.73~eV (dashed lines).
 }%
 \end{figure}
 
-$n_{\mathrm{id}}$ increase (about 0.03) and $\tau_g$ decrease (about 10~\%) were observed after illumination immediately.
-These changes vanished gradually, both $n_{\mathrm{id}}$ and $\tau_g$ time dependences were very similar to those, which is expected \cite{FeB:Schmidt} for Fe$_i$B$_s$ repairing.
+$n_{\mathrm{id}}$ increase (about 0.03) and $\tau_g$ decrease (about 10~\%) were observed after illumination immediately --- see Fig.~\ref{fig_Time}(a).
+These changes vanished gradually.
+We supposed that the $\tau_g$ and $n$ evolutions could be described by expressions like Eq.~(\ref{eqFeB}).
+Then Eq.~(\ref{eqTrep}) was used to calculate characteristic time and fitting lines were plotted on Fig.~\ref{fig_Time}(a).
+The fittings with $E_{\mathtt{D,Fe}}=0.68$~eV are in good agreement with experimental data.
 Hence iron--boron pairs take part in SCR recombination.
-On the other hand, electron and hole CCS of released by illumination interstitial iron are 1.7 and 0.04 times \cite{FeB:Schmidt} as much as those of Fe$_i$B$_s$.
+On the other hand, electron and hole CCS of released by illumination interstitial iron are 1.7 and 0.04 times \cite{MurphyJAP2011} as much as those of Fe$_i$B$_s$.
 A small (about 10~\%) $\tau_g$ alteration, which is caused by light, is evidence of supporting role of iron--boron pair in SCR recombination.
-Furthermore, since $\tau_n$ does not depend on illumination, then Fe$_i$B$_s$ has not an influence on base lifetime.
+Furthermore, since $\tau_n$ does not depend on illumination (see Fig.~\ref{fig_Time}(b)), then Fe$_i$B$_s$ has not an influence on base lifetime.
 
 As a result, oxide precipitates are number one in SCR and base recombination.
 According to Murphy \emph{et al}.\cite{MurphySC2014,MurphyJAP2012},
