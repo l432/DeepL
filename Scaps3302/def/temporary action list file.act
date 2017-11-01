@@ -1,5 +1,5 @@
 
-Temperature :   300.00 K
+Temperature :   330.00 K
 Voltage :     0.0000 V
 Frequency :   1.0000e+06 Hz
 Number of points :   5
@@ -28,8 +28,8 @@ Secondworkpoint generation file :*.gen
 Secondworkpoint attenuation :   100.0000 %
 pause :  0
 IV_startV :     0.0000 V
-IV_stopV :     0.6000 V
-IV_points :  61
+IV_stopV :     0.5700 V
+IV_points :  58
 IV_increment :     0.010000 V
 IV_calculate :  1
 stop after Voc :  0

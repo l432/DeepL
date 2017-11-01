@@ -1,6 +1,6 @@
 
-> SCAPS 3.3.03 ELIS-UGent: Version scaps3303.exe, dated 14-07-2016, 11:10:12 Problem definition file
-> last saved by SCAPS: 	15-10-2017 at 15:28:24
+> SCAPS 3.3.03 ELIS-UGent: Version scaps3303.exe, dated 14-07-2016, 10:10:12 Problem definition file
+> last saved by SCAPS: 	01-11-2017 at 21:41:52
 > 
 > 
 > Comments (to be) included in the def file
@@ -45,10 +45,6 @@
 > 
 > > end of problem definition file
 > 
-> > end of problem definition file
-> 
-> > end of problem definition file
-> 
 convergence
 
 clamp_psi :  5.00e-01 units kT
@@ -63,7 +59,7 @@ clamp_meta :  1.00e-02 (rel.)
 usemetaclamping : 0
 maxiter : 10000
 defectdiscretisations :     7
-widthtail :  2.00e+00
+widthtail :  2.00e-02
 widthgauss :  6.00e+00
 QE calculation mode:  1 (0: cst. # of photons, 1: cst. incident power)
 number of photons :  3.00e+22
@@ -112,7 +108,7 @@ mu_p :	 4.500000e-02	 5.000000e-03	 1.000000e-03	 1.000000e+00	 1.000000e+00	 4.
 K_rad :	 1.800000e-21	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 1.800000e-21	 1.800000e-21	 1	 0	[m^3/s]
 c_n_auger :	 3.000000e-43	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 3.000000e-43	 3.000000e-43	 1	 0	[m^
 c_p_auger :	 3.000000e-43	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 3.000000e-43	 3.000000e-43	 1	 0	[m^
-Na(uniform) :	 1.640000e+21	 1.640000e+21	 1.000000e+01	 1.000000e+01	 1.000000e+01	 1.640000e+21	 1.640000e+21	 0	 2	[
+Na(uniform) :	 1.000000e+22	 1.000000e+22	 1.000000e+01	 1.000000e+01	 1.000000e+01	 1.000000e+22	 1.000000e+22	 0	 2	[
 Nd(uniform) :	 0.000000e+00	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 0.000000e+00	 0.000000e+00	 0	 2	[
 absorption grading :	 1107.12	 1033.31	  250.00	  250.00	    0.00	    1.20	    1.20	 7	 0	[nm]
 absorptionmodel pure A material (y=0) : from file
@@ -125,7 +121,7 @@ srhrecombination
 
 type : neutral ( 1 level(s) )
 energy distribution : single
-Reference for defect energy :  2 ; 0 = above EV (SCAPS<2.7); 1 = above Ei; 2 = below EC
+Reference for defect energy :  0 ; 0 = above EV (SCAPS<2.7); 1 = above Ei; 2 = below EC
 Ekar :  0.1000 [eV]
 Nt(uniform) :	 1.000000e+20	 1.000000e+20	 1.000000e+20	 1.000000e+00	 1.000000e+00	 1.000000e+20	 1.000000e+20	 0	 2	[
 profile : homogenous
@@ -133,9 +129,9 @@ Lkar : 1.000e+00 [m]
 Nleft : 1.000e+20 [/m^3]
 Nright : 1.000e+20 [/m^3]
 leveltype : neutral	
-sigma_n : 2.500e-19	[m^2]
-sigma_p : 5.500e-19	[m^2]
-Et :   0.260	[eV]
+sigma_n : 3.600e-19	[m^2]
+sigma_p : 7.000e-21	[m^2]
+Et :   0.394	[eV]
 
 interface properties
 
