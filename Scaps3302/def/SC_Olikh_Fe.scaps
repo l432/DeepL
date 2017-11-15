@@ -1,15 +1,15 @@
 > SCAPS 3.3.03 ELIS-UGent: Version scaps3303.exe, dated 14-07-2016, 10:10:12
-> SCAPS All SCAPS Settings file, saved on 	01-11-2017 at 21:41:51
+> SCAPS All SCAPS Settings file, saved on 	15-11-2017 at 21:49:03
 > problem definition file loaded :
 > d:\Samples\DeepL\Scaps3302\def\SC_Olikh_Fe.scaps
-> last saved: 	01-11-2017 at 21:41:51
+> last saved: 	15-11-2017 at 21:49:03
 > 
 
 
 >> begin of problem definition file
 
 > SCAPS 3.3.03 ELIS-UGent: Version scaps3303.exe, dated 14-07-2016, 10:10:12 Problem definition file
-> last saved by SCAPS: 	01-11-2017 at 21:41:52
+> last saved by SCAPS: 	15-11-2017 at 21:49:04
 > 
 > 
 > Comments (to be) included in the def file
@@ -41,6 +41,8 @@
 > No doping type nor extrinsic doping is set! (NA = ND = 1E10/cm3 = about ni)
 > 
 > Should be OK for low doped silicon. For higher doping, the mobilities should be set to an appropriate lower value; th
+> 
+> > end of problem definition file
 > 
 > > end of problem definition file
 > 
@@ -213,8 +215,8 @@ spectrum file :old AM1_5G 1 sun.spe
 spectrum cut off :  0
 short wavelength cut off :   200.00 nm
 long wavelength cut off :  4000.00 nm
-neutral density :     0.0000
-transmission :   100.0000 %
+neutral density :    -0.6990
+transmission :   500.0000 %
 generation file :*.gen
 attenuation :   100.0000 %
 Secondworkpoint Temperature :   300.00 K
@@ -232,8 +234,8 @@ Secondworkpoint generation file :*.gen
 Secondworkpoint attenuation :   100.0000 %
 pause :  0
 IV_startV :     0.0000 V
-IV_stopV :     0.5700 V
-IV_points :  58
+IV_stopV :     0.6200 V
+IV_points :  63
 IV_increment :     0.010000 V
 IV_calculate :  1
 stop after Voc :  0
