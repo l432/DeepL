@@ -9,8 +9,8 @@ spectrum file :old AM1_5G 1 sun.spe
 spectrum cut off :  0
 short wavelength cut off :   200.00 nm
 long wavelength cut off :  4000.00 nm
-neutral density :     0.0000
-transmission :   100.0000 %
+neutral density :    -0.6990
+transmission :   500.0000 %
 generation file :*.gen
 attenuation :   100.0000 %
 Secondworkpoint Temperature :   300.00 K
@@ -28,8 +28,8 @@ Secondworkpoint generation file :*.gen
 Secondworkpoint attenuation :   100.0000 %
 pause :  0
 IV_startV :     0.0000 V
-IV_stopV :     0.5700 V
-IV_points :  58
+IV_stopV :     0.6200 V
+IV_points :  63
 IV_increment :     0.010000 V
 IV_calculate :  1
 stop after Voc :  0

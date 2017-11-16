@@ -1,6 +1,6 @@
 
 > SCAPS 3.3.03 ELIS-UGent: Version scaps3303.exe, dated 14-07-2016, 10:10:12 Problem definition file
-> last saved by SCAPS: 	01-11-2017 at 21:41:52
+> last saved by SCAPS: 	15-11-2017 at 21:49:04
 > 
 > 
 > Comments (to be) included in the def file
@@ -32,6 +32,8 @@
 > No doping type nor extrinsic doping is set! (NA = ND = 1E10/cm3 = about ni)
 > 
 > Should be OK for low doped silicon. For higher doping, the mobilities should be set to an appropriate lower value; th
+> 
+> > end of problem definition file
 > 
 > > end of problem definition file
 > 
