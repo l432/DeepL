@@ -94,7 +94,7 @@ whereas neutrons mainly create vacancy clusters, \cite{Rew:Srour,Pintilie} disor
 Our work presents distinctions between AI effects in silicon structures with different RDs.
 The intensity of US applied was insufficient for a new defect formation, RD annealing or long distance (a many interatomic distance) diffusion.
 As a result, the complete recovery of characteristics was observed after AW propagation had stopped.
-To describe the processes in space charge region (SCR) and in the diode base as well as to study shunt resistance, we used the models of coupled defect level recombination,\cite{CDLR:JAP1995,CDLR:JAP} Shockley--Read--Hall (SRH) recombination and dislocation--induced impedance,\cite{Rsh:Gopal2003,Rsh:Gopal2004} respectively. 
+To describe the processes in space charge region (SCR) and in the diode base as well as to study shunt resistance, we used the models of coupled defect level recombination,\cite{CDLR:JAP1995,CDLR:JAP} Shockley--Read--Hall (SRH) recombination and dislocation--induced impedance,\cite{Rsh:Gopal2003,Rsh:Gopal2004} respectively.
 The observed AI phenomena are accounted for in terms of defect interaction with AW strain field.\cite{MirzadeJAP2011,PeleshchakUJF2016}
 Our research not only provides a better understanding of ADI but could also facilitates the development of acoustically controlled devices or radiation sensors.
 
@@ -451,8 +451,8 @@ However, it should be taken into account, that the displacement of the point def
 Finally, no US  absorption by defect is assumed.
 In this simple case, $\delta$ is equal to $0^\circ$ if $(\Delta\Omega_d^\mathtt{D}\cdot\Delta\Omega_d^\mathtt{A})>0$,
 or to $180^\circ$ if $(\Delta\Omega_d^\mathtt{D}\cdot\Delta\Omega_d^\mathtt{A})<0$.
-In addition, $\varepsilon_{\mathtt{RDA}}$ depends on
-$|u_\mathtt{D}-u_\mathtt{A}|$ ($\delta=0^\circ$ case) or $|u_\mathtt{D}+u_\mathtt{A}|$ ($\delta=180^\circ$ case).
+In addition, $\varepsilon_{\mathtt{RDA}}$ exclusively depends on
+$|u_\mathtt{D}-u_\mathtt{A}|$ (in $\delta=0^\circ$ case) or $|u_\mathtt{D}+u_\mathtt{A}|$ (in $\delta=180^\circ$ case).
 Moreover, these dependences are identical in both cases.
 The typical results of simulation of coupling parameter changes are shown in  Fig.~\ref{fig_Erda}.
 
@@ -479,9 +479,6 @@ $K_\mathtt{US}^\mathtt{DA}$ characterizes defect couple--ultrasound interaction 
 Eq.~(\ref{eqEpsSig}) takes into account that $u_\mathtt{D},u_\mathtt{A}\propto \xi_\mathtt{US}\propto\sqrt{W_\mathtt{US}}$.
 
 
-% Thus, the axis of donor--acceptor pair with ( ΔΩ_d D ΔΩ_d  A>0)  should be predominantly parallel to dislocation line, whereas the axis of a pair of coupled defects with ΔΩ_d D ΔΩ_d  A<0 should make a right angle with dislocation line. As AW displacement is parallel to p-n junction plane, the cases of the most exciting interest are the following:
-
-
 It is worth keeping in mind that
 CDLR current flows locally in the locations of extended defects.\cite{CDLR:JAP,CDLR:SSP}
 At the same time, the dislocations are often located perpendicularly to $p-n$ junction plane in the SCR region,
@@ -506,7 +503,7 @@ Taking into account the experimental results and the estimation suggested by our
 (i)~$E_{\tau g}$ and $T_{\mathrm{id}}$ are mainly determined by couple component energy levels.
 The alteration of $E_{\tau g}$ and $T_{\mathrm{id}}$ for nSC, g6SC, and g7SC in comparison with iSC testifies to the change of defect (donor, acceptor, or both)
 which take part in CDLR after irradiation.
-g6SC defect is coincident to g7SC defect and differs from neutron--irradiated sample defect.
+g6SC defects are coincident to g7SC defects and differs from neutron--irradiated sample defect.
 
 \noindent
 (ii)~USL causes donor--acceptor distance change and results in $\varepsilon_{\sigma}$ and $\varepsilon_{\mathtt{RDA}}$,
@@ -521,7 +518,7 @@ Similar AI defect variations were also reported previously.\cite{Wosinski,Ostape
 \noindent
 (iv)~$\varepsilon_{\sigma}$ sign is immutable --- see Eq.~(\ref{eqEpsSig}),
 whereas $\varepsilon_{\mathtt{RDA}}$ sign can vary for the pair with opposite relaxation volume component (see Fig.~\ref{fig_Erda}).
-Therefore change of $\Delta n_{\mathrm{id}}$ and $\varepsilon_{\tau g}$ sign is the evidence of transformation
+Therefore, change of $\Delta n_{\mathrm{id}}$ and $\varepsilon_{\tau g}$ sign is the evidence of transformation
 from $(\Delta\Omega_d^\mathtt{D}\cdot\Delta\Omega_d^\mathtt{A}>0)$  to
 $(\Delta\Omega_d^\mathtt{D}\cdot\Delta\Omega_d^\mathtt{A}<0)$  after irradiation.
 The transformation is confirmed by the enhanced efficiency of US action on defects in irradiated samples.
@@ -557,7 +554,7 @@ In fact,  the irradiation induced lifetime reduction is described by the Messeng
 \tau_n^{-1}=\tau_{n0}^{-1}+K_\tau\Psi\,,
 \end{equation}
 where $\tau_{n0}$ is the minority carrier lifetime in non--irradiated sample
-and $K_\tau$ is a lifetime damage--constant.
+and $K_\tau$ is a lifetime damage constant.
 The known $K_\tau$ values and estimated changes of reciprocal base lifetime $K_\tau\Psi$ are shown in Table~\ref{tabTAUn}.
 As seen from the table, the estimated value of radiation--induced $\tau_n^{-1}$ change comprises ($8\div17$), 4, and 29~\% of
 the values measured for samples nSC, g6SC and g7SC, respectively, so this cannot explain the dispersion observed experimentally.
@@ -678,7 +675,7 @@ It can be caused by aluminum particles, macroscopic Si$_3$N$_4$ inclusions or in
 In the course of firing, Al particle can penetrate into the sample creating $p^+$--doped region around it, which compensates the emitter and remains in ohmic contact with the base.
 Inversion layers and Si$_3$N$_4$ inclusions occur mainly in multicrystalline silicon cells \cite{Rsh:Breitenstein} and cannot cause shunt resistance in the investigated samples.
 Dislocations, however, which intersect the junction, are generally held responsible as a possible source of ohmic current.\cite{Rsh:Breitenstein,TAT:Gopal,Rsh:Baker}
-In our opinion, both aluminum particles and dislocations are present in the investigated structure,
+In our opinion, both aluminum particles and dislocations are present in the investigated structures,
 so the overall shunt resistance can be expressed as
 \begin{equation}
 \label{eqRshFull}
@@ -704,7 +701,6 @@ R_{sh,\mathtt{dis}}=\frac{T}{\sigma_{\mathtt{dis}}}\left[\cosh\left(\frac{E_\mat
 with
 \begin{equation}
 \label{eqRdis}
-%\sigma_{\mathtt{dis}}=\rho_{\mathtt{dis}}Aq^2A_{\mathtt{dis}}\sqrt{K_nK_p}\,N_{\mathtt{dis}}(n_p+p_p)k^{-1}\,,
 \sigma_{\mathtt{dis}}=\rho_{\mathtt{dis}}Aq^2A_{\mathtt{dis}}\sqrt{K_nK_p}\,N_{\mathtt{dis}}(n_p+p_p)/k\,,
 \end{equation}
 where
@@ -771,7 +767,7 @@ Filled, semi--filled and open marks correspond to sample before annealing, after
 \end{figure}
 
 
-Intensive light is known\cite{LIDRev,LIDRev2} to cause permanent transformation of BO defects and considerable decrease of minority--carrier lifetime as low as 10~\% of initial value at long term illumination).
+Intensive light is known\cite{LIDRev,LIDRev2} to cause permanent transformation of BO defects and considerable decrease of minority--carrier lifetime (as low as 10~\% of initial value at long term illumination).
 Annealing at 200~$^\circ$C for $10$~min in the darkness results in both recovery of state and readiness to light--induced degradation of BO defects.
 Fig.~\ref{fig_Illum} shows the changes of structure parameters in comparison with those prior to illumination.
 As seen from the figure, illumination does not result in considerable permanent change of $\tau_g$, $\tau_n$, $n_{\mathrm{id}}$ before as well as after annealing.
@@ -817,14 +813,14 @@ Thus, a conclusion can be made that oxide precipitates are number one agents in 
 According to Murphy \emph{et al}.\cite{MurphySC2014,MurphyJAP2012},
 there exist at least two independent oxide precipitate related defects.
 These defects have $\sigma_n/\sigma_p=157$ and $\sigma_p/\sigma_n=1200$ respectively,\cite{MurphyJAP2012} which is suitable for CDLR.
-These facts allow us to conclude that the defect responsible for AI phenomena in nSC is mainly oxide precipitate.
+These facts allow us to conclude that the defect responsible for AI phenomena in iSC is mainly oxide precipitate.
 
 In foreseeing RD type, it is worth keeping in mind doping level, oxygen concentration and irradiation dose.
 In our case (Czochralski, oxygen--rich, $\sim7\cdot10^{17}$~cm$^{-3}$, $p$--Si with boron concentration $\sim10^{15}$~cm$^{-3}$ and low dose)
 it is expected that C$_i$O$_i$, vacancy clusters V$_n$ (divacancy V$_2$, trivacancy V$_3$, ...) and VO$_i$
 are produced mainly by neutron irradiation \cite{n:long,n:gamma,Moll:PhD}
 while C$_i$O$_i$ and  VO$_i$ --- by $\gamma$--rays.\cite{gamma:Stahl,Moll:PhD,gamma:Kolk,A:Caracas}
-The RD concentration $N_{t,\mathtt{RD}}$ linearly depend on dose,
+The RD concentration $N_{t,\mathtt{RD}}$ linearly depends on dose,
 the known introduction rate for neutron $\eta_n$ and gamma $\eta_\gamma$ irradiation in Cz--Si are shown in Table~\ref{tabDefect}.
 The expected values of $N_{t,\mathtt{RD}}$ for the investigated samples are listed in Table~\ref{tabDefect} as well.
 
@@ -859,7 +855,7 @@ The influence of RD on base lifetime could be estimated by Eq.~(\ref{eqTAUSHRsum
 VO$_i$ is a recombination center which is not active in $p$--Si.\cite{gamma:Kolkov,IrrCzpSi:Benton,IrrCzpSi:Coffa,IrrCzpSi:Ganagona,IrrCzpSi:Vines}
 The estimated $\tau_{n,\mathtt{RD}}$ for C$_i$O$_i$, V$_2$, and  V$_3$ are shown in Table~\ref{tabDefect}.
 As seen from the table,  $\tau_n$ is effected mainly by C$_i$O$_i$ in $\gamma$--irradiated samples and by vacancy clusters in nSC.
-It should be noted, that nSC, g6SC, g7SC sums of $\tau_{n,\mathtt{RD}}$ are in quite good agreement with $(K_\tau\cdot\Psi)$ values.
+It should be noted, that nSC, g6SC, g7SC sums of $\tau_{n,\mathtt{RD}}^{-1}$ are in quite good agreement with $(K_\tau\cdot\Psi)$ values.
 
 We shall now consider $K_\mathtt{US}^\mathtt{eff}$ for non--irradiated sample assuming $M_d^\mathtt{AA}=1$ and $M_d^\mathtt{nonAA}=1$.
 We shall also assume that US interactions with C$_i$O$_i$ and V$_n$ are described by $K_\mathtt{US}^\mathtt{CO}$ and $K_\mathtt{US}^\mathtt{V}$, respectively.
@@ -897,7 +893,7 @@ $K_\mathtt{US}^\mathtt{CO}=0$.
 Since $(\tau_{n,in}^\mathtt{AA})^{-1}<1.83$, $K_\mathtt{US}^\mathtt{AA}>5$~cm$^2$/W.
 Thus, the observed change in base lifetime is caused by AI modification of the same defect (most likely oxide precipitates) in
 both non--irradiated and $\gamma$--irradiated samples.
-This effect is enhanced by alteration of AI divacancy in neutron--irradiated samples.
+This effect is enhanced by AI alteration of divacancy in neutron--irradiated samples.
 In other words, C$_i$O$_i$ is non--AA defect, whereas V$_2$ is AA defect.
 
 
