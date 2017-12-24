@@ -1,0 +1,39 @@
+% Data of Hall-Effect Measurement
+% Version Information: Version 1.50 (2003/8/19)
+% Original file: E:\Files\temp\Example\Si\nSi2.nT
+% Experimental data file: E:\Files\Program\Builder\Hall\FCCSWin\FCCSWin1_5_0\Example\Si\nSi1.nT
+% Name of measurement: Matsuura Laboratory
+% Date of measurement: 2003/8/19
+% Name of analysis: Matsuura Laboratory
+% Date of Analysis: 2003/8/19
+% Sample number: nSi1
+% Semiconductor: CdTe
+% Conduction type: n-type
+% Sample thickness [micron]: 0
+% Magnetic Field [T]: 0
+% Current [A]: 0
+% Number of data: 30
+% Experimental Data (Polycrystalline Thin FIlm deposited by CVD)
+% Temperature [K]   Majority-Carrier Concentration [cm^-3]   Reliability   
+77	7.12E16	1
+85	7.22E16	1
+90	7.3E16	1
+95	7.41E16	1
+100	7.52E16	1
+110	7.94E16	1
+120	8.27E16	1
+130	8.72E16	1
+140	9.05E16	1
+150	9.46E16	1
+160	9.82E16	1
+170	1.02E17	1
+180	1.07E17	1
+190	1.11E17	1
+200	1.16E17	1
+210	1.227E17	1
+220	1.3E17	1
+230	1.39E17	1
+240	1.45E17	1
+250	1.532E17	1
+260	1.583E17	1
+270	1.64E17	1

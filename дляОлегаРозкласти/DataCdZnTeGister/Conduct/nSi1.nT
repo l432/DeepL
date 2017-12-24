@@ -1,0 +1,47 @@
+% Data of Hall-Effect Measurement
+% Version Information: Version 1.50 (2003/8/19)
+% Original file: E:\Files\temp\Example\Si\nSi2.nT
+% Experimental data file: E:\Files\Program\Builder\Hall\FCCSWin\FCCSWin1_5_0\Example\Si\nSi1.nT
+% Name of measurement: Matsuura Laboratory
+% Date of measurement: 2003/8/19
+% Name of analysis: Matsuura Laboratory
+% Date of Analysis: 2003/8/19
+% Sample number: nSi1
+% Semiconductor: Si
+% Conduction type: n-type
+% Sample thickness [micron]: 0
+% Magnetic Field [T]: 0
+% Current [A]: 0
+% Number of data: 30
+% Experimental Data (Polycrystalline Thin FIlm deposited by CVD)
+% Temperature [K]   Majority-Carrier Concentration [cm^-3]   Reliability   
+71.1     1.37e+14     1
+72.1     1.51e+14     1
+77.1     1.96e+14     1
+81     2.27e+14     1
+85.5     2.66e+14     1
+90.5     2.99e+14     1
+95.8     3.63e+14     1
+101.6     4e+14     1
+107.6     4.58e+14     1
+114.5     5.11e+14     1
+119.8     5.12e+14     1
+128.7     5.94e+14     1
+138.9     6.44e+14     1
+150.9     7e+14     1
+169.3     7.48e+14     1
+186.9     7.94e+14     1
+209     8.4e+14     1
+236.6     8.73e+14     1
+250.9     8.8e+14     1
+252.8     8.88e+14     1
+259.3     8.92e+14     1
+264.4     9.01e+14     1
+269.4     9.07e+14     1
+271.9     9.02e+14     1
+274.9     9.18e+14     1
+280.7     9.29e+14     1
+286.6     9.39e+14     1
+292.9     9.57e+14     1
+299.3     9.92e+14     1
+320.4     1.13e+15     1

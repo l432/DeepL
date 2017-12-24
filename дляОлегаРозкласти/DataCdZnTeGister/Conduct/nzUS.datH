@@ -1,0 +1,21 @@
+Free Carrier Concentration Spectroscopy (Automatic Evaluation Version)
+% Version Information:     Version 1.7.1 (2017/8/23)
+ Function Type:  H(T,Eref)=n(T)^2*exp(Eref/kT)/(kT)^2.5
+Sample Number:             nSi1
+Semiconductor:             CdTe
+Conduction Type:           n-type
+Original File:             E:\Files\temp\Example\Si\nSi2.nT
+File of Experimental Data: D:\Samples\DeepL\дл€ќлега–озкласти\DataCdZnTeGister\Conduct\nzUS.nT
+Data File for Analysis:    D:\Samples\DeepL\дл€ќлега–озкласти\DataCdZnTeGister\Conduct\nzUS.spl
+Fermi Level File:          D:\Samples\DeepL\дл€ќлега–озкласти\DataCdZnTeGister\Conduct\nzUS.fl
+H1 File:                   D:\Samples\DeepL\дл€ќлега–озкласти\DataCdZnTeGister\Conduct\nzUS.H1
+H2 File:                   
+H3 File:                   
+Obtained Results
+First Density:                   2,29E+17 cm^-3
+First Energy Level:              0,0114 eV
+Second Density:                  0,00E+00 cm^-3
+Second Energy Level:             0,0000 eV
+Third Density:                   0,00E+00 cm^-3
+Third Energy Level:              0,0000 eV
+Conpensating Density:            0,00E+00 cm^-3
