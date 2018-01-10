@@ -389,7 +389,7 @@ $\tau_g$ temperature dependence is expected \cite{TAUg:Schroder,TAUg:Aharoni} to
 \begin{equation}
   \tau_g\simeq2\,\tau_n\sqrt{\sigma_n/\sigma_p}\cosh\left[\left(E_t-E_i\right)/kT\right]
 \end{equation}
-where 
+where
 $\sigma_n$, $\sigma_p$, and  $E_t$ are the electron and hole capture cross sections (CCSs) and the energy  level of  the  recombination  center,
 and $E_i$  is the  intrinsic  energy level.
 In our case, $n_{\mathrm{id}}$ is greater than 2, and $\tau_g$ increases with temperature.
@@ -423,14 +423,6 @@ $N_{\mathtt{D}}$ and $N_{\mathtt{A}}$ are the densities of donor and acceptor--l
 $\sigma_{n}^{\mathtt{D}}$ and $\sigma_{p}^{\mathtt{A}}$ are the electron CCS of the donor and hole CCS of the acceptor,
 $\upsilon_{\mathrm{th},n}$ and $\upsilon_{\mathrm{th},p}$ are the thermal electron and hole velocities,
 $n_{\mathtt{D,A}}$, $p_{\,\mathtt{D,A}}$, and $\epsilon$ depend on $E_t^{\mathtt{D}}$, $E_t^{\mathtt{A}}$, and level degeneracy  factors.
-Unfortunately, the equation does not account for the functional relation between $J$--$V$ characteristics parameters and attributes of defects taking part in CDLR.
-Since $\tau_g\propto R^{-1}$, the $n_{\mathtt{D,A}}$, $p_{\,\mathtt{D,A}}$, and $\epsilon$ are expected to provide a thermoactivated behavior of SCR lifetime.
-In our opinion, the value of $E_{\tau g}$ is mainly determined by the donor and acceptor level position,
-whereas the value  of $T_\mathrm{id}$ is affected by $N_\mathtt{D}$ and $N_\mathtt{A}$ too.
-Hence, data in Fig.~\ref{figDUS} and Table~\ref{tabParam} show that 
-(i)~the same defects are take part in the SCR recombination in both the SC15 and SC4,
-but defect concentrations in the samples are different;
-(ii)~UL does not result in the  modification of the level position as well as defect concentration.
 
 According to Steingrube \emph{et al}. \cite{CDLR:JAP},
 CCS for defect in a pair differs from that for an isolated defect and depends on the distance $r$ between the donor and the acceptor:
@@ -447,9 +439,25 @@ R_{\mathtt{DA}} (r) \propto N_{\mathtt{D}}N_{\mathtt{A}}\left[1+\frac{r}{a_0}+\f
    e^{-r/a_0}\,.
 \end{equation}
 
+
+Unfortunately, the equation does not account for the functional relation between $J$--$V$ characteristics parameters and attributes of defects taking part in CDLR.
+However, it is shown \cite{CDLR:JAP1995,CDLR:SSP} that $n_{\mathrm{id}}$ increases with the decrement in $R_{\mathtt{DA}}$.
+Since $\tau_g\propto R^{-1}$, the $n_{\mathtt{D,A}}$, $p_{\,\mathtt{D,A}}$, and $\epsilon$ are expected to provide a thermoactivated behavior of SCR lifetime.
+In our opinion, the value of $E_{\tau g}$ is mainly determined by by couple component energy levels,
+whereas the value  of $T_\mathrm{id}$ is affected by $N_\mathtt{D}$ and $N_\mathtt{A}$ too.
+Hence,
+%data in Fig.~\ref{figDUS} and Table~\ref{tabParam} show that
+(i)~same defects are take part in the SCR recombination in both  SC15 and SC4 because the $E_{\tau g}$ values are identical;
+(ii)~the defect concentrations in SC15 and SC4 are different because the $T_\mathrm{id}$, $\tau_{g,in}$, and $n_{\mathrm{id},in}$ values
+are different;
+%the SC4 defect concentration is greater and  donor--acceptor distance is less than those in SC15 because the SC4 $\tau_{g,in}$ and $n_{\mathrm{id},in}$ values are less;
+(iii)~UL does not result in the  modification of the level position as well as defect concentration because the $E_{\tau g}$ and $T_\mathrm{id}$ values are not affected.
+
+
+
 In our opinion, the observed reversible AI modifications of $n_{\mathrm{id}}$ and $\tau_g$ are induced by
-donor--acceptor distance alteration in the samples under USL.
-In fact, according to the data,\cite{MirzadeJAP2011,PeleshchakUJF2016} the force acting on a point defect during USL can be expressed as
+donor--acceptor distance alteration in the samples under UL.
+In fact, according to the data \cite{MirzadeJAP2011,PeleshchakUJF2016}, the force acting on a point defect during UL can be expressed as
 \begin{equation}
 \label{eqFd}
 F_d=\chi\,\Delta\Omega_d\frac{\partial \xi(x,t)}{\partial x}\,,
@@ -477,7 +485,7 @@ The simplest model, which is shown in Fig.~\ref{figModel}, gives the following  
 Initially, the donor (D) and the acceptor (A) are separated by the distance $r_{in}$.
 Under UL, the defects would vibrate with amplitudes $u_\mathtt{D}$ and $u_\mathtt{A}$.
 Depending on $\xi_{U\!S}$, defect elastic strain ($\Delta\Omega_d^\mathtt{D}$ and $\Delta\Omega_d^\mathtt{A}$), and defect coupling the defect vibration amplitudes can have different values.
-The vibration axis coincides with AW displacement direction and forms angle $\varphi$ with  the line, which passes the defect initial positions.
+The vibration axis coincides with AW displacement direction and forms angle $\varphi$ with  the line, which passes throw the defect initial positions.
 $\delta$ is the phase shift between donor and acceptor vibration.
 
 
@@ -510,37 +518,20 @@ In this estimation, the relaxation time in the CDLR sub--system is assumed to be
 and we apply the previously used \cite{CDLR:JAP} value $a_0=3.23$~nm.
 In addition, the chosen $u_\mathtt{D}$ and $u_\mathtt{A}$ values are commensurate with $u_\mathtt{US}$.
 However, it should be taken into account that the displacement of the point defect without the covalent bond could exceed a matrix atom displacement.
-Finally, no US  absorption by the defect is assumed.
-In this simple case, $\delta$ is equal to $0^\circ$ if $(\Delta\Omega_d^\mathtt{D}\cdot\Delta\Omega_d^\mathtt{A})>0$
-or to $180^\circ$ if $(\Delta\Omega_d^\mathtt{D}\cdot\Delta\Omega_d^\mathtt{A})<0$.
-In addition, $\varepsilon_{\mathtt{RDA}}$ exclusively depends on
-$|u_\mathtt{D}-u_\mathtt{A}|$ (in the $\delta=0^\circ$ case) or $|u_\mathtt{D}+u_\mathtt{A}|$ (in the $\delta=180^\circ$ case).
-Moreover, these dependences are identical in both cases.
-Relative changes of CCS depend on oscillation amplitudes with similar features and
-do not depend on $\varphi$:
-\begin{equation}
-\label{eqEpsSig}
-\varepsilon_{\sigma}=(u_\mathtt{D}\pm u_\mathtt{A})^2/2\,r_{in}^2=K_\mathtt{US}^\mathtt{DA}W_{\mathtt{US}}\,,
-\end{equation}
-where``$+$'' and ``$-$'' correspond to $\delta=180^\circ$ and $\delta=0^\circ$, respectively,
-$K_\mathtt{US}^\mathtt{DA}$ characterizes the defect couple--ultrasound interaction and depends on properties defects as well as crystal matrix.
-Equation~(\ref{eqEpsSig}) takes into account that $u_\mathtt{D},u_\mathtt{A}\propto \xi_\mathtt{US}\propto\sqrt{W_\mathtt{US}}$.
 
 
+Fig.~\ref{figR2L}(a) show that the UL leads to the increase in SSC.
+The AI alteration of coupling parameter is more complicated --- see Fig.~\ref{figR2L}(b).
+In particular, the decrease in $R_{\mathtt{DA}}$ is expected in case of $\varphi\approx90^\circ$ [the couple axis is perpendicular to the AW displacement direction, see Fig.~\ref{figLnew}(b)] or in case of low $r_{in}/a_0$ value [see Fig.~\ref{figLnew}(a)].
+In the lat case, the intensive CDLR is expected \cite{CDLR:JAP1995,CDLR:JAP}.
+%Besides, simulations show that the US influence increases with decrease in $r_{in}$.
 
+Thus, according to the our model estimation,
+UL causes the donor–-acceptor distance change and results in $\varepsilon_{\sigma}$ and $\varepsilon_{\mathtt{RDA}}$,
+which mainly depend on lattice deformation.
+According to the CDLR theory,  the increase in the SSC and decrease in the coupling parameters should lead to the decrease in the carrier lifetime and increase in the ideality factor.
+It was observed in the experiment.
 
-Simulations show that the extent of ultrasound influence on both $r_{DA}$ and $\sigma$ increases with $r_0$ decrease.
-
-
-Fig.~\ref{figR2L}(a) and Eq.~(\ref{eqEpsSig}) show that the capture cross section increases under USL condition.
-AI alteration of coupling parameter is more complicated and sign of $\varepsilon_{r_{DA}}$ depends on $\varphi$ and $r_0$ - see Figs.~\ref{figR2L}(b) and \ref{figLnew}.
-But in the case of low $r_0/a_0$ value, CDLR recombination is expected \cite{CDLR:JAP1995,CDLR:JAP} to be effective and the AI $r_{DA}$ reduction is forecasted by Fig.~\ref{figLnew} even through  $\varphi=0^\circ$.
-
-According to the CDLR recombination theory,  $\sigma$ increase and $r_{DA}$ decrease must cause a lifetime reduction and an ideality factor rise.
-Just so effects are observed under USL condition.
-Under equal $W_{{U\!S}}$ value conditions T--USL is more effective due to the larger $\varepsilon_{U\!S}$ value (see Table~\ref{tabUSL}).
-As mentioned above, the $r_0$ is probably smaller in SC--R15 than in SC--R4.
-On our opinion, it is a reason of the more remarkable AI effect in SC--R15.
 
 \subsection{Ultrasound influence on recombination in the SSC base \label{P2}}
 
@@ -583,6 +574,28 @@ Symbol filling is defined by the intensity and type of ultrasound waves and coin
 Lines are linear fitting of T--USL data.
 }%
 \end{figure}
+
+
+
+
+Finally, no US  absorption by the defect is assumed.
+In this simple case, $\delta$ is equal to $0^\circ$ if $(\Delta\Omega_d^\mathtt{D}\cdot\Delta\Omega_d^\mathtt{A})>0$
+or to $180^\circ$ if $(\Delta\Omega_d^\mathtt{D}\cdot\Delta\Omega_d^\mathtt{A})<0$.
+In addition, $\varepsilon_{\mathtt{RDA}}$ exclusively depends on
+$|u_\mathtt{D}-u_\mathtt{A}|$ (in the $\delta=0^\circ$ case) or $|u_\mathtt{D}+u_\mathtt{A}|$ (in the $\delta=180^\circ$ case).
+Moreover, these dependences are identical in both cases.
+Relative changes of CCS depend on oscillation amplitudes with similar features and
+do not depend on $\varphi$:
+\begin{equation}
+\label{eqEpsSig}
+\varepsilon_{\sigma}=(u_\mathtt{D}\pm u_\mathtt{A})^2/2\,r_{in}^2=K_\mathtt{US}^\mathtt{DA}W_{\mathtt{US}}\,,
+\end{equation}
+where``$+$'' and ``$-$'' correspond to $\delta=180^\circ$ and $\delta=0^\circ$, respectively,
+$K_\mathtt{US}^\mathtt{DA}$ characterizes the defect couple--ultrasound interaction and depends on properties defects as well as crystal matrix.
+Equation~(\ref{eqEpsSig}) takes into account that $u_\mathtt{D},u_\mathtt{A}\propto \xi_\mathtt{US}\propto\sqrt{W_\mathtt{US}}$.
+
+
+
 
 Ordinary the lifetime reduction under radiation action is described by the Messenger–-Spratt equation \cite{Markvart}:
 \begin{equation}
