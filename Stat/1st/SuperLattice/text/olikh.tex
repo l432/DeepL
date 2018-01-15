@@ -120,14 +120,14 @@ $f_\mathtt{US}$&wave&$W_{\mathtt{US}}$&$\xi_{\mathtt{US}}$&$u_{\mathtt{US}}$&UL&
 It was reported previously \cite{Ostapenko1995,Olikh:Ultras,Ostrovskii2001} that the characteristic time of change in silicon structure parameters under
 the US action  did not exceed $2\times10^3$~s.
 In order to wait until the AI transitional period is competed, the following experimental procedure was used.
-When USL started, the sample was first exposed to room temperature for 60~min and then the measurement and the sample heating were started.
+When UL started, the sample was first exposed to room temperature for 60~min and then the measurement and the sample heating were started.
 In order to avoid the effect of piezoelectric field on both the measurements and sample parameters, the transducer was shielded.
 The more details about the experimental setup are presented elsewhere \cite{Olikh:Ultras}.
 
 
 \subsection{Current--voltage measurements and SSC parameters determination}
 
-The dark and illuminated forward current--voltage ($J$--$V$) characteristics of the samples both with and without USL were measured over a temperature range of 290--340~K.
+The dark and illuminated forward current--voltage ($J$--$V$) characteristics of the samples both with and without UL were measured over a temperature range of 290--340~K.
 The temperature was controlled by differential copper--constantan thermocouple.
 Some of the obtained curves are shown in Fig.~\ref{figIV}.
 
@@ -636,112 +636,112 @@ Therefore, according to Eq.~(\ref{eqEpsSig}), the more effective US influence is
 
 \begin{figure}
 \begin{center}
-\includegraphics[width=7.5cm]{olikhFig10}%
+\includegraphics[width=7.5cm]{olikhFig9}%
 \end{center}
 \caption{\label{figDUS_Rsh}
-Plot of $R_{sh}$ as the function of $kT$ for the SC--R4 with and without USL.
+Temperature dependences of shunt resistance for SC4, obtained with and without (open marks) UL.
 %$W_{U\!S}$,W/cm$^2$: 0.18 (2), 0.22 (3), 0.40 (4).
-Lines are the fitted curves using Eq.~(\ref{eqRsh})
+The marks are the experimental results, and the lines are the fitted curves using Eq.~(\ref{eqRsh})
 }%
 \end{figure}
 
-Fig.~\ref{figDUS_Rsh} illustrates $R_{sh}$ modification for the sample under USL condition.
-One can see that the T--USL leads to moderate $R_{sh}$ decrease whereas the L--USL does not change shunt resistance practically.
+Fig.~\ref{figDUS_Rsh} shows the  shunt resistance  over the explored temperature range.
+As seen from the figure, the tUS results in a decrease in $R_{sh}$ whereas the lUL does not change shunt resistance practically.
+The calculated data are listed in Tables~\ref{tabParam} and \ref{tabAIEfect}.
 
-
-Several non-mechanical reasons of SSC shunt resistance appearance are known \cite{Rsh:Breitenstein}.
-They are aluminum particles, macroscopic Si$_3$N$_4$ inclusions, inversion layers at precipitates.
-During firing Al will alloy in, leading to a p$^+$--doped region around the particle, which may compensate the emitter and may be in ohmic contact with the
-base.
-Subsequent annealing had to increase this p$^+$--region and to decrease $R_{sh}$.
-Such behavior  conflicts with data, which are presented on Sec.~\ref{P3}.
-Inversion layers and Si$_3$N$_4$ inclusions occur in multicrystalline silicon cells mainly \cite{Rsh:Breitenstein} and cannot cause a shunt resistance of the investigated samples too.
-On the other hand, dislocations, which intersect the junction, are generally held responsible as a possible source of ohmic current \cite{Rsh:Breitenstein,TAT:Gopal,Rsh:Baker}.
+The shunt resistance is known\cite{Rsh:Breitenstein} to occur in $p$--$n$ structure due to several non--mechanical reasons.
+It can be caused by aluminum particles, macroscopic Si$_3$N$_4$ inclusions, or inversion layers at precipitates.
+In the course of firing, the Al particle can penetrate into the sample creating $p^+$--doped region around it, which compensates the emitter and remains in ohmic contact with the base.
+Subsequent annealing should decrease $R_{sh}$,
+but this expected behavior  conflicts with data, which are presented therein after, in Sec.~\ref{P3}.
+Inversion layers and Si$_3$N$_4$ inclusions occur mainly in multicrystalline silicon cells \cite{Rsh:Breitenstein} and cannot cause shunt resistance in the investigated samples.
+Dislocations, however, which intersect the junction, are generally held responsible as a possible source of ohmic current.\cite{Rsh:Breitenstein,TAT:Gopal,Rsh:Baker}
 Dislocations should be strongly recombinative, its recombination current may become strong enough for it to act as a shunt.
 For this reason they should be decorated by impurities \cite{Rsh:Breitenstein}.
 
-Gopal and Gupta \cite{Rsh:Gopal2003,Rsh:Gopal2004} introduced the model of dislocation--induced impedance of photovoltaic detector.
-According to this model, the $R_{sh}$ can be given by
+
+According to the model of dislocation--induced impedance of photovoltaic detector suggested by Gopal and Gupta,\cite{Rsh:Gopal2003,Rsh:Gopal2004}
+$R_{sh}$ can be given by:
 \begin{equation}
 \label{eqRsh}
-R_{sh}=kTR_{dis}\,\cosh\left(\frac{E_{dis}-E_i+U_s}{2kT}\right)\cosh\left(\frac{E_{dis}-E_i-U_s}{2kT}\right)\,,
+R_{sh}=\frac{T}{\sigma_{\mathtt{dis}}}\left[\cosh\left(\frac{E_\mathtt{dis}-E_i}{kT}\right)+\cosh\left(\frac{U_s}{kT}\right)\right]\,,
 \end{equation}
 with
 \begin{equation}
 \label{eqRdis}
-R_{dis}^{-1}=\rho_{dis}Aq^2A_{dis}\sqrt{K_nK_p}N_{dis}(n_p+p_p)\,,
+\sigma_{\mathtt{dis}}=\rho_{\mathtt{dis}}A^2q^2A_{\mathtt{dis}}\sqrt{K_nK_p}\,N_{\mathtt{dis}}(n_p+p_p)/k\,,
 \end{equation}
-%
-%\begin{eqnarray}
-%\nonumber
-%R_{sh}&=&\frac{kT\cosh\left(\frac{E_{dis}-E_i+U_s}{2kT}\right)\cosh\left(\frac{E_{dis}-E_i-U_s}{2kT}\right)}{\rho_{dis}Aq^2A_{dis}\sqrt{K_nK_p}N_{dis}(n_p+p_p)}\\
-%\label{eqRsh}
-%&=&R_{sh,0}kT\cosh\left(\frac{E_{dis}-E_i+U_s}{2kT}\right)\cosh\left(\frac{E_{dis}-E_i-U_s}{2kT}\right)\,,
-%\end{eqnarray}
 where
-$E_{dis}$ is the energy level which significantly contributes to the dislocation recombination current,
-$E_i$ is the intrinsic Fermi level,
+$E_{\mathtt{dis}}$ is the energy level which significantly contributes to the dislocation recombination current,
 $U_s$ is the potential at the surface of the dislocation core,
-$\rho_{dis}$ and $A_{dis}$ are the dislocation density and surface area, respectively,
-$K_n$ and $K_p$ are the capture probabilities for electrons and holes by the dislocation states,
-$N_{dis}$ is the density of surface states at each dislocation.
-Eq.~(\ref{eqRsh}) is reduced for the simplified case $K_p=K_n$.
+$A$ is the sample area,
+$\rho_{\mathtt{dis}}$ and $A_{\mathtt{dis}}$ are the dislocation density and surface area, respectively,
+$K_n$ and $K_p$ are the probabilities for electrons and holes capture by the dislocation states,
+and $N_{\mathtt{dis}}$ is the density of surface states at each dislocation.
+Equation~(\ref{eqRsh}) is true for the simplified case of $K_p=K_n$.
 It should be noted that a similar temperature dependence of a SSC shunt resistance is used elsewhere \cite{RshT} too.
 
-We use Eq.~(\ref{eqRsh}) to fit the experimental $R_{sh}$ data.
-$(E_{dis}-E_i)$, $U_s$ and $R_{dis}$ are taken as the fitting parameters.
-It was established that the good agreement of the experimental data with the fitting curves has been observed (see Fig.~\ref{figDUS_Rsh}) for values $(E_{dis}-E_i)=(0.34\pm0.02)$~eV and $U_s=(5\pm4)\times10^{-8}$~eV, which were independent of USL.
-The obtained value $(E_{dis}-E_i)$ corresponds to the carrier activation energy $E_a\simeq 0.5E_g-(E_{dis}-E_i)\simeq 0.22$~eV, which is comparable to the values reported by other researcher.
-Thus activation energies $0.22\div0.25$~eV \cite{Edis:Evans}, $0.28$~eV \cite{Edis:Castaldini}, $0.19$~eV \cite{Edis:Omling} and $0.23$~eV \cite{Edis:Ogawa}  are associated with an impurity at the dislocation or with an intrinsic dislocstion levels.
 
-%are in quite good agreement with
-The $R_{dis}$ value decreases in the T--USL case and its relative changes $\varepsilon_{Rdis}$ are shown in Table~\ref{tabAIEfect}.
-On our opinion this is caused by an augmentation of  $A_{dis}$ in Eq.~(\ref{eqRdis}).
-The dislocation core atom displacement  is  parallel and normal to the  current direction in the  L--USL  case and T--USL case respectively.
-As the result, in the T--USL case carriers are captured by dislocation levels from enlarged volume.
-It induces the effective surface area increase and the shunt resistance decrease.
+To fit the experimental data for $R_{sh}$, we used Eq.~(\ref{eqRsh}).
+As the fitting parameters, $(E_{\mathtt{dis}}-E_i)$, $U_s$, and $\sigma_{\mathtt{dis}}$ were taken.
+It has been found that the experimental data are in good agreement with the fitting curves (see Fig.~\ref{figDUS_Rsh}) for values $(E_{\mathtt{dis}}-E_i)=(0.34\pm0.02)$~eV and $U_s=(5\pm4)\times10^{-8}$~eV, which were independent of UL.
+The obtained value of $(E_{\mathtt{dis}}-E_i)$ corresponds to the carrier activation energy $0.22\pm0.02$~eV and
+is comparable with the
+$0.22\div0.25$~eV \cite{Edis:Evans}, $0.28$~eV \cite{Edis:Castaldini}, $0.19$~eV \cite{Edis:Omling}, and $0.23$~eV \cite{Edis:Ogawa},
+which was earlier reported for an impurity at the dislocation or with an intrinsic dislocation level.
+
+tUL causes  $\sigma_{\mathtt{dis}}$ increase.
+In our opinion, this is caused by an $A_\mathtt{dis}$ augmentation.
+Namely, the dislocation core atom displacement  is  parallel or normal to the  current direction in case of lUL or tUL, respectively.
+As a result, the carriers are captured by dislocation levels from enlarged volume in the tUL case.
+Therefore, the effective surface area increases and $R_{sh}$ decreases due to US action.
 
 
 \subsection{Open--circuit voltage and fill factor simulation\label{P4}}
 
 
-To show $V_{oc}$ and $FF$ dependencies on $\tau_n$, $n_\mathrm{id}$, $\tau_g$, and $R_{sh}$ we have simulated $J$--$V$ characteristics at different parameters value by using Eqs.~(\ref{eqIV}) and (\ref{eqIph}).
-The values, that are close to investigated SSCs parameters, are used for simulation.
-The results are shown on Figures \ref{figVoc} and \ref{figFF}.
+In order to visualize  dependencies of the open--circuit voltage and fill factor on $\tau_n$, $n_\mathrm{id}$, $\tau_g$, and $R_{sh}$, the following procedure was used.
+Firstly, we used Eqs.~(\ref{eqIV})--(\ref{eqIph}) to  simulated $J$--$V$ characteristics taking the various values of $\tau_g$, $\tau_n$, $n_{\mathrm{id}}$, and $R_{sh}$.
+The parameters values, which are close to those of investigated SSCs, are used in simulation.
+Secondly, $V_{oc}$ and $F\!F$ were estimated from the obtained $J$--$V$ curves by the conventional mode.
+The results are shown in Figures \ref{figVoc} and \ref{figFF}.
 
 
 \begin{figure}
 \begin{center}
-\includegraphics[width=15cm]{olikhFig12ab}%
+\includegraphics[width=14cm]{olikhFig10}%
 \end{center}
 \caption{\label{figVoc}
-Simulated open--circuit voltage dependencies on SCR carrier lifetime and base  carrier lifetime (a) and on ideality factor and shunt resistance (b).
-The constant values $n=2.55$ (a), $R_{sh}=5\cdot10^3$~$\Omega$ (a), $\tau_n=3\cdot10^{-6}$~s (b), $\tau_g=5\cdot10^{-8}$~s (b), and $T=320$~K were used.
+Simulated open--circuit voltage dependencies on the SCR lifetime and base lifetime (a), and on the ideality factor and shunt resistance (b).
+The constant values $n=2.55$ (a), $R_{sh}=5\times10^3$~$\Omega$ (a), $\tau_n=3\times10^{-6}$~s (b), $\tau_g=5\times10^{-8}$~s (b), and $T=320$~K were used.
 }%
 \end{figure}
 
 
 \begin{figure}
 \begin{center}
-\includegraphics[width=15cm]{olikhFig13ab}%
+\includegraphics[width=14cm]{olikhFig11}%
 \end{center}
 \caption{\label{figFF}
-Simulated fill factor dependencies on SCR carrier lifetime and base  carrier lifetime (a) and on ideality factor and shunt resistance (b).
-The constant values $n=2.55$ (a), $R_{sh}=5\cdot10^3$~$\Omega$ (a), $\tau_n=3\cdot10^{-6}$~s (b), $\tau_g=5\cdot10^{-8}$~s (b), and $T=320$~K were used.
+Simulated fill factor dependencies on the SCR carrier lifetime and base  carrier lifetime (a), and on the ideality factor and shunt resistance (b).
+The constant values $n=2.55$ (a), $R_{sh}=5\times10^3$~$\Omega$ (a), $\tau_n=3\times10^{-6}$~s (b), $\tau_g=5\times10^{-8}$~s (b), and $T=320$~K were used.
 }%
 \end{figure}
 
-One can see on Figs.~\ref{figVoc}(a) and \ref{figFF}(a) that $\tau_g$ decrease should lead to a decrement of both $V_{oc}$ and $FF$.
-At the same time the open--circuit voltage and the fill factor dependencies on $\tau_n$ are weak for the investigated SSC.
-Figures~\ref{figVoc}(b) and \ref{figFF}(b) show that the $n_\mathrm{id}$ as well as $R_{sh}$ influence on $V_{oc}$ and $FF$ depends substantially on shunt resistance value.
-Thus if $R_{sh}>10^5$~$\Omega$ (SC--R15 case) then $V_{oc}$ increases with an ideality factor increment and both $V_{oc}$ and $FF$ don't depend on shunt resistance value practically.
-Whereas if $R_{sh}\leq10^4$~$\Omega$ (SC--R4 case) then  the open--circuit voltage and the fill factor decrease with shunt resistance decrement, but $FF$ only depends on $n_\mathrm{id}$ weakly.
+As seen from the Figures~\ref{figVoc}(a) and \ref{figFF}(a),
+the $\tau_g$ decrease leads to the decrease in both $V_{oc}$ and $F\!F$.
+At the same time, the open--circuit voltage and fill factor dependencies on the base lifetime are weak for the investigated SSCs.
+Figs.~\ref{figVoc}(b) and \ref{figFF}(b) show that 
+$V_{oc}$ and $FF$ are affected by the both $n_\mathrm{id}$ and $R_{sh}$,
+and the effect value considerably depends on shunt resistance value.
+For instance, $V_{oc}$ increases with the increase in the ideality factor and both $V_{oc}$ and $FF$ does not almost depend on the shunt resistance value if $R_{sh}>10^5$~$\Omega$ (in the SC15 case).
+At the same time,  the open--circuit voltage and fill factor decrease with decrease in the shunt resistance, and only $F\!F$ weakly depends on $n_\mathrm{id}$ if  $R_{sh}\leq10^4$~$\Omega$ (in the SCR4 case).
 
-Thereby the discussed above AI decrease of $\tau_g$ leads to degradation of open--circuit voltage and the fill factor in the USL case.
-This effect is enhanced by AI $R_{sh}$ decrease in the SC--R4 and is recovered partially by AI $n_\mathrm{id}$ increase in the SC--R15.
 
-\subsection{Light and annealing influence on the SSC parameters
-\label{P3}}
+Therefore the discussed above decrease in $\tau_g$ leads to AI degradation of the both open--circuit voltage and fill factor.
+This effect is enhanced by the AI decrease in $R_{sh}$ and partially recovered by the AI increase in $n_\mathrm{id}$ for SC4 and SC15, respectively.
+
+\subsection{Illumination and annealing influence\label{P3}}
 
 Any concrete defect title was not referred as an recombination center in the discussion above.
 The additional investigations are necessary to define the type of defects, which are involved in both the recombination and the acousto--defect interaction.
@@ -787,7 +787,7 @@ The reason of light induced and annealing induced changes  will not be further d
 
 \begin{figure}
 \begin{center}
-\includegraphics[width=15cm]{olikhFig8abcd}%
+\includegraphics[width=15cm]{olikhFig12}%
 \end{center}
 \caption{\label{figLight}
 Dependencies of SCR carrier lifetime (a), ideality factor (b), base  carrier lifetime (c), and shunt resistance (d) on accumulated illumination time and annealing.
@@ -811,7 +811,7 @@ Hence, on our opinion, the pair Fe$_i$B$_s$ is not main reason of a SCR recombin
 
 \begin{figure}
 \begin{center}
-\includegraphics[width=7.5cm]{olikhFig9abcd}%
+\includegraphics[width=7.5cm]{olikhFig13}%
 \end{center}
 \caption{\label{figAfter}
 SCR carrier lifetime (a), ideality factor (b), base  carrier lifetime (c), and shunt resistance (d) as a function of time since illumination stoping.
