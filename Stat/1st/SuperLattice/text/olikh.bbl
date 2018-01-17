@@ -429,21 +429,6 @@ J.~D. Murphy, K.~Bothe, M.~Olmo, V.~V. Voronkov, R.~J. Falster, The effect of
 \newblock \href {http://dx.doi.org/10.1063/1.3632067}
   {\path{doi:10.1063/1.3632067}}.
 
-\bibitem{Kim}
-M.~Kim, M.~Abbott, N.~Nampalli, S.~Wenham, B.~Stefani, B.~Hallam, Modulating
-  the extent of fast and slow boron-oxygen related degradation in {C}zochralski
-  silicon by thermal annealing: {E}vidence of a single defect, J. Appl. Phys.
-  121~(5) (2017) 053106.
-\newblock \href {http://dx.doi.org/10.1063/1.4975685}
-  {\path{doi:10.1063/1.4975685}}.
-
-\bibitem{LID:BothePP}
-K.~Bothe, R.~Sinton, J.~Schmidt, Fundamental boron--oxygen-related carrier
-  lifetime limit in mono- and multicrystalline silicon, Progress in
-  Photovoltaics: Research and Applications 13~(4) (2005) 287--296.
-\newblock \href {http://dx.doi.org/10.1002/pip.586}
-  {\path{doi:10.1002/pip.586}}.
-
 \bibitem{FeB:Vahanissi}
 V.~Vahanissi, A.~Haarahiltunen, H.~Talvitie, M.~Yli-Koski, H.~Savin, Impact of
   phosphorus gettering parameters and initial iron level on silicon solar cell
@@ -458,20 +443,6 @@ J.~Schmidt, Effect of dissociation of iron--boron pairs in crystalline silicon
   Applications 13~(4) (2005) 325--331.
 \newblock \href {http://dx.doi.org/10.1002/pip.594}
   {\path{doi:10.1002/pip.594}}.
-
-\bibitem{TeimurazPSS}
-T.~Mchedlidze, J.~Weber, Iron--related carrier traps near the n$^+$p--junctions
-  of crystalline silicon solar cells: impacts of feedstock and of the
-  fabrication processes, phys. stat. sol. (b) 251~(8) (2014) 1608--1613.
-\newblock \href {http://dx.doi.org/10.1002/pssb.201451021}
-  {\path{doi:10.1002/pssb.201451021}}.
-
-\bibitem{TeimurazJAP}
-T.~Mchedlidze, L.~Scheffler, J.~Weber, M.~Herms, J.~Neusel, V.~Osinniy,
-  C.~Moller, K.~Lauer, Local detection of deep carrier traps in the pn-junction
-  of silicon solar cells, Appl. Phys. Lett. 103~(01) (2013) 013901.
-\newblock \href {http://dx.doi.org/10.1063/1.4807142}
-  {\path{doi:10.1063/1.4807142}}.
 
 \bibitem{MurphySC2014}
 J.~Murphy, J.~McGuire, K.~Bothe, V.~Voronkov, R.~Falster, Minority carrier
@@ -504,5 +475,48 @@ L.~Chen, X.~Yu, P.~Chen, P.~Wang, X.~Gu, J.~Lu, D.~Yang, Effect of oxygen
   Energy Mater. Sol. Cells 95~(11) (2011) 3148--3151.
 \newblock \href {http://dx.doi.org/10.1016/j.solmat.2011.06.044}
   {\path{doi:10.1016/j.solmat.2011.06.044}}.
+
+\bibitem{Oxide:Porrini}
+M.~Porrini, P.~Tessariol, Minority carrier lifetime of p--type silicon
+  containing oxygen precipitates: influence of injection level and precipitate
+  size/density, Materials Science and Engineering B 73~(1--3) (2000) 244--249.
+\newblock \href {http://dx.doi.org/10.1016/S0921-5107(99)00472-9}
+  {\path{doi:10.1016/S0921-5107(99)00472-9}}.
+
+\bibitem{Wijaranakula}
+W.~Wijaranakula, The reaction kinetics of iron-boron pair formation and
+  dissociation in p--type silicon, J. Etectrochem. Soc. 140~(1) (1993)
+  275--281.
+\newblock \href {http://dx.doi.org/10.1149/1.2056102}
+  {\path{doi:10.1149/1.2056102}}.
+
+\bibitem{Kim}
+M.~Kim, M.~Abbott, N.~Nampalli, S.~Wenham, B.~Stefani, B.~Hallam, Modulating
+  the extent of fast and slow boron-oxygen related degradation in {C}zochralski
+  silicon by thermal annealing: {E}vidence of a single defect, J. Appl. Phys.
+  121~(5) (2017) 053106.
+\newblock \href {http://dx.doi.org/10.1063/1.4975685}
+  {\path{doi:10.1063/1.4975685}}.
+
+\bibitem{LID:BothePP}
+K.~Bothe, R.~Sinton, J.~Schmidt, Fundamental boron--oxygen-related carrier
+  lifetime limit in mono- and multicrystalline silicon, Progress in
+  Photovoltaics: Research and Applications 13~(4) (2005) 287--296.
+\newblock \href {http://dx.doi.org/10.1002/pip.586}
+  {\path{doi:10.1002/pip.586}}.
+
+\bibitem{TeimurazPSS}
+T.~Mchedlidze, J.~Weber, Iron--related carrier traps near the n$^+$p--junctions
+  of crystalline silicon solar cells: impacts of feedstock and of the
+  fabrication processes, phys. stat. sol. (b) 251~(8) (2014) 1608--1613.
+\newblock \href {http://dx.doi.org/10.1002/pssb.201451021}
+  {\path{doi:10.1002/pssb.201451021}}.
+
+\bibitem{TeimurazJAP}
+T.~Mchedlidze, L.~Scheffler, J.~Weber, M.~Herms, J.~Neusel, V.~Osinniy,
+  C.~Moller, K.~Lauer, Local detection of deep carrier traps in the pn-junction
+  of silicon solar cells, Appl. Phys. Lett. 103~(01) (2013) 013901.
+\newblock \href {http://dx.doi.org/10.1063/1.4807142}
+  {\path{doi:10.1063/1.4807142}}.
 
 \end{thebibliography}

@@ -209,6 +209,15 @@ The last relation was obtained from $J$--$V$ curves fitting --- see Sec.~\ref{P2
 Thus, $L_n$ and $\tau_n$ can be obtained from the both single $J$--$V$ curve and $J_{sc}$ temperature dependence.
 To to separate the second case values, the subscript ``$ph$'' was used: $L_n^{ph}$, $\tau_n^{ph}$, $\varepsilon_{\tau n}^{ph}$ etc.
 
+\subsection{Defect structure modification\label{DSM}}
+To determine the major recombination centers in the investigated samples, the following experimental procedure was used after the AI effects investigation.
+The samples were light soaked under intensive illumination by a halogen lamp (2 Suns) at approximately 305~K.
+The illumination time varied from 1~h to 8~h.
+After illumination was terminated, the sample was exposed to room temperature in the darkness.
+Over 5~h period, dark $J$--$V$ characteristics were measured with the interval of 10--15 min in order to determine the kinetics of the parameters at room temperature.
+To estimate the permanent light--induced change, the measurements of  dark $J$--$V$ characteristics were performed in 48~h after illumination.
+After the total time under intensive illumination ran up to 15~h, the samples were annealed at 200~$^\circ$C for $10$~min in darkness,  after which the measurements were carried out at room temperature.
+Then, the illumination and measurements were repeated.
 
 \subsection{Fitting procedure}
 
@@ -221,7 +230,7 @@ The least--squares method was used to linear fitting.
 \section{Results and Discussion}
 \subsection{Photo--electric conversion}
 The obtained temperature dependences of the the short--circuit current density, open--circuit voltage and the fill factor are shown in Fig.~\ref{figDUS_Isc}.
-The parameters values at 320~K are listed in Tab.~\ref{tabParam}.
+The parameters values at 320~K are listed in Table~\ref{tabParam}.
 It should be noted that not only $I_{sc}$ and $V_{oc}$ but also SSC efficiency, $F\!F$, and minority carrier lifetime
 decreases under low--intensity light conditions \cite{LI:Ruhle,LI:Reich,LI:lifetime}.
 Hence, data in Fig.~\ref{figDUS_Isc} and Table~\ref{tabParam} are not equivalent to the standard test condition (AM1.5, $25^{\circ}$C, 1000~W/m$^2$) results,
@@ -731,7 +740,7 @@ The constant values $n=2.55$ (a), $R_{sh}=5\times10^3$~$\Omega$ (a), $\tau_n=3\t
 As seen from the Figures~\ref{figVoc}(a) and \ref{figFF}(a),
 the $\tau_g$ decrease leads to the decrease in both $V_{oc}$ and $F\!F$.
 At the same time, the open--circuit voltage and fill factor dependencies on the base lifetime are weak for the investigated SSCs.
-Figs.~\ref{figVoc}(b) and \ref{figFF}(b) show that 
+Figs.~\ref{figVoc}(b) and \ref{figFF}(b) show that
 $V_{oc}$ and $FF$ are affected by the both $n_\mathrm{id}$ and $R_{sh}$,
 and the effect value considerably depends on shunt resistance value.
 For instance, $V_{oc}$ increases with the increase in the ideality factor and both $V_{oc}$ and $FF$ does not almost depend on the shunt resistance value if $R_{sh}>10^5$~$\Omega$ (in the SC15 case).
@@ -741,72 +750,55 @@ At the same time,  the open--circuit voltage and fill factor decrease with decre
 Therefore the discussed above decrease in $\tau_g$ leads to AI degradation of the both open--circuit voltage and fill factor.
 This effect is enhanced by the AI decrease in $R_{sh}$ and partially recovered by the AI increase in $n_\mathrm{id}$ for SC4 and SC15, respectively.
 
-\subsection{Illumination and annealing influence\label{P3}}
-
-Any concrete defect title was not referred as an recombination center in the discussion above.
-The additional investigations are necessary to define the type of defects, which are involved in both the recombination and the acousto--defect interaction.
-
-It is known that the most harmful recombination centers in boron--doped Czochralski--grown SSC are the  boron--oxygen related defects \cite{MurphyJAP2011,Kim,LID:BothePP,LIDRev}, iron--boron pairs \cite{MurphyJAP2011,FeB:Vahanissi,FeB:Schmidt} (or another Fe--related trap in the $n^+p$--junctions \cite{TeimurazPSS,TeimurazJAP}), and oxide precipitates \cite{MurphySC2014,Oxide_Schon,MurphyJAP2011,MurphyJAP2012,Oxide:Chen}.
-The first two defects are sensitive to an intensive illumination at room temperature.
-Thus transformation of boron--oxygen defects by an illumination leads to minority--carrier lifetime degradation (down to as 5 times as small \cite{LIDRev}).
-Full lifetime recovery is observed after annealing at 200~$^\circ$C for $10$~min in the dark.
-The degradation--recovery cycle can be reiterated \cite{Kim}.
-On the other hand, at room temperature, the vast majority of iron exists in iron--boron pairs, which can be readily dissociated under intense illumination to release interstitial iron.
-This gives a lifetime change which depends on doping concentration and excess carrier concentration \cite{FeB:Schmidt}.
-After the dissociation procedure, the concentration of Fe$_i$ decreases according to \cite{MurphyJAP2011}
+\subsection{Defect type discussions\label{P3}}
+It is known that main lifetime killers  in boron--doped Czochralski--grown Si are boron--oxygen related (BO) defects \cite{LIDRev,LIDRev2},
+iron--boron pairs \cite{MurphyJAP2011,FeB:Vahanissi,FeB:Schmidt},
+and oxide precipitates \cite{MurphySC2014,Oxide_Schon,MurphyJAP2011,MurphyJAP2012,Oxide:Chen,Oxide:Porrini}.
+The first two defects are sensitive to intensive illumination at room temperature.
+Intensive light is known \cite{LIDRev,LIDRev2} to cause permanent transformation of BO defects and considerable decrease of minority--carrier lifetime.
+Annealing at 200~$^\circ$C for $10$~min in the darkness results in both recovery of state and readiness to light--induced degradation of BO defects.
+At the same time, the vast majority of impurity iron exists in iron--boron pairs.
+Fe$_i$B$_s$ can be readily dissociated under intense illumination to release interstitial iron,
+which results in lifetime changes.
+In the darkness, Fe$_i$B$_s$ is repaired and Fe$_i$ concentration decreases according to \cite{MurphyJAP2011,Wijaranakula}
 \begin{equation}
 \label{eqFeB}
 N_{Fe}(t)=(N_{Fe,0}-N_{Fe,eq})\exp\left[-1.3\cdot10^{-3}p_p^{\,2/3}\exp\left(-\frac{0.68}{kT}\right)t\right]+N_{Fe,eq}\,,
 \end{equation}
 where
-$N_{Fe,0}$ and $N_{Fe,eq}$ are the concentration after dissociation immediately and equilibrium
-concentration which remains a long time after dissociation respectively.
+$N_{Fe,\,0}$ is the concentration immediately after illumination, and $N_{Fe,\,eq}$ is the equilibrium concentration which remains for a long time after dissociation.
 
-
-
-To inspect an availability of boron--oxygen defects and iron--boron pairs the following experimental procedure has been used.
-The samples were light soaked under halogen lamp (2 Suns) illumination at approximately 305~K.
-The illumination time varied from 1~h to 8~h.
-After illumination samples are stored in the dark at room temperature.
-To determine the kinetics of SSC parameters the dark $J$--$V$ characteristics have been measured with interval 10--15~min at room temperature over a period 5~h after illumination stopping.
-To determine the permanent LID of SSC parameters the dark $J$--$V$ characteristics have been measured in 48~h after illumination.
-After accumulated time under illumination had reached 10--15~h the samples were annealed at 200~$^\circ$C for $10$~min in the dark and SSC parameters were determined at room temperature.
-After that, the illumination--annealing cycle was repeated.
-
-The results of residual influence of both illumination and annealing on an equilibrium value of SSC parameters are presented on Fig.~\ref{figLight}.
-In contrast to other Figures, this contains sample SC--R3 data.
-The SC--R3 distinctive features are a low $R_{sh}$ value and a performance of annealing before illumination.
-Though the obtained results for SC--R3 are similar to other samples.
-One can see that the illumination does not affect a SCR carrier lifetime as well as a base carrier lifetime neither before annealing, nor after.
-Illumination induced decrease of ideality factor is commensurable with an accuracy of $n_\mathrm{id}$ determination.
-Change of shunt resistance under illumination is most considerable but it reaches $-20$~\% only and does not recur after an  annealing -- see Fig.~\ref{figLight}(d), curve for the sample SC--R4.
-Annealing had more efficient influence on SSC parameters and results in  an increment of $\tau_g$ and $R_{sh}$ as well as in a decrement of $\tau_n$ and $n_\mathrm{id}$.
-Such behavior of SSC parameters under illumination and annealing action is evident of absence of boron--oxygen defects influence.
-The reason of light induced and annealing induced changes  will not be further discussed since this is beyond scope of our study.
+To inspect a role of BO defects and iron--boron pairs in the investigated samples, the procedure, which is described in Section~\ref{DSM}, was used.
+Fig.~\ref{figLight} shows the permanent changes of SSC parameters as a result of the intensive illumination and annealing.
+In contrast to other, Fig.~\ref{figLight} shows sample SC3 data as well.
+The SC3 features are the low $R_{sh}$ value and the first $10$~min 200~$^\circ$C annealing before intensive illumination.
+As seen from the figure, illumination does not result in a considerable permanent change of $\tau_g$, $\tau_n$, and $n_{\mathrm{id}}$ before as well as after annealing.
+Therefore, the BO influence on recombination can be neglected  in both the SCR and the base.
 
 
 \begin{figure}
 \begin{center}
-\includegraphics[width=15cm]{olikhFig12}%
+\includegraphics[width=14cm]{olikhFig12}%
 \end{center}
 \caption{\label{figLight}
-Dependencies of SCR carrier lifetime (a), ideality factor (b), base  carrier lifetime (c), and shunt resistance (d) on accumulated illumination time and annealing.
-Data were obtained from $J$--$V$ curves which had measured in 48~h after illumination or annealing at $T=295$~K.
+Dependencies of SCR lifetime (a), ideality factor (b), base  lifetime (c), and shunt resistance (d) on accumulated illumination time and annealing.
 Lines only serve as guide to the eye.
 }%
 \end{figure}
 
-The typical dependencies of SSC parameters versus time since illumination stoping are shown on Fig.~\ref{figAfter}.
-As one can see, $\tau_n$ and $R_{sh}$ do not vary practically.
-Hence these parameters can not be influenced by iron--boron pairs.
-At the same time  $\tau_g$ and $n_\mathrm{id}$ are changing after illumination.
-We supposed that the expressions, that have described the both $\tau_g$ and $n_\mathrm{id}$ evolution, were similar to    Eq.~(\ref{eqFeB}) and used the characteristic time $\left[1.3\cdot10^{-3}(1.4\times10^{15})^{\,2/3}\exp\left(-\frac{0.68}{295k}\right)\right]^{-1}=2.53\cdot10^4$~s to plot fitting line on Figs.~\ref{figAfter}(a) and (b).
-The fitting is in good agreement with experimental data.
-Therefore pairs Fe$_i$B$_s$ can affect a SCR recombination and the acceptor level $E_C-0.23$~eV can be involved in a CDLR recombination process.
-Incidentally, pair Fe$_i$B$_s$ is a good candidate for acousto-active defect:
-the B is substitutional atom whose volume is smaller than the volume of the matrix atom and $\Delta\Omega_d (\mbox{B}_s)<0$ whereas the interstitial Fe leads to $\Delta\Omega_d (\mbox{Fe}_i)>0$.
-On the other hand, the  $\tau_g$ change after illumination is about 10~\% (see Fig.~\ref{figAfter}(a)), whereas a capture cross sections change, which is expected due to pair dissociation, equals to 1.7~times for electrons and 0.04~times for holes \cite{FeB:Schmidt}.
-Hence, on our opinion, the pair Fe$_i$B$_s$ is not main reason of a SCR recombination in the investigated samples.
+The parameter evolutions after intensive illumination are shown in Fig.~\ref{figAfter}. 
+Since $\tau_n$ does not depend on illumination [see Fig.~\ref{figAfter}(c)], Fe$_i$B$_s$ does not influence the base lifetime.
+It was found that $n_{\mathrm{id}}$ increased (by about 0.03) and $\tau_g$ decreased (by about 10~\%) immediately after illumination --- see Fig.~\ref{figAfter}(a, b).
+These changes vanished gradually.
+We supposed that $\tau_g$ and $n_{\mathrm{id}}$ evolutions could be described by expressions similar to Eq.~(\ref{eqFeB}).
+The expected characteristic time $2.53\times10^4$~s was used, and the fitting lines are presented on Fig.~\ref{figAfter}(a, b).
+The fittings with are in good agreement with the experimental data.
+Hence, it is evident that iron--boron pairs take part in SCR recombination and the acceptor level $E_C-0.23$~eV is involved in the CDLR.
+On the one hand, pair Fe$_i$B$_s$ is a good candidate for an AA center:
+the B is substitutional impurities whose ionic radius is smaller than that of matrix atoms
+$\Delta\Omega_d (\mbox{B}_s)<0$ whereas the interstitial Fe leads to $\Delta\Omega_d (\mbox{Fe}_i)>0$.
+On the second hand, electron and hole CCS of Fe$_i$ are 1.7 and 0.04 times \cite{MurphyJAP2011} as much as those of Fe$_i$B$_s$.
+A small $\tau_g$ alteration (by about 10~\%) caused by light is the evidence of the supporting role of iron--boron pair in SCR recombination.
 
 
 \begin{figure}
@@ -814,33 +806,31 @@ Hence, on our opinion, the pair Fe$_i$B$_s$ is not main reason of a SCR recombin
 \includegraphics[width=7.5cm]{olikhFig13}%
 \end{center}
 \caption{\label{figAfter}
-SCR carrier lifetime (a), ideality factor (b), base  carrier lifetime (c), and shunt resistance (d) as a function of time since illumination stoping.
-Sample SC--R4.
-$T=295$~K.
-Lines are plotted by using Eq.~(\ref{eqFeB}) and characteristic time $2.53\cdot10^4$~s.
+SCR lifetime (a), ideality factor (b), base  lifetime (c), and shunt resistance (d) as a function of time since illumination has stopped.
+Sample SC4.
+Lines are plotted by using Eq.~(\ref{eqFeB}) and characteristic time $2.53\times10^4$~s.
 }%
 \end{figure}
 
-
-According to Murphy \emph{et al}.\cite{MurphySC2014,MurphyJAP2012},
-the recombination at oxide precipitates cannot be explained by a single two--level defect alone and at least two independent defects are exist.
-These defects have single energy levels at $E_V+0.22$~eV and $E_C-0.08$~eV and have $\sigma_n/\sigma_p=157$ and $\sigma_p/\sigma_n=1200$ respectively \cite{MurphyJAP2012}.
-So, these defects are suitable for the CDLR recombination process.
-Dislocations and stacking faults surround  the oxide precipitates and lead to capture coefficient change as well as to increase the concentrations of two defects, without introducing additional states into the bandgap \cite{MurphySC2014,MurphyJAP2011,MurphyJAP2012} and can provide their acousto--activity.
-The oxide precipitates are nonuniformly distributed across a Cz--Si wafer \cite{Oxide_Schon} or a solar cell \cite{Oxide:Chen} and it is the probable reason for a SSC parameters variation from one investigated sample to another.
-On the basis of mentioned above, we conclude that the defects, involved in both recombination and acousto--defect interaction are oxide precipitates mainly.
+Thus, a conclusion can be made that oxide precipitates are number one agents in SCR and base recombinations.
+According to Murphy \emph{et al}.\cite{MurphySC2014,MurphyJAP2012}
+there exist at least two independent oxide precipitate related defects.
+These defects have $\sigma_n/\sigma_p=157$ and $\sigma_p/\sigma_n=1200$, respectively,\cite{MurphyJAP2012} which is suitable for CDLR.
+These facts allow us to conclude that the defect responsible for AI phenomena in iSC is mainly oxide precipitate.
+Dislocations and stacking faults surround  the oxide precipitates and lead to capture coefficient change as well as to increase the concentrations of two defects, without introducing additional states into the bandgap \cite{MurphySC2014,MurphyJAP2011,MurphyJAP2012} and assist to defects acousto--activity.
+The nonuniform distribution of oxide precipitates is observed in the Cz--Si wafer \cite{Oxide_Schon} and solar cell \cite{Oxide:Chen} and can be a reason of the investigated parameter variation.
+On the basis of mentioned above, we conclude that the defects, involved in the both recombination and acousto--defect interaction are oxide precipitates mainly.
 
 
 
 
 
 \section{Conclusion}
-The experimental investigation of ultrasound influence on the silicon solar cell has been carried out in the temperature range from 290 to 340~K.
-The investigation has revealed the acoustically driven reversible degradation of SSC parameters.
-It has been found out that the transverse ultrasound waves are more effective tools to affect silicon structure parameters than longitudinal ones.
-It has been given evidence that the degradation is due to the recombination amplification under the ultrasound wave action.
-The analysis has shown that the acoustically induced increase of carrier capture coefficient of point or extended defects is a reason of observed effects.
-The qualitative model of ultrasound influence, which is based on a change of a distance between defects or between components of defect complex under alternating deformation action, is proposed.
+The influence of ultrasound on the silicon solar cell  has been investigated experimentally over a temperature range of 290--340~K.
+The investigation has revealed an acoustically driven reversible degradation in SSC parameters.
+The effect is intensified in the case of the transverse acoustic waves using.
+The analysis has shown that degradation is caused by the acoustically induced increase in the carrier capture coefficient for point or extended defects.
+The qualitative model of the observed phenomenon, which is based on the increase in the distance between coupled defects or between complex defect components due to ultrasound action, has been considered.
 It has been shown that the oxide precipitates are most likely defects, which take part in the acousto--defect interaction.
 Thus, ultrasound can be an effective tool for controlling silicon structure characteristics.
 
