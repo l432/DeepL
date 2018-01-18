@@ -42,7 +42,7 @@ Gopal
 Solid State Physics Laboratory, Timarpur, Delhi
 110054, India
 sspl@ssplnet.org
-He has intriduced model of dislocation–induced impedance, which has been used in our manuscript.
+He has introduced model of dislocation–induced impedance, which has been used in our manuscript.
 (IEEE Trans Electron Devices 50(2003), 1220–1226; IEEE Trans Electron Devices 51(2004),1078–1083)
 
 
