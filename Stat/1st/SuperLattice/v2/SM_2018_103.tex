@@ -78,7 +78,7 @@ The observed AI phenomena are accounted for in terms of the defect interaction w
 The SSC was fabricated from 2~in. (300~$\mu$m thick) p--type boron doped Czochralski silicon wafer with $<$111$>$ orientation and a doping level of $1.4\times10^{15}$~cm$^{-3}$.
 The n$^+$ emitter with a carrier concentration of about $10^{19}$~cm$^{-3}$ and a thickness of 0.5~$\mu$m was formed by phosphorus implantation.
 The wafer surface was capped by the TiO$_x$ antireflective coating.
-The front and rear aluminium electrodes were deposited by screen printing before rapid annealing.
+The front grid and rear full area aluminium electrodes were deposited by screen printing before rapid annealing.
 %The samples used in the experiment were cut from the central part of the wafer and had the area of $2$~cm$^{2}$.
 %
 %The investigated samples mainly differed in the shunt resistance ($R_{sh}$) value.
@@ -91,11 +91,15 @@ These samples is labeled ``SC4'' and ``SC15'', respectively,  from now on.
 
 
 \subsection{Ultrasound loading}
-In case of ultrasound loading (UL), the transverse or longitudinal AWs, which were exited by using LiNbO$_3$ piezoelectric transducer,  were applied to the samples at the base side in the [111]--direction.
+In case of ultrasound loading (UL), the transverse or longitudinal AWs, 
+which were exited by using LiNbO$_3$ piezoelectric transducer,  were applied to the samples in the [111]--direction.
+The transducer was attached to a full--area Al back contact.
+The acoustic contact was made by using the gluten ``BF--6''.
 The US frequencies $f_\mathtt{US}$, intensities $W_{\mathtt{US}}$, amplitudes of lattice deformation $\xi_{\mathtt{US}}=\sqrt{2W_\mathtt{US}/\rho_\mathtt{Si}\,\vartheta_{\mathtt{US}}^3}$, and lattice atom
 displacements  $u_{\mathtt{US}}=\sqrt{W_\mathtt{US}/2\,\pi^2\,f_\mathtt{US}^2\,\rho_\mathtt{Si}\,\vartheta_{\mathtt{US}}}$ are listed in Table~\ref{tabUSL}.
 $\rho_{Si}=2.33$~g/m$^3$ is the silicon density,
 $\vartheta_{U\!S}$ is the US velocity, $9850$~m/s and $5840$~m/s in cases of longitudinal and transverse AWs, respectively.
+
 
 \begin{table}
 \caption{\label{tabUSL}The ultrasound loading parameters.
@@ -175,9 +179,11 @@ We used Eqs. (\ref{eqIV})--(\ref{eqW}) to fit the experimental data taking $\tau
 Also, we used the known \cite{ni:Green,Schroder2006,Markvart} temperature dependences of $n_i$, $E_g$, and $\mu_n$.
 As a result, we obtained extremely good fit to the experimental data --- see Fig.~\ref{figIV}.
 The parameters values, obtained from the dark and illuminated measurement at the same temperature and UL option, were identical practically.
+This concordance is quite expected at low illumination intensity \cite{Rs:BREITENSTEIN2013}.
 
 It is known that $J_{sc}\approx J_{ph}R_{sh}/(R_{sh}+R_{s})$.
-The value of $R_s$ was found to be about 2~$\Omega\cdot$cm$^2$, whereas $R_{sh}$ exceeded 4~k$\Omega\cdot$cm$^2$.
+Typical values for SSC $R_s$ are between 0,5 and 2~$\Omega\cdot$cm$^2$  \cite{Breitenstein2013,SCRs:Mette}.
+The value of $R_s$ was found to be about 1.5~$\Omega\cdot$cm$^2$, whereas $R_{sh}$ exceeded 4~k$\Omega\cdot$cm$^2$.
 Therefore it is expected that $J_{sc}\approx J_{ph}$.
 In fact, this relation was observed for the $J_{ph}$, which was obtained by fitting of whole of $J$--$V$ curve, and the $J_{sc}$, which was obtained as a point of intersection of a $J$--$V$ curve with a current axis.
 
@@ -232,10 +238,11 @@ The least--squares method was used to linear fitting.
 The obtained temperature dependences of the the short--circuit current density, open--circuit voltage and the fill factor are shown in Fig.~\ref{figDUS_Isc}.
 The parameters values at 320~K are listed in Table~\ref{tabParam}.
 It should be noted that not only $I_{sc}$ and $V_{oc}$ but also SSC efficiency, $F\!F$, and minority carrier lifetime
-decreases under low--intensity light conditions \cite{LI:Ruhle,LI:Reich,LI:lifetime}.
+decreases under low--intensity light conditions \cite{LI:Ruhle,LI:Reich,LI:lifetime,Breitenstein2013}.
 Hence, data in Fig.~\ref{figDUS_Isc} and Table~\ref{tabParam} are not equivalent to the standard test condition (AM1.5, $25^{\circ}$C, 1000~W/m$^2$) results,
 but illustrate the AI effects.
-
+Note that the yearly averaged energy yield of a solar panel,
+especially if operated in the middle Europe, strongly depends on its low light--level performance.
 
 
 
@@ -367,7 +374,7 @@ The values of $T_{\mathrm{id}}$ and $E_{\tau g}$ found for  samples under UL as 
 
 \begin{figure}
 \begin{center}
-\includegraphics[width=14cm]{olikhFig3}%
+\includegraphics[width=12cm]{olikhFig3}%
 \end{center}
 \caption{\label{figDUS}
 Temperature dependences of SCR carrier lifetime (a) and  ideality factor (b) for SC15 (curves 1--4, squares) and SC4 (5--8, circles).
@@ -379,6 +386,9 @@ curves 4 and 8 correspond to tULc.
 The marks are the experimental results, and the lines are the fitted curves using
 Eq.~(\ref{eq_TAUgT}) and $E_{\tau g}=0.24$~eV (a) or
 Eq.~(\ref{eq_nT}) and $T_\mathrm{id}=330$ or 230~K (b).
+Inset: Two examples of voltage dependences of differential ideality factor for SC15.
+The open marks are obtained without UL, full mark correspond to tULc.
+$T=335$~K.
 }%
 \end{figure}
 
@@ -418,8 +428,14 @@ The large ideality factor is attributed to the deep--level--assisted tunneling \
 But according to this model, the $n_\mathrm{id}$ does not depend on temperature.
 
 
-At the same time, all the observed features of SCR recombination can be explained by the model of coupled defect level recombination (CDLR) \cite{CDLR:JAP1995,CDLR:JAP,CDLR:SSP}.
-According to the CDLR model, the recombination is the result of carrier exchange between two defect levels and crystal bands.
+At the same time, all the observed features of SCR recombination can be explained by the model of coupled defect level recombination (CDLR) \cite{CDLR:JAP1995,CDLR:JAP,CDLR:SSP,CDLR:SupMicr,Breitenstein2013}.
+According to the CDLR model, the recombination is the result of carrier exchange between two defect levels and crystal bands;
+and the high ideality factor is due to saturation of the inter--level recombination channel, leading
+to a hump in the $n_\mathtt{id}^\mathtt{dif}=\frac{1}{kT}\frac{dV}{d(\ln I)}=f(V)$ characteristics. 
+Such hump is observed in the our case --- see inset in  Fig.~\ref{figDUS}(b).
+It was found that the magnitude and the position of this hump strongly depends
+on the energy positions and on the capture and inter--level
+recombination parameters of the two levels involved \cite{Breitenstein2013,CDLR:JAP}. 
 In particular, it is supposed \cite{CDLR:JAP} that the recombination rate is dominant at the sites where acceptor--like defect is coupled with donor-like defect.
 In a simplified case, when there is no carrier exchange between the donor level $E_t^{\mathtt{D}}$ and valence band,
 as well as between the acceptor level $E_t^{\mathtt{A}}$ and conduction band,
@@ -488,7 +504,7 @@ Therefore, a point defect vibrates under UL, so oscillation amplitude and phase 
 
 \begin{figure}
 \begin{center}
-\includegraphics[width=7.5cm]{olikhFig4}%
+\includegraphics[width=5.5cm]{olikhFig4}%
 \end{center}
 \caption{\label{figModel}
 Model of CDLR center behavior under US action.
@@ -658,13 +674,13 @@ Fig.~\ref{figDUS_Rsh} shows the  shunt resistance  over the explored temperature
 As seen from the figure, the tUS results in a decrease in $R_{sh}$ whereas the lUL does not change shunt resistance practically.
 The calculated data are listed in Tables~\ref{tabParam} and \ref{tabAIEfect}.
 
-The shunt resistance is known\cite{Rsh:Breitenstein} to occur in $p$--$n$ structure due to several non--mechanical reasons.
-It can be caused by aluminum particles, macroscopic Si$_3$N$_4$ inclusions, or inversion layers at precipitates.
+The shunt resistance is known\cite{Rsh:Breitenstein,Breitenstein2013} to occur in $p$--$n$ structure due to several non--mechanical reasons.
+It can be caused by aluminum particles, macroscopic Si$_3$N$_4$ inclusions, filaments consisting from cubic SiC, or inversion layers at precipitates.
 In the course of firing, the Al particle can penetrate into the sample creating $p^+$--doped region around it, which compensates the emitter and remains in ohmic contact with the base.
 Subsequent annealing should decrease $R_{sh}$,
 but this expected behavior  conflicts with data, which are presented therein after, in Sec.~\ref{P3}.
-Inversion layers and Si$_3$N$_4$ inclusions occur mainly in multicrystalline silicon cells \cite{Rsh:Breitenstein} and cannot cause shunt resistance in the investigated samples.
-Dislocations, however, which intersect the junction, are generally held responsible as a possible source of ohmic current.\cite{Rsh:Breitenstein,TAT:Gopal,Rsh:Baker}
+SiC filaments, inversion layers, and Si$_3$N$_4$ inclusions occur mainly in multicrystalline silicon cells \cite{Rsh:Breitenstein,Breitenstein2013} and cannot cause shunt resistance in the investigated samples.
+Dislocations, however, which intersect the junction, are generally held responsible as a possible source of ohmic current \cite{Rsh:Breitenstein,TAT:Gopal,Rsh:Baker}.
 Dislocations should be strongly recombinative, its recombination current may become strong enough for it to act as a shunt.
 For this reason they should be decorated by impurities \cite{Rsh:Breitenstein}.
 
@@ -696,7 +712,7 @@ As the fitting parameters, $(E_{\mathtt{dis}}-E_i)$, $U_s$, and $\sigma_{\mathtt
 It has been found that the experimental data are in good agreement with the fitting curves (see Fig.~\ref{figDUS_Rsh}) for values $(E_{\mathtt{dis}}-E_i)=(0.34\pm0.02)$~eV and $U_s=(5\pm4)\times10^{-8}$~eV, which were independent of UL.
 The obtained value of $(E_{\mathtt{dis}}-E_i)$ corresponds to the carrier activation energy $0.22\pm0.02$~eV and
 is comparable with the
-$0.22\div0.25$~eV \cite{Edis:Evans}, $0.28$~eV \cite{Edis:Castaldini}, $0.19$~eV \cite{Edis:Omling}, and $0.23$~eV \cite{Edis:Ogawa},
+$0.22\div0.25$~eV \cite{Edis:Evans}, $0.28$~eV \cite{disl10:Castaldini}, $0.19$~eV \cite{Edis:Omling}, and $0.23$~eV \cite{Edis:Ogawa},
 which was earlier reported for an impurity at the dislocation or with an intrinsic dislocation level.
 
 tUL causes  $\sigma_{\mathtt{dis}}$ increase.
@@ -740,6 +756,11 @@ The constant values $n=2.55$ (a), $R_{sh}=5\times10^3$~$\Omega$ (a), $\tau_n=3\t
 As seen from the Figures~\ref{figVoc}(a) and \ref{figFF}(a),
 the $\tau_g$ decrease leads to the decrease in both $V_{oc}$ and $F\!F$.
 At the same time, the open--circuit voltage and fill factor dependencies on the base lifetime are weak for the investigated SSCs.
+It should be noted that the $W_{ph}$ value from experiment  was used in simulation.
+If the cell is operated at reduced illumination intensity,
+then the open--circuit voltage and maximum power point voltage become lower.
+Hence the recombination current essentially influences $V_{oc}$ and fill factor
+in contrast to diffusion current \cite{Breitenstein2013}.
 Figs.~\ref{figVoc}(b) and \ref{figFF}(b) show that
 $V_{oc}$ and $FF$ are affected by the both $n_\mathrm{id}$ and $R_{sh}$,
 and the effect value considerably depends on shunt resistance value.
@@ -833,7 +854,6 @@ The analysis has shown that degradation is caused by the acoustically induced in
 The qualitative model of the observed phenomenon, which is based on the increase in the distance between coupled defects or between complex defect components due to ultrasound action, has been considered.
 It has been shown that the oxide precipitates are most likely defects, which take part in the acousto--defect interaction.
 Thus, ultrasound can be an effective tool for controlling silicon structure characteristics.
-
 
 
 \section*{References}
