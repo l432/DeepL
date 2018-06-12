@@ -19,7 +19,7 @@ EditWindowCount=1
 [D:\Oleg\SAMPLE\DeepL\SCAPS\main.pas]
 ModuleType=TSourceModule
 FormState=1
-FormOnTop=0
+FormOnTop=1
 
 [D:\Oleg\SAMPLE\DeepL\SCAPS\IV_Class.pas]
 ModuleType=TSourceModule
@@ -70,7 +70,7 @@ TopLine=157
 LeftCol=1
 Elisions=
 Bookmarks=
-EditViewName=D:\Oleg\SAMPLE\DeepL\SCAPS\main.pas
+EditViewName=Borland.FormDesignerView
 
 [View1]
 CustomEditViewType=TEditView
@@ -396,6 +396,11 @@ Dockable=1
 StayOnTop=0
 SplitPos=111
 
+[PropInspDesignerSelection]
+ArrangeBy=Category
+SelectedItem=Action,
+ExpandedItems=Action=1,"Drag Drop/Docking=1","Help and Hints=1",Input=1,Layout=1,Legacy=1,Linkage=1,Locale=1,Localizable=1,Miscellaneous=1,Visual=1
+
 [ModelViewTool]
 PercentageSizes=1
 Create=1
@@ -598,7 +603,7 @@ Dockable=1
 StayOnTop=0
 TabPosition=1
 ActiveTabID=RefactoringForm
-TabDockClients=RefactoringForm,FindReferencsForm,ToDo List,RefactoringsView,UsagesView,QAView,MetricsView
+TabDockClients=RefactoringForm,FindReferencsForm,ToDo List,QAView,MetricsView,RefactoringsView,UsagesView
 
 [DockSite1]
 HostDockSite=DockBottomPanel
