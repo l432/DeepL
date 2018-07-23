@@ -1,0 +1,15 @@
+Dear Dr. Gopal,
+
+Firstly, excuse me for long time reply.
+The vacation is a reason.
+
+The sent analysis result are interesting, but I have some comments.
+See blue text in "analysis of the data_Responce.docx"-file.
+
+Unfortunately, the reverse  bias characteristics of these solar cells were not measured.
+Test mesurements  shown that reverse characteristics have been influenced by shunt resistance considerably.
+Therefore detailed investigation was not carried out.
+
+With best regards,
+
+Oleg Olikh 
