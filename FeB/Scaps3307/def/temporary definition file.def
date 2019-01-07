@@ -1,6 +1,6 @@
 
-> SCAPS 3.3.03 ELIS-UGent: Version scaps3303.exe, dated 14-07-2016, 10:10:12 Problem definition file
-> last saved by SCAPS: 	06-01-2019 at 12:49:02
+> SCAPS 3.3.07 ELIS-UGent: Version scaps3307.exe, dated 06-01-2019, 14:07:34 Problem definition file
+> last saved by SCAPS: 	07-01-2019 at 18:00:36
 > 
 > 
 > Comments (to be) included in the def file
@@ -47,11 +47,17 @@
 > 
 > > end of problem definition file
 > 
+> > end of problem definition file
+> 
+> > end of problem definition file
+> 
+> > end of problem definition file
+> 
 convergence
 
-clamp_psi :  5.00e-01 units kT
-clamp_n :  5.00e-01 units kT
-clamp_p :  5.00e-01 units kT
+clamp_psi :  2.50e-01 units kT
+clamp_n :  2.50e-01 units kT
+clamp_p :  2.50e-01 units kT
 termination_psi :  1.00e-03 units kT
 termination_Fn :  1.00e-03 units kT
 termination_Fp :  1.00e-03 units kT
@@ -61,22 +67,28 @@ clamp_meta :  1.00e-02 (rel.)
 usemetaclamping : 0
 maxiter : 10000
 defectdiscretisations :     7
-widthtail :  2.00e-02
+widthtail :  1.00e-02
 widthgauss :  6.00e+00
 QE calculation mode:  1 (0: cst. # of photons, 1: cst. incident power)
 number of photons :  3.00e+22
 incident power :  1.00e+00
 recalculate mesh :  1 (0: fixed mesh, 1: adaptive mesh)
 maximum mesh changes per iteration step :  10
-maximum ratio between neighbouring points :  1.60e+00
-minimum ratio between neighbouring points :  1.05e+00
+maximum ratio between neighbouring points :  1.10e+00
+minimum ratio between neighbouring points :  1.01e+00
 generation limit :  1.00e+00 microA/cm2
 recombination limit :  1.00e-03 microA/cm2
-Mott-Schottky analysis epsilon of sheet # :  1
+Mott-Schottky analysis epsilon of layer number :  1
 Mott-Schottky analysis epsilon of sheet side : -1	(left side = -1; right side = +1)
 Mott-Schottky analysis number of points :  3	(3 or 5 as of december 2008)
 Mott-Schottky analysis polynomial order middle :  2	(1 or 2 as of december 2008)
 Mott-Schottky analysis polynomial order edges:  1	(1 or 2 as of december 2008)
+Mott-Schottky analysis defect number :  0
+Mott-Schottky analysis level number :  0
+Mott-Schottky analysis eh type :  1
+Mott-Schottky analysis constant epsilon :   10.00000000
+Mott-Schottky analysis epsilon(x) mode for NW :  0
+Mott-Schottky analysis smooth epsilon for NW :  0
 Include charge in defects in the calculation of the flatband condition :  1	(1=yes, 0=no)
 
 
@@ -84,8 +96,8 @@ back contact
 
 flatband : 1 (1: flatband contact imposed; 0: fixed Phi_m value)
 recalculate : 1 (1 = do or 0 = do not recalculate phi_m to set flatband in each batch step)
-Sn :  1.000e+05 [m/s]
-Sp :  1.000e+03 [m/s]
+Sn :  1.000e+00 [m/s]
+Sp :  1.000e+00 [m/s]
 Tunneling to contact: 0
 Relative electron mass :   1.0000e+00
 Relative hole mass :   1.0000e+00
@@ -102,9 +114,9 @@ v_th_n :	 2.300e+05	 1.000e+05	 1.000e+01	 1.000e+01	 1.000e+01	 2.300e+05	 2.30
 v_th_p :	 1.650e+05	 1.000e+05	 1.000e+01	 1.000e+01	 1.000e+01	 1.650e+05	 1.650e+05	 1	 0	[m/s]
 eps :	    11.900000	    10.000000	    10.000000	    10.000000	    10.000000	    11.900000	    11.900000	 1	 0	[-]
 chi :	  4.050000	  4.500000	  1.000000	  1.000000	  1.000000	  4.050000	  4.050000	 1	 0	[eV]
-Eg :	  1.120000	  1.200000	  0.500000	  1.000000	  1.000000	  1.120000	  1.120000	 1	 0	[eV]
-Nc :	 2.800000e+25	 1.000000e+25	 1.000000e+01	 1.000000e+01	 1.000000e+01	 2.800000e+25	 2.800000e+25	 1	 0	[/m^3]
-Nv :	 1.040000e+25	 1.000000e+25	 1.000000e+01	 1.000000e+01	 1.000000e+01	 1.040000e+25	 1.040000e+25	 1	 0	[/m^3]
+Eg :	  1.124100	  1.200000	  0.500000	  1.000000	  1.000000	  1.124100	  1.124100	 1	 0	[eV]
+Nc :	 2.860000e+25	 1.000000e+25	 1.000000e+01	 1.000000e+01	 1.000000e+01	 2.860000e+25	 2.860000e+25	 1	 0	[/m^3]
+Nv :	 3.100000e+25	 1.000000e+25	 1.000000e+01	 1.000000e+01	 1.000000e+01	 3.100000e+25	 3.100000e+25	 1	 0	[/m^3]
 mu_n :	 1.500000e-01	 5.000000e-03	 1.000000e-03	 1.000000e+00	 1.000000e+00	 1.500000e-01	 1.500000e-01	 1	 0	[m^2/Vs]
 mu_p :	 4.500000e-02	 5.000000e-03	 1.000000e-03	 1.000000e+00	 1.000000e+00	 4.500000e-02	 4.500000e-02	 1	 0	[m^2/Vs]
 K_rad :	 1.800000e-21	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 1.800000e-21	 1.800000e-21	 1	 0	[m^3/s]
@@ -112,12 +124,32 @@ c_n_auger :	 3.000000e-43	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+0
 c_p_auger :	 3.000000e-43	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 3.000000e-43	 3.000000e-43	 1	 0	[m^
 Na(uniform) :	 1.000000e+23	 1.000000e+23	 1.000000e+01	 1.000000e+01	 1.000000e+01	 1.000000e+23	 1.000000e+23	 0	 2	[
 Nd(uniform) :	 0.000000e+00	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 0.000000e+00	 0.000000e+00	 0	 2	[
-absorption grading :	 1107.12	 1033.31	  250.00	  250.00	    0.00	    1.20	    1.20	 7	 0	[nm]
+absorption grading :	 1103.08	 1033.31	  250.00	  250.00	    0.00	    1.20	    1.20	 7	 0	[nm]
 absorptionmodel pure A material (y=0) : from file
 absorptionfile pure A material (y=0) : Si.abs
-absorption pure B material (y=1), model : coefficients A and B
-pure B material (y=1), A : 1.000e+07 [/(m*sqrt(eV))]
-pure B material (y=1), B : 0.000e+00 [sqrt(eV)/m]
+absorption pure B material (y=1), model : coefficients A and B (line inserted for compatibility with SCAPS until 3.3.06
+pure B material (y=1), A : 1.000e+07 [/(m*sqrt(eV))] (line inserted for compatibility with SCAPS until 3.3.06)
+pure B material (y=1), B : 0.000e+00 [sqrt(eV)/m] (line inserted for compatibility with SCAPS until 3.3.06)
+absorptionmodel pure B material (y=1) : from model
+absorption model B, model : sqrt(hv-Eg) law (SCAPS traditional)
+absorption model B, value of parameter 1 :   1.095445e+05
+absorption model B, value of parameter 2 :   0.000000e+00
+
+srhrecombination
+
+type : amphoteric ( 2 level(s) )
+energy distribution : single
+Reference for defect energy :  2 ; 0 = above EV (SCAPS<2.7); 1 = above Ei; 2 = below EC
+Ekar :  0.1000 [eV]
+degeneracy factors equal oneNt(uniform) :	 1.000000e+20	 1.000000e+16	 1.000000e+16	 1.000000e+00	 1.000000e+00	 1.0000
+profile : homogenous
+Lkar : 1.000e+00 [m]
+Nleft : 1.000e+20 [/m^3]
+Nright : 1.000e+20 [/m^3]
+leveltype : +/0	0/-	
+sigma_n : 4.000e-17	2.500e-19	[m^2]
+sigma_p : 2.000e-18	5.500e-19	[m^2]
+Et :   1.020	  0.260	[eV]
 
 interface properties
 
@@ -139,9 +171,9 @@ v_th_n :	 2.300e+05	 1.000e+05	 1.000e+01	 1.000e+01	 1.000e+01	 2.300e+05	 2.30
 v_th_p :	 1.650e+05	 1.000e+05	 1.000e+01	 1.000e+01	 1.000e+01	 1.650e+05	 1.650e+05	 1	 0	[m/s]
 eps :	    11.900000	    10.000000	    10.000000	    10.000000	    10.000000	    11.900000	    11.900000	 1	 0	[-]
 chi :	  4.050000	  4.500000	  1.000000	  1.000000	  1.000000	  4.050000	  4.050000	 1	 0	[eV]
-Eg :	  1.120000	  1.200000	  0.500000	  1.000000	  1.000000	  1.120000	  1.120000	 1	 0	[eV]
-Nc :	 2.800000e+25	 1.000000e+25	 1.000000e+01	 1.000000e+01	 1.000000e+01	 2.800000e+25	 2.800000e+25	 1	 0	[/m^3]
-Nv :	 1.040000e+25	 1.000000e+25	 1.000000e+01	 1.000000e+01	 1.000000e+01	 1.040000e+25	 1.040000e+25	 1	 0	[/m^3]
+Eg :	  1.124100	  1.200000	  0.500000	  1.000000	  1.000000	  1.124100	  1.124100	 1	 0	[eV]
+Nc :	 2.860000e+25	 1.000000e+25	 1.000000e+01	 1.000000e+01	 1.000000e+01	 2.860000e+25	 2.860000e+25	 1	 0	[/m^3]
+Nv :	 3.100000e+25	 1.000000e+25	 1.000000e+01	 1.000000e+01	 1.000000e+01	 3.100000e+25	 3.100000e+25	 1	 0	[/m^3]
 mu_n :	 1.500000e-01	 5.000000e-03	 1.000000e-03	 1.000000e+00	 1.000000e+00	 1.500000e-01	 1.500000e-01	 1	 0	[m^2/Vs]
 mu_p :	 4.500000e-02	 5.000000e-03	 1.000000e-03	 1.000000e+00	 1.000000e+00	 4.500000e-02	 4.500000e-02	 1	 0	[m^2/Vs]
 K_rad :	 1.800000e-21	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 1.800000e-21	 1.800000e-21	 1	 0	[m^3/s]
@@ -149,20 +181,24 @@ c_n_auger :	 3.000000e-43	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+0
 c_p_auger :	 3.000000e-43	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 3.000000e-43	 3.000000e-43	 1	 0	[m^
 Na(uniform) :	 0.000000e+00	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 0.000000e+00	 0.000000e+00	 0	 2	[
 Nd(uniform) :	 1.000000e+25	 1.000000e+25	 1.000000e+01	 1.000000e+01	 1.000000e+01	 1.000000e+25	 1.000000e+25	 0	 2	[
-absorption grading :	 1107.12	 1033.31	  250.00	  250.00	    0.00	    1.20	    1.20	 7	 0	[nm]
+absorption grading :	 1103.08	 1033.31	  250.00	  250.00	    0.00	    1.20	    1.20	 7	 0	[nm]
 absorptionmodel pure A material (y=0) : from file
 absorptionfile pure A material (y=0) : Si.abs
-absorption pure B material (y=1), model : coefficients A and B
-pure B material (y=1), A : 1.000e+07 [/(m*sqrt(eV))]
-pure B material (y=1), B : 0.000e+00 [sqrt(eV)/m]
+absorption pure B material (y=1), model : coefficients A and B (line inserted for compatibility with SCAPS until 3.3.06
+pure B material (y=1), A : 1.000e+07 [/(m*sqrt(eV))] (line inserted for compatibility with SCAPS until 3.3.06)
+pure B material (y=1), B : 0.000e+00 [sqrt(eV)/m] (line inserted for compatibility with SCAPS until 3.3.06)
+absorptionmodel pure B material (y=1) : from model
+absorption model B, model : sqrt(hv-Eg) law (SCAPS traditional)
+absorption model B, value of parameter 1 :   1.095445e+05
+absorption model B, value of parameter 2 :   0.000000e+00
 
 
 front contact
 
 flatband : 1 (1: flatband contact imposed; 0: fixed Phi_m value)
 recalculate : 1 (1 = do or 0 = do not recalculate phi_m to set flatband in each batch step)
-Sn : 1.000e+03 [m/s]
-Sp : 1.000e+05 [m/s]
+Sn : 1.000e+00 [m/s]
+Sp : 1.000e+00 [m/s]
 Tunneling to contact: 0
 Relative electron mass :   1.0000e+00
 Relative hole mass :   1.0000e+00
