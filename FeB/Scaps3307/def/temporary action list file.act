@@ -1,5 +1,5 @@
 
-Temperature :   290.00 K
+Temperature :   300.00 K
 Voltage :     0.0000 V
 Frequency :   1.0000e+06 Hz
 Number of points :   5
@@ -26,8 +26,8 @@ Secondworkpoint transmission :   100.0000 %
 Secondworkpoint attenuation :   100.0000 %
 pause :  0
 IV_startV :     0.0000 V
-IV_stopV :     0.8000 V
-IV_points :  81
+IV_stopV :     0.7000 V
+IV_points :  71
 IV_increment :     0.010000 V
 IV_calculate :  1
 stop after Voc :  0

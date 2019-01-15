@@ -1,15 +1,15 @@
 > SCAPS 3.3.07 ELIS-UGent: Version scaps3307.exe, dated 06-01-2019, 14:07:34
-> SCAPS All SCAPS Settings file, saved on 	07-01-2019 at 16:59:49
+> SCAPS All SCAPS Settings file, saved on 	11-01-2019 at 22:06:12
 > problem definition file loaded :
 > d:\Samples\DeepL\FeB\Scaps3307\def\SC_Fe_NoLight.scaps
-> last saved: 	07-01-2019 at 16:59:49
+> last saved: 	11-01-2019 at 22:06:12
 > 
 
 
 >> begin of problem definition file
 
 > SCAPS 3.3.07 ELIS-UGent: Version scaps3307.exe, dated 06-01-2019, 14:07:34 Problem definition file
-> last saved by SCAPS: 	07-01-2019 at 16:59:50
+> last saved by SCAPS: 	11-01-2019 at 22:06:13
 > 
 > 
 > Comments (to be) included in the def file
@@ -58,6 +58,8 @@
 > 
 > > end of problem definition file
 > 
+> > end of problem definition file
+> 
 convergence
 
 clamp_psi :  2.50e-01 units kT
@@ -72,7 +74,7 @@ clamp_meta :  1.00e-02 (rel.)
 usemetaclamping : 0
 maxiter : 10000
 defectdiscretisations :     7
-widthtail :  2.00e+00
+widthtail :  1.00e-02
 widthgauss :  6.00e+00
 QE calculation mode:  1 (0: cst. # of photons, 1: cst. incident power)
 number of photons :  3.00e+22
@@ -101,8 +103,8 @@ back contact
 
 flatband : 1 (1: flatband contact imposed; 0: fixed Phi_m value)
 recalculate : 1 (1 = do or 0 = do not recalculate phi_m to set flatband in each batch step)
-Sn :  5.000e+01 [m/s]
-Sp :  5.000e+01 [m/s]
+Sn :  1.000e+00 [m/s]
+Sp :  1.000e+00 [m/s]
 Tunneling to contact: 0
 Relative electron mass :   1.0000e+00
 Relative hole mass :   1.0000e+00
@@ -127,7 +129,7 @@ mu_p :	 4.500000e-02	 5.000000e-03	 1.000000e-03	 1.000000e+00	 1.000000e+00	 4.
 K_rad :	 1.800000e-21	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 1.800000e-21	 1.800000e-21	 1	 0	[m^3/s]
 c_n_auger :	 3.000000e-43	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 3.000000e-43	 3.000000e-43	 1	 0	[m^6/s]
 c_p_auger :	 3.000000e-43	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 3.000000e-43	 3.000000e-43	 1	 0	[m^6/s]
-Na(uniform) :	 1.000000e+23	 1.000000e+23	 1.000000e+01	 1.000000e+01	 1.000000e+01	 1.000000e+23	 1.000000e+23	 0	 2	[/m^3]
+Na(uniform) :	 1.000000e+22	 1.000000e+22	 1.000000e+01	 1.000000e+01	 1.000000e+01	 1.000000e+22	 1.000000e+22	 0	 2	[/m^3]
 Nd(uniform) :	 0.000000e+00	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 0.000000e+00	 0.000000e+00	 0	 2	[/m^3]
 absorption grading :	 1103.08	 1033.31	  250.00	  250.00	    0.00	    1.20	    1.20	 7	 0	[nm]
 absorptionmodel pure A material (y=0) : from file
@@ -146,11 +148,11 @@ type : donor ( 1 level(s) )
 energy distribution : single
 Reference for defect energy :  0 ; 0 = above EV (SCAPS<2.7); 1 = above Ei; 2 = below EC
 Ekar :  0.1000 [eV]
-Nt(uniform) :	 1.000000e+20	 1.000000e+20	 1.000000e+20	 1.000000e+00	 1.000000e+00	 1.000000e+20	 1.000000e+20	 0	 2	[/m^3]
+Nt(uniform) :	 1.000000e+19	 1.000000e+20	 1.000000e+20	 1.000000e+00	 1.000000e+00	 1.000000e+19	 1.000000e+19	 0	 2	[/m^3]
 profile : homogenous
 Lkar : 1.000e+00 [m]
-Nleft : 1.000e+20 [/m^3]
-Nright : 1.000e+20 [/m^3]
+Nleft : 1.000e+19 [/m^3]
+Nright : 1.000e+19 [/m^3]
 leveltype : +/0	
 sigma_n : 3.600e-19	[m^2]
 sigma_p : 7.000e-21	[m^2]
@@ -202,8 +204,8 @@ front contact
 
 flatband : 1 (1: flatband contact imposed; 0: fixed Phi_m value)
 recalculate : 1 (1 = do or 0 = do not recalculate phi_m to set flatband in each batch step)
-Sn : 1.000e+02 [m/s]
-Sp : 1.000e+02 [m/s]
+Sn : 1.000e+00 [m/s]
+Sp : 1.000e+00 [m/s]
 Tunneling to contact: 0
 Relative electron mass :   1.0000e+00
 Relative hole mass :   1.0000e+00
@@ -223,7 +225,7 @@ cell reference system :  1 (1: as a consumer (consumed power = +VJ; 0: as a gene
 
 >> begin of action list file
 
-Temperature :   290.00 K
+Temperature :   300.00 K
 Voltage :     0.0000 V
 Frequency :   1.0000e+06 Hz
 Number of points :   5

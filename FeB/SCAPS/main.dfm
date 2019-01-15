@@ -3,7 +3,7 @@ object MainForm: TMainForm
   Top = 0
   BorderStyle = bsDialog
   Caption = 'SCAPS Conversion'
-  ClientHeight = 268
+  ClientHeight = 550
   ClientWidth = 480
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -34,7 +34,7 @@ object MainForm: TMainForm
   end
   object LAction: TLabel
     Left = 216
-    Top = 154
+    Top = 106
     Width = 238
     Height = 24
     Alignment = taCenter
@@ -64,7 +64,7 @@ object MainForm: TMainForm
   end
   object BtDone: TButton
     Left = 32
-    Top = 152
+    Top = 104
     Width = 153
     Height = 33
     Caption = '&Extract IV files'
@@ -79,8 +79,8 @@ object MainForm: TMainForm
     OnClick = BtDoneClick
   end
   object BtClose: TButton
-    Left = 176
-    Top = 224
+    Left = 168
+    Top = 504
     Width = 105
     Height = 25
     Caption = '&Close'
@@ -93,9 +93,93 @@ object MainForm: TMainForm
     TabOrder = 2
     OnClick = BtCloseClick
   end
+  object GBTemp: TGroupBox
+    Left = 16
+    Top = 176
+    Width = 313
+    Height = 65
+    Caption = 'Temperature'
+    TabOrder = 3
+    object LTemp_start: TLabel
+      Left = 16
+      Top = 24
+      Width = 33
+      Height = 16
+      Caption = 'Start:'
+    end
+    object LTemp_Finish: TLabel
+      Left = 123
+      Top = 24
+      Width = 38
+      Height = 16
+      Caption = 'Finish:'
+    end
+    object LTemp_Step: TLabel
+      Left = 224
+      Top = 24
+      Width = 31
+      Height = 16
+      Caption = 'Step:'
+    end
+    object STTemp_start: TStaticText
+      Left = 64
+      Top = 24
+      Width = 25
+      Height = 20
+      Caption = '300'
+      TabOrder = 0
+    end
+    object STTemp_Finish: TStaticText
+      Left = 171
+      Top = 24
+      Width = 25
+      Height = 20
+      Caption = '350'
+      TabOrder = 1
+    end
+    object STTemp_Step: TStaticText
+      Left = 272
+      Top = 24
+      Width = 18
+      Height = 20
+      Caption = '10'
+      TabOrder = 2
+    end
+  end
+  object GBBoron: TGroupBox
+    Left = 16
+    Top = 256
+    Width = 177
+    Height = 65
+    Caption = 'Boron concentration, cm-3'
+    TabOrder = 4
+    object STBoron: TStaticText
+      Left = 32
+      Top = 24
+      Width = 43
+      Height = 26
+      Caption = '1e16'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -18
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 0
+    end
+  end
+  object Button1: TButton
+    Left = 317
+    Top = 256
+    Width = 145
+    Height = 40
+    Caption = '.material file create'
+    TabOrder = 5
+    OnClick = Button1Click
+  end
   object OpenDialog1: TOpenDialog
     Filter = 'Scaps files (*.iv)|*.iv'
-    Left = 408
-    Top = 232
+    Left = 424
+    Top = 504
   end
 end
