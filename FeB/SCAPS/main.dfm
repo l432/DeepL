@@ -33,8 +33,8 @@ object MainForm: TMainForm
     ParentFont = False
   end
   object LAction: TLabel
-    Left = 216
-    Top = 106
+    Left = 224
+    Top = 82
     Width = 238
     Height = 24
     Alignment = taCenter
@@ -64,7 +64,7 @@ object MainForm: TMainForm
   end
   object BtDone: TButton
     Left = 32
-    Top = 104
+    Top = 80
     Width = 153
     Height = 33
     Caption = '&Extract IV files'
@@ -95,7 +95,7 @@ object MainForm: TMainForm
   end
   object GBTemp: TGroupBox
     Left = 16
-    Top = 176
+    Top = 152
     Width = 313
     Height = 65
     Caption = 'Temperature'
@@ -148,7 +148,7 @@ object MainForm: TMainForm
   end
   object GBBoron: TGroupBox
     Left = 16
-    Top = 256
+    Top = 223
     Width = 177
     Height = 65
     Caption = 'Boron concentration, cm-3'
@@ -168,14 +168,37 @@ object MainForm: TMainForm
       TabOrder = 0
     end
   end
-  object Button1: TButton
-    Left = 317
-    Top = 256
-    Width = 145
-    Height = 40
+  object BMaterialFileCreate: TButton
+    Left = 328
+    Top = 233
+    Width = 134
+    Height = 55
     Caption = '.material file create'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -17
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
     TabOrder = 5
-    OnClick = Button1Click
+    WordWrap = True
+    OnClick = BMaterialFileCreateClick
+  end
+  object BDatesDat: TButton
+    Left = 16
+    Top = 313
+    Width = 129
+    Height = 48
+    Caption = 'dates.dat convert'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -17
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 6
+    WordWrap = True
+    OnClick = BDatesDatClick
   end
   object OpenDialog1: TOpenDialog
     Filter = 'Scaps files (*.iv)|*.iv'

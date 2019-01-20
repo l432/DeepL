@@ -1,15 +1,15 @@
 > SCAPS 3.3.07 ELIS-UGent: Version scaps3307.exe, dated 06-01-2019, 14:07:34
-> SCAPS All SCAPS Settings file, saved on 	15-01-2019 at 21:58:50
+> SCAPS All SCAPS Settings file, saved on 	20-01-2019 at 22:41:13
 > problem definition file loaded :
-> d:\Samples\DeepL\FeB\Scaps3307\def\SC_Fe_simple300.scaps
-> last saved: 	12-01-2019 at 14:25:53
+> d:\Samples\DeepL\FeB\Scaps3307\def\Fe300.scaps
+> last saved: 	20-01-2019 at 22:41:13
 > 
 
 
 >> begin of problem definition file
 
 > SCAPS 3.3.07 ELIS-UGent: Version scaps3307.exe, dated 06-01-2019, 14:07:34 Problem definition file
-> last saved by SCAPS: 	15-01-2019 at 21:58:51
+> last saved by SCAPS: 	20-01-2019 at 22:41:14
 > 
 > 
 > Comments (to be) included in the def file
@@ -41,6 +41,8 @@
 > No doping type nor extrinsic doping is set! (NA = ND = 1E10/cm3 = about ni)
 > 
 > Should be OK for low doped silicon. For higher doping, the mobilities should be set to an appropriate lower value; th
+> 
+> > end of problem definition file
 > 
 > > end of problem definition file
 > 
@@ -298,7 +300,7 @@ values from a list :  0
 logarithmic variation :  1
 startvalue :   1.00000000e+09
 stopvalue :   1.00000000e+13
-number of steps :   13
+number of steps :   25
 
 >> end of batch settings file
 
@@ -318,36 +320,14 @@ Stop criterion for Chi square :   1.00000000e-07
 
 Curve fitting parameter  0 :
 
-label 1 : T
-label 2 : nihil
-label 3 : nihil
-label 4 : nihil
-minimum value :   3.00000000e+02
-maximum value :   3.50000000e+02
-start value = actual value :    0
-logarithmic variation :  0
-
-Curve fitting parameter  1 :
-
 label 1 : layer 1
 label 2 : defect 1
-label 3 : sigma_n
+label 3 : Nt total
 label 4 : nihil
-minimum value :   3.59900000e-15
-maximum value :   4.10900000e-15
+minimum value :   1.00000000e+09
+maximum value :   1.00000000e+13
 start value = actual value :    0
-logarithmic variation :  0
-
-Curve fitting parameter  2 :
-
-label 1 : layer 1
-label 2 : defect 1
-label 3 : sigma_p	
-label 4 : nihil
-minimum value :   7.00100000e-17
-maximum value :   8.97500000e-17
-start value = actual value :    0
-logarithmic variation :  0
+logarithmic variation :  1
 
 >> end of curve fitting settings file
 

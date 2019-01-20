@@ -24,13 +24,15 @@ type
     LTemp_Step: TLabel;
     GBBoron: TGroupBox;
     STBoron: TStaticText;
-    Button1: TButton;
+    BMaterialFileCreate: TButton;
+    BDatesDat: TButton;
     procedure BtFileSelectClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
     procedure BtCloseClick(Sender: TObject);
     procedure BtDoneClick(Sender: TObject);
-    procedure Button1Click(Sender: TObject);
+    procedure BMaterialFileCreateClick(Sender: TObject);
+    procedure BDatesDatClick(Sender: TObject);
   private
     { Private declarations }
     TempStart,TempFinish,TempStep: TIntegerParameterShow;
@@ -203,6 +205,7 @@ end;
 procedure TMainForm.BtFileSelectClick(Sender: TObject);
 
 begin
+   OpenDialog1.Filter:='Scaps files (*.iv)|*.iv';
    if OpenDialog1.Execute()
      then
        begin
@@ -224,7 +227,82 @@ begin
 end;
 
 
-procedure TMainForm.Button1Click(Sender: TObject);
+procedure TMainForm.BDatesDatClick(Sender: TObject);
+ var Direc:string;
+    DatesDatFile,{CommentsFile,}TxtFile,
+    nDat,n_srhDat:TStringList;
+    SR : TSearchRec;
+    i,j:integer;
+    fl_name,tempString:string;
+    SRH_file:boolean;
+begin
+ OpenDialog1.Filter:='Shottky result file (*.iv)|dates.dat';
+   if OpenDialog1.Execute()
+     then
+       begin
+       Direc:=ExtractFilePath(OpenDialog1.FileName);
+       DatesDatFile:=TStringList.Create;
+//       CommentsFile:=TStringList.Create;
+       TxtFile:=TStringList.Create;
+       nDat:=TStringList.Create;
+       n_srhDat:=TStringList.Create;
+       DatesDatFile.LoadFromFile(OpenDialog1.FileName);
+//       if FileExists(Direc+'comments') then
+//          CommentsFile.LoadFromFile(Direc+'comments')
+//                                       else
+//          begin
+//            showmessage('comments file is absent');
+//            Exit;
+//          end;
+       if FindFirst('*.txt', faAnyFile, SR) = 0 then
+         TxtFile.LoadFromFile(SR.Name)
+                                                else
+         begin
+            showmessage('.txt file is absent');
+            Exit;
+         end;
+       nDat.Add('N_Fe N_B T n');
+       n_srhDat.Add('N_Fe N_B T n');
+       for I := 1 to DatesDatFile.Count - 1 do
+         begin
+          fl_name:=StringDataFromRow(DatesDatFile[i],2);
+          fl_name:=Copy(fl_name,1,AnsiPos ('.dat', fl_name)-1);
+          SRH_file:=(AnsiPos ('_srh', fl_name)>0);
+          if SRH_file then fl_name:=Copy(fl_name,1,AnsiPos ('_srh', fl_name)-1);
+          for j:=1 to TxtFile.Count - 1 do
+            if AnsiPos(fl_name,TxtFile[j])>0 then
+             begin
+              tempString:=StringDataFromRow(TxtFile[j],4)+
+                          ' '+StringDataFromRow(TxtFile[j],1)+
+                          ' '+LowerCase(floattostrF(Boron.Data,ffExponent,4,2))+
+                          ' '+StringDataFromRow(DatesDatFile[i],9);
+              Break;
+             end;
+          if SRH_file then  n_srhDat.Add(tempString)
+                      else  nDat.Add(tempString);
+         end;
+        Delete(Direc,Length(Direc),1);
+        tempString:='';
+        for I := Length(Direc) downto 1 do
+          tempString:=tempString+Direc[i];
+        Delete(tempString,1,AnsiPos ('\', tempString)-1);
+        Direc:='';
+        for I := Length(tempString) downto 1 do
+          Direc:=Direc+tempString[i];
+        tempString:=LowerCase(floattostrF( Boron.Data,ffExponent,4,2));
+        tempString:=AnsiReplaceStr(tempString,'.','p');
+        tempString:=AnsiReplaceStr(tempString,'+','');
+        tempString:='NB'+tempString+'T'+StringDataFromRow(TxtFile[2],1);
+        nDat.SaveToFile(Direc+tempString+'Fe.dat');
+        n_srhDat.SaveToFile(Direc+tempString+'Fe_srh.dat');
+        TxtFile.Free;
+        DatesDatFile.Free;
+        nDat.Free;
+        n_srhDat.Free;
+       end;
+end;
+
+procedure TMainForm.BMaterialFileCreateClick(Sender: TObject);
  var nSiLayer,pSiLayer,Sigma_P,Sigma_N,
      TempMybdf,pSi_matbdf,nSi_matbdf,
      Egbdf,mu_nbdf,mu_pbdf:TStringList;
