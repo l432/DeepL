@@ -26,6 +26,14 @@ type
     STBoron: TStaticText;
     BMaterialFileCreate: TButton;
     BDatesDat: TButton;
+    BFeB_x: TButton;
+    GBFerum: TGroupBox;
+    LFe_Lo: TLabel;
+    LFe_Hi: TLabel;
+    LFe_steps: TLabel;
+    STFe_Lo: TStaticText;
+    STFe_Hi: TStaticText;
+    STFe_steps: TStaticText;
     procedure BtFileSelectClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
@@ -33,11 +41,21 @@ type
     procedure BtDoneClick(Sender: TObject);
     procedure BMaterialFileCreateClick(Sender: TObject);
     procedure BDatesDatClick(Sender: TObject);
+    procedure BFeB_xClick(Sender: TObject);
   private
     { Private declarations }
     TempStart,TempFinish,TempStep: TIntegerParameterShow;
+    FeLow,FeHi:TDoubleParameterShow;
+    FeStepNumber: TIntegerParameterShow;
     Boron:TDoubleParameterShow;
-    ConfigFile:TIniFile;    
+    ConfigFile:TIniFile;
+    function NBoronToString():string;
+    function Nfeb(Nb,T,Ef:double):double;
+    {рівноважна частка пар FeB по відношенню до загальної
+    кількості Fe,
+    Nb - концентрація бору, []=см-3
+    Т - температура
+    Ef - положення рівня Фермі відносно валентної зони}
   public
     { Public declarations }
   end;
@@ -236,7 +254,7 @@ procedure TMainForm.BDatesDatClick(Sender: TObject);
     fl_name,tempString:string;
     SRH_file:boolean;
 begin
- OpenDialog1.Filter:='Shottky result file (*.iv)|dates.dat';
+ OpenDialog1.Filter:='Shottky result file (dates.dat)|dates.dat';
    if OpenDialog1.Execute()
      then
        begin
@@ -261,8 +279,8 @@ begin
             showmessage('.txt file is absent');
             Exit;
          end;
-       nDat.Add('N_Fe N_B T n');
-       n_srhDat.Add('N_Fe N_B T n');
+       nDat.Add('N_Fe N_B T n n_SRH');
+//       n_srhDat.Add('N_Fe N_B T n');
        for I := 1 to DatesDatFile.Count - 1 do
          begin
           fl_name:=StringDataFromRow(DatesDatFile[i],2);
@@ -281,6 +299,21 @@ begin
           if SRH_file then  n_srhDat.Add(tempString)
                       else  nDat.Add(tempString);
          end;
+        DatesDatFile.Clear;
+        DatesDatFile.Add('N_Fe N_B T n_Fe n_Fe_SRH');
+        for I := 1 to nDat.Count - 1 do
+         begin
+          tempString:=StringDataFromRow(nDat[i],1)+
+                      ' '+StringDataFromRow(nDat[i],2)+
+                      ' '+StringDataFromRow(nDat[i],3);
+          for j := 0 to n_srhDat.Count - 1 do
+           if AnsiPos(tempString,n_srhDat[j])>0 then
+            begin
+            DatesDatFile.Add(nDat[i]+' '+StringDataFromRow(n_srhDat[j],4));
+            Break;
+            end;
+         end;
+
         Delete(Direc,Length(Direc),1);
         tempString:='';
         for I := Length(Direc) downto 1 do
@@ -292,9 +325,11 @@ begin
         tempString:=LowerCase(floattostrF( Boron.Data,ffExponent,4,2));
         tempString:=AnsiReplaceStr(tempString,'.','p');
         tempString:=AnsiReplaceStr(tempString,'+','');
-        tempString:='NB'+tempString+'T'+StringDataFromRow(TxtFile[2],1);
-        nDat.SaveToFile(Direc+tempString+'Fe.dat');
-        n_srhDat.SaveToFile(Direc+tempString+'Fe_srh.dat');
+        tempString:=NBoronToString()+
+        {'NB'+tempString+}'T'+StringDataFromRow(TxtFile[2],1);
+        DatesDatFile.SaveToFile(Direc+tempString+'Fe.dat');
+//        nDat.SaveToFile(Direc+tempString+'Fe.dat');
+//        n_srhDat.SaveToFile(Direc+tempString+'Fe_srh.dat');
         TxtFile.Free;
         DatesDatFile.Free;
         nDat.Free;
@@ -302,9 +337,92 @@ begin
        end;
 end;
 
+procedure TMainForm.BFeB_xClick(Sender: TObject);
+ var Direc:string;
+     EB_File,FeGRDFile,FeBGRDFile:TStringList;
+     Vec:PVector;
+     Row:Int64;
+     i:word;
+     T:word;
+     delFe,Nfe:double;
+     tempstr:string;
+
+begin
+ OpenDialog1.Filter:='File with energy bands (*.eb)|*.eb';
+ if OpenDialog1.Execute()
+   then
+     begin
+      Direc:=ExtractFilePath(OpenDialog1.FileName);
+      EB_File:=TStringList.Create;
+      FeGRDFile:=TStringList.Create;
+      FeBGRDFile:=TStringList.Create;
+      EB_File.LoadFromFile(OpenDialog1.FileName);
+      new(Vec);
+      Row:=0;
+      T:=0;
+      while (Row<EB_File.Count) do
+       begin
+        if AnsiPos ('Temperature', EB_File[ROW])>0 then
+          T:=round(FloatDataFromRow(EB_File[ROW],2));
+
+        if AnsiPos ('x(um)', EB_File[ROW])>0 then
+          begin
+//            showmessage(EB_File[ROW]);
+            Row:=Row+2;
+            for I := 0 to 99 do
+             begin
+               Vec.Add(290+FloatDataFromRow(EB_File[ROW],2),-FloatDataFromRow(EB_File[ROW],7));
+               Inc(ROW);
+             end;
+            Break;
+          end;
+         Inc(ROW);
+       end;
+      for I := 0 to 5 do
+       Vec.Add(i*50,Vec^.Y[0]);
+      Vec.Sorting();
+      Vec.Write_File('Ef_'+NBoronToString+'T'+IntTostr(T)+'.dat',10);
+      for I := 0 to Vec^.n - 1 do
+       Vec^.Y[i]:=Nfeb(Boron.Data,T,Vec^.Y[i]);
+
+      if FeStepNumber.Data>1 then delFe:=(Log10(FeHi.Data)-Log10(FeLow.Data))/(FeStepNumber.Data-1)
+                             else delFe:= Log10(FeHi.Data);
+      Nfe:=Log10(FeLow.Data);
+      repeat
+        FeGRDFile.Clear;
+        FeBGRDFile.Clear;
+        FeGRDFile.Add('interpolation: linear');
+        FeGRDFile.Add('');
+        FeGRDFile.Add('x (micrometer)	Nt (1/m3)');
+
+        FeBGRDFile.Add('interpolation: linear');
+        FeBGRDFile.Add('');
+        FeBGRDFile.Add('x (micrometer)	Nt (1/m3)');
+        for I := 0 to Vec^.n - 1 do
+         begin
+          FeBGRDFile.Add(FloatToStrF(Vec^.X[i],ffExponent,10,2)+'	'+
+                        FloatToStrF(Vec^.Y[i]*Power(10,Nfe)*1e6,ffExponent,8,2));
+          FeGRDFile.Add(FloatToStrF(Vec^.X[i],ffExponent,10,2)+'	'+
+                        FloatToStrF((1-Vec^.Y[i])*Power(10,Nfe)*1e6,ffExponent,8,2));
+         end;
+        tempstr:= LowerCase(floattostrF(Power(10,Nfe),ffExponent,4,2));
+        tempstr:=AnsiReplaceStr(tempstr,'.','p');
+        tempstr:=AnsiReplaceStr(tempstr,'+','');
+        FeBGRDFile.SaveToFile('FeB'+tempstr+'.grd');
+        FeGRDFile.SaveToFile('Fe'+tempstr+'.grd');
+        Nfe:=Nfe+delFe;
+      until (Nfe>Log10(FeHi.Data*1.0001));
+
+      dispose(Vec);
+      EB_File.Free;
+      FeGRDFile.Free;
+      FeBGRDFile.Free;
+     end;
+end;
+
 procedure TMainForm.BMaterialFileCreateClick(Sender: TObject);
  var nSiLayer,pSiLayer,Sigma_P,Sigma_N,
-     TempMybdf,pSi_matbdf,nSi_matbdf,
+     TempMybdf,{pSi_matbdf,nSi_matbdf,}
      Egbdf,mu_nbdf,mu_pbdf:TStringList;
     T:integer;
     tempstr:string;
@@ -314,8 +432,8 @@ begin
  nSiLayer:=TStringList.Create;
  pSiLayer:=TStringList.Create;
  TempMybdf:=TStringList.Create;
- pSi_matbdf:=TStringList.Create;
- nSi_matbdf:=TStringList.Create;
+// pSi_matbdf:=TStringList.Create;
+// nSi_matbdf:=TStringList.Create;
  Egbdf:=TStringList.Create;
  mu_nbdf:=TStringList.Create;
  mu_pbdf:=TStringList.Create;
@@ -323,8 +441,8 @@ begin
  Sigma_N.Clear;
  Sigma_P.Clear;
  TempMybdf.Clear;
- pSi_matbdf.Clear;
- nSi_matbdf.Clear;
+// pSi_matbdf.Clear;
+// nSi_matbdf.Clear;
  Egbdf.Clear;
  mu_nbdf.Clear;
  mu_pbdf.Clear;
@@ -446,13 +564,16 @@ begin
   pSiLayer.Add('absorption pure B material (y=1), model : from file');
   pSiLayer.Add('absorption pure B material (y=1), file : Si.abs');
 
-  tempstr:=LowerCase(floattostrF( Boron.Data,ffExponent,4,2));
-  tempstr:=AnsiReplaceStr(tempstr,'.','p');
-  tempstr:=AnsiReplaceStr(tempstr,'+','');
-  nSiLayer.SaveToFile('nSi_T'+inttostr(T)+'NB'+tempstr+'.material');
-  nSi_matbdf.Add('file: '+'nSi_T'+inttostr(T)+'NB'+tempstr+'.material');
-  pSiLayer.SaveToFile('pSi_T'+inttostr(T)+'NB'+tempstr+'.material');
-  pSi_matbdf.Add('file: '+'pSi_T'+inttostr(T)+'NB'+tempstr+'.material');
+//  tempstr:=LowerCase(floattostrF( Boron.Data,ffExponent,4,2));
+//  tempstr:=AnsiReplaceStr(tempstr,'.','p');
+//  tempstr:=AnsiReplaceStr(tempstr,'+','');
+//  nSiLayer.SaveToFile('nSi_T'+inttostr(T)+'NB'+tempstr+'.material');
+//  nSi_matbdf.Add('file: '+'nSi_T'+inttostr(T)+'NB'+tempstr+'.material');
+//  pSiLayer.SaveToFile('pSi_T'+inttostr(T)+'NB'+tempstr+'.material');
+//  pSi_matbdf.Add('file: '+'pSi_T'+inttostr(T)+'NB'+tempstr+'.material');
+
+  nSiLayer.SaveToFile('nSi_T'+inttostr(T)+NBoronToString+'.material');
+  pSiLayer.SaveToFile('pSi_T'+inttostr(T)+NBoronToString+'.material');
 
   T:=T+TempStep.Data;
  until (T>TempFinish.Data);
@@ -472,8 +593,8 @@ begin
  nSiLayer.Free;
  pSiLayer.Free;
  TempMybdf.Free;
- pSi_matbdf.Free;
- nSi_matbdf.Free;
+// pSi_matbdf.Free;
+// nSi_matbdf.Free;
  Egbdf.Free;
  mu_nbdf.Free;
  mu_pbdf.Free;
@@ -499,6 +620,18 @@ begin
   Boron.SetName('Boron');
   Boron.ReadFromIniFile(ConfigFile);
 
+  FeLow:=TDoubleParameterShow. Create(STFe_Lo,LFe_Lo,'Low limit:',1e9,5);
+  FeLow.SetName('Iron');
+  FeLow.ReadFromIniFile(ConfigFile);
+  FeHi:=TDoubleParameterShow. Create(STFe_Hi,LFe_Hi,'High limit:',1e13,5);
+  FeHi.SetName('Iron');
+  FeHi.ReadFromIniFile(ConfigFile);
+  FeStepNumber:=TIntegerParameterShow. Create(STFe_steps,LFe_steps,'Step Number:',25);
+  FeStepNumber.SetName('Iron');
+  FeStepNumber.ReadFromIniFile(ConfigFile);
+
+
+
  Diod:=TDiod_Schottky.Create;
 // Diod.ReadFromIniFile(ConfigFile);
  Diod.Semiconductor.Material:=TMaterial.Create(Si);
@@ -516,11 +649,32 @@ begin
   TempStep.WriteToIniFile(ConfigFile);
   TempStep.Free;
   TempStart.WriteToIniFile(ConfigFile);
+  TempStart.Free;
+  FeLow.WriteToIniFile(ConfigFile);
+  FeLow.Free;
+  FeHi.WriteToIniFile(ConfigFile);
+  FeHi.Free;
+  FeStepNumber.WriteToIniFile(ConfigFile);
+  FeStepNumber.Free;
 //  Diod.WriteToIniFile(ConfigFile);
   Diod.Semiconductor.Material.Free;
   Diod.Free;
   ConfigFile.Free;
   SCAPSFile.Free;
+end;
+
+function TMainForm.NBoronToString: string;
+begin
+  Result:=LowerCase(floattostrF(Boron.Data,ffExponent,4,2));
+  Result:=AnsiReplaceStr(Result,'.','p');
+  Result:=AnsiReplaceStr(Result,'+','');
+  Result:='NB'+Result;
+end;
+
+function TMainForm.Nfeb(Nb, T, Ef: double): double;
+begin
+  Result:=Nb*1e-23*exp(0.582/Kb/T)/(1+Nb*1e-23*exp(0.582/Kb/T))
+                  /(1+exp((Ef-0.394)/Kb/T));
 end;
 
 end.

@@ -95,7 +95,7 @@ object MainForm: TMainForm
   end
   object GBTemp: TGroupBox
     Left = 16
-    Top = 152
+    Top = 144
     Width = 313
     Height = 65
     Caption = 'Temperature'
@@ -199,6 +199,75 @@ object MainForm: TMainForm
     TabOrder = 6
     WordWrap = True
     OnClick = BDatesDatClick
+  end
+  object BFeB_x: TButton
+    Left = 343
+    Top = 392
+    Width = 129
+    Height = 48
+    Caption = 'Fe(x) and FeB(x) create'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -17
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 7
+    WordWrap = True
+    OnClick = BFeB_xClick
+  end
+  object GBFerum: TGroupBox
+    Left = 8
+    Top = 384
+    Width = 263
+    Height = 65
+    Caption = 'Iron concentration, cm-3'
+    TabOrder = 8
+    object LFe_Lo: TLabel
+      Left = 16
+      Top = 24
+      Width = 33
+      Height = 16
+      Caption = 'Start:'
+    end
+    object LFe_Hi: TLabel
+      Left = 99
+      Top = 24
+      Width = 38
+      Height = 16
+      Caption = 'Finish:'
+    end
+    object LFe_steps: TLabel
+      Left = 179
+      Top = 24
+      Width = 31
+      Height = 16
+      Caption = 'Step:'
+    end
+    object STFe_Lo: TStaticText
+      Left = 16
+      Top = 46
+      Width = 25
+      Height = 20
+      Caption = '300'
+      TabOrder = 0
+    end
+    object STFe_Hi: TStaticText
+      Left = 99
+      Top = 46
+      Width = 25
+      Height = 20
+      Caption = '350'
+      TabOrder = 1
+    end
+    object STFe_steps: TStaticText
+      Left = 179
+      Top = 46
+      Width = 18
+      Height = 20
+      Caption = '10'
+      TabOrder = 2
+    end
   end
   object OpenDialog1: TOpenDialog
     Filter = 'Scaps files (*.iv)|*.iv'

@@ -1,15 +1,15 @@
 > SCAPS 3.3.07 ELIS-UGent: Version scaps3307.exe, dated 06-01-2019, 14:07:34
-> SCAPS All SCAPS Settings file, saved on 	21-01-2019 at 23:21:43
+> SCAPS All SCAPS Settings file, saved on 	22-01-2019 at 23:20:28
 > problem definition file loaded :
-> d:\Samples\DeepL\FeB\Scaps3307\def\Fe300.scaps
-> last saved: 	21-01-2019 at 23:21:43
+> d:\Samples\DeepL\FeB\Scaps3307\def\FeB300.scaps
+> last saved: 	22-01-2019 at 23:20:28
 > 
 
 
 >> begin of problem definition file
 
 > SCAPS 3.3.07 ELIS-UGent: Version scaps3307.exe, dated 06-01-2019, 14:07:34 Problem definition file
-> last saved by SCAPS: 	21-01-2019 at 23:21:44
+> last saved by SCAPS: 	22-01-2019 at 23:20:30
 > 
 > 
 > Comments (to be) included in the def file
@@ -41,12 +41,6 @@
 > No doping type nor extrinsic doping is set! (NA = ND = 1E10/cm3 = about ni)
 > 
 > Should be OK for low doped silicon. For higher doping, the mobilities should be set to an appropriate lower value; th
-> 
-> > end of problem definition file
-> 
-> > end of problem definition file
-> 
-> > end of problem definition file
 > 
 > > end of problem definition file
 > 
@@ -154,18 +148,34 @@ absorption model B, value of parameter 2 :   0.000000e+00
 
 srhrecombination
 
+type : amphoteric ( 2 level(s) )
+energy distribution : single
+Reference for defect energy :  2 ; 0 = above EV (SCAPS<2.7); 1 = above Ei; 2 = below EC
+Ekar :  0.1000 [eV]
+degeneracy factors equal oneNt(x) :	 9.975390e+14	 4.477022e+03	 1.000000e+20	 1.000000e+00	 1.000000e+00	 9.975390e+14	 4.477022e+03	12	 1	FeB1p000e09.grd	[/m^3]
+profile : homogenous
+Lkar : 1.000e+00 [m]
+Nleft : 9.975e+14 [/m^3]
+Nright : 9.975e+14 [/m^3]
+leveltype : +/0	0/-	
+sigma_n : 4.000e-17	2.500e-19	[m^2]
+sigma_p : 2.000e-18	5.500e-19	[m^2]
+Et :   1.024	  0.260	[eV]
+
+next
+
 type : donor ( 1 level(s) )
 energy distribution : single
 Reference for defect energy :  0 ; 0 = above EV (SCAPS<2.7); 1 = above Ei; 2 = below EC
 Ekar :  0.1000 [eV]
-Nt(uniform) :	 1.000000e+19	 1.000000e+20	 1.000000e+20	 1.000000e+00	 1.000000e+00	 1.000000e+19	 1.000000e+19	 0	 2	[/m^3]
+Nt(x) :	 2.460999e+12	 1.000000e+15	 1.000000e+20	 1.000000e+00	 1.000000e+00	 2.460999e+12	 1.000000e+15	12	 1	Fe1p000e09.grd	[/m^3]
 profile : homogenous
 Lkar : 1.000e+00 [m]
-Nleft : 1.000e+19 [/m^3]
-Nright : 1.000e+19 [/m^3]
+Nleft : 2.461e+12 [/m^3]
+Nright : 2.461e+12 [/m^3]
 leveltype : +/0	
-sigma_n : 3.600e-19	[m^2]
-sigma_p : 7.000e-21	[m^2]
+sigma_n : 3.599e-19	[m^2]
+sigma_p : 7.001e-21	[m^2]
 Et :   0.394	[eV]
 
 interface properties
@@ -226,7 +236,7 @@ illuminated from : right
 internal Rfront :   0.00000000
 internal Tfront :  1.0000e+00
 Series resistance :  1 (1: Rs enabled; 0: Rs disabled)
-Rs [Ohm.m2] :   1.000000e-04
+Rs [Ohm.m2] :   5.000000e-05
 voltage V applied to : -1 (+1: right contact; -1: left contact)
 cell reference system :  1 (1: as a consumer (consumed power = +VJ; 0: as a generator (generated power = +VJ) )
 
@@ -296,19 +306,79 @@ Batch parameter 0 :
 Label 1 : layer 1
 Label 2 : defect 1
 Label 3 : Nt total
-Label 4 : nihil
+Label 4 : grading file
 simultaneous :  0
-values from a list :  0
-logarithmic variation :  1
-startvalue :   1.00000000e+09
-stopvalue :   1.00000000e+13
-number of steps :   25
+values from a list :  1
+logarithmic variation :  0
+values are file names :  1
+number of file names :   13
+list of filenames saved :  1
+filepath : d:\Samples\DeepL\FeB\Scaps3307\bdf\12.bdf
+filename : 12.bdf
+file   0:FeB1p000e09.grd
+file   1:FeB2p154e09.grd
+file   2:FeB4p642e09.grd
+file   3:FeB1p000e10.grd
+file   4:FeB2p154e10.grd
+file   5:FeB4p642e10.grd
+file   6:FeB1p000e11.grd
+file   7:FeB2p154e11.grd
+file   8:FeB4p642e11.grd
+file   9:FeB1p000e12.grd
+file  10:FeB2p154e12.grd
+file  11:FeB4p642e12.grd
+file  12:FeB1p000e13.grd
+
+Batch parameter 1 :
+
+Label 1 : layer 1
+Label 2 : defect 2
+Label 3 : Nt total
+Label 4 : grading file
+simultaneous :  1
+values from a list :  1
+logarithmic variation :  0
+values are file names :  1
+number of file names :   13
+list of filenames saved :  1
+filepath : d:\Samples\DeepL\FeB\Scaps3307\bdf\11.bdf
+filename : 11.bdf
+file   0:Fe1p000e09.grd
+file   1:Fe2p154e09.grd
+file   2:Fe4p642e09.grd
+file   3:Fe1p000e10.grd
+file   4:Fe2p154e10.grd
+file   5:Fe4p642e10.grd
+file   6:Fe1p000e11.grd
+file   7:Fe2p154e11.grd
+file   8:Fe4p642e11.grd
+file   9:Fe1p000e12.grd
+file  10:Fe2p154e12.grd
+file  11:Fe4p642e12.grd
+file  12:Fe1p000e13.grd
 
 >> end of batch settings file
 
 
 >> begin of recorder settings file
 
+
+Recorder parameter   0 :
+
+recorder type :energy bands
+recorder property :conduction band energy
+
+Recorder parameter   1 :
+
+recorder type :energy bands
+recorder property :hole Fermi level
+
+Recorder parameter   2 :
+
+recorder type :energy bands
+recorder property :valence band energy
+
+Recorder type flag : 	 0	 1	 0	 0	 0	 0	 0	 0
 
 >> end of recorder settings file
 
@@ -319,17 +389,6 @@ Max number of steps whilst curve fitting :   25
 Max step size whilst curve fitting :   1.00000000e-01
 Stop criterion for step size :   1.00000000e-10
 Stop criterion for Chi square :   1.00000000e-07
-
-Curve fitting parameter  0 :
-
-label 1 : layer 1
-label 2 : defect 1
-label 3 : Nt total
-label 4 : nihil
-minimum value :   1.00000000e+09
-maximum value :   1.00000000e+13
-start value = actual value :    0
-logarithmic variation :  1
 
 >> end of curve fitting settings file
 
