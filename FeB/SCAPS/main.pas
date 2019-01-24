@@ -252,7 +252,7 @@ procedure TMainForm.BDatesDatClick(Sender: TObject);
     SR : TSearchRec;
     i,j:integer;
     fl_name,tempString:string;
-    SRH_file:boolean;
+    SRH_file,FeBdata:boolean;
 begin
  OpenDialog1.Filter:='Shottky result file (dates.dat)|dates.dat';
    if OpenDialog1.Execute()
@@ -279,6 +279,8 @@ begin
             showmessage('.txt file is absent');
             Exit;
          end;
+       FeBdata:=(Length(TxtFile[0])>14);
+
        nDat.Add('N_Fe N_B T n n_SRH');
 //       n_srhDat.Add('N_Fe N_B T n');
        for I := 1 to DatesDatFile.Count - 1 do
@@ -300,7 +302,8 @@ begin
                       else  nDat.Add(tempString);
          end;
         DatesDatFile.Clear;
-        DatesDatFile.Add('N_Fe N_B T n_Fe n_Fe_SRH');
+        if FeBdata then DatesDatFile.Add('N_Fe N_B T n_FeB n_FeB_SRH')
+                   else DatesDatFile.Add('N_Fe N_B T n_Fe n_Fe_SRH');
         for I := 1 to nDat.Count - 1 do
          begin
           tempString:=StringDataFromRow(nDat[i],1)+
@@ -327,7 +330,10 @@ begin
         tempString:=AnsiReplaceStr(tempString,'+','');
         tempString:=NBoronToString()+
         {'NB'+tempString+}'T'+StringDataFromRow(TxtFile[2],1);
-        DatesDatFile.SaveToFile(Direc+tempString+'Fe.dat');
+        if FeBdata then DatesDatFile.SaveToFile(Direc+tempString+'FeB.dat')
+                   else DatesDatFile.SaveToFile(Direc+tempString+'Fe.dat');
+
+//        DatesDatFile.SaveToFile(Direc+tempString+'Fe.dat');
 //        nDat.SaveToFile(Direc+tempString+'Fe.dat');
 //        n_srhDat.SaveToFile(Direc+tempString+'Fe_srh.dat');
         TxtFile.Free;
