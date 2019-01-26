@@ -185,7 +185,7 @@ object MainForm: TMainForm
     OnClick = BMaterialFileCreateClick
   end
   object BDatesDat: TButton
-    Left = 16
+    Left = 8
     Top = 313
     Width = 129
     Height = 48
