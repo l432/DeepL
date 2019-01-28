@@ -247,12 +247,12 @@ end;
 
 procedure TMainForm.BDatesDatClick(Sender: TObject);
  var Direc:string;
-    DatesDatFile,{CommentsFile,}TxtFile,
+    DatesDatFile,ResultFile,TxtFile,
     nDat,n_srhDat:TStringList;
     SR : TSearchRec;
     i,j:integer;
     fl_name,tempString:string;
-    SRH_file:boolean;
+    SRH_file,FeBdata,RowIsFound:boolean;
 begin
  OpenDialog1.Filter:='Shottky result file (dates.dat)|dates.dat';
    if OpenDialog1.Execute()
@@ -260,7 +260,7 @@ begin
        begin
        Direc:=ExtractFilePath(OpenDialog1.FileName);
        DatesDatFile:=TStringList.Create;
-//       CommentsFile:=TStringList.Create;
+       ResultFile:=TStringList.Create;
        TxtFile:=TStringList.Create;
        nDat:=TStringList.Create;
        n_srhDat:=TStringList.Create;
@@ -279,6 +279,8 @@ begin
             showmessage('.txt file is absent');
             Exit;
          end;
+       FeBdata:=(Length(TxtFile[0])>14);
+
        nDat.Add('N_Fe N_B T n n_SRH');
 //       n_srhDat.Add('N_Fe N_B T n');
        for I := 1 to DatesDatFile.Count - 1 do
@@ -291,8 +293,8 @@ begin
             if AnsiPos(fl_name,TxtFile[j])>0 then
              begin
               tempString:=StringDataFromRow(TxtFile[j],4)+
-                          ' '+StringDataFromRow(TxtFile[j],1)+
                           ' '+LowerCase(floattostrF(Boron.Data,ffExponent,4,2))+
+                          ' '+StringDataFromRow(TxtFile[j],1)+
                           ' '+StringDataFromRow(DatesDatFile[i],9);
               Break;
              end;
@@ -300,7 +302,8 @@ begin
                       else  nDat.Add(tempString);
          end;
         DatesDatFile.Clear;
-        DatesDatFile.Add('N_Fe N_B T n_Fe n_Fe_SRH');
+        if FeBdata then DatesDatFile.Add('N_Fe N_B T n_FeB n_FeB_SRH')
+                   else DatesDatFile.Add('N_Fe N_B T n_Fe n_Fe_SRH');
         for I := 1 to nDat.Count - 1 do
          begin
           tempString:=StringDataFromRow(nDat[i],1)+
@@ -322,16 +325,159 @@ begin
         Direc:='';
         for I := Length(tempString) downto 1 do
           Direc:=Direc+tempString[i];
+        SetCurrentDir(Direc);
         tempString:=LowerCase(floattostrF( Boron.Data,ffExponent,4,2));
         tempString:=AnsiReplaceStr(tempString,'.','p');
         tempString:=AnsiReplaceStr(tempString,'+','');
         tempString:=NBoronToString()+
         {'NB'+tempString+}'T'+StringDataFromRow(TxtFile[2],1);
-        DatesDatFile.SaveToFile(Direc+tempString+'Fe.dat');
+        if FeBdata then DatesDatFile.SaveToFile(tempString+'FeB.dat')
+                   else DatesDatFile.SaveToFile(tempString+'Fe.dat');
+
+
+
+       if FindFirst('ResultAll.dat', faAnyFile, SR) <> 0 then
+         begin
+           DatesDatFile.SaveToFile('ResultAll.dat');
+         end
+                                                         else
+         begin
+          ResultFile.LoadFromFile(SR.Name);
+          if (AnsiPos('n_FeB',ResultFile[0])>0)and(AnsiPos('n_Fe ',ResultFile[0])>0) then
+             begin
+               while DatesDatFile.Count>1 do
+                begin
+                 tempString:=StringDataFromRow(DatesDatFile[1],1)+
+                      ' '+StringDataFromRow(DatesDatFile[1],2)+
+                      ' '+StringDataFromRow(DatesDatFile[1],3);
+                 RowIsFound:=false;
+                 for I := 1 to ResultFile.Count - 1 do
+                   begin
+                     if AnsiPos(tempString,ResultFile[i])>0 then
+                      begin
+                         if FeBdata then tempString:=tempString+' '+
+                                         StringDataFromRow(ResultFile[i],4)+' '+
+                                         StringDataFromRow(ResultFile[i],5)+' '+
+                                         StringDataFromRow(DatesDatFile[1],4)+' '+
+                                         StringDataFromRow(DatesDatFile[1],5)
+                                    else tempString:=DatesDatFile[1]+' '+
+                                         StringDataFromRow(ResultFile[i],6)+' '+
+                                         StringDataFromRow(ResultFile[i],7);
+                        tempString:=SomeSpaceToOne(tempString);
+                        ResultFile.Delete(i);
+                        ResultFile.Insert(i,tempString);
+                        RowIsFound:=true;
+                        Break;
+                      end; //if AnsiPos(tempString,ResultFile[i])>0 then
+                   end;//for I := 1 to ResultFile.Count - 1 do
+                 if not(RowIsFound) then
+                    begin
+                    if FeBdata then  tempString:=tempString+' 1 1 '+
+                                         StringDataFromRow(DatesDatFile[1],4)+' '+
+                                         StringDataFromRow(DatesDatFile[1],5)
+                               else tempString:=DatesDatFile[1];
+                     ResultFile.Add(tempString);
+                    end;
+                 DatesDatFile.Delete(1);
+                end; //while DatesDatFile.Count>1 do
+             end;
+          if (AnsiPos('n_FeB',ResultFile[0])>0)and(not(AnsiPos('n_Fe ',ResultFile[0])>0)) then
+             begin
+              if not(FeBdata) then
+                begin
+                 ResultFile.Delete(0);
+                 ResultFile.Insert(0,'N_Fe N_B T n_Fe n_Fe_SRH n_FeB n_FeB_SRH');
+                 for I := 1 to ResultFile.Count - 1 do
+                   begin
+                    tempString:=StringDataFromRow(ResultFile[i],1)+
+                      ' '+StringDataFromRow(ResultFile[i],2)+
+                      ' '+StringDataFromRow(ResultFile[i],3)+' 1 1 '+
+                      StringDataFromRow(ResultFile[i],4)+' '+
+                      StringDataFromRow(ResultFile[i],5);
+                      ResultFile.Delete(i);
+                      ResultFile.Insert(i,tempString);
+                   end;
+                end;
+              while DatesDatFile.Count>1 do
+                begin
+                 tempString:=StringDataFromRow(DatesDatFile[1],1)+
+                      ' '+StringDataFromRow(DatesDatFile[1],2)+
+                      ' '+StringDataFromRow(DatesDatFile[1],3);
+                 RowIsFound:=false;
+                 for I := 1 to ResultFile.Count - 1 do
+                   begin
+                     if AnsiPos(tempString,ResultFile[i])>0 then
+                      begin
+                         if FeBdata then tempString:=DatesDatFile[1]
+                                    else tempString:=DatesDatFile[1]+' '+
+                                         StringDataFromRow(ResultFile[i],6)+' '+
+                                         StringDataFromRow(ResultFile[i],7);
+                        tempString:=SomeSpaceToOne(tempString);
+                        ResultFile.Delete(i);
+                        ResultFile.Insert(i,tempString);
+                        RowIsFound:=true;
+                        Break;
+                      end; //if AnsiPos(tempString,ResultFile[i])>0 then
+                   end;//for I := 1 to ResultFile.Count - 1 do
+                 if not(RowIsFound) then ResultFile.Add(DatesDatFile[1]);
+                 DatesDatFile.Delete(1);
+                end; //while DatesDatFile.Count>1 do
+             end;
+          if (not(AnsiPos('n_FeB',ResultFile[0])>0))and(AnsiPos('n_Fe ',ResultFile[0])>0) then
+             begin
+              if FeBdata then
+                begin
+                 ResultFile.Delete(0);
+                 ResultFile.Insert(0,'N_Fe N_B T n_Fe n_Fe_SRH n_FeB n_FeB_SRH')
+                end;
+               while DatesDatFile.Count>1 do
+                begin
+                 tempString:=StringDataFromRow(DatesDatFile[1],1)+
+                      ' '+StringDataFromRow(DatesDatFile[1],2)+
+                      ' '+StringDataFromRow(DatesDatFile[1],3);
+                 RowIsFound:=false;
+                 for I := 1 to ResultFile.Count - 1 do
+                   begin
+                     if AnsiPos(tempString,ResultFile[i])>0 then
+                      begin
+                         if FeBdata then tempString:=tempString+' '+
+                                         StringDataFromRow(ResultFile[i],4)+' '+
+                                         StringDataFromRow(ResultFile[i],5)+' '+
+                                         StringDataFromRow(DatesDatFile[1],4)+' '+
+                                         StringDataFromRow(DatesDatFile[1],5)
+                                    else tempString:=DatesDatFile[1];
+                        tempString:=SomeSpaceToOne(tempString);
+                        ResultFile.Delete(i);
+                        ResultFile.Insert(i,tempString);
+                        RowIsFound:=true;
+                        Break;
+                      end; //if AnsiPos(tempString,ResultFile[i])>0 then
+                   end;//for I := 1 to ResultFile.Count - 1 do
+                 if not(RowIsFound) then
+                    begin
+                    if FeBdata then  tempString:=tempString+' 1 1 '+
+                                         StringDataFromRow(DatesDatFile[1],4)+' '+
+                                         StringDataFromRow(DatesDatFile[1],5)
+                               else tempString:=DatesDatFile[1];
+                     ResultFile.Add(tempString);
+                    end;
+                 DatesDatFile.Delete(1);
+                end; //while DatesDatFile.Count>1 do
+             end;
+          ResultFile.SaveToFile('ResultAll.dat');
+         end;
+
+
+
+//        if FeBdata then DatesDatFile.SaveToFile(Direc+tempString+'FeB.dat')
+//                   else DatesDatFile.SaveToFile(Direc+tempString+'Fe.dat');
+
+//        DatesDatFile.SaveToFile(Direc+tempString+'Fe.dat');
 //        nDat.SaveToFile(Direc+tempString+'Fe.dat');
 //        n_srhDat.SaveToFile(Direc+tempString+'Fe_srh.dat');
         TxtFile.Free;
         DatesDatFile.Free;
+        ResultFile.Free;
         nDat.Free;
         n_srhDat.Free;
        end;
@@ -454,6 +600,7 @@ begin
 //  showmessage(LowerCase(floattostrF( Silicon.mu_n(T,0)*1e4,ffExponent,7,2))+'  '+floattostr(Silicon.mu_n(T,1e25)));
 //  showmessage(LowerCase(floattostrF( T,ffExponent,9,2)));
 //   showmessage(floattostr(3e-4/Silicon.mu_p(T,Boron.Data*1e7)/Boron.Data/1e7/Qelem));
+  Sigma_P.Add('T sig_n sig_p');
  repeat
   Sigma_N.Add(LowerCase(floattostrf(9.1e-15*exp(-0.024/Kb/T),ffExponent,4,2)));
 //  Sigma_P.Add(LowerCase(floattostrf(3.985e-16*exp(-0.045/Kb/T),ffExponent,4,2)));
@@ -578,14 +725,15 @@ begin
   T:=T+TempStep.Data;
  until (T>TempFinish.Data);
 
- Sigma_N.SaveToFile('Sigma_n.bdf');
- Sigma_P.SaveToFile('Sigma_p.bdf');
- TempMybdf.SaveToFile('TempMy.bdf');
+// Sigma_N.SaveToFile('Sigma_n.bdf');
+// Sigma_P.SaveToFile('Sigma_p.bdf');
+ Sigma_P.SaveToFile('Sigma.bdf');
+// TempMybdf.SaveToFile('TempMy.bdf');
 // pSi_matbdf.SaveToFile('pSi_mat.bdf');
 // nSi_matbdf.SaveToFile('nSi_mat.bdf');
- Egbdf.SaveToFile('Eg.bdf');
- mu_nbdf.SaveToFile('mu_n.bdf');
- mu_pbdf.SaveToFile('mu_p.bdf');
+// Egbdf.SaveToFile('Eg.bdf');
+// mu_nbdf.SaveToFile('mu_n.bdf');
+// mu_pbdf.SaveToFile('mu_p.bdf');
 
 
  Sigma_N.Free;

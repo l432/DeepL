@@ -117,6 +117,7 @@ end;
 procedure TIVparameter.ParameterDetermination(DataString: String);
 var
   I: Integer;
+  tempStr:string;
 begin
  if AnsiStartsStr('Temperature', DataString) then
   begin
@@ -154,11 +155,17 @@ begin
             if AnsiEndsStr(' ',DataString) then DataString:=Copy(DataString,1,Length(DataString)-1);
          end;
          try
-          fData[i]:=StrToFloat(Copy(DataString,
+          tempStr:=Copy(DataString,
                                     LastDelimiter(' ', DataString)+1,
-                                    Length(DataString)-LastDelimiter(' ', DataString)));
+                                    Length(DataString)-LastDelimiter(' ', DataString));
+          fData[i]:=StrToFloat(tempStr);
          except
-
+           if (AnsiPos('.grd',tempStr)>0)and(AnsiPos('FeB',tempStr)>0) then
+             begin
+               tempstr:=Copy(tempstr,AnsiPos('B',tempStr)+1,8);
+               tempstr:=AnsiReplaceStr(tempstr,'p','.');
+               fData[i]:=StrToFloat(tempStr);
+             end;
          end;
         Exit;
       end;
