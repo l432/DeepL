@@ -56,6 +56,10 @@ type
     Nb - концентрація бору, []=см-3
     Т - температура
     Ef - положення рівня Фермі відносно валентної зони}
+    function BandGapNarrowing(Nd:double):double;
+    {звуження ширини забороненої зони внаслідок легування,
+    Nd - концентрація легантів []=см^-3,
+    результат в еВ  }
   public
     { Public declarations }
   end;
@@ -244,6 +248,11 @@ begin
        end;
 end;
 
+
+function TMainForm.BandGapNarrowing(Nd: double): double;
+begin
+  Result:=6.92e-3*(Ln(Nd/1.3e17)+sqrt(0.5+sqr(Ln(Nd/1.3e17))));
+end;
 
 procedure TMainForm.BDatesDatClick(Sender: TObject);
  var Direc:string;
@@ -573,6 +582,8 @@ procedure TMainForm.BMaterialFileCreateClick(Sender: TObject);
     T:integer;
     tempstr:string;
 begin
+// showmessage(floattostr(Boron.Data));
+
  Sigma_N:=TStringList.Create;
  Sigma_P:=TStringList.Create;
  nSiLayer:=TStringList.Create;
@@ -638,9 +649,10 @@ begin
   nSiLayer.Add('chi :	  4.050000	  4.050000	  0.100000	  1.000000	  1.000000	  4.050000	  4.050000	 0	 0	[eV]');
   pSiLayer.Add('chi :	  4.050000	  4.050000	  0.100000	  1.000000	  1.000000	  4.050000	  4.050000	 0	 0	[eV]');
 
-  tempstr:=LowerCase(floattostrF( Silicon.Eg(T),ffFixed,7,6));
+  tempstr:=LowerCase(floattostrF( Silicon.Eg(T)-BandGapNarrowing(1e19),ffFixed,7,6));
   nSiLayer.Add('Eg :	  '+tempstr+'	  '+tempstr+'	  0.100000	  1.000000	  1.000000	  '+
       tempstr+'	  '+tempstr+'	 0	 0	[eV]');
+  tempstr:=LowerCase(floattostrF( Silicon.Eg(T)-BandGapNarrowing(Boron.Data),ffFixed,7,6));
   pSiLayer.Add('Eg :	  '+tempstr+'	  '+tempstr+'	  0.100000	  1.000000	  1.000000	  '+
       tempstr+'	  '+tempstr+'	 0	 0	[eV]');
 
@@ -703,8 +715,8 @@ begin
   pSiLayer.Add('Relative electron mass :	 3.400000e-01	 3.400000e-01	 1.000000e+00	 1.000000e+00	 1.000000e+00	 3.400000e-01	 3.400000e-01	 0	 0	[-]');
   pSiLayer.Add('Relative hole mass :	 6.000000e-01	 6.000000e-01	 1.000000e+00	 1.000000e+00	 1.000000e+00	 6.000000e-01	 6.000000e-01	 0	 0	[-]');
   pSiLayer.Add('K_rad :	 1.800000e-15	 1.800000e-15	 1.000000e+01	 1.000000e+01	 1.000000e+01	 1.800000e-15	 1.800000e-15	 0	 0	[cm^3/s]');
-  pSiLayer.Add('c_n_auger :	 3.000000e-31	 3.000000e-31	 1.000000e+01	 1.000000e+01	 1.000000e+01	 3.000000e-31	 3.000000e-31	 0	 0	[cm^6/s]');
-  pSiLayer.Add('c_p_auger :	 3.000000e-31	 3.000000e-31	 1.000000e+01	 1.000000e+01	 1.000000e+01	 3.000000e-31	 3.000000e-31	 0	 0	[m^6/s]');
+  pSiLayer.Add('c_n_auger :	 2.800000e-31	 2.800000e-31	 1.000000e+01	 1.000000e+01	 1.000000e+01	 2.800000e-31	 2.800000e-31	 0	 0	[cm^6/s]');
+  pSiLayer.Add('c_p_auger :	 0.990000e-31	 0.990000e-31	 1.000000e+01	 1.000000e+01	 1.000000e+01	 0.990000e-31	 0.990000e-31	 0	 0	[cm^6/s]');
   pSiLayer.Add('absorption grading :	 1107.12	 1107.12	  250.00	  250.00	    0.00	 1107.12	 1107.12	 0	 0	[nm]');
   pSiLayer.Add('absorptionmodel pure A material (y=0) : from file');
   pSiLayer.Add('absorptionfile pure A material (y=0) : Si.abs');
@@ -824,5 +836,8 @@ begin
   Result:=Nb*1e-23*exp(0.582/Kb/T)/(1+Nb*1e-23*exp(0.582/Kb/T))
                   /(1+exp((Ef-0.394)/Kb/T));
 end;
+
+
+
 
 end.
