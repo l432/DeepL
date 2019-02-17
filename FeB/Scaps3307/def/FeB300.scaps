@@ -1,15 +1,15 @@
-> SCAPS 3.3.07 ELIS-UGent: Version scaps3307.exe, dated 06-01-2019, 14:07:34
-> SCAPS All SCAPS Settings file, saved on 	16-02-2019 at 15:33:20
+> SCAPS 3.3.07 ELIS-UGent: Version scaps3307.exe, dated 17-02-2019, 14:51:26
+> SCAPS All SCAPS Settings file, saved on 	17-02-2019 at 15:45:26
 > problem definition file loaded :
 > d:\Samples\DeepL\FeB\Scaps3307\def\FeB300.scaps
-> last saved: 	16-02-2019 at 15:33:20
+> last saved: 	17-02-2019 at 15:45:26
 > 
 
 
 >> begin of problem definition file
 
-> SCAPS 3.3.07 ELIS-UGent: Version scaps3307.exe, dated 06-01-2019, 14:07:34 Problem definition file
-> last saved by SCAPS: 	16-02-2019 at 15:33:21
+> SCAPS 3.3.07 ELIS-UGent: Version scaps3307.exe, dated 17-02-2019, 14:51:26 Problem definition file
+> last saved by SCAPS: 	17-02-2019 at 15:45:27
 > 
 > 
 > Comments (to be) included in the def file
@@ -41,6 +41,8 @@
 > No doping type nor extrinsic doping is set! (NA = ND = 1E10/cm3 = about ni)
 > 
 > Should be OK for low doped silicon. For higher doping, the mobilities should be set to an appropriate lower value; th
+> 
+> > end of problem definition file
 > 
 > > end of problem definition file
 > 
@@ -115,8 +117,8 @@ back contact
 
 flatband : 1 (1: flatband contact imposed; 0: fixed Phi_m value)
 recalculate : 1 (1 = do or 0 = do not recalculate phi_m to set flatband in each batch step)
-Sn :  1.000e+00 [m/s]
-Sp :  1.000e+00 [m/s]
+Sn :  1.000e+01 [m/s]
+Sp :  1.000e+01 [m/s]
 Tunneling to contact: 0
 Relative electron mass :   1.0000e+00
 Relative hole mass :   1.0000e+00
@@ -160,11 +162,11 @@ type : amphoteric ( 2 level(s) )
 energy distribution : single
 Reference for defect energy :  2 ; 0 = above EV (SCAPS<2.7); 1 = above Ei; 2 = below EC
 Ekar :  0.1000 [eV]
-degeneracy factors equal oneNt(x) :	 9.975390e+14	 4.592924e+03	 9.983000e+14	 1.000000e+00	 1.000000e+00	 9.975390e+14	 4.592924e+03	12	 1	FeB1p000e09.grd	[/m^3]
+degeneracy factors equal oneNt(x) :	 9.975390e+15	 4.592924e+04	 9.975000e+14	 1.000000e+00	 1.000000e+00	 9.975390e+15	 4.592924e+04	12	 1	FeB1p000e10.grd	[/m^3]
 profile : homogenous
 Lkar : 1.000e+00 [m]
-Nleft : 9.975e+14 [/m^3]
-Nright : 9.975e+14 [/m^3]
+Nleft : 9.975e+15 [/m^3]
+Nright : 9.975e+15 [/m^3]
 leveltype : +/0	0/-	
 sigma_n : 4.000e-17	2.500e-19	[m^2]
 sigma_p : 2.000e-18	5.500e-19	[m^2]
@@ -176,11 +178,11 @@ type : donor ( 1 level(s) )
 energy distribution : single
 Reference for defect energy :  0 ; 0 = above EV (SCAPS<2.7); 1 = above Ei; 2 = below EC
 Ekar :  0.1000 [eV]
-Nt(x) :	 2.460999e+12	 1.000000e+15	 1.000000e+20	 1.000000e+00	 1.000000e+00	 2.460999e+12	 1.000000e+15	12	 1	Fe1p000e09.grd	[/m^3]
+Nt(x) :	 2.460999e+13	 1.000000e+16	 1.000000e+20	 1.000000e+00	 1.000000e+00	 2.460999e+13	 1.000000e+16	12	 1	Fe1p000e10.grd	[/m^3]
 profile : homogenous
 Lkar : 1.000e+00 [m]
-Nleft : 2.461e+12 [/m^3]
-Nright : 2.461e+12 [/m^3]
+Nleft : 2.461e+13 [/m^3]
+Nright : 2.461e+13 [/m^3]
 leveltype : +/0	
 sigma_n : 3.599e-19	[m^2]
 sigma_p : 7.001e-21	[m^2]
@@ -232,8 +234,8 @@ front contact
 
 flatband : 1 (1: flatband contact imposed; 0: fixed Phi_m value)
 recalculate : 1 (1 = do or 0 = do not recalculate phi_m to set flatband in each batch step)
-Sn : 1.000e+00 [m/s]
-Sp : 1.000e+00 [m/s]
+Sn : 1.000e+01 [m/s]
+Sp : 1.000e+01 [m/s]
 Tunneling to contact: 0
 Relative electron mass :   1.0000e+00
 Relative hole mass :   1.0000e+00
@@ -280,8 +282,8 @@ Secondworkpoint transmission :   100.0000 %
 Secondworkpoint attenuation :   100.0000 %
 pause :  0
 IV_startV :     0.0000 V
-IV_stopV :     0.7000 V
-IV_points :  71
+IV_stopV :     0.6200 V
+IV_points :  63
 IV_increment :     0.010000 V
 IV_calculate :  1
 stop after Voc :  0
@@ -312,40 +314,66 @@ batch display mode = not suppressed
 Batch parameter 0 :
 
 Label 1 : layer 1
-Label 2 : defect 2
+Label 2 : defect 1
 Label 3 : Nt total
 Label 4 : grading file
 simultaneous :  0
 values from a list :  1
 logarithmic variation :  0
 values are file names :  1
-number of file names :   25
+number of file names :   19
 list of filenames saved :  0
-file   0:Fe1p000e09.grd
-file   1:Fe1p468e09.grd
-file   2:Fe2p154e09.grd
-file   3:Fe3p162e09.grd
-file   4:Fe4p642e09.grd
-file   5:Fe6p813e09.grd
-file   6:Fe1p000e10.grd
-file   7:Fe1p468e10.grd
-file   8:Fe2p154e10.grd
-file   9:Fe3p162e10.grd
-file  10:Fe4p642e10.grd
-file  11:Fe6p813e10.grd
-file  12:Fe1p000e11.grd
-file  13:Fe1p468e11.grd
-file  14:Fe2p154e11.grd
-file  15:Fe3p162e11.grd
-file  16:Fe4p642e11.grd
-file  17:Fe6p813e11.grd
-file  18:Fe1p000e12.grd
-file  19:Fe1p468e12.grd
-file  20:Fe2p154e12.grd
-file  21:Fe3p162e12.grd
-file  22:Fe4p642e12.grd
-file  23:Fe6p813e12.grd
-file  24:Fe1p000e13.grd
+file   0:FeB1p000e10.grd
+file   1:FeB1p468e10.grd
+file   2:FeB2p154e10.grd
+file   3:FeB3p162e10.grd
+file   4:FeB4p642e10.grd
+file   5:FeB6p813e10.grd
+file   6:FeB1p000e11.grd
+file   7:FeB1p468e11.grd
+file   8:FeB2p154e11.grd
+file   9:FeB3p162e11.grd
+file  10:FeB4p642e11.grd
+file  11:FeB6p813e11.grd
+file  12:FeB1p000e12.grd
+file  13:FeB1p468e12.grd
+file  14:FeB2p154e12.grd
+file  15:FeB3p162e12.grd
+file  16:FeB4p642e12.grd
+file  17:FeB6p813e12.grd
+file  18:FeB1p000e13.grd
+
+Batch parameter 1 :
+
+Label 1 : layer 1
+Label 2 : defect 2
+Label 3 : Nt total
+Label 4 : grading file
+simultaneous :  1
+values from a list :  1
+logarithmic variation :  0
+values are file names :  1
+number of file names :   19
+list of filenames saved :  0
+file   0:Fe1p000e10.grd
+file   1:Fe1p468e10.grd
+file   2:Fe2p154e10.grd
+file   3:Fe3p162e10.grd
+file   4:Fe4p642e10.grd
+file   5:Fe6p813e10.grd
+file   6:Fe1p000e11.grd
+file   7:Fe1p468e11.grd
+file   8:Fe2p154e11.grd
+file   9:Fe3p162e11.grd
+file  10:Fe4p642e11.grd
+file  11:Fe6p813e11.grd
+file  12:Fe1p000e12.grd
+file  13:Fe1p468e12.grd
+file  14:Fe2p154e12.grd
+file  15:Fe3p162e12.grd
+file  16:Fe4p642e12.grd
+file  17:Fe6p813e12.grd
+file  18:Fe1p000e13.grd
 
 >> end of batch settings file
 
