@@ -6,12 +6,29 @@ Batch parameter 0 :
 Label 1 : layer 1
 Label 2 : defect 1
 Label 3 : Nt total
-Label 4 : nihil
+Label 4 : grading file
 simultaneous :  0
-values from a list :  0
-logarithmic variation :  1
-startvalue :   1.00000000e+09
-stopvalue :   1.00000000e+13
-number of steps :   25
+values from a list :  1
+logarithmic variation :  0
+values are file names :  1
+number of file names :    2
+list of filenames saved :  0
+file   0:FeB1p000e10.grd
+file   1:FeB1p000e13.grd
+
+Batch parameter 1 :
+
+Label 1 : layer 1
+Label 2 : defect 2
+Label 3 : Nt total
+Label 4 : grading file
+simultaneous :  1
+values from a list :  1
+logarithmic variation :  0
+values are file names :  1
+number of file names :    2
+list of filenames saved :  0
+file   0:Fe1p000e10.grd
+file   1:Fe1p000e13.grd
 
 >> end of batch settings file
