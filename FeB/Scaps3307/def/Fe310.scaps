@@ -1,15 +1,15 @@
 > SCAPS 3.3.07 ELIS-UGent: Version scaps3307.exe, dated 06-01-2019, 14:07:34
-> SCAPS All SCAPS Settings file, saved on 	16-02-2019 at 17:16:21
+> SCAPS All SCAPS Settings file, saved on 	17-02-2019 at 18:18:15
 > problem definition file loaded :
 > d:\Samples\DeepL\FeB\Scaps3307\def\Fe310.scaps
-> last saved: 	16-02-2019 at 17:16:21
+> last saved: 	17-02-2019 at 18:18:15
 > 
 
 
 >> begin of problem definition file
 
 > SCAPS 3.3.07 ELIS-UGent: Version scaps3307.exe, dated 06-01-2019, 14:07:34 Problem definition file
-> last saved by SCAPS: 	16-02-2019 at 17:16:22
+> last saved by SCAPS: 	17-02-2019 at 18:18:15
 > 
 > 
 > Comments (to be) included in the def file
@@ -41,6 +41,8 @@
 > No doping type nor extrinsic doping is set! (NA = ND = 1E10/cm3 = about ni)
 > 
 > Should be OK for low doped silicon. For higher doping, the mobilities should be set to an appropriate lower value; th
+> 
+> > end of problem definition file
 > 
 > > end of problem definition file
 > 
@@ -123,8 +125,8 @@ back contact
 
 flatband : 1 (1: flatband contact imposed; 0: fixed Phi_m value)
 recalculate : 1 (1 = do or 0 = do not recalculate phi_m to set flatband in each batch step)
-Sn :  1.000e+00 [m/s]
-Sp :  1.000e+00 [m/s]
+Sn :  1.000e+01 [m/s]
+Sp :  1.000e+01 [m/s]
 Tunneling to contact: 0
 Relative electron mass :   1.0000e+00
 Relative hole mass :   1.0000e+00
@@ -224,8 +226,8 @@ front contact
 
 flatband : 1 (1: flatband contact imposed; 0: fixed Phi_m value)
 recalculate : 1 (1 = do or 0 = do not recalculate phi_m to set flatband in each batch step)
-Sn : 1.000e+00 [m/s]
-Sp : 1.000e+00 [m/s]
+Sn : 1.000e+01 [m/s]
+Sp : 1.000e+01 [m/s]
 Tunneling to contact: 0
 Relative electron mass :   1.0000e+00
 Relative hole mass :   1.0000e+00
@@ -235,8 +237,6 @@ working point
 illuminated from : right
 internal Rfront :   0.00000000
 internal Tfront :  1.0000e+00
-Series resistance :  1 (1: Rs enabled; 0: Rs disabled)
-Rs [Ohm.m2] :   5.000000e-05
 voltage V applied to : -1 (+1: right contact; -1: left contact)
 cell reference system :  1 (1: as a consumer (consumed power = +VJ; 0: as a generator (generated power = +VJ) )
 
@@ -272,8 +272,8 @@ Secondworkpoint transmission :   100.0000 %
 Secondworkpoint attenuation :   100.0000 %
 pause :  0
 IV_startV :     0.0000 V
-IV_stopV :     0.7000 V
-IV_points :  71
+IV_stopV :     0.6200 V
+IV_points :  63
 IV_increment :     0.010000 V
 IV_calculate :  1
 stop after Voc :  0
@@ -310,9 +310,9 @@ Label 4 : nihil
 simultaneous :  0
 values from a list :  0
 logarithmic variation :  1
-startvalue :   1.00000000e+09
+startvalue :   1.00000000e+10
 stopvalue :   1.00000000e+13
-number of steps :   25
+number of steps :   19
 
 >> end of batch settings file
 
