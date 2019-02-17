@@ -1,15 +1,15 @@
 > SCAPS 3.3.07 ELIS-UGent: Version scaps3307.exe, dated 06-01-2019, 14:07:34
-> SCAPS All SCAPS Settings file, saved on 	15-02-2019 at 18:32:38
+> SCAPS All SCAPS Settings file, saved on 	17-02-2019 at 12:06:23
 > problem definition file loaded :
 > d:\Samples\DeepL\FeB\Scaps3307\def\FeB290.scaps
-> last saved: 	15-02-2019 at 18:32:38
+> last saved: 	17-02-2019 at 12:06:23
 > 
 
 
 >> begin of problem definition file
 
 > SCAPS 3.3.07 ELIS-UGent: Version scaps3307.exe, dated 06-01-2019, 14:07:34 Problem definition file
-> last saved by SCAPS: 	15-02-2019 at 18:32:39
+> last saved by SCAPS: 	17-02-2019 at 12:06:24
 > 
 > 
 > Comments (to be) included in the def file
@@ -41,6 +41,8 @@
 > No doping type nor extrinsic doping is set! (NA = ND = 1E10/cm3 = about ni)
 > 
 > Should be OK for low doped silicon. For higher doping, the mobilities should be set to an appropriate lower value; th
+> 
+> > end of problem definition file
 > 
 > > end of problem definition file
 > 
@@ -111,8 +113,8 @@ back contact
 
 flatband : 1 (1: flatband contact imposed; 0: fixed Phi_m value)
 recalculate : 1 (1 = do or 0 = do not recalculate phi_m to set flatband in each batch step)
-Sn :  1.000e+00 [m/s]
-Sp :  1.000e+00 [m/s]
+Sn :  1.000e+01 [m/s]
+Sp :  1.000e+01 [m/s]
 Tunneling to contact: 0
 Relative electron mass :   1.0000e+00
 Relative hole mass :   1.0000e+00
@@ -129,17 +131,17 @@ v_th_n :	 2.033e+05	 1.000e+05	 1.000e+01	 1.000e+01	 1.000e+01	 2.033e+05	 2.03
 v_th_p :	 1.680e+05	 1.000e+05	 1.000e+01	 1.000e+01	 1.000e+01	 1.680e+05	 1.680e+05	 1	 0	[m/s]
 eps :	    11.900000	    10.000000	    10.000000	    10.000000	    10.000000	    11.900000	    11.900000	 1	 0	[-]
 chi :	  4.050000	  4.500000	  1.000000	  1.000000	  1.000000	  4.050000	  4.050000	 1	 0	[eV]
-Eg :	  1.124121	  1.200000	  0.500000	  1.000000	  1.000000	  1.124121	  1.124121	 1	 0	[eV]
-Nc :	 2.860000e+25	 1.000000e+25	 1.000000e+01	 1.000000e+01	 1.000000e+01	 2.860000e+25	 2.860000e+25	 1	 0	[/m^3]
-Nv :	 3.100000e+25	 1.000000e+25	 1.000000e+01	 1.000000e+01	 1.000000e+01	 3.100000e+25	 3.100000e+25	 1	 0	[/m^3]
-mu_n :	 1.360000e-01	 5.000000e-03	 1.000000e-03	 1.000000e+00	 1.000000e+00	 1.360000e-01	 1.360000e-01	 1	 0	[m^2/Vs]
-mu_p :	 4.373899e-02	 5.000000e-03	 1.000000e-03	 1.000000e+00	 1.000000e+00	 4.373899e-02	 4.373899e-02	 1	 0	[m^2/Vs]
+Eg :	  1.126101	  1.200000	  0.500000	  1.000000	  1.000000	  1.126101	  1.126101	 1	 0	[eV]
+Nc :	 2.852254e+25	 1.000000e+25	 1.000000e+01	 1.000000e+01	 1.000000e+01	 2.852254e+25	 2.852254e+25	 1	 0	[/m^3]
+Nv :	 3.063434e+25	 1.000000e+25	 1.000000e+01	 1.000000e+01	 1.000000e+01	 3.063434e+25	 3.063434e+25	 1	 0	[/m^3]
+mu_n :	 1.466017e-01	 5.000000e-03	 1.000000e-03	 1.000000e+00	 1.000000e+00	 1.466017e-01	 1.466017e-01	 1	 0	[m^2/Vs]
+mu_p :	 4.670910e-02	 5.000000e-03	 1.000000e-03	 1.000000e+00	 1.000000e+00	 4.670910e-02	 4.670910e-02	 1	 0	[m^2/Vs]
 K_rad :	 1.800000e-21	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 1.800000e-21	 1.800000e-21	 1	 0	[m^3/s]
-c_n_auger :	 3.000000e-43	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 3.000000e-43	 3.000000e-43	 1	 0	[m^6/s]
-c_p_auger :	 3.000000e-43	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 3.000000e-43	 3.000000e-43	 1	 0	[m^6/s]
+c_n_auger :	 2.800000e-43	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 2.800000e-43	 2.800000e-43	 1	 0	[m^6/s]
+c_p_auger :	 9.900000e-44	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 9.900000e-44	 9.900000e-44	 1	 0	[m^6/s]
 Na(uniform) :	 1.000000e+22	 1.000000e+22	 1.000000e+01	 1.000000e+01	 1.000000e+01	 1.000000e+22	 1.000000e+22	 0	 2	[/m^3]
 Nd(uniform) :	 0.000000e+00	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 0.000000e+00	 0.000000e+00	 0	 2	[/m^3]
-absorption grading :	 1103.06	 1033.31	  250.00	  250.00	    0.00	    1.20	    1.20	 7	 0	[nm]
+absorption grading :	 1101.12	 1033.31	  250.00	  250.00	    0.00	    1.20	    1.20	 7	 0	[nm]
 absorptionmodel pure A material (y=0) : from file
 absorptionfile pure A material (y=0) : Si.abs
 absorption pure B material (y=1), model : coefficients A and B (line inserted for compatibility with SCAPS until 3.3.06)
@@ -156,11 +158,11 @@ type : amphoteric ( 2 level(s) )
 energy distribution : single
 Reference for defect energy :  2 ; 0 = above EV (SCAPS<2.7); 1 = above Ei; 2 = below EC
 Ekar :  0.1000 [eV]
-degeneracy factors equal oneNt(x) :	 9.987934e+14	 1.485543e+03	 9.975000e+14	 1.000000e+00	 1.000000e+00	 9.987934e+14	 1.485543e+03	12	 1	FeB1p000e09.grd	[/m^3]
+degeneracy factors equal oneNt(x) :	 9.987934e+15	 1.485543e+04	 9.988000e+14	 1.000000e+00	 1.000000e+00	 9.987934e+15	 1.485543e+04	12	 1	FeB1p000e10.grd	[/m^3]
 profile : homogenous
 Lkar : 1.000e+00 [m]
-Nleft : 9.988e+14 [/m^3]
-Nright : 9.988e+14 [/m^3]
+Nleft : 9.988e+15 [/m^3]
+Nright : 9.988e+15 [/m^3]
 leveltype : +/0	0/-	
 sigma_n : 4.000e-17	2.500e-19	[m^2]
 sigma_p : 2.000e-18	5.500e-19	[m^2]
@@ -172,14 +174,14 @@ type : donor ( 1 level(s) )
 energy distribution : single
 Reference for defect energy :  0 ; 0 = above EV (SCAPS<2.7); 1 = above Ei; 2 = below EC
 Ekar :  0.1000 [eV]
-Nt(x) :	 1.206594e+12	 1.000000e+15	 1.000000e+20	 1.000000e+00	 1.000000e+00	 1.206594e+12	 1.000000e+15	12	 1	Fe1p000e09.grd	[/m^3]
+Nt(x) :	 1.206594e+13	 1.000000e+16	 1.000000e+20	 1.000000e+00	 1.000000e+00	 1.206594e+13	 1.000000e+16	12	 1	Fe1p000e10.grd	[/m^3]
 profile : homogenous
 Lkar : 1.000e+00 [m]
-Nleft : 1.207e+12 [/m^3]
-Nright : 1.207e+12 [/m^3]
+Nleft : 1.207e+13 [/m^3]
+Nright : 1.207e+13 [/m^3]
 leveltype : +/0	
-sigma_n : 3.599e-19	[m^2]
-sigma_p : 7.001e-21	[m^2]
+sigma_n : 3.486e-19	[m^2]
+sigma_p : 6.593e-21	[m^2]
 Et :   0.394	[eV]
 
 interface properties
@@ -202,17 +204,17 @@ v_th_n :	 2.033e+05	 1.000e+05	 1.000e+01	 1.000e+01	 1.000e+01	 2.033e+05	 2.03
 v_th_p :	 1.680e+05	 1.000e+05	 1.000e+01	 1.000e+01	 1.000e+01	 1.680e+05	 1.680e+05	 1	 0	[m/s]
 eps :	    11.900000	    10.000000	    10.000000	    10.000000	    10.000000	    11.900000	    11.900000	 1	 0	[-]
 chi :	  4.050000	  4.500000	  1.000000	  1.000000	  1.000000	  4.050000	  4.050000	 1	 0	[eV]
-Eg :	  1.124121	  1.200000	  0.500000	  1.000000	  1.000000	  1.124121	  1.124121	 1	 0	[eV]
-Nc :	 2.860000e+25	 1.000000e+25	 1.000000e+01	 1.000000e+01	 1.000000e+01	 2.860000e+25	 2.860000e+25	 1	 0	[/m^3]
-Nv :	 3.100000e+25	 1.000000e+25	 1.000000e+01	 1.000000e+01	 1.000000e+01	 3.100000e+25	 3.100000e+25	 1	 0	[/m^3]
-mu_n :	 1.159079e-02	 5.000000e-03	 1.000000e-03	 1.000000e+00	 1.000000e+00	 1.159079e-02	 1.159079e-02	 1	 0	[m^2/Vs]
-mu_p :	 4.612000e-02	 5.000000e-03	 1.000000e-03	 1.000000e+00	 1.000000e+00	 4.612000e-02	 4.612000e-02	 1	 0	[m^2/Vs]
+Eg :	  1.066263	  1.200000	  0.500000	  1.000000	  1.000000	  1.066263	  1.066263	 1	 0	[eV]
+Nc :	 2.852254e+25	 1.000000e+25	 1.000000e+01	 1.000000e+01	 1.000000e+01	 2.852254e+25	 2.852254e+25	 1	 0	[/m^3]
+Nv :	 3.063434e+25	 1.000000e+25	 1.000000e+01	 1.000000e+01	 1.000000e+01	 3.063434e+25	 3.063434e+25	 1	 0	[/m^3]
+mu_n :	 1.173863e-02	 5.000000e-03	 1.000000e-03	 1.000000e+00	 1.000000e+00	 1.173863e-02	 1.173863e-02	 1	 0	[m^2/Vs]
+mu_p :	 4.942140e-02	 5.000000e-03	 1.000000e-03	 1.000000e+00	 1.000000e+00	 4.942140e-02	 4.942140e-02	 1	 0	[m^2/Vs]
 K_rad :	 1.800000e-21	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 1.800000e-21	 1.800000e-21	 1	 0	[m^3/s]
 c_n_auger :	 3.000000e-43	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 3.000000e-43	 3.000000e-43	 1	 0	[m^6/s]
 c_p_auger :	 3.000000e-43	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 3.000000e-43	 3.000000e-43	 1	 0	[m^6/s]
 Na(uniform) :	 0.000000e+00	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 0.000000e+00	 0.000000e+00	 0	 2	[/m^3]
 Nd(uniform) :	 1.000000e+25	 1.000000e+25	 1.000000e+01	 1.000000e+01	 1.000000e+01	 1.000000e+25	 1.000000e+25	 0	 2	[/m^3]
-absorption grading :	 1103.06	 1033.31	  250.00	  250.00	    0.00	    1.20	    1.20	 7	 0	[nm]
+absorption grading :	 1162.92	 1033.31	  250.00	  250.00	    0.00	    1.20	    1.20	 7	 0	[nm]
 absorptionmodel pure A material (y=0) : from file
 absorptionfile pure A material (y=0) : Si.abs
 absorption pure B material (y=1), model : coefficients A and B (line inserted for compatibility with SCAPS until 3.3.06)
@@ -228,8 +230,8 @@ front contact
 
 flatband : 1 (1: flatband contact imposed; 0: fixed Phi_m value)
 recalculate : 1 (1 = do or 0 = do not recalculate phi_m to set flatband in each batch step)
-Sn : 1.000e+00 [m/s]
-Sp : 1.000e+00 [m/s]
+Sn : 1.000e+01 [m/s]
+Sp : 1.000e+01 [m/s]
 Tunneling to contact: 0
 Relative electron mass :   1.0000e+00
 Relative hole mass :   1.0000e+00
@@ -239,8 +241,6 @@ working point
 illuminated from : right
 internal Rfront :   0.00000000
 internal Tfront :  1.0000e+00
-Series resistance :  1 (1: Rs enabled; 0: Rs disabled)
-Rs [Ohm.m2] :   5.000000e-05
 voltage V applied to : -1 (+1: right contact; -1: left contact)
 cell reference system :  1 (1: as a consumer (consumed power = +VJ; 0: as a generator (generated power = +VJ) )
 
@@ -276,8 +276,8 @@ Secondworkpoint transmission :   100.0000 %
 Secondworkpoint attenuation :   100.0000 %
 pause :  0
 IV_startV :     0.0000 V
-IV_stopV :     0.7000 V
-IV_points :  71
+IV_stopV :     0.6200 V
+IV_points :  63
 IV_increment :     0.010000 V
 IV_calculate :  1
 stop after Voc :  0
@@ -315,35 +315,27 @@ simultaneous :  0
 values from a list :  1
 logarithmic variation :  0
 values are file names :  1
-number of file names :   25
-list of filenames saved :  1
-filepath : d:\Samples\DeepL\FeB\Scaps3307\bdf\FeB.bdf
-filename : FeB.bdf
-file   0:FeB1p000e09.grd
-file   1:FeB1p468e09.grd
-file   2:FeB2p154e09.grd
-file   3:FeB3p162e09.grd
-file   4:FeB4p642e09.grd
-file   5:FeB6p813e09.grd
-file   6:FeB1p000e10.grd
-file   7:FeB1p468e10.grd
-file   8:FeB2p154e10.grd
-file   9:FeB3p162e10.grd
-file  10:FeB4p642e10.grd
-file  11:FeB6p813e10.grd
-file  12:FeB1p000e11.grd
-file  13:FeB1p468e11.grd
-file  14:FeB2p154e11.grd
-file  15:FeB3p162e11.grd
-file  16:FeB4p642e11.grd
-file  17:FeB6p813e11.grd
-file  18:FeB1p000e12.grd
-file  19:FeB1p468e12.grd
-file  20:FeB2p154e12.grd
-file  21:FeB3p162e12.grd
-file  22:FeB4p642e12.grd
-file  23:FeB6p813e12.grd
-file  24:FeB1p000e13.grd
+number of file names :   19
+list of filenames saved :  0
+file   0:FeB1p000e10.grd
+file   1:FeB1p468e10.grd
+file   2:FeB2p154e10.grd
+file   3:FeB3p162e10.grd
+file   4:FeB4p642e10.grd
+file   5:FeB6p813e10.grd
+file   6:FeB1p000e11.grd
+file   7:FeB1p468e11.grd
+file   8:FeB2p154e11.grd
+file   9:FeB3p162e11.grd
+file  10:FeB4p642e11.grd
+file  11:FeB6p813e11.grd
+file  12:FeB1p000e12.grd
+file  13:FeB1p468e12.grd
+file  14:FeB2p154e12.grd
+file  15:FeB3p162e12.grd
+file  16:FeB4p642e12.grd
+file  17:FeB6p813e12.grd
+file  18:FeB1p000e13.grd
 
 Batch parameter 1 :
 
@@ -355,35 +347,27 @@ simultaneous :  1
 values from a list :  1
 logarithmic variation :  0
 values are file names :  1
-number of file names :   25
-list of filenames saved :  1
-filepath : d:\Samples\DeepL\FeB\Scaps3307\bdf\Fe.bdf
-filename : Fe.bdf
-file   0:Fe1p000e09.grd
-file   1:Fe1p468e09.grd
-file   2:Fe2p154e09.grd
-file   3:Fe3p162e09.grd
-file   4:Fe4p642e09.grd
-file   5:Fe6p813e09.grd
-file   6:Fe1p000e10.grd
-file   7:Fe1p468e10.grd
-file   8:Fe2p154e10.grd
-file   9:Fe3p162e10.grd
-file  10:Fe4p642e10.grd
-file  11:Fe6p813e10.grd
-file  12:Fe1p000e11.grd
-file  13:Fe1p468e11.grd
-file  14:Fe2p154e11.grd
-file  15:Fe3p162e11.grd
-file  16:Fe4p642e11.grd
-file  17:Fe6p813e11.grd
-file  18:Fe1p000e12.grd
-file  19:Fe1p468e12.grd
-file  20:Fe2p154e12.grd
-file  21:Fe3p162e12.grd
-file  22:Fe4p642e12.grd
-file  23:Fe6p813e12.grd
-file  24:Fe1p000e13.grd
+number of file names :   19
+list of filenames saved :  0
+file   0:Fe1p000e10.grd
+file   1:Fe1p468e10.grd
+file   2:Fe2p154e10.grd
+file   3:Fe3p162e10.grd
+file   4:Fe4p642e10.grd
+file   5:Fe6p813e10.grd
+file   6:Fe1p000e11.grd
+file   7:Fe1p468e11.grd
+file   8:Fe2p154e11.grd
+file   9:Fe3p162e11.grd
+file  10:Fe4p642e11.grd
+file  11:Fe6p813e11.grd
+file  12:Fe1p000e12.grd
+file  13:Fe1p468e12.grd
+file  14:Fe2p154e12.grd
+file  15:Fe3p162e12.grd
+file  16:Fe4p642e12.grd
+file  17:Fe6p813e12.grd
+file  18:Fe1p000e13.grd
 
 >> end of batch settings file
 
