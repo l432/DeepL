@@ -1,0 +1,72 @@
+> SCAPS 3.3.07 ELIS-UGent: Version scaps3307.exe, dated 06-01-2019, 14:07:34
+> SCAPS Batch Settings file, saved on 	17-02-2019 at 12:06:05
+> problem definition file loaded :
+> d:\Samples\DeepL\FeB\Scaps3307\def\FeB290.scaps
+> last saved: 	17-02-2019 at 12:02:14
+> 
+
+batch display mode = not suppressed
+
+Batch parameter 0 :
+
+Label 1 : layer 1
+Label 2 : defect 1
+Label 3 : Nt total
+Label 4 : grading file
+simultaneous :  0
+values from a list :  1
+logarithmic variation :  0
+values are file names :  1
+number of file names :   19
+list of filenames saved :  0
+file   0:FeB1p000e10.grd
+file   1:FeB1p468e10.grd
+file   2:FeB2p154e10.grd
+file   3:FeB3p162e10.grd
+file   4:FeB4p642e10.grd
+file   5:FeB6p813e10.grd
+file   6:FeB1p000e11.grd
+file   7:FeB1p468e11.grd
+file   8:FeB2p154e11.grd
+file   9:FeB3p162e11.grd
+file  10:FeB4p642e11.grd
+file  11:FeB6p813e11.grd
+file  12:FeB1p000e12.grd
+file  13:FeB1p468e12.grd
+file  14:FeB2p154e12.grd
+file  15:FeB3p162e12.grd
+file  16:FeB4p642e12.grd
+file  17:FeB6p813e12.grd
+file  18:FeB1p000e13.grd
+
+Batch parameter 1 :
+
+Label 1 : layer 1
+Label 2 : defect 2
+Label 3 : Nt total
+Label 4 : grading file
+simultaneous :  1
+values from a list :  1
+logarithmic variation :  0
+values are file names :  1
+number of file names :   19
+list of filenames saved :  0
+file   0:Fe1p000e10.grd
+file   1:Fe1p468e10.grd
+file   2:Fe2p154e10.grd
+file   3:Fe3p162e10.grd
+file   4:Fe4p642e10.grd
+file   5:Fe6p813e10.grd
+file   6:Fe1p000e11.grd
+file   7:Fe1p468e11.grd
+file   8:Fe2p154e11.grd
+file   9:Fe3p162e11.grd
+file  10:Fe4p642e11.grd
+file  11:Fe6p813e11.grd
+file  12:Fe1p000e12.grd
+file  13:Fe1p468e12.grd
+file  14:Fe2p154e12.grd
+file  15:Fe3p162e12.grd
+file  16:Fe4p642e12.grd
+file  17:Fe6p813e12.grd
+file  18:Fe1p000e13.grd

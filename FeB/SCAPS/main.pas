@@ -802,6 +802,11 @@ end;
 
 procedure TMainForm.FormDestroy(Sender: TObject);
 begin
+
+ ConfigFile.EraseSection('Temperature');
+ ConfigFile.EraseSection('Boron');
+ ConfigFile.EraseSection('Iron');
+
   Boron.WriteToIniFile(ConfigFile);
   Boron.Free;
   TempFinish.WriteToIniFile(ConfigFile);
