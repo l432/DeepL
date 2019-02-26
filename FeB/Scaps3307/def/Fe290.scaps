@@ -1,15 +1,15 @@
 > SCAPS 3.3.07 ELIS-UGent: Version scaps3307.exe, dated 06-01-2019, 14:07:34
-> SCAPS All SCAPS Settings file, saved on 	23-02-2019 at 18:26:08
+> SCAPS All SCAPS Settings file, saved on 	26-02-2019 at 20:31:49
 > problem definition file loaded :
 > d:\Samples\DeepL\FeB\Scaps3307\def\Fe290.scaps
-> last saved: 	23-02-2019 at 18:26:08
+> last saved: 	26-02-2019 at 20:31:49
 > 
 
 
 >> begin of problem definition file
 
 > SCAPS 3.3.07 ELIS-UGent: Version scaps3307.exe, dated 06-01-2019, 14:07:34 Problem definition file
-> last saved by SCAPS: 	23-02-2019 at 18:26:09
+> last saved by SCAPS: 	26-02-2019 at 20:31:50
 > 
 > 
 > Comments (to be) included in the def file
@@ -41,6 +41,10 @@
 > No doping type nor extrinsic doping is set! (NA = ND = 1E10/cm3 = about ni)
 > 
 > Should be OK for low doped silicon. For higher doping, the mobilities should be set to an appropriate lower value; th
+> 
+> > end of problem definition file
+> 
+> > end of problem definition file
 > 
 > > end of problem definition file
 > 
@@ -137,17 +141,17 @@ v_th_n :	 2.033e+05	 1.000e+05	 1.000e+01	 1.000e+01	 1.000e+01	 2.033e+05	 2.03
 v_th_p :	 1.680e+05	 1.000e+05	 1.000e+01	 1.000e+01	 1.000e+01	 1.680e+05	 1.680e+05	 1	 0	[m/s]
 eps :	    11.900000	    10.000000	    10.000000	    10.000000	    10.000000	    11.900000	    11.900000	 1	 0	[-]
 chi :	  4.050000	  4.500000	  1.000000	  1.000000	  1.000000	  4.050000	  4.050000	 1	 0	[eV]
-Eg :	  1.126410	  1.200000	  0.500000	  1.000000	  1.000000	  1.126410	  1.126410	 1	 0	[eV]
+Eg :	  1.126363	  1.200000	  0.500000	  1.000000	  1.000000	  1.126363	  1.126363	 1	 0	[eV]
 Nc :	 2.852254e+25	 1.000000e+25	 1.000000e+01	 1.000000e+01	 1.000000e+01	 2.852254e+25	 2.852254e+25	 1	 0	[/m^3]
 Nv :	 3.063434e+25	 1.000000e+25	 1.000000e+01	 1.000000e+01	 1.000000e+01	 3.063434e+25	 3.063434e+25	 1	 0	[/m^3]
 mu_n :	 1.466017e-01	 5.000000e-03	 1.000000e-03	 1.000000e+00	 1.000000e+00	 1.466017e-01	 1.466017e-01	 1	 0	[m^2/Vs]
-mu_p :	 4.904732e-02	 5.000000e-03	 1.000000e-03	 1.000000e+00	 1.000000e+00	 4.904732e-02	 4.904732e-02	 1	 0	[m^2/Vs]
+mu_p :	 4.880261e-02	 5.000000e-03	 1.000000e-03	 1.000000e+00	 1.000000e+00	 4.880261e-02	 4.880261e-02	 1	 0	[m^2/Vs]
 K_rad :	 1.800000e-21	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 1.800000e-21	 1.800000e-21	 1	 0	[m^3/s]
 c_n_auger :	 2.800000e-43	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 2.800000e-43	 2.800000e-43	 1	 0	[m^6/s]
 c_p_auger :	 9.900000e-44	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 9.900000e-44	 9.900000e-44	 1	 0	[m^6/s]
-Na(uniform) :	 1.000000e+21	 1.000000e+21	 1.000000e+01	 1.000000e+01	 1.000000e+01	 1.000000e+21	 1.000000e+21	 0	 2	[/m^3]
+Na(uniform) :	 1.778000e+21	 1.778000e+21	 1.000000e+01	 1.000000e+01	 1.000000e+01	 1.778000e+21	 1.778000e+21	 0	 2	[/m^3]
 Nd(uniform) :	 0.000000e+00	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 0.000000e+00	 0.000000e+00	 0	 2	[/m^3]
-absorption grading :	 1100.82	 1033.31	  250.00	  250.00	    0.00	    1.20	    1.20	 7	 0	[nm]
+absorption grading :	 1100.87	 1033.31	  250.00	  250.00	    0.00	    1.20	    1.20	 7	 0	[nm]
 absorptionmodel pure A material (y=0) : from file
 absorptionfile pure A material (y=0) : Si.abs
 absorption pure B material (y=1), model : coefficients A and B (line inserted for compatibility with SCAPS until 3.3.06)
