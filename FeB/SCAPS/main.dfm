@@ -3,59 +3,59 @@ object MainForm: TMainForm
   Top = 0
   BorderStyle = bsDialog
   Caption = 'SCAPS Conversion'
-  ClientHeight = 550
-  ClientWidth = 480
+  ClientHeight = 413
+  ClientWidth = 360
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -13
+  Font.Height = -10
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  PixelsPerInch = 120
-  TextHeight = 16
+  PixelsPerInch = 96
+  TextHeight = 12
   object LFile: TLabel
-    Left = 224
-    Top = 36
-    Width = 238
-    Height = 24
+    Left = 168
+    Top = 27
+    Width = 179
+    Height = 18
     Alignment = taCenter
     AutoSize = False
     Caption = 'No Selection'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -20
+    Font.Height = -15
     Font.Name = 'Tahoma'
     Font.Style = []
     ParentFont = False
   end
   object LAction: TLabel
-    Left = 224
-    Top = 82
-    Width = 238
-    Height = 24
+    Left = 168
+    Top = 62
+    Width = 179
+    Height = 18
     Alignment = taCenter
     AutoSize = False
     Caption = 'Not Yet'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -20
+    Font.Height = -15
     Font.Name = 'Tahoma'
     Font.Style = []
     ParentFont = False
   end
   object BtFileSelect: TButton
-    Left = 32
-    Top = 32
-    Width = 153
-    Height = 33
+    Left = 24
+    Top = 24
+    Width = 115
+    Height = 25
     Caption = '&Select  .iv file'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -17
+    Font.Height = -13
     Font.Name = 'Tahoma'
     Font.Style = [fsBold]
     ParentFont = False
@@ -63,15 +63,15 @@ object MainForm: TMainForm
     OnClick = BtFileSelectClick
   end
   object BtDone: TButton
-    Left = 32
-    Top = 80
-    Width = 153
-    Height = 33
+    Left = 24
+    Top = 60
+    Width = 115
+    Height = 25
     Caption = '&Extract IV files'
     Enabled = False
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -17
+    Font.Height = -13
     Font.Name = 'Tahoma'
     Font.Style = [fsBold]
     ParentFont = False
@@ -79,14 +79,14 @@ object MainForm: TMainForm
     OnClick = BtDoneClick
   end
   object BtClose: TButton
-    Left = 168
-    Top = 504
-    Width = 105
-    Height = 25
+    Left = 126
+    Top = 378
+    Width = 79
+    Height = 19
     Caption = '&Close'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -18
+    Font.Height = -15
     Font.Name = 'Tahoma'
     Font.Style = [fsBold]
     ParentFont = False
@@ -94,74 +94,74 @@ object MainForm: TMainForm
     OnClick = BtCloseClick
   end
   object GBTemp: TGroupBox
-    Left = 16
-    Top = 144
-    Width = 313
-    Height = 65
+    Left = 12
+    Top = 108
+    Width = 235
+    Height = 49
     Caption = 'Temperature'
     TabOrder = 3
     object LTemp_start: TLabel
-      Left = 16
-      Top = 24
-      Width = 33
-      Height = 16
+      Left = 12
+      Top = 18
+      Width = 25
+      Height = 12
       Caption = 'Start:'
     end
     object LTemp_Finish: TLabel
-      Left = 123
-      Top = 24
-      Width = 38
-      Height = 16
+      Left = 92
+      Top = 18
+      Width = 30
+      Height = 12
       Caption = 'Finish:'
     end
     object LTemp_Step: TLabel
-      Left = 224
-      Top = 24
-      Width = 31
-      Height = 16
+      Left = 168
+      Top = 18
+      Width = 24
+      Height = 12
       Caption = 'Step:'
     end
     object STTemp_start: TStaticText
-      Left = 64
-      Top = 24
-      Width = 25
-      Height = 20
+      Left = 48
+      Top = 18
+      Width = 19
+      Height = 16
       Caption = '300'
       TabOrder = 0
     end
     object STTemp_Finish: TStaticText
-      Left = 171
-      Top = 24
-      Width = 25
-      Height = 20
+      Left = 128
+      Top = 18
+      Width = 19
+      Height = 16
       Caption = '350'
       TabOrder = 1
     end
     object STTemp_Step: TStaticText
-      Left = 272
-      Top = 24
-      Width = 18
-      Height = 20
+      Left = 204
+      Top = 18
+      Width = 14
+      Height = 16
       Caption = '10'
       TabOrder = 2
     end
   end
   object GBBoron: TGroupBox
-    Left = 16
-    Top = 223
-    Width = 177
-    Height = 65
+    Left = 12
+    Top = 167
+    Width = 133
+    Height = 49
     Caption = 'Boron concentration, cm-3'
     TabOrder = 4
     object STBoron: TStaticText
-      Left = 32
-      Top = 24
-      Width = 43
-      Height = 26
+      Left = 24
+      Top = 18
+      Width = 36
+      Height = 22
       Caption = '1e16'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -18
+      Font.Height = -15
       Font.Name = 'Tahoma'
       Font.Style = []
       ParentFont = False
@@ -169,14 +169,14 @@ object MainForm: TMainForm
     end
   end
   object BMaterialFileCreate: TButton
-    Left = 328
-    Top = 233
-    Width = 134
-    Height = 55
+    Left = 246
+    Top = 175
+    Width = 101
+    Height = 41
     Caption = '.material file create'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -17
+    Font.Height = -13
     Font.Name = 'Tahoma'
     Font.Style = [fsBold]
     ParentFont = False
@@ -185,14 +185,14 @@ object MainForm: TMainForm
     OnClick = BMaterialFileCreateClick
   end
   object BDatesDat: TButton
-    Left = 8
-    Top = 313
-    Width = 129
-    Height = 48
+    Left = 6
+    Top = 235
+    Width = 97
+    Height = 36
     Caption = 'dates.dat convert'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -17
+    Font.Height = -13
     Font.Name = 'Tahoma'
     Font.Style = [fsBold]
     ParentFont = False
@@ -201,14 +201,14 @@ object MainForm: TMainForm
     OnClick = BDatesDatClick
   end
   object BFeB_x: TButton
-    Left = 343
-    Top = 392
-    Width = 129
-    Height = 48
+    Left = 257
+    Top = 294
+    Width = 97
+    Height = 36
     Caption = 'Fe(x) and FeB(x) create'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -17
+    Font.Height = -13
     Font.Name = 'Tahoma'
     Font.Style = [fsBold]
     ParentFont = False
@@ -217,54 +217,54 @@ object MainForm: TMainForm
     OnClick = BFeB_xClick
   end
   object GBFerum: TGroupBox
-    Left = 8
-    Top = 384
-    Width = 263
-    Height = 65
+    Left = 6
+    Top = 288
+    Width = 197
+    Height = 49
     Caption = 'Iron concentration, cm-3'
     TabOrder = 8
     object LFe_Lo: TLabel
-      Left = 16
-      Top = 24
-      Width = 33
-      Height = 16
+      Left = 12
+      Top = 18
+      Width = 25
+      Height = 12
       Caption = 'Start:'
     end
     object LFe_Hi: TLabel
-      Left = 99
-      Top = 24
-      Width = 38
-      Height = 16
+      Left = 74
+      Top = 18
+      Width = 30
+      Height = 12
       Caption = 'Finish:'
     end
     object LFe_steps: TLabel
-      Left = 179
-      Top = 24
-      Width = 31
-      Height = 16
+      Left = 134
+      Top = 18
+      Width = 24
+      Height = 12
       Caption = 'Step:'
     end
     object STFe_Lo: TStaticText
-      Left = 16
-      Top = 46
-      Width = 25
-      Height = 20
+      Left = 12
+      Top = 35
+      Width = 19
+      Height = 16
       Caption = '300'
       TabOrder = 0
     end
     object STFe_Hi: TStaticText
-      Left = 99
-      Top = 46
-      Width = 25
-      Height = 20
+      Left = 74
+      Top = 35
+      Width = 19
+      Height = 16
       Caption = '350'
       TabOrder = 1
     end
     object STFe_steps: TStaticText
-      Left = 179
-      Top = 46
-      Width = 18
-      Height = 20
+      Left = 134
+      Top = 35
+      Width = 14
+      Height = 16
       Caption = '10'
       TabOrder = 2
     end

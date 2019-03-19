@@ -1,15 +1,15 @@
-> SCAPS 3.3.07 ELIS-UGent: Version scaps3307.exe, dated 06-01-2019, 14:07:34
-> SCAPS All SCAPS Settings file, saved on 	26-02-2019 at 13:24:15
+> SCAPS 3.3.07 ELIS-UGent: Version scaps3307.exe, dated 08-01-2019, 08:00:27
+> SCAPS All SCAPS Settings file, saved on 	19-03-2019 at 09:38:59
 > problem definition file loaded :
-> d:\Samples\DeepL\FeB\Scaps3307\def\Fe300.scaps
-> last saved: 	26-02-2019 at 13:24:15
+> d:\Oleg\SAMPLE\DeepL\FeB\Scaps3307\def\Fe305.scaps
+> last saved: 	27-02-2019 at 07:40:16
 > 
 
 
 >> begin of problem definition file
 
-> SCAPS 3.3.07 ELIS-UGent: Version scaps3307.exe, dated 06-01-2019, 14:07:34 Problem definition file
-> last saved by SCAPS: 	26-02-2019 at 13:24:16
+> SCAPS 3.3.07 ELIS-UGent: Version scaps3307.exe, dated 08-01-2019, 08:00:27 Problem definition file
+> last saved by SCAPS: 	19-03-2019 at 09:39:00
 > 
 > 
 > Comments (to be) included in the def file
@@ -41,6 +41,10 @@
 > No doping type nor extrinsic doping is set! (NA = ND = 1E10/cm3 = about ni)
 > 
 > Should be OK for low doped silicon. For higher doping, the mobilities should be set to an appropriate lower value; th
+> 
+> > end of problem definition file
+> 
+> > end of problem definition file
 > 
 > > end of problem definition file
 > 
@@ -143,17 +147,17 @@ v_th_n :	 2.033e+05	 1.000e+05	 1.000e+01	 1.000e+01	 1.000e+01	 2.033e+05	 2.03
 v_th_p :	 1.680e+05	 1.000e+05	 1.000e+01	 1.000e+01	 1.000e+01	 1.680e+05	 1.680e+05	 1	 0	[m/s]
 eps :	    11.900000	    10.000000	    10.000000	    10.000000	    10.000000	    11.900000	    11.900000	 1	 0	[-]
 chi :	  4.050000	  4.500000	  1.000000	  1.000000	  1.000000	  4.050000	  4.050000	 1	 0	[eV]
-Eg :	  1.120718	  1.200000	  0.500000	  1.000000	  1.000000	  1.120718	  1.120718	 1	 0	[eV]
-Nc :	 2.860000e+25	 1.000000e+25	 1.000000e+01	 1.000000e+01	 1.000000e+01	 2.860000e+25	 2.860000e+25	 1	 0	[/m^3]
-Nv :	 3.100000e+25	 1.000000e+25	 1.000000e+01	 1.000000e+01	 1.000000e+01	 3.100000e+25	 3.100000e+25	 1	 0	[/m^3]
-mu_n :	 1.360000e-01	 5.000000e-03	 1.000000e-03	 1.000000e+00	 1.000000e+00	 1.360000e-01	 1.360000e-01	 1	 0	[m^2/Vs]
-mu_p :	 3.308249e-02	 5.000000e-03	 1.000000e-03	 1.000000e+00	 1.000000e+00	 3.308249e-02	 3.308249e-02	 1	 0	[m^2/Vs]
+Eg :	  1.119374	  1.200000	  0.500000	  1.000000	  1.000000	  1.119374	  1.119374	 1	 0	[eV]
+Nc :	 2.863784e+25	 1.000000e+25	 1.000000e+01	 1.000000e+01	 1.000000e+01	 2.863784e+25	 2.863784e+25	 1	 0	[/m^3]
+Nv :	 3.117986e+25	 1.000000e+25	 1.000000e+01	 1.000000e+01	 1.000000e+01	 3.117986e+25	 3.117986e+25	 1	 0	[/m^3]
+mu_n :	 1.311231e-01	 5.000000e-03	 1.000000e-03	 1.000000e+00	 1.000000e+00	 1.311231e-01	 1.311231e-01	 1	 0	[m^2/Vs]
+mu_p :	 3.231108e-02	 5.000000e-03	 1.000000e-03	 1.000000e+00	 1.000000e+00	 3.231108e-02	 3.231108e-02	 1	 0	[m^2/Vs]
 K_rad :	 1.800000e-21	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 1.800000e-21	 1.800000e-21	 1	 0	[m^3/s]
 c_n_auger :	 2.800000e-43	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 2.800000e-43	 2.800000e-43	 1	 0	[m^6/s]
 c_p_auger :	 9.900000e-44	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 9.900000e-44	 9.900000e-44	 1	 0	[m^6/s]
 Na(uniform) :	 1.000000e+23	 1.000000e+23	 1.000000e+01	 1.000000e+01	 1.000000e+01	 1.000000e+23	 1.000000e+23	 0	 2	[/m^3]
 Nd(uniform) :	 0.000000e+00	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 0.000000e+00	 0.000000e+00	 0	 2	[/m^3]
-absorption grading :	 1106.41	 1033.31	  250.00	  250.00	    0.00	    1.20	    1.20	 7	 0	[nm]
+absorption grading :	 1107.74	 1033.31	  250.00	  250.00	    0.00	    1.20	    1.20	 7	 0	[nm]
 absorptionmodel pure A material (y=0) : from file
 absorptionfile pure A material (y=0) : Si.abs
 absorption pure B material (y=1), model : coefficients A and B (line inserted for compatibility with SCAPS until 3.3.06)
@@ -170,14 +174,14 @@ type : donor ( 1 level(s) )
 energy distribution : single
 Reference for defect energy :  0 ; 0 = above EV (SCAPS<2.7); 1 = above Ei; 2 = below EC
 Ekar :  0.1000 [eV]
-Nt(uniform) :	 1.000000e+19	 1.000000e+20	 1.000000e+20	 1.000000e+00	 1.000000e+00	 1.000000e+19	 1.000000e+19	 0	 2	[/m^3]
+Nt(uniform) :	 1.000000e+16	 1.000000e+20	 1.000000e+20	 1.000000e+00	 1.000000e+00	 1.000000e+16	 1.000000e+16	 0	 2	[/m^3]
 profile : homogenous
 Lkar : 1.000e+00 [m]
-Nleft : 1.000e+19 [/m^3]
-Nright : 1.000e+19 [/m^3]
+Nleft : 1.000e+16 [/m^3]
+Nright : 1.000e+16 [/m^3]
 leveltype : +/0	
-sigma_n : 3.599e-19	[m^2]
-sigma_p : 7.001e-21	[m^2]
+sigma_n : 3.654e-19	[m^2]
+sigma_p : 7.203e-21	[m^2]
 Et :   0.394	[eV]
 
 interface properties
@@ -200,17 +204,17 @@ v_th_n :	 2.033e+05	 1.000e+05	 1.000e+01	 1.000e+01	 1.000e+01	 2.033e+05	 2.03
 v_th_p :	 1.680e+05	 1.000e+05	 1.000e+01	 1.000e+01	 1.000e+01	 1.680e+05	 1.680e+05	 1	 0	[m/s]
 eps :	    11.900000	    10.000000	    10.000000	    10.000000	    10.000000	    11.900000	    11.900000	 1	 0	[-]
 chi :	  4.050000	  4.500000	  1.000000	  1.000000	  1.000000	  4.050000	  4.050000	 1	 0	[eV]
-Eg :	  1.063621	  1.200000	  0.500000	  1.000000	  1.000000	  1.063621	  1.063621	 1	 0	[eV]
-Nc :	 2.860000e+25	 1.000000e+25	 1.000000e+01	 1.000000e+01	 1.000000e+01	 2.860000e+25	 2.860000e+25	 1	 0	[/m^3]
-Nv :	 3.100000e+25	 1.000000e+25	 1.000000e+01	 1.000000e+01	 1.000000e+01	 3.100000e+25	 3.100000e+25	 1	 0	[/m^3]
-mu_n :	 1.159079e-02	 5.000000e-03	 1.000000e-03	 1.000000e+00	 1.000000e+00	 1.159079e-02	 1.159079e-02	 1	 0	[m^2/Vs]
-mu_p :	 4.612000e-02	 5.000000e-03	 1.000000e-03	 1.000000e+00	 1.000000e+00	 4.612000e-02	 4.612000e-02	 1	 0	[m^2/Vs]
+Eg :	  1.062277	  1.200000	  0.500000	  1.000000	  1.000000	  1.062277	  1.062277	 1	 0	[eV]
+Nc :	 2.863784e+25	 1.000000e+25	 1.000000e+01	 1.000000e+01	 1.000000e+01	 2.863784e+25	 2.863784e+25	 1	 0	[/m^3]
+Nv :	 3.117986e+25	 1.000000e+25	 1.000000e+01	 1.000000e+01	 1.000000e+01	 3.117986e+25	 3.117986e+25	 1	 0	[/m^3]
+mu_n :	 1.151926e-02	 5.000000e-03	 1.000000e-03	 1.000000e+00	 1.000000e+00	 1.151926e-02	 1.151926e-02	 1	 0	[m^2/Vs]
+mu_p :	 4.459654e-02	 5.000000e-03	 1.000000e-03	 1.000000e+00	 1.000000e+00	 4.459654e-02	 4.459654e-02	 1	 0	[m^2/Vs]
 K_rad :	 1.800000e-21	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 1.800000e-21	 1.800000e-21	 1	 0	[m^3/s]
-c_n_auger :	 3.000000e-43	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 3.000000e-43	 3.000000e-43	 1	 0	[m^6/s]
-c_p_auger :	 3.000000e-43	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 3.000000e-43	 3.000000e-43	 1	 0	[m^6/s]
+c_n_auger :	 2.800000e-43	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 2.800000e-43	 2.800000e-43	 1	 0	[m^6/s]
+c_p_auger :	 9.900000e-44	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 9.900000e-44	 9.900000e-44	 1	 0	[m^6/s]
 Na(uniform) :	 0.000000e+00	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 0.000000e+00	 0.000000e+00	 0	 2	[/m^3]
 Nd(uniform) :	 1.000000e+25	 1.000000e+25	 1.000000e+01	 1.000000e+01	 1.000000e+01	 1.000000e+25	 1.000000e+25	 0	 2	[/m^3]
-absorption grading :	 1165.81	 1033.31	  250.00	  250.00	    0.00	    1.20	    1.20	 7	 0	[nm]
+absorption grading :	 1167.28	 1033.31	  250.00	  250.00	    0.00	    1.20	    1.20	 7	 0	[nm]
 absorptionmodel pure A material (y=0) : from file
 absorptionfile pure A material (y=0) : Si.abs
 absorption pure B material (y=1), model : coefficients A and B (line inserted for compatibility with SCAPS until 3.3.06)
@@ -237,6 +241,8 @@ working point
 illuminated from : right
 internal Rfront :   0.00000000
 internal Tfront :  1.0000e+00
+Series resistance :  1 (1: Rs enabled; 0: Rs disabled)
+Rs [Ohm.m2] :   5.000000e-05
 voltage V applied to : -1 (+1: right contact; -1: left contact)
 cell reference system :  1 (1: as a consumer (consumed power = +VJ; 0: as a generator (generated power = +VJ) )
 
@@ -245,7 +251,7 @@ cell reference system :  1 (1: as a consumer (consumed power = +VJ; 0: as a gene
 
 >> begin of action list file
 
-Temperature :   300.00 K
+Temperature :   305.00 K
 Voltage :     0.0000 V
 Frequency :   1.0000e+06 Hz
 Number of points :   5

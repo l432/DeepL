@@ -335,13 +335,18 @@ begin
         for I := Length(tempString) downto 1 do
           Direc:=Direc+tempString[i];
         SetCurrentDir(Direc);
-        tempString:=LowerCase(floattostrF( Boron.Data,ffExponent,4,2));
-        tempString:=AnsiReplaceStr(tempString,'.','p');
-        tempString:=AnsiReplaceStr(tempString,'+','');
-        tempString:=NBoronToString()+
-        {'NB'+tempString+}'T'+StringDataFromRow(TxtFile[2],1);
-        if FeBdata then DatesDatFile.SaveToFile(tempString+'FeB.dat')
-                   else DatesDatFile.SaveToFile(tempString+'Fe.dat');
+//        tempString:=LowerCase(floattostrF(Boron.Data,ffExponent,4,2));
+//        tempString:=AnsiReplaceStr(tempString,'.','p');
+//        tempString:=AnsiReplaceStr(tempString,'+','');
+
+//        tempString:=NBoronToString()+
+//        {'NB'+tempString+}'T'+StringDataFromRow(TxtFile[2],1);
+//        if FeBdata then DatesDatFile.SaveToFile(tempString+'FeB.dat')
+//                   else DatesDatFile.SaveToFile(tempString+'Fe.dat');
+        tempString:='T'+StringDataFromRow(TxtFile[2],1)+
+                      NBoronToString();
+        if FeBdata then DatesDatFile.SaveToFile('FB'+tempString+'.dat')
+                   else DatesDatFile.SaveToFile('Fe'+tempString+'.dat');
 
 
 
@@ -703,8 +708,10 @@ begin
   nSiLayer.Add('Relative electron mass :	 3.400000e-01	 3.400000e-01	 1.000000e+00	 1.000000e+00	 1.000000e+00	 3.400000e-01	 3.400000e-01	 0	 0	[-]');
   nSiLayer.Add('Relative hole mass :	 6.000000e-01	 6.000000e-01	 1.000000e+00	 1.000000e+00	 1.000000e+00	 6.000000e-01	 6.000000e-01	 0	 0	[-]');
   nSiLayer.Add('K_rad :	 1.800000e-15	 1.800000e-15	 1.000000e+01	 1.000000e+01	 1.000000e+01	 1.800000e-15	 1.800000e-15	 0	 0	[cm^3/s]');
-  nSiLayer.Add('c_n_auger :	 3.000000e-31	 3.000000e-31	 1.000000e+01	 1.000000e+01	 1.000000e+01	 3.000000e-31	 3.000000e-31	 0	 0	[cm^6/s]');
-  nSiLayer.Add('c_p_auger :	 3.000000e-31	 3.000000e-31	 1.000000e+01	 1.000000e+01	 1.000000e+01	 3.000000e-31	 3.000000e-31	 0	 0	[m^6/s]');
+//  nSiLayer.Add('c_n_auger :	 3.000000e-31	 3.000000e-31	 1.000000e+01	 1.000000e+01	 1.000000e+01	 3.000000e-31	 3.000000e-31	 0	 0	[cm^6/s]');
+//  nSiLayer.Add('c_p_auger :	 3.000000e-31	 3.000000e-31	 1.000000e+01	 1.000000e+01	 1.000000e+01	 3.000000e-31	 3.000000e-31	 0	 0	[m^6/s]');
+  nSiLayer.Add('c_n_auger :	 2.800000e-31	 2.800000e-31	 1.000000e+01	 1.000000e+01	 1.000000e+01	 2.800000e-31	 2.800000e-31	 0	 0	[cm^6/s]');
+  nSiLayer.Add('c_p_auger :	 0.990000e-31	 0.990000e-31	 1.000000e+01	 1.000000e+01	 1.000000e+01	 0.990000e-31	 0.990000e-31	 0	 0	[cm^6/s]');
   nSiLayer.Add('absorption grading :	 1107.12	 1107.12	  250.00	  250.00	    0.00	 1107.12	 1107.12	 0	 0	[nm]');
   nSiLayer.Add('absorptionmodel pure A material (y=0) : from file');
   nSiLayer.Add('absorptionfile pure A material (y=0) : Si.abs');
@@ -833,7 +840,7 @@ begin
   Result:=LowerCase(floattostrF(Boron.Data,ffExponent,4,2));
   Result:=AnsiReplaceStr(Result,'.','p');
   Result:=AnsiReplaceStr(Result,'+','');
-  Result:='NB'+Result;
+  Result:='B'+Result;
 end;
 
 function TMainForm.Nfeb(Nb, T, Ef: double): double;
