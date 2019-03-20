@@ -1,15 +1,15 @@
 > SCAPS 3.3.07 ELIS-UGent: Version scaps3307.exe, dated 06-01-2019, 14:07:34
-> SCAPS All SCAPS Settings file, saved on 	26-02-2019 at 14:21:34
+> SCAPS All SCAPS Settings file, saved on 	23-02-2019 at 16:07:40
 > problem definition file loaded :
-> d:\Samples\DeepL\FeB\Scaps3307\def\FeB335.scaps
-> last saved: 	26-02-2019 at 14:21:34
+> d:\Samples\DeepL\FeB\Scaps3307\def\FeB330.scaps
+> last saved: 	23-02-2019 at 15:37:47
 > 
 
 
 >> begin of problem definition file
 
 > SCAPS 3.3.07 ELIS-UGent: Version scaps3307.exe, dated 06-01-2019, 14:07:34 Problem definition file
-> last saved by SCAPS: 	26-02-2019 at 14:21:34
+> last saved by SCAPS: 	23-02-2019 at 16:07:42
 > 
 > 
 > Comments (to be) included in the def file
@@ -41,10 +41,6 @@
 > No doping type nor extrinsic doping is set! (NA = ND = 1E10/cm3 = about ni)
 > 
 > Should be OK for low doped silicon. For higher doping, the mobilities should be set to an appropriate lower value; th
-> 
-> > end of problem definition file
-> 
-> > end of problem definition file
 > 
 > > end of problem definition file
 > 
@@ -155,17 +151,17 @@ v_th_n :	 2.033e+05	 1.000e+05	 1.000e+01	 1.000e+01	 1.000e+01	 2.033e+05	 2.03
 v_th_p :	 1.680e+05	 1.000e+05	 1.000e+01	 1.000e+01	 1.000e+01	 1.680e+05	 1.680e+05	 1	 0	[m/s]
 eps :	    11.900000	    10.000000	    10.000000	    10.000000	    10.000000	    11.900000	    11.900000	 1	 0	[-]
 chi :	  4.050000	  4.500000	  1.000000	  1.000000	  1.000000	  4.050000	  4.050000	 1	 0	[eV]
-Eg :	  1.110993	  1.200000	  0.500000	  1.000000	  1.000000	  1.110993	  1.110993	 1	 0	[eV]
+Eg :	  1.113734	  1.200000	  0.500000	  1.000000	  1.000000	  1.113734	  1.113734	 1	 0	[eV]
 Nc :	 2.885359e+25	 1.000000e+25	 1.000000e+01	 1.000000e+01	 1.000000e+01	 2.885359e+25	 2.885359e+25	 1	 0	[/m^3]
 Nv :	 3.222070e+25	 1.000000e+25	 1.000000e+01	 1.000000e+01	 1.000000e+01	 3.222070e+25	 3.222070e+25	 1	 0	[/m^3]
 mu_n :	 1.066914e-01	 5.000000e-03	 1.000000e-03	 1.000000e+00	 1.000000e+00	 1.066914e-01	 1.066914e-01	 1	 0	[m^2/Vs]
-mu_p :	 2.816285e-02	 5.000000e-03	 1.000000e-03	 1.000000e+00	 1.000000e+00	 2.816285e-02	 2.816285e-02	 1	 0	[m^2/Vs]
+mu_p :	 3.535022e-02	 5.000000e-03	 1.000000e-03	 1.000000e+00	 1.000000e+00	 3.535022e-02	 3.535022e-02	 1	 0	[m^2/Vs]
 K_rad :	 1.800000e-21	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 1.800000e-21	 1.800000e-21	 1	 0	[m^3/s]
 c_n_auger :	 2.800000e-43	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 2.800000e-43	 2.800000e-43	 1	 0	[m^6/s]
 c_p_auger :	 9.900000e-44	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 9.900000e-44	 9.900000e-44	 1	 0	[m^6/s]
-Na(uniform) :	 1.000000e+23	 1.000000e+23	 1.000000e+01	 1.000000e+01	 1.000000e+01	 1.000000e+23	 1.000000e+23	 0	 2	[/m^3]
+Na(uniform) :	 1.000000e+22	 1.000000e+22	 1.000000e+01	 1.000000e+01	 1.000000e+01	 1.000000e+22	 1.000000e+22	 0	 2	[/m^3]
 Nd(uniform) :	 0.000000e+00	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 0.000000e+00	 0.000000e+00	 0	 2	[/m^3]
-absorption grading :	 1116.10	 1033.31	  250.00	  250.00	    0.00	    1.20	    1.20	 7	 0	[nm]
+absorption grading :	 1113.35	 1033.31	  250.00	  250.00	    0.00	    1.20	    1.20	 7	 0	[nm]
 absorptionmodel pure A material (y=0) : from file
 absorptionfile pure A material (y=0) : Si.abs
 absorption pure B material (y=1), model : coefficients A and B (line inserted for compatibility with SCAPS until 3.3.06)
@@ -182,11 +178,11 @@ type : amphoteric ( 2 level(s) )
 energy distribution : single
 Reference for defect energy :  2 ; 0 = above EV (SCAPS<2.7); 1 = above Ei; 2 = below EC
 Ekar :  0.1000 [eV]
-degeneracy factors equal oneNt(x) :	 8.480091e+15	 1.761539e+06	 8.111000e+15	 1.000000e+00	 1.000000e+00	 8.480091e+15	 1.761539e+06	12	 1	FeB1p000e10.grd	[/m^3]
+degeneracy factors equal oneNt(x) :	 9.779601e+15	 1.425599e+06	 9.834000e+15	 1.000000e+00	 1.000000e+00	 9.779601e+15	 1.425599e+06	12	 1	FeB1p000e10.grd	[/m^3]
 profile : homogenous
 Lkar : 1.000e+00 [m]
-Nleft : 8.480e+15 [/m^3]
-Nright : 8.480e+15 [/m^3]
+Nleft : 9.780e+15 [/m^3]
+Nright : 9.780e+15 [/m^3]
 leveltype : +/0	0/-	
 sigma_n : 4.000e-17	2.500e-19	[m^2]
 sigma_p : 2.000e-18	5.500e-19	[m^2]
@@ -198,11 +194,11 @@ type : donor ( 1 level(s) )
 energy distribution : single
 Reference for defect energy :  0 ; 0 = above EV (SCAPS<2.7); 1 = above Ei; 2 = below EC
 Ekar :  0.1000 [eV]
-Nt(x) :	 1.519909e+15	 1.000000e+16	 1.000000e+20	 1.000000e+00	 1.000000e+00	 1.519909e+15	 1.000000e+16	12	 1	Fe1p000e10.grd	[/m^3]
+Nt(x) :	 2.203987e+14	 1.000000e+16	 1.000000e+20	 1.000000e+00	 1.000000e+00	 2.203987e+14	 1.000000e+16	12	 1	Fe1p000e10.grd	[/m^3]
 profile : homogenous
 Lkar : 1.000e+00 [m]
-Nleft : 1.520e+15 [/m^3]
-Nright : 1.520e+15 [/m^3]
+Nleft : 2.204e+14 [/m^3]
+Nright : 2.204e+14 [/m^3]
 leveltype : +/0	
 sigma_n : 3.966e-19	[m^2]
 sigma_p : 8.395e-21	[m^2]

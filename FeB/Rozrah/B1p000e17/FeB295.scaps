@@ -1,15 +1,15 @@
-> SCAPS 3.3.07 ELIS-UGent: Version scaps3307.exe, dated 06-01-2019, 14:07:34
-> SCAPS All SCAPS Settings file, saved on 	26-02-2019 at 13:20:13
+> SCAPS 3.3.07 ELIS-UGent: Version scaps3307.exe, dated 08-01-2019, 08:00:27
+> SCAPS All SCAPS Settings file, saved on 	20-03-2019 at 08:38:59
 > problem definition file loaded :
-> d:\Samples\DeepL\FeB\Scaps3307\def\FeB295.scaps
-> last saved: 	26-02-2019 at 13:20:13
+> d:\Oleg\SAMPLE\DeepL\FeB\Scaps3307\def\FeB295.scaps
+> last saved: 	20-03-2019 at 08:38:59
 > 
 
 
 >> begin of problem definition file
 
-> SCAPS 3.3.07 ELIS-UGent: Version scaps3307.exe, dated 06-01-2019, 14:07:34 Problem definition file
-> last saved by SCAPS: 	26-02-2019 at 13:20:14
+> SCAPS 3.3.07 ELIS-UGent: Version scaps3307.exe, dated 08-01-2019, 08:00:27 Problem definition file
+> last saved by SCAPS: 	20-03-2019 at 08:38:59
 > 
 > 
 > Comments (to be) included in the def file
@@ -41,6 +41,8 @@
 > No doping type nor extrinsic doping is set! (NA = ND = 1E10/cm3 = about ni)
 > 
 > Should be OK for low doped silicon. For higher doping, the mobilities should be set to an appropriate lower value; th
+> 
+> > end of problem definition file
 > 
 > > end of problem definition file
 > 
@@ -164,11 +166,11 @@ type : amphoteric ( 2 level(s) )
 energy distribution : single
 Reference for defect energy :  2 ; 0 = above EV (SCAPS<2.7); 1 = above Ei; 2 = below EC
 Ekar :  0.1000 [eV]
-degeneracy factors equal oneNt(x) :	 9.884377e+15	 3.991708e+04	 9.829000e+15	 1.000000e+00	 1.000000e+00	 9.884377e+15	 3.991708e+04	12	 1	FeB1p000e10.grd	[/m^3]
+degeneracy factors equal oneNt(x) :	 9.998267e+15	 4.037702e+04	 9.884000e+15	 1.000000e+00	 1.000000e+00	 9.998267e+15	 4.037702e+04	12	 1	FeB1p000e10.grd	[/m^3]
 profile : homogenous
 Lkar : 1.000e+00 [m]
-Nleft : 9.884e+15 [/m^3]
-Nright : 9.884e+15 [/m^3]
+Nleft : 9.998e+15 [/m^3]
+Nright : 9.998e+15 [/m^3]
 leveltype : +/0	0/-	
 sigma_n : 4.000e-17	2.500e-19	[m^2]
 sigma_p : 2.000e-18	5.500e-19	[m^2]
@@ -180,11 +182,11 @@ type : donor ( 1 level(s) )
 energy distribution : single
 Reference for defect energy :  0 ; 0 = above EV (SCAPS<2.7); 1 = above Ei; 2 = below EC
 Ekar :  0.1000 [eV]
-Nt(x) :	 1.156234e+14	 1.000000e+16	 1.000000e+20	 1.000000e+00	 1.000000e+00	 1.156234e+14	 1.000000e+16	12	 1	Fe1p000e10.grd	[/m^3]
+Nt(x) :	 1.732807e+12	 1.000000e+16	 1.000000e+20	 1.000000e+00	 1.000000e+00	 1.732807e+12	 1.000000e+16	12	 1	Fe1p000e10.grd	[/m^3]
 profile : homogenous
 Lkar : 1.000e+00 [m]
-Nleft : 1.156e+14 [/m^3]
-Nright : 1.156e+14 [/m^3]
+Nleft : 1.733e+12 [/m^3]
+Nright : 1.733e+12 [/m^3]
 leveltype : +/0	
 sigma_n : 3.543e-19	[m^2]
 sigma_p : 6.797e-21	[m^2]
@@ -216,8 +218,8 @@ Nv :	 3.081818e+25	 1.000000e+25	 1.000000e+01	 1.000000e+01	 1.000000e+01	 3.08
 mu_n :	 1.166389e-02	 5.000000e-03	 1.000000e-03	 1.000000e+00	 1.000000e+00	 1.166389e-02	 1.166389e-02	 1	 0	[m^2/Vs]
 mu_p :	 4.772627e-02	 5.000000e-03	 1.000000e-03	 1.000000e+00	 1.000000e+00	 4.772627e-02	 4.772627e-02	 1	 0	[m^2/Vs]
 K_rad :	 1.800000e-21	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 1.800000e-21	 1.800000e-21	 1	 0	[m^3/s]
-c_n_auger :	 3.000000e-43	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 3.000000e-43	 3.000000e-43	 1	 0	[m^6/s]
-c_p_auger :	 3.000000e-43	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 3.000000e-43	 3.000000e-43	 1	 0	[m^6/s]
+c_n_auger :	 2.800000e-43	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 2.800000e-43	 2.800000e-43	 1	 0	[m^6/s]
+c_p_auger :	 9.900000e-44	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 9.900000e-44	 9.900000e-44	 1	 0	[m^6/s]
 Na(uniform) :	 0.000000e+00	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 0.000000e+00	 0.000000e+00	 0	 2	[/m^3]
 Nd(uniform) :	 1.000000e+25	 1.000000e+25	 1.000000e+01	 1.000000e+01	 1.000000e+01	 1.000000e+25	 1.000000e+25	 0	 2	[/m^3]
 absorption grading :	 1164.35	 1033.31	  250.00	  250.00	    0.00	    1.20	    1.20	 7	 0	[nm]
@@ -321,7 +323,7 @@ simultaneous :  0
 values from a list :  1
 logarithmic variation :  0
 values are file names :  1
-number of file names :   19
+number of file names :   25
 list of filenames saved :  0
 file   0:FeB1p000e10.grd
 file   1:FeB1p468e10.grd
@@ -342,6 +344,12 @@ file  15:FeB3p162e12.grd
 file  16:FeB4p642e12.grd
 file  17:FeB6p813e12.grd
 file  18:FeB1p000e13.grd
+file  19:FeB1p468e13.grd
+file  20:FeB2p154e13.grd
+file  21:FeB3p162e13.grd
+file  22:FeB4p642e13.grd
+file  23:FeB6p813e13.grd
+file  24:FeB1p000e14.grd
 
 Batch parameter 1 :
 
@@ -353,7 +361,7 @@ simultaneous :  1
 values from a list :  1
 logarithmic variation :  0
 values are file names :  1
-number of file names :   19
+number of file names :   25
 list of filenames saved :  0
 file   0:Fe1p000e10.grd
 file   1:Fe1p468e10.grd
@@ -374,6 +382,12 @@ file  15:Fe3p162e12.grd
 file  16:Fe4p642e12.grd
 file  17:Fe6p813e12.grd
 file  18:Fe1p000e13.grd
+file  19:Fe1p468e13.grd
+file  20:Fe2p154e13.grd
+file  21:Fe3p162e13.grd
+file  22:Fe4p642e13.grd
+file  23:Fe6p813e13.grd
+file  24:Fe1p000e14.grd
 
 >> end of batch settings file
 
