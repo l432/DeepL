@@ -34,6 +34,7 @@ type
     STFe_Lo: TStaticText;
     STFe_Hi: TStaticText;
     STFe_steps: TStaticText;
+    BDatesDatCorrect: TButton;
     procedure BtFileSelectClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
@@ -42,6 +43,7 @@ type
     procedure BMaterialFileCreateClick(Sender: TObject);
     procedure BDatesDatClick(Sender: TObject);
     procedure BFeB_xClick(Sender: TObject);
+    procedure BDatesDatCorrectClick(Sender: TObject);
   private
     { Private declarations }
     TempStart,TempFinish,TempStep: TIntegerParameterShow;
@@ -494,6 +496,53 @@ begin
         ResultFile.Free;
         nDat.Free;
         n_srhDat.Free;
+       end;
+end;
+
+procedure TMainForm.BDatesDatCorrectClick(Sender: TObject);
+ var Direc:string;
+    DatesDatFile,ResultFile:TStringList;
+    SR : TSearchRec;
+    i,j:integer;
+    tempString:string;
+begin
+ OpenDialog1.Filter:='Shottky result file (dates.dat)|dates.dat';
+   if OpenDialog1.Execute()
+     then
+       begin
+       Direc:=ExtractFilePath(OpenDialog1.FileName);
+       DatesDatFile:=TStringList.Create;
+       ResultFile:=TStringList.Create;
+       DatesDatFile.LoadFromFile(OpenDialog1.FileName);
+
+        Delete(Direc,Length(Direc),1);
+        tempString:='';
+        for I := Length(Direc) downto 1 do
+          tempString:=tempString+Direc[i];
+        Delete(tempString,1,AnsiPos ('\', tempString)-1);
+        Direc:='';
+        for I := Length(tempString) downto 1 do
+          Direc:=Direc+tempString[i];
+        SetCurrentDir(Direc);
+       if FindFirst('dates.dat', faAnyFile, SR) <> 0 then
+         begin
+            showmessage('dates.dat in up-directory is absent');
+            Exit;
+         end                                         else
+         begin
+           ResultFile.LoadFromFile(SR.Name);
+           for I := 1 to DatesDatFile.Count - 1 do
+                for j := 1 to ResultFile.Count - 1 do
+                    if StringDataFromRow(DatesDatFile[i],1)=
+                       StringDataFromRow(ResultFile[j],1)   then
+                      begin
+                        ResultFile.Delete(j);
+                        ResultFile.Insert(j,DatesDatFile[i]);
+                      end;
+          ResultFile.SaveToFile('dates.dat');
+         end;
+        DatesDatFile.Free;
+        ResultFile.Free;
        end;
 end;
 

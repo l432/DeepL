@@ -269,6 +269,22 @@ object MainForm: TMainForm
       TabOrder = 2
     end
   end
+  object BDatesDatCorrect: TButton
+    Left = 122
+    Top = 235
+    Width = 97
+    Height = 36
+    Caption = 'correct dates.dat'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 9
+    WordWrap = True
+    OnClick = BDatesDatCorrectClick
+  end
   object OpenDialog1: TOpenDialog
     Filter = 'Scaps files (*.iv)|*.iv'
     Left = 424
