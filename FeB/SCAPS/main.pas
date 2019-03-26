@@ -35,6 +35,8 @@ type
     STFe_Hi: TStaticText;
     STFe_steps: TStaticText;
     BDatesDatCorrect: TButton;
+    GBFinal: TGroupBox;
+    BResult: TButton;
     procedure BtFileSelectClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
@@ -44,6 +46,7 @@ type
     procedure BDatesDatClick(Sender: TObject);
     procedure BFeB_xClick(Sender: TObject);
     procedure BDatesDatCorrectClick(Sender: TObject);
+    procedure BResultClick(Sender: TObject);
   private
     { Private declarations }
     TempStart,TempFinish,TempStep: TIntegerParameterShow;
@@ -51,6 +54,7 @@ type
     FeStepNumber: TIntegerParameterShow;
     Boron:TDoubleParameterShow;
     ConfigFile:TIniFile;
+//    Direc:string;
     function NBoronToString():string;
     function Nfeb(Nb,T,Ef:double):double;
     {рівноважна частка пар FeB по відношенню до загальної
@@ -251,13 +255,28 @@ begin
 end;
 
 
+procedure TMainForm.BResultClick(Sender: TObject);
+ var  ResultFile:TStringList;
+begin
+ OpenDialog1.Filter:='Result file (ResultAll.dat)|ResultAll.dat';
+   if OpenDialog1.Execute()
+     then
+       begin
+        ResultFile:=TStringList.Create;
+        Directory:=ExtractFilePath(OpenDialog1.FileName);
+        ResultFile.LoadFromFile(OpenDialog1.FileName);
+        showmessage(inttostr(ResultFile.Count));
+        ResultFile.Free;
+       end;
+end;
+
 function TMainForm.BandGapNarrowing(Nd: double): double;
 begin
   Result:=6.92e-3*(Ln(Nd/1.3e17)+sqrt(0.5+sqr(Ln(Nd/1.3e17))));
 end;
 
 procedure TMainForm.BDatesDatClick(Sender: TObject);
- var Direc:string;
+ var //Direc:string;
     DatesDatFile,ResultFile,TxtFile,
     nDat,n_srhDat:TStringList;
     SR : TSearchRec;
@@ -269,20 +288,14 @@ begin
    if OpenDialog1.Execute()
      then
        begin
-       Direc:=ExtractFilePath(OpenDialog1.FileName);
+       Directory:=ExtractFilePath(OpenDialog1.FileName);
        DatesDatFile:=TStringList.Create;
        ResultFile:=TStringList.Create;
        TxtFile:=TStringList.Create;
        nDat:=TStringList.Create;
        n_srhDat:=TStringList.Create;
        DatesDatFile.LoadFromFile(OpenDialog1.FileName);
-//       if FileExists(Direc+'comments') then
-//          CommentsFile.LoadFromFile(Direc+'comments')
-//                                       else
-//          begin
-//            showmessage('comments file is absent');
-//            Exit;
-//          end;
+
        if FindFirst('*.txt', faAnyFile, SR) = 0 then
          TxtFile.LoadFromFile(SR.Name)
                                                 else
@@ -328,15 +341,15 @@ begin
             end;
          end;
 
-        Delete(Direc,Length(Direc),1);
+        Delete(Directory,Length(Directory),1);
         tempString:='';
-        for I := Length(Direc) downto 1 do
-          tempString:=tempString+Direc[i];
+        for I := Length(Directory) downto 1 do
+          tempString:=tempString+Directory[i];
         Delete(tempString,1,AnsiPos ('\', tempString)-1);
-        Direc:='';
+        Directory:='';
         for I := Length(tempString) downto 1 do
-          Direc:=Direc+tempString[i];
-        SetCurrentDir(Direc);
+          Directory:=Directory+tempString[i];
+        SetCurrentDir(Directory);
 //        tempString:=LowerCase(floattostrF(Boron.Data,ffExponent,4,2));
 //        tempString:=AnsiReplaceStr(tempString,'.','p');
 //        tempString:=AnsiReplaceStr(tempString,'+','');
@@ -485,12 +498,7 @@ begin
 
 
 
-//        if FeBdata then DatesDatFile.SaveToFile(Direc+tempString+'FeB.dat')
-//                   else DatesDatFile.SaveToFile(Direc+tempString+'Fe.dat');
 
-//        DatesDatFile.SaveToFile(Direc+tempString+'Fe.dat');
-//        nDat.SaveToFile(Direc+tempString+'Fe.dat');
-//        n_srhDat.SaveToFile(Direc+tempString+'Fe_srh.dat');
         TxtFile.Free;
         DatesDatFile.Free;
         ResultFile.Free;
@@ -500,7 +508,7 @@ begin
 end;
 
 procedure TMainForm.BDatesDatCorrectClick(Sender: TObject);
- var Direc:string;
+ var //Direc:string;
     DatesDatFile,ResultFile:TStringList;
     SR : TSearchRec;
     i,j:integer;
@@ -510,20 +518,20 @@ begin
    if OpenDialog1.Execute()
      then
        begin
-       Direc:=ExtractFilePath(OpenDialog1.FileName);
+       Directory:=ExtractFilePath(OpenDialog1.FileName);
        DatesDatFile:=TStringList.Create;
        ResultFile:=TStringList.Create;
        DatesDatFile.LoadFromFile(OpenDialog1.FileName);
 
-        Delete(Direc,Length(Direc),1);
+        Delete(Directory,Length(Directory),1);
         tempString:='';
-        for I := Length(Direc) downto 1 do
-          tempString:=tempString+Direc[i];
+        for I := Length(Directory) downto 1 do
+          tempString:=tempString+Directory[i];
         Delete(tempString,1,AnsiPos ('\', tempString)-1);
-        Direc:='';
+        Directory:='';
         for I := Length(tempString) downto 1 do
-          Direc:=Direc+tempString[i];
-        SetCurrentDir(Direc);
+          Directory:=Directory+tempString[i];
+        SetCurrentDir(Directory);
        if FindFirst('dates.dat', faAnyFile, SR) <> 0 then
          begin
             showmessage('dates.dat in up-directory is absent');
@@ -547,7 +555,7 @@ begin
 end;
 
 procedure TMainForm.BFeB_xClick(Sender: TObject);
- var Direc:string;
+ var //Direc:string;
      EB_File,FeGRDFile,FeBGRDFile:TStringList;
      Vec:PVector;
      Row:Int64;
@@ -561,7 +569,7 @@ begin
  if OpenDialog1.Execute()
    then
      begin
-      Direc:=ExtractFilePath(OpenDialog1.FileName);
+      Directory:=ExtractFilePath(OpenDialog1.FileName);
       EB_File:=TStringList.Create;
       FeGRDFile:=TStringList.Create;
       FeBGRDFile:=TStringList.Create;

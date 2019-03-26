@@ -4,7 +4,7 @@ object MainForm: TMainForm
   BorderStyle = bsDialog
   Caption = 'SCAPS Conversion'
   ClientHeight = 413
-  ClientWidth = 360
+  ClientWidth = 567
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -284,6 +284,30 @@ object MainForm: TMainForm
     TabOrder = 9
     WordWrap = True
     OnClick = BDatesDatCorrectClick
+  end
+  object GBFinal: TGroupBox
+    Left = 384
+    Top = 72
+    Width = 173
+    Height = 169
+    Caption = 'Final'
+    TabOrder = 10
+    object BResult: TButton
+      Left = 22
+      Top = 40
+      Width = 133
+      Height = 53
+      Caption = 'ResultAll.dat convert'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 0
+      WordWrap = True
+      OnClick = BResultClick
+    end
   end
   object OpenDialog1: TOpenDialog
     Filter = 'Scaps files (*.iv)|*.iv'
