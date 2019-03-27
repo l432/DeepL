@@ -33,5 +33,7 @@
     <DCCReference Include="main.pas">
       <Form>MainForm</Form>
     </DCCReference>
+    <DCCReference Include="ResultAll.pas" />
+    <DCCReference Include="SomeFunction.pas" />
   </ItemGroup>
 </Project>
