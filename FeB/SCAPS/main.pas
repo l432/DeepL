@@ -271,7 +271,7 @@ procedure TMainForm.BResultClick(Sender: TObject);
 // const DirecName:array[1..3]of string=('Iron','Boron','Temperature');
 //   ShortDirecName:array[1..3]of string=('Fe','B','T');
 
- var  ResultFile,SimpleDataFile:TStringList;
+ var  ResultFile,SimpleDataFile,MatrixDataFile:TStringList;
       ArrayKeyStringList,AKSL2,AKSL3:TArrayKeyStringList;
       Number,Number2:word;
       I,j:integer;
@@ -285,6 +285,7 @@ begin
        begin
         ResultFile:=TStringList.Create;
         SimpleDataFile:=TStringList.Create;
+        MatrixDataFile:=TStringList.Create;
         Directory:=ExtractFilePath(OpenDialog1.FileName);
         ResultFile.LoadFromFile(OpenDialog1.FileName);
         ResultFile.Delete(0);
@@ -314,15 +315,17 @@ begin
                   +'/'+ShortDirecName[Number]
                   +EditString(ArrayKeyStringList.Keys[i]));
               DirectoryN2:=GetCurrentDir;
+              MatrixDataFile.Clear;
 
               for Number2 := 1 to 2 do
                 begin
                 AKSL2.Clear;
                 AKSL2.AddKeysFromStringList(ArrayKeyStringList.StringLists[i],Number2);
                 AKSL2.SortingByKeyValue;
+
                 CreateDirSafety(SubDirectoryName(Number,Number2));
                 SetCurrentDir(DirectoryN2+'/'+SubDirectoryName(Number,Number2));
-                AKSL2.CreateDirByKeys(SubDirectorySault(Number,Number2));
+//                AKSL2.CreateDirByKeys(SubDirectorySault(Number,Number2));
                 for j := 0 to AKSL2.Count-1 do
                  begin
                   AKSL3.Clear;
@@ -331,14 +334,20 @@ begin
                   AKSL3.DataConvert;
                   SimpleDataFile.Clear;
                   AKSL3.KeysAndListsToStringList(SimpleDataFile);
+                  if Number2=1 then
+                    KeysAndStringListToStringList(LogKey(AKSL2.Keys[j]),SimpleDataFile,MatrixDataFile);
                   SimpleDataFile.Insert(0,DataFileHeader(Number,Number2));
+                  SimpleDataFile.SaveToFile(DataFileName(Number,Number2,
+                                        ArrayKeyStringList.Keys[i],
+                                        AKSL2.Keys[j]));
                  end;
                 SetCurrentDir(DirectoryN2);
                 end;
 
-
-
               SetCurrentDir(DirectoryN);
+              MatrixDataFile.Insert(0,MatrixFileHeader(Number));
+              MatrixDataFile.SaveToFile(MatrixFileName(Number,ArrayKeyStringList.Keys[i]));
+
             end;
 
 
@@ -347,9 +356,9 @@ begin
 
 //          AKSL2.StringLists[0].Add(AKSL2.Keys[0]);
 //          AKSL2.StringLists[0].SaveToFile('temp.dat');
-          SimpleDataFile.SaveToFile('temp.dat');
-          AKSL3.StringLists[0].Add(AKSL3.Keys[0]);
-          AKSL3.StringLists[0].SaveToFile('temp3.dat');
+//          SimpleDataFile.SaveToFile('temp.dat');
+//          AKSL3.StringLists[0].Add(AKSL3.Keys[0]);
+//          AKSL3.StringLists[0].SaveToFile('temp3.dat');
 
 
 //         ArrayKeyStringList.StringLists[1].SaveToFile('temp.dat');
@@ -359,6 +368,7 @@ begin
         AKSL2.Free;
         ArrayKeyStringList.Free;
         SimpleDataFile.Free;
+        MatrixDataFile.Free;
         ResultFile.Free;
        end;
 end;
