@@ -279,7 +279,7 @@ procedure TMainForm.BResultClick(Sender: TObject);
       DirectoryN,DirectoryN2:string;
 
 begin
- OpenDialog1.Filter:='Result file (ResultAll.dat)|ResultAll.dat';
+ OpenDialog1.Filter:='Result file (ResultAll.dat)|*.dat';
    if OpenDialog1.Execute()
      then
        begin
