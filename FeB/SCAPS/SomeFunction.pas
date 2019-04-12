@@ -175,7 +175,7 @@ begin
   for I := 0 to Souce.Count - 1 do
    Target.Add(Key+' '+LogKey(StringDataFromRow(Souce[i],1))
             +' '+DeleteStringDataFromRow(Souce[i],1));
-//   Target.Add(Key+' '+Souce[i]);
+
 end;
 
 end.

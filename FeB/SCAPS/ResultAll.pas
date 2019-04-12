@@ -126,6 +126,7 @@ begin
  for I := 0 to Count - 1 do
    for j := 0 to StringLists[i].Count - 1 do
     StringList.Add(Keys[i]+' '+StringLists[i][j]);
+//    StringList.Add(Keys[i]+' '+StringDataFromRow(StringLists[i][j],6));
 end;
 
 procedure TArrayKeyStringList.SortingByKeyValue;
