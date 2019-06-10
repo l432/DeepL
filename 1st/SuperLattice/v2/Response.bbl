@@ -1,0 +1,153 @@
+\begin{thebibliography}{10}
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \def\href#1#2{#2} \def\path#1{#1}\fi
+
+\bibitem{USM:SEYIDOV2016}
+M.~Y. Seyidov, R.~A. Suleymanov, A.~P. Odrinsky, C.~Kırbaş, Effect of deep
+  native defects on ultrasound propagation in {T}l{I}n{S}$_2$ layered crystal,
+  Physica B: Condensed Matter 497 (2016) 86--92.
+\newblock \href {http://dx.doi.org/10.1016/j.physb.2016.06.010}
+  {\path{doi:10.1016/j.physb.2016.06.010}}.
+
+\bibitem{USM:Zhevstovskikh}
+I.~V. Zhevstovskikh, I.~B. Bersuker, V.~V. Gudkov, N.~S. Averkiev, M.~N.
+  Sarychev, S.~Zherlitsyn, S.~Yasin, G.~S. Shakurov, V.~A. Ulanov, V.~T.
+  Surikov, Numerical adiabatic potentials of orthorhombic {J}ahn--{T}eller
+  effects retrieved from ultrasound attenuation experiments. {A}pplication to
+  the {S}r{F}$_2$:{C}r crystal, J. Appl. Phys. 119~(22) (2016) 225108.
+\newblock \href {http://dx.doi.org/10.1063/1.4953640}
+  {\path{doi:10.1063/1.4953640}}.
+
+\bibitem{USM:Averkin2014}
+N.~S. Averkiev, I.~B. Bersuker, V.~V. Gudkov, K.~A. Baryshnikov, G.~V.
+  Colibaba, I.~V. Zhevstovskikh, V.~Y. Mayakin, A.~M. Monakhov, D.~D. Nedeoglo,
+  M.~N. Sarychev, V.~T. Surikov, Ultrasonic exploration of vacancy centres with
+  the {J}ahn--{T}eller effect. {A}pplication to the {Z}n{S}e crystal, Phys.
+  Status Solidi B 251~(8) (2014) 1590--1595.
+\newblock \href {http://dx.doi.org/10.1002/pssb.201451092}
+  {\path{doi:10.1002/pssb.201451092}}.
+
+\bibitem{USM:Akatsu2009}
+M.~Akatsu, T.~Goto, H.~Y-Kaneta, H.~Watanabe, Y.~Nemoto, K.~Mitsumoto, S.~Baba,
+  Y.~Nagai, S.~Nakamura, Ultrasonic study of vacancy in single crystal silicon
+  at low temperatures, Journal of Physics: Conference Series 150~(4) (2009)
+  042002.
+\newblock \href {http://dx.doi.org/10.1088/1742-6596/150/4/042002}
+  {\path{doi:10.1088/1742-6596/150/4/042002}}.
+
+\bibitem{USM:Okabe2013}
+K.~Okabe, M.~Akatsu, S.~Baba, K.~Mitsumoto, Y.~Nemoto, H.~Yamada-Kaneta,
+  T.~Goto, H.~Saito, K.~Kashima, Y.~Saito, Strong quadrupole-strain interaction
+  of vacancy orbital in boron--doped {C}zochralski silicon, J. Phys. Soc. Jpn.
+  82~(12) (2013) 124604.
+\newblock \href {http://dx.doi.org/10.7566/JPSJ.82.124604}
+  {\path{doi:10.7566/JPSJ.82.124604}}.
+
+\bibitem{Ostapenko1994}
+I.~A. Buyanova, S.~S. Ostapenko, M.~K. Sheinkman, M.~Murrikov, Ultrasound
+  regeneration of {EL}2 centres in {G}a{A}s, Semicond. Sci. Technol. 9~(2)
+  (1994) 158--162.
+\newblock \href {http://dx.doi.org/10.1088/0268-1242/9/2/005}
+  {\path{doi:10.1088/0268-1242/9/2/005}}.
+
+\bibitem{Ostapenko1995}
+S.~S. Ostapenko, R.~E. Bell, Ultrasound stimulated dissociation of {F}e--{B}
+  pairs in silicon, J. Appl. Phys. 77~(10) (1995) 5458--5460.
+\newblock \href {http://dx.doi.org/10.1063/1.359243}
+  {\path{doi:10.1063/1.359243}}.
+
+\bibitem{Korotchenkov1995}
+O.~Korotchenkov, H.~Grimmliss, Long-wavelength acoustic-mode-enhanced electron
+  emission from {S}e and {T}e donors in silicon, Phys. Rev. B 52~(20) (1995)
+  14598--14606.
+\newblock \href {http://dx.doi.org/10.1103/PhysRevB.52.14598}
+  {\path{doi:10.1103/PhysRevB.52.14598}}.
+
+\bibitem{UST:Medvid}
+D.~Kropman, V.~Seeman, S.~Dolgov, A.~Medvids, Effect of ultrasonic treatment on
+  the defect structure of the {S}i--{S}i{O}$_2$ system, Phys. Status Solidi C
+  13~(10--12) (2016) 793--797.
+\newblock \href {http://dx.doi.org/10.1002/pssc.201600052}
+  {\path{doi:10.1002/pssc.201600052}}.
+
+\bibitem{Gorb2010}
+A.~Gorb, O.~Korotchenkov, O.~Olikh, A.~Podolian, Ultrasonically recovered
+  performance of $\gamma-$irradiated metal-silicon structures, IEEE Trans.
+  Nucl. Sci. 57~(3) (2010) 1632--1639.
+\newblock \href {http://dx.doi.org/10.1109/TNS.2010.2047655}
+  {\path{doi:10.1109/TNS.2010.2047655}}.
+
+\bibitem{Podolian2012}
+A.~O. Podolian, A.~B. Nadtochiy, O.~A. Korotchenkov, Charge carrier lifetime
+  recovery in $\gamma-$irradiated silicon under the action of ultrasound, Tech.
+  Phys. Lett. 38~(5) (2012) 405--408.
+\newblock \href {http://dx.doi.org/10.1134/S1063785012050124}
+  {\path{doi:10.1134/S1063785012050124}}.
+
+\bibitem{MirzadeJAP2011}
+F.~Mirzade, Elastic wave propagation in a solid layer with laser-induced point
+  defects, J. Appl. Phys. 110~(6) (2011) 064906.
+\newblock \href {http://dx.doi.org/10.1063/1.3633524}
+  {\path{doi:10.1063/1.3633524}}.
+
+\bibitem{PeleshchakUJF2016}
+R.~Peleshchak, O.~Kuzyk, O.~Dan'kiv, Formation of periodic structures under the
+  influence of an acousti wave in semiconductors with a two-component defect
+  subsystem, Ukr. J. Phys. 61~(8) (2016) 741--746.
+\newblock \href {http://dx.doi.org/10.15407/ujpe61.08.0741}
+  {\path{doi:10.15407/ujpe61.08.0741}}.
+
+\bibitem{CDLR:JAP}
+S.~Steingrube, O.~Breitenstein, K.~Ramspeck, S.~Glunz, A.~Schenk, P.~P.
+  Altermatt, Explanation of commonly observed shunt currents in c-si solar
+  cells by means of recombination statistics beyond the shockley-read-hall
+  approximation, J. Appl. Phys. 110~(1) (2011) 014515.
+\newblock \href {http://dx.doi.org/10.1063/1.3607310}
+  {\path{doi:10.1063/1.3607310}}.
+
+\bibitem{CDLR:R2}
+D.~G. Thomas, J.~Hopfield, W.~M. Augistyniak, Kinetics of radiative
+  recombination at randomly distributed donors and acceptors, Phys. Rev.
+  140~(1A) (1965) A202--A220.
+\newblock \href {http://dx.doi.org/10.1103/PhysRev.140.A202}
+  {\path{doi:10.1103/PhysRev.140.A202}}.
+
+\bibitem{Rsh:Breitenstein}
+O.~Breitenstein, J.~P. Rakotoniaina, M.~H. Al~Rifai, M.~Werner, Shunt types in
+  crystalline silicon solar cells, Progress in Photovoltaics: Research and
+  Applications 12~(7) (2004) 529--538.
+\newblock \href {http://dx.doi.org/10.1002/pip.544}
+  {\path{doi:10.1002/pip.544}}.
+
+\bibitem{TAT:Gopal}
+V.~Gopal, A new approach to investigate leakage current mechanisms in infrared
+  photodiodes from illuminated current-voltage characteristics, J. Appl. Phys.
+  116~(8) (2014) 084502.
+\newblock \href {http://dx.doi.org/10.1063/1.4893899}
+  {\path{doi:10.1063/1.4893899}}.
+
+\bibitem{Rsh:Baker}
+I.~Baker, C.~Maxey, Summary of {H}g{C}d{T}e 2{D} array technology in the
+  {U}.{K}., J. Electron. Mater. 30~(6) (2001) 682--689.
+\newblock \href {http://dx.doi.org/10.1007/BF02665856}
+  {\path{doi:10.1007/BF02665856}}.
+
+\bibitem{Rsh:Gopal2003}
+V.~Gopal, S.~Gupta, Effect of dislocations on the zero-bias resistance-area
+  product, quantum efficiency, and spectral response of {LWIR} {H}g{C}d{T}e
+  photovoltaic detectors, IEEE Trans. Electron Devices 50~(5) (2003)
+  1220--1226.
+\newblock \href {http://dx.doi.org/10.1109/TED.2003.813230}
+  {\path{doi:10.1109/TED.2003.813230}}.
+
+\bibitem{Rsh:Gopal2004}
+V.~Gopal, S.~Gupta, Contribution of dislocations to the zero-bias
+  resistance-area product of {LWIR} {H}g{C}d{T}e photodiodes at low
+  temperatures, IEEE Trans. Electron Devices 51~(7) (2004) 1078--1083.
+\newblock \href {http://dx.doi.org/10.1109/TED.2004.829857}
+  {\path{doi:10.1109/TED.2004.829857}}.
+
+\end{thebibliography}
