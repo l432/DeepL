@@ -1,0 +1,437 @@
+\begin{thebibliography}{10}
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \def\href#1#2{#2} \def\path#1{#1}\fi
+
+\bibitem{Rao}
+A.~Rao, S.~Krishnan, G.~Sanjeev, K.~Siddappa, Effect of 8 {M}ev {E}lectrons on
+  {A}u/n--{S}i {S}chottky diodes, Int. J. Pure Appl. Phys. 5~(1) (2009) 55--62.
+
+\bibitem{Tascioglu2010old}
+İlke Taşçıoğlu, A.~Tataroğlu, A.~Özbay, Şemsettin Altındal, The role
+  of $^{60}$co $\gamma$--ray irradiation on the interface states and series
+  resistance in {MIS} structures, Radiat. Phys. Chem. 79~(4) (2010) 457--461.
+\newblock \href {http://dx.doi.org/10.1016/j.radphyschem.2009.10.002}
+  {\path{doi:10.1016/j.radphyschem.2009.10.002}}.
+
+\bibitem{Tataroglu:2007NIMA}
+A.~Tataroğlu, .~Antindal, Analysis of interface states and series resistance
+  at {MIS} structure irradiated under $^{60}${C}o $\gamma-$rays, Nucl. Instrum.
+  Methods Phys. Res., Sect. A 580~(3) (2007) 1588--1593.
+\newblock \href {http://dx.doi.org/10.1016/j.nima.2007.07.027}
+  {\path{doi:10.1016/j.nima.2007.07.027}}.
+
+\bibitem{Olikh:2013IEEE}
+O.~Y. Olikh, Non-monotonic $\gamma-$ray influence on {M}o/n-{S}i {S}chottky
+  barrier structure properties, IEEE Trans. Nucl. Sci. 60~(1) (2013) 394--401.
+\newblock \href {http://dx.doi.org/10.1109/TNS.2012.2234137}
+  {\path{doi:10.1109/TNS.2012.2234137}}.
+
+\bibitem{Verma}
+S.~Verma, K.~C. Praveen, A.~Bobby, D.~Kanjilal, Recovery of electrical
+  characteristics of au/n-si schottky junction under ${}^{60}\hbox{Co}$ gamma
+  irradiation, IEEE Transactions on Device and Materials Reliability 14~(2)
+  (2014) 721--725.
+\newblock \href {http://dx.doi.org/10.1109/TDMR.2014.2312753}
+  {\path{doi:10.1109/TDMR.2014.2312753}}.
+
+\bibitem{Abdolahpour}
+M.~A. Salari, B.~Güzeldir, M.~Sağlam, The effects of gamma irradiation on
+  electrical characteristics of zn/zno/n-si/au-sb structure, AIP Conference
+  Proceedings 1935~(1) (2018) 050002.
+\newblock \href {http://dx.doi.org/10.1063/1.5025974}
+  {\path{doi:10.1063/1.5025974}}.
+
+\bibitem{Podolian2012}
+A.~O. Podolian, A.~B. Nadtochiy, O.~A. Korotchenkov, Charge carrier lifetime
+  recovery in $\gamma-$irradiated silicon under the action of ultrasound, Tech.
+  Phys. Lett. 38~(5) (2012) 405--408.
+\newblock \href {http://dx.doi.org/10.1134/S1063785012050124}
+  {\path{doi:10.1134/S1063785012050124}}.
+
+\bibitem{PodolHivrEn}
+A.~Podolyan, V.~Khivrich, Room--temperature ultrasonic annealing of radiation
+  defects in silicon, Tech. Phys. Lett. 31~(10) (2005) 11--16.
+\newblock \href {http://dx.doi.org/10.1134/1.1931783}
+  {\path{doi:10.1134/1.1931783}}.
+
+\bibitem{YOlikh2006TPL}
+Y.~Olikh, M.~Tymochko, A.~Dolgolenko, Acoustic--wave--stimulated
+  transformations of radiation defects in $\gamma-$irradiated n--type silicon
+  crystals, Tech. Phys. Lett. 32~(7) (2006) 586--589.
+\newblock \href {http://dx.doi.org/10.1134/S106378500607011X}
+  {\path{doi:10.1134/S106378500607011X}}.
+
+\bibitem{Olikh:FTP1996}
+Y.~Olikh, N.~Karas', On the effect of ultrasound on the annealing of radiation
+  defects in neutron-doped germanium, Fizika i tekhnika poluprovodnikov 30~(8)
+  (1996) 1455--1459.
+
+\bibitem{OlikhProc}
+Y.~Olikh, V.~Tartachnik, I.~Tichyna, V.~R.M., Termoacoustic annealing of
+  radiation--induced defects in indium--phosphide crystal, in: The proceeding
+  of 5$^{th}$ conference "Acoustoelectronics’ 91", 1991, pp. 95--96, {V}arna,
+  Bulgaria.
+
+\bibitem{OstrovFTTRad}
+I.~Ostrovskii, O.~Korotchenkov, V.~A. Lysyh, Annealing of point defects by
+  ultrasound in solids, Soviet Physics Solid State 20~(7) (1987) 2153--2156.
+
+\bibitem{UST:OstrovCsI}
+I.~Ostrovskii, N.~Ostrovskaya, O.~Korotchenkov, J.~Reidy, Radiation defects
+  manipulation by ultrasound in ionic crystals, IEEE Trans. Nucl. Sci. 52~(6)
+  (2005) 3068--3073.
+\newblock \href {http://dx.doi.org/10.1109/TNS.2005.861476}
+  {\path{doi:10.1109/TNS.2005.861476}}.
+
+\bibitem{YOlikh2007TPL}
+N.~Guseynov, Y.~Olikh, S.~Askerov, Ultrasonic treatment restores the
+  photoelectric parameters of silicon solar cells degraded under the action of
+  $^{60}${C}o gamma radiation, Tech. Phys. Lett. 33~(1) (2007) 18--21.
+\newblock \href {http://dx.doi.org/10.1134/S1063785007010063}
+  {\path{doi:10.1134/S1063785007010063}}.
+
+\bibitem{Olikh2018JAP}
+O.~Y. Olikh, A.~M. Gorb, R.~G. Chupryna, O.~V. Pristay-Fenenkov,
+  Acousto--defect interaction in irradiated and non--irradiated silicon
+  $n^+$--$p$ structure, J. Appl. Phys. 123~(16) (2018) 161573.
+\newblock \href {http://dx.doi.org/10.1063/1.5001123}
+  {\path{doi:10.1063/1.5001123}}.
+
+\bibitem{US:LED}
+O.~Konoreva, M.~Lytovchenko, Y.~Malyi, Y.~Olikh, I.~Petrenko, M.~Pinkovska,
+  V.~Tartachnyk, Acoustic--stimulated relaxation of gaas$_{1-x}$p$_x$ leds
+  electroluminescence intensity, Semiconductor Physics, Quantum Electronics \&
+  Optoelectronics 19~(1) (2016) 34--38.
+\newblock \href {http://dx.doi.org/10.15407/spqeo19.01.034}
+  {\path{doi:10.15407/spqeo19.01.034}}.
+
+\bibitem{UST:LED_SM}
+O.~Konoreva, Y.~M. Olikh, M.~Pinkovska, O.~Radkevych, V.~Tartachnyk,
+  V.~Shlapatska, The influence of acoustic--dislocation interaction on
+  intensity of the bound exciton recombination in initial and irradiated gaasp
+  leds structures, Superlattices Microstruct. 102 (2017) 88--93.
+\newblock \href {http://dx.doi.org/10.1016/j.spmi.2016.12.026}
+  {\path{doi:10.1016/j.spmi.2016.12.026}}.
+
+\bibitem{Pashaev2014}
+I.~G. Pashaev, Study of the relaxation of the excess current in silicon
+  schottky diodes, Semiconductors 48~(10) (2014) 1391--1394.
+\newblock \href {http://dx.doi.org/10.1134/S1063782614100224}
+  {\path{doi:10.1134/S1063782614100224}}.
+
+\bibitem{Olikh:Ultras}
+O.~Olikh, Reversible influence of ultrasound on $\gamma-$irradiated {M}o/n-{S}i
+  {S}chottky barrier structure, Ultrasonics 56 (2015) 545--550.
+\newblock \href {http://dx.doi.org/10.1016/j.ultras.2014.10.008}
+  {\path{doi:10.1016/j.ultras.2014.10.008}}.
+
+\bibitem{Ostap:SiO2}
+S.~Ostapenko, L.~Jastrzebski, J.~Lagowski, R.~K. Smeltzer, Enhanced
+  hydrogenation in polycrystalline silicon thin films using low--temperature
+  ultrasound treatment, Appl. Phys. Lett. 68~(20) (1996) 2873--2875.
+\newblock \href {http://dx.doi.org/10.1063/1.116353}
+  {\path{doi:10.1063/1.116353}}.
+
+\bibitem{UST:Medvid}
+D.~Kropman, V.~Seeman, S.~Dolgov, A.~Medvids, Effect of ultrasonic treatment on
+  the defect structure of the {S}i--{S}i{O}$_2$ system, Phys. Status Solidi C
+  13~(10--12) (2016) 793--797.
+\newblock \href {http://dx.doi.org/10.1002/pssc.201600052}
+  {\path{doi:10.1002/pssc.201600052}}.
+
+\bibitem{Zaver:2008}
+N.~Zaveryukhina, E.~Zaveryukhina, S.~Vlasov, B.~Zaveryukhin, Acoustostimulated
+  changes in the density of surface states and their energy spectrum in p--type
+  silicon single crystals, Tech. Phys. Lett. 34~(3) (2008) 241--243.
+\newblock \href {http://dx.doi.org/10.1134/S106378500803019X}
+  {\path{doi:10.1134/S106378500803019X}}.
+
+\bibitem{Parchinskii2003}
+P.~Parchinskii, S.~Vlasov, L.~Ligai, O.~Y. Shchukina, The effect of ultrasonic
+  treatment on the generation characteristics of a {S}i--{S}i{O}$_2$ interface,
+  Tech. Phys. Lett. 29~(5) (2003) 392--394.
+\newblock \href {http://dx.doi.org/10.1134/1.1579804}
+  {\path{doi:10.1134/1.1579804}}.
+
+\bibitem{Zdeb1989}
+A.~Zbelʹskyy, D.~Kropman, S.~M.K., The effect of ultrasound on point defects
+  in structures {S}i--{S}io$_2$, Zhurnal tekhnicheskoy fiziki 59~(8) (1989)
+  131--134.
+
+\bibitem{Gorb2010}
+A.~Gorb, O.~Korotchenkov, O.~Olikh, A.~Podolian, Ultrasonically recovered
+  performance of $\gamma-$irradiated metal-silicon structures, IEEE Trans.
+  Nucl. Sci. 57~(3) (2010) 1632--1639.
+\newblock \href {http://dx.doi.org/10.1109/TNS.2010.2047655}
+  {\path{doi:10.1109/TNS.2010.2047655}}.
+
+\bibitem{Parchinskii2000}
+P.~B. Parchinskii, S.~I. Vlasov, R.~A. Muminov, K.~K. Ismailov, U.~Turgunov,
+  The effect of ultrasound on the parameters of
+  metal--dielectric--semiconductor structures, Tech. Phys. Lett. 26~(10) (2000)
+  420--422.
+\newblock \href {http://dx.doi.org/10.1134/1.1262865}
+  {\path{doi:10.1134/1.1262865}}.
+
+\bibitem{Parchinskii2006}
+P.~Parchinskii, S.~Vlasov, L.~Ligai, Effect of ultrasonic treatment on the
+  generation characteristics of irradiated silicon--silicon--dioxide interface,
+  Semiconductors 40~(7) (2006) 808--811.
+\newblock \href {http://dx.doi.org/10.1134/S106378260607013X}
+  {\path{doi:10.1134/S106378260607013X}}.
+
+\bibitem{COLLETT201750}
+K.~A. Collett, R.~S. Bonilla, P.~Hamer, G.~Bourret-Sicotte, R.~Lobo, T.~Kho,
+  P.~R. Wilshaw, An enhanced alneal process to produce {SRV} $< 1$cm/s in
+  $1\omega$ cm n--type {S}i, Sol. Energy Mater. Sol. Cells 173 (2017) 50--58.
+\newblock \href {http://dx.doi.org/10.1016/j.solmat.2017.06.022}
+  {\path{doi:10.1016/j.solmat.2017.06.022}}.
+
+\bibitem{Kerr_2001}
+M.~J. Kerr, A.~Cuevas, Very low bulk and surface recombination in oxidized
+  silicon wafers, Semiconductor Science and Technology 17~(1) (2001) 35--38.
+\newblock \href {http://dx.doi.org/10.1088/0268-1242/17/1/306}
+  {\path{doi:10.1088/0268-1242/17/1/306}}.
+
+\bibitem{Aberle2000}
+A.~G. Aberle, Surface passivation of crystalline silicon solar cells: a review,
+  Prog. Photovoltaics Res. Appl. 8~(5) (2000) 473--487.
+\newblock \href
+  {http://dx.doi.org/10.1002/1099-159X(200009/10)8:5<473::AID-PIP337>3.0.CO;2-D}
+  {\path{doi:10.1002/1099-159X(200009/10)8:5<473::AID-PIP337>3.0.CO;2-D}}.
+
+\bibitem{Larionova2010}
+Y.~Larionova, V.~Mertens, N.-P. Harder, R.~Brendel, Surface passivation of
+  n--type {C}zochralski silicon substrates by
+  thermal--{S}i{O}$_2$/plasma--enhanced chemical vapor deposition {S}i{N}
+  stacks, Appl. Phys. Lett. 96~(3) (2010) 032105.
+\newblock \href {http://dx.doi.org/10.1063/1.3291681}
+  {\path{doi:10.1063/1.3291681}}.
+
+\bibitem{SiO2:Mahapatra}
+S.~Mahapatra, D.~Saha, D.~Varghese, P.~B. Kumar, On the generation and recovery
+  of interface traps in mosfets subjected to nbti, fn, and hci stress, IEEE
+  Trans. Electron Devices 53~(7) (2006) 1583--1592.
+\newblock \href {http://dx.doi.org/10.1109/TED.2006.876041}
+  {\path{doi:10.1109/TED.2006.876041}}.
+
+\bibitem{SiO2:Esseni}
+D.~Esseni, J.~D. Bude, L.~Selmi, On interface and oxide degradation in vlsi
+  mosfets. i. deuterium effect in che stress regime, IEEE Trans. Electron
+  Devices 49~(2) (2002) 247--253.
+\newblock \href {http://dx.doi.org/10.1109/16.981214}
+  {\path{doi:10.1109/16.981214}}.
+
+\bibitem{LID:SchmidtJMR}
+J.~Schmidt, K.~Bothe, D.~Macdonald, J.~Adey, R.~Jones, D.~Palmer,
+  Electronically stimulated degradation of silicon solar cells, Journal of
+  Materials Research 21~(1) (2006) 5--12.
+\newblock \href {http://dx.doi.org/10.1557/JMR.2006.0012}
+  {\path{doi:10.1557/JMR.2006.0012}}.
+
+\bibitem{LIDRev}
+J.~Lindroos, H.~Savin, Review of light-induced degradation in crystalline
+  silicon solar cells, Sol. Energy Mater. Sol. Cells 147 (2016) 115--126.
+\newblock \href
+  {http://dx.doi.org/http://dx.doi.org/10.1016/j.solmat.2015.11.047}
+  {\path{doi:http://dx.doi.org/10.1016/j.solmat.2015.11.047}}.
+
+\bibitem{LIDRev2}
+T.~Niewelt, J.~Sch\"{o}on, W.~Warta, S.~W. Glunz, M.~C. Schubert, Degradation
+  of crystalline silicon due to boron--oxygen defects, IEEE Journal of
+  Photovoltaics 7~(1) (2017) 383 --398.
+\newblock \href {http://dx.doi.org/10.1109/JPHOTOV.2016.2614119}
+  {\path{doi:10.1109/JPHOTOV.2016.2614119}}.
+
+\bibitem{LID:JAP2017II}
+H.~Vahlman, A.~Haarahiltunen, W.~Kwapil, J.~Schon, A.~Inglese, H.~Savin,
+  Modeling of light--induced degradation due to {C}u precipitation in p--type
+  silicon. {II}. comparison of simulations and experiments, J. Appl. Phys.
+  121~(19) (2017) 195704.
+\newblock \href {http://dx.doi.org/10.1063/1.4983455}
+  {\path{doi:10.1063/1.4983455}}.
+
+\bibitem{CID:APL}
+C.~Vargas, Y.~Zhu, G.~Coletti, C.~Chan, D.~Payne, M.~Jensen, Z.~Hameiri,
+  Recombination parameters of lifetime--limiting carrier--induced defects in
+  multicrystalline silicon for solar cells, Appl. Phys. Lett. 110~(9) (2017)
+  092106.
+\newblock \href {http://dx.doi.org/10.1063/1.4977906}
+  {\path{doi:10.1063/1.4977906}}.
+
+\bibitem{CID:PPS}
+D.~N.~R. Payne, C.~E. Chan, B.~J. Hallam, B.~Hoex, M.~D. Abbott, S.~R. Wenham,
+  D.~M. Bagnall, Acceleration and mitigation of carrier--induced degradation in
+  p--type multi--crystalline silicon, Phys. Status Solidi RRL 10~(3) (2016)
+  237--241.
+\newblock \href {http://dx.doi.org/10.1002/pssr.201510437}
+  {\path{doi:10.1002/pssr.201510437}}.
+
+\bibitem{PID:SEMSC}
+V.~Naumann, D.~Lausch, A.~Hahnel, J.~Bauer, O.~Breitenstein, A.~Graff,
+  M.~Werner, S.~Swatek, S.~Grober, J.~Bagdahn, C.~Hagendorf, Explanation of
+  potential--induced degradation of the shunting type by {N}a decoration of
+  stacking faults in {S}i solar cells, Sol. Energy Mater. Sol. Cells 120 (2014)
+  383--389.
+\newblock \href {http://dx.doi.org/10.1016/j.solmat.2013.06.015}
+  {\path{doi:10.1016/j.solmat.2013.06.015}}.
+
+\bibitem{PID:PP}
+S.~Hoffmann, M.~Koehl, Effect of humidity and temperature on the
+  potential-induced degradation, Progress in Photovoltaics: Research and
+  Applications 22~(2) (2012) 173--179.
+\newblock \href {http://dx.doi.org/10.1002/pip.2238}
+  {\path{doi:10.1002/pip.2238}}.
+
+\bibitem{PID:2017}
+K.~Hara, K.~Ogawa, Y.~Okabayashi, H.~Matsuzaki, A.~Masuda, Influence of surface
+  structure of n--type single--crystalline {S}i solar cells on
+  potential--induced deinfluence, Sol. Energy Mater. Sol. Cells 166 (2017)
+  132--139.
+\newblock \href {http://dx.doi.org/10.1016/j.solmat.2017.03.018}
+  {\path{doi:10.1016/j.solmat.2017.03.018}}.
+
+\bibitem{Bhat}
+S.~Bhat, A.~Rao, S.~Krishnan, G.~Sanjeev, S.~E. Puthanveettil, A study on the
+  variation of c--{S}i solar cell parameters under 8 {M}e{V} electron
+  irradiation, Sol. Energy Mater. Sol. Cells 120 (2014) 191--196.
+\newblock \href {http://dx.doi.org/10.1016/j.solmat.2013.08.043}
+  {\path{doi:10.1016/j.solmat.2013.08.043}}.
+
+\bibitem{Karazhanov}
+S.~Z. Karazhanov, Mechanism for the anomalous degradation of silicon space
+  solar cells, Appl. Phys. Lett. 76~(19) (2000) 2689--2691.
+\newblock \href {http://dx.doi.org/10.1063/1.126445}
+  {\path{doi:10.1063/1.126445}}.
+
+\bibitem{Korotchenkov1995}
+O.~Korotchenkov, H.~Grimmliss, Long-wavelength acoustic-mode-enhanced electron
+  emission from {S}e and {T}e donors in silicon, Phys. Rev. B 52~(20) (1995)
+  14598--14606.
+\newblock \href {http://dx.doi.org/10.1103/PhysRevB.52.14598}
+  {\path{doi:10.1103/PhysRevB.52.14598}}.
+
+\bibitem{Ostapenko1995}
+S.~S. Ostapenko, R.~E. Bell, Ultrasound stimulated dissociation of {F}e--{B}
+  pairs in silicon, J. Appl. Phys. 77~(10) (1995) 5458--5460.
+\newblock \href {http://dx.doi.org/10.1063/1.359243}
+  {\path{doi:10.1063/1.359243}}.
+
+\bibitem{Olikh2009Sem}
+O.~Y. Olikh, The variation in activity of recombination centers in silicon
+  $p$--$n$ structures under the conditions of acoustic loading, Semiconductors
+  43~(6) (2009) 745--750.
+\newblock \href {http://dx.doi.org/10.1134/S1063782609060116}
+  {\path{doi:10.1134/S1063782609060116}}.
+
+\bibitem{YOlikh:SupMicr}
+Y.~M. Olikh, M.~D. Tymochko, Reverse ultrasonic changes of electrical
+  conductivity in {C}d{T}e:{C}l crystals, Superlattices Microstruct. 95 (2016)
+  78--82.
+\newblock \href {http://dx.doi.org/10.1016/j.spmi.2016.04.038}
+  {\path{doi:10.1016/j.spmi.2016.04.038}}.
+
+\bibitem{Mirsagatov}
+S.~A. Mirsagatov, I.~B. Sapaeva, Z.~Nazarov, Ultrasonic annealing of surface
+  states in the heterojunction of a $p$--{S}i/$n$--{C}d{S}/$n^+$--{C}d{S}
+  injection photodiode, Inorganic Materials 51~(1) (2015) 1--4.
+\newblock \href {http://dx.doi.org/10.1134/S0020168515010148}
+  {\path{doi:10.1134/S0020168515010148}}.
+
+\bibitem{Ostapenko1999}
+S.~Ostapenko, Defect passivation using ultrasound treatment: fundamentals and
+  application, Applied Physics A: Materials Science \& Processing 69~(2) (1999)
+  225--232.
+\newblock \href {http://dx.doi.org/10.1007/s003390050994}
+  {\path{doi:10.1007/s003390050994}}.
+
+\bibitem{Ostrovskii2001}
+I.~Ostrovskii, O.~Korotchenkov, O.~Olikh, A.~Podolyan, R.~Chupryna,
+  M.~Torres-Cisneros, Acoustically driven optical phenomena in bulk and
+  low-dimensional semiconductors, J. Opt. A: Pure Appl. Opt. 3~(4) (2001)
+  S82--S86.
+\newblock \href {http://dx.doi.org/10.1088/1464-4258/3/4/364}
+  {\path{doi:10.1088/1464-4258/3/4/364}}.
+
+\bibitem{OlikhJAP}
+O.~Y. Olikh, K.~V. Voytenko, R.~M. Burbelo, Ultrasound influence on
+  {I}--{V}--{T} characteristics of silicon {S}chottky barrier structure, J.
+  Appl. Phys. 117~(4) (2015) 044505.
+\newblock \href {http://dx.doi.org/10.1063/1.4906844}
+  {\path{doi:10.1063/1.4906844}}.
+
+\bibitem{Olikh2011Sem}
+O.~Olikh, Features of dynamic acoustically induced modification of photovoltaic
+  parameters of silicon solar cells, Semiconductors 45~(6) (2011) 798--804.
+\newblock \href {http://dx.doi.org/10.1134/S1063782611060170}
+  {\path{doi:10.1134/S1063782611060170}}.
+
+\bibitem{Davletova2009}
+A.~Davletova, S.~Z. Karazhanov, A study of electrical properties of dislocation
+  engineered {S}i processed by ultrasound, Journal of Physics and Chemistry of
+  Solids 70~(6) (2009) 989--992.
+\newblock \href {http://dx.doi.org/10.1016/j.jpcs.2009.05.009}
+  {\path{doi:10.1016/j.jpcs.2009.05.009}}.
+
+\bibitem{Davletova2008}
+A.~Davletova, S.~Z. Karazhanov, Open-circuit voltage decay transient in
+  dislocation-engineered {S}i p--n junction, Journal of Physics D: Applied
+  Physics 41~(16) (2008) 165107.
+\newblock \href {http://dx.doi.org/10.1088/0022-3727/41/16/165107}
+  {\path{doi:10.1088/0022-3727/41/16/165107}}.
+
+\bibitem{YOlikh2005}
+V.~Melnik, Y.~Olikh, V.~Popov, B.~Romanyuk, Y.~Goltvyanskii, A.~Evtukh,
+  Characteristics of silicon p--n junction formed by ion implantation with in
+  situ ultrasound treatment, Materials Science and Engineering: B 124--125
+  (2005) 327--330.
+\newblock \href {http://dx.doi.org/10.1016/j.mseb.2005.08.039}
+  {\path{doi:10.1016/j.mseb.2005.08.039}}.
+
+\bibitem{CDLR:JAP1995}
+A.~Schenka, U.~Krumbein, Coupled defect-level recombination: Theory and
+  application to anomalous diode characteristics, J. Appl. Phys. 78~(5) (1995)
+  3185--3192.
+\newblock \href {http://dx.doi.org/10.1063/1.360007}
+  {\path{doi:10.1063/1.360007}}.
+
+\bibitem{CDLR:JAP}
+S.~Steingrube, O.~Breitenstein, K.~Ramspeck, S.~Glunz, A.~Schenk, P.~P.
+  Altermatt, Explanation of commonly observed shunt currents in c-si solar
+  cells by means of recombination statistics beyond the shockley-read-hall
+  approximation, J. Appl. Phys. 110~(1) (2011) 014515.
+\newblock \href {http://dx.doi.org/10.1063/1.3607310}
+  {\path{doi:10.1063/1.3607310}}.
+
+\bibitem{Rsh:Gopal2003}
+V.~Gopal, S.~Gupta, Effect of dislocations on the zero-bias resistance-area
+  product, quantum efficiency, and spectral response of {LWIR} {H}g{C}d{T}e
+  photovoltaic detectors, IEEE Trans. Electron Devices 50~(5) (2003)
+  1220--1226.
+\newblock \href {http://dx.doi.org/10.1109/TED.2003.813230}
+  {\path{doi:10.1109/TED.2003.813230}}.
+
+\bibitem{Rsh:Gopal2004}
+V.~Gopal, S.~Gupta, Contribution of dislocations to the zero-bias
+  resistance-area product of {LWIR} {H}g{C}d{T}e photodiodes at low
+  temperatures, IEEE Trans. Electron Devices 51~(7) (2004) 1078--1083.
+\newblock \href {http://dx.doi.org/10.1109/TED.2004.829857}
+  {\path{doi:10.1109/TED.2004.829857}}.
+
+\bibitem{MirzadeJAP2011}
+F.~Mirzade, Elastic wave propagation in a solid layer with laser-induced point
+  defects, J. Appl. Phys. 110~(6) (2011) 064906.
+\newblock \href {http://dx.doi.org/10.1063/1.3633524}
+  {\path{doi:10.1063/1.3633524}}.
+
+\bibitem{PeleshchakUJF2016}
+R.~Peleshchak, O.~Kuzyk, O.~Dan'kiv, Formation of periodic structures under the
+  influence of an acousti wave in semiconductors with a two-component defect
+  subsystem, Ukr. J. Phys. 61~(8) (2016) 741--746.
+\newblock \href {http://dx.doi.org/10.15407/ujpe61.08.0741}
+  {\path{doi:10.15407/ujpe61.08.0741}}.
+
+\end{thebibliography}
