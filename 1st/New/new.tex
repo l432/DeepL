@@ -129,8 +129,8 @@ Fig.~\ref{figIV} shows $I–V$ characteristics for both initial and irradiated Au-
 One can see that $I–V$ characteristic for non-irradiated sample is typical for Schottky  diode:
 the forward current is caused by a  thermionic emission (TE) over barrier,
 the reverse current value is determined by  barrier height lowering, which occur due to the electric field ($\log I\sim V^{1/2}$) \cite{Rhoderick1988,Andrews}.
-The forward branch was fitted by the following equation 
-\cite{Rhoderick1988} 
+The forward branch was fitted by the following equation
+\cite{Rhoderick1988}
 \begin{equation}
 \label{eqSDIV}
 I=I_s\left\{\exp\left[\frac{q(V-IR_s)}{nkT}\right]-1\right\}\,,
@@ -142,8 +142,11 @@ $n$ is the ideality factor,
 the other symbols  have their usual meanings.
 The fitting results are shown on Fig.~\ref{figIV},b and d by solid lines,
 the obtained parameters values are listed in Table~\ref{tabMIS}.
-
-
+It should be noted that the oxide layer presence does not allow to determinate the barrier height by help the saturation current value only,
+%and equation $I_s=AA^*\,T^2\exp\left(-\frac{q\Phi_b}{kT}\right)$  
+%($A$ is the structure area, 
+%$A^*$ is the effective Richardson constant),
+since the tunneling must be taken into account as well \cite{OZBEK2011,Kobayashi}.
 
 
 \begin{figure}
@@ -166,23 +169,34 @@ and the solid, dashed, and dotted lines are the TE, TAT, and SCLC fitted curves 
 \begin{tabular}{lcccc}
 \hline
 \multicolumn{5}{l}{Structure status}\\\hline
-$\gamma$--irradiation&$-$&$+$&$+$&$+$\\ 
-UST&$-$&$-$&$+$&$+$\\ 
+$\gamma$--irradiation&$-$&$+$&$+$&$+$\\
+UST&$-$&$-$&$+$&$+$\\
 &&&30~min&60~min\\ \hline
 \multicolumn{5}{l}{Parameter}\\\hline
-$I_s$, $10^{-9}$A & 3.3& 1.1& 4.9& \\ 
-$R_s$, $10^{4}$Ом & 1.1& 13& 8.8& \\ 
-$n$ & 1.7& 10.3& 9.9& \\ 
-$m_\mathrm{F}$ & &1.3& 1.6& 1.8 \\ 
-$I_0$, $10^{-8}$A & &$4.5$& $13$& $150$ \\ 
-$I_{0,\mathrm{TAT}}$, a.u. & &1& 0.14& 0.04 \\ 
-$U_d$, B & &0.73& 0.44& 0.12 \\ 
-$R_\mathrm{TAT}$, a.u. & &1& 0.54& 0.33 \\ 
-$K_\mathrm{RECT}$ ($V=0,5$~V)&770 &0.22& 1.33& 5.4 \\ 
+$I_s$, $10^{-9}$A & 3.3& 1.1& 4.9& \\
+$R_s$, $10^{4}$Ом & 1.1& 13& 8.8& \\
+$n$ & 1.7& 10.3& 9.9& \\
+$m_\mathrm{F}$ & &1.3& 1.6& 1.8 \\
+$I_0$, $10^{-8}$A & &$4.5$& $13$& $150$ \\
+$I_{0,\mathrm{TAT}}$, a.u. & &1& 0.14& 0.04 \\
+$U_d$, B & &0.73& 0.44& 0.12 \\
+$R_\mathrm{TAT}$, a.u. & &1& 0.54& 0.33 \\
+$K_\mathrm{RECT}$ ($V=0.5$~V)&770 &0.22& 1.33& 5.4 \\
 \end{tabular}
 \end{table}
 
 
+In addition, the real current value for the non-irradiated structure exceeds ones, which is expected from Eq.~(\ref{eqSDIV}) --- see Fig.~\ref{figIV}.
+The redundant current is most likely to be caused by the tunneling through the SiO$_2$ layer and can be described as \cite{Rhoderick1988,Novikov2009}:
+\begin{equation}\label{eqFowlNord}
+    \ln\left(\frac{I}{F_m^2}\right)\propto -\frac{4 \sqrt{2m^*}(qE_{\mathrm{eff}})^{3/2}}{3\hbar q F_m}\,,
+\end{equation}
+where
+$F_m$ is the electric field,
+$E_{\mathrm{eff}}$ is the effective tunneling energy.
+%This assumption benefit is the linearity of the Fowler--Nordheim plots of the forward current at large bias --- see Fig.~\ref{FigFauler}.
+The linearity of the Fowler--Nordheim plot of the forward current at large bias is this assumption evidence --- see Fig.~\ref{FigFauler}.
+It was taken into account at plotting that the electric field in a oxide layer is proportional to the applied voltage $F_m\propto V$.
 
 \begin{figure}
 \centerline{\includegraphics[width=0.6\textwidth]{FigFauler}}
@@ -192,6 +206,16 @@ The line is the least--squares linear fitting.
 }%
 \end{figure}
 
+
+
+%Внаслідок $\gamma$--опромінення характер проходження струму суттєво змінився --- див. криві 2 на рис.~\ref{figIV_MIS}.
+%Особливо це стосується зворотної гілки ВАХ (рис.~\ref{figIV_MIS},б), де кардинальні видозміни польової залежності струму свідчать про зміну механізму перенесення заряду.
+%При прямому зміщенні залежність $I(V)$, очікувана в рамках ТЕ моделі, спостерігається лише при напрузі, більшій 1~В (рис.~\ref{figIV_MIS},в), а величина струму суттєво менша, ніж до опромінення.
+%Як показала апроксимація відповідної ділянки ВАХ згідно з формулою~(\ref{eqSDIV}), у результаті опромінення відбулося значне  зростання фактора неідеальності та послідовного опору (причому зміни останнього суттєво перевищують зміни питомого опору, які спостерігаються в об'ємних зразках).
+%Радіаційно--індуковане збільшення $n_\mathrm{id}$, зумовлене утворенням дефектів, і є головною причиною зменшення величини термоемісійного струму.
+%У роботі \cite{FZSi:Rad} проведено дослідження процесів дефектоутворення у кремнії, метод вирощування і питомий опір якого збігаються із дослідженими структурами, при опромінення $\gamma$--квантами $^{60}$Co з дозою близько $9\cdot10^7$~рад.
+%Авторами  показано, що основними радіаційними дефектами в цьому випадку є комплекси VO$_i$, С$_i$C$_s$, $H$--центр (V$_2$O$_i$), $\Gamma$--центр та міжвузловий дефект $I^{0/-}$.
+%Останній є вторинним дефектом і саме з ним пов'язуються процеси компенсації (інверсії) провідності.
 
 
 %The irradiation is known to lead to Si---H bond breakage at the Si--SiO$_2$ interface \cite{SiO2:Mahapatra,SiO2:Esseni}.

@@ -233,4 +233,23 @@ J.~Andrews, M.~Lepselter, Reverse current-voltage characteristics of
 \newblock \href {http://dx.doi.org/10.1016/0038-1101(70)90098-5}
   {\path{doi:10.1016/0038-1101(70)90098-5}}.
 
+\bibitem{OZBEK2011}
+A.~M. Ozbek, B.~J. Baliga, Tunneling coefficient for {G}a{N} {S}chottky barrier
+  diodes, Solid-State Electron. 62~(1) (2011) 1--4.
+\newblock \href {http://dx.doi.org/10.1016/j.sse.2011.04.016}
+  {\path{doi:10.1016/j.sse.2011.04.016}}.
+
+\bibitem{Kobayashi}
+H.~Kobayashi, T.~Ishida, Y.~Nakato, H.~Mori, Mechanism of carrier transport
+  through a silicon--oxide layer for indium--tin--oxide/silicon--oxide/silicon
+  solar cells, J. Appl. Phys. 78~(6) (1995) 3931--3939.
+\newblock \href {http://dx.doi.org/10.1063/1.359912}
+  {\path{doi:10.1063/1.359912}}.
+
+\bibitem{Novikov2009}
+Y.~N. Novikov, Non-volatile memory based on silicon nanoclusters,
+  Semiconductors 43~(8) (2009) 1040--1045.
+\newblock \href {http://dx.doi.org/10.1134/S1063782609080144}
+  {\path{doi:10.1134/S1063782609080144}}.
+
 \end{thebibliography}
