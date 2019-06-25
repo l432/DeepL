@@ -113,7 +113,8 @@ therefore  the non--ionizing energy losses was larger as well.
 iii)~It is known \cite{PersenkovBook}, that the surface defect density, which is $\gamma$--induced in Si--SiO$_2$,  is about $10^{12}$~eV/cm for  $10^{7}$~rad in the case of (111)--oriented substrate ant this value is much more then one for (100)--substrate, which is used in cited study.
 
 The UST of the irradiated structure was done by attaching the piezoelectric transducer to one side of the sample. An epoxy glue was used as the bondingmedium, providing the rigid coupling of the transducer to the sample. The thickness resonant of the transducers was 4~MHz. A radio--frequency voltage supplied from a generator drives the transducer, resulting in vibrations of the coupled transducer-sample system.
-UST was carried out by a series of consecutive loading--unloading cycles, 30~min each.
+UST was carried out by a two consecutive loading--unloading cycles, 30~min each;
+so the total UST time $t_\mathrm{UST}$ was equal to 30~min or 60~min.
 The density of acoustic energy flux $W_{US}$ in Si was equal to about 2~W/cm$^2$.
 The sample temperature was measured with a copper--constantan thermocouple directly attached to the surface and did not exceed 350~K.
 The more details about the sample and UST setup are presented elsewhere \cite{Gorb2010}.
@@ -143,8 +144,8 @@ the other symbols  have their usual meanings.
 The fitting results are shown on Fig.~\ref{figIV},b and d by solid lines,
 the obtained parameters values are listed in Table~\ref{tabMIS}.
 It should be noted that the oxide layer presence does not allow to determinate the barrier height by help the saturation current value only,
-%and equation $I_s=AA^*\,T^2\exp\left(-\frac{q\Phi_b}{kT}\right)$  
-%($A$ is the structure area, 
+%and equation $I_s=AA^*\,T^2\exp\left(-\frac{q\Phi_b}{kT}\right)$
+%($A$ is the structure area,
 %$A^*$ is the effective Richardson constant),
 since the tunneling must be taken into account as well \cite{OZBEK2011,Kobayashi}.
 
@@ -171,7 +172,7 @@ and the solid, dashed, and dotted lines are the TE, TAT, and SCLC fitted curves 
 \multicolumn{5}{l}{Structure status}\\\hline
 $\gamma$--irradiation&$-$&$+$&$+$&$+$\\
 UST&$-$&$-$&$+$&$+$\\
-&&&30~min&60~min\\ \hline
+$t_\mathrm{UST}$, min&$-$&$-$&30&60\\ \hline
 \multicolumn{5}{l}{Parameter}\\\hline
 $I_s$, $10^{-9}$A & 3.3& 1.1& 4.9& \\
 $R_s$, $10^{4}$Ом & 1.1& 13& 8.8& \\
@@ -181,7 +182,7 @@ $I_0$, $10^{-8}$A & &$4.5$& $13$& $150$ \\
 $I_{0,\mathrm{TAT}}$, a.u. & &1& 0.14& 0.04 \\
 $U_d$, B & &0.73& 0.44& 0.12 \\
 $R_\mathrm{TAT}$, a.u. & &1& 0.54& 0.33 \\
-$K_\mathrm{RECT}$ ($V=0.5$~V)&770 &0.22& 1.33& 5.4 \\
+%$K_\mathrm{RECT}$ ($V=0.5$~V)&770 &0.22& 1.33& 5.4 \\
 \end{tabular}
 \end{table}
 
@@ -196,7 +197,7 @@ $F_m$ is the electric field,
 $E_{\mathrm{eff}}$ is the effective tunneling energy.
 %This assumption benefit is the linearity of the Fowler--Nordheim plots of the forward current at large bias --- see Fig.~\ref{FigFauler}.
 The linearity of the Fowler--Nordheim plot of the forward current at large bias is this assumption evidence --- see Fig.~\ref{FigFauler}.
-It was taken into account at plotting that the electric field in a oxide layer is proportional to the applied voltage $F_m\propto V$.
+It was taken into account when plotting that the electric field in a oxide layer is proportional to the applied voltage $F_m\propto V$.
 
 \begin{figure}
 \centerline{\includegraphics[width=0.6\textwidth]{FigFauler}}
@@ -206,19 +207,59 @@ The line is the least--squares linear fitting.
 }%
 \end{figure}
 
+The $\gamma$--irradiation has a considerable effect on the current behavior --- see Fig.~\ref{figIV}.
+The changes are pronounced for the reverse branch especially and the $I-V$ characteristic modification is the evidence of a transformation of the current transport mechanism.
+Thus the forward $I-V$ dependence, expected according to TE model, is observed at $V>1$~V only  and the current value is much more then ones in non--irradiated case.
+The fitting of the $V>1$~V region by Eq.~(\ref{eqSDIV}) show that the irradiation leads to significant increase in both series resistance and ideality factor values --- see Table~\ref{tabMIS} data.
+And the former significantly exceeds the resistance change, which was observed in the bulk samples.
+The ideality factor increase deals with the RDs formation  and results in the observed TE current decreasing.
+Note that the effect of the radiation induced decreasing of MOS structure current is known 
+\cite{SiO2:Niu}.
 
 
-%Внаслідок $\gamma$--опромінення характер проходження струму суттєво змінився --- див. криві 2 на рис.~\ref{figIV_MIS}.
-%Особливо це стосується зворотної гілки ВАХ (рис.~\ref{figIV_MIS},б), де кардинальні видозміни польової залежності струму свідчать про зміну механізму перенесення заряду.
-%При прямому зміщенні залежність $I(V)$, очікувана в рамках ТЕ моделі, спостерігається лише при напрузі, більшій 1~В (рис.~\ref{figIV_MIS},в), а величина струму суттєво менша, ніж до опромінення.
-%Як показала апроксимація відповідної ділянки ВАХ згідно з формулою~(\ref{eqSDIV}), у результаті опромінення відбулося значне  зростання фактора неідеальності та послідовного опору (причому зміни останнього суттєво перевищують зміни питомого опору, які спостерігаються в об'ємних зразках).
-%Радіаційно--індуковане збільшення $n_\mathrm{id}$, зумовлене утворенням дефектів, і є головною причиною зменшення величини термоемісійного струму.
-%У роботі \cite{FZSi:Rad} проведено дослідження процесів дефектоутворення у кремнії, метод вирощування і питомий опір якого збігаються із дослідженими структурами, при опромінення $\gamma$--квантами $^{60}$Co з дозою близько $9\cdot10^7$~рад.
-%Авторами  показано, що основними радіаційними дефектами в цьому випадку є комплекси VO$_i$, С$_i$C$_s$, $H$--центр (V$_2$O$_i$), $\Gamma$--центр та міжвузловий дефект $I^{0/-}$.
-%Останній є вторинним дефектом і саме з ним пов'язуються процеси компенсації (інверсії) провідності.
+Pintilie, \emph{et al}. \cite{FZSi:Rad} have investigated the RD formation by $^{60}$Co $\gamma$-radiation in silicon.
+The both  growth method and resistivity have been analogous to structure under our investigation and the dose $9\cdot10^7$~rad have been used.
+It have been shown that complexes VO$_i$, С$_i$C$_s$, $H$--centre (V$_2$O$_i$), $\Gamma$--centre, and interstitial defect $I^{0/-}$ are the main radiation defects.
+The latest one is a secondary defect and its appearance leads to a conductivity compensation (inversion) \cite{FZSi:Rad}.
+
+In our case the series resistance change in a range one order of magnitude above causes the reduction of voltage drop in the dielectric layer.
+As a result, the electric field intensity was ceased to be sufficient for effective Fowler--Nordheim tunneling and the corresponding current component is not observed after irradiation.
+
+Fig.~\ref{figIV},d show that the forward $I-V$ characteristic of irradiated structures at low biases ($V<1$~V) is enough good described by a power law
+\begin{equation}\label{eqVIsclc}
+  I=I_0\,V^{\,m_\mathrm{F}},
+\end{equation}
+where
+$m_\mathrm{F}=\frac{V}{I}\frac{\partial V}{\partial I}$ is the power--law parameter.
+The relation (\ref{eqVIsclc}) is typical for the space charge limited current
+(SCLC) \cite{SCLC:MA2016,Jafar,SCLC:Kaya} and the $m_\mathrm{F}$ value is connected with the energy distribution of traps, which emit carriers.
+E.g. the value $m_\mathrm{F}\approx1,3$, which is observed for the investigated structure after $\gamma$--irradiation and before UST, is evident of the exponential trap distribution.
+It is known \cite{SCLC:MA2016,Jafar,SCLC:Kaya} that the $I_0$ depend on the total trap concentration $N_t$
+\begin{equation}\label{eqIoSCLC}
+  I_0\sim 1/N_t^{m_\mathrm{F}-1},
+\end{equation}
+and the temperature dependency of  power--law parameter is defined by equation
+\begin{equation}\label{eqMT_IoSCLC}
+  m_\mathrm{F}=1+T_c/T,
+\end{equation}
+where
+$T_c$ is the characteristic temperature parameter of the trap distribution;
+notably the trap concentration per unit energy range at an energy $E$ above the valence band
+is proportional to $\exp(-E/kT_c)$.
+
+The SCLC current–-voltage relation is often written as \cite{Jafar}
+\begin{equation}\label{eqVIsclcT}
+  I(V,T)=C\exp\left(-\frac{E_x}{kT}\right)\,V^{\,m_\mathrm{F}(T)},
+\end{equation}
+where
+$C$ is the constant,
+$E_x$ is the activation energy that defined by the level position of the filled traps to the conductivity band.
+Fig.~\ref{figEa_MIS} shows the temperature dependence of the forward current.
+Eq.~(\ref{eqMT_IoSCLC}) was taken into account when Fig.~\ref{figEa_MIS} plotting.
+One can see that the experimental data are in good agreement with the fitting curve by Eq.~(\ref{eqVIsclcT}) for value $E_x=(0,32\pm0,01)$~eV.
 
 
-%The irradiation is known to lead to Si---H bond breakage at the Si--SiO$_2$ interface \cite{SiO2:Mahapatra,SiO2:Esseni}.
+
 
 \begin{figure}
 \centerline{\includegraphics[width=0.6\textwidth]{figEa_MIS}}
@@ -228,6 +269,46 @@ The line is the least--squares linear fitting.
 }%
 \end{figure}
 
+The $\gamma$--irradiation of Si--SiO$_2$ structures is known \cite{PersenkovBook} to lead to 
+a mechanical stress relaxation, a trap filling, and a new charged defect generation.
+It is believed \cite{SiO2:Devine,SiO2:Lenahan} that the negative charge is trapped at the interface while the positive charge accumulates at $E'$--centers, $E'_\delta$--centers, and three strained bond  related centers.
+However, the $E'$ and $E'_\delta$ concentration considerably overrides the bond  related centers concentration in the case of defect formation by  photons ($X$-- and $\gamma$--rays) \cite{SiO2:Devine}.
+It should be noted that the low temperature as well as low partial oxygen pressure result in the thin SiO$_2$ layer formation in the structure under investigation.
+But it is known \cite{SiO2:Cantin} that RDs, which appears in thin and thick layers, are the same.
+
+Note that the hydrogen content is the key factor of a  generation of the electrically active RDs in silicon MOS structures \cite{SiO2:Cantin} and the SiO$_2$ layers, which are grown by thermal oxidation, are rich in an atomic hydrogen \cite{PersenkovBook}. 
+The irradiation is known \cite{SiO2:Mahapatra,SiO2:Esseni} to lead to the breaking of $\equiv\!\mathrm{Si}\!-\!\mathrm{H}$ bonds at the Si--SiO$_2$ interface and subsequent diffusion of released H species into the oxide bulk.
+%The deep level formation is due to the breaking of interfacial $\equiv\!\mathrm{Si}\!-\!\mathrm{H}$ bonds under hot carriers present condition and subsequent diffusion of released H species into the oxide bulk \cite{SiO2:Mahapatra,SiO2:Esseni}.
+The resulting unsaturated bonds $\equiv\mathrm{Si}-$ act as electronic traps.
+Generally  such defects are distinguished by the orientation of the silicon substrate.
+It is considered \cite{SiO2:Rev} that $P_b$ centers appear at (111)--oriented substrate interface whereas $P_{b1}$ and $P_ {b0}$ centers are a typical in the case of (100)--oriented substrate.
+Both $P_ {b0}$ and $P_{b1}$ are chemically identical to the $P_b$ center, 
+however the difference in an electrical activity is observed.
+
+The non--monotonic energy distribution of the interface levels is observed in  Si--SiO$_2$ structures, grown on $n$--type silicon crystal, after the $\gamma$--rays irradiation with dose above $5\cdot10^5$~rad \cite{PersenkovBook}.
+
+According to Parchinskii, \emph{et al}. \cite{ParchSiO2}, the highest density of surface states is observed at $E_c-(0,32\pm0,04)$~eV.
+This value coincides with the determined  $E_x$ value.
+Therefore the current at low forward bias for irradiated structures is deals with carriers, which are trapped  by $P_b$--centers.
+Besides the negative charge accumulation at interface results in both barrier height increase and observed TE current decreasing.
+But as mentioned above, the main reason of TE current reduction is the $n$ rise, which is induced  by RDs generation at silicon near surface region.
+
+Fig.~\ref{figIV},a and Fig.~\ref{figIV},d shown that USTs cause an increase of  a space charge limited current.
+In particular, SCLC exceeds the TE current at the whole used forward voltage interval in the 
+case of $t_\mathrm{UST}=60$~min.
+We used Eq.~(\ref{eqVIsclc}) to fit experimental $I-V$ data of irradiated and ultrasonically treated structures.
+The obtained fitting parameters are summarized in Table~\ref{tabMIS}.
+According to Eq.~(\ref{eqIoSCLC}) the detected increase in $I_0$ value is evident of AI decrease in $P_b$--center concentration.
+The $P_b$--center annealing is known \cite{SiO2:Takakura,SiO2:Wurzer} to deal with 
+
+%Виявлене збільшення $I_0$ свідчить, відповідно до формули~(\ref{eqIoSCLC}), про АІ зменшення концентрації $P_b$--центрів,
+%З літератури \cite{SiO2:Takakura,SiO2:Wurzer} відомо, що відпал $P_b$--центрів відбувається внаслідок пасивації ненасичених зв'язків атомами водню.
+%Тобто отримані результати свідчать, що УЗО стимулює дифузію водню.
+%Загалом подібні процеси спостерігалися і раніше \cite{Ostap:SiO2,Ostap:PhotoLum,ostapenko1997}, проте в нашому випадку мова йде про АІ відпал радіаційних дефектів.
+
+
+
+%а зростання $m_\mathrm{F}$ (або, що те саме, $T_c$) --- про звуження енергетичного розподілу відповідних рівнів.
 
 %\section*{References}
 
