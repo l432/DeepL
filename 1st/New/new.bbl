@@ -341,4 +341,47 @@ P.~B. Parchinskii, S.~I. Vlasov, A.~Nasirov, The effect of $\gamma$--ray
 \newblock \href {http://dx.doi.org/10.1134/1.1823064}
   {\path{doi:10.1134/1.1823064}}.
 
+\bibitem{SiO2:Takakura}
+K.~Takakura, H.~Ohyama, A.~Ueda, M.~Nakabayashi, K.~Hayama, K.~Kobayashi,
+  E.~Simoen, A.~Mercha, C.~Claeys, Recovery behaviour resulting from thermal
+  annealing in n--{MOSFET}s irradiated by 20 {M}e{V} protons, Semicond. Sci.
+  Technol. 18~(6) (2003) 506--511.
+\newblock \href {http://dx.doi.org/10.1088/0268-1242/18/6/319}
+  {\path{doi:10.1088/0268-1242/18/6/319}}.
+
+\bibitem{SiO2:Wurzer}
+H.~Wurzer, R.~Mahnkopf, H.~Klose, Annealing of degraded
+  npn--transistors-mechanisms and modeling, IEEE Trans. Electron Devices 41~(4)
+  (1994) 533--538.
+\newblock \href {http://dx.doi.org/10.1109/16.278506}
+  {\path{doi:10.1109/16.278506}}.
+
+\bibitem{Ostap:PhotoLum}
+J.~Koshka, S.~Ostapenko, T.~Ruf, J.~M. Zhang, Activation of luminescence in
+  polycrystalline silicon thin films by ultrasound treatment, Appl. Phys. Lett.
+  69~(17) (1996) 2537--2539.
+\newblock \href {http://arxiv.org/abs/https://doi.org/10.1063/1.117731}
+  {\path{arXiv:https://doi.org/10.1063/1.117731}}, \href
+  {http://dx.doi.org/10.1063/1.117731} {\path{doi:10.1063/1.117731}}.
+
+\bibitem{ostapenko1997}
+S.~S. Ostapenko, Mechanism of ultrasonic enhanced hydrogenation in poly--{S}i
+  thin films, in: Defects in Semiconductors 19, Vol. 258 of Materials Science
+  Forum, Trans Tech Publications, 1997, pp. 197--202.
+\newblock \href {http://dx.doi.org/10.4028/www.scientific.net/MSF.258-263.197}
+  {\path{doi:10.4028/www.scientific.net/MSF.258-263.197}}.
+
+\bibitem{AZIZ2001}
+M.~J. Aziz, Stress effects on defects and dopant diffusion in {S}i, Mater. Sci.
+  Semicond. Process. 4~(5) (2001) 397--403.
+\newblock \href {http://dx.doi.org/10.1016/S1369-8001(01)00014-2}
+  {\path{doi:10.1016/S1369-8001(01)00014-2}}.
+
+\bibitem{SiO2:DiMaria}
+D.~J. DiMaria, E.~Cartier, Mechanism for stress--induced leakage currents in
+  thin silicon dioxide films, J. Appl. Phys. 78~(6) (1995) 3883--3894.
+\newblock \href {http://arxiv.org/abs/https://doi.org/10.1063/1.359905}
+  {\path{arXiv:https://doi.org/10.1063/1.359905}}, \href
+  {http://dx.doi.org/10.1063/1.359905} {\path{doi:10.1063/1.359905}}.
+
 \end{thebibliography}
