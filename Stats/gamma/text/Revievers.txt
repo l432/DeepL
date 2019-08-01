@@ -1,0 +1,60 @@
+Smagul 
+Zh
+Karazhanov 
+Senior Scientist    
+Institute for Energy Technology, Norway
+Sector Energy and Environmental Technology
+smagulk@ife.no
+His papers are devoted to ultrasound-dislocation interaction in silicon barrier structure.
+(J. Phys. D: Appl. Phys. 41 (2008) 165107; J. Phys. Chem. Solids 70 (2009) 989–992)
+
+Andriy
+B.
+Romanyuk
+Institute of Physics
+University of Basel, Switzerland
+andriy.romanyuk@unibas.ch
+He is author of works, which are deals with acoustically induced effects in semiconductors.
+(J. Appl. Phys. 107 (2010)
+114307; J. Appl. Phys. 99 (2006), 034314; Appl. Phys. Lett. 90 (2007),
+013118)
+
+Bruno
+K.
+Meyer
+Physical Institute
+Justus-Liebig Universitaty, Germany
+Bruno.K.Meyer@exp1.physik.uni-giessen.de
+He has investigated ultrasound influence on semiconductor structure
+(Solid State Commun. 116 (2000) 87–91)
+
+Silke
+Steingrube
+Department Solar Energy, Institute Solid-State Physics, Leibniz University of Hannover, Appelstr. 2, 30167
+Hannover, Germany
+steingrube@solar.uni-hannover.de
+He has used models of coupled defect level recombination to explain features of solar cell current-voltage characteristics.
+(J. Appl. Phys. 110(2011), 014515)
+
+
+Vishnu
+Gopal
+Solid State Physics Laboratory, Timarpur, Delhi
+110054, India
+sspl@ssplnet.org
+He has introduced model of dislocation–induced impedance, which has been used in our manuscript.
+(IEEE Trans Electron Devices 50(2003), 1220–1226; IEEE Trans Electron Devices 51(2004),1078–1083)
+
+He has a great skill in determination of current mechanisms in semiconductor barrier structures.
+(IEEE Trans Electron Devices 51(2004),1078–1083;
+J.Appl. Phys. 116 (2014) 084502;
+Semicond. Sci. Technol. 16 (2001) 372-376)
+
+
+Arthur
+Medvids
+Faculty of Materials Science and Applied Chemistry, 
+Riga Technical University, Riga, Latvia
+He has investigated ultrasound influence on semiconductor structure
+medvids@latnet.lv
+(Phys Status Solidi C 13(2016), 793–797)
