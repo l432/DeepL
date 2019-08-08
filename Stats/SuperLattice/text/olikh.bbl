@@ -9,6 +9,13 @@
 D.~K. Schroder, Semiconductor Material and Device Characterization, 3rd
   Edition, John Wiley \& Sons, New Jersey, 2006.
 
+\bibitem{Grover}
+S.~Grover, A.~J.~V. Li, D.~L. Young, P.~Stradins, H.~M. Branz, Reformulation of
+  solar cell physics to facilitate experimental separation of recombination
+  pathways, Appl. Phys. Lett. 103~(9) (2013) 093502.
+\newblock \href {http://dx.doi.org/10.1063/1.4819728}
+  {\path{doi:10.1063/1.4819728}}.
+
 \bibitem{n2Kuhn}
 R.~{Kuhn}, P.~{Fath}, E.~{Bucher}, Effects of pn--junctions bordering on
   surfaces investigated by means of 2{D}--modeling, in: Conference Record of
@@ -65,6 +72,13 @@ J.~Schmidt, Effect of dissociation of iron--boron pairs in crystalline silicon
   Applications 13~(4) (2005) 325--331.
 \newblock \href {http://dx.doi.org/10.1002/pip.594}
   {\path{doi:10.1002/pip.594}}.
+
+\bibitem{ZHU2016192}
+H.~Zhu, X.~Yu, X.~Zhu, Y.~Wu, J.~He, J.~Vanhellemont, D.~Yang, Low temperature
+  iron gettering by grown-in defects in p--type {C}zochralski silicon,
+  Superlattices Microstruct. 99 (2016) 192--196.
+\newblock \href {http://dx.doi.org/10.1016/j.spmi.2016.03.006}
+  {\path{doi:10.1016/j.spmi.2016.03.006}}.
 
 \bibitem{SCAPS1}
 M.~Burgelman, P.~Nollet, S.~Degrave, Modelling polycrystalline semiconductor
@@ -128,266 +142,73 @@ B.~Zhao, J.~Zhou, Y.~Chen, Numerical simulation of the impurity photovoltaic
 \newblock \href {http://dx.doi.org/10.1016/j.physb.2010.06.012}
   {\path{doi:10.1016/j.physb.2010.06.012}}.
 
-\bibitem{LID:SchmidtJMR}
-J.~Schmidt, K.~Bothe, D.~Macdonald, J.~Adey, R.~Jones, D.~Palmer,
-  Electronically stimulated degradation of silicon solar cells, Journal of
-  Materials Research 21~(1) (2006) 5--12.
-\newblock \href {http://dx.doi.org/10.1557/JMR.2006.0012}
-  {\path{doi:10.1557/JMR.2006.0012}}.
-
-\bibitem{LIDRev}
-J.~Lindroos, H.~Savin, Review of light-induced degradation in crystalline
-  silicon solar cells, Sol. Energy Mater. Sol. Cells 147 (2016) 115--126.
-\newblock \href
-  {http://dx.doi.org/http://dx.doi.org/10.1016/j.solmat.2015.11.047}
-  {\path{doi:http://dx.doi.org/10.1016/j.solmat.2015.11.047}}.
-
-\bibitem{LIDRev2}
-T.~Niewelt, J.~Sch\"{o}on, W.~Warta, S.~W. Glunz, M.~C. Schubert, Degradation
-  of crystalline silicon due to boron--oxygen defects, IEEE Journal of
-  Photovoltaics 7~(1) (2017) 383 --398.
-\newblock \href {http://dx.doi.org/10.1109/JPHOTOV.2016.2614119}
-  {\path{doi:10.1109/JPHOTOV.2016.2614119}}.
-
-\bibitem{LID:JAP2017II}
-H.~Vahlman, A.~Haarahiltunen, W.~Kwapil, J.~Schon, A.~Inglese, H.~Savin,
-  Modeling of light--induced degradation due to {C}u precipitation in p--type
-  silicon. {II}. comparison of simulations and experiments, J. Appl. Phys.
-  121~(19) (2017) 195704.
-\newblock \href {http://dx.doi.org/10.1063/1.4983455}
-  {\path{doi:10.1063/1.4983455}}.
-
-\bibitem{CID:APL}
-C.~Vargas, Y.~Zhu, G.~Coletti, C.~Chan, D.~Payne, M.~Jensen, Z.~Hameiri,
-  Recombination parameters of lifetime--limiting carrier--induced defects in
-  multicrystalline silicon for solar cells, Appl. Phys. Lett. 110~(9) (2017)
-  092106.
-\newblock \href {http://dx.doi.org/10.1063/1.4977906}
-  {\path{doi:10.1063/1.4977906}}.
-
-\bibitem{CID:PPS}
-D.~N.~R. Payne, C.~E. Chan, B.~J. Hallam, B.~Hoex, M.~D. Abbott, S.~R. Wenham,
-  D.~M. Bagnall, Acceleration and mitigation of carrier--induced degradation in
-  p--type multi--crystalline silicon, Phys. Status Solidi RRL 10~(3) (2016)
-  237--241.
-\newblock \href {http://dx.doi.org/10.1002/pssr.201510437}
-  {\path{doi:10.1002/pssr.201510437}}.
-
-\bibitem{PID:SEMSC}
-V.~Naumann, D.~Lausch, A.~Hahnel, J.~Bauer, O.~Breitenstein, A.~Graff,
-  M.~Werner, S.~Swatek, S.~Grober, J.~Bagdahn, C.~Hagendorf, Explanation of
-  potential--induced degradation of the shunting type by {N}a decoration of
-  stacking faults in {S}i solar cells, Sol. Energy Mater. Sol. Cells 120 (2014)
-  383--389.
-\newblock \href {http://dx.doi.org/10.1016/j.solmat.2013.06.015}
-  {\path{doi:10.1016/j.solmat.2013.06.015}}.
-
-\bibitem{PID:PP}
-S.~Hoffmann, M.~Koehl, Effect of humidity and temperature on the
-  potential-induced degradation, Progress in Photovoltaics: Research and
-  Applications 22~(2) (2012) 173--179.
-\newblock \href {http://dx.doi.org/10.1002/pip.2238}
-  {\path{doi:10.1002/pip.2238}}.
-
-\bibitem{PID:2017}
-K.~Hara, K.~Ogawa, Y.~Okabayashi, H.~Matsuzaki, A.~Masuda, Influence of surface
-  structure of n--type single--crystalline {S}i solar cells on
-  potential--induced deinfluence, Sol. Energy Mater. Sol. Cells 166 (2017)
-  132--139.
-\newblock \href {http://dx.doi.org/10.1016/j.solmat.2017.03.018}
-  {\path{doi:10.1016/j.solmat.2017.03.018}}.
-
-\bibitem{Bhat}
-S.~Bhat, A.~Rao, S.~Krishnan, G.~Sanjeev, S.~E. Puthanveettil, A study on the
-  variation of c--{S}i solar cell parameters under 8 {M}e{V} electron
-  irradiation, Sol. Energy Mater. Sol. Cells 120 (2014) 191--196.
-\newblock \href {http://dx.doi.org/10.1016/j.solmat.2013.08.043}
-  {\path{doi:10.1016/j.solmat.2013.08.043}}.
-
-\bibitem{Karazhanov}
-S.~Z. Karazhanov, Mechanism for the anomalous degradation of silicon space
-  solar cells, Appl. Phys. Lett. 76~(19) (2000) 2689--2691.
-\newblock \href {http://dx.doi.org/10.1063/1.126445}
-  {\path{doi:10.1063/1.126445}}.
-
-\bibitem{Korotchenkov1995}
-O.~Korotchenkov, H.~Grimmliss, Long-wavelength acoustic-mode-enhanced electron
-  emission from {S}e and {T}e donors in silicon, Phys. Rev. B 52~(20) (1995)
-  14598--14606.
-\newblock \href {http://dx.doi.org/10.1103/PhysRevB.52.14598}
-  {\path{doi:10.1103/PhysRevB.52.14598}}.
-
-\bibitem{Ostapenko1995}
-S.~S. Ostapenko, R.~E. Bell, Ultrasound stimulated dissociation of {F}e--{B}
-  pairs in silicon, J. Appl. Phys. 77~(10) (1995) 5458--5460.
-\newblock \href {http://dx.doi.org/10.1063/1.359243}
-  {\path{doi:10.1063/1.359243}}.
-
-\bibitem{Olikh2009Sem}
-O.~Y. Olikh, The variation in activity of recombination centers in silicon
-  $p$--$n$ structures under the conditions of acoustic loading, Semiconductors
-  43~(6) (2009) 745--750.
-\newblock \href {http://dx.doi.org/10.1134/S1063782609060116}
-  {\path{doi:10.1134/S1063782609060116}}.
-
-\bibitem{UST:Medvid}
-D.~Kropman, V.~Seeman, S.~Dolgov, A.~Medvids, Effect of ultrasonic treatment on
-  the defect structure of the {S}i--{S}i{O}$_2$ system, Phys. Status Solidi C
-  13~(10--12) (2016) 793--797.
-\newblock \href {http://dx.doi.org/10.1002/pssc.201600052}
-  {\path{doi:10.1002/pssc.201600052}}.
-
-\bibitem{Olikh2018JAP}
-O.~Y. Olikh, A.~M. Gorb, R.~G. Chupryna, O.~V. Pristay-Fenenkov,
-  Acousto--defect interaction in irradiated and non--irradiated silicon
-  $n^+$--$p$ structure, J. Appl. Phys. 123~(16) (2018) 161573.
-\newblock \href {http://dx.doi.org/10.1063/1.5001123}
-  {\path{doi:10.1063/1.5001123}}.
-
-\bibitem{YOlikh:SupMicr}
-Y.~M. Olikh, M.~D. Tymochko, Reverse ultrasonic changes of electrical
-  conductivity in {C}d{T}e:{C}l crystals, Superlattices Microstruct. 95 (2016)
-  78--82.
-\newblock \href {http://dx.doi.org/10.1016/j.spmi.2016.04.038}
-  {\path{doi:10.1016/j.spmi.2016.04.038}}.
-
-\bibitem{Zaver:2008}
-N.~Zaveryukhina, E.~Zaveryukhina, S.~Vlasov, B.~Zaveryukhin, Acoustostimulated
-  changes in the density of surface states and their energy spectrum in p--type
-  silicon single crystals, Tech. Phys. Lett. 34~(3) (2008) 241--243.
-\newblock \href {http://dx.doi.org/10.1134/S106378500803019X}
-  {\path{doi:10.1134/S106378500803019X}}.
-
-\bibitem{Mirsagatov}
-S.~A. Mirsagatov, I.~B. Sapaeva, Z.~Nazarov, Ultrasonic annealing of surface
-  states in the heterojunction of a $p$--{S}i/$n$--{C}d{S}/$n^+$--{C}d{S}
-  injection photodiode, Inorganic Materials 51~(1) (2015) 1--4.
-\newblock \href {http://dx.doi.org/10.1134/S0020168515010148}
-  {\path{doi:10.1134/S0020168515010148}}.
-
-\bibitem{Ostapenko1999}
-S.~Ostapenko, Defect passivation using ultrasound treatment: fundamentals and
-  application, Applied Physics A: Materials Science \& Processing 69~(2) (1999)
-  225--232.
-\newblock \href {http://dx.doi.org/10.1007/s003390050994}
-  {\path{doi:10.1007/s003390050994}}.
-
-\bibitem{Ostrovskii2001}
-I.~Ostrovskii, O.~Korotchenkov, O.~Olikh, A.~Podolyan, R.~Chupryna,
-  M.~Torres-Cisneros, Acoustically driven optical phenomena in bulk and
-  low-dimensional semiconductors, J. Opt. A: Pure Appl. Opt. 3~(4) (2001)
-  S82--S86.
-\newblock \href {http://dx.doi.org/10.1088/1464-4258/3/4/364}
-  {\path{doi:10.1088/1464-4258/3/4/364}}.
-
-\bibitem{OlikhJAP}
-O.~Y. Olikh, K.~V. Voytenko, R.~M. Burbelo, Ultrasound influence on
-  {I}--{V}--{T} characteristics of silicon {S}chottky barrier structure, J.
-  Appl. Phys. 117~(4) (2015) 044505.
-\newblock \href {http://dx.doi.org/10.1063/1.4906844}
-  {\path{doi:10.1063/1.4906844}}.
-
-\bibitem{Olikh2011Sem}
-O.~Olikh, Features of dynamic acoustically induced modification of photovoltaic
-  parameters of silicon solar cells, Semiconductors 45~(6) (2011) 798--804.
-\newblock \href {http://dx.doi.org/10.1134/S1063782611060170}
-  {\path{doi:10.1134/S1063782611060170}}.
-
-\bibitem{Davletova2009}
-A.~Davletova, S.~Z. Karazhanov, A study of electrical properties of dislocation
-  engineered {S}i processed by ultrasound, Journal of Physics and Chemistry of
-  Solids 70~(6) (2009) 989--992.
-\newblock \href {http://dx.doi.org/10.1016/j.jpcs.2009.05.009}
-  {\path{doi:10.1016/j.jpcs.2009.05.009}}.
-
-\bibitem{Davletova2008}
-A.~Davletova, S.~Z. Karazhanov, Open-circuit voltage decay transient in
-  dislocation-engineered {S}i p--n junction, Journal of Physics D: Applied
-  Physics 41~(16) (2008) 165107.
-\newblock \href {http://dx.doi.org/10.1088/0022-3727/41/16/165107}
-  {\path{doi:10.1088/0022-3727/41/16/165107}}.
-
-\bibitem{YOlikh2005}
-V.~Melnik, Y.~Olikh, V.~Popov, B.~Romanyuk, Y.~Goltvyanskii, A.~Evtukh,
-  Characteristics of silicon p--n junction formed by ion implantation with in
-  situ ultrasound treatment, Materials Science and Engineering: B 124--125
-  (2005) 327--330.
-\newblock \href {http://dx.doi.org/10.1016/j.mseb.2005.08.039}
-  {\path{doi:10.1016/j.mseb.2005.08.039}}.
-
-\bibitem{Olikh:Ultras}
-O.~Olikh, Reversible influence of ultrasound on $\gamma-$irradiated {M}o/n-{S}i
-  {S}chottky barrier structure, Ultrasonics 56 (2015) 545--550.
-\newblock \href {http://dx.doi.org/10.1016/j.ultras.2014.10.008}
-  {\path{doi:10.1016/j.ultras.2014.10.008}}.
-
-\bibitem{CDLR:JAP1995}
-A.~Schenka, U.~Krumbein, Coupled defect-level recombination: Theory and
-  application to anomalous diode characteristics, J. Appl. Phys. 78~(5) (1995)
-  3185--3192.
-\newblock \href {http://dx.doi.org/10.1063/1.360007}
-  {\path{doi:10.1063/1.360007}}.
-
-\bibitem{CDLR:JAP}
-S.~Steingrube, O.~Breitenstein, K.~Ramspeck, S.~Glunz, A.~Schenk, P.~P.
-  Altermatt, Explanation of commonly observed shunt currents in c-si solar
-  cells by means of recombination statistics beyond the shockley-read-hall
-  approximation, J. Appl. Phys. 110~(1) (2011) 014515.
-\newblock \href {http://dx.doi.org/10.1063/1.3607310}
-  {\path{doi:10.1063/1.3607310}}.
-
-\bibitem{Rsh:Gopal2003}
-V.~Gopal, S.~Gupta, Effect of dislocations on the zero-bias resistance-area
-  product, quantum efficiency, and spectral response of {LWIR} {H}g{C}d{T}e
-  photovoltaic detectors, IEEE Trans. Electron Devices 50~(5) (2003)
-  1220--1226.
-\newblock \href {http://dx.doi.org/10.1109/TED.2003.813230}
-  {\path{doi:10.1109/TED.2003.813230}}.
-
-\bibitem{Rsh:Gopal2004}
-V.~Gopal, S.~Gupta, Contribution of dislocations to the zero-bias
-  resistance-area product of {LWIR} {H}g{C}d{T}e photodiodes at low
-  temperatures, IEEE Trans. Electron Devices 51~(7) (2004) 1078--1083.
-\newblock \href {http://dx.doi.org/10.1109/TED.2004.829857}
-  {\path{doi:10.1109/TED.2004.829857}}.
-
-\bibitem{MirzadeJAP2011}
-F.~Mirzade, Elastic wave propagation in a solid layer with laser-induced point
-  defects, J. Appl. Phys. 110~(6) (2011) 064906.
-\newblock \href {http://dx.doi.org/10.1063/1.3633524}
-  {\path{doi:10.1063/1.3633524}}.
-
-\bibitem{PeleshchakUJF2016}
-R.~Peleshchak, O.~Kuzyk, O.~Dan'kiv, Formation of periodic structures under the
-  influence of an acousti wave in semiconductors with a two-component defect
-  subsystem, Ukr. J. Phys. 61~(8) (2016) 741--746.
-\newblock \href {http://dx.doi.org/10.15407/ujpe61.08.0741}
-  {\path{doi:10.15407/ujpe61.08.0741}}.
-
-\bibitem{ni:Green}
-A.~B. Sproul, M.~A. Green, Intrinsic carrier concentration and minority-carrier
-  mobility of silicon from 77 to 300~k, J. Appl. Phys. 73~(3) (1993)
-  1214--1225.
-\newblock \href {http://dx.doi.org/10.1063/1.353288}
-  {\path{doi:10.1063/1.353288}}.
-
 \bibitem{Markvart}
 A.~McEvoy, T.~Markvart, L.~Castaner (Eds.), Solar Cells. Materials, Manufacture
   and Operation, 2nd Edition, Academic Press, Oxford, 2013.
 
-\bibitem{BO:Halam2016}
-B.~J. Hallam, M.~D. Abbott, N.~Nampalli, P.~G. Hamer, S.~R. Wenham,
-  Implications of accelerated recombination--active defect complex formation
-  for mitigating carrier--induced degradation in silicon, IEEE Journal of
-  Photovoltaics 6~(1) (2016) 92--99.
-\newblock \href {http://dx.doi.org/10.1109/JPHOTOV.2015.2494691}
-  {\path{doi:10.1109/JPHOTOV.2015.2494691}}.
+\bibitem{ZHOU20188}
+Z.~Zhou, I.~Perez-Wurfl, B.~J. Simonds, Rapid, deep dopant diffusion in
+  crystalline silicon by laser--induced surface melting, Mater. Sci. Semicond.
+  Process. 86 (2018) 8--17.
+\newblock \href {http://dx.doi.org/10.1016/j.mssp.2018.06.012}
+  {\path{doi:10.1016/j.mssp.2018.06.012}}.
 
-\bibitem{Razeghi}
-M.~Razeghi, A.~Rogalski, Semiconductor ultraviolet detectors, J. Appl. Phys.
-  79~(10) (1996) 7433--7473.
-\newblock \href {http://dx.doi.org/10.1063/1.362677}
-  {\path{doi:10.1063/1.362677}}.
+\bibitem{Nc:Green}
+M.~A. Green, Intrinsic concentration, effective densities of states, and
+  effective mass in silicon, J. Appl. Phys. 67~(6) (1990) 2944--2954.
+\newblock \href {http://dx.doi.org/10.1063/1.345414}
+  {\path{doi:10.1063/1.345414}}.
+
+\bibitem{Rein2}
+S.~Rein, S.~W. Glunz, Electronic properties of interstitial iron and iron-boron
+  pairs determined by means of advanced lifetime spectroscopy, J. Appl. Phys.
+  98~(11) (2005) 113711.
+\newblock \href {http://arxiv.org/abs/https://doi.org/10.1063/1.2106017}
+  {\path{arXiv:https://doi.org/10.1063/1.2106017}}, \href
+  {http://dx.doi.org/10.1063/1.2106017} {\path{doi:10.1063/1.2106017}}.
+
+\bibitem{MurphyJAP2011}
+J.~D. Murphy, K.~Bothe, M.~Olmo, V.~V. Voronkov, R.~J. Falster, The effect of
+  oxide precipitates on minority carrier lifetime in p--type silicon, J. Appl.
+  Phys. 110~(5) (2011) 053713.
+\newblock \href {http://dx.doi.org/10.1063/1.3632067}
+  {\path{doi:10.1063/1.3632067}}.
+
+\bibitem{Narland}
+T.~N{\ae}rland, S.~Bernardini, N.~Stoddard, E.~Good, A.~Augusto, M.~Bertoni,
+  Comparison of iron-related recombination centers in boron, gallium, and
+  indium doped silicon analyzed by defect parameter contour mapping, Energy
+  Procedia 124 (2017) 138--145.
+\newblock \href {http://dx.doi.org/10.1016/j.egypro.2017.09.321}
+  {\path{doi:10.1016/j.egypro.2017.09.321}}.
+
+\bibitem{Sakauchi}
+S.~Sakauchi, M.~Suezawa, K.~Sumino, H.~Nakashima, Recombination--enhanced {F}e
+  atom jump between the first and the second neighbor site of {F}e--acceptor
+  pair in {S}i, J. Appl. Phys. 80~(11) (1996) 6198--6203.
+\newblock \href {http://dx.doi.org/10.1063/1.363695}
+  {\path{doi:10.1063/1.363695}}.
+
+\bibitem{FeB:kinetic}
+W.~Wijaranakula, The reaction kinetics of iron--boron pair formation and
+  dissociation in p--type silicon, J. Electrochem. Soc. 140~(1) (1993)
+  275--281.
+\newblock \href {http://dx.doi.org/10.1149/1.2056102}
+  {\path{doi:10.1149/1.2056102}}.
+
+\bibitem{Kohno}
+H.~Kohno, H.~Hieslmair, A.~A. Istratov, E.~R. Weber, Temperature dependence of
+  the iron donor level in silicon at device processing temperatures, Appl.
+  Phys. Lett. 76~(19) (2000) 2734--2736.
+\newblock \href {http://dx.doi.org/10.1063/1.126459}
+  {\path{doi:10.1063/1.126459}}.
+
+\bibitem{Breitenstein2013}
+O.~Breitenstein, Understanding the current-voltage characteristics of
+  industrial crystalline silicon solar cells by considering inhomogeneous
+  current distributions, Opto--Electronics Review 21~(3) (2013) 259--282.
+\newblock \href {http://dx.doi.org/10.2478/s11772-013-0095-5}
+  {\path{doi:10.2478/s11772-013-0095-5}}.
 
 \bibitem{DE:Sun}
 J.~Sun, Q.~Zhang, E.~P. Tsang, {DE}/{EDA}: {A} new evolutionary algorithm for
@@ -400,172 +221,5 @@ K.~Wang, M.~Ye, Parameter determination of {S}chottky--barrier diode model
   using differential evolution, Solid-State Electron. 53~(2) (2009) 234--240.
 \newblock \href {http://dx.doi.org/10.1016/j.sse.2008.11.010}
   {\path{doi:10.1016/j.sse.2008.11.010}}.
-
-\bibitem{Olikh:Rev}
-O.~Y. Olikh, Review and test of methods for determination of the {S}chottky
-  diode parameters, J. Appl. Phys. 118~(2) (2015) 024502.
-\newblock \href {http://dx.doi.org/10.1063/1.4926420}
-  {\path{doi:10.1063/1.4926420}}.
-
-\bibitem{LI:Ruhle}
-K.~R\"{u}hle, M.~K. Juhl, M.~D. Abbott, M.~Kasemann, Evaluating crystalline
-  silicon solar cells at low light intensities using intensity--dependent
-  analysis of {I}--{V} parameters, IEEE Journal of Photovoltaics 5~(3) (2015)
-  926--931.
-\newblock \href {http://dx.doi.org/10.1109/JPHOTOV.2015.2395145}
-  {\path{doi:10.1109/JPHOTOV.2015.2395145}}.
-
-\bibitem{LI:Reich}
-N.~Reich, W.~van Sark, E.~Alsema, R.~Lof, R.~Schropp, W.~Sinke, W.~Turkenburg,
-  Crystalline silicon cell performance at low light intensities, Sol. Energy
-  Mater. Sol. Cells 93~(9) (2009) 1471--1481.
-\newblock \href {http://dx.doi.org/10.1016/j.solmat.2009.03.018}
-  {\path{doi:10.1016/j.solmat.2009.03.018}}.
-
-\bibitem{LI:lifetime}
-F.~W. Chen, J.~E. Cotter, M.~D. Abbott, T.-T.~A. Li, K.~C. Fisher, The
-  influence of parasitic effects on injection--level--dependent lifetime data,
-  IEEE Trans. Electron Devices 54~(11) (2007) 2960--2968.
-\newblock \href {http://dx.doi.org/10.1109/TED.2007.906970}
-  {\path{doi:10.1109/TED.2007.906970}}.
-
-\bibitem{Olikh:Ultras2016}
-O.~Olikh, K.~Voytenko, On the mechanism of ultrasonic loading effect in
-  silicon--based {S}chottky diodes, Ultrasonics 66~(1) (2016) 1--3.
-\newblock \href {http://dx.doi.org/10.1016/j.ultras.2015.12.001}
-  {\path{doi:10.1016/j.ultras.2015.12.001}}.
-
-\bibitem{TAUg:Schroder}
-D.~Schroder, The concept of generation and recombination lifetimes in
-  semiconductors, IEEE Trans. Electron Devices 29~(8) (1982) 1336--1338.
-\newblock \href {http://dx.doi.org/10.1109/T-ED.1982.20879}
-  {\path{doi:10.1109/T-ED.1982.20879}}.
-
-\bibitem{TAUg:Aharoni}
-H.~Aharoni, T.~Ohmi, M.~M. Oka, A.~Nakada, Y.~Tamai, Analysis of $n^+p$ silicon
-  junctions with varying substrate doping concentrations made under ultraclean
-  processing technology, J. Appl. Phys. 81~(3) (1997) 1270--1288.
-\newblock \href {http://dx.doi.org/10.1063/1.364442}
-  {\path{doi:10.1063/1.364442}}.
-
-\bibitem{Beier}
-J.~Beier, B.~Voss, Humps in dark {I}--{V}--curves --- analysis and explanation,
-  in: Proceedings of the 23rd IEEE Photovoltaic Specialists Conference, 1993,
-  pp. 321--326, {L}ouisville, KY, USA.
-
-\bibitem{Shah}
-J.~M. Shah, Y.-L. Li, T.~Gessmann, E.~F. Schubert, Experimental analysis and
-  theoretical model for anomalously high ideality factors ($n\gg2.0$) in
-  {A}l{G}a{N}/{G}a{N} p--n junction diodes, J. Appl. Phys. 94~(4) (2003)
-  2627--2630.
-\newblock \href {http://dx.doi.org/10.1063/1.1593218}
-  {\path{doi:10.1063/1.1593218}}.
-
-\bibitem{Kaminski_n}
-A.~Kaminski, J.~J. Marchand, H.~E. Omari, A.~Laugier, Q.~N. Le, D.~Sarti,
-  Conduction processes in silicon solar cells, in: Proceedings of the 25th IEEE
-  Photovoltaic Specialists Conference, 1996, pp. 573--576, {W}ashington, DC,
-  USA.
-
-\bibitem{CDLR:SSP}
-O.~Breitenstein, J.~Bauer, P.~P. Altermatt, K.~Ramspeck, Influence of defects
-  on solar cell characteristics, Solid State Phenomena 156--158 (2010) 1--10.
-\newblock \href {http://dx.doi.org/10.4028/www.scientific.net/SSP.156-158.1}
-  {\path{doi:10.4028/www.scientific.net/SSP.156-158.1}}.
-
-\bibitem{CDLR:R2}
-D.~G. Thomas, J.~Hopfield, W.~M. Augistyniak, Kinetics of radiative
-  recombination at randomly distributed donors and acceptors, Phys. Rev.
-  140~(1A) (1965) A202--A220.
-\newblock \href {http://dx.doi.org/10.1103/PhysRev.140.A202}
-  {\path{doi:10.1103/PhysRev.140.A202}}.
-
-\bibitem{Rsh:Breitenstein}
-O.~Breitenstein, J.~P. Rakotoniaina, M.~H. Al~Rifai, M.~Werner, Shunt types in
-  crystalline silicon solar cells, Progress in Photovoltaics: Research and
-  Applications 12~(7) (2004) 529--538.
-\newblock \href {http://dx.doi.org/10.1002/pip.544}
-  {\path{doi:10.1002/pip.544}}.
-
-\bibitem{TAT:Gopal}
-V.~Gopal, A new approach to investigate leakage current mechanisms in infrared
-  photodiodes from illuminated current--voltage characteristics, J. Appl. Phys.
-  116~(8) (2014) 084502.
-\newblock \href {http://dx.doi.org/10.1063/1.4893899}
-  {\path{doi:10.1063/1.4893899}}.
-
-\bibitem{Rsh:Baker}
-I.~Baker, C.~Maxey, Summary of {H}g{C}d{T}e 2{D} array technology in the
-  {U}.{K}., J. Electron. Mater. 30~(6) (2001) 682--689.
-\newblock \href {http://dx.doi.org/10.1007/BF02665856}
-  {\path{doi:10.1007/BF02665856}}.
-
-\bibitem{RshT}
-N.~Barth, R.~Jovanovic, S.~Ahzi, M.~A. Khaleel, {P}{V} panel single and double
-  diode models: Optimization of the parameters and temperature dependence, Sol.
-  Energy Mater. Sol. Cells 148 (2016) 87--98.
-\newblock \href {http://dx.doi.org/10.1016/j.solmat.2015.09.003}
-  {\path{doi:10.1016/j.solmat.2015.09.003}}.
-
-\bibitem{MurphyJAP2011}
-J.~D. Murphy, K.~Bothe, M.~Olmo, V.~V. Voronkov, R.~J. Falster, The effect of
-  oxide precipitates on minority carrier lifetime in p--type silicon, J. Appl.
-  Phys. 110~(5) (2011) 053713.
-\newblock \href {http://dx.doi.org/10.1063/1.3632067}
-  {\path{doi:10.1063/1.3632067}}.
-
-\bibitem{FeB:Vahanissi}
-V.~Vahanissi, A.~Haarahiltunen, H.~Talvitie, M.~Yli-Koski, H.~Savin, Impact of
-  phosphorus gettering parameters and initial iron level on silicon solar cell
-  properties, Progress in Photovoltaics: Research and Applications 21~(5)
-  (2013) 1127--1135.
-\newblock \href {http://dx.doi.org/10.1002/pip.2215}
-  {\path{doi:10.1002/pip.2215}}.
-
-\bibitem{MurphySC2014}
-J.~Murphy, J.~McGuire, K.~Bothe, V.~Voronkov, R.~Falster, Minority carrier
-  lifetime in silicon photovoltaics: The effect of oxygen precipitation, Sol.
-  Energy Mater. Sol. Cells 120 (2014) 402--411.
-\newblock \href {http://dx.doi.org/10.1016/j.solmat.2013.06.018}
-  {\path{doi:10.1016/j.solmat.2013.06.018}}.
-
-\bibitem{Oxide_Schon}
-J.~Sch\"{o}n, A.~Youssef, S.~Park, L.~E. Mundt, T.~Niewelt, S.~Mack,
-  K.~Nakajima, K.~Morishita, R.~Murai, M.~A. Jensen, T.~Buonassisi, M.~C.
-  Schubert, Identification of lifetime limiting defects by temperature-- and
-  injection-dependent photoluminescence imaging, J. Appl. Phys. 120~(10) (2016)
-  105703.
-\newblock \href {http://dx.doi.org/10.1063/1.4961465}
-  {\path{doi:10.1063/1.4961465}}.
-
-\bibitem{MurphyJAP2012}
-J.~D. Murphy, K.~Bothe, R.~Krain, V.~V. Voronkov, R.~J. Falster,
-  Parameterisation of injection-dependent lifetime measurements in
-  semiconductors in terms of {S}hockley--{R}ead--{H}all statistics: {A}n
-  application to oxide precipitates in silicon, J. Appl. Phys. 111~(11) (2012)
-  113709.
-\newblock \href {http://dx.doi.org/10.1063/1.4725475}
-  {\path{doi:10.1063/1.4725475}}.
-
-\bibitem{Oxide:Chen}
-L.~Chen, X.~Yu, P.~Chen, P.~Wang, X.~Gu, J.~Lu, D.~Yang, Effect of oxygen
-  precipitation on the performance of {C}zochralski silicon solar cells, Sol.
-  Energy Mater. Sol. Cells 95~(11) (2011) 3148--3151.
-\newblock \href {http://dx.doi.org/10.1016/j.solmat.2011.06.044}
-  {\path{doi:10.1016/j.solmat.2011.06.044}}.
-
-\bibitem{Oxide:Porrini}
-M.~Porrini, P.~Tessariol, Minority carrier lifetime of p--type silicon
-  containing oxygen precipitates: influence of injection level and precipitate
-  size/density, Materials Science and Engineering: B 73~(1--3) (2000) 244--249.
-\newblock \href {http://dx.doi.org/10.1016/S0921-5107(99)00472-9}
-  {\path{doi:10.1016/S0921-5107(99)00472-9}}.
-
-\bibitem{Wijaranakula}
-W.~Wijaranakula, The reaction kinetics of iron-boron pair formation and
-  dissociation in p--type silicon, J. Etectrochem. Soc. 140~(1) (1993)
-  275--281.
-\newblock \href {http://dx.doi.org/10.1149/1.2056102}
-  {\path{doi:10.1149/1.2056102}}.
 
 \end{thebibliography}
