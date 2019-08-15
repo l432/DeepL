@@ -60,6 +60,14 @@ A.~S.~H. van~der Heide, A.~Schonecker, J.~H. Bultman, W.~C. Sinke, Explanation
 \newblock \href {http://dx.doi.org/10.1002/pip.556}
   {\path{doi:10.1002/pip.556}}.
 
+\bibitem{Duan}
+L.~{Duan}, H.~{Yi}, C.~{Xu}, M.~B. {Upama}, M.~A. {Mahmud}, D.~{Wang}, F.~H.
+  {Shabab}, A.~{Uddin}, Relationship between the diode ideality factor and the
+  carrier recombination resistance in organic solar cells, IEEE Journal of
+  Photovoltaics 8~(6) (2018) 1701--1709.
+\newblock \href {http://dx.doi.org/10.1109/JPHOTOV.2018.2870722}
+  {\path{doi:10.1109/JPHOTOV.2018.2870722}}.
+
 \bibitem{Istratov1999}
 A.~A. Istratov, H.~Hieslmair, E.~Weber, Iron and its complexes in silicon,
   Applied Physics A: Materials Science \& Processing 69~(1) (1999) 13--44.
@@ -114,12 +122,12 @@ C.-H. Huang, W.-J. Chuang, Dependence of performance parameters of {C}d{T}e
 \newblock \href {http://dx.doi.org/10.1016/j.vacuum.2015.03.008}
   {\path{doi:10.1016/j.vacuum.2015.03.008}}.
 
-\bibitem{SCAPSuse4}
-H.~Heriche, Z.~Rouabah, N.~Bouarissa, New ultra thin {CIGS} structure solar
-  cells using {SCAPS} simulation program, Int. J. Hydrogen Energy 42~(15)
-  (2017) 9524--9532.
-\newblock \href {http://dx.doi.org/10.1016/j.ijhydene.2017.02.099}
-  {\path{doi:10.1016/j.ijhydene.2017.02.099}}.
+\bibitem{SCAPSuse5}
+F.~Azri, A.~Meftah, N.~Sengouga, A.~Meftah, Electron and hole transport layers
+  optimization by numerical simulation of a perovskite solar cell, Solar Energy
+  181 (2019) 372--378.
+\newblock \href {http://dx.doi.org/10.1016/j.solener.2019.02.017}
+  {\path{doi:10.1016/j.solener.2019.02.017}}.
 
 \bibitem{SCAPSuseSi1}
 A.~Hamache, N.~Sengouga, A.~Meftah, M.~Henini, Modeling the effect of 1 {M}e{V}
@@ -128,12 +136,12 @@ A.~Hamache, N.~Sengouga, A.~Meftah, M.~Henini, Modeling the effect of 1 {M}e{V}
 \newblock \href {http://dx.doi.org/10.1016/j.radphyschem.2016.02.025}
   {\path{doi:10.1016/j.radphyschem.2016.02.025}}.
 
-\bibitem{SCAPSuseSi2}
-S.~Khelifi, J.~Verschraegen, M.~Burgelman, A.~Belghachi, Numerical simulation
-  of the impurity photovoltaic effect in silicon solar cells, Renewable Energy
-  33~(2) (2008) 293--298.
-\newblock \href {http://dx.doi.org/10.1016/j.renene.2007.05.027}
-  {\path{doi:10.1016/j.renene.2007.05.027}}.
+\bibitem{SCAPSuseSi4}
+E.~Hu, G.~Yue, R.~Zhang, Y.~Zheng, L.~Chen, S.~Wang, Numerical simulations of
+  multilevel impurity photovoltaic effect in the sulfur doped crystalline
+  silicon, Renewable Energy 77 (2015) 442--446.
+\newblock \href {http://dx.doi.org/10.1016/j.renene.2014.12.049}
+  {\path{doi:10.1016/j.renene.2014.12.049}}.
 
 \bibitem{SCAPSuseSi3}
 B.~Zhao, J.~Zhou, Y.~Chen, Numerical simulation of the impurity photovoltaic
@@ -163,9 +171,8 @@ M.~A. Green, Intrinsic concentration, effective densities of states, and
 S.~Rein, S.~W. Glunz, Electronic properties of interstitial iron and iron-boron
   pairs determined by means of advanced lifetime spectroscopy, J. Appl. Phys.
   98~(11) (2005) 113711.
-\newblock \href {http://arxiv.org/abs/https://doi.org/10.1063/1.2106017}
-  {\path{arXiv:https://doi.org/10.1063/1.2106017}}, \href
-  {http://dx.doi.org/10.1063/1.2106017} {\path{doi:10.1063/1.2106017}}.
+\newblock \href {http://dx.doi.org/10.1063/1.2106017}
+  {\path{doi:10.1063/1.2106017}}.
 
 \bibitem{MurphyJAP2011}
 J.~D. Murphy, K.~Bothe, M.~Olmo, V.~V. Voronkov, R.~J. Falster, The effect of
