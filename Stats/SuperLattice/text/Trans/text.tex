@@ -1,0 +1,491 @@
+%\documentclass[<options>]{elsarticle}
+\documentclass [sort&compress] {elsarticle}
+\usepackage{graphicx}% Include figure files
+
+\bibliographystyle{elsarticle-num}
+\begin{document}
+\begin{frontmatter}
+
+\title{Relationship between the ideality factor and the iron concentration in silicon solar cells}
+
+\author{O.Ya.~Olikh}
+\ead{olikh@univ.kiev.ua}
+
+\address{Faculty of Physics, Taras Shevchenko National University of Kyiv, Kyiv 01601, Ukraine}
+
+
+\begin{abstract}
+The ideality factor value of silicon $n^+-p$ solar cells with a various iron contaminant has been studied by means of computer simulation.
+An iron concentration range of $10^{10}-10^{13}$~cm$^{-3}$, a base doping level range of $10^{15}-10^{17}$~cm$^{-3}$, and a temperature range of $290-340$~K were under study.
+The Solar Cells Capacitance Simulator (SCAPS) has been the tool used for numerical simulation of these devices.
+The two--diode model was used to extract an  ideality factor.
+The Shockley--Read--Hall recombination, the Auger recombination, the radiative recombination, the unpaired interstitial iron, and
+the iron--boron pair were under consideration.
+The algorithms of an iron concentration evaluation in a silicon solar cell by using a current--voltage curve have been proposed.
+The analytic expressions have been suggested and the calibration curves have been are calculated.
+\end{abstract}
+
+
+\begin{keyword}
+silicon solar cell\sep SCAPS simulator\sep ideality factor\sep iron concentration
+\end{keyword}
+
+
+\end{frontmatter}
+
+
+\section{Introduction}
+
+It is well known that impurities are crucial for the semiconductor devices performance.
+It is completely relevant to solar cell (SC) as well.
+Dopants determinate an internal electric field, which leads to a separation of light-generated carriers and a photovoltage generation.
+Contaminants act often as a highly effective recombination centre, reducing the carrier lifetime and SC efficiency.
+Therefore the impurity concentration determination is a very important problem.
+There are many experimental methods for solving this problem, such as the infrared spectroscopy, deep level transient spectroscopy, photoluminescence,
+thermally stimulated capacitance and current, secondary ion mass spectrometry etc \cite{Schroder2006}.
+These methods are complicated  enough and demand a special setup.
+
+At the same time, the analysis of  the current--voltage ($I-V$)  characteristic is commonly used  to characterize the solar cell.
+Thus, the dark $I-V$ curve normally serves as a first diagnosis of SC recombination \cite{Grover}.
+The $I-V$  equation that models the SC by an equivalent electrical circuit contains several parameters related to physical phenomena occurring in the device.
+It is obviously that these parameters depend on impurities, but the interrelations are intricate sufficiently.
+As a result, $I-V$ curves are not used practically for a contaminant diagnosis, although the possibility of simultaneous calibrate both SC performance and impurity looks quite attractive.
+
+One of a number of parameters of SC model is the ideality factor $n$.
+The value of $n>1$ indicates that there are traps involved in a carrier recombination mechanism in solar cells.
+If the defect related recombination  is dominant than the value $n=2$ is often stated in a literature.
+But when the value of $n$ approaches 2, it suggests the  very specific  assumptions about  the  energy levels  (middle  of  the  bandgap) and  capture  cross sections  (equal for electrons and  holes)  of  the recombination centres in a symmetrically  doped diode which lead to $n=2$ \cite{n2Kuhn,n2_Beier}.
+Typically, the value of the ideality factor ranges from 1 to 2 for real devices and
+depends on ambient conditions and the recombination center parameters, including a trap concentration \cite{n2_Beier,n2McIntosh,n2Kaminski,HAMEIRI2013251,Heide}.
+Thus, the ideality factor is an important parameter that can describe the electrical behavior of photovoltaic devices
+and is used to characterize the recombination in SC \cite{Duan}.
+
+
+The aim of our work is to investigate a possibility of  a contaminant concentration evaluation by using an ideality factor value.
+The heuristic approach is used and its milestones can be expressed as following:
+i)~the dark $I-V$ characteristic of the SCs with known contaminant composition is simulated;
+ii)~the obtained characteristic is fitted according to the double--diode model and the ideality factor is determined;
+iii)~the initial impurity concentration and the calculated ideality factor value are used for acquisition of analytic or grading dependencies.
+
+As a first approximation, the paper considers a fairly simple but practically important system.
+Namely, the crystalline silicon SC and iron impurity were under consideration.
+Si photovoltaic device cover almost 90\% of global SC market.
+Iron is a major contaminant due to the wide use of stainless steel equipment in the fabrication line and one of the most detrimental metal impurities in solar--grade crystalline silicon materials \cite{Istratov1999,FeB:Schmidt,ZHU2016192}.
+
+Numerical simulation is carried out by using the one--dimensional code SCAPS \cite{SCAPS1,SCAPS2}.
+This software is widely used to modeling of various solar cells \cite{SCAPSuse1,SCAPSuse2,SCAPSuse3,SCAPSuse5,SCAPSuseSi1,SCAPSuseSi4,SCAPSuseSi3},
+including silicon based devices \cite{SCAPSuseSi1,SCAPSuseSi3,SCAPSuseSi4}.
+
+\section{Simulation details}
+The simple $n^+-p$ structure as  shown in inset in Fig.~\ref{figIV} is used in the present calculation.
+with the initial thickness of each layer $d_n=0.5$~$\mu$m and $d_p=300$~$\mu$m, respectively.
+$n^+$ is the emitter layer with $N_\mathrm{D}=10^{19}$~cm$^{-3}$ while $10^{15}-10^{17}$~cm$^{-3}$ is the $N_\mathrm{A}$ of the $p$ base layer.
+The $p$ base layer is uniformly doped with boron.
+
+The simulations  were carried out over a temperature range of $290\div330$~K.
+The temperature dependencies of bandgap and carrier mobility are calculated, respectively,  according to Varshni and Caughey--Thomas equations \cite{Schroder2006}.
+The bandgap narrowing is considered as described by the Slotboom equation \cite{Markvart,ZHOU20188}.
+The density of states in the conduction/valence band ($N_C$/$N_V$) and thermal carrier velocities are from Green \cite{Nc:Green}.
+
+
+The iron is considered as a base layer uniform contaminant with the concentration $10^{10}-10^{13}$~cm$^{-3}$.
+The iron atoms are known to be predominantly located in interstitial lattice position in silicon.
+The donor level $E_{\mathrm{Fe}_i} = E_V+0.394$~eV is associated with $\mathrm{Fe}_i$ \cite{Rein2,MurphyJAP2011}.
+Therefore neutral  $\mathrm{Fe}_i^0$ and ionized $\mathrm{Fe}_i^+$  interstitial are observed in  Si.
+In $p$--type material, $\mathrm{Fe}_i^+$ readily interacts with ionized shallow acceptors.
+In our simulation, the pair $\mathrm{Fe}_i\mathrm{B}_s$ must be under consideration.
+On the one hand, this pair is bistable defect and the trigonal and the orthorhombic configurations are feasible.
+On the other hand, the orthorhombic pair is only observable at low temperature ($<150$~K) under an illumination or carrier injection condition \cite{Narland,Sakauchi}.
+Besides,  the $\mathrm{Fe}_i\mathrm{B}_s$ pairs can be readily dissociated by 15 to 90~s illumination with a halogen lamp \cite{FeB:Schmidt}.
+The association reaction is diffusion limited and can take place under dark condition during tens minute \cite{FeB:kinetic}.
+Two following cases were under simulation.
+
+
+\noindent
+i)~
+The negligible proportion of Fe present in the form of $\mathrm{Fe}_i\mathrm{B}_s$ pairs is assumed:
+\begin{equation}
+\label{eqN1}
+    N_{\mathrm{Fe}}=N_{\mathrm{Fe}_i^0}+N_{\mathrm{Fe}_i^+} \,,
+\end{equation}
+where
+$N_{\mathrm{Fe}_i^0}$ and $N_{\mathrm{Fe}_i^+}$ are the concentrations of  neutral and ionized iron respectively.
+This is a safe assumption for cells operating under constant illumination or after illumination stop immediately.
+The hole and electron capture cross--sections of defect are calculated according to
+$\sigma_{p,\mathrm{Fe}_i}=3.85\times10^{-16}\exp(-\frac{0.045}{kT})$~cm$^2$ and
+$\sigma_{n,\mathrm{Fe}_i}=9.1\times10^{-15}\exp(-\frac{0.024}{kT})$~cm$^2$ \cite{Istratov1999,Rein2,MurphyJAP2011}.
+$E_{\mathrm{Fe}_i}$ is taken as the temperature independent value \cite{Kohno}.
+This case is labeled ``FI'' from now on.
+
+\noindent
+ii)~
+The equilibrium condition is assumed and the total dissolved iron concentration is given by a sum of concentrations of three separate species
+\begin{equation}
+\label{eqN2}
+    N_{\mathrm{Fe}}=N_{\mathrm{Fe}_i^0}+N_{\mathrm{Fe}_i^+}+N_{\mathrm{FeB}} \,,
+\end{equation}
+where
+$N_\mathrm{FeB}$ is the $\mathrm{Fe}_i\mathrm{B}_s$ pair concentration.
+The using of the relationships between the equilibrium concentration of $\mathrm{Fe}_i^+$, $\mathrm{Fe}_i^0$, and  $\mathrm{Fe}_i\mathrm{B}_s$ from \cite{MurphyJAP2011,FeB:kinetic}
+leads to the following expression
+\begin{equation}
+\label{eqNFeB}
+    N_{\mathrm{FeB}}=N_{\mathrm{Fe}}\frac{N_\mathrm{A}10^{-23}\exp\left(-\frac{E_b}{kT}\right)}
+     {\left[1+N_\mathrm{A}10^{-23}\exp\left(-\frac{E_b}{kT}\right)\right]\left[1+\exp\left(-\frac{F-E_{\mathrm{Fe}_i}}{kT}\right)\right]}\,.
+\end{equation}
+where
+$F$ is the Fermi level,
+$E_b$ is the binding energy of the $\mathrm{Fe}_i\mathrm{B}_s$ pairs (taken as 0.582 eV).
+Hence it should be taken under account the uniform distribution of the $\mathrm{Fe}_i\mathrm{B}_s$ pair.
+In our simulation, first, the Fermi level position in the base layer is calculated for each doping level as well as temperature.
+Then, Eq.~(\ref{eqNFeB}) is used to calculate the $\mathrm{Fe}_i\mathrm{B}_s$ pair distribution.
+The representative example of calculation is shown in Fig.~\ref{figDist}.
+
+\begin{figure}
+\includegraphics[width=0.7\textwidth]{Fig2}%
+\caption{\label{figDist}
+The calculated SC base distribution of Fermi level position (a, solid line), unpaired interstitial iron concentration (b, dashed line),
+and $\mathrm{Fe}_i\mathrm{B}_s$ pair concentration (b, dotted--dashed line).
+$N_\mathrm{A}=10^{16}$~cm$^{-3}$, $T=300$~K.
+The position of $\mathrm{Fe}_i$ donor level (dotted line) is shown in the panel (a) as well.
+}%
+\end{figure}
+
+
+The trigonal $\mathrm{Fe}_i\mathrm{B}_s$ pair is considered, a true condition under room temperature.
+This pair is amphoteric defect.
+In the present work, the parameters of donor ($E_{\mathrm{FeB}}^{d} = E_V+0.10$~eV,
+$\sigma_{p,\mathrm{FeB}}^d=2\times10^{-14}$~cm$^2$,
+$\sigma_{n,\mathrm{FeB}}^d=4\times10^{-13}$~cm$^2$)
+and  acceptor ($E_{\mathrm{FeB}}^{a} = E_C-0.26$~eV,
+$\sigma_{p,\mathrm{FeB}}^a=5.5\times10^{-15}$~cm$^2$,
+$\sigma_{n,\mathrm{FeB}}^a=2.5\times10^{-15}$~cm$^2$)
+levels are used from \cite{Istratov1999,Rein2,MurphyJAP2011,FeB:kinetic}.
+This case is labeled ``FIFB'' from now on.
+
+Only a bulk recombination is under consideration in the paper.
+Once again two cases were simulated.
+In the first one, labeled ``SRH'', the Shockley--Read--Hall recombination is taken into account only.
+In the second one, denoted ``SRHBBA'', the both Shockley--Read--Hall recombination and intrinsic recombination are allowed for.
+The electron and hole Auger recombination factors ($C_n=2.8\times10^{-31}$~cm$^6$s$^{-1}$ and $C_p=9.9\times10^{-32}$~cm$^6$s$^{-1}$)
+and radiative band--to--band recombination coefficient ($B=1.8\times10^{-15}$~cm$^3$s$^{-1}$)
+are taken from \cite{Markvart}.
+
+So, four different data sets (FI--SRH, FI--SRHBBA, FIFB--SRH, and FIFB--SRHBBA)
+have been simulated for solar cell.
+
+
+\begin{figure}
+\includegraphics[width=0.7\textwidth]{Fig1}%
+\caption{\label{figIV}
+$I-V$ characteristic simulated in FI--SRH--case, $N_\mathrm{A}=10^{17}$~cm$^{-3}$,  $N_{\mathrm{Fe}}=10^{13}$~cm$^{-3}$, $T=290$~K (marks)
+and its fitting by Eq.~(\ref{eqIV}) (solid line).
+The dashed and dotted--dashed lines represent the diffusion and recombination currents.
+Inset: Solar cell structure, which are used in simulation.
+}%
+\end{figure}
+
+The dark forward $I-V$ characteristic were generated by SCAPS over a voltage range up to $0.62$~V.
+The $I-V$ curve example is shown in Fig.~\ref{figIV}.
+
+The real silicon SCs are often described by so--called two--diode model \cite{Breitenstein2013}.
+The first diode represents the ``ideal'' diode, describing the so--called diffusion current, characterized by a saturation current $I_{01}$,
+and the second diode is the so--called recombination current, characterized by a saturation current $I_{02}$ and an ideality factor $n$ \cite{Breitenstein2013}.
+According to the two--diode model, the dark SC current is given by
+\begin{equation}
+\label{eqIV}
+    I=I_{01}\left[\exp\left(-\frac{qV}{kT}\right)-1\right]+ I_{02}\left[\exp\left(-\frac{qV}{nkT}\right)-1\right]\,.
+\end{equation}
+It should be noted that the influence of series resistance as well as shunt resistance is neglected in Eq.~(\ref{eqIV}).
+We used Eq.~(\ref{eqIV}) to fit the simulated data taking $n$, $I_{01}$, and $I_{02}$ as the fitting parameters and more attention was paid to the ideality factor value.
+The fitting result is shown in Fig.~\ref{figIV}.
+
+All non-linear fittings in the paper were done by using the differential evolution method \cite{DE:Sun,DEWang}.
+The least--squares method was used to linear fitting.
+
+
+
+\section{Results and Discussion}
+\subsection{Interstitial iron, SRH recombination}
+
+Some data, calculated in the FI--SRH case, are shown in Fig.~\ref{figA}(a,b).
+One can see that the ideality factor  increases monotonically with the doping level increase.
+While temperature dependence of the  $n$  is more intricate: it contains the both increasing and decreasing components and the contribution of the last one rises with  increase in $N_\mathrm{A}$.
+The iron concentration increase leads to  the increase in $n$ value and does not change $n(N_\mathrm{A},T)$ dependence --- see Fig.~\ref{figA} and Supplementary Material.
+It is evidence of for possibilities of  $N_\mathrm{Fe}$ evaluation by using $n$.
+Only low doping level value ($N_\mathrm{A}\cong10^{15}$~cm$^{-3}$)and high temperature ($T>300$~K) are exclusion
+because $n\cong1$ is expected accordingly to the simulation.
+
+\begin{figure}
+\includegraphics[width=0.5\textwidth]{Fig3a}%
+\includegraphics[width=0.5\textwidth]{Fig3b}
+\includegraphics[width=0.5\textwidth]{Fig3c}
+\includegraphics[width=0.5\textwidth]{Fig3d}
+\caption{\label{figA}
+Ideality factor as a function of the temperature and dopant (boron) concentration.
+FI--SRH case.
+$N_\mathrm{Fe}$, cm$^{-3}$: $10^{10}$ (a,c), $10^{13}$ (b,d).
+The simulated data are in panels (a) and (b);
+the fittings of simulated data with help Eq.~(\ref{eqMain})
+are in panels (c) and (d).
+}%
+\end{figure}
+
+It is clear that an analytical expression would be more convenient way to the $N_\mathrm{Fe}$ evaluation.
+To build such expression one has to take into account that the interstitial iron captures an electron in $p$--type silicon.
+Therefore the recombination affectivity is determined by a hole occurrence  on the $\mathrm{Fe}_i$ level.
+The hole occupation probability is $f_p=\left[1+\exp\left(\frac{F-E_{\mathrm{Fe}_i}}{kT}\right)\right]^{-1}$
+and this equation can be a start point to build an expression $n=n(T,N_\mathrm{A},N_\mathrm{Fe})$.
+It must be considered that, unlike the simulated  $n(N_\mathrm{A},T)$ relationship,
+$f_p(N_\mathrm{A},T)$ depends on temperature monotonically and reaches saturation with the increase in $N_\mathrm{A}$ --- see Supplementary Material.
+In addition, the Fermi level can be evaluated by the equation $(F-E_V)=kT\ln(N_V/N_\mathrm{A})$ under the simulation conditions.
+
+Based on aforesaid, we search expression $n=n(T,N_\mathrm{A},N_\mathrm{Fe})$ in the following form:
+\begin{equation}
+\label{eqMain}
+    n(T,N_\mathrm{A},N_\mathrm{Fe})=1+\frac{n_0(N_\mathrm{Fe})\cdot T^{m_T}\cdot(\log N_\mathrm{A})^{m_\mathrm{A}}}
+        {1+N_V(T)\cdot\gamma(N_\mathrm{A},N_\mathrm{Fe})\cdot\exp\left(\frac{E_\mathrm{ef}(T,N_\mathrm{A})}{kT}\right)}\,,
+\end{equation}
+where
+$m_T$ and $m_\mathrm{A}$ are the constant,
+and fitness parameters $n_0$, $\gamma$, and $E_\mathrm{ef}$ depend on iron concentration, doping level, and temperature.
+
+The analysis has shown that the simulated data are well fitted by Eq.~(\ref{eqMain}) with $m_T=1.13$, $m_\mathrm{A}=2.85$, $\gamma=N_\mathrm{A}^{-1}$.
+Besides, the dependence of the effective energy $E_\mathrm{ef}$ can be expressed as:
+\begin{equation}
+\label{eqEf-FISRH}
+    E_\mathrm{ef}(T,N_\mathrm{A})=E_0-\alpha\, T / \log N_\mathrm{A}+\beta \,T\,,
+\end{equation}
+where
+values $E_0=1.43\pm0.08$~eV, $\alpha=85\pm5$~meV$\,$cm$^{-3}$K$^{-1}$, and $\beta=1.9\pm0.2$~meV$\,$K$^{-1}$ do not depend on $N_\mathrm{Fe}$ practically.
+The parameters are listed in Table~\ref{tabEq} and the results of the fitting are shown in Fig.~\ref{figA}(c,d), and Supplementary Material.
+A good agreement of  simulated data and fitting curves prove the expediency of Eq.~(\ref{eqMain}) using.
+
+\begin{table}
+\caption{\label{tabEq}Parameters of Eq.~(\ref{eqMain}) fitting of simulated ideality factor relationships.
+}
+\begin{tabular}{lcccc}
+\hline
+\hline
+Simulation case&\multicolumn{4}{c}{Parameter}\\
+&$m_T$&$m_\mathrm{A}$&$\gamma$ (cm$^3$)&$E_\mathrm{ef}$ (eV)\\
+\hline
+FI--SRH&1.13&2.85&$N_\mathrm{A}^{-1}$&$1.43-\frac{0.085\, T} {\log N_\mathrm{A}}+0.0019 \,T$\\
+FI--SRHBBA&1.3&2.85&Eq.~(\ref{eqGamma})&$9.53-0.52\log N_\mathrm{A}$\\
+FIFB--SRH&2.2&2.85&Fig.~\ref{fig9}(a)&$16.6-0.90\log N_\mathrm{A}$\\
+FIFB--SRHBBA&2.2&2.85&Fig.~\ref{fig9}(b)&$13.4-0.77\log N_\mathrm{A}$\\
+\hline
+\hline
+\end{tabular}
+\end{table}
+
+
+Thus, in the FI--SRH case, the simulated (semi--empirical) dependence of the ideality factor takes the following shape:
+\begin{equation}
+\label{eqM-FISRH}
+    n=1+\frac{n_0(N_\mathrm{Fe})\cdot T^{1.13}\cdot(\log N_\mathrm{A})^{2.85}}
+        {1+\frac{N_V(T)}{N_\mathrm{A}}\cdot\exp\left(\frac{1.43}{kT}-\frac{986}{\log N_\mathrm{A}}+22\right)}\,.
+\end{equation}
+
+We use Eq.~(\ref{eqM-FISRH}) by taking $n_0$ as fitting parameter to fit the $n$ dependencies, calculated for different $N_\mathrm{Fe}$ value.
+The resulting $n_0$ dependence on iron concentration is shown in Fig.~\ref{fig4}.
+This curve is monotonic as well as  smooth enough and can serves as a calibration curve.
+In addition, the found dependence is well described by Eq.~(\ref{eqN0}):
+\begin{equation}
+\label{eqN0}
+    n_0(N_\mathrm{Fe})=1.28\times10^{-7}-\frac{2.38\times10^{-8}}{1+\left(\frac{N_\mathrm{Fe}}{4.96\times10^{12}}\right)^{0.85}}\,.
+\end{equation}
+
+\begin{figure}
+\includegraphics[width=0.6\textwidth]{Fig4}%
+\caption{\label{fig4}
+Dependence of the parameter $n_0$ (see Eq.~(\ref{eqMain})) on the iron concentration in SC base.
+FI--SRH case.
+Line is the fitted curve using Eq.~(\ref{eqN0}).
+}%
+\end{figure}
+
+Thus, the algorithm of an iron concentration evaluation in a silicon SC by using a $I-V$ curve can be as following.
+\begin{enumerate}[(i)]
+\item The solar cell is illuminated by 15 to 90 s with a halogen lamp to dissociate the FeB pairs.
+      When illumination stopped, the $I-V$ characteristic is measured.
+\item $I-V$ curve is fitted accordingly to the two--diode model and the ideality factor $n$ is determined.
+\item Taking into account $n$ value, doping level $N_\mathrm{A}$, and measurement temperature,
+      the parameter $n_0$ is calculated by relationship
+\begin{displaymath}
+    n_0=(n-1)\cdot \frac{1+\frac{N_V(T)}{N_\mathrm{A}}\cdot\exp\left(\frac{1.43}{kT}-\frac{986}{\log N_\mathrm{A}}+22\right)}{T^{1.13}\cdot(\log N_\mathrm{A})^{2.85}}\,.
+\end{displaymath}
+\item $N_\mathrm{Fe}$ is evaluated by using the calibration curve in Fig.~\ref{fig4} or by the following expression
+\begin{displaymath}
+    N_\mathrm{Fe}=4.96\times10^{12}\cdot \left(\frac{2.38\times10^{-8}}{1.28\times10^{-7}-n_0}\right)^{1.18}\,.
+\end{displaymath}
+\end{enumerate}
+
+
+\subsection{Interstitial iron, SRH recombination, intrinsic recombination}
+
+
+It should be noted that the taking into consideration of the Auger recombination and band--to--band recombination  cause to modification in the above  algorithm.
+In fact, the simulation show that the dependencies $n(N_\mathrm{A},T)$ are changed partially --- see Fig.~\ref{fig5}.
+It is quite expectable that these changes rise with the $N_\mathrm{A}$ increase and the $N_\mathrm{Fe}$ decrease.
+Besides, the non--monotonic dependencies $n(N_\mathrm{A},T)$ are observed at the low iron concentration value.
+Thus, the search for an analytical expression, qualified for the each temperature and doping level values, seems inappropriate.
+
+
+\begin{figure}
+\includegraphics[width=0.5\textwidth]{Fig5a}%
+\includegraphics[width=0.5\textwidth]{Fig5b}
+\caption{\label{fig5}
+Ideality factor as a function of the temperature and dopant (boron) concentration.
+FI--SRHBBA case.
+$N_\mathrm{Fe}$, cm$^{-3}$: $10^{10}$ (a), $10^{13}$ (b).
+}%
+\end{figure}
+
+On the other hand, since room temperature measurements of $I-V$ characteristics alone cannot provide detailed information about the SC properties,
+additional insight is often gained by characterising the devises over a temperature range.
+Therefore in this case, we try to evaluate the iron concentration by using the ideality factor temperature dependence,
+which is measured (simulated)  for the solar cell with  the known constant doping level --- $n(T)\mid_{N_\mathrm{A}=\mathrm{const}}$.
+
+Some of the obtained curves $n(T)$ are shown in Fig.~\ref{fig6}.
+One can see that the $N_\mathrm{A}$ value affects substantively on temperature dependence of the ideality factor.
+We use Eq.~(\ref{eqMain})  and value $m_\mathrm{A}=2.85$ to fit the simulated $n$ temperature dependence.
+A close agreement between simulated and fitted data has been found with help $m_T=1.3$ and $E_\mathrm{ef}=(9.53-0.52\log N_\mathrm{A})$ --- see lines in Fig.~\ref{fig6}.
+
+\begin{figure}
+\includegraphics[width=0.5\textwidth]{Fig6}%
+\caption{\label{fig6}
+Temperature dependencies of the ideality factor.
+FI--SRHBBA case.
+The marks are the simulation results, and the lines are the fitted curves using Eq.~(\ref{eqMain}) and data in Table~\ref{tabEq}.
+$N_\mathrm{Fe}$, cm$^{-3}$: $10^{10}$ (curves 1, 6), $10^{12}$ (2, 4, and 7), $10^{13}$ (3, 5, and 8).
+$N_\mathrm{A}$ cm$^{-3}$: $10^{15}$ (1, 2, and 3), $10^{16}$ (4,  5), $10^{17}$ (6, 7, and 8).
+}%
+\end{figure}
+
+The values of the both another parameters $n_0$ and $\gamma$ depend on doping level as well as iron concentration and can be used to evaluate $N_\mathrm{Fe}$.
+So, as it is shown in Fig.~\ref{fig7}(a), the dependencies $\gamma(N_\mathrm{Fe})$ can be described by the following equation:
+\begin{equation}
+\label{eqGamma}
+    \gamma=\left(\frac{10^{15}}{N_\mathrm{A}}\right)^{11}\cdot \frac{\eta N_0+N_\mathrm{Fe}}{N_0+N_\mathrm{Fe}}\,.
+\end{equation}
+where
+$10\div15$ and $(0.5\div1)\times10^{12}$~cm$^{-3}$ are the $\eta$ and $N_0$, respectively, at various boron concentration.
+
+
+\begin{figure}
+\includegraphics[width=0.5\textwidth]{Fig7a}%
+\includegraphics[width=0.5\textwidth]{Fig7b}
+\caption{\label{fig7}
+Dependencies of the parameters $\gamma$ (a) and $n_0$ (b) on the iron concentration in SC base.
+FI--SRHBBA  case.
+Lines in panel (a) are the fitted curves using Eq.~(\ref{eqGamma}), lines in panel (b) only
+serve as guide to the eye.
+}%
+\end{figure}
+
+The concentration dependencies of the parameter $n_0$ are shown in Fig.~\ref{fig7}(b) and can serve as a calibration curves as well.
+As shown in figure, the iron concentration evaluation by using the $n_0$ value is advisable for a high base doping level($N_\mathrm{A}>10^{16}$~cm$^{-3}$).
+At low $N_\mathrm{A}$ value the weak dependence $n_0$ on $N_\mathrm{Fe}$ impairs the estimation accuracy.
+Simultaneously, the opposite case is observed for parameter $\gamma$ and
+it is better to evaluate  $N_\mathrm{Fe}$ by the $\gamma$ value at a low doping level,
+Otherwise the $\gamma$ decreases significantly (see Eq.~(\ref{eqGamma})) and the accuracy of $\gamma$ determination by Eq.~(\ref{eqMain}) fitting falls.
+
+
+\subsection{Iron--boron pair and interstitial iron}
+
+The results, obtained under an equilibrium condition and $\mathrm{Fe}_i\mathrm{B}_s$ presence, are illustrated by Fig.~\ref{fig8}.
+The main features of the ideality factor change are obviously to be in agree with the case of $\mathrm{Fe}_i\mathrm{B}_s$ absent.
+Namely, there are $n$ increase with increase in $N_\mathrm{Fe}$, the $n(T)$ dependence non--monotony, which pronounced with decrease in $N_\mathrm{A}$, etc.
+First of all, these are because Fermi level is far from the valence band, the neutral  interstitial $\mathrm{Fe}_i^0$ is dominant,
+and the boron contained complex  is  not created within a space charge region (SCR) --- see Fig.~\ref{figDist}.
+That is, unlike the quasi neutral region, the illumination does not cardinally change  the $N_{\mathrm{Fe}_i}$ and $N_{\mathrm{Fe}_i\mathrm{B}_s}$ ratio.
+On the other hand, the SCR recombination defines the value of ideality factor mainly.
+But the $n$ absolute  value  is smaller in FIFB--case then that in the FI--case because $\mathrm{Fe}_i$ and $\mathrm{Fe}_i\mathrm{B}_s$ have different energy levels and cross--sections for recombination.
+Comparison of Fig.~\ref{fig8}(a) and Fig.~\ref{fig8}(c) as well as  comparison of Fig.~\ref{fig8}(b) and Fig.~\ref{fig8}(d)
+shows that intrinsic recombination affects the $n$ value at a low iron concentration, and high temperature, and high doping level.
+
+\begin{figure}
+\includegraphics[width=0.5\textwidth]{Fig8a}%
+\includegraphics[width=0.5\textwidth]{Fig8b}
+\includegraphics[width=0.5\textwidth]{Fig8c}
+\includegraphics[width=0.5\textwidth]{Fig8d}
+\caption{\label{fig8}
+Ideality factor as a function of the temperature and dopant (boron) concentration.
+FIFB--SRH (a,b) and FIFB--SRHBBA (c, d) cases.
+$N_\mathrm{Fe}$, cm$^{-3}$: $10^{10}$ (a, c), $10^{13}$ (b, d).
+}%
+\end{figure}
+
+As in previous FI-SRHBBA case, the different $n(N_\mathrm{A}, T)$ dependencies are observed at the different $N_\mathrm{Fe}$ values.
+As in previous case, the ideality factor temperature dependencies $n(T)\mid_{N_\mathrm{A}=\mathrm{const}}$ are under consideration
+and we use Eq.~(\ref{eqMain}) to fit simulated data.
+It has been found that the simulated data are in good agreement with the fitting curves (see Supplementary Material) for values
+$m_T=2.2$ and $E_\mathrm{ef}$, which were linear dependent of $\log N_\mathrm{A}$ and were listed in Table~\ref{tabEq}.
+
+The obtained dependencies of parameters $\gamma$ and $n_0$ on iron concentration are shown in Fig.~\ref{fig9} and Fig.~\ref{fig10}, respectively,
+and can serve as a calibration curves as well.
+Again, it is more appropriate to use the parameter $\gamma$ for $N_\mathrm{Fe}$ evaluation at low boron concentrations and the parameter $n_0$ in the opposite case.
+However, the conditional limit shifts toward the smaller $N_\mathrm{A}$ values and is about $3\times10^{15}$~cm$^{-3}$.
+Again, the main difference between calibration curves in the FIFB--SRH and FIFB--SRHBBA cases is observed for $N_\mathrm{A}<10^{11}$~cm$^{-3}$ and $N_\mathrm{A}>3\times10^{16}$~cm$^{-3}$.
+
+
+\begin{figure}
+\includegraphics[width=0.5\textwidth]{Fig9a}%
+\includegraphics[width=0.5\textwidth]{Fig9b}
+\caption{\label{fig9}
+Dependencies of the parameters $\gamma$ on the iron concentration in SC base.
+FIFB--SRH (a) and FIFB--SRHBBA (b) cases.
+Lines are the fitted curves using Eq.~(\ref{eqGamma})
+}%
+\end{figure}
+
+\begin{figure}
+\includegraphics[width=0.5\textwidth]{Fig10a}%
+\includegraphics[width=0.5\textwidth]{Fig10b}
+\caption{\label{fig10}
+Dependencies of the parameters $n_0$ on the iron concentration in SC base.
+FIFB--SRH (a) and FIFB--SRHBBA (b) cases.
+Lines only serve as guide to the eye.
+}%
+\end{figure}
+
+
+Thus, the another, more complicated but more general, algorithm of an iron concentration evaluation can be offered.
+\begin{enumerate}[(i)]
+\item The dark $I-V$ characteristics of the silicon SC are measured over over a temperature range of about $290-340$~K.
+The measurements can be carried out  after a halogen lamp illumination or after long--term storing in the dark.
+\item $I-V$ curves are fitted accordingly to the two--diode model and the temperature dependency of the ideality factor $n(T)$ is determined.
+\item Eq.~(\ref{eqMain}) and Table~\ref{tabEq} are used to fit the $n(T)$.
+ The $n_0$ and $\gamma$ are taken as the fitting parameters.
+\item $N_\mathrm{Fe}$ is evaluated by using calibration curves in Fig.~\ref{fig7} or in Figs.~\ref{fig9}(b) and ~\ref{fig10}(b) in the
+ after illumination or after dark storing measurement cases, respectively.
+\end{enumerate}
+
+
+\section{Conclusion}
+The relationship between the diode ideality factor and the iron concentration in the base layer of silicon $n^+-p$ solar cells has been studied through computer simulation.
+An iron concentration range of $10^{10}-10^{13}$~cm$^{-3}$, a base doping level range of $10^{15}-10^{17}$~cm$^{-3}$, and a temperature range of $290-340$~K were under study.
+The results obtained in this work show that the ideality factor value can serve to estimate a contaminant concentration.
+So, the analysis has shown that in the case of the Shockley--Read--Hall recombination and the unpaired interstitial iron,
+single $I-V$ characteristic measurement and single ideality factor extraction  are needed.
+If the Auger recombination, the radiative recombination, or the iron--boron pair presence have to be taking into account,
+then measurements over a temperature range are needed.
+The calibration curves have been are calculated and the analytic expressions have been suggested.
+
+However we should note the following.
+The simplified task was under consideration and the set of variables consisted of three values (temperature, doping level, iron concentration) only.
+But the analytical expression was found in the  approximation case only.
+As simulation has shown, the  geometry of the solar cell (e.g. base layer thickness) affected value of ideality factor as well.
+In general case, the ideality factor can be used to estimate not only a trap concentration but also an energy level and a capture cross--section.
+But such multivariable problem would lead to a a huge set of calibration curves.
+On the other hand, the artificial neural networks seem to be good for this task.
+
+
+%\section*{References}
+
+\bibliography{olikh}
+
+
+\end{document}
+
