@@ -1,0 +1,161 @@
+Ref: SSE_2019_316
+Title: Influence of $\gamma$--irradiation and ultrasound treatment on carrier transport in Au–-SiO$_2$–-Si structure}
+Journal: Solid State Electronics
+To submit your revised manuscript:
+
+    Log into EVISE® at: http://www.evise.com/evise/faces/pages/navigation/NavController.jspx?JRNL_ACR=SSE
+    Locate your manuscript under the header 'My Submissions that need Revisions' on your 'My Author Tasks' view
+    Click on 'Agree to Revise'
+    Make the required edits
+    Click on 'Complete Submission' to approve
+
+What happens next?
+
+After you approve your submission preview you will receive a notification that the submission is complete. To track the status of your paper throughout the editorial process, log in to Evise® at: http://www.evise.com/evise/faces/pages/navigation/NavController.jspx?JRNL_ACR=SSE.
+
+Enrich your article to present your research with maximum impact. This journal supports the following Content Innovations:
+-----------
+
+Grenoble, October 3, 2019
+
+ 
+
+Ref. No: 19-316
+
+ 
+
+Dear Dr Olikh,
+
+ 
+
+Your manuscript has now been assessed by our referees. Please find enclosed their reports.
+
+ 
+
+According to the reviewers, your paper requires major revisions. One reviewer is against publication but I give you a chance: the revision should be extremely convincing.
+
+ 
+
+I would be grateful if you could modify the text in accordance with the referee's suggestions. Please detail in a cover letter how you have answered each point. When you disagree with their criticism, please provide substantiated comments. The information contained in your answers must be integrated in the new version as much as possible. All changes should be HIGHLIGHTED on the revised manuscript.
+
+ 
+
+Please note that, in order to reduce the publication time, the revised manuscript is expected WITHIN 6 WEEKS.
+
+ 
+
+I look forward to hearing from you.
+
+ 
+
+Yours sincerely,
+
+ 
+
+Sorin Cristoloveanu
+
+Editor
+
+ 
+
+--------------------
+
+ 
+
+Ref. No: 19-316
+
+ 
+
+Title of Paper: Influence of gamma-irradiation and ultrasound treatment on carrier transport
+
+in Au–SiO2–Si structure
+
+ 
+
+Author(s): Gorb et al
+
+ 
+
+Referee No: 1B
+
+ 
+
+Date: 22.07.2019
+
+ 
+
+REFEREE'S COMMENTS TO AUTHOR:
+
+ 
+
+The manuscript is not suitable for publication. I do not see the novelty of the study nor the importance
+
+of the work. The main conclusions (and the highlights) were in fact drawn before and according to more consistent studies.
+
+ 
+
+The claimed study of carrier transport is very poor, the investigations being reduced to the measurement and fit of a few Current-Voltage (I-V) characteristics recorded on Au-SiO2-Si MOS capacitors at room temperature (295K?!, for all the cases the same?): as grown, as irradiated with Co60-gamma and irradiated followed by ultrasound treatments of 30 and 60 minutes.
+
+ 
+
+The temperature dependence was measured only in a tiny range and only for fw biases (between 304K and 320K in Fig.3, although the fit of the I-V, shown in Fig.1, seems to be for 295K!).
+
+ 
+
+The possible dependencies on the oxide thickness are neglected (the thickness of the oxide and of the depletion layer in Si are not even mentioned in the manuscript) as well as on the defect distribution (mentioned as nonhomogeneous for E’-center at page 8). A positive charge in the oxide would move the flat band voltage, shifting and disturbing, when nothomogeneous, the shape of the I-V curves.
+
+ 
+
+Thus, it is hard to understand how relevant are the fit formulas for the device I-V characteristics.
+
+ 
+
+Also, the English is poor.
+
+ 
+
+----------------------
+
+ 
+
+Ref. No: 19-316
+
+ 
+
+Title of Paper: Influence of gamma-irradiation and ultrasound treatment on carrier transport
+
+in Au–SiO2–Si structure
+
+ 
+
+Author(s): Gorb et al
+
+ 
+
+Referee No: 1AA
+
+ 
+
+Date:
+
+ 
+
+REFEREE'S COMMENTS TO AUTHOR:
+
+ 
+
+The paper addresses an important study. The results present interest to semiconductor electronic devices, in particular, solar cells, processing methods, etc. The paper can be accepted for publication after revisions. I have minor comments.
+
+1. The paper is about influence of gamma-irradiation on carrier transport in Au-SiO2-Si structure. However, gamma-irradiation mainly influences on bulk Si rather than its surface, which is too thin. I feel that the discussions regarding the Si surface passivation are not relevant to main focus of the article.
+
+2. The idea about ultrasound-induced hydrogen diffusion is interesting, however, there is no discussion about hydrogen source. The only source could be the hydrogen used in surface treatment, but that concentration of that hydrogen is not enough to cause drastic influence on electrical properties of bulk Si irradiated by gamma particles. This part of the discussions is speculative.
+
+3. Some important References are not cited, such as, e.g., A Davletova, et. al. J. Phys. Chem. Solids 70 (6), 989-992; J. Phys. D: Appl. Phys. 41 (16), 165107.
+
+ 
+
+-------------------------------------------------------------
+
+Copyright © 2018 Elsevier B.V. | Privacy Policy
+
+Elsevier B.V., Radarweg 29, 1043 NX Amsterdam, The Netherlands, Reg. No. 33156677.
