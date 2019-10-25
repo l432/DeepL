@@ -4,4 +4,15 @@ Max step size whilst curve fitting :   1.00000000e-01
 Stop criterion for step size :   1.00000000e-10
 Stop criterion for Chi square :   1.00000000e-07
 
+Curve fitting parameter  0 :
+
+label 1 : layer 1
+label 2 : defect 1
+label 3 : Nt total
+label 4 : nihil
+minimum value :   1.00000000e+10
+maximum value :   1.00000000e+13
+start value = actual value :    0
+logarithmic variation :  1
+
 >> end of curve fitting settings file
