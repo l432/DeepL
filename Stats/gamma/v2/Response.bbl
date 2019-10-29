@@ -13,4 +13,26 @@ D.~M. Fleetwood, S.~T. Pantelides, R.~D. Schrimpf (Eds.), Defects in
 V.~Pershenkov, V.~Popov, A.~Shalʹnov, Poverkhnostnye radiatsiyni efekty v
   elementakh intehralʹnykh mikroskhem, Enerhoatomyzdat, Moskow, 1988.
 
+\bibitem{SiO2:Devine}
+R.~A.~B. Devine, The structure of {S}i{O}$_2$, its defects and radiation
+  hardness, IEEE Trans. Nucl. Sci. 41~(3) (1994) 452--459.
+\newblock \href {http://dx.doi.org/10.1109/23.299784}
+  {\path{doi:10.1109/23.299784}}.
+
+\bibitem{SiO2:Mahapatra}
+S.~Mahapatra, D.~Saha, D.~Varghese, P.~B. Kumar, On the generation and recovery
+  of interface traps in {MOSFET}s subjected to {NBTI}, {FN}, and {HCI} stress,
+  IEEE Trans. Electron Devices 53~(7) (2006) 1583--1592.
+\newblock \href {http://dx.doi.org/10.1109/TED.2006.876041}
+  {\path{doi:10.1109/TED.2006.876041}}.
+
+\bibitem{angermann2016}
+H.~Angermann, P.~Balamou, W.~J. Lu, L.~Korte, C.~Leendertz, B.~Stegemann,
+  Oxidation of {S}i surfaces: Effect of ambient air and water treatments on
+  surface charge and interface state density, in: Ultra Clean Processing of
+  Semiconductor Surfaces XIII, Vol. 255 of Solid State Phenomena, 2016, pp.
+  331--337.
+\newblock \href {http://dx.doi.org/10.4028/www.scientific.net/SSP.255.331}
+  {\path{doi:10.4028/www.scientific.net/SSP.255.331}}.
+
 \end{thebibliography}
