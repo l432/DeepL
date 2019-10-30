@@ -119,6 +119,7 @@ The more details about the sample and UST setup are presented elsewhere \cite{Go
 
 The characteristics of initial Au–-SiO$_2$–-Si structure, $\gamma$--irradiated structure, and both irradiated and ultrasonically treated structure, were investigated by using an  current--voltage ($I-V$) technique.
 The forward and reverse bias characteristics were measured in current range from $10^{-9}$ to $10^{-3}$~A with a voltage step of $0.01$~V at 300~K.
+To identify the current mechanism in irradiated structure, $I-V$ characteristics were measured over a temperature range of 300-340~K before UST.
 
 
 The data non--linear fitting were done by using the method of modified artificial bee colony \cite{MABC}.
@@ -211,7 +212,7 @@ Note that the effect of the radiation induced reduction of current in MOS struct
 The fitting of the $V>1$~V region by Eq.~(\ref{eqSDIV}) shown that the irradiation has caused significant increase in both series resistance value and ideality factor  --- see Table~\ref{tabMIS} data.
 %And the former significantly exceeds the resistance change, which has been observed in the bulk samples.
 The ideality factor increase deals with RD formation  and results in the observed decreasing of TE current.
-Pintilie, \emph{et al}. \cite{FZSi:Rad} shown that complexes VO$_i$, Ñ$_i$C$_s$, $H$--center (V$_2$O$_i$), $\Gamma$--center, and interstitial defect $I^{0/-}$ are the main defects, created by $^{60}$Co $\gamma$-radiation in Si.
+Pintilie \emph{et al}. \cite{FZSi:Rad} shown that complexes VO$_i$, Ñ$_i$C$_s$, $H$--center (V$_2$O$_i$), $\Gamma$--center, and interstitial defect $I^{0/-}$ are the main defects, created by $^{60}$Co $\gamma$-radiation in Si.
 It should be noted that the growth method and resistivity of crystal, investigated in \cite{FZSi:Rad}, were analogous to our case; besides, the close doze ($9\cdot10^7$~rad) was used.
 $I^{0/-}$ is a secondary defect and its appearance leads to conductivity compensation (inversion) \cite{FZSi:Rad}.
 In our opinion, this defect is responsible for series resistance increase.
@@ -257,7 +258,8 @@ It is seen that the experimental data are in good agreement with the fitting cur
 \centerline{\includegraphics[width=0.6\textwidth]{figEa_MIS}}
 \caption{\label{figEa_MIS}
 Temperature dependence of SCLC--current for $\gamma$--irrradiated Au--SiO$_2$--Si structure before UST at $V=0,4$~V.
-The line is the least--squares linear fitting.
+Inset: Temperature dependence of power--law parameter.
+Lines are the least--squares linear fitting.
 }%
 \end{figure}
 
@@ -331,7 +333,7 @@ On our opinion,  SILC is observed in irradiated structure under reverse bias ---
 In fact, the conduction mechanism responsible for SILC is generally assumed \cite{SiO2:Esseni,SiO2:DiMaria} to be a trap--assisted tunneling (TAT).
 According to \cite{TAT:Gilmore,TAT:GopalSST,TAT:Gopal}, the field dependence of TAT current is described as
 \begin{equation}\label{eqIVTAT}
-  I_R=I_{0,\mathrm{TAT}}\,(U_d+V)\exp\left(-\frac{R_\mathrm{TAT}}{F_m}\right),
+  I_R=I_{0,\mathrm{TAT}}\,(U_d-V)\exp\left(-\frac{R_\mathrm{TAT}}{F_m}\right),
 \end{equation}
 where
 $I_{0,\mathrm{TAT}}$ and $R_\mathrm{TAT}$ do not depend on voltage,

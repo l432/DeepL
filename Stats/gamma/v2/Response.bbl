@@ -5,6 +5,25 @@
 \expandafter\ifx\csname href\endcsname\relax
   \def\href#1#2{#2} \def\path#1{#1}\fi
 
+\bibitem{TAT:Gilmore}
+A.~S. Gilmore, J.~Bangs, A.~Gerrish, {I}--{V} modeling of current limiting
+  mechanisms in {H}g{C}d{T}e {FPA} detectors, Proc.SPIE 5563 (2004) 46--54.
+\newblock \href {http://dx.doi.org/10.1117/12.562614}
+  {\path{doi:10.1117/12.562614}}.
+
+\bibitem{TAT:GopalSST}
+V.~Gopal, S.~K. Singh, R.~M. Mehra, Excess dark currents in {H}g{C}d{T}e
+  p$^+$--n junction diodes, Semicond. Sci. Technol. 16~(5) (2001) 372--376.
+\newblock \href {http://dx.doi.org/10.1088/0268-1242/16/5/316}
+  {\path{doi:10.1088/0268-1242/16/5/316}}.
+
+\bibitem{TAT:Gopal}
+V.~Gopal, A new approach to investigate leakage current mechanisms in infrared
+  photodiodes from illuminated current--voltage characteristics, J. Appl. Phys.
+  116~(8) (2014) 084502.
+\newblock \href {http://dx.doi.org/10.1063/1.4893899}
+  {\path{doi:10.1063/1.4893899}}.
+
 \bibitem{Fleetwood}
 D.~M. Fleetwood, S.~T. Pantelides, R.~D. Schrimpf (Eds.), Defects in
   Microelectronic Materials and Devices, CRC Press, London, New York, 2009.
@@ -34,5 +53,12 @@ H.~Angermann, P.~Balamou, W.~J. Lu, L.~Korte, C.~Leendertz, B.~Stegemann,
   331--337.
 \newblock \href {http://dx.doi.org/10.4028/www.scientific.net/SSP.255.331}
   {\path{doi:10.4028/www.scientific.net/SSP.255.331}}.
+
+\bibitem{FZSi:Rad}
+I.~Pintilie, E.~Fretwurst, G.~Lindström, J.~Stahl, Second--order generation of
+  point defects in gamma--irradiated float-zone silicon, an explanation for
+  "type inversion", Appl. Phys. Lett. 82~(13) (2003) 2169--2171.
+\newblock \href {http://dx.doi.org/10.1063/1.1564869}
+  {\path{doi:10.1063/1.1564869}}.
 
 \end{thebibliography}
