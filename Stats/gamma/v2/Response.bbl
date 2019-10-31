@@ -1,9 +1,24 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 \expandafter\ifx\csname url\endcsname\relax
   \def\url#1{\texttt{#1}}\fi
 \expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
 \expandafter\ifx\csname href\endcsname\relax
   \def\href#1#2{#2} \def\path#1{#1}\fi
+
+\bibitem{Parchinskii2000}
+P.~B. Parchinskii, S.~I. Vlasov, R.~A. Muminov, K.~K. Ismailov, U.~Turgunov,
+  The effect of ultrasound on the parameters of
+  metal--dielectric--semiconductor structures, Tech. Phys. Lett. 26~(10) (2000)
+  420--422.
+\newblock \href {http://dx.doi.org/10.1134/1.1262865}
+  {\path{doi:10.1134/1.1262865}}.
+
+\bibitem{Parchinskii2006}
+P.~Parchinskii, S.~Vlasov, L.~Ligai, Effect of ultrasonic treatment on the
+  generation characteristics of irradiated silicon--silicon--dioxide interface,
+  Semiconductors 40~(7) (2006) 808--811.
+\newblock \href {http://dx.doi.org/10.1134/S106378260607013X}
+  {\path{doi:10.1134/S106378260607013X}}.
 
 \bibitem{TAT:Gilmore}
 A.~S. Gilmore, J.~Bangs, A.~Gerrish, {I}--{V} modeling of current limiting
