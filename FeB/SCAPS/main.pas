@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, StdCtrls, FileCtrl, StrUtils,OlegFunction,OlegType,OlegShowTypes, 
-  IniFiles,OlegMaterialSamples,Math,SomeFunction;
+  IniFiles,OlegMaterialSamples,Math,SomeFunction, OlegVector;
 
 type
   TMainForm = class(TForm)
@@ -660,7 +660,7 @@ end;
 procedure TMainForm.BFeB_xClick(Sender: TObject);
  var //Direc:string;
      EB_File,FeGRDFile,FeBGRDFile:TStringList;
-     Vec:PVector;
+     Vec:TVector;
      Row:Int64;
      i:word;
      T:word;
@@ -677,7 +677,7 @@ begin
       FeGRDFile:=TStringList.Create;
       FeBGRDFile:=TStringList.Create;
       EB_File.LoadFromFile(OpenDialog1.FileName);
-      new(Vec);
+      Vec:=TVector.Create;
       Row:=0;
       T:=0;
       while (Row<EB_File.Count) do
@@ -699,11 +699,11 @@ begin
          Inc(ROW);
        end;
       for I := 0 to 5 do
-       Vec.Add(i*50,Vec^.Y[0]);
+       Vec.Add(i*50,Vec.Y[0]);
       Vec.Sorting();
-      Vec.Write_File('Ef_'+NBoronToString+'T'+IntTostr(T)+'.dat',10);
-      for I := 0 to Vec^.n - 1 do
-       Vec^.Y[i]:=Nfeb(Boron.Data,T,Vec^.Y[i]);
+      Vec.WriteToFile('Ef_'+NBoronToString+'T'+IntTostr(T)+'.dat',10);
+      for I := 0 to Vec.HighNumber do
+       Vec.Y[i]:=Nfeb(Boron.Data,T,Vec.Y[i]);
 
       if FeStepNumber.Data>1 then delFe:=(Log10(FeHi.Data)-Log10(FeLow.Data))/(FeStepNumber.Data-1)
                              else delFe:= Log10(FeHi.Data);
@@ -718,12 +718,12 @@ begin
         FeBGRDFile.Add('interpolation: linear');
         FeBGRDFile.Add('');
         FeBGRDFile.Add('x (micrometer)	Nt (1/m3)');
-        for I := 0 to Vec^.n - 1 do
+        for I := 0 to Vec.HighNumber do
          begin
-          FeBGRDFile.Add(FloatToStrF(Vec^.X[i],ffExponent,10,2)+'	'+
-                        FloatToStrF(Vec^.Y[i]*Power(10,Nfe)*1e6,ffExponent,8,2));
-          FeGRDFile.Add(FloatToStrF(Vec^.X[i],ffExponent,10,2)+'	'+
-                        FloatToStrF((1-Vec^.Y[i])*Power(10,Nfe)*1e6,ffExponent,8,2));
+          FeBGRDFile.Add(FloatToStrF(Vec.X[i],ffExponent,10,2)+'	'+
+                        FloatToStrF(Vec.Y[i]*Power(10,Nfe)*1e6,ffExponent,8,2));
+          FeGRDFile.Add(FloatToStrF(Vec.X[i],ffExponent,10,2)+'	'+
+                        FloatToStrF((1-Vec.Y[i])*Power(10,Nfe)*1e6,ffExponent,8,2));
          end;
         tempstr:= LowerCase(floattostrF(Power(10,Nfe),ffExponent,4,2));
         tempstr:=AnsiReplaceStr(tempstr,'.','p');
@@ -733,7 +733,7 @@ begin
         Nfe:=Nfe+delFe;
       until (Nfe>Log10(FeHi.Data*1.0001));
 
-      dispose(Vec);
+      Vec.Free;
       EB_File.Free;
       FeGRDFile.Free;
       FeBGRDFile.Free;
