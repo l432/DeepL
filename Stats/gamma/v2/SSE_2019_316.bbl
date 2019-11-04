@@ -345,10 +345,8 @@ R.~A.~B. Devine, The structure of {S}i{O}$_2$, its defects and radiation
 P.~M. Lenahan, J.~F. Conley, What can electron paramagnetic resonance tell us
   about the {S}i/{S}i{O}$_2$ system?, J. Vac. Sci. Technol. B 16~(4) (1998)
   2134--2153.
-\newblock \href
-  {http://arxiv.org/abs/https://avs.scitation.org/doi/pdf/10.1116/1.590301}
-  {\path{arXiv:https://avs.scitation.org/doi/pdf/10.1116/1.590301}}, \href
-  {http://dx.doi.org/10.1116/1.590301} {\path{doi:10.1116/1.590301}}.
+\newblock \href {http://dx.doi.org/10.1116/1.590301}
+  {\path{doi:10.1116/1.590301}}.
 
 \bibitem{SiO2:Mahapatra}
 S.~Mahapatra, D.~Saha, D.~Varghese, P.~B. Kumar, On the generation and recovery
