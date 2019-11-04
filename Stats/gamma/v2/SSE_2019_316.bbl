@@ -227,7 +227,7 @@ Y.~Larionova, V.~Mertens, N.-P. Harder, R.~Brendel, Surface passivation of
 
 \bibitem{angermann2016}
 H.~Angermann, P.~Balamou, W.~J. Lu, L.~Korte, C.~Leendertz, B.~Stegemann,
-  Oxidation of si surfaces: Effect of ambient air and water treatments on
+  Oxidation of {S}i surfaces: Effect of ambient air and water treatments on
   surface charge and interface state density, in: Ultra Clean Processing of
   Semiconductor Surfaces XIII, Vol. 255 of Solid State Phenomena, 2016, pp.
   331--337.
@@ -244,6 +244,10 @@ M.~Morita, T.~Ohmi, E.~Hasegawa, M.~Kawakami, M.~Ohwada, Growth of native oxide
   on a silicon surface, Journal of Applied Physics 68~(3) (1990) 1272--1281.
 \newblock \href {http://dx.doi.org/10.1063/1.347181}
   {\path{doi:10.1063/1.347181}}.
+
+\bibitem{Sze2012}
+S.~M. Sze, M.~Lee, Semiconductor Devices: Physics and Technology, 3rd Edition,
+  John Wiley \& Sons, Inc, New York, 2012.
 
 \bibitem{PersenkovBook}
 V.~Pershenkov, V.~Popov, A.~Shalʹnov, Poverkhnostnye radiatsiyni efekty v
@@ -324,6 +328,13 @@ M.~Kaya, H.~Çetin, B.~Boyarbay, A.~Gök, E.~Ayyildiz, Temperature dependence
 \newblock \href {http://dx.doi.org/10.1088/0953-8984/19/40/406205}
   {\path{doi:10.1088/0953-8984/19/40/406205}}.
 
+\bibitem{SiO2:Cantin}
+J.~L. Cantin, H.~J. von Bardeleben, J.~L. Autran, Irradiation effects in
+  ultrathin {S}i/{S}i{O}$_2$ structures, IEEE Trans. Nucl. Sci. 45~(3) (1998)
+  1407--1411.
+\newblock \href {http://dx.doi.org/10.1109/23.685215}
+  {\path{doi:10.1109/23.685215}}.
+
 \bibitem{SiO2:Devine}
 R.~A.~B. Devine, The structure of {S}i{O}$_2$, its defects and radiation
   hardness, IEEE Trans. Nucl. Sci. 41~(3) (1994) 452--459.
@@ -339,13 +350,6 @@ P.~M. Lenahan, J.~F. Conley, What can electron paramagnetic resonance tell us
   {\path{arXiv:https://avs.scitation.org/doi/pdf/10.1116/1.590301}}, \href
   {http://dx.doi.org/10.1116/1.590301} {\path{doi:10.1116/1.590301}}.
 
-\bibitem{SiO2:Cantin}
-J.~L. Cantin, H.~J. von Bardeleben, J.~L. Autran, Irradiation effects in
-  ultrathin {S}i/{S}i{O}$_2$ structures, IEEE Trans. Nucl. Sci. 45~(3) (1998)
-  1407--1411.
-\newblock \href {http://dx.doi.org/10.1109/23.685215}
-  {\path{doi:10.1109/23.685215}}.
-
 \bibitem{SiO2:Mahapatra}
 S.~Mahapatra, D.~Saha, D.~Varghese, P.~B. Kumar, On the generation and recovery
   of interface traps in {MOSFET}s subjected to {NBTI}, {FN}, and {HCI} stress,
@@ -359,6 +363,10 @@ D.~Esseni, J.~D. Bude, L.~Selmi, On interface and oxide degradation in {VLSI}
   Devices 49~(2) (2002) 247--253.
 \newblock \href {http://dx.doi.org/10.1109/16.981214}
   {\path{doi:10.1109/16.981214}}.
+
+\bibitem{Fleetwood}
+D.~M. Fleetwood, S.~T. Pantelides, R.~D. Schrimpf (Eds.), Defects in
+  Microelectronic Materials and Devices, CRC Press, London, New York, 2009.
 
 \bibitem{SiO2:Rev}
 D.~K. Schroder, J.~A. Babcock, Negative bias temperature instability: Road to
@@ -454,14 +462,14 @@ D.~J. DiMaria, E.~Cartier, Mechanism for stress--induced leakage currents in
   {http://dx.doi.org/10.1063/1.359905} {\path{doi:10.1063/1.359905}}.
 
 \bibitem{TAT:Gilmore}
-A.~S. Gilmore, J.~Bangs, A.~Gerrish, I--v modeling of current limiting
-  mechanisms in hgcdte fpa detectors, Proc.SPIE 5563 (2004) 46--54.
+A.~S. Gilmore, J.~Bangs, A.~Gerrish, {I}--{V} modeling of current limiting
+  mechanisms in {H}g{C}d{T}e {FPA} detectors, Proc.SPIE 5563 (2004) 46--54.
 \newblock \href {http://dx.doi.org/10.1117/12.562614}
   {\path{doi:10.1117/12.562614}}.
 
 \bibitem{TAT:GopalSST}
-V.~Gopal, S.~K. Singh, R.~M. Mehra, Excess dark currents in hgcdte p$^+$--n
-  junction diodes, Semicond. Sci. Technol. 16~(5) (2001) 372--376.
+V.~Gopal, S.~K. Singh, R.~M. Mehra, Excess dark currents in {H}g{C}d{T}e
+  p$^+$--n junction diodes, Semicond. Sci. Technol. 16~(5) (2001) 372--376.
 \newblock \href {http://dx.doi.org/10.1088/0268-1242/16/5/316}
   {\path{doi:10.1088/0268-1242/16/5/316}}.
 

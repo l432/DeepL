@@ -39,6 +39,31 @@ V.~Gopal, A new approach to investigate leakage current mechanisms in infrared
 \newblock \href {http://dx.doi.org/10.1063/1.4893899}
   {\path{doi:10.1063/1.4893899}}.
 
+\bibitem{SiO2:Devine}
+R.~A.~B. Devine, The structure of {S}i{O}$_2$, its defects and radiation
+  hardness, IEEE Trans. Nucl. Sci. 41~(3) (1994) 452--459.
+\newblock \href {http://dx.doi.org/10.1109/23.299784}
+  {\path{doi:10.1109/23.299784}}.
+
+\bibitem{SiO2:Lenahan}
+P.~M. Lenahan, J.~F. Conley, What can electron paramagnetic resonance tell us
+  about the {S}i/{S}i{O}$_2$ system?, J. Vac. Sci. Technol. B 16~(4) (1998)
+  2134--2153.
+\newblock \href {http://dx.doi.org/10.1116/1.590301}
+  {\path{doi:10.1116/1.590301}}.
+
+\bibitem{Tung:MSE}
+R.~T. Tung, Recent advances in {S}chottky barrier concept, Materials Science
+  and Engineering: R: Reports 35~(1--3) (2001) 1--138.
+\newblock \href {http://dx.doi.org/10.1016/S0927-796X(01)00037-7}
+  {\path{doi:10.1016/S0927-796X(01)00037-7}}.
+
+\bibitem{Tung:PhysRev}
+R.~T. Tung, Electron transport at metal-semiconductor interfaces: General
+  theory, Phys. Rev. B 45~(23) (1992) 13509--13523.
+\newblock \href {http://dx.doi.org/10.1103/PhysRevB.45.13509}
+  {\path{doi:10.1103/PhysRevB.45.13509}}.
+
 \bibitem{Fleetwood}
 D.~M. Fleetwood, S.~T. Pantelides, R.~D. Schrimpf (Eds.), Defects in
   Microelectronic Materials and Devices, CRC Press, London, New York, 2009.
@@ -46,12 +71,6 @@ D.~M. Fleetwood, S.~T. Pantelides, R.~D. Schrimpf (Eds.), Defects in
 \bibitem{PersenkovBook}
 V.~Pershenkov, V.~Popov, A.~Shalʹnov, Poverkhnostnye radiatsiyni efekty v
   elementakh intehralʹnykh mikroskhem, Enerhoatomyzdat, Moskow, 1988.
-
-\bibitem{SiO2:Devine}
-R.~A.~B. Devine, The structure of {S}i{O}$_2$, its defects and radiation
-  hardness, IEEE Trans. Nucl. Sci. 41~(3) (1994) 452--459.
-\newblock \href {http://dx.doi.org/10.1109/23.299784}
-  {\path{doi:10.1109/23.299784}}.
 
 \bibitem{SiO2:Mahapatra}
 S.~Mahapatra, D.~Saha, D.~Varghese, P.~B. Kumar, On the generation and recovery
