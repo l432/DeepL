@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, StdCtrls, FileCtrl, StrUtils,OlegFunction,OlegType,OlegShowTypes, 
-  IniFiles,OlegMaterialSamples,Math,SomeFunction, OlegVector;
+  IniFiles,OlegMaterialSamples,Math,SomeFunction, OlegVector, OlegDefectsSi;
 
 type
   TMainForm = class(TForm)
@@ -37,6 +37,19 @@ type
     BDatesDatCorrect: TButton;
     GBFinal: TGroupBox;
     BResult: TButton;
+    LBase_Conc: TLabel;
+    LBase_Thick: TLabel;
+    STBase_Thick: TStaticText;
+    GroupBox1: TGroupBox;
+    LSBF_Conc: TLabel;
+    LSBF_Thick: TLabel;
+    STSBF_Con: TStaticText;
+    STSBF_Thick: TStaticText;
+    GroupBox2: TGroupBox;
+    LEmiter_Conc: TLabel;
+    LEmiter_Thick: TLabel;
+    STEmiter_Con: TStaticText;
+    STEmiter_Thick: TStaticText;
     procedure BtFileSelectClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
@@ -52,22 +65,22 @@ type
     TempStart,TempFinish,TempStep: TIntegerParameterShow;
     FeLow,FeHi:TDoubleParameterShow;
     FeStepNumber: TIntegerParameterShow;
-    Boron:TDoubleParameterShow;
+    Boron,EmiterCon,BSFCon:TDoubleParameterShow;
+    BaseThick:TIntegerParameterShow;
+    EmiterThick,BSFThick:TDoubleParameterShow;
+
     ConfigFile:TIniFile;
 //    Direc:string;
     function NBoronToString():string;
 //    function NumberToString(Number:double;DigitNumber:word=4):string;
 //    function EditString(str:string):string;
+    function BaseThickToString():string;
     function Nfeb(Nb,T,Ef:double):double;
     {рівноважна частка пар FeB по відношенню до загальної
     кількості Fe,
     Nb - концентрація бору, []=см-3
     Т - температура
     Ef - положення рівня Фермі відносно валентної зони}
-    function BandGapNarrowing(Nd:double):double;
-    {звуження ширини забороненої зони внаслідок легування,
-    Nd - концентрація легантів []=см^-3,
-    результат в еВ  }
   public
     { Public declarations }
   end;
@@ -373,9 +386,10 @@ begin
        end;
 end;
 
-function TMainForm.BandGapNarrowing(Nd: double): double;
+
+function TMainForm.BaseThickToString: string;
 begin
-  Result:=6.92e-3*(Ln(Nd/1.3e17)+sqrt(0.5+sqr(Ln(Nd/1.3e17))));
+   Result:='D'+IntToStr(round(BaseThick.Data/10));
 end;
 
 procedure TMainForm.BDatesDatClick(Sender: TObject);
@@ -741,191 +755,253 @@ begin
 end;
 
 procedure TMainForm.BMaterialFileCreateClick(Sender: TObject);
- var nSiLayer,pSiLayer,Sigma_P,Sigma_N,
-     TempMybdf,{pSi_matbdf,nSi_matbdf,}
-     Egbdf,mu_nbdf,mu_pbdf:TStringList;
-    T:integer;
-    tempstr:string;
+ var nSiLayer,pSiLayer,Defect,SBFLayer:TStringList;
+     T:integer;
+     tempstr,tempBody,tempFooter:string;
+     dFei,dFeBd,dFeBa:TDefect;
 begin
 // showmessage(floattostr(Boron.Data));
 
- Sigma_N:=TStringList.Create;
- Sigma_P:=TStringList.Create;
+
+ Defect:=TStringList.Create;
+ Defect.Clear;
+ T:=TempStart.Data;
+
+ dFei:=TDefect.Create(Fei);
+ dFeBd:=TDefect.Create(FeB_don);
+ dFeBa:=TDefect.Create(FeB_ac);
+ tempstr:='                   '+dFei.Name;
+ tempstr:=tempstr+'                       '+'FeB '+dFeBa.DefectType;
+ tempstr:=tempstr+'                          '+'FeB '+dFeBd.DefectType;
+ Defect.Add(tempstr);
+ tempstr:='T        sig_n       sig_p';
+ tempstr:=tempstr+'        sig_n       sig_p';
+ tempstr:=tempstr+'             sig_n       sig_p';
+ Defect.Add(tempstr);
+ repeat
+  tempstr:=inttostr(T)+'  ';
+  tempstr:=tempstr+LowerCase(floattostrf(dFei.Sn(T)*1e4,ffExponent,4,2))+' ';
+  tempstr:=tempstr+LowerCase(floattostrf(dFei.Sp(T)*1e4,ffExponent,4,2))+'   ';
+  tempstr:=tempstr+LowerCase(floattostrf(dFeBa.Sn(T)*1e4,ffExponent,4,2))+' ';
+  tempstr:=tempstr+LowerCase(floattostrf(dFeBa.Sp(T)*1e4,ffExponent,4,2))+'   ';
+  tempstr:=tempstr+LowerCase(floattostrf(dFeBd.Sn(T)*1e4,ffExponent,4,2))+' ';
+  tempstr:=tempstr+LowerCase(floattostrf(dFeBd.Sp(T)*1e4,ffExponent,4,2));
+  Defect.Add(tempstr);
+
+  T:=T+TempStep.Data;
+ until (T>TempFinish.Data);
+ dFei.Free;
+ dFeBd.Free;
+ dFeBa.Free;
+ Defect.SaveToFile('defect.bdf');
+ Defect.Free;
+
+
  nSiLayer:=TStringList.Create;
  pSiLayer:=TStringList.Create;
- TempMybdf:=TStringList.Create;
-// pSi_matbdf:=TStringList.Create;
-// nSi_matbdf:=TStringList.Create;
- Egbdf:=TStringList.Create;
- mu_nbdf:=TStringList.Create;
- mu_pbdf:=TStringList.Create;
+ SBFLayer:=TStringList.Create;
+ T:=TempStart.Data;
 
- Sigma_N.Clear;
- Sigma_P.Clear;
- TempMybdf.Clear;
-// pSi_matbdf.Clear;
-// nSi_matbdf.Clear;
- Egbdf.Clear;
- mu_nbdf.Clear;
- mu_pbdf.Clear;
-
-  T:=TempStart.Data;
-
-// showmessage(floattostr( Diod.Semiconductor.Material.Nc(300)));
-//  showmessage(LowerCase(floattostrF( Diod.Semiconductor.Material.Nc(T)/1e6,ffExponent,7,2)));
-//  showmessage(LowerCase(floattostrF( Silicon.mu_n(T,0)*1e4,ffExponent,7,2))+'  '+floattostr(Silicon.mu_n(T,1e25)));
-//  showmessage(LowerCase(floattostrF( T,ffExponent,9,2)));
-//   showmessage(floattostr(3e-4/Silicon.mu_p(T,Boron.Data*1e7)/Boron.Data/1e7/Qelem));
-  Sigma_P.Add('T sig_n sig_p');
  repeat
-  Sigma_N.Add(LowerCase(floattostrf(9.1e-15*exp(-0.024/Kb/T),ffExponent,4,2)));
-//  Sigma_P.Add(LowerCase(floattostrf(3.985e-16*exp(-0.045/Kb/T),ffExponent,4,2)));
-  Sigma_P.Add(Inttostr(T)+' '+LowerCase(floattostrf(9.1e-15*exp(-0.024/Kb/T),ffExponent,4,2))+' '+
-              LowerCase(floattostrf(3.985e-16*exp(-0.045/Kb/T),ffExponent,4,2)));
-  TempMybdf.Add(LowerCase('  '+floattostrF( T,ffExponent,9,2)));
-  Egbdf.Add(LowerCase(floattostrF( Silicon.Eg(T),ffFixed,7,6)));
-  mu_nbdf.Add(LowerCase(floattostrF( Silicon.mu_n(T,0)*1e4,ffExponent,7,2)));
-  mu_pbdf.Add(LowerCase(floattostrF( Silicon.mu_p(T,Boron.Data*1e6)*1e4,ffExponent,7,2)));
-
   nSiLayer.Clear;
   pSiLayer.Clear;
+  SBFLayer.Clear;
   nSiLayer.Add('material name : n_Si');
   pSiLayer.Add('material name : p_Si');
+  SBFLayer.Add('material name : p+_Si');
 
-//  tempstr:=LowerCase(floattostrF( Diod.Semiconductor.Material.Vth_n(T)*100,ffExponent,4,2));
-{в SCAPS теплові швидкості, а також густини станів у зонах, вважаються
-залежними від температури і потрібно задавати їх значення при 300 К }
+  {в SCAPS теплові швидкості, а також густини станів у зонах, вважаються
+  залежними від температури і потрібно задавати їх значення при 300 К }
+  tempBody:='	 1.000e+01	 1.000e+01	 1.000e+01	 ';
+  tempFooter:='	 0	 0	[cm/s]';
   tempstr:=LowerCase(floattostrF( Diod.Semiconductor.Material.Vth_n(300)*100,ffExponent,4,2));
-  nSiLayer.Add('v_th_n :	 '+tempstr+'	 '+tempstr+'	 1.000e+01	 1.000e+01	 1.000e+01	 '+
-    tempstr+'	 '+tempstr+'	 0	 0	[cm/s]');
-  pSiLayer.Add('v_th_n :	 '+tempstr+'	 '+tempstr+'	 1.000e+01	 1.000e+01	 1.000e+01	 '+
-    tempstr+'	 '+tempstr+'	 0	 0	[cm/s]');
+  tempstr:=tempstr+'	 '+tempstr+tempBody+
+    tempstr+'	 '+tempstr+tempFooter;
+  nSiLayer.Add('v_th_n :	 '+tempstr);
+  pSiLayer.Add('v_th_n :	 '+tempstr);
+  SBFLayer.Add('v_th_n :	 '+tempstr);
 
-//  tempstr:=LowerCase(floattostrF( Diod.Semiconductor.Material.Vth_p(T)*100,ffExponent,4,2));
   tempstr:=LowerCase(floattostrF( Diod.Semiconductor.Material.Vth_p(300)*100,ffExponent,4,2));
-  nSiLayer.Add('v_th_p :	 '+tempstr+'	 '+tempstr+'	 1.000e+01	 1.000e+01	 1.000e+01	 '+
-    tempstr+'	 '+tempstr+'	 0	 0	[cm/s]');
-  pSiLayer.Add('v_th_p :	 '+tempstr+'	 '+tempstr+'	 1.000e+01	 1.000e+01	 1.000e+01	 '+
-    tempstr+'	 '+tempstr+'	 0	 0	[cm/s]');
+  tempstr:=tempstr+'	 '+tempstr+tempBody+tempstr+'	 '+tempstr+tempFooter;
+  nSiLayer.Add('v_th_p :	 '+tempstr);
+  pSiLayer.Add('v_th_p :	 '+tempstr);
+  SBFLayer.Add('v_th_p :	 '+tempstr);
 
-  nSiLayer.Add('eps :	    11.900000	    11.900000	    1.000000	    10.000000	    10.000000	    11.900000	    11.900000	 0	 0	[-]');
-  pSiLayer.Add('eps :	    11.900000	    11.900000	    1.000000	    10.000000	    10.000000	    11.900000	    11.900000	 0	 0	[-]');
+  tempstr:='eps :	    11.900000	    11.900000	    1.000000	    10.000000	    10.000000	    11.900000	    11.900000	 0	 0	[-]';
+  nSiLayer.Add(tempstr);
+  pSiLayer.Add(tempstr);
+  SBFLayer.Add(tempstr);
 
-  nSiLayer.Add('chi :	  4.050000	  4.050000	  0.100000	  1.000000	  1.000000	  4.050000	  4.050000	 0	 0	[eV]');
-  pSiLayer.Add('chi :	  4.050000	  4.050000	  0.100000	  1.000000	  1.000000	  4.050000	  4.050000	 0	 0	[eV]');
+  tempstr:='chi :	  4.050000	  4.050000	  0.100000	  1.000000	  1.000000	  4.050000	  4.050000	 0	 0	[eV]';
+  nSiLayer.Add(tempstr);
+  pSiLayer.Add(tempstr);
+  SBFLayer.Add(tempstr);
 
-  tempstr:=LowerCase(floattostrF( Silicon.Eg(T)-BandGapNarrowing(1e19),ffFixed,7,6));
-  nSiLayer.Add('Eg :	  '+tempstr+'	  '+tempstr+'	  0.100000	  1.000000	  1.000000	  '+
-      tempstr+'	  '+tempstr+'	 0	 0	[eV]');
-  tempstr:=LowerCase(floattostrF( Silicon.Eg(T)-BandGapNarrowing(Boron.Data),ffFixed,7,6));
-  pSiLayer.Add('Eg :	  '+tempstr+'	  '+tempstr+'	  0.100000	  1.000000	  1.000000	  '+
-      tempstr+'	  '+tempstr+'	 0	 0	[eV]');
+  tempBody:='	  0.100000	  1.000000	  1.000000	  ';
+  tempFooter:='	 0	 0	[eV]';
+  tempstr:=LowerCase(floattostrF( Silicon.Eg(T)-Silicon.BGN(EmiterCon.Data*1e6,True),ffFixed,7,6));
+  nSiLayer.Add('Eg :	  '+tempstr+'	  '+tempstr+tempBody+
+      tempstr+'	  '+tempstr+tempFooter);
+  tempstr:=LowerCase(floattostrF( Silicon.Eg(T)-Silicon.BGN(Boron.Data*1e6,False),ffFixed,7,6));
+  pSiLayer.Add('Eg :	  '+tempstr+'	  '+tempstr+tempBody+
+      tempstr+'	  '+tempstr+tempFooter);
+  tempstr:=LowerCase(floattostrF( Silicon.Eg(T)-Silicon.BGN(BSFCon.Data*1e6,False),ffFixed,7,6));
+  SBFLayer.Add('Eg :	  '+tempstr+'	  '+tempstr+tempBody+
+      tempstr+'	  '+tempstr+tempFooter);
 
-//  tempstr:=LowerCase(floattostrF( Diod.Semiconductor.Material.Nc(T)/1e6,ffExponent,7,2));
-  tempstr:=LowerCase(floattostrF( Diod.Semiconductor.Material.Nc(T)*Power((300/T),1.5)/1e6,ffExponent,7,2));
+  tempBody:='	 1.000000e+01	 1.000000e+01	 1.000000e+01	 ';
+  tempFooter:='	 0	 0	[/cm^3]';
+  tempstr:=LowerCase(floattostrF( Silicon.Nc(T)*Power((300/T),1.5)/1e6,ffExponent,7,2));
 {в літературі для температурної залежності густин станів передбачаються інші ступені, ніж
 1,5, яку використовує SCAPS. Тому для того, щоб програма використовувала правильні
 значення, задаємо її значення при 300 К таке, щоб для класичної залежності (T/300)^1.5
 виходили значення, яке потрібно}
-  nSiLayer.Add('Nc :	 '+tempstr+'	 '+tempstr+'	 1.000000e+01	 1.000000e+01	 1.000000e+01	 '+
-      tempstr+'	 '+tempstr+'	 0	 0	[/cm^3]');
-  pSiLayer.Add('Nc :	 '+tempstr+'	 '+tempstr+'	 1.000000e+01	 1.000000e+01	 1.000000e+01	 '+
-      tempstr+'	 '+tempstr+'	 0	 0	[/cm^3]');
+  tempstr:='Nc :	 '+tempstr+'	 '+tempstr+tempBody+
+      tempstr+'	 '+tempstr+tempFooter;
+  nSiLayer.Add(tempstr);
+  pSiLayer.Add(tempstr);
+  SBFLayer.Add(tempstr);
 
-//  tempstr:=LowerCase(floattostrF( Diod.Semiconductor.Material.Nv(T)/1e6,ffExponent,7,2));
-  tempstr:=LowerCase(floattostrF( Diod.Semiconductor.Material.Nv(T)*Power((300/T),1.5)/1e6,ffExponent,7,2));
-  nSiLayer.Add('Nv :	 '+tempstr+'	 '+tempstr+'	 1.000000e+01	 1.000000e+01	 1.000000e+01	 '+
-      tempstr+'	 '+tempstr+'	 0	 0	[/cm^3]');
-  pSiLayer.Add('Nv :	 '+tempstr+'	 '+tempstr+'	 1.000000e+01	 1.000000e+01	 1.000000e+01	 '+
-      tempstr+'	 '+tempstr+'	 0	 0	[/cm^3]');
+  tempstr:=LowerCase(floattostrF( Silicon.Nv(T)*Power((300/T),1.5)/1e6,ffExponent,7,2));
+  tempstr:='Nv :	 '+tempstr+'	 '+tempstr+tempBody+
+      tempstr+'	 '+tempstr+tempFooter;
+  nSiLayer.Add(tempstr);
+  pSiLayer.Add(tempstr);
+  SBFLayer.Add(tempstr);
 
-  tempstr:=LowerCase(floattostrF( Silicon.mu_n(T,1e25)*1e4,ffExponent,7,2));
-  nSiLayer.Add('mu_n :	 '+tempstr+'	 '+tempstr+'	 1.000000e-03	 1.000000e+00	 1.000000e+00	 '+
-      tempstr+'	 '+tempstr+'	 0	 0	[cm^2/Vs]');
-  tempstr:=LowerCase(floattostrF( Silicon.mu_n(T,0)*1e4,ffExponent,7,2));
-  pSiLayer.Add('mu_n :	 '+tempstr+'	 '+tempstr+'	 1.000000e-03	 1.000000e+00	 1.000000e+00	 '+
-      tempstr+'	 '+tempstr+'	 0	 0	[cm^2/Vs]');
+  tempBody:='	 1.000000e-03	 1.000000e+00	 1.000000e+00	 ';
+  tempFooter:='	 0	 0	[cm^2/Vs]';
+  tempstr:=LowerCase(floattostrF( Silicon.mu_n(T,EmiterCon.Data*1e6,True)*1e4,ffExponent,7,2));
+  nSiLayer.Add('mu_n :	 '+tempstr+'	 '+tempstr+tempBody+
+      tempstr+'	 '+tempstr+tempFooter);
+  tempstr:=LowerCase(floattostrF(Silicon.mu_p(T,EmiterCon.Data*1e6,False)*1e4,ffExponent,7,2));
+  nSiLayer.Add('mu_p :	 '+tempstr+'	 '+tempstr+tempBody+
+      tempstr+'	 '+tempstr+tempFooter);
 
-  tempstr:=LowerCase(floattostrF( Silicon.mu_p(T,0)*1e4,ffExponent,7,2));
-  nSiLayer.Add('mu_p :	 '+tempstr+'	 '+tempstr+'	 1.000000e-03	 1.000000e+00	 1.000000e+00	 '+
-      tempstr+'	 '+tempstr+'	 0	 0	[cm^2/Vs]');
-  tempstr:=LowerCase(floattostrF( Silicon.mu_p(T,Boron.Data*1e6)*1e4,ffExponent,7,2));
-  pSiLayer.Add('mu_p :	 '+tempstr+'	 '+tempstr+'	 1.000000e-03	 1.000000e+00	 1.000000e+00	 '+
-      tempstr+'	 '+tempstr+'	 0	 0	[cm^2/Vs]');
 
-  nSiLayer.Add('Nd(uniform) :	 1.000000e+19	 1.000000e+19	 1.000000e+01	 1.000000e+01	 1.000000e+01	 '+
-      '1.000000e+19	 1.000000e+19	 0	 2	[/cm^3]');
-  pSiLayer.Add('Nd(uniform) :	 0.000000e+00	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 '+
-      '0.000000e+00	 0.000000e+00	 0	 2	[/cm^3]');
+  tempstr:=LowerCase(floattostrF( Silicon.mu_n(T,Boron.Data*1e6,False)*1e4,ffExponent,7,2));
+  pSiLayer.Add('mu_n :	 '+tempstr+'	 '+tempstr+tempBody+
+      tempstr+'	 '+tempstr+tempFooter);
+  tempstr:=LowerCase(floattostrF( Silicon.mu_p(T,Boron.Data*1e6,True)*1e4,ffExponent,7,2));
+  pSiLayer.Add('mu_p :	 '+tempstr+'	 '+tempstr+tempBody+
+      tempstr+'	 '+tempstr+tempFooter);
 
-  nSiLayer.Add('Na(uniform) :	 0.000000e+00	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 '+
-      '0.000000e+00	 0.000000e+00	 0	 2	[/cm^3]');
-   tempstr:=LowerCase(floattostrF( Boron.Data,ffExponent,7,2));
-  pSiLayer.Add('Na(uniform) :	 '+tempstr+'	 '+tempstr+'	 1.000000e+01	 1.000000e+01	 1.000000e+01	 '+
-      tempstr+'	 '+tempstr+'	 0	 2	[/cm^3]');
 
-  nSiLayer.Add('Tunneling in layer: 1 (0: no tunneling, 1: with tunneling)');
-  nSiLayer.Add('Relative electron mass :	 3.400000e-01	 3.400000e-01	 1.000000e+00	 1.000000e+00	 1.000000e+00	 3.400000e-01	 3.400000e-01	 0	 0	[-]');
-  nSiLayer.Add('Relative hole mass :	 6.000000e-01	 6.000000e-01	 1.000000e+00	 1.000000e+00	 1.000000e+00	 6.000000e-01	 6.000000e-01	 0	 0	[-]');
-  nSiLayer.Add('K_rad :	 1.800000e-15	 1.800000e-15	 1.000000e+01	 1.000000e+01	 1.000000e+01	 1.800000e-15	 1.800000e-15	 0	 0	[cm^3/s]');
-//  nSiLayer.Add('c_n_auger :	 3.000000e-31	 3.000000e-31	 1.000000e+01	 1.000000e+01	 1.000000e+01	 3.000000e-31	 3.000000e-31	 0	 0	[cm^6/s]');
-//  nSiLayer.Add('c_p_auger :	 3.000000e-31	 3.000000e-31	 1.000000e+01	 1.000000e+01	 1.000000e+01	 3.000000e-31	 3.000000e-31	 0	 0	[m^6/s]');
-  nSiLayer.Add('c_n_auger :	 2.800000e-31	 2.800000e-31	 1.000000e+01	 1.000000e+01	 1.000000e+01	 2.800000e-31	 2.800000e-31	 0	 0	[cm^6/s]');
-  nSiLayer.Add('c_p_auger :	 0.990000e-31	 0.990000e-31	 1.000000e+01	 1.000000e+01	 1.000000e+01	 0.990000e-31	 0.990000e-31	 0	 0	[cm^6/s]');
+  tempstr:=LowerCase(floattostrF( Silicon.mu_n(T,BSFCon.Data*1e6,False)*1e4,ffExponent,7,2));
+  SBFLayer.Add('mu_n :	 '+tempstr+'	 '+tempstr+tempBody+
+      tempstr+'	 '+tempstr+tempFooter);
+  tempstr:=LowerCase(floattostrF( Silicon.mu_p(T,BSFCon.Data*1e6,True)*1e4,ffExponent,7,2));
+  SBFLayer.Add('mu_p :	 '+tempstr+'	 '+tempstr+tempBody+
+      tempstr+'	 '+tempstr+tempFooter);
+
+
+  tempBody:='	 1.000000e+01	 1.000000e+01	 1.000000e+01	 ';
+  tempFooter:='	 0	 2	[/cm^3]';
+
+  tempstr:=LowerCase(floattostrF(EmiterCon.Data,ffExponent,7,2));
+  nSiLayer.Add('Nd(uniform) :	 '+tempstr+'	 '+tempstr+tempBody+
+      tempstr+'	 '+tempstr+tempFooter);
+
+
+  tempstr:='0.000000e+00';
+  pSiLayer.Add('Nd(uniform) :	 '+tempstr+'	 '+tempstr+tempBody+
+      tempstr+'	 '+tempstr+tempFooter);
+  SBFLayer.Add('Nd(uniform) :	 '+tempstr+'	 '+tempstr+tempBody+
+      tempstr+'	 '+tempstr+tempFooter);
+
+  nSiLayer.Add('Na(uniform) :	 '+tempstr+'	 '+tempstr+tempBody+
+      tempstr+'	 '+tempstr+tempFooter);
+  tempstr:=LowerCase(floattostrF(Boron.Data,ffExponent,7,2));
+  pSiLayer.Add('Na(uniform) :	 '+tempstr+'	 '+tempstr+tempBody+
+      tempstr+'	 '+tempstr+tempFooter);
+  tempstr:=LowerCase(floattostrF(BSFCon.Data,ffExponent,7,2));
+  SBFLayer.Add('Na(uniform) :	 '+tempstr+'	 '+tempstr+tempBody+
+      tempstr+'	 '+tempstr+tempFooter);
+
+  tempstr:='Tunneling in layer: 1 (0: no tunneling, 1: with tunneling)';
+  nSiLayer.Add(tempstr);
+  pSiLayer.Add(tempstr);
+  SBFLayer.Add(tempstr);
+
+  tempstr:=LowerCase(floattostrF( Silicon.Meff_e(T),ffExponent,7,2));
+  tempBody:='	 1.000000e+00	 1.000000e+00	 1.000000e+00	 ';
+  tempFooter:='	 0	 0	[-]';
+  tempstr:='Relative electron mass :	 '+tempstr+'	 '+tempstr+tempBody+
+      tempstr+'	 '+tempstr+tempFooter;
+  nSiLayer.Add(tempstr);
+  pSiLayer.Add(tempstr);
+  SBFLayer.Add(tempstr);
+
+  tempstr:=LowerCase(floattostrF( Silicon.Meff_h(T),ffExponent,7,2));
+  tempstr:='Relative hole mass :	 '+tempstr+'	 '+tempstr+tempBody+
+      tempstr+'	 '+tempstr+tempFooter;
+  nSiLayer.Add(tempstr);
+  pSiLayer.Add(tempstr);
+  SBFLayer.Add(tempstr);
+
+  tempstr:=LowerCase(floattostrF( Silicon.Brad(T)*1e6,ffExponent,7,2));
+  tempBody:='	 1.000000e+01	 1.000000e+01	 1.000000e+01	 ';
+  tempFooter:='	 0	 0	[cm^3/s]';
+  tempstr:='K_rad :	 '+tempstr+'	 '+tempstr+tempBody+
+      tempstr+'	 '+tempstr+tempFooter;
+  nSiLayer.Add(tempstr);
+  pSiLayer.Add(tempstr);
+  SBFLayer.Add(tempstr);
+
+
+  tempBody:='	 1.000000e+01	 1.000000e+01	 1.000000e+01	 ';
+  tempFooter:='	 0	 0	[cm^6/s]';
+  tempstr:=LowerCase(floattostrF( Silicon.Cn_Auger(EmiterCon.Data*1e6,T)*1e12,ffExponent,7,2));
+  nSiLayer.Add('c_n_auger :	 '+tempstr+'	 '+tempstr+tempBody+
+      tempstr+'	 '+tempstr+tempFooter);
+  tempstr:=LowerCase(floattostrF( Silicon.Cn_Auger(Silicon.MinorityN(Boron.Data*1e6),T)*1e12,ffExponent,7,2));
+  pSiLayer.Add('c_n_auger :	 '+tempstr+'	 '+tempstr+tempBody+
+      tempstr+'	 '+tempstr+tempFooter);
+  tempstr:=LowerCase(floattostrF( Silicon.Cn_Auger(Silicon.MinorityN(BSFCon.Data*1e6),T)*1e12,ffExponent,7,2));
+  SBFLayer.Add('c_n_auger :	 '+tempstr+'	 '+tempstr+tempBody+
+      tempstr+'	 '+tempstr+tempFooter);
+
+
+  tempstr:=LowerCase(floattostrF( Silicon.Cn_Auger(Silicon.MinorityN(EmiterCon.Data*1e6),T)*1e12,ffExponent,7,2));
+  nSiLayer.Add('c_p_auger :	 '+tempstr+'	 '+tempstr+tempBody+
+      tempstr+'	 '+tempstr+tempFooter);
+  tempstr:=LowerCase(floattostrF( Silicon.Cn_Auger(Boron.Data*1e6,T)*1e12,ffExponent,7,2));
+  pSiLayer.Add('c_p_auger :	 '+tempstr+'	 '+tempstr+tempBody+
+      tempstr+'	 '+tempstr+tempFooter);
+  tempstr:=LowerCase(floattostrF( Silicon.Cn_Auger(BSFCon.Data*1e6,T)*1e12,ffExponent,7,2));
+  SBFLayer.Add('c_p_auger :	 '+tempstr+'	 '+tempstr+tempBody+
+      tempstr+'	 '+tempstr+tempFooter);
+
+
   nSiLayer.Add('absorption grading :	 1107.12	 1107.12	  250.00	  250.00	    0.00	 1107.12	 1107.12	 0	 0	[nm]');
   nSiLayer.Add('absorptionmodel pure A material (y=0) : from file');
   nSiLayer.Add('absorptionfile pure A material (y=0) : Si.abs');
   nSiLayer.Add('absorption pure B material (y=1), model : from file');
   nSiLayer.Add('absorption pure B material (y=1), file : Si.abs');
 
-  pSiLayer.Add('Tunneling in layer: 1 (0: no tunneling, 1: with tunneling)');
-  pSiLayer.Add('Relative electron mass :	 3.400000e-01	 3.400000e-01	 1.000000e+00	 1.000000e+00	 1.000000e+00	 3.400000e-01	 3.400000e-01	 0	 0	[-]');
-  pSiLayer.Add('Relative hole mass :	 6.000000e-01	 6.000000e-01	 1.000000e+00	 1.000000e+00	 1.000000e+00	 6.000000e-01	 6.000000e-01	 0	 0	[-]');
-  pSiLayer.Add('K_rad :	 1.800000e-15	 1.800000e-15	 1.000000e+01	 1.000000e+01	 1.000000e+01	 1.800000e-15	 1.800000e-15	 0	 0	[cm^3/s]');
-  pSiLayer.Add('c_n_auger :	 2.800000e-31	 2.800000e-31	 1.000000e+01	 1.000000e+01	 1.000000e+01	 2.800000e-31	 2.800000e-31	 0	 0	[cm^6/s]');
-  pSiLayer.Add('c_p_auger :	 0.990000e-31	 0.990000e-31	 1.000000e+01	 1.000000e+01	 1.000000e+01	 0.990000e-31	 0.990000e-31	 0	 0	[cm^6/s]');
   pSiLayer.Add('absorption grading :	 1107.12	 1107.12	  250.00	  250.00	    0.00	 1107.12	 1107.12	 0	 0	[nm]');
   pSiLayer.Add('absorptionmodel pure A material (y=0) : from file');
   pSiLayer.Add('absorptionfile pure A material (y=0) : Si.abs');
   pSiLayer.Add('absorption pure B material (y=1), model : from file');
   pSiLayer.Add('absorption pure B material (y=1), file : Si.abs');
 
-//  tempstr:=LowerCase(floattostrF( Boron.Data,ffExponent,4,2));
-//  tempstr:=AnsiReplaceStr(tempstr,'.','p');
-//  tempstr:=AnsiReplaceStr(tempstr,'+','');
-//  nSiLayer.SaveToFile('nSi_T'+inttostr(T)+'NB'+tempstr+'.material');
-//  nSi_matbdf.Add('file: '+'nSi_T'+inttostr(T)+'NB'+tempstr+'.material');
-//  pSiLayer.SaveToFile('pSi_T'+inttostr(T)+'NB'+tempstr+'.material');
-//  pSi_matbdf.Add('file: '+'pSi_T'+inttostr(T)+'NB'+tempstr+'.material');
+  SBFLayer.Add('absorption grading :	 1107.12	 1107.12	  250.00	  250.00	    0.00	 1107.12	 1107.12	 0	 0	[nm]');
+  SBFLayer.Add('absorptionmodel pure A material (y=0) : from file');
+  SBFLayer.Add('absorptionfile pure A material (y=0) : Si.abs');
+  SBFLayer.Add('absorption pure B material (y=1), model : from file');
+  SBFLayer.Add('absorption pure B material (y=1), file : Si.abs');
 
-  nSiLayer.SaveToFile('nSi_T'+inttostr(T)+NBoronToString+'.material');
-  pSiLayer.SaveToFile('pSi_T'+inttostr(T)+NBoronToString+'.material');
+
+  nSiLayer.SaveToFile('nSi_'+BaseThickToString+'T'+inttostr(T)+NBoronToString+'.material');
+  pSiLayer.SaveToFile('pSi_'+BaseThickToString+'T'+inttostr(T)+NBoronToString+'.material');
+  SBFLayer.SaveToFile('ppSi_'+BaseThickToString+'T'+inttostr(T)+NBoronToString+'.material');
 
   T:=T+TempStep.Data;
  until (T>TempFinish.Data);
 
-// Sigma_N.SaveToFile('Sigma_n.bdf');
-// Sigma_P.SaveToFile('Sigma_p.bdf');
- Sigma_P.SaveToFile('Sigma.bdf');
-// TempMybdf.SaveToFile('TempMy.bdf');
-// pSi_matbdf.SaveToFile('pSi_mat.bdf');
-// nSi_matbdf.SaveToFile('nSi_mat.bdf');
-// Egbdf.SaveToFile('Eg.bdf');
-// mu_nbdf.SaveToFile('mu_n.bdf');
-// mu_pbdf.SaveToFile('mu_p.bdf');
 
-
- Sigma_N.Free;
- Sigma_P.Free;
  nSiLayer.Free;
  pSiLayer.Free;
- TempMybdf.Free;
-// pSi_matbdf.Free;
-// nSi_matbdf.Free;
- Egbdf.Free;
- mu_nbdf.Free;
- mu_pbdf.Free;
-
 end;
 
 procedure TMainForm.FormCreate(Sender: TObject);
@@ -943,9 +1019,26 @@ begin
   TempStep:=TIntegerParameterShow. Create(STTemp_Step,LTemp_Step,'Step:',10);
   TempStep.SetName('Temperature');
   TempStep.ReadFromIniFile(ConfigFile);
-  Boron:=TDoubleParameterShow. Create(STBoron,'Concentration',1e10,5);
-  Boron.SetName('Boron');
+  Boron:=TDoubleParameterShow. Create(STBoron,'Boron',1e10,5);
+  Boron.SetName('SC');
   Boron.ReadFromIniFile(ConfigFile);
+  EmiterCon:=TDoubleParameterShow. Create(STEmiter_Con,'Phosphorus',1e19,3);
+  EmiterCon.SetName('SC');
+  EmiterCon.ReadFromIniFile(ConfigFile);
+  BSFCon:=TDoubleParameterShow. Create(STSBF_Con,'BSFBoron',5e18,3);
+  BSFCon.SetName('SC');
+  BSFCon.ReadFromIniFile(ConfigFile);
+  EmiterThick:=TDoubleParameterShow. Create(STEmiter_Thick,'EmiterThick',0.5,3);
+  EmiterThick.SetName('SC');
+  EmiterThick.ReadFromIniFile(ConfigFile);
+  BSFThick:=TDoubleParameterShow. Create(STSBF_Thick,'SBFThick',0.5,3);
+  BSFThick.SetName('SC');
+  BSFThick.ReadFromIniFile(ConfigFile);
+  BaseThick:=TIntegerParameterShow. Create(STBase_Thick,LSBF_Thick, 'Thickness (mkm)',180);
+  BaseThick.SetName('SC');
+  BaseThick.ReadFromIniFile(ConfigFile);
+
+
 
   FeLow:=TDoubleParameterShow. Create(STFe_Lo,LFe_Lo,'Low limit:',1e9,5);
   FeLow.SetName('Iron');
@@ -971,11 +1064,22 @@ procedure TMainForm.FormDestroy(Sender: TObject);
 begin
 
  ConfigFile.EraseSection('Temperature');
- ConfigFile.EraseSection('Boron');
+ ConfigFile.EraseSection('SC');
  ConfigFile.EraseSection('Iron');
 
   Boron.WriteToIniFile(ConfigFile);
   Boron.Free;
+  EmiterCon.WriteToIniFile(ConfigFile);
+  EmiterCon.Free;
+  BSFCon.WriteToIniFile(ConfigFile);
+  BSFCon.Free;
+  EmiterThick.WriteToIniFile(ConfigFile);
+  EmiterThick.Free;
+  BSFThick.WriteToIniFile(ConfigFile);;
+  BSFThick.Free;
+  BaseThick.WriteToIniFile(ConfigFile);;
+  BaseThick.Free;
+
   TempFinish.WriteToIniFile(ConfigFile);
   TempFinish.Free;
   TempStep.WriteToIniFile(ConfigFile);
@@ -998,10 +1102,6 @@ end;
 function TMainForm.NBoronToString: string;
 begin
   Result:='B'+NumberToString(Boron.Data);
-//  Result:=LowerCase(floattostrF(Boron.Data,ffExponent,4,2));
-//  Result:=AnsiReplaceStr(Result,'.','p');
-//  Result:=AnsiReplaceStr(Result,'+','');
-//  Result:='B'+Result;
 end;
 
 function TMainForm.Nfeb(Nb, T, Ef: double): double;
