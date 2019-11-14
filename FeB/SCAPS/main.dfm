@@ -211,8 +211,8 @@ object MainForm: TMainForm
     end
   end
   object BMaterialFileCreate: TButton
-    Left = 269
-    Top = 136
+    Left = 45
+    Top = 128
     Width = 228
     Height = 36
     Caption = '.material file create'
@@ -478,6 +478,22 @@ object MainForm: TMainForm
       ParentFont = False
       TabOrder = 1
     end
+  end
+  object BScapsFileCreate: TButton
+    Left = 312
+    Top = 128
+    Width = 228
+    Height = 36
+    Caption = '.scaps file create'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -18
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 13
+    WordWrap = True
+    OnClick = BScapsFileCreateClick
   end
   object OpenDialog1: TOpenDialog
     Filter = 'Scaps files (*.iv)|*.iv'
