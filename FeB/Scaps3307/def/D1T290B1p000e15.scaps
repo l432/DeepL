@@ -172,22 +172,6 @@ absorption model B, model : sqrt(hv-Eg) law (SCAPS traditional)
 absorption model B, value of parameter 1 :   1.095445e+05
 absorption model B, value of parameter 2 :   0.000000e+00
 
-srhrecombination
-
-type : donor ( 1 level(s) )
-energy distribution : single
-Reference for defect energy :  0 ; 0 = above EV (SCAPS<2.7); 1 = above Ei; 2 = below EC
-Ekar :  0.1000 [eV]
-Nt(uniform) :	 1.000000e+19	 1.000000e+20	 1.000000e+20	 1.000000e+00	 1.000000e+00	 1.000000e+19	 1.000000e+19	 0	 2	[/m^3]
-profile : homogenous
-Lkar : 1.000e+00 [m]
-Nleft : 1.000e+19 [/m^3]
-Nright : 1.000e+19 [/m^3]
-leveltype : +/0	
-sigma_n : 7.870e-19	[m^2]
-sigma_p : 6.150e-21	[m^2]
-Et :   0.394	[eV]
-
 interface properties
 
 interfacename : 
@@ -199,7 +183,7 @@ Relative hole mass :  1.00
 layer
 
 name : p_Si
-d : 1.500e-04 [m]
+d : 1.000e-05 [m]
 Tunneling in layer: 0
 Relative electron mass :	  3.5677e-01	  1.0000e+00	  1.0000e+00	  1.0000e+00	  1.0000e+00	  3.5677e-01	  3.5677e-01	 1	 0	[-]
 Relative hole mass :	  8.0241e-01	  1.0000e+00	  1.0000e+00	  1.0000e+00	  1.0000e+00	  8.0241e-01	  8.0241e-01	 1	 0	[-]
@@ -228,22 +212,6 @@ absorptionmodel pure B material (y=1) : from model
 absorption model B, model : sqrt(hv-Eg) law (SCAPS traditional)
 absorption model B, value of parameter 1 :   1.095445e+05
 absorption model B, value of parameter 2 :   0.000000e+00
-
-srhrecombination
-
-type : donor ( 1 level(s) )
-energy distribution : single
-Reference for defect energy :  0 ; 0 = above EV (SCAPS<2.7); 1 = above Ei; 2 = below EC
-Ekar :  0.1000 [eV]
-Nt(uniform) :	 1.000000e+19	 1.000000e+20	 1.000000e+20	 1.000000e+00	 1.000000e+00	 1.000000e+19	 1.000000e+19	 0	 2	[/m^3]
-profile : homogenous
-Lkar : 1.000e+00 [m]
-Nleft : 1.000e+19 [/m^3]
-Nright : 1.000e+19 [/m^3]
-leveltype : +/0	
-sigma_n : 7.870e-19	[m^2]
-sigma_p : 6.150e-21	[m^2]
-Et :   0.394	[eV]
 
 interface properties
 
@@ -340,7 +308,7 @@ IV_startV :     0.0000 V
 IV_stopV :     0.6200 V
 IV_points :  63
 IV_increment :     0.010000 V
-IV_calculate :  1
+IV_calculate :  0
 stop after Voc :  0
 CV_startV :    -0.8000 V
 CV_stopV :     0.8000 V
@@ -366,32 +334,6 @@ QE_calculate :  0
 
 batch display mode = not suppressed
 
-Batch parameter 0 :
-
-Label 1 : layer 1
-Label 2 : defect 1
-Label 3 : Nt total
-Label 4 : nihil
-simultaneous :  0
-values from a list :  0
-logarithmic variation :  1
-startvalue :   1.00000000e+10
-stopvalue :   1.00000000e+13
-number of steps :   19
-
-Batch parameter 1 :
-
-Label 1 : layer 2
-Label 2 : defect 1
-Label 3 : Nt total
-Label 4 : nihil
-simultaneous :  1
-values from a list :  0
-logarithmic variation :  1
-startvalue :   1.00000000e+10
-stopvalue :   1.00000000e+13
-number of steps :   19
-
 >> end of batch settings file
 
 
@@ -407,17 +349,6 @@ Max number of steps whilst curve fitting :   25
 Max step size whilst curve fitting :   1.00000000e-01
 Stop criterion for step size :   1.00000000e-10
 Stop criterion for Chi square :   1.00000000e-07
-
-Curve fitting parameter  0 :
-
-label 1 : layer 1
-label 2 : defect 1
-label 3 : Nt total
-label 4 : nihil
-minimum value :   1.00000000e+10
-maximum value :   1.00000000e+13
-start value = actual value :    0
-logarithmic variation :  1
 
 >> end of curve fitting settings file
 

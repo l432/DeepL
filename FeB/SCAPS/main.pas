@@ -69,6 +69,8 @@ type
     procedure BDatesDatCorrectClick(Sender: TObject);
     procedure BResultClick(Sender: TObject);
     procedure BScapsFileCreateClick(Sender: TObject);
+    procedure B_SCAPSFSelectClick(Sender: TObject);
+    procedure B_ResFSelectClick(Sender: TObject);
   private
     { Private declarations }
     TempStart,TempFinish,TempStep: TIntegerParameterShow;
@@ -79,6 +81,9 @@ type
     EmiterThick,BSFThick:TDoubleParameterShow;
 
     ConfigFile:TIniFile;
+    SCAPS_Folder,Result_Folder:string;
+    Procedure FoldersToForm();
+    {виведення на форму розташувань директорій}    
 //    Direc:string;
     function NBoronToString():string;
 //    function NumberToString(Number:double;DigitNumber:word=4):string;
@@ -280,6 +285,18 @@ end;
 
 
 
+procedure TMainForm.B_ResFSelectClick(Sender: TObject);
+begin
+   if SelectDirectory('Choose Result Directory','C:', Result_Folder)
+   then FoldersToForm;
+end;
+
+procedure TMainForm.B_SCAPSFSelectClick(Sender: TObject);
+begin
+  if SelectDirectory('Choose SCAPS Directory','C:', SCAPS_Folder)
+   then FoldersToForm;
+end;
+
 //function TMainForm.EditString(str: string): string;
 //begin
 //  Result:=AnsiReplaceStr(str,'.','p');
@@ -402,8 +419,22 @@ procedure TMainForm.BScapsFileCreateClick(Sender: TObject);
      T:integer;
      fileName,tempStr,tempBegin,tempMidle,tempEnd:string;
      dFei,dFeBd,dFeBa:TDefect;
+  I: Integer;
 
 begin
+  while not(SetCurrentDir(SCAPS_Folder)) do
+   B_SCAPSFSelectClick(nil);
+
+  while not(SetCurrentDir(Result_Folder)) do
+   B_ResFSelectClick(nil);
+
+  tempStr:=Result_Folder+'\'+BaseThickToString;
+  while not(SetCurrentDir(tempSTR)) do
+       MkDir(BaseThickToString);
+  tempStr:=tempStr+'\'+NBoronToString;
+  while not(SetCurrentDir(tempSTR)) do
+       MkDir(NBoronToString);
+
  FeScaps:=TStringList.Create;
  dFei:=TDefect.Create(Fei);
  dFeBd:=TDefect.Create(FeB_don);
@@ -411,12 +442,14 @@ begin
 
  T:=TempStart.Data;
 
- fileName:='Fe'+BaseThickToString+'T'+inttostr(T)+NBoronToString+'.scaps';
 
  repeat
  FeScaps.Clear;
+ SetCurrentDir(ExtractFilePath(Application.ExeName));
+ fileName:='Fe'+BaseThickToString+'T'+inttostr(T)+NBoronToString+'.scaps';
+
  FeScaps.LoadFromFile('FeSample.scaps');
- tempStr:='> d:\Samples\DeepL\FeB\Scaps3307\def\'+fileName;
+ tempStr:='> '+SCAPS_Folder+'\def\'+fileName;
  StringReplace(FeScaps,tempStr,3);
 
 
@@ -469,13 +502,13 @@ begin
  tempMidle:='	  1.200000	  0.500000	  1.000000	  1.000000	  ';
  tempEnd:='	 1	 0	[eV]';
  tempstr:=LowerCase(floattostrF( Silicon.Eg(T)-Silicon.BGN(BSFCon.Data*1e6,False),ffFixed,7,6));
- tempstr:=tempBegin+tempstr+tempMidle+tempstr+'	 '+tempstr+tempEnd;
+ tempstr:=tempBegin+tempstr+tempMidle+tempstr+' 	 '+tempstr+tempEnd;
  StringReplace(FeScaps,tempStr,153);
  tempstr:=LowerCase(floattostrF(Silicon.Eg(T)-Silicon.BGN(Boron.Data*1e6,False),ffFixed,7,6));
- tempstr:=tempBegin+tempstr+tempMidle+tempstr+'	 '+tempstr+tempEnd;
+ tempstr:=tempBegin+tempstr+tempMidle+tempstr+'	  '+tempstr+tempEnd;
  StringReplace(FeScaps,tempStr,210);
  tempstr:=LowerCase(floattostrF(Silicon.Eg(T)-Silicon.BGN(EmiterCon.Data*1e6,True),ffFixed,7,6));
- tempstr:=tempBegin+tempstr+tempMidle+tempstr+'	 '+tempstr+tempEnd;
+ tempstr:=tempBegin+tempstr+tempMidle+tempstr+'	  '+tempstr+tempEnd;
  StringReplace(FeScaps,tempStr,267);
 
  tempBegin:='Nc :	 ';
@@ -572,12 +605,12 @@ begin
  tempEnd:='	[m^2]';
  tempstr:=LowerCase(floattostrf(dFei.Sn(T),ffExponent,4,2));
  tempstr:=tempBegin+tempstr+tempEnd;
- StringReplace(FeScaps,tempStr,144);
+ StringReplace(FeScaps,tempStr,186);
  StringReplace(FeScaps,tempStr,243);
  tempBegin:='sigma_p : ';
  tempstr:=LowerCase(floattostrf(dFei.Sp(T),ffExponent,4,2));
  tempstr:=tempBegin+tempstr+tempEnd;
- StringReplace(FeScaps,tempStr,145);
+ StringReplace(FeScaps,tempStr,187); 
  StringReplace(FeScaps,tempStr,244);
 
  tempBegin:='Temperature :   ';
@@ -587,9 +620,51 @@ begin
  tempBegin:='Secondworkpoint Temperature :   ';
  StringReplace(FeScaps,tempBegin+tempstr+tempEnd,325);
 
-// FeScaps.Insert(146,tempStr);
+ tempBegin:='startvalue :   ';
+ tempstr:=LowerCase(floattostrf(FeLow.Data,ffExponent,9,2));
+ StringReplace(FeScaps,'minimum value :   '+tempstr,416);
+ tempstr:=tempBegin+tempStr;
+ StringReplace(FeScaps,tempstr,377);
+ StringReplace(FeScaps,tempstr,390);
+ tempBegin:='stopvalue :   ';
+ tempstr:=LowerCase(floattostrf(FeHi.Data,ffExponent,9,2));
+ StringReplace(FeScaps,'maximum value :   '+tempstr,417);
+ tempstr:=tempBegin+tempStr;
+ StringReplace(FeScaps,tempstr,378);
+ StringReplace(FeScaps,tempstr,391);
+ tempBegin:='number of steps :   ';
+ tempstr:=LowerCase(inttostr(FeStepNumber.Data));
+ tempstr:=tempBegin+tempStr;
+ StringReplace(FeScaps,tempstr,379);
+ StringReplace(FeScaps,tempstr,392);
 
- FeScaps.SaveToFile('Fe'+BaseThickToString+'T'+inttostr(T)+NBoronToString+'.scaps');
+
+
+// FeScaps.Insert(146,tempStr);
+ if SetCurrentDir(SCAPS_Folder+'\def') then
+    FeScaps.SaveToFile(fileName);
+
+  tempStr:=Result_Folder+'\'+BaseThickToString+'\'+NBoronToString;
+  SetCurrentDir(tempStr);
+  while not(SetCurrentDir(tempSTR+'\'+'T'+inttostr(T))) do
+       MkDir('T'+inttostr(T));
+  FeScaps.SaveToFile(fileName);
+
+ StringReplace(FeScaps,'d : 1.000e-05 [m]',201);
+ StringReplace(FeScaps,'IV_calculate :  0',342);
+
+ for I := 410 to 420 do FeScaps.Delete(410);
+ for I := 368 to 393 do FeScaps.Delete(368);
+ for I := 231 to 246 do FeScaps.Delete(231);
+ for I := 174 to 189 do FeScaps.Delete(174);
+
+ fileName:='D1'+'T'+inttostr(T)+NBoronToString+'.scaps';
+ if SetCurrentDir(SCAPS_Folder+'\def') then
+    FeScaps.SaveToFile(fileName);
+
+  tempStr:=Result_Folder+'\'+BaseThickToString+'\'+NBoronToString;
+  SetCurrentDir(tempSTR+'\'+'T'+inttostr(T));
+  FeScaps.SaveToFile(fileName);
 
  T:=T+TempStep.Data;
  until (T>TempFinish.Data);
@@ -1221,6 +1296,12 @@ begin
  pSiLayer.Free;
 end;
 
+procedure TMainForm.FoldersToForm;
+begin
+ L_SCAPSF.Caption:=SCAPS_Folder;
+ L_ResF.Caption:=Result_Folder;
+end;
+
 procedure TMainForm.FormCreate(Sender: TObject);
 begin
   DecimalSeparator:='.';
@@ -1268,6 +1349,10 @@ begin
   FeStepNumber.ReadFromIniFile(ConfigFile);
 
 
+  SCAPS_Folder:=ConfigFile.ReadString('Folders','SCAPS',GetCurrentDir);
+  Result_Folder:=ConfigFile.ReadString('Folders','Results',GetCurrentDir);
+  FoldersToForm();
+
 
  Diod:=TDiod_Schottky.Create;
 // Diod.ReadFromIniFile(ConfigFile);
@@ -1283,6 +1368,11 @@ begin
  ConfigFile.EraseSection('Temperature');
  ConfigFile.EraseSection('SC');
  ConfigFile.EraseSection('Iron');
+ ConfigFile.EraseSection('Folders');
+
+  ConfigFile.WriteString('Folders','SCAPS',SCAPS_Folder);
+  ConfigFile.WriteString('Folders','Results',Result_Folder);
+
 
   Boron.WriteToIniFile(ConfigFile);
   Boron.Free;

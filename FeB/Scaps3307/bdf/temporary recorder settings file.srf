@@ -1,20 +1,3 @@
 
 
-Recorder parameter   0 :
-
-recorder type :energy bands
-recorder property :conduction band energy
-
-Recorder parameter   1 :
-
-recorder type :energy bands
-recorder property :hole Fermi level
-
-Recorder parameter   2 :
-
-recorder type :energy bands
-recorder property :valence band energy
-
-Recorder type flag : 	 0	 1	 0	 0	 0	 0	 0	 0
-
 >> end of recorder settings file
