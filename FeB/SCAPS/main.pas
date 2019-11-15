@@ -5,7 +5,8 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, StdCtrls, FileCtrl, StrUtils,OlegFunction,OlegType,OlegShowTypes, 
-  IniFiles,OlegMaterialSamples,Math,SomeFunction, OlegVector, OlegDefectsSi;
+  IniFiles,OlegMaterialSamples,Math,SomeFunction, OlegVector, OlegDefectsSi, 
+  IV_Class;
 
 type
   TMainForm = class(TForm)
@@ -82,6 +83,7 @@ type
 
     ConfigFile:TIniFile;
     SCAPS_Folder,Result_Folder:string;
+    IVparameter:TIVparameter;
     Procedure FoldersToForm();
     {виведення на форму розташувань директорій}    
 //    Direc:string;
@@ -96,6 +98,9 @@ type
     Т - температура
     Ef - положення рівня Фермі відносно валентної зони}
     procedure StringReplace(StringList:TStringList; Str:string; IndexOfString:integer);
+    function PartOfFileNameCreate(T:integer):string;
+    procedure SetCurrentFolders;
+    procedure SetTemperatureFolders(T: Integer);
   public
     { Public declarations }
   end;
@@ -108,7 +113,7 @@ var
 implementation
 
 uses
-  IV_Class, ResultAll;
+  ResultAll;
 
 {$R *.dfm}
 
@@ -119,15 +124,13 @@ begin
 end;
 
 procedure TMainForm.BtDoneClick(Sender: TObject);
-// const Izoom=1e-5;
  var Row:Int64;
-//     Task,FileNumber:word;
      Comments,SCparam,DatFile,DatFile_srh:TStringList;
-//     IlluminatedChar:boolean;
      V,I,I_srh:double;
-     tempStr,DatFileName,DatFileLocation,DatFileLocation2:string;
+     tempStr,DatFileName,DatFileLocation,DatFileLocation2,
+     Tdir,Ddir,Bdir,tempStr2:string;
      j: byte;
-     IVparameter:TIVparameter;
+//     IVparameter:TIVparameter;
 begin
 
  if LFile.Font.Color<>clBlue then Exit;
@@ -139,11 +142,9 @@ begin
    end;
  DatFileLocation:=AnsiReplaceStr (FileName, '.', '_');
  DatFileLocation2:=DatFileLocation;
- try
-  MkDir(DatFileLocation);
- except
 
- end;
+// CreateDirSafety(DatFileLocation);
+
  DatFileLocation:=Directory+'\'+DatFileLocation+'\';
 
 
@@ -153,7 +154,7 @@ begin
  DatFile:=TStringList.Create;
  DatFile_srh:=TStringList.Create;
 
- IVparameter:=TIVparameter.Create;
+// IVparameter:=TIVparameter.Create;
  IVparameter.ParameterTitleDetermination(SCAPSFile);
 
 
@@ -167,7 +168,41 @@ begin
    Comments.Add('');
   end;
 
-
+  IVparameter.SCAPSFileNameDetermination(SCAPSFile);
+  Tdir:='';
+  Ddir:='';
+  Bdir:='';
+  Tdir:=Copy(IVparameter.fSCAPSFileName,
+                AnsiPos('T',IVparameter.fSCAPSFileName),4);
+  Ddir:=Copy(IVparameter.fSCAPSFileName,
+                AnsiPos('D',IVparameter.fSCAPSFileName),3);
+  Bdir:=Copy(IVparameter.fSCAPSFileName,
+                AnsiPos('B',IVparameter.fSCAPSFileName),9);
+  if  (Tdir<>'')and(Ddir<>'')and(Bdir<>'')
+      and SetCurrentDir(Result_Folder)   then
+    begin
+     tempSTR:=Result_Folder;
+     while not(SetCurrentDir(tempSTR+'\'+Ddir)) do
+        MkDir(Ddir);
+     tempStr:=tempStr+'\'+Ddir;
+     while not(SetCurrentDir(tempSTR+'\'+Bdir)) do
+        MkDir(Bdir);
+     tempStr:=tempStr+'\'+Bdir;
+     while not(SetCurrentDir(tempSTR+'\'+Tdir)) do
+        MkDir(Bdir);
+     tempStr:=tempStr+'\'+Tdir;
+     while not(SetCurrentDir(tempSTR+'\iv')) do
+        MkDir('iv');
+     tempStr:=tempStr+'\iv';
+     if AnsiPos('FeB',IVparameter.fSCAPSFileName)>0
+        then  tempStr2:='FeB'
+        else  tempStr2:='Fe';
+     while not(SetCurrentDir(tempSTR+'\'+tempStr2)) do
+        MkDir(tempStr2);
+     tempStr:=tempStr+'\'+tempStr2+'\';
+     DatFileLocation:=tempStr;
+     DatFileLocation2:=tempStr2;
+    end;
 
  Row:=0;
  while (Row<SCAPSFile.Count) do
@@ -181,6 +216,8 @@ begin
     end;
 
    IVparameter.ParameterDetermination(SCAPSFile[ROW]);
+
+
 
   if ((AnsiContainsStr(SCAPSFile[ROW],'v(V)'))and
 //      (AnsiContainsStr(SCAPSFile[ROW],'jtot(mA/cm2)'))) then
@@ -225,6 +262,9 @@ begin
         Row:=ROW+1;
        end;
 
+
+
+
      DatFileName:=IVparameter.FileName+'.dat';
      DatFile.SaveToFile(DatFileLocation+DatFileName);
      Comments.Add(DatFileName);
@@ -254,7 +294,7 @@ begin
 
  SCparam.Free;
  DatFile.Free;
-   IVparameter.Free;
+//   IVparameter.Free;
 
  LAction.Caption:='Extraction is done';
  LAction.Font.Color:=clGreen;
@@ -263,6 +303,7 @@ end;
 procedure TMainForm.BtFileSelectClick(Sender: TObject);
 
 begin
+   OpenDialog1.InitialDir:=SCAPS_Folder+'\results\';
    OpenDialog1.Filter:='Scaps files (*.iv)|*.iv';
    if OpenDialog1.Execute()
      then
@@ -422,18 +463,7 @@ procedure TMainForm.BScapsFileCreateClick(Sender: TObject);
   I: Integer;
 
 begin
-  while not(SetCurrentDir(SCAPS_Folder)) do
-   B_SCAPSFSelectClick(nil);
-
-  while not(SetCurrentDir(Result_Folder)) do
-   B_ResFSelectClick(nil);
-
-  tempStr:=Result_Folder+'\'+BaseThickToString;
-  while not(SetCurrentDir(tempSTR)) do
-       MkDir(BaseThickToString);
-  tempStr:=tempStr+'\'+NBoronToString;
-  while not(SetCurrentDir(tempSTR)) do
-       MkDir(NBoronToString);
+  SetCurrentFolders;
 
  FeScaps:=TStringList.Create;
  dFei:=TDefect.Create(Fei);
@@ -446,7 +476,7 @@ begin
  repeat
  FeScaps.Clear;
  SetCurrentDir(ExtractFilePath(Application.ExeName));
- fileName:='Fe'+BaseThickToString+'T'+inttostr(T)+NBoronToString+'.scaps';
+ fileName:='Fe'+PartOfFileNameCreate(T)+'.scaps';
 
  FeScaps.LoadFromFile('FeSample.scaps');
  tempStr:='> '+SCAPS_Folder+'\def\'+fileName;
@@ -644,10 +674,7 @@ begin
  if SetCurrentDir(SCAPS_Folder+'\def') then
     FeScaps.SaveToFile(fileName);
 
-  tempStr:=Result_Folder+'\'+BaseThickToString+'\'+NBoronToString;
-  SetCurrentDir(tempStr);
-  while not(SetCurrentDir(tempSTR+'\'+'T'+inttostr(T))) do
-       MkDir('T'+inttostr(T));
+  SetTemperatureFolders(T);
   FeScaps.SaveToFile(fileName);
 
  StringReplace(FeScaps,'d : 1.000e-05 [m]',201);
@@ -964,12 +991,13 @@ procedure TMainForm.BFeB_xClick(Sender: TObject);
      EB_File,FeGRDFile,FeBGRDFile:TStringList;
      Vec:TVector;
      Row:Int64;
-     i:word;
+     i,j:word;
      T:word;
      delFe,Nfe:double;
      tempstr:string;
 
 begin
+// OpenDialog1.InitialDir:=SCAPS_Folder+'\results\';
  OpenDialog1.Filter:='File with energy bands (*.eb)|*.eb';
  if OpenDialog1.Execute()
    then
@@ -979,9 +1007,14 @@ begin
       FeGRDFile:=TStringList.Create;
       FeBGRDFile:=TStringList.Create;
       EB_File.LoadFromFile(OpenDialog1.FileName);
+      SetCurrentFolders;
+
       Vec:=TVector.Create;
       Row:=0;
       T:=0;
+      IVparameter.SCAPSFileNameDetermination(EB_File);
+
+
       while (Row<EB_File.Count) do
        begin
         if AnsiPos ('Temperature', EB_File[ROW])>0 then
@@ -989,27 +1022,35 @@ begin
 
         if AnsiPos ('x(um)', EB_File[ROW])>0 then
           begin
-//            showmessage(EB_File[ROW]);
             Row:=Row+2;
-            for I := 0 to 99 do
+            for I := 0 to 199 do
              begin
-               Vec.Add(290+FloatDataFromRow(EB_File[ROW],2),-FloatDataFromRow(EB_File[ROW],7));
+//               Vec.Add(290+FloatDataFromRow(EB_File[ROW],2),-FloatDataFromRow(EB_File[ROW],7));
+               if i>149 then
+               Vec.Add(BaseThick.Data-10+FloatDataFromRow(EB_File[ROW],2),-FloatDataFromRow(EB_File[ROW],7))
+                         else
+               Vec.Add(FloatDataFromRow(EB_File[ROW],2),-FloatDataFromRow(EB_File[ROW],7));
+
                Inc(ROW);
              end;
             Break;
           end;
          Inc(ROW);
        end;
-      for I := 0 to 5 do
-       Vec.Add(i*50,Vec.Y[0]);
-      Vec.Sorting();
-      Vec.WriteToFile('Ef_'+NBoronToString+'T'+IntTostr(T)+'.dat',10);
+      Vec.DeleteDuplicate;
+      SetTemperatureFolders(T);
+      Vec.WriteToFile('Ef_'+PartOfFileNameCreate(T)+'.dat',10);
+      while not (SetCurrentDir(GetCurrentDir + '\grd')) do
+        MkDir('grd');
+
+
       for I := 0 to Vec.HighNumber do
        Vec.Y[i]:=Nfeb(Boron.Data,T,Vec.Y[i]);
 
       if FeStepNumber.Data>1 then delFe:=(Log10(FeHi.Data)-Log10(FeLow.Data))/(FeStepNumber.Data-1)
                              else delFe:= Log10(FeHi.Data);
       Nfe:=Log10(FeLow.Data);
+      j:=0;
       repeat
         FeGRDFile.Clear;
         FeBGRDFile.Clear;
@@ -1027,12 +1068,18 @@ begin
           FeGRDFile.Add(FloatToStrF(Vec.X[i],ffExponent,10,2)+'	'+
                         FloatToStrF((1-Vec.Y[i])*Power(10,Nfe)*1e6,ffExponent,8,2));
          end;
-        tempstr:= LowerCase(floattostrF(Power(10,Nfe),ffExponent,4,2));
-        tempstr:=AnsiReplaceStr(tempstr,'.','p');
-        tempstr:=AnsiReplaceStr(tempstr,'+','');
-        FeBGRDFile.SaveToFile('FeB'+tempstr+'.grd');
-        FeGRDFile.SaveToFile('Fe'+tempstr+'.grd');
+//        tempstr:= LowerCase(floattostrF(Power(10,Nfe),ffExponent,4,2));
+//        tempstr:=AnsiReplaceStr(tempstr,'.','p');
+//        tempstr:=AnsiReplaceStr(tempstr,'+','');
+//        FeBGRDFile.SaveToFile('FeB'+tempstr+'.grd');
+//        FeGRDFile.SaveToFile('Fe'+tempstr+'.grd');
+        tempstr:=IntToStr(j);
+        if j<10 then tempstr:='0'+tempstr;
+        
+        FeBGRDFile.SaveToFile('B'+tempstr+'.grd');
+        FeGRDFile.SaveToFile('F'+tempstr+'.grd');
         Nfe:=Nfe+delFe;
+        inc(j);
       until (Nfe>Log10(FeHi.Data*1.0001));
 
       Vec.Free;
@@ -1353,6 +1400,7 @@ begin
   Result_Folder:=ConfigFile.ReadString('Folders','Results',GetCurrentDir);
   FoldersToForm();
 
+  IVparameter:=TIVparameter.Create;
 
  Diod:=TDiod_Schottky.Create;
 // Diod.ReadFromIniFile(ConfigFile);
@@ -1400,6 +1448,7 @@ begin
   FeStepNumber.WriteToIniFile(ConfigFile);
   FeStepNumber.Free;
 //  Diod.WriteToIniFile(ConfigFile);
+  IVparameter.Free;
   Diod.Semiconductor.Material.Free;
   Diod.Free;
   ConfigFile.Free;
@@ -1419,6 +1468,36 @@ end;
 
 
 
+
+function TMainForm.PartOfFileNameCreate(T: integer): string;
+begin
+ Result:=BaseThickToString+'T'+inttostr(T)+NBoronToString;
+end;
+
+procedure TMainForm.SetCurrentFolders;
+var
+  tempStr: string;
+begin
+  while not (SetCurrentDir(SCAPS_Folder)) do
+    B_SCAPSFSelectClick(nil);
+  while not (SetCurrentDir(Result_Folder)) do
+    B_ResFSelectClick(nil);
+  tempStr := Result_Folder + '\' + BaseThickToString;
+  while not (SetCurrentDir(tempSTR)) do
+    MkDir(BaseThickToString);
+  tempStr := tempStr + '\' + NBoronToString;
+  while not (SetCurrentDir(tempSTR)) do
+    MkDir(NBoronToString);
+end;
+
+procedure TMainForm.SetTemperatureFolders(T: Integer);
+ Var  tempStr:string;
+begin
+  tempStr := Result_Folder + '\' + BaseThickToString + '\' + NBoronToString;
+  SetCurrentDir(tempStr);
+  while not (SetCurrentDir(tempSTR + '\' + 'T' + inttostr(T))) do
+    MkDir('T' + inttostr(T));
+end;
 
 procedure TMainForm.StringReplace(StringList: TStringList; Str: string;
   IndexOfString: integer);

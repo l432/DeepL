@@ -26,6 +26,7 @@ type
    fData:array of double;
    fTemperatura:double;
    fFileNumber:word;
+   fSCAPSFileName:string;
    Constructor Create();
    Procedure Clear();
    Procedure Empty();
@@ -37,6 +38,8 @@ type
    Function FileName:string;
    Procedure ParameterTitleDetermination(SCAPSFile:TStringList);
    Procedure ParameterDetermination(DataString:String);
+   function NameIsPresent(NameStr:string):boolean;
+   Procedure SCAPSFileNameDetermination(SCAPSFile:TStringList);
  end;
 
 implementation
@@ -97,6 +100,7 @@ begin
  fFileNumber:=0;
  for I := 0 to High(fData) do
    fData[i]:=0;
+ fSCAPSFileName:='';  
 end;
 
 function TIVparameter.FileName: string;
@@ -112,6 +116,15 @@ begin
  fDescription.Free;
  fUnit.Free;
  inherited Free;
+end;
+
+function TIVparameter.NameIsPresent(NameStr: string): boolean;
+var
+  I: Integer;
+begin
+ Result:=False;
+ for I := 0 to fName.Count - 1 do
+   Result:=(Result or (fName[i]=NameStr));
 end;
 
 procedure TIVparameter.ParameterDetermination(DataString: String);
@@ -137,6 +150,19 @@ begin
     Delete(DataString, 1, AnsiPos ('step', DataString)+4);
      try
        fFileNumber:=StrToInt(Copy(DataString, 1, AnsiPos (' ', DataString)-1));
+     except
+
+     end;
+    Exit;
+  end;
+
+ if AnsiStartsStr('problem definition file', DataString) then
+  begin
+    if fSCAPSFileName<>'' then Exit;
+    DataString:=SomeSpaceToOne(DataString);
+    Delete(DataString, 1, AnsiPos ('def\', DataString)+3);
+     try
+       fSCAPSFileName:=Copy(DataString, 1, AnsiPos ('.', DataString)-1);
      except
 
      end;
@@ -209,6 +235,7 @@ begin
         if AnsiContainsStr(Name,'[') then
            Name:=Copy(Name,1,AnsiPos('[',Name)-1);
         Name:=Acronym(Name);
+        while NameIsPresent(Name) do  Name:=Name+'1';
         Add(Name,Description,'');
        until false;
      end;
@@ -217,6 +244,19 @@ begin
 
 end;
 
+
+procedure TIVparameter.SCAPSFileNameDetermination(SCAPSFile: TStringList);
+ var i:Int64;
+begin
+ fSCAPSFileName:='';
+  i:=0;
+ while (i<SCAPSFile.Count) do
+   begin
+     ParameterDetermination(SCAPSFile[i]);
+     if fSCAPSFileName<>'' then Exit;
+     inc(i)
+   end;
+end;
 
 function TIVparameter.Title: string;
  var i:integer;
