@@ -26,6 +26,7 @@ type
    fData:array of double;
    fTemperatura:double;
    fFileNumber:word;
+   fSCAPSFileName:string;
    Constructor Create();
    Procedure Clear();
    Procedure Empty();
@@ -37,6 +38,8 @@ type
    Function FileName:string;
    Procedure ParameterTitleDetermination(SCAPSFile:TStringList);
    Procedure ParameterDetermination(DataString:String);
+   function NameIsPresent(NameStr:string):boolean;
+   Procedure SCAPSFileNameDetermination(SCAPSFile:TStringList);
  end;
 
 implementation
@@ -97,6 +100,7 @@ begin
  fFileNumber:=0;
  for I := 0 to High(fData) do
    fData[i]:=0;
+ fSCAPSFileName:='';  
 end;
 
 function TIVparameter.FileName: string;
@@ -112,6 +116,15 @@ begin
  fDescription.Free;
  fUnit.Free;
  inherited Free;
+end;
+
+function TIVparameter.NameIsPresent(NameStr: string): boolean;
+var
+  I: Integer;
+begin
+ Result:=False;
+ for I := 0 to fName.Count - 1 do
+   Result:=(Result or (fName[i]=NameStr));
 end;
 
 procedure TIVparameter.ParameterDetermination(DataString: String);
@@ -143,6 +156,19 @@ begin
     Exit;
   end;
 
+ if AnsiStartsStr('problem definition file', DataString) then
+  begin
+    if fSCAPSFileName<>'' then Exit;
+    DataString:=SomeSpaceToOne(DataString);
+    Delete(DataString, 1, AnsiPos ('def\', DataString)+3);
+     try
+       fSCAPSFileName:=Copy(DataString, 1, AnsiPos ('.', DataString)-1);
+     except
+
+     end;
+    Exit;
+  end;
+
   for I := 0 to fDescription.Count - 1 do
      if AnsiStartsStr(fDescription[i], DataString) then
       begin
@@ -165,6 +191,29 @@ begin
                tempstr:=Copy(tempstr,AnsiPos('B',tempStr)+1,8);
                tempstr:=AnsiReplaceStr(tempstr,'p','.');
                fData[i]:=StrToFloat(tempStr);
+               Exit;
+             end;
+           if (AnsiPos('.grd',tempStr)>0) then
+             begin
+              if (AnsiPos('00',tempStr)>0) then fData[i]:=1.000000E+10;
+              if (AnsiPos('01',tempStr)>0) then fData[i]:=1.468000E+10;
+              if (AnsiPos('02',tempStr)>0) then fData[i]:=2.154000E+10;
+              if (AnsiPos('03',tempStr)>0) then fData[i]:=3.162000E+10;
+              if (AnsiPos('04',tempStr)>0) then fData[i]:=4.642000E+10;
+              if (AnsiPos('05',tempStr)>0) then fData[i]:=6.813000E+10;
+              if (AnsiPos('06',tempStr)>0) then fData[i]:=1.000000E+11;
+              if (AnsiPos('07',tempStr)>0) then fData[i]:=1.468000E+11;
+              if (AnsiPos('08',tempStr)>0) then fData[i]:=2.154000E+11;
+              if (AnsiPos('09',tempStr)>0) then fData[i]:=3.162000E+11;
+              if (AnsiPos('10',tempStr)>0) then fData[i]:=4.642000E+11;
+              if (AnsiPos('11',tempStr)>0) then fData[i]:=6.813000E+11;
+              if (AnsiPos('12',tempStr)>0) then fData[i]:=1.000000E+12;
+              if (AnsiPos('13',tempStr)>0) then fData[i]:=1.468000E+12;
+              if (AnsiPos('14',tempStr)>0) then fData[i]:=2.154000E+12;
+              if (AnsiPos('15',tempStr)>0) then fData[i]:=3.162000E+12;
+              if (AnsiPos('16',tempStr)>0) then fData[i]:=4.642000E+12;
+              if (AnsiPos('17',tempStr)>0) then fData[i]:=6.813000E+12;
+              if (AnsiPos('18',tempStr)>0) then fData[i]:=1.000000E+13;
              end;
          end;
         Exit;
@@ -209,6 +258,7 @@ begin
         if AnsiContainsStr(Name,'[') then
            Name:=Copy(Name,1,AnsiPos('[',Name)-1);
         Name:=Acronym(Name);
+        while NameIsPresent(Name) do  Name:=Name+'1';
         Add(Name,Description,'');
        until false;
      end;
@@ -217,6 +267,19 @@ begin
 
 end;
 
+
+procedure TIVparameter.SCAPSFileNameDetermination(SCAPSFile: TStringList);
+ var i:Int64;
+begin
+ fSCAPSFileName:='';
+  i:=0;
+ while (i<SCAPSFile.Count) do
+   begin
+     ParameterDetermination(SCAPSFile[i]);
+     if fSCAPSFileName<>'' then Exit;
+     inc(i)
+   end;
+end;
 
 function TIVparameter.Title: string;
  var i:integer;

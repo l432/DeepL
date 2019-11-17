@@ -280,7 +280,7 @@ object MainForm: TMainForm
       Caption = 'Finish:'
     end
     object LFe_steps: TLabel
-      Left = 179
+      Left = 173
       Top = 24
       Width = 31
       Height = 16
@@ -512,7 +512,7 @@ object MainForm: TMainForm
       Caption = 'D:\Oleg\Disser\Dokument\etap6\CD'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = 18
+      Font.Height = 20
       Font.Name = 'Tahoma'
       Font.Style = []
       ParentFont = False
@@ -527,7 +527,7 @@ object MainForm: TMainForm
       Caption = 'D:\Oleg\Disser\Dokument\etap6\CD'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = 18
+      Font.Height = 20
       Font.Name = 'Tahoma'
       Font.Style = []
       ParentFont = False
@@ -535,12 +535,12 @@ object MainForm: TMainForm
     object ST_SCAPSF: TStaticText
       Left = 21
       Top = 21
-      Width = 90
-      Height = 22
+      Width = 101
+      Height = 24
       Caption = 'SCAPS Folder'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = 18
+      Font.Height = 20
       Font.Name = 'Tahoma'
       Font.Style = []
       ParentFont = False
@@ -554,7 +554,7 @@ object MainForm: TMainForm
       Caption = 'Select'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = 18
+      Font.Height = 20
       Font.Name = 'Tahoma'
       Font.Style = []
       ParentFont = False
@@ -564,12 +564,12 @@ object MainForm: TMainForm
     object ST_ResF: TStaticText
       Left = 21
       Top = 49
-      Width = 94
-      Height = 22
+      Width = 103
+      Height = 24
       Caption = 'Results Folder'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = 18
+      Font.Height = 20
       Font.Name = 'Tahoma'
       Font.Style = []
       ParentFont = False
@@ -583,7 +583,7 @@ object MainForm: TMainForm
       Caption = 'Select'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = 18
+      Font.Height = 20
       Font.Name = 'Tahoma'
       Font.Style = []
       ParentFont = False
