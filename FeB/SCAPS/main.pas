@@ -126,7 +126,7 @@ end;
 procedure TMainForm.BtDoneClick(Sender: TObject);
  var Row:Int64;
      Comments,SCparam,DatFile,DatFile_srh:TStringList;
-     V,I,I_srh:double;
+     V,I,I_srh,d,Na:double;
      tempStr,DatFileName,DatFileLocation,DatFileLocation2,
      Tdir,Ddir,Bdir,tempStr2:string;
      j: byte;
@@ -161,6 +161,8 @@ begin
  if IVparameter.fName.Count>0 then
   begin
    SCparam.Add(IVparameter.Title);
+   StringReplaceMy(SCparam,SCparam[SCparam.Count-1]+' d N_B',
+                   SCparam.Count-1);
    for j := 0 to IVparameter.fName.Count - 1 do
     if IVparameter.fUnit[j]<>''
      then Comments.Add(IVparameter.fName[j]+' - '+IVparameter.fUnit[j])
@@ -181,8 +183,17 @@ begin
                 AnsiPos('T',IVparameter.fSCAPSFileName),4);
   Ddir:=Copy(IVparameter.fSCAPSFileName,
                 AnsiPos('D',IVparameter.fSCAPSFileName),3);
+  tempstr:=Ddir;
+  Delete(tempstr, 1, 1);
+  tempstr:=tempstr+'0';
+  d:=strtoint(tempstr)*1e-6;
   Bdir:=Copy(IVparameter.fSCAPSFileName,
                 AnsiPos('B',IVparameter.fSCAPSFileName),9);
+  tempstr:=Bdir;
+  Delete(tempstr, 1, 1);
+  tempstr:=AnsiReplaceStr(tempstr,'p','.');
+  Na:=StrToFloat(tempStr);
+
   if  (Tdir<>'')and(Ddir<>'')and(Bdir<>'')
       and SetCurrentDir(Result_Folder)   then
     begin
@@ -214,7 +225,16 @@ begin
   begin
    if AnsiStartsStr ('SCAPS', SCAPSFile[ROW]) then
     begin
-      if Row<>0 then SCparam.Add(IVparameter.DataString);
+      if Row<>0 then
+       begin
+       SCparam.Add(IVparameter.DataString);
+       StringReplaceMy(SCparam,SCparam[SCparam.Count-1]
+                       +' '
+                       +FloatToStrF(d,ffExponent,4,0)+
+                       ' '
+                       +FloatToStrF(Na,ffExponent,4,0),
+                   SCparam.Count-1);
+       end;
       IVparameter.Empty;
       Inc(Row);
       Continue;
@@ -288,6 +308,12 @@ begin
   end;
 
  SCparam.Add(IVparameter.DataString);
+ StringReplaceMy(SCparam,SCparam[SCparam.Count-1]
+                       +' '
+                       +FloatToStrF(d,ffExponent,4,0)+
+                       ' '
+                       +FloatToStrF(Na,ffExponent,4,0),
+                   SCparam.Count-1);
 
  if Comments.Count>0 then
       Comments.SaveToFile(DatFileLocation+'comments');
@@ -308,7 +334,7 @@ end;
 procedure TMainForm.BtFileSelectClick(Sender: TObject);
 
 begin
-   OpenDialog1.InitialDir:=SCAPS_Folder+'\results\';
+//   OpenDialog1.InitialDir:=SCAPS_Folder+'\results\';
    OpenDialog1.Filter:='Scaps files (*.iv)|*.iv';
    if OpenDialog1.Execute()
      then

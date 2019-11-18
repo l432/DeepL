@@ -13,18 +13,21 @@
 Для кожної температури
 
 4. В SCAPS завантажуємо файл "FeD*.scaps",
+    натискаємо "Clear all simulation",
     запускаємо "Calculate: batch",
     зберігаємо *.iv файл.
 
 5."Витягуємо" ВАХ (кнопки "Select .iv file" та "Extract IV files")
 
 6.В SCAPS завантажуємо файл "D1Т*.scaps",
+    натискаємо "Clear all simulation",
     запускаємо "Calculate: single shot",
     зберігаємо *.eb файл.
 
 7. Створюємо файли розподілу дефектів по товщині - кнопка "Fe(x) and FeB(x) create".
 
 8. В SCAPS завантажуємо файл "FeBD*.scaps",
+    натискаємо "Clear all simulation",
     запускаємо "Calculate: batch",
     зберігаємо *.iv файл.
 
