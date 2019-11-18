@@ -191,6 +191,29 @@ begin
                tempstr:=Copy(tempstr,AnsiPos('B',tempStr)+1,8);
                tempstr:=AnsiReplaceStr(tempstr,'p','.');
                fData[i]:=StrToFloat(tempStr);
+               Exit;
+             end;
+           if (AnsiPos('.grd',tempStr)>0) then
+             begin
+              if (AnsiPos('00',tempStr)>0) then fData[i]:=1.000000E+10;
+              if (AnsiPos('01',tempStr)>0) then fData[i]:=1.468000E+10;
+              if (AnsiPos('02',tempStr)>0) then fData[i]:=2.154000E+10;
+              if (AnsiPos('03',tempStr)>0) then fData[i]:=3.162000E+10;
+              if (AnsiPos('04',tempStr)>0) then fData[i]:=4.642000E+10;
+              if (AnsiPos('05',tempStr)>0) then fData[i]:=6.813000E+10;
+              if (AnsiPos('06',tempStr)>0) then fData[i]:=1.000000E+11;
+              if (AnsiPos('07',tempStr)>0) then fData[i]:=1.468000E+11;
+              if (AnsiPos('08',tempStr)>0) then fData[i]:=2.154000E+11;
+              if (AnsiPos('09',tempStr)>0) then fData[i]:=3.162000E+11;
+              if (AnsiPos('10',tempStr)>0) then fData[i]:=4.642000E+11;
+              if (AnsiPos('11',tempStr)>0) then fData[i]:=6.813000E+11;
+              if (AnsiPos('12',tempStr)>0) then fData[i]:=1.000000E+12;
+              if (AnsiPos('13',tempStr)>0) then fData[i]:=1.468000E+12;
+              if (AnsiPos('14',tempStr)>0) then fData[i]:=2.154000E+12;
+              if (AnsiPos('15',tempStr)>0) then fData[i]:=3.162000E+12;
+              if (AnsiPos('16',tempStr)>0) then fData[i]:=4.642000E+12;
+              if (AnsiPos('17',tempStr)>0) then fData[i]:=6.813000E+12;
+              if (AnsiPos('18',tempStr)>0) then fData[i]:=1.000000E+13;
              end;
          end;
         Exit;
