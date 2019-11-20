@@ -154,7 +154,7 @@ begin
  DatFile:=TStringList.Create;
  DatFile_srh:=TStringList.Create;
 
-// IVparameter:=TIVparameter.Create;
+ IVparameter.Clear;
  IVparameter.ParameterTitleDetermination(SCAPSFile);
 
 
@@ -830,6 +830,7 @@ procedure TMainForm.BDatesDatClick(Sender: TObject);
     i,j:integer;
     fl_name,tempString:string;
     SRH_file,FeBdata,RowIsFound:boolean;
+    N_FeNumber,N_BNumber,TNumber,dNumber,nNumber:integer;
 begin
  OpenDialog1.Filter:='Shottky result file (dates.dat)|dates.dat';
    if OpenDialog1.Execute()
@@ -850,10 +851,27 @@ begin
             showmessage('.txt file is absent');
             Exit;
          end;
-       FeBdata:=(Length(TxtFile[0])>14);
+//       FeBdata:=(Length(TxtFile[0])>14);
+       FeBdata:=(AnsiPos('FeB',SR.Name)>0);
 
-       nDat.Add('N_Fe N_B T n n_SRH');
-//       n_srhDat.Add('N_Fe N_B T n');
+       nNumber:=SubstringNumberFromRow('n2',DatesDatFile[0]);
+       N_FeNumber:=SubstringNumberFromRow('TDD',TxtFile[0]);
+       N_BNumber:=SubstringNumberFromRow('N_B',TxtFile[0]);
+       TNumber:=SubstringNumberFromRow('T',TxtFile[0]);
+       dNumber:=SubstringNumberFromRow('d',TxtFile[0]);
+
+       if (nNumber=0)or
+          (N_FeNumber=0)or
+          (N_BNumber=0)or
+          (TNumber=0)or
+          (dNumber=0)
+          then
+         begin
+            showmessage('Wrong file format');
+            Exit;
+         end;
+
+       nDat.Add('N_Fe N_B T d n n_SRH');
        for I := 1 to DatesDatFile.Count - 1 do
          begin
           fl_name:=StringDataFromRow(DatesDatFile[i],2);
@@ -863,27 +881,33 @@ begin
           for j:=1 to TxtFile.Count - 1 do
             if AnsiPos(fl_name,TxtFile[j])>0 then
              begin
-              tempString:=StringDataFromRow(TxtFile[j],4)+
-                          ' '+LowerCase(floattostrF(Boron.Data,ffExponent,4,2))+
-                          ' '+StringDataFromRow(TxtFile[j],1)+
-                          ' '+StringDataFromRow(DatesDatFile[i],9);
+//              tempString:=StringDataFromRow(TxtFile[j],4)+
+//                          ' '+LowerCase(floattostrF(Boron.Data,ffExponent,4,2))+
+//                          ' '+StringDataFromRow(TxtFile[j],1)+
+//                          ' '+StringDataFromRow(DatesDatFile[i],9);
+              tempString:=StringDataFromRow(TxtFile[j],N_FeNumber)+
+                          ' '+StringDataFromRow(TxtFile[j],N_BNumber) +
+                          ' '+StringDataFromRow(TxtFile[j],TNumber)+
+                          ' '+StringDataFromRow(TxtFile[j],dNumber)+
+                          ' '+StringDataFromRow(DatesDatFile[i],nNumber);
               Break;
              end;
           if SRH_file then  n_srhDat.Add(tempString)
                       else  nDat.Add(tempString);
          end;
         DatesDatFile.Clear;
-        if FeBdata then DatesDatFile.Add('N_Fe N_B T n_FeB n_FeB_SRH')
-                   else DatesDatFile.Add('N_Fe N_B T n_Fe n_Fe_SRH');
+        if FeBdata then DatesDatFile.Add('N_Fe N_B T d n_FeB n_FeB_SRH')
+                   else DatesDatFile.Add('N_Fe N_B T d n_Fe n_Fe_SRH');
         for I := 1 to nDat.Count - 1 do
          begin
           tempString:=StringDataFromRow(nDat[i],1)+
                       ' '+StringDataFromRow(nDat[i],2)+
-                      ' '+StringDataFromRow(nDat[i],3);
+                      ' '+StringDataFromRow(nDat[i],3)+
+                      ' '+StringDataFromRow(nDat[i],4);
           for j := 0 to n_srhDat.Count - 1 do
            if AnsiPos(tempString,n_srhDat[j])>0 then
             begin
-            DatesDatFile.Add(nDat[i]+' '+StringDataFromRow(n_srhDat[j],4));
+            DatesDatFile.Add(nDat[i]+' '+StringDataFromRow(n_srhDat[j],5));
             Break;
             end;
          end;
@@ -896,22 +920,27 @@ begin
         Directory:='';
         for I := Length(tempString) downto 1 do
           Directory:=Directory+tempString[i];
-        SetCurrentDir(Directory);
-//        tempString:=LowerCase(floattostrF(Boron.Data,ffExponent,4,2));
-//        tempString:=AnsiReplaceStr(tempString,'.','p');
-//        tempString:=AnsiReplaceStr(tempString,'+','');
+        Delete(Directory,Length(Directory),1);
+        tempString:='';
+        for I := Length(Directory) downto 1 do
+          tempString:=tempString+Directory[i];
+        Delete(tempString,1,AnsiPos ('\', tempString)-1);
+        Directory:='';
+        for I := Length(tempString) downto 1 do
+          Directory:=Directory+tempString[i];
 
-//        tempString:=NBoronToString()+
-//        {'NB'+tempString+}'T'+StringDataFromRow(TxtFile[2],1);
-//        if FeBdata then DatesDatFile.SaveToFile(tempString+'FeB.dat')
-//                   else DatesDatFile.SaveToFile(tempString+'Fe.dat');
-        tempString:='T'+StringDataFromRow(TxtFile[2],1)+
-                      NBoronToString();
+        SetCurrentDir(Directory);
+
+        tempString:='D'+IntToStr(round(strtofloat(StringDataFromRow(DatesDatFile[2],4))*1e5))
+        +'T'+StringDataFromRow(DatesDatFile[2],3)
+        +'B'+NumberToString(strtofloat(StringDataFromRow(DatesDatFile[2],2)));
+//        tempString:='T'+StringDataFromRow(TxtFile[2],1)+
+//                      NBoronToString();
         if FeBdata then DatesDatFile.SaveToFile('FB'+tempString+'.dat')
                    else DatesDatFile.SaveToFile('Fe'+tempString+'.dat');
 
 
-
+       SetCurrentDir(Result_Folder);
        if FindFirst('ResultAll.dat', faAnyFile, SR) <> 0 then
          begin
            DatesDatFile.SaveToFile('ResultAll.dat');
@@ -925,20 +954,21 @@ begin
                 begin
                  tempString:=StringDataFromRow(DatesDatFile[1],1)+
                       ' '+StringDataFromRow(DatesDatFile[1],2)+
-                      ' '+StringDataFromRow(DatesDatFile[1],3);
+                      ' '+StringDataFromRow(DatesDatFile[1],3)+
+                      ' '+StringDataFromRow(DatesDatFile[1],4);
                  RowIsFound:=false;
                  for I := 1 to ResultFile.Count - 1 do
                    begin
                      if AnsiPos(tempString,ResultFile[i])>0 then
                       begin
                          if FeBdata then tempString:=tempString+' '+
-                                         StringDataFromRow(ResultFile[i],4)+' '+
                                          StringDataFromRow(ResultFile[i],5)+' '+
-                                         StringDataFromRow(DatesDatFile[1],4)+' '+
-                                         StringDataFromRow(DatesDatFile[1],5)
-                                    else tempString:=DatesDatFile[1]+' '+
                                          StringDataFromRow(ResultFile[i],6)+' '+
-                                         StringDataFromRow(ResultFile[i],7);
+                                         StringDataFromRow(DatesDatFile[1],5)+' '+
+                                         StringDataFromRow(DatesDatFile[1],6)
+                                    else tempString:=DatesDatFile[1]+' '+
+                                         StringDataFromRow(ResultFile[i],7)+' '+
+                                         StringDataFromRow(ResultFile[i],8);
                         tempString:=SomeSpaceToOne(tempString);
                         ResultFile.Delete(i);
                         ResultFile.Insert(i,tempString);
@@ -949,8 +979,8 @@ begin
                  if not(RowIsFound) then
                     begin
                     if FeBdata then  tempString:=tempString+' 1 1 '+
-                                         StringDataFromRow(DatesDatFile[1],4)+' '+
-                                         StringDataFromRow(DatesDatFile[1],5)
+                                         StringDataFromRow(DatesDatFile[1],5)+' '+
+                                         StringDataFromRow(DatesDatFile[1],6)
                                else tempString:=DatesDatFile[1];
                      ResultFile.Add(tempString);
                     end;
@@ -962,14 +992,15 @@ begin
               if not(FeBdata) then
                 begin
                  ResultFile.Delete(0);
-                 ResultFile.Insert(0,'N_Fe N_B T n_Fe n_Fe_SRH n_FeB n_FeB_SRH');
+                 ResultFile.Insert(0,'N_Fe N_B T d n_Fe n_Fe_SRH n_FeB n_FeB_SRH');
                  for I := 1 to ResultFile.Count - 1 do
                    begin
                     tempString:=StringDataFromRow(ResultFile[i],1)+
                       ' '+StringDataFromRow(ResultFile[i],2)+
-                      ' '+StringDataFromRow(ResultFile[i],3)+' 1 1 '+
-                      StringDataFromRow(ResultFile[i],4)+' '+
-                      StringDataFromRow(ResultFile[i],5);
+                      ' '+StringDataFromRow(ResultFile[i],3)+
+                      ' '+StringDataFromRow(ResultFile[i],4)+' 1 1 '+
+                      StringDataFromRow(ResultFile[i],5)+' '+
+                      StringDataFromRow(ResultFile[i],6);
                       ResultFile.Delete(i);
                       ResultFile.Insert(i,tempString);
                    end;
@@ -978,7 +1009,8 @@ begin
                 begin
                  tempString:=StringDataFromRow(DatesDatFile[1],1)+
                       ' '+StringDataFromRow(DatesDatFile[1],2)+
-                      ' '+StringDataFromRow(DatesDatFile[1],3);
+                      ' '+StringDataFromRow(DatesDatFile[1],3)+
+                      ' '+StringDataFromRow(DatesDatFile[1],4);
                  RowIsFound:=false;
                  for I := 1 to ResultFile.Count - 1 do
                    begin
@@ -986,8 +1018,8 @@ begin
                       begin
                          if FeBdata then tempString:=DatesDatFile[1]
                                     else tempString:=DatesDatFile[1]+' '+
-                                         StringDataFromRow(ResultFile[i],6)+' '+
-                                         StringDataFromRow(ResultFile[i],7);
+                                         StringDataFromRow(ResultFile[i],7)+' '+
+                                         StringDataFromRow(ResultFile[i],8);
                         tempString:=SomeSpaceToOne(tempString);
                         ResultFile.Delete(i);
                         ResultFile.Insert(i,tempString);
@@ -1004,23 +1036,24 @@ begin
               if FeBdata then
                 begin
                  ResultFile.Delete(0);
-                 ResultFile.Insert(0,'N_Fe N_B T n_Fe n_Fe_SRH n_FeB n_FeB_SRH')
+                 ResultFile.Insert(0,'N_Fe N_B T d n_Fe n_Fe_SRH n_FeB n_FeB_SRH')
                 end;
                while DatesDatFile.Count>1 do
                 begin
                  tempString:=StringDataFromRow(DatesDatFile[1],1)+
                       ' '+StringDataFromRow(DatesDatFile[1],2)+
-                      ' '+StringDataFromRow(DatesDatFile[1],3);
+                      ' '+StringDataFromRow(DatesDatFile[1],3)+
+                      ' '+StringDataFromRow(DatesDatFile[1],4);
                  RowIsFound:=false;
                  for I := 1 to ResultFile.Count - 1 do
                    begin
                      if AnsiPos(tempString,ResultFile[i])>0 then
                       begin
                          if FeBdata then tempString:=tempString+' '+
-                                         StringDataFromRow(ResultFile[i],4)+' '+
                                          StringDataFromRow(ResultFile[i],5)+' '+
-                                         StringDataFromRow(DatesDatFile[1],4)+' '+
-                                         StringDataFromRow(DatesDatFile[1],5)
+                                         StringDataFromRow(ResultFile[i],6)+' '+
+                                         StringDataFromRow(DatesDatFile[1],5)+' '+
+                                         StringDataFromRow(DatesDatFile[1],6)
                                     else tempString:=DatesDatFile[1];
                         tempString:=SomeSpaceToOne(tempString);
                         ResultFile.Delete(i);
@@ -1032,8 +1065,8 @@ begin
                  if not(RowIsFound) then
                     begin
                     if FeBdata then  tempString:=tempString+' 1 1 '+
-                                         StringDataFromRow(DatesDatFile[1],4)+' '+
-                                         StringDataFromRow(DatesDatFile[1],5)
+                                         StringDataFromRow(DatesDatFile[1],5)+' '+
+                                         StringDataFromRow(DatesDatFile[1],6)
                                else tempString:=DatesDatFile[1];
                      ResultFile.Add(tempString);
                     end;

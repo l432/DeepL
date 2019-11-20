@@ -100,7 +100,7 @@ begin
  fFileNumber:=0;
  for I := 0 to High(fData) do
    fData[i]:=0;
- fSCAPSFileName:='';  
+ fSCAPSFileName:='';
 end;
 
 function TIVparameter.FileName: string;
