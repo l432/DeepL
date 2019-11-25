@@ -40,11 +40,11 @@
    вибираємо папку з файлами (кнопка "Сhose directory" на вкладці "Directory operation")
    вибираємо функцію D-diod (кнопка "Select")
    встановлюємо наступні параметри (кнопка "Option")
-     * "Iteration Number" - 2000
+     * "Iteration Number" - 3000
      *  "Evolution Type" - MABC
      *  n1 - Constant, 1     
      *  Rs -  Constant, 1
-     *  Io1 - Logarithmic, Initial 1e-13, 1e-10;  Limit 1e-18, 1e-8
+     *  Io1 - Logarithmic, Initial 1e-13, 1e-10;  Limit 1e-28, 1e-8
      *  Rsh - Constant, 1e20
      *  n2 - Normal, Initial 1, 1.5;  Limit 1, 2.5
      *  Io2 - Logarithmic, Initial 1e-9, 1e-5;  Limit 1e-18, 1e-5

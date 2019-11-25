@@ -1,7 +1,7 @@
 > SCAPS 3.3.07 ELIS-UGent: Version scaps3307.exe, dated 06-01-2019, 14:07:34
 > SCAPS All SCAPS Settings file, saved on 	16-11-2019 at 16:14:00
 > problem definition file loaded :
-> D:\Samples\DeepL\FeB\Scaps3307\def\FeBD15T330B1p000e15.scaps
+> D:\Oleg\SAMPLE\DeepL\FeB\Scaps3307\def\FeBD15T330B1p000e15.scaps
 > last saved: 	16-11-2019 at 16:14:00
 > 
 
@@ -383,8 +383,8 @@ Secondworkpoint transmission :   100.0000 %
 Secondworkpoint attenuation :   100.0000 %
 pause :  0
 IV_startV :     0.0000 V
-IV_stopV :     0.6200 V
-IV_points :  63
+IV_stopV :     0.5000 V
+IV_points :  51
 IV_increment :     0.010000 V
 IV_calculate :  1
 stop after Voc :  0

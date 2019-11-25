@@ -383,8 +383,8 @@ Secondworkpoint transmission :   100.0000 %
 Secondworkpoint attenuation :   100.0000 %
 pause :  0
 IV_startV :     0.0000 V
-IV_stopV :     0.5000 V
-IV_points :  51
+IV_stopV :     0.4500 V
+IV_points :  46
 IV_increment :     0.010000 V
 IV_calculate :  1
 stop after Voc :  0
