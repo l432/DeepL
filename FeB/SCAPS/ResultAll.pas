@@ -5,11 +5,22 @@ interface
 uses
   Classes,OlegFunction,SomeFunction;
 
+type TArguments=(aFe,aB,aT,aD);
+
+const
+      DirectoryNames:array[TArguments]of string=
+      ('Iron','Boron','Temperature','Thickness');
+      ShortDirectoryNames:array[TArguments]of string=
+       ('Fe','B','T','d');
+      FileHeaderNames:array[TArguments]of string=
+       ('N_Fe','N_B','T','d');
 type
+
+
  TArrayKeyStringList=class
  private
   function GetCount:word;
-    procedure Initiate;
+  procedure Initiate;
  public
   Keys:array of string;
   StringLists:array of TStringList;
@@ -26,7 +37,52 @@ type
   procedure DataConvert();
  end;
 
+TKeyStrList=class
+ private
+  KeysName:string;
+  Keys:array of string;
+  StringLists:array of TStringList;
+  function GetCount:word;
+  function GetSList(index:integer):TStringList;
+ public
+  property Count:word read GetCount;
+  property SList[index:integer]:TStringList read GetSList;
+  function KeysNameDetermine(fileHeader:string):string;
+  procedure AddKey(Key,SringKey:string);
+  {якщо Key вже є в наборі Keys,
+  то SringKey додається у відповідний StringLists,
+  інакше Key додається до Keys і створюється
+  ще один StringLists з рядком SringKey}
+  procedure AddKeysFromStringList(StringList:TStringList;PartNumber:word);
+  {вважаючи, що у колонці PartNumber (нумерація
+  з одиниці) StringList розташовані ключі,
+  створюється набори даних ключ-набір рядків}
+  procedure SortingByKeyValue();
 
+end;
+
+TArrKeyStrList=class
+ private
+//  KeysName:string;
+//  Keys:array of string;
+//  StringLists:array of TStringList;
+  ArrKeyStrList:array of TKeyStrList;
+  fParent:TArrKeyStrList;
+  fChields:array of TArrKeyStrList;
+  DirectoryPath:string;
+  fArgumentNumber:integer;
+//  function KeysNameDetermine(fileHeader:string):string;
+//  procedure AddKey(Key,SringKey:string);
+//  {якщо Key вже є в наборі Keys,
+//  то SringKey додається у відповідний StringLists,
+//  інакше Key додається до Keys і створюється
+//  ще один StringLists з рядком SringKey}
+//  procedure AddKeysFromStringList(StringList:TStringList;PartNumber:word);
+
+ public
+  Constructor Create(SL:TStringList;DataNumber:integer=4;
+                     Parent:TArrKeyStrList=nil);
+end;
 
 
 implementation
@@ -126,7 +182,6 @@ begin
  for I := 0 to Count - 1 do
    for j := 0 to StringLists[i].Count - 1 do
     StringList.Add(Keys[i]+' '+StringLists[i][j]);
-//    StringList.Add(Keys[i]+' '+StringDataFromRow(StringLists[i][j],6));
 end;
 
 procedure TArrayKeyStringList.SortingByKeyValue;
@@ -136,6 +191,153 @@ procedure TArrayKeyStringList.SortingByKeyValue;
      tempString:string;
      tempStringList:TStringList;
 
+begin
+ tempStringList:=TStringList.Create;
+ SetLength(KeyValue,Count);
+ for I := 0 to Count - 1 do
+  KeyValue[i]:=StrToFloat(Keys[i]);
+  for I := 0 to High(KeyValue)-1 do
+   for j := 0 to High(KeyValue)-1-i do
+     if KeyValue[j]>KeyValue[j+1] then
+       begin
+        tempDouble:=KeyValue[j];
+        KeyValue[j]:=KeyValue[j+1];
+        KeyValue[j+1]:=tempDouble;
+
+        tempString:=Keys[j];
+        Keys[j]:=Keys[j+1];
+        Keys[j+1]:=tempString;
+
+        tempStringList.Assign(StringLists[j]);
+        StringLists[j].Assign(StringLists[j+1]);
+        StringLists[j+1].Assign(tempStringList);
+       end;
+ tempStringList.Free;
+end;
+
+{ TArrKeyStrList }
+
+//procedure TArrKeyStrList.AddKey(Key, SringKey: string);
+// var i:integer;
+//begin
+// try
+//   StrToFloat(Key);
+//   for I := 0 to High(Keys) do
+//     if Key=Keys[i] then
+//      begin
+//        StringLists[i].Add(SringKey);
+//        Exit;
+//      end;
+//   SetLength(Keys,High(Keys)+2);
+//   SetLength(StringLists,High(StringLists)+2);
+//   StringLists[High(StringLists)]:=TStringList.Create;
+//   Keys[High(Keys)]:=Key;
+//   StringLists[High(StringLists)].Add(SringKey);
+// except
+//   KeysName:=KeysNameDetermine(Key);
+// end;
+//end;
+
+
+constructor TArrKeyStrList.Create(SL: TStringList;
+                               DataNumber: integer;
+                               Parent: TArrKeyStrList);
+ var
+     i:integer;
+begin
+ inherited Create;
+ fParent:=Parent;
+ if fParent=nil then DirectoryPath:=GetCurrentDir;
+ fArgumentNumber:=NumberOfSubstringInRow(SL[0])-DataNumber;
+ SetLength(ArrKeyStrList,fArgumentNumber);
+ for I := 0 to High(ArrKeyStrList) do
+  begin
+    ArrKeyStrList[i]:=TKeyStrList.Create;
+    ArrKeyStrList[i].AddKeysFromStringList(SL,i+1);
+    ArrKeyStrList[i].SortingByKeyValue;
+  end;
+
+
+ if fArgumentNumber>1 then
+  begin
+    SetLength(fChields,fArgumentNumber);
+  end;
+ 
+
+end;
+
+//function TArrKeyStrList.KeysNameDetermine(fileHeader: string): string;
+// var i:TArguments;
+//begin
+// for I := Low(TArguments) to High(TArguments) do
+//   if fileHeader=FileHeaderNames[i] then
+//    begin
+//      Result:=ShortDirectoryNames[i];
+//      Exit;
+//    end;
+//  Result:='None';
+//end;
+
+{ TKeyStrList }
+
+procedure TKeyStrList.AddKey(Key, SringKey: string);
+ var i:integer;
+begin
+ try
+   StrToFloat(Key);
+   for I := 0 to High(Keys) do
+     if Key=Keys[i] then
+      begin
+        StringLists[i].Add(SringKey);
+        Exit;
+      end;
+   SetLength(Keys,High(Keys)+2);
+   SetLength(StringLists,High(StringLists)+2);
+   StringLists[High(StringLists)]:=TStringList.Create;
+   Keys[High(Keys)]:=Key;
+   StringLists[High(StringLists)].Add(SringKey);
+ except
+   KeysName:=KeysNameDetermine(Key);
+ end;
+end;
+
+procedure TKeyStrList.AddKeysFromStringList(StringList: TStringList;
+                                            PartNumber: word);
+ var i:integer;
+begin
+  for I := 0 to StringList.Count - 1 do
+     AddKey(StringDataFromRow(StringList[i],PartNumber),
+             DeleteStringDataFromRow(StringList[i],PartNumber));
+end;
+
+function TKeyStrList.GetCount: word;
+begin
+ Result:=High(Keys)+1;
+end;
+
+function TKeyStrList.GetSList(index: integer): TStringList;
+begin
+ Result:=StringLists[index];
+end;
+
+function TKeyStrList.KeysNameDetermine(fileHeader: string): string;
+ var i:TArguments;
+begin
+ for I := Low(TArguments) to High(TArguments) do
+   if fileHeader=FileHeaderNames[i] then
+    begin
+      Result:=ShortDirectoryNames[i];
+      Exit;
+    end;
+  Result:='None';
+end;
+
+procedure TKeyStrList.SortingByKeyValue;
+ var KeyValue:array of double;
+     i,j:integer;
+     tempDouble:double;
+     tempString:string;
+     tempStringList:TStringList;
 begin
  tempStringList:=TStringList.Create;
  SetLength(KeyValue,Count);

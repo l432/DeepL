@@ -5,8 +5,9 @@ interface
 uses
   Classes;
 
- const DirecName:array[1..3]of string=('Iron','Boron','Temperature');
-      ShortDirecName:array[1..3]of string=('Fe','B','T');
+ const DirecName:array[1..4]of string=
+      ('Iron','Boron','Temperature','Thickness');
+      ShortDirecName:array[1..4]of string=('Fe','B','T','d');
       FileHeader='nFsrh nFBsrh dnsrh nF nFB dn';
 
 
@@ -31,6 +32,16 @@ uses
 
 function EditString(str:string):string;
 begin
+  try
+   if StrToFloat(str)<1 then
+      begin
+      Result:=IntToStr(Round(1e6*StrToFloat(str)));
+      Exit;
+      end;
+  finally
+
+  end;
+
   Result:=AnsiReplaceStr(str,'.','p');
   Result:=AnsiReplaceStr(Result,'+','');
   while AnsiPos ('0E', Result)>5 do
@@ -49,9 +60,15 @@ end;
 function SubDirectorySault(Number1,Number2:word):string;
 begin
   case Number1 of
-   1:if Number2=1 then Result:=ShortDirecName[2] else Result:=ShortDirecName[3];
-   2:if Number2=1 then Result:=ShortDirecName[1] else Result:=ShortDirecName[3];
-   else if Number2=1 then Result:=ShortDirecName[1] else Result:=ShortDirecName[2];
+   1:if Number2=1
+         then Result:=ShortDirecName[2]
+         else Result:=ShortDirecName[3];
+   2:if Number2=1
+         then Result:=ShortDirecName[1]
+         else Result:=ShortDirecName[3];
+   else if Number2=1
+         then Result:=ShortDirecName[1]
+         else Result:=ShortDirecName[2];
   end;
 end;
 
@@ -164,9 +181,10 @@ end;
 
 function LogKey(Key:string):string;
 begin
-  if (AnsiPos ('e',Key)>0)or(AnsiPos ('E',Key)>0)
-   then  Result:=FloatToStrF(Log10(strtofloat(Key)), ffExponent, 10, 2)
-   else  Result:=Key;
+  if ((AnsiPos ('e',Key)>0)or(AnsiPos ('E',Key)>0))
+     and  (strtofloat(Key)>1)
+        then Result:=FloatToStrF(Log10(strtofloat(Key)), ffExponent, 10, 2)
+        else  Result:=Key;
 end;
 
 procedure KeysAndStringListToStringList(Key:string;Souce,Target:TStringList);

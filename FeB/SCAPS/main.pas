@@ -420,8 +420,6 @@ begin
 
           for I := 0 to ArrayKeyStringList.Count-1 do
             begin
-  //            CreateDirSafety(ShortDirecName[Number]+
-  //                EditString(ArrayKeyStringList.Keys[i]));
 
               SetCurrentDir(DirectoryN
                   +'/'+ShortDirecName[Number]
