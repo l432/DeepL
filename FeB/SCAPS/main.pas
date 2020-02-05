@@ -389,6 +389,7 @@ procedure TMainForm.BResultClick(Sender: TObject);
       I,j:integer;
 //      Key,KeyString:string;
       DirectoryN,DirectoryN2:string;
+      ArrKeyStrList:TArrKeyStrList;
 
 begin
  OpenDialog1.Filter:='Result file (ResultAll.dat)|*.dat';
@@ -396,89 +397,95 @@ begin
      then
        begin
         ResultFile:=TStringList.Create;
-        SimpleDataFile:=TStringList.Create;
-        MatrixDataFile:=TStringList.Create;
+//        SimpleDataFile:=TStringList.Create;
+//        MatrixDataFile:=TStringList.Create;
         Directory:=ExtractFilePath(OpenDialog1.FileName);
         ResultFile.LoadFromFile(OpenDialog1.FileName);
-        ResultFile.Delete(0);
-        ArrayKeyStringList:=TArrayKeyStringList.Create;
-        AKSL2:=TArrayKeyStringList.Create;
-        AKSL3:=TArrayKeyStringList.Create;
-        for Number := 1 to 3 do
-        begin
-//        Number:=3;
-          ArrayKeyStringList.Clear;
-          ArrayKeyStringList.AddKeysFromStringList(ResultFile,Number);
-          ArrayKeyStringList.SortingByKeyValue;
+        ArrKeyStrList:=TArrKeyStrList.Create(ResultFile);
+        ArrKeyStrList.SaveData;
+        ArrKeyStrList.Free;
 
-          CreateDirSafety(DirecName[Number]);
+//        ResultFile.Delete(0);
+//        ArrayKeyStringList:=TArrayKeyStringList.Create;
+//        AKSL2:=TArrayKeyStringList.Create;
+//        AKSL3:=TArrayKeyStringList.Create;
+//        for Number := 1 to 3 do
+//        begin
+////        Number:=3;
+//          ArrayKeyStringList.Clear;
+//          ArrayKeyStringList.AddKeysFromStringList(ResultFile,Number);
+//          ArrayKeyStringList.SortingByKeyValue;
+//
+//          CreateDirSafety(DirecName[Number]);
+//
+//          SetCurrentDir(Directory+'/'+DirecName[Number]);
+//          DirectoryN:=GetCurrentDir;
+//
+//          ArrayKeyStringList.CreateDirByKeys(ShortDirecName[Number]);
+//
+//          for I := 0 to ArrayKeyStringList.Count-1 do
+//            begin
+//
+//              SetCurrentDir(DirectoryN
+//                  +'/'+ShortDirecName[Number]
+//                  +EditString(ArrayKeyStringList.Keys[i]));
+//              DirectoryN2:=GetCurrentDir;
+//              MatrixDataFile.Clear;
+//
+//              for Number2 := 1 to 2 do
+//                begin
+//                AKSL2.Clear;
+//                AKSL2.AddKeysFromStringList(ArrayKeyStringList.StringLists[i],Number2);
+//                AKSL2.SortingByKeyValue;
+//
+//                CreateDirSafety(SubDirectoryName(Number,Number2));
+//                SetCurrentDir(DirectoryN2+'/'+SubDirectoryName(Number,Number2));
+////                AKSL2.CreateDirByKeys(SubDirectorySault(Number,Number2));
+//                for j := 0 to AKSL2.Count-1 do
+//                 begin
+//                  AKSL3.Clear;
+//                  AKSL3.AddKeysFromStringList(AKSL2.StringLists[j],1);
+//                  AKSL3.SortingByKeyValue;
+//                  AKSL3.DataConvert;
+//                  SimpleDataFile.Clear;
+//                  AKSL3.KeysAndListsToStringList(SimpleDataFile);
+//                  if Number2=1 then
+//                    KeysAndStringListToStringList(LogKey(AKSL2.Keys[j]),SimpleDataFile,MatrixDataFile);
+//                  SimpleDataFile.Insert(0,DataFileHeader(Number,Number2));
+//                  SimpleDataFile.SaveToFile(DataFileName(Number,Number2,
+//                                        ArrayKeyStringList.Keys[i],
+//                                        AKSL2.Keys[j]));
+//                 end;
+//                SetCurrentDir(DirectoryN2);
+//                end;
+//
+//              SetCurrentDir(DirectoryN);
+//              MatrixDataFile.Insert(0,MatrixFileHeader(Number));
+//              MatrixDataFile.SaveToFile(MatrixFileName(Number,ArrayKeyStringList.Keys[i]));
+//
+//            end;
+//
+//
+//         SetCurrentDir(Directory);
+//        end;
+//
+////          AKSL2.StringLists[0].Add(AKSL2.Keys[0]);
+////          AKSL2.StringLists[0].SaveToFile('temp.dat');
+////          SimpleDataFile.SaveToFile('temp.dat');
+////          AKSL3.StringLists[0].Add(AKSL3.Keys[0]);
+////          AKSL3.StringLists[0].SaveToFile('temp3.dat');
+//
+//
+////         ArrayKeyStringList.StringLists[1].SaveToFile('temp.dat');
+////        showmessage(inttostr(ArrayKeyStringList.StringLists[10].Count));
+////        showmessage(inttostr(ArrayKeyStringList.Count));
+//        AKSL3.Free;
+//        AKSL2.Free;
+//        ArrayKeyStringList.Free;
+//        SimpleDataFile.Free;
+//        MatrixDataFile.Free;
 
-          SetCurrentDir(Directory+'/'+DirecName[Number]);
-          DirectoryN:=GetCurrentDir;
 
-          ArrayKeyStringList.CreateDirByKeys(ShortDirecName[Number]);
-
-          for I := 0 to ArrayKeyStringList.Count-1 do
-            begin
-
-              SetCurrentDir(DirectoryN
-                  +'/'+ShortDirecName[Number]
-                  +EditString(ArrayKeyStringList.Keys[i]));
-              DirectoryN2:=GetCurrentDir;
-              MatrixDataFile.Clear;
-
-              for Number2 := 1 to 2 do
-                begin
-                AKSL2.Clear;
-                AKSL2.AddKeysFromStringList(ArrayKeyStringList.StringLists[i],Number2);
-                AKSL2.SortingByKeyValue;
-
-                CreateDirSafety(SubDirectoryName(Number,Number2));
-                SetCurrentDir(DirectoryN2+'/'+SubDirectoryName(Number,Number2));
-//                AKSL2.CreateDirByKeys(SubDirectorySault(Number,Number2));
-                for j := 0 to AKSL2.Count-1 do
-                 begin
-                  AKSL3.Clear;
-                  AKSL3.AddKeysFromStringList(AKSL2.StringLists[j],1);
-                  AKSL3.SortingByKeyValue;
-                  AKSL3.DataConvert;
-                  SimpleDataFile.Clear;
-                  AKSL3.KeysAndListsToStringList(SimpleDataFile);
-                  if Number2=1 then
-                    KeysAndStringListToStringList(LogKey(AKSL2.Keys[j]),SimpleDataFile,MatrixDataFile);
-                  SimpleDataFile.Insert(0,DataFileHeader(Number,Number2));
-                  SimpleDataFile.SaveToFile(DataFileName(Number,Number2,
-                                        ArrayKeyStringList.Keys[i],
-                                        AKSL2.Keys[j]));
-                 end;
-                SetCurrentDir(DirectoryN2);
-                end;
-
-              SetCurrentDir(DirectoryN);
-              MatrixDataFile.Insert(0,MatrixFileHeader(Number));
-              MatrixDataFile.SaveToFile(MatrixFileName(Number,ArrayKeyStringList.Keys[i]));
-
-            end;
-
-
-         SetCurrentDir(Directory);
-        end;
-
-//          AKSL2.StringLists[0].Add(AKSL2.Keys[0]);
-//          AKSL2.StringLists[0].SaveToFile('temp.dat');
-//          SimpleDataFile.SaveToFile('temp.dat');
-//          AKSL3.StringLists[0].Add(AKSL3.Keys[0]);
-//          AKSL3.StringLists[0].SaveToFile('temp3.dat');
-
-
-//         ArrayKeyStringList.StringLists[1].SaveToFile('temp.dat');
-//        showmessage(inttostr(ArrayKeyStringList.StringLists[10].Count));
-//        showmessage(inttostr(ArrayKeyStringList.Count));
-        AKSL3.Free;
-        AKSL2.Free;
-        ArrayKeyStringList.Free;
-        SimpleDataFile.Free;
-        MatrixDataFile.Free;
         ResultFile.Free;
        end;
 end;

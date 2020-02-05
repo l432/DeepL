@@ -19,6 +19,7 @@ function DataFileHeader(Number1,Number2:word):string;
 function MatrixFileHeader(Number1:word):string;
 function DataLabel(Number1,Number2:word):string;
 function DataStringConvert(Souce:string):string;
+function DataStringConvertNew(Souce:string;StartPosition:word=0):string;
 function PartOfDataFileName(Key:string):string;
 function DataFileName(Number1,Number2:word;Key1,Key2:string):string;
 function MatrixFileName(Number1:word;Key1:string):string;
@@ -127,6 +128,31 @@ begin
          +FloatToStrF(nFe-nFeB,ffExponent,10,2);
 end;
 
+function DataStringConvertNew(Souce:string;StartPosition:word=0):string;
+ var nFe,nFeSRH,nFeB,nFeBSRH:double;
+     i:byte;
+begin
+ nFe:=FloatDataFromRow(Souce,1+StartPosition);
+ nFeSRH:=FloatDataFromRow(Souce,2+StartPosition);
+ nFeB:=FloatDataFromRow(Souce,3+StartPosition);
+ nFeBSRH:=FloatDataFromRow(Souce,4+StartPosition);
+ Result:='';
+ for I := 1 to StartPosition
+  do Result:=Result+StringDataFromRow(Souce,i)+' ';
+
+ Result:=Result
+         +StringDataFromRow(Souce,2+StartPosition)+' '
+         +StringDataFromRow(Souce,4+StartPosition)+' '
+         +FloatToStrF(nFeSRH-nFeBSRH,ffExponent,10,2)+' '
+         +StringDataFromRow(Souce,1+StartPosition)+' '
+         +StringDataFromRow(Souce,3+StartPosition)+' '
+         +FloatToStrF(nFe-nFeB,ffExponent,10,2)+' '
+         +FloatToStrF(nFeSRH-nFe,ffExponent,10,2)+' '
+         +FloatToStrF(nFeBSRH-nFeB,ffExponent,10,2);
+end;
+
+
+
 function PartOfDataFileName(Key:string):string;
 begin
   if (AnsiPos ('e',Key)>0)or(AnsiPos ('E',Key)>0)
@@ -193,7 +219,6 @@ begin
   for I := 0 to Souce.Count - 1 do
    Target.Add(Key+' '+LogKey(StringDataFromRow(Souce[i],1))
             +' '+DeleteStringDataFromRow(Souce[i],1));
-
 end;
 
 end.
