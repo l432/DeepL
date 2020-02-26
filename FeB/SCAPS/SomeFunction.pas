@@ -208,9 +208,19 @@ end;
 function LogKey(Key:string):string;
 begin
   if ((AnsiPos ('e',Key)>0)or(AnsiPos ('E',Key)>0))
-     and  (strtofloat(Key)>1)
+    then
+      begin
+      if (strtofloat(Key)>1)
         then Result:=FloatToStrF(Log10(strtofloat(Key)), ffExponent, 10, 2)
-        else  Result:=Key;
+        else Result:=inttostr( Round(strtofloat(Key)*1e6))
+      end
+    else Result:=Key;
+
+
+//  if ((AnsiPos ('e',Key)>0)or(AnsiPos ('E',Key)>0))
+//     and  (strtofloat(Key)>1)
+//        then Result:=FloatToStrF(Log10(strtofloat(Key)), ffExponent, 10, 2)
+//        else  Result:=Key;
 end;
 
 procedure KeysAndStringListToStringList(Key:string;Souce,Target:TStringList);
