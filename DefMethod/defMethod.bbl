@@ -108,13 +108,13 @@ Advances in Condensed Matter and Materials Research~/ Ed. by Hans~Geelvinck,
 \newblock М.: Физматлит, 2010. ---
 \newblock {С.}~456.
 
-\bibitem{Pavlov}
-\selectlanguageifdefined{russian}
-\BibEmph{Павлов,~Л.П.} Методы измерения
-  параметров полупроводниковых
-  материалов~/ Л.П.~Павлов. ---
-\newblock М.: Высшая школа, 1987. ---
-\newblock {С.}~239.
+\bibitem{Krause}
+\selectlanguageifdefined{english}
+\BibEmph{Krause-Rehberg,~Reinhard}. Positron Annihilation in Semiconductors:
+  Defect Studies~/ Reinhard~Krause-Rehberg, Hartmut~S.~Leipner. ---
+\newblock Springe, 2003. ---
+\newblock Vol.~127 of \BibEmph{Springer Series in Solid-State Sciences}. ---
+\newblock P.~383.
 
 \bibitem{ROUGIEUX2018}
 \selectlanguageifdefined{english}
@@ -197,5 +197,14 @@ Laplace--transform deep-level transient spectroscopy studies of the G4
 \newblock 1998. --- Nov. ---
 \newblock Vol.~73, no.~21. ---
 \newblock Pp.~3126--3128.
+
+\bibitem{Uedono_2014}
+\selectlanguageifdefined{english}
+(Invited) Point Defect Characterization of Group-{III} Nitrides by Using
+  Monoenergetic Positron Beams~/ A.~Uedono, S.~Ishibashi, N.~Oshima et~al.~//
+  \BibEmph{{ECS} Transactions}. ---
+\newblock 2014. --- Mar. ---
+\newblock Vol.~61, no.~5. ---
+\newblock Pp.~19--30.
 
 \end{thebibliography}
