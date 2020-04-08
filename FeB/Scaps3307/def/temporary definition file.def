@@ -219,7 +219,7 @@ Relative hole mass :  1.00
 layer
 
 name : p_Si
-d : 2.400e-04 [m]
+d : 2.100e-04 [m]
 Tunneling in layer: 0
 Relative electron mass :	  3.6284e-01	  1.0000e+00	  1.0000e+00	  1.0000e+00	  1.0000e+00	  3.6284e-01	  3.6284e-01	 1	
 Relative hole mass :	  8.2483e-01	  1.0000e+00	  1.0000e+00	  1.0000e+00	  1.0000e+00	  8.2483e-01	  8.2483e-01	 1	 0	[
