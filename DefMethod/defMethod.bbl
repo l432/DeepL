@@ -207,4 +207,27 @@ Laplace--transform deep-level transient spectroscopy studies of the G4
 \newblock Vol.~61, no.~5. ---
 \newblock Pp.~19--30.
 
+\bibitem{Bulyar}
+\selectlanguageifdefined{russian}
+Определение параметров глубоких уровней
+  по дифференциальным коэффициентам
+  вольт--амперных характеристик~/
+  С.В.~Булярский, М.О.~Воробьев, Н.С.~Грушко,
+  А.В.~Лакалин~// \BibEmph{Письма в журнал
+  технической физики}. ---
+\newblock 1999. ---
+\newblock Т.~25, {№}~5. ---
+\newblock {С.}~22--27.
+
+\bibitem{Olikh:FTP2009}
+\selectlanguageifdefined{russian}
+\BibEmph{Олих,~О.~Я.} Изменение активности
+  рекомбинационных центров в кремниевых
+  p--n--структурах в условиях акустического
+  нагружения~/ О.~Я.~Олих~// \BibEmph{Физика и
+  техника полупроводников}. ---
+\newblock 2009. ---
+\newblock Т.~43, {№}~6. ---
+\newblock {С.}~774--779.
+
 \end{thebibliography}
