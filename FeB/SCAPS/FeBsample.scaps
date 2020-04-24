@@ -104,9 +104,9 @@
 > 
 convergence
 
-clamp_psi :  2.50e-01 units kT
-clamp_n :  2.50e-01 units kT
-clamp_p :  2.50e-01 units kT
+clamp_psi :  5.00e-01 units kT
+clamp_n :  5.00e-01 units kT
+clamp_p :  5.00e-01 units kT
 termination_psi :  1.00e-03 units kT
 termination_Fn :  1.00e-03 units kT
 termination_Fp :  1.00e-03 units kT
@@ -114,7 +114,7 @@ termination_Meta_full :  1.00e-03 (rel.)
 maxmetaiter_full :   250
 clamp_meta :  1.00e-02 (rel.)
 usemetaclamping : 0
-maxiter : 10000
+maxiter :  1000
 defectdiscretisations :     7
 widthtail :  1.00e-02
 widthgauss :  6.00e+00
@@ -123,7 +123,7 @@ number of photons :  3.00e+22
 incident power :  1.00e+00
 recalculate mesh :  1 (0: fixed mesh, 1: adaptive mesh)
 maximum mesh changes per iteration step :  10
-maximum ratio between neighbouring points :  1.10e+00
+maximum ratio between neighbouring points :  1.60e+00
 minimum ratio between neighbouring points :  1.01e+00
 generation limit :  1.00e+00 microA/cm2
 recombination limit :  1.00e-03 microA/cm2

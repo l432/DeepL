@@ -59,6 +59,8 @@ type
     ST_ResF: TStaticText;
     L_ResF: TLabel;
     B_ResFSelect: TButton;
+    OpenDialog2: TOpenDialog;
+    BAllDatesDat: TButton;
     procedure BtFileSelectClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
@@ -72,6 +74,7 @@ type
     procedure BScapsFileCreateClick(Sender: TObject);
     procedure B_SCAPSFSelectClick(Sender: TObject);
     procedure B_ResFSelectClick(Sender: TObject);
+    procedure BAllDatesDatClick(Sender: TObject);
   private
     { Private declarations }
     TempStart,TempFinish,TempStep: TIntegerParameterShow;
@@ -101,6 +104,8 @@ type
     function PartOfFileNameCreate(T:integer):string;
     procedure SetCurrentFolders;
     procedure SetTemperatureFolders(T: Integer);
+    procedure AdDataFromDatesDat(FullFilename:string);
+    function SearchInFolders(StartFolder:string):string;
   public
     { Public declarations }
   end;
@@ -334,7 +339,8 @@ end;
 procedure TMainForm.BtFileSelectClick(Sender: TObject);
 
 begin
-//   OpenDialog1.InitialDir:=SCAPS_Folder+'\results\';
+   OpenDialog1.InitialDir:=SCAPS_Folder+'\results';
+   OpenDialog1.FileName:='';
    OpenDialog1.Filter:='Scaps files (*.iv)|*.iv';
    if OpenDialog1.Execute()
      then
@@ -383,15 +389,18 @@ procedure TMainForm.BResultClick(Sender: TObject);
 // const DirecName:array[1..3]of string=('Iron','Boron','Temperature');
 //   ShortDirecName:array[1..3]of string=('Fe','B','T');
 
- var  ResultFile,SimpleDataFile,MatrixDataFile:TStringList;
-      ArrayKeyStringList,AKSL2,AKSL3:TArrayKeyStringList;
-      Number,Number2:word;
-      I,j:integer;
+ var  ResultFile{,SimpleDataFile,MatrixDataFile}:TStringList;
+//      ArrayKeyStringList,AKSL2,AKSL3:TArrayKeyStringList;
+//      Number,Number2:word;
+//      I,j:integer;
 //      Key,KeyString:string;
-      DirectoryN,DirectoryN2:string;
+//      DirectoryN,DirectoryN2:string;
       ArrKeyStrList:TArrKeyStrList;
 
 begin
+
+ OpenDialog1.InitialDir :=Result_Folder;
+ OpenDialog1.FileName:='';
  OpenDialog1.Filter:='Result file (ResultAll.dat)|*.dat';
    if OpenDialog1.Execute()
      then
@@ -523,6 +532,12 @@ begin
  tempStr:='> '+SCAPS_Folder+'\def\'+fileName2;
  StringReplaceMy(FeBScaps,tempStr,3);
 
+
+// tempBegin:='Sn :  ';
+// tempEnd:=' [m/s]';
+// tempstr:=LowerCase(floattostrF(3.2*BSFCon.Data/1e16+0.3,ffExponent,4,2));
+// tempstr:=tempBegin+tempstr+tempEnd;
+// StringReplaceMy(FeScaps,tempStr,135);
 
  tempBegin:='d : ';
  tempEnd:=' [m]';
@@ -822,12 +837,7 @@ begin
  FeScaps.Free;
 end;
 
-function TMainForm.BaseThickToString: string;
-begin
-   Result:='D'+IntToStr(round(BaseThick.Data/10));
-end;
-
-procedure TMainForm.BDatesDatClick(Sender: TObject);
+procedure TMainForm.AdDataFromDatesDat(FullFilename: string);
  var //Direc:string;
     DatesDatFile,ResultFile,TxtFile,
     nDat,n_srhDat:TStringList;
@@ -837,17 +847,16 @@ procedure TMainForm.BDatesDatClick(Sender: TObject);
     SRH_file,FeBdata,RowIsFound:boolean;
     N_FeNumber,N_BNumber,TNumber,dNumber,nNumber:integer;
 begin
- OpenDialog1.Filter:='Shottky result file (dates.dat)|dates.dat';
-   if OpenDialog1.Execute()
-     then
-       begin
-       Directory:=ExtractFilePath(OpenDialog1.FileName);
+
+//       showmessage(GetCurrentDir);
+       Directory:=ExtractFilePath(FullFilename);
+       SetCurrentDir(Directory);
        DatesDatFile:=TStringList.Create;
        ResultFile:=TStringList.Create;
        TxtFile:=TStringList.Create;
        nDat:=TStringList.Create;
        n_srhDat:=TStringList.Create;
-       DatesDatFile.LoadFromFile(OpenDialog1.FileName);
+       DatesDatFile.LoadFromFile(FullFilename);
 
        if FindFirst('*.txt', faAnyFile, SR) = 0 then
          TxtFile.LoadFromFile(SR.Name)
@@ -1081,14 +1090,278 @@ begin
           ResultFile.SaveToFile('ResultAll.dat');
          end;
 
-
-
-
+        FindClose(SR);
         TxtFile.Free;
         DatesDatFile.Free;
         ResultFile.Free;
         nDat.Free;
         n_srhDat.Free;
+end;
+
+procedure TMainForm.BAllDatesDatClick(Sender: TObject);
+begin
+// AdDataFromDatesDat('D:\Samples\DeepL\FeB\ResultsOlegNew\D15\B1p000e15\T290\iv\Fe\dates.dat');
+ SearchInFolders(Result_Folder);
+end;
+
+function TMainForm.BaseThickToString: string;
+begin
+   Result:='D'+IntToStr(round(BaseThick.Data/10));
+end;
+
+procedure TMainForm.BDatesDatClick(Sender: TObject);
+// var
+//    DatesDatFile,ResultFile,TxtFile,
+//    nDat,n_srhDat:TStringList;
+//    SR : TSearchRec;
+//    i,j:integer;
+//    fl_name,tempString:string;
+//    SRH_file,FeBdata,RowIsFound:boolean;
+//    N_FeNumber,N_BNumber,TNumber,dNumber,nNumber:integer;
+begin
+ OpenDialog2.Filter:='Shottky result file (dates.dat)|dates.dat';
+   if OpenDialog2.Execute()
+     then
+       begin
+//         showmessage(OpenDialog2.FileName);
+         AdDataFromDatesDat(OpenDialog2.FileName);
+//       Directory:=ExtractFilePath(OpenDialog2.FileName);
+//       DatesDatFile:=TStringList.Create;
+//       ResultFile:=TStringList.Create;
+//       TxtFile:=TStringList.Create;
+//       nDat:=TStringList.Create;
+//       n_srhDat:=TStringList.Create;
+//       DatesDatFile.LoadFromFile(OpenDialog2.FileName);
+//
+//       if FindFirst('*.txt', faAnyFile, SR) = 0 then
+//         TxtFile.LoadFromFile(SR.Name)
+//                                                else
+//         begin
+//            showmessage('.txt file is absent');
+//            Exit;
+//         end;
+//       FeBdata:=(AnsiPos('FeB',SR.Name)>0);
+//
+//       nNumber:=SubstringNumberFromRow('n2',DatesDatFile[0]);
+//       N_FeNumber:=SubstringNumberFromRow('TDD',TxtFile[0]);
+//       N_BNumber:=SubstringNumberFromRow('N_B',TxtFile[0]);
+//       TNumber:=SubstringNumberFromRow('T',TxtFile[0]);
+//       dNumber:=SubstringNumberFromRow('d',TxtFile[0]);
+//
+//       if (nNumber=0)or
+//          (N_FeNumber=0)or
+//          (N_BNumber=0)or
+//          (TNumber=0)or
+//          (dNumber=0)
+//          then
+//         begin
+//            showmessage('Wrong file format');
+//            Exit;
+//         end;
+//
+//       nDat.Add('N_Fe N_B T d n n_SRH');
+//       for I := 1 to DatesDatFile.Count - 1 do
+//         begin
+//          fl_name:=StringDataFromRow(DatesDatFile[i],2);
+//          fl_name:=Copy(fl_name,1,AnsiPos ('.dat', fl_name)-1);
+//          SRH_file:=(AnsiPos ('_srh', fl_name)>0);
+//          if SRH_file then fl_name:=Copy(fl_name,1,AnsiPos ('_srh', fl_name)-1);
+//          for j:=1 to TxtFile.Count - 1 do
+//            if AnsiPos(fl_name,TxtFile[j])>0 then
+//             begin
+//              tempString:=StringDataFromRow(TxtFile[j],N_FeNumber)+
+//                          ' '+StringDataFromRow(TxtFile[j],N_BNumber) +
+//                          ' '+StringDataFromRow(TxtFile[j],TNumber)+
+//                          ' '+StringDataFromRow(TxtFile[j],dNumber)+
+//                          ' '+StringDataFromRow(DatesDatFile[i],nNumber);
+//              Break;
+//             end;
+//          if SRH_file then  n_srhDat.Add(tempString)
+//                      else  nDat.Add(tempString);
+//         end;
+//        DatesDatFile.Clear;
+//        if FeBdata then DatesDatFile.Add('N_Fe N_B T d n_FeB n_FeB_SRH')
+//                   else DatesDatFile.Add('N_Fe N_B T d n_Fe n_Fe_SRH');
+//        for I := 1 to nDat.Count - 1 do
+//         begin
+//          tempString:=StringDataFromRow(nDat[i],1)+
+//                      ' '+StringDataFromRow(nDat[i],2)+
+//                      ' '+StringDataFromRow(nDat[i],3)+
+//                      ' '+StringDataFromRow(nDat[i],4);
+//          for j := 0 to n_srhDat.Count - 1 do
+//           if AnsiPos(tempString,n_srhDat[j])>0 then
+//            begin
+//            DatesDatFile.Add(nDat[i]+' '+StringDataFromRow(n_srhDat[j],5));
+//            Break;
+//            end;
+//         end;
+//
+//        Delete(Directory,Length(Directory),1);
+//        tempString:='';
+//        for I := Length(Directory) downto 1 do
+//          tempString:=tempString+Directory[i];
+//        Delete(tempString,1,AnsiPos ('\', tempString)-1);
+//        Directory:='';
+//        for I := Length(tempString) downto 1 do
+//          Directory:=Directory+tempString[i];
+//        Delete(Directory,Length(Directory),1);
+//        tempString:='';
+//        for I := Length(Directory) downto 1 do
+//          tempString:=tempString+Directory[i];
+//        Delete(tempString,1,AnsiPos ('\', tempString)-1);
+//        Directory:='';
+//        for I := Length(tempString) downto 1 do
+//          Directory:=Directory+tempString[i];
+//
+//        SetCurrentDir(Directory);
+//
+//        tempString:='D'+IntToStr(round(strtofloat(StringDataFromRow(DatesDatFile[2],4))*1e5))
+//        +'T'+StringDataFromRow(DatesDatFile[2],3)
+//        +'B'+NumberToString(strtofloat(StringDataFromRow(DatesDatFile[2],2)));
+//        if FeBdata then DatesDatFile.SaveToFile('FB'+tempString+'.dat')
+//                   else DatesDatFile.SaveToFile('Fe'+tempString+'.dat');
+//
+//
+//       SetCurrentDir(Result_Folder);
+//       if FindFirst('ResultAll.dat', faAnyFile, SR) <> 0 then
+//         begin
+//           DatesDatFile.SaveToFile('ResultAll.dat');
+//         end
+//                                                         else
+//         begin
+//          ResultFile.LoadFromFile(SR.Name);
+//          if (AnsiPos('n_FeB',ResultFile[0])>0)and(AnsiPos('n_Fe ',ResultFile[0])>0) then
+//             begin
+//               while DatesDatFile.Count>1 do
+//                begin
+//                 tempString:=StringDataFromRow(DatesDatFile[1],1)+
+//                      ' '+StringDataFromRow(DatesDatFile[1],2)+
+//                      ' '+StringDataFromRow(DatesDatFile[1],3)+
+//                      ' '+StringDataFromRow(DatesDatFile[1],4);
+//                 RowIsFound:=false;
+//                 for I := 1 to ResultFile.Count - 1 do
+//                   begin
+//                     if AnsiPos(tempString,ResultFile[i])>0 then
+//                      begin
+//                         if FeBdata then tempString:=tempString+' '+
+//                                         StringDataFromRow(ResultFile[i],5)+' '+
+//                                         StringDataFromRow(ResultFile[i],6)+' '+
+//                                         StringDataFromRow(DatesDatFile[1],5)+' '+
+//                                         StringDataFromRow(DatesDatFile[1],6)
+//                                    else tempString:=DatesDatFile[1]+' '+
+//                                         StringDataFromRow(ResultFile[i],7)+' '+
+//                                         StringDataFromRow(ResultFile[i],8);
+//                        tempString:=SomeSpaceToOne(tempString);
+//                        ResultFile.Delete(i);
+//                        ResultFile.Insert(i,tempString);
+//                        RowIsFound:=true;
+//                        Break;
+//                      end; //if AnsiPos(tempString,ResultFile[i])>0 then
+//                   end;//for I := 1 to ResultFile.Count - 1 do
+//                 if not(RowIsFound) then
+//                    begin
+//                    if FeBdata then  tempString:=tempString+' 1 1 '+
+//                                         StringDataFromRow(DatesDatFile[1],5)+' '+
+//                                         StringDataFromRow(DatesDatFile[1],6)
+//                               else tempString:=DatesDatFile[1];
+//                     ResultFile.Add(tempString);
+//                    end;
+//                 DatesDatFile.Delete(1);
+//                end; //while DatesDatFile.Count>1 do
+//             end;
+//          if (AnsiPos('n_FeB',ResultFile[0])>0)and(not(AnsiPos('n_Fe ',ResultFile[0])>0)) then
+//             begin
+//              if not(FeBdata) then
+//                begin
+//                 ResultFile.Delete(0);
+//                 ResultFile.Insert(0,'N_Fe N_B T d n_Fe n_Fe_SRH n_FeB n_FeB_SRH');
+//                 for I := 1 to ResultFile.Count - 1 do
+//                   begin
+//                    tempString:=StringDataFromRow(ResultFile[i],1)+
+//                      ' '+StringDataFromRow(ResultFile[i],2)+
+//                      ' '+StringDataFromRow(ResultFile[i],3)+
+//                      ' '+StringDataFromRow(ResultFile[i],4)+' 1 1 '+
+//                      StringDataFromRow(ResultFile[i],5)+' '+
+//                      StringDataFromRow(ResultFile[i],6);
+//                      ResultFile.Delete(i);
+//                      ResultFile.Insert(i,tempString);
+//                   end;
+//                end;
+//              while DatesDatFile.Count>1 do
+//                begin
+//                 tempString:=StringDataFromRow(DatesDatFile[1],1)+
+//                      ' '+StringDataFromRow(DatesDatFile[1],2)+
+//                      ' '+StringDataFromRow(DatesDatFile[1],3)+
+//                      ' '+StringDataFromRow(DatesDatFile[1],4);
+//                 RowIsFound:=false;
+//                 for I := 1 to ResultFile.Count - 1 do
+//                   begin
+//                     if AnsiPos(tempString,ResultFile[i])>0 then
+//                      begin
+//                         if FeBdata then tempString:=DatesDatFile[1]
+//                                    else tempString:=DatesDatFile[1]+' '+
+//                                         StringDataFromRow(ResultFile[i],7)+' '+
+//                                         StringDataFromRow(ResultFile[i],8);
+//                        tempString:=SomeSpaceToOne(tempString);
+//                        ResultFile.Delete(i);
+//                        ResultFile.Insert(i,tempString);
+//                        RowIsFound:=true;
+//                        Break;
+//                      end; //if AnsiPos(tempString,ResultFile[i])>0 then
+//                   end;//for I := 1 to ResultFile.Count - 1 do
+//                 if not(RowIsFound) then ResultFile.Add(DatesDatFile[1]);
+//                 DatesDatFile.Delete(1);
+//                end; //while DatesDatFile.Count>1 do
+//             end;
+//          if (not(AnsiPos('n_FeB',ResultFile[0])>0))and(AnsiPos('n_Fe ',ResultFile[0])>0) then
+//             begin
+//              if FeBdata then
+//                begin
+//                 ResultFile.Delete(0);
+//                 ResultFile.Insert(0,'N_Fe N_B T d n_Fe n_Fe_SRH n_FeB n_FeB_SRH')
+//                end;
+//               while DatesDatFile.Count>1 do
+//                begin
+//                 tempString:=StringDataFromRow(DatesDatFile[1],1)+
+//                      ' '+StringDataFromRow(DatesDatFile[1],2)+
+//                      ' '+StringDataFromRow(DatesDatFile[1],3)+
+//                      ' '+StringDataFromRow(DatesDatFile[1],4);
+//                 RowIsFound:=false;
+//                 for I := 1 to ResultFile.Count - 1 do
+//                   begin
+//                     if AnsiPos(tempString,ResultFile[i])>0 then
+//                      begin
+//                         if FeBdata then tempString:=tempString+' '+
+//                                         StringDataFromRow(ResultFile[i],5)+' '+
+//                                         StringDataFromRow(ResultFile[i],6)+' '+
+//                                         StringDataFromRow(DatesDatFile[1],5)+' '+
+//                                         StringDataFromRow(DatesDatFile[1],6)
+//                                    else tempString:=DatesDatFile[1];
+//                        tempString:=SomeSpaceToOne(tempString);
+//                        ResultFile.Delete(i);
+//                        ResultFile.Insert(i,tempString);
+//                        RowIsFound:=true;
+//                        Break;
+//                      end; //if AnsiPos(tempString,ResultFile[i])>0 then
+//                   end;//for I := 1 to ResultFile.Count - 1 do
+//                 if not(RowIsFound) then
+//                    begin
+//                    if FeBdata then  tempString:=tempString+' 1 1 '+
+//                                         StringDataFromRow(DatesDatFile[1],5)+' '+
+//                                         StringDataFromRow(DatesDatFile[1],6)
+//                               else tempString:=DatesDatFile[1];
+//                     ResultFile.Add(tempString);
+//                    end;
+//                 DatesDatFile.Delete(1);
+//                end; //while DatesDatFile.Count>1 do
+//             end;
+//          ResultFile.SaveToFile('ResultAll.dat');
+//         end;
+//        TxtFile.Free;
+//        DatesDatFile.Free;
+//        ResultFile.Free;
+//        nDat.Free;
+//        n_srhDat.Free;
        end;
 end;
 
@@ -1150,7 +1423,8 @@ procedure TMainForm.BFeB_xClick(Sender: TObject);
      tempstr:string;
 
 begin
-// OpenDialog1.InitialDir:=SCAPS_Folder+'\results\';
+ OpenDialog1.InitialDir:=SCAPS_Folder+'\results';
+ OpenDialog1.FileName:='';
  OpenDialog1.Filter:='File with energy bands (*.eb)|*.eb';
  if OpenDialog1.Execute()
    then
@@ -1537,13 +1811,13 @@ begin
   SCAPSFile:=TStringList.Create;
   SCAPSFile.Sorted:=False;
    ConfigFile:=TIniFile.Create(ExtractFilePath(Application.ExeName)+'SCapsConv.ini');
-  TempStart:=TIntegerParameterShow. Create(STTemp_start,LTemp_start,'Start:',300);
+  TempStart:=TIntegerParameterShow. Create(STTemp_start,LTemp_start,'Start:',290);
   TempStart.SetName('Temperature');
   TempStart.ReadFromIniFile(ConfigFile);
-  TempFinish:=TIntegerParameterShow. Create(STTemp_Finish,LTemp_Finish,'Finish:',350);
+  TempFinish:=TIntegerParameterShow. Create(STTemp_Finish,LTemp_Finish,'Finish:',340);
   TempFinish.SetName('Temperature');
   TempFinish.ReadFromIniFile(ConfigFile);
-  TempStep:=TIntegerParameterShow. Create(STTemp_Step,LTemp_Step,'Step:',10);
+  TempStep:=TIntegerParameterShow. Create(STTemp_Step,LTemp_Step,'Step:',5);
   TempStep.SetName('Temperature');
   TempStep.ReadFromIniFile(ConfigFile);
   Boron:=TDoubleParameterShow. Create(STBoron,'Boron',1e10,5);
@@ -1558,7 +1832,7 @@ begin
   EmiterThick:=TDoubleParameterShow. Create(STEmiter_Thick,'EmiterThick',0.5,3);
   EmiterThick.SetName('SC');
   EmiterThick.ReadFromIniFile(ConfigFile);
-  BSFThick:=TDoubleParameterShow. Create(STSBF_Thick,'SBFThick',0.5,3);
+  BSFThick:=TDoubleParameterShow. Create(STSBF_Thick,'SBFThick',1.0,3);
   BSFThick.SetName('SC');
   BSFThick.ReadFromIniFile(ConfigFile);
   BaseThick:=TIntegerParameterShow. Create(STBase_Thick,LSBF_Thick, 'Thickness (mkm)',180);
@@ -1567,13 +1841,13 @@ begin
 
 
 
-  FeLow:=TDoubleParameterShow. Create(STFe_Lo,LFe_Lo,'Low limit:',1e9,5);
+  FeLow:=TDoubleParameterShow. Create(STFe_Lo,LFe_Lo,'Low limit:',1e10,5);
   FeLow.SetName('Iron');
   FeLow.ReadFromIniFile(ConfigFile);
   FeHi:=TDoubleParameterShow. Create(STFe_Hi,LFe_Hi,'High limit:',1e13,5);
   FeHi.SetName('Iron');
   FeHi.ReadFromIniFile(ConfigFile);
-  FeStepNumber:=TIntegerParameterShow. Create(STFe_steps,LFe_steps,'Step Number:',25);
+  FeStepNumber:=TIntegerParameterShow. Create(STFe_steps,LFe_steps,'Step Number:',19);
   FeStepNumber.SetName('Iron');
   FeStepNumber.ReadFromIniFile(ConfigFile);
 
@@ -1654,6 +1928,26 @@ end;
 function TMainForm.PartOfFileNameCreate(T: integer): string;
 begin
  Result:=BaseThickToString+'T'+inttostr(T)+NBoronToString;
+end;
+
+function TMainForm.SearchInFolders(StartFolder: string): string;
+ var sr: TSearchRec;
+begin
+  Result:='';
+  if FindFirst(StartFolder+'\*.*', faAnyFile,SR) <> 0 then Exit;
+  repeat
+    if (((SR.Attr and faDirectory) = SR.Attr)
+     and (SR.Name <> '.') and (SR.Name <> '..'))
+      then
+          begin
+            SearchInFolders(StartFolder+'\'+SR.Name);
+          end;
+    if (SR.Name ='dates.dat')
+      then AdDataFromDatesDat(StartFolder+'\'+SR.Name);
+
+  until FindNext(SR) <> 0;
+  FindClose(SR);
+
 end;
 
 procedure TMainForm.SetCurrentFolders;
