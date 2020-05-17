@@ -3,7 +3,7 @@ unit ResultAll;
 interface
 
 uses
-  Classes,OlegFunction,SomeFunction;
+  Classes,OlegFunction,SomeFunction,OlegMath;
 
 type TArguments=(aFe,aB,aT,aD);
 
@@ -39,6 +39,13 @@ type
  end;
 
 TKeyStrList=class
+{зберігається фактично весь переформатований ResultAll.dat
+в KeysName назва параметра ('Fe','Bo','T','d')
+в Keys[i] - значення цього параметра
+в StringLists[i] - рядки де таке значення зустрічалося,
+рядки скорочені з точки зору відсутності самого Keys[i];
+StringHeader - заголовок файлу  ResultAll.dat  за виключенням  KeysName
+}
  private
   function GetCount:word;
   function GetSList(index:integer):TStringList;
@@ -64,30 +71,36 @@ TKeyStrList=class
   procedure SortingByKeyValue();
   procedure DataConvert(StartPosition:word=0);
   procedure KeysAndListsToStringList(StringList:TStringList);
-
 end;
 
+
+
 TArrKeyStrList=class
+{на верхньому рівні весь ResultAll.dat,
+розбитий на частини, кількість яких дорівнює
+кількості параметрів - наприклад 4 (Fe, Bo, T, d),
+ці частини знаходяться в  ArrKeyStrList[i];
+в нащадках  fChields розміщюються
+розбиті на частинки вказані вище великі частини:
+фактично в ArrKeyStrList[i].StringLists[j]
+знаходиться міні-файл ResultAll.dat і
+вже він розбивається по параметрам;
+процес закінчується, коли залишається
+лише один параметр і розраховані величини,
+у відповідному нащадку лише нульовий елемент в ArrKeyStrList
+}
  private
-//  KeysName:string;
-//  Keys:array of string;
-//  StringLists:array of TStringList;
   ArrKeyStrList:array of TKeyStrList;
-//  fParent:TArrKeyStrList;
   fFileNamePart:string;
   fChields:array of TArrKeyStrList;
   DirectoryPath:string;
+  {шлях, куди будуть записуватися файли}
   fArgumentNumber:integer;
-//  function KeysNameDetermine(fileHeader:string):string;
-//  procedure AddKey(Key,SringKey:string);
-//  {якщо Key вже є в наборі Keys,
-//  то SringKey додається у відповідний StringLists,
-//  інакше Key додається до Keys і створюється
-//  ще один StringLists з рядком SringKey}
-//  procedure AddKeysFromStringList(StringList:TStringList;PartNumber:word);
-
  public
-  Constructor Create(SL:TStringList;DataNumber:integer=4;
+  Constructor Create(SL:TStringList;
+                     DataNumber:integer=4;
+    {DataNumber - кількість величин, які розраховувалися,
+    за замовчуванням - чотири значення фактору неідеальності}
                      FolderName:string='';
                      FileNamePart:string='');
 //                     Parent:TArrKeyStrList=nil);
@@ -263,8 +276,6 @@ begin
  if FolderName='' then DirectoryPath:=GetCurrentDir
                   else DirectoryPath:=FolderName;
 
-
-
  fFileNamePart:=FileNamePart;
  fArgumentNumber:=NumberOfSubstringInRow(SL[0])-DataNumber;
 
@@ -420,25 +431,29 @@ end;
 procedure TKeyStrList.SortingByKeyValue;
  var KeyValue:array of double;
      i,j:integer;
-     tempDouble:double;
-     tempString:string;
+//     tempDouble:double;
+//     tempString:string;
      tempStringList:TStringList;
 begin
  tempStringList:=TStringList.Create;
  SetLength(KeyValue,Count);
  for I := 0 to Count - 1 do
   KeyValue[i]:=StrToFloat(Keys[i]);
-  for I := 0 to High(KeyValue)-1 do
+ for I := 0 to High(KeyValue)-1 do
    for j := 0 to High(KeyValue)-1-i do
      if KeyValue[j]>KeyValue[j+1] then
        begin
-        tempDouble:=KeyValue[j];
-        KeyValue[j]:=KeyValue[j+1];
-        KeyValue[j+1]:=tempDouble;
+        SwapRound(KeyValue[j],KeyValue[j+1]);
 
-        tempString:=Keys[j];
-        Keys[j]:=Keys[j+1];
-        Keys[j+1]:=tempString;
+//        tempDouble:=KeyValue[j];
+//        KeyValue[j]:=KeyValue[j+1];
+//        KeyValue[j+1]:=tempDouble;
+
+        SwapRound(Keys[j],Keys[j+1]);
+
+//        tempString:=Keys[j];
+//        Keys[j]:=Keys[j+1];
+//        Keys[j+1]:=tempString;
 
         tempStringList.Assign(StringLists[j]);
         StringLists[j].Assign(StringLists[j+1]);
@@ -460,6 +475,8 @@ procedure TArrKeyStrList.SaveData;
  var i,j,k:integer;
       tempStr,tempStr2:string;
       SimpleDataFile:TStringList;
+      DataNumber:integer;
+      ValueName:string;
 begin
  SimpleDataFile:=TStringList.Create;
 
@@ -513,6 +530,44 @@ begin
     SetCurrentDir(tempStr);
 
     ArrKeyStrList[0].DataConvert(1);
+//    for j := 0 to ArrKeyStrList[0].Count-1 do
+//     ArrKeyStrList[0].StringLists[j].SaveToFile('aa'+ArrKeyStrList[0].Keys[j]+'.dat');
+//
+    DataNumber:=NumberOfSubstringInRow(ArrKeyStrList[0].StringLists[0][0])-1;
+
+    for I := 1 to  DataNumber do
+    begin
+     ValueName:=StringDataFromRow(ArrKeyStrList[0].StringLists[0][0],1+i);
+     while not(SetCurrentDir(tempStr+'\'+ValueName))
+             do MkDir(ValueName);
+
+     SimpleDataFile.Clear;
+
+     tempStr2:=StringDataFromRow(ArrKeyStrList[0].StringLists[0][0],1);
+     for j := 0 to ArrKeyStrList[0].Count-1 do
+      tempStr2:=tempStr2+' '+ArrKeyStrList[0].KeysName
+            +TKeyStrList.PartOfDataFileName(ArrKeyStrList[0].Keys[j]);
+     SimpleDataFile.Add(tempStr2);
+
+     tempStr2:=ArrKeyStrList[0].KeysName;
+     for j := 0 to ArrKeyStrList[0].Count-1 do
+      tempStr2:=tempStr2+' '+LogKey(ArrKeyStrList[0].Keys[j]);
+     SimpleDataFile.Add(tempStr2);
+     for k := 1 to ArrKeyStrList[0].StringLists[0].Count - 1 do
+       begin
+        tempStr2:=LogKey(StringDataFromRow(ArrKeyStrList[0].StringLists[0][k],1));
+        for j := 0 to ArrKeyStrList[0].Count-1 do
+         tempStr2:=tempStr2+' '+StringDataFromRow(ArrKeyStrList[0].StringLists[j][k],1+i);
+        SimpleDataFile.Add(tempStr2);
+       end;
+     SimpleDataFile.SaveToFile(ValueName+'_'
+                              +fFileNamePart+'_'
+                              +ArrKeyStrList[0].KeysName
+                              +'.dat');
+     SetCurrentDir(tempStr);
+    end;
+
+//    SetCurrentDir(tempStr);
     SimpleDataFile.Clear;
     for I := 0 to ArrKeyStrList[1].Count-1 do
       for j := 0 to ArrKeyStrList[0].Count-1 do
@@ -530,7 +585,48 @@ begin
                              +ArrKeyStrList[1].KeysName
                              +ArrKeyStrList[0].KeysName
                              +'.dat');
+
+    ArrKeyStrList[1].DataConvert(1);
+
+
+    DataNumber:=NumberOfSubstringInRow(ArrKeyStrList[1].StringLists[0][0])-1;
+    for I := 1 to  DataNumber do
+    begin
+     ValueName:=StringDataFromRow(ArrKeyStrList[1].StringLists[0][0],1+i);
+     SetCurrentDir(tempStr+'\'+ValueName);
+
+     SimpleDataFile.Clear;
+
+     tempStr2:=StringDataFromRow(ArrKeyStrList[1].StringLists[0][0],1);
+     for j := 0 to ArrKeyStrList[1].Count-1 do
+      tempStr2:=tempStr2+' '+ArrKeyStrList[1].KeysName
+            +TKeyStrList.PartOfDataFileName(ArrKeyStrList[1].Keys[j]);
+     SimpleDataFile.Add(tempStr2);
+
+     tempStr2:=ArrKeyStrList[1].KeysName;
+     for j := 0 to ArrKeyStrList[1].Count-1 do
+      tempStr2:=tempStr2+' '+LogKey(ArrKeyStrList[1].Keys[j]);
+     SimpleDataFile.Add(tempStr2);
+
+     for k := 1 to ArrKeyStrList[1].StringLists[0].Count - 1 do
+       begin
+        tempStr2:=LogKey(StringDataFromRow(ArrKeyStrList[1].StringLists[0][k],1));
+        for j := 0 to ArrKeyStrList[1].Count-1 do
+         tempStr2:=tempStr2+' '+StringDataFromRow(ArrKeyStrList[1].StringLists[j][k],1+i);
+        SimpleDataFile.Add(tempStr2);
+       end;
+
+
+     SimpleDataFile.SaveToFile(ValueName+'_'
+                              +fFileNamePart+'_'
+                              +ArrKeyStrList[1].KeysName
+                              +'.dat');
+     SetCurrentDir(tempStr);
+    end;
+
+
    end;
+
    SimpleDataFile.Free;
 
 end;
