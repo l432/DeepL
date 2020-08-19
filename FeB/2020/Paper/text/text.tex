@@ -192,11 +192,11 @@ It was assumed uniform doping with phosphorus (the emitter layer, concentration 
 and boron (base and BSF--layer, concentrations $N_\mathrm{A}$ and $N_\mathrm{BSF}$, respectively).
 
 The following recombination processes were taken into account:
-i)~outside surface recombination with electron and hole velocities $10^3$~cm/s;
-ii)~intrinsic recombination (radiative band--to--band and Auger with coefficients,
+i)~the outside surface recombination with electron and hole velocities $10^3$~cm/s;
+ii)~the intrinsic recombination (radiative band--to--band and Auger with coefficients,
 which depend on temperature and doping level according
 to Nguyen~\emph{et al.} \cite{Si_BtB} and Altermatt~\emph{et al.} \cite{Si_Auger});
-iii)~Shockley–-Read-–Hall (SRH) recombination.
+iii)~the Shockley–-Read-–Hall (SRH) recombination.
 
 In the last case, as the base and BSF--layer uniform contaminant, iron is assumed to be in concentration $N_\mathrm{Fe}$.
 It is well known that the iron atom locates in lone interstitial lattice position in silicon ($\mathrm{Fe}_i$) or
@@ -273,12 +273,69 @@ Besides, the change of the ideality factor after $\mathrm{Fe}_i\mathrm{B}_s$ ass
 %     {\left[1+N_\mathrm{A}10^{-23}\exp\left(-\frac{E_b}{kT}\right)\right]\left[1+\exp\left(-\frac{F-E_{\mathrm{Fe}_i}}{kT}\right)\right]}\,.
 %\end{equation}
 
-Typically, the value of the ideality factor ranges from 1 to 2 for real devices and depends on ambient conditions and recombination center parameters, including the concentration of traps \cite{n2_Beier,n2McIntosh,n2Kaminski,HAMEIRI2013251,Heide}.
-
-У цьому посібнику розглянуто лише деякі з експериментальних методів, які дозволяють досліджувати дефекти.
-Додаткову інформацію щодо як розглянутих методів, так і низки інших можна знайти в
 
 \section{Results and discussion}
+
+Типові отримані в результаті симулювання залежності величини фактору неідеальноті від температури та концентрацій бору та заліза представлені на рисунках~\ref{FigTNa},\ref{FigTNfe}, \ref{FigNaNfe}.
+Зауважим, що на тих рисунках, де поверхня для $\delta n_\mathrm{Fe}^\mathrm{srh}$ (number 5, orange) не показана, вона практично збігається з к поверхнею для $\delta n_\mathrm{FeB}^\mathrm{srh}$ (number 4, yellow).
+
+Декілька важливих висновків, необхідних для аналізу отриманих даних, можно зробити з рис.\ref{FigEf}.
+Перед безпосереднім аналізом отриманих залежностей необхідно звернути увагу на рис.\ref{FigEf}.
+По-перше, він свідчить, що навіть для випадку, коли переважаюча частина
+атомів заліза утворила пари з  акцепторною домішкою,
+In the case of $\mathrm{Fe}_i\mathrm{B}_s$ and $\mathrm{Fe}_i$ coexistence
+рекомбінаційні процеси визначаються насамперед, неспареними міжвузольними дефектами.
+In fact, донорний рівень $E_{\mathrm{FeB}}^\mathrm{A}$ знаходить нижче рівня Фермі і тому ймовірність захоплення ним нерівноважних електронів достатньо мала.
+Крім того, у 2/3 глибини ОПЗ, з процесами у якому насамперед пов'язують появу фактор неідеальності,
+кількість неспарених атомів заліза переважає кількість пар.
+Це підтверджується і тим, що залежності $n_\mathrm{FeB}$ (surfaces 1, red) and $n_\mathrm{Fe}$ (surfaces 2, cyan) on Figs.~\ref{FigTNa}--\ref{FigNaNfe} мають однаковий характер.
+По-друге, кількість неспарених атомів заліза In the case of $\mathrm{Fe}_i\mathrm{B}_s$ and $\mathrm{Fe}_i$ coexistence може бути досить значною і зростає зі збільшенням температури та
+зниженням ступеня легування.
+Так, наприклад, при $T=340$~K and $N_\mathrm{A}=10^{15}$~cm$^{-3}$ (or $10^{16}$~cm$^{-3}$) у квазінейтральній області бази
+концентрація $\mathrm{Fe}_i$  досягає 23 (or 3) відсотків $N_\mathrm{Fe}$.
+Тобто в цих умовах, концентрація неспарених атомів заліза в темряві при $N_\mathrm{Fe}=10^{13}$~cm$^{-3}$ більша
+ніж при освітленні та $N_\mathrm{Fe}=10^{11}$~cm$^{-3}$.
+Нарешті, так як лише $\mathrm{Fe}_i^+$ на відміну від $\mathrm{Fe}_i^0$ беруть участь у рекомбінації ІКР,
+то ці процеси ефективно відбуваються при $x\geq0.6W_p$ (where $W_p$ - ширина область).
+Тобто, при збільшенны рівня легування область, де відбуваються процеси, що визначають величину фактору неідеальності віддаляється від $p-n$ переходу.
+
+
+При аналізі залежностей фактору неідельності від температури та концентрації бору необхідно враховувати декілька факторів. А саме.
+
+i)~The recombination efficiency is determined by a hole occurring on the $\mathrm{Fe}_i$ level.
+Відповідно до статистики Фермі-Дірака у не виродженому напівпровіднику p-типу за умови повної іонізації акцепторів, ймовірність
+The probability of hole occupation is
+
+\begin{equation}
+\label{eqfp}
+ f_p=\frac{1}{1+\frac{N_V(T)}{N_\mathrm{A}}\exp\left(\frac{E_V-E_{\mathrm{Fe}_i}}{kT}\right)}\,.
+\end{equation}
+
+Як показано раніше  \cite{Olikh2018SM}, залежність $f_p(T,N_\mathrm{A})$ загалом подібна до тієї, що спостерігається для фактору неідеальності.
+Зокрема, коли  $f_p$ близька до одиниці (високі значення $N_\mathrm{A}$ та низькі температури) ця функція змінюється повільно, $n$ практично не залежить від температури і повільно зростає зі збільшенням рівня легування --- Figs.\ref{FigTNfe}(b),(c); \ref{FigNaNfe}(a).
+При зменщенні $N_\mathrm{A}$ or (and) increase in T у досить вузькому інтервалі аргументів рівень заповнюється електроном, SRH рекомбінація перестає відбуватися, значення факторунеідеальності  різко падає - Figs.\ref{FigTNa}, \ref{FigTNfe}(a); \ref{FigNaNfe}(b).
+
+ii)~Співвідношення рекомбінації на дефектах та власної.
+Загалом наявність SRH рекомбінації викликає зростання $n$, у граничному випадку 
+If the defect related recombination is dominant, the value often reported in publications is $n=2$.
+radiative band--to--band and Auger інтенсифікується при збільшенні концентрації вільних носіїв заряду (рівня легування) та температури \cite{Si_BtB,Si_Auger}).
+При цьому 
+о фактор неідеальності падає, а величини 
+$\delta n_\mathrm{Fe}^\mathrm{srh}$ 
+та 
+$\delta n_\mathrm{FeB}^\mathrm{srh}$
+стають відмінними від нуля.
+Цей ефект спостерігається у кутах залежностей на  Figs.\ref{FigTNa}(a); \ref{FigTNfe}(b),(c); \ref{FigNaNfe}.
+
+Зміна концентрації домішкових атомів заліза практично невпливає на характер залежності фактору неідеальності від інших параметрів.
+Проте цілком очікувано зростання $N_\mathrm{Fe}$  супровожується збільшення величини $n$ 
+(Figs.\ref{FigTNfe}, \ref{FigNaNfe}), яке практично лінійне по відношенню до $\ln(N_\mathrm{Fe})$.
+Виняток спостерігається лише у випадку коли рівень $\mathrm{Fe}_i$ заповнений електроном ($n<1.06$).
+Водночас при малих концентраціях заліза при однакових інших параметрах більший внесок має власна рекомбінація, що і викликає більш різке зменшення фактору неідеальності.
+Це особливо яскраво видно на \ref{FigTNfe}(b),(c). 
+
+
+
 
 
 \begin{equation}
@@ -310,13 +367,37 @@ Inset: Structure, which are used in simulation.
 
  Fig.~\ref{FigEf}.
 The calculated base and SBF--layer distribution of Fermi level position (a, solid lines), unpaired interstitial iron concentration (b, dotted lines),
-and $\mathrm{Fe}_i\mathrm{B}_s$ pair concentration (b, solid lines).
+and $\mathrm{Fe}_i\mathrm{B}_s$ pair concentration (b, solid lines) at $V=0$.
 $N_\mathrm{A}$, cm$^{-3}$: $10^{15}$ (curves 1, 2), $10^{16}$ (3, 4), $10^{17}$ (5, 6);
 $T$, K: 290 (1, 3, 5), 340 (2, 4, 6);
 $N_\mathrm{Fe}=10^{13}$~cm$^{-3}$;
 $d_p=180$~$\mu$m.
 The positions of $\mathrm{Fe}_i$ donor level (dotted--dashed line) and $\mathrm{Fe}_i\mathrm{B}_s$
  donor level (dashed line) are shown in the panel (a) as well.
+
+ Fig.~\ref{FigTNa}.
+Ideality factor and its change as a function of the temperature and acceptor (boron) concentration.
+$N_\mathrm{Fe}$, cm$^{-3}$: $10^{10}$ (a), $10^{13}$ (b);
+$d_p=240$~$\mu$m.
+Surface 1 reflects the  $n_\mathrm{FeB}$ dependance,
+2 ---  $n_\mathrm{Fe}$,
+3 --- $\delta n_\mathrm{Fe-FeB}$,
+4 --- $\delta n_\mathrm{FeB}^\mathrm{srh}$,
+5 --- $\delta n_\mathrm{Fe}^\mathrm{srh}$.
+
+
+ Fig.~\ref{FigTNfe}.
+Ideality factor and its change as a function of the temperature and iron concentration.
+$N_\mathrm{A}$, cm$^{-3}$: $10^{15}$ (a), $10^{16}$ (b), $10^{17}$ (c);
+$d_p=150$~$\mu$m.
+Surface numbers are the same to Fig.~\ref{FigTNa}.
+
+ Fig.~\ref{FigNaNfe}.
+Ideality factor and its change as a function of the acceptor (boron) concentration and iron concentration.
+$T$, K: $290$ (a), $340$ (b);
+$d_p=180$~$\mu$m.
+Surface numbers are the same to Fig.~\ref{FigTNa}.
+
 
  Fig.~\ref{FigTotal}.
 (a) Dependencies of ideality factor on base thickness.
@@ -347,28 +428,7 @@ The calculated dependencies of electron diffusion length in the structure base
 in case of unpaired $\mathrm{Fe}_i$ sole.
 The shaded area represents values of base thickness, which used in simulation.
 
- Fig.~\ref{FigTNa}.
-Ideality factor and its change as a function of the temperature and acceptor (boron) concentration.
-$N_\mathrm{Fe}$, cm$^{-3}$: $10^{10}$ (a), $10^{13}$ (b);
-$d_p=240$~$\mu$m.
-Surface 1 reflects the  $n_\mathrm{Fe}$ dependance,
-2 ---  $n_\mathrm{FeB}$,
-3 --- $\delta n_\mathrm{Fe-FeB}$,
-4 --- $\delta n_\mathrm{Fe}^\mathrm{srh}$,
-5 --- $\delta n_\mathrm{FeB}^\mathrm{srh}$.
 
-
- Fig.~\ref{FigTNfe}.
-Ideality factor and its change as a function of the temperature and iron concentration.
-$N_\mathrm{A}$, cm$^{-3}$: $10^{15}$ (a), $10^{16}$ (b), $10^{17}$ (c);
-$d_p=150$~$\mu$m.
-Surface numbers are the same to Fig.~\ref{FigTNa}.
-
- Fig.~\ref{FigNaNfe}.
-Ideality factor and its change as a function of the acceptor (boron) concentration and iron concentration.
-$T$, K: $290$ (a), $340$ (b);
-$d_p=180$~$\mu$m.
-Surface numbers are the same to Fig.~\ref{FigTNa}.
 
 \newpage
 
@@ -414,21 +474,6 @@ $T$, K&$290-340$&11\\
 \end{figure}
 
 \begin{figure}
-\includegraphics[width=15cm]{FigTotal}
-\caption{.
-}
-\label{FigTotal}
-\end{figure}
-
-
-\begin{figure}
-\includegraphics[width=7.5cm]{FigLn}
-\caption{.
-}
-\label{FigLn}
-\end{figure}
-
-\begin{figure}
 \includegraphics[width=7.5cm]{FigFe100d24} \hfill
 \includegraphics[width=7.5cm]{FigFe103d24}
 \caption{.
@@ -452,6 +497,23 @@ $T$, K&$290-340$&11\\
 }
 \label{FigNaNfe}
 \end{figure}
+
+\begin{figure}
+\includegraphics[width=15cm]{FigTotal}
+\caption{.
+}
+\label{FigTotal}
+\end{figure}
+
+
+\begin{figure}
+\includegraphics[width=7.5cm]{FigLn}
+\caption{.
+}
+\label{FigLn}
+\end{figure}
+
+
 
 \newpage
 
