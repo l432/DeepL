@@ -97,7 +97,7 @@
 
 \begin{center}
 
-{\bfseries Modeling of ideality factor value in $n^+$--$p$--$p^+$--Si structures}
+{\bfseries Modeling of ideality factor value in $n^+$--$p$--$p^+$--Si structure}
 
 O.Ya. Olikh, O.V. Zavhorodnii
 
@@ -111,10 +111,23 @@ https://orcid.org/0000-0003-0633-5429 (Olikh)
 
 \end{center}
 
-This paper presents the results of
+This paper presents the results of computer simulation of the ideality factor of silicon $n^+-p-p^+$ structure with iron contamination.
+The Solar Cells Capacitance Simulator (SCAPS) was the tool used for numerical simulation of these devices.
+The iron concentration range of $10^{10}-10^{13}$~cm$^{-3}$, acceptor doping level range of $10^{15}-10^{17}$~cm$^{-3}$, temperature range of $290-340$~K,
+and base thickness range of $150-240$~$\mu$m were used in the investigation.
+The double diode model was used to extract the ideality factor.
+The following cases were considered: 
+(i)~uniformly distributed lone interstitial iron atoms;
+(ii)~coexistence of non--uniformly distributed $\mathrm{Fe}_i$ and $\mathrm{Fe}_i\mathrm{B}_s$
+It has been shown that 
+the ideality factor value determined by a hole occurring on the $\mathrm{Fe}_i$ level, 
+a trap location, and a intrinsic recombination contribution.
+The increase in base thickness leads to decrease in $n$ value.
+The sign of change in ideality factor after $\mathrm{Fe}_i\mathrm{B}_s$ dissociation depends on temperature, doping level, and iron concentration.
+
 
 \textbf{Key words:}
-silicon, solar cell, SCAPS simulator, ideality factor, iron concentration
+ideality factor, silicon, $n^+$--$p$--$p^+$ structure, SCAPS, iron concentration
 
 
 \section{Introduction}
@@ -147,7 +160,7 @@ in the depletion region \cite{2Diod:Ishaque,2Diod:Buhler,Breitenstein2013}:
 \end{equation}
 where
 first term closely related to the recombination in the quasi--neutral region,
-second term describes the overall space charge region recombination,
+second term describes the overall space charge region (SCR) recombination,
 $R_s$ and $R_sh$ are the series and shunt resistance, respectively.
 In this case the relationship between the ideality factor and SC characteristics is more complicated.
 Певні приклади щодо взаємозв'язку n з напругою холостого ходу та fill factor  рамках дво-діодної моделі можна знайти в \cite{Olikh2018SM}.
@@ -316,36 +329,103 @@ The probability of hole occupation is
 При зменщенні $N_\mathrm{A}$ or (and) increase in T у досить вузькому інтервалі аргументів рівень заповнюється електроном, SRH рекомбінація перестає відбуватися, значення факторунеідеальності  різко падає - Figs.\ref{FigTNa}, \ref{FigTNfe}(a); \ref{FigNaNfe}(b).
 
 ii)~Співвідношення рекомбінації на дефектах та власної.
-Загалом наявність SRH рекомбінації викликає зростання $n$, у граничному випадку 
+Загалом наявність SRH рекомбінації викликає зростання $n$, у граничному випадку
 If the defect related recombination is dominant, the value often reported in publications is $n=2$.
 radiative band--to--band and Auger інтенсифікується при збільшенні концентрації вільних носіїв заряду (рівня легування) та температури \cite{Si_BtB,Si_Auger}).
-При цьому 
-о фактор неідеальності падає, а величини 
-$\delta n_\mathrm{Fe}^\mathrm{srh}$ 
-та 
+При цьому
+о фактор неідеальності падає, а величини
+$\delta n_\mathrm{Fe}^\mathrm{srh}$
+та
 $\delta n_\mathrm{FeB}^\mathrm{srh}$
 стають відмінними від нуля.
 Цей ефект спостерігається у кутах залежностей на  Figs.\ref{FigTNa}(a); \ref{FigTNfe}(b),(c); \ref{FigNaNfe}.
 
 Зміна концентрації домішкових атомів заліза практично невпливає на характер залежності фактору неідеальності від інших параметрів.
-Проте цілком очікувано зростання $N_\mathrm{Fe}$  супровожується збільшення величини $n$ 
+Проте цілком очікувано зростання $N_\mathrm{Fe}$  супровожується збільшення величини $n$
 (Figs.\ref{FigTNfe}, \ref{FigNaNfe}), яке практично лінійне по відношенню до $\ln(N_\mathrm{Fe})$.
 Виняток спостерігається лише у випадку коли рівень $\mathrm{Fe}_i$ заповнений електроном ($n<1.06$).
 Водночас при малих концентраціях заліза при однакових інших параметрах більший внесок має власна рекомбінація, що і викликає більш різке зменшення фактору неідеальності.
-Це особливо яскраво видно на \ref{FigTNfe}(b),(c). 
+Це особливо яскраво видно на \ref{FigTNfe}(b),(c).
 
-
-
-
-
+Як видно з Eq.~(\ref{eqIVd}), фактор неідеальності фігурує у доданку, який описує SCR recombination.
+А отже ця величини ніби то не мала б залежати від товщини бази $n^+$--$p$--$p^+$ structure.
+Проте так залежність спостерігається - див. Fig.~\ref{FigTotal}(a),
+Фактор неідеальності зменшується зі збільшенням товщини.
+Це  свідченням того, що на величину фактору неідеальності мають вплив і процеси у квазінейтральній області.
+Характер змін однаковий in both lone unpaired $\mathrm{Fe}_i$ and $\mathrm{Fe}_i\mathrm{B}_s$ and $\mathrm{Fe}_i$ coexistence cases
+і добре описується лінійною залежністю
 \begin{equation}
 \label{eqN_D}
     n=n_0-\beta\,d_p\,.
 \end{equation}
+where
+$\beta$ is the ideality factor thickness coefficient.
+Найбільший вплив товщина бази має при середніх ($01.05<n<1.25$) значеннях фактору неідеальності.
+На Fig.~\ref{FigTotal}(b)--(d) представлені залежності $\beta$ від інших параметрів моделювання.
+Видно, що загалом вплив $d_p$ на $n$ підсилюється при зростанні температури та зменшенні концентрацій бору та заліза.
+Зменшення відносного внеску SRH recombination або внаслідок заповнення електроном рівня $\mathrm{Fe}_i$ level,
+або через підсилення процесів власної рекомбінації викликає зменшення модуля $\beta$.
+Крім того, на Fig.~\ref{FigLn} представлені залежності  довжини дифузії електронів ($L_n$) в базі від концентрації
+lone unpaired $\mathrm{Fe}_i$, розраховані за допомогою SCAPS.
+Видно, що вплив товщини бази спостерігається лише в тому випадку, якщо $L_n>d_p$ і саме це є причиною того, що $\beta\approx0$ при $n>1.3$.
+
+На Fig.~\ref{FigTNa}--\ref{FigNaNfe} також представлені залежності зміни фактору неідеальності після спарювання
+міжвузольних атомів заліза $\delta n_\mathrm{Fe-FeB}$ --- surfaces 3, blue.
+Так як після утворення пар інтенсивність SRH рекомбінації зменшується, то очікувалося, що
+$n_\mathrm{FeB}<n_\mathrm{Fe}$ and $\delta n_\mathrm{Fe-FeB}>0$ при всіх значеннях інших параметрів.
+Прикладами таких цілком очікуваних залежностей є  Fig.~\ref{FigTNfe}(b),(c) and \ref{FigNaNfe}(a).
+В цьому випадку $\delta n_\mathrm{Fe-FeB}$ зростає з підвищенням концентрації бору і практичного не залежить
+від температури та концентрації заліза.
+Винятки спостерігаються лише у випадку, коли підсилюється внесок власної рекомбінації і
+$\delta n_\mathrm{Fe-FeB}$ зменшується --- області високих температур і малих концентрацій заліза Fig.~\ref{FigTNfe}(b),(c)
+чи високого рівня легування при невисокій концентрації рекомбінаційних центрів \ref{FigNaNfe}(a).
+
+Проте виявилось, що реалізуються ситуації, коли $n_\mathrm{FeB}>n_\mathrm{Fe}$  - Fig.~\ref{FigTNa}, Fig.~\ref{FigTNfe}(a),\ref{FigNaNfe}(b).
+Ці області від'ємних значень $\delta n_\mathrm{Fe-FeB}$ спостерігаються в околі зменшення фактору неідельності
+внаслідок заповнення $\mathrm{Fe}_i$ level.
+Однією з причин цього ефекту могла бути відмінність розташування рівня Фермі
+In the case of $\mathrm{Fe}_i\mathrm{B}_s$ and $\mathrm{Fe}_i$ coexistence.
+Проте, як показали розрахунки, ця відмінність не перевищує $5\times10^{-6}$~eV і
+не може бути причиною виявленого ефекту.
+
+On Fig.~\ref{FigDelFei} представлено зміну просторового розподілу рекомбінаційно активних міжатомних
+атомів заліза до та після переходу у рівноважний для темряви стан, пов'язаний
+з утворенням пар.
+Видно, що 
+ступінь зменшення концентрації $\mathrm{Fe}_i$ залежить від відстані до $p-n$--переходу.
+На нашу думку, саме зміна профілю $N_{\mathrm{Fe}_i^+}$ і є причиною того, що при 
+$\mathrm{Fe}_i\mathrm{B}_s$ and $\mathrm{Fe}_i$ coexistence 
+величина фактору неідеальності більш "стійка" до змін температури та рівня легування.
+Причому ефект залежить від загальної концентрації атомів заліза: при зростанні $N_{\mathrm{Fe}}$
+спад у величині $n$ спостерігається при більших температурах (Fig.~\ref{FigTNfe})(a)) та менших
+концентраціях бору (Fig.~\ref{FigNaNfe})(b)).
+
+В свою чергу, при $n_\mathrm{FeB}>n_\mathrm{Fe}$ та в околі реалізації цієї умові від концентрації
+заліза залежить і величина $\delta n_\mathrm{Fe-FeB}$.
+А отже вона також, поряд з $n_\mathrm{Fe}$ та $n_\mathrm{FeB}$ може бути використана
+для оцінки величини концентрації домішок за параметрами $I-V$ characteristic.
 
 \section{Conclusion}
 
-\section{Acknowledgements}
+The diode ideality factor of silicon $n^+-p-p^+$ structure with iron contamination has been studied via computer simulation.
+The data used in the simulations were the following.
+The iron concentration ranged from $10^{10}$ to $10^{13}$~cm$^{-3}$,
+the acceptor doping level --- from $10^{15}$ to $10^{17}$~cm$^{-3}$,
+the temperature --- from $290$ to $340$~K,
+and the base thickness --- from $150$ to $240$~$\mu$m.
+It has been shown that the temperature and doping level dependencies of the ideality factor value
+are mainly determined by a hole occurring on the $\mathrm{Fe}_i$ level. 
+The $n$ dependence on iron concentration is a monotonic function.
+Additionally, not only defect concentration but also its location influences on  ideality factor value.
+The intrinsic recombination causes the decrease in the ideality factor value at a high temperature and doping level as well as at a low iron concentration.
+It has also been found that the base thickness influences on ideality factor if it exceeds the minority carrier diffusion length. 
+The increase in base thickness leads to decrease in $n$ value.
+The investigation has revealed that the ideality factor in $\mathrm{Fe}_i\mathrm{B}_s$ and $\mathrm{Fe}_i$ coexistence case
+can exceed ones in lone unpaired $\mathrm{Fe}_i$ case.
+The ideality factor change after $\mathrm{Fe}_i\mathrm{B}_s$ dissociation can be used to contaminant concentration evaluation. 
+
+
+%\section{Acknowledgements}
 
 \bibliography{olikh}
 
@@ -379,11 +459,11 @@ The positions of $\mathrm{Fe}_i$ donor level (dotted--dashed line) and $\mathrm{
 Ideality factor and its change as a function of the temperature and acceptor (boron) concentration.
 $N_\mathrm{Fe}$, cm$^{-3}$: $10^{10}$ (a), $10^{13}$ (b);
 $d_p=240$~$\mu$m.
-Surface 1 reflects the  $n_\mathrm{FeB}$ dependance,
-2 ---  $n_\mathrm{Fe}$,
-3 --- $\delta n_\mathrm{Fe-FeB}$,
-4 --- $\delta n_\mathrm{FeB}^\mathrm{srh}$,
-5 --- $\delta n_\mathrm{Fe}^\mathrm{srh}$.
+Surface 1 (red) reflects the  $n_\mathrm{FeB}$ dependance,
+2 (cyan) ---  $n_\mathrm{Fe}$,
+3 (blue) --- $\delta n_\mathrm{Fe-FeB}$,
+4 (yellow) --- $\delta n_\mathrm{FeB}^\mathrm{srh}$,
+5 (orange) --- $\delta n_\mathrm{Fe}^\mathrm{srh}$.
 
 
  Fig.~\ref{FigTNfe}.
@@ -400,7 +480,7 @@ Surface numbers are the same to Fig.~\ref{FigTNa}.
 
 
  Fig.~\ref{FigTotal}.
-(a) Dependencies of ideality factor on base thickness.
+(a) Typical dependencies of ideality factor on base thickness.
 The results for $\mathrm{Fe}_i\mathrm{B}_s$ and $\mathrm{Fe}_i$ coexistence (curves 1-10, filled marks)
 as well as for unpaired $\mathrm{Fe}_i$ sole (1a, 4a, 8a, 9a, empty marks) are presented.
 $T$, K: 290 (1-4, 1a, 4a), 320 (5, 6), 340 (7-10);
@@ -417,7 +497,7 @@ $N_\mathrm{A}$, cm$^{-3}$: $10^{15}$ (1, 4, 7), $10^{16}$ (2, 5, 8),  $10^{17}$ 
 $T$, K: 290 (1--4), 325 (5--8), 340 (9--12);
 $N_\mathrm{Fe}$, cm$^{-3}$: $10^{10}$ (1, 5, 9), $10^{11}$ (2, 6, 10),  $10^{12}$ (3, 7, 11), $10^{13}$ (4, 8, 12).
 
-(c) Ideality factor thickness coefficient vs temperature.
+(d) Ideality factor thickness coefficient vs temperature.
 $N_\mathrm{A}$, cm$^{-3}$: $10^{15}$ (1--4), $10^{16}$ (5--8),  $10^{17}$ (9--12).
 $N_\mathrm{Fe}$, cm$^{-3}$: $10^{10}$ (1, 5, 9), $10^{11}$ (2, 6, 10),  $10^{12}$ (3, 7, 11), $10^{13}$ (4, 8, 12).
 
@@ -427,6 +507,14 @@ Panels (b)--(d) present results in  case of $\mathrm{Fe}_i\mathrm{B}_s$ and $\ma
 The calculated dependencies of electron diffusion length in the structure base
 in case of unpaired $\mathrm{Fe}_i$ sole.
 The shaded area represents values of base thickness, which used in simulation.
+
+ Fig.~\ref{FigDelFei}.
+The distribution of fraction of positively charged interstitial iron $N_{\mathrm{Fe}_i^+}$ to the total
+impurity number $N_{\mathrm{Fe}}$ in structure base.
+The curves 1 and 2 correspond to the cases of lone unpaired $\mathrm{Fe}_i$ and $\mathrm{Fe}_i\mathrm{B}_s$ and $\mathrm{Fe}_i$ coexistence,
+respectively.
+The curve 3 is difference of 1 and 2.
+$T=330$~K, $N_\mathrm{A}=3.162\times10^{15}$~cm$^{-3}$, $d_p=180$~$\mu$m.
 
 
 
@@ -513,7 +601,12 @@ $T$, K&$290-340$&11\\
 \label{FigLn}
 \end{figure}
 
-
+\begin{figure}
+\includegraphics[width=7.5cm]{FigDelFei}
+\caption{.
+}
+\label{FigDelFei}
+\end{figure}
 
 \newpage
 
@@ -530,9 +623,36 @@ $T$, K&$290-340$&11\\
 
 \end{center}
 
+У цій роботі подано результати моделювання величини фактору неідеальності кремнієвих $n^+-p-p^+$ структур.
+При цьому вважалося, що основні рекомбінаційні центри у базі структури пов'язані з домішковими атомами заліза.
+Для моделювання вольт-амперних характеристик таких структур використовувався Solar Cells Capacitance Simulator (SCAPS). 
+При цьому додатково враховувалися температурні залежності параметрів як матеріалу, так і дефектів.
+При розрахунках вар'ювалися величини рівня легування ($10^{15}\div10^{17}$~см$^{-3}$ атомів бору) та товщини ($150\div240$~$\mu$м) бази,
+температура ($290\div340$~K) та концентрації домішки заліза ($10^{10}\div10^{13}$~см$^{-3}$).
+Окремо розглядалися випадки, коли всі атоми заліза знаходилися у міжвузольному положенні $\mathrm{Fe}_i$ та
+коли переважна частина з них утворювала пари з легуючою домішкою $\mathrm{Fe}_i\mathrm{B}_s$.
+Останній випадок відповідає стану рівноваги за відсутності освітлення і при цьому 
+співвідношення між концентраціями  $\mathrm{Fe}_i$ та $\mathrm{Fe}_i\mathrm{B}_s$ визначалося положенням
+рівня Фермі та температурою.
+Визначення величини фактору неідеальності ($n$) відбувалося шляхом апроксимації (з використанням
+метаеврістичного методу IJAVA) отриманих вольт-амперні характеристик.
+
+Показано, що навіть за наявності $\mathrm{Fe}_i\mathrm{B}_s$ основну роль у формуванні величини $n$
+відіграють процеси рекомбінації за участю рівнів, пов'язаних з $\mathrm{Fe}_i$.
+Залежності $n$ від температури та рівня легування визначаються, насамперед,
+заселеністю рівня $\mathrm{Fe}_i$.
+У випадку, коли підсилюється відносний внесок процесів власної рекомбінації (високі 
+температури та рівень легування, низькі концентрації домішки) відбувається зменшення фактору неідеальності.
+На величину $n$, окрім концентрації дефектів, впливає також їх просторове розташування відносно $p-n$ переходу.
+Зі збільшенням товщини бази структури (у випадку, коли вона перевищує довжину дифузії неосновних носіїв та
+переважаючою є рекомбінація Шоклі-Ріда-Хола) відбувається незначне зменшення фактору неідеальності.
+Показано, що можуть реалізуватися випадки, коли $n$ після розпаду $\mathrm{Fe}_i\mathrm{B}_s$ зменшується.
+Запропоновано, що зміна фактору неідеальності поряд після розпаду $\mathrm{Fe}_i\mathrm{B}_s$ поряд з абсолютним значенням $n$  може бути використана
+для оцінки концентрації домішок.
 
 
 \textbf{Ключові слова:}
-кремній, сонячний елемент, SCAPS, фактор неідеальності, концентрація заліза
+фактор неідеальності, кремній, $n^+$--$p$--$p^+$ структура, SCAPS, концентрація заліза
+
 
 \end{document}
