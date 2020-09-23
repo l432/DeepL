@@ -37,6 +37,28 @@ Keithley 2400 замінювати на 2460 чи 2450 небажано, бо там не передбачено RS-232.
 
 
 
+Рахунки
+- ITECH IT6952A
+- Keithley DMM7510
+ з опціями з розділу TEST LEADS AND PROBES
+  1754
+  1756
+  5804
+  5806
+
+- Keithley DMM6500
+ з опціями
+ 2000  SCAN Card
+ 2001 TSSCAN Card
+ KTTI - RS232
+ з розділу TEST LEADS AND PROBES
+  1754
+  1756
+  5804
+  5806
+
+
+
 
 
 Широ дякую за допомогу у виборі обладнання!
