@@ -37,7 +37,8 @@ type
    Function DataString:string;
    Function FileName:string;
    Procedure ParameterTitleDetermination(SCAPSFile:TStringList);
-   Procedure ParameterDetermination(DataString:String);
+   Procedure ParameterDetermination(DataString: String;
+                      FeLow:double=1e10;FeHi:double=1e13; StepNumber:integer=19);
    function NameIsPresent(NameStr:string):boolean;
    Procedure SCAPSFileNameDetermination(SCAPSFile:TStringList);
  end;
@@ -45,7 +46,7 @@ type
 implementation
 
 uses
-  SysUtils, OlegType, StrUtils, Dialogs, OlegFunction;
+  SysUtils, OlegType, StrUtils, Dialogs, OlegFunction, Math;
 
 { TIVparameter }
 
@@ -127,11 +128,37 @@ begin
    Result:=(Result or (fName[i]=NameStr));
 end;
 
-procedure TIVparameter.ParameterDetermination(DataString: String);
+procedure TIVparameter.ParameterDetermination(DataString: String;
+                      FeLow:double=1e10;FeHi:double=1e13; StepNumber:integer=19);
 var
-  I: Integer;
+  I,j: Integer;
   tempStr:string;
+  fileNumber:array of string;
+  FeValue:array of double;
+  FeStep:double;
+  temp:double;
+  pw:integer;
 begin
+
+ SetLength(fileNumber,StepNumber);
+ SetLength(FeValue,StepNumber);
+ FeStep:=(log10(FeHi)-log10(FeLow))/(StepNumber-1);
+ for I := 0 to StepNumber - 1 do
+  begin
+   fileNumber[i]:=inttostr(i);
+   if i<10 then fileNumber[i]:='0'+fileNumber[i];
+   temp:=Power(10,log10(FeLow)+FeStep*i);
+//   showmessage(inttostr(i)+' '+floattostrf(temp,ffExponent,9,2));
+   pw:=trunc(ln(temp)/ln(10));
+   temp:=temp/Power(10,pw);
+//   showmessage(inttostr(pw)+' '+floattostrf(temp,ffExponent,9,2));
+
+   FeValue[i]:=round(temp*1000)*round(Power(10,pw-3));
+//   showmessage(floattostr(FeValue[i]));
+  end;
+
+//trunc(ln(num)/ln(10))+1;
+
  if AnsiStartsStr('Temperature', DataString) then
   begin
     DataString:=SomeSpaceToOne(DataString);
@@ -195,13 +222,19 @@ begin
              end;
            if (AnsiPos('.grd',tempStr)>0) then
              begin
-              if (AnsiPos('00',tempStr)>0) then fData[i]:=1.000000E+10;
-              if (AnsiPos('01',tempStr)>0) then fData[i]:=3.162000E+10;
-              if (AnsiPos('02',tempStr)>0) then fData[i]:=1.000000E+11;
-              if (AnsiPos('03',tempStr)>0) then fData[i]:=3.162000E+11;
-              if (AnsiPos('04',tempStr)>0) then fData[i]:=1.000000E+12;
-              if (AnsiPos('05',tempStr)>0) then fData[i]:=3.162000E+12;
-              if (AnsiPos('06',tempStr)>0) then fData[i]:=1.000000E+13;
+              for j := 0 to StepNumber - 1 do
+                  if (AnsiPos(fileNumber[j],tempStr)>0)
+                    then  fData[i]:=FeValue[j];
+//                    showmessage(floattostr(FeValue[j]));
+
+
+//              if (AnsiPos('00',tempStr)>0) then fData[i]:=1.000000E+10;
+//              if (AnsiPos('01',tempStr)>0) then fData[i]:=3.162000E+10;
+//              if (AnsiPos('02',tempStr)>0) then fData[i]:=1.000000E+11;
+//              if (AnsiPos('03',tempStr)>0) then fData[i]:=3.162000E+11;
+//              if (AnsiPos('04',tempStr)>0) then fData[i]:=1.000000E+12;
+//              if (AnsiPos('05',tempStr)>0) then fData[i]:=3.162000E+12;
+//              if (AnsiPos('06',tempStr)>0) then fData[i]:=1.000000E+13;
 
 
 //              if (AnsiPos('00',tempStr)>0) then fData[i]:=1.000000E+10;

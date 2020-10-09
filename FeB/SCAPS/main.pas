@@ -245,7 +245,7 @@ begin
       Continue;
     end;
 
-   IVparameter.ParameterDetermination(SCAPSFile[ROW]);
+   IVparameter.ParameterDetermination(SCAPSFile[ROW],FeLow.Data,FeHi.Data,FeStepNumber.Data);
 
 
 
