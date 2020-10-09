@@ -506,7 +506,6 @@ procedure TMainForm.BScapsFileCreateClick(Sender: TObject);
      fileName,fileName2,tempStr,tempBegin,tempMidle,tempEnd:string;
      dFei,dFeBd,dFeBa:TDefect;
   I: Integer;
-
 begin
   SetCurrentFolders;
 
@@ -800,6 +799,89 @@ begin
  StringReplaceMy(FeScaps,tempstr,392);
 
 
+// ----------------------------------------------
+ for I := 0 to round(FloatDataFromRow(FeBScaps[520],6)) - 1 do
+       FeBScaps.Delete(522);
+ for I := FeStepNumber.Data - 1 downto 0 do
+       begin
+        tempBegin:=inttostr(i);
+        if i<10 then
+             begin
+              tempstr:='0'+tempBegin;
+              tempBegin:=' '+tempBegin;
+             end
+                else
+             tempstr:=tempBegin;
+        FeBScaps.Insert(522,'file  '+tempBegin+':F'+tempstr+'.grd');
+       end;
+
+ tempBegin:='number of file names :   ';
+ tempstr:=LowerCase(inttostr(FeStepNumber.Data));
+ tempstr:=tempBegin+tempStr;
+ StringReplaceMy(FeBScaps,tempstr,520);
+
+
+
+ for I := 0 to round(FloatDataFromRow(FeBScaps[488],6)) - 1 do
+       FeBScaps.Delete(490);
+ for I := FeStepNumber.Data - 1 downto 0 do
+       begin
+        tempBegin:=inttostr(i);
+        if i<10 then
+             begin
+              tempstr:='0'+tempBegin;
+              tempBegin:=' '+tempBegin;
+             end
+                else
+             tempstr:=tempBegin;
+        FeBScaps.Insert(490,'file  '+tempBegin+':B'+tempstr+'.grd');
+       end;
+
+ tempBegin:='number of file names :   ';
+ tempstr:=LowerCase(inttostr(FeStepNumber.Data));
+ tempstr:=tempBegin+tempStr;
+ StringReplaceMy(FeBScaps,tempstr,488);
+
+  for I := 0 to round(FloatDataFromRow(FeBScaps[456],6)) - 1 do
+       FeBScaps.Delete(458);
+ for I := FeStepNumber.Data - 1 downto 0 do
+       begin
+        tempBegin:=inttostr(i);
+        if i<10 then
+             begin
+              tempstr:='0'+tempBegin;
+              tempBegin:=' '+tempBegin;
+             end
+                else
+             tempstr:=tempBegin;
+        FeBScaps.Insert(458,'file  '+tempBegin+':S'+tempstr+'.grd');
+       end;
+
+ tempBegin:='number of file names :   ';
+ tempstr:=LowerCase(inttostr(FeStepNumber.Data));
+ tempstr:=tempBegin+tempStr;
+ StringReplaceMy(FeBScaps,tempstr,456);
+
+ for I := 0 to round(FloatDataFromRow(FeBScaps[424],6)) - 1 do
+       FeBScaps.Delete(426);
+ for I := FeStepNumber.Data - 1 downto 0 do
+       begin
+        tempBegin:=inttostr(i);
+        if i<10 then
+             begin
+              tempstr:='0'+tempBegin;
+              tempBegin:=' '+tempBegin;
+             end
+                else
+             tempstr:=tempBegin;
+        FeBScaps.Insert(426,'file  '+tempBegin+':P'+tempstr+'.grd');
+       end;
+
+ tempBegin:='number of file names :   ';
+ tempstr:=LowerCase(inttostr(FeStepNumber.Data));
+ tempstr:=tempBegin+tempStr;
+ StringReplaceMy(FeBScaps,tempstr,424);
+// -----------------------------------------------------------------
 
 // FeScaps.Insert(146,tempStr);
  if SetCurrentDir(SCAPS_Folder+'\def') then
