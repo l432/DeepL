@@ -32,6 +32,10 @@ Directory:=CurDirectory;
 end;
 
 
+olegolikh
+olegolikh@knu.ua
+g2662421
+
 https://github.com/olegolikh/SCAPSConvertion.git
 
 https://github.com/olegolikh/IVcharacteristics.git
