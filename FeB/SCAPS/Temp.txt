@@ -30,3 +30,8 @@ SelectDirectory('Chose Directory','C:', CurDirectory);
 ChooseDirect(Form1);
 Directory:=CurDirectory;
 end;
+
+
+https://github.com/olegolikh/SCAPSConvertion.git
+
+https://github.com/olegolikh/IVcharacteristics.git
