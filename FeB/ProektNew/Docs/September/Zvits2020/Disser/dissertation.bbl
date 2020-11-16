@@ -7,6 +7,42 @@
 \ifx\undefined\BibAnnote\long\def\BibAnnote#1{}\else\fi
 \ifx\undefined\BibEmph\def\BibEmph#1{\emph{#1}}\else\fi
 
+\bibitem{SINKE2019}
+\selectlanguageifdefined{english}
+\BibEmph{Sinke,~Wim~C.} Development of photovoltaic technologies for global
+  impact~/ Wim~C.~Sinke~// \BibEmph{Renewable Energy}. ---
+\newblock 2019. --- Aug. ---
+\newblock Vol. 138. ---
+\newblock Pp.~911--914.
+
+\bibitem{Wijaranakula}
+\selectlanguageifdefined{english}
+\BibEmph{Wijaranakula,~W.} The Reaction Kinetics of Iron-Boron Pair Formation
+  and Dissociation in P--Type Silicon~/ W.~Wijaranakula~// \BibEmph{J.
+  Etectrochem. Soc.} ---
+\newblock 1993. --- Jan. ---
+\newblock Vol. 140, no.~1. ---
+\newblock Pp.~275--281.
+
+\bibitem{Narland}
+\selectlanguageifdefined{english}
+Comparison of iron-related recombination centers in boron, gallium, and indium
+  doped silicon analyzed by defect parameter contour mapping~/ {Tine
+  U.}~N{\ae}rland, Simone~Bernardini, Nathan~Stoddard et~al.~// \BibEmph{Energy
+  Procedia}. ---
+\newblock 2017. --- Sep. ---
+\newblock Vol. 124. ---
+\newblock Pp.~138--145.
+
+\bibitem{Sakauchi}
+\selectlanguageifdefined{english}
+Recombination--enhanced {F}e atom jump between the first and the second
+  neighbor site of {F}e--acceptor pair in {S}i~/ S.~Sakauchi, M.~Suezawa,
+  K.~Sumino, H.~Nakashima~// \BibEmph{J. Appl. Phys.} ---
+\newblock 1996. --- Aug. ---
+\newblock Vol.~80, no.~11. ---
+\newblock Pp.~6198--6203.
+
 \bibitem{Si_Auger}
 \selectlanguageifdefined{english}
 Assessment and parameterisation of {C}oulomb--enhanced {A}uger recombination
@@ -15,6 +51,61 @@ Assessment and parameterisation of {C}oulomb--enhanced {A}uger recombination
 \newblock 1997. --- Nov. ---
 \newblock Vol.~82, no.~10. ---
 \newblock Pp.~4938--4944.
+
+\bibitem{FeBLight}
+\selectlanguageifdefined{english}
+\BibEmph{Macdonald,~D.} Measuring dopant concentrations in compensated p--type
+  crystalline silicon via iron-acceptor pairing~/ D.~Macdonald, A.~Cuevas,
+  L.~J.~Geerligs~// \BibEmph{Appl. Phys. Lett.} ---
+\newblock 2008. --- May. ---
+\newblock Vol.~92, no.~20. ---
+\newblock P.~202119.
+
+\bibitem{FeBLight2}
+\selectlanguageifdefined{english}
+\BibEmph{Geerligs,~L.~J.} Dynamics of light-induced FeB pair dissociation in
+  crystalline silicon~/ L.~J.~Geerligs, Daniel~Macdonald~// \BibEmph{Appl.
+  Phys. Lett.} ---
+\newblock 2004. --- Nov. ---
+\newblock Vol.~85, no.~22. ---
+\newblock Pp.~5227--5229.
+
+\bibitem{FeB:Schmidt}
+\selectlanguageifdefined{english}
+\BibEmph{Schmidt,~Jan}. Effect of Dissociation of Iron--Boron Pairs in
+  Crystalline Silicon on Solar Cell Properties~/ Jan~Schmidt~//
+  \BibEmph{Progress in Photovoltaics: Research and Applications}. ---
+\newblock 2005. --- Jun. ---
+\newblock Vol.~13, no.~4. ---
+\newblock Pp.~325--331.
+
+\bibitem{FeBLight3}
+\selectlanguageifdefined{english}
+Iron-boron pairing kinetics in illuminated p-type and in boron/phosphorus
+  co-doped n-type silicon~/ Christian~Möller, Til~Bartel, Fabien~Gibaja,
+  Kevin~Lauer~// \BibEmph{J. Appl. Phys.} ---
+\newblock 2014. --- Jul. ---
+\newblock Vol. 116, no.~2. ---
+\newblock P.~024503.
+
+\bibitem{FeBCoDop}
+\selectlanguageifdefined{english}
+Dynamics of iron-acceptor-pair formation in co-doped silicon~/ T.~Bartel,
+  F.~Gibaja, O.~Graf et~al.~// \BibEmph{Appl. Phys. Lett.} ---
+\newblock 2013. --- Nov. ---
+\newblock Vol. 103, no.~20. ---
+\newblock P.~202109.
+
+\bibitem{FeBDecay}
+\selectlanguageifdefined{english}
+Study on the time decay of excess carriers in solar silicon~/ K.~Lauer,
+  A.~Laades, H.~Übensee, A.~Lawerenz~// \BibEmph{Materials Science and
+  Engineering: B}. ---
+\newblock 2009. --- Mar. ---
+\newblock Vol. 159-160. ---
+\newblock Pp.~202--205. ---
+\newblock EMRS 2008 Spring Conference Symposium K: Advanced Silicon Materials
+  Research for Electronic and Photovoltaic Applications.
 
 \bibitem{2Diod:Ishaque}
 \selectlanguageifdefined{english}
@@ -122,15 +213,6 @@ Photoconversion Efficiency in Textured Silicon--Based Solar Cells.~/
 \newblock 2018. --- Dec. ---
 \newblock Vol.~44, no.~12. ---
 \newblock Pp.~873--876.
-
-\bibitem{FeB:Schmidt}
-\selectlanguageifdefined{english}
-\BibEmph{Schmidt,~Jan}. Effect of Dissociation of Iron--Boron Pairs in
-  Crystalline Silicon on Solar Cell Properties~/ Jan~Schmidt~//
-  \BibEmph{Progress in Photovoltaics: Research and Applications}. ---
-\newblock 2005. --- Jun. ---
-\newblock Vol.~13, no.~4. ---
-\newblock Pp.~325--331.
 
 \bibitem{FeB:kinetic}
 \selectlanguageifdefined{english}
