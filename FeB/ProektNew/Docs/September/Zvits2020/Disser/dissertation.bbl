@@ -7,6 +7,16 @@
 \ifx\undefined\BibAnnote\long\def\BibAnnote#1{}\else\fi
 \ifx\undefined\BibEmph\def\BibEmph#1{\emph{#1}}\else\fi
 
+\bibitem{Breitenstein2013}
+\selectlanguageifdefined{english}
+\BibEmph{Breitenstein,~O.} Understanding the current-voltage characteristics of
+  industrial crystalline silicon solar cells by considering inhomogeneous
+  current distributions~/ O.~Breitenstein~// \BibEmph{Opto--Electronics
+  Review}. ---
+\newblock 2013. --- Sep. ---
+\newblock Vol.~21, no.~3. ---
+\newblock Pp.~259--282.
+
 \bibitem{SINKE2019}
 \selectlanguageifdefined{english}
 \BibEmph{Sinke,~Wim~C.} Development of photovoltaic technologies for global
@@ -125,16 +135,6 @@ Study on the time decay of excess carriers in solar silicon~/ K.~Lauer,
 \newblock 2013. --- Aug. ---
 \newblock Vol.~21, no.~5. ---
 \newblock Pp.~884--893.
-
-\bibitem{Breitenstein2013}
-\selectlanguageifdefined{english}
-\BibEmph{Breitenstein,~O.} Understanding the current-voltage characteristics of
-  industrial crystalline silicon solar cells by considering inhomogeneous
-  current distributions~/ O.~Breitenstein~// \BibEmph{Opto--Electronics
-  Review}. ---
-\newblock 2013. --- Sep. ---
-\newblock Vol.~21, no.~3. ---
-\newblock Pp.~259--282.
 
 \bibitem{Olikh2018SM}
 \selectlanguageifdefined{english}
