@@ -1,7 +1,5 @@
-artem24837@gmail.com
-olozitsky@gmail.com
-vkostylyov@ukr.net
-my_co@ukr.net
-maiko_kate@ukr.net
-viktorvlasiuk@gmail.com
-romkin.ua@gmail.com
+artem24837@gmail.com; olozitsky@gmail.com; vkostylyov@ukr.net; viktorvlasiuk@gmail.com; romkin.ua@gmail.com; 
+my_co@ukr.net; maiko_kate@ukr.net
+
+
+olegolikh@knu.ua
