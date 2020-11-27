@@ -7,6 +7,52 @@
 \ifx\undefined\BibAnnote\long\def\BibAnnote#1{}\else\fi
 \ifx\undefined\BibEmph\def\BibEmph#1{\emph{#1}}\else\fi
 
+\bibitem{Sachenko2016}
+\selectlanguageifdefined{english}
+Analysis of the silicon solar cells efficiency. Type of doping and level
+  optimization~/ A.V.~Sachenko, V.P.~Kostylyov, M.V.~Gerasymenko et~al.~//
+  \BibEmph{Semiconductor Physics, Quantum Electronics \& Optoelectronics}. ---
+\newblock 2016. ---
+\newblock Vol.~19, no.~1. ---
+\newblock Pp.~67--74.
+
+\bibitem{TAYYIB201221}
+\selectlanguageifdefined{english}
+Accelerated Light-Induced Defect Transformation Study of Elkem Solar Grade
+  Silicon~/ M.~Tayyib, J.~Theobald, K.~Peter et~al.~// \BibEmph{Energy
+  Procedia}. ---
+\newblock 2012. ---
+\newblock Vol.~27. ---
+\newblock Pp.~21 -- 26. ---
+\newblock Proceedings of the 2nd International Conference on Crystalline
+  Silicon Photovoltaics SiliconPV 2012.
+
+\bibitem{FeB_Wilson}
+\selectlanguageifdefined{english}
+Accelerated Light-Induced Degradation (ALID) for Monitoring of Defects in PV
+  Silicon Wafers and Solar Cells~/ M.~Wilson, P.~Edelman, A.~Savtchouk
+  et~al.~// \BibEmph{J. Electron. Mater.} ---
+\newblock 2010. --- Jun. ---
+\newblock Vol.~39. ---
+\newblock P.~642–647.
+
+\bibitem{FeB_Walz}
+\selectlanguageifdefined{english}
+\BibEmph{Walz,~D.} On the recombination behaviour of iron in moderately
+  boron-doped p-type silicon~/ D.~Walz, J.P.~My, G.~Kamarinos~// \BibEmph{Appl.
+  Phys. A: Mater. Sci. Process}. ---
+\newblock 1996. --- Apr. ---
+\newblock Vol.~62, no.~4. ---
+\newblock Pp.~345--353.
+
+\bibitem{FeB_Zong}
+\selectlanguageifdefined{english}
+\BibEmph{Zoth,~G.} A fast, preperetion-free method to detect irpn in silicon~/
+  G.~Zoth, W.~Bergholz~// \BibEmph{J. Appl. Phys.} ---
+\newblock 1990. --- Jun. ---
+\newblock Vol.~67, no.~11. ---
+\newblock Pp.~6764--6771.
+
 \bibitem{Breitenstein2013}
 \selectlanguageifdefined{english}
 \BibEmph{Breitenstein,~O.} Understanding the current-voltage characteristics of
