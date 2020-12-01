@@ -1,0 +1,17 @@
+Вельмишановна пані Олено,
+
+ст.1, права колонка, 4-й рядок зверху
+"no-load voltage" замінити на "open-circuit voltage"
+
+ст.5, ліва колонки, 3-й рядок зверху
+"temperature and boron the concentration of boron"
+ замінити на "temperature and boron concentration"
+
+
+
+З повагою,
+від імені співавторів
+Оліх Олег
+
+edboard.jps@gmail.com
+eISPCS-20
