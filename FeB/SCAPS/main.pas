@@ -152,8 +152,8 @@ begin
 
  DatFileLocation:=Directory+'\'+DatFileLocation+'\';
 
-
- DecimalSeparator:='.';
+ FormatSettings.DecimalSeparator:='.';
+// DecimalSeparator:='.';
  Comments:=TStringList.Create;
  SCparam:=TStringList.Create;
  DatFile:=TStringList.Create;
@@ -365,13 +365,13 @@ end;
 
 procedure TMainForm.B_ResFSelectClick(Sender: TObject);
 begin
-   if SelectDirectory('Choose Result Directory','C:', Result_Folder)
+   if SelectDirectory('Choose Result Directory','', Result_Folder)
    then FoldersToForm;
 end;
 
 procedure TMainForm.B_SCAPSFSelectClick(Sender: TObject);
 begin
-  if SelectDirectory('Choose SCAPS Directory','C:', SCAPS_Folder)
+  if SelectDirectory('Choose SCAPS Directory','', SCAPS_Folder)
    then FoldersToForm;
 end;
 
@@ -1889,7 +1889,8 @@ end;
 
 procedure TMainForm.FormCreate(Sender: TObject);
 begin
-  DecimalSeparator:='.';
+  FormatSettings.DecimalSeparator:='.';
+//  DecimalSeparator:='.';
   SCAPSFile:=TStringList.Create;
   SCAPSFile.Sorted:=False;
    ConfigFile:=TIniFile.Create(ExtractFilePath(Application.ExeName)+'SCapsConv.ini');
