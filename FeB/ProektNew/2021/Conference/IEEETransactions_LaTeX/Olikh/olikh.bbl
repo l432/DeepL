@@ -133,4 +133,56 @@ K.~Kim, J.~Gwak, S.~K. Ahn, Y.-J. Eo, J.~H. Park, J.-S. Cho, M.~G. Kang, H.-E.
   Song, and J.~H. Yun, ``Simulations of chalcopyrite/c-si tandem cells using
   scaps-1d,'' \emph{Sol. Energy}, vol. 145, pp. 52--58, 2017.
 
+\bibitem{Pasler}
+R.~P\"assler, ``Dispersion-related description of temperature dependencies of
+  band gaps in semiconductors,'' \emph{Phys. Rev. B}, vol.~66, p. 085201, Aug
+  2002.
+
+\bibitem{EgNarrow}
+D.~Yan and A.~Cuevas, ``Empirical determination of the energy band gap
+  narrowing in p$^+$ silicon heavily doped with boron,'' \emph{J. Appl. Phys.},
+  vol. 116, no.~19, p. 194505, Nov 2014.
+
+\bibitem{Nc:Green}
+M.~A. Green, ``Intrinsic concentration, effective densities of states, and
+  effective mass in silicon,'' \emph{J. Appl. Phys.}, vol.~67, no.~6, pp.
+  2944--2954, Mar 1990.
+
+\bibitem{Si_ni_Couderc}
+R.~Couderc, M.~Amara, and M.~Lemiti, ``Reassessment of the intrinsic carrier
+  density temperature dependence in crystalline silicon,'' \emph{J. Appl.
+  Phys.}, vol. 115, no.~9, p. 093705, Mar 2014.
+
+\bibitem{OMara}
+W.~O'Mara, R.~Herring, and L.~Hant, \emph{Handbook of semiconductor silicon
+  technology}.\hskip 1em plus 0.5em minus 0.4em\relax New Jersey, USA: Noyes
+  Publications, 1990.
+
+\bibitem{KLAASSEN953}
+D.~Klaassen, ``A unified mobility model for device simulation --- {I}. model
+  equations and concentration dependence,'' \emph{Solid-State Electron.},
+  vol.~35, no.~7, pp. 953-- 959, Jul 1992.
+
+\bibitem{Si_BtB}
+H.~T. Nguyen, S.~C. Baker-Finch, and D.~Macdonald, ``Temperature dependence of
+  the radiative recombination coefficient in crystalline silicon from spectral
+  photoluminescence,'' \emph{Appl. Phys. Lett.}, vol. 104, no.~11, p. 112105,
+  Mar 2014.
+
+\bibitem{Si_Auger}
+P.~P. Altermatt, J.~Schmidt, G.~Heiser, and A.~G. Aberle, ``Assessment and
+  parameterisation of {C}oulomb--enhanced {A}uger recombination coefficients in
+  lowly injected crystalline silicon,'' \emph{J. Appl. Phys.}, vol.~82, no.~10,
+  pp. 4938--4944, Nov 1997.
+
+\bibitem{MurphyJAP2011}
+J.~D. Murphy, K.~Bothe, M.~Olmo, V.~V. Voronkov, and R.~J. Falster, ``The
+  effect of oxide precipitates on minority carrier lifetime in p--type
+  silicon,'' \emph{J. Appl. Phys.}, vol. 110, no.~5, p. 053713, Sep 2011.
+
+\bibitem{FeB:kinetic}
+W.~Wijaranakula, ``The reaction kinetics of iron--boron pair formation and
+  dissociation in p--type silicon,'' \emph{J. Electrochem. Soc.}, vol. 140,
+  no.~1, pp. 275--281, Jan 1993.
+
 \end{thebibliography}

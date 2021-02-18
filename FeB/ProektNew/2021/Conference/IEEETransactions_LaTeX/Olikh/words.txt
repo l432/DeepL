@@ -1,0 +1,3 @@
+Two hidden layers with 2560 nodes per layer and six output nodes were selected. The activation function was chosen to be Sigmoid. The learning rate was kept at 0.2. 
+
+labeled dataset to train on.

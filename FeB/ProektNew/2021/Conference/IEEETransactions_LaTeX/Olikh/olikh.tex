@@ -460,47 +460,96 @@ ideality factor, silicon, $n^+$--$p$--$p^+$ structure, SCAPS, iron contamination
 
 
 \IEEEPARstart{N}{on--destructive} methods of evaluation of the impurities contamination in semiconductor crystals and structures, in particular solar cells (SCs), are important from an applied point of view.
-To date, a not little collection of direct methods (an infrared tomography, an electron-paramagnetic resonance, a non-stationary spectroscopy, etc.) as well as indirect methods (a surface photovoltage, a minority carrier lifetime measurements) has been developed to solve this problem. 
-But almost all of them require special sample preparing or/and specialized equipment. 
+To date, a not little collection of direct methods (an infrared tomography, an electron-paramagnetic resonance, a non-stationary spectroscopy, etc.) as well as indirect methods (a surface photovoltage, a minority carrier lifetime measurements) has been developed to solve this problem.
+But almost all of them require special sample preparing or/and specialized equipment.
 At the same time, the current--voltage curve (IVC) measurement is a widespread method of SC characterization and allows to determine a number of fundamental SC parameters.
 Evidently SC parameters in particular and the processes of carrier propagation in general depend on electrically active defects presence; therefore there is a possibility in principle to determine the impurity concentration by IVC shape.
 And recent papers demonstrate a novel approach to extract
 defect properties from inexpensive IV measurements of completed
 devices \cite{HowMuchPhysics}.
 
-One of the main obstacles of such a convenient and express method developing is the multiparameter relationship between the contamination of recombination centers and IVC characteristics, which are determined by experimental curves fitting. 
-However, in the last decade, deep learning, which are enable to solve problems without clear algorithmization, have been successfully used in various fields of theoretical and applied physics \cite{MachLean_RevModPhys,MachLeanJAP,MachLeanPPV}. 
-This gives hope for an real implementation of aforesaid SC characterization method with deep learning approaches using (so to say "deep learning for deep levels").
+One of the main obstacles of such a convenient and express method developing is the multiparameter relationship between the contamination of recombination centers and IVC characteristics, which are determined by experimental curves fitting.
+However, in the last decade, the deep learning, which are enable to solve problems without clear algorithmization, have been successfully used in various fields of theoretical and applied physics \cite{MachLean_RevModPhys,MachLeanJAP,MachLeanPPV}.
+This gives hope for an real implementation of aforesaid SC characterization method with using of deep learning approach (so to say "deep learning for deep levels").
 
 In this work, we use numerical device models to show the possibility of such an approach fulfillment using the example of evaluation the iron concentration in $n^+$--$p$--$p^+$-Si by the ideality factor value.
 The reasons for aforesaid system consideration are following.
 Although the ideality factor $n=2$ is often used to describe the trap related recombination, $n$ value is known to depend on defect parameters, including the concentration \cite{n2_Beier,n2McIntosh,n2Kaminski,HAMEIRI2013251,Heide}.
-Consequently the ideality factor is often used to characterize the various 
+Consequently the ideality factor is often used to characterize the various
 semiconductor barrier structures \cite{Heide,Duan,n_CharGaN,n_CharSemic,n_CharPhysRevAppl}.
 We have previously demonstrated \cite{Olikh2019SM} the correlation between defect contamination and $n$ value, but the corresponding analytic expressions were not obvious and calibration curves were needed.
-Iron is a major contaminant as well as one of the most detrimental
-metal impurities in solar--grade crystalline silicon materials \cite{HowMuchPhysics,FeB:Schmidt}.
+The iron is a major contaminant as well as one of the most detrimental(and hence, best
+characterized) 
+metal impurities in silicon photovoltaic devices \cite{HowMuchPhysics,FeB:Schmidt}.
 A simple back surface field (BSF) $n^+$--$p$--$p^+$ structure are important from an applied point of view.
 
+is one of themost detrimental point defects in silicon PV devices.
+
 The deep learning is based on learn by examples.
-In this work the set of examples were simulated by using SCAPS-1D \cite{SCAPS1,SCAPS2}, which is widely used to model silicon-based devices \cite{SCAPSuseSi4,SCAPSuseSi1,SCAPSuseSi6} as well.
+In this work the labeled dataset has been simulated by using SCAPS-1D \cite{SCAPS1,SCAPS2}, which was widely used to model silicon-based devices \cite{SCAPSuseSi4,SCAPSuseSi1,SCAPSuseSi6} as well.
 
+
+The work milestone are following
+(i)~the IVC simulation of numerous $n^+$--$p$--$p^+$-Si structure with various parameters for different temperatures;
+(ii)~the fitting of the IVC set according to the two--diode model and the extraction of $n$ value set;
+(iii)~the training of deep neural network (DNN) to estimate an iron-related defect contamination by using some dataset part and DNN testing with another part.
+The consequent Sections give the details.
+
+\section{Simulation Details}
+
+\subsection{Temperature Dependencies of Material Parameters}
+
+To receive more relevant labeled data, the IVC simulation was performed with regard to following silicon properties:
+\begin{enumerate}
+  \item~the bandgap temperature dependence according to P\"assler equation \cite{Pasler};
+  \item~the doping induced bandgap narrowing \cite{EgNarrow};
+  \item~the thermal carrier velocities from \cite{Nc:Green};
+  \item~the temperature dependence of effective states density  according to \cite{Si_ni_Couderc};
+  \item~the free carrier effective masses from \cite{OMara}
+  \item~the carrier mobilities according to Klaassen's theory  \cite{KLAASSEN953};
+  \item~the temperature and doping level dependencies of band--to--band and Auger recombination coefficients from \cite{Si_BtB} and \cite{Si_Auger} respectively.
+\end{enumerate}
+
+\subsection{Defect Parameters}
+
+The calculations were carried out under the assumption that the defect--assisted recombination was 
+bound up with iron--related deep levels.
+Iron atoms were speculated to be uniformly located in both SC base ($p$--region) and BSF-layer ($p^+$--region) with concentration $N_{\mathrm{Fe}}$.
+And simulations were carried out for two cases.
+In the first equilibrium one, the iron is believed to be both in the interstitial lattice position ($\mathrm{Fe}_i$) and in the trigonal pair with shallow acceptors (boron, $\mathrm{Fe}_i\mathrm{B}_s$).
+The pair's fraction does not constant in SC regions and is given by \cite{MurphyJAP2011,FeB:kinetic}
 \begin{equation}
-\label{eqn_Eg}
-E_g(T) = E_g(0)-\alpha\,\theta\left\{\frac{1-3\Delta^2}{\exp{(\theta/T)}-1}+
-  \frac{\theta^2}{2}\left(\sqrt[6]{1+\frac{\pi^2}{3(1+\Delta^2)}\left(\frac{2T}{\theta}\right)^2
-  +\frac{3\Delta^2-1}{4}\left(\frac{2T}{\theta}\right)^3+\frac{8}{3}\left(\frac{2T}{\theta}\right)^4
-  +\left(\frac{2T}{\theta}\right)^6}-1\right)\right\},
+\label{eqNFeB}
+    \frac{N_{\mathrm{FeB}}}{N_{\mathrm{Fe}}}=\frac{N_\mathrm{B}10^{-23}\exp\left(-\frac{E_b}{kT}\right)}
+     {\left[1+\frac{N_\mathrm{B}}{10^{23}}\exp\left(-\frac{E_b}{kT}\right)\right]\left[1+\exp\left(-\frac{F-E_{\mathrm{Fe}_i}}{kT}\right)\right]}\,.
 \end{equation}
+where
+$N_\mathrm{B}$ is the boron concentration,
+$F$ is the Fermi level,
+$E_b=0.582$~eV is the binding energy of the $\mathrm{Fe}_i\mathrm{B}_s$ pairs,
+$E_{\mathrm{Fe}_i}$ is the donor level, associated with $\mathrm{Fe}_i$.
 
-\setlength{\arraycolsep}{0.0em}
-\begin{eqnarray}
-Z&{}={}&E_g(0)-\alpha\,\theta\left\{\frac{1-3\Delta^2}{\exp{(\theta/T)}-1}\right\}\nonumber\\
-&&+\frac{\theta^2}{2}\left(\sqrt[6]{1+\frac{\pi^2}{3(1+\Delta^2)}\left(\frac{2T}{\theta}\right)^2
-  +\frac{3\Delta^2-1}{4}\left(\frac{2T}{\theta}\right)^3+\frac{8}{3}\left(\frac{2T}{\theta}\right)^4
-  +\left(\frac{2T}{\theta}\right)^6}-1\right)
-\end{eqnarray}
-\setlength{\arraycolsep}{5pt}
+In the second one, the $\mathrm{Fe}_i$ was suggested to be presence only with uniform distribution.
+
+
+In the first, equilibrium, it was believed that iron can be both in the interstitial position and create a pair with boron. 
+
+%\begin{equation}
+%\label{eqn_Eg}
+%E_g(T) = E_g(0)-\alpha\,\theta\left\{\frac{1-3\Delta^2}{\exp{(\theta/T)}-1}+
+%  \frac{\theta^2}{2}\left(\sqrt[6]{1+\frac{\pi^2}{3(1+\Delta^2)}\left(\frac{2T}{\theta}\right)^2
+%  +\frac{3\Delta^2-1}{4}\left(\frac{2T}{\theta}\right)^3+\frac{8}{3}\left(\frac{2T}{\theta}\right)^4
+%  +\left(\frac{2T}{\theta}\right)^6}-1\right)\right\},
+%\end{equation}
+%
+%\setlength{\arraycolsep}{0.0em}
+%\begin{eqnarray}
+%Z&{}={}&E_g(0)-\alpha\,\theta\left\{\frac{1-3\Delta^2}{\exp{(\theta/T)}-1}\right\}\nonumber\\
+%&&+\frac{\theta^2}{2}\left(\sqrt[6]{1+\frac{\pi^2}{3(1+\Delta^2)}\left(\frac{2T}{\theta}\right)^2
+%  +\frac{3\Delta^2-1}{4}\left(\frac{2T}{\theta}\right)^3+\frac{8}{3}\left(\frac{2T}{\theta}\right)^4
+%  +\left(\frac{2T}{\theta}\right)^6}-1\right)
+%\end{eqnarray}
+%\setlength{\arraycolsep}{5pt}
 
 %\hfill mds
 
