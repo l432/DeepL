@@ -185,4 +185,33 @@ W.~Wijaranakula, ``The reaction kinetics of iron--boron pair formation and
   dissociation in p--type silicon,'' \emph{J. Electrochem. Soc.}, vol. 140,
   no.~1, pp. 275--281, Jan 1993.
 
+\bibitem{FeB_Zong}
+G.~Zoth and W.~Bergholz, ``A fast, preperetion-free method to detect irpn in
+  silicon,'' \emph{J. Appl. Phys.}, vol.~67, no.~11, pp. 6764--6771, Jun 1990.
+
+\bibitem{FeBLight2}
+L.~J. Geerligs and D.~Macdonald, ``Dynamics of light-induced feb pair
+  dissociation in crystalline silicon,'' \emph{Appl. Phys. Lett.}, vol.~85,
+  no.~22, pp. 5227--5229, Nov 2004.
+
+\bibitem{ROUGIEUX2018}
+F.~E. Rougieux, C.~Sun, and D.~Macdonald, ``Determining the charge states and
+  capture mechanisms of defects in silicon through accurate recombination
+  analyses: A review,'' \emph{Solar Energy Materials and Solar Cells}, vol.
+  187, pp. 263 -- 272, Dec 2018.
+
+\bibitem{Istratov1999}
+A.~A. Istratov, H.~Hieslmair, and E.~Weber, ``Iron and its complexes in
+  silicon,'' \emph{Applied Physics A: Materials Science \& Processing},
+  vol.~69, no.~1, pp. 13--44, Jul 1999.
+
+\bibitem{OlikhJPS}
+O.~Y. Olikh and O.~V. Zavhorodnii, ``Modeling of ideality factor value in
+  $n^+$--$p$--$p^+$--si structure,'' \emph{Journal of Physical Studies},
+  vol.~24, no.~4, p. 4701, 2020.
+
+\bibitem{Keras}
+F.~Chollet, \emph{Deep Learning with Python}, 2nd~ed.\hskip 1em plus 0.5em
+  minus 0.4em\relax Manning, 2017.
+
 \end{thebibliography}
