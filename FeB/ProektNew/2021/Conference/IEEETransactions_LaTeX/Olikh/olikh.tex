@@ -344,7 +344,7 @@
 % There should be no need to do such things with IEEEtran.cls V1.6 and later.
 % (Unless specifically asked to do so by the journal or conference you plan
 % to submit to, of course. )
-
+\usepackage{graphicx}
 \usepackage{cite}
 \usepackage{amsmath}
 \interdisplaylinepenalty=2500
@@ -532,7 +532,7 @@ $E_{\mathrm{Fe}_i}$ is the donor level, associated with $\mathrm{Fe}_i$.
 In the second one, the $\mathrm{Fe}_i$ was suggested to be presence only with uniform distribution.
 Such state can be realized by heat treatment (210$^\circ$C, 3~min) \cite{FeB_Zong} or intense illumination \cite{FeBLight2}.
 
-The donor level $E_{\mathrm{Fe}_i} = E_V+0.394$~eV 
+The donor level $E_{\mathrm{Fe}_i} = E_V+0.394$~eV
 with electron $\sigma_{n,{\mathrm{Fe}}}=3.47\times10^{-11}T^{-1.48}$~cm$^2$ and
 hole $\sigma_{p,{\mathrm{Fe}}}=4.54\times10^{-16}\exp\left(-\frac{0.05}{kT}\right)$~cm$^2$ capture cross-sections \cite{MurphyJAP2011,ROUGIEUX2018}
 was associated with $\mathrm{Fe}_i$.
@@ -550,21 +550,30 @@ were used in simulation for $\mathrm{Fe}_i\mathrm{B}_s$.
 The dark IVCs for $n^+$--$p$--$p^+$-Si structure were simulated.
 The thickness and donor concentration for emitter layer ($n^+$) were $0.5$~$\mu$m and $10^{19}$~cm$^{-3}$.
 The BSF--layer with thickness  $1$~$\mu$m and acceptor concentration $5\times10^{18}$~cm$^{-3}$ was used.
-The base thickness $d_p$ ($150-240$~$\mu$m) and doping level (boron concentration, $N_B=10^{15}-10^{17}$~cm$^{-3}$) changed from one simulation to another.
+The base thickness $d_p$ ($150-240$~$\mu$m) and doping level (boron concentration, $N_\mathrm{B}=10^{15}-10^{17}$~cm$^{-3}$) changed from one simulation to another.
 Other varied parameters were temperature ($T=290-340$~K) and iron concentration ($N_{\mathrm{Fe}}=10^{10}-10^{13}$~cm$^{-3}$).
 
-To obtain training labeled dataset, 15048 IVCs were simulated with parameters, which evenly 
-(for $T$ and $d_p$ in linear scale, for $N_{\mathrm{Fe}}$ and $N_B$ in logarithmic scale) 
-distributed in the mentioned ranges.
+To obtain training labeled dataset, 15048 IVCs were simulated with parameters, which evenly
+(for $T$ and $d_p$ in linear scale, for $N_{\mathrm{Fe}}$ and $N_\mathrm{B}$ in logarithmic scale)
+distributed over the mentioned ranges.
 Besides some test labeled dataset were prepared.
-For example, $d_p$, $N_{\mathrm{Fe}}$ and $N_B$ values are equal to values of training dataset and $T$ differs from them
+For example, $d_p$, $N_{\mathrm{Fe}}$ and $N_\mathrm{B}$ values are equal to values of training dataset and $T$ differs from them
 for one of test dataset, which labeled "T-varied".
-The values of $d_p$, $N_{\mathrm{Fe}}$ and $N_B$ are different from training dataset mesh in "d-varied", 
-"Fe-varied" and "B-varied" dataset, respectively. 
+The values of $d_p$, $N_{\mathrm{Fe}}$ and $N_\mathrm{B}$ are different from training dataset mesh in "d-varied",
+"Fe-varied" and "B-varied" dataset, respectively.
 "All-varied" dataset was calculated with using all parameter values, unmatched to ones of training dataset.
 The precise parameters values are listed in  Supplementary Material.
 
 \cite{OlikhJPS,Keras}
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=0.5\textwidth]{Fig1a}
+\includegraphics[width=0.5\textwidth]{Fig1b}
+\caption{Simulation results for the network.}
+\label{fig_sim}
+\end{figure}
+
 %\begin{equation}
 %\label{eqn_Eg}
 %E_g(T) = E_g(0)-\alpha\,\theta\left\{\frac{1-3\Delta^2}{\exp{(\theta/T)}-1}+
