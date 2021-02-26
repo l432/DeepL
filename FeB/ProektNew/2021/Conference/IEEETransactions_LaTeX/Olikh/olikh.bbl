@@ -42,6 +42,11 @@ S.~Rodrigues, H.~G. Ramos, and F.~Morgado-Dias, ``Machine learning pv system
   performance analyser,'' \emph{Prog. Photovoltaics Res. Appl.}, vol.~26,
   no.~8, pp. 675--687, Aug 2018.
 
+\bibitem{MI_JAP}
+S.~Ju, S.~Shimizu, and J.~Shiomi, ``Designing thermal functional materials by
+  coupling thermal transport calculations and machine learning,'' \emph{J.
+  Appl. Phys.}, vol. 128, no.~16, p. 161102, Oct 2020.
+
 \bibitem{n2_Beier}
 J.~{Beier} and B.~{Voss}, ``Humps in dark {I}--{V}--curves--analysis and
   explanation,'' in \emph{Conference Record of the Twenty Third IEEE
@@ -133,11 +138,6 @@ K.~Kim, J.~Gwak, S.~K. Ahn, Y.-J. Eo, J.~H. Park, J.-S. Cho, M.~G. Kang, H.-E.
   Song, and J.~H. Yun, ``Simulations of chalcopyrite/c-si tandem cells using
   scaps-1d,'' \emph{Sol. Energy}, vol. 145, pp. 52--58, 2017.
 
-\bibitem{MI_JAP}
-S.~Ju, S.~Shimizu, and J.~Shiomi, ``Designing thermal functional materials by
-  coupling thermal transport calculations and machine learning,'' \emph{J.
-  Appl. Phys.}, vol. 128, no.~16, p. 161102, Oct 2020.
-
 \bibitem{Pasler}
 R.~P\"assler, ``Dispersion-related description of temperature dependencies of
   band gaps in semiconductors,'' \emph{Phys. Rev. B}, vol.~66, p. 085201, Aug
@@ -209,6 +209,17 @@ F.~E. Rougieux, C.~Sun, and D.~Macdonald, ``Determining the charge states and
 A.~A. Istratov, H.~Hieslmair, and E.~Weber, ``Iron and its complexes in
   silicon,'' \emph{Applied Physics A: Materials Science \& Processing},
   vol.~69, no.~1, pp. 13--44, Jul 1999.
+
+\bibitem{Breitenstein2013}
+O.~Breitenstein, ``Understanding the current-voltage characteristics of
+  industrial crystalline silicon solar cells by considering inhomogeneous
+  current distributions,'' \emph{Opto--Electronics Review}, vol.~21, no.~3, pp.
+  259--282, Sep 2013.
+
+\bibitem{IJAVA}
+K.~Yu, J.~Liang, B.~Qu, X.~Chen, and H.~Wang, ``Parameters identification of
+  photovoltaic models using an improved {JAYA} optimization algorithm,''
+  \emph{Energy Conversion and Management}, vol. 150, pp. 742--753, Oct 2017.
 
 \bibitem{OlikhJPS}
 O.~Y. Olikh and O.~V. Zavhorodnii, ``Modeling of ideality factor value in
