@@ -375,7 +375,7 @@
 \author{Oleg~Olikh,
         Oleg~Lozitsky,
         and~Oleksii~Zavhorodnii% <-this % stops a space
-\thanks{The authors are with the Faculty of Physics, Taras Shevchenko National University of Kyiv, 64/13, Volodymyrska Street, City of Kyiv, Ukraine, 01601 (e-mail: olikh@knu.ua).}}
+\thanks{The authors are with the Faculty of Physics, Taras Shevchenko National University of Kyiv, 64/13, Volodymyrska Street, City of Kyiv, Ukraine, 01601 (e-mail: olegolikh@knu.ua).}}
 
 % note the % following the last \IEEEmembership and also \thanks -
 % these prevent an unwanted space from occurring between the last author name
@@ -503,7 +503,7 @@ The consequent Sections give the details.
 
 \begin{figure*}[tb]
 \centering
-\includegraphics[width=0.8\textwidth]{Chem}
+\includegraphics[width=0.9\textwidth]{Chem}
 \caption{Flowchart of the work  steps.
 Additional details are discussed in the body of the article.}
 \label{fig_chem}
@@ -686,7 +686,7 @@ full&$0.30\pm0.08$& $0.05\pm0.02$\\
 
 DNNs, trained by parameters grid nodes data, were applied to test datasets.
 Results are presented in Fig.~\ref{fig_TrPr} (a)-(e), (g)-(k) and in Table~\ref{table_MSRE}.
-As it is shown, the $n_\mathrm{Fe-FeB}$ DNN can be quite wrong for some samples 
+As it is shown, the $n_\mathrm{Fe-FeB}$ DNN can be quite wrong for some samples
 ($\{d_p,N_\mathrm{B},T,n_\mathrm{Fe-FeB}\}$ sets).
 The largest errors are observed for doping level values, which unused during  network learning
 (B-varied dataset, Fig.~\ref{fig_TrPr}(c)).
@@ -739,7 +739,7 @@ d-varied (b, h),
 B-varied (c, i),
 Fe-varied (d, j),
 All-varied (e, k).
-DNNs were trained by training dataset ((a)--(e), (g)--(k)) 
+DNNs were trained by training dataset ((a)--(e), (g)--(k))
 or full (f, l) dataset.
 %Panels (f) and (l) represent results of  data from
 %$n_\mathrm{Fe-FeB}$ DNN and $n_\mathrm{Fe-FeB}$--$n_\mathrm{Fe}$ DNN,
@@ -759,25 +759,25 @@ But in our opinion, the network predictive ability is fundamentally limited by $
 The increase in the input parameter number is quite expected to enhances the DNN capability.
 But the expected improvement of the of $n_\mathrm{Fe-FeB}$--$n_\mathrm{Fe}$ DNN must be also caused by the removal of a certain degeneration of correlation between an ideality factor value and an iron concentration (a kind of splitting).
 
-Indeed, one can see the improvement in operating characteristic 
+Indeed, one can see the improvement in operating characteristic
 of $n_\mathrm{Fe-FeB}$--$n_\mathrm{Fe}$ DNN in comparison with $n_\mathrm{Fe-FeB}$ DNN.
-The improvement manifests itself both in the MSRE decrease (see Table~\ref{table_MSRE}) and 
-in the almost complete absence of huge 
+The improvement manifests itself both in the MSRE decrease (see Table~\ref{table_MSRE}) and
+in the almost complete absence of huge
 difference in $N_\mathrm{Fe,TRUE}$ and $N_\mathrm{Fe,PRED}$ values.
-Really, the maximum SRE does not exceed 1 and SRE is less than 0.1 for 60\% of samples 
+Really, the maximum SRE does not exceed 1 and SRE is less than 0.1 for 60\% of samples
 even for the All-varied test dataset --- see Fig.~\ref{fig_TrPr}(k).
 
-Despite the difference in predicting accuracy, 
+Despite the difference in predicting accuracy,
 the $n_\mathrm{Fe-FeB}$--$n_\mathrm{Fe}$ DNN's features are similar to  $n_\mathrm{Fe-FeB}$ DNN's ones.
-Thus difference in $N_\mathrm{B}$ value from training dataset is the most troublesome case 
+Thus difference in $N_\mathrm{B}$ value from training dataset is the most troublesome case
 (Fig.~\ref{fig_TrPr}(i)).
-The enjoyable (from a practical point of view) attribute is an ability to predict iron concentration value, which not used under learning. 
+The enjoyable (from a practical point of view) attribute is an ability to predict iron concentration value, which not used under learning.
 
 It is known \cite{Keras} that the increase of labeled dataset to train on leads to improve  deep neural network results.
-We have used all simulated data (so-called full dataset) to train both 
+We have used all simulated data (so-called full dataset) to train both
 $n_\mathrm{Fe-FeB}$--$n_\mathrm{Fe}$ DNN and $n_\mathrm{Fe-FeB}$ DNN as well.
 The results are presented in Table~\ref{table_CV} and Fig.~\ref{fig_TrPr} (f) and (l).
-Surprisingly the expansion of training base did not make better the results of cross--validation 
+Surprisingly the expansion of training base did not make better the results of cross--validation
 for $n_\mathrm{Fe-FeB}$ DNN.
 In our opinion, the mentioned above features of $n_\mathrm{Fe-FeB}$ vs $N_\mathrm{Fe}$ dependence
 are a reason of such result.
