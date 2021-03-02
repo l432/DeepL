@@ -92,7 +92,7 @@ J.~Chen, M.~Zhu, X.~Lu, and X.~Zou, ``Electrical characterization of gan
 
 \bibitem{n_CharSemic}
 P.~Dalapati, N.~Manik, and A.~Basu, ``Analysis of the temperature dependence of
-  diode ideality factor in ingan-based uv-a light-emitting diode,''
+  diode ideality factor in {I}n{G}a{N}-based {UV}-{A} light-emitting diode,''
   \emph{Semiconductors}, vol.~54, no.~10, pp. 1284--1289, Oct 2020.
 
 \bibitem{n_CharPhysRevAppl}
@@ -100,6 +100,12 @@ P.~Calado, D.~Burkitt, J.~Yao, J.~Troughton, T.~M. Watson, M.~J. Carnie, A.~M.
   Telford, B.~C. O'Regan, J.~Nelson, and P.~R. Barnes, ``Identifying dominant
   recombination mechanisms in perovskite solar cells by measuring the transient
   ideality factor,'' \emph{Phys. Rev. Applied}, vol.~11, p. 044005, Apr 2019.
+
+\bibitem{BulyarJAP}
+S.~V. Bulyarskiy, A.~V. Lakalin, M.~A. Saurov, and G.~G. Gusarov, ``The effect
+  of vacancy-impurity complexes in silicon on the current–voltage
+  characteristics of p–n junctions,'' \emph{J. Appl. Phys.}, vol. 128,
+  no.~15, p. 155702, Oct 2020.
 
 \bibitem{Olikh2019SM}
 O.~Olikh, ``Relationship between the ideality factor and the iron concentration
