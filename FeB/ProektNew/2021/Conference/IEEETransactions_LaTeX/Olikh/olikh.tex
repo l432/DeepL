@@ -431,13 +431,13 @@
 % As a general rule, do not put math, special symbols or citations
 % in the abstract or keywords.
 \begin{abstract}
-Defect-assisted recombination processes frequently 
-limit the photovoltaic device performance. 
+Defect-assisted recombination processes frequently
+limit the photovoltaic device performance.
 Non--destructive methods of evaluation of the impurities contamination in solar cells, are important from an applied point of view.
 In this work, we use numerical device
-simulation to  demonstrate the ability to extract impurity contamination 
+simulation to  demonstrate the ability to extract impurity contamination
 from an ideality factor value and utilizing a deep neural network (DNN).
-The dense layer DNN was trained by using simulation of current-voltage curves 
+The dense layer DNN was trained by using simulation of current-voltage curves
 of silicon \emph{n}\textsuperscript{+}--\emph{p}--\emph{p}\textsuperscript{+}  structure with the following parameters.
 The iron  concentration ranged from 10\textsuperscript{10} to 10\textsuperscript{13}~cm\textsuperscript{-3},
 the base doping level --- from 10\textsuperscript{15} to 10\textsuperscript{17}~cm\textsuperscript{-3},
@@ -587,7 +587,7 @@ Other varied parameters were temperature ($T=290$--$340$~K) and iron concentrati
 evenly
 (for $T$ and $d_p$ in linear scale, for $N_{\mathrm{Fe}}$ and $N_\mathrm{B}$ in logarithmic scale)
 distributed over the above ranges,
- formed a kind of parameter's grid.
+ formed a kind of parameter's grid --- see Fig.~\ref{fig_ParVal}.
 To obtain training dataset, 15048 IVCs were simulated in Fe-case and Fe-FeB-case for nodes of grid.
 
 Besides IVCs were prepared for several test datasets as well.
@@ -597,6 +597,7 @@ The corresponding test dataset is labeled "T-varied" from now on.
 The value of $d_p$, $N_{\mathrm{Fe}}$ and $N_\mathrm{B}$ is divergent from  grig in "d-varied",
 "Fe-varied" and "B-varied" dataset, respectively.
 "All-varied" dataset was calculated with using all parameter values, unmatched to ones of training dataset.
+%The precise parameters values are listed in  Supplementary Material.
 The precise parameters values are listed in  Supplementary Material.
 
 
@@ -605,15 +606,11 @@ The precise parameters values are listed in  Supplementary Material.
 %\includegraphics[width=0.3\textwidth]{FigDataAB}
 \includegraphics[width=0.4\textwidth]{FigDataA}
 \includegraphics[width=0.4\textwidth]{FigDataB}
-\caption{Ideality factor as a function of the temperature and boron concentration (a, b)
-or the base thickness and iron concentration (c,d).
-The cases of $\mathrm{Fe}_i\mathrm{B}_s$ and $\mathrm{Fe}_i$ coexistence (a, c)
-and interstitial iron presence only (b, d).
-$N_\mathrm{Fe}=10^{10}$~cm$^{-3}$ (a,b),
-$d_p=180$~$\mu$m (a, b),
-$N_\mathrm{B}=10^{16}$~cm$^{-3}$ (c, d),
-$T=320$~K (c, d).
-%Simulation results for parameter's grid are presented.
+\caption{The parameters used for the simulations and the labeled datasets preparation.
+The grid nodes and marks correspond to training dataset and test datasets
+(B-varied (black squares), Fe-varied (red circles), d-varied (blue triangles up),
+T-varied (green triangles down), and  All-varied (violet stars)).
+Different mark interiors denote the  different subdatasets.
 }
 \label{fig_ParVal}
 \end{figure}
@@ -848,16 +845,16 @@ and trained DNNs are presented at \emph{https://github.com/olegolikh/IVcharacter
 
 \section{Conclusion}
 
-In this work, we demonstrate the ability to extract impurity contamination 
+In this work, we demonstrate the ability to extract impurity contamination
 from IV measurements (an ideality factor value) and utilizing a deep neural network.
-These approach utilizes a simple and widely applicable setup and 
-does not require a much experimental time. 
+These approach utilizes a simple and widely applicable setup and
+does not require a much experimental time.
 
-The method is based on the ability to train the deep neural network by using the 
+The method is based on the ability to train the deep neural network by using the
 results of simulation of solar cell with various parameters, in particular, the impurity concentration.
 In this model study, we investigated a single crystal silicon $n^+$--$p$--$p^+$ system with iron for which parameters have been extensively reported in the literature.
 The obtained results show that the dense layer DNN, trained with structure base doping level value and thickness, is able to predict iron concentration with MSRE up to 0.03 by using ideality factor values.
-The analysis has shown that it is important to train DNN by boron concentration value of structure under consideration. 
+The analysis has shown that it is important to train DNN by boron concentration value of structure under consideration.
 It is likely that two ideality factor values (for structure with $\mathrm{Fe}_i$ only as well as with $\mathrm{Fe}_i\mathrm{B}_s$ and $\mathrm{Fe}_i$ coexistence) would be needed to substantially upgrade a prediction accuracy.
 
 Furthermore, IV measurement is a standard SC characterization technique,
@@ -908,23 +905,23 @@ The work was supported by National Research Foundation  of Ukraine by the state 
  received the Ph.D. degree in solid state physics at Taras Shevchenko National University of Kyiv,  Ukraine, in 2001, and  D.Sc. degree  in solid state physics at Taras Shevchenko National University of Kyiv, in 2018.
  He is currently an Associate Professor with the Department of General Physics, Taras Shevchenko National University of Kyiv.
 
- He has been involved in Semiconductor Device research for more than 25 years, 
+ He has been involved in Semiconductor Device research for more than 25 years,
  working on the characterisation of barrier structure, on
  defect acousto-engineering techniques in silicon, and also in
  the field of meta–-heuristic methods.
- 
+
 %Her research interests focus on material
 %research in semiconductors, more speciﬁcally defect engineering in silicon,
 %nanostructured silicon, light-induced degradation, and silicon photodetectors.
 %
-% 
+%
 % His research interests in semiconductor physics have focused on external (radiation, ultrasound) influence on properties of semiconductor devices.
 \end{IEEEbiography}
 
 % if you will not have a photo at all:
 \begin{IEEEbiographynophoto}{Oleg Lozitsky}
-received the B.S. and M.S. degree in solid state physics 
-Taras Shevchenko National University of Kyiv,  Ukraine, in 2015 
+received the B.S. and M.S. degree in solid state physics
+Taras Shevchenko National University of Kyiv,  Ukraine, in 2015
 and in 2017.
 
 He is currently a Graduate Student with Physics Faculty, Taras Shevchenko National University of Kyiv.
@@ -936,10 +933,10 @@ His research interests focus on modeling of material physical properties by usin
 %\newpage
 
 \begin{IEEEbiographynophoto}{Oleksii~Zavhorodnii}
-received the B.S. degree in solid state physics 
+received the B.S. degree in solid state physics
 Taras Shevchenko National University of Kyiv,  Ukraine, in 2010.
 
-He is currently studying for a M.S. degree. 
+He is currently studying for a M.S. degree.
 His research interests focus on solar cell simulation.
 \end{IEEEbiographynophoto}
 
