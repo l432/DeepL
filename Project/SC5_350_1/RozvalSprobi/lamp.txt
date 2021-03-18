@@ -1,0 +1,11 @@
+G7A - основна лампа, ORION (200Вт, 24V) 7A
+G64A - основна лампа, ORION, 6.4A
+
+R7sT40 - CL- 083 (ECOLIGTH, 150W, ~220V)
+
+UV10W - UV LED 395nm (Opto, 10W)
+
+HLX640 - 64640 HLX (OSRAM, 150W, 24V) ставив 6А
+HLX657 - 64657 HLX (OSRAM, 250W, 24V) ставив 20В
+
+orion6A - остання лампа! 6А
