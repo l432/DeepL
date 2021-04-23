@@ -45,7 +45,7 @@
 \shortauthors{O Olikh et~al.}
 %\begin{frontmatter}
 
-\title [mode = title]{TThis is a specimen $a_b$ title}
+\title [mode = title]{Deep neural network method for predicting the iron concentration in silicon solar cell by current-voltage characteristic}
 %\tnotemark[1,2]
 
 %\tnotetext[1]{This document is the results of the research
@@ -150,7 +150,7 @@ It is shown that DNN is able to predict iron concentration with mean squared rel
 \end{highlights}
 
 \begin{keywords}
-Ideality factor \sep Silicon \sep $n^+$--$p$--$p^+$ structure \sep 
+Ideality factor \sep Silicon \sep $n^+$--$p$--$p^+$ structure \sep
 SCAPS \sep Iron contamination \sep Machine learning
 \end{keywords}
 
@@ -159,6 +159,65 @@ SCAPS \sep Iron contamination \sep Machine learning
 
 
 \section{Introduction}
+
+%IronSC
+%\citet{Fortunato2010}.
+
+Metal,  especially iron, contamination control remains an important challenge for silicon processing both for microelectronics, logic technologies and solar cells (SCs) \citep{ZHU2016192,Claers2018,FeB:Schmidt,IronSC}.
+%Metallic contamination leads to recombination defect creation and is a performance-limiting factor in many photovoltaic (PV) devices .
+%Techniques to monitor impurities are an essential part of successful yield engineering and processing.
+Typically, metal related defect characterization is performed by Fourier-transform infrared spectroscopy,
+electron-paramagnetic resonance,
+minority carrier lifetime measurements,
+deep level transient spectroscopy (DLTS), 
+Laplace DLTS etc \citep{Schroder2006,HowMuchPhysics,LaplDLTS}.
+However, these techniques are time-consuming, require special equipment or/and sample preparing.
+At the same time, the current-voltage (IV) measurement is a  standard  rapid industrial SC characterization technique.
+IV characteristics contain important information about electrically active defects \citep{HowMuchPhysics,BulyarJAP}.
+And a few  defect diagnostics by IV characteristics are proposed 
+\citep{HowMuchPhysics,BulyarJAP,BulyarSSE,Claeys2019,simoen2007}.
+The temperature dependencies of current components \citep{Claeys2019,simoen2007} 
+or IV differential parameters \citep{BulyarJAP,BulyarSSE} are under consideration in the aforesaid methods.
+But the numerous and high accuracy IV measurements are required in the first and second cases, respectively. 
+
+
+In our previous work \citep{Olikh2019SM}, we have shown that the SC ideality factor value ($n$) can be used to estimate the iron concentration ($N_{\mathrm{Fe}}$).
+It should be noted that the ideality factor is quite often  used to characterize the various
+semiconductor barrier structures \cite{Heide,Duan,n_CharGaN,n_CharSemic,n_CharPhysRevAppl}.
+However, a defect's signature in an ideality factor is convoluted with those from so many other physical processes.
+As a result the obtained analytic expressions $N_{\mathrm{Fe}}=f(n)$ are not general and numerous grading curves are needed to $N_{\mathrm{Fe}}$ determination \citep{Olikh2019SM}.
+
+On the other hand, in the last decade, the deep learning, which is enable to solve problems without clear algorithmization, have been successfully used in various fields of theoretical and applied physics \cite{MachLean_RevModPhys,MachLeanJAP,MachLeanPPV}.
+Furthermore, materials informatics
+(combination of material property calculations/measurements and informatics algorithms)
+has been asserted \cite{MI_JAP} to become the fourth (along with theory, simulations, and experiments) paradigm of science.
+
+
+
+This gives hope for an real implementation of aforesaid SC characterization method with using of deep learning approach (so to say "deep learning for deep levels"). 
+
+studied relationship between the SC ideality factor and the iron concentration.
+
+Any defects detrimental to the device performance should by
+deﬁnition have a signature in the device performance such as
+current–voltage (JV) measurements. However, such a signal is
+convoluted with those from so many other physical processes
+that it cannot be extracted or interpreted through a simple ﬁtting
+approach, as the ﬁt would be underconstrained. 
+
+The obtained
+results show that the ideality factor value can be used to estimate the contaminant concentration.
+
+
+Non--destructive methods of evaluation of the impurities contamination in semiconductor structures, in particular solar cells (SCs), are important from an applied point of view.
+To date, a not little collection of direct methods (an infrared tomography, an electron-paramagnetic resonance, a non-stationary spectroscopy, etc.) as well as indirect methods (a surface photovoltage, a minority carrier lifetime measurements) has been developed to solve this problem.
+But almost all of them require special sample preparing or/and specialized equipment.
+At the same time, the current--voltage curve (IVC) measurement is a widespread industrial characterization technique and allows to determine a number of fundamental SC parameters.
+Evidently SC parameters in particular and the processes of carrier propagation in general depend on electrically active defects presence; therefore there is a possibility in principle to determine the impurity concentration by IVC shape.
+And recent papers demonstrate a novel approach to extract
+defect properties from inexpensive IV measurements of completed
+devices \cite{HowMuchPhysics}.
+
 
 The Elsevier cas-sc class is based on the
 standard article class and supports almost all of the functionality of
@@ -217,9 +276,9 @@ Elsevier styles based on standard styles like Harvard and Vancouver.
 Please use Bib\TeX\ to generate your bibliography and include DOIs
 whenever available.
 
-Here are two sample references:
-See \citet{Fortunato2010}. Also refer \citet{Fortunato2010,NewmanGirvan2004}.
-More citations are here \citep{Fortunato2010,Vehlowetal2013}.
+%Here are two sample references:
+%See \citet{Fortunato2010}. Also refer \citet{Fortunato2010,NewmanGirvan2004}.
+%More citations are here \citep{Fortunato2010,Vehlowetal2013}.
 
 \section{Floats}
 {Figures} may be included using the command, \verb+\includegraphics+ in
@@ -434,11 +493,11 @@ This work was supported by National Research Foundation  of Ukraine
 
 %% Loading bibliography style file
 %\bibliographystyle{elsarticle-num}
-%\bibliographystyle{model1-num-names}
-\bibliographystyle{cas-model2-names}
+\bibliographystyle{model1-num-names}
+%\bibliographystyle{cas-model2-names}
 
 % Loading bibliography database
-\bibliography{cas-refs}
+\bibliography{olikh}
 
 
 %\vskip3pt
