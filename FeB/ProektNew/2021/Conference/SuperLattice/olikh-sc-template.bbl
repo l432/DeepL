@@ -1,4 +1,4 @@
-\begin{thebibliography}{28}
+\begin{thebibliography}{45}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\bibinfo}[2]{#2}
 \ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
@@ -253,5 +253,134 @@
   scaps-1d},
 \newblock \bibinfo{journal}{Sol. Energy} \bibinfo{volume}{145}
   (\bibinfo{year}{2017}) \bibinfo{pages}{52--58}.
+%Type = Article
+\bibitem[{P\"assler(2002)}]{Pasler}
+\bibinfo{author}{R.~P\"assler},
+\newblock \bibinfo{title}{Dispersion-related description of temperature
+  dependencies of band gaps in semiconductors},
+\newblock \bibinfo{journal}{Phys. Rev. B} \bibinfo{volume}{66}
+  (\bibinfo{year}{2002}) \bibinfo{pages}{085201}.
+%Type = Article
+\bibitem[{Yan and Cuevas(2014)}]{EgNarrow}
+\bibinfo{author}{D.~Yan}, \bibinfo{author}{A.~Cuevas},
+\newblock \bibinfo{title}{Empirical determination of the energy band gap
+  narrowing in p$^+$ silicon heavily doped with boron},
+\newblock \bibinfo{journal}{J. Appl. Phys.} \bibinfo{volume}{116}
+  (\bibinfo{year}{2014}) \bibinfo{pages}{194505}.
+%Type = Article
+\bibitem[{Green(1990)}]{Nc:Green}
+\bibinfo{author}{M.~A. Green},
+\newblock \bibinfo{title}{Intrinsic concentration, effective densities of
+  states, and effective mass in silicon},
+\newblock \bibinfo{journal}{J. Appl. Phys.} \bibinfo{volume}{67}
+  (\bibinfo{year}{1990}) \bibinfo{pages}{2944--2954}.
+%Type = Article
+\bibitem[{Couderc et~al.(2014)Couderc, Amara, and Lemiti}]{Si_ni_Couderc}
+\bibinfo{author}{R.~Couderc}, \bibinfo{author}{M.~Amara},
+  \bibinfo{author}{M.~Lemiti},
+\newblock \bibinfo{title}{Reassessment of the intrinsic carrier density
+  temperature dependence in crystalline silicon},
+\newblock \bibinfo{journal}{J. Appl. Phys.} \bibinfo{volume}{115}
+  (\bibinfo{year}{2014}) \bibinfo{pages}{093705}.
+%Type = Article
+\bibitem[{Klaassen(1992)}]{KLAASSEN953}
+\bibinfo{author}{D.~Klaassen},
+\newblock \bibinfo{title}{A unified mobility model for device simulation ---
+  {I}. model equations and concentration dependence},
+\newblock \bibinfo{journal}{Solid-State Electron.} \bibinfo{volume}{35}
+  (\bibinfo{year}{1992}) \bibinfo{pages}{953-- 959}.
+%Type = Book
+\bibitem[{O'Mara et~al.(1990)O'Mara, Herring, and Hant}]{OMara}
+\bibinfo{author}{W.~O'Mara}, \bibinfo{author}{R.~Herring},
+  \bibinfo{author}{L.~Hant}, \bibinfo{title}{Handbook of semiconductor silicon
+  technology}, \bibinfo{publisher}{Noyes Publications}, \bibinfo{address}{New
+  Jersey, USA}, \bibinfo{year}{1990}.
+%Type = Article
+\bibitem[{Altermatt et~al.(1997)Altermatt, Schmidt, Heiser, and
+  Aberle}]{Si_Auger}
+\bibinfo{author}{P.~P. Altermatt}, \bibinfo{author}{J.~Schmidt},
+  \bibinfo{author}{G.~Heiser}, \bibinfo{author}{A.~G. Aberle},
+\newblock \bibinfo{title}{Assessment and parameterisation of
+  {C}oulomb--enhanced {A}uger recombination coefficients in lowly injected
+  crystalline silicon},
+\newblock \bibinfo{journal}{J. Appl. Phys.} \bibinfo{volume}{82}
+  (\bibinfo{year}{1997}) \bibinfo{pages}{4938--4944}.
+%Type = Article
+\bibitem[{Nguyen et~al.(2014)Nguyen, Baker-Finch, and Macdonald}]{Si_BtB}
+\bibinfo{author}{H.~T. Nguyen}, \bibinfo{author}{S.~C. Baker-Finch},
+  \bibinfo{author}{D.~Macdonald},
+\newblock \bibinfo{title}{Temperature dependence of the radiative recombination
+  coefficient in crystalline silicon from spectral photoluminescence},
+\newblock \bibinfo{journal}{Appl. Phys. Lett.} \bibinfo{volume}{104}
+  (\bibinfo{year}{2014}) \bibinfo{pages}{112105}.
+%Type = Article
+\bibitem[{Murphy et~al.(2011)Murphy, Bothe, Olmo, Voronkov, and
+  Falster}]{MurphyJAP2011}
+\bibinfo{author}{J.~D. Murphy}, \bibinfo{author}{K.~Bothe},
+  \bibinfo{author}{M.~Olmo}, \bibinfo{author}{V.~V. Voronkov},
+  \bibinfo{author}{R.~J. Falster},
+\newblock \bibinfo{title}{The effect of oxide precipitates on minority carrier
+  lifetime in p--type silicon},
+\newblock \bibinfo{journal}{J. Appl. Phys.} \bibinfo{volume}{110}
+  (\bibinfo{year}{2011}) \bibinfo{pages}{053713}.
+%Type = Article
+\bibitem[{Wijaranakula(1993)}]{FeB:kinetic}
+\bibinfo{author}{W.~Wijaranakula},
+\newblock \bibinfo{title}{The reaction kinetics of iron--boron pair formation
+  and dissociation in p--type silicon},
+\newblock \bibinfo{journal}{J. Electrochem. Soc.} \bibinfo{volume}{140}
+  (\bibinfo{year}{1993}) \bibinfo{pages}{275--281}.
+%Type = Article
+\bibitem[{Zoth and Bergholz(1990)}]{FeB_Zong}
+\bibinfo{author}{G.~Zoth}, \bibinfo{author}{W.~Bergholz},
+\newblock \bibinfo{title}{A fast, preperetion-free method to detect irpn in
+  silicon},
+\newblock \bibinfo{journal}{J. Appl. Phys.} \bibinfo{volume}{67}
+  (\bibinfo{year}{1990}) \bibinfo{pages}{6764--6771}.
+%Type = Article
+\bibitem[{Geerligs and Macdonald(2004)}]{FeBLight2}
+\bibinfo{author}{L.~J. Geerligs}, \bibinfo{author}{D.~Macdonald},
+\newblock \bibinfo{title}{Dynamics of light-induced feb pair dissociation in
+  crystalline silicon},
+\newblock \bibinfo{journal}{Appl. Phys. Lett.} \bibinfo{volume}{85}
+  (\bibinfo{year}{2004}) \bibinfo{pages}{5227--5229}.
+%Type = Article
+\bibitem[{Rougieux et~al.(2018)Rougieux, Sun, and Macdonald}]{ROUGIEUX2018}
+\bibinfo{author}{F.~E. Rougieux}, \bibinfo{author}{C.~Sun},
+  \bibinfo{author}{D.~Macdonald},
+\newblock \bibinfo{title}{Determining the charge states and capture mechanisms
+  of defects in silicon through accurate recombination analyses: A review},
+\newblock \bibinfo{journal}{Solar Energy Materials and Solar Cells}
+  \bibinfo{volume}{187} (\bibinfo{year}{2018}) \bibinfo{pages}{263 -- 272}.
+%Type = Article
+\bibitem[{Istratov et~al.(1999)Istratov, Hieslmair, and Weber}]{Istratov1999}
+\bibinfo{author}{A.~A. Istratov}, \bibinfo{author}{H.~Hieslmair},
+  \bibinfo{author}{E.~Weber},
+\newblock \bibinfo{title}{Iron and its complexes in silicon},
+\newblock \bibinfo{journal}{Applied Physics A: Materials Science \& Processing}
+  \bibinfo{volume}{69} (\bibinfo{year}{1999}) \bibinfo{pages}{13--44}.
+%Type = Article
+\bibitem[{Breitenstein(2013)}]{Breitenstein2013}
+\bibinfo{author}{O.~Breitenstein},
+\newblock \bibinfo{title}{Understanding the current-voltage characteristics of
+  industrial crystalline silicon solar cells by considering inhomogeneous
+  current distributions},
+\newblock \bibinfo{journal}{Opto--Electronics Review} \bibinfo{volume}{21}
+  (\bibinfo{year}{2013}) \bibinfo{pages}{259--282}.
+%Type = Article
+\bibitem[{Yu et~al.(2017)Yu, Liang, Qu, Chen, and Wang}]{IJAVA}
+\bibinfo{author}{K.~Yu}, \bibinfo{author}{J.~Liang}, \bibinfo{author}{B.~Qu},
+  \bibinfo{author}{X.~Chen}, \bibinfo{author}{H.~Wang},
+\newblock \bibinfo{title}{Parameters identification of photovoltaic models
+  using an improved {JAYA} optimization algorithm},
+\newblock \bibinfo{journal}{Energy Conversion and Management}
+  \bibinfo{volume}{150} (\bibinfo{year}{2017}) \bibinfo{pages}{742--753}.
+%Type = Article
+\bibitem[{Olikh and Zavhorodnii(2020)}]{OlikhJPS}
+\bibinfo{author}{O.~Y. Olikh}, \bibinfo{author}{O.~V. Zavhorodnii},
+\newblock \bibinfo{title}{Modeling of ideality factor value in
+  $n^+$--$p$--$p^+$--si structure},
+\newblock \bibinfo{journal}{Journal of Physical Studies} \bibinfo{volume}{24}
+  (\bibinfo{year}{2020}) \bibinfo{pages}{4701}.
 
 \end{thebibliography}

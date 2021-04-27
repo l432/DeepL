@@ -195,7 +195,7 @@ The aim of this work is to apply the deep learning approach for predicting the i
 Further, unlike in previous work \citep{Olikh2019SM}, the back surface field (BSF) $n^+$--$p$--$p^+$ structure was under consideration
 and the base thickness influence on ideality factor was taken into account as well.
 
-As the approximation to the practice on manufacturing line, the paper considers a fairly simple system
+As the approximation to the practical using, the paper considers a fairly simple system
 which consists of crystalline silicon (c-Si) SC  and iron impurity.
 However, the system is important in practice.
 Silicon solar cells constitute ~90\% of current global production capacity \citep{SCRev2015} and
@@ -204,14 +204,14 @@ Iron is a major as one of the most detrimental metal impurities in c-Si SCs \cit
 The flowchart of the used heuristic approach is shown in Fig.~\ref{fig_chem}.
 The following milestones can be distinguished.
 First, the dark IV characteristic is simulated for SCs with both known contaminant composition and various parameters.
-In our numerical simulation we make use of SCAPS-1D \cite{SCAPS1,SCAPS2}, 
-which widely used to model silicon-based devices \cite{SCAPSuseSi4,SCAPSuseSi1,SCAPSuseSi6}.
+In our numerical simulation we make use of SCAPS-1D \citep{SCAPS1,SCAPS2},
+which widely used to model silicon-based devices \citep{SCAPSuseSi4,SCAPSuseSi1,SCAPSuseSi6}.
 Second, the obtained characteristic is fitted according to the double-diode model and the ideality factor is estimated.
 As a result of aforesaid steps, the labeled datasets were produced.
-Obviously, the labeled dataset from experimental IVs  would be preferable, 
+Obviously, the labeled dataset from experimental IVs  would be preferable,
 but it is practically difficult to find the thousands of samples with the required parameters.
-Third, the training of deep neural network (DNN) to estimate an iron contamination  by using SC's base thickness as well as doping level,
-temperature and ideality factor value.
+Third, the training of deep neural network (DNN) to estimate an iron contamination  by using SC's base thickness, doping level,
+temperature, and ideality factor value.
 Fours, the DNN testing.
 
 \begin{figure}
@@ -225,39 +225,33 @@ Additional details are discussed in the body of the article.}
 
 \section{Simulation Details}
 
-The calculation presented here uses simple $n^+-p$ structure shown in inset in Fig.~\ref{figIV}.
-The initial thickness of each layer $d_n=0.5$~$\mu$m and $d_p=300$~$\mu$m respectively;
-$n^+$ is the emitter layer with the donor concentration $N_\mathrm{D}=10^{19}$~cm$^{-3}$ and $10^{15}-10^{17}$~cm$^{-3}$ is the acceptor concentration $N_\mathrm{A}$ of the $p$ base layer,
-which is uniformly doped with boron.
-
+The presented calculation uses $n^+$--$p$--$p^+$ structure.
+$n^+$ is the emitter layer with the donor concentration $N_D=10^{19}$~cm$^{-3}$ and
+the thickness 0.5~$\mu$m.
+$p$ and $p^+$ are the base and BSF-layer, respectively, which are uniformly doped with boron.
+$1$~$\mu$m and $5\times10^{18}$~cm$^{-3}$ are the thickness $d_{BSF}$ and the acceptor concentration $N_{BSF}$
+of the $p^+$ layer.
+The base with the thickness $d_p=150$--$240$~$\mu$m is doped with concentration
+$N_\mathrm{B}=10^{15}$--$10^{17}$~cm$^{-3}$.
 
 The simulations  were carried out over the temperature range $290-340$~K.
-It should be noted that SCAPS only takes into account the simplified temperature dependencies of density of states
-and  thermal  velocity of carriers.
-Therefore the SCAPS setting file was created for each temperature using the material and defect parameters of Tables~\ref{tabMaterial} and \ref{tabDefect} respectively.
-
-
-
-\begin{equation}
+The SCAPS setting file was created for each temperature using the following material parameters.
+The bandgap $E_G$ and bandgap narrowing $\Delta E_G$ models are, respectively, from P\"{a}ssler \citep{Pasler} and Yan and Cuevas \citep{EgNarrow}:
+\begin{eqnarray}
 \label{eqEg}
-    E_G(T)=E_G(0)-\alpha\Theta\left\{\frac{1-3\Delta^2}{\exp\left(\frac{\Theta}{T}\right)-1}
+E_G=E_{G0}-\alpha\Theta\left\{\frac{1-3\Delta^2}{e^{\frac{\Theta}{T}}-1}
     +\frac{3\Delta^2}{2}\left(\sqrt[6]{1+\frac{\pi^2}{3(1+\Delta^2)}\left(\frac{2T}{\Theta}\right)^2
     +\frac{3\Delta^2-1}{4}\left(\frac{2T}{\Theta}\right)^3+\frac{8}{3}\left(\frac{2T}{\Theta}\right)^4
-    +\left(\frac{2T}{\Theta}\right)^6}-1\right)\right\}\,,
-\end{equation}
+    +\left(\frac{2T}{\Theta}\right)^6}-1\right)\right\}\,,\\
+\Delta E_G=4.20\times10^{-5}\left[\ln\left(\frac{N_{D}}{10^{14}}\right)\right]^3\,;\qquad
+     \Delta E_G=4.72\times10^{-5}\left[\ln\left(\frac{N_{B,BSF}}{10^{14}}\right)\right]^3\,,
+\end{eqnarray}
 where
-$E_G(0)=1.1701$~eV,
+$E_{G0}=1.1701$~eV,
 $\alpha=3.23\times10^{-4}$~eV/K,
 $\Theta=446$~K,
 $\Delta=0.51$.
-
-
-\begin{equation}
-\label{eqDelEg}
-    \Delta E_G=4.20\times10^{-5}\left[\ln\left(\frac{N_B}{10^{14}}\right)\right]^3\,;\qquad
-     \Delta E_G=4.72\times10^{-5}\left[\ln\left(\frac{N_A}{10^{14}}\right)\right]^3\,,
-\end{equation}
-
+The carrier thermal velocities are calculated from models by Green \citep{Nc:Green}:
 \begin{equation}
 \label{eqVth}
     \upsilon_{\mathrm{th},n}=\sqrt{\frac{8qkT}{0.28m_0\pi}}\,;\qquad
@@ -265,14 +259,15 @@ $\Delta=0.51$.
 \end{equation}
 where
 $m_0$ is the free electron mass.
-
-
+The effective states density masses in the conduction band $m^*_{dC}$ and
+the valence band $m^*_{dV}$ are calculated according to models from Couderc et al. \citep{Si_ni_Couderc}:
 \begin{eqnarray}
-% \nonumber to remove numbering (before each equation)
   \left(\frac{m^*_{dC}}{m_0}\right)^{1.5} &=& 1.094-1.312\times10^{-5}T+6.753\times10^{-7}T^2+4.609\times10^{-10}T^3\,, \\
   \left(\frac{m^*_{dV}}{m_0}\right)^{1.5} &=& 0.3426+3.376\times10^{-3}T-4.689\times10^{-6}T^2+2.525\times10^{-9}T^3\,.
 \end{eqnarray}
-
+The carrier mobilities and the free carrier effective masses are from Klaassen \citep{KLAASSEN953}
+and O'Mara et al. \citep{OMara}, respectively.
+The temperature and doping dependencies of Auger recombination coefficients are calculated from models by Altermatt et al. \citep{Si_Auger}:
 \begin{eqnarray}
 % \nonumber to remove numbering (before each equation)
    \nonumber C_{p} (T)&=& (7.91\times10^{-32}-4.13\times10^{-35}T+3.59\times10^{-37}T^2)\\
@@ -280,14 +275,139 @@ $m_0$ is the free electron mass.
    C_{n} (T)&=& 2.8\times10^{-31}
   \times\left(1+\left(235548T^{-1.5013}-1\right)\left(1-\tanh\left[\left\{\frac{n}{5\times10^{16}}\right\}^{0.34}\right]\right)\right)\,.
 \end{eqnarray}
+The Auger recombination coefficient is from Nguyen et al. \citep{Si_BtB}.
+
+The outside surface recombination with electron and hole velocities $10^3$~cm/s was taken into account.
+
+The simulations are carried out under the assumption that the defect--assisted recombination is connected with iron--related deep levels only.
+As the base and the SBF-layer uniform contaminant, iron is assumed to be in concentration
+$N_{\mathrm{Fe}}=10^{10}$--$10^{13}$~cm$^{-3}$.
+The simulations have been performed for the following two cases.
+In the first one, the concentration of totally dissolved iron is given by a sum of
+the concentration of the interstitial iron $\mathrm{Fe}_i$
+and the concentration of trigonal iron-boron pair $\mathrm{Fe}_i\mathrm{B}_s$:
+\begin{equation}\label{eqNFeB}
+  N_{\mathrm{Fe}}=N_{\mathrm{Fe}_i}+N_{\mathrm{Fe}_i\mathrm{B}_s}\,.
+\end{equation}
+The defect distributions are uniform, depend on the Fermi level $F$ position, and are given by
+\citep{MurphyJAP2011,FeB:kinetic}:
+\begin{equation}
+\label{eqNFeB}
+    \frac{N_{\mathrm{FeB}}}{N_{\mathrm{Fe}}}=\frac{N_\mathrm{B}10^{-23}\exp\left(-\frac{E_b}{kT}\right)}
+     {\left[1+\frac{N_\mathrm{B}}{10^{23}}\exp\left(-\frac{E_b}{kT}\right)\right]\left[1+\exp\left(-\frac{F-E_{\mathrm{Fe}_i}}{kT}\right)\right]}\,,
+     \quad N_{\mathrm{Fe}_i}=N_{\mathrm{Fe}}-N_{\mathrm{FeB}}\,,
+\end{equation}
+where
+$E_b=0.582$~eV is the binding energy of the $\mathrm{Fe}_i\mathrm{B}_s$ pairs,
+$E_{\mathrm{Fe}_i}$ is the donor level, associated with $\mathrm{Fe}_i$.
+This case correspond to the equilibrium condition and is labeled ``Fe-FeB'' from now on.
+
+In the second one, the $\mathrm{Fe}_i$ is suggested to be only present with uniform distribution ($N_{\mathrm{Fe}_i}=N_{\mathrm{Fe}}$).
+This case can be realized by heat treatment (210$^\circ$C, 3~min) \cite{FeB_Zong} or intense illumination \cite{FeBLight2} and is referred as ``Fe-FeB'' hereafter.
 
 
-The following recombination processes were taken into account: i) the outside surface recombination with electron and hole velocities 103 cm/s; 
+The donor level $E_{\mathrm{Fe}_i} = E_V+0.394$~eV
+with electron $\sigma_{n,{\mathrm{Fe}}}=3.47\times10^{-11}T^{-1.48}$~cm$^2$ and
+hole $\sigma_{p,{\mathrm{Fe}}}=4.54\times10^{-16}\exp\left(-\frac{0.05}{kT}\right)$~cm$^2$ capture cross-sections \cite{MurphyJAP2011,ROUGIEUX2018}
+is associated with $\mathrm{Fe}_i$ in simulations.
+The donor level $E_{\mathrm{FeB}}^\mathrm{D}= E_V+0.10$~eV,
+$\sigma_{n,{\mathrm{FeB}}}^\mathrm{D}=4\times10^{-13}$~cm$^2$,
+$\sigma_{p,{\mathrm{FeB}}}^\mathrm{D}=2\times10^{-14}$~cm$^2$
+and acceptor level $E_{\mathrm{FeB}}^\mathrm{A}= E_C-0.26$~eV,
+$\sigma_{n,{\mathrm{FeB}}}^\mathrm{A}=5.1\times10^{-9}T^{-2.5}$~cm$^2$,
+$\sigma_{p,{\mathrm{FeB}}}^\mathrm{A}=3.32\times10^{-10}\exp\left(-\frac{0.262}{kT}\right)$~cm$^2$
+\cite{Istratov1999,MurphyJAP2011,ROUGIEUX2018}
+are used for $\mathrm{Fe}_i\mathrm{B}_s$.
+
+The dark forward IV characteristic were generated by SCAPS over a voltage range up to $0.45$~V.
+According to the two-diode model, the dark SC current is given by \citep{Breitenstein2013}
+\begin{equation}
+\label{eqIVd}
+    I=I_{01}\left[\exp\left(-\frac{q(V-R_sI)}{kT}\right)-1\right]
+      + I_{02}\left[\exp\left(-\frac{q(V-R_sI)}{nkT}\right)-1\right]
+      +\frac{V-R_sI}{R_{sh}}\,,
+\end{equation}
+where
+$I_{01}$ and $I_{02}$ are the saturation currents,
+$R_{sh}$ and $R_s$ are the shunt and series resistances.
+The two-diode model are often used to describe real Si SCs
+and we used Eq.~\ref{eqIVd} to fit the simulated data by taking $n$, $I_{01}$, $I_{02}$,
+$R_{sh}$, and $R_s$ as fitting parameters.
+The fitting was performed by using the meta--heuristic method IJAVA \cite{IJAVA}.
+It should be noted that influence of both $R_s$ (obtained values $<10^{-2}$~$\Omega$) and $R_{sh}$
+(obtained values $>10^{18}$~$\Omega$) can be neglected in simulated IV.
+
+It is the ideality factor value $n$ which is used in our further calculation.
+The ideality factors, which are obtained in  Fe-case and Fe-FeB-case,
+are referred as  $n_\mathrm{Fe}$ and $n_\mathrm{Fe-FeB}$ hereafter.
+The typical simulated dependencies of  the ideality factor are shown in Fig.~\ref{fig_nValues}.
+The detailed discussion about $n_\mathrm{Fe}$ and $n_\mathrm{Fe-FeB}$  values are presented elsewhere \cite{OlikhJPS},
+however it should be noted that
+(i)~$n$ can takes equal values for different SC parameters values;
+(ii)~dependencies of $n_\mathrm{Fe}$ and $n_\mathrm{Fe-FeB}$ varies slightly.
+
+\begin{figure}[bt]
+\centering
+\includegraphics[width=0.48\textwidth]{Fig1a}
+\includegraphics[width=0.48\textwidth]{Fig1b}
+\caption{Ideality factor versus temperature and boron concentration (a, b)
+or base thickness and iron concentration (c,d).
+The Fe-FeB-case (a, c) and Fe-case (b, d).
+$N_\mathrm{Fe}=10^{10}$~cm$^{-3}$ (a,b),
+$d_p=180$~$\mu$m (a, b),
+$N_\mathrm{B}=10^{16}$~cm$^{-3}$ (c, d),
+$T=320$~K (c, d).
+}
+\label{fig_nValues}
+\end{figure}
+
+\section{Deep neural network}
+
+Training a deep neural network requires a large number of samples.
+In order to build a training dataset, we used IV characteristics, which
+are simulated by using 4 $d_p$ values, 9 $N_\mathrm{B}$ values, 11 $T$ values and 19 $N_{\mathrm{Fe}}$ values.
+These base thickness, doping level, temperature, and iron concentration values are regularly (for $T$ and $d_p$ in linear scale, for $N_{\mathrm{Fe}}$ and $N_\mathrm{B}$ in logarithmic scale) distributed over the  ranges $150$--$240$~$\mu$m, $10^{15}$--$10^{17}$~cm$^{-3}$, $290-340$~K, and
+$10^{10}$--$10^{13}$~cm$^{-3}$, respectively.
+Thus, 7524 IV characteristics are simulated in Fe-case as well as in Fe-FeB-case to to build a training dataset.
+
+Besides, several test datasets are prepared.
+The $d_p$, $N_\mathrm{B}$, and $N_{\mathrm{Fe}}$ values, which equal to  values from training dataset and $T$ values, which is divergent from training dataset are used to build the test dataset, labeled ``T-varied''.
+These dataset is based on 894 pairs of IV characteristics.
+The similar approach was used to prepare ``d-varied'' (1189 samples), ``Fe-varied'' (856 samples), and ``B-varied'' (514 samples) test datasets.
+The base thickness, doping level, temperature, and iron concentration values, which are divergent from training dataset values, are used to prepare ``All-varied'' (684 samples).
+
+The precise parameters values are listed in  Supplementary Material.
+
+We have tried to construct the DNN, which is able to estimate iron contamination by using
+SC parameters ($d_p$ and $N_\mathrm{B}$),  IV measurement temperature, and result of IV fitting (ideality factor value).
+As it is shown in Fig.~\ref{fig_chem} two DNNs with different input parameters were under consideration.
+The input sample of the first one consist of $\{d_p,N_\mathrm{B},T,n_\mathrm{Fe-FeB}\}$.
+In practice, these input set can be obtained from one dark IV measurement.
+These neural network referred as DNN$_\mathrm{FeFeB}$ hereafter.
+The second one uses  $\{d_p,N_\mathrm{B},T,n_\mathrm{Fe-FeB},n_\mathrm{Fe}\}$ in input layer.
+In practice, the obtaining of such a set requires additional SC processing (e.g. intense illumination) and two IV measuring.
+The label  DNN$_\mathrm{FeFeB-Fe}$ is used below.
 
 
 
 
 
+\section{Results and discussion}
+
+
+%\begin{figure}
+%	\centering
+%		\includegraphics[scale=.75]{figs/Fig1.pdf}
+%	\caption{The evanescent light - $1S$ quadrupole coupling
+%	($g_{1,l}$) scaled to the bulk exciton-photon coupling
+%	($g_{1,2}$). The size parameter $kr_{0}$ is denoted as $x$ and
+%	the \PMS is placed directly on the cuprous oxide sample ($\delta
+%	r=0$, See also Table \protect\ref{tbl1}).}
+%	\label{FIG:1}
+%\end{figure}
+
+
+As a result of aforesaid steps, the labeled datasets were produced.
 
 The Elsevier cas-sc class is based on the
 standard article class and supports almost all of the functionality of

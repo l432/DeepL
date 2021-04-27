@@ -1,0 +1,31 @@
+Two hidden layers with 2560 nodes per layer and six output nodes were selected. The activation function was chosen to be Sigmoid. The learning rate was kept at 0.2. 
+
+labeled dataset to train on.
+
+Training a deep neural network requires a large number of
+samples. In order to build a dataset containing the correspondence
+between S parameters, permittivity and permeability, we used CST
+MICROWAVE STUDIO (MWS) to generate simulation data.
+
+In order to make full use of the
+sequence information of the data, we use a gated recurrent unit
+(GRU) neural network17
+to establish an retrieval model. Finally, we
+train the network model with the generated samples, and the
+trained model can automatically retrieve the permittivity and per-
+meability by entering S parameters.
+
+
+In this paper, we propose a novel deep learning-based electro-
+magnetic parameter retrieval method that can solve the permittivity
+and permeability based on the S parameters. This is the first
+attempt to use deep learning for electromagnetic parameter
+retrieval. The simulation shows that the proposed scheme has high
+accuracy and does not have the multivaluedness problem of the tra-
+ditional NRW method. It provides a novel, simple, and more uni-
+versal approach for the retrieval method.
+
+
+
+In order to train an ANN, a training set must be
+provided.
