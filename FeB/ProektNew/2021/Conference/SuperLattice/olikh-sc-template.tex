@@ -163,60 +163,130 @@ SCAPS \sep Iron contamination \sep Machine learning
 %IronSC
 %\citet{Fortunato2010}.
 
-Metal,  especially iron, contamination control remains an important challenge for silicon processing both for microelectronics, logic technologies and solar cells (SCs) \citep{ZHU2016192,Claers2018,FeB:Schmidt,IronSC}.
+Metal  contamination control remains an important challenge for silicon processing both for microelectronics, logic technologies and solar cells (SCs) \citep{Claers2018,ZHU2016192,FeB:Schmidt,IronSC}.
 %Metallic contamination leads to recombination defect creation and is a performance-limiting factor in many photovoltaic (PV) devices .
 %Techniques to monitor impurities are an essential part of successful yield engineering and processing.
 Typically, metal related defect characterization is performed by Fourier-transform infrared spectroscopy,
 electron-paramagnetic resonance,
 minority carrier lifetime measurements,
-deep level transient spectroscopy (DLTS), 
+deep level transient spectroscopy (DLTS),
 Laplace DLTS etc \citep{Schroder2006,HowMuchPhysics,LaplDLTS}.
 However, these techniques are time-consuming, require special equipment or/and sample preparing.
 At the same time, the current-voltage (IV) measurement is a  standard  rapid industrial SC characterization technique.
 IV characteristics contain important information about electrically active defects \citep{HowMuchPhysics,BulyarJAP}.
-And a few  defect diagnostics by IV characteristics are proposed 
+And a few  defect diagnostics by IV characteristics are proposed
 \citep{HowMuchPhysics,BulyarJAP,BulyarSSE,Claeys2019,simoen2007}.
-The temperature dependencies of current components \citep{Claeys2019,simoen2007} 
-or IV differential parameters \citep{BulyarJAP,BulyarSSE} are under consideration in the aforesaid methods.
-But the numerous and high accuracy IV measurements are required in the first and second cases, respectively. 
+The temperature dependencies of current components \citep{Claeys2019,simoen2007}
+or IV differential parameters \citep{BulyarJAP,BulyarSSE} are under consideration.
+But the numerous and high accuracy IV measurements are required in the first and second cases, respectively.
 
 
 In our previous work \citep{Olikh2019SM}, we have shown that the SC ideality factor value ($n$) can be used to estimate the iron concentration ($N_{\mathrm{Fe}}$).
 It should be noted that the ideality factor is quite often  used to characterize the various
 semiconductor barrier structures \cite{Heide,Duan,n_CharGaN,n_CharSemic,n_CharPhysRevAppl}.
 However, a defect's signature in an ideality factor is convoluted with those from so many other physical processes.
-As a result the obtained analytic expressions $N_{\mathrm{Fe}}=f(n)$ are not general and numerous grading curves are needed to $N_{\mathrm{Fe}}$ determination \citep{Olikh2019SM}.
-
+As a result the obtained analytic expressions $N_{\mathrm{Fe}}=f(n)$ are not general and the numerous grading curves are needed to $N_{\mathrm{Fe}}$ determination \citep{Olikh2019SM}.
 On the other hand, in the last decade, the deep learning, which is enable to solve problems without clear algorithmization, have been successfully used in various fields of theoretical and applied physics \cite{MachLean_RevModPhys,MachLeanJAP,MachLeanPPV}.
 Furthermore, materials informatics
 (combination of material property calculations/measurements and informatics algorithms)
 has been asserted \cite{MI_JAP} to become the fourth (along with theory, simulations, and experiments) paradigm of science.
+The aim of this work is to apply the deep learning approach for predicting the iron concentration from ideality factor
+(so to say "deep learning for deep levels").
+Further, unlike in previous work \citep{Olikh2019SM}, the back surface field (BSF) $n^+$--$p$--$p^+$ structure was under consideration
+and the base thickness influence on ideality factor was taken into account as well.
+
+As the approximation to the practice on manufacturing line, the paper considers a fairly simple system
+which consists of crystalline silicon (c-Si) SC  and iron impurity.
+However, the system is important in practice.
+Silicon solar cells constitute ~90\% of current global production capacity \citep{SCRev2015} and
+BSF  is one of  popular designs used for industrial mass production of c-Si SCs \citep{SCRev2020}.
+Iron is a major as one of the most detrimental metal impurities in c-Si SCs \citep{ZHU2016192,FeB:Schmidt,IronSC}.
+The flowchart of the used heuristic approach is shown in Fig.~\ref{fig_chem}.
+The following milestones can be distinguished.
+First, the dark IV characteristic is simulated for SCs with both known contaminant composition and various parameters.
+In our numerical simulation we make use of SCAPS-1D \cite{SCAPS1,SCAPS2}, 
+which widely used to model silicon-based devices \cite{SCAPSuseSi4,SCAPSuseSi1,SCAPSuseSi6}.
+Second, the obtained characteristic is fitted according to the double-diode model and the ideality factor is estimated.
+As a result of aforesaid steps, the labeled datasets were produced.
+Obviously, the labeled dataset from experimental IVs  would be preferable, 
+but it is practically difficult to find the thousands of samples with the required parameters.
+Third, the training of deep neural network (DNN) to estimate an iron contamination  by using SC's base thickness as well as doping level,
+temperature and ideality factor value.
+Fours, the DNN testing.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.9\textwidth]{Chem}
+\caption{Schematic of deep learning based approach  for predicting the iron concentration.
+Additional details are discussed in the body of the article.}
+\label{fig_chem}
+\end{figure}
+
+
+\section{Simulation Details}
+
+The calculation presented here uses simple $n^+-p$ structure shown in inset in Fig.~\ref{figIV}.
+The initial thickness of each layer $d_n=0.5$~$\mu$m and $d_p=300$~$\mu$m respectively;
+$n^+$ is the emitter layer with the donor concentration $N_\mathrm{D}=10^{19}$~cm$^{-3}$ and $10^{15}-10^{17}$~cm$^{-3}$ is the acceptor concentration $N_\mathrm{A}$ of the $p$ base layer,
+which is uniformly doped with boron.
+
+
+The simulations  were carried out over the temperature range $290-340$~K.
+It should be noted that SCAPS only takes into account the simplified temperature dependencies of density of states
+and  thermal  velocity of carriers.
+Therefore the SCAPS setting file was created for each temperature using the material and defect parameters of Tables~\ref{tabMaterial} and \ref{tabDefect} respectively.
 
 
 
-This gives hope for an real implementation of aforesaid SC characterization method with using of deep learning approach (so to say "deep learning for deep levels"). 
+\begin{equation}
+\label{eqEg}
+    E_G(T)=E_G(0)-\alpha\Theta\left\{\frac{1-3\Delta^2}{\exp\left(\frac{\Theta}{T}\right)-1}
+    +\frac{3\Delta^2}{2}\left(\sqrt[6]{1+\frac{\pi^2}{3(1+\Delta^2)}\left(\frac{2T}{\Theta}\right)^2
+    +\frac{3\Delta^2-1}{4}\left(\frac{2T}{\Theta}\right)^3+\frac{8}{3}\left(\frac{2T}{\Theta}\right)^4
+    +\left(\frac{2T}{\Theta}\right)^6}-1\right)\right\}\,,
+\end{equation}
+where
+$E_G(0)=1.1701$~eV,
+$\alpha=3.23\times10^{-4}$~eV/K,
+$\Theta=446$~K,
+$\Delta=0.51$.
 
-studied relationship between the SC ideality factor and the iron concentration.
 
-Any defects detrimental to the device performance should by
-deﬁnition have a signature in the device performance such as
-current–voltage (JV) measurements. However, such a signal is
-convoluted with those from so many other physical processes
-that it cannot be extracted or interpreted through a simple ﬁtting
-approach, as the ﬁt would be underconstrained. 
+\begin{equation}
+\label{eqDelEg}
+    \Delta E_G=4.20\times10^{-5}\left[\ln\left(\frac{N_B}{10^{14}}\right)\right]^3\,;\qquad
+     \Delta E_G=4.72\times10^{-5}\left[\ln\left(\frac{N_A}{10^{14}}\right)\right]^3\,,
+\end{equation}
 
-The obtained
-results show that the ideality factor value can be used to estimate the contaminant concentration.
+\begin{equation}
+\label{eqVth}
+    \upsilon_{\mathrm{th},n}=\sqrt{\frac{8qkT}{0.28m_0\pi}}\,;\qquad
+    \upsilon_{\mathrm{th},p}=\sqrt{\frac{8qkT}{0.41m_0\pi}}\,,
+\end{equation}
+where
+$m_0$ is the free electron mass.
 
 
-Non--destructive methods of evaluation of the impurities contamination in semiconductor structures, in particular solar cells (SCs), are important from an applied point of view.
-To date, a not little collection of direct methods (an infrared tomography, an electron-paramagnetic resonance, a non-stationary spectroscopy, etc.) as well as indirect methods (a surface photovoltage, a minority carrier lifetime measurements) has been developed to solve this problem.
-But almost all of them require special sample preparing or/and specialized equipment.
-At the same time, the current--voltage curve (IVC) measurement is a widespread industrial characterization technique and allows to determine a number of fundamental SC parameters.
-Evidently SC parameters in particular and the processes of carrier propagation in general depend on electrically active defects presence; therefore there is a possibility in principle to determine the impurity concentration by IVC shape.
-And recent papers demonstrate a novel approach to extract
-defect properties from inexpensive IV measurements of completed
-devices \cite{HowMuchPhysics}.
+\begin{eqnarray}
+% \nonumber to remove numbering (before each equation)
+  \left(\frac{m^*_{dC}}{m_0}\right)^{1.5} &=& 1.094-1.312\times10^{-5}T+6.753\times10^{-7}T^2+4.609\times10^{-10}T^3\,, \\
+  \left(\frac{m^*_{dV}}{m_0}\right)^{1.5} &=& 0.3426+3.376\times10^{-3}T-4.689\times10^{-6}T^2+2.525\times10^{-9}T^3\,.
+\end{eqnarray}
+
+\begin{eqnarray}
+% \nonumber to remove numbering (before each equation)
+   \nonumber C_{p} (T)&=& (7.91\times10^{-32}-4.13\times10^{-35}T+3.59\times10^{-37}T^2)\\
+  &&\times\left(1+\left(564812T^{-1.6545}-1\right)\left(1-\tanh\left[\left\{\frac{p}{5\times10^{16}}\right\}^{0.29}\right]\right)\right)\,, \\
+   C_{n} (T)&=& 2.8\times10^{-31}
+  \times\left(1+\left(235548T^{-1.5013}-1\right)\left(1-\tanh\left[\left\{\frac{n}{5\times10^{16}}\right\}^{0.34}\right]\right)\right)\,.
+\end{eqnarray}
+
+
+The following recombination processes were taken into account: i) the outside surface recombination with electron and hole velocities 103 cm/s; 
+
+
+
+
 
 
 The Elsevier cas-sc class is based on the
@@ -301,13 +371,6 @@ pdf\LaTeX{} does not accept graphic files in the postscript format.
 %	\label{FIG:1}
 %\end{figure}
 
-\begin{figure}
-\centering
-\includegraphics[width=0.9\textwidth]{Chem}
-\caption{Flowchart of the work  steps.
-Additional details are discussed in the body of the article.}
-\label{fig_chem}
-\end{figure}
 
 
 The \verb+table+ environment is handy for marking up tabular

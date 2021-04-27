@@ -1,7 +1,15 @@
-\begin{thebibliography}{21}
+\begin{thebibliography}{28}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\bibinfo}[2]{#2}
 \ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
+%Type = Book
+\bibitem[{Claeys and Simoen(2018)}]{Claers2018}
+\bibinfo{author}{C.~Claeys}, \bibinfo{author}{E.~Simoen}, \bibinfo{title}{Metal
+  Impurities in Silicon- and Germanium-Based Technologies: Origin,
+  Characterization, Control, and Device Impact}, volume \bibinfo{volume}{270}
+  of \textit{\bibinfo{series}{Springer Series in Materials Science}},
+  \bibinfo{publisher}{Springer International Publishing},
+  \bibinfo{address}{Berlin/New York}, \bibinfo{year}{2018}.
 %Type = Article
 \bibitem[{Zhu et~al.(2016)Zhu, Yu, Zhu, Wu, He, Vanhellemont, and
   Yang}]{ZHU2016192}
@@ -12,14 +20,6 @@
   p--type {C}zochralski silicon},
 \newblock \bibinfo{journal}{Superlattices Microstruct.} \bibinfo{volume}{99}
   (\bibinfo{year}{2016}) \bibinfo{pages}{192--196}.
-%Type = Book
-\bibitem[{Claeys and Simoen(2018)}]{Claers2018}
-\bibinfo{author}{C.~Claeys}, \bibinfo{author}{E.~Simoen}, \bibinfo{title}{Metal
-  Impurities in Silicon- and Germanium-Based Technologies: Origin,
-  Characterization, Control, and Device Impact}, volume \bibinfo{volume}{270}
-  of \textit{\bibinfo{series}{Springer Series in Materials Science}},
-  \bibinfo{publisher}{Springer International Publishing},
-  \bibinfo{address}{Berlin/New York}, \bibinfo{year}{2018}.
 %Type = Article
 \bibitem[{Schmidt(2005)}]{FeB:Schmidt}
 \bibinfo{author}{J.~Schmidt},
@@ -189,5 +189,69 @@
   thermal transport calculations and machine learning},
 \newblock \bibinfo{journal}{J. Appl. Phys.} \bibinfo{volume}{128}
   (\bibinfo{year}{2020}) \bibinfo{pages}{161102}.
+%Type = Article
+\bibitem[{Jean et~al.(2015)Jean, Brown, Jaffe, Buonassisi, and
+  Bulovi\'{c}}]{SCRev2015}
+\bibinfo{author}{J.~Jean}, \bibinfo{author}{P.~R. Brown},
+  \bibinfo{author}{R.~L. Jaffe}, \bibinfo{author}{T.~Buonassisi},
+  \bibinfo{author}{V.~Bulovi\'{c}},
+\newblock \bibinfo{title}{Pathways for solar photovoltaics},
+\newblock \bibinfo{journal}{Energy Environ Sci.} \bibinfo{volume}{8}
+  (\bibinfo{year}{2015}) \bibinfo{pages}{1200--1219}.
+%Type = Article
+\bibitem[{Ajayan et~al.(2020)Ajayan, Nirmal, Mohankumar, Saravanan, Jagadesh,
+  and Arivazhagan}]{SCRev2020}
+\bibinfo{author}{J.~Ajayan}, \bibinfo{author}{D.~Nirmal},
+  \bibinfo{author}{P.~Mohankumar}, \bibinfo{author}{M.~Saravanan},
+  \bibinfo{author}{M.~Jagadesh}, \bibinfo{author}{L.~Arivazhagan},
+\newblock \bibinfo{title}{A review of photovoltaic performance of
+  organic/inorganic solar cells for future renewable and sustainable energy
+  technologies},
+\newblock \bibinfo{journal}{Superlattices Microstruct.} \bibinfo{volume}{143}
+  (\bibinfo{year}{2020}) \bibinfo{pages}{106549}.
+%Type = Article
+\bibitem[{Burgelman et~al.(2000)Burgelman, Nollet, and Degrave}]{SCAPS1}
+\bibinfo{author}{M.~Burgelman}, \bibinfo{author}{P.~Nollet},
+  \bibinfo{author}{S.~Degrave},
+\newblock \bibinfo{title}{Modelling polycrystalline semiconductor solar cells},
+\newblock \bibinfo{journal}{Thin Solid Films} \bibinfo{volume}{361--362}
+  (\bibinfo{year}{2000}) \bibinfo{pages}{527--532}.
+%Type = Article
+\bibitem[{Decock et~al.(2011)Decock, Khelifi, and Burgelman}]{SCAPS2}
+\bibinfo{author}{K.~Decock}, \bibinfo{author}{S.~Khelifi},
+  \bibinfo{author}{M.~Burgelman},
+\newblock \bibinfo{title}{Modelling multivalent defects in thin film solar
+  cells},
+\newblock \bibinfo{journal}{Thin Solid Films} \bibinfo{volume}{519}
+  (\bibinfo{year}{2011}) \bibinfo{pages}{7481--7484}.
+%Type = Article
+\bibitem[{Hu et~al.(2015)Hu, Yue, Zhang, Zheng, Chen, and Wang}]{SCAPSuseSi4}
+\bibinfo{author}{E.~Hu}, \bibinfo{author}{G.~Yue}, \bibinfo{author}{R.~Zhang},
+  \bibinfo{author}{Y.~Zheng}, \bibinfo{author}{L.~Chen},
+  \bibinfo{author}{S.~Wang},
+\newblock \bibinfo{title}{Numerical simulations of multilevel impurity
+  photovoltaic effect in the sulfur doped crystalline silicon},
+\newblock \bibinfo{journal}{Renewable Energy} \bibinfo{volume}{77}
+  (\bibinfo{year}{2015}) \bibinfo{pages}{442--446}.
+%Type = Article
+\bibitem[{Hamache et~al.(2016)Hamache, Sengouga, Meftah, and
+  Henini}]{SCAPSuseSi1}
+\bibinfo{author}{A.~Hamache}, \bibinfo{author}{N.~Sengouga},
+  \bibinfo{author}{A.~Meftah}, \bibinfo{author}{M.~Henini},
+\newblock \bibinfo{title}{Modeling the effect of 1 {M}e{V} electron irradiation
+  on the performance of n$^+$--p--p$^+$ silicon space solar cells},
+\newblock \bibinfo{journal}{Radiat. Phys. Chem.} \bibinfo{volume}{123}
+  (\bibinfo{year}{2016}) \bibinfo{pages}{103--108}.
+%Type = Article
+\bibitem[{Kim et~al.(2017)Kim, Gwak, Ahn, Eo, Park, Cho, Kang, Song, and
+  Yun}]{SCAPSuseSi6}
+\bibinfo{author}{K.~Kim}, \bibinfo{author}{J.~Gwak}, \bibinfo{author}{S.~K.
+  Ahn}, \bibinfo{author}{Y.-J. Eo}, \bibinfo{author}{J.~H. Park},
+  \bibinfo{author}{J.-S. Cho}, \bibinfo{author}{M.~G. Kang},
+  \bibinfo{author}{H.-E. Song}, \bibinfo{author}{J.~H. Yun},
+\newblock \bibinfo{title}{Simulations of chalcopyrite/c-si tandem cells using
+  scaps-1d},
+\newblock \bibinfo{journal}{Sol. Energy} \bibinfo{volume}{145}
+  (\bibinfo{year}{2017}) \bibinfo{pages}{52--58}.
 
 \end{thebibliography}
