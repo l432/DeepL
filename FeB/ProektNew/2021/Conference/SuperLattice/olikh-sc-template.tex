@@ -361,7 +361,7 @@ $T=320$~K (c, d).
 \label{fig_nValues}
 \end{figure}
 
-\section{Deep neural network}
+\section{Deep neural network models}
 
 Training a deep neural network requires a large number of samples.
 In order to build a training dataset, we used IV characteristics, which
@@ -371,7 +371,7 @@ $10^{10}$--$10^{13}$~cm$^{-3}$, respectively.
 Thus, 7524 IV characteristics are simulated in Fe-case as well as in Fe-FeB-case to to build a training dataset.
 
 Besides, several test datasets are prepared.
-The $d_p$, $N_\mathrm{B}$, and $N_{\mathrm{Fe}}$ values, which equal to  values from training dataset and $T$ values, which is divergent from training dataset are used to build the test dataset, labeled ``T-varied''.
+The $d_p$, $N_\mathrm{B}$, and $N_{\mathrm{Fe}}$ values, which equal to  values from training dataset, and $T$ values, which is divergent from training dataset, are used to build the test dataset, labeled ``T-varied''.
 These dataset is based on 894 pairs of IV characteristics.
 The similar approach was used to prepare ``d-varied'' (1189 samples), ``Fe-varied'' (856 samples), and ``B-varied'' (514 samples) test datasets.
 The base thickness, doping level, temperature, and iron concentration values, which are divergent from training dataset values, are used to prepare ``All-varied'' (684 samples).
@@ -379,20 +379,105 @@ The base thickness, doping level, temperature, and iron concentration values, wh
 The precise parameters values are listed in  Supplementary Material.
 
 We have tried to construct the DNN, which is able to estimate iron contamination by using
-SC parameters ($d_p$ and $N_\mathrm{B}$),  IV measurement temperature, and result of IV fitting (ideality factor value).
+SC parameters ($d_p$ and $N_\mathrm{B}$),  measurement temperature, and result of IV fitting (ideality factor value).
 As it is shown in Fig.~\ref{fig_chem} two DNNs with different input parameters were under consideration.
-The input sample of the first one consist of $\{d_p,N_\mathrm{B},T,n_\mathrm{Fe-FeB}\}$.
+The input sample of the first one consist of $\{d_p,\log N_\mathrm{B},T,n_\mathrm{Fe-FeB}\}$.
 In practice, these input set can be obtained from one dark IV measurement.
 These neural network referred as DNN$_\mathrm{FeFeB}$ hereafter.
-The second one uses  $\{d_p,N_\mathrm{B},T,n_\mathrm{Fe-FeB},n_\mathrm{Fe}\}$ in input layer.
+The second one uses  $\{d_p,\log N_\mathrm{B},T,n_\mathrm{Fe-FeB},n_\mathrm{Fe}\}$ in input layer.
 In practice, the obtaining of such a set requires additional SC processing (e.g. intense illumination) and two IV measuring.
 The label  DNN$_\mathrm{FeFeB-Fe}$ is used below.
 
+The dense deep neural network was implemented through the high-level Keras API provided by TensorFlow.
+The input layers consist of 4 (5) nodes --- see Fig.~\ref{fig_chem}.
+1 node and linear activation were used in output layer.
+The five configurations oh hidden layers were under consideration:
+(i)~``pipe'': each hidden layer contains equal number of nodes;
+(ii)~``trapezium'': six hidden layers, number of neural linearly decreases from 100~\% (first layer) to 50~\%(last layer);
+(iii)~``triangle'': ten layers, number of neural linearly decreases from 100~\% (first layer) to 10~\%(last layer);
+(iv)~``butterfly'': two serial reflected trapezium configuration;
+(v)~``fir'': two serial trapezium configuration.
 
+The loss function was chosen mean square relative error (MSRE):
+\begin{equation}
+\label{eqMSRE}
+    \mathrm{MSRE}=\frac{1}{N_s}\sum_{i=1}^{N_s}\frac{(N_\mathrm{Fe,TRUE,i}-N_\mathrm{Fe,PRED,i})^2}{N_\mathrm{Fe,TRUE,i}\cdot N_\mathrm{Fe,PRED,i}}\,,
+\end{equation}
+where
+$N_s$ is the number of samples in dataset,
+$N_\mathrm{Fe,TRUE,i}$ is the iron concentration, which was used in simulation of $i$--th sample,
+$N_\mathrm{Fe,PRED,i}$ is the DNN prediction for $i$--th sample.
 
+Hyperparameters include the number of nodes for first hidden layer,
+the number of hidden layers (in pipe configuration),
+the batch size,
+the activation function,
+the optimizer,
+the learning rate,
+the preprocessing method,
+the dropout rate,
+the regularization function,
+the regularization rate,
+and the weight initializer.
+A grid search (coarse tuning) and Bayesian search (fine tuning) were performed over the predefined hyperparameter space, shown in Table~\ref{tabHP}, and the best hyperparameter combination is chosen.
 
+\begin{table}[width=.9\linewidth,cols=2,pos=h]
+\caption{Hyperparameter space for DNNs.}\label{tabHP}
+\begin{tabular*}{\tblwidth}{@{} LL@{} }
+\toprule
+Hyperparameter & Values\\
+\midrule
+\# nodes for first hidden layer & 30, 40, 50, 75, 100, 150 \\
+\# hidden layers & 4, 5, 6, 8, 10, 15 \\
+ batch size & 8, 16, 32, 64, 128 \\
+activation function & ReLu, sigmoid, tanh, SELU, ELU \\
+optimizer & SGD, RMSprop, Adam, Adadelta, Adagrad, Adamax, Nadam, Ftrl \\
+preprocessing method & StandartScaler, MinMaxScaler \\
+\bottomrule
+\end{tabular*}
+\end{table}
+
+10--fold cross--validation was used to estimate DNN training.
+The MSRE, determination coefficient $R^2$, and correlation coefficient $R$ were 
+three metrics used to evaluate the performance of the DNN models on test datasets.
 
 \section{Results and discussion}
+
+
+
+
+\begin{table}[width=.9\linewidth,cols=3,pos=h]
+\caption{Results of 10--fold cross--validation}\label{table_CV}
+\begin{tabular*}{\tblwidth}{@{} LLL@{} }
+\toprule
+Dataset & \multicolumn{2}{c}{MSRE}\\
+ & DNN$_\mathrm{FeFeB}$&DNN$_\mathrm{FeFeB-Fe}$\\
+\midrule
+training&$0.29\pm0.07$&$0.09\pm0.04$ \\
+full&$0.30\pm0.08$& $0.05\pm0.02$\\
+\bottomrule
+\end{tabular*}
+\end{table}
+
+
+\begin{table}[width=.9\linewidth,cols=7,pos=h]
+\caption{DNN's testing results}\label{table_MSRE}
+\begin{tabular*}{\tblwidth}{@{} LLLLLLL@{} }
+\toprule
+Dataset & \multicolumn{3}{c}{DNN$_\mathrm{FeFeB}$}& \multicolumn{3}{c}{DNN$_\mathrm{FeFeB-Fe}$}\\
+ & MSRE & $R^2$& $R$ & MSRE & $R^2$& $R$\\
+\midrule
+T--varied&0.46 & & & 0.06& & \\
+B--varied&1.2 &&& 0.25&&\\
+d--varied&0.36 &&& 0.06&&\\
+Fe--varied&0.06 &&& 0.03&&\\
+All--varied&0.49 &&& 0.10&&\\
+\bottomrule
+\end{tabular*}
+\end{table}
+
+
+
 
 
 %\begin{figure}
@@ -667,6 +752,17 @@ author credit taxonomy contribution roles tagged using \verb+\credit+
 in frontmatter.
 
 \printcredits
+
+\section*{Data availability}
+
+The simulated IV characteristics, $n_\mathrm{Fe}$ and $n_\mathrm{Fe-FeB}$ values,
+and trained DNNs are available 
+at \newline
+\emph{https://github.com/olegolikh/IVcharacteristics.git}.
+
+\section*{Declaration of competing interest}
+
+The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper. 
 
 \section*{Acknowledgment}
 
