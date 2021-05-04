@@ -1,4 +1,4 @@
-\begin{thebibliography}{45}
+\begin{thebibliography}{46}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\bibinfo}[2]{#2}
 \ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
@@ -382,5 +382,10 @@
   $n^+$--$p$--$p^+$--si structure},
 \newblock \bibinfo{journal}{Journal of Physical Studies} \bibinfo{volume}{24}
   (\bibinfo{year}{2020}) \bibinfo{pages}{4701}.
+%Type = Book
+\bibitem[{Chollet(2017)}]{Keras}
+\bibinfo{author}{F.~Chollet}, \bibinfo{title}{Deep Learning with Python},
+  \bibinfo{publisher}{Manning}, \bibinfo{edition}{second} edition,
+  \bibinfo{year}{2017}.
 
 \end{thebibliography}

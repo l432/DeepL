@@ -388,17 +388,17 @@ The second one uses  $\{d_p,\log N_\mathrm{B},T,n_\mathrm{Fe-FeB},n_\mathrm{Fe}\
 In practice, the obtaining of such a set requires additional SC processing (e.g. intense illumination) and two IV measuring.
 The label  DNN$_\mathrm{FeFeB-Fe}$ is used below.
 
-The dense deep neural network was implemented through the high-level Keras API provided by TensorFlow.
-The input layers consist of 4 (5) nodes --- see Fig.~\ref{fig_chem}.
+The dense deep neural network was implemented through the high-level Keras API provided by TensorFlow \cite{Keras}.
+The input layers consist of 4 or 5 nodes --- see Fig.~\ref{fig_chem}.
 1 node and linear activation were used in output layer.
 The five configurations oh hidden layers were under consideration:
 (i)~``pipe'': each hidden layer contains equal number of nodes;
-(ii)~``trapezium'': six hidden layers, number of neural linearly decreases from 100~\% (first layer) to 50~\%(last layer);
-(iii)~``triangle'': ten layers, number of neural linearly decreases from 100~\% (first layer) to 10~\%(last layer);
-(iv)~``butterfly'': two serial reflected trapezium configuration;
-(v)~``fir'': two serial trapezium configuration.
+(ii)~``trapezium'': six hidden layers, number of neural linearly decreases from 100\% (first layer) to 50\% (last layer);
+(iii)~``triangle'': ten layers, number of neural linearly decreases from 100\% (first layer) to 10\% (last layer);
+(iv)~``butterfly'': two serial reflected trapezium configurations;
+(v)~``fir'': two serial trapezium configurations.
 
-The loss function was chosen mean square relative error (MSRE):
+The loss function was chosen mean squared relative error (MSRE):
 \begin{equation}
 \label{eqMSRE}
     \mathrm{MSRE}=\frac{1}{N_s}\sum_{i=1}^{N_s}\frac{(N_\mathrm{Fe,TRUE,i}-N_\mathrm{Fe,PRED,i})^2}{N_\mathrm{Fe,TRUE,i}\cdot N_\mathrm{Fe,PRED,i}}\,,
@@ -421,28 +421,54 @@ the regularization rate,
 and the weight initializer.
 A grid search (coarse tuning) and Bayesian search (fine tuning) were performed over the predefined hyperparameter space, shown in Table~\ref{tabHP}, and the best hyperparameter combination is chosen.
 
-\begin{table}[width=.9\linewidth,cols=2,pos=h]
+\begin{table}[width=\linewidth,cols=2,pos=h]
 \caption{Hyperparameter space for DNNs.}\label{tabHP}
 \begin{tabular*}{\tblwidth}{@{} LL@{} }
 \toprule
 Hyperparameter & Values\\
 \midrule
-\# nodes for first hidden layer & 30, 40, 50, 75, 100, 150 \\
+\# nodes for first &\\
+hidden layer & 30, 40, 50, 75, 100, 120, 150 \\
 \# hidden layers & 4, 5, 6, 8, 10, 15 \\
  batch size & 8, 16, 32, 64, 128 \\
 activation function & ReLu, sigmoid, tanh, SELU, ELU \\
 optimizer & SGD, RMSprop, Adam, Adadelta, Adagrad, Adamax, Nadam, Ftrl \\
+learning rate & $10^{-5}$, $10^{-4}$, $10^{-3}$, $10^{-2}$\\
+epoch & 100, 300, 400, 600, 1000, 1500\\
 preprocessing method & StandartScaler, MinMaxScaler \\
+regularization function& None, L2, L1, Dropout\\
+regularization rate & $10^{-5}$, $10^{-4}$, $10^{-3}$, $10^{-2}$\\
+dropout rate & 0.2, 0.3, 0.4, 0.5 \\
+weight initializer& Xavier Normal or Uniform, He Normal or Uniform, Random Normal or Uniform, Ones\\
 \bottomrule
 \end{tabular*}
 \end{table}
 
 10--fold cross--validation was used to estimate DNN training.
-The MSRE, determination coefficient $R^2$, and correlation coefficient $R$ were 
+The MSRE, determination coefficient $R^2$, and correlation coefficient $R$ were
 three metrics used to evaluate the performance of the DNN models on test datasets.
 
 \section{Results and discussion}
 
+
+\begin{table}[width=.9\linewidth,cols=3,pos=h]
+\caption{Chosen hyperparameter combinations.}\label{tabChosenHP}
+\begin{tabular*}{\tblwidth}{@{} LLL@{} }
+\toprule
+Hyperparameter & DNN$_\mathrm{FeFeB}$&DNN$_\mathrm{FeFeB-Fe}$\\
+\midrule
+\# nodes for hidden layers & 120, 108, 96, 84, 72, 60& 100, 100, 100, 100 \\
+ batch size & 32 &32 \\
+activation function & ReLu & ELU \\
+optimizer & Adamax & Adamax\\
+learning rate & $10^{-3}$& $10^{-3}$\\
+epoch & 400 & 1500\\
+preprocessing method & StandartScaler& StandartScaler\\
+regularization function& None& None\\
+weight initializer& Xavier Normal & Xavier Normal\\
+\bottomrule
+\end{tabular*}
+\end{table}
 
 
 
@@ -453,8 +479,8 @@ three metrics used to evaluate the performance of the DNN models on test dataset
 Dataset & \multicolumn{2}{c}{MSRE}\\
  & DNN$_\mathrm{FeFeB}$&DNN$_\mathrm{FeFeB-Fe}$\\
 \midrule
-training&$0.29\pm0.07$&$0.09\pm0.04$ \\
-full&$0.30\pm0.08$& $0.05\pm0.02$\\
+training&$0.31\pm0.07$&$0.03\pm0.01$ \\
+full&$0.28\pm0.05$& $0.03\pm0.01$\\
 \bottomrule
 \end{tabular*}
 \end{table}
@@ -467,18 +493,92 @@ full&$0.30\pm0.08$& $0.05\pm0.02$\\
 Dataset & \multicolumn{3}{c}{DNN$_\mathrm{FeFeB}$}& \multicolumn{3}{c}{DNN$_\mathrm{FeFeB-Fe}$}\\
  & MSRE & $R^2$& $R$ & MSRE & $R^2$& $R$\\
 \midrule
-T--varied&0.46 & & & 0.06& & \\
-B--varied&1.2 &&& 0.25&&\\
-d--varied&0.36 &&& 0.06&&\\
-Fe--varied&0.06 &&& 0.03&&\\
-All--varied&0.49 &&& 0.10&&\\
+T--varied&0.41 &0.936 &0.967 & 0.020& 0.994&0.997 \\
+d--varied&0.37 &0.961&0.980& 0.018&0.996&0.998\\
+B--varied&1.06&0.881&0.939& 0.084&0.991&0.995\\
+Fe--varied&0.06 &0.991&0.996& 0.005&0.999&0.999\\
+All--varied&0.54 &0.813&0.901& 0.138&0.948&0.974\\
 \bottomrule
 \end{tabular*}
 \end{table}
 
 
 
+\begin{figure}[tb]
+\centering
+\includegraphics[width=0.32\textwidth]{F3a}
+\includegraphics[width=0.32\textwidth]{F3b}
+\includegraphics[width=0.32\textwidth]{F3c}
+\includegraphics[width=0.32\textwidth]{F3d}
+\includegraphics[width=0.32\textwidth]{F3e}
+\includegraphics[width=0.32\textwidth]{F3f}
+\caption{Iron concentrations are plotted against those generated by DNN$_\mathrm{FeFeB-Fe}$ 
+on  T-varied (a),  
+d-varied (b),
+B-varied (c),
+Fe-varied (d),
+All-varied (e),
+and full (f) datasets (red points).
+Bars represent histograms of squared relative error. 
+DNN was learned by training (a)--(e) or full (f) dataset.
+The black dashed lines are the identify lines servings as the references.}
+\label{fig_TrDNN1}
+\end{figure}
 
+
+\begin{figure}[tb]
+\centering
+\includegraphics[width=0.48\textwidth]{F4} \hfill
+\includegraphics[width=0.48\textwidth]{F5} \\
+\parbox[t]{0.48\textwidth}
+{\caption{(a) Dependence of the MSRE (training dataset) \\on the temperature.
+(b),(c) Histograms of squared relative \\error for $T=290$~K and $T=340$~K.\\
+Red: DNN$_\mathrm{FeFeB}$; blue: DNN$_\mathrm{FeFeB-Fe}$.
+}
+\label{fig_Temp}} \hfill
+\parbox[t]{0.48\textwidth}{\caption{(a) Dependence of the MSRE (training dataset) \\on the base thickness.
+(b),(c) Histograms of squared \\ relative error for $d_p=150$~$\mu$m and $d_p=240$~$\mu$m.\\
+Red: DNN$_\mathrm{FeFeB}$; blue: DNN$_\mathrm{FeFeB-Fe}$.}
+\label{fig_depth}}
+\end{figure}
+
+\begin{figure}[tb]
+\centering
+\includegraphics[width=0.48\textwidth]{F6} \hfill
+\includegraphics[width=0.48\textwidth]{F7} \\
+\parbox[t]{0.48\textwidth}
+{\caption{(a) Dependence of the MSRE (training dataset) \\on the boron concentration.
+(b),(c) Histograms of squared \\ relative error for $N_\mathrm{B}=10^{15}$~cm$^{-3}$ and $N_\mathrm{B}=10^{17}$~cm$^{-3}$.\\
+Red: DNN$_\mathrm{FeFeB}$; blue: DNN$_\mathrm{FeFeB-Fe}$.
+}
+\label{fig_Temp}} \hfill
+\parbox[t]{0.48\textwidth}{\caption{(a) Dependence of the MSRE (training dataset) \\on the iron concentration.
+(b),(c) Histograms of squared \\ relative error for $N_\mathrm{Fe}=10^{10}$~cm$^{-3}$ and $N_\mathrm{Fe}=10^{13}$~cm$^{-3}$.\\
+Red: DNN$_\mathrm{FeFeB}$; blue: DNN$_\mathrm{FeFeB-Fe}$.}
+\label{fig_depth}}
+\end{figure}
+
+
+\begin{figure}[tb]
+\centering
+\includegraphics[width=0.32\textwidth]{F8a}
+\includegraphics[width=0.32\textwidth]{F8b}
+\includegraphics[width=0.32\textwidth]{F8c}
+\includegraphics[width=0.32\textwidth]{F8d}
+\includegraphics[width=0.32\textwidth]{F8e}
+\includegraphics[width=0.32\textwidth]{F8f}
+\caption{Iron concentrations are plotted against those generated by DNN$_\mathrm{FeFeB}$
+on  T-varied (a),
+d-varied (b),
+B-varied (c),
+Fe-varied (d),
+All-varied (e),
+and full (f) datasets (red points).
+Bars represent histograms of squared relative error.
+DNN was learned by training (a)--(e) or full (f) dataset.
+The black dashed lines are the identify lines servings as the references.}
+\label{fig_TrDNN2}
+\end{figure}
 
 %\begin{figure}
 %	\centering
@@ -756,13 +856,13 @@ in frontmatter.
 \section*{Data availability}
 
 The simulated IV characteristics, $n_\mathrm{Fe}$ and $n_\mathrm{Fe-FeB}$ values,
-and trained DNNs are available 
+and trained DNNs are available
 at \newline
 \emph{https://github.com/olegolikh/IVcharacteristics.git}.
 
 \section*{Declaration of competing interest}
 
-The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper. 
+The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.
 
 \section*{Acknowledgment}
 
