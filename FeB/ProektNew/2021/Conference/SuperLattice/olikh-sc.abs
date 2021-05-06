@@ -1,0 +1,23 @@
+Defect-assisted recombination processes frequently
+limit the photovoltaic device performance.
+The low-cost and express methods of impurity contamination control
+are in demand at solar cell manufacturing.
+In this paper, we used deep learning-based
+approach to extract the iron concentration in silicon solar cell from an
+ideality factor values.
+We used SCAPS-1D to simulate solar cell with the back surface field design
+and to generate labeled training and test datasets.
+Our results showed the deep neural network ability
+to predict iron concentration with mean squared relative error up to 0.005 by using ideality factor values, SC base thickness and doping level, and temperature.
+The simulation shows that the prediction error
+is reduced for high doping level, low temperature, and using of two ideality factor value (for structure with interstitial iron atoms only as well as for for structure with
+coexistence of Fe\textsubscript{i} and iron-boron pair).
+
+%This template helps you to create a properly formatted \LaTeX\ manuscript.
+%
+%\noindent\texttt{\textbackslash begin{abstract}} \dots
+%\texttt{\textbackslash end{abstract}} and
+%\verb+\begin{keyword}+ \verb+...+ \verb+\end{keyword}+
+%which
+%contain the abstract and keywords respectively.
+%Each keyword shall be separated by a \verb+\sep+ command.

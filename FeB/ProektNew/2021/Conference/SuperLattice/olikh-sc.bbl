@@ -1,0 +1,391 @@
+\begin{thebibliography}{46}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\providecommand{\bibinfo}[2]{#2}
+\ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
+%Type = Book
+\bibitem[{Claeys and Simoen(2018)}]{Claers2018}
+\bibinfo{author}{C.~Claeys}, \bibinfo{author}{E.~Simoen}, \bibinfo{title}{Metal
+  Impurities in Silicon- and Germanium-Based Technologies: Origin,
+  Characterization, Control, and Device Impact}, volume \bibinfo{volume}{270}
+  of \textit{\bibinfo{series}{Springer Series in Materials Science}},
+  \bibinfo{publisher}{Springer International Publishing},
+  \bibinfo{address}{Berlin/New York}, \bibinfo{year}{2018}.
+%Type = Article
+\bibitem[{Zhu et~al.(2016)Zhu, Yu, Zhu, Wu, He, Vanhellemont, and
+  Yang}]{ZHU2016192}
+\bibinfo{author}{H.~Zhu}, \bibinfo{author}{X.~Yu}, \bibinfo{author}{X.~Zhu},
+  \bibinfo{author}{Y.~Wu}, \bibinfo{author}{J.~He},
+  \bibinfo{author}{J.~Vanhellemont}, \bibinfo{author}{D.~Yang},
+\newblock \bibinfo{title}{Low temperature iron gettering by grown-in defects in
+  p--type {C}zochralski silicon},
+\newblock \bibinfo{journal}{Superlattices Microstruct.} \bibinfo{volume}{99}
+  (\bibinfo{year}{2016}) \bibinfo{pages}{192--196}.
+%Type = Article
+\bibitem[{Schmidt(2005)}]{FeB:Schmidt}
+\bibinfo{author}{J.~Schmidt},
+\newblock \bibinfo{title}{Effect of dissociation of iron--boron pairs in
+  crystalline silicon on solar cell properties},
+\newblock \bibinfo{journal}{Progress in Photovoltaics: Research and
+  Applications} \bibinfo{volume}{13} (\bibinfo{year}{2005})
+  \bibinfo{pages}{325--331}.
+%Type = Article
+\bibitem[{Schubert et~al.(2015)Schubert, Padilla, Michl, Mundt, Giesecke,
+  Hohl-Ebinger, Benick, Warta, Tajima, and Ogura}]{IronSC}
+\bibinfo{author}{M.~Schubert}, \bibinfo{author}{M.~Padilla},
+  \bibinfo{author}{B.~Michl}, \bibinfo{author}{L.~Mundt},
+  \bibinfo{author}{J.~Giesecke}, \bibinfo{author}{J.~Hohl-Ebinger},
+  \bibinfo{author}{J.~Benick}, \bibinfo{author}{W.~Warta},
+  \bibinfo{author}{M.~Tajima}, \bibinfo{author}{A.~Ogura},
+\newblock \bibinfo{title}{Iron related solar cell instability: Imaging analysis
+  and impact on cell performance},
+\newblock \bibinfo{journal}{Sol. Energy Mater. Sol. Cells}
+  \bibinfo{volume}{138} (\bibinfo{year}{2015}) \bibinfo{pages}{96--101}.
+%Type = Book
+\bibitem[{Schroder(2006)}]{Schroder2006}
+\bibinfo{author}{D.~K. Schroder}, \bibinfo{title}{Semiconductor Material and
+  Device Characterization}, \bibinfo{publisher}{John Wiley \& Sons},
+  \bibinfo{address}{New Jersey}, \bibinfo{edition}{third} edition,
+  \bibinfo{year}{2006}.
+%Type = Article
+\bibitem[{Kurchin et~al.(2020)Kurchin, Poindexter, V\"{a}h\"{a}nissi, Savin,
+  del Ca\~{n}izo, and Buonassisi}]{HowMuchPhysics}
+\bibinfo{author}{R.~C. Kurchin}, \bibinfo{author}{J.~R. Poindexter},
+  \bibinfo{author}{V.~V\"{a}h\"{a}nissi}, \bibinfo{author}{H.~Savin},
+  \bibinfo{author}{C.~del Ca\~{n}izo}, \bibinfo{author}{T.~Buonassisi},
+\newblock \bibinfo{title}{How much physics is in a current-voltage curve?
+  inferring defect properties from photovoltaic device measurements},
+\newblock \bibinfo{journal}{IEEE J. Photovolt.} \bibinfo{volume}{10}
+  (\bibinfo{year}{2020}) \bibinfo{pages}{1532--1537}.
+%Type = Article
+\bibitem[{Peaker et~al.(2018)Peaker, Markevich, and Coutinho}]{LaplDLTS}
+\bibinfo{author}{A.~R. Peaker}, \bibinfo{author}{V.~P. Markevich},
+  \bibinfo{author}{J.~Coutinho},
+\newblock \bibinfo{title}{Tutorial: Junction spectroscopy techniques and
+  deep-level defects in semiconductors},
+\newblock \bibinfo{journal}{J. Appl. Phys.} \bibinfo{volume}{123}
+  (\bibinfo{year}{2018}) \bibinfo{pages}{161559}.
+%Type = Article
+\bibitem[{Bulyarskiy et~al.(2020)Bulyarskiy, Lakalin, Saurov, and
+  Gusarov}]{BulyarJAP}
+\bibinfo{author}{S.~V. Bulyarskiy}, \bibinfo{author}{A.~V. Lakalin},
+  \bibinfo{author}{M.~A. Saurov}, \bibinfo{author}{G.~G. Gusarov},
+\newblock \bibinfo{title}{The effect of vacancy-impurity complexes in silicon
+  on the current-voltage characteristics of p-n junctions},
+\newblock \bibinfo{journal}{J. Appl. Phys.} \bibinfo{volume}{128}
+  (\bibinfo{year}{2020}) \bibinfo{pages}{155702}.
+%Type = Article
+\bibitem[{Bulyarskiy(2019)}]{BulyarSSE}
+\bibinfo{author}{S.~V. Bulyarskiy},
+\newblock \bibinfo{title}{The effect of electron-phonon interaction on the
+  formation of reverse currents of p-n-junctions of silicon-based power
+  semiconductor devices},
+\newblock \bibinfo{journal}{Solid-State Electron.} \bibinfo{volume}{160}
+  (\bibinfo{year}{2019}) \bibinfo{pages}{107624}.
+%Type = Article
+\bibitem[{Claeys and Simoen(2019)}]{Claeys2019}
+\bibinfo{author}{C.~Claeys}, \bibinfo{author}{E.~Simoen},
+\newblock \bibinfo{title}{Device performance as a metrology tool to detect
+  metals in silicon},
+\newblock \bibinfo{journal}{physica status solidi (a)} \bibinfo{volume}{216}
+  (\bibinfo{year}{2019}) \bibinfo{pages}{1900126}.
+%Type = Inproceedings
+\bibitem[{Simoen et~al.(2007)Simoen, Claeys, and Vanhellemont}]{simoen2007}
+\bibinfo{author}{E.~Simoen}, \bibinfo{author}{C.~Claeys},
+  \bibinfo{author}{J.~Vanhellemont},
+\newblock \bibinfo{title}{Defect analysis in semiconductor materials based on
+  p-n junction diode characteristics},
+\newblock in: \bibinfo{booktitle}{Defects and Diffusion in Semiconductors - An
+  Annual Retrospective IX}, volume \bibinfo{volume}{261} of
+  \textit{\bibinfo{series}{Defect and Diffusion Forum}},
+  \bibinfo{publisher}{Trans Tech Publications Ltd}, \bibinfo{year}{2007}, pp.
+  \bibinfo{pages}{1--24}.
+%Type = Article
+\bibitem[{Olikh(2019)}]{Olikh2019SM}
+\bibinfo{author}{O.~Olikh},
+\newblock \bibinfo{title}{Relationship between the ideality factor and the iron
+  concentration in silicon solar cells},
+\newblock \bibinfo{journal}{Superlattices Microstruct.} \bibinfo{volume}{136}
+  (\bibinfo{year}{2019}) \bibinfo{pages}{106309}.
+%Type = Article
+\bibitem[{van~der Heide et~al.(2005)van~der Heide, Schonecker, Bultman, and
+  Sinke}]{Heide}
+\bibinfo{author}{A.~S.~H. van~der Heide}, \bibinfo{author}{A.~Schonecker},
+  \bibinfo{author}{J.~H. Bultman}, \bibinfo{author}{W.~C. Sinke},
+\newblock \bibinfo{title}{Explanation of high solar cell diode factors by
+  nonuniform contact resistance},
+\newblock \bibinfo{journal}{Progress in Photovoltaics: Research and
+  Applications} \bibinfo{volume}{13} (\bibinfo{year}{2005})
+  \bibinfo{pages}{3--16}.
+%Type = Article
+\bibitem[{{Duan} et~al.(2018){Duan}, {Yi}, {Xu}, {Upama}, {Mahmud}, {Wang},
+  {Shabab}, and {Uddin}}]{Duan}
+\bibinfo{author}{L.~{Duan}}, \bibinfo{author}{H.~{Yi}},
+  \bibinfo{author}{C.~{Xu}}, \bibinfo{author}{M.~B. {Upama}},
+  \bibinfo{author}{M.~A. {Mahmud}}, \bibinfo{author}{D.~{Wang}},
+  \bibinfo{author}{F.~H. {Shabab}}, \bibinfo{author}{A.~{Uddin}},
+\newblock \bibinfo{title}{Relationship between the diode ideality factor and
+  the carrier recombination resistance in organic solar cells},
+\newblock \bibinfo{journal}{IEEE Journal of Photovoltaics} \bibinfo{volume}{8}
+  (\bibinfo{year}{2018}) \bibinfo{pages}{1701--1709}.
+%Type = Article
+\bibitem[{Chen et~al.(2020)Chen, Zhu, Lu, and Zou}]{n_CharGaN}
+\bibinfo{author}{J.~Chen}, \bibinfo{author}{M.~Zhu}, \bibinfo{author}{X.~Lu},
+  \bibinfo{author}{X.~Zou},
+\newblock \bibinfo{title}{Electrical characterization of {G}a{N} {S}chottky
+  barrier diode at cryogenic temperatures},
+\newblock \bibinfo{journal}{Appl. Phys. Lett.} \bibinfo{volume}{116}
+  (\bibinfo{year}{2020}) \bibinfo{pages}{062102}.
+%Type = Article
+\bibitem[{Dalapati et~al.(2020)Dalapati, Manik, and Basu}]{n_CharSemic}
+\bibinfo{author}{P.~Dalapati}, \bibinfo{author}{N.~Manik},
+  \bibinfo{author}{A.~Basu},
+\newblock \bibinfo{title}{Analysis of the temperature dependence of diode
+  ideality factor in {I}n{G}a{N}-based {UV}-{A} light-emitting diode},
+\newblock \bibinfo{journal}{Semiconductors} \bibinfo{volume}{54}
+  (\bibinfo{year}{2020}) \bibinfo{pages}{1284--1289}.
+%Type = Article
+\bibitem[{Calado et~al.(2019)Calado, Burkitt, Yao, Troughton, Watson, Carnie,
+  Telford, O'Regan, Nelson, and Barnes}]{n_CharPhysRevAppl}
+\bibinfo{author}{P.~Calado}, \bibinfo{author}{D.~Burkitt},
+  \bibinfo{author}{J.~Yao}, \bibinfo{author}{J.~Troughton},
+  \bibinfo{author}{T.~M. Watson}, \bibinfo{author}{M.~J. Carnie},
+  \bibinfo{author}{A.~M. Telford}, \bibinfo{author}{B.~C. O'Regan},
+  \bibinfo{author}{J.~Nelson}, \bibinfo{author}{P.~R. Barnes},
+\newblock \bibinfo{title}{Identifying dominant recombination mechanisms in
+  perovskite solar cells by measuring the transient ideality factor},
+\newblock \bibinfo{journal}{Phys. Rev. Applied} \bibinfo{volume}{11}
+  (\bibinfo{year}{2019}) \bibinfo{pages}{044005}.
+%Type = Article
+\bibitem[{Carleo et~al.(2019)Carleo, Cirac, Cranmer, Daudet, Schuld, Tishby,
+  Vogt-Maranto, and Zdeborov\'a}]{MachLean_RevModPhys}
+\bibinfo{author}{G.~Carleo}, \bibinfo{author}{I.~Cirac},
+  \bibinfo{author}{K.~Cranmer}, \bibinfo{author}{L.~Daudet},
+  \bibinfo{author}{M.~Schuld}, \bibinfo{author}{N.~Tishby},
+  \bibinfo{author}{L.~Vogt-Maranto}, \bibinfo{author}{L.~Zdeborov\'a},
+\newblock \bibinfo{title}{Machine learning and the physical sciences},
+\newblock \bibinfo{journal}{Rev. Mod. Phys.} \bibinfo{volume}{91}
+  (\bibinfo{year}{2019}) \bibinfo{pages}{045002}.
+%Type = Article
+\bibitem[{Ju et~al.(2020)Ju, Shimizu, and Shiomi}]{MachLeanJAP}
+\bibinfo{author}{S.~Ju}, \bibinfo{author}{S.~Shimizu},
+  \bibinfo{author}{J.~Shiomi},
+\newblock \bibinfo{title}{Designing thermal functional materials by coupling
+  thermal transport calculations and machine learning},
+\newblock \bibinfo{journal}{J. Appl. Phys.} \bibinfo{volume}{128}
+  (\bibinfo{year}{2020}) \bibinfo{pages}{161102}.
+%Type = Article
+\bibitem[{Rodrigues et~al.(2018)Rodrigues, Ramos, and
+  Morgado-Dias}]{MachLeanPPV}
+\bibinfo{author}{S.~Rodrigues}, \bibinfo{author}{H.~G. Ramos},
+  \bibinfo{author}{F.~Morgado-Dias},
+\newblock \bibinfo{title}{Machine learning pv system performance analyser},
+\newblock \bibinfo{journal}{Prog. Photovoltaics Res. Appl.}
+  \bibinfo{volume}{26} (\bibinfo{year}{2018}) \bibinfo{pages}{675--687}.
+%Type = Article
+\bibitem[{Ju et~al.(2020)Ju, Shimizu, and Shiomi}]{MI_JAP}
+\bibinfo{author}{S.~Ju}, \bibinfo{author}{S.~Shimizu},
+  \bibinfo{author}{J.~Shiomi},
+\newblock \bibinfo{title}{Designing thermal functional materials by coupling
+  thermal transport calculations and machine learning},
+\newblock \bibinfo{journal}{J. Appl. Phys.} \bibinfo{volume}{128}
+  (\bibinfo{year}{2020}) \bibinfo{pages}{161102}.
+%Type = Article
+\bibitem[{Jean et~al.(2015)Jean, Brown, Jaffe, Buonassisi, and
+  Bulovi\'{c}}]{SCRev2015}
+\bibinfo{author}{J.~Jean}, \bibinfo{author}{P.~R. Brown},
+  \bibinfo{author}{R.~L. Jaffe}, \bibinfo{author}{T.~Buonassisi},
+  \bibinfo{author}{V.~Bulovi\'{c}},
+\newblock \bibinfo{title}{Pathways for solar photovoltaics},
+\newblock \bibinfo{journal}{Energy Environ Sci.} \bibinfo{volume}{8}
+  (\bibinfo{year}{2015}) \bibinfo{pages}{1200--1219}.
+%Type = Article
+\bibitem[{Ajayan et~al.(2020)Ajayan, Nirmal, Mohankumar, Saravanan, Jagadesh,
+  and Arivazhagan}]{SCRev2020}
+\bibinfo{author}{J.~Ajayan}, \bibinfo{author}{D.~Nirmal},
+  \bibinfo{author}{P.~Mohankumar}, \bibinfo{author}{M.~Saravanan},
+  \bibinfo{author}{M.~Jagadesh}, \bibinfo{author}{L.~Arivazhagan},
+\newblock \bibinfo{title}{A review of photovoltaic performance of
+  organic/inorganic solar cells for future renewable and sustainable energy
+  technologies},
+\newblock \bibinfo{journal}{Superlattices Microstruct.} \bibinfo{volume}{143}
+  (\bibinfo{year}{2020}) \bibinfo{pages}{106549}.
+%Type = Article
+\bibitem[{Burgelman et~al.(2000)Burgelman, Nollet, and Degrave}]{SCAPS1}
+\bibinfo{author}{M.~Burgelman}, \bibinfo{author}{P.~Nollet},
+  \bibinfo{author}{S.~Degrave},
+\newblock \bibinfo{title}{Modelling polycrystalline semiconductor solar cells},
+\newblock \bibinfo{journal}{Thin Solid Films} \bibinfo{volume}{361--362}
+  (\bibinfo{year}{2000}) \bibinfo{pages}{527--532}.
+%Type = Article
+\bibitem[{Decock et~al.(2011)Decock, Khelifi, and Burgelman}]{SCAPS2}
+\bibinfo{author}{K.~Decock}, \bibinfo{author}{S.~Khelifi},
+  \bibinfo{author}{M.~Burgelman},
+\newblock \bibinfo{title}{Modelling multivalent defects in thin film solar
+  cells},
+\newblock \bibinfo{journal}{Thin Solid Films} \bibinfo{volume}{519}
+  (\bibinfo{year}{2011}) \bibinfo{pages}{7481--7484}.
+%Type = Article
+\bibitem[{Hu et~al.(2015)Hu, Yue, Zhang, Zheng, Chen, and Wang}]{SCAPSuseSi4}
+\bibinfo{author}{E.~Hu}, \bibinfo{author}{G.~Yue}, \bibinfo{author}{R.~Zhang},
+  \bibinfo{author}{Y.~Zheng}, \bibinfo{author}{L.~Chen},
+  \bibinfo{author}{S.~Wang},
+\newblock \bibinfo{title}{Numerical simulations of multilevel impurity
+  photovoltaic effect in the sulfur doped crystalline silicon},
+\newblock \bibinfo{journal}{Renewable Energy} \bibinfo{volume}{77}
+  (\bibinfo{year}{2015}) \bibinfo{pages}{442--446}.
+%Type = Article
+\bibitem[{Hamache et~al.(2016)Hamache, Sengouga, Meftah, and
+  Henini}]{SCAPSuseSi1}
+\bibinfo{author}{A.~Hamache}, \bibinfo{author}{N.~Sengouga},
+  \bibinfo{author}{A.~Meftah}, \bibinfo{author}{M.~Henini},
+\newblock \bibinfo{title}{Modeling the effect of 1 {M}e{V} electron irradiation
+  on the performance of n$^+$--p--p$^+$ silicon space solar cells},
+\newblock \bibinfo{journal}{Radiat. Phys. Chem.} \bibinfo{volume}{123}
+  (\bibinfo{year}{2016}) \bibinfo{pages}{103--108}.
+%Type = Article
+\bibitem[{Kim et~al.(2017)Kim, Gwak, Ahn, Eo, Park, Cho, Kang, Song, and
+  Yun}]{SCAPSuseSi6}
+\bibinfo{author}{K.~Kim}, \bibinfo{author}{J.~Gwak}, \bibinfo{author}{S.~K.
+  Ahn}, \bibinfo{author}{Y.-J. Eo}, \bibinfo{author}{J.~H. Park},
+  \bibinfo{author}{J.-S. Cho}, \bibinfo{author}{M.~G. Kang},
+  \bibinfo{author}{H.-E. Song}, \bibinfo{author}{J.~H. Yun},
+\newblock \bibinfo{title}{Simulations of chalcopyrite/c-si tandem cells using
+  scaps-1d},
+\newblock \bibinfo{journal}{Sol. Energy} \bibinfo{volume}{145}
+  (\bibinfo{year}{2017}) \bibinfo{pages}{52--58}.
+%Type = Article
+\bibitem[{P\"assler(2002)}]{Pasler}
+\bibinfo{author}{R.~P\"assler},
+\newblock \bibinfo{title}{Dispersion-related description of temperature
+  dependencies of band gaps in semiconductors},
+\newblock \bibinfo{journal}{Phys. Rev. B} \bibinfo{volume}{66}
+  (\bibinfo{year}{2002}) \bibinfo{pages}{085201}.
+%Type = Article
+\bibitem[{Yan and Cuevas(2014)}]{EgNarrow}
+\bibinfo{author}{D.~Yan}, \bibinfo{author}{A.~Cuevas},
+\newblock \bibinfo{title}{Empirical determination of the energy band gap
+  narrowing in p$^+$ silicon heavily doped with boron},
+\newblock \bibinfo{journal}{J. Appl. Phys.} \bibinfo{volume}{116}
+  (\bibinfo{year}{2014}) \bibinfo{pages}{194505}.
+%Type = Article
+\bibitem[{Green(1990)}]{Nc:Green}
+\bibinfo{author}{M.~A. Green},
+\newblock \bibinfo{title}{Intrinsic concentration, effective densities of
+  states, and effective mass in silicon},
+\newblock \bibinfo{journal}{J. Appl. Phys.} \bibinfo{volume}{67}
+  (\bibinfo{year}{1990}) \bibinfo{pages}{2944--2954}.
+%Type = Article
+\bibitem[{Couderc et~al.(2014)Couderc, Amara, and Lemiti}]{Si_ni_Couderc}
+\bibinfo{author}{R.~Couderc}, \bibinfo{author}{M.~Amara},
+  \bibinfo{author}{M.~Lemiti},
+\newblock \bibinfo{title}{Reassessment of the intrinsic carrier density
+  temperature dependence in crystalline silicon},
+\newblock \bibinfo{journal}{J. Appl. Phys.} \bibinfo{volume}{115}
+  (\bibinfo{year}{2014}) \bibinfo{pages}{093705}.
+%Type = Article
+\bibitem[{Klaassen(1992)}]{KLAASSEN953}
+\bibinfo{author}{D.~Klaassen},
+\newblock \bibinfo{title}{A unified mobility model for device simulation ---
+  {I}. model equations and concentration dependence},
+\newblock \bibinfo{journal}{Solid-State Electron.} \bibinfo{volume}{35}
+  (\bibinfo{year}{1992}) \bibinfo{pages}{953-- 959}.
+%Type = Book
+\bibitem[{O'Mara et~al.(1990)O'Mara, Herring, and Hant}]{OMara}
+\bibinfo{author}{W.~O'Mara}, \bibinfo{author}{R.~Herring},
+  \bibinfo{author}{L.~Hant}, \bibinfo{title}{Handbook of semiconductor silicon
+  technology}, \bibinfo{publisher}{Noyes Publications}, \bibinfo{address}{New
+  Jersey, USA}, \bibinfo{year}{1990}.
+%Type = Article
+\bibitem[{Altermatt et~al.(1997)Altermatt, Schmidt, Heiser, and
+  Aberle}]{Si_Auger}
+\bibinfo{author}{P.~P. Altermatt}, \bibinfo{author}{J.~Schmidt},
+  \bibinfo{author}{G.~Heiser}, \bibinfo{author}{A.~G. Aberle},
+\newblock \bibinfo{title}{Assessment and parameterisation of
+  {C}oulomb--enhanced {A}uger recombination coefficients in lowly injected
+  crystalline silicon},
+\newblock \bibinfo{journal}{J. Appl. Phys.} \bibinfo{volume}{82}
+  (\bibinfo{year}{1997}) \bibinfo{pages}{4938--4944}.
+%Type = Article
+\bibitem[{Nguyen et~al.(2014)Nguyen, Baker-Finch, and Macdonald}]{Si_BtB}
+\bibinfo{author}{H.~T. Nguyen}, \bibinfo{author}{S.~C. Baker-Finch},
+  \bibinfo{author}{D.~Macdonald},
+\newblock \bibinfo{title}{Temperature dependence of the radiative recombination
+  coefficient in crystalline silicon from spectral photoluminescence},
+\newblock \bibinfo{journal}{Appl. Phys. Lett.} \bibinfo{volume}{104}
+  (\bibinfo{year}{2014}) \bibinfo{pages}{112105}.
+%Type = Article
+\bibitem[{Murphy et~al.(2011)Murphy, Bothe, Olmo, Voronkov, and
+  Falster}]{MurphyJAP2011}
+\bibinfo{author}{J.~D. Murphy}, \bibinfo{author}{K.~Bothe},
+  \bibinfo{author}{M.~Olmo}, \bibinfo{author}{V.~V. Voronkov},
+  \bibinfo{author}{R.~J. Falster},
+\newblock \bibinfo{title}{The effect of oxide precipitates on minority carrier
+  lifetime in p--type silicon},
+\newblock \bibinfo{journal}{J. Appl. Phys.} \bibinfo{volume}{110}
+  (\bibinfo{year}{2011}) \bibinfo{pages}{053713}.
+%Type = Article
+\bibitem[{Wijaranakula(1993)}]{FeB:kinetic}
+\bibinfo{author}{W.~Wijaranakula},
+\newblock \bibinfo{title}{The reaction kinetics of iron--boron pair formation
+  and dissociation in p--type silicon},
+\newblock \bibinfo{journal}{J. Electrochem. Soc.} \bibinfo{volume}{140}
+  (\bibinfo{year}{1993}) \bibinfo{pages}{275--281}.
+%Type = Article
+\bibitem[{Zoth and Bergholz(1990)}]{FeB_Zong}
+\bibinfo{author}{G.~Zoth}, \bibinfo{author}{W.~Bergholz},
+\newblock \bibinfo{title}{A fast, preperetion-free method to detect irpn in
+  silicon},
+\newblock \bibinfo{journal}{J. Appl. Phys.} \bibinfo{volume}{67}
+  (\bibinfo{year}{1990}) \bibinfo{pages}{6764--6771}.
+%Type = Article
+\bibitem[{Geerligs and Macdonald(2004)}]{FeBLight2}
+\bibinfo{author}{L.~J. Geerligs}, \bibinfo{author}{D.~Macdonald},
+\newblock \bibinfo{title}{Dynamics of light-induced feb pair dissociation in
+  crystalline silicon},
+\newblock \bibinfo{journal}{Appl. Phys. Lett.} \bibinfo{volume}{85}
+  (\bibinfo{year}{2004}) \bibinfo{pages}{5227--5229}.
+%Type = Article
+\bibitem[{Rougieux et~al.(2018)Rougieux, Sun, and Macdonald}]{ROUGIEUX2018}
+\bibinfo{author}{F.~E. Rougieux}, \bibinfo{author}{C.~Sun},
+  \bibinfo{author}{D.~Macdonald},
+\newblock \bibinfo{title}{Determining the charge states and capture mechanisms
+  of defects in silicon through accurate recombination analyses: A review},
+\newblock \bibinfo{journal}{Solar Energy Materials and Solar Cells}
+  \bibinfo{volume}{187} (\bibinfo{year}{2018}) \bibinfo{pages}{263 -- 272}.
+%Type = Article
+\bibitem[{Istratov et~al.(1999)Istratov, Hieslmair, and Weber}]{Istratov1999}
+\bibinfo{author}{A.~A. Istratov}, \bibinfo{author}{H.~Hieslmair},
+  \bibinfo{author}{E.~Weber},
+\newblock \bibinfo{title}{Iron and its complexes in silicon},
+\newblock \bibinfo{journal}{Applied Physics A: Materials Science \& Processing}
+  \bibinfo{volume}{69} (\bibinfo{year}{1999}) \bibinfo{pages}{13--44}.
+%Type = Article
+\bibitem[{Breitenstein(2013)}]{Breitenstein2013}
+\bibinfo{author}{O.~Breitenstein},
+\newblock \bibinfo{title}{Understanding the current-voltage characteristics of
+  industrial crystalline silicon solar cells by considering inhomogeneous
+  current distributions},
+\newblock \bibinfo{journal}{Opto--Electronics Review} \bibinfo{volume}{21}
+  (\bibinfo{year}{2013}) \bibinfo{pages}{259--282}.
+%Type = Article
+\bibitem[{Yu et~al.(2017)Yu, Liang, Qu, Chen, and Wang}]{IJAVA}
+\bibinfo{author}{K.~Yu}, \bibinfo{author}{J.~Liang}, \bibinfo{author}{B.~Qu},
+  \bibinfo{author}{X.~Chen}, \bibinfo{author}{H.~Wang},
+\newblock \bibinfo{title}{Parameters identification of photovoltaic models
+  using an improved {JAYA} optimization algorithm},
+\newblock \bibinfo{journal}{Energy Conversion and Management}
+  \bibinfo{volume}{150} (\bibinfo{year}{2017}) \bibinfo{pages}{742--753}.
+%Type = Article
+\bibitem[{Olikh and Zavhorodnii(2020)}]{OlikhJPS}
+\bibinfo{author}{O.~Y. Olikh}, \bibinfo{author}{O.~V. Zavhorodnii},
+\newblock \bibinfo{title}{Modeling of ideality factor value in
+  $n^+$--$p$--$p^+$--si structure},
+\newblock \bibinfo{journal}{Journal of Physical Studies} \bibinfo{volume}{24}
+  (\bibinfo{year}{2020}) \bibinfo{pages}{4701}.
+%Type = Book
+\bibitem[{Chollet(2017)}]{Keras}
+\bibinfo{author}{F.~Chollet}, \bibinfo{title}{Deep Learning with Python},
+  \bibinfo{publisher}{Manning}, \bibinfo{edition}{second} edition,
+  \bibinfo{year}{2017}.
+
+\end{thebibliography}
