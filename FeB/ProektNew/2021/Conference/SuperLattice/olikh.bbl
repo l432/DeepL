@@ -1,4 +1,4 @@
-\begin{thebibliography}{46}
+\begin{thebibliography}{49}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\bibinfo}[2]{#2}
 \ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
@@ -253,6 +253,38 @@
   scaps-1d},
 \newblock \bibinfo{journal}{Sol. Energy} \bibinfo{volume}{145}
   (\bibinfo{year}{2017}) \bibinfo{pages}{52--58}.
+%Type = Article
+\bibitem[{Cappelletti et~al.(2018)Cappelletti, Casas, Cédola, y~Blancá, and
+  Soucase}]{SCAPSuse1}
+\bibinfo{author}{M.~Cappelletti}, \bibinfo{author}{G.~Casas},
+  \bibinfo{author}{A.~Cédola}, \bibinfo{author}{E.~P. y~Blancá},
+  \bibinfo{author}{B.~M. Soucase},
+\newblock \bibinfo{title}{Study of the reverse saturation current and series
+  resistance of p-p-n perovskite solar cells using the single and double-diode
+  models},
+\newblock \bibinfo{journal}{Superlattices Microstruct.} \bibinfo{volume}{123}
+  (\bibinfo{year}{2018}) \bibinfo{pages}{338--348}.
+%Type = Article
+\bibitem[{Boubakeur et~al.(2020)Boubakeur, Aissat, {Ben Arbia}, Maaref, and
+  Vilcot}]{SCAPSuse2020}
+\bibinfo{author}{M.~Boubakeur}, \bibinfo{author}{A.~Aissat},
+  \bibinfo{author}{M.~{Ben Arbia}}, \bibinfo{author}{H.~Maaref},
+  \bibinfo{author}{J.~Vilcot},
+\newblock \bibinfo{title}{Enhancement of the efficiency of ultra-thin cigs/si
+  structure for solar cell applications},
+\newblock \bibinfo{journal}{Superlattices Microstruct.} \bibinfo{volume}{138}
+  (\bibinfo{year}{2020}) \bibinfo{pages}{106377}.
+%Type = Article
+\bibitem[{Casas et~al.(2017)Casas, Cappelletti, Cédola, Soucase, and {Peltzer
+  y Blancá}}]{SCAPSuse2017SM}
+\bibinfo{author}{G.~Casas}, \bibinfo{author}{M.~Cappelletti},
+  \bibinfo{author}{A.~Cédola}, \bibinfo{author}{B.~M. Soucase},
+  \bibinfo{author}{E.~{Peltzer y Blancá}},
+\newblock \bibinfo{title}{Analysis of the power conversion efficiency of
+  perovskite solar cells with different materials as hole-transport layer by
+  numerical simulations},
+\newblock \bibinfo{journal}{Superlattices Microstruct.} \bibinfo{volume}{107}
+  (\bibinfo{year}{2017}) \bibinfo{pages}{136--143}.
 %Type = Article
 \bibitem[{P\"assler(2002)}]{Pasler}
 \bibinfo{author}{R.~P\"assler},
