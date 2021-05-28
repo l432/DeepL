@@ -13,7 +13,7 @@ I have submitted an article on May 24.
 Since then, the status of the article has not changed
 ("Submitted to Journal").
 Did I make some mistake in the procedure? 
-The article was transfered from "Superlattices and Microstructures" and I had no such experience.
+The article was transferred from "Superlattices and Microstructures" and I had no such experience.
 
 Username: olikh
 Article: "Deep neural network method for predicting the iron concentration in silicon solar cells by current-voltage characteristics" 
