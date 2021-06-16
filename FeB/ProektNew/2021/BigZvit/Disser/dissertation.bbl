@@ -62,4 +62,21 @@ Assessment and parameterisation of {C}oulomb--enhanced {A}uger recombination
 \newblock Vol.~82, no.~10. ---
 \newblock Pp.~4938--4944.
 
+\bibitem{FeB_Zong}
+\selectlanguageifdefined{english}
+\BibEmph{Zoth,~G.} A fast, preperetion-free method to detect irpn in silicon~/
+  G.~Zoth, W.~Bergholz~// \BibEmph{J. Appl. Phys.} ---
+\newblock 1990. --- Jun. ---
+\newblock Vol.~67, no.~11. ---
+\newblock Pp.~6764--6771.
+
+\bibitem{FeBLight2}
+\selectlanguageifdefined{english}
+\BibEmph{Geerligs,~L.~J.} Dynamics of light-induced FeB pair dissociation in
+  crystalline silicon~/ L.~J.~Geerligs, Daniel~Macdonald~// \BibEmph{Appl.
+  Phys. Lett.} ---
+\newblock 2004. --- Nov. ---
+\newblock Vol.~85, no.~22. ---
+\newblock Pp.~5227--5229.
+
 \end{thebibliography}
