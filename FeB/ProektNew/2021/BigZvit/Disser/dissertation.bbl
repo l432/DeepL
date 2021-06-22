@@ -79,4 +79,11 @@ Assessment and parameterisation of {C}oulomb--enhanced {A}uger recombination
 \newblock Vol.~85, no.~22. ---
 \newblock Pp.~5227--5229.
 
+\bibitem{Keras}
+\selectlanguageifdefined{english}
+\BibEmph{Chollet,~François}. Deep Learning with Python~/ François~Chollet.
+  ---
+\newblock Second edition. ---
+\newblock Manning, 2017.
+
 \end{thebibliography}
