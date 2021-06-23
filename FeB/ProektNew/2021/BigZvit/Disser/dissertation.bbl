@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 \def\selectlanguageifdefined#1{
 \expandafter\ifx\csname date#1\endcsname\relax
 \else\language\csname l@#1\endcsname\fi}
@@ -85,5 +85,51 @@ Assessment and parameterisation of {C}oulomb--enhanced {A}uger recombination
   ---
 \newblock Second edition. ---
 \newblock Manning, 2017.
+
+\bibitem{LIDRev2}
+\selectlanguageifdefined{english}
+Degradation of Crystalline Silicon Due to Boron--Oxygen Defects~/ Tim~Niewelt,
+  Jonas~Sch\"{o}on, Wilhelm~Warta et~al.~// \BibEmph{IEEE Journal of
+  Photovoltaics}. ---
+\newblock 2017. --- Jan. ---
+\newblock Vol.~7, no.~1. ---
+\newblock Pp.~383 --398.
+
+\bibitem{ROUGIEUX2018}
+\selectlanguageifdefined{english}
+\BibEmph{Rougieux,~Fiacre~E.} Determining the charge states and capture
+  mechanisms of defects in silicon through accurate recombination analyses: A
+  review~/ Fiacre~E.~Rougieux, Chang~Sun, Daniel~Macdonald~// \BibEmph{Sol.
+  Energy Mater. Sol. Cells}. ---
+\newblock 2018. --- Dec. ---
+\newblock Vol. 187. ---
+\newblock Pp.~263 -- 272.
+
+\bibitem{FeB:Schmidt}
+\selectlanguageifdefined{english}
+\BibEmph{Schmidt,~Jan}. Effect of Dissociation of Iron--Boron Pairs in
+  Crystalline Silicon on Solar Cell Properties~/ Jan~Schmidt~//
+  \BibEmph{Progress in Photovoltaics: Research and Applications}. ---
+\newblock 2005. --- Jun. ---
+\newblock Vol.~13, no.~4. ---
+\newblock Pp.~325--331.
+
+\bibitem{JAPSach}
+\selectlanguageifdefined{english}
+Temperature dependence of photoconversion efficiency in silicon heterojunction
+  solar cells: Theory vs experiment~/ A.~V.~Sachenko, Yu.~V.~Kryuchenko,
+  V.~P.~Kostylyov et~al.~// \BibEmph{J. Appl. Phys.} ---
+\newblock 2016. --- Jun. ---
+\newblock Vol. 119, no.~22. ---
+\newblock P.~225702.
+
+\bibitem{Si_ni_Couderc}
+\selectlanguageifdefined{english}
+\BibEmph{Couderc,~Romain}. Reassessment of the intrinsic carrier density
+  temperature dependence in crystalline silicon~/ Romain~Couderc,
+  Mohamed~Amara, Mustapha~Lemiti~// \BibEmph{J. Appl. Phys.} ---
+\newblock 2014. --- Mar. ---
+\newblock Vol. 115, no.~9. ---
+\newblock P.~093705.
 
 \end{thebibliography}
