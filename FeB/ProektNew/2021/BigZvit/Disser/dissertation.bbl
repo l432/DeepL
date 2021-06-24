@@ -132,4 +132,39 @@ Temperature dependence of photoconversion efficiency in silicon heterojunction
 \newblock Vol. 115, no.~9. ---
 \newblock P.~093705.
 
+\bibitem{FeBLight3}
+\selectlanguageifdefined{english}
+Iron-boron pairing kinetics in illuminated p-type and in boron/phosphorus
+  co-doped n-type silicon~/ Christian~Möller, Til~Bartel, Fabien~Gibaja,
+  Kevin~Lauer~// \BibEmph{J. Appl. Phys.} ---
+\newblock 2014. --- Jul. ---
+\newblock Vol. 116, no.~2. ---
+\newblock P.~024503.
+
+\bibitem{Markvart}
+\selectlanguageifdefined{english}
+Solar Cells. Materials, Manufacture and Operation~/ Ed. by Augustin~McEvoy,
+  Tom~Markvart, Luis~Castaner. ---
+\newblock Second edition. ---
+\newblock Oxford: Academic Press, 2013. ---
+\newblock 641~pp.
+
+\bibitem{EBLSHADE}
+\selectlanguageifdefined{english}
+\BibEmph{Mohamed,~Ali~W.} Novel mutation strategy for enhancing {SHADE} and
+  {LSHADE} algorithms for global numerical optimization~/ Ali~W.~Mohamed,
+  Anas~A.~Hadi, Kamal~M.~Jambi~// \BibEmph{Swarm Evol. Comput.} ---
+\newblock 2019. --- Nov. ---
+\newblock Vol.~50. ---
+\newblock P.~100455.
+
+\bibitem{FeBkinAPL2008}
+\selectlanguageifdefined{english}
+\BibEmph{Macdonald,~D.} Measuring dopant concentrations in compensated p--type
+  crystalline silicon via iron--acceptor pairing~/ D.~Macdonald, A.~Cuevas,
+  L.~J.~Geerligs~// \BibEmph{Appl. Phys. Lett.} ---
+\newblock 2008. --- May. ---
+\newblock Vol.~92, no.~20. ---
+\newblock P.~202119.
+
 \end{thebibliography}
