@@ -167,4 +167,14 @@ Solar Cells. Materials, Manufacture and Operation~/ Ed. by Augustin~McEvoy,
 \newblock Vol.~92, no.~20. ---
 \newblock P.~202119.
 
+\bibitem{SCparam2017}
+\selectlanguageifdefined{english}
+New guidelines for a more accurate extraction of solar cells and modules key
+  data from their current–voltage curves~/ Bertrand~Paviet-Salomon,
+  Jacques~Levrat, Vahid~Fakhfouri et~al.~// \BibEmph{Prog. Photovoltaics Res.
+  Appl.} ---
+\newblock 2017. --- Jul. ---
+\newblock Vol.~25, no.~7. ---
+\newblock Pp.~623--635.
+
 \end{thebibliography}
