@@ -177,4 +177,13 @@ New guidelines for a more accurate extraction of solar cells and modules key
 \newblock Vol.~25, no.~7. ---
 \newblock Pp.~623--635.
 
+\bibitem{FeBJAP2005}
+\selectlanguageifdefined{english}
+Formation rates of iron-acceptor pairs in crystalline silicon~/
+  Daniel~Macdonald, Thomas~Roth, Prakash N.~K.~Deenapanray et~al.~//
+  \BibEmph{J. Appl. Phys.} ---
+\newblock 2005. --- Oct. ---
+\newblock Vol.~98, no.~8. ---
+\newblock P.~083509.
+
 \end{thebibliography}
