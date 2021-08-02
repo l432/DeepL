@@ -186,4 +186,21 @@ Formation rates of iron-acceptor pairs in crystalline silicon~/
 \newblock Vol.~98, no.~8. ---
 \newblock P.~083509.
 
+\bibitem{OlikhDef}
+\selectlanguageifdefined{ukrainian}
+\BibEmph{Оліх,~О.Я.} Дефекти у
+  напівпровідникових та діелектричних
+  кристалах~/ О.Я.~Оліх. ---
+\newblock Вінниця: ФОП Корзун Д.Ю., 2016. ---
+\newblock 152~{с.}
+
+\bibitem{GORB2020}
+\selectlanguageifdefined{english}
+Influence of $\gamma$--irradiation and ultrasound treatment on current
+  mechanism in Au-SiO$_2$-Si structure~/ A.M.~Gorb, O.A.~Korotchenkov,
+  O.Ya.~Olikh et~al.~// \BibEmph{Solid-State Electron.} ---
+\newblock 2020. --- Mar. ---
+\newblock Vol. 165. ---
+\newblock P.~107712.
+
 \end{thebibliography}
