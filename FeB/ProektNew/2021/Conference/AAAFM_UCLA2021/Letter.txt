@@ -40,8 +40,11 @@ Taras Shevchenko National University of Kyiv
 
 Dear Organizing Committee AAAFM-UCLA,
 
-Why our presentation (ID 817) is absent in Conference Program 
+
+I am registered as a participant.
+But our presentation (ID 817) is absent in Conference Program 
 (https://aaafm.org/ucla2021/wp-content/uploads/2021/05/AAAFM-UCLA-2021-program-05-04-2021.pdf)?
+Why is it absent?
 
 ID 817 "Ultrasound as Functional Influence Tool on FeB pair Association in Silicon Solar Cells" 
 Olikh, Oleg; Kostylyov, Vitaliy; Vlasiuk, Victor; Korkishko, Roman.
