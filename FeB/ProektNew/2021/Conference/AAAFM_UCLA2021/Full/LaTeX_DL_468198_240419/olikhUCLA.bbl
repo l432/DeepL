@@ -1,0 +1,219 @@
+\begin{thebibliography}{10}
+\providecommand{\url}[1]{{#1}}
+\providecommand{\urlprefix}{URL }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{DOI \discretionary{}{}{}#1}\else
+  \providecommand{\doi}{DOI \discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+
+\bibitem{ostapenko2002}
+S.S. Ostapenko, N.E. Korsunskaya, M.K. Sheinkman, in \emph{Defect Interaction
+  and Clustering in Semiconductors}, \emph{Solid State Phenomena}, vol.~85
+  (Trans Tech Publications Ltd, 2001), \emph{Solid State Phenomena}, vol.~85,
+  pp. 317--336.
+\newblock \doi{10.4028/www.scientific.net/SSP.85-86.317}
+
+\bibitem{Savkina2013}
+R.K. Savkina, Recent Patents on Electrical \& Electronic Engineering
+  \textbf{6}(3), 157 (2013).
+\newblock \doi{10.2174/22131116113066660008}
+
+\bibitem{Olikh2018JAP}
+O.Y. Olikh, A.M. Gorb, R.G. Chupryna, O.V. Pristay-Fenenkov, J. Appl. Phys.
+  \textbf{123}(16), 161573 (2018).
+\newblock \doi{10.1063/1.5001123}
+
+\bibitem{Davletova2008}
+A.~Davletova, S.Z. Karazhanov, Journal of Physics D: Applied Physics
+  \textbf{41}(16), 165107 (2008).
+\newblock \doi{10.1088/0022-3727/41/16/165107}
+
+\bibitem{Olikh2020JEM}
+Y.~Olikh, M.~Tymochko, O.~Olikh, J. Electron. Mater. \textbf{49}(8), 4524–453
+  (2020).
+\newblock \doi{10.1007/s11664-020-08179-7}
+
+\bibitem{Olikh:Ultras}
+O.~Olikh, Ultrasonics \textbf{56}, 545 (2015).
+\newblock \doi{10.1016/j.ultras.2014.10.008}
+
+\bibitem{OlikhJAP}
+O.Y. Olikh, K.V. Voytenko, R.M. Burbelo, J. Appl. Phys. \textbf{117}(4), 044505
+  (2015).
+\newblock \doi{10.1063/1.4906844}
+
+\bibitem{Teterkin2009}
+A.~Sukach, V.~Teterkin, Tech. Phys. Lett. \textbf{35}(6), 514 (2009).
+\newblock \doi{10.1134/S1063785009060108}
+
+\bibitem{USImplant:JVacSci}
+D.~Krüger, B.~Romanyuk, V.~Melnik, Y.~Olikh, R.~Kurps, J. Vac. Sci. Technol. B
+  \textbf{20}(4), 1448 (2002).
+\newblock \doi{10.1116/1.1493784}
+
+\bibitem{RomanyukSST}
+B.~Romanyuk, V.~Melnik, Y.~Olikh, V.~Popov, D.~Krüger, Semicond. Sci. Technol.
+  \textbf{16}(5), 397 (2001).
+\newblock \doi{10.1088/0268-1242/16/5/320}
+
+\bibitem{Kalem2000}
+S.~Kalem, O.~Yavuzcetin, C.~Altineller, Journal of Porous Materials
+  \textbf{7}(1), 381 (2000).
+\newblock \doi{10.1023/A:1009687021287}
+
+\bibitem{US:ZnOfilm}
+S.~Fujita, K.~Kaneko, T.~Ikenoue, T.~Kawaharamura, M.~Furuta, Phys. Status
+  Solidi C \textbf{11}(7--8), 1225 (2014).
+\newblock \doi{10.1002/pssc.201300655}
+
+\bibitem{LaineIEEEPV2016}
+H.S. Laine, V.~V\"{a}h\"{a}nissi, A.E. Morishige, J.~Hofstetter,
+  A.~Haarahiltunen, B.~Lai, H.~Savin, D.P. Fenning, IEEE Journal of
+  Photovoltaics \textbf{6}(5), 1094 (2016).
+\newblock \doi{10.1109/JPHOTOV.2016.2576680}
+
+\bibitem{FeB:Vahanissi}
+V.~V\"{a}h\"{a}nissi, A.~Haarahiltunen, H.~Talvitie, M.~Yli-Koski, H.~Savin,
+  Progress in Photovoltaics: Research and Applications \textbf{21}(5), 1127
+  (2013).
+\newblock \doi{10.1002/pip.2215}
+
+\bibitem{Teimuraz2014JAP}
+T.~Mchedlidze, C.~M\"{o}ller, K.~Lauer, J.~Weber, J. Appl. Phys.
+  \textbf{116}(24), 245701 (2014).
+\newblock \doi{10.1063/1.4905027}
+
+\bibitem{Ostapenko1995}
+S.S. Ostapenko, R.E. Bell, J. Appl. Phys. \textbf{77}(10), 5458 (1995).
+\newblock \doi{10.1063/1.359243}
+
+\bibitem{FeB:kinetic}
+W.~Wijaranakula, J. Electrochem. Soc. \textbf{140}(1), 275 (1993).
+\newblock \doi{10.1149/1.2056102}
+
+\bibitem{FeBAssJAP2014}
+C.~M\"{o}ller, T.~Bartel, F.~Gibaja, K.~Lauer, J. Appl. Phys. \textbf{116}(2),
+  024503 (2014).
+\newblock \doi{10.1063/1.4889817}
+
+\bibitem{FeBAssSST2011}
+J.~Tan, D.~Macdonald, F.~Rougieux, A.~Cuevas, Semicond Sci. Technol.
+  \textbf{26}(5), 055019 (2011).
+\newblock \doi{10.1088/0268-1242/26/5/055019}
+
+\bibitem{FeBJAP2005}
+D.~Macdonald, T.~Roth, P.N.K. Deenapanray, K.~Bothe, P.~Pohl, J.~Schmidt, J.
+  Appl. Phys. \textbf{98}(8), 083509 (2005).
+\newblock \doi{10.1063/1.2102071}
+
+\bibitem{Bube}
+A.~Fahrenbruch, R.~Bube, \emph{Fundamentals of Solar Cells: Photovoltaic Solar
+  Energy Conversion} (Academic Press, 1983)
+
+\bibitem{Razeghi}
+M.~Razeghi, A.~Rogalski, J. Appl. Phys. \textbf{79}(10), 7433 (1996).
+\newblock \doi{10.1063/1.362677}
+
+\bibitem{Si:Absorb}
+K.~Rajkanan, R.~Singh, J.~Shewchun, Solid-State Electron. \textbf{22}(9), 793
+  (1979).
+\newblock \doi{10.1016/0038-1101(79)90128-X}
+
+\bibitem{GreenOptic}
+M.A. Green, M.J. Keevers, Progress in Photovoltaics: Research and Applications
+  \textbf{3}(3), 189 (1995).
+\newblock \doi{10.1002/pip.4670030303}
+
+\bibitem{KostRefl2000}
+N.~Klyui, V.~Kostylyov, A.~Rozhin, V.~Gorbulik, V.~Litovchenko, M.~Voronkin,
+  N.~Zaika, Opto-Electr. Rev. \textbf{8}(4), 402 (2000)
+
+\bibitem{KostRefl2000A}
+V.G. Litovchenko, N.~Klyui, V.P. Kostylyov, V.I. Gorbulik, Y.P. Piryatinskii,
+  Opto-Electr. Rev. \textbf{8}(4), 406 (2000)
+
+\bibitem{KLAASSEN953}
+D.~Klaassen, Solid-State Electron. \textbf{35}(7), 953 (1992).
+\newblock \doi{10.1016/0038-1101(92)90325-7}
+
+\bibitem{Si_BtB}
+H.T. Nguyen, S.C. Baker-Finch, D.~Macdonald, Appl. Phys. Lett.
+  \textbf{104}(11), 112105 (2014).
+\newblock \doi{10.1063/1.4869295}
+
+\bibitem{Si_Auger}
+P.P. Altermatt, J.~Schmidt, G.~Heiser, A.G. Aberle, J. Appl. Phys.
+  \textbf{82}(10), 4938 (1997).
+\newblock \doi{10.1063/1.366360}
+
+\bibitem{Si_ni_Couderc}
+R.~Couderc, M.~Amara, M.~Lemiti, J. Appl. Phys. \textbf{115}(9), 093705 (2014).
+\newblock \doi{10.1063/1.4867776}
+
+\bibitem{Nc:Green}
+M.A. Green, J. Appl. Phys. \textbf{67}(6), 2944 (1990).
+\newblock \doi{10.1063/1.345414}
+
+\bibitem{ROUGIEUX2018}
+F.E. Rougieux, C.~Sun, D.~Macdonald, Sol. Energy Mater. Sol. Cells
+  \textbf{187}, 263  (2018).
+\newblock \doi{https://doi.org/10.1016/j.solmat.2018.07.029}
+
+\bibitem{MurphyJAP2011}
+J.D. Murphy, K.~Bothe, M.~Olmo, V.V. Voronkov, R.J. Falster, J. Appl. Phys.
+  \textbf{110}(5), 053713 (2011).
+\newblock \doi{10.1063/1.3632067}
+
+\bibitem{EBLSHADE}
+A.W. Mohamed, A.A. Hadi, K.M. Jambi, Swarm Evol. Comput. \textbf{50}, 100455
+  (2019).
+\newblock \doi{10.1016/j.swevo.2018.10.006}
+
+\bibitem{FeBkinAPL2008}
+D.~Macdonald, A.~Cuevas, L.J. Geerligs, Appl. Phys. Lett. \textbf{92}(20),
+  202119 (2008).
+\newblock \doi{10.1063/1.2936840}
+
+\bibitem{FeBKin2019}
+N.~Khelifati, H.S. Laine, V.~Vähänissi, H.~Savin, F.Z. Bouamama, D.~Bouhafs,
+  Phys Status Solidi A \textbf{216}(17), 1900253 (2019).
+\newblock \doi{https://doi.org/10.1002/pssa.201900253}
+
+\bibitem{AZIZ2001}
+M.J. Aziz, Mater. Sci. Semicond. Process. \textbf{4}(5), 397 (2001).
+\newblock \doi{10.1016/S1369-8001(01)00014-2}
+
+\bibitem{Stavola}
+M.~Stavola (ed.), \emph{Identification of Defects in Semiconductors} (Academic
+  Press, 1998)
+
+\bibitem{WeberFe}
+E.~Weber, Appl. Phys. A \textbf{30}(1), 1 (1983).
+\newblock \doi{10.1007/BF00617708}
+
+\bibitem{Ostapenko1999}
+S.~Ostapenko, Applied Physics A: Materials Science \& Processing
+  \textbf{69}(2), 225 (1999).
+\newblock \doi{10.1007/s003390050994}
+
+\bibitem{Zaveryukhin2002}
+B.~Zaveryukhin, N.~Zaveryukhina, O.M. Tursunkulov, Tech. Phys. Lett.
+  \textbf{28}(9), 752 (2002).
+\newblock \doi{10.1134/1.1511774}
+
+\bibitem{FeStrain}
+B.~Ziebarth, M.~Mrovec, C.~Els\"asser, P.~Gumbsch, Phys. Rev. B \textbf{92},
+  115309 (2015).
+\newblock \doi{10.1103/PhysRevB.92.115309}
+
+\bibitem{GORB2020}
+A.~Gorb, O.~Korotchenkov, O.~Olikh, A.~Podolian, R.~Chupryna, Solid-State
+  Electron. \textbf{165}, 107712 (2020).
+\newblock \doi{10.1016/j.sse.2019.107712}
+
+\bibitem{UST:Medvid}
+D.~Kropman, V.~Seeman, S.~Dolgov, A.~Medvids, Phys. Status Solidi C
+  \textbf{13}(10--12), 793 (2016).
+\newblock \doi{10.1002/pssc.201600052}
+
+\end{thebibliography}

@@ -1,0 +1,558 @@
+%%%%%%%%%%%%%%%%%%%%%%% file template.tex %%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% This is a general template file for the LaTeX package SVJour3
+% for Springer journals.          Springer Heidelberg 2010/09/16
+%
+% Copy it to a new file with a new name and use it as the basis
+% for your article. Delete % signs as needed.
+%
+% This template includes a few options for different layouts and
+% content for various journals. Please consult a previous issue of
+% your journal as needed.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% First comes an example EPS file -- just ignore it and
+% proceed on the \documentclass line
+% your LaTeX will extract the file if required
+\begin{filecontents*}{example.eps}
+%!PS-Adobe-3.0 EPSF-3.0
+%%BoundingBox: 19 19 221 221
+%%CreationDate: Mon Sep 29 1997
+%%Creator: programmed by hand (JK)
+%%EndComments
+gsave
+newpath
+  20 20 moveto
+  20 220 lineto
+  220 220 lineto
+  220 20 lineto
+closepath
+2 setlinewidth
+gsave
+  .4 setgray fill
+grestore
+stroke
+grestore
+\end{filecontents*}
+%
+\RequirePackage{fix-cm}
+%
+%\documentclass{svjour3}                     % onecolumn (standard format)
+%\documentclass[smallcondensed]{svjour3}     % onecolumn (ditto)
+\documentclass[smallextended]{svjour3}       % onecolumn (second format)
+%\documentclass[twocolumn]{svjour3}          % twocolumn
+%
+\smartqed  % flush right qed marks, e.g. at end of proof
+%
+\usepackage{graphicx}
+\usepackage{amsmath}
+%
+% \usepackage{mathptmx}      % use Times fonts if available on your TeX system
+%
+% insert here the call for the packages your document requires
+%\usepackage{latexsym}
+% etc.
+%
+% please place your own definitions here and don't use \def but
+% \newcommand{}{}
+%
+% Insert the name of "your journal" with
+% \journalname{myjournal}
+%
+\begin{document}
+
+\title{Ultrasound as Functional Influence Tool on FeB pair Association in Silicon Solar Cells%\thanks{Grants or other notes
+%about the article that should go on the front page should be
+%placed here. General acknowledgments should be placed at the end of the article.}
+}
+%\subtitle{Do you have a subtitle?\\ If so, write it here}
+
+%\titlerunning{Short form of title}        % if too long for running head
+
+\author{Oleg Olikh         \and
+        Vitaliy Kostylyov \and
+        Victor Vlasiuk \and
+        Roman Korkishko
+}
+
+%\authorrunning{Short form of author list} % if too long for running head
+
+
+\institute{O. Olikh \at
+             Taras Shevchenko National University of Kyiv, 64/13, Volodymyrska Street, Kyiv, Ukraine, 01601 \\
+              \email{olegolikh@knu.ua}           %  \\
+%             \emph{Present address:} of F. Author  %  if needed
+           \and
+          V. Kostylyov \and  V. Vlasiuk \and R. Korkishko \at
+              V. Lashkaryov Institute of Semiconductor Physic of NAS of Ukraine, 41, pr. Nauki, Kyiv, Ukraine, 03028
+}
+
+\date{Received: date / Accepted: date}
+% The correct dates will be entered by the editor
+
+
+\maketitle
+
+\begin{abstract}
+The experimental study of silicon solar cells have shown that ultrasound (US) application accelerates iron-boron pair association.This effect was investigated for different US frequencies and intensities as well as iron concentrations in the structure. It has been found that in [100] oriented solar elements US longitudinal waves are more efficient than transverse waves. The experimentally observed phenomena are related to the decrease in iron migration energy (to 10 meV) in the US stress ﬁelds.
+\keywords{Ultrasound \and Silicon solar cell \and Iron-boron pair \and Acousto-defect interaction}
+% \PACS{PACS code1 \and PACS code2 \and more}
+%\subclass{MSC code1 \and MSC code2 \and more}
+\end{abstract}
+
+\section{Introduction}
+\label{intro}
+It is well known that ultrasound (US) can act efficiently on defect subsystems of semiconductor crystals and devices due to dissipation of US vibration energy, which is particularly intense in the regions with periodicity disorder \cite{ostapenko2002,Savkina2013,Olikh2018JAP}.
+At US of prethreshold intensity, acoustically induced (AI) reconstruction of defects causes the reverse changes in charge concentration and mobility in crystals \cite{Davletova2008,Olikh2020JEM},
+barrier height in Schottky structures \cite{Olikh:Ultras,OlikhJAP}
+as well as magnitude of tunnel and recombination components in p-n structures \cite{Teterkin2009,Olikh2018JAP}.
+Also it seems promising to apply the US as an additional factor of influence during conventional technological processes.
+In this case semiconductor structures are usually found in  nonequilibrium conditions and the defect--impurity subsystem is capable of modifying easier under the action of elastic oscillations.
+For instance, the application of ultrasound loading (USL) in conditions of ion implantation facilitates
+the formation of ultra-shallow junctions \cite{USImplant:JVacSci},
+the process of silicon surface layer amorphization becomes more intensive \cite{RomanyukSST};
+USL applied during the production of porous silicon  results in structural ordering \cite{Kalem2000}
+and when applied during ZnO deposition provides higher homogeneity of the films \cite{US:ZnOfilm}.
+
+Iron is one of the most widespread as well as harmful impurities in silicon solar cells (SCs).
+In silicon photovoltaics, one of the main methods of the impurity deactivation and removing it from the operation zone is gettering Fe atoms at certain centers (at extended defects, at oxygen precipitates, or at interfaces) \cite{LaineIEEEPV2016}.
+It was shown that similar gettering processes can be realized during such standard operations as phosphorus diffusion  \cite{FeB:Vahanissi}
+or production of antireflection coating  \cite{Teimuraz2014JAP}.
+It is clear that the process efficiency depends on the mobility of iron atoms.
+The aim of this work is to investigate experimentally how acoustic waves (AWs) influence the ability of iron to diffuse in silicon solar cells.
+The time of iron--boron pair association after  light-induced dissociation was used as an indicator of iron ion mobility.
+The possibility of US to change the state of FeB was shown previously  \cite{Ostapenko1995},
+however this work is the first to investigate the process of dissociation in conditions of USL.
+
+\section{Experimental and Calculation Details}
+\label{sec:1}
+
+Experimental studies were performed on the samples of silicon SC with geometric dimensions of $1.52\times1.535$~cm$^2$ made on the basis of single-crystal  $p$--type silicon [100] wafers with resistivity of about 10~$\Omega\cdot$cm
+(boron doping level  $N_A=1.4\cdot10^{15}$~cm$^{-3}$).
+The thickness of the wafers was 380~$\mu$m.
+On the front surface, the SCs had a separating $n^+$--$p$ junction formed by phosphorus diffusion.
+In addition, to reduce recombination losses and increase the conductivity of the contact layer
+on the rear surface an isotype $p^+$-$p$ barrier was formed by diffusion of boron.
+Electrical contacts were formed by applying a solid layer of aluminum on the rear surface and a layer in the form of a grid on the front surface.
+Layers of SiO$_2$ and Si$_3$N$_4$ were formed on the surface of the SC to passivate the surface and reduce optical reflectance.
+The scheme of SC is presented in Fig.~\ref{figChem}.
+\begin{figure}
+ \includegraphics[width=0.5\textwidth]{Fig1}
+\caption{Scheme of the sample and USL.
+1 –-- frontal metallic comb electrode (Al);
+2 --– Si$_3$N$_4$ (40 nm);
+3 –-- SiO$_2$ (30 nm);
+4 –-- induced $n^{++}$-layer;
+5 –-- diffusion $n^+$-layer;
+6 –-- quasineutral base region of $p$-type (350 $\mu$m);
+7 –-- diffusion $p^+$-layer;
+8 –-- rear metallization (Al);
+9 –-- piezoelectric transducer;
+10 –-- metal foil (Cu)}
+\label{figChem}       % Give a unique label
+\end{figure}
+
+In case of USL, the transverse or longitudinal AWs, which were excited by using LiNbO$_3$ or ceramic piezoelectric transducer,
+were applied to the samples in [100] direction.
+The transducer was attached to the whole area of Al back contact.
+AWs excited in the samples were 2.4; 4.1; 5.4; 9.0; 14; 18; 31 MHz (longitudinal) or 0.3~MHz (transverse)
+with frequency $f_\mathrm{US}$ and had the intensity of $W_\mathrm{US}<1.3$~W/cm$^2$.
+In order to avoid the impact of piezoelectric field on both the measurements and sample parameters,
+the transducer was shielded by Cu foil (see Fig.~\ref{figChem}).
+
+It is known that Fe in silicon can be in two states:
+in the form of FeB pair or in the interstitial state Fe$_i$.
+At near room temperature and boron concentration $>10^{14}$~cm$^{-3}$,
+almost all Fe bound in FeB pairs is in equilibrium \cite{FeB:kinetic,FeBAssJAP2014,FeBAssSST2011,FeBJAP2005}.
+However, numerous researches show that dissociation of pairs can be performed either by heating to the temperature above 200$^\circ$C,
+or by intense illumination at room temperature \cite{FeBAssJAP2014,FeBJAP2005}.
+In our work we used the latter approach, the lamp being used was a halogen lamp with radiation intensity of about 250~mW/cm$^2$.
+To dissociate the pairs the frontal side of the sample was illuminated for 30~s.
+
+It is known that FeB pair dissociations in the SC base are accompanied by the change
+in lifetime of minority carriers $\tau$.
+As an indicator of this quantity we considered short circuit current $I_\mathrm{SC}$,
+which was measured under SC illumination by a low energy monochromatic light source.
+This was a light emitting diode (LED) with radiation power $P_{ph}\sim350$~$\mu$~W
+(measured by PowerMeter Rk-5720) and light wavelength $\lambda=940$~nm.
+As the calculations showed, under these conditions the level of nonequilibrium carrier
+excitations was $\Delta n<10^{12}$cm$^{-3}$.
+
+The kinetics of short circuit current was measured after intensive illumination of the sample
+(see Fig.~\ref{figIsc}).
+All the measurements were carried out by varying the temperature from 300 to 340~K with a thermoelectric cooler,
+and by stabilizing it with a computer--controlled PID loop to better than 0.05~K.
+The SC temperature was controlled by STS--21 sensor, which was placed on the front sample surface.
+
+\begin{figure}
+ \includegraphics[width=0.5\textwidth]{Fig2}
+\caption{Kinetics of short circuit current magnitude after intensive illumination.
+Points indicate experimental data and the solid lines represent approximation
+according to Eqs.~(\ref{eqIsc})-(\ref{eqNFeBt}).
+$T$, K: 300 (1), 330 (2).}
+\label{figIsc}       % Give a unique label
+\end{figure}
+
+The parameters of pair association were determined by approximation of the measured kinetic
+dependencies $I_\mathrm{SC}(t)$ in the following way.
+In conditions of LED illumination mentioned above,
+it is quite possible to use the approximation of homogeneous carrier generation in the SC base.
+In this case the short circuit current can be described as follows \cite{Bube,Razeghi}
+\begin{equation}
+\label{eqIsc}
+I_\mathrm{SC}=\frac{P_{ph}(1-R_{ph}q\beta\lambda)}{hc}\frac{\alpha_{ph}L_n}{1+\alpha_{ph}L_n}\,,
+\end{equation}
+where
+$\alpha_{ph}=\alpha_{ph}(T,\lambda)$ is the coefficient of light absorption,
+which was calculated according to \cite{Si:Absorb,GreenOptic},
+$R_{ph}$ is the coefficient of reflection;
+as shown by the calculations with using recurrent correlations for coefficients of amplitude reflections \cite{KostRefl2000,KostRefl2000A},
+in our case from the silicon SC with two layered antireflection coating $R_{ph}=0,14$;
+$\beta$ is the coefficient of quantum  yield, $\beta=1$;
+$L_n$  is the diffusion length of minority carriers.
+As the measurements of $L_n$ by spectral dependence of internal quantum yield show,
+the quantity was from 35 to 150~$\mu$m (for different samples),
+which justifies the usage of expression~(\ref{eqIsc}).
+In its turn
+\begin{equation}
+\label{eqLn}
+I_n=\sqrt{\frac{\mu_nkT\tau}{q}}\,,
+\end{equation}
+where
+$\mu_n$ is the electron mobility, was calculated by Klaassen theory \cite{KLAASSEN953}.
+
+In the assumption that it is the iron related defects that play an essential role in the recombination,
+the following expression can be used to estimate $\tau$ according to Mattisen rule:
+\begin{equation}
+\label{eqTau}
+\tau^{-1}=\tau_{rad}^{-1}+\tau_{Aug}^{-1}+(\tau_{SRH}^{\mathrm{Fe_i}})^{-1}
++(\tau_{SRH}^\mathrm{FeB})^{-1}+\tau_{other}^{-1}\,,
+\end{equation}
+where
+$\tau_{rad}$ is the lifetime associated with band-to-band radiation recombination
+\begin{equation}
+\label{eqTauRad}
+\tau_{rad}^{-1}=B(N_A+n_0+\Delta n)\,,
+\end{equation}
+$\tau_{Aug}$ is the life time associated with Auger processes:
+\begin{equation}
+\label{eqTauAug}
+\tau_{Aug}^{-1}=C_p\,N_A^2\,,
+\end{equation}
+the values of recombination coefficients $B$ and $C_p$ were calculated by data from \cite{Si_BtB,Si_Auger};
+$n_0=n_i^2/N_A$,
+$n_i$ is the intrinsic carrier concentration, whose dependence on temperature was taken from \cite{Si_ni_Couderc};
+$\tau_{SRH}^{\mathrm{Fe_i}}$  and $\tau_{SRH}^\mathrm{FeB}$ are related to the recombinations at interstitial iron atoms Fe$_i$ and at FeB pairs, accordingly;
+$\tau_{other}$ describes the rest of recombination pathways including surface recombination.
+
+In order to calculate $\tau_{SRH}^{\mathrm{Fe_i}}$  and $\tau_{SRH}^\mathrm{FeB}$,
+Shockley--Read--Hall model was used:
+\begin{equation}
+\label{eqTauSRH}
+\tau_{SRH}^{\mathrm{Fe_i,FeB}}=\frac{\tau_{p0}(n_0+n_1+\Delta n)+\tau_{n0}(N_A+p_1+\Delta n)}
+                             {N_A+n_0+\Delta n}\,,
+\end{equation}
+where
+$\tau_{p0,n0}=(N_t \sigma_{p,n}\upsilon_{th}^{p,n})^{-1}$,
+$N_t$ is the concentration of recombination centers
+($N_\mathrm{Fe_i}$ and $N_\mathrm{FeB}$ for Fe$_i$ and FeB, respectively),
+$\sigma_n$, $\sigma_p$  are the cross sections of the recombination centers for electrons and holes, respectively,
+$\upsilon_{th}^{n}$, $\upsilon_{th}^{p}$ are the average thermal velocities of electrons and holes calculated according to \cite{Nc:Green},
+$n_1=N_C \exp(-(E_C-E_t)/kT)$,
+$p_1=N_V \exp(-(E_t-E_V)/kT)$,
+$N_C$, $N_V$ are the effective densities of states near the bottom of the conduction band
+and the top of the valence band, respectively \cite{Si_ni_Couderc},
+$E_C$, $E_V$ are the energy positions of the bottom of the conduction band and
+the top of the valence band,
+$E_t$ is the energy position of the recombination level due to defect.
+The parameters of recombination centers related to Fe$_i$ ant FeB were taken from \cite{ROUGIEUX2018}.
+
+The time dependence of interstitial iron atom concentration
+after pair dissociations is described by the known expression from \cite{MurphyJAP2011}:
+\begin{equation}
+\label{eqNFet}
+N_\mathrm{Fe_i}(t)=(N_\mathrm{Fe_i,0}-N_\mathrm{Fe_i,eq})\cdot
+\exp(-t/\tau_{ass})+N_\mathrm{Fe_i,eq}\,,
+\end{equation}
+where
+$\tau_{ass}$ is the characteristic time of the complex association,
+$N_\mathrm{Fe_i,0}$ is the interstitial iron atom concentration
+immediately after intensive illumination,
+$N_\mathrm{Fe_i,eq}$ is the part of interstitial iron atoms with $N_\mathrm{Fe_i,0}$
+that remain unpaired in equilibrium state (after a long exposition in darkness)\cite{FeB:kinetic}:
+\begin{equation}
+\label{eqNFeeq}
+N_\mathrm{Fe_i,eq}=\frac{N_\mathrm{Fe_i,0}}
+   {\left[1+N_A 10^{-23}\exp\left(\frac{0.582\mathrm{eV}}{kT}\right)\right]
+    \left[1+\exp\left(-\frac{E_F-0.394\mathrm{eV}}{kT}\right)\right]}\,,
+\end{equation}
+$E_F$ is the quasi--Fermi level.
+
+In its turn, time dependence of iron--boron pair concentration
+$N_\mathrm{FeB}$ formed as a result of association of the part with $N_\mathrm{Fe_i,0}$
+should be described by the expression
+\begin{equation}
+\label{eqNFeBt}
+N_\mathrm{FeB}(t)=N_\mathrm{Fe_i,0}-N_\mathrm{Fe_i}(t)\,.
+\end{equation}
+
+We fitted experimentally measured dependencies of short circuit current
+according to the complex of the above equations (see the example in Fig.~\ref{figIsc}.
+The fitting was performed by metaheuristic method EBLSHADE \cite{EBLSHADE},
+the parameters to be found were $P_{ph}$, $\tau_{other}$, $N_\mathrm{Fe_i,0}$, and $\tau_{ass}$.
+
+For the data given in Fig.~\ref{figIsc},
+the parameters found by the fitting had the following values.
+$P_{ph}=(3,2\pm0,3)\cdot10^{-4}$~W, which agrees well with the measured value.
+
+In cases when the time of intensive illumination was over 20~s,
+$\tau_{other}>100$~s, which testifies that the contribution of other recombination pathways can be neglected.
+
+$N_\mathrm{Fe_i,0}=(7\pm1)\cdot10^{12}$~cm$^{-3}$,
+      which is on the one hand a rather typical value for solar silicon,
+      on the other hand it is close to the values $3\cdot10^{12}$~cm$^{-3}$
+      obtained for the samples of the same series by the spectral dependence of intrinsic quantum efficiency method.
+
+Finally, the values of $\tau_{ass}$ were found
+  to be $(1380\pm20)$~s for $T=330$~K and $(1,26\pm0,02)\cdot10^4$~s for $T=300$~K.
+  It was reported that $\tau_{ass}$ should depend on boron concentration as well as temperature,
+  in particular the following expression was proposed to estimate its value in \cite{FeBAssJAP2014}:
+\begin{equation}
+\label{eqTass}
+\tau_{ass}=\frac{5.7\cdot10^5T}{N_A}\exp\left(\frac{E_m}{kT}\right)\,,
+\end{equation}
+where
+$E_m$ is the energy of Fe$_i$ migration.
+Being calculated by using Eq.~(\ref{eqTass}) on the basis of the obtained
+values of association time, it comprised $E_m=(0.655\pm0,002)$~eV.
+This value coincides with the well known from \cite{FeBAssJAP2014,FeBkinAPL2008} value  of 0.66~eV.
+
+The coincidence of the obtained data with the expected ones
+proves that the investigations of short circuit current kinetics
+after intensive illumination can be applied in finding such parameters of defects related to iron
+as FeB pair association time and Fe$_i$ initial concentration.
+
+\section{Results and Discussion}
+
+The experiments have shown that in the result of excitation of elastic oscillations
+the resumption processes of short circuit current magnitude (and thus FeB pair association) accelerate.
+Fig.~\ref{figIscUs} shows, for example, the time dependencies of short circuit current
+after intensive illumination at different temperatures
+that were measured under USL as well as without USL.
+It is seen that the resumption speed $I_\mathrm{SC}$ depends both on temperature
+(which is quite expectable according to Eq.~(\ref{eqTass})) and on applied USL.
+The figure also shows $\tau_{ass}$ values which were found by nonlinear fitting of experimental curves.
+Here, we use $\tau_{0}$ for the time of association without USL
+and $\tau_\mathrm{US}$ for the conditions of USL.
+As seen from the figure, $\tau_\mathrm{US}/\tau_{0}< 1$.
+Further on, to characterize quantitatively the degree of
+acoustically induced (AI) decrease of association time, we shall use the quantity $\tau_\mathrm{US}/\tau_{0}$.
+
+\begin{figure}
+ \includegraphics[width=1.0\textwidth]{Fig3}
+\caption{
+Kinetics of short circuit current  after intensive illumination under USL
+($f_\mathrm{US} = 2.4$~MHz, filled red marks on the chart)
+and without USL (empty green marks).
+Solid lines indicate fitting according to Eqs.~(\ref{eqIsc})-(\ref{eqNFeBt}).
+$T$, K: 300 (a), 320 (b), 340 (c).
+}
+\label{figIscUs}       % Give a unique label
+\end{figure}
+
+The investigations show that the degree at which the association accelerates
+under USL depends on acoustic wave intensity.
+Fig.~\ref{figfus} gives the data that evidence about decrease
+in $\tau_\mathrm{US}$ due to increase in $W_\mathrm{US}$.
+It is evident that whatever the US frequency is, $\tau_\mathrm{US}/\tau_{0}$
+practically linearly depends on the intensity at small values of $W_\mathrm{US}$.
+As USL becomes more intense, the saturation of $\tau_\mathrm{US}$ is observed,
+which corresponds to about 0.7$\tau_{0}$.
+
+\begin{figure}
+ \includegraphics[width=0.5\textwidth]{Fig4a}
+ \includegraphics[width=0.5\textwidth]{Fig4b}
+\caption{
+The dependencies of the degree of AI time decrease on the applied US intensity at different $f_\mathrm{US}$.
+Parts a and b present the samples with different iron concentrations.
+$T=340$~K.
+The marks are the experimental results, the lines are given for convenience only.
+}
+\label{figfus}       % Give a unique label
+\end{figure}
+
+Also, Fig.~\ref{figfus} demonstrates that the efficiency of
+AI change in migration energy decreases as the US frequency increases,
+this effect being observed for all the samples and does not depend on impurity iron concentration.
+In particular, saturation $\tau_\mathrm{US}/\tau_{0}$ at $f_\mathrm{US}=2.4$~MHz is observed
+at approximately $W_\mathrm{US}=0.6$~W/cm$^2$,
+while for $9.0$~MHz it is revealed at $0.9$~W/cm$^2$, see Fig.~\ref{figfus}(b).
+As for the saturation magnitude, it does not depend on $f_\mathrm{US}$.
+Transverse waves as well, despite their low frequency, less strongly impact the processes of iron ion diffusion.
+
+Fig.~\ref{figfus} also gives iron concentrations $N_\mathrm{Fe,0}$ obtained from $I_\mathrm{SC}$ relaxation
+in conditions of complete pair dissociation (i.e. the illumination that causes the maximum short circuit current decrease).
+The next figure, Fig.~\ref{figNFe}, presents $\tau_\mathrm{US}/\tau_{0}$  dependencies
+for the samples with different iron concentrations under USL of the same US frequency.
+It is evident that the magnitude of AI effect in fact does not depend on $N_\mathrm{Fe,0}$.
+
+\begin{figure}
+ \includegraphics[width=0.5\textwidth]{Fig5}
+\caption{
+The dependencies of the degree of AI association time decrease on applied US intensity
+in SC with different content of iron atoms.
+$T=340$~K.
+$f_\mathrm{US}=5.4$~MHz.
+The marks are the experimental results, the lines are given for convenience only.
+}
+\label{figNFe}       % Give a unique label
+\end{figure}
+
+Our experiments have shown that
+as the temperature decreases the efficiency of US impact on $\tau_ass$ increases
+(see Fig.~\ref{figTemp} which presents the temperature dependence of $\tau_\mathrm{US}/\tau_{0}$)
+at a constant intensity of US application.
+In general, these curves are close to linear.
+
+\begin{figure}
+ \includegraphics[width=0.5\textwidth]{Fig6}
+\caption{
+Temperature dependencies of  acoustically induced FeB association time decrease.
+The marks are the experimental results, the lines are the linear fitted curves.
+}
+\label{figTemp}       % Give a unique label
+\end{figure}
+
+The association of FeB complex happens at the  expense of  Fe$_i$ diffusion towards the
+boron atoms located in substituting positions and strongly bound with the neighbour due to forming covalent bonds with them.
+Therefore, the $\tau_{ass}$ depends on the coefficient of iron diffusion $D_\mathrm{Fe}$,
+so a more detailed, in comparison with Eq.~(\ref{eqTass}), expression takes the following form \cite{FeBAssJAP2014,FeBJAP2005,FeBKin2019}:
+\begin{equation}
+\label{eqTass2}
+\tau_{ass}=\frac{\varepsilon\varepsilon_0 kT}{q^2D_\mathrm{Fe}N_A}=
+\frac{\varepsilon\varepsilon_0 kT}{q^2D_\mathrm{0,Fe}N_A}\exp\left(\frac{E_m}{kT}\right)\,,
+\end{equation}
+where
+$D_\mathrm{Fe}=D_\mathrm{0,Fe}\exp(-E_m/kT)$,
+$D_\mathrm{0,Fe}$ is a temperature-independent multiplier,
+in the general case \cite{AZIZ2001,Stavola,WeberFe}
+$D_\mathrm{0,Fe}=\beta\nu a^2\exp(\delta S_\mathrm{Fe}/k)$,
+$\beta$ is a correlation factor,
+$\nu$  is an effective vibrational (attempt) frequency,
+$a$ is a jump distance,
+$\delta S_\mathrm{Fe}$ is the migration entropy.
+
+As evident from Eq.~(\ref{eqTass2}), the decrease in FeB association time under USL testifies about
+AI increase in $D_\mathrm{Fe}$.
+It is, most probable, due to the increase in diffusion energy (see Fig.~\ref{figUSChem}).
+Enhanced diffusion of impurities in the US field was observed previously
+both in poly- and mono-crystals of silicon and gallium arsenide \cite{Ostapenko1999,Zaveryukhin2002}.
+The decrease in interstitial iron atom migration energy can be given as
+\begin{figure}
+ \includegraphics[width=0.9\textwidth]{Fig7}
+\caption{
+A schematic picture showing the spatial variation of the potential energy of
+iron interstitial atom in Si as a function of position near the boron substitutional atom.
+US stress lowers the energy barrier for Fe migration.
+The curves are scaled arbitrarily.
+}
+\label{figUSChem}       % Give a unique label
+\end{figure}
+
+\begin{equation}
+\label{eqEmUs}
+E_m \xrightarrow{ultrasound} E_{m,0}-\Delta E_\mathrm{US}\,,
+\end{equation}
+where $E_{m,0}$ is the migration energy without elastic oscillations in silicon SC,
+which is $E_{m,0}\sim0.66$~eV according to \cite{FeBAssJAP2014,FeBkinAPL2008} and our experimental data;
+$\Delta E_\mathrm{US}$ is the AI change in this quantity value.
+According to the performed investigations  $\Delta E_\mathrm{US}=f(W_\mathrm{US},f_\mathrm{US},T)$ and does not exceed 10~meV.
+
+The physics of the found AI effect can be the following.
+By using thermodynamic formalism it was shown in \cite{AZIZ2001} that the ability of
+impurities in Si to diffuse depends on mechanical stress $\eta$:
+\begin{equation}
+\label{eqTeor}
+\frac{D(\eta)}{D(0)}=\exp\left(\frac{\eta V^*}{kT}\right)=
+\exp\left(\frac{\eta [-\Omega+V^r+V^m]}{kT}\right)\,,
+\end{equation}
+where
+$V^*$ is an activation strain tensor,
+$\Omega$ is the atomic volume representing  crystal dimension changes
+upon the formation of lattice site before the lattice relaxation
+around the newly created point defect is permitted,
+$V^r$ is a relaxation volume,
+$V^m$ is a migration strain tensor, which characterizes stress impact on the defect mobility.
+The enhance Fe$_i$ diffusivity in the strain field is discussed in \cite{FeStrain} as well.
+
+In our opinion, this is the mechanism, which explains the found US impact on FeB pairs association in silicon SC.
+As seen from Eq.~(\ref{eqTeor}), the diffusion coefficient change caused
+by the applied stress is thermally  activated, which explains the observed
+temperature dependence of AI changes in $\tau_{ass}$.
+In addition, generally $V^*$ contains 81 component  \cite{AZIZ2001},
+and therefore change in $D$ depends on the direction of atom elastic displacements.
+This accounts for less effective AI impact of transverse waves.
+It should be noted, that it is the absorption of oscillation energy that the authors \cite{GORB2020,UST:Medvid}
+use to reveal the causes of USL impact on defect system in Si--SiO$_2$ structures,
+and in particular AI increase in impurities mobility.
+
+The observation reported here opens up new possibilities in manipulating electronic
+properties of silicon barrier devices.
+For example, as mentioned above, during phosphor diffusion, the iron impurity gettering occurs as well.
+This happens at high temperatures (near 900$^\circ$C),
+and for this reason iron is found in unpaired interstitial state.
+USL applied during this technological process should increase the degree of the SC basic region
+cleaning due to AI increase in Fe coefficient and as a result improve SC performance.
+
+\section{Conclusion}
+
+The ultrasound influence on
+FeB pair association in silicon solar cells has been investigated experimentally.
+The investigation has revealed that pair associations are accelerated due to enhance of iron
+atom diffusion under the action of ultrasound field.
+The effect gets stronger with the increase in temperature and decrease in USL frequency.
+The application of longitudinal waves is more effective than that of transverse waves.
+The effect can be related to a nearly room--temperature decrease in iron migration energy (to 10 meV) in the ultrasound stress ﬁelds.
+Thus, ultrasound can be an effective functional tool for controlling silicon structure characteristics.
+
+
+\begin{acknowledgements}
+The authors would like to acknowledge the financial supports by National Research Foundation  of Ukraine
+(project number 2020.02/0036)
+\end{acknowledgements}
+
+
+% Authors must disclose all relationships or interests that
+% could have direct or potential influence or impart bias on
+% the work:
+%
+\section*{Conflict of interest}
+
+The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.
+
+
+% BibTeX users please use one of
+%\bibliographystyle{spbasic}      % basic style, author-year citations
+%\bibliographystyle{spmpsci}      % mathematics and physical sciences
+\bibliographystyle{spphys}       % APS-like style for physics
+\bibliography{olikh}
+
+%% Non-BibTeX users please use
+%\begin{thebibliography}{}
+%%
+%% and use \bibitem to create references. Consult the Instructions
+%% for authors for reference list style.
+%%
+%\bibitem{RefJ}
+%% Format for Journal Reference
+%Author, Article title, Journal, Volume, page numbers (year)
+%% Format for books
+%\bibitem{RefB}
+%Author, Book title, page numbers. Publisher, place (year)
+%% etc
+%\end{thebibliography}
+
+\end{document}
+% end of file template.tex
+
