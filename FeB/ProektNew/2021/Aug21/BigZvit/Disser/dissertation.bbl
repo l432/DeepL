@@ -215,7 +215,7 @@ Influence of $\gamma$--irradiation and ultrasound treatment on current
 \bibitem{2021Ultrasonics}
 \selectlanguageifdefined{english}
 Acoustically Induced Acceleration of Iron Migration in Silicon Solar Cells~/
-  O.~Olikh, V.~Kostylyov, V.~Vlasiuk, Korkishko~R.~// Ultrasonics 2021, 5th
+  O.~Olikh, V.~Kostylyov, V.~Vlasiuk, R.~Korkishko~// Ultrasonics 2021, 5th
   International Caparica Conference on Ultrasonic based Applications: from
   analysis to synthesis. Proceedings Book. Caparica, Portugal. ---
 \newblock Caparica: 2021. ---
@@ -225,10 +225,19 @@ Acoustically Induced Acceleration of Iron Migration in Silicon Solar Cells~/
 \selectlanguageifdefined{english}
 Estimation of Iron Concenration in Silicon Solar Cell by Kinetics of
   Light-Induced Change in Short-Circuit Current~/ O.~Olikh, V.~Kostylyov,
-  V.~Vlasiuk, Korkishko~R.~// II International Advanced Study Conference
+  V.~Vlasiuk, R.~Korkishko~// II International Advanced Study Conference
   Condensed Matter and Low Temperature Physics CM\&LTP 2021. Book of Abstracts.
   Kharkiv, Ukraine. ---
 \newblock Kharkiv: 2021. ---
 \newblock P.~191.
+
+\bibitem{OlikhJPS}
+\selectlanguageifdefined{english}
+\BibEmph{Olikh,~O.~Ya.} Modeling of ideality factor value in
+  $n^+$--$p$--$p^+$--Si structure~/ O.~Ya.~Olikh, O.~V.~Zavhorodnii~//
+  \BibEmph{Journal of Physical Studies}. ---
+\newblock 2020. ---
+\newblock Vol.~24, no.~4. ---
+\newblock P.~4701.
 
 \end{thebibliography}
