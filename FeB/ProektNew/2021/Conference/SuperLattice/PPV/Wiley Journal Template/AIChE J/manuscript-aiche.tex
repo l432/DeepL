@@ -1,0 +1,182 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass{wiley-article} % Courtesy Overleaf
+
+% Add additional packages here if required
+\usepackage[super, comma, sort&compress]{natbib}
+\usepackage{natmove}
+\usepackage{setspace}
+
+%\changefontsizes{10pt}
+\raggedbottom 
+
+
+% Update article type if known
+\papertype{Original Article}
+\paperfield{Field of the paper}
+
+\abbrevs{%
+         ABC, a black cat; 
+	     DEF, doesn't ever fret; 
+	     GHI, goes home immediately.
+     }
+
+\title{This is my title}
+
+\author[1\authfn{1}]{Author First}
+\author[2\authfn{1}]{Author Second}
+\author[1\authfn{2}]{Author Third}
+
+\contrib[\authfn{1}]{Equally contributing authors.}
+
+\affil[1]{Department, Institution, City, State or Province, Postal Code, Country}
+\affil[2]{Department, Institution, City, State or Province, Postal Code, Country}
+
+\corraddress{Author C, Department, Institution, City, State or Province, Postal Code, Country}
+\corremail{correspondingauthor@email.com}
+
+\presentadd[\authfn{2}]{Department, Institution, City, State or Province, Postal Code, Country}
+
+\fundinginfo{Funder One, Funder One Department, Grant/Award Number: 123456, 123457 and 123458; Funder Two, Funder Two Department, Grant/Award Number: 123459}
+
+\runningauthor{F. Author et al.}
+
+\begin{document}
+
+\begin{frontmatter}
+\maketitle
+
+\begin{abstract}
+This is a generic template designed for use by multiple journals, which includes several options for customization. Please consult the author guidelines for the journal to which you are submitting in order to confirm that your manuscript will comply with the journal's requirements. Please replace this text with your abstract.
+
+% Please include a maximum of seven keywords
+\keywords{keyword 1, keyword 2, keyword 3, keyword 4, keyword 5, keyword 6, keyword 7}
+\end{abstract}
+
+\end{frontmatter}
+
+%\doublespacing
+
+\section{First Level Heading}\label{sec:intro}
+Please lay out your article using the section headings and example objects below, and remember to delete all help text prior to submitting your article to the journal. For regular Research Articles, submitted manuscripts should not exceed a total of 35 pages including
+title/abstract page, paper text (basis: 12 point font, double space, 1 inch by inch margins), figures, tables, and list of references. Exceptions can be made with approved justification. It is preferred that figures and tables are embedded within the main body of the text. There
+may be more than one figure or table per page.
+
+Upload a PDF version of your manuscript for review. Once a manuscript has been accepted for
+publication, Zip-up the directory containing all your LaTeX files. This includes the TeX document, all graphics as separate files, any class files, any bibliography files, and the PDF of the final version. This zip file can be uploaded as a single file into Manuscript Central.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.3\linewidth]{example-image-rectangle}
+\caption{Although we encourage authors to send us the highest-quality figures possible, for peer-review purposes we can accept a wide variety of formats, sizes, and resolutions. The figure and its legend must be understandable without reference to the text. Include definitions of any symbols used and define/explain all abbreviations and units of measurement.}
+\label{fig: sample1}
+\end{figure}
+
+\subsection{Second level heading}
+If data, scripts or other artifacts used to generate the analyses presented in the article are available via a publicly available data repository, please include a reference to the location of the material within the article. Equations should be inserted using standard LaTeX equation and eqnarray environments, not as graphics, and should be set in the main text. Here is a simple inline equation $e^{i\pi}=-1$ and here's a longer equation, numbered:
+\begin{equation}
+	\label{eqn:some}
+	\int_0^{+\infty}e^{-x^2}dx=\frac{\sqrt{\pi}}{2}
+\end{equation}
+And one that is not numbered
+\begin{equation*}
+e^{i\pi}=-1
+\end{equation*}
+
+\subsection{Document class options}
+The \texttt{wiley-article} document class offers the following options:
+%
+\begin{description}
+\item[\texttt{blind}] Anonymise all author, affiliation, correspondence
+       and funding information.
+\item[\texttt{lineno}] Adds line numbers.
+\item[\texttt{serif}] Sets the body font to be serif.
+\item[\texttt{twocolumn}] Sets the body text in two-column layout.
+\item[\texttt{num-refs}] Uses the numerical Vancouver bibliography style; see section \ref{sec:bibstyles}.
+\item[\texttt{alpha-refs}] Uses the author-year RSS bibliography style; see section \ref{sec:bibstyles}.
+\end{description}
+
+\subsection{Adding citations and a references list}\label{sec:bibstyles}
+Please use a \verb|.bib| file to store your references. You can then cite entries from it, like this: \cite{urmson2008autonomous,lees2010theoretical} and \cite{geiger2012we}. Just remember to specify a bibliography style, as well as the filename of the \verb|.bib|. This template provides two \verb|\documentclass| options for the citation and reference list style: 
+\begin{description}
+\item[Numerical style] Use \verb|\documentclass[...,num-refs]{wiley-article}| (Vancouver style)
+\item[Author-year style] Use \verb|\documentclass[...,alpha-refs]{wiley-article}| (RSS style)
+\end{description}
+
+If you are submitting to a journal that uses neither of the above, then instead of specifying one of these options in the document class you should use  \verb|\bibliographystyle| to specify the appropriate \verb|WileyNJD-...| style, and load the \verb|natbib| with the appropriate options as needed. If the journal provides you with an alternative .bst file to use, please upload this first, and then specify it with the \verb|\bibliographystyle| as above.
+
+\subsection{Usage examples of \texttt{wiley-article} options}
+
+\begin{enumerate}
+\item Using numerical, sort-by-authors citations:
+\begin{verbatim}
+\documentclass[num-refs]{wiley-article}
+\end{verbatim}
+
+\item Anonymised submission using author-year citations:
+\begin{verbatim}
+\documentclass[blind,alpha-refs]{wiley-article}
+\end{verbatim}
+
+\item Using \texttt{unsrtnat} for numerical, in-sequence citations:
+\begin{verbatim}
+\documentclass{wiley-article}
+\usepackage[numbers]{natbib}
+\bibliographystyle{unsrtnat}
+\end{verbatim}
+
+\item Using the \texttt{WileyNJD-AMA} reference style and superscript citations, two-column and serif fonts, for submission to AIChE:
+
+\begin{verbatim}
+\documentclass[serif,twocolumn]{wiley-article}
+\usepackage[super]{natbib}
+\bibliographystyle{WileyNJD-AMA}
+\makeatletter
+\renewcommand{\@biblabel}[1]{#1.}
+\makeatother
+\end{verbatim}
+
+\end{enumerate}
+
+\subsubsection{Third level heading}
+Supporting information will be included with the published article. For submission any supporting information should be supplied as separate files but referred to in the text. 
+
+Appendices will be published after the references. For submission they should be supplied as separate files but referred to in the text.
+
+\paragraph{Fourth level heading}
+Chemical substances should be referred to by the generic name only. Trade names should not be used. Drugs should be referred to by their generic names. If proprietary drugs have been used
+in the study, refer to these by their generic name, mentioning the proprietary name, and the name and location of the manufacturer, in parentheses.
+
+\subparagraph{Fifth level heading}
+Measurements should be given in SI or SI-derived units. Chemical substances should be referred to by the generic name only. Trade names should not be used. Drugs should be referred to by their generic names. If proprietary drugs have been used in the study, refer to these by their generic name, mentioning the proprietary name, and the name and location of the manufacturer, in parentheses.
+
+\begin{table}
+\centering 
+\caption{This is a table. Tables should be self-contained and complement, but not duplicate, information contained in the text. They should be not be provided as images. Legends should be concise but comprehensive – the table, legend and footnotes must be understandable without reference to the text. All abbreviations must be defined in footnotes.}
+\label{tab: sample table}
+\begin{tabular}{lccrr}
+\headrow
+\thead{Variables} & \thead{JKL} & \thead{Control} & \thead{MN} & \thead{$t$}\\
+Age at testing & 38 & 58 & 504.48 & 58 ms\\
+Age at testing & 38 & 58 & 504.48 & 58 ms\\
+Age at testing & 38 & 58 & 504.48 & 58 ms\\
+Age at testing & 38 & 58 & 504.48 & 58 ms\\
+Age at testing & 38 & 58 & 504.48 & 58 ms\\
+Age at testing & 38 & 58 & 504.48 & 58 ms\\
+\hline  
+\end{tabular}
+\end{table}
+
+\section*{Acknowledgments}
+Acknowledgements should include contributions from anyone who does not meet the criteria for authorship (for example, to recognize contributions from people who provided technical help, collation of data, writing assistance, acquisition of funding, or a department chairperson who provided general support), as well as any funding or other support information.
+
+\section*{Conflict of Interest}
+You may be asked to provide a conflict of interest statement during the submission process. Please check the journal's author guidelines for details on what to include in this section. Please ensure you liaise with all co-authors to confirm agreement with the final statement.
+
+\section*{Supporting Information}
+Supporting information is information that is not essential to the article, but provides greater depth and background. It is hosted online and appears without editing or typesetting. It may include tables, figures, videos, datasets, etc. More information can be found in the journal's author guidelines or at \url{http://www.wileyauthors.com/suppinfoFAQs}. Note: if data, scripts, or other artefacts used to generate the analyses presented in the paper are available via a publicly available data repository, authors should include a reference to the location of the material within their paper.
+
+
+\bibliographystyle{aichej}
+\bibliography{mybib}
+
+\end{document}

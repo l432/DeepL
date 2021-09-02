@@ -1,0 +1,337 @@
+\begin{thebibliography}{49}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{}
+
+\bibitem[{Claeys and Simoen(2018)Claeys, Cor and Simoen, Eddy}]{Claers2018}
+Claeys C, Simoen E.
+\newblock Metal Impurities in Silicon- and Germanium-Based Technologies:
+  Origin, Characterization, Control, and Device Impact, vol. 270 of Springer
+  Series in Materials Science.
+\newblock Berlin/New York: Springer International Publishing; 2018.
+
+\bibitem[{Zhu et~al.(2016)Haiyan Zhu and Xuegong Yu and Xiaodong Zhu and Yichao
+  Wu and Jian He and Jan Vanhellemont and Deren Yang}]{ZHU2016192}
+Zhu H, Yu X, Zhu X, Wu Y, He J, Vanhellemont J, et~al.
+\newblock Low temperature iron gettering by grown-in defects in p--type
+  {C}zochralski silicon.
+\newblock Superlattices Microstruct 2016 Nov;99:192--196.
+
+\bibitem[{Schmidt(2005)Schmidt, Jan}]{FeB:Schmidt}
+Schmidt J.
+\newblock Effect of Dissociation of Iron--Boron Pairs in Crystalline Silicon on
+  Solar Cell Properties.
+\newblock Progress in Photovoltaics: Research and Applications 2005
+  Jun;13(4):325--331.
+
+\bibitem[{Schubert et~al.(2015)M.C. Schubert and M. Padilla and B. Michl and L.
+  Mundt and J. Giesecke and J. Hohl-Ebinger and J. Benick and W. Warta and M.
+  Tajima and A. Ogura}]{IronSC}
+Schubert MC, Padilla M, Michl B, Mundt L, Giesecke J, Hohl-Ebinger J, et~al.
+\newblock Iron related solar cell instability: Imaging analysis and impact on
+  cell performance.
+\newblock Sol Energy Mater Sol Cells 2015 Jul;138:96--101.
+
+\bibitem[{Schroder(2006)D. K. Schroder}]{Schroder2006}
+Schroder DK.
+\newblock Semiconductor Material and Device Characterization.
+\newblock Third ed. New Jersey: John Wiley \& Sons; 2006.
+
+\bibitem[{Kurchin et~al.(2020)R. C. Kurchin and J. R. Poindexter and V.
+  V\"{a}h\"{a}nissi and H. Savin and C. del Ca\~{n}izo and T.
+  Buonassisi}]{HowMuchPhysics}
+Kurchin RC, Poindexter JR, V\"{a}h\"{a}nissi V, Savin H, del Ca\~{n}izo C,
+  Buonassisi T.
+\newblock How Much Physics is in a Current-Voltage Curve? Inferring Defect
+  Properties From Photovoltaic Device Measurements.
+\newblock IEEE J Photovolt 2020 Nov;10(6):1532--1537.
+
+\bibitem[{Peaker et~al.(2018)Peaker,A. R. and Markevich,V. P. and
+  Coutinho,J.}]{LaplDLTS}
+Peaker AR, Markevich VP, Coutinho J.
+\newblock Tutorial: Junction spectroscopy techniques and deep-level defects in
+  semiconductors.
+\newblock J Appl Phys 2018;123(16):161559.
+
+\bibitem[{Bulyarskiy et~al.(2020)Bulyarskiy,Sergey V. and Lakalin,Alexander V.
+  and Saurov,Mikhail A. and Gusarov,Georgy G.}]{BulyarJAP}
+Bulyarskiy SV, Lakalin AV, Saurov MA, Gusarov GG.
+\newblock The effect of vacancy-impurity complexes in silicon on the
+  current-voltage characteristics of p-n junctions.
+\newblock J Appl Phys 2020 Oct;128(15):155702.
+
+\bibitem[{Bulyarskiy(2019)Sergey V. Bulyarskiy}]{BulyarSSE}
+Bulyarskiy SV.
+\newblock The effect of electron-phonon interaction on the formation of reverse
+  currents of p-n-junctions of silicon-based power semiconductor devices.
+\newblock Solid-State Electron 2019 Oct;160:107624.
+
+\bibitem[{Claeys and Simoen(2019)Claeys, Cor and Simoen, Eddy}]{Claeys2019}
+Claeys C, Simoen E.
+\newblock Device Performance as a Metrology Tool to Detect Metals in Silicon.
+\newblock physica status solidi (a) 2019 Sep;216(17):1900126.
+
+\bibitem[{Simoen et~al.(2007)Simoen, Eddy and Claeys, Cor and Vanhellemont,
+  Jan}]{simoen2007}
+Simoen E, Claeys C, Vanhellemont J.
+\newblock Defect Analysis in Semiconductor Materials Based on p-n Junction
+  Diode Characteristics.
+\newblock In: Defects and Diffusion in Semiconductors - An Annual Retrospective
+  IX, vol. 261 of Defect and Diffusion Forum Trans Tech Publications Ltd; 2007.
+  p. 1--24.
+
+\bibitem[{Olikh(2019)O.Ya. Olikh}]{Olikh2019SM}
+Olikh OY.
+\newblock Relationship between the ideality factor and the iron concentration
+  in silicon solar cells.
+\newblock Superlattices Microstruct 2019 Dec;136:106309.
+
+\bibitem[{van~der Heide et~al.(2005)van der Heide, A. S. H. and Schonecker, A.
+  and Bultman, J. H. and Sinke, W. C.}]{Heide}
+van~der Heide ASH, Schonecker A, Bultman JH, Sinke WC.
+\newblock Explanation of High Solar Cell Diode Factors by Nonuniform Contact
+  Resistance.
+\newblock Progress in Photovoltaics: Research and Applications 2005
+  Jan;13(1):3--16.
+
+\bibitem[{{Duan} et~al.(2018)L. {Duan} and H. {Yi} and C. {Xu} and M. B.
+  {Upama} and M. A. {Mahmud} and D. {Wang} and F. H. {Shabab} and A.
+  {Uddin}}]{Duan}
+{Duan} L, {Yi} H, {Xu} C, {Upama} MB, {Mahmud} MA, {Wang} D, et~al.
+\newblock Relationship Between the Diode Ideality Factor and the Carrier
+  Recombination Resistance in Organic Solar Cells.
+\newblock IEEE Journal of Photovoltaics 2018 Nov;8(6):1701--1709.
+
+\bibitem[{Chen et~al.(2020)Chen,Jiaxiang and Zhu,Min and Lu,Xing and
+  Zou,Xinbo}]{n_CharGaN}
+Chen J, Zhu M, Lu X, Zou X.
+\newblock Electrical characterization of {G}a{N} {S}chottky barrier diode at
+  cryogenic temperatures.
+\newblock Appl Phys Lett 2020 Feb;116(6):062102.
+
+\bibitem[{Dalapati et~al.(2020)Dalapati, P. and Manik, N.B. and Basu,
+  A.N.}]{n_CharSemic}
+Dalapati P, Manik NB, Basu AN.
+\newblock Analysis of the Temperature Dependence of Diode Ideality Factor in
+  {I}n{G}a{N}-Based {UV}-{A} Light-Emitting Diode.
+\newblock Semiconductors 2020 Oct;54(10):1284--1289.
+
+\bibitem[{Calado et~al.(2019)Calado, Phil and Burkitt, Dan and Yao, Jizhong and
+  Troughton, Joel and Watson, Trystan M. and Carnie, Matt J. and Telford,
+  Andrew M. and O'Regan, Brian C. and Nelson, Jenny and Barnes, Piers
+  R.F.}]{n_CharPhysRevAppl}
+Calado P, Burkitt D, Yao J, Troughton J, Watson TM, Carnie MJ, et~al.
+\newblock Identifying Dominant Recombination Mechanisms in Perovskite Solar
+  Cells by Measuring the Transient Ideality Factor.
+\newblock Phys Rev Applied 2019 Apr;11:044005.
+
+\bibitem[{Carleo et~al.(2019)Carleo, Giuseppe and Cirac, Ignacio and Cranmer,
+  Kyle and Daudet, Laurent and Schuld, Maria and Tishby, Naftali and
+  Vogt-Maranto, Leslie and Zdeborov\'a, Lenka}]{MachLean_RevModPhys}
+Carleo G, Cirac I, Cranmer K, Daudet L, Schuld M, Tishby N, et~al.
+\newblock Machine learning and the physical sciences.
+\newblock Rev Mod Phys 2019 Dec;91:045002.
+
+\bibitem[{Ju et~al.(2020)Ju,Shenghong and Shimizu,Shuntaro and
+  Shiomi,Junichiro}]{MachLeanJAP}
+Ju S, Shimizu S, Shiomi J.
+\newblock Designing thermal functional materials by coupling thermal transport
+  calculations and machine learning.
+\newblock J Appl Phys 2020 Oct;128(16):161102.
+
+\bibitem[{Rodrigues et~al.(2018)Rodrigues, Sandy and Ramos, Helena Geirinhas
+  and Morgado-Dias, Fernando}]{MachLeanPPV}
+Rodrigues S, Ramos HG, Morgado-Dias F.
+\newblock Machine learning PV system performance analyser.
+\newblock Prog Photovoltaics Res Appl 2018 Aug;26(8):675--687.
+
+\bibitem[{Ju et~al.(2020)Ju,Shenghong and Shimizu,Shuntaro and
+  Shiomi,Junichiro}]{MI_JAP}
+Ju S, Shimizu S, Shiomi J.
+\newblock Designing thermal functional materials by coupling thermal transport
+  calculations and machine learning.
+\newblock J Appl Phys 2020 Oct;128(16):161102.
+
+\bibitem[{Jean et~al.(2015)Jean, Joel and Brown, Patrick R. and Jaffe, Robert
+  L. and Buonassisi, Tonio and Bulovi\'{c}, Vladimir}]{SCRev2015}
+Jean J, Brown PR, Jaffe RL, Buonassisi T, Bulovi\'{c} V.
+\newblock Pathways for solar photovoltaics.
+\newblock Energy Environ Sci 2015 Jul;8(4):1200--1219.
+
+\bibitem[{Ajayan et~al.(2020)J. Ajayan and D. Nirmal and P. Mohankumar and M.
+  Saravanan and M. Jagadesh and L. Arivazhagan}]{SCRev2020}
+Ajayan J, Nirmal D, Mohankumar P, Saravanan M, Jagadesh M, Arivazhagan L.
+\newblock A review of photovoltaic performance of organic/inorganic solar cells
+  for future renewable and sustainable energy technologies.
+\newblock Superlattices Microstruct 2020 Jul;143:106549.
+
+\bibitem[{Burgelman et~al.(2000)M Burgelman and P Nollet and S
+  Degrave}]{SCAPS1}
+Burgelman M, Nollet P, Degrave S.
+\newblock Modelling polycrystalline semiconductor solar cells.
+\newblock Thin Solid Films 2000 Feb;361--362:527--532.
+
+\bibitem[{Decock et~al.(2011)Koen Decock and Samira Khelifi and Marc
+  Burgelman}]{SCAPS2}
+Decock K, Khelifi S, Burgelman M.
+\newblock Modelling multivalent defects in thin film solar cells.
+\newblock Thin Solid Films 2011 Aug;519(21):7481--7484.
+
+\bibitem[{Hu et~al.(2015)E.T. Hu and G.Q. Yue and R.J. Zhang and Y.X. Zheng and
+  L.Y. Chen and S.Y. Wang}]{SCAPSuseSi4}
+Hu ET, Yue GQ, Zhang RJ, Zheng YX, Chen LY, Wang SY.
+\newblock Numerical simulations of multilevel impurity photovoltaic effect in
+  the sulfur doped crystalline silicon.
+\newblock Renewable Energy 2015 May;77:442--446.
+
+\bibitem[{Hamache et~al.(2016)Abdelghani Hamache and Nouredine Sengouga and
+  Afak Meftah and Mohamed Henini}]{SCAPSuseSi1}
+Hamache A, Sengouga N, Meftah A, Henini M.
+\newblock Modeling the effect of 1 {M}e{V} electron irradiation on the
+  performance of n$^+$--p--p$^+$ silicon space solar cells.
+\newblock Radiat Phys Chem 2016 Jun;123:103--108.
+
+\bibitem[{Kim et~al.(2017)Kihwan Kim and Jihye Gwak and Seung Kyu Ahn and
+  Young-Joo Eo and Joo Hyung Park and Jun-Sik Cho and Min Gu Kang and Hee-Eun
+  Song and Jae Ho Yun}]{SCAPSuseSi6}
+Kim K, Gwak J, Ahn SK, Eo YJ, Park JH, Cho JS, et~al.
+\newblock Simulations of chalcopyrite/c-Si tandem cells using SCAPS-1D.
+\newblock Sol Energy 2017;145:52--58.
+
+\bibitem[{Cappelletti et~al.(2018)M.A. Cappelletti and G.A. Casas and A.P.
+  Cédola and E.L. Peltzer y Blancá and B. Marí Soucase}]{SCAPSuse1}
+Cappelletti MA, Casas GA, Cédola AP, y~Blancá ELP, Soucase BM.
+\newblock Study of the reverse saturation current and series resistance of
+  p-p-n perovskite solar cells using the single and double-diode models.
+\newblock Superlattices Microstruct 2018 Nov;123:338--348.
+
+\bibitem[{Boubakeur et~al.(2020)M. Boubakeur and A. Aissat and M. {Ben Arbia}
+  and H. Maaref and J.P. Vilcot}]{SCAPSuse2020}
+Boubakeur M, Aissat A, {Ben Arbia} M, Maaref H, Vilcot JP.
+\newblock Enhancement of the efficiency of ultra-thin CIGS/Si structure for
+  solar cell applications.
+\newblock Superlattices Microstruct 2020 Feb;138:106377.
+
+\bibitem[{Casas et~al.(2017)G.A. Casas and M.A. Cappelletti and A.P. Cédola
+  and Bernabé Marí Soucase and E.L. {Peltzer y Blancá}}]{SCAPSuse2017SM}
+Casas GA, Cappelletti MA, Cédola AP, Soucase BM, {Peltzer y Blancá} EL.
+\newblock Analysis of the power conversion efficiency of perovskite solar cells
+  with different materials as Hole-Transport Layer by numerical simulations.
+\newblock Superlattices Microstruct 2017;107:136--143.
+
+\bibitem[{P\"assler(2002)P\"assler, Roland}]{Pasler}
+P\"assler R.
+\newblock Dispersion-related description of temperature dependencies of band
+  gaps in semiconductors.
+\newblock Phys Rev B 2002 Aug;66:085201.
+
+\bibitem[{Yan and Cuevas(2014)Yan,Di and Cuevas,Andres}]{EgNarrow}
+Yan D, Cuevas A.
+\newblock Empirical determination of the energy band gap narrowing in p$^+$
+  silicon heavily doped with boron.
+\newblock J Appl Phys 2014 Nov;116(19):194505.
+
+\bibitem[{Green(1990)Green, Martin A.}]{Nc:Green}
+Green MA.
+\newblock Intrinsic concentration, effective densities of states, and effective
+  mass in silicon.
+\newblock J Appl Phys 1990 Mar;67(6):2944--2954.
+
+\bibitem[{Couderc et~al.(2014)Couderc,Romain and Amara,Mohamed and
+  Lemiti,Mustapha}]{Si_ni_Couderc}
+Couderc R, Amara M, Lemiti M.
+\newblock Reassessment of the intrinsic carrier density temperature dependence
+  in crystalline silicon.
+\newblock J Appl Phys 2014 Mar;115(9):093705.
+
+\bibitem[{Klaassen(1992)D.B.M. Klaassen}]{KLAASSEN953}
+Klaassen DBM.
+\newblock A unified mobility model for device simulation --- {I}. Model
+  equations and concentration dependence.
+\newblock Solid-State Electron 1992 Jul;35(7):953-- 959.
+
+\bibitem[{O'Mara et~al.(1990)O'Mara, W.C. and Herring, R.B. and Hant,
+  L.P.}]{OMara}
+O'Mara WC, Herring RB, Hant LP.
+\newblock Handbook of semiconductor silicon technology.
+\newblock New Jersey, USA: Noyes Publications; 1990.
+
+\bibitem[{Altermatt et~al.(1997)Altermatt,Pietro P. and Schmidt,Jan and
+  Heiser,Gernot and Aberle,Armin G.}]{Si_Auger}
+Altermatt PP, Schmidt J, Heiser G, Aberle AG.
+\newblock Assessment and parameterisation of {C}oulomb--enhanced {A}uger
+  recombination coefficients in lowly injected crystalline silicon.
+\newblock J Appl Phys 1997 Nov;82(10):4938--4944.
+
+\bibitem[{Nguyen et~al.(2014)Nguyen,Hieu T. and Baker--Finch,Simeon C. and
+  Macdonald,Daniel}]{Si_BtB}
+Nguyen HT, Baker-Finch SC, Macdonald D.
+\newblock Temperature dependence of the radiative recombination coefficient in
+  crystalline silicon from spectral photoluminescence.
+\newblock Appl Phys Lett 2014 Mar;104(11):112105.
+
+\bibitem[{Murphy et~al.(2011)Murphy, J. D. and Bothe, K. and Olmo, M. and
+  Voronkov, V. V. and Falster, R. J.}]{MurphyJAP2011}
+Murphy JD, Bothe K, Olmo M, Voronkov VV, Falster RJ.
+\newblock The effect of oxide precipitates on minority carrier lifetime in
+  p--type silicon.
+\newblock J Appl Phys 2011 Sep;110(5):053713.
+
+\bibitem[{Wijaranakula(1993)Wijaranakula, W.}]{FeB:kinetic}
+Wijaranakula W.
+\newblock The Reaction Kinetics of Iron--Boron Pair Formation and Dissociation
+  in P--Type Silicon.
+\newblock J Electrochem Soc 1993 Jan;140(1):275--281.
+
+\bibitem[{Zoth and Bergholz(1990)Zoth, G. and Bergholz, W.}]{FeB_Zong}
+Zoth G, Bergholz W.
+\newblock A fast, preperetion-free method to detect iron in silicon.
+\newblock J Appl Phys 1990 Jun;67(11):6764--6771.
+
+\bibitem[{Geerligs and Macdonald(2004)Geerligs,L. J. and
+  Macdonald,Daniel}]{FeBLight2}
+Geerligs LJ, Macdonald D.
+\newblock Dynamics of light-induced FeB pair dissociation in crystalline
+  silicon.
+\newblock Appl Phys Lett 2004 Nov;85(22):5227--5229.
+
+\bibitem[{Rougieux et~al.(2018)Fiacre E. Rougieux and Chang Sun and Daniel
+  Macdonald}]{ROUGIEUX2018}
+Rougieux FE, Sun C, Macdonald D.
+\newblock Determining the charge states and capture mechanisms of defects in
+  silicon through accurate recombination analyses: A review.
+\newblock Sol Energy Mater Sol Cells 2018 Dec;187:263 -- 272.
+
+\bibitem[{Istratov et~al.(1999)Istratov, A. A. and Hieslmair, H. and Weber,
+  E.R.}]{Istratov1999}
+Istratov AA, Hieslmair H, Weber ER.
+\newblock Iron and its complexes in silicon.
+\newblock Applied Physics A: Materials Science \& Processing 1999
+  Jul;69(1):13--44.
+
+\bibitem[{Breitenstein(2013)Breitenstein, O.}]{Breitenstein2013}
+Breitenstein O.
+\newblock Understanding the current-voltage characteristics of industrial
+  crystalline silicon solar cells by considering inhomogeneous current
+  distributions.
+\newblock Opto--Electronics Review 2013 Sep;21(3):259--282.
+
+\bibitem[{Yu et~al.(2017)Kunjie Yu and J.J. Liang and B.Y. Qu and Xu Chen and
+  Heshan Wang}]{IJAVA}
+Yu K, Liang JJ, Qu BY, Chen X, Wang H.
+\newblock Parameters identification of photovoltaic models using an improved
+  {JAYA} optimization algorithm.
+\newblock Energy Conversion and Management 2017 Oct;150:742--753.
+
+\bibitem[{Olikh and Zavhorodnii(2020)Olikh, O. Ya. and Zavhorodnii, O.
+  V.}]{OlikhJPS}
+Olikh OY, Zavhorodnii OV.
+\newblock Modeling of ideality factor value in $n^+$--$p$--$p^+$--Si structure.
+\newblock Journal of Physical Studies 2020;24(4):4701.
+
+\bibitem[{Chollet(2017)Chollet, François}]{Keras}
+Chollet F.
+\newblock Deep Learning with Python.
+\newblock Second ed. Manning; 2017.
+
+\end{thebibliography}

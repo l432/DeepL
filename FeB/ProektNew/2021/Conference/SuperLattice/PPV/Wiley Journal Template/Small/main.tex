@@ -1,0 +1,200 @@
+\documentclass{WileyMSP-template}
+
+\usepackage[square, super, comma]{natbib}
+\usepackage{natmove}
+\usepackage{setspace}
+
+\begin{document}
+
+\pagestyle{fancy}
+\rhead{\includegraphics[width=2.5cm]{vch-logo.png}}
+
+
+\title{Please insert your title here}
+
+\maketitle
+
+% Author: Please give full first and last names for authors and include * after the name of all corresponding authors
+
+\author{Author One}
+\author{Author Two}
+\author{Author Three*}
+
+% Dedication
+\dedication{Optional dedication here. If no dedication is required, please leave blank}
+
+
+% Affiliations: Please provide adacemic titles (Prof. or Dr.) for all authors where applicable, and include an institutional email address for all corresponding authors
+\begin{affiliations}
+A. N. Author, A. N. O. Author\\
+Address\\
+Email Address:
+
+A. N. O. Author\\
+Address
+
+\end{affiliations}
+
+
+% Keywords: Please provide a minimum of three and a maximum of seven keywords, separated by commas
+\keywords{Keyword 1, Keyword 2, Keyword 3}
+
+
+% Abstract should be written in the present tense and impersonal style (i.e., avoid we), and be at most 200 words long
+\begin{abstract}
+
+Please insert your abstract here
+
+\end{abstract}
+
+% Text: Please use section headings and subheadings as specified below. For communications, all section headings apart from Experimental Section should be removed
+% Please make the first reference to a display item bold: \textbf{Figure 1}
+% Do not abbreviate Figure, Equation, etc.; display items are always singular, i.e., Figure 1 and 2.
+% Equations are always singular, i.e., Equation 1 and 2, and should be inserted using the {equation} environment, not as graphics
+% Please do not use footnotes in the text, additional information can be added to the Reference list.
+
+
+\section{First Section}
+
+
+\subsection{First Subsection}
+
+
+\subsubsection{First Sub Subsection}
+
+
+\threesubsection{First lowest-level subsection}
+Example of citations~\cite{geiger2012we,lees2010theoretical}. The authors~\cite{urmson2008autonomous} stated that...
+
+\section{Conclusion}
+
+% Experimental section
+
+\section{Experimental Section}
+\threesubsection{First part of experimental section}\\
+\threesubsection{Second part of experimental section}\\
+
+
+\medskip
+\textbf{Supporting Information} \par %Please delete the Suppporting Information statement if it is not applicable. Please supply Supporting Information in another file. Supporting information should not be provided in .tex format
+Supporting Information is available from the Wiley Online Library or from the author.
+
+
+
+% Acknowledgements
+\medskip
+\textbf{Acknowledgements} \par %delete if not applicable))
+Please insert your acknowledgements here
+
+% References
+\medskip
+
+% Use the following code if you wish to generate your bibliography with BibTeX;
+% replace the string "MSP-template" below with the name(s) of
+% the BibTeX data base(s) you want to use.
+% The resulting bibliography-output (the content of the .bbl file)
+% must be pasted back into this file before submission.
+% Please also include your BibTeX data base file(s) in your submission
+% so that we can re-run BibTeX if necessary.
+%
+\bibliographystyle{MSP}
+\bibliography{mybib}
+
+%\begin{thebibliography}{1}
+%	\providecommand{\url}[1]{\texttt{#1}}
+%	\providecommand{\urlprefix}{URL }
+%	
+%	\bibitem{urmson2008autonomous}
+%	C.~Urmson, J.~Anhalt, D.~Bagnell, C.~Baker, R.~Bittner, M.~Clark, J.~Dolan,
+%	D.~Duggins, T.~Galatali, C.~Geyer, et~al.,
+%	\newblock \emph{Journal of Field Robotics} \textbf{2008}, \emph{25}, 8 425.
+%	
+%	\bibitem{lees2010theoretical}
+%	J.~Lees-Miller, J.~Hammersley, R.~Wilson,
+%	\newblock \emph{Transportation Research Record: Journal of the Transportation
+%		Research Board} \textbf{2010}, , 2146 76.
+%	
+%	\bibitem{geiger2012we}
+%	A.~Geiger, P.~Lenz, R.~Urtasun,
+%	\newblock In \emph{IEEE Conference on Computer Vision and Pattern Recognition
+%		(CVPR) 2012}. IEEE, \textbf{2012} 3354--3361.
+%	
+%\end{thebibliography}
+
+
+% Figures/tables and captions
+% Permission statements are required for all figures reproduced or adapted from previously published articles/sources. Please also ensure that all necessary permissions to reproduce images have been received
+% Please remove these statements for original figures
+
+
+\begin{figure}
+  \includegraphics[width=\linewidth]{placeholder-image.png}
+  \caption{Figure 1 caption goes here. Reproduced with permission.\textsuperscript{[Ref.]} Copyright Year, Publisher. }
+  \label{fig:boat1}
+\end{figure}
+
+\begin{figure}
+  \includegraphics[width=\linewidth]{placeholder-image.png}
+  \caption{Figure 2 caption goes here. Reproduced with permission.\textsuperscript{[Ref.]} Copyright Year, Publisher.}
+  \label{fig:boat1}
+\end{figure}
+
+\begin{figure}
+  \includegraphics[width=\linewidth]{placeholder-image.png}
+  \caption{Figure 3 caption goes here. Reproduced with permission.\textsuperscript{[Ref.]} Copyright Year, Publisher.}
+  \label{fig:boat1}
+\end{figure}
+
+\begin{table}
+ \caption{Table 1 caption}
+  \begin{tabular}[htbp]{@{}lll@{}}
+    \hline
+    Description 1 & Description 2 & Description 3 \\
+    \hline
+    Row 1, Col 1  & Row 1, Col 2  & Row 1, Col 3  \\
+    Row 2, Col 1  & Row 2, Col 2  & Row 2, Col 3  \\
+    \hline
+  \end{tabular}
+\end{table}
+
+
+% Please provide Biographies and photos for Essays, Feature Articles, Progress Reports, Reviews, and Perspectives for those authors who should be highlighted  
+% These should be at most 100 words long
+% For other article types this section can be removed
+% Photographs should be 40mm broad and 50 mm high
+
+\begin{figure}
+  \includegraphics{bio-placeholder.jpg}
+  \caption*{Biography}
+\end{figure}
+
+\begin{figure}
+  \includegraphics{bio-placeholder.jpg}
+  \caption*{Biography}
+\end{figure}
+
+\begin{figure}
+  \includegraphics{bio-placeholder.jpg}
+  \caption*{Biography}
+\end{figure}
+
+\begin{figure}
+  \includegraphics{bio-placeholder.jpg}
+  \caption*{Biography}
+\end{figure}
+
+
+% Table of contents entry should be 50 - 60 words long
+% Image should be 55 mm broad and 50 mm high or 110 mm broad and 20 mm high
+
+
+\begin{figure}
+\textbf{Table of Contents}\\
+\medskip
+  \includegraphics{toc-image.png}
+  \medskip
+  \caption*{ToC Entry}
+\end{figure}
+
+
+\end{document}
