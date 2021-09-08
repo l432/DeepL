@@ -61,15 +61,16 @@ ideality factor values.
 SCAPS-1D was the software of choice for simulation of solar cell with the back surface field design
 and for generation of labeled training and test datasets.
 Our results demonstrated the deep neural network ability
-to predict iron concentration with mean squared relative error up to 0.005 by using ideality factor values, SC base thickness and doping level, and temperature.
+to predict iron concentration by using ideality factor values, temperature, and base thickness as well as doping level of solar cell.
 The simulation shows that the prediction error
 is reduced for high doping level, low temperature, and using of two values of ideality factor (for structure with interstitial iron atoms only as well as for structure with
 coexistence of Fe\textsubscript{i} and iron-boron pair).
+The capability of functioning of proposed method is verified for real silicon structures.
 
 %This is a generic template designed for use by multiple journals, which includes several options for customization. Please consult the author guidelines for the journal to which you are submitting in order to confirm that your manuscript will comply with the journal's requirements. Please replace this text with your abstract.
 
 % Please include a maximum of seven keywords
-\keywords{ideality factor, silicon, $n^+$--$p$--$p^+$ structure, SCAPS, iron contamination, machine learning}
+\keywords{ideality factor, silicon, $n^+$--$p$--$p^+$ structure, iron contamination, SCAPS, machine learning}
 \end{abstract}
 
 \end{frontmatter}
@@ -124,7 +125,7 @@ Obviously, the labeled dataset from experimental IVs  would be preferable,
 but it is practically difficult to find the thousands of samples with the required parameters.
 Third, the training of deep neural network (DNN) to estimate an iron contamination  by using SC's base thickness, doping level,
 temperature, and ideality factor value.
-Fours, the DNN testing.
+Fours, the DNN testing by using synthetic IV curves as well as experimental IV curves.
 
 \begin{figure}
 \centering
@@ -580,12 +581,14 @@ which caused by ambiguity of dependence $n_\mathrm{Fe-FeB}=f(N_\mathrm{Fe})$ .
 
 \subsection{Experimental IV curves}
 
+\cite{2021CMLTP,FeBAssJAP2014,FeBKin2019}
+
 \begin{figure}[t]
 \centering
 \includegraphics[width=0.5\textwidth]{F9}
 \caption{
-$I$–-$V$ characteristics measured at 300~K, 320~K, and 340~K for 
-sample \#320. 
+$I$–-$V$ characteristics measured at 300~K, 320~K, and 340~K for
+sample SC320.
 The marks are the experimental results, and
 the solid lines are the curves fitted by
 Eq.~(\ref{eqIVd}).
@@ -602,7 +605,7 @@ $n_\mathrm{Fe-FeB}$&$R_{sh,\mathrm{Fe-FeB}}$,&
 $n_\mathrm{Fe}$&$R_{sh,\mathrm{Fe}}$,&
 \multicolumn{4}{c}{$N_\mathrm{Fe,PRED}$, $10^{12}$~cm$^{-3}$}\\
 \headrow
-&$10^{12}$~cm$^{-3}$&K&&$\Omega$&&$\Omega$&\multicolumn{2}{c}{DNN$_\mathrm{FeFeB}$}&\multicolumn{2}{c}{DNN$_\mathrm{FeFeB-Fe}$}\\
+&$10^{12}$~cm$^{-3}$&K&&Ohm&&Ohm&\multicolumn{2}{c}{DNN$_\mathrm{FeFeB}$}&\multicolumn{2}{c}{DNN$_\mathrm{FeFeB-Fe}$}\\
 \headrow
 &&&&&&&training&full&training&full\\
 \#320&$2.0\pm0.4$&300&1.214&$1.6\cdot10^6$&1.195&$1.4\cdot10^6$&3.9&2.8&3.0&2.0\\
@@ -611,15 +614,6 @@ $n_\mathrm{Fe}$&$R_{sh,\mathrm{Fe}}$,&
 \#349&$6.7\pm0.7$&300&1.223&$2.9\cdot10^6$&1.222&$2.6\cdot10^6$&8.9&5.6&15&11\\
 &&320&1.183&$1.7\cdot10^6$&1.182&$1.7\cdot10^6$&1.2&0.4&10&32\\
 &&340&1.138&$1.3\cdot10^6$&1.173&$1.3\cdot10^6$&9.8&1.7&26&411\\
-%\headrow
-%\thead{Dataset} & \multicolumn{3}{c}{DNN$_\mathrm{FeFeB}$}& \multicolumn{3}{c}{DNN$_\mathrm{FeFeB-Fe}$}\\
-%\headrow
-% & \thead{MSRE} & \thead{$R^2$}& \thead{$R$} & \thead{MSRE} & \thead{$R^2$}& \thead{$R$}\\
-%T--varied&0.41 &0.936 &0.967 & 0.020& 0.994&0.997 \\
-%d--varied&0.37 &0.961&0.980& 0.018&0.996&0.998\\
-%B--varied&1.06&0.881&0.939& 0.084&0.991&0.995\\
-%Fe--varied&0.06 &0.991&0.996& 0.005&0.999&0.999\\
-%All--varied&0.54 &0.813&0.901& 0.138&0.948&0.974\\
 \hline
 \end{tabular}
 \end{table}
@@ -634,16 +628,18 @@ of deep learning in this problem.
 This is the first attempt of using of the deep learning for deep levels parameter
 retrieval from current-voltage curve.
 In this model study, we used simulation to obtain training and test labeled datasets.
+Besides a trial test of DNN was performed using the parameters of real solar cells. 
 Our results showed the ability of the deep neural network
-to predict iron concentration with MSRE up to 0.005 by using ideality factor values,
+to predict iron concentration by using ideality factor values,
 SC base thickness and doping level, and temperature.
-The simulation has shown that two ideality factor values (for structure with $\mathrm{Fe}_i$ only as well as with $\mathrm{Fe}_i\mathrm{B}_s$ and $\mathrm{Fe}_i$ coexistence) would be needed to substantially upgrade a prediction accuracy.
+MSRE was up to 0.005 for synthetic datasets.
+The simulation has shown the prospects for the use of two ideality factor values  (for structure with $\mathrm{Fe}_i$ only as well as with $\mathrm{Fe}_i\mathrm{B}_s$ and $\mathrm{Fe}_i$ coexistence)
+for upgrade a prediction accuracy.
+At the same time, the practical application of such an approach manifested difficulties in obtaining of correct data.
 It was important to train DNN with a boron concentration value,
 which agreed with doping level of investigated structures.
 Moreover the increase of iron concentration or boron concentration as well as temperature decrease
 results in a prediction error reducing.
-
-
 
 The proposed approach envisages
 the utilization of a simple and widely applicable setup and

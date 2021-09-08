@@ -1,4 +1,4 @@
-\begin{thebibliography}{49}
+\begin{thebibliography}{52}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\urlprefix}{}
@@ -333,5 +333,29 @@ Olikh OY, Zavhorodnii OV.
 Chollet F.
 \newblock Deep Learning with Python.
 \newblock Second ed. Manning; 2017.
+
+\bibitem[{Olikh et~al.(2021)Olikh, O. and Kostylyov, V. and Vlasiuk, V. and
+  Korkishko, R.}]{2021CMLTP}
+Olikh O, Kostylyov V, Vlasiuk V, Korkishko R.
+\newblock Estimation of Iron Concenration in Silicon Solar Cell by Kinetics of
+  Light-Induced Change in Short-Circuit Current.
+\newblock In: II International Advanced Study Conference Condensed Matter and
+  Low Temperature Physics CM\&LTP 2021. Book of Abstracts. Kharkiv, Ukraine.
+  Kharkiv; 2021. p. 191.
+
+\bibitem[{M\"{o}ller et~al.(2014)M\"{o}ller, Christian and Bartel, Til and
+  Gibaja,Fabien and Lauer, Kevin}]{FeBAssJAP2014}
+M\"{o}ller C, Bartel T, Gibaja F, Lauer K.
+\newblock Iron-boron pairing kinetics in illuminated p-type and in
+  boron/phosphorus co-doped n-type silicon.
+\newblock J Appl Phys 2014 Jul;116(2):024503.
+
+\bibitem[{Khelifati et~al.(2019)Khelifati, Nabil and Laine, Hannu S. and
+  Vähänissi, Ville and Savin, Hele and Bouamama, Fatima Zohra and Bouhafs,
+  Djoudi}]{FeBKin2019}
+Khelifati N, Laine HS, Vähänissi V, Savin H, Bouamama FZ, Bouhafs D.
+\newblock Dissociation and Formation Kinetics of Iron–Boron Pairs in Silicon
+  after Phosphorus Implantation Gettering.
+\newblock Phys Status Solidi A 2019 Sep;216(17):1900253.
 
 \end{thebibliography}
