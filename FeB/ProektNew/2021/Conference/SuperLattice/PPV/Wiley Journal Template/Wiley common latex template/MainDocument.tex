@@ -540,7 +540,7 @@ Really, it is shown in Fig.~\ref{fig_TrDNN2} that the maximum SRE does not excee
 and SRE is less than 0.02 for 93\%, 92\%, 73\%, and 97\% of samples of T-varied, d-varied, B-varied, and Fe-varied datasets respectively.
 The $R^2$ (0.999) and $R$ (0.999) values for Fe-varied dataset draws attention as well.
 
-\begin{figure}[tb]
+\begin{figure}[bt]
 \centering
 \includegraphics[width=0.32\textwidth]{F8a}
 \includegraphics[width=0.32\textwidth]{F8b}
@@ -581,7 +581,38 @@ which caused by ambiguity of dependence $n_\mathrm{Fe-FeB}=f(N_\mathrm{Fe})$ .
 
 \subsection{Experimental IV curves}
 
-\cite{2021CMLTP,FeBAssJAP2014,FeBKin2019}
+The ability of DNNs to predict the iron concentration in real silicon SCs was tested as well. 
+The $n^+$--$p$--$p^+$--Si samples were used in the experiment. 
+The structures were fabricated from $p$--type boron doped Czochralski silicon wafer with [100] orientation and a resistivity of 10~Ohm$\cdot$cm ($N_B = 1.4\cdot10^{15}$~cm$^{-3}$). 
+The $n^+$ emitter with a surface resistance of about $(20\div30)$~$\Omega/\Box$ and a thickness 
+of $0.7$ $\mu$m was formed by phosphorus diffusion at 940$^\circ$C. 
+The anti-recombination isotype barrier was created by using $p^+$ layer 
+($(10\div20)$~$\Omega/\Box$, $0.6$~$\mu$m), 
+which was formed by boron diffusion at 985$^\circ$C. 
+The base thickness was equal to 350~$\mu$m. 
+The samples used in the experiment had the area of $1.52\times1.535$~cm$^2$. 
+The concentration of iron in the SC base $N_\mathrm{Fe,MEAS}$ was determined from kinetic of the short circuit current under monochromatic illumination \cite{2021CMLTP}. 
+Two samples, referred to as SC320 and SC349 with $N_\mathrm{Fe,MEAS}$  values 
+of $(2.0\pm0.4)\cdot10^{12}$~cm$^{-3}$ and $(6.7\pm0.7)\cdot10^{12}$~cm$^{-3}$, 
+respectively, were used in the investigation.
+
+One can see that DNN was faced with a rather difficult task, 
+in which complexity is associated with a certain mismatch between the parameters of real structures and those used in the simulation. 
+However, the need for iron-related defects, which predominantly determine recombination, was the main criterion for sampling in our case.
+
+The dark $I$--$V$ characteristics of these samples were measured at temperatures 
+of 300, 320, and 340~K. 
+The measurements were taken after 48~h sample storage in the dark at room temperature 
+(``Fe-FeB'' case) 
+as well as immediately after sample intense illumination with a halogen lamp 
+(``Fe'' case). 
+After that, we used Eq.~(\ref{eqIVd}) to fit the experimental data and determine fitting parameters, in particular $n$, $R_s$, $R_sh$. 
+The typical results of measurements and approximations are shown in Fig.~\ref{fig_IVexp} 
+and Table~\ref{table_Exp}. 
+It should be noted that for real $I$--$V$ curves, in contrast to synthetic ones, 
+the influence of series and shunt resistances cannot be neglected 
+(the $R_s$ values are about 3 and 6~Ohm for samples SC320 and SC349, respectively, 
+the Rsh values are listed in Table~\ref{table_Exp}).
 
 \begin{figure}[t]
 \centering
@@ -608,17 +639,58 @@ $n_\mathrm{Fe}$&$R_{sh,\mathrm{Fe}}$,&
 &$10^{12}$~cm$^{-3}$&K&&Ohm&&Ohm&\multicolumn{2}{c}{DNN$_\mathrm{FeFeB}$}&\multicolumn{2}{c}{DNN$_\mathrm{FeFeB-Fe}$}\\
 \headrow
 &&&&&&&training&full&training&full\\
-\#320&$2.0\pm0.4$&300&1.214&$1.6\cdot10^6$&1.195&$1.4\cdot10^6$&3.9&2.8&3.0&2.0\\
+SC320&$2.0\pm0.4$&300&1.214&$1.6\cdot10^6$&1.195&$1.4\cdot10^6$&3.9&2.8&3.0&2.0\\
 &&320&1.204&$8.6\cdot10^5$&1.148&$8.0\cdot10^5$&6.6&1.9&16&19\\
 &&340&1.118&$4.3\cdot10^5$&1.111&$4.3\cdot10^5$&3.8&1.2&89&574\\
-\#349&$6.7\pm0.7$&300&1.223&$2.9\cdot10^6$&1.222&$2.6\cdot10^6$&8.9&5.6&15&11\\
+SC349&$6.7\pm0.7$&300&1.223&$2.9\cdot10^6$&1.222&$2.6\cdot10^6$&8.9&5.6&15&11\\
 &&320&1.183&$1.7\cdot10^6$&1.182&$1.7\cdot10^6$&1.2&0.4&10&32\\
 &&340&1.138&$1.3\cdot10^6$&1.173&$1.3\cdot10^6$&9.8&1.7&26&411\\
 \hline
 \end{tabular}
 \end{table}
 
-%N_\mathrm{Fe,PRED}
+The values of the ideality factor, determined from the experimental curves, 
+and the sample parameters were used as input data for 
+DNN$_\mathrm{FeFeB}$ and DNN$_\mathrm{FeFeB-Fe}$, 
+which were trained on the training dataset or the full dataset. 
+The predictions are listed in Table~\ref{table_Exp}.
+
+First of all, considering the not extreme high complexity of the simulation model, 
+we note that the results even exceed expectations. 
+Particularly for DNN$_\mathrm{FeFeB}$, 
+where the predicted iron concentrations differ by only several times from the measured ones. 
+And in the case of sample SC320 and DNN$_\mathrm{FeFeB}$, 
+trained on the full dataset, the error does not exceed 40\%.
+
+Also, it should be noted that the results confirm 
+the trends identified during analyzing synthetic $I$-$V$ curves. 
+Namely, the prediction accuracy decreases for $T>320$~K 
+and iron concentrations, which are close to the upper limit of the 
+considered range ($10^{13}$~cm$^{-3}$). 
+These facts fully coincide with the data in Fig.~\ref{fig_Temp}a and Fig.~\ref{fig_Fe}a, respectively. 
+In addition, the sample's base doping level ($N_B=1.4\cdot10^{15}$~cm$^{-3}$) is not used in the training dataset but can be found in the d--varied dataset (see Supplementary Material). 
+Table~\ref{table_Exp} shows that the prediction of DNN$_\mathrm{FeFeB}$, 
+trained by full dataset, is better than in the case of learning by training dataset only, especially for the SC320. 
+This feature confirms the conclusion from the previous section about the importance of DNN training with $N_B$ values, which are expected in the object of future research.
+
+On the other hand, contrary to expectations, the DNN$_\mathrm{FeFeB-Fe}$ demonstrate worse performance than DNN$_\mathrm{FeFeB}$ in the case majority. 
+There can be several reasons. 
+Firstly, the use of two ideality factor values enhances the influence of simulation simplifications (e.g., the effect of unaccounted processes that cause the appearance of both shunt and series resistance). 
+Secondly, the correct $n_\mathrm{Fe}$ determination is a more complicated experimental task than $n_\mathrm{Fe-FeB}$ identifying. 
+For example, it took about 100~s to obtain the $I$--$V$ characteristics 
+after intense illumination in our case. 
+This interval consisted of time to set the temperature after 
+illumination-induced heating 
+as well as time to measurement. 
+According to \cite{FeBAssJAP2014,FeBKin2019}, the characteristic association time of FeB pairs 
+at $T=340$~K and $N_B=1.4\cdot10^{15}$~cm$^{-3}$ is about 600~s. 
+Therefore, it cannot be expected that such a value of the ideality factor 
+corresponds to the complete dissociation of FeB pairs. 
+That is, despite the potentially higher accuracy of the DNN$_\mathrm{FeFeB-Fe}$ predictions 
+(shown in the previous section), the practical application of this approach is more complex.
+
+Generally, the results obtained for real SCs confirm the possibility of estimation for iron contamination by ideality factor value.
+
 
 \section{Conclusion and Outlook}
 In this paper,
