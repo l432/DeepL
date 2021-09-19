@@ -1,15 +1,15 @@
 > SCAPS 3.3.07 ELIS-UGent: Version scaps3307.exe, dated 06-01-2019, 14:07:34
-> SCAPS All SCAPS Settings file, saved on 	16-11-2019 at 16:14:00
+> SCAPS All SCAPS Settings file, saved on 	13-11-2019 at 21:21:41
 > problem definition file loaded :
-> D:\Samples\DeepL\FeB\Scaps3310\def\FeBD35T340B1p360e15.scaps
-> last saved: 	16-11-2019 at 16:14:00
+> D:\Samples\DeepL\FeB\Scaps3310\def\FeD35T340B1p360e15.scaps
+> last saved: 	13-11-2019 at 21:21:41
 > 
 
 
 >> begin of problem definition file
 
 > SCAPS 3.3.07 ELIS-UGent: Version scaps3307.exe, dated 06-01-2019, 14:07:34 Problem definition file
-> last saved by SCAPS: 	16-11-2019 at 16:14:01
+> last saved by SCAPS: 	13-11-2019 at 21:21:42
 > 
 > 
 > Comments (to be) included in the def file
@@ -41,18 +41,6 @@
 > No doping type nor extrinsic doping is set! (NA = ND = 1E10/cm3 = about ni)
 > 
 > Should be OK for low doped silicon. For higher doping, the mobilities should be set to an appropriate lower value; th
-> 
-> > end of problem definition file
-> 
-> > end of problem definition file
-> 
-> > end of problem definition file
-> 
-> > end of problem definition file
-> 
-> > end of problem definition file
-> 
-> > end of problem definition file
 > 
 > > end of problem definition file
 > 
@@ -173,7 +161,7 @@ c_n_auger :	 1.044061e-41	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+0
 c_p_auger :	 1.103376e-43	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 1.103376e-43	 1.103376e-43	 1	 0	[m^6/s]
 Na(uniform) :	 5.000000e+24	 5.000000e+24	 1.000000e+01	 1.000000e+01	 1.000000e+01	 5.000000e+24	 5.000000e+24	 0	 2	[/m^3]
 Nd(uniform) :	 0.000000e+00	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 0.000000e+00	 0.000000e+00	 0	 2	[/m^3]
-absorption grading :	 1104.82	 1033.31	  250.00	  250.00	    0.00	    1.20	    1.20	 7	 0	[nm]
+absorption grading :	 1164.87	 1033.31	  250.00	  250.00	    0.00	    1.20	    1.20	 7	 0	[nm]
 absorptionmodel pure A material (y=0) : from file
 absorptionfile pure A material (y=0) : Si.abs
 absorption pure B material (y=1), model : coefficients A and B (line inserted for compatibility with SCAPS until 3.3.06)
@@ -186,32 +174,15 @@ absorption model B, value of parameter 2 :   0.000000e+00
 
 srhrecombination
 
-type : amphoteric ( 2 level(s) )
-energy distribution : single
-Reference for defect energy :  2 ; 0 = above EV (SCAPS<2.7); 1 = above Ei; 2 = below EC
-Ekar :  0.1000 [eV]
-degeneracy factors equal one
-Nt(x) :	 9.922139e+18	 9.922136e+18	 9.493000e+18	 1.000000e+00	 1.000000e+00	 9.922139e+18	 9.922136e+18	12	 1	P00.grd	[/m^3]
-profile : homogenous
-Lkar : 1.000e+00 [m]
-Nleft : 9.922e+18 [/m^3]
-Nright : 9.922e+18 [/m^3]
-leveltype : +/0	0/-	
-sigma_n : 4.000e-17 2.393e-19	[m^2]
-sigma_p : 2.000e-18 4.375e-18	[m^2]
-Et :   0.954	  0.262	[eV]
-
-next
-
 type : donor ( 1 level(s) )
 energy distribution : single
 Reference for defect energy :  0 ; 0 = above EV (SCAPS<2.7); 1 = above Ei; 2 = below EC
 Ekar :  0.1000 [eV]
-Nt(x) :	 7.786108e+16	 7.786419e+16	 1.000000e+20	 1.000000e+00	 1.000000e+00	 7.786108e+16	 7.786419e+16	12	 1	S00.grd	[/m^3]
+Nt(uniform) :	 1.000000e+19	 1.000000e+20	 1.000000e+20	 1.000000e+00	 1.000000e+00	 1.000000e+19	 1.000000e+19	 0	 2	[/m^3]
 profile : homogenous
 Lkar : 1.000e+00 [m]
-Nleft : 7.786e+16 [/m^3]
-Nright : 7.786e+16 [/m^3]
+Nleft : 1.000e+19 [/m^3]
+Nright : 1.000e+19 [/m^3]
 leveltype : +/0	
 sigma_n : 6.219e-19	[m^2]
 sigma_p : 8.252e-21	[m^2]
@@ -247,7 +218,7 @@ c_n_auger :	 1.043971e-41	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+0
 c_p_auger :	 2.617725e-42	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 2.617725e-42	 2.617725e-42	 1	 0	[m^6/s]
 Na(uniform) :	 1.360000e+21	 1.360000e+21	 1.000000e+01	 1.000000e+01	 1.000000e+01	 1.360000e+21	 1.360000e+21	 0	 2	[/m^3]
 Nd(uniform) :	 0.000000e+00	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 0.000000e+00	 0.000000e+00	 0	 2	[/m^3]
-absorption grading :	 1104.82	 1033.31	  250.00	  250.00	    0.00	    1.20	    1.20	 7	 0	[nm]
+absorption grading :	 1103.49	 1033.31	  250.00	  250.00	    0.00	    1.20	    1.20	 7	 0	[nm]
 absorptionmodel pure A material (y=0) : from file
 absorptionfile pure A material (y=0) : Si.abs
 absorption pure B material (y=1), model : coefficients A and B (line inserted for compatibility with SCAPS until 3.3.06)
@@ -260,32 +231,15 @@ absorption model B, value of parameter 2 :   0.000000e+00
 
 srhrecombination
 
-type : amphoteric ( 2 level(s) )
-energy distribution : single
-Reference for defect energy :  2 ; 0 = above EV (SCAPS<2.7); 1 = above Ei; 2 = below EC
-Ekar :  0.1000 [eV]
-degeneracy factors equal one
-Nt(x) :	 9.922040e+18	 1.418743e+07	 9.493000e+18	 1.000000e+00	 1.000000e+00	 9.922040e+18	 1.418743e+07	12	 1	B00.grd	[/m^3]
-profile : homogenous
-Lkar : 1.000e+00 [m]
-Nleft : 9.922e+18 [/m^3]
-Nright : 9.922e+18 [/m^3]
-leveltype : +/0	0/-	
-sigma_n : 4.000e-17 2.393e-19	[m^2]
-sigma_p : 2.000e-18 4.375e-18	[m^2]
-Et :   1.013	  0.262	[eV]
-
-next
-
 type : donor ( 1 level(s) )
 energy distribution : single
 Reference for defect energy :  0 ; 0 = above EV (SCAPS<2.7); 1 = above Ei; 2 = below EC
 Ekar :  0.1000 [eV]
-Nt(x) :	 7.795962e+16	 1.000000e+19	 1.000000e+20	 1.000000e+00	 1.000000e+00	 7.795962e+16	 1.000000e+19	12	 1	F00.grd	[/m^3]
+Nt(uniform) :	 1.000000e+19	 1.000000e+20	 1.000000e+20	 1.000000e+00	 1.000000e+00	 1.000000e+19	 1.000000e+19	 0	 2	[/m^3]
 profile : homogenous
 Lkar : 1.000e+00 [m]
-Nleft : 7.796e+16 [/m^3]
-Nright : 7.796e+16 [/m^3]
+Nleft : 1.000e+19 [/m^3]
+Nright : 1.000e+19 [/m^3]
 leveltype : +/0	
 sigma_n : 6.219e-19	[m^2]
 sigma_p : 8.252e-21	[m^2]
@@ -321,7 +275,7 @@ c_n_auger :	 2.801111e-43	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+0
 c_p_auger :	 3.898476e-42	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 3.898476e-42	 3.898476e-42	 1	 0	[m^6/s]
 Na(uniform) :	 0.000000e+00	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 0.000000e+00	 0.000000e+00	 0	 2	[/m^3]
 Nd(uniform) :	 1.000000e+25	 1.000000e+25	 1.000000e+01	 1.000000e+01	 1.000000e+01	 1.000000e+25	 1.000000e+25	 0	 2	[/m^3]
-absorption grading :	 1165.81	 1033.31	  250.00	  250.00	    0.00	    1.20	    1.20	 7	 0	[nm]
+absorption grading :	 1169.60	 1033.31	  250.00	  250.00	    0.00	    1.20	    1.20	 7	 0	[nm]
 absorptionmodel pure A material (y=0) : from file
 absorptionfile pure A material (y=0) : Si.abs
 absorption pure B material (y=1), model : coefficients A and B (line inserted for compatibility with SCAPS until 3.3.06)
@@ -417,92 +371,26 @@ Batch parameter 0 :
 Label 1 : layer 1
 Label 2 : defect 1
 Label 3 : Nt total
-Label 4 : grading file
+Label 4 : nihil
 simultaneous :  0
-values from a list :  1
-logarithmic variation :  0
-values are file names :  1
-number of file names :   10
-list of filenames saved :  0
-file   0:P00.grd
-file   1:P01.grd
-file   2:P02.grd
-file   3:P03.grd
-file   4:P04.grd
-file   5:P05.grd
-file   6:P06.grd
-file   7:P07.grd
-file   8:P08.grd
-file   9:P09.grd
+values from a list :  0
+logarithmic variation :  1
+startvalue :   1.00000000e+13
+stopvalue :   1.00000000e+14
+number of steps :   10
 
 Batch parameter 1 :
-
-Label 1 : layer 1
-Label 2 : defect 2
-Label 3 : Nt total
-Label 4 : grading file
-simultaneous :  1
-values from a list :  1
-logarithmic variation :  0
-values are file names :  1
-number of file names :   10
-list of filenames saved :  0
-file   0:S00.grd
-file   1:S01.grd
-file   2:S02.grd
-file   3:S03.grd
-file   4:S04.grd
-file   5:S05.grd
-file   6:S06.grd
-file   7:S07.grd
-file   8:S08.grd
-file   9:S09.grd
-
-Batch parameter 2 :
 
 Label 1 : layer 2
 Label 2 : defect 1
 Label 3 : Nt total
-Label 4 : grading file
+Label 4 : nihil
 simultaneous :  1
-values from a list :  1
-logarithmic variation :  0
-values are file names :  1
-number of file names :   10
-list of filenames saved :  0
-file   0:B00.grd
-file   1:B01.grd
-file   2:B02.grd
-file   3:B03.grd
-file   4:B04.grd
-file   5:B05.grd
-file   6:B06.grd
-file   7:B07.grd
-file   8:B08.grd
-file   9:B09.grd
-
-Batch parameter 3 :
-
-Label 1 : layer 2
-Label 2 : defect 2
-Label 3 : Nt total
-Label 4 : grading file
-simultaneous :  1
-values from a list :  1
-logarithmic variation :  0
-values are file names :  1
-number of file names :   10
-list of filenames saved :  0
-file   0:F00.grd
-file   1:F01.grd
-file   2:F02.grd
-file   3:F03.grd
-file   4:F04.grd
-file   5:F05.grd
-file   6:F06.grd
-file   7:F07.grd
-file   8:F08.grd
-file   9:F09.grd
+values from a list :  0
+logarithmic variation :  1
+startvalue :   1.00000000e+13
+stopvalue :   1.00000000e+14
+number of steps :   10
 
 >> end of batch settings file
 
@@ -519,6 +407,17 @@ Max number of steps whilst curve fitting :   25
 Max step size whilst curve fitting :   1.00000000e-01
 Stop criterion for step size :   1.00000000e-10
 Stop criterion for Chi square :   1.00000000e-07
+
+Curve fitting parameter  0 :
+
+label 1 : layer 1
+label 2 : defect 1
+label 3 : Nt total
+label 4 : nihil
+minimum value :   1.00000000e+13
+maximum value :   1.00000000e+14
+start value = actual value :    0
+logarithmic variation :  1
 
 >> end of curve fitting settings file
 

@@ -1,9 +1,0 @@
-> Example of a bdf-file with definition files (MB 9-8-2010)
-> four different definition files
-> The keyword indicating a non-comment line is "file:"
-> The definition files should be stored in the folder "def" of your SCAPS instalation folder
-
-file: CdTe-base.def
-file: CdTe air activated.def
-file: CdTe vacuum activated.def
-file: Example CdTe.def

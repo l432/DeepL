@@ -1,4 +1,0 @@
-/optical filter representing perfect mirror (to use at backcontact)
-/lambda[nm]	transmission[%]
-0	100
-10000	100
