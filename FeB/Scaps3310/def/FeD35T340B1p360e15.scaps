@@ -1,15 +1,15 @@
 > SCAPS 3.3.10 ELIS-UGent: Version scaps3310.exe, dated 19-09-2021, 12:47:26
-> SCAPS All SCAPS Settings file, saved on 	19-09-2021 at 12:51:32
+> SCAPS All SCAPS Settings file, saved on 	19-09-2021 at 20:24:16
 > problem definition file loaded :
-> d:\Samples\DeepL\FeB\Scaps3310\def\FeD35T340B1p360e15.scaps
-> last saved: 	19-09-2021 at 12:51:32
+> D:\Samples\DeepL\FeB\Scaps3310\def\FeD35T340B1p360e15.scaps
+> last saved: 	19-09-2021 at 20:23:24
 > 
 
 
 >> begin of problem definition file
 
 > SCAPS 3.3.10 ELIS-UGent: Version scaps3310.exe, dated 19-09-2021, 12:47:26 Problem definition file
-> last saved by SCAPS: 	19-09-2021 at 12:51:34
+> last saved by SCAPS: 	19-09-2021 at 20:24:17
 > 
 > 
 > Comments (to be) included in the def file
@@ -153,7 +153,7 @@ v_th_n :	 2.164e+05	 1.000e+05	 1.000e+01	 1.000e+01	 1.000e+01	 2.164e+05	 2.16
 v_th_p :	 1.789e+05	 1.000e+05	 1.000e+01	 1.000e+01	 1.000e+01	 1.789e+05	 1.789e+05	 1	 0	[m/s]
 eps :	    11.900000	    10.000000	    10.000000	    10.000000	    10.000000	    11.900000	    11.900000	 1	 0	[-]
 chi :	  4.050000	  4.500000	  1.000000	  1.000000	  1.000000	  4.050000	  4.050000	 1	 0	[eV]
-Eg :	  1.053766	  1.200000	  0.500000	  1.000000	  1.000000	  1.053766	  1.053766	 1	 0	[eV]
+Eg :	  1.053766	  1.200000	  0.500000	  1.000000	  1.000000	  1.053766 	 1.053766	 1	 0	[eV]
 Nc :	 2.884920e+25	 1.000000e+25	 1.000000e+01	 1.000000e+01	 1.000000e+01	 2.884920e+25	 2.884920e+25	 1	 0	[/m^3]
 Nv :	 2.629291e+25	 1.000000e+25	 1.000000e+01	 1.000000e+01	 1.000000e+01	 2.629291e+25	 2.629291e+25	 1	 0	[/m^3]
 mu_n :	 1.536606e-02	 5.000000e-03	 1.000000e-03	 1.000000e+00	 1.000000e+00	 1.536606e-02	 1.536606e-02	 1	 0	[m^2/Vs]
@@ -339,8 +339,8 @@ Secondworkpoint transmission :   100.0000 %
 Secondworkpoint attenuation :   100.0000 %
 pause :  0
 IV_startV :     0.0000 V
-IV_stopV :     0.4500 V
-IV_points :  46
+IV_stopV :     0.7000 V
+IV_points :  71
 IV_increment :     0.010000 V
 IV_calculate :  1
 stop after Voc :  0
@@ -438,7 +438,7 @@ logarithmic variation :  1
 >> begin of general SCAPS settings file
 
 
-handling of error messages :  0 ; 0=to screen and wait for ackowledgement; 1=append to log file; 2=overwrite log file
+handling of error messages :  2 ; 0=to screen and wait for ackowledgement; 1=append to log file; 2=overwrite log file
 handling of inter/extra-polation errors :  0 ; 0=proceed without warning; 1=give warning then proceed
 output list after a convergence error :  0 ; 0=truncate; 1=fill with zero's; 2=fill with white space
 maximum voltage for the recording of solar cell characteristics (V) :     2.000000

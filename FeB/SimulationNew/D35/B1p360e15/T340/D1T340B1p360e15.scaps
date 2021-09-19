@@ -1,15 +1,15 @@
-> SCAPS 3.3.07 ELIS-UGent: Version scaps3307.exe, dated 06-01-2019, 14:07:34
-> SCAPS All SCAPS Settings file, saved on 	13-11-2019 at 21:21:41
+> SCAPS 3.3.10 ELIS-UGent: Version scaps3310.exe, dated 19-09-2021, 12:47:26
+> SCAPS All SCAPS Settings file, saved on 	19-09-2021 at 20:24:16
 > problem definition file loaded :
 > D:\Samples\DeepL\FeB\Scaps3310\def\FeD35T340B1p360e15.scaps
-> last saved: 	13-11-2019 at 21:21:41
+> last saved: 	19-09-2021 at 20:23:24
 > 
 
 
 >> begin of problem definition file
 
-> SCAPS 3.3.07 ELIS-UGent: Version scaps3307.exe, dated 06-01-2019, 14:07:34 Problem definition file
-> last saved by SCAPS: 	13-11-2019 at 21:21:42
+> SCAPS 3.3.10 ELIS-UGent: Version scaps3310.exe, dated 19-09-2021, 12:47:26 Problem definition file
+> last saved by SCAPS: 	19-09-2021 at 20:24:17
 > 
 > 
 > Comments (to be) included in the def file
@@ -41,6 +41,8 @@
 > No doping type nor extrinsic doping is set! (NA = ND = 1E10/cm3 = about ni)
 > 
 > Should be OK for low doped silicon. For higher doping, the mobilities should be set to an appropriate lower value; th
+> 
+> > end of problem definition file
 > 
 > > end of problem definition file
 > 
@@ -282,9 +284,9 @@ Temperature :   340.00 K
 Voltage :     0.0000 V
 Frequency :   1.0000e+06 Hz
 Number of points :   5
-dark :  1
+dark :  0
 incident illumination specified
-incident spectrum from file :AM1_5G 1 sun.spe
+incident spectrum from file :AM1.5G ed2 1 sun.spe
 spectrum cut off :  0
 short wavelength cut off :   200.00 nm
 long wavelength cut off :  4000.00 nm
@@ -305,8 +307,8 @@ Secondworkpoint transmission :   100.0000 %
 Secondworkpoint attenuation :   100.0000 %
 pause :  0
 IV_startV :     0.0000 V
-IV_stopV :     0.4500 V
-IV_points :  46
+IV_stopV :     0.7000 V
+IV_points :  71
 IV_increment :     0.010000 V
 IV_calculate :  0
 stop after Voc :  0
@@ -356,7 +358,8 @@ Stop criterion for Chi square :   1.00000000e-07
 >> begin of general SCAPS settings file
 
 
-handling of error messages :  0 ; 0=to screen and wait for ackowledgement; 1=append to log file; 2=overwrite log file
+handling of error messages :  2 ; 0=to screen and wait for ackowledgement; 1=append to log file; 2=overwrite log file
+handling of inter/extra-polation errors :  0 ; 0=proceed without warning; 1=give warning then proceed
 output list after a convergence error :  0 ; 0=truncate; 1=fill with zero's; 2=fill with white space
 maximum voltage for the recording of solar cell characteristics (V) :     2.000000
 minimum voltage increment for the recording of solar cell characteristics (V) :   0.01000000

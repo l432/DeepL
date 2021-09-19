@@ -1,10 +1,10 @@
 object MainForm: TMainForm
   Left = 0
   Top = 0
-  BorderStyle = bsDialog
+  BorderIcons = [biSystemMenu, biMinimize]
   Caption = 'SCAPS Conversion'
-  ClientHeight = 700
-  ClientWidth = 888
+  ClientHeight = 690
+  ClientWidth = 878
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -606,6 +606,25 @@ object MainForm: TMainForm
     TabOrder = 15
     WordWrap = True
     OnClick = BAllDatesDatClick
+  end
+  object RGIllumination: TRadioGroup
+    Left = 672
+    Top = 240
+    Width = 129
+    Height = 105
+    Caption = 'Illumination'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clMaroon
+    Font.Height = -15
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ItemIndex = 0
+    Items.Strings = (
+      'dark'
+      'AM1.5'
+      '940nm')
+    ParentFont = False
+    TabOrder = 16
   end
   object OpenDialog1: TOpenDialog
     Filter = 'Scaps files (*.iv)|*.iv'
