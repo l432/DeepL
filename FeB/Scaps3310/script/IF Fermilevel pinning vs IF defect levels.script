@@ -1,0 +1,55 @@
+// SCAPS script
+clear all
+clear actions
+
+action light 
+load generationfile.filenamelist c:\Marc\scaps\SCAPS user problems\Xu Liang\Xu Liang genfilelist.txt[0]
+action generationfromfile
+// show scriptvariables 
+
+set scriptvariable.maxiteration 3
+load definitionfile Numos CIGS baseline.def
+//show scriptvariables 
+
+set scriptvariable.xname lambda (nm)
+set scriptvariable.vname |J| (mA/cm2)
+set scriptvariable.uname Jideal (mA/cm2)
+set scriptvariable.wname QE
+
+// fill xvector with the wavelengths
+math fillconstant x 0 maxiteration // to reserve space an initialise it with zeros
+// fill it with actual lambda values (for the moment unelegantly; once the values should be read from a list)
+set scriptvariable.xvector[0] 400
+set scriptvariable.xvector[1] 550
+set scriptvariable.xvector[2] 620
+
+math fillconstant u 0 maxiteration
+math fillconstant v 0 maxiteration
+math fillconstant w 0 maxiteration
+
+//show scriptvariables 
+
+loop start
+
+load generationfile.filenamelist c:\Marc\scaps\Numos gen files\Numos genfilelist.txt[loopcounter]
+calculate singleshot 
+
+get energybands.jtotal_scalar vvector[loopcounter] 
+get action.jideal.after_attenuation uvector[loopcounter]
+//show scriptvariables 
+
+loop stop
+
+math vectorabs vv
+math vectordivide wvu
+show scriptvariables 
+
+plot xu
+plot xv
+plot xw
+
+
+
+
+
+

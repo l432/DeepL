@@ -1,0 +1,55 @@
+// SCAPS script
+set errorhandling.overwritefile 
+set errorhandling.outputlist.truncate 
+clear all 
+clear actions 
+
+action light 
+action iv.startv 0
+action iv.stopv 5
+action iv.increment 0.02
+action iv.stopaftervoc 
+action iv.doiv 
+
+set scriptvariable.uvalue 0.2 // is dEg, the step of the band gap variation
+// set a smaller increment to obtain more detailed results, but only when you are patient...
+math filllinear.fixedincrement x 0.60 2.4 uvalue // to set nx and from that maxiteration = nx
+set scriptvariable.maxiteration nx
+
+loop maxiteration maxiteration
+
+loop start
+math filllinear.fixedincrement x 0.8 3 uvalue // reset xvector, since it has been used in previous loops as storage
+set scriptvariable.xvalue xvector[loopcounter]
+
+load definitionfile tandem_top.def
+set layer1.eg xvalue
+set layer2.eg xvalue
+calculate singleshot 
+get iv xy
+
+// show scriptvariables 
+run script tandem slave script (vary Egbottom).script
+// show scriptvariables 
+
+loop stop
+show scriptvariables 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
