@@ -311,7 +311,7 @@ IV_stopV :     0.7000 V
 IV_points :  71
 IV_increment :     0.010000 V
 IV_calculate :  0
-stop after Voc :  0
+stop after Voc :  1
 CV_startV :    -0.8000 V
 CV_stopV :     0.8000 V
 CV_points :  81

@@ -18,7 +18,7 @@ object MainForm: TMainForm
   PixelsPerInch = 120
   TextHeight = 16
   object LFile: TLabel
-    Left = 203
+    Left = 333
     Top = 281
     Width = 238
     Height = 24
@@ -26,7 +26,7 @@ object MainForm: TMainForm
     AutoSize = False
     Caption = 'No Selection'
     Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
+    Font.Color = clBlue
     Font.Height = -20
     Font.Name = 'Tahoma'
     Font.Style = []
@@ -50,9 +50,9 @@ object MainForm: TMainForm
   object BtFileSelect: TButton
     Left = 11
     Top = 277
-    Width = 153
+    Width = 326
     Height = 34
-    Caption = '&Select  .iv file'
+    Caption = '&Select  and process .iv file'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -20
@@ -210,22 +210,6 @@ object MainForm: TMainForm
       TabOrder = 1
     end
   end
-  object BMaterialFileCreate: TButton
-    Left = 48
-    Top = 227
-    Width = 228
-    Height = 36
-    Caption = '.material file create'
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -20
-    Font.Name = 'Tahoma'
-    Font.Style = [fsBold]
-    ParentFont = False
-    TabOrder = 5
-    WordWrap = True
-    OnClick = BMaterialFileCreateClick
-  end
   object BDatesDat: TButton
     Left = 8
     Top = 393
@@ -238,7 +222,7 @@ object MainForm: TMainForm
     Font.Name = 'Tahoma'
     Font.Style = [fsBold]
     ParentFont = False
-    TabOrder = 6
+    TabOrder = 5
     WordWrap = True
     OnClick = BDatesDatClick
   end
@@ -254,7 +238,7 @@ object MainForm: TMainForm
     Font.Name = 'Tahoma'
     Font.Style = [fsBold]
     ParentFont = False
-    TabOrder = 7
+    TabOrder = 6
     WordWrap = True
     OnClick = BFeB_xClick
   end
@@ -264,7 +248,7 @@ object MainForm: TMainForm
     Width = 262
     Height = 73
     Caption = 'Iron concentration, cm-3'
-    TabOrder = 8
+    TabOrder = 7
     object LFe_Lo: TLabel
       Left = 16
       Top = 24
@@ -323,7 +307,7 @@ object MainForm: TMainForm
     Font.Name = 'Tahoma'
     Font.Style = [fsBold]
     ParentFont = False
-    TabOrder = 9
+    TabOrder = 8
     WordWrap = True
     OnClick = BDatesDatCorrectClick
   end
@@ -333,7 +317,7 @@ object MainForm: TMainForm
     Width = 231
     Height = 148
     Caption = 'Final'
-    TabOrder = 10
+    TabOrder = 9
     object BResult: TButton
       Left = 29
       Top = 53
@@ -357,7 +341,7 @@ object MainForm: TMainForm
     Width = 202
     Height = 120
     Caption = 'SBF layer'
-    TabOrder = 11
+    TabOrder = 10
     object LSBF_Conc: TLabel
       Left = 11
       Top = 19
@@ -421,7 +405,7 @@ object MainForm: TMainForm
     Width = 210
     Height = 120
     Caption = 'Emiter'
-    TabOrder = 12
+    TabOrder = 11
     object LEmiter_Conc: TLabel
       Left = 11
       Top = 19
@@ -480,7 +464,7 @@ object MainForm: TMainForm
     end
   end
   object BScapsFileCreate: TButton
-    Left = 315
+    Left = 8
     Top = 227
     Width = 228
     Height = 36
@@ -491,7 +475,7 @@ object MainForm: TMainForm
     Font.Name = 'Tahoma'
     Font.Style = [fsBold]
     ParentFont = False
-    TabOrder = 13
+    TabOrder = 12
     WordWrap = True
     OnClick = BScapsFileCreateClick
   end
@@ -501,7 +485,7 @@ object MainForm: TMainForm
     Width = 724
     Height = 77
     Caption = 'Folder Select'
-    TabOrder = 14
+    TabOrder = 13
     object L_SCAPSF: TLabel
       Left = 323
       Top = 19
@@ -603,7 +587,7 @@ object MainForm: TMainForm
     Font.Name = 'Tahoma'
     Font.Style = [fsBold]
     ParentFont = False
-    TabOrder = 15
+    TabOrder = 14
     WordWrap = True
     OnClick = BAllDatesDatClick
   end
@@ -624,7 +608,7 @@ object MainForm: TMainForm
       'AM1.5'
       '940nm')
     ParentFont = False
-    TabOrder = 16
+    TabOrder = 15
   end
   object OpenDialog1: TOpenDialog
     Filter = 'Scaps files (*.iv)|*.iv'

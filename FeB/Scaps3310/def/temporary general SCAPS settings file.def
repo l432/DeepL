@@ -1,6 +1,7 @@
 
 
-handling of error messages :  0 ; 0=to screen and wait for ackowledgement; 1=append to log file; 2=overwrite log file
+handling of error messages :  2 ; 0=to screen and wait for ackowledgement; 1=append to log file; 2=overwrite log file
+handling of inter/extra-polation errors :  0 ; 0=proceed without warning; 1=give warning then proceed
 output list after a convergence error :  0 ; 0=truncate; 1=fill with zero's; 2=fill with white space
 maximum voltage for the recording of solar cell characteristics (V) :     2.000000
 minimum voltage increment for the recording of solar cell characteristics (V) :   0.01000000

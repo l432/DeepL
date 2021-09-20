@@ -3,9 +3,9 @@ Temperature :   340.00 K
 Voltage :     0.0000 V
 Frequency :   1.0000e+06 Hz
 Number of points :   5
-dark :  1
+dark :  0
 incident illumination specified
-incident spectrum from file :AM1_5G 1 sun.spe
+incident spectrum from file :AM1.5G ed2 1 sun.spe
 spectrum cut off :  0
 short wavelength cut off :   200.00 nm
 long wavelength cut off :  4000.00 nm
@@ -26,11 +26,11 @@ Secondworkpoint transmission :   100.0000 %
 Secondworkpoint attenuation :   100.0000 %
 pause :  0
 IV_startV :     0.0000 V
-IV_stopV :     0.4500 V
-IV_points :  46
+IV_stopV :     0.7000 V
+IV_points :  71
 IV_increment :     0.010000 V
 IV_calculate :  1
-stop after Voc :  0
+stop after Voc :  1
 CV_startV :    -0.8000 V
 CV_stopV :     0.8000 V
 CV_points :  81

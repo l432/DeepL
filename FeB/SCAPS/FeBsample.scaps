@@ -1,15 +1,15 @@
-> SCAPS 3.3.07 ELIS-UGent: Version scaps3307.exe, dated 06-01-2019, 14:07:34
-> SCAPS All SCAPS Settings file, saved on 	16-11-2019 at 16:14:00
+> SCAPS 3.3.10 ELIS-UGent: Version scaps3310.exe, dated 19-09-2021, 12:47:26
+> SCAPS All SCAPS Settings file, saved on 	19-09-2021 at 23:08:33
 > problem definition file loaded :
-> d:\Samples\DeepL\FeB\Scaps3307\def\OOOlegFeB.scaps
-> last saved: 	16-11-2019 at 16:14:00
+> d:\Samples\DeepL\FeB\Scaps3310\def\FeBD35T340B1p360e15.scaps
+> last saved: 	19-09-2021 at 22:59:51
 > 
 
 
 >> begin of problem definition file
 
-> SCAPS 3.3.07 ELIS-UGent: Version scaps3307.exe, dated 06-01-2019, 14:07:34 Problem definition file
-> last saved by SCAPS: 	16-11-2019 at 16:14:01
+> SCAPS 3.3.10 ELIS-UGent: Version scaps3310.exe, dated 19-09-2021, 12:47:26 Problem definition file
+> last saved by SCAPS: 	19-09-2021 at 23:08:35
 > 
 > 
 > Comments (to be) included in the def file
@@ -41,6 +41,8 @@
 > No doping type nor extrinsic doping is set! (NA = ND = 1E10/cm3 = about ni)
 > 
 > Should be OK for low doped silicon. For higher doping, the mobilities should be set to an appropriate lower value; th
+> 
+> > end of problem definition file
 > 
 > > end of problem definition file
 > 
@@ -562,7 +564,8 @@ Stop criterion for Chi square :   1.00000000e-07
 >> begin of general SCAPS settings file
 
 
-handling of error messages :  0 ; 0=to screen and wait for ackowledgement; 1=append to log file; 2=overwrite log file
+handling of error messages :  2 ; 0=to screen and wait for ackowledgement; 1=append to log file; 2=overwrite log file
+handling of inter/extra-polation errors :  0 ; 0=proceed without warning; 1=give warning then proceed
 output list after a convergence error :  0 ; 0=truncate; 1=fill with zero's; 2=fill with white space
 maximum voltage for the recording of solar cell characteristics (V) :     2.000000
 minimum voltage increment for the recording of solar cell characteristics (V) :   0.01000000
