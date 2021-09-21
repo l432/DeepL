@@ -2,11 +2,11 @@
 %Control: key (0)
 %Control: author (8) initials jnrlst
 %Control: editor formatted (1) identically to author
-%Control: production of article title (0) allowed
-%Control: page (1) range
+%Control: production of article title (-1) disabled
+%Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{33}%
+\begin{thebibliography}{50}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -56,11 +56,9 @@
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
   {Jivanescu}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Romanyuk}},
   \ and\ \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Stesmans}},\
-  }\bibfield  {title} {\enquote {\bibinfo {title} {Influence of in suti applied
-  ultrasound during {S}i$^+$ implantation in {S}io$_2$ on paramagnetic defect
-  generation},}\ }\href {\doibase 10.1063/1.3369041} {\bibfield  {journal}
-  {\bibinfo  {journal} {J. Appl. Phys.}\ }\textbf {\bibinfo {volume} {107}},\
-  \bibinfo {pages} {114307} (\bibinfo {year} {2010})}\BibitemShut {NoStop}%
+  }\href {\doibase 10.1063/1.3369041} {\bibfield  {journal} {\bibinfo
+  {journal} {J. Appl. Phys.}\ }\textbf {\bibinfo {volume} {107}},\ \bibinfo
+  {pages} {114307} (\bibinfo {year} {2010})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Gorb}\ \emph {et~al.}(2020)\citenamefont {Gorb},
   \citenamefont {Korotchenkov}, \citenamefont {Olikh}, \citenamefont
   {Podolian},\ and\ \citenamefont {Chupryna}}]{GORB2020}%
@@ -69,20 +67,16 @@
   {Gorb}}, \bibinfo {author} {\bibfnamefont {O.}~\bibnamefont {Korotchenkov}},
   \bibinfo {author} {\bibfnamefont {O.}~\bibnamefont {Olikh}}, \bibinfo
   {author} {\bibfnamefont {A.}~\bibnamefont {Podolian}}, \ and\ \bibinfo
-  {author} {\bibfnamefont {R.}~\bibnamefont {Chupryna}},\ }\bibfield  {title}
-  {\enquote {\bibinfo {title} {Influence of $\gamma$--irradiation and
-  ultrasound treatment on current mechanism in au-sio$_2$-si structure},}\
-  }\href {\doibase 10.1016/j.sse.2019.107712} {\bibfield  {journal} {\bibinfo
-  {journal} {Solid-State Electron.}\ }\textbf {\bibinfo {volume} {165}},\
-  \bibinfo {pages} {107712} (\bibinfo {year} {2020})}\BibitemShut {NoStop}%
+  {author} {\bibfnamefont {R.}~\bibnamefont {Chupryna}},\ }\href {\doibase
+  10.1016/j.sse.2019.107712} {\bibfield  {journal} {\bibinfo  {journal}
+  {Solid-State Electron.}\ }\textbf {\bibinfo {volume} {165}},\ \bibinfo
+  {pages} {107712} (\bibinfo {year} {2020})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Ostapenko}(1999)}]{Ostapenko1999}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
-  {Ostapenko}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Defect
-  passivation using ultrasound treatment: fundamentals and application},}\
-  }\href {\doibase 10.1007/s003390050994} {\bibfield  {journal} {\bibinfo
-  {journal} {Applied Physics A: Materials Science \& Processing}\ }\textbf
-  {\bibinfo {volume} {69}},\ \bibinfo {pages} {225--232} (\bibinfo {year}
+  {Ostapenko}},\ }\href {\doibase 10.1007/s003390050994} {\bibfield  {journal}
+  {\bibinfo  {journal} {Applied Physics A: Materials Science \& Processing}\
+  }\textbf {\bibinfo {volume} {69}},\ \bibinfo {pages} {225} (\bibinfo {year}
   {1999})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Zaveryukhin}, \citenamefont {Zaveryukhina},\ and\
   \citenamefont {Tursunkulov}(2002)}]{Zaveryukhin2002}%
@@ -90,12 +84,10 @@
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {B.}~\bibnamefont
   {Zaveryukhin}}, \bibinfo {author} {\bibfnamefont {N.}~\bibnamefont
   {Zaveryukhina}}, \ and\ \bibinfo {author} {\bibfnamefont {O.~M.}\
-  \bibnamefont {Tursunkulov}},\ }\bibfield  {title} {\enquote {\bibinfo {title}
-  {Variation of the reflection coefficient of semiconductors in a wavelength
-  range from 0.2 to 20 $\mu$m under the action of ultrasonic waves},}\ }\href
-  {\doibase 10.1134/1.1511774} {\bibfield  {journal} {\bibinfo  {journal}
-  {Tech. Phys. Lett.}\ }\textbf {\bibinfo {volume} {28}},\ \bibinfo {pages}
-  {752--756} (\bibinfo {year} {2002})}\BibitemShut {NoStop}%
+  \bibnamefont {Tursunkulov}},\ }\href {\doibase 10.1134/1.1511774} {\bibfield
+  {journal} {\bibinfo  {journal} {Tech. Phys. Lett.}\ }\textbf {\bibinfo
+  {volume} {28}},\ \bibinfo {pages} {752} (\bibinfo {year} {2002})}\BibitemShut
+  {NoStop}%
 \bibitem [{\citenamefont {Zaveryukhina}\ \emph {et~al.}(2008)\citenamefont
   {Zaveryukhina}, \citenamefont {Zaveryukhina}, \citenamefont {Vlasov},\ and\
   \citenamefont {Zaveryukhin}}]{Zaver:2008}%
@@ -104,12 +96,10 @@
   {Zaveryukhina}}, \bibinfo {author} {\bibfnamefont {E.}~\bibnamefont
   {Zaveryukhina}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
   {Vlasov}}, \ and\ \bibinfo {author} {\bibfnamefont {B.}~\bibnamefont
-  {Zaveryukhin}},\ }\bibfield  {title} {\enquote {\bibinfo {title}
-  {Acoustostimulated changes in the density of surface states and their energy
-  spectrum in p--type silicon single crystals},}\ }\href {\doibase
-  10.1134/S106378500803019X} {\bibfield  {journal} {\bibinfo  {journal} {Tech.
-  Phys. Lett.}\ }\textbf {\bibinfo {volume} {34}},\ \bibinfo {pages} {241--243}
-  (\bibinfo {year} {2008})}\BibitemShut {NoStop}%
+  {Zaveryukhin}},\ }\href {\doibase 10.1134/S106378500803019X} {\bibfield
+  {journal} {\bibinfo  {journal} {Tech. Phys. Lett.}\ }\textbf {\bibinfo
+  {volume} {34}},\ \bibinfo {pages} {241} (\bibinfo {year} {2008})}\BibitemShut
+  {NoStop}%
 \bibitem [{\citenamefont {Dirnstorfer}\ \emph {et~al.}(2000)\citenamefont
   {Dirnstorfer}, \citenamefont {Burkhardt}, \citenamefont {Meyer},
   \citenamefont {Ostapenko},\ and\ \citenamefont {Karg}}]{OstapSC}%
@@ -118,12 +108,10 @@
   {Dirnstorfer}}, \bibinfo {author} {\bibfnamefont {W.}~\bibnamefont
   {Burkhardt}}, \bibinfo {author} {\bibfnamefont {B.~K.}\ \bibnamefont
   {Meyer}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Ostapenko}}, \
-  and\ \bibinfo {author} {\bibfnamefont {F.}~\bibnamefont {Karg}},\ }\bibfield
-  {title} {\enquote {\bibinfo {title} {Effect of ultrasound treatment on
-  cuinse$_2$ solar cells},}\ }\href {\doibase 10.1016/S0038-1098(00)00276-3}
-  {\bibfield  {journal} {\bibinfo  {journal} {Solid State Commun.}\ }\textbf
-  {\bibinfo {volume} {116}},\ \bibinfo {pages} {87--91} (\bibinfo {year}
-  {2000})}\BibitemShut {NoStop}%
+  and\ \bibinfo {author} {\bibfnamefont {F.}~\bibnamefont {Karg}},\ }\href
+  {\doibase 10.1016/S0038-1098(00)00276-3} {\bibfield  {journal} {\bibinfo
+  {journal} {Solid State Commun.}\ }\textbf {\bibinfo {volume} {116}},\
+  \bibinfo {pages} {87} (\bibinfo {year} {2000})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Buyanova}\ \emph {et~al.}(1993)\citenamefont
   {Buyanova}, \citenamefont {Ostapenko}, \citenamefont {Savchuk},\ and\
   \citenamefont {Sheinkman}}]{buyanova1994}%
@@ -132,8 +120,6 @@
   {Buyanova}}, \bibinfo {author} {\bibfnamefont {S.~S.}\ \bibnamefont
   {Ostapenko}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Savchuk}},
   \ and\ \bibinfo {author} {\bibfnamefont {M.~K.}\ \bibnamefont {Sheinkman}},\
-  }\bibfield  {title} {\enquote {\bibinfo {title} {Influence of ultrasound
-  vibrations on the stable-metastable transitions of el2 centers in gaas},}\
   }in\ \href {\doibase 10.4028/www.scientific.net/MSF.143-147.1063} {\emph
   {\bibinfo {booktitle} {Defects in Semiconductors 17}}},\ \bibinfo {series}
   {Materials Science Forum}, Vol.\ \bibinfo {volume} {143},\ \bibinfo {editor}
@@ -151,42 +137,34 @@
   {Korotchenkov}}, \bibinfo {author} {\bibfnamefont {O.}~\bibnamefont {Olikh}},
   \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Podolyan}}, \bibinfo
   {author} {\bibfnamefont {R.}~\bibnamefont {Chupryna}}, \ and\ \bibinfo
-  {author} {\bibfnamefont {M.}~\bibnamefont {Torres-Cisneros}},\ }\bibfield
-  {title} {\enquote {\bibinfo {title} {Acoustically driven optical phenomena in
-  bulk and low-dimensional semiconductors},}\ }\href {\doibase
-  10.1088/1464-4258/3/4/364} {\bibfield  {journal} {\bibinfo  {journal} {J.
-  Opt. A: Pure Appl. Opt.}\ }\textbf {\bibinfo {volume} {3}},\ \bibinfo {pages}
-  {S82--S86} (\bibinfo {year} {2001})}\BibitemShut {NoStop}%
+  {author} {\bibfnamefont {M.}~\bibnamefont {Torres-Cisneros}},\ }\href
+  {\doibase 10.1088/1464-4258/3/4/364} {\bibfield  {journal} {\bibinfo
+  {journal} {J. Opt. A: Pure Appl. Opt.}\ }\textbf {\bibinfo {volume} {3}},\
+  \bibinfo {pages} {S82} (\bibinfo {year} {2001})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Wosinski}, \citenamefont {Makosa},\ and\
   \citenamefont {Witczak}(1994)}]{Wosinski}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {T.}~\bibnamefont
   {Wosinski}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Makosa}}, \
-  and\ \bibinfo {author} {\bibfnamefont {Z.}~\bibnamefont {Witczak}},\
-  }\bibfield  {title} {\enquote {\bibinfo {title} {Transformation of native
-  defects in bulk {G}a{A}s under ultrasonic vibration},}\ }\href {\doibase
-  10.1088/0268-1242/9/11/003} {\bibfield  {journal} {\bibinfo  {journal}
-  {Semicond. Sci. Technol.}\ }\textbf {\bibinfo {volume} {9}},\ \bibinfo
-  {pages} {2047--2052} (\bibinfo {year} {1994})}\BibitemShut {NoStop}%
+  and\ \bibinfo {author} {\bibfnamefont {Z.}~\bibnamefont {Witczak}},\ }\href
+  {\doibase 10.1088/0268-1242/9/11/003} {\bibfield  {journal} {\bibinfo
+  {journal} {Semicond. Sci. Technol.}\ }\textbf {\bibinfo {volume} {9}},\
+  \bibinfo {pages} {2047} (\bibinfo {year} {1994})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Olikh}(2015)}]{Olikh:Ultras}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {O.}~\bibnamefont
-  {Olikh}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Reversible
-  influence of ultrasound on $\gamma-$irradiated {M}o/n-{S}i {S}chottky barrier
-  structure},}\ }\href {\doibase 10.1016/j.ultras.2014.10.008} {\bibfield
+  {Olikh}},\ }\href {\doibase 10.1016/j.ultras.2014.10.008} {\bibfield
   {journal} {\bibinfo  {journal} {Ultrasonics}\ }\textbf {\bibinfo {volume}
-  {56}},\ \bibinfo {pages} {545--550} (\bibinfo {year} {2015})}\BibitemShut
+  {56}},\ \bibinfo {pages} {545} (\bibinfo {year} {2015})}\BibitemShut
   {NoStop}%
 \bibitem [{\citenamefont {Korotchenkov}\ and\ \citenamefont
   {Grimmeiss}(1995)}]{Korotchenkov1995}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {O.}~\bibnamefont
   {Korotchenkov}}\ and\ \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont
-  {Grimmeiss}},\ }\bibfield  {title} {\enquote {\bibinfo {title}
-  {Long-wavelength acoustic-mode-enhanced electron emission from {S}e and {T}e
-  donors in silicon},}\ }\href {\doibase 10.1103/PhysRevB.52.14598} {\bibfield
+  {Grimmeiss}},\ }\href {\doibase 10.1103/PhysRevB.52.14598} {\bibfield
   {journal} {\bibinfo  {journal} {Phys. Rev. B}\ }\textbf {\bibinfo {volume}
-  {52}},\ \bibinfo {pages} {14598--14606} (\bibinfo {year} {1995})}\BibitemShut
+  {52}},\ \bibinfo {pages} {14598} (\bibinfo {year} {1995})}\BibitemShut
   {NoStop}%
 \bibitem [{\citenamefont {Podolian}, \citenamefont {Nadtochiy},\ and\
   \citenamefont {Korotchenkov}(2012)}]{Podolian2012}%
@@ -194,24 +172,19 @@
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.~O.}\ \bibnamefont
   {Podolian}}, \bibinfo {author} {\bibfnamefont {A.~B.}\ \bibnamefont
   {Nadtochiy}}, \ and\ \bibinfo {author} {\bibfnamefont {O.~A.}\ \bibnamefont
-  {Korotchenkov}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Charge
-  carrier lifetime recovery in $\gamma-$irradiated silicon under the action of
-  ultrasound},}\ }\href {\doibase 10.1134/S1063785012050124} {\bibfield
+  {Korotchenkov}},\ }\href {\doibase 10.1134/S1063785012050124} {\bibfield
   {journal} {\bibinfo  {journal} {Tech. Phys. Lett.}\ }\textbf {\bibinfo
-  {volume} {38}},\ \bibinfo {pages} {405--408} (\bibinfo {year}
-  {2012})}\BibitemShut {NoStop}%
+  {volume} {38}},\ \bibinfo {pages} {405} (\bibinfo {year} {2012})}\BibitemShut
+  {NoStop}%
 \bibitem [{\citenamefont {Olikh}, \citenamefont {Tymochko},\ and\ \citenamefont
   {Dolgolenko}(2006)}]{YOlikh2006TPL}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont
   {Olikh}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Tymochko}}, \
   and\ \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Dolgolenko}},\
-  }\bibfield  {title} {\enquote {\bibinfo {title} {Acoustic--wave--stimulated
-  transformations of radiation defects in $\gamma-$irradiated n--type silicon
-  crystals},}\ }\href {\doibase 10.1134/S106378500607011X} {\bibfield
-  {journal} {\bibinfo  {journal} {Tech. Phys. Lett.}\ }\textbf {\bibinfo
-  {volume} {32}},\ \bibinfo {pages} {586--589} (\bibinfo {year}
-  {2006})}\BibitemShut {NoStop}%
+  }\href {\doibase 10.1134/S106378500607011X} {\bibfield  {journal} {\bibinfo
+  {journal} {Tech. Phys. Lett.}\ }\textbf {\bibinfo {volume} {32}},\ \bibinfo
+  {pages} {586} (\bibinfo {year} {2006})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Ostrovskii}\ \emph {et~al.}(2005)\citenamefont
   {Ostrovskii}, \citenamefont {Ostrovskaya}, \citenamefont {Korotchenkov},\
   and\ \citenamefont {Reidy}}]{UST:OstrovCsI}%
@@ -220,23 +193,19 @@
   {Ostrovskii}}, \bibinfo {author} {\bibfnamefont {N.}~\bibnamefont
   {Ostrovskaya}}, \bibinfo {author} {\bibfnamefont {O.}~\bibnamefont
   {Korotchenkov}}, \ and\ \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
-  {Reidy}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Radiation defects
-  manipulation by ultrasound in ionic crystals},}\ }\href {\doibase
-  10.1109/TNS.2005.861476} {\bibfield  {journal} {\bibinfo  {journal} {IEEE
-  Trans. Nucl. Sci.}\ }\textbf {\bibinfo {volume} {52}},\ \bibinfo {pages}
-  {3068--3073} (\bibinfo {year} {2005})}\BibitemShut {NoStop}%
+  {Reidy}},\ }\href {\doibase 10.1109/TNS.2005.861476} {\bibfield  {journal}
+  {\bibinfo  {journal} {IEEE Trans. Nucl. Sci.}\ }\textbf {\bibinfo {volume}
+  {52}},\ \bibinfo {pages} {3068} (\bibinfo {year} {2005})}\BibitemShut
+  {NoStop}%
 \bibitem [{\citenamefont {Parchinskii}, \citenamefont {Vlasov},\ and\
   \citenamefont {Ligai}(2006)}]{Parchinskii2006}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.}~\bibnamefont
   {Parchinskii}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Vlasov}},
-  \ and\ \bibinfo {author} {\bibfnamefont {L.}~\bibnamefont {Ligai}},\
-  }\bibfield  {title} {\enquote {\bibinfo {title} {Effect of ultrasonic
-  treatment on the generation characteristics of irradiated
-  silicon--silicon--dioxide interface},}\ }\href {\doibase
-  10.1134/S106378260607013X} {\bibfield  {journal} {\bibinfo  {journal}
-  {Semiconductors}\ }\textbf {\bibinfo {volume} {40}},\ \bibinfo {pages}
-  {808--811} (\bibinfo {year} {2006})}\BibitemShut {NoStop}%
+  \ and\ \bibinfo {author} {\bibfnamefont {L.}~\bibnamefont {Ligai}},\ }\href
+  {\doibase 10.1134/S106378260607013X} {\bibfield  {journal} {\bibinfo
+  {journal} {Semiconductors}\ }\textbf {\bibinfo {volume} {40}},\ \bibinfo
+  {pages} {808} (\bibinfo {year} {2006})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Konoreva}\ \emph {et~al.}(2017)\citenamefont
   {Konoreva}, \citenamefont {Olikh}, \citenamefont {Pinkovska}, \citenamefont
   {Radkevych}, \citenamefont {Tartachnyk},\ and\ \citenamefont
@@ -247,13 +216,10 @@
   \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Pinkovska}}, \bibinfo
   {author} {\bibfnamefont {O.}~\bibnamefont {Radkevych}}, \bibinfo {author}
   {\bibfnamefont {V.}~\bibnamefont {Tartachnyk}}, \ and\ \bibinfo {author}
-  {\bibfnamefont {V.}~\bibnamefont {Shlapatska}},\ }\bibfield  {title}
-  {\enquote {\bibinfo {title} {The influence of acoustic--dislocation
-  interaction on intensity of the bound exciton recombination in initial and
-  irradiated {G}a{A}s{P} {LED}s structures},}\ }\href {\doibase
+  {\bibfnamefont {V.}~\bibnamefont {Shlapatska}},\ }\href {\doibase
   10.1016/j.spmi.2016.12.026} {\bibfield  {journal} {\bibinfo  {journal}
   {Superlattices Microstruct.}\ }\textbf {\bibinfo {volume} {102}},\ \bibinfo
-  {pages} {88--93} (\bibinfo {year} {2017})}\BibitemShut {NoStop}%
+  {pages} {88} (\bibinfo {year} {2017})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Romanyuk}\ \emph {et~al.}(2007)\citenamefont
   {Romanyuk}, \citenamefont {Oelhafen}, \citenamefont {Kurps},\ and\
   \citenamefont {Melnik}}]{Roman:2007APL}%
@@ -261,20 +227,16 @@
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
   {Romanyuk}}, \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {Oelhafen}},
   \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont {Kurps}}, \ and\ \bibinfo
-  {author} {\bibfnamefont {V.}~\bibnamefont {Melnik}},\ }\bibfield  {title}
-  {\enquote {\bibinfo {title} {Use of ultrasound for metal cluster engineering
-  in ion implanted silicon oxide},}\ }\href {\doibase 10.1063/1.2430055}
-  {\bibfield  {journal} {\bibinfo  {journal} {Appl. Phys. Lett.}\ }\textbf
-  {\bibinfo {volume} {90}},\ \bibinfo {pages} {013118} (\bibinfo {year}
-  {2007})}\BibitemShut {NoStop}%
+  {author} {\bibfnamefont {V.}~\bibnamefont {Melnik}},\ }\href {\doibase
+  10.1063/1.2430055} {\bibfield  {journal} {\bibinfo  {journal} {Appl. Phys.
+  Lett.}\ }\textbf {\bibinfo {volume} {90}},\ \bibinfo {pages} {013118}
+  (\bibinfo {year} {2007})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Olikh}, \citenamefont {Voytenko},\ and\ \citenamefont
   {Burbelo}(2015)}]{OlikhJAP}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {O.~Y.}\ \bibnamefont
   {Olikh}}, \bibinfo {author} {\bibfnamefont {K.~V.}\ \bibnamefont {Voytenko}},
   \ and\ \bibinfo {author} {\bibfnamefont {R.~M.}\ \bibnamefont {Burbelo}},\
-  }\bibfield  {title} {\enquote {\bibinfo {title} {Ultrasound influence on
-  {I}--{V}--{T} characteristics of silicon {S}chottky barrier structure},}\
   }\href {\doibase 10.1063/1.4906844} {\bibfield  {journal} {\bibinfo
   {journal} {J. Appl. Phys.}\ }\textbf {\bibinfo {volume} {117}},\ \bibinfo
   {pages} {044505} (\bibinfo {year} {2015})}\BibitemShut {NoStop}%
@@ -286,44 +248,35 @@
   {Olikh}}, \bibinfo {author} {\bibfnamefont {A.~M.}\ \bibnamefont {Gorb}},
   \bibinfo {author} {\bibfnamefont {R.~G.}\ \bibnamefont {Chupryna}}, \ and\
   \bibinfo {author} {\bibfnamefont {O.~V.}\ \bibnamefont {Pristay-Fenenkov}},\
-  }\bibfield  {title} {\enquote {\bibinfo {title} {Acousto--defect interaction
-  in irradiated and non--irradiated silicon $n^+$--$p$ structure},}\ }\href
-  {\doibase 10.1063/1.5001123} {\bibfield  {journal} {\bibinfo  {journal} {J.
-  Appl. Phys.}\ }\textbf {\bibinfo {volume} {123}},\ \bibinfo {pages} {161573}
-  (\bibinfo {year} {2018})}\BibitemShut {NoStop}%
+  }\href {\doibase 10.1063/1.5001123} {\bibfield  {journal} {\bibinfo
+  {journal} {J. Appl. Phys.}\ }\textbf {\bibinfo {volume} {123}},\ \bibinfo
+  {pages} {161573} (\bibinfo {year} {2018})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Romanyuk}, \citenamefont {Spassov},\ and\
   \citenamefont {Melnik}(2006)}]{Roman:2006JAP}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
   {Romanyuk}}, \bibinfo {author} {\bibfnamefont {V.}~\bibnamefont {Spassov}}, \
-  and\ \bibinfo {author} {\bibfnamefont {V.}~\bibnamefont {Melnik}},\
-  }\bibfield  {title} {\enquote {\bibinfo {title} {Influence of in situ
-  ultrasound treatment during ion implantation on formation of silver
-  nanoparticles in silica},}\ }\href {\doibase 10.1063/1.2171773} {\bibfield
-  {journal} {\bibinfo  {journal} {J. Appl. Phys.}\ }\textbf {\bibinfo {volume}
-  {99}},\ \bibinfo {pages} {034314} (\bibinfo {year} {2006})}\BibitemShut
-  {NoStop}%
+  and\ \bibinfo {author} {\bibfnamefont {V.}~\bibnamefont {Melnik}},\ }\href
+  {\doibase 10.1063/1.2171773} {\bibfield  {journal} {\bibinfo  {journal} {J.
+  Appl. Phys.}\ }\textbf {\bibinfo {volume} {99}},\ \bibinfo {pages} {034314}
+  (\bibinfo {year} {2006})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Istratov}, \citenamefont {Hieslmair},\ and\
   \citenamefont {Weber}(2000)}]{Istratov2000}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.~A.}\ \bibnamefont
   {Istratov}}, \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Hieslmair}},
-  \ and\ \bibinfo {author} {\bibfnamefont {E.}~\bibnamefont {Weber}},\
-  }\bibfield  {title} {\enquote {\bibinfo {title} {Iron contamination in
-  silicon technology},}\ }\href {\doibase 10.1007/s003390051074} {\bibfield
-  {journal} {\bibinfo  {journal} {Appl. Phys. A}\ }\textbf {\bibinfo {volume}
-  {70}},\ \bibinfo {pages} {489–534} (\bibinfo {year} {2000})}\BibitemShut
-  {NoStop}%
+  \ and\ \bibinfo {author} {\bibfnamefont {E.}~\bibnamefont {Weber}},\ }\href
+  {\doibase 10.1007/s003390051074} {\bibfield  {journal} {\bibinfo  {journal}
+  {Appl. Phys. A}\ }\textbf {\bibinfo {volume} {70}},\ \bibinfo {pages}
+  {489–534} (\bibinfo {year} {2000})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Geerligs}\ and\ \citenamefont
   {Macdonald}(2004)}]{FeBLight2}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {L.~J.}\ \bibnamefont
   {Geerligs}}\ and\ \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont
-  {Macdonald}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Dynamics of
-  light-induced feb pair dissociation in crystalline silicon},}\ }\href
-  {\doibase 10.1063/1.1823587} {\bibfield  {journal} {\bibinfo  {journal}
-  {Appl. Phys. Lett.}\ }\textbf {\bibinfo {volume} {85}},\ \bibinfo {pages}
-  {5227--5229} (\bibinfo {year} {2004})}\BibitemShut {NoStop}%
+  {Macdonald}},\ }\href {\doibase 10.1063/1.1823587} {\bibfield  {journal}
+  {\bibinfo  {journal} {Appl. Phys. Lett.}\ }\textbf {\bibinfo {volume} {85}},\
+  \bibinfo {pages} {5227} (\bibinfo {year} {2004})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Macdonald}\ \emph {et~al.}(2005)\citenamefont
   {Macdonald}, \citenamefont {Roth}, \citenamefont {Deenapanray}, \citenamefont
   {Bothe}, \citenamefont {Pohl},\ and\ \citenamefont {Schmidt}}]{FeBJAP2005}%
@@ -333,11 +286,10 @@
   \bibinfo {author} {\bibfnamefont {P.~N.~K.}\ \bibnamefont {Deenapanray}},
   \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont {Bothe}}, \bibinfo
   {author} {\bibfnamefont {P.}~\bibnamefont {Pohl}}, \ and\ \bibinfo {author}
-  {\bibfnamefont {J.}~\bibnamefont {Schmidt}},\ }\bibfield  {title} {\enquote
-  {\bibinfo {title} {Formation rates of iron-acceptor pairs in crystalline
-  silicon},}\ }\href {\doibase 10.1063/1.2102071} {\bibfield  {journal}
-  {\bibinfo  {journal} {J. Appl. Phys.}\ }\textbf {\bibinfo {volume} {98}},\
-  \bibinfo {pages} {083509} (\bibinfo {year} {2005})}\BibitemShut {NoStop}%
+  {\bibfnamefont {J.}~\bibnamefont {Schmidt}},\ }\href {\doibase
+  10.1063/1.2102071} {\bibfield  {journal} {\bibinfo  {journal} {J. Appl.
+  Phys.}\ }\textbf {\bibinfo {volume} {98}},\ \bibinfo {pages} {083509}
+  (\bibinfo {year} {2005})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {M\"{o}ller}\ \emph {et~al.}(2014)\citenamefont
   {M\"{o}ller}, \citenamefont {Bartel}, \citenamefont {Gibaja},\ and\
   \citenamefont {Lauer}}]{FeBAssJAP2014}%
@@ -345,9 +297,7 @@
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.}~\bibnamefont
   {M\"{o}ller}}, \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont {Bartel}},
   \bibinfo {author} {\bibfnamefont {F.}~\bibnamefont {Gibaja}}, \ and\ \bibinfo
-  {author} {\bibfnamefont {K.}~\bibnamefont {Lauer}},\ }\bibfield  {title}
-  {\enquote {\bibinfo {title} {Iron-boron pairing kinetics in illuminated
-  p-type and in boron/phosphorus co-doped n-type silicon},}\ }\href {\doibase
+  {author} {\bibfnamefont {K.}~\bibnamefont {Lauer}},\ }\href {\doibase
   10.1063/1.4889817} {\bibfield  {journal} {\bibinfo  {journal} {J. Appl.
   Phys.}\ }\textbf {\bibinfo {volume} {116}},\ \bibinfo {pages} {024503}
   (\bibinfo {year} {2014})}\BibitemShut {NoStop}%
@@ -356,23 +306,19 @@
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {G.}~\bibnamefont
   {Zoth}}\ and\ \bibinfo {author} {\bibfnamefont {W.}~\bibnamefont
-  {Bergholz}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {A fast,
-  preperetion-free method to detect iron in silicon},}\ }\href {\doibase
-  10.1063/1.345063} {\bibfield  {journal} {\bibinfo  {journal} {J. Appl.
-  Phys.}\ }\textbf {\bibinfo {volume} {67}},\ \bibinfo {pages} {6764--6771}
-  (\bibinfo {year} {1990})}\BibitemShut {NoStop}%
+  {Bergholz}},\ }\href {\doibase 10.1063/1.345063} {\bibfield  {journal}
+  {\bibinfo  {journal} {J. Appl. Phys.}\ }\textbf {\bibinfo {volume} {67}},\
+  \bibinfo {pages} {6764} (\bibinfo {year} {1990})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Ostapenko}, \citenamefont {~},\ and\ \citenamefont
   {Sopori}(1995)}]{Ostapenko1995SST}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.~S.}\ \bibnamefont
   {Ostapenko}}, \bibinfo {author} {\bibfnamefont {L.}~\bibnamefont {~},
   \bibfnamefont {Jastrzebski}}, \ and\ \bibinfo {author} {\bibfnamefont
-  {B.}~\bibnamefont {Sopori}},\ }\bibfield  {title} {\enquote {\bibinfo {title}
-  {Change of minority carrier diffusion length in polycrystalline silicon by
-  ultrasound treatment},}\ }\href {\doibase 10.1088/0268-1242/10/11/011}
+  {B.}~\bibnamefont {Sopori}},\ }\href {\doibase 10.1088/0268-1242/10/11/011}
   {\bibfield  {journal} {\bibinfo  {journal} {Semicond. Sci. Technol.}\
-  }\textbf {\bibinfo {volume} {10}},\ \bibinfo {pages} {1494--1500} (\bibinfo
-  {year} {1995})}\BibitemShut {NoStop}%
+  }\textbf {\bibinfo {volume} {10}},\ \bibinfo {pages} {1494} (\bibinfo {year}
+  {1995})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Ostapenko}\ \emph {et~al.}(1994)\citenamefont
   {Ostapenko}, \citenamefont {Jastrzebski}, \citenamefont {Lagowski},\ and\
   \citenamefont {Sopori}}]{Ostapenko1994APL}%
@@ -381,12 +327,9 @@
   {Ostapenko}}, \bibinfo {author} {\bibfnamefont {L.}~\bibnamefont
   {Jastrzebski}}, \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
   {Lagowski}}, \ and\ \bibinfo {author} {\bibfnamefont {B.}~\bibnamefont
-  {Sopori}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Increasing short
-  minority carrier diffusion lengths in solar--grade polycrystalline silicon by
-  ultrasound treatment},}\ }\href {\doibase 10.1063/1.112942} {\bibfield
-  {journal} {\bibinfo  {journal} {Appl. Phys. Lett.}\ }\textbf {\bibinfo
-  {volume} {65}},\ \bibinfo {pages} {1555--1557} (\bibinfo {year}
-  {1994})}\BibitemShut {NoStop}%
+  {Sopori}},\ }\href {\doibase 10.1063/1.112942} {\bibfield  {journal}
+  {\bibinfo  {journal} {Appl. Phys. Lett.}\ }\textbf {\bibinfo {volume} {65}},\
+  \bibinfo {pages} {1555} (\bibinfo {year} {1994})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Khelifati}\ \emph {et~al.}(2019)\citenamefont
   {Khelifati}, \citenamefont {Laine}, \citenamefont {Vähänissi},
   \citenamefont {Savin}, \citenamefont {Bouamama},\ and\ \citenamefont
@@ -397,13 +340,10 @@
   {Laine}}, \bibinfo {author} {\bibfnamefont {V.}~\bibnamefont {Vähänissi}},
   \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Savin}}, \bibinfo
   {author} {\bibfnamefont {F.~Z.}\ \bibnamefont {Bouamama}}, \ and\ \bibinfo
-  {author} {\bibfnamefont {D.}~\bibnamefont {Bouhafs}},\ }\bibfield  {title}
-  {\enquote {\bibinfo {title} {Dissociation and formation kinetics of
-  iron–boron pairs in silicon after phosphorus implantation gettering},}\
-  }\href {\doibase https://doi.org/10.1002/pssa.201900253} {\bibfield
-  {journal} {\bibinfo  {journal} {Phys Status Solidi A}\ }\textbf {\bibinfo
-  {volume} {216}},\ \bibinfo {pages} {1900253} (\bibinfo {year}
-  {2019})}\BibitemShut {NoStop}%
+  {author} {\bibfnamefont {D.}~\bibnamefont {Bouhafs}},\ }\href {\doibase
+  https://doi.org/10.1002/pssa.201900253} {\bibfield  {journal} {\bibinfo
+  {journal} {Phys Status Solidi A}\ }\textbf {\bibinfo {volume} {216}},\
+  \bibinfo {pages} {1900253} (\bibinfo {year} {2019})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Tan}\ \emph {et~al.}(2011)\citenamefont {Tan},
   \citenamefont {Macdonald}, \citenamefont {Rougieux},\ and\ \citenamefont
   {Cuevas}}]{FeBAssSST2011}%
@@ -411,12 +351,10 @@
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
   {Tan}}, \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont {Macdonald}},
   \bibinfo {author} {\bibfnamefont {F.}~\bibnamefont {Rougieux}}, \ and\
-  \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Cuevas}},\ }\bibfield
-  {title} {\enquote {\bibinfo {title} {Accurate measurement of the formation
-  rate of iron{\textendash}boron pairs in silicon},}\ }\href {\doibase
-  10.1088/0268-1242/26/5/055019} {\bibfield  {journal} {\bibinfo  {journal}
-  {Semicond Sci. Technol.}\ }\textbf {\bibinfo {volume} {26}},\ \bibinfo
-  {pages} {055019} (\bibinfo {year} {2011})}\BibitemShut {NoStop}%
+  \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Cuevas}},\ }\href
+  {\doibase 10.1088/0268-1242/26/5/055019} {\bibfield  {journal} {\bibinfo
+  {journal} {Semicond Sci. Technol.}\ }\textbf {\bibinfo {volume} {26}},\
+  \bibinfo {pages} {055019} (\bibinfo {year} {2011})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Lauer}\ \emph {et~al.}(2016)\citenamefont {Lauer},
   \citenamefont {M{\"{o}}ller}, \citenamefont {Debbih}, \citenamefont {Auge},\
   and\ \citenamefont {Schulze}}]{lauer2016}%
@@ -425,9 +363,7 @@
   {Lauer}}, \bibinfo {author} {\bibfnamefont {C.}~\bibnamefont {M{\"{o}}ller}},
   \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont {Debbih}}, \bibinfo
   {author} {\bibfnamefont {M.}~\bibnamefont {Auge}}, \ and\ \bibinfo {author}
-  {\bibfnamefont {D.}~\bibnamefont {Schulze}},\ }\bibfield  {title} {\enquote
-  {\bibinfo {title} {Determination of activation energy of the iron acceptor
-  pair association and dissociation reaction},}\ }in\ \href {\doibase
+  {\bibfnamefont {D.}~\bibnamefont {Schulze}},\ }in\ \href {\doibase
   10.4028/www.scientific.net/SSP.242.230} {\emph {\bibinfo {booktitle}
   {Gettering and Defect Engineering in Semiconductor Technology XVI}}},\
   \bibinfo {series} {Solid State Phenomena}, Vol.\ \bibinfo {volume} {242}\
@@ -444,22 +380,18 @@
   {\bibfnamefont {J.}~\bibnamefont {He}}, \bibinfo {author} {\bibfnamefont
   {Y.}~\bibnamefont {Wu}}, \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
   {Vanhellemont}}, \ and\ \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont
-  {Que}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Iron--boron pair
-  dissociation in silicon under strong illumination},}\ }\href {\doibase
-  10.1063/1.4819481} {\bibfield  {journal} {\bibinfo  {journal} {AIP Adv.}\
-  }\textbf {\bibinfo {volume} {3}},\ \bibinfo {pages} {082124} (\bibinfo {year}
-  {2013})}\BibitemShut {NoStop}%
+  {Que}},\ }\href {\doibase 10.1063/1.4819481} {\bibfield  {journal} {\bibinfo
+  {journal} {AIP Adv.}\ }\textbf {\bibinfo {volume} {3}},\ \bibinfo {pages}
+  {082124} (\bibinfo {year} {2013})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Macdonald}, \citenamefont {Cuevas},\ and\
   \citenamefont {Geerligs}(2008)}]{FeBkinAPL2008}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.}~\bibnamefont
   {Macdonald}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Cuevas}}, \
   and\ \bibinfo {author} {\bibfnamefont {L.~J.}\ \bibnamefont {Geerligs}},\
-  }\bibfield  {title} {\enquote {\bibinfo {title} {Measuring dopant
-  concentrations in compensated p--type crystalline silicon via iron--acceptor
-  pairing},}\ }\href {\doibase 10.1063/1.2936840} {\bibfield  {journal}
-  {\bibinfo  {journal} {Appl. Phys. Lett.}\ }\textbf {\bibinfo {volume} {92}},\
-  \bibinfo {pages} {202119} (\bibinfo {year} {2008})}\BibitemShut {NoStop}%
+  }\href {\doibase 10.1063/1.2936840} {\bibfield  {journal} {\bibinfo
+  {journal} {Appl. Phys. Lett.}\ }\textbf {\bibinfo {volume} {92}},\ \bibinfo
+  {pages} {202119} (\bibinfo {year} {2008})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Bartel}\ \emph {et~al.}(2013)\citenamefont {Bartel},
   \citenamefont {Gibaja}, \citenamefont {Graf}, \citenamefont {Gross},
   \citenamefont {Kaes}, \citenamefont {Heuer}, \citenamefont {Kirscht},
@@ -472,10 +404,183 @@
   {M.}~\bibnamefont {Kaes}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
   {Heuer}}, \bibinfo {author} {\bibfnamefont {F.}~\bibnamefont {Kirscht}},
   \bibinfo {author} {\bibfnamefont {C.}~\bibnamefont {Möller}}, \ and\
-  \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont {Lauer}},\ }\bibfield
-  {title} {\enquote {\bibinfo {title} {Dynamics of iron-acceptor-pair formation
-  in co-doped silicon},}\ }\href {\doibase 10.1063/1.4830227} {\bibfield
-  {journal} {\bibinfo  {journal} {Appl. Phys. Lett.}\ }\textbf {\bibinfo
-  {volume} {103}},\ \bibinfo {pages} {202109} (\bibinfo {year}
-  {2013})}\BibitemShut {NoStop}%
+  \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont {Lauer}},\ }\href
+  {\doibase 10.1063/1.4830227} {\bibfield  {journal} {\bibinfo  {journal}
+  {Appl. Phys. Lett.}\ }\textbf {\bibinfo {volume} {103}},\ \bibinfo {pages}
+  {202109} (\bibinfo {year} {2013})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Fahrenbruch}\ and\ \citenamefont
+  {Bube}(1983)}]{Bube}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Fahrenbruch}}\ and\ \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
+  {Bube}},\ }\href@noop {} {\emph {\bibinfo {title} {Fundamentals of Solar
+  Cells: Photovoltaic Solar Energy Conversion}}}\ (\bibinfo  {publisher}
+  {Academic Press},\ \bibinfo {year} {1983})\ p.\ \bibinfo {pages}
+  {580}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Razeghi}\ and\ \citenamefont
+  {Rogalski}(1996)}]{Razeghi}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Razeghi}}\ and\ \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Rogalski}},\ }\href {\doibase 10.1063/1.362677} {\bibfield  {journal}
+  {\bibinfo  {journal} {J. Appl. Phys.}\ }\textbf {\bibinfo {volume} {79}},\
+  \bibinfo {pages} {7433} (\bibinfo {year} {1996})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Murphy}\ \emph {et~al.}(2011)\citenamefont {Murphy},
+  \citenamefont {Bothe}, \citenamefont {Olmo}, \citenamefont {Voronkov},\ and\
+  \citenamefont {Falster}}]{MurphyJAP2011}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~D.}\ \bibnamefont
+  {Murphy}}, \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont {Bothe}},
+  \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Olmo}}, \bibinfo {author}
+  {\bibfnamefont {V.~V.}\ \bibnamefont {Voronkov}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {R.~J.}\ \bibnamefont {Falster}},\ }\href {\doibase
+  10.1063/1.3632067} {\bibfield  {journal} {\bibinfo  {journal} {J. Appl.
+  Phys.}\ }\textbf {\bibinfo {volume} {110}},\ \bibinfo {pages} {053713}
+  (\bibinfo {year} {2011})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Wijaranakula}(1993)}]{FeB:kinetic}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {W.}~\bibnamefont
+  {Wijaranakula}},\ }\href {\doibase 10.1149/1.2056102} {\bibfield  {journal}
+  {\bibinfo  {journal} {J. Electrochem. Soc.}\ }\textbf {\bibinfo {volume}
+  {140}},\ \bibinfo {pages} {275} (\bibinfo {year} {1993})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Klyui}\ \emph {et~al.}(2000)\citenamefont {Klyui},
+  \citenamefont {Kostylyov}, \citenamefont {Rozhin}, \citenamefont {Gorbulik},
+  \citenamefont {Litovchenko}, \citenamefont {Voronkin},\ and\ \citenamefont
+  {Zaika}}]{KostRefl2000}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {N.}~\bibnamefont
+  {Klyui}}, \bibinfo {author} {\bibfnamefont {V.}~\bibnamefont {Kostylyov}},
+  \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Rozhin}}, \bibinfo
+  {author} {\bibfnamefont {V.}~\bibnamefont {Gorbulik}}, \bibinfo {author}
+  {\bibfnamefont {V.}~\bibnamefont {Litovchenko}}, \bibinfo {author}
+  {\bibfnamefont {M.}~\bibnamefont {Voronkin}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {N.}~\bibnamefont {Zaika}},\ }\href@noop {} {\bibfield
+  {journal} {\bibinfo  {journal} {Opto-Electr. Rev.}\ }\textbf {\bibinfo
+  {volume} {8}},\ \bibinfo {pages} {402} (\bibinfo {year} {2000})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Klaassen}(1992)}]{KLAASSEN953}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.}~\bibnamefont
+  {Klaassen}},\ }\href {\doibase 10.1016/0038-1101(92)90325-7} {\bibfield
+  {journal} {\bibinfo  {journal} {Solid-State Electron.}\ }\textbf {\bibinfo
+  {volume} {35}},\ \bibinfo {pages} {953} (\bibinfo {year} {1992})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Green}(1990)}]{Nc:Green}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.~A.}\ \bibnamefont
+  {Green}},\ }\href {\doibase 10.1063/1.345414} {\bibfield  {journal} {\bibinfo
+   {journal} {J. Appl. Phys.}\ }\textbf {\bibinfo {volume} {67}},\ \bibinfo
+  {pages} {2944} (\bibinfo {year} {1990})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Couderc}, \citenamefont {Amara},\ and\ \citenamefont
+  {Lemiti}(2014)}]{Si_ni_Couderc}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
+  {Couderc}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Amara}}, \
+  and\ \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Lemiti}},\ }\href
+  {\doibase 10.1063/1.4867776} {\bibfield  {journal} {\bibinfo  {journal} {J.
+  Appl. Phys.}\ }\textbf {\bibinfo {volume} {115}},\ \bibinfo {pages} {093705}
+  (\bibinfo {year} {2014})},\ \Eprint
+  {http://arxiv.org/abs/https://doi.org/10.1063/1.4867776}
+  {https://doi.org/10.1063/1.4867776} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Rougieux}, \citenamefont {Sun},\ and\ \citenamefont
+  {Macdonald}(2018)}]{ROUGIEUX2018}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {F.~E.}\ \bibnamefont
+  {Rougieux}}, \bibinfo {author} {\bibfnamefont {C.}~\bibnamefont {Sun}}, \
+  and\ \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont {Macdonald}},\ }\href
+  {\doibase https://doi.org/10.1016/j.solmat.2018.07.029} {\bibfield  {journal}
+  {\bibinfo  {journal} {Sol. Energy Mater. Sol. Cells}\ }\textbf {\bibinfo
+  {volume} {187}},\ \bibinfo {pages} {263 } (\bibinfo {year}
+  {2018})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Rajkanan}, \citenamefont {Singh},\ and\ \citenamefont
+  {Shewchun}(1979)}]{Si:Absorb}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
+  {Rajkanan}}, \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont {Singh}}, \
+  and\ \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Shewchun}},\ }\href
+  {\doibase 10.1016/0038-1101(79)90128-X} {\bibfield  {journal} {\bibinfo
+  {journal} {Solid-State Electron.}\ }\textbf {\bibinfo {volume} {22}},\
+  \bibinfo {pages} {793} (\bibinfo {year} {1979})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Green}\ and\ \citenamefont
+  {Keevers}(1995)}]{GreenOptic}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.~A.}\ \bibnamefont
+  {Green}}\ and\ \bibinfo {author} {\bibfnamefont {M.~J.}\ \bibnamefont
+  {Keevers}},\ }\href {\doibase 10.1002/pip.4670030303} {\bibfield  {journal}
+  {\bibinfo  {journal} {Progress in Photovoltaics: Research and Applications}\
+  }\textbf {\bibinfo {volume} {3}},\ \bibinfo {pages} {189} (\bibinfo {year}
+  {1995})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Nguyen}, \citenamefont {Baker-Finch},\ and\
+  \citenamefont {Macdonald}(2014)}]{Si_BtB}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.~T.}\ \bibnamefont
+  {Nguyen}}, \bibinfo {author} {\bibfnamefont {S.~C.}\ \bibnamefont
+  {Baker-Finch}}, \ and\ \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont
+  {Macdonald}},\ }\href {\doibase 10.1063/1.4869295} {\bibfield  {journal}
+  {\bibinfo  {journal} {Appl. Phys. Lett.}\ }\textbf {\bibinfo {volume}
+  {104}},\ \bibinfo {pages} {112105} (\bibinfo {year} {2014})},\ \Eprint
+  {http://arxiv.org/abs/https://doi.org/10.1063/1.4869295}
+  {https://doi.org/10.1063/1.4869295} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Altermatt}\ \emph {et~al.}(1997)\citenamefont
+  {Altermatt}, \citenamefont {Schmidt}, \citenamefont {Heiser},\ and\
+  \citenamefont {Aberle}}]{Si_Auger}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.~P.}\ \bibnamefont
+  {Altermatt}}, \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Schmidt}},
+  \bibinfo {author} {\bibfnamefont {G.}~\bibnamefont {Heiser}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {A.~G.}\ \bibnamefont {Aberle}},\ }\href {\doibase
+  10.1063/1.366360} {\bibfield  {journal} {\bibinfo  {journal} {J. Appl.
+  Phys.}\ }\textbf {\bibinfo {volume} {82}},\ \bibinfo {pages} {4938} (\bibinfo
+  {year} {1997})},\ \Eprint
+  {http://arxiv.org/abs/https://doi.org/10.1063/1.366360}
+  {https://doi.org/10.1063/1.366360} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Mohamed}, \citenamefont {Hadi},\ and\ \citenamefont
+  {Jambi}(2019)}]{EBLSHADE}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.~W.}\ \bibnamefont
+  {Mohamed}}, \bibinfo {author} {\bibfnamefont {A.~A.}\ \bibnamefont {Hadi}}, \
+  and\ \bibinfo {author} {\bibfnamefont {K.~M.}\ \bibnamefont {Jambi}},\ }\href
+  {\doibase 10.1016/j.swevo.2018.10.006} {\bibfield  {journal} {\bibinfo
+  {journal} {Swarm Evol. Comput.}\ }\textbf {\bibinfo {volume} {50}},\ \bibinfo
+  {pages} {100455} (\bibinfo {year} {2019})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Herlufsen}\ \emph {et~al.}(2012)\citenamefont
+  {Herlufsen}, \citenamefont {Macdonald}, \citenamefont {Bothe},\ and\
+  \citenamefont {Schmidt}}]{FeMethod2012}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+  {Herlufsen}}, \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont
+  {Macdonald}}, \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont {Bothe}}, \
+  and\ \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Schmidt}},\ }\href
+  {\doibase 10.1002/pssr.201105499} {\bibfield  {journal} {\bibinfo  {journal}
+  {physica status solidi (RRL) – Rapid Research Letters}\ }\textbf {\bibinfo
+  {volume} {6}},\ \bibinfo {pages} {1} (\bibinfo {year} {2012})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Schmidt}\ \emph {et~al.}(2020)\citenamefont
+  {Schmidt}, \citenamefont {Bothe}, \citenamefont {Voronkov},\ and\
+  \citenamefont {Falster}}]{Schmidt2019}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {Schmidt}}, \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont {Bothe}},
+  \bibinfo {author} {\bibfnamefont {V.~V.}\ \bibnamefont {Voronkov}}, \ and\
+  \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont {Falster}},\ }\href
+  {\doibase 10.1002/pssb.201900167} {\bibfield  {journal} {\bibinfo  {journal}
+  {physica status solidi (b)}\ }\textbf {\bibinfo {volume} {257}},\ \bibinfo
+  {pages} {1900167} (\bibinfo {year} {2020})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Lagowski}\ \emph {et~al.}(1993)\citenamefont
+  {Lagowski}, \citenamefont {Edelman}, \citenamefont {Kontkiewicz},
+  \citenamefont {Milic}, \citenamefont {Henley}, \citenamefont {Dexter},
+  \citenamefont {Jastrzebski},\ and\ \citenamefont {Hoff}}]{Lagowskii1993}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {Lagowski}}, \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {Edelman}},
+  \bibinfo {author} {\bibfnamefont {A.~M.}\ \bibnamefont {Kontkiewicz}},
+  \bibinfo {author} {\bibfnamefont {O.}~\bibnamefont {Milic}}, \bibinfo
+  {author} {\bibfnamefont {W.}~\bibnamefont {Henley}}, \bibinfo {author}
+  {\bibfnamefont {M.}~\bibnamefont {Dexter}}, \bibinfo {author} {\bibfnamefont
+  {L.}~\bibnamefont {Jastrzebski}}, \ and\ \bibinfo {author} {\bibfnamefont
+  {A.~M.}\ \bibnamefont {Hoff}},\ }\href {\doibase 10.1063/1.110789} {\bibfield
+   {journal} {\bibinfo  {journal} {Applied Physics Letters}\ }\textbf {\bibinfo
+  {volume} {63}},\ \bibinfo {pages} {3043} (\bibinfo {year}
+  {1993})}\BibitemShut {NoStop}%
 \end{thebibliography}%
