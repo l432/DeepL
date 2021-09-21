@@ -11,9 +11,7 @@ uses
 type
   TMainForm = class(TForm)
     BtFileSelect: TButton;
-    BtDone: TButton;
     LFile: TLabel;
-    LAction: TLabel;
     OpenDialog1: TOpenDialog;
     BtClose: TButton;
     GBTemp: TGroupBox;
@@ -65,7 +63,6 @@ type
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
     procedure BtCloseClick(Sender: TObject);
-    procedure BtDoneClick(Sender: TObject);
     procedure BDatesDatClick(Sender: TObject);
     procedure BFeB_xClick(Sender: TObject);
     procedure BDatesDatCorrectClick(Sender: TObject);
@@ -105,6 +102,7 @@ type
     procedure SetTemperatureFolders(T: Integer);
     procedure AdDataFromDatesDat(FullFilename:string);
     function SearchInFolders(StartFolder:string):string;
+    function DatFileLocationCreateAndDetermine(InnerDir, Tdir, Ddir, Bdir: string):string;
   public
     { Public declarations }
   end;
@@ -127,305 +125,59 @@ begin
  MainForm.Close;
 end;
 
-procedure TMainForm.BtDoneClick(Sender: TObject);
- var Row:Int64;
-     Comments,SCparam,DatFile,DatFile_srh:TStringList;
-     V,I,I_srh,d,Na:double;
-     tempStr,DatFileName,DatFileLocation,DatFileLocation2,
-     Tdir,Ddir,Bdir,tempStr2:string;
-     j: byte;
-//     IVparameter:TIVparameter;
-begin
-
- if LFile.Font.Color<>clBlue then Exit;
-
- if not(SetCurrentDir(Directory)) then
-   begin
-    MessageDlg('Current directory is not exist', mtError,[mbOk],0);
-    Exit;
-   end;
- DatFileLocation:=AnsiReplaceStr (FileName, '.', '_');
- DatFileLocation2:=DatFileLocation;
-
-// CreateDirSafety(DatFileLocation);
-
- DatFileLocation:=Directory+'\'+DatFileLocation+'\';
-
- FormatSettings.DecimalSeparator:='.';
-// DecimalSeparator:='.';
- Comments:=TStringList.Create;
- SCparam:=TStringList.Create;
- DatFile:=TStringList.Create;
- DatFile_srh:=TStringList.Create;
-
- IVparameter.Clear;
- IVparameter.ParameterTitleDetermination(SCAPSFile);
-
-
- if IVparameter.fName.Count>0 then
-  begin
-   SCparam.Add(IVparameter.Title);
-   StringReplaceMy(SCparam,SCparam[SCparam.Count-1]+' d N_B',
-                   SCparam.Count-1);
-   for j := 0 to IVparameter.fName.Count - 1 do
-    if IVparameter.fUnit[j]<>''
-     then Comments.Add(IVparameter.fName[j]+' - '+IVparameter.fUnit[j])
-     else Comments.Add(IVparameter.fName[j]+' - '+IVparameter.fDescription[j]);
-   Comments.Add('');
-  end;
-
-  IVparameter.SCAPSFileNameDetermination(SCAPSFile);
-  if AnsiPos('FeB',IVparameter.fSCAPSFileName)>0
-    then  tempStr2:='FeB'
-    else  tempStr2:='Fe';
-  IVparameter.fSCAPSFileName:= StringReplace(IVparameter.fSCAPSFileName,
-            'FeB', 'Fe',[rfIgnoreCase]);
-  Tdir:='';
-  Ddir:='';
-  Bdir:='';
-  Tdir:=Copy(IVparameter.fSCAPSFileName,
-                AnsiPos('T',IVparameter.fSCAPSFileName),4);
-  Ddir:=Copy(IVparameter.fSCAPSFileName,
-                AnsiPos('D',IVparameter.fSCAPSFileName),3);
-  tempstr:=Ddir;
-  Delete(tempstr, 1, 1);
-  tempstr:=tempstr+'0';
-  d:=strtoint(tempstr)*1e-6;
-  Bdir:=Copy(IVparameter.fSCAPSFileName,
-                AnsiPos('B',IVparameter.fSCAPSFileName),9);
-  tempstr:=Bdir;
-  Delete(tempstr, 1, 1);
-  tempstr:=AnsiReplaceStr(tempstr,'p','.');
-  Na:=StrToFloat(tempStr);
-
-  if  (Tdir<>'')and(Ddir<>'')and(Bdir<>'')
-      and SetCurrentDir(Result_Folder)   then
-    begin
-     tempSTR:=Result_Folder;
-     while not(SetCurrentDir(tempSTR+'\'+Ddir)) do
-        MkDir(Ddir);
-     tempStr:=tempStr+'\'+Ddir;
-     while not(SetCurrentDir(tempSTR+'\'+Bdir)) do
-        MkDir(Bdir);
-     tempStr:=tempStr+'\'+Bdir;
-     while not(SetCurrentDir(tempSTR+'\'+Tdir)) do
-        MkDir(Tdir);
-     tempStr:=tempStr+'\'+Tdir;
-     while not(SetCurrentDir(tempSTR+'\iv')) do
-        MkDir('iv');
-     tempStr:=tempStr+'\iv';
-//     if AnsiPos('FeB',IVparameter.fSCAPSFileName)>0
-//        then  tempStr2:='FeB'
-//        else  tempStr2:='Fe';
-     while not(SetCurrentDir(tempSTR+'\'+tempStr2)) do
-        MkDir(tempStr2);
-     tempStr:=tempStr+'\'+tempStr2+'\';
-     DatFileLocation:=tempStr;
-     DatFileLocation2:=tempStr2;
-    end;
-
- Row:=0;
- while (Row<SCAPSFile.Count) do
-  begin
-   if AnsiStartsStr ('SCAPS', SCAPSFile[ROW]) then
-    begin
-      if Row<>0 then
-       begin
-       SCparam.Add(IVparameter.DataString);
-       StringReplaceMy(SCparam,SCparam[SCparam.Count-1]
-                       +' '
-                       +FloatToStrF(d,ffExponent,4,0)+
-                       ' '
-                       +FloatToStrF(Na,ffExponent,4,0),
-                   SCparam.Count-1);
-       end;
-      IVparameter.Empty;
-      Inc(Row);
-      Continue;
-    end;
-
-   IVparameter.ParameterDetermination(SCAPSFile[ROW],FeLow.Data,FeHi.Data,FeStepNumber.Data);
-
-
-
-  if ((AnsiContainsStr(SCAPSFile[ROW],'v(V)'))and
-//      (AnsiContainsStr(SCAPSFile[ROW],'jtot(mA/cm2)'))) then
-     (AnsiContainsStr(SCAPSFile[ROW],' jbulk(mA/cm2)'))and
-      (AnsiContainsStr(SCAPSFile[ROW],'j_SRH'))) then
-    begin
-     ROW:=ROW+2;
-     DatFile.Clear;
-     DatFile_srh.Clear;
-    while SCAPSFile[ROW]<>'' do
-       begin
-        SCAPSFile[ROW]:=SomeSpaceToOne(SCAPSFile[ROW]);
-        tempStr:=SCAPSFile[ROW];
-        if AnsiStartsStr(' ',tempStr) then Delete(tempStr, 1, 1);
-        try
-         V:=StrToFloat(Copy(tempStr, 1, AnsiPos (' ', tempStr)-1));
-         Delete(tempStr, 1, AnsiPos (' ', tempStr));
-
-         Delete(tempStr, 1, AnsiPos (' ', tempStr));
-         Delete(tempStr, 1, AnsiPos (' ', tempStr));
-         Delete(tempStr, 1, AnsiPos (' ', tempStr));
-
-         I:=10*SampleArea*StrToFloat(Copy(tempStr, 1, AnsiPos (' ', tempStr)-1));
-
-         Delete(tempStr, 1, AnsiPos (' ', tempStr));
-         Delete(tempStr, 1, AnsiPos (' ', tempStr));
-         Delete(tempStr, 1, AnsiPos (' ', tempStr));
-         Delete(tempStr, 1, AnsiPos (' ', tempStr));
-
-         I_srh:=10*SampleArea*StrToFloat(Copy(tempStr, 1, AnsiPos (' ', tempStr)-1));
-
-        except
-         V:=0;
-         I:=0;
-
-         I_srh:=0;
-        end;
-        DatFile.Add((FloatToStrF(V,ffExponent,4,0)+' '+
-                     FloatToStr(I)));
-        DatFile_srh.Add((FloatToStrF(V,ffExponent,4,0)+' '+
-                     FloatToStr(I_srh)));
-        Row:=ROW+1;
-       end;
-
-
-
-
-     DatFileName:=IVparameter.FileName+'.dat';
-     DatFile.SaveToFile(DatFileLocation+DatFileName);
-     Comments.Add(DatFileName);
-     Comments.Add('T='+FloatToStrF(IVparameter.fTemperatura,ffGeneral,4,1));
-     Comments.Add('');
-
-     DatFileName:=IVparameter.FileName+'_srh.dat';
-     DatFile_srh.SaveToFile(DatFileLocation+DatFileName);
-     Comments.Add(DatFileName);
-     Comments.Add('T='+FloatToStrF(IVparameter.fTemperatura,ffGeneral,4,1));
-     Comments.Add('');
-     Continue;
-   end;
-
-   Inc(Row);
-  end;
-
- SCparam.Add(IVparameter.DataString);
- StringReplaceMy(SCparam,SCparam[SCparam.Count-1]
-                       +' '
-                       +FloatToStrF(d,ffExponent,4,0)+
-                       ' '
-                       +FloatToStrF(Na,ffExponent,4,0),
-                   SCparam.Count-1);
-
- if Comments.Count>0 then
-      Comments.SaveToFile(DatFileLocation+'comments');
- Comments.Free;
- if SCparam.Count>1 then
-//      SCparam.SaveToFile(DatFileLocation+'SCparam.dat');
-//      SCparam.SaveToFile(DatFileLocation+DatFileLocation2+'.dat');
-      SCparam.SaveToFile(DatFileLocation+DatFileLocation2+'.txt');
-
- SCparam.Free;
- DatFile.Free;
-//   IVparameter.Free;
-
- LAction.Caption:='Extraction is done';
- LAction.Font.Color:=clGreen;
-end;
-
-function DirFromFileName(Filename,Labels:string;Len:word):string;
-begin
-  Result:='';
-  Result:=Copy(FileName,
-                AnsiPos(Labels,FileName),Len);
-end;
-
-function d_determine(DirName:string):double;
-begin
-  Delete(DirName, 1, 1);
-  DirName:=DirName+'0';
-  Result:=strtoint(DirName)*1e-6;
-end;
-
-function N_B_determine(DirName:string):double;
-begin
-  Delete(DirName, 1, 1);
-  DirName:=AnsiReplaceStr(DirName,'p','.');
-  Result:=StrToFloat(DirName);
-end;
-
-procedure TMainForm.BtFileSelectClick(Sender: TObject);
-var Row:Int64;
-    Comments,SCparam,DatFile,DatFile_srh:TStringList;
-    DatFileLocation,DatFileLocation2,tempStr,tempStr2,
-    Tdir,Ddir,Bdir:string;
-    d,N_B:double;
-    j:integer;
-begin
-   OpenDialog1.InitialDir:=SCAPS_Folder+'\results';
-   OpenDialog1.FileName:='';
-   OpenDialog1.Filter:='Scaps files (*.iv)|*.iv';
-   if OpenDialog1.Execute()
-     then
-       begin
-       Directory:=ExtractFilePath(OpenDialog1.FileName);
-       FileName:=ExtractFileName(OpenDialog1.FileName);
-       FileName:=copy(FileName,1,length(FileName)-3);
-       LFile.Caption:=FileName;
-//       LFile.Font.Color:=clblue;
-//       BtDone.Enabled:=True;
-//       LAction.Caption:='Not Yet';
-//       LAction.Font.Color:=clBlack;
-       if FileExists(OpenDialog1.FileName) then
-         begin
-         SCAPSFile.Clear;
-         SCAPSFile.LoadFromFile(OpenDialog1.FileName);
-         end;
-       end;
-
+//procedure TMainForm.BtDoneClick(Sender: TObject);
+// var Row:Int64;
+//     Comments,SCparam,DatFile,DatFile_srh:TStringList;
+//     V,I,I_srh,d,Na:double;
+//     tempStr,DatFileName,DatFileLocation,DatFileLocation2,
+//     Tdir,Ddir,Bdir,tempStr2:string;
+//     j: byte;
+////     IVparameter:TIVparameter;
+//begin
+//
 // if LFile.Font.Color<>clBlue then Exit;
- SetCurrentDir(ExtractFilePath(OpenDialog1.FileName));
-
- DatFileLocation:=AnsiReplaceStr (FileName, '.', '_');
- DatFileLocation2:=DatFileLocation;
- DatFileLocation:=Directory+'\'+DatFileLocation+'\';
-
- FormatSettings.DecimalSeparator:='.';
- Comments:=TStringList.Create;
- SCparam:=TStringList.Create;
- DatFile:=TStringList.Create;
- DatFile_srh:=TStringList.Create;
-
- IVparameter.Clear;
- IVparameter.ParameterTitleDetermination(SCAPSFile);
-
- if IVparameter.fName.Count>0 then
-  begin
-   SCparam.Add(IVparameter.Title);
-   StringReplaceMy(SCparam,SCparam[SCparam.Count-1]+' d N_B',
-                   SCparam.Count-1);
-   for j := 0 to IVparameter.fName.Count - 1 do
-    if IVparameter.fUnit[j]<>''
-     then Comments.Add(IVparameter.fName[j]+' - '+IVparameter.fUnit[j])
-     else Comments.Add(IVparameter.fName[j]+' - '+IVparameter.fDescription[j]);
-   Comments.Add('');
-  end;
-
-  IVparameter.SCAPSFileNameDetermination(SCAPSFile);
-  if AnsiPos('FeB',IVparameter.fSCAPSFileName)>0
-    then  tempStr2:='FeB'
-    else  tempStr2:='Fe';
-  IVparameter.fSCAPSFileName:= StringReplace(IVparameter.fSCAPSFileName,
-            'FeB', 'Fe',[rfIgnoreCase]);
-
-  Tdir:=DirFromFileName(IVparameter.fSCAPSFileName,'T',4);
-  Ddir:=DirFromFileName(IVparameter.fSCAPSFileName,'D',3);
-  Bdir:=DirFromFileName(IVparameter.fSCAPSFileName,'B',9);
-  d:=d_determine(Ddir);
-  N_B:=N_B_determine(Bdir);
-
+//
+// if not(SetCurrentDir(Directory)) then
+//   begin
+//    MessageDlg('Current directory is not exist', mtError,[mbOk],0);
+//    Exit;
+//   end;
+// DatFileLocation:=AnsiReplaceStr (FileName, '.', '_');
+// DatFileLocation2:=DatFileLocation;
+//
+//// CreateDirSafety(DatFileLocation);
+//
+// DatFileLocation:=Directory+'\'+DatFileLocation+'\';
+//
+// FormatSettings.DecimalSeparator:='.';
+//// DecimalSeparator:='.';
+// Comments:=TStringList.Create;
+// SCparam:=TStringList.Create;
+// DatFile:=TStringList.Create;
+// DatFile_srh:=TStringList.Create;
+//
+// IVparameter.Clear;
+// IVparameter.ParameterTitleDetermination(SCAPSFile);
+//
+//
+// if IVparameter.fName.Count>0 then
+//  begin
+//   SCparam.Add(IVparameter.Title);
+//   StringReplaceMy(SCparam,SCparam[SCparam.Count-1]+' d N_B',
+//                   SCparam.Count-1);
+//   for j := 0 to IVparameter.fName.Count - 1 do
+//    if IVparameter.fUnit[j]<>''
+//     then Comments.Add(IVparameter.fName[j]+' - '+IVparameter.fUnit[j])
+//     else Comments.Add(IVparameter.fName[j]+' - '+IVparameter.fDescription[j]);
+//   Comments.Add('');
+//  end;
+//
+//  IVparameter.SCAPSFileNameDetermination(SCAPSFile);
+//  if AnsiPos('FeB',IVparameter.fSCAPSFileName)>0
+//    then  tempStr2:='FeB'
+//    else  tempStr2:='Fe';
+//  IVparameter.fSCAPSFileName:= StringReplace(IVparameter.fSCAPSFileName,
+//            'FeB', 'Fe',[rfIgnoreCase]);
 //  Tdir:='';
 //  Ddir:='';
 //  Bdir:='';
@@ -443,32 +195,33 @@ begin
 //  Delete(tempstr, 1, 1);
 //  tempstr:=AnsiReplaceStr(tempstr,'p','.');
 //  Na:=StrToFloat(tempStr);
-
-
-
-  if  (Tdir<>'')and(Ddir<>'')and(Bdir<>'')
-      and SetCurrentDir(Result_Folder)   then
-    begin
-     tempSTR:=Result_Folder;
-     while not(SetCurrentDir(tempSTR+'\'+Ddir)) do
-        MkDir(Ddir);
-     tempStr:=tempStr+'\'+Ddir;
-     while not(SetCurrentDir(tempSTR+'\'+Bdir)) do
-        MkDir(Bdir);
-     tempStr:=tempStr+'\'+Bdir;
-     while not(SetCurrentDir(tempSTR+'\'+Tdir)) do
-        MkDir(Tdir);
-     tempStr:=tempStr+'\'+Tdir;
-     while not(SetCurrentDir(tempSTR+'\iv')) do
-        MkDir('iv');
-     tempStr:=tempStr+'\iv';
-     while not(SetCurrentDir(tempSTR+'\'+tempStr2)) do
-        MkDir(tempStr2);
-     tempStr:=tempStr+'\'+tempStr2+'\';
-     DatFileLocation:=tempStr;
-     DatFileLocation2:=tempStr2;
-    end;
-
+//
+//  if  (Tdir<>'')and(Ddir<>'')and(Bdir<>'')
+//      and SetCurrentDir(Result_Folder)   then
+//    begin
+//     tempSTR:=Result_Folder;
+//     while not(SetCurrentDir(tempSTR+'\'+Ddir)) do
+//        MkDir(Ddir);
+//     tempStr:=tempStr+'\'+Ddir;
+//     while not(SetCurrentDir(tempSTR+'\'+Bdir)) do
+//        MkDir(Bdir);
+//     tempStr:=tempStr+'\'+Bdir;
+//     while not(SetCurrentDir(tempSTR+'\'+Tdir)) do
+//        MkDir(Tdir);
+//     tempStr:=tempStr+'\'+Tdir;
+//     while not(SetCurrentDir(tempSTR+'\iv')) do
+//        MkDir('iv');
+//     tempStr:=tempStr+'\iv';
+////     if AnsiPos('FeB',IVparameter.fSCAPSFileName)>0
+////        then  tempStr2:='FeB'
+////        else  tempStr2:='Fe';
+//     while not(SetCurrentDir(tempSTR+'\'+tempStr2)) do
+//        MkDir(tempStr2);
+//     tempStr:=tempStr+'\'+tempStr2+'\';
+//     DatFileLocation:=tempStr;
+//     DatFileLocation2:=tempStr2;
+//    end;
+//
 // Row:=0;
 // while (Row<SCAPSFile.Count) do
 //  begin
@@ -568,15 +321,184 @@ begin
 //      Comments.SaveToFile(DatFileLocation+'comments');
 // Comments.Free;
 // if SCparam.Count>1 then
+////      SCparam.SaveToFile(DatFileLocation+'SCparam.dat');
+////      SCparam.SaveToFile(DatFileLocation+DatFileLocation2+'.dat');
 //      SCparam.SaveToFile(DatFileLocation+DatFileLocation2+'.txt');
 //
 // SCparam.Free;
 // DatFile.Free;
+////   IVparameter.Free;
 //
 // LAction.Caption:='Extraction is done';
 // LAction.Font.Color:=clGreen;
+//end;
+
+function DirFromFileName(Filename,Labels:string;Len:word):string;
+begin
+  Result:='';
+  Result:=Copy(FileName,
+                AnsiPos(Labels,FileName),Len);
+end;
+
+function d_determine(DirName:string):double;
+begin
+  Delete(DirName, 1, 1);
+  DirName:=DirName+'0';
+  Result:=strtoint(DirName)*1e-6;
+end;
+
+function N_B_determine(DirName:string):double;
+begin
+  Delete(DirName, 1, 1);
+  DirName:=AnsiReplaceStr(DirName,'p','.');
+  Result:=StrToFloat(DirName);
+end;
+
+procedure TMainForm.BtFileSelectClick(Sender: TObject);
+var Row:Int64;
+    Comments,SCparam,DatFile,DatFile_srh:TStringList;
+    DatFileLocation,
+    Tdir,Ddir,Bdir,InnerDir,DatFileName,ParamSyffix:string;
+    V,I,I_srh:double;
+    j:integer;
+    VoltageColumnNumber,CurrentColumnNumber,
+    CurrentSRHColumnNumber:word;
+begin
+   OpenDialog1.InitialDir:=SCAPS_Folder+'\results';
+   OpenDialog1.FileName:='';
+   OpenDialog1.Filter:='Scaps files (*.iv)|*.iv';
+   if OpenDialog1.Execute()
+     then
+       begin
+       FileName:=ExtractFileName(OpenDialog1.FileName);
+       FileName:=copy(FileName,1,length(FileName)-3);
+       LFile.Caption:=FileName;
+       if FileExists(OpenDialog1.FileName) then
+         begin
+         SCAPSFile.Clear;
+         SCAPSFile.LoadFromFile(OpenDialog1.FileName);
+         end;
+       end;
+
+ SetCurrentDir(ExtractFilePath(OpenDialog1.FileName));
+
+ FormatSettings.DecimalSeparator:='.';
+ Comments:=TStringList.Create;
+ SCparam:=TStringList.Create;
+ DatFile:=TStringList.Create;
+ DatFile_srh:=TStringList.Create;
+
+ IVparameter.Clear;
+ IVparameter.ParameterTitleDetermination(SCAPSFile);
+
+ if IVparameter.fName.Count>0 then
+  begin
+   SCparam.Add(IVparameter.Title+' d N_B');
+   for j := 0 to IVparameter.fName.Count - 1 do
+    if IVparameter.fUnit[j]<>''
+     then Comments.Add(IVparameter.fName[j]+' - '+IVparameter.fUnit[j])
+     else Comments.Add(IVparameter.fName[j]+' - '+IVparameter.fDescription[j]);
+   Comments.Add('');
+  end;
+
+  IVparameter.SCAPSFileNameDetermination(SCAPSFile);
+  if AnsiPos('FeB',IVparameter.fSCAPSFileName)>0
+    then  InnerDir:='FeB'
+    else  InnerDir:='Fe';
+  IVparameter.fSCAPSFileName:= StringReplace(IVparameter.fSCAPSFileName,
+            'FeB', 'Fe',[rfIgnoreCase]);
+
+  Tdir:=DirFromFileName(IVparameter.fSCAPSFileName,'T',4);
+  Ddir:=DirFromFileName(IVparameter.fSCAPSFileName,'D',3);
+  Bdir:=DirFromFileName(IVparameter.fSCAPSFileName,'B',9);
+  ParamSyffix:=' '+FloatToStrF(d_determine(Ddir),ffExponent,4,0)
+               +' '+FloatToStrF(N_B_determine(Bdir),ffExponent,4,0);
 
 
+  DatFileLocation := DatFileLocationCreateAndDetermine(InnerDir, Tdir, Ddir, Bdir);
+
+ Row:=0;
+ while (Row<SCAPSFile.Count) do
+  begin
+   if AnsiStartsStr ('SCAPS', SCAPSFile[ROW]) then
+    begin
+      if Row<>0 then
+       SCparam.Add(IVparameter.DataString+ParamSyffix);
+
+      IVparameter.Empty;
+      Inc(Row);
+      Continue;
+    end;
+
+   IVparameter.ParameterDetermination(SCAPSFile[ROW],FeLow.Data,FeHi.Data,FeStepNumber.Data);
+
+  if ((AnsiContainsStr(SCAPSFile[ROW],'v(V)'))and
+      (AnsiContainsStr(SCAPSFile[ROW],'jtot(mA/cm2)')) and
+     (AnsiContainsStr(SCAPSFile[ROW],' jbulk(mA/cm2)'))and
+      (AnsiContainsStr(SCAPSFile[ROW],'j_SRH'))) then
+    begin
+     VoltageColumnNumber:=SubstringNumberFromRow('v(V)',SCAPSFile[ROW]);
+     if RGIllumination.ItemIndex=0 then
+      begin
+        CurrentColumnNumber:=SubstringNumberFromRow('jbulk(mA/cm2)',SCAPSFile[ROW]);
+        CurrentSRHColumnNumber:=SubstringNumberFromRow('j_SRH',SCAPSFile[ROW]);
+        DatFile_srh.Clear;
+      end                          else
+        CurrentColumnNumber:=SubstringNumberFromRow('jtot(mA/cm2)',SCAPSFile[ROW]);
+     ROW:=ROW+2;
+     DatFile.Clear;
+    while SCAPSFile[ROW]<>'' do
+       begin
+        V:=FloatDataFromRow(SCAPSFile[ROW],VoltageColumnNumber);
+        if RGIllumination.ItemIndex=0 then
+         begin
+           I:=10*SampleArea*FloatDataFromRow(SCAPSFile[ROW],CurrentColumnNumber);
+           I_srh:=10*SampleArea*FloatDataFromRow(SCAPSFile[ROW],CurrentSRHColumnNumber);
+         end                           else
+           I:=FloatDataFromRow(SCAPSFile[ROW],CurrentColumnNumber);
+
+        DatFile.Add((FloatToStrF(V,ffExponent,4,0)+' '+
+                     FloatToStr(I)));
+        if RGIllumination.ItemIndex=0 then
+          DatFile_srh.Add((FloatToStrF(V,ffExponent,4,0)+' '+
+                           FloatToStr(I_srh)));
+        Row:=ROW+1;
+       end;
+
+
+
+
+     DatFileName:=IVparameter.FileName+'.dat';
+     DatFile.SaveToFile(DatFileLocation+DatFileName);
+     Comments.Add(DatFileName);
+     Comments.Add('T='+FloatToStrF(IVparameter.fTemperatura,ffGeneral,4,1));
+     Comments.Add('');
+
+     if RGIllumination.ItemIndex=0 then
+      begin
+       DatFileName:=IVparameter.FileName+'_srh.dat';
+       DatFile_srh.SaveToFile(DatFileLocation+DatFileName);
+       Comments.Add(DatFileName);
+       Comments.Add('T='+FloatToStrF(IVparameter.fTemperatura,ffGeneral,4,1));
+       Comments.Add('');
+      end;
+     Continue;
+   end;
+
+   Inc(Row);
+  end;
+
+ SCparam.Add(IVparameter.DataString+ParamSyffix);
+
+ if Comments.Count>0 then
+      Comments.SaveToFile(DatFileLocation+'comments.dat');
+ Comments.Free;
+ if SCparam.Count>1 then
+      SCparam.SaveToFile(DatFileLocation+InnerDir+'.txt');
+
+ SCparam.Free;
+ DatFile.Free;
+ DatFile_srh.Free;
 end;
 
 
@@ -591,6 +513,33 @@ procedure TMainForm.B_SCAPSFSelectClick(Sender: TObject);
 begin
   if SelectDirectory('Choose SCAPS Directory','', SCAPS_Folder)
    then FoldersToForm;
+end;
+
+function TMainForm.DatFileLocationCreateAndDetermine(InnerDir, Tdir, Ddir,
+  Bdir: string): string;
+var
+  tempStr: string;
+begin
+  if (Tdir <> '') and (Ddir <> '') and (Bdir <> '') and SetCurrentDir(Result_Folder) then
+  begin
+    tempSTR := Result_Folder+ '\' + Ddir;
+    while not (SetCurrentDir(tempSTR)) do
+      MkDir(Ddir);
+    tempStr := tempStr + '\' + Bdir;
+    while not (SetCurrentDir(tempSTR)) do
+      MkDir(Bdir);
+    tempStr := tempStr + '\' + Tdir;
+    while not (SetCurrentDir(tempSTR)) do
+      MkDir(Tdir);
+    tempStr := tempStr + '\iv';
+    while not (SetCurrentDir(tempSTR)) do
+      MkDir('iv');
+    tempStr := tempStr + '\' + InnerDir;
+    while not (SetCurrentDir(tempSTR)) do
+      MkDir(InnerDir);
+    Result := tempStr + '\';
+  end;
+
 end;
 
 //function TMainForm.EditString(str: string): string;
@@ -2295,6 +2244,7 @@ begin
   FindClose(SR);
 
 end;
+
 
 procedure TMainForm.SetCurrentFolders;
 var

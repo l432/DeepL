@@ -4,7 +4,7 @@ object MainForm: TMainForm
   BorderIcons = [biSystemMenu, biMinimize]
   Caption = 'SCAPS Conversion'
   ClientHeight = 690
-  ClientWidth = 878
+  ClientWidth = 843
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -18,8 +18,8 @@ object MainForm: TMainForm
   PixelsPerInch = 120
   TextHeight = 16
   object LFile: TLabel
-    Left = 333
-    Top = 281
+    Left = 292
+    Top = 289
     Width = 238
     Height = 24
     Alignment = taCenter
@@ -32,27 +32,12 @@ object MainForm: TMainForm
     Font.Style = []
     ParentFont = False
   end
-  object LAction: TLabel
-    Left = 203
-    Top = 328
-    Width = 238
-    Height = 24
-    Alignment = taCenter
-    AutoSize = False
-    Caption = 'Not Yet'
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -20
-    Font.Name = 'Tahoma'
-    Font.Style = []
-    ParentFont = False
-  end
   object BtFileSelect: TButton
-    Left = 11
-    Top = 277
-    Width = 326
+    Left = 8
+    Top = 285
+    Width = 241
     Height = 34
-    Caption = '&Select  and process .iv file'
+    Caption = 'Process .iv file'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -20
@@ -62,25 +47,9 @@ object MainForm: TMainForm
     TabOrder = 0
     OnClick = BtFileSelectClick
   end
-  object BtDone: TButton
-    Left = 11
-    Top = 325
-    Width = 153
-    Height = 34
-    Caption = '&Extract IV files'
-    Enabled = False
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -20
-    Font.Name = 'Tahoma'
-    Font.Style = [fsBold]
-    ParentFont = False
-    TabOrder = 1
-    OnClick = BtDoneClick
-  end
   object BtClose: TButton
-    Left = 168
-    Top = 664
+    Left = 169
+    Top = 648
     Width = 105
     Height = 25
     Caption = '&Close'
@@ -90,7 +59,7 @@ object MainForm: TMainForm
     Font.Name = 'Tahoma'
     Font.Style = [fsBold]
     ParentFont = False
-    TabOrder = 2
+    TabOrder = 1
     OnClick = BtCloseClick
   end
   object GBTemp: TGroupBox
@@ -99,7 +68,7 @@ object MainForm: TMainForm
     Width = 97
     Height = 105
     Caption = 'Temperature'
-    TabOrder = 3
+    TabOrder = 2
     object LTemp_start: TLabel
       Left = 11
       Top = 24
@@ -152,7 +121,7 @@ object MainForm: TMainForm
     Width = 250
     Height = 120
     Caption = 'Base'
-    TabOrder = 4
+    TabOrder = 3
     object LBase_Conc: TLabel
       Left = 11
       Top = 19
@@ -212,7 +181,7 @@ object MainForm: TMainForm
   end
   object BDatesDat: TButton
     Left = 8
-    Top = 393
+    Top = 433
     Width = 129
     Height = 48
     Caption = 'dates.dat convert'
@@ -222,13 +191,13 @@ object MainForm: TMainForm
     Font.Name = 'Tahoma'
     Font.Style = [fsBold]
     ParentFont = False
-    TabOrder = 5
+    TabOrder = 4
     WordWrap = True
     OnClick = BDatesDatClick
   end
   object BFeB_x: TButton
-    Left = 305
-    Top = 483
+    Left = 8
+    Top = 339
     Width = 130
     Height = 48
     Caption = 'Fe(x) and FeB(x) create'
@@ -238,17 +207,17 @@ object MainForm: TMainForm
     Font.Name = 'Tahoma'
     Font.Style = [fsBold]
     ParentFont = False
-    TabOrder = 6
+    TabOrder = 5
     WordWrap = True
     OnClick = BFeB_xClick
   end
   object GBFerum: TGroupBox
-    Left = 11
-    Top = 464
-    Width = 262
+    Left = 551
+    Top = 227
+    Width = 240
     Height = 73
     Caption = 'Iron concentration, cm-3'
-    TabOrder = 7
+    TabOrder = 6
     object LFe_Lo: TLabel
       Left = 16
       Top = 24
@@ -296,8 +265,8 @@ object MainForm: TMainForm
     end
   end
   object BDatesDatCorrect: TButton
-    Left = 165
-    Top = 393
+    Left = 169
+    Top = 433
     Width = 130
     Height = 48
     Caption = 'correct dates.dat'
@@ -307,17 +276,17 @@ object MainForm: TMainForm
     Font.Name = 'Tahoma'
     Font.Style = [fsBold]
     ParentFont = False
-    TabOrder = 8
+    TabOrder = 7
     WordWrap = True
     OnClick = BDatesDatCorrectClick
   end
   object GBFinal: TGroupBox
-    Left = 509
-    Top = 464
+    Left = 600
+    Top = 511
     Width = 231
     Height = 148
     Caption = 'Final'
-    TabOrder = 9
+    TabOrder = 8
     object BResult: TButton
       Left = 29
       Top = 53
@@ -341,7 +310,7 @@ object MainForm: TMainForm
     Width = 202
     Height = 120
     Caption = 'SBF layer'
-    TabOrder = 10
+    TabOrder = 9
     object LSBF_Conc: TLabel
       Left = 11
       Top = 19
@@ -405,7 +374,7 @@ object MainForm: TMainForm
     Width = 210
     Height = 120
     Caption = 'Emiter'
-    TabOrder = 11
+    TabOrder = 10
     object LEmiter_Conc: TLabel
       Left = 11
       Top = 19
@@ -475,7 +444,7 @@ object MainForm: TMainForm
     Font.Name = 'Tahoma'
     Font.Style = [fsBold]
     ParentFont = False
-    TabOrder = 12
+    TabOrder = 11
     WordWrap = True
     OnClick = BScapsFileCreateClick
   end
@@ -485,7 +454,7 @@ object MainForm: TMainForm
     Width = 724
     Height = 77
     Caption = 'Folder Select'
-    TabOrder = 13
+    TabOrder = 12
     object L_SCAPSF: TLabel
       Left = 323
       Top = 19
@@ -587,13 +556,13 @@ object MainForm: TMainForm
     Font.Name = 'Tahoma'
     Font.Style = [fsBold]
     ParentFont = False
-    TabOrder = 14
+    TabOrder = 13
     WordWrap = True
     OnClick = BAllDatesDatClick
   end
   object RGIllumination: TRadioGroup
-    Left = 672
-    Top = 240
+    Left = 662
+    Top = 306
     Width = 129
     Height = 105
     Caption = 'Illumination'
@@ -608,7 +577,7 @@ object MainForm: TMainForm
       'AM1.5'
       '940nm')
     ParentFont = False
-    TabOrder = 15
+    TabOrder = 14
   end
   object OpenDialog1: TOpenDialog
     Filter = 'Scaps files (*.iv)|*.iv'
