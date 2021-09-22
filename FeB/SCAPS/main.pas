@@ -1705,6 +1705,14 @@ begin
        end;
 end;
 
+procedure GradFileTitleCreate(SL:TStringList);
+begin
+  SL.Clear;
+  SL.Add('interpolation: linear');
+  SL.Add('');
+  SL.Add('x (micrometer)	Nt (1/m3)');
+end;
+
 procedure TMainForm.BFeB_xClick(Sender: TObject);
  var //Direc:string;
      EB_File,FeGRDFile,FeBGRDFile,FeGRDFilePP,FeBGRDFilePP:TStringList;
@@ -1774,25 +1782,30 @@ begin
       Nfe:=Log10(FeLow.Data);
       j:=0;
       repeat
-        FeGRDFile.Clear;
-        FeBGRDFile.Clear;
-        FeGRDFile.Add('interpolation: linear');
-        FeGRDFile.Add('');
-        FeGRDFile.Add('x (micrometer)	Nt (1/m3)');
+        GradFileTitleCreate(FeGRDFile);
+        GradFileTitleCreate(FeBGRDFile);
+        GradFileTitleCreate(FeGRDFilePP);
+        GradFileTitleCreate(FeBGRDFilePP);
 
-        FeBGRDFile.Add('interpolation: linear');
-        FeBGRDFile.Add('');
-        FeBGRDFile.Add('x (micrometer)	Nt (1/m3)');
-
-        FeGRDFilePP.Clear;
-        FeBGRDFilePP.Clear;
-        FeGRDFilePP.Add('interpolation: linear');
-        FeGRDFilePP.Add('');
-        FeGRDFilePP.Add('x (micrometer)	Nt (1/m3)');
-
-        FeBGRDFilePP.Add('interpolation: linear');
-        FeBGRDFilePP.Add('');
-        FeBGRDFilePP.Add('x (micrometer)	Nt (1/m3)');
+//        FeGRDFile.Clear;
+//        FeBGRDFile.Clear;
+//        FeGRDFile.Add('interpolation: linear');
+//        FeGRDFile.Add('');
+//        FeGRDFile.Add('x (micrometer)	Nt (1/m3)');
+//
+//        FeBGRDFile.Add('interpolation: linear');
+//        FeBGRDFile.Add('');
+//        FeBGRDFile.Add('x (micrometer)	Nt (1/m3)');
+//
+//        FeGRDFilePP.Clear;
+//        FeBGRDFilePP.Clear;
+//        FeGRDFilePP.Add('interpolation: linear');
+//        FeGRDFilePP.Add('');
+//        FeGRDFilePP.Add('x (micrometer)	Nt (1/m3)');
+//
+//        FeBGRDFilePP.Add('interpolation: linear');
+//        FeBGRDFilePP.Add('');
+//        FeBGRDFilePP.Add('x (micrometer)	Nt (1/m3)');
 
         for I := 0 to 99 do
          begin
