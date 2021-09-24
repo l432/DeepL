@@ -3,9 +3,11 @@ unit ResultAll;
 interface
 
 uses
-  Classes,OlegFunction,SomeFunction,OlegMath;
+  Classes,OlegFunction,SomeFunction,OlegMath, OlegType;
 
 type TArguments=(aFe,aB,aT,aD);
+     TExtractedDataDark=(edn2);
+     TExtractedDataLight=(edVoc,edIsc,edFF,edEta);
 
 const
       DirectoryNames:array[TArguments]of string=
@@ -15,8 +17,19 @@ const
       FileHeaderNames:array[TArguments]of string=
        ('N_Fe','N_B','T','d');
       FileHeaderNew='nFsrh nFBsrh dnsrh nF nFB dn dnF dnFB';
-type
 
+      ParametersNames:array[TArguments]of string=
+       ('N_Fe','N_B','T','d');
+      ParametersPsevdo:array[TArguments]of string=
+       ('TDD','N_B','T','d');
+
+      ExtractedDataLightNames:array[TExtractedDataLight]of string=
+      ('Jsc', 'Eta','Voc','FF');
+      ExtractedDataDarkPsevdo:array[TExtractedDataDark]of string=('n2');
+      ExtractedDataLightPsevdo:array[TExtractedDataLight]of string=
+      ('Jsc','eta','Voc','FF');
+
+type
 
  TArrayKeyStringList=class
  private
@@ -108,6 +121,18 @@ TArrKeyStrList=class
  procedure SaveData;
 end;
 
+Function NumberDetermine(Names:array of string;
+                          Source:string;
+                          var Numbers:TArrInteger):boolean;
+{визначення номерів позицій елементів з Names в рядку Source;
+якщо хоча б одного елементу немає - результат False}
+
+Procedure ShowArrarOfString(AOS:array of string);
+
+Function NewStringByNumbers(Source:string;
+                           Numbers:TArrInteger):string;
+{створюється новий рядок з тих частин Source, номери яких вказані в Numbers,
+частини розділені пробілами, крайній пробіл видалено}
 
 implementation
 
@@ -663,6 +688,45 @@ end;
 //                             ArrKeyStrList[i].KeysName+TKeyStrList.PartOfDataFileName(ArrKeyStrList[i].Keys[j]));
 //       end;
 //  end;
+
+
+Function NumberDetermine(Names:array of string;
+                          Source:string;
+                          var Numbers:TArrInteger):boolean;
+{визначення номерів позицій елементів з Names в рядку Source;
+якщо хоча б одного елементу немає - результат False}
+ var i:integer;
+begin
+ SetLength(Numbers,High(Names)+1);
+ Result:=True;
+ for I := Low(Names) to High(Names) do
+  begin
+  Numbers[i]:=SubstringNumberFromRow(Names[i],Source);
+  Result:=Result and  (Numbers[i]<>0);
+  end;
+end;
+
+Procedure ShowArrarOfString(AOS:array of string);
+ var temp:string;
+     i:integer;
+begin
+  temp:='';
+  for I := Low(AOS) to High(AOS) do
+    temp:=temp+AOS[i]+' ';
+  showmessage(temp);
+end;
+
+Function NewStringByNumbers(Source:string;
+                           Numbers:TArrInteger):string;
+{створюється новий рядок з тих частин Source, номери яких вказані в Numbers,
+частини розділені пробілами, крайній пробіл видалено}
+ var i:integer;
+begin
+  Result:='';
+  for I := Low(Numbers) to High(Numbers) do
+    Result:=Result+StringDataFromRow(Source,Numbers[i])+' ';
+  Result:=TrimRight(Result);
+end;
 
 
 end.

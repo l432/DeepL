@@ -10,9 +10,9 @@ const
   {записуємо ВАХ у файл з міркування, що площа зразка 1мм^2}
 
  IlluminatedParameterName:array [0..6] of string=
-   ('Voc','Jsc','FF','eta', 'Vmpp', 'Jmpp','Wph');
+   ('Voc','Jsc','FF','Eta', 'Vmpp', 'Jmpp','Wph');
  IlluminatedParameterDescription:array [0..6] of string=
-   ('Voc =','Jsc =','FF =','eta =', 'V_MPP =', 'J_MPP =','Incident power');
+   ('Voc =','Jsc =','FF =','Eta =', 'V_MPP =', 'J_MPP =','Incident power');
  IlluminatedParameterUnit:array [0..6] of string=
    ('Volt','mA/cm2','%','%', 'Volt', 'mA/cm2','mW/cm2');
 

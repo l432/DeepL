@@ -59,6 +59,7 @@ type
     OpenDialog2: TOpenDialog;
     BAllDatesDat: TButton;
     RGIllumination: TRadioGroup;
+    Button1: TButton;
     procedure BtFileSelectClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
@@ -71,6 +72,7 @@ type
     procedure B_SCAPSFSelectClick(Sender: TObject);
     procedure B_ResFSelectClick(Sender: TObject);
     procedure BAllDatesDatClick(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
   private
     { Private declarations }
     TempStart,TempFinish,TempStep: TIntegerParameterShow;
@@ -502,6 +504,11 @@ begin
 end;
 
 
+
+procedure TMainForm.Button1Click(Sender: TObject);
+begin
+ ShowArrarOfString(ParametersPsevdo);
+end;
 
 procedure TMainForm.B_ResFSelectClick(Sender: TObject);
 begin
@@ -1139,6 +1146,7 @@ procedure TMainForm.AdDataFromDatesDat(FullFilename: string);
     fl_name,tempString:string;
     SRH_file,FeBdata,RowIsFound:boolean;
     N_FeNumber,N_BNumber,TNumber,dNumber,nNumber:integer;
+    ParameterNumbers,ExtractedDataNumbers:TArrInteger;
 begin
 
 //       showmessage(GetCurrentDir);
@@ -1151,15 +1159,43 @@ begin
        n_srhDat:=TStringList.Create;
        DatesDatFile.LoadFromFile(FullFilename);
 
-       if FindFirst('*.txt', faAnyFile, SR) = 0 then
-         TxtFile.LoadFromFile(SR.Name)
-                                                else
+       if (RGIllumination.ItemIndex=0) then
          begin
-            showmessage('.txt file is absent');
-            Exit;
-         end;
-//       FeBdata:=(Length(TxtFile[0])>14);
-       FeBdata:=(AnsiPos('FeB',SR.Name)>0);
+         if FindFirst('*.txt', faAnyFile, SR) = 0 then
+           TxtFile.LoadFromFile(SR.Name)
+                                                  else
+           begin
+              showmessage('.txt file is absent');
+              Exit;
+           end;
+
+         FeBdata:=(AnsiPos('FeB',SR.Name)>0);
+         end                           else
+         FeBdata:=(AnsiPos('FeB',ExtractFileName(FullFilename))>0);
+
+       try
+       if RGIllumination.ItemIndex=0 then
+        begin
+         if not(NumberDetermine(ParametersPsevdo,TxtFile[0], ParameterNumbers))
+            or not(NumberDetermine(ExtractedDataDarkPsevdo,DatesDatFile[0], ExtractedDataNumbers))
+                then
+                raise Exception.Create('Wrong file format');
+        end                          else
+         if not(NumberDetermine(ParametersPsevdo,DatesDatFile[0], ParameterNumbers))
+            or not(NumberDetermine(ExtractedDataLightPsevdo,DatesDatFile[0], ExtractedDataNumbers))
+                then
+                raise Exception.Create('Wrong file format');
+       except
+        FindClose(SR);
+        TxtFile.Free;
+        DatesDatFile.Free;
+        ResultFile.Free;
+        nDat.Free;
+        n_srhDat.Free;
+        showmessage('Wrong file format');
+        Exit;
+       end;
+       nNumber:=ExtractedDataNumbers[0];
 
        nNumber:=SubstringNumberFromRow('n2',DatesDatFile[0]);
        N_FeNumber:=SubstringNumberFromRow('TDD',TxtFile[0]);
@@ -1188,21 +1224,22 @@ begin
           for j:=1 to TxtFile.Count - 1 do
             if AnsiPos(fl_name,TxtFile[j])>0 then
              begin
-//              tempString:=StringDataFromRow(TxtFile[j],4)+
-//                          ' '+LowerCase(floattostrF(Boron.Data,ffExponent,4,2))+
-//                          ' '+StringDataFromRow(TxtFile[j],1)+
-//                          ' '+StringDataFromRow(DatesDatFile[i],9);
-              tempString:=StringDataFromRow(TxtFile[j],N_FeNumber)+
-                          ' '+StringDataFromRow(TxtFile[j],N_BNumber) +
-                          ' '+StringDataFromRow(TxtFile[j],TNumber)+
-                          ' '+StringDataFromRow(TxtFile[j],dNumber)+
-                          ' '+StringDataFromRow(DatesDatFile[i],nNumber);
+              tempString:=NewStringByNumbers(TxtFile[j],ParameterNumbers)
+                          +' '+NewStringByNumbers(DatesDatFile[i],ExtractedDataNumbers);
+//              tempString:=StringDataFromRow(TxtFile[j],N_FeNumber)+
+//                          ' '+StringDataFromRow(TxtFile[j],N_BNumber) +
+//                          ' '+StringDataFromRow(TxtFile[j],TNumber)+
+//                          ' '+StringDataFromRow(TxtFile[j],dNumber)+
+//                          ' '+StringDataFromRow(DatesDatFile[i],nNumber);
               Break;
              end;
           if SRH_file then  n_srhDat.Add(tempString)
                       else  nDat.Add(tempString);
          end;
+
+
         DatesDatFile.Clear;
+
         if FeBdata then DatesDatFile.Add('N_Fe N_B T d n_FeB n_FeB_SRH')
                    else DatesDatFile.Add('N_Fe N_B T d n_Fe n_Fe_SRH');
         for I := 1 to nDat.Count - 1 do
@@ -2250,7 +2287,9 @@ begin
           begin
             SearchInFolders(StartFolder+'\'+SR.Name);
           end;
-    if (SR.Name ='dates.dat')
+    if (SR.Name ='dates.dat')and(RGIllumination.ItemIndex=0)
+      then AdDataFromDatesDat(StartFolder+'\'+SR.Name);
+    if ((SR.Name ='Fe.txt')or((SR.Name ='FeB.txt')))and(RGIllumination.ItemIndex>0)
       then AdDataFromDatesDat(StartFolder+'\'+SR.Name);
 
   until FindNext(SR) <> 0;
