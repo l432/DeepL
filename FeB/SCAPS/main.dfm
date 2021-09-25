@@ -579,15 +579,6 @@ object MainForm: TMainForm
     ParentFont = False
     TabOrder = 14
   end
-  object Button1: TButton
-    Left = 693
-    Top = 448
-    Width = 75
-    Height = 25
-    Caption = 'Button1'
-    TabOrder = 15
-    OnClick = Button1Click
-  end
   object OpenDialog1: TOpenDialog
     Filter = 'Scaps files (*.iv)|*.iv'
     Left = 426

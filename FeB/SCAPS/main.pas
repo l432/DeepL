@@ -59,7 +59,6 @@ type
     OpenDialog2: TOpenDialog;
     BAllDatesDat: TButton;
     RGIllumination: TRadioGroup;
-    Button1: TButton;
     procedure BtFileSelectClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
@@ -437,13 +436,13 @@ begin
   if ((AnsiContainsStr(SCAPSFile[ROW],'v(V)'))and
       (AnsiContainsStr(SCAPSFile[ROW],'jtot(mA/cm2)')) and
      (AnsiContainsStr(SCAPSFile[ROW],' jbulk(mA/cm2)'))and
-      (AnsiContainsStr(SCAPSFile[ROW],'j_SRH'))) then
+      (AnsiContainsStr(SCAPSFile[ROW],'j_SRH(mA/cm2)'))) then
     begin
      VoltageColumnNumber:=SubstringNumberFromRow('v(V)',SCAPSFile[ROW]);
+     CurrentSRHColumnNumber:=SubstringNumberFromRow('j_SRH(mA/cm2)',SCAPSFile[ROW]);
      if RGIllumination.ItemIndex=0 then
       begin
         CurrentColumnNumber:=SubstringNumberFromRow('jbulk(mA/cm2)',SCAPSFile[ROW]);
-        CurrentSRHColumnNumber:=SubstringNumberFromRow('j_SRH',SCAPSFile[ROW]);
         DatFile_srh.Clear;
       end                          else
         CurrentColumnNumber:=SubstringNumberFromRow('jtot(mA/cm2)',SCAPSFile[ROW]);
@@ -452,6 +451,7 @@ begin
     while SCAPSFile[ROW]<>'' do
        begin
         V:=FloatDataFromRow(SCAPSFile[ROW],VoltageColumnNumber);
+        I_srh:=0;
         if RGIllumination.ItemIndex=0 then
          begin
            I:=10*SampleArea*FloatDataFromRow(SCAPSFile[ROW],CurrentColumnNumber);
@@ -1138,18 +1138,15 @@ begin
 end;
 
 procedure TMainForm.AdDataFromDatesDat(FullFilename: string);
- var //Direc:string;
+ var
     DatesDatFile,ResultFile,TxtFile,
     nDat,n_srhDat:TStringList;
     SR : TSearchRec;
     i,j:integer;
-    fl_name,tempString:string;
-    SRH_file,FeBdata,RowIsFound:boolean;
-    N_FeNumber,N_BNumber,TNumber,dNumber,nNumber:integer;
-    ParameterNumbers,ExtractedDataNumbers:TArrInteger;
+    fl_name,tempString,FillString,AllResultTitle:string;
+    SRH_file,FeBdata,RowIsFound,DarkIV,FeBdataInFile,FedataInFile:boolean;
+    ParameterNumbers,ExtractedDataNumbers,ExtractedDataNumbersFeB:TArrInteger;
 begin
-
-//       showmessage(GetCurrentDir);
        Directory:=ExtractFilePath(FullFilename);
        SetCurrentDir(Directory);
        DatesDatFile:=TStringList.Create;
@@ -1158,8 +1155,10 @@ begin
        nDat:=TStringList.Create;
        n_srhDat:=TStringList.Create;
        DatesDatFile.LoadFromFile(FullFilename);
+       DarkIV:=RGIllumination.ItemIndex=0;
 
-       if (RGIllumination.ItemIndex=0) then
+   try
+       if DarkIV then
          begin
          if FindFirst('*.txt', faAnyFile, SR) = 0 then
            TxtFile.LoadFromFile(SR.Name)
@@ -1171,50 +1170,28 @@ begin
 
          FeBdata:=(AnsiPos('FeB',SR.Name)>0);
          end                           else
+
          FeBdata:=(AnsiPos('FeB',ExtractFileName(FullFilename))>0);
 
-       try
-       if RGIllumination.ItemIndex=0 then
+       if DarkIV then
         begin
          if not(NumberDetermine(ParametersPsevdo,TxtFile[0], ParameterNumbers))
             or not(NumberDetermine(ExtractedDataDarkPsevdo,DatesDatFile[0], ExtractedDataNumbers))
                 then
                 raise Exception.Create('Wrong file format');
         end                          else
+        begin
          if not(NumberDetermine(ParametersPsevdo,DatesDatFile[0], ParameterNumbers))
             or not(NumberDetermine(ExtractedDataLightPsevdo,DatesDatFile[0], ExtractedDataNumbers))
                 then
                 raise Exception.Create('Wrong file format');
-       except
-        FindClose(SR);
-        TxtFile.Free;
-        DatesDatFile.Free;
-        ResultFile.Free;
-        nDat.Free;
-        n_srhDat.Free;
-        showmessage('Wrong file format');
-        Exit;
-       end;
-       nNumber:=ExtractedDataNumbers[0];
+        end;
 
-       nNumber:=SubstringNumberFromRow('n2',DatesDatFile[0]);
-       N_FeNumber:=SubstringNumberFromRow('TDD',TxtFile[0]);
-       N_BNumber:=SubstringNumberFromRow('N_B',TxtFile[0]);
-       TNumber:=SubstringNumberFromRow('T',TxtFile[0]);
-       dNumber:=SubstringNumberFromRow('d',TxtFile[0]);
-
-       if (nNumber=0)or
-          (N_FeNumber=0)or
-          (N_BNumber=0)or
-          (TNumber=0)or
-          (dNumber=0)
-          then
-         begin
-            showmessage('Wrong file format');
-            Exit;
-         end;
-
-       nDat.Add('N_Fe N_B T d n n_SRH');
+       if DarkIV then
+       begin
+       nDat.Add(NewStringFromStringArray(ParametersNames)
+                +' '+NewStringFromStringArray(ExtractedDataDarkNames)
+                +' '+NewStringFromStringArray(ExtractedDataDarkNames,'_SRH'));
        for I := 1 to DatesDatFile.Count - 1 do
          begin
           fl_name:=StringDataFromRow(DatesDatFile[i],2);
@@ -1226,28 +1203,38 @@ begin
              begin
               tempString:=NewStringByNumbers(TxtFile[j],ParameterNumbers)
                           +' '+NewStringByNumbers(DatesDatFile[i],ExtractedDataNumbers);
-//              tempString:=StringDataFromRow(TxtFile[j],N_FeNumber)+
-//                          ' '+StringDataFromRow(TxtFile[j],N_BNumber) +
-//                          ' '+StringDataFromRow(TxtFile[j],TNumber)+
-//                          ' '+StringDataFromRow(TxtFile[j],dNumber)+
-//                          ' '+StringDataFromRow(DatesDatFile[i],nNumber);
               Break;
              end;
           if SRH_file then  n_srhDat.Add(tempString)
                       else  nDat.Add(tempString);
          end;
+       end         else
+       begin
+       nDat.Add(NewStringFromStringArray(ParametersNames)
+                +' '+NewStringFromStringArray(ExtractedDataLightNames));
+       for I := 1 to DatesDatFile.Count - 1 do
+         begin
+           nDat.Add(NewStringByNumbers(DatesDatFile[i],ParameterNumbers)
+                          +' '+NewStringByNumbers(DatesDatFile[i],ExtractedDataNumbers));
+         end;
+       end;
 
+       DatesDatFile.Clear;
 
-        DatesDatFile.Clear;
-
+       if DarkIV then
+        begin
         if FeBdata then DatesDatFile.Add('N_Fe N_B T d n_FeB n_FeB_SRH')
                    else DatesDatFile.Add('N_Fe N_B T d n_Fe n_Fe_SRH');
+        end       else
+        if FeBdata then DatesDatFile.Add(NewStringFromStringArray(ParametersNames)
+                          +' '+NewStringFromStringArray(ExtractedDataLightNames,'_FeB'))
+                   else DatesDatFile.Add(NewStringFromStringArray(ParametersNames)
+                          +' '+NewStringFromStringArray(ExtractedDataLightNames,'_Fe'));
+        if DarkIV then
+        begin
         for I := 1 to nDat.Count - 1 do
          begin
-          tempString:=StringDataFromRow(nDat[i],1)+
-                      ' '+StringDataFromRow(nDat[i],2)+
-                      ' '+StringDataFromRow(nDat[i],3)+
-                      ' '+StringDataFromRow(nDat[i],4);
+           tempString:=DeleteStringDataFromRow(nDat[i],5);
           for j := 0 to n_srhDat.Count - 1 do
            if AnsiPos(tempString,n_srhDat[j])>0 then
             begin
@@ -1255,163 +1242,154 @@ begin
             Break;
             end;
          end;
+        end       else
+        begin
+         for I := 1 to nDat.Count - 1 do  DatesDatFile.Add(nDat[i]);
+        end;
 
-        Delete(Directory,Length(Directory),1);
-        tempString:='';
-        for I := Length(Directory) downto 1 do
-          tempString:=tempString+Directory[i];
-        Delete(tempString,1,AnsiPos ('\', tempString)-1);
-        Directory:='';
-        for I := Length(tempString) downto 1 do
-          Directory:=Directory+tempString[i];
-        Delete(Directory,Length(Directory),1);
-        tempString:='';
-        for I := Length(Directory) downto 1 do
-          tempString:=tempString+Directory[i];
-        Delete(tempString,1,AnsiPos ('\', tempString)-1);
-        Directory:='';
-        for I := Length(tempString) downto 1 do
-          Directory:=Directory+tempString[i];
-
-        SetCurrentDir(Directory);
-
+        SetCurrentDir(DeleteLastDir(DeleteLastDir(Directory)));
         tempString:='D'+IntToStr(round(strtofloat(StringDataFromRow(DatesDatFile[2],4))*1e5))
         +'T'+StringDataFromRow(DatesDatFile[2],3)
         +'B'+NumberToString(strtofloat(StringDataFromRow(DatesDatFile[2],2)));
-//        tempString:='T'+StringDataFromRow(TxtFile[2],1)+
-//                      NBoronToString();
         if FeBdata then DatesDatFile.SaveToFile('FB'+tempString+'.dat')
                    else DatesDatFile.SaveToFile('Fe'+tempString+'.dat');
 
 
        SetCurrentDir(Result_Folder);
        if FindFirst('ResultAll.dat', faAnyFile, SR) <> 0 then
-         begin
-           DatesDatFile.SaveToFile('ResultAll.dat');
-         end
+         DatesDatFile.SaveToFile('ResultAll.dat')
                                                          else
          begin
           ResultFile.LoadFromFile(SR.Name);
-          if (AnsiPos('n_FeB',ResultFile[0])>0)and(AnsiPos('n_Fe ',ResultFile[0])>0) then
+
+          ParameterNumbers:=[1,2,3,4];
+          if DarkIV then
+           begin
+            FeBdataInFile:=AnsiPos('n_FeB',ResultFile[0])>0;
+            FedataInFile:=AnsiPos('n_Fe ',ResultFile[0])>0;
+            FillString:=' 1 1 ';
+            ExtractedDataNumbers:=[5,6];
+            ExtractedDataNumbersFeB:=[7,8];
+            AllResultTitle:='N_Fe N_B T d n_Fe n_Fe_SRH n_FeB n_FeB_SRH';
+           end      else
+           begin
+            FeBdataInFile:=AnsiPos('Jsc_FeB',ResultFile[0])>0;
+            FedataInFile:=AnsiPos('Jsc_Fe ',ResultFile[0])>0;
+            FillString:=' 0 0 0 0 ';
+            ExtractedDataNumbers:=[5,6,7,8];
+            ExtractedDataNumbersFeB:=[9,10,11,12];
+            AllResultTitle:=NewStringFromStringArray(ParametersNames)
+                            +' '+NewStringFromStringArray(ExtractedDataLightNames,'_Fe')
+                            +' '+NewStringFromStringArray(ExtractedDataLightNames,'_FeB')
+                            +' '+NewStringFromStringArray(ExtractedDataLightNames,'_e');
+           end;
+
+          if (FeBdataInFile)and(FedataInFile) then
              begin
                while DatesDatFile.Count>1 do
                 begin
-                 tempString:=StringDataFromRow(DatesDatFile[1],1)+
-                      ' '+StringDataFromRow(DatesDatFile[1],2)+
-                      ' '+StringDataFromRow(DatesDatFile[1],3)+
-                      ' '+StringDataFromRow(DatesDatFile[1],4);
+                 tempString:=NewStringByNumbers(DatesDatFile[1],ParameterNumbers);
                  RowIsFound:=false;
                  for I := 1 to ResultFile.Count - 1 do
                    begin
                      if AnsiPos(tempString,ResultFile[i])>0 then
                       begin
-                         if FeBdata then tempString:=tempString+' '+
-                                         StringDataFromRow(ResultFile[i],5)+' '+
-                                         StringDataFromRow(ResultFile[i],6)+' '+
-                                         StringDataFromRow(DatesDatFile[1],5)+' '+
-                                         StringDataFromRow(DatesDatFile[1],6)
-                                    else tempString:=DatesDatFile[1]+' '+
-                                         StringDataFromRow(ResultFile[i],7)+' '+
-                                         StringDataFromRow(ResultFile[i],8);
+                         if FeBdata then tempString:=tempString+' '
+                                          +NewStringByNumbers(ResultFile[i],ExtractedDataNumbers)+' '
+                                          +NewStringByNumbers(DatesDatFile[1],ExtractedDataNumbers)
+                                    else tempString:=DatesDatFile[1]+' '
+                                          +NewStringByNumbers(ResultFile[i],ExtractedDataNumbersFeB);
                         tempString:=SomeSpaceToOne(tempString);
-                        ResultFile.Delete(i);
-                        ResultFile.Insert(i,tempString);
+                        if not(DarkIV) then delIllumParamCalculate(tempString);
+                        StringReplaceMy(ResultFile,tempString,i);
                         RowIsFound:=true;
                         Break;
                       end; //if AnsiPos(tempString,ResultFile[i])>0 then
                    end;//for I := 1 to ResultFile.Count - 1 do
                  if not(RowIsFound) then
                     begin
-                    if FeBdata then  tempString:=tempString+' 1 1 '+
-                                         StringDataFromRow(DatesDatFile[1],5)+' '+
-                                         StringDataFromRow(DatesDatFile[1],6)
-                               else tempString:=DatesDatFile[1];
+                    if FeBdata then  tempString:=tempString+FillString
+                                         +NewStringByNumbers(DatesDatFile[1],ExtractedDataNumbers)
+                               else tempString:=DatesDatFile[1]+FillString;
+                     if not(DarkIV) then delIllumParamCalculate(tempString);
                      ResultFile.Add(tempString);
                     end;
                  DatesDatFile.Delete(1);
                 end; //while DatesDatFile.Count>1 do
              end;
-          if (AnsiPos('n_FeB',ResultFile[0])>0)and(not(AnsiPos('n_Fe ',ResultFile[0])>0)) then
+          if (FeBdataInFile)and(not(FedataInFile)) then
              begin
               if not(FeBdata) then
                 begin
-                 ResultFile.Delete(0);
-                 ResultFile.Insert(0,'N_Fe N_B T d n_Fe n_Fe_SRH n_FeB n_FeB_SRH');
+                 StringReplaceMy(ResultFile,AllResultTitle,0);
                  for I := 1 to ResultFile.Count - 1 do
                    begin
-                    tempString:=StringDataFromRow(ResultFile[i],1)+
-                      ' '+StringDataFromRow(ResultFile[i],2)+
-                      ' '+StringDataFromRow(ResultFile[i],3)+
-                      ' '+StringDataFromRow(ResultFile[i],4)+' 1 1 '+
-                      StringDataFromRow(ResultFile[i],5)+' '+
-                      StringDataFromRow(ResultFile[i],6);
-                      ResultFile.Delete(i);
-                      ResultFile.Insert(i,tempString);
+                    tempString:=NewStringByNumbers(ResultFile[i],ParameterNumbers)
+                                +FillString
+                                +NewStringByNumbers(ResultFile[i],ExtractedDataNumbers);
+                      if not(DarkIV) then delIllumParamCalculate(tempString);
+                      StringReplaceMy(ResultFile,tempString,i);
                    end;
                 end;
               while DatesDatFile.Count>1 do
                 begin
-                 tempString:=StringDataFromRow(DatesDatFile[1],1)+
-                      ' '+StringDataFromRow(DatesDatFile[1],2)+
-                      ' '+StringDataFromRow(DatesDatFile[1],3)+
-                      ' '+StringDataFromRow(DatesDatFile[1],4);
+                 tempString:=NewStringByNumbers(DatesDatFile[1],ParameterNumbers);
                  RowIsFound:=false;
                  for I := 1 to ResultFile.Count - 1 do
                    begin
                      if AnsiPos(tempString,ResultFile[i])>0 then
                       begin
                          if FeBdata then tempString:=DatesDatFile[1]
-                                    else tempString:=DatesDatFile[1]+' '+
-                                         StringDataFromRow(ResultFile[i],7)+' '+
-                                         StringDataFromRow(ResultFile[i],8);
+                                    else tempString:=DatesDatFile[1]+' '
+                                         +NewStringByNumbers(ResultFile[i],ExtractedDataNumbersFeB);
                         tempString:=SomeSpaceToOne(tempString);
-                        ResultFile.Delete(i);
-                        ResultFile.Insert(i,tempString);
+                        if not(DarkIV)and(not(FeBdata)) then delIllumParamCalculate(tempString);
+                        StringReplaceMy(ResultFile,tempString,i);
                         RowIsFound:=true;
                         Break;
                       end; //if AnsiPos(tempString,ResultFile[i])>0 then
                    end;//for I := 1 to ResultFile.Count - 1 do
-                 if not(RowIsFound) then ResultFile.Add(DatesDatFile[1]);
+                 if not(RowIsFound) then
+                   begin
+                    if FeBdata then tempString:=DatesDatFile[1]
+                               else tempString:=DatesDatFile[1]+FillString;
+                    if not(DarkIV)and(not(FeBdata)) then delIllumParamCalculate(tempString);
+                    ResultFile.Add(tempString);
+                   end;
                  DatesDatFile.Delete(1);
                 end; //while DatesDatFile.Count>1 do
              end;
-          if (not(AnsiPos('n_FeB',ResultFile[0])>0))and(AnsiPos('n_Fe ',ResultFile[0])>0) then
+          if (not(FeBdataInFile))and(FedataInFile) then
              begin
               if FeBdata then
                 begin
-                 ResultFile.Delete(0);
-                 ResultFile.Insert(0,'N_Fe N_B T d n_Fe n_Fe_SRH n_FeB n_FeB_SRH')
+                 StringReplaceMy(ResultFile,AllResultTitle,0);
                 end;
                while DatesDatFile.Count>1 do
                 begin
-                 tempString:=StringDataFromRow(DatesDatFile[1],1)+
-                      ' '+StringDataFromRow(DatesDatFile[1],2)+
-                      ' '+StringDataFromRow(DatesDatFile[1],3)+
-                      ' '+StringDataFromRow(DatesDatFile[1],4);
+                 tempString:=NewStringByNumbers(DatesDatFile[1],ParameterNumbers);
                  RowIsFound:=false;
                  for I := 1 to ResultFile.Count - 1 do
                    begin
                      if AnsiPos(tempString,ResultFile[i])>0 then
                       begin
-                         if FeBdata then tempString:=tempString+' '+
-                                         StringDataFromRow(ResultFile[i],5)+' '+
-                                         StringDataFromRow(ResultFile[i],6)+' '+
-                                         StringDataFromRow(DatesDatFile[1],5)+' '+
-                                         StringDataFromRow(DatesDatFile[1],6)
+                         if FeBdata then tempString:=tempString+' '
+                                          +NewStringByNumbers(ResultFile[i],ExtractedDataNumbers)+' '
+                                          +NewStringByNumbers(DatesDatFile[1],ExtractedDataNumbers)
                                     else tempString:=DatesDatFile[1];
                         tempString:=SomeSpaceToOne(tempString);
-                        ResultFile.Delete(i);
-                        ResultFile.Insert(i,tempString);
+                        if not(DarkIV)and(FeBdata) then delIllumParamCalculate(tempString);
+                        StringReplaceMy(ResultFile,tempString,i);
                         RowIsFound:=true;
                         Break;
                       end; //if AnsiPos(tempString,ResultFile[i])>0 then
                    end;//for I := 1 to ResultFile.Count - 1 do
                  if not(RowIsFound) then
                     begin
-                    if FeBdata then  tempString:=tempString+' 1 1 '+
-                                         StringDataFromRow(DatesDatFile[1],5)+' '+
-                                         StringDataFromRow(DatesDatFile[1],6)
-                               else tempString:=DatesDatFile[1];
+                     if FeBdata then tempString:=tempString+FillString
+                                       +NewStringByNumbers(DatesDatFile[1],ExtractedDataNumbers)
+                                else tempString:=DatesDatFile[1];
+                     if not(DarkIV)and(FeBdata) then delIllumParamCalculate(tempString);
                      ResultFile.Add(tempString);
                     end;
                  DatesDatFile.Delete(1);
@@ -1419,13 +1397,14 @@ begin
              end;
           ResultFile.SaveToFile('ResultAll.dat');
          end;
-
+   finally
         FindClose(SR);
         TxtFile.Free;
         DatesDatFile.Free;
         ResultFile.Free;
         nDat.Free;
         n_srhDat.Free;
+   end;
 end;
 
 procedure TMainForm.BAllDatesDatClick(Sender: TObject);

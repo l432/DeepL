@@ -23,6 +23,8 @@ const
       ParametersPsevdo:array[TArguments]of string=
        ('TDD','N_B','T','d');
 
+      ExtractedDataDarkNames:array[TExtractedDataDark]of string=
+      ('n');
       ExtractedDataLightNames:array[TExtractedDataLight]of string=
       ('Jsc', 'Eta','Voc','FF');
       ExtractedDataDarkPsevdo:array[TExtractedDataDark]of string=('n2');
@@ -121,18 +123,11 @@ TArrKeyStrList=class
  procedure SaveData;
 end;
 
-Function NumberDetermine(Names:array of string;
-                          Source:string;
-                          var Numbers:TArrInteger):boolean;
-{визначення номерів позицій елементів з Names в рядку Source;
-якщо хоча б одного елементу немає - результат False}
-
-Procedure ShowArrarOfString(AOS:array of string);
-
-Function NewStringByNumbers(Source:string;
-                           Numbers:TArrInteger):string;
-{створюється новий рядок з тих частин Source, номери яких вказані в Numbers,
-частини розділені пробілами, крайній пробіл видалено}
+Procedure delIllumParamCalculate(var str:string);
+{вважається, що str має формат
+'N_Fe _B T d Isc_Fe Eta_Fe Voc_Fe FF_Fe Isc_FeB Eta_FeB Voc_FeB FF_FeB'
+і розраховуються та дописуються у цей же рядок
+відносні зміни (P_FeB-P_Fe)/P_FeB}
 
 implementation
 
@@ -656,77 +651,22 @@ begin
 
 end;
 
-// if FolderName='' then DirectoryPath:=GetCurrentDir
-//                  else DirectoryPath:=FolderName;
-//
-// if FileNamePart<>'' then DirectoryPath:=DirectoryPath+FileNamePart;
-//
-// fFileNamePart:=FileNamePart;
-// fArgumentNumber:=NumberOfSubstringInRow(SL[0])-DataNumber;
-// SetLength(ArrKeyStrList,fArgumentNumber);
-// for I := 0 to High(ArrKeyStrList) do
-//  begin
-//    ArrKeyStrList[i]:=TKeyStrList.Create;
-//    ArrKeyStrList[i].AddKeysFromStringList(SL,i+1);
-//    ArrKeyStrList[i].SortingByKeyValue;
-//  end;
-//
-// SetLength(fChields,0);
-//
-// if fArgumentNumber>1 then
-//  begin
-//  for I := 0 to High(ArrKeyStrList) do
-//   for j := 0 to ArrKeyStrList[i].Count-1 do
-//       begin
-//        SetLength(fChields,High(fChields)+2);
-//        fChields[High(fChields)]:=
-//             TArrKeyStrList.Create(ArrKeyStrList[i].StringLists[j],
-//                             DataNumber,
-//                             DirectoryPath
-//                             +'\'
-//                             +TKeyStrList.BigFolderNameDetermine(ArrKeyStrList[i].KeysName),
-//                             ArrKeyStrList[i].KeysName+TKeyStrList.PartOfDataFileName(ArrKeyStrList[i].Keys[j]));
-//       end;
-//  end;
-
-
-Function NumberDetermine(Names:array of string;
-                          Source:string;
-                          var Numbers:TArrInteger):boolean;
-{визначення номерів позицій елементів з Names в рядку Source;
-якщо хоча б одного елементу немає - результат False}
- var i:integer;
+Procedure delIllumParamCalculate(var str:string);
+{вважається, що str має формат
+'N_Fe _B T d Isc_Fe Eta_Fe Voc_Fe FF_Fe Isc_FeB Eta_FeB Voc_FeB FF_FeB'
+і розраховуються та дописуються у цей же рядок
+відносні зміни (P_FeB-P_Fe)/P_FeB}
+ var P_FeB,P_Fe:double;
+     i:word;
 begin
- SetLength(Numbers,High(Names)+1);
- Result:=True;
- for I := Low(Names) to High(Names) do
-  begin
-  Numbers[i]:=SubstringNumberFromRow(Names[i],Source);
-  Result:=Result and  (Numbers[i]<>0);
-  end;
+ for I := 5 to 8 do
+   begin
+    P_Fe:=FloatDataFromRow(str,i);
+    P_FeB:=FloatDataFromRow(str,i+4);
+    if (P_FeB<>0)and(P_Fe<>0)
+      then str:=str+' '+FloatToStrF((P_FeB-P_Fe)/P_FeB*100,ffExponent,8,2)
+      else str:=str+' 0';
+   end;
 end;
-
-Procedure ShowArrarOfString(AOS:array of string);
- var temp:string;
-     i:integer;
-begin
-  temp:='';
-  for I := Low(AOS) to High(AOS) do
-    temp:=temp+AOS[i]+' ';
-  showmessage(temp);
-end;
-
-Function NewStringByNumbers(Source:string;
-                           Numbers:TArrInteger):string;
-{створюється новий рядок з тих частин Source, номери яких вказані в Numbers,
-частини розділені пробілами, крайній пробіл видалено}
- var i:integer;
-begin
-  Result:='';
-  for I := Low(Numbers) to High(Numbers) do
-    Result:=Result+StringDataFromRow(Source,Numbers[i])+' ';
-  Result:=TrimRight(Result);
-end;
-
 
 end.

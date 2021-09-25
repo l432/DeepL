@@ -1,7 +1,7 @@
 > SCAPS 3.3.10 ELIS-UGent: Version scaps3310.exe, dated 19-09-2021, 12:47:26
 > SCAPS All SCAPS Settings file, saved on 	19-09-2021 at 20:24:16
 > problem definition file loaded :
-> D:\DeepL\FeB\Scaps3310\def\FeD35T300B1p360e15.scaps
+> D:\Samples\DeepL\FeB\Scaps3310\def\FeD35T300B1p360e15.scaps
 > last saved: 	19-09-2021 at 20:23:24
 > 
 
@@ -377,9 +377,9 @@ Label 4 : nihil
 simultaneous :  0
 values from a list :  0
 logarithmic variation :  1
-startvalue :   1.00000000e+13
+startvalue :   1.00000000e+10
 stopvalue :   1.00000000e+14
-number of steps :   10
+number of steps :   25
 
 Batch parameter 1 :
 
@@ -390,9 +390,9 @@ Label 4 : nihil
 simultaneous :  1
 values from a list :  0
 logarithmic variation :  1
-startvalue :   1.00000000e+13
+startvalue :   1.00000000e+10
 stopvalue :   1.00000000e+14
-number of steps :   10
+number of steps :   25
 
 >> end of batch settings file
 
@@ -416,7 +416,7 @@ label 1 : layer 1
 label 2 : defect 1
 label 3 : Nt total
 label 4 : nihil
-minimum value :   1.00000000e+13
+minimum value :   1.00000000e+10
 maximum value :   1.00000000e+14
 start value = actual value :    0
 logarithmic variation :  1
@@ -427,7 +427,7 @@ label 1 : layer 2
 label 2 : defect 1
 label 3 : Nt total
 label 4 : nihil
-minimum value :   1.00000000e+13
+minimum value :   1.00000000e+10
 maximum value :   1.00000000e+14
 start value = actual value :    0
 logarithmic variation :  1

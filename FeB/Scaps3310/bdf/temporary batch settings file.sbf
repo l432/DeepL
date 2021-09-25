@@ -11,7 +11,7 @@ simultaneous :  0
 values from a list :  1
 logarithmic variation :  0
 values are file names :  1
-number of file names :   10
+number of file names :   25
 list of filenames saved :  0
 file   0:P00.grd
 file   1:P01.grd
@@ -23,6 +23,21 @@ file   6:P06.grd
 file   7:P07.grd
 file   8:P08.grd
 file   9:P09.grd
+file  10:P10.grd
+file  11:P11.grd
+file  12:P12.grd
+file  13:P13.grd
+file  14:P14.grd
+file  15:P15.grd
+file  16:P16.grd
+file  17:P17.grd
+file  18:P18.grd
+file  19:P19.grd
+file  20:P20.grd
+file  21:P21.grd
+file  22:P22.grd
+file  23:P23.grd
+file  24:P24.grd
 
 Batch parameter 1 :
 
@@ -34,7 +49,7 @@ simultaneous :  1
 values from a list :  1
 logarithmic variation :  0
 values are file names :  1
-number of file names :   10
+number of file names :   25
 list of filenames saved :  0
 file   0:S00.grd
 file   1:S01.grd
@@ -46,6 +61,21 @@ file   6:S06.grd
 file   7:S07.grd
 file   8:S08.grd
 file   9:S09.grd
+file  10:S10.grd
+file  11:S11.grd
+file  12:S12.grd
+file  13:S13.grd
+file  14:S14.grd
+file  15:S15.grd
+file  16:S16.grd
+file  17:S17.grd
+file  18:S18.grd
+file  19:S19.grd
+file  20:S20.grd
+file  21:S21.grd
+file  22:S22.grd
+file  23:S23.grd
+file  24:S24.grd
 
 Batch parameter 2 :
 
@@ -57,7 +87,7 @@ simultaneous :  1
 values from a list :  1
 logarithmic variation :  0
 values are file names :  1
-number of file names :   10
+number of file names :   25
 list of filenames saved :  0
 file   0:B00.grd
 file   1:B01.grd
@@ -69,6 +99,21 @@ file   6:B06.grd
 file   7:B07.grd
 file   8:B08.grd
 file   9:B09.grd
+file  10:B10.grd
+file  11:B11.grd
+file  12:B12.grd
+file  13:B13.grd
+file  14:B14.grd
+file  15:B15.grd
+file  16:B16.grd
+file  17:B17.grd
+file  18:B18.grd
+file  19:B19.grd
+file  20:B20.grd
+file  21:B21.grd
+file  22:B22.grd
+file  23:B23.grd
+file  24:B24.grd
 
 Batch parameter 3 :
 
@@ -80,7 +125,7 @@ simultaneous :  1
 values from a list :  1
 logarithmic variation :  0
 values are file names :  1
-number of file names :   10
+number of file names :   25
 list of filenames saved :  0
 file   0:F00.grd
 file   1:F01.grd
@@ -92,5 +137,20 @@ file   6:F06.grd
 file   7:F07.grd
 file   8:F08.grd
 file   9:F09.grd
+file  10:F10.grd
+file  11:F11.grd
+file  12:F12.grd
+file  13:F13.grd
+file  14:F14.grd
+file  15:F15.grd
+file  16:F16.grd
+file  17:F17.grd
+file  18:F18.grd
+file  19:F19.grd
+file  20:F20.grd
+file  21:F21.grd
+file  22:F22.grd
+file  23:F23.grd
+file  24:F24.grd
 
 >> end of batch settings file
