@@ -1,0 +1,16 @@
+olikh@univ.kiev.ua
+vkost@isp.kiev.ua
+viktorvlasiuk@gmail.com
+romkin.ua@gmail.com
+jaroluk3@ukr.net
+R.Chupryna@gmail.com
+
+
+V E Lashkaryov Institute of Semiconductor Physics NAS of Ukraine, Kyiv, Ukraine
+
+Taras Shevchenko National University of Kyiv, Kyiv, Ukraine
+
+
+Features of FeB pair light-induced dissociation and repair in silicon n+-p-p+ structures under ultrasound loading
+
+The influence of ultrasound on iron-boron pair dissociation and association in silicon n+–p-p+ structures were investigated experimentally. The FeB pair transformations were monitored by measurements of  short circuit current kinetics. It was found that ultrasound causes the decrease in both the concentration of pairs, which were dissociated by light, and time of association. The phenomenon was investigated at different light intensities, temperatures, frequencies, and power of ultrasound loading. The possible mechanisms underlying the revealed  effects were analyzed.
