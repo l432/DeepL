@@ -971,25 +971,25 @@ begin
   1:begin
      StringReplaceMy(FeScaps,'dark :  0',318);
      StringReplaceMy(FeScaps,'incident spectrum from file :AM1.5G ed2 1 sun.spe',320);
-     StringReplaceMy(FeScaps,'IV_stopV :     0.7000 V',341);
-     StringReplaceMy(FeScaps,'IV_points :  71',342);
+     StringReplaceMy(FeScaps,'IV_stopV :     0.7500 V',341);
+     StringReplaceMy(FeScaps,'IV_points :  76',342);
       StringReplaceMy(FeScaps,'stop after Voc :  1',345);
      StringReplaceMy(FeBScaps,'dark :  0',364);
      StringReplaceMy(FeBScaps,'incident spectrum from file :AM1.5G ed2 1 sun.spe',366);
-     StringReplaceMy(FeBScaps,'IV_stopV :     0.7000 V',387);
-     StringReplaceMy(FeBScaps,'IV_points :  71',388);
+     StringReplaceMy(FeBScaps,'IV_stopV :     0.7500 V',387);
+     StringReplaceMy(FeBScaps,'IV_points :  76',388);
      StringReplaceMy(FeBScaps,'stop after Voc :  1',391);
     end;
   2:begin
      StringReplaceMy(FeScaps,'dark :  0',318);
      StringReplaceMy(FeScaps,'incident spectrum from file :940nmSim.spe',320);
-     StringReplaceMy(FeScaps,'IV_stopV :     0.7000 V',341);
-     StringReplaceMy(FeScaps,'IV_points :  71',342);
+     StringReplaceMy(FeScaps,'IV_stopV :     0.7500 V',341);
+     StringReplaceMy(FeScaps,'IV_points :  76',342);
       StringReplaceMy(FeScaps,'stop after Voc :  1',345);
      StringReplaceMy(FeBScaps,'dark :  0',364);
      StringReplaceMy(FeBScaps,'incident spectrum from file :940nmSim.spe',366);
-     StringReplaceMy(FeBScaps,'IV_stopV :     0.7000 V',387);
-     StringReplaceMy(FeBScaps,'IV_points :  71',388);
+     StringReplaceMy(FeBScaps,'IV_stopV :     0.7500 V',387);
+     StringReplaceMy(FeBScaps,'IV_points :  76',388);
      StringReplaceMy(FeBScaps,'stop after Voc :  1',391);
     end;
  end;

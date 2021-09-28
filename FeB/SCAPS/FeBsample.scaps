@@ -125,7 +125,7 @@ number of photons :  3.00e+22
 incident power :  1.00e+00
 recalculate mesh :  1 (0: fixed mesh, 1: adaptive mesh)
 maximum mesh changes per iteration step :  10
-maximum ratio between neighbouring points :  1.60e+00
+maximum ratio between neighbouring points :  3.00e+00
 minimum ratio between neighbouring points :  1.01e+00
 generation limit :  1.00e+00 microA/cm2
 recombination limit :  1.00e-03 microA/cm2
