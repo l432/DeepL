@@ -7,103 +7,102 @@
 \ifx\undefined\BibAnnote\long\def\BibAnnote#1{}\else\fi
 \ifx\undefined\BibEmph\def\BibEmph#1{\emph{#1}}\else\fi
 
-\bibitem{2Diod:Ishaque}
+\bibitem{Olikh2019SM}
 \selectlanguageifdefined{english}
-\BibEmph{Ishaque,~Kashif}. Simple, fast and accurate two--diode model for
-  photovoltaic modules~/ Kashif~Ishaque, Zainal~Salam, Hamed~Taheri~//
-  \BibEmph{Sol. Energy Mater. Sol. Cells}. ---
-\newblock 2011. --- Feb. ---
-\newblock Vol.~95, no.~2. ---
-\newblock Pp.~586--594.
+\BibEmph{Olikh,~O.Ya.} Relationship between the ideality factor and the iron
+  concentration in silicon solar cells~/ O.Ya.~Olikh~// \BibEmph{Superlattices
+  Microstruct.} ---
+\newblock 2019. --- Dec. ---
+\newblock Vol. 136. ---
+\newblock P.~106309.
 
-\bibitem{Breitenstein2013}
+\bibitem{Heide}
 \selectlanguageifdefined{english}
-\BibEmph{Breitenstein,~O.} Understanding the current-voltage characteristics of
-  industrial crystalline silicon solar cells by considering inhomogeneous
-  current distributions~/ O.~Breitenstein~// \BibEmph{Opto--Electronics
-  Review}. ---
-\newblock 2013. --- Sep. ---
-\newblock Vol.~21, no.~3. ---
-\newblock Pp.~259--282.
+Explanation of High Solar Cell Diode Factors by Nonuniform Contact Resistance~/
+  A.~S.~H.~van~der~Heide, A.~Schonecker, J.~H.~Bultman, W.~C.~Sinke~//
+  \BibEmph{Progress in Photovoltaics: Research and Applications}. ---
+\newblock 2005. --- Jan. ---
+\newblock Vol.~13, no.~1. ---
+\newblock Pp.~3--16.
 
-\bibitem{IJAVA}
+\bibitem{Duan}
 \selectlanguageifdefined{english}
-Parameters identification of photovoltaic models using an improved {JAYA}
-  optimization algorithm~/ Kunjie~Yu, J.J.~Liang, B.Y.~Qu et~al.~//
-  \BibEmph{Energy Conversion and Management}. ---
-\newblock 2017. --- Oct. ---
-\newblock Vol. 150. ---
-\newblock Pp.~742--753.
+Relationship Between the Diode Ideality Factor and the Carrier Recombination
+  Resistance in Organic Solar Cells~/ L.~{Duan}, H.~{Yi}, C.~{Xu} et~al.~//
+  \BibEmph{IEEE Journal of Photovoltaics}. ---
+\newblock 2018. --- Nov. ---
+\newblock Vol.~8, no.~6. ---
+\newblock Pp.~1701--1709.
 
-\bibitem{Olikh2018SM}
+\bibitem{n_CharGaN}
 \selectlanguageifdefined{english}
-\BibEmph{Olikh,~O.Ya.} Acoustically driven degradation in single crystalline
-  silicon solar cell~/ O.Ya.~Olikh~// \BibEmph{Superlattices Microstruct.} ---
-\newblock 2018. --- May. ---
-\newblock Vol. 117. ---
-\newblock Pp.~173--188.
-
-\bibitem{Si_BtB}
-\selectlanguageifdefined{english}
-\BibEmph{Nguyen,~Hieu~T.} Temperature dependence of the radiative recombination
-  coefficient in crystalline silicon from spectral photoluminescence~/
-  Hieu~T.~Nguyen, Simeon~C.~Baker-Finch, Daniel~Macdonald~// \BibEmph{Appl.
+Electrical characterization of {G}a{N} {S}chottky barrier diode at cryogenic
+  temperatures~/ Jiaxiang~Chen, Min~Zhu, Xing~Lu, Xinbo~Zou~// \BibEmph{Appl.
   Phys. Lett.} ---
-\newblock 2014. --- Mar. ---
-\newblock Vol. 104, no.~11. ---
-\newblock P.~112105.
+\newblock 2020. --- Feb. ---
+\newblock Vol. 116, no.~6. ---
+\newblock P.~062102.
 
-\bibitem{Si_Auger}
+\bibitem{n_CharSemic}
 \selectlanguageifdefined{english}
-Assessment and parameterisation of {C}oulomb--enhanced {A}uger recombination
-  coefficients in lowly injected crystalline silicon~/ Pietro~P.~Altermatt,
-  Jan~Schmidt, Gernot~Heiser, Armin~G.~Aberle~// \BibEmph{J. Appl. Phys.} ---
-\newblock 1997. --- Nov. ---
-\newblock Vol.~82, no.~10. ---
-\newblock Pp.~4938--4944.
+\BibEmph{Dalapati,~P.} Analysis of the Temperature Dependence of Diode Ideality
+  Factor in {I}n{G}a{N}-Based {UV}-{A} Light-Emitting Diode~/ P.~Dalapati,
+  N.B.~Manik, A.N.~Basu~// \BibEmph{Semiconductors}. ---
+\newblock 2020. --- Oct. ---
+\newblock Vol.~54, no.~10. ---
+\newblock Pp.~1284--1289.
 
-\bibitem{FeB_Zong}
+\bibitem{n_CharPhysRevAppl}
 \selectlanguageifdefined{english}
-\BibEmph{Zoth,~G.} A fast, preperetion-free method to detect irpn in silicon~/
-  G.~Zoth, W.~Bergholz~// \BibEmph{J. Appl. Phys.} ---
-\newblock 1990. --- Jun. ---
-\newblock Vol.~67, no.~11. ---
-\newblock Pp.~6764--6771.
+Identifying Dominant Recombination Mechanisms in Perovskite Solar Cells by
+  Measuring the Transient Ideality Factor~/ Phil~Calado, Dan~Burkitt,
+  Jizhong~Yao et~al.~// \BibEmph{Phys. Rev. Applied}. ---
+\newblock 2019. --- Apr. ---
+\newblock Vol.~11. ---
+\newblock P.~044005.
 
-\bibitem{FeBLight2}
+\bibitem{MachLean_RevModPhys}
 \selectlanguageifdefined{english}
-\BibEmph{Geerligs,~L.~J.} Dynamics of light-induced FeB pair dissociation in
-  crystalline silicon~/ L.~J.~Geerligs, Daniel~Macdonald~// \BibEmph{Appl.
-  Phys. Lett.} ---
-\newblock 2004. --- Nov. ---
-\newblock Vol.~85, no.~22. ---
-\newblock Pp.~5227--5229.
+Machine learning and the physical sciences~/ Giuseppe~Carleo, Ignacio~Cirac,
+  Kyle~Cranmer et~al.~// \BibEmph{Rev. Mod. Phys.} ---
+\newblock 2019. --- Dec. ---
+\newblock Vol.~91. ---
+\newblock P.~045002.
 
-\bibitem{Keras}
+\bibitem{MachLeanJAP}
 \selectlanguageifdefined{english}
-\BibEmph{Chollet,~François}. Deep Learning with Python~/ François~Chollet.
-  ---
-\newblock Second edition. ---
-\newblock Manning, 2017.
+\BibEmph{Ju,~Shenghong}. Designing thermal functional materials by coupling
+  thermal transport calculations and machine learning~/ Shenghong~Ju,
+  Shuntaro~Shimizu, Junichiro~Shiomi~// \BibEmph{J. Appl. Phys.} ---
+\newblock 2020. --- Oct. ---
+\newblock Vol. 128, no.~16. ---
+\newblock P.~161102.
 
-\bibitem{LIDRev2}
+\bibitem{MachLeanPPV}
 \selectlanguageifdefined{english}
-Degradation of Crystalline Silicon Due to Boron--Oxygen Defects~/ Tim~Niewelt,
-  Jonas~Sch\"{o}on, Wilhelm~Warta et~al.~// \BibEmph{IEEE Journal of
-  Photovoltaics}. ---
-\newblock 2017. --- Jan. ---
-\newblock Vol.~7, no.~1. ---
-\newblock Pp.~383 --398.
+\BibEmph{Rodrigues,~Sandy}. Machine learning PV system performance analyser~/
+  Sandy~Rodrigues, Helena~Geirinhas~Ramos, Fernando~Morgado-Dias~//
+  \BibEmph{Prog. Photovoltaics Res. Appl.} ---
+\newblock 2018. --- Aug. ---
+\newblock Vol.~26, no.~8. ---
+\newblock Pp.~675--687.
 
-\bibitem{ROUGIEUX2018}
+\bibitem{SCRev2015}
 \selectlanguageifdefined{english}
-\BibEmph{Rougieux,~Fiacre~E.} Determining the charge states and capture
-  mechanisms of defects in silicon through accurate recombination analyses: A
-  review~/ Fiacre~E.~Rougieux, Chang~Sun, Daniel~Macdonald~// \BibEmph{Sol.
-  Energy Mater. Sol. Cells}. ---
-\newblock 2018. --- Dec. ---
-\newblock Vol. 187. ---
-\newblock Pp.~263 -- 272.
+Pathways for solar photovoltaics~/ Joel~Jean, Patrick~R.~Brown, Robert~L.~Jaffe
+  et~al.~// \BibEmph{Energy Environ Sci.} ---
+\newblock 2015. --- Jul. ---
+\newblock Vol.~8, no.~4. ---
+\newblock Pp.~1200--1219.
+
+\bibitem{SCRev2020}
+\selectlanguageifdefined{english}
+A review of photovoltaic performance of organic/inorganic solar cells for
+  future renewable and sustainable energy technologies~/ J.~Ajayan, D.~Nirmal,
+  P.~Mohankumar et~al.~// \BibEmph{Superlattices Microstruct.} ---
+\newblock 2020. --- Jul. ---
+\newblock Vol. 143. ---
+\newblock P.~106549.
 
 \bibitem{FeB:Schmidt}
 \selectlanguageifdefined{english}
@@ -114,130 +113,48 @@ Degradation of Crystalline Silicon Due to Boron--Oxygen Defects~/ Tim~Niewelt,
 \newblock Vol.~13, no.~4. ---
 \newblock Pp.~325--331.
 
-\bibitem{JAPSach}
+\bibitem{IronSC}
 \selectlanguageifdefined{english}
-Temperature dependence of photoconversion efficiency in silicon heterojunction
-  solar cells: Theory vs experiment~/ A.~V.~Sachenko, Yu.~V.~Kryuchenko,
-  V.~P.~Kostylyov et~al.~// \BibEmph{J. Appl. Phys.} ---
-\newblock 2016. --- Jun. ---
-\newblock Vol. 119, no.~22. ---
-\newblock P.~225702.
+Iron related solar cell instability: Imaging analysis and impact on cell
+  performance~/ M.C.~Schubert, M.~Padilla, B.~Michl et~al.~// \BibEmph{Sol.
+  Energy Mater. Sol. Cells}. ---
+\newblock 2015. --- Jul. ---
+\newblock Vol. 138. ---
+\newblock Pp.~96--101.
 
-\bibitem{Si_ni_Couderc}
+\bibitem{FeBLight2}
 \selectlanguageifdefined{english}
-\BibEmph{Couderc,~Romain}. Reassessment of the intrinsic carrier density
-  temperature dependence in crystalline silicon~/ Romain~Couderc,
-  Mohamed~Amara, Mustapha~Lemiti~// \BibEmph{J. Appl. Phys.} ---
-\newblock 2014. --- Mar. ---
-\newblock Vol. 115, no.~9. ---
-\newblock P.~093705.
+\BibEmph{Geerligs,~L.~J.} Dynamics of light-induced FeB pair dissociation in
+  crystalline silicon~/ L.~J.~Geerligs, Daniel~Macdonald~// \BibEmph{Appl.
+  Phys. Lett.} ---
+\newblock 2004. --- Nov. ---
+\newblock Vol.~85, no.~22. ---
+\newblock Pp.~5227--5229.
 
-\bibitem{FeBLight3}
+\bibitem{FeB_Zong}
 \selectlanguageifdefined{english}
-Iron-boron pairing kinetics in illuminated p-type and in boron/phosphorus
-  co-doped n-type silicon~/ Christian~Möller, Til~Bartel, Fabien~Gibaja,
-  Kevin~Lauer~// \BibEmph{J. Appl. Phys.} ---
-\newblock 2014. --- Jul. ---
-\newblock Vol. 116, no.~2. ---
-\newblock P.~024503.
+\BibEmph{Zoth,~G.} A fast, preperetion-free method to detect irpn in silicon~/
+  G.~Zoth, W.~Bergholz~// \BibEmph{J. Appl. Phys.} ---
+\newblock 1990. --- Jun. ---
+\newblock Vol.~67, no.~11. ---
+\newblock Pp.~6764--6771.
 
-\bibitem{Markvart}
+\bibitem{MurphyJAP2011}
 \selectlanguageifdefined{english}
-Solar Cells. Materials, Manufacture and Operation~/ Ed. by Augustin~McEvoy,
-  Tom~Markvart, Luis~Castaner. ---
-\newblock Second edition. ---
-\newblock Oxford: Academic Press, 2013. ---
-\newblock 641~pp.
+The effect of oxide precipitates on minority carrier lifetime in p--type
+  silicon~/ J.~D.~Murphy, K.~Bothe, M.~Olmo et~al.~// \BibEmph{J. Appl. Phys.}
+  ---
+\newblock 2011. --- Sep. ---
+\newblock Vol. 110, no.~5. ---
+\newblock P.~053713.
 
-\bibitem{EBLSHADE}
+\bibitem{FeB:kinetic}
 \selectlanguageifdefined{english}
-\BibEmph{Mohamed,~Ali~W.} Novel mutation strategy for enhancing {SHADE} and
-  {LSHADE} algorithms for global numerical optimization~/ Ali~W.~Mohamed,
-  Anas~A.~Hadi, Kamal~M.~Jambi~// \BibEmph{Swarm Evol. Comput.} ---
-\newblock 2019. --- Nov. ---
-\newblock Vol.~50. ---
-\newblock P.~100455.
-
-\bibitem{FeBkinAPL2008}
-\selectlanguageifdefined{english}
-\BibEmph{Macdonald,~D.} Measuring dopant concentrations in compensated p--type
-  crystalline silicon via iron--acceptor pairing~/ D.~Macdonald, A.~Cuevas,
-  L.~J.~Geerligs~// \BibEmph{Appl. Phys. Lett.} ---
-\newblock 2008. --- May. ---
-\newblock Vol.~92, no.~20. ---
-\newblock P.~202119.
-
-\bibitem{SCparam2017}
-\selectlanguageifdefined{english}
-New guidelines for a more accurate extraction of solar cells and modules key
-  data from their current–voltage curves~/ Bertrand~Paviet-Salomon,
-  Jacques~Levrat, Vahid~Fakhfouri et~al.~// \BibEmph{Prog. Photovoltaics Res.
-  Appl.} ---
-\newblock 2017. --- Jul. ---
-\newblock Vol.~25, no.~7. ---
-\newblock Pp.~623--635.
-
-\bibitem{FeBJAP2005}
-\selectlanguageifdefined{english}
-Formation rates of iron-acceptor pairs in crystalline silicon~/
-  Daniel~Macdonald, Thomas~Roth, Prakash N.~K.~Deenapanray et~al.~//
-  \BibEmph{J. Appl. Phys.} ---
-\newblock 2005. --- Oct. ---
-\newblock Vol.~98, no.~8. ---
-\newblock P.~083509.
-
-\bibitem{OlikhDef}
-\selectlanguageifdefined{ukrainian}
-\BibEmph{Оліх,~О.Я.} Дефекти у
-  напівпровідникових та діелектричних
-  кристалах~/ О.Я.~Оліх. ---
-\newblock Вінниця: ФОП Корзун Д.Ю., 2016. ---
-\newblock 152~{с.}
-
-\bibitem{GORB2020}
-\selectlanguageifdefined{english}
-Influence of $\gamma$--irradiation and ultrasound treatment on current
-  mechanism in Au-SiO$_2$-Si structure~/ A.M.~Gorb, O.A.~Korotchenkov,
-  O.Ya.~Olikh et~al.~// \BibEmph{Solid-State Electron.} ---
-\newblock 2020. --- Mar. ---
-\newblock Vol. 165. ---
-\newblock P.~107712.
-
-\bibitem{ECRES2021}
-\selectlanguageifdefined{english}
-\BibEmph{Olikh,~O.} Deep-learning approach to the iron concentration evaluation
-  in silicon solar cell~/ O.~Olikh, O.~Lozitsky, O.~Zavhorodnii~// 9 European
-  conference on renewable energy systems. Proceedings. Istanbul, Turkey.~/ Ed.
-  by Erol~Kurt. ---
-\newblock Istanbul: 2021. ---
-\newblock P.~22.
-
-\bibitem{2021Ultrasonics}
-\selectlanguageifdefined{english}
-Acoustically Induced Acceleration of Iron Migration in Silicon Solar Cells~/
-  O.~Olikh, V.~Kostylyov, V.~Vlasiuk, R.~Korkishko~// Ultrasonics 2021, 5th
-  International Caparica Conference on Ultrasonic based Applications: from
-  analysis to synthesis. Proceedings Book. Caparica, Portugal. ---
-\newblock Caparica: 2021. ---
-\newblock P.~109.
-
-\bibitem{2021CMLTP}
-\selectlanguageifdefined{english}
-Estimation of Iron Concenration in Silicon Solar Cell by Kinetics of
-  Light-Induced Change in Short-Circuit Current~/ O.~Olikh, V.~Kostylyov,
-  V.~Vlasiuk, R.~Korkishko~// II International Advanced Study Conference
-  Condensed Matter and Low Temperature Physics CM\&LTP 2021. Book of Abstracts.
-  Kharkiv, Ukraine. ---
-\newblock Kharkiv: 2021. ---
-\newblock P.~191.
-
-\bibitem{OlikhJPS}
-\selectlanguageifdefined{english}
-\BibEmph{Olikh,~O.~Ya.} Modeling of ideality factor value in
-  $n^+$--$p$--$p^+$--Si structure~/ O.~Ya.~Olikh, O.~V.~Zavhorodnii~//
-  \BibEmph{Journal of Physical Studies}. ---
-\newblock 2020. ---
-\newblock Vol.~24, no.~4. ---
-\newblock P.~4701.
+\BibEmph{Wijaranakula,~W.} The Reaction Kinetics of Iron--Boron Pair Formation
+  and Dissociation in P--Type Silicon~/ W.~Wijaranakula~// \BibEmph{J.
+  Electrochem. Soc.} ---
+\newblock 1993. --- Jan. ---
+\newblock Vol. 140, no.~1. ---
+\newblock Pp.~275--281.
 
 \end{thebibliography}
