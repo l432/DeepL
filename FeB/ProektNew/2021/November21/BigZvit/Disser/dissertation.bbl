@@ -157,4 +157,22 @@ The effect of oxide precipitates on minority carrier lifetime in p--type
 \newblock Vol. 140, no.~1. ---
 \newblock Pp.~275--281.
 
+\bibitem{FeBLight3}
+\selectlanguageifdefined{english}
+Iron-boron pairing kinetics in illuminated p-type and in boron/phosphorus
+  co-doped n-type silicon~/ Christian~Möller, Til~Bartel, Fabien~Gibaja,
+  Kevin~Lauer~// \BibEmph{J. Appl. Phys.} ---
+\newblock 2014. --- Jul. ---
+\newblock Vol. 116, no.~2. ---
+\newblock P.~024503.
+
+\bibitem{FeBKin2019}
+\selectlanguageifdefined{english}
+Dissociation and Formation Kinetics of Iron–Boron Pairs in Silicon after
+  Phosphorus Implantation Gettering~/ Nabil~Khelifati, Hannu~S.~Laine,
+  Ville~Vähänissi et~al.~// \BibEmph{Phys Status Solidi A}. ---
+\newblock 2019. --- Sep. ---
+\newblock Vol. 216, no.~17. ---
+\newblock P.~1900253.
+
 \end{thebibliography}
