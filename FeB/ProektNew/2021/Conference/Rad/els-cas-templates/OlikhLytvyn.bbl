@@ -1,0 +1,488 @@
+\begin{thebibliography}{45}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\href}[2]{#2}
+\providecommand{\path}[1]{#1}
+\providecommand{\DOIprefix}{doi:}
+\providecommand{\ArXivprefix}{arXiv:}
+\providecommand{\URLprefix}{URL: }
+\providecommand{\Pubmedprefix}{pmid:}
+\providecommand{\doi}[1]{\href{http://dx.doi.org/#1}{\path{#1}}}
+\providecommand{\Pubmed}[1]{\href{pmid:#1}{\path{#1}}}
+\providecommand{\bibinfo}[2]{#2}
+\ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
+%Type = Article
+\bibitem[{Abbate et~al.(1995)Abbate, Ostrovskii, Han, Masini, Palma and
+  Das}]{OstrovskiiSST}
+\bibinfo{author}{Abbate, A.}, \bibinfo{author}{Ostrovskii, I.V.},
+  \bibinfo{author}{Han, K.J.}, \bibinfo{author}{Masini, G.},
+  \bibinfo{author}{Palma, F.}, \bibinfo{author}{Das, P.}, \bibinfo{year}{1995}.
+\newblock \bibinfo{title}{Transient acoustoelectric spectroscopy measurements
+  for the characterization of {GaAs} epilayer structures}.
+\newblock \bibinfo{journal}{Semicond. Sci. Technol.} \bibinfo{volume}{10},
+  \bibinfo{pages}{965--969}.
+\newblock \DOIprefix\doi{10.1088/0268-1242/10/7/011}.
+%Type = Article
+\bibitem[{Anikin et~al.(1991a)Anikin, Andreyev, Lebedev, Pyatko, Rastegayeva,
+  Savkina, Strel'chuk, Syrkin and Chelnokov}]{Anikin1991:2En}
+\bibinfo{author}{Anikin, M.}, \bibinfo{author}{Andreyev, A.},
+  \bibinfo{author}{Lebedev, A.}, \bibinfo{author}{Pyatko, S.},
+  \bibinfo{author}{Rastegayeva, M.}, \bibinfo{author}{Savkina, N.},
+  \bibinfo{author}{Strel'chuk, A.}, \bibinfo{author}{Syrkin, A.},
+  \bibinfo{author}{Chelnokov, V.}, \bibinfo{year}{1991}a.
+\newblock \bibinfo{title}{High temperature {S}chottky diode {A}u-{S}i{C}-6{H}}.
+\newblock \bibinfo{journal}{Fizika i tekhnika poluprovodnikov}
+  \bibinfo{volume}{25}, \bibinfo{pages}{328--333}.
+\newblock \bibinfo{note}{(in Russian)}.
+%Type = Article
+\bibitem[{Anikin et~al.(1991b)Anikin, Zubrilov, Lebedev, Strel'chuk and
+  Cherenkov}]{Anikin1991:3En}
+\bibinfo{author}{Anikin, M.}, \bibinfo{author}{Zubrilov, A.},
+  \bibinfo{author}{Lebedev, A.}, \bibinfo{author}{Strel'chuk, A.},
+  \bibinfo{author}{Cherenkov, A.}, \bibinfo{year}{1991}b.
+\newblock \bibinfo{title}{Recombination processes in
+  6{H}--{S}i{C}p--n--structures and the influence of deep centers}.
+\newblock \bibinfo{journal}{Fizika i tekhnika poluprovodnikov}
+  \bibinfo{volume}{25}, \bibinfo{pages}{479--486}.
+\newblock \bibinfo{note}{(in Russian)}.
+%Type = Article
+\bibitem[{Ashby et~al.(1976)Ashby, Roberts, Ashen and Mullin}]{ASHBY:GaAs}
+\bibinfo{author}{Ashby, A.}, \bibinfo{author}{Roberts, G.},
+  \bibinfo{author}{Ashen, D.}, \bibinfo{author}{Mullin, J.},
+  \bibinfo{year}{1976}.
+\newblock \bibinfo{title}{Non-extrinsic conduction in semi-insulating gallium
+  arsenide}.
+\newblock \bibinfo{journal}{Solid State Commun.} \bibinfo{volume}{20},
+  \bibinfo{pages}{61--63}.
+\newblock \DOIprefix\doi{10.1016/0038-1098(76)91699-9}.
+%Type = Article
+\bibitem[{Ashkinadze et~al.(1996)Ashkinadze, Cohen, Ron, Linder and
+  Pfeiffer}]{ASHKINADZE1996}
+\bibinfo{author}{Ashkinadze, B.}, \bibinfo{author}{Cohen, E.},
+  \bibinfo{author}{Ron, A.}, \bibinfo{author}{Linder, E.},
+  \bibinfo{author}{Pfeiffer, L.}, \bibinfo{year}{1996}.
+\newblock \bibinfo{title}{The effects of photogenerated free carriers and
+  microwave electron heating on exciton dynamics in gaasalgaas quantum wells}.
+\newblock \bibinfo{journal}{Solid-State Electron.} \bibinfo{volume}{40},
+  \bibinfo{pages}{561--565}.
+\newblock \DOIprefix\doi{10.1016/0038-1101(95)00290-1}.
+%Type = Article
+\bibitem[{Bacherikov et~al.(2008)Bacherikov, Konakova, Milenin, Okhrimenko,
+  Svetlichnyi and Polyakov}]{Bacherikov2008En}
+\bibinfo{author}{Bacherikov, Y.}, \bibinfo{author}{Konakova, R.},
+  \bibinfo{author}{Milenin, V.}, \bibinfo{author}{Okhrimenko, O.},
+  \bibinfo{author}{Svetlichnyi, A.}, \bibinfo{author}{Polyakov, V.},
+  \bibinfo{year}{2008}.
+\newblock \bibinfo{title}{Changes in characteristics of gadolinium, titanium,
+  and erbium oxide films on the sic surface under microwave treatment}.
+\newblock \bibinfo{journal}{Semiconductors} \bibinfo{volume}{42},
+  \bibinfo{pages}{868--872}.
+\newblock \DOIprefix\doi{10.1134/S106378260807019}.
+%Type = Article
+\bibitem[{Bacherikov et~al.(2003)Bacherikov, Konakova, Kocherov, Lytvyn,
+  Lytvyn, Okhrimenko and Svetlichnyi}]{Bacherikov2003En}
+\bibinfo{author}{Bacherikov, Y.Y.}, \bibinfo{author}{Konakova, R.V.},
+  \bibinfo{author}{Kocherov, A.N.}, \bibinfo{author}{Lytvyn, P.M.},
+  \bibinfo{author}{Lytvyn, O.S.}, \bibinfo{author}{Okhrimenko, O.B.},
+  \bibinfo{author}{Svetlichnyi, A.M.}, \bibinfo{year}{2003}.
+\newblock \bibinfo{title}{Effect of microwave annealing on silicon
+  dioxide/silicon carbide structures}.
+\newblock \bibinfo{journal}{Technical Physics} \bibinfo{volume}{48},
+  \bibinfo{pages}{598--601}.
+\newblock \DOIprefix\doi{10.1134/1.1576474}.
+%Type = Book
+\bibitem[{Belyaev et~al.(2002)Belyaev, Venger, Ermolovich, Konakova, Lytvyn,
+  Milenin, Prokopenko, Svechnikov, Soloviev and Fedorenko}]{BelyaevIntac}
+\bibinfo{author}{Belyaev, A.}, \bibinfo{author}{Venger, E.},
+  \bibinfo{author}{Ermolovich, I.}, \bibinfo{author}{Konakova, R.},
+  \bibinfo{author}{Lytvyn, P.}, \bibinfo{author}{Milenin, V.},
+  \bibinfo{author}{Prokopenko, I.}, \bibinfo{author}{Svechnikov, G.},
+  \bibinfo{author}{Soloviev, E.}, \bibinfo{author}{Fedorenko, L.},
+  \bibinfo{year}{2002}.
+\newblock \bibinfo{title}{Effect of microwave and laser radiations on the
+  parameters of semiconductor structures}.
+\newblock \bibinfo{publisher}{Intac}, \bibinfo{address}{Kyiv}.
+%Type = Article
+\bibitem[{Belyayev et~al.(1998)Belyayev, Belyayev, Yermolovich, Komirenko,
+  Konakova, Lyapin, Milenin, Solov'ev and Shevelev}]{Belyaev1998JTFEn}
+\bibinfo{author}{Belyayev, A.}, \bibinfo{author}{Belyayev, A.},
+  \bibinfo{author}{Yermolovich, I.}, \bibinfo{author}{Komirenko, S.},
+  \bibinfo{author}{Konakova, R.}, \bibinfo{author}{Lyapin, V.},
+  \bibinfo{author}{Milenin, V.}, \bibinfo{author}{Solov'ev, E.},
+  \bibinfo{author}{Shevelev, M.}, \bibinfo{year}{1998}.
+\newblock \bibinfo{title}{Influence of microwave treatment on the
+  electrophysical characteristics of technically important semiconductors and
+  surface-barrier structures}.
+\newblock \bibinfo{journal}{Technical Physics} \bibinfo{volume}{43},
+  \bibinfo{pages}{1445--1449}.
+\newblock \DOIprefix\doi{10.1134/1.1259222}.
+%Type = Article
+\bibitem[{Belyayev et~al.(2012)Belyayev, Sachenko, Boltovets, Ivanov, Konakova,
+  Kudryk, Matveeva, Milenin, Novitskii and Sheremet}]{Konakova2012FTPEn}
+\bibinfo{author}{Belyayev, A.}, \bibinfo{author}{Sachenko, A.},
+  \bibinfo{author}{Boltovets, N.}, \bibinfo{author}{Ivanov, V.},
+  \bibinfo{author}{Konakova, R.}, \bibinfo{author}{Kudryk, Y.},
+  \bibinfo{author}{Matveeva, L.}, \bibinfo{author}{Milenin, V.},
+  \bibinfo{author}{Novitskii, S.}, \bibinfo{author}{Sheremet, V.},
+  \bibinfo{year}{2012}.
+\newblock \bibinfo{title}{Effect of microwave irradiation on the resistance of
+  au--tib$_x$--ge--au--n--n$^+$--n$^{++}$--{G}a{A}s({I}n{P}) ohmic contacts}.
+\newblock \bibinfo{journal}{Semiconductors} \bibinfo{volume}{46},
+  \bibinfo{pages}{541--544}.
+\newblock \DOIprefix\doi{10.1134/S1063782612040021}.
+%Type = Article
+\bibitem[{Bhunia and Bose(1998)}]{BHUNIA1998}
+\bibinfo{author}{Bhunia, S.}, \bibinfo{author}{Bose, D.}, \bibinfo{year}{1998}.
+\newblock \bibinfo{title}{Microwave synthesis, single crystal growth and
+  characterization of znte}.
+\newblock \bibinfo{journal}{J. Cryst. Growth} \bibinfo{volume}{186},
+  \bibinfo{pages}{535--542}.
+\newblock \DOIprefix\doi{10.1016/S0022-0248(97)00814-2}.
+%Type = Article
+\bibitem[{Boltovets et~al.(2002)Boltovets, Kamalov, Kolyadina, Konakova,
+  Lytvyn, Lytvyn, Matveeva, Milenin and Rengevych}]{BoltovetsEn}
+\bibinfo{author}{Boltovets, N.S.}, \bibinfo{author}{Kamalov, A.B.},
+  \bibinfo{author}{Kolyadina, E.Y.}, \bibinfo{author}{Konakova, R.V.},
+  \bibinfo{author}{Lytvyn, P.M.}, \bibinfo{author}{Lytvyn, O.S.},
+  \bibinfo{author}{Matveeva, L.A.}, \bibinfo{author}{Milenin, V.V.},
+  \bibinfo{author}{Rengevych, O.E.}, \bibinfo{year}{2002}.
+\newblock \bibinfo{title}{Microwave-stimulated relaxation of internal strains
+  in gaas-based device heterostructures}.
+\newblock \bibinfo{journal}{Technical Physics Letters} \bibinfo{volume}{28},
+  \bibinfo{pages}{154--156}.
+\newblock \DOIprefix\doi{10.1134/1.1458520}.
+%Type = Article
+\bibitem[{Bourgoin et~al.(1988)Bourgoin, von Bardeleben and
+  Stiévenard}]{Bourgoin:GaAs}
+\bibinfo{author}{Bourgoin, J.C.}, \bibinfo{author}{von Bardeleben, H.J.},
+  \bibinfo{author}{Stiévenard, D.}, \bibinfo{year}{1988}.
+\newblock \bibinfo{title}{Native defects in gallium arsenide}.
+\newblock \bibinfo{journal}{J. Appl. Phys.} \bibinfo{volume}{64},
+  \bibinfo{pages}{R65--R92}.
+\newblock \DOIprefix\doi{10.1063/1.341206}.
+%Type = Article
+\bibitem[{Bourgoin and De~Angelis(2001)}]{Bourgoin2001}
+\bibinfo{author}{Bourgoin, J.C.}, \bibinfo{author}{De~Angelis, N.},
+  \bibinfo{year}{2001}.
+\newblock \bibinfo{title}{The defect responsible for non--radiative
+  recombination in {GaAs} materials}.
+\newblock \bibinfo{journal}{Semicond. Sci. Technol.} \bibinfo{volume}{16},
+  \bibinfo{pages}{497--501}.
+\newblock \DOIprefix\doi{10.1088/0268-1242/9/2/005}.
+%Type = Article
+\bibitem[{Bulyarskii et~al.(2000)Bulyarskii, Grushko and
+  Zhukov}]{Bulyarskii2000}
+\bibinfo{author}{Bulyarskii, S.}, \bibinfo{author}{Grushko, N.},
+  \bibinfo{author}{Zhukov, A.}, \bibinfo{year}{2000}.
+\newblock \bibinfo{title}{Field dependence of the rate of thermal emission of
+  holes from the {V}$_\mathrm{Ga}${S}$_\mathrm{As}$ complex in gallium
+  arsenide}.
+\newblock \bibinfo{journal}{Semiconductors} \bibinfo{volume}{34},
+  \bibinfo{pages}{40--44}.
+\newblock \DOIprefix\doi{10.1134/1.1187958}.
+%Type = Article
+\bibitem[{Ermolovich et~al.(2007)Ermolovich, Milenin, Milenin, Konakova and
+  Red'ko}]{Konakova2007JTFEn}
+\bibinfo{author}{Ermolovich, I.}, \bibinfo{author}{Milenin, G.},
+  \bibinfo{author}{Milenin, V.}, \bibinfo{author}{Konakova, R.},
+  \bibinfo{author}{Red'ko, R.}, \bibinfo{year}{2007}.
+\newblock \bibinfo{title}{Modification of the defect structure in binary
+  semiconductors under the action of microwave radiation}.
+\newblock \bibinfo{journal}{Technical Physics} \bibinfo{volume}{77},
+  \bibinfo{pages}{1173--1177}.
+\newblock \DOIprefix\doi{10.1134/S1063784207090113}.
+%Type = Article
+\bibitem[{Ermolovich et~al.(1998)Ermolovich, Venger, Konakova, Milenin,
+  Svechnikov and Sheveljev}]{ProcSPIE}
+\bibinfo{author}{Ermolovich, I.B.}, \bibinfo{author}{Venger, E.F.},
+  \bibinfo{author}{Konakova, R.V.}, \bibinfo{author}{Milenin, V.V.},
+  \bibinfo{author}{Svechnikov, S.V.}, \bibinfo{author}{Sheveljev, M.V.},
+  \bibinfo{year}{1998}.
+\newblock \bibinfo{title}{Photoluminescent investigations of shf irradiation
+  effect on defect states in gaas:sn(te) and inp crystals}.
+\newblock \bibinfo{journal}{Proc. SPIE} \bibinfo{volume}{3359},
+  \bibinfo{pages}{265--272}.
+\newblock \DOIprefix\doi{10.1117/12.306225}.
+%Type = Article
+\bibitem[{Fang et~al.(1990)Fang, Shan, Schlesinger and Milnes}]{FANG1990}
+\bibinfo{author}{Fang, Z.}, \bibinfo{author}{Shan, L.},
+  \bibinfo{author}{Schlesinger, T.}, \bibinfo{author}{Milnes, A.},
+  \bibinfo{year}{1990}.
+\newblock \bibinfo{title}{Study of defects in {LEC}--grown undoped {SI}--{GaAs}
+  by thermally stimulated current spectroscopy}.
+\newblock \bibinfo{journal}{Materials Science and Engineering: B}
+  \bibinfo{volume}{5}, \bibinfo{pages}{397--408}.
+\newblock \DOIprefix\doi{10.1016/0921-5107(90)90104-J}.
+%Type = Article
+\bibitem[{Fang et~al.(1987)Fang, Schlesinger and Milnes}]{Fang:EL6}
+\bibinfo{author}{Fang, Z.Q.}, \bibinfo{author}{Schlesinger, T.E.},
+  \bibinfo{author}{Milnes, A.G.}, \bibinfo{year}{1987}.
+\newblock \bibinfo{title}{Evidence for {EL}6 ($e_c-0.35$ e{V}) acting as a
+  dominant recombination center in n--type horizontal {B}ridgman {GaAs}}.
+\newblock \bibinfo{journal}{J. Appl. Phys.} \bibinfo{volume}{61},
+  \bibinfo{pages}{5047--5050}.
+\newblock \DOIprefix\doi{10.1063/1.338327}.
+%Type = Article
+\bibitem[{Godwod et~al.(1976)Godwod, Nagy and Rek}]{Godwod}
+\bibinfo{author}{Godwod, K.}, \bibinfo{author}{Nagy, A.T.},
+  \bibinfo{author}{Rek, Z.}, \bibinfo{year}{1976}.
+\newblock \bibinfo{title}{The application of the x--ray triple--crystal
+  spectrometer for measuring the radius of curvature of bent single crystals}.
+\newblock \bibinfo{journal}{Phys. Status Solidi A} \bibinfo{volume}{34},
+  \bibinfo{pages}{705--710}.
+\newblock \DOIprefix\doi{10.1002/pssa.2210340235}.
+%Type = Article
+\bibitem[{Gromashevskii et~al.(2013)Gromashevskii, Tatyanenko and
+  Snopok}]{PANnewEn}
+\bibinfo{author}{Gromashevskii, V.}, \bibinfo{author}{Tatyanenko, N.},
+  \bibinfo{author}{Snopok, B.}, \bibinfo{year}{2013}.
+\newblock \bibinfo{title}{Application of the transverse acoustoelectric effect
+  to studying silicon surface charging upon water adsorption}.
+\newblock \bibinfo{journal}{Semiconductors} \bibinfo{volume}{47},
+  \bibinfo{pages}{579--585}.
+\newblock \DOIprefix\doi{10.1134/S106378261304009X}.
+%Type = Article
+\bibitem[{Hemmingsson et~al.(1999)Hemmingsson, Son and Janzén}]{Hemmingsson}
+\bibinfo{author}{Hemmingsson, C.G.}, \bibinfo{author}{Son, N.T.},
+  \bibinfo{author}{Janzén, E.}, \bibinfo{year}{1999}.
+\newblock \bibinfo{title}{Observation of negative--{U} centers in 6{H} silicon
+  carbide}.
+\newblock \bibinfo{journal}{Appl. Phys. Lett.} \bibinfo{volume}{74},
+  \bibinfo{pages}{839--841}.
+\newblock \DOIprefix\doi{10.1063/1.123401}.
+%Type = Article
+\bibitem[{Kitchen et~al.(2014)Kitchen, Vallance, Kennedy, Tapia-Ruiz,
+  Carassiti, Harrison, Whittaker, Drysdale, Kingman and Gregory}]{MW:Rev}
+\bibinfo{author}{Kitchen, H.J.}, \bibinfo{author}{Vallance, S.R.},
+  \bibinfo{author}{Kennedy, J.L.}, \bibinfo{author}{Tapia-Ruiz, N.},
+  \bibinfo{author}{Carassiti, L.}, \bibinfo{author}{Harrison, A.},
+  \bibinfo{author}{Whittaker, A.G.}, \bibinfo{author}{Drysdale, T.D.},
+  \bibinfo{author}{Kingman, S.W.}, \bibinfo{author}{Gregory, D.H.},
+  \bibinfo{year}{2014}.
+\newblock \bibinfo{title}{Modern microwave methods in solid-state inorganic
+  materials chemistry: From fundamentals to manufacturing}.
+\newblock \bibinfo{journal}{Chem. Rev.} \bibinfo{volume}{114},
+  \bibinfo{pages}{1170--1206}.
+\newblock \DOIprefix\doi{10.1021/cr4002353}.
+%Type = Article
+\bibitem[{Kol'chenko and Lomako(1994)}]{KolFTP1994En}
+\bibinfo{author}{Kol'chenko, T.}, \bibinfo{author}{Lomako, V.},
+  \bibinfo{year}{1994}.
+\newblock \bibinfo{title}{New metastable center in irradiated {G}a{A}s}.
+\newblock \bibinfo{journal}{Fizika i tekhnika poluprovodnikov}
+  \bibinfo{volume}{28}, \bibinfo{pages}{857--860}.
+\newblock \bibinfo{note}{(in Russian)}.
+%Type = Article
+\bibitem[{Kol'chenko et~al.(1989)Kol'chenko, Lomako, Rodionov and
+  Sveshnikov}]{KolFTP1989En}
+\bibinfo{author}{Kol'chenko, T.}, \bibinfo{author}{Lomako, V.},
+  \bibinfo{author}{Rodionov, A.}, \bibinfo{author}{Sveshnikov, Y.},
+  \bibinfo{year}{1989}.
+\newblock \bibinfo{title}{Features of defect formation in epitaxial gallium
+  arsenide, which is containing isovalent indium impurity}.
+\newblock \bibinfo{journal}{Fizika i tekhnika poluprovodnikov}
+  \bibinfo{volume}{23}, \bibinfo{pages}{626--629}.
+\newblock \bibinfo{note}{(in Russian)}.
+%Type = Article
+\bibitem[{Kozlovskii et~al.(2000)Kozlovskii, Kozlov and Lomasov}]{KozlovsEn}
+\bibinfo{author}{Kozlovskii, V.V.}, \bibinfo{author}{Kozlov, V.A.},
+  \bibinfo{author}{Lomasov, V.N.}, \bibinfo{year}{2000}.
+\newblock \bibinfo{title}{Modification of semiconductors with proton beams. a
+  review}.
+\newblock \bibinfo{journal}{Semiconductors} \bibinfo{volume}{34},
+  \bibinfo{pages}{123--140}.
+\newblock \DOIprefix\doi{10.1134/1.1187921}.
+%Type = Article
+\bibitem[{Kuznetsov and Edmond(1997)}]{Kuznets1997En}
+\bibinfo{author}{Kuznetsov, N.}, \bibinfo{author}{Edmond, J.},
+  \bibinfo{year}{1997}.
+\newblock \bibinfo{title}{Effect of deep levels on current excitation in
+  6{H}--{S}i{C} diodes}.
+\newblock \bibinfo{journal}{Semiconductors} \bibinfo{volume}{31},
+  \bibinfo{pages}{1049--1052}.
+\newblock \DOIprefix\doi{10.1134/1.1187023}.
+%Type = Article
+\bibitem[{Lebedev et~al.(2001)Lebedev, Davydov, Tregubova, Bogdanova, Shcheglov
+  and Pavlenko}]{Lebedev2001En}
+\bibinfo{author}{Lebedev, A.}, \bibinfo{author}{Davydov, D.},
+  \bibinfo{author}{Tregubova, A.}, \bibinfo{author}{Bogdanova, E.},
+  \bibinfo{author}{Shcheglov, M.}, \bibinfo{author}{Pavlenko, M.},
+  \bibinfo{year}{2001}.
+\newblock \bibinfo{title}{Effect of structural imperfection on the spectrum of
+  deep levels in 6{H}--{SiC}}.
+\newblock \bibinfo{journal}{Semiconductors} \bibinfo{volume}{35},
+  \bibinfo{pages}{1372--1374}.
+\newblock \DOIprefix\doi{10.1134/1.1427973}.
+%Type = Article
+\bibitem[{Lebedev et~al.(2000)Lebedev, Veinger, Davydov, Kozlovskii, Savkina
+  and Strel'chuk}]{Lebedev2000En}
+\bibinfo{author}{Lebedev, A.}, \bibinfo{author}{Veinger, A.},
+  \bibinfo{author}{Davydov, D.}, \bibinfo{author}{Kozlovskii, V.},
+  \bibinfo{author}{Savkina, N.}, \bibinfo{author}{Strel'chuk, A.},
+  \bibinfo{year}{2000}.
+\newblock \bibinfo{title}{Radiation defects in n--6{H}--{SiC} irradiated with 8
+  {MeV} protons}.
+\newblock \bibinfo{journal}{Semiconductors} \bibinfo{volume}{34},
+  \bibinfo{pages}{861--866}.
+\newblock \DOIprefix\doi{10.1134/1.1188089}.
+%Type = Article
+\bibitem[{Lebedev(1999)}]{Lebed1999En}
+\bibinfo{author}{Lebedev, A.A.}, \bibinfo{year}{1999}.
+\newblock \bibinfo{title}{Deep level centers in silicon carbide: A review}.
+\newblock \bibinfo{journal}{Semiconductors} \bibinfo{volume}{33},
+  \bibinfo{pages}{107--130}.
+\newblock \DOIprefix\doi{10.1134/1.1187657}.
+%Type = Article
+\bibitem[{Lef{\`e}vre and Schulz(1977)}]{Lefevre1977}
+\bibinfo{author}{Lef{\`e}vre, H.}, \bibinfo{author}{Schulz, M.},
+  \bibinfo{year}{1977}.
+\newblock \bibinfo{title}{Double correlation technique ({DDLTS}) for the
+  analysis of deep level profiles in semiconductors}.
+\newblock \bibinfo{journal}{Applied physics} \bibinfo{volume}{12},
+  \bibinfo{pages}{45--53}.
+\newblock \DOIprefix\doi{10.1007/BF00900067}.
+%Type = Article
+\bibitem[{Makram-Ebeid and Lannoo(1982)}]{Makram}
+\bibinfo{author}{Makram-Ebeid, S.}, \bibinfo{author}{Lannoo, M.},
+  \bibinfo{year}{1982}.
+\newblock \bibinfo{title}{Quantum model for phonon--assisted tunnel ionization
+  of deep levels in a semiconductor}.
+\newblock \bibinfo{journal}{Phys. Rev. B} \bibinfo{volume}{25},
+  \bibinfo{pages}{6406--6424}.
+\newblock \DOIprefix\doi{10.1103/PhysRevB.25.6406}.
+%Type = Article
+\bibitem[{Milenin et~al.(1994)Milenin, Konakova, Statov, Sklyarevich, Tkhorik,
+  Filatov and Shevelev}]{Milenin1994En}
+\bibinfo{author}{Milenin, V.}, \bibinfo{author}{Konakova, R.},
+  \bibinfo{author}{Statov, V.}, \bibinfo{author}{Sklyarevich, V.},
+  \bibinfo{author}{Tkhorik, Y.}, \bibinfo{author}{Filatov, M.},
+  \bibinfo{author}{Shevelev, M.}, \bibinfo{year}{1994}.
+\newblock \bibinfo{title}{Physicochemical processes at the interface of
+  contacts {A}u/{P}t/{C}r/{P}t/{G}a{A}s, subjected to microwave annealing}.
+\newblock \bibinfo{journal}{Pis'ma v zhurnal tekhnicheskoy fiziki}
+  \bibinfo{volume}{20}, \bibinfo{pages}{32--36}.
+\newblock \bibinfo{note}{(in Russian)}.
+%Type = Article
+\bibitem[{Mircea and Mitonneau(1975)}]{Mircea1975}
+\bibinfo{author}{Mircea, A.}, \bibinfo{author}{Mitonneau, A.},
+  \bibinfo{year}{1975}.
+\newblock \bibinfo{title}{A study of electron traps in vapour--phase epitaxial
+  {G}a{A}s}.
+\newblock \bibinfo{journal}{Applied physics} \bibinfo{volume}{8},
+  \bibinfo{pages}{15--21}.
+\newblock \DOIprefix\doi{10.1007/BF00883664}.
+%Type = Article
+\bibitem[{Ostrovskii and Olikh(1998)}]{OlikhSSC}
+\bibinfo{author}{Ostrovskii, I.}, \bibinfo{author}{Olikh, O.},
+  \bibinfo{year}{1998}.
+\newblock \bibinfo{title}{Characterization of interface deep levels in as vapor
+  grown epi--{G}a{A}s}.
+\newblock \bibinfo{journal}{Solid State Commun.} \bibinfo{volume}{107},
+  \bibinfo{pages}{341--343}.
+\newblock \DOIprefix\doi{https://doi.org/10.1016/S0038-1098(98)00236-1}.
+%Type = Article
+\bibitem[{Ostrovskii et~al.(1998)Ostrovskii, Saiko and Walther}]{OstrovPAN}
+\bibinfo{author}{Ostrovskii, I.V.}, \bibinfo{author}{Saiko, S.V.},
+  \bibinfo{author}{Walther, H.G.}, \bibinfo{year}{1998}.
+\newblock \bibinfo{title}{Determination of deep levels' parameters in
+  epi--{G}a{A}s by a transient acoustoelectric technique}.
+\newblock \bibinfo{journal}{J. Phys. D: Appl. Phys.} \bibinfo{volume}{31},
+  \bibinfo{pages}{2319--2325}.
+\newblock \DOIprefix\doi{10.1088/0022-3727/31/18/018}.
+%Type = Article
+\bibitem[{Pashkov et~al.(1994)Pashkov, Perevoshchikov and
+  Skupov}]{Pashkov1994En}
+\bibinfo{author}{Pashkov, V.}, \bibinfo{author}{Perevoshchikov, V.},
+  \bibinfo{author}{Skupov, V.}, \bibinfo{year}{1994}.
+\newblock \bibinfo{title}{Influence of annealing in a {microwave} radiation
+  field on the residual deformation and impurity composition of near-surface
+  silicon layers}.
+\newblock \bibinfo{journal}{Pis'ma v zhurnal tekhnicheskoy fiziki}
+  \bibinfo{volume}{20}, \bibinfo{pages}{14--18}.
+\newblock \bibinfo{note}{(in Russian)}.
+%Type = Article
+\bibitem[{Pavlovi\'{c} et~al.(2000)Pavlovi\'{c}, Desnica and
+  Gladi\'{c}}]{Pavlovic2000}
+\bibinfo{author}{Pavlovi\'{c}, M.}, \bibinfo{author}{Desnica, U.V.},
+  \bibinfo{author}{Gladi\'{c}, J.}, \bibinfo{year}{2000}.
+\newblock \bibinfo{title}{Complete set of deep traps in semi--insulating gaas}.
+\newblock \bibinfo{journal}{J. Appl. Phys.} \bibinfo{volume}{88},
+  \bibinfo{pages}{4563--4570}.
+\newblock \DOIprefix\doi{10.1063/1.1308072}.
+%Type = Article
+\bibitem[{Samoylov et~al.(1994)Samoylov, Yakusheva and Prints}]{Samoilov1994En}
+\bibinfo{author}{Samoylov, V.A.}, \bibinfo{author}{Yakusheva, N.A.},
+  \bibinfo{author}{Prints, V.Y.}, \bibinfo{year}{1994}.
+\newblock \bibinfo{title}{Effect of an isovalent antimony impurity on the
+  formation of electrically active cents in $n$--{G}a{A}s obtained by
+  liquid-phase epitaxy from a bismuth melt}.
+\newblock \bibinfo{journal}{Fizika i tekhnika poluprovodnikov}
+  \bibinfo{volume}{28}, \bibinfo{pages}{1617--1626}.
+\newblock \bibinfo{note}{(in Russian)}.
+%Type = Book
+\bibitem[{Schrimpf and Fleetwood(2004)}]{RadiationEffectsBook}
+\bibinfo{author}{Schrimpf, R.D.}, \bibinfo{author}{Fleetwood, D.M.},
+  \bibinfo{year}{2004}.
+\newblock \bibinfo{title}{Radiation Effects and Soft Errors in Integrated
+  Circuits and Electronic Devices}.
+\newblock \bibinfo{publisher}{World Scientific}.
+\newblock \DOIprefix\doi{10.1142/5607}.
+%Type = Article
+\bibitem[{Stellmacher et~al.(2001)Stellmacher, Bisaro, Galtier, Nagle, Khirouni
+  and Bourgoin}]{Stellmacher}
+\bibinfo{author}{Stellmacher, M.}, \bibinfo{author}{Bisaro, R.},
+  \bibinfo{author}{Galtier, P.}, \bibinfo{author}{Nagle, J.},
+  \bibinfo{author}{Khirouni, K.}, \bibinfo{author}{Bourgoin, J.C.},
+  \bibinfo{year}{2001}.
+\newblock \bibinfo{title}{Defects and defect behaviour in {G}a{A}s grown at low
+  temperature}.
+\newblock \bibinfo{journal}{Semicond. Sci. Technol.} \bibinfo{volume}{16},
+  \bibinfo{pages}{440--446}.
+\newblock \DOIprefix\doi{10.1088/0268-1242/16/6/304}.
+%Type = Article
+\bibitem[{Vaytkus et~al.(1988)Vaytkus, Storasta, Pintsevichyus, Pyatrauskas and
+  Kazhukauskas}]{VaitkusEn}
+\bibinfo{author}{Vaytkus, Y.}, \bibinfo{author}{Storasta, Y.},
+  \bibinfo{author}{Pintsevichyus, A.}, \bibinfo{author}{Pyatrauskas, M.},
+  \bibinfo{author}{Kazhukauskas, V.}, \bibinfo{year}{1988}.
+\newblock \bibinfo{title}{Determination of the parameters of deep centers in
+  semi-insulating {G}a{A}s from the relaxation of photoconductivity under laser
+  excitation}.
+\newblock \bibinfo{journal}{Litovskiy fizicheskiy sbornik}
+  \bibinfo{volume}{28}, \bibinfo{pages}{744--751}.
+\newblock \bibinfo{note}{(in Russian)}.
+%Type = Article
+\bibitem[{Yousefi et~al.(1995)Yousefi, Webb, Rousina and Khanna}]{Yousefi1995}
+\bibinfo{author}{Yousefi, G.H.}, \bibinfo{author}{Webb, J.B.},
+  \bibinfo{author}{Rousina, R.}, \bibinfo{author}{Khanna, S.M.},
+  \bibinfo{year}{1995}.
+\newblock \bibinfo{title}{Electron irradiation induced defects and schottky
+  diode characteristics for metalorganic vapor phase epitaxy and molecular beam
+  epitaxial n--{G}a{A}s}.
+\newblock \bibinfo{journal}{J. Electron. Mater.} \bibinfo{volume}{24},
+  \bibinfo{pages}{15--20}.
+\newblock \DOIprefix\doi{10.1007/BF02659720}.
+%Type = Article
+\bibitem[{Zayats et~al.(2015)Zayats, Konakova, Milenin, Milenin, Red’ko and
+  Red’ko}]{Konakova2015En}
+\bibinfo{author}{Zayats, N.S.}, \bibinfo{author}{Konakova, R.V.},
+  \bibinfo{author}{Milenin, V.V.}, \bibinfo{author}{Milenin, G.V.},
+  \bibinfo{author}{Red’ko, R.A.}, \bibinfo{author}{Red’ko, S.N.},
+  \bibinfo{year}{2015}.
+\newblock \bibinfo{title}{Microwave-radiation-induced structural
+  transformations in homo- and heterogeneous gaas-based systems}.
+\newblock \bibinfo{journal}{Technical Physics} \bibinfo{volume}{60},
+  \bibinfo{pages}{432--436}.
+\newblock \DOIprefix\doi{10.1134/S1063784215030299}.
+%Type = Article
+\bibitem[{Zohm et~al.(2000)Zohm, Kasper, Mehringer and Müller}]{ZOHM2000}
+\bibinfo{author}{Zohm, H.}, \bibinfo{author}{Kasper, E.},
+  \bibinfo{author}{Mehringer, P.}, \bibinfo{author}{Müller, G.},
+  \bibinfo{year}{2000}.
+\newblock \bibinfo{title}{Thermal processing of silicon wafers with microwave
+  co-heating}.
+\newblock \bibinfo{journal}{Microelectron. Eng.} \bibinfo{volume}{54},
+  \bibinfo{pages}{247--253}.
+\newblock \DOIprefix\doi{10.1016/S0167-9317(00)00413-5}.
+
+\end{thebibliography}
