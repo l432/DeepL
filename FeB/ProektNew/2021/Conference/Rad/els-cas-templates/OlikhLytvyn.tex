@@ -47,6 +47,8 @@
 \usepackage{xspace}
 \usepackage{pdfwidgets}
 \usepackage{enumerate}
+\usepackage{longtable}
+\usepackage{supertabular}
 %% The amsthm package provides extended theorem environments
 %% \usepackage{amsthm}
 
@@ -251,40 +253,40 @@ $t_\mathtt{MWT}$, c: 0 (curves 1), 20 (2), 40 (3), 60 (4)
 %\begin{tabular*}{\tblwidth}{@{} CCCCCCC@{}}
 %\toprule
 \hline
-Sample& $t_\mathtt{MWT}$, s &Level &$(E_c-E_t)$, eV &$\sigma_n$, cm$^2$\textsuperscript{ a)}&$R_\mathtt{cur}$, m&$\xi_\mathtt{cur}$\\
+Sample& $t_\mathrm{MWT}$, s &Level &$(E_c-E_t)$, eV &$\sigma_n$, cm$^2$\textsuperscript{ a)}&$R_\mathrm{cur}$, m&$\xi_\mathrm{cur}$\\
 %\midrule
 \hline
-SIC1& 0 &ESC1& $0,33\pm0,01$ &$(7\pm4)\cdot10^{-18}$&$\infty$&0\\ %\cline{2-7}
-& 20 &ESC1& $0,33\pm0,01$ &$(5\pm3)\cdot10^{-19}$&170,2&$8,7\cdot10^{-7}$\\ %\cline{2-7}
-& 40 &ESC2& $0,26\pm0,01$ &$(2\pm1)\cdot10^{-19}$&\multicolumn{2}{c}{\multirow{2}{*}{-}}\\ %\cline{2-5}
+SIC1& 0 &ESC1& $0.33\pm0.01$ &$(7\pm4)\cdot10^{-18}$&$\infty$&0\\ %\cline{2-7}
+& 20 &ESC1& $0.33\pm0.01$ &$(5\pm3)\cdot10^{-19}$&170.2&$8.7\cdot10^{-7}$\\ %\cline{2-7}
+& 40 &ESC2& $0.26\pm0.01$ &$(2\pm1)\cdot10^{-19}$&\multicolumn{2}{c}{\multirow{2}{*}{-}}\\ %\cline{2-5}
 & 80 & \multicolumn{3}{c}{weak signal}&\multicolumn{2}{c}{}\\ %\hline
-SIC2& 0 &ESC1& $0,33\pm0,01$ &$(7\pm4)\cdot10^{-18}$&$>2000$&$<1,2\cdot10^{-7}$\\ %\cline{2-7}
-& 20 &ESC1& $0,33\pm0,01$ &$(5\pm3)\cdot10^{-19}$&171,9&$1,4\cdot10^{-6}$\\ %\hline
-SIC3& 0 &ESC1& $0,34\pm0,02$ &$(3\pm2)\cdot10^{-18}$&3,8&$6,1\cdot10^{-5}$\\ %\cline{2-7}
-& 20 &ESC2&$0,29\pm0,01$ &$(5\pm3)\cdot10^{-19}$&5,5&$4,2\cdot10^{-5}$\\ %\cline{2-7}
-& 40 &ESC2& $0,26\pm0,01$ &$(10\pm7)\cdot10^{-20}$&\multicolumn{2}{c}{\multirow{2}{*}{-}}\\ %\cline{2-5}
-& 80 &ESC2& $0,23\pm0,01$ &$(6\pm4)\cdot10^{-20}$&\multicolumn{2}{c}{}\\ %\hline
-GAS1& 0 &EGA1& $0,32\pm0,02$ &$(3\pm2)\cdot10^{-17}$&-53,8&$-2,8\cdot10^{-6}$\\ %\cline{2-7}
-& 20 &EGA1& $0,31\pm0,01$ &$(2\pm1)\cdot10^{-17}$&22,9&$6,5\cdot10^{-6}$\\ %\cline{2-7}
+SIC2& 0 &ESC1& $0.33\pm0.01$ &$(7\pm4)\cdot10^{-18}$&$>2000$&$<1.2\cdot10^{-7}$\\ %\cline{2-7}
+& 20 &ESC1& $0.33\pm0.01$ &$(5\pm3)\cdot10^{-19}$&171.9&$1.4\cdot10^{-6}$\\ %\hline
+SIC3& 0 &ESC1& $0.34\pm0.02$ &$(3\pm2)\cdot10^{-18}$&3.8&$6.1\cdot10^{-5}$\\ %\cline{2-7}
+& 20 &ESC2&$0.29\pm0.01$ &$(5\pm3)\cdot10^{-19}$&5.5&$4.2\cdot10^{-5}$\\ %\cline{2-7}
+& 40 &ESC2& $0.26\pm0.01$ &$(10\pm7)\cdot10^{-20}$&\multicolumn{2}{c}{\multirow{2}{*}{-}}\\ %\cline{2-5}
+& 80 &ESC2& $0.23\pm0.01$ &$(6\pm4)\cdot10^{-20}$&\multicolumn{2}{c}{}\\ %\hline
+GAS1& 0 &EGA1& $0.32\pm0.02$ &$(3\pm2)\cdot10^{-17}$&-53.8&$-2.8\cdot10^{-6}$\\ %\cline{2-7}
+& 20 &EGA1& $0.31\pm0.01$ &$(2\pm1)\cdot10^{-17}$&22.9&$6.5\cdot10^{-6}$\\ %\cline{2-7}
 & 40 & \multicolumn{3}{c}{weak signal}&\multicolumn{2}{c}{-}\\ %\hline
-GAS2& 0 &EGA1& $0,32\pm0,01$ &$(4\pm2)\cdot10^{-17}$&17,2&$8,7\cdot10^{-6}$\\ %\cline{2-7}
-& 20 &EGA2& $0,28\pm0,01$ &$(5\pm2)\cdot10^{-18}$&14,7&$1,0\cdot10^{-5}$\\ %\cline{2-7}
+GAS2& 0 &EGA1& $0.32\pm0.01$ &$(4\pm2)\cdot10^{-17}$&17.2&$8.7\cdot10^{-6}$\\ %\cline{2-7}
+& 20 &EGA2& $0.28\pm0.01$ &$(5\pm2)\cdot10^{-18}$&14.7&$1.0\cdot10^{-5}$\\ %\cline{2-7}
 & 40 & \multicolumn{3}{c}{weak signal}&\multicolumn{2}{c}{}\\ %\cline{1-5}
-GAT& 0 &EGA3& $0,49\pm0,02$ &$(5\pm3)\cdot10^{-14}$&\multicolumn{2}{c}{}\\ %\cline{2-5}
-& 20 &EGA4& $0,40\pm0,02$ &$(2\pm1)\cdot10^{-15}$&\multicolumn{2}{c}{}\\ %\cline{1-5}
-GAE1& 0 &EGA5& $0,24\pm0,01$ &$(2\pm1)\cdot10^{-18}$&\multicolumn{2}{c}{}\\ %\cline{2-5}
-& 60 &EGA2& $0,29\pm0,01$ &$(10\pm6)\cdot10^{-18}$&\multicolumn{2}{c}{}\\ %\cline{1-5}
-GAE2& 0 &EGA5& $0,25\pm0,01$ &$(2\pm1)\cdot10^{-18}$&\multicolumn{2}{c}{}\\ %\cline{2-5}
-& 60 &EGA2& $0,30\pm0,01$ &$(2\pm1)\cdot10^{-17}$&\multicolumn{2}{c}{}\\ %\cline{1-5}
-GAE3& 0 &EGA6& $0,43\pm0,01$ &$(8\pm5)\cdot10^{-17}$&\multicolumn{2}{c}{-}\\ %\cline{2-5}
-& 60 &EGA6& $0,46\pm0,02$ &$(7\pm4)\cdot10^{-16}$&\multicolumn{2}{c}{}\\ %\cline{1-5}
-GAB1& 0 &EGA4& $0,39\pm0,01$ &$(10\pm7)\cdot10^{-18}$&\multicolumn{2}{c}{}\\ %\cline{2-5}
-& 20 &EGA4& $0,39\pm0,01$ &$(4\pm2)\cdot10^{-17}$&\multicolumn{2}{c}{}\\ %\cline{2-5}
-& 40 &EGA6& $0,43\pm0,02$ &$(10\pm6)\cdot10^{-17}$&\multicolumn{2}{c}{}\\ %\cline{1-5}
-GAB2& 0 &EGA4& $0,40\pm0,01$ &$(10\pm6)\cdot10^{-17}$&\multicolumn{2}{c}{}\\ %\cline{2-5}
-& 20 &EGA4& $0,41\pm0,01$ &$(10\pm6)\cdot10^{-17}$&\multicolumn{2}{c}{}\\ %\cline{2-5}
-& 40 &EGA6& $0,45\pm0,02$ &$(4\pm2)\cdot10^{-16}$&\multicolumn{2}{c}{}\\  %\hline
-\multicolumn{6}{l}{\textsuperscript{ a)} \emph{at $T=300$~К for SIC, GA, GAE and at $T=340$~К for GAB}}\\
+GAT& 0 &EGA3& $0.49\pm0.02$ &$(5\pm3)\cdot10^{-14}$&\multicolumn{2}{c}{}\\ %\cline{2-5}
+& 20 &EGA4& $0.40\pm0.02$ &$(2\pm1)\cdot10^{-15}$&\multicolumn{2}{c}{}\\ %\cline{1-5}
+GAE1& 0 &EGA5& $0.24\pm0.01$ &$(2\pm1)\cdot10^{-18}$&\multicolumn{2}{c}{}\\ %\cline{2-5}
+& 60 &EGA2& $0.29\pm0.01$ &$(10\pm6)\cdot10^{-18}$&\multicolumn{2}{c}{}\\ %\cline{1-5}
+GAE2& 0 &EGA5& $0.25\pm0.01$ &$(2\pm1)\cdot10^{-18}$&\multicolumn{2}{c}{}\\ %\cline{2-5}
+& 60 &EGA2& $0.30\pm0.01$ &$(2\pm1)\cdot10^{-17}$&\multicolumn{2}{c}{}\\ %\cline{1-5}
+GAE3& 0 &EGA6& $0.43\pm0.01$ &$(8\pm5)\cdot10^{-17}$&\multicolumn{2}{c}{-}\\ %\cline{2-5}
+& 60 &EGA6& $0.46\pm0.02$ &$(7\pm4)\cdot10^{-16}$&\multicolumn{2}{c}{}\\ %\cline{1-5}
+GAB1& 0 &EGA4& $0.39\pm0.01$ &$(10\pm7)\cdot10^{-18}$&\multicolumn{2}{c}{}\\ %\cline{2-5}
+& 20 &EGA4& $0.39\pm0.01$ &$(4\pm2)\cdot10^{-17}$&\multicolumn{2}{c}{}\\ %\cline{2-5}
+& 40 &EGA6& $0.43\pm0.02$ &$(10\pm6)\cdot10^{-17}$&\multicolumn{2}{c}{}\\ %\cline{1-5}
+GAB2& 0 &EGA4& $0.40\pm0.01$ &$(10\pm6)\cdot10^{-17}$&\multicolumn{2}{c}{}\\ %\cline{2-5}
+& 20 &EGA4& $0.41\pm0.01$ &$(10\pm6)\cdot10^{-17}$&\multicolumn{2}{c}{}\\ %\cline{2-5}
+& 40 &EGA6& $0.45\pm0.02$ &$(4\pm2)\cdot10^{-16}$&\multicolumn{2}{c}{}\\  %\hline
+\multicolumn{6}{l}{\textsuperscript{ a)} \emph{at $T=300$~K for SIC, GA, GAE and at $T=340$~K for GAB}}\\
 \hline
 %\bottomrule
 \end{tabular}
@@ -321,6 +323,157 @@ GAB2& 0 &EGA4& $0,40\pm0,01$ &$(10\pm6)\cdot10^{-17}$&\multicolumn{2}{c}{}\\ %\c
 \cite{Hemmingsson}
 
 \cite{Lebedev2001En}
+
+\pagebreak
+
+%\begin{table*}
+%\caption{\label{tabEGA1}Literature data for levels closed to the location of detected levels
+%}
+%\center
+%\begin{tabular}{cccccc}
+%\hline
+%$(E_c-E_t)$, eV &$\sigma_n$, cm$^2$&configuration&method$\textsuperscript{ a)}$&epi--structure&Reference\\
+%\hline
+%\multicolumn{6}{c}{EGA1, ($E_c-E_t)=(0.31\div0.32)$~eV}\\
+%0.33&-&complex with V$_\mathrm{As}$&DLTS&no&\cite{EL6:Richter}\\% \hline
+%0.33&-&-&DLTS&no&\cite{Neild1991}\\ %\hline
+%$0.31\div0.33$&-&V$_\mathrm{As}$&&no&\cite{EL6:Schultz}\\ %\hline
+%0.33&$1\cdot10^{-17}$&-&TSC&no&\cite{Pavlovic2000}\\ %\hline
+%0.323&$1\cdot10^{-14}$&-&DLTS&yes&\cite{Yousefi1995}\\ %\hline
+%0.334&$2\cdot10^{-15}$&&DLTS&yes&\cite{Yousefi1995}\\ %\hline
+%0.35&-&complex with V$_\mathrm{As}$&PA&no&\cite{EL6:Kuisma}\\ %\hline
+%$0.315\div0.325$&$3\cdot10^{-17}$&-&TSC&no&\cite{Pavlovic:GaAs}\\ %\hline
+%0.33&-&-&TSC&no&\cite{Tomozane:GaAs}\\ %\hline
+%$0.30\div0.33$&-&-&DLTS&no&\cite{Lang:GaAs}\\ %\hline
+%\multicolumn{6}{c}{EGA2, ($E_c-E_t)=(0.28\div0.30)$~eV}\\
+%0.28&$5\cdot10^{-18}$&V$_\mathrm{As}$As$_i$&TSC&no&\cite{Pavlovic2000}\\ %\hline
+%0.26&$3.5\cdot10^{-15}$&-&DLTS&yes&\cite{Yousefi1995}\\ %\hline
+%0.277&$5\cdot10^{-17}$&-&TSC&no&\cite{Pavlovic:GaAs}\\ %\hline
+%0.284&$1\cdot10^{-17}$&-&TSC&no&\cite{Pavlovic:GaAs}\\ %\hline
+%0.28&-&intrinsic&TP&no&\cite{Abele:GaAs}\\ %\hline
+%0.28&$8\cdot10^{-15}$&-&DLTS&yes&\cite{Mircea1975}\\ %\hline
+%0.30&-&complex with Te&DLTS&no&\cite{KolFTP1994En}\\ %\hline
+%0.30&$6\cdot10^{-15}$&V$_\mathrm{As}$As$_i$&DLTS&no&\cite{Pons}\\ %\hline
+%\multicolumn{6}{c}{EGA3, ($E_c-E_t)=0.49$~eV}\\
+%0.50&-&Sb$_\mathrm{Ga}$&DLTS&no&\cite{Samoilov1994En}\\ %\hline
+%0.48&$4\cdot10^{-16}$&As$_\mathrm{Ga}^{++}$&TSC&no&\cite{Pavlovic2000}\\ %\hline
+%0.485&$2\cdot10^{-16}$&-&TSC&no&\cite{Pavlovic:GaAs}\\ %\hline
+%0.48&-&impurity&TP&no&\cite{Abele:GaAs}\\ %\hline
+%0.51&$1\cdot10^{-12}$&-&DLTS&no&\cite{Martin1977}\\ %\hline
+%0.48&$3\cdot10^{-13}$&-&DLTS&no&\cite{Lang:GaAs}\\ %\hline
+%0.50&$1\cdot10^{-15}$&V$_\mathrm{As}$, V$_\mathrm{Ga}$Ga$_i$V$_\mathrm{As}$ &DLTS&no&\cite{Pons}\\
+%\multicolumn{6}{c}{EGA4, ($E_c-E_t)=(0.39\div0.41)$~eV}\\
+%0.42&-&-&DLTS&no&\cite{Neild1991}\\ %\hline
+%0.41&-&V$_\mathrm{Ga}$V$_\mathrm{As}$&DLTS&no&\cite{Samoilov1994En}\\ %\hline
+%$0.39$&-&V$_\mathrm{Ga}$Ga$_\mathrm{As}$&TSC&no&\cite{FANG1990}\\ %\hline
+%$0.41$&$2\cdot10^{-13}$&-&DLTS&yes&\cite{Bourgoin:GaAs}\\ %\hline
+%0.40&-&-&SCRC&yes&\cite{ASHBY:GaAs}\\ %\hline
+%0.37&$2\cdot10^{-14}$&-&DLTS&yes&\cite{Fang:EL6}\\ %\hline
+%0.40&-&V$_\mathrm{Ga}$Ga$_\mathrm{As}$&DLTS&no&\cite{VaitkusEn}\\ %\hline
+%0.387&$2\cdot10^{-14}$&-&DLTS&yes&\cite{Yousefi1995}\\ %\hline
+%\multicolumn{6}{c}{EGA5, ($E_c-E_t)=(0.24\div0.25)$~eV}\\
+%0.23&-&-&DLTS&no&\cite{Neild1991}\\ %\hline
+%0.23&$2\cdot10^{-17}$&-&TSC&no&\cite{Pavlovic2000}\\ %\hline
+%$0.22\div0.25$&$8\cdot10^{-19}$&-&TSC&no&\cite{Lin:GaAs}\\ %\hline
+%$0.26$&-&complex with V$_\mathrm{Ga}$&TSC&no&\cite{FANG1990}\\ %\hline
+%0.24&-&-&TSC&no&\cite{Tomozane:GaAs}\\ %\hline
+%0.23&-&intrinsic&TP&no&\cite{Abele:GaAs}\\ %\hline
+%0.23&-&V$_\mathrm{Ga}$V$_\mathrm{As}$&DLTS&no&\cite{Morrow:EL17}\\ %\hline
+%0.23&$1\cdot10^{-14}$&V$_\mathrm{Ga}$V$_\mathrm{As}$&DLTS&no&\cite{Bourgoin:GaAs}\\ %\hline
+%0.23&$7\cdot10^{-15}$&-&DLTS&yes&\cite{Mircea1975}\\ %\hline
+%0.22&$2\cdot10^{-15}$&-&DLTS&no&\cite{Fang:EL6}\\ %\hline
+%0.258&$4\cdot10^{-16}$&-&DLTS&yes&\cite{Yousefi1995}\\ %\hline
+%\multicolumn{6}{c}{EGA6, ($E_c-E_t)=(0.43\div0.46)$~eV}\\
+%0.44&$1\cdot10^{-14}$&V$_\mathrm{As}$As$_i$, V$_\mathrm{As}$&TSC&no&\cite{Pavlovic2000}\\ %\hline
+%0.44&$9\cdot10^{-15}$&-&TSC&no&\cite{Pavlovic:GaAs}\\ %\hline
+%\multirow{2}{*}{0.43}&\multirow{2}{*}{$7\cdot10^{-16}$}&\multirow{2}{*}{intrinsic}&\multirow{2}{*}{DLTS}&\multirow{2}{*}{yes}&\cite{Lefevre1977}\\
+%&&&&&\cite{Bourgoin:GaAs}\\
+%%0.43&$7\cdot10^{-16}$&intrinsic&DLTS&yes&\cite{Lefevre1977} \cite{Bourgoin:GaAs}\\ %\hline
+%0.44&$2\cdot10^{-15}$&complex with V$_\mathrm{As}$&DLTS&yes&\cite{KolFTP1989En}\\ %\hline
+%\multicolumn{6}{l}{$\textsuperscript{ a)}$ \emph{DLTS --- deep level transient spectroscopy}}\\
+%%\multicolumn{6}{l}{ \emph{TSC --- метод термостимульованих струмів}}\\
+%%\multicolumn{6}{l}{ \emph{PA --- позитрон--анігіляційна спектроскопія}}
+%%\multicolumn{6}{l}{\emph{TP --- релаксація фотопровідності}}
+%%\multicolumn{6}{l}{\emph{SCRC --- температурна залежність струму ОПЗ}}\\
+%\hline
+%\end{tabular}
+%\end{table*}
+
+
+\begin{table*}
+\caption{\label{tabEGA1}Literature data for levels closed to the location of detected levels
+}
+\center
+\begin{minipage}{1.85\textwidth}
+\begin{tabular}{cccccc}
+\hline
+$(E_c-E_t)$, eV &$\sigma_n$, cm$^2$&configuration&method$\textsuperscript{ a)}$&epi--structure&Reference\\
+\hline
+\multicolumn{6}{c}{EGA1, ($E_c-E_t)=(0.31\div0.32)$~eV}\\
+0.33&-&complex with V$_\mathrm{As}$&DLTS&no&\cite{EL6:Richter}\\% \hline
+0.33&-&-&DLTS&no&\cite{Neild1991}\\ %\hline
+$0.31\div0.33$&-&V$_\mathrm{As}$&&no&\cite{EL6:Schultz}\\ %\hline
+0.33&$1\cdot10^{-17}$&-&TSC&no&\cite{Pavlovic2000}\\ %\hline
+0.323&$1\cdot10^{-14}$&-&DLTS&yes&\cite{Yousefi1995}\\ %\hline
+0.334&$2\cdot10^{-15}$&&DLTS&yes&\cite{Yousefi1995}\\ %\hline
+0.35&-&complex with V$_\mathrm{As}$&PA&no&\cite{EL6:Kuisma}\\ %\hline
+$0.315\div0.325$&$3\cdot10^{-17}$&-&TSC&no&\cite{Pavlovic:GaAs}\\ %\hline
+0.33&-&-&TSC&no&\cite{Tomozane:GaAs}\\ %\hline
+$0.30\div0.33$&-&-&DLTS&no&\cite{Lang:GaAs}\\ %\hline
+\multicolumn{6}{c}{EGA2, ($E_c-E_t)=(0.28\div0.30)$~eV}\\
+0.28&$5\cdot10^{-18}$&V$_\mathrm{As}$As$_i$&TSC&no&\cite{Pavlovic2000}\\ %\hline
+0.26&$3.5\cdot10^{-15}$&-&DLTS&yes&\cite{Yousefi1995}\\ %\hline
+0.277&$5\cdot10^{-17}$&-&TSC&no&\cite{Pavlovic:GaAs}\\ %\hline
+0.284&$1\cdot10^{-17}$&-&TSC&no&\cite{Pavlovic:GaAs}\\ %\hline
+0.28&-&intrinsic&TP&no&\cite{Abele:GaAs}\\ %\hline
+0.28&$8\cdot10^{-15}$&-&DLTS&yes&\cite{Mircea1975}\\ %\hline
+0.30&-&complex with Te&DLTS&no&\cite{KolFTP1994En}\\ %\hline
+0.30&$6\cdot10^{-15}$&V$_\mathrm{As}$As$_i$&DLTS&no&\cite{Pons}\\ %\hline
+\multicolumn{6}{c}{EGA3, ($E_c-E_t)=0.49$~eV}\\
+0.50&-&Sb$_\mathrm{Ga}$&DLTS&no&\cite{Samoilov1994En}\\ %\hline
+0.48&$4\cdot10^{-16}$&As$_\mathrm{Ga}^{++}$&TSC&no&\cite{Pavlovic2000}\\ %\hline
+0.485&$2\cdot10^{-16}$&-&TSC&no&\cite{Pavlovic:GaAs}\\ %\hline
+0.48&-&impurity&TP&no&\cite{Abele:GaAs}\\ %\hline
+0.51&$1\cdot10^{-12}$&-&DLTS&no&\cite{Martin1977}\\ %\hline
+0.48&$3\cdot10^{-13}$&-&DLTS&no&\cite{Lang:GaAs}\\ %\hline
+0.50&$1\cdot10^{-15}$&V$_\mathrm{As}$, V$_\mathrm{Ga}$Ga$_i$V$_\mathrm{As}$ &DLTS&no&\cite{Pons}\\
+\multicolumn{6}{c}{EGA4, ($E_c-E_t)=(0.39\div0.41)$~eV}\\
+0.42&-&-&DLTS&no&\cite{Neild1991}\\ %\hline
+0.41&-&V$_\mathrm{Ga}$V$_\mathrm{As}$&DLTS&no&\cite{Samoilov1994En}\\ %\hline
+$0.39$&-&V$_\mathrm{Ga}$Ga$_\mathrm{As}$&TSC&no&\cite{FANG1990}\\ %\hline
+$0.41$&$2\cdot10^{-13}$&-&DLTS&yes&\cite{Bourgoin:GaAs}\\ %\hline
+0.40&-&-&SCRC&yes&\cite{ASHBY:GaAs}\\ %\hline
+0.37&$2\cdot10^{-14}$&-&DLTS&yes&\cite{Fang:EL6}\\ %\hline
+0.40&-&V$_\mathrm{Ga}$Ga$_\mathrm{As}$&DLTS&no&\cite{VaitkusEn}\\ %\hline
+0.387&$2\cdot10^{-14}$&-&DLTS&yes&\cite{Yousefi1995}\\ %\hline
+\multicolumn{6}{c}{EGA5, ($E_c-E_t)=(0.24\div0.25)$~eV}\\
+0.23&-&-&DLTS&no&\cite{Neild1991}\\ %\hline
+0.23&$2\cdot10^{-17}$&-&TSC&no&\cite{Pavlovic2000}\\ %\hline
+$0.22\div0.25$&$8\cdot10^{-19}$&-&TSC&no&\cite{Lin:GaAs}\\ %\hline
+$0.26$&-&complex with V$_\mathrm{Ga}$&TSC&no&\cite{FANG1990}\\ %\hline
+0.24&-&-&TSC&no&\cite{Tomozane:GaAs}\\ %\hline
+0.23&-&intrinsic&TP&no&\cite{Abele:GaAs}\\ %\hline
+0.23&-&V$_\mathrm{Ga}$V$_\mathrm{As}$&DLTS&no&\cite{Morrow:EL17}\\ %\hline
+0.23&$1\cdot10^{-14}$&V$_\mathrm{Ga}$V$_\mathrm{As}$&DLTS&no&\cite{Bourgoin:GaAs}\\ %\hline
+0.23&$7\cdot10^{-15}$&-&DLTS&yes&\cite{Mircea1975}\\ %\hline
+0.22&$2\cdot10^{-15}$&-&DLTS&no&\cite{Fang:EL6}\\ %\hline
+0.258&$4\cdot10^{-16}$&-&DLTS&yes&\cite{Yousefi1995}\\ %\hline
+\multicolumn{6}{c}{EGA6, ($E_c-E_t)=(0.43\div0.46)$~eV}\\
+0.44&$1\cdot10^{-14}$&V$_\mathrm{As}$As$_i$, V$_\mathrm{As}$&TSC&no&\cite{Pavlovic2000}\\ %\hline
+0.44&$9\cdot10^{-15}$&-&TSC&no&\cite{Pavlovic:GaAs}\\ %\hline
+\multirow{2}{*}{0.43}&\multirow{2}{*}{$7\cdot10^{-16}$}&\multirow{2}{*}{intrinsic}&\multirow{2}{*}{DLTS}&\multirow{2}{*}{yes}&\cite{Lefevre1977}\\
+&&&&&\cite{Bourgoin:GaAs}\\
+%0.43&$7\cdot10^{-16}$&intrinsic&DLTS&yes&\cite{Lefevre1977} \cite{Bourgoin:GaAs}\\ %\hline
+0.44&$2\cdot10^{-15}$&complex with V$_\mathrm{As}$&DLTS&yes&\cite{KolFTP1989En}\\ %\hline
+\multicolumn{6}{l}{$\textsuperscript{ a)}$ \emph{DLTS --- deep level transient spectroscopy}}\\
+%\multicolumn{6}{l}{ \emph{TSC --- метод термостимульованих струмів}}\\
+%\multicolumn{6}{l}{ \emph{PA --- позитрон--анігіляційна спектроскопія}}
+%\multicolumn{6}{l}{\emph{TP --- релаксація фотопровідності}}
+%\multicolumn{6}{l}{\emph{SCRC --- температурна залежність струму ОПЗ}}\\
+\hline
+\end{tabular}
+\end{minipage}
+\end{table*}
 
 \cite{KolFTP1994En}
 
