@@ -28,15 +28,25 @@
 % \documentclass[final,1p,times,twocolumn,authoryear]{elsarticle}
 %% \documentclass[final,3p,times,authoryear]{elsarticle}
 \documentclass[final,3p,times,twocolumn,authoryear]{elsarticle}
+%\documentclass[a4paper,12pt]{article}
 %% \documentclass[final,5p,times,authoryear]{elsarticle}
 %% \documentclass[final,5p,times,twocolumn,authoryear]{elsarticle}
 
 %% For including figures, graphicx.sty has been loaded in
 %% elsarticle.cls. If you prefer to use the old commands
 %% please give \usepackage{epsfig}
+%\input{glyphtounicode}
+%\pdfgentounicode=1
 
 %% The amssymb package provides various useful mathematical symbols
 \usepackage{amssymb}
+\usepackage{multirow}
+%\usepackage[xcolor,qtwo]{rvdtx}
+%\usepackage{multicol}
+\usepackage{color}
+\usepackage{xspace}
+\usepackage{pdfwidgets}
+\usepackage{enumerate}
 %% The amsthm package provides extended theorem environments
 %% \usepackage{amsthm}
 
@@ -78,37 +88,21 @@
 
 \title{Microwave induced transformation of defect subsystem in SiC and GaAs}
 
-%% use optional labels to link authors explicitly to addresses:
-%% \author[label1,label2]{}
-%% \affiliation[label1]{organization={},
-%%             addressline={},
-%%             city={},
-%%             postcode={},
-%%             state={},
-%%             country={}}
-%%
-%% \affiliation[label2]{organization={},
-%%             addressline={},
-%%             city={},
-%%             postcode={},
-%%             state={},
-%%             country={}}
 
-\author[label1]{Oleg Olikh\corref{cor1}}
-\ead{olegolikh@knu.ua}
-
-\affiliation[label1]{organization={Physics Faculty, Taras Shevchenko National University of Kyiv},%Department and Organization
-            addressline={64/13, Volodymyrska Street},
-            city={Kyiv},
-            postcode={01601},
-            country={Ukraine}}
-\author[label2]{Petro Lytvyn}
-\affiliation[label2]{organization={V. Lashkaryov Institute of Semiconductor Physic of NAS of Ukraine},%Department and Organization
-            addressline={41, pr. Nauki},
-            city={Kyiv},
-            postcode={03028},
-            country={Ukraine}}
-\cortext[cor1]{Corresponding author}
+%\author[label1]{Oleg Olikh\corref{cor1}}
+%\ead{olegolikh@knu.ua}
+%\affiliation[label1]{organization={Physics Faculty, Taras Shevchenko National University of Kyiv},%Department and Organization
+%            addressline={64/13, Volodymyrska Street},
+%            city={Kyiv},
+%            postcode={01601},
+%            country={Ukraine}}
+%\author[label2]{Petro Lytvyn}
+%\affiliation[label2]{organization={V. Lashkaryov Institute of Semiconductor Physic of NAS of Ukraine},%Department and Organization
+%            addressline={41, pr. Nauki},
+%            city={Kyiv},
+%            postcode={03028},
+%            country={Ukraine}}
+%\cortext[cor1]{Corresponding author}
 
 \begin{abstract}
 Text of abstract Text of abstract Text of abstract Text of abstract
@@ -123,11 +117,11 @@ Text of abstract Text of abstract Text of abstract Text of abstract
 %%\includegraphics{grabs}
 %\end{graphicalabstract}
 
-%%Research highlights
-\begin{highlights}
-\item Research highlight 1
-\item Research highlight 2
-\end{highlights}
+%Research highlights
+%\begin{highlights}
+%\item Research highlight 1
+%\item Research highlight 2
+%\end{highlights}
 
 \begin{keyword}
 Microwave
@@ -177,9 +171,41 @@ Bacherikov2008En,Konakova2015En,Konakova2012FTPEn}.)
 
 \cite{BoltovetsEn,Milenin1994En,BelyaevIntac,ASHKINADZE1996,ProcSPIE}
 
+
+\begin{figure}
+\center
+\includegraphics[width=0.5\textwidth]{Fig1}
+\caption{\label{figSamp_TAV}
+Structure of samples}%
+\end{figure}
+
+
 \cite{OstrovPAN,OlikhSSC,PANnewEn,OstrovskiiSST}
 
+\begin{equation}\label{eqVtav}
+  V_\mathtt{TAV}(t)=V_{\mathtt{TAV},0}\exp(-t/\tau).
+\end{equation}
+
+
+\begin{figure}
+\center
+\includegraphics[width=0.5\textwidth]{fig2}
+\caption{\label{figTAV}
+The scheme of TAV measurement.
+The time dependencies of the radio impulse $V_\mathtt{RF}$ for the excitation of ultrasound in a piezoelectric plate and the resulting TAV signal $V_\mathtt{TAV}$ are schematically shown as well.
+}%
+\end{figure}
+
+
 \cite{OstrovPAN,OstrovskiiSST}
+
+\begin{equation}\label{eqPANtau}
+  \tau=\frac{1}{\sigma_n\,\upsilon_{\mathrm{th},n}\,N_c}\exp\left(\frac{E_c-E_t}{kT}\right).
+\end{equation}
+where
+$\upsilon_{\mathrm{th},n}$ is the electron thermal velocity
+$N_C$ is the densities of states in the conduction band.
+
 
 \cite{Godwod}
 
@@ -188,6 +214,81 @@ Bacherikov2008En,Konakova2015En,Konakova2012FTPEn}.)
 \cite{Belyaev1998JTFEn}
 
 \section{Results and discussion}\label{sec3}
+
+
+\begin{figure*}
+\center
+\includegraphics[width=0.7\textwidth]{Fig3}
+\caption{\label{figTauTAV}
+Dependences of TAV relaxation time on inverse temperature for samples SIC2 (a), SIC3 (b), GAS2 (c), GAE2 (d) and GAB1 (e) before and after MWT.
+$t_\mathtt{MWT}$, c: 0 (curves 1), 20 (2), 40 (3), 60 (4)
+}%
+\end{figure*}
+
+
+%\begin{table}
+%  \caption{This is a test caption.}
+%  \begin{tabular*}{\tblwidth}{@{} LLLL@{} }
+%   \toprule
+%    Col 1 & Col 2\\
+%   \midrule
+%    12345 & 12345\\
+%    12345 & 12345\\
+%    12345 & 12345\\
+%    12345 & 12345\\
+%    12345 & 12345\\
+%    12345 & 12345\\
+%   \bottomrule
+%  \end{tabular*}
+%\end{table}
+
+\begin{table*}
+\caption{\label{tabMW}The determined parameters of defects in the samples $n$--GaAs and $n$--6$H$--SiC samples
+}
+\center
+%\renewcommand{\arraystretch}{0.95}
+\begin{tabular}{ccccccc}
+%\begin{tabular*}{\tblwidth}{@{} CCCCCCC@{}}
+%\toprule
+\hline
+Sample& $t_\mathtt{MWT}$, s &Level &$(E_c-E_t)$, eV &$\sigma_n$, cm$^2$\textsuperscript{ a)}&$R_\mathtt{cur}$, m&$\xi_\mathtt{cur}$\\
+%\midrule
+\hline
+SIC1& 0 &ESC1& $0,33\pm0,01$ &$(7\pm4)\cdot10^{-18}$&$\infty$&0\\ %\cline{2-7}
+& 20 &ESC1& $0,33\pm0,01$ &$(5\pm3)\cdot10^{-19}$&170,2&$8,7\cdot10^{-7}$\\ %\cline{2-7}
+& 40 &ESC2& $0,26\pm0,01$ &$(2\pm1)\cdot10^{-19}$&\multicolumn{2}{c}{\multirow{2}{*}{-}}\\ %\cline{2-5}
+& 80 & \multicolumn{3}{c}{weak signal}&\multicolumn{2}{c}{}\\ %\hline
+SIC2& 0 &ESC1& $0,33\pm0,01$ &$(7\pm4)\cdot10^{-18}$&$>2000$&$<1,2\cdot10^{-7}$\\ %\cline{2-7}
+& 20 &ESC1& $0,33\pm0,01$ &$(5\pm3)\cdot10^{-19}$&171,9&$1,4\cdot10^{-6}$\\ %\hline
+SIC3& 0 &ESC1& $0,34\pm0,02$ &$(3\pm2)\cdot10^{-18}$&3,8&$6,1\cdot10^{-5}$\\ %\cline{2-7}
+& 20 &ESC2&$0,29\pm0,01$ &$(5\pm3)\cdot10^{-19}$&5,5&$4,2\cdot10^{-5}$\\ %\cline{2-7}
+& 40 &ESC2& $0,26\pm0,01$ &$(10\pm7)\cdot10^{-20}$&\multicolumn{2}{c}{\multirow{2}{*}{-}}\\ %\cline{2-5}
+& 80 &ESC2& $0,23\pm0,01$ &$(6\pm4)\cdot10^{-20}$&\multicolumn{2}{c}{}\\ %\hline
+GAS1& 0 &EGA1& $0,32\pm0,02$ &$(3\pm2)\cdot10^{-17}$&-53,8&$-2,8\cdot10^{-6}$\\ %\cline{2-7}
+& 20 &EGA1& $0,31\pm0,01$ &$(2\pm1)\cdot10^{-17}$&22,9&$6,5\cdot10^{-6}$\\ %\cline{2-7}
+& 40 & \multicolumn{3}{c}{weak signal}&\multicolumn{2}{c}{-}\\ %\hline
+GAS2& 0 &EGA1& $0,32\pm0,01$ &$(4\pm2)\cdot10^{-17}$&17,2&$8,7\cdot10^{-6}$\\ %\cline{2-7}
+& 20 &EGA2& $0,28\pm0,01$ &$(5\pm2)\cdot10^{-18}$&14,7&$1,0\cdot10^{-5}$\\ %\cline{2-7}
+& 40 & \multicolumn{3}{c}{weak signal}&\multicolumn{2}{c}{}\\ %\cline{1-5}
+GAT& 0 &EGA3& $0,49\pm0,02$ &$(5\pm3)\cdot10^{-14}$&\multicolumn{2}{c}{}\\ %\cline{2-5}
+& 20 &EGA4& $0,40\pm0,02$ &$(2\pm1)\cdot10^{-15}$&\multicolumn{2}{c}{}\\ %\cline{1-5}
+GAE1& 0 &EGA5& $0,24\pm0,01$ &$(2\pm1)\cdot10^{-18}$&\multicolumn{2}{c}{}\\ %\cline{2-5}
+& 60 &EGA2& $0,29\pm0,01$ &$(10\pm6)\cdot10^{-18}$&\multicolumn{2}{c}{}\\ %\cline{1-5}
+GAE2& 0 &EGA5& $0,25\pm0,01$ &$(2\pm1)\cdot10^{-18}$&\multicolumn{2}{c}{}\\ %\cline{2-5}
+& 60 &EGA2& $0,30\pm0,01$ &$(2\pm1)\cdot10^{-17}$&\multicolumn{2}{c}{}\\ %\cline{1-5}
+GAE3& 0 &EGA6& $0,43\pm0,01$ &$(8\pm5)\cdot10^{-17}$&\multicolumn{2}{c}{-}\\ %\cline{2-5}
+& 60 &EGA6& $0,46\pm0,02$ &$(7\pm4)\cdot10^{-16}$&\multicolumn{2}{c}{}\\ %\cline{1-5}
+GAB1& 0 &EGA4& $0,39\pm0,01$ &$(10\pm7)\cdot10^{-18}$&\multicolumn{2}{c}{}\\ %\cline{2-5}
+& 20 &EGA4& $0,39\pm0,01$ &$(4\pm2)\cdot10^{-17}$&\multicolumn{2}{c}{}\\ %\cline{2-5}
+& 40 &EGA6& $0,43\pm0,02$ &$(10\pm6)\cdot10^{-17}$&\multicolumn{2}{c}{}\\ %\cline{1-5}
+GAB2& 0 &EGA4& $0,40\pm0,01$ &$(10\pm6)\cdot10^{-17}$&\multicolumn{2}{c}{}\\ %\cline{2-5}
+& 20 &EGA4& $0,41\pm0,01$ &$(10\pm6)\cdot10^{-17}$&\multicolumn{2}{c}{}\\ %\cline{2-5}
+& 40 &EGA6& $0,45\pm0,02$ &$(4\pm2)\cdot10^{-16}$&\multicolumn{2}{c}{}\\  %\hline
+\multicolumn{6}{l}{\textsuperscript{ a)} \emph{at $T=300$~К for SIC, GA, GAE and at $T=340$~К for GAB}}\\
+\hline
+%\bottomrule
+\end{tabular}
+\end{table*}
 
  \cite{Pavlovic2000}
 
@@ -258,6 +359,8 @@ Bacherikov2008En,Konakova2015En,Konakova2012FTPEn}.)
 %\bibliographystyle{elsarticle-num}
 %\bibliographystyle{cas-model2-names}
 %\bibliographystyle{elsarticle-num-names}
+
+\section*{References}
 \bibliographystyle{elsarticle-harv}
 \bibliography{olikh}
 
