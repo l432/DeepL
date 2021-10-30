@@ -1,0 +1,83 @@
+%merlin.mbs aipnum4-1.bst 2010-07-25 4.21a (PWD, AO, DPC) hacked
+%Control: key (0)
+%Control: author (8) initials jnrlst
+%Control: editor formatted (1) identically to author
+%Control: production of article title (-1) disabled
+%Control: page (0) single
+%Control: year (1) truncated
+%Control: production of eprint (0) enabled
+\begin{thebibliography}{2}%
+\makeatletter
+\providecommand \@ifxundefined [1]{%
+ \@ifx{#1\undefined}
+}%
+\providecommand \@ifnum [1]{%
+ \ifnum #1\expandafter \@firstoftwo
+ \else \expandafter \@secondoftwo
+ \fi
+}%
+\providecommand \@ifx [1]{%
+ \ifx #1\expandafter \@firstoftwo
+ \else \expandafter \@secondoftwo
+ \fi
+}%
+\providecommand \natexlab [1]{#1}%
+\providecommand \enquote  [1]{``#1''}%
+\providecommand \bibnamefont  [1]{#1}%
+\providecommand \bibfnamefont [1]{#1}%
+\providecommand \citenamefont [1]{#1}%
+\providecommand \href@noop [0]{\@secondoftwo}%
+\providecommand \href [0]{\begingroup \@sanitize@url \@href}%
+\providecommand \@href[1]{\@@startlink{#1}\@@href}%
+\providecommand \@@href[1]{\endgroup#1\@@endlink}%
+\providecommand \@sanitize@url [0]{\catcode `\\12\catcode `\$12\catcode
+  `\&12\catcode `\#12\catcode `\^12\catcode `\_12\catcode `\%12\relax}%
+\providecommand \@@startlink[1]{}%
+\providecommand \@@endlink[0]{}%
+\providecommand \url  [0]{\begingroup\@sanitize@url \@url }%
+\providecommand \@url [1]{\endgroup\@href {#1}{\urlprefix }}%
+\providecommand \urlprefix  [0]{URL }%
+\providecommand \Eprint [0]{\href }%
+\providecommand \doibase [0]{http://dx.doi.org/}%
+\providecommand \selectlanguage [0]{\@gobble}%
+\providecommand \bibinfo  [0]{\@secondoftwo}%
+\providecommand \bibfield  [0]{\@secondoftwo}%
+\providecommand \translation [1]{[#1]}%
+\providecommand \BibitemOpen [0]{}%
+\providecommand \bibitemStop [0]{}%
+\providecommand \bibitemNoStop [0]{.\EOS\space}%
+\providecommand \EOS [0]{\spacefactor3000\relax}%
+\providecommand \BibitemShut  [1]{\csname bibitem#1\endcsname}%
+\let\auto@bib@innerbib\@empty
+%</preamble>
+\bibitem [{\citenamefont {Sachenko}\ \emph {et~al.}(2016)\citenamefont
+  {Sachenko}, \citenamefont {Kryuchenko}, \citenamefont {Kostylyov},
+  \citenamefont {Bobyl}, \citenamefont {Terukov}, \citenamefont {Abolmasov},
+  \citenamefont {Abramov}, \citenamefont {Andronikov}, \citenamefont {Shvarts},
+  \citenamefont {Sokolovskyi},\ and\ \citenamefont {Evstigneev}}]{JAPSach}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.~V.}\ \bibnamefont
+  {Sachenko}}, \bibinfo {author} {\bibfnamefont {Y.~V.}\ \bibnamefont
+  {Kryuchenko}}, \bibinfo {author} {\bibfnamefont {V.~P.}\ \bibnamefont
+  {Kostylyov}}, \bibinfo {author} {\bibfnamefont {A.~V.}\ \bibnamefont
+  {Bobyl}}, \bibinfo {author} {\bibfnamefont {E.~I.}\ \bibnamefont {Terukov}},
+  \bibinfo {author} {\bibfnamefont {S.~N.}\ \bibnamefont {Abolmasov}}, \bibinfo
+  {author} {\bibfnamefont {A.~S.}\ \bibnamefont {Abramov}}, \bibinfo {author}
+  {\bibfnamefont {D.~A.}\ \bibnamefont {Andronikov}}, \bibinfo {author}
+  {\bibfnamefont {M.~Z.}\ \bibnamefont {Shvarts}}, \bibinfo {author}
+  {\bibfnamefont {I.~O.}\ \bibnamefont {Sokolovskyi}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {M.}~\bibnamefont {Evstigneev}},\ }\href {\doibase
+  10.1063/1.4953384} {\bibfield  {journal} {\bibinfo  {journal} {J. Appl.
+  Phys.}\ }\textbf {\bibinfo {volume} {119}},\ \bibinfo {pages} {225702}
+  (\bibinfo {year} {2016})},\ \Eprint
+  {http://arxiv.org/abs/https://doi.org/10.1063/1.4953384}
+  {https://doi.org/10.1063/1.4953384} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Zoth}\ and\ \citenamefont
+  {Bergholz}(1990)}]{FeB_Zong}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {G.}~\bibnamefont
+  {Zoth}}\ and\ \bibinfo {author} {\bibfnamefont {W.}~\bibnamefont
+  {Bergholz}},\ }\href {\doibase 10.1063/1.345063} {\bibfield  {journal}
+  {\bibinfo  {journal} {J. Appl. Phys.}\ }\textbf {\bibinfo {volume} {67}},\
+  \bibinfo {pages} {6764} (\bibinfo {year} {1990})}\BibitemShut {NoStop}%
+\end{thebibliography}%
