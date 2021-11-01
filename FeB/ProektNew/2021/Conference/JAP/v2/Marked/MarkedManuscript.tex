@@ -28,6 +28,7 @@
 \usepackage{etoolbox}
 \usepackage{color}
 \usepackage[normalem]{ulem} % для подчёркиваний uline
+\usepackage{multirow}
 
 %% Apr 2021: AIP requests that the corresponding
 %% email to be moved after the affiliations
@@ -130,13 +131,24 @@ The $n^+$-$p$-$p^+$-Si samples used in the experiment are shown in Fig.~\ref{Fig
 The structure was fabricated from a 380~$\mu$m thick $p$-type boron-doped
 Czochralski silicon wafer with [100] orientation and resistivity of 10~Ohm$\cdot$cm.
 The $n^+$ emitter with surface resistance of about $20-30$~$\Omega/\Box$
-and  thickness of $0.7$~$\mu$m was formed by phosphorus diffusion at 940$^\circ$C.
+and  thickness of $0.7$~$\mu$m was formed by phosphorus diffusion at 940$^\circ$C
+\textcolor[rgb]{0.00,0.07,1.00}{\uline{from gas phase (POCl$_3$)}}.
 The anti-recombination isotype barrier was created by using $p^+$
-layer ($10-20$~$\Omega/\Box$, $0.6$~$\mu$m) formed by boron diffusion at 985$^\circ$C.
+layer ($10-20$~$\Omega/\Box$, $0.6$~$\mu$m) formed by boron diffusion at 985$^\circ$C
+\textcolor[rgb]{0.00,0.07,1.00}{\uline{from gas phase (BCl$_3$)}}.
 The antireflective and passivating SiO$_2$ (40~nm) and Si$_3$N$_4$ (30~nm) layers
 were formed on the front surface as well.
-The solid and grid Al contacts were formed on the rear and front surfaces respectively.
+The solid and grid Al contacts were formed
+\textcolor[rgb]{0.00,0.07,1.00}{\uline{by magnetron sputtering}}
+on the rear and front surfaces respectively.
 The samples used in the experiment had an area of $1.52\times1.535$~cm$^2$.
+
+\textcolor[rgb]{0.00,0.07,1.00}{\uline{
+It was found that some SC lots are characterized by significantly lower values of parameters compared to typical solar cells for this manufacturing.
+Additional experiments with thermal annealing at temperatures of 200$^\circ$C and 90$^\circ$C showed that a sharp drop in the photoconversion parameters value is due to the presence of an iron impurity with a concentration of up to $4\cdot10^{13}$~cm$^{-3}$ in the SC base.
+It was also found that the source of iron impurity is insufficiently pure chemicals that were used for chemical treatments in the technological process for some SC lots.
+To study the effect of ultrasonic loading on the transformation  of iron-boron pairs, samples from these ``bad'' lots with varying degrees of iron contamination ($2\cdot10^{12}-4\cdot10^{13}$~cm$^{-3}$) were taken.
+}}
 
 
 \begin{figure}
@@ -408,25 +420,67 @@ where
 $\tau_\mathrm{dis}$ is the characteristic time of dissociation,
 $N_\mathrm{Fe,fit}$ is the value corresponding to saturation.
 The examples of approximation curves are given in Fig.~\ref{Fig:Nfe_till},
-and the values of the parameters obtained by approximation --- in Fig.~\ref{Fig:IllRez}.
+and the values of the parameters obtained by approximation --- in 
+\textcolor[rgb]{0.00,0.07,1.00}{\uline{
+Table~\ref{tabSample}.}}
+%Fig.~\ref{Fig:IllRez}.
 
-\begin{figure}
-\includegraphics[width=0.5\textwidth]{Fig5a}\\% Here is how to import EPS art
-\includegraphics[width=0.5\textwidth]{Fig5b}\\% Here is how to import EPS art
-\includegraphics[width=0.5\textwidth]{Fig5c}% Here is how to import EPS art
-\caption{\label{Fig:IllRez}
-The value of maximum concentrations of light released iron atoms (unhatched bars)
-and characteristic dissociation time (hatched bars) obtained by approximating experimental dependencies by Eq.~(\ref{eqNfe0Exp}).
-Red bars correspond to cases without USL,
-blue ones --- with USL.
-Violet and pink bars (panel b) are obtained at $T=320$~K,
-the rest --- at $T=340$~K.
-The conditions of USL for samples SC350-1, SC350-2,
-SC349-1 are identical with those given in the caption to Fig.~\ref{Fig:Nfe_till}.
-For SC352-1 $f_\mathrm{US}=5.9$~MHz,
-$W_\mathrm{US}=1.0$~W/cm$^2$.
+\textcolor[rgb]{0.00,0.07,1.00}{
+\begin{table}
+\caption{\label{tabSample}The value of maximum concentrations of light released iron atoms 
+and characteristic dissociation time obtained by approximating experimental dependencies by Eq.~(\ref{eqNfe0Exp}).
 }
-\end{figure}
+\begin{ruledtabular}
+\begin{tabular}{ccccccc}
+\multirow{2}{*}{Sample} &$T$&$W_\mathrm{ill}$&$f_\mathrm{US}$&$W_\mathrm{US}$& $N_\mathrm{Fe,fit}$
+&$\tau_\mathrm{dis}$ \\
+&(K)& (W/cm$^2$)& (MHz)&(W/cm$^2$)&($10^{13}$~cm$^{-3})$&(s) \\
+\hline
+SC350-1&340&0.08&\multicolumn{2}{c}{non}&$3.0\pm0.3$&$15\pm4$\\
+&340&0.08&9.0&0.9&$2.9\pm0.4$&$15\pm6$\\
+&340&0.12&\multicolumn{2}{c}{non}&$2.98\pm0.07$&$7\pm1$\\
+&340&0.12&9.0&0.9&$2.99\pm0.06$&$7\pm1$\\
+&340&0.16&\multicolumn{2}{c}{non}&$2.98\pm0.02$&$3.4\pm0.2$\\
+&340&0.16&9.0&0.6&$2.78\pm0.03$&$3.1\pm0.6$\\
+&340&0.16&9.0&0.9&$2.67\pm0.07$&$2.9\pm0.6$\\
+SC352-1&340&0.16&\multicolumn{2}{c}{non}&$4.25\pm0.03$&$3.8\pm0.2$\\
+&340&0.16&5.9&1.0&$4.03\pm0.04$&$3.7\pm0.2$\\
+SC350-2&340&0.09&\multicolumn{2}{c}{non}&$1.76\pm0.08$&$16\pm2$\\
+&340&0.09&0.3&0.6&$1.72\pm0.05$&$14\pm1$\\
+&340&0.12&\multicolumn{2}{c}{non}&$1.89\pm0.02$&$9\pm1$\\
+&340&0.12&0.3&0.6&$1.86\pm0.03$&$8\pm2$\\
+&340&0.16&\multicolumn{2}{c}{non}&$1.88\pm0.02$&$4.3\pm0.3$\\
+&340&0.16&0.3&0.6&$1.72\pm0.02$&$4.4\pm0.4$\\
+&320&0.16&\multicolumn{2}{c}{non}&$1.9\pm0.2$&$11\pm4$\\
+&320&0.16&0.3&0.6&$1.8\pm0.1$&$11\pm1$\\
+SC349-1&340&0.08&\multicolumn{2}{c}{non}&$0.66\pm0.02$&$7\pm1$\\
+&340&0.08&5.0&0.5&$0.64\pm0.05$&$9\pm3$\\
+&340&0.12&\multicolumn{2}{c}{non}&$0.65\pm0.01$&$2.7\pm0.3$\\
+&340&0.12&5.0&0.5&$0.62\pm0.01$&$2.9\pm0.4$\\
+&340&0.16&\multicolumn{2}{c}{non}&$0.67\pm0.01$&$2.3\pm0.2$\\
+&340&0.16&5.0&0.5&$0.61\pm0.01$&$1.8\pm0.3$\\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+}
+
+%\begin{figure}
+%\includegraphics[width=0.5\textwidth]{Fig5a}\\% Here is how to import EPS art
+%\includegraphics[width=0.5\textwidth]{Fig5b}\\% Here is how to import EPS art
+%\includegraphics[width=0.5\textwidth]{Fig5c}% Here is how to import EPS art
+%\caption{\label{Fig:IllRez}
+%The value of maximum concentrations of light released iron atoms (unhatched bars)
+%and characteristic dissociation time (hatched bars) obtained by approximating experimental dependencies by Eq.~(\ref{eqNfe0Exp}).
+%Red bars correspond to cases without USL,
+%blue ones --- with USL.
+%Violet and pink bars (panel b) are obtained at $T=320$~K,
+%the rest --- at $T=340$~K.
+%The conditions of USL for samples SC350-1, SC350-2,
+%SC349-1 are identical with those given in the caption to Fig.~\ref{Fig:Nfe_till}.
+%For SC352-1 $f_\mathrm{US}=5.9$~MHz,
+%$W_\mathrm{US}=1.0$~W/cm$^2$.
+%}
+%\end{figure}
 
 On the other way,
 the equilibrium between free Fe$_i$ and Fe$_i$B$_s$ is determined by the following rate equations
@@ -464,10 +518,17 @@ It should be noted that in our case
 $N_\mathrm{Fe,fit}\simeq N_\mathrm{Fe,tot}$.
 
 As for the case without USL, we should note the following.
-First, for every sample $N_\mathrm{Fe,fit}$ remains constant and does not depend on illumination intensity and temperature (red and pink unhatched bars in Fig.~\ref{Fig:IllRez}).
+First, for every sample $N_\mathrm{Fe,fit}$ remains constant and does not depend on illumination intensity and temperature 
+\textcolor[rgb]{0.00,0.07,1.00}{\uline{
+--- see Table~\ref{tabSample}.}}
+%(red and pink unhatched bars in Fig.~\ref{Fig:IllRez}).
 This is quite expectable if we assume that
 in this case $N_\mathrm{Fe,fit}=N_\mathrm{Fe,tot}$.
-Second, the value of $\tau_\mathrm{dis}$ (hatched bars in Fig.~\ref{Fig:IllRez})
+Second, the value of $\tau_\mathrm{dis}$ 
+\textcolor[rgb]{0.00,0.07,1.00}{\uline{
+(last column in Table~\ref{tabSample})
+}}
+%(hatched bars in Fig.~\ref{Fig:IllRez})
 depends on $W_\mathrm{ill}$ and $T$.
 It is well known \cite{Schmidt2019,FeBLight2,FeBKin2019} that the dissociation rate of FeB pairs increases quadratically with increasing illumination intensity.
 In the insets in Fig.~\ref{Fig:Nfe_till} the values of $\tau_\mathrm{dis}$
@@ -477,7 +538,11 @@ with the reported data and can serve as additional proof of the suggested approa
 applicability in estimating iron-related defect parameters.
 Moreover, it is known \cite{Lagowskii1993} that the dissociation time decreases approximately twice per 20$^\circ$C increase.
 In our experiment, $\tau_\mathrm{dis}=(11\pm4)$~s for sample SC350-2
-(Figs.~\ref{Fig:Nfe_till}(b) and ~\ref{Fig:IllRez}(b)) at $T=320$~K , and at 340~K,
+(Figs.~\ref{Fig:Nfe_till}(b) and 
+\textcolor[rgb]{0.00,0.07,1.00}{\uline{
+Table~\ref{tabSample}}}
+%~\ref{Fig:IllRez}(b)
+) at $T=320$~K , and at 340~K,
 it comprised $4.3\pm0.3$~s, which justifies the expectations.
 
 Another reason why it is advisable to analyze $I\mathrm{SC}$ kinetics is the behavior of
@@ -505,12 +570,23 @@ the correlation coefficient equals to 0.98 (see Supplementary Material).
 }}
 
 Paying our attention back to the impact of acoustic waves on the processes of light--induced dissociation of FeB pairs, the following should be noted.
-First,  USL actually does not influence the magnitude of $\tau_\mathrm{dis}$:
-the heights of neighboring hatched red and blue bars are similar in the error range for all the cases in Fig.~\ref{Fig:IllRez} .
-Second, some pairs do not dissociate under USL:
+First,  USL actually does not influence the magnitude of 
+\textcolor[rgb]{0.00,0.07,1.00}{\uline{
+dissociation time: 
+$\tau_\mathrm{dis}$ values in neighboring rows}}
+%the heights of neighboring hatched red and blue bars 
+are similar in the error range for all the cases in 
+\textcolor[rgb]{0.00,0.07,1.00}{\uline{
+Table~\ref{tabSample}}}.
+%Fig.~\ref{Fig:IllRez} .
+Second, some pairs do not dissociate under \textcolor[rgb]{0.00,0.07,1.00}{\uline{illumination in the USL case}}:
 $N_\mathrm{Fe,fit}(W_\mathrm{US}>0)< N_\mathrm{Fe,fit}(W_\mathrm{US}=0)$.
 How large the portion of these pairs is, depends on US intensity
-(see Figs.~\ref{Fig:Nfe_till}(a), \ref{Fig:IllRez}(a), $W_\mathrm{ill}=0.16$~W/cm$^2$);
+(see Figs.~\ref{Fig:Nfe_till}(a), 
+\textcolor[rgb]{0.00,0.07,1.00}{\uline{
+Table~\ref{tabSample}}},
+%\ref{Fig:IllRez}(a), 
+$W_\mathrm{ill}=0.16$~W/cm$^2$);
 and at maximum $W_\mathrm{US}$ values this portion reaches 10\%.
 It should be noted that this [effect] is observed only in the case when light--induced pair dissociation is close to saturation.
 If $W_\mathrm{ill}$ (or temperature), however, is that a part of iron atoms stays near the substitutional boron atoms at the given illumination times,
@@ -540,8 +616,8 @@ Fig.~\ref{Fig:EmWus} presents the dependencies $\Delta E_\mathrm{US}=\Delta E_\m
 The presented data show that
 
 \begin{figure}
-\includegraphics[width=0.45\textwidth]{Fig6a}\\% Here is how to import EPS art
-\includegraphics[width=0.45\textwidth]{Fig6b}% Here is how to import EPS art
+\includegraphics[width=0.45\textwidth]{Fig5a}\\% Here is how to import EPS art
+\includegraphics[width=0.45\textwidth]{Fig5b}% Here is how to import EPS art
 \caption{\label{Fig:EmWus}
 Dependencies of AI change in migration energy on US intensity for various
 frequencies (a) and samples with different  iron concentrations (b).
@@ -572,7 +648,7 @@ where temperature coefficient $\alpha_\mathrm{US}$ depends on US frequency
 (see inset in Fig.~\ref{Fig:EmT}), while $\Delta E_\mathrm{US}(0)$ depends also on the US intensity.
 
 \begin{figure}
-\includegraphics[width=0.45\textwidth]{Fig7}% Here is how to import EPS art
+\includegraphics[width=0.45\textwidth]{Fig6}% Here is how to import EPS art
 \caption{\label{Fig:EmT}
 Temperature dependencies of $\Delta E_\mathrm{US}$.
 $N_\mathrm{Fe,tot}$, $10^{13}$~cm$^{-3}$:

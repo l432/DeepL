@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{3}%
+\begin{thebibliography}{7}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -86,4 +86,53 @@
   {Bergholz}},\ }\href {\doibase 10.1063/1.345063} {\bibfield  {journal}
   {\bibinfo  {journal} {J. Appl. Phys.}\ }\textbf {\bibinfo {volume} {67}},\
   \bibinfo {pages} {6764} (\bibinfo {year} {1990})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Schmidt}\ \emph {et~al.}(2020)\citenamefont
+  {Schmidt}, \citenamefont {Bothe}, \citenamefont {Voronkov},\ and\
+  \citenamefont {Falster}}]{Schmidt2019}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {Schmidt}}, \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont {Bothe}},
+  \bibinfo {author} {\bibfnamefont {V.~V.}\ \bibnamefont {Voronkov}}, \ and\
+  \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont {Falster}},\ }\href
+  {\doibase 10.1002/pssb.201900167} {\bibfield  {journal} {\bibinfo  {journal}
+  {physica status solidi (b)}\ }\textbf {\bibinfo {volume} {257}},\ \bibinfo
+  {pages} {1900167} (\bibinfo {year} {2020})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Geerligs}\ and\ \citenamefont
+  {Macdonald}(2004)}]{FeBLight2}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {L.~J.}\ \bibnamefont
+  {Geerligs}}\ and\ \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont
+  {Macdonald}},\ }\href {\doibase 10.1063/1.1823587} {\bibfield  {journal}
+  {\bibinfo  {journal} {Appl. Phys. Lett.}\ }\textbf {\bibinfo {volume} {85}},\
+  \bibinfo {pages} {5227} (\bibinfo {year} {2004})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Khelifati}\ \emph {et~al.}(2019)\citenamefont
+  {Khelifati}, \citenamefont {Laine}, \citenamefont {Vähänissi},
+  \citenamefont {Savin}, \citenamefont {Bouamama},\ and\ \citenamefont
+  {Bouhafs}}]{FeBKin2019}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {N.}~\bibnamefont
+  {Khelifati}}, \bibinfo {author} {\bibfnamefont {H.~S.}\ \bibnamefont
+  {Laine}}, \bibinfo {author} {\bibfnamefont {V.}~\bibnamefont {Vähänissi}},
+  \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Savin}}, \bibinfo
+  {author} {\bibfnamefont {F.~Z.}\ \bibnamefont {Bouamama}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {D.}~\bibnamefont {Bouhafs}},\ }\href {\doibase
+  https://doi.org/10.1002/pssa.201900253} {\bibfield  {journal} {\bibinfo
+  {journal} {Phys Status Solidi A}\ }\textbf {\bibinfo {volume} {216}},\
+  \bibinfo {pages} {1900253} (\bibinfo {year} {2019})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Lagowski}\ \emph {et~al.}(1993)\citenamefont
+  {Lagowski}, \citenamefont {Edelman}, \citenamefont {Kontkiewicz},
+  \citenamefont {Milic}, \citenamefont {Henley}, \citenamefont {Dexter},
+  \citenamefont {Jastrzebski},\ and\ \citenamefont {Hoff}}]{Lagowskii1993}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {Lagowski}}, \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {Edelman}},
+  \bibinfo {author} {\bibfnamefont {A.~M.}\ \bibnamefont {Kontkiewicz}},
+  \bibinfo {author} {\bibfnamefont {O.}~\bibnamefont {Milic}}, \bibinfo
+  {author} {\bibfnamefont {W.}~\bibnamefont {Henley}}, \bibinfo {author}
+  {\bibfnamefont {M.}~\bibnamefont {Dexter}}, \bibinfo {author} {\bibfnamefont
+  {L.}~\bibnamefont {Jastrzebski}}, \ and\ \bibinfo {author} {\bibfnamefont
+  {A.~M.}\ \bibnamefont {Hoff}},\ }\href {\doibase 10.1063/1.110789} {\bibfield
+   {journal} {\bibinfo  {journal} {Applied Physics Letters}\ }\textbf {\bibinfo
+  {volume} {63}},\ \bibinfo {pages} {3043} (\bibinfo {year}
+  {1993})}\BibitemShut {NoStop}%
 \end{thebibliography}%
