@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{7}%
+\begin{thebibliography}{11}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -50,6 +50,20 @@
 \providecommand \BibitemShut  [1]{\csname bibitem#1\endcsname}%
 \let\auto@bib@innerbib\@empty
 %</preamble>
+\bibitem [{\citenamefont {Tayyib}\ \emph {et~al.}(2012)\citenamefont {Tayyib},
+  \citenamefont {Theobald}, \citenamefont {Peter}, \citenamefont {Odden},\ and\
+  \citenamefont {Sætre}}]{TAYYIB201221}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Tayyib}}, \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Theobald}},
+  \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont {Peter}}, \bibinfo
+  {author} {\bibfnamefont {J.}~\bibnamefont {Odden}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {T.}~\bibnamefont {Sætre}},\ }\href {\doibase
+  10.1016/j.egypro.2012.07.023} {\bibfield  {journal} {\bibinfo  {journal}
+  {Energy Procedia}\ }\textbf {\bibinfo {volume} {27}},\ \bibinfo {pages} {21 }
+  (\bibinfo {year} {2012})},\ \bibinfo {note} {proceedings of the 2nd
+  International Conference on Crystalline Silicon Photovoltaics SiliconPV
+  2012}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Sachenko}\ \emph {et~al.}(2016)\citenamefont
   {Sachenko}, \citenamefont {Kryuchenko}, \citenamefont {Kostylyov},
   \citenamefont {Bobyl}, \citenamefont {Terukov}, \citenamefont {Abolmasov},
@@ -135,4 +149,33 @@
    {journal} {\bibinfo  {journal} {Applied Physics Letters}\ }\textbf {\bibinfo
   {volume} {63}},\ \bibinfo {pages} {3043} (\bibinfo {year}
   {1993})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Ostapenko}, \citenamefont {Jastrzebski},\ and\
+  \citenamefont {Sopori}(1995)}]{Ostapenko1995SST}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.~S.}\ \bibnamefont
+  {Ostapenko}}, \bibinfo {author} {\bibfnamefont {L.}~\bibnamefont
+  {Jastrzebski}}, \ and\ \bibinfo {author} {\bibfnamefont {B.}~\bibnamefont
+  {Sopori}},\ }\href {\doibase 10.1088/0268-1242/10/11/011} {\bibfield
+  {journal} {\bibinfo  {journal} {Semicond. Sci. Technol.}\ }\textbf {\bibinfo
+  {volume} {10}},\ \bibinfo {pages} {1494} (\bibinfo {year}
+  {1995})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Ostapenko}\ \emph {et~al.}(1994)\citenamefont
+  {Ostapenko}, \citenamefont {Jastrzebski}, \citenamefont {Lagowski},\ and\
+  \citenamefont {Sopori}}]{Ostapenko1994APL}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.~S.}\ \bibnamefont
+  {Ostapenko}}, \bibinfo {author} {\bibfnamefont {L.}~\bibnamefont
+  {Jastrzebski}}, \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {Lagowski}}, \ and\ \bibinfo {author} {\bibfnamefont {B.}~\bibnamefont
+  {Sopori}},\ }\href {\doibase 10.1063/1.112942} {\bibfield  {journal}
+  {\bibinfo  {journal} {Appl. Phys. Lett.}\ }\textbf {\bibinfo {volume} {65}},\
+  \bibinfo {pages} {1555} (\bibinfo {year} {1994})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Ostapenko}\ and\ \citenamefont
+  {Bell}(1995)}]{Ostapenko1995}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.~S.}\ \bibnamefont
+  {Ostapenko}}\ and\ \bibinfo {author} {\bibfnamefont {R.~E.}\ \bibnamefont
+  {Bell}},\ }\href {\doibase 10.1063/1.359243} {\bibfield  {journal} {\bibinfo
+  {journal} {J. Appl. Phys.}\ }\textbf {\bibinfo {volume} {77}},\ \bibinfo
+  {pages} {5458} (\bibinfo {year} {1995})}\BibitemShut {NoStop}%
 \end{thebibliography}%
