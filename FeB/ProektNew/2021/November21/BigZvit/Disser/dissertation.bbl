@@ -133,7 +133,7 @@ Iron related solar cell instability: Imaging analysis and impact on cell
 
 \bibitem{FeB_Zong}
 \selectlanguageifdefined{english}
-\BibEmph{Zoth,~G.} A fast, preperetion-free method to detect irpn in silicon~/
+\BibEmph{Zoth,~G.} A fast, preperetion-free method to detect iron in silicon~/
   G.~Zoth, W.~Bergholz~// \BibEmph{J. Appl. Phys.} ---
 \newblock 1990. --- Jun. ---
 \newblock Vol.~67, no.~11. ---
@@ -157,10 +157,10 @@ The effect of oxide precipitates on minority carrier lifetime in p--type
 \newblock Vol. 140, no.~1. ---
 \newblock Pp.~275--281.
 
-\bibitem{FeBLight3}
+\bibitem{FeBAssJAP2014}
 \selectlanguageifdefined{english}
 Iron-boron pairing kinetics in illuminated p-type and in boron/phosphorus
-  co-doped n-type silicon~/ Christian~Möller, Til~Bartel, Fabien~Gibaja,
+  co-doped n-type silicon~/ Christian~M\"{o}ller, Til~Bartel, Fabien~Gibaja,
   Kevin~Lauer~// \BibEmph{J. Appl. Phys.} ---
 \newblock 2014. --- Jul. ---
 \newblock Vol. 116, no.~2. ---
@@ -174,5 +174,78 @@ Dissociation and Formation Kinetics of Iron–Boron Pairs in Silicon after
 \newblock 2019. --- Sep. ---
 \newblock Vol. 216, no.~17. ---
 \newblock P.~1900253.
+
+\bibitem{ostapenko2002}
+\selectlanguageifdefined{english}
+\BibEmph{Ostapenko,~Sergei~S.} Ultrasound Stimulated Defect Reactions in
+  Semiconductors~/ Sergei~S.~Ostapenko, Nadejda~E.~Korsunskaya,
+  Moissei~K.~Sheinkman~// Defect Interaction and Clustering in Semiconductors.
+  ---
+\newblock Vol.~85 of \BibEmph{Solid State Phenomena}. ---
+\newblock Trans Tech Publications Ltd, 2001. --- 12. ---
+\newblock Pp.~317--336.
+
+\bibitem{Savkina2013}
+\selectlanguageifdefined{english}
+\BibEmph{Savkina,~Rada~K.} Recent Progress in Semiconductor Properties
+  Engineering by Ultrasonication~/ Rada~K.~Savkina~// \BibEmph{Recent Patents
+  on Electrical \& Electronic Engineering}. ---
+\newblock 2013. ---
+\newblock Vol.~6, no.~3. ---
+\newblock Pp.~157--172.
+
+\bibitem{Olikh2018JAP}
+\selectlanguageifdefined{english}
+Acousto--defect interaction in irradiated and non--irradiated silicon
+  $n^+$--$p$ structure~/ O.~Ya.~Olikh, A.~M.~Gorb, R.~G.~Chupryna,
+  O.~V.~Pristay-Fenenkov~// \BibEmph{J. Appl. Phys.} ---
+\newblock 2018. --- Apr. ---
+\newblock Vol. 123, no.~16. ---
+\newblock P.~161573.
+
+\bibitem{Davletova2008}
+\selectlanguageifdefined{english}
+\BibEmph{Davletova,~A.} Open-circuit voltage decay transient in
+  dislocation-engineered {S}i p--n junction~/ A.~Davletova,
+  S.~Zh.~Karazhanov~// \BibEmph{Journal of Physics D: Applied Physics}. ---
+\newblock 2008. --- Aug. ---
+\newblock Vol.~41, no.~16. ---
+\newblock P.~165107.
+
+\bibitem{Olikh2020JEM}
+\selectlanguageifdefined{english}
+\BibEmph{Olikh,~Y.} Mechanisms of Two-Stage Conductivity Relaxation in CdTe:Cl
+  with Ultrasound~/ Y.~Olikh, M.~Tymochko, O.~Olikh~// \BibEmph{J. Electron.
+  Mater.} ---
+\newblock 2020. --- Aug. ---
+\newblock Vol.~49, no.~8. ---
+\newblock P.~4524–453.
+
+\bibitem{Olikh:Ultras}
+\selectlanguageifdefined{english}
+\BibEmph{Olikh,~Oleg}. Reversible influence of ultrasound on
+  $\gamma-$irradiated {M}o/n-{S}i {S}chottky barrier structure~/ Oleg~Olikh~//
+  \BibEmph{Ultrasonics}. ---
+\newblock 2015. --- Feb. ---
+\newblock Vol.~56. ---
+\newblock Pp.~545--550.
+
+\bibitem{OlikhJAP}
+\selectlanguageifdefined{english}
+\BibEmph{Olikh,~O.~Ya.} Ultrasound influence on {I}--{V}--{T} characteristics
+  of silicon {S}chottky barrier structure~/ O.~Ya.~Olikh, K.~V.~Voytenko,
+  R.~M.~Burbelo~// \BibEmph{J. Appl. Phys.} ---
+\newblock 2015. --- Jan. ---
+\newblock Vol. 117, no.~4. ---
+\newblock P.~044505.
+
+\bibitem{Teterkin2009}
+\selectlanguageifdefined{english}
+\BibEmph{Sukach,~A.V.} Ultrasonic treatment--induced modification of the
+  electrical properties of {I}n{A}s p--n junctions~/ A.V.~Sukach,
+  V.V.~Teterkin~// \BibEmph{Tech. Phys. Lett.} ---
+\newblock 2009. --- June. ---
+\newblock Vol.~35, no.~6. ---
+\newblock Pp.~514--517.
 
 \end{thebibliography}
