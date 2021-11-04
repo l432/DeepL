@@ -248,4 +248,95 @@ Acousto--defect interaction in irradiated and non--irradiated silicon
 \newblock Vol.~35, no.~6. ---
 \newblock Pp.~514--517.
 
+\bibitem{USImplant:JVacSci}
+\selectlanguageifdefined{english}
+Influence of in situ ultrasound treatment during ion implantation on
+  amorphization and junction formation in silicon~/ D.~Krüger, B.~Romanyuk,
+  V.~Melnik et~al.~// \BibEmph{J. Vac. Sci. Technol. B}. ---
+\newblock 2002. --- Jul. ---
+\newblock Vol.~20, no.~4. ---
+\newblock Pp.~1448--1451.
+
+\bibitem{RomanyukSST}
+\selectlanguageifdefined{english}
+Modification of the Si amorphization process by in situ ultrasonic treatment
+  during ion implantation~/ B.~Romanyuk, V.~Melnik, Ya.~Olikh et~al.~//
+  \BibEmph{Semicond. Sci. Technol.} ---
+\newblock 2001. --- May. ---
+\newblock Vol.~16, no.~5. ---
+\newblock Pp.~397--401.
+
+\bibitem{Kalem2000}
+\selectlanguageifdefined{english}
+\BibEmph{Kalem,~S.} Effect of Light Exposure and Ultrasound on the Formation of
+  Porous Silicon~/ S.~Kalem, O.~Yavuzcetin, C.~Altineller~// \BibEmph{Journal
+  of Porous Materials}. ---
+\newblock 2000. --- Jan. ---
+\newblock Vol.~7, no.~1. ---
+\newblock Pp.~381--383.
+
+\bibitem{US:ZnOfilm}
+\selectlanguageifdefined{english}
+Ultrasonic--assisted mist chemical vapor deposition of II--oxide and related
+  oxide compounds~/ Shizuo~Fujita, Kentaro~Kaneko, Takumi~Ikenoue et~al.~//
+  \BibEmph{Phys. Status Solidi C}. ---
+\newblock 2014. --- Jul. ---
+\newblock Vol.~11, no. 7--8. ---
+\newblock Pp.~1225--1228.
+
+\bibitem{LaineIEEEPV2016}
+\selectlanguageifdefined{english}
+Impact of Iron Precipitation on Phosphorus-Implanted Silicon Solar Cells~/
+  Hannu~S.~Laine, Ville~V\"{a}h\"{a}nissi, Ashley~E.~Morishige et~al.~//
+  \BibEmph{IEEE Journal of Photovoltaics}. ---
+\newblock 2016. --- Sep. ---
+\newblock Vol.~6, no.~5. ---
+\newblock Pp.~1094--1102.
+
+\bibitem{FeB:Vahanissi}
+\selectlanguageifdefined{english}
+Impact of phosphorus gettering parameters and initial iron level on silicon
+  solar cell properties~/ Ville~V\"{a}h\"{a}nissi, Antti~Haarahiltunen,
+  Heli~Talvitie et~al.~// \BibEmph{Progress in Photovoltaics: Research and
+  Applications}. ---
+\newblock 2013. --- Aug. ---
+\newblock Vol.~21, no.~5. ---
+\newblock Pp.~1127--1135.
+
+\bibitem{Teimuraz2014JAP}
+\selectlanguageifdefined{english}
+Evolution of iron-containing defects during processing of Si solar cells~/
+  Teimuraz~Mchedlidze, Christian~M\"{o}ller, Kevin~Lauer, J\"{o}rg~Weber~//
+  \BibEmph{J. Appl. Phys.} ---
+\newblock 2014. --- Dec. ---
+\newblock Vol. 116, no.~24. ---
+\newblock P.~245701.
+
+\bibitem{Ostapenko1995}
+\selectlanguageifdefined{english}
+\BibEmph{Ostapenko,~S.~S.} Ultrasound stimulated dissociation of {F}e--{B}
+  pairs in silicon~/ S.~S.~Ostapenko, R.~E.~Bell~// \BibEmph{J. Appl. Phys.}
+  ---
+\newblock 1995. --- May. ---
+\newblock Vol.~77, no.~10. ---
+\newblock Pp.~5458--5460.
+
+\bibitem{Si:Absorb}
+\selectlanguageifdefined{english}
+\BibEmph{Rajkanan,~K.} Absorption coefficient of silicon for solar cell
+  calculations~/ K.~Rajkanan, R.~Singh, J.~Shewchun~// \BibEmph{Solid-State
+  Electron.} ---
+\newblock 1979. --- Sep. ---
+\newblock Vol.~22, no.~9. ---
+\newblock Pp.~793--795.
+
+\bibitem{GreenOptic}
+\selectlanguageifdefined{english}
+\BibEmph{Green,~Martin~A.} Optical properties of intrinsic silicon at 300 K~/
+  Martin~A.~Green, Mark~J.~Keevers~// \BibEmph{Progress in Photovoltaics:
+  Research and Applications}. ---
+\newblock 1995. ---
+\newblock Vol.~3, no.~3. ---
+\newblock Pp.~189--192.
+
 \end{thebibliography}
