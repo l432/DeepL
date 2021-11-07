@@ -321,6 +321,24 @@ Evolution of iron-containing defects during processing of Si solar cells~/
 \newblock Vol.~77, no.~10. ---
 \newblock Pp.~5458--5460.
 
+\bibitem{Ostapenko1994APL}
+\selectlanguageifdefined{english}
+Increasing short minority carrier diffusion lengths in solar--grade
+  polycrystalline silicon by ultrasound treatment~/ S.~S.~Ostapenko,
+  L.~Jastrzebski, J.~Lagowski, B.~Sopori~// \BibEmph{Appl. Phys. Lett.} ---
+\newblock 1994. --- Sep. ---
+\newblock Vol.~65, no.~12. ---
+\newblock Pp.~1555--1557.
+
+\bibitem{Ostapenko1995SST}
+\selectlanguageifdefined{english}
+\BibEmph{Ostapenko,~S.~S.} Change of minority carrier diffusion length in
+  polycrystalline silicon by ultrasound treatment~/ S.~S.~Ostapenko,
+  L.~Jastrzebski, B.~Sopori~// \BibEmph{Semicond. Sci. Technol.} ---
+\newblock 1995. --- Nov. ---
+\newblock Vol.~10, no.~11. ---
+\newblock Pp.~1494--1500.
+
 \bibitem{Si:Absorb}
 \selectlanguageifdefined{english}
 \BibEmph{Rajkanan,~K.} Absorption coefficient of silicon for solar cell
@@ -338,5 +356,23 @@ Evolution of iron-containing defects during processing of Si solar cells~/
 \newblock 1995. ---
 \newblock Vol.~3, no.~3. ---
 \newblock Pp.~189--192.
+
+\bibitem{KostRefl2000}
+\selectlanguageifdefined{english}
+Silicon solar cells with antireflecting and protective coatings based on
+  diamond-like carbon and silicon carbide films~/ N.I.~Klyui, V.P.~Kostylyov,
+  A.G.~Rozhin et~al.~// \BibEmph{Opto-Electr. Rev.} ---
+\newblock 2000. ---
+\newblock Vol.~8, no.~4. ---
+\newblock Pp.~402--405.
+
+\bibitem{LnIscMethod}
+\selectlanguageifdefined{english}
+\BibEmph{Stokes,~E.~D.} Diffusion lengths in solar cells from short-circuit
+  current measurements~/ E.~D.~Stokes, T.~L.~Chu~// \BibEmph{Appl. Phys. Lett.}
+  ---
+\newblock 1977. --- Apr. ---
+\newblock Vol.~30, no.~8. ---
+\newblock Pp.~425--426.
 
 \end{thebibliography}
