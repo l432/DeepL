@@ -375,4 +375,31 @@ Silicon solar cells with antireflecting and protective coatings based on
 \newblock Vol.~30, no.~8. ---
 \newblock Pp.~425--426.
 
+\bibitem{FeBAssSST2011}
+\selectlanguageifdefined{english}
+Accurate measurement of the formation rate of iron--boron pairs in silicon~/
+  J.~Tan, D.~Macdonald, F.~Rougieux, A.~Cuevas~// \BibEmph{Semicond Sci.
+  Technol.} ---
+\newblock 2011. --- Mar. ---
+\newblock Vol.~26, no.~5. ---
+\newblock P.~055019.
+
+\bibitem{Schmidt2019}
+\selectlanguageifdefined{english}
+Fast and Slow Stages of Lifetime Degradation by Boron–Oxygen Centers in
+  Crystalline Silicon~/ Jan~Schmidt, Karsten~Bothe, Vladimir~V.~Voronkov,
+  Robert~Falster~// \BibEmph{physica status solidi (b)}. ---
+\newblock 2020. --- Jan. ---
+\newblock Vol. 257, no.~1. ---
+\newblock P.~1900167.
+
+\bibitem{Lagowskii1993}
+\selectlanguageifdefined{english}
+Iron detection in the part per quadrillion range in silicon using surface
+  photovoltage and photodissociation of iron-boron pairs~/ J.~Lagowski,
+  P.~Edelman, A.~M.~Kontkiewicz et~al.~// \BibEmph{Appl. Phys. Lett.} ---
+\newblock 1993. --- Nov. ---
+\newblock Vol.~63, no.~22. ---
+\newblock Pp.~3043--3045.
+
 \end{thebibliography}
