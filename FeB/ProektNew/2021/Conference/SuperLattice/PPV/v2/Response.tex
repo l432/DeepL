@@ -59,41 +59,89 @@ Below we refer to each of the reviewer’s comments.
 
 \subsection*{Response to Reviewer \#1 }
 
+
+
 \noindent
 \textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~1.}}
-\emph{A solar cell with BSF is chosen as the basis of the work, claiming that 
-"BSF is one of the popular designs used for industrial mass production...", 
-but this is no longer the case, BSF solar cells are present in the market due to old manufacturing lines that are still operative, but the standard now is PERC technology. 
-If the training of the network is based on SCAPS simulations, why was not trained with a PERC structure? 
-At least, some hint on how results would be with a PERC structure should be given. 
+\emph{A solar cell with BSF is chosen as the basis of the work, claiming that
+"BSF is one of the popular designs used for industrial mass production...",
+but this is no longer the case, BSF solar cells are present in the market due to old manufacturing lines that are still operative, but the standard now is PERC technology.
+If the training of the network is based on SCAPS simulations, why was not trained with a PERC structure?
+At least, some hint on how results would be with a PERC structure should be given.
 (By the way, the BSF in this work is made with B-doping, which is also a minoritary approach at the industrial level, where BSF is of Aluminium).}
 
-
+\vspace{0.5cm}
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
-The text was revised.
+The reviewer is quite right and PERC technology will be dominant in close future.
+But now the part of BSF solar cells is still big enough --- see Fig.~\ref{fig_BSF}.
+%\cite{GreenRew2019,WilsonRew2020}
 
 
+\begin{figure}[b]
+\centering
+\includegraphics[width=0.48\textwidth]{BSF_PERC1}
+\includegraphics[width=0.48\textwidth]{BSF_PERC2}
+\caption{Projected manufacturing capacity share of different
+silicon--based cell technologies.
+Sources:  https://www.aleo-solar.com/perc-cell-technology-explained/
+(left panel), \cite{GreenRew2019} (right panel).
+}
+\label{fig_BSF}
+\end{figure}
+
+SCAPS-1D is a one-dimensional solar cell simulation programme and
+the modeling of PERC solar cells with rear contact, which is
+inhomogeneous, in surface is hard task.
+We understand the limitations of 1D simulators and noted about this in the Conclusion.
+
+We agree that it would be better to use Al-doped $p^+$-layer, but please consider the following.
+The simulated IV curves were used to obtain the ideality factor value $n$.
+According used two-diode model,
+$n$ characterizes current of second (so-called recombination)  diode;
+the current of second diode current is due to recombination within
+the depletion region mainly \citep{Breitenstein2013}.
+The $p^+$--layer influence on mentioned process is rather determined by
+pulling electric field.  
+Therefore the kind of doping atom in $p^+$--layer is not very important for our simulation.
+In the case of $n^+-p-p^+$ structure with Al-doped base the new training data set is needed,
+but the proposed deep-learning oriented approach to determining the impurity concentration remains valid.
+On the other hand, the recombination in the rear surface region is not dominant
+in $n$ value determination.
+In our opinion, the trained DNN can be applied to PERC solar cell in wich
+i)~the base is boron-doped;
+ii)~the iron-related deep levels are the main reason of defect-assisted recombination. 
+
+
+The text was revised and the some information (hint) was added in page 
+
+
+\vspace{1cm}
+\noindent
 \textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~2.}}
-\emph{As far as I understand, the simulation with SCAPS could be improved: emitter and BSF are uniform and this is not the case in reality. 
-There is no mention to the metallization, are there no contacts? 
+\emph{As far as I understand, the simulation with SCAPS could be improved: emitter and BSF are uniform and this is not the case in reality.
+There is no mention to the metallization, are there no contacts?
 There should be, and they will influence the carrier transport and also the surface recombination velocities in the metal-semiconductor interface, among others.}
 
-
+\vspace{0.5cm}
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
 The text was revised.
 
+\vspace{1cm}
+\noindent
 \textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~3.}}
 \emph{Why a voltage sweep restricted to 0.45 V?
 This is rather low when compared to the voltages at the maximum power point of BSF solar cells...
 Wouldn't it influence in the extraction of the ideality factor values?}
 
+\vspace{0.5cm}
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
 The text was revised.
 
-
+\vspace{1cm}
+\noindent
 \textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~4.}}
 \emph{I am not sure that I interpret well the results in table 5.
 In the text the authors state that "the results even exceed expectations".
@@ -102,26 +150,35 @@ There is some discussion on why DNN$_{FeFeB-Fe}$ performs worse than DNN$_{FeFeB
 (temperatures higher than 300K for the higher Fe content, 100\% or more error for the training dataset...).
 }
 
+\vspace{0.5cm}
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
 The text was revised.
 
-
+\vspace{1cm}
+\noindent
 \textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~5.}}
 \emph{In the jargon, we do not talk of surface resistance, but sheet resistance.
 Also, it is the first time that I read the "anti-recombination isotype barrier" for a high-low junction or a BSF.}
 
+\vspace{0.5cm}
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
 The text was revised.
 
+\vspace{1cm}
+\noindent
 \textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~6.}}
 \emph{It is mentioned in the paper that there is Suplementary Material, but I have not had the opportunity to read it.}
 
+\vspace{0.5cm}
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
 The text was revised.
 
+
+\vspace{1cm}
+\noindent
 \textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~7.}}
 \emph{On the other hand, the paper needs a thorough revision of English, preferably by a native or bilingual speaker.
 English is not my mother tongue, but I think that there are many expressions that are not correct, and make the reading difficult.
@@ -131,9 +188,11 @@ and a lot in between: "both for microelectronics, logic technologies and solar c
 "the various semiconductor barrier structures", "practical using", "Fours", "SFB", "in our further calculation",
 "simulated with using", "in comparing with", "more narrow", etc. etc. }
 
+\vspace{0.5cm}
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
-The text was revised.
+We are sorry for English.
+The text was revised by bilingual speaker and we hope for language improving.
 
 
 
@@ -144,64 +203,73 @@ The text was revised.
 \textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~1.}}
 \emph{2 Simulation details}
 
-\emph{It is assumed that all SRH recombination in the device come from iron impurities and the associated deep level defects. 
-It seems necessary to discuss its validity, and it could be interesting to put it against the fact that Al-BSF devices based on Czochralski silicon wafers are considered. 
-More generally, if another type of defects is present in the solar cell, also inducing SRH recombination, 
+\emph{It is assumed that all SRH recombination in the device come from iron impurities and the associated deep level defects.
+It seems necessary to discuss its validity, and it could be interesting to put it against the fact that Al-BSF devices based on Czochralski silicon wafers are considered.
+More generally, if another type of defects is present in the solar cell, also inducing SRH recombination,
 is it possible to estimate to what extend are the DNNs trained here still accurate ? }
 
+\vspace{0.5cm}
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
 The text was revised.
 
+
+\vspace{1cm}
+\noindent
 \textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~2.}}
-\emph{When Fe-FeB and Fe cases are presented, it could be clearer to provide very few more explanations on both types of defects, 
-and the important fact that iron-boron pairs can be temporarily dissociated, providing the Fe case, 
+\emph{When Fe-FeB and Fe cases are presented, it could be clearer to provide very few more explanations on both types of defects,
+and the important fact that iron-boron pairs can be temporarily dissociated, providing the Fe case,
 through the heat treatment or high illumination already mentioned. }
 
+\vspace{0.5cm}
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
 The text was revised.
 
-
-
+\vspace{1cm}
+\noindent
 \textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~3.}}
 \emph{3 Deep neural network models}
 
 \emph{
-It is clear how the main training dataset is created, and how the 4 * 9 * 11 * 19 = 7524 IV curves are generated. 
-However, the definition of the test datasets and the values for temperature, 
+It is clear how the main training dataset is created, and how the 4 * 9 * 11 * 19 = 7524 IV curves are generated.
+However, the definition of the test datasets and the values for temperature,
 base thickness, iron concentration and doping level are not clear for each T-varied, d-varied, etc. test set. }
 
+\vspace{0.5cm}
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
 The text was revised.
 
-
+\vspace{1cm}
+\noindent
 \textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~4.}}
 \emph{
-For instance, in the case of the T-varied test set, it is mentioned that the same base thickness, 
-iron concentration and doping level values are used as in training dataset. 
-However, 4 * 9 * 19 = 684 and the amount of 894 IVs can’t be explained by multiplying with any number of temperature values. 
+For instance, in the case of the T-varied test set, it is mentioned that the same base thickness,
+iron concentration and doping level values are used as in training dataset.
+However, 4 * 9 * 19 = 684 and the amount of 894 IVs can’t be explained by multiplying with any number of temperature values.
 In Supplementary Material, the associated summary table do neither explain this value 894. More generally these tables are difficult to interpret. It is possible that the subset of 144 values for T-varied test has been duplicated. }
 
+\vspace{0.5cm}
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
 The text was revised.
 
-
+\vspace{1cm}
+\noindent
 \textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~5.}}
 \emph{4 Results and discussion}
 
 \emph{
-On figures 4, 5, 6 and 7, very interesting results are presented, and analyses of the dependence of estimation 
-error with temperature, boron or iron densities and base thickness are well done. 
-However, it seems that the same error statistics of results obtained on test datasets 
-(instead of training dataset) would more directly assess the quality of predictions by the DNNs. 
-For instance, the Fe-varied dataset has been identified to be 
-the closest to “real demand” or results obtained with the all-varied dataset would also be most probably very useful. 
+On figures 4, 5, 6 and 7, very interesting results are presented, and analyses of the dependence of estimation
+error with temperature, boron or iron densities and base thickness are well done.
+However, it seems that the same error statistics of results obtained on test datasets
+(instead of training dataset) would more directly assess the quality of predictions by the DNNs.
+For instance, the Fe-varied dataset has been identified to be
+the closest to “real demand” or results obtained with the all-varied dataset would also be most probably very useful.
 Such results could be showed in Supplementary Material, in the same form as figures 4, 5, 6 and 7. }
 
-
+\vspace{0.5cm}
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
 The text was revised.
