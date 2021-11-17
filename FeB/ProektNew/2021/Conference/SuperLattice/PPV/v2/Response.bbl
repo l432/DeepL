@@ -1,4 +1,4 @@
-\begin{thebibliography}{2}
+\begin{thebibliography}{7}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\urlprefix}{}
@@ -14,5 +14,42 @@ Breitenstein O.
   crystalline silicon solar cells by considering inhomogeneous current
   distributions.
 \newblock Opto--Electronics Review 2013 Sep;21(3):259--282.
+
+\bibitem[{Hu et~al.(2015)E.T. Hu and G.Q. Yue and R.J. Zhang and Y.X. Zheng and
+  L.Y. Chen and S.Y. Wang}]{SCAPSuseSi4}
+Hu ET, Yue GQ, Zhang RJ, Zheng YX, Chen LY, Wang SY.
+\newblock Numerical simulations of multilevel impurity photovoltaic effect in
+  the sulfur doped crystalline silicon.
+\newblock Renewable Energy 2015 May;77:442--446.
+
+\bibitem[{Hamache et~al.(2016)Abdelghani Hamache and Nouredine Sengouga and
+  Afak Meftah and Mohamed Henini}]{SCAPSuseSi1}
+Hamache A, Sengouga N, Meftah A, Henini M.
+\newblock Modeling the effect of 1 {M}e{V} electron irradiation on the
+  performance of n$^+$-p-p$^+$ silicon space solar cells.
+\newblock Radiat Phys Chem 2016 Jun;123:103--108.
+
+\bibitem[{Cappelletti et~al.(2018)M.A. Cappelletti and G.A. Casas and A.P.
+  Cédola and E.L. Peltzer y Blancá and B. Marí Soucase}]{SCAPSuse1}
+Cappelletti MA, Casas GA, Cédola AP, y~Blancá ELP, Soucase BM.
+\newblock Study of the reverse saturation current and series resistance of
+  p-p-n perovskite solar cells using the single and double-diode models.
+\newblock Superlattices Microstruct 2018 Nov;123:338--348.
+
+\bibitem[{Azri et~al.(2019)Faiza Azri and Afak Meftah and Nouredine Sengouga
+  and Amjad Meftah}]{SCAPSuse5}
+Azri F, Meftah A, Sengouga N, Meftah A.
+\newblock Electron and hole transport layers optimization by numerical
+  simulation of a perovskite solar cell.
+\newblock Solar Energy 2019 Mar;181:372--378.
+
+\bibitem[{Chowdhury et~al.(2020)M.S. Chowdhury and S.A. Shahahmadi and P.
+  Chelvanathan and S.K. Tiong and N. Amin and K. Techato and N. Nuthammachot
+  and T. Chowdhury and M. Suklueng}]{ScapsUse10}
+Chowdhury MS, Shahahmadi SA, Chelvanathan P, Tiong SK, Amin N, Techato K,
+  et~al.
+\newblock Effect of deep-level defect density of the absorber layer and n/i
+  interface in perovskite solar cells by {SCAPS-1D}.
+\newblock Results Phys 2020 Mar;16:102839.
 
 \end{thebibliography}

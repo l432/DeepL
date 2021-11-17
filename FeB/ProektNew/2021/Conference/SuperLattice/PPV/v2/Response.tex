@@ -73,7 +73,7 @@ At least, some hint on how results would be with a PERC structure should be give
 \vspace{0.5cm}
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
-The reviewer is quite right and PERC technology will be dominant in close future.
+The Reviewer is absolutely right and PERC technology will be dominant in close future.
 But now the part of BSF solar cells is still big enough --- see Fig.~\ref{fig_BSF}.
 %\cite{GreenRew2019,WilsonRew2020}
 
@@ -102,7 +102,7 @@ $n$ characterizes current of second (so-called recombination)  diode;
 the current of second diode current is due to recombination within
 the depletion region mainly \citep{Breitenstein2013}.
 The $p^+$--layer influence on mentioned process is rather determined by
-pulling electric field.  
+pulling electric field.
 Therefore the kind of doping atom in $p^+$--layer is not very important for our simulation.
 In the case of $n^+-p-p^+$ structure with Al-doped base the new training data set is needed,
 but the proposed deep-learning oriented approach to determining the impurity concentration remains valid.
@@ -110,10 +110,10 @@ On the other hand, the recombination in the rear surface region is not dominant
 in $n$ value determination.
 In our opinion, the trained DNN can be applied to PERC solar cell in wich
 i)~the base is boron-doped;
-ii)~the iron-related deep levels are the main reason of defect-assisted recombination. 
+ii)~the iron-related deep levels are the main reason of defect-assisted recombination.
 
 
-The text was revised and the some information (hint) was added in page 
+The text was revised and the some information (hint) was added in page
 
 
 \vspace{1cm}
@@ -126,7 +126,21 @@ There should be, and they will influence the carrier transport and also the surf
 \vspace{0.5cm}
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
-The text was revised.
+The flat bands conditions were assumed for metal contacts on on the rear and
+front surfaces.
+A sentence was added in text. 
+Let us note that it is common practice not to pay special attention in SCAPS simulation 
+to contacts in the case of
+the barrier absence --- e.g., see \cite{SCAPSuseSi4,SCAPSuseSi1,SCAPSuse1,SCAPSuse5,ScapsUse10}.
+
+
+
+The Reviewer is correct about the way of SCAPS simulation improvement.
+In the present paper, we have concentrated on recombination in the SC base region,
+which mainly determine ideality factor value.
+The non-uniformities of emitter and  BSF-layer affect much weaker on $n$ value.
+But the Reviewer’s suggestion is very interesting, and must be done in the 
+future. 
 
 \vspace{1cm}
 \noindent
@@ -138,7 +152,54 @@ Wouldn't it influence in the extraction of the ideality factor values?}
 \vspace{0.5cm}
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
-The text was revised.
+We used the two-diode model to fit the simulated data.
+According to the two-diode model, the dark SC current is given by
+\begin{equation}
+\label{eqIVd}
+    I=I_{01}\left[\exp\left(-\frac{q(V-R_sI)}{kT}\right)-1\right]
+      + I_{02}\left[\exp\left(-\frac{q(V-R_sI)}{nkT}\right)-1\right]
+      +\frac{V-R_sI}{R_{sh}}\,,
+\end{equation}
+where
+$I_{01}$ and $I_{02}$ are the saturation currents,
+$R_{sh}$ and $R_s$ are the shunt and series resistances.
+The two-diode model is often applied for description of real Si SCs
+and the first diode represents the ``ideal'' diode and
+first term in Eq.~(\ref{eqIVd})
+current is due to recombination in the base
+and the emitter, including their surfaces;
+the second diode is the so-called recombination diode
+and second term is due to recombination within
+the depletion region \citep{Breitenstein2013}.
+
+The typical IV curves are shown in Fig.~\ref{fig_IV}.
+It is seen that the contribution of recombination diode current is essential at low bias only.
+At $V\simeq 0.25$~V the first term in Eq.~(\ref{eqIVd}) is
+by an order of magnitude larger than the second term.
+Similar situation is observed for
+experimental IV curves --- see Fig.~9 in Manuscript.
+The ideality factor value is related to slope of recombination current
+dependence on voltage in semi-logarithmic scale.
+Therefore the voltage range $(0-0.45)$~V is quite sufficient for an accurate determination of the ideality factor values.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.5\textwidth]{FigIV}
+\caption{Simulated IV characteristic (marks)
+and its fitting by Eq.~(\ref{eqIVd}) (solid lines 1 and 4).
+The dashed (3, 6) and dotted--dashed (2, 5)
+lines represent the recombination diode currents and the ``ideal'' diode currents, respectively.
+$N_\mathrm{B} = 10^{17}$~cm$^{-3}$, $N_\mathrm{Fe} = 10^{13}$~cm$^{-3}$,
+$T = 340$~K, $d_p = 180$~$\mu$m.
+The results for Fe-case (circles, curves 4-6, red)
+and Fe-FeB case (squares, curves 1-3, black) are presented.
+Inset: Structures, which are used in the simulation.
+}
+\label{fig_IV}
+\end{figure}
+
+The information was added in page
+
 
 \vspace{1cm}
 \noindent
@@ -164,7 +225,8 @@ Also, it is the first time that I read the "anti-recombination isotype barrier" 
 \vspace{0.5cm}
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
-The text was revised.
+The Reviewer is absolutely right.
+We have revised the text accordingly. 
 
 \vspace{1cm}
 \noindent
@@ -174,7 +236,9 @@ The text was revised.
 \vspace{0.5cm}
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
-The text was revised.
+We apologize for embarrassing.
+But we are in confusion:
+Reviewer \#2 mentioned about the data in the table of Supplementary Material.
 
 
 \vspace{1cm}
@@ -224,7 +288,8 @@ through the heat treatment or high illumination already mentioned. }
 \vspace{0.5cm}
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
-The text was revised.
+The corresponding corrections were done in page
+
 
 \vspace{1cm}
 \noindent
@@ -239,7 +304,11 @@ base thickness, iron concentration and doping level are not clear for each T-var
 \vspace{0.5cm}
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
-The text was revised.
+The sample of values which used for Fe-varied dataset was added in page  
+
+
+
+
 
 \vspace{1cm}
 \noindent
@@ -253,7 +322,13 @@ In Supplementary Material, the associated summary table do neither explain this 
 \vspace{0.5cm}
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
-The text was revised.
+The Reviewer is absolutely right:
+i)~the subset of 144 values for T-varied test dataset has been duplicated;
+ii)~Table in Supplementary Material has a mistakes and is not clear.
+The correct values of $d_p$, $N_\mathrm{B}$, and $N_{\mathrm{Fe}}$ were listed in Table,
+but we have a some problems with addition and multiplication.
+We apologize for the inattention.
+Table in Supplementary Material was revised.
 
 \vspace{1cm}
 \noindent
@@ -525,8 +600,8 @@ The text was revised.
 
 
 
-\bibliographystyle{rss}
-%\bibliographystyle{WileyNJD-Harvard}
+%\bibliographystyle{rss}
+\bibliographystyle{WileyNJD-Harvard}
 \bibliography{olikh}
 
 
