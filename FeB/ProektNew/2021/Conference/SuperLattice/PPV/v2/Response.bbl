@@ -1,7 +1,14 @@
-\begin{thebibliography}{7}
+\begin{thebibliography}{8}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\urlprefix}{}
+
+\bibitem[{Hallam et~al.(2017)Hallam, Brett J. and Hamer, Phill G. and Bonilla,
+  Ruy S. and Wenham, Stuart R. and Wilshaw, Peter R.}]{TreeDiode}
+Hallam BJ, Hamer PG, Bonilla RS, Wenham SR, Wilshaw PR.
+\newblock Method of Extracting Solar Cell Parameters From Derivatives of Dark
+  I–V Curves.
+\newblock IEEE Journal of Photovoltaics 2017 Sep;7(5):1304--1312.
 
 \bibitem[{Green(2019)Martin A Green}]{GreenRew2019}
 Green MA.
