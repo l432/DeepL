@@ -1,4 +1,4 @@
-\begin{thebibliography}{56}
+\begin{thebibliography}{63}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\urlprefix}{}
@@ -205,7 +205,7 @@ Hu ET, Yue GQ, Zhang RJ, Zheng YX, Chen LY, Wang SY.
   Afak Meftah and Mohamed Henini}]{SCAPSuseSi1}
 Hamache A, Sengouga N, Meftah A, Henini M.
 \newblock Modeling the effect of 1 {M}e{V} electron irradiation on the
-  performance of n$^+$--p--p$^+$ silicon space solar cells.
+  performance of n$^+$-p-p$^+$ silicon space solar cells.
 \newblock Radiat Phys Chem 2016 Jun;123:103--108.
 
 \bibitem[{Kim et~al.(2017)Kihwan Kim and Jihye Gwak and Seung Kyu Ahn and
@@ -388,5 +388,54 @@ Khelifati N, Laine HS, Vähänissi V, Savin H, Bouamama FZ, Bouhafs D.
 \newblock Dissociation and Formation Kinetics of Iron–Boron Pairs in Silicon
   after Phosphorus Implantation Gettering.
 \newblock Phys Status Solidi A 2019 Sep;216(17):1900253.
+
+\bibitem[{McIntosh et~al.(2000)McIntosh, Keith and Altermatt, Peter and Heiser,
+  Gernot}]{n2McIntosh}
+McIntosh K, Altermatt P, Heiser G.
+\newblock Depletion--region recombination in silicon solar cells. When does
+  $mDR = 2$?
+\newblock In: 16th European Photovoltaic Solar Energy Conference: Proceedings
+  of the International Conference and Exhibition Publisher:James and James
+  (Science Publishers) Ltd; 2000. p. 250--253.
+
+\bibitem[{Hallam et~al.(2017)Hallam, Brett J. and Hamer, Phill G. and Bonilla,
+  Ruy S. and Wenham, Stuart R. and Wilshaw, Peter R.}]{TreeDiode}
+Hallam BJ, Hamer PG, Bonilla RS, Wenham SR, Wilshaw PR.
+\newblock Method of Extracting Solar Cell Parameters From Derivatives of Dark
+  I–V Curves.
+\newblock IEEE Journal of Photovoltaics 2017 Sep;7(5):1304--1312.
+
+\bibitem[{Shah et~al.(2003)Shah, Jay M. and Li, Y.-L. and Gessmann, Th. and
+  Schubert, E. F.}]{Shah}
+Shah JM, Li YL, Gessmann T, Schubert EF.
+\newblock Experimental analysis and theoretical model for anomalously high
+  ideality factors ($n\gg2.0$) in {A}l{G}a{N}/{G}a{N} p--n junction diodes.
+\newblock J Appl Phys 2003 Aug;94(4):2627--2630.
+
+\bibitem[{Lindroos and Savin(2016)Lindroos, Jeanette and Savin, Hele}]{LIDRev}
+Lindroos J, Savin H.
+\newblock Review of light-induced degradation in crystalline silicon solar
+  cells.
+\newblock Sol Energy Mater Sol Cells 2016 Apr;147:115--126.
+
+\bibitem[{Niewelt et~al.(2017)Niewelt, Tim and Sch\"{o}on, Jonas and Warta,
+  Wilhelm and Glunz, Stefan W. and Schubert, Martin C.}]{LIDRev2}
+Niewelt T, Sch\"{o}on J, Warta W, Glunz SW, Schubert MC.
+\newblock Degradation of Crystalline Silicon Due to Boron--Oxygen Defects.
+\newblock IEEE Journal of Photovoltaics 2017 Jan;7(1):383 --398.
+
+\bibitem[{Murphy et~al.(2014)Murphy, J.D. and McGuire, J.D. and Bothe, K. and
+  Voronkov, V.V. and Falster, R.J.}]{MurphySC2014}
+Murphy JD, McGuire JD, Bothe K, Voronkov VV, Falster RJ.
+\newblock Minority carrier lifetime in silicon photovoltaics: The effect of
+  oxygen precipitation.
+\newblock Sol Energy Mater Sol Cells 2014 Jan;120:402--411.
+
+\bibitem[{Chen et~al.(2011)Chen, Lin and Yu, Xuegong and Chen, Peng and Wang,
+  Peng and Gu, Xin and Lu, Jinggang and Yang, Deren}]{Oxide:Chen}
+Chen L, Yu X, Chen P, Wang P, Gu X, Lu J, et~al.
+\newblock Effect of oxygen precipitation on the performance of {C}zochralski
+  silicon solar cells.
+\newblock Sol Energy Mater Sol Cells 2011 Nov;95(11):3148--3151.
 
 \end{thebibliography}

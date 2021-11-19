@@ -114,7 +114,8 @@ However, the system is important in practice.
 Silicon solar cells constitute ~90\% of current global production capacity \cite{SCRev2015} and
 BSF  is one of  the popular designs used for industrial mass production of c-Si SCs as yet \cite{SCRev2020,GreenRew2019}.
 Surely, the passivated emitter and rear cell technology has
-recently come to the fore, but PERC solar cells contain $n^+$--$p$ junction as well\cite{GreenRew2019,WilsonRew2020}.
+recently come to the fore, but PERC solar cells contain $n^+$--$p$ junction 
+and local $n^+$--$p$--$p^{++}$ as well \cite{GreenRew2019,WilsonRew2020}.
 Iron is a major as well as one of the most detrimental metallic impurities in c-Si SCs \cite{ZHU2016192,FeB:Schmidt,IronSC}.
 The flowchart of the used heuristic approach is shown in Fig.~\ref{fig_chem}.
 The following constituents can be marked out.
@@ -284,7 +285,8 @@ and the voltage range $(0-0.45)$~V is quite sufficient for an accurate determina
 It is the ideality factor value $n$ which is used in our further calculation.
 The ideality factors, which are obtained in  Fe-case and Fe-FeB-case,
 are referred to as  $n_\mathrm{Fe}$ and $n_\mathrm{Fe-FeB}$ hereafter.
-The typical simulated dependencies of  the ideality factor are shown in Fig.~\ref{fig_nValues}.
+The typical simulated dependencies of  the ideality factor are shown in Fig.~\ref{fig_nValues}
+and in Supplementary Material.
 The detailed discussion about $n_\mathrm{Fe}$ and $n_\mathrm{Fe-FeB}$  values are presented elsewhere \cite{OlikhJPS},
 however it should be noted that
 (i)~$n$ can take equal values for different  values of SC parameters;
@@ -316,31 +318,31 @@ Thus, 7524 IV characteristics are simulated in Fe-case as well as in Fe-FeB-case
 
 Besides, several test datasets are prepared.
 For instance, the test dataset, labeled ``Fe-varied'' consist of two subset.
-The $N_{\mathrm{Fe}}$ values 
-$1.300\times10^{10}$, $2.471\times10^{10}$, $4.696\times10^{10}$, 
-$8.927\times10^{10}$, $1.697\times10^{11}$, $3.225\times10^{11}$, 
-$6.130\times10^{11}$, $1.165\times10^{120}$, $2.214\times10^{12}$, 
+The $N_{\mathrm{Fe}}$ values
+$1.300\times10^{10}$, $2.471\times10^{10}$, $4.696\times10^{10}$,
+$8.927\times10^{10}$, $1.697\times10^{11}$, $3.225\times10^{11}$,
+$6.130\times10^{11}$, $1.165\times10^{120}$, $2.214\times10^{12}$,
 $4.209\times10^{12}$, $8.000\times10^{12}$~cm$^{-3}$
 (which does not used during training data set creation),
 $T$ values 290, 295, 300, 305, 310, 315, 320, 325, 330, 335, 340~K
 (which used during training data set creation),
 $d_p$ value 180~$\mu$m (which used during training data set creation),
-and $N_\mathrm{B}$ values 
-$1.778\times10^{15}$, $5.623\times10^{15}$, $10^{16}$, 
+and $N_\mathrm{B}$ values
+$1.778\times10^{15}$, $5.623\times10^{15}$, $10^{16}$,
 $3.162\times10^{16}$, $10^{17}$~cm$^{-3}$
 (which used during training data set creation)
 were used to prepare the first subset.
 Thus the first subset is base on 605 pairs of IV characteristics.
-The $N_{\mathrm{Fe}}$ values 
-$1.200\times10^{110}$, $2.234\times10^{11}$, $4.160\times10^{11}$, 
-$7.746\times10^{11}$, $1.442\times10^{12}$, $2.685\times10^{12}$, 
+The $N_{\mathrm{Fe}}$ values
+$1.200\times10^{110}$, $2.234\times10^{11}$, $4.160\times10^{11}$,
+$7.746\times10^{11}$, $1.442\times10^{12}$, $2.685\times10^{12}$,
 $5.000\times10^{12}$~cm$^{-3}$
 (which does not used during training data set creation),
 $T$ values 290, 300, 310, 320, 330, 340~K
 (which used during training data set creation),
 $d_p$ values 210, 240~$\mu$m (which used during training data set creation),
-and $N_\mathrm{B}$ values 
-$3.162\times10^{15}$, $10^{16}$, 
+and $N_\mathrm{B}$ values
+$3.162\times10^{15}$, $10^{16}$,
 $10^{17}$~cm$^{-3}$
 (which used during training data set creation)
 were used to prepare the second subset of Fe-varied test dataset.
@@ -749,6 +751,56 @@ That is, despite the potentially higher accuracy of the DNN$_\mathrm{FeFeB-Fe}$ 
 (shown in the previous section), the practical application of this approach is more complex.
 
 Generally, the results obtained for real SCs confirm the possibility of estimation for iron contamination by ideality factor value.
+
+Finally we would like to suggest some speculations about applicability of the trained DNNs to different SC structures.
+The speculations are based on assumption that the ideality factor distinguishes
+depletion-region recombination from most other source of recombination \cite{Breitenstein2013,n2McIntosh}.
+Certainly, there are some differences from this rule for real structures.
+For instance, our simulation reveals the $n$ dependence on base thickness \cite{OlikhJPS}.
+But this dependence is weak and the ideality factor value is mainly determined
+by depletion-region recombination nevertheless.
+
+First of all, the DNNs applicability related to requirement of 
+predominating of Shockley–Read–Hall recombination.
+In the cases of other mechanism of free carrier concentration decrease the
+models which diverge from two-diode is proposed (e.g., tree-diode \cite{TreeDiode,Shah}).
+Moreover, the base must be doped by boron.
+For example, if SC prepared from Si:Al wafer,
+the simulation model which is used for training model preparing must
+be modified: the parameters of $\mathrm{Fe}_i\mathrm{Al}_s$ pair are needed 
+to take into consideration as well as the changes of defect 
+distribution (Eq.~(\ref{eqNFeB})).
+Finally, if another type of defects (in addition to iron--related deep levels)
+is present in the solar cell, also inducing intensive SRH recombination,
+the simulation model must be more complicated as well.
+The primary competitors of $\mathrm{Fe}_i\mathrm{B}_s$  are  boron-oxygen complexes \cite{LIDRev,LIDRev2}
+and oxide precipitates \cite{MurphySC2014,Oxide:Chen} in Cz-Si; 
+and the corresponding model can be a next step.
+By the way, it is pertinent to note that the indicator of 
+the another defects presence can be a high $n$ value:
+in our simulation $n<1.4$ is observed.
+It is possible that last is most limiting factor of the DNNs applicability;
+in particular, it confined SCs selection for experimental verification of proposed method.
+ 
+Thus the trained DNNs can be applied to BSF solar cell prepared from Si:B wafers.
+It would be noted that the modern manufacturing technique allows to substantially restrict
+oxygen concentration in even Cz-Si.
+On the one hand,  the Al is used to produce the doped $p^+$ region
+at the industrial level \cite{GreenRew2019,WilsonRew2020}.
+The $p^{+}$ layer which doped by boron was under our consideration 
+(the monitoring and reproducibility of the boron diffusion from the gas phase 
+$\mathrm{B}\mathrm{Cl}_3$ enable to improve SC quality)
+On the other hand, the $p^+$--layer influence on depletion-region recombination
+process is rather determined by pulling electric field.
+Therefore the kind of doping atom in $p^+$--layer is not very important for simulation
+and in our opinion the  DNNs is applicable for Al BSF cell as well.
+Besides the recombination in the rear surface region is not dominant
+in $n$ value determination.
+In the wake of aforesaid, the trained DNN can be applied to PERC solar cell in which
+i)~the base is boron-doped;
+ii)~the iron-related deep levels are the main reason of defect-assisted recombination.
+
+
 
 
 \section{Conclusion and Outlook}
