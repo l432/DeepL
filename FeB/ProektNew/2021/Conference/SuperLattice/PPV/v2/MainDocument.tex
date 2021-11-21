@@ -51,22 +51,20 @@
 \maketitle
 
 \begin{abstract}
-Defect-assisted recombination processes frequently
-limit the photovoltaic device performance.
-The low-cost and express methods of impurity contamination control
-are in demand at solar cell manufacturing.
-In this paper, we applied deep learning-based
-approach to extract the iron concentration in silicon solar cells from an
-ideality factor values.
-SCAPS-1D was the software of choice for the simulation of solar cells with the back surface field design
-and for the generation of labeled training and test datasets.
-Our results demonstrated the deep neural network ability
-to predict iron concentration by using ideality factor values, temperature, and base thickness as well as doping level of a solar cell.
-The simulation shows that the prediction error
-is reduced for high doping level, low temperature, and using of two values of ideality factor (for structure with interstitial iron atoms only as well as for structure with
-coexistence of Fe\textsubscript{i} and iron-boron pair).
-The capability of functioning of the proposed method is verified for real silicon structures.
-
+Defect-assisted recombination often restrict the performance of photovoltaic devices
+and in order to mass-produce reliable solar cells low cost express methods are in demand
+which could monitor contamination during the process of manufacture.
+In our work, we applied the deep learning-based approach for estimating iron concentration
+in silicon solar cells by using ideality factor.
+The simulation of solar cells with the back surface field design
+for generating labeled training and test datasets was performed using SCAPS-1D software.
+Our results demonstrate that deep neural networks can predict iron concentration using
+the ideality factor, temperature, base-thickness and doping level of  solar cells.
+Our simulation showed  smaller prediction errors at high doping level,
+low temperature, and the two values of ideality factor
+(first one for structures containing only iron interstitial atoms
+and second for structures where Fe\textsubscript{i} and iron-boron pairs coexist).
+The proposed method was tested on real silicon structures.
 %This is a generic template designed for use by multiple journals, which includes several options for customization. Please consult the author guidelines for the journal to which you are submitting in order to confirm that your manuscript will comply with the journal's requirements. Please replace this text with your abstract.
 
 % Please include a maximum of seven keywords
@@ -78,81 +76,104 @@ The capability of functioning of the proposed method is verified for real silico
 %\doublespacing
 
 \section{Introduction}\label{sec:intro}
-Metal  contamination control remains an important challenge for silicon processing both for microelectronics, logic technologies, and solar cells (SCs) \cite{Claers2018,ZHU2016192,FeB:Schmidt,IronSC}.
-Typically, metal related defect characterization is performed by Fourier-transform infrared spectroscopy,
+Metal contamination control remains an important challenge
+for silicon processing in microelectronics, logic technologies
+and manufacture of solar cells (SCs) \cite{Claers2018,ZHU2016192,FeB:Schmidt,IronSC}.
+Typically, metal related defects are  characterised
+by Fourier-transform infrared spectroscopy,
 electron-paramagnetic resonance,
 minority carrier lifetime measurements,
 deep level transient spectroscopy (DLTS),
-Laplace DLTS etc \cite{Schroder2006,HowMuchPhysics,LaplDLTS}.
-However, these techniques are time-consuming, require special equipment or/and sample preparation.
-At the same time, the current-voltage (IV) measurements are the  standard  rapid industrial SC characterization technique.
+Laplace DLTS, etc \cite{Schroder2006,HowMuchPhysics,LaplDLTS}.
+However, these techniques are time-consuming, require special equipment or/and specially prepared samples.
+At the same time, a rapid standard SC characterization technique
+widely used in industry today is current-voltage (IV) measurements.
 IV characteristics contain important information about electrically active defects \cite{HowMuchPhysics,BulyarJAP}.
-And several methods are proposed for diagnosing defects using the IV characteristic
-\cite{HowMuchPhysics,BulyarJAP,BulyarSSE,Claeys2019,simoen2007}.
-The temperature dependencies of current components \cite{Claeys2019,simoen2007}
-or IV differential parameters \cite{BulyarJAP,BulyarSSE} are under consideration.
-But the numerous and high accuracy IV measurements are required in the first and second cases, respectively.
+Researchers propose several methods based on IV characteristics to diagnose
+the defects \cite{HowMuchPhysics,BulyarJAP,BulyarSSE,Claeys2019,simoen2007}
+and consider temperature dependencies of current components  \cite{Claeys2019,simoen2007}
+or IV differential parameters \cite{BulyarJAP,BulyarSSE}.
+These methods, however, require numerous IV measurements (in the first case)
+or IV measurements of high accuracy (in the second case).
 
-In our previous work \cite{Olikh2019SM}, we have shown that the SC ideality factor value ($n$) can be used to estimate the iron concentration ($N_{\mathrm{Fe}}$).
-It should be noted that the ideality factor is quite often  used to characterize the various
-semiconductor barrier structures \cite{Heide,Duan,n_CharGaN,n_CharSemic,n_CharPhysRevAppl}.
-However, a defect's signature in an ideality factor is convoluted with those from so many other physical processes.
-As a result, obtained analytic expressions $N_{\mathrm{Fe}}=f(n)$ are not general and the numerous grading curves are required to determine $N_{\mathrm{Fe}}$;
-besides the IV measurements over a temperature range are necessary \cite{Olikh2019SM}.
-On the other hand, in the last decade, deep learning, which enables solving problems without clear algorithmization, has been successfully used in various fields of theoretical and applied physics  \cite{MachLean_RevModPhys,MachLeanJAP,MachLeanPPV}.
-Furthermore, materials informatics
-(combination of material property calculations/measurements and informatics algorithms)
-has been asserted \cite{MI_JAP} to become the fourth (along with theory, simulations, and experiments) paradigm of science.
-This work aims to apply the deep learning approach for predicting the iron concentration from the ideality factor value
-(so to say "deep learning for deep levels").
-Further, unlike in previous work \cite{Olikh2019SM}, the back surface field (BSF) $n^+$--$p$--$p^+$ structure was under consideration
-and the influence of the base thickness on ideality factor was taken into account as well.
+In our previous work \cite{Olikh2019SM},
+we show that iron concentration ($N_{\mathrm{Fe}}$) can be estimated
+by using SC ideality factor value ($n$),
+which is used quite often to characterize semiconductor
+barrier structures of different types \cite{Heide,Duan,n_CharGaN,n_CharSemic,n_CharPhysRevAppl}.
+However, the defect signatures are convoluted in the ideality factor
+with the signatures from many other physical processes.
+As a result, the analytically obtained expressions for  $N_{\mathrm{Fe}}=f(n)$
+are not universal and numerous grading curves have to be used to
+determine $N_{\mathrm{Fe}}$;
+moreover,   IV must be measured  over a temperature range \cite{Olikh2019SM}.
 
-As the approximation to the practical using, the paper considers a fairly simple system
+Over the last decade,
+various fields of theoretical and applied physics
+have successfully been solving different problems
+which do not involve rigid algorithmization
+by using deep learning methods  \cite{MachLean_RevModPhys,MachLeanJAP,MachLeanPPV}.
+Moreover, the authors claim \cite{MI_JAP}  that materials informatics (combination of material property
+calculations/measurements and algorithms of informatics)
+has become the fourth (along with theory, simulations and experiments) paradigm of science.
+In our work too we apply deep learning for predicting iron concentration
+from the ideality factor value (so to say "deep learning for deep levels").
+Unlike in \cite{Olikh2019SM}, we applied it
+to the back surface field (BSF) $n^+$--$p$--$p^+$ structure
+and took into account the influence of the base thickness on the ideality factor.
+
+In our work, as an approximation to the practice,
+we consider a rather simple system
 that consists of crystalline silicon (c-Si) SC  and iron impurity.
-However, the system is important in practice.
-Silicon solar cells constitute ~90\% of current global production capacity \cite{SCRev2015} and
-BSF  is one of  the popular designs used for industrial mass production of c-Si SCs as yet \cite{SCRev2020,GreenRew2019}.
+Despite its simplicity, the system is important for practical applications
+since  silicon solar cells constitute ~90\% of current global production capacity \cite{SCRev2015}
+and BSF  is one of  the popular designs used
+for industrial mass production of c-Si SCs as yet \cite{SCRev2020,GreenRew2019}.
 Surely, the passivated emitter and rear cell technology has
-recently come to the fore, but PERC solar cells contain $n^+$--$p$ junction 
+recently come to the fore, but PERC solar cells contain $n^+$--$p$ junction
 and local $n^+$--$p$--$p^{++}$ as well \cite{GreenRew2019,WilsonRew2020}.
-Iron is a major as well as one of the most detrimental metallic impurities in c-Si SCs \cite{ZHU2016192,FeB:Schmidt,IronSC}.
-The flowchart of the used heuristic approach is shown in Fig.~\ref{fig_chem}.
-The following constituents can be marked out.
-First, the dark IV characteristics are simulated for SCs with known contaminant composition and various parameters.
-In our numerical simulation we applied SCAPS-1D \cite{SCAPS1,SCAPS2},
-which widely used to model solar cells \cite{SCAPSuseSi4,SCAPSuseSi1,SCAPSuseSi6,SCAPSuse1,SCAPSuse2020,SCAPSuse2017SM}.
-Second, the obtained IV curves are fitted according to the double-diode model and the ideality factors are estimated.
-As a result of the aforesaid steps, the labeled datasets were produced.
+Iron in these structures is the main and one of the most detrimental metallic impurities \cite{ZHU2016192,FeB:Schmidt,IronSC}.
+The flowchart of the heuristic approach we used is shown in Fig.~\ref{fig_chem}
+where the following steps can be distinguished.
+First, the dark IV characteristics were simulated for SCs with varied parameters
+and known contaminant composition.
+In our numerical simulation,  we applied SCAPS-1D \cite{SCAPS1,SCAPS2}
+widely used to model solar cells \cite{SCAPSuseSi4,SCAPSuseSi1,SCAPSuseSi6,SCAPSuse1,SCAPSuse2020,SCAPSuse2017SM}.
+Second, the obtained IV curves were fitted according to the double-diode model
+and the ideality factors were estimated.
+In the result, the labeled datasets were produced.
 Obviously, the labeled dataset from experimental IVs  would be preferable,
-but it is practically difficult to find the thousands of samples with the required parameters.
-Third, the training of deep neural network (DNN) to estimate iron contamination  by using SC's base thickness, doping level,
-temperature, and ideality factor value.
-Fours, the DNN testing by using synthetic IV curves as well as experimental IV curves.
+but in practice it is almost impossible to find thousands of samples
+with the required parameters.
+Third, the deep neural network (DNN) was trained to estimate iron contamination
+by using SC's base thickness, doping level, temperature and the ideality factor value.
+Fourth, the DNN was tested by using both synthetic and experimental IV curves.
 
 \begin{figure}
 \centering
 \includegraphics[width=0.8\textwidth]{Chem}
-\caption{Schematic of deep learning-based approach  for predicting the iron concentration.
-Additional details are discussed in the body of the article.}
+\caption{Scheme of deep learning-based approach for predicting iron concentration.
+Additional details are discussed in the body of the article.
+}
 \label{fig_chem}
 \end{figure}
 
 
 \section{Simulation Details}
 
-The presented calculation uses $n^+$--$p$--$p^+$ structure:
-the emitter layer $n^+$ with the donor concentration $N_D=10^{19}$~cm$^{-3}$ and
-the thickness 0.5~$\mu$m;
-$p$ and $p^+$ are uniformly doped with boron;
-the base $p$ with the thickness $d_p=150$--$240$~$\mu$m is doped with concentration
-$N_\mathrm{B}=10^{15}$--$10^{17}$~cm$^{-3}$
-and the BSF-layer $p^+$ with the thickness $d_{BSF}$ ($1$~$\mu$m) and the acceptor
-concentration $N_{BSF}$ ($5\times10^{18}$~cm$^{-3}$).
+The $n^+$--$p$--$p^+$ structure used in calculations
+had 0.5~$\mu$m thick emitter layer $n^+$ with donor concentration $N_D=10^{19}$~cm$^{-3}$;
+$p$ and $p^+$ were uniformly doped with boron;
+the base $p$ had the thickness $d_p=150$--$240$~$\mu$m
+and dopant concentration $N_\mathrm{B}=10^{15}$--$10^{17}$~cm$^{-3}$;
+the BSF-layer $p^+$ had the thickness $d_{BSF}$ ($1$~$\mu$m)
+and the acceptor concentration $N_{BSF}=5\times10^{18}$~cm$^{-3}$.
 
 The simulations  were carried out over the temperature range $290-340$~K.
-The SCAPS setting file was created for each temperature using the following material parameters.
-The bandgap $E_G$ and bandgap narrowing $\Delta E_G$ models are, respectively, from P\"{a}ssler \cite{Pasler} and Yan and Cuevas \cite{EgNarrow}:
+For each temperature, the SCAPS setting file was created
+by using the following material parameters.
+The bandgap $E_G$ and bandgap narrowing $\Delta E_G$ models taken from
+P\"{a}ssler \cite{Pasler} and Yan and Cuevas \cite{EgNarrow} respectively:
 \begin{eqnarray}
 \label{eqEg}
 E_G=E_{G0}-\alpha\Theta\left\{\frac{1-3\Delta^2}{e^{\frac{\Theta}{T}}-1}
@@ -167,16 +188,16 @@ $E_{G0}=1.1701$~eV,
 $\alpha=3.23\times10^{-4}$~eV/K,
 $\Theta=446$~K,
 $\Delta=0.51$.
-The carrier thermal velocities are calculated from models by Green \citep{Nc:Green}:
+The carrier thermal velocities were calculated from models by Green \citep{Nc:Green}:
 \begin{equation}
 \label{eqVth}
     \upsilon_{\mathrm{th},n}=\sqrt{\frac{8qkT}{0.28m_0\pi}}\,;\qquad
     \upsilon_{\mathrm{th},p}=\sqrt{\frac{8qkT}{0.41m_0\pi}}\,,
 \end{equation}
 where
-$m_0$ is the free electron mass.
-The effective states density masses in the conduction band $m^*_{dC}$ and
-the valence band $m^*_{dV}$ are calculated according to models from Couderc et al. \citep{Si_ni_Couderc}:
+$m_0$ is a free electron mass.
+The effective state density masses in the conduction band $m^*_{dC}$ and
+valence band $m^*_{dV}$ were calculated according to models from Couderc et al. \citep{Si_ni_Couderc}
 \begin{eqnarray}
   \left(\frac{m^*_{dC}}{m_0}\right)^{1.5} &=& 1.094-1.312\times10^{-5}T+6.753\times10^{-7}T^2+4.609\times10^{-10}T^3\,, \\
   \left(\frac{m^*_{dV}}{m_0}\right)^{1.5} &=& 0.3426+3.376\times10^{-3}T-4.689\times10^{-6}T^2+2.525\times10^{-9}T^3\,.
@@ -193,13 +214,13 @@ The temperature and doping dependencies of Auger recombination coefficients are 
 \end{eqnarray}
 The band-to-band radiation recombination coefficient was taken from Nguyen et al. \cite{Si_BtB}.
 
-The outside surface recombination with electron and hole velocities $10^3$~cm/s was taken into account.
-The flat bands conditions were assumed for metal contacts on on the rear and
+The outside surface recombination with electron and hole velocities $10^3$~cm/s ware taken into account.
+The flat bands' conditions were assumed for metal contacts on the rear and
 front surfaces.
 
-The simulations are carried out under the assumption that the defect–assisted recombination corresponds to the
-iron–related deep levels only.
-As the base and the SBF-layer uniform contaminant, iron is assumed to be in concentration
+
+The simulations were carried out under the assumption that defect–assisted recombination corresponds only to the iron–related deep levels.
+As the base and the SBF-layer are uniform contaminants, iron is assumed to be in concentration
 $N_{\mathrm{Fe}}=10^{10}$--$10^{13}$~cm$^{-3}$.
 It is known that Fe in silicon can be in two states:
 in the form of FeB pair or in the interstitial state Fe$_i$.
@@ -215,11 +236,10 @@ region of SC base.
 However, numerous researches show that temporarily dissociation of pairs can be performed either by heating to the temperature above 200$^\circ$C,
 or by intense illumination at room temperature \cite{FeBAssJAP2014,FeBJAP2005}.
 
-
-The simulations have been performed for the following two cases.
-In the first one, the concentration of total dissolved iron is given by a sum of
-concentrations of the interstitial iron $\mathrm{Fe}_i$
-and the trigonal iron-boron pair $\mathrm{Fe}_i\mathrm{B}_s$:
+The simulations were performed for the following two cases.
+In the first case, the concentration of totally dissolved iron was given by a sum of
+concentrations of the interstitial iron atoms $\mathrm{Fe}_i$
+and  trigonal iron-boron pairs $\mathrm{Fe}_i\mathrm{B}_s$:
 \begin{equation}\label{eqNFeB}
   N_{\mathrm{Fe}}=N_{\mathrm{Fe}_i}+N_{\mathrm{Fe}_i\mathrm{B}_s}\,.
 \end{equation}
@@ -232,12 +252,13 @@ The defect distributions in base and $p^+$-layer are inhomogeneous, and depend o
      \quad N_{\mathrm{Fe}_i}=N_{\mathrm{Fe}}-N_{\mathrm{FeB}}\,,
 \end{equation}
 where
-$E_b=0.582$~eV is the binding energy of the $\mathrm{Fe}_i\mathrm{B}_s$ pairs,
-$E_{\mathrm{Fe}_i}$ is the donor level, associated with $\mathrm{Fe}_i$.
-This case corresponds to the equilibrium condition and in this article will be referred to as ``Fe-FeB''.
+$E_b=0.582$~eV is the binding energy of $\mathrm{Fe}_i\mathrm{B}_s$ pairs,
+$E_{\mathrm{Fe}_i}$ is the donor level associated with $\mathrm{Fe}_i$.
+This case corresponds to the equilibrium condition and in this article it will be referred to as ``Fe-FeB''.
 
-In the second one, the $\mathrm{Fe}_i$ is suggested to be presented only with homogeneous distribution ($N_{\mathrm{Fe}_i}=N_{\mathrm{Fe}}$).
-This case can be realized by heat treatment (210$^\circ$C, 3~min) \cite{FeB_Zong} or intense illumination \cite{FeBLight2} and will be referred as ``Fe'' hereafter.
+In the second case, $\mathrm{Fe}_i$ was assumed to be homogeneously distributed ($N_{\mathrm{Fe}_i}=N_{\mathrm{Fe}}$).
+This condition can be realized by heat treatment (210$^\circ$C, 3~min) \cite{FeB_Zong}
+or intense illumination \cite{FeBLight2} and will be referred to as ``Fe''.
 
 The donor level $E_{\mathrm{Fe}_i} = E_V+0.394$~eV
 with electron $\sigma_{n,{\mathrm{Fe}}}=3.47\times10^{-11}T^{-1.48}$~cm$^2$ and
@@ -263,34 +284,35 @@ According to the two-diode model, the dark SC current is given by \citep{Breiten
 where
 $I_{01}$ and $I_{02}$ are the saturation currents,
 $R_{sh}$ and $R_s$ are the shunt and series resistances.
-The two-diode model is often applied for description of real Si SCs
+The two-diode model is often used for describing real Si SCs
 and the first diode represents the ``ideal'' diode and
-first term in Eq.~(\ref{eqIVd})
+the first term in Eq.~(\ref{eqIVd})
 current is due to recombination in the base
 and the emitter, including their surfaces;
 the second diode is the so-called recombination diode
-and second term is due to recombination within
+and the second term is due to recombination within
 the depletion region \citep{Breitenstein2013}.
-We used Eq.~(\ref{eqIVd}) to fit the simulated data by taking $n$, $I_{01}$, $I_{02}$,
+The simulated data were fitted by Eq.~(\ref{eqIVd})
+with $n$, $I_{01}$, $I_{02}$,
 $R_{sh}$, and $R_s$ as fitting parameters.
-The fitting was performed by using the meta--heuristic method IJAVA \cite{IJAVA}.
+The fitting was performed by meta--heuristic method IJAVA \cite{IJAVA}.
 The typical example of IV curves and fitting results is shown
 in Supplementary Material.
 It should be noted that
 i)~the influence of both $R_s$ (obtained values $<10^{-2}$~$\Omega$) and $R_{sh}$
-(obtained values $>10^{18}$~$\Omega$) can be neglected in simulated IV;
+(obtained values $>10^{18}$~$\Omega$) can be neglected in simulated IVs;
 ii)~the contribution of recombination diode current is essential at low bias only
 and the voltage range $(0-0.45)$~V is quite sufficient for an accurate determination of the ideality factor values.
 
-It is the ideality factor value $n$ which is used in our further calculation.
-The ideality factors, which are obtained in  Fe-case and Fe-FeB-case,
-are referred to as  $n_\mathrm{Fe}$ and $n_\mathrm{Fe-FeB}$ hereafter.
+In our further calculations we used the ideality factors
+obtained in  Fe-case and Fe-FeB-case
+which are referred to as  $n_\mathrm{Fe}$ and $n_\mathrm{Fe-FeB}$ hereafter.
 The typical simulated dependencies of  the ideality factor are shown in Fig.~\ref{fig_nValues}
 and in Supplementary Material.
-The detailed discussion about $n_\mathrm{Fe}$ and $n_\mathrm{Fe-FeB}$  values are presented elsewhere \cite{OlikhJPS},
+The detailed discussion about $n_\mathrm{Fe}$ and $n_\mathrm{Fe-FeB}$ values are presented elsewhere \cite{OlikhJPS},
 however it should be noted that
 (i)~$n$ can take equal values for different  values of SC parameters;
-(ii)~dependencies of $n_\mathrm{Fe}$ and $n_\mathrm{Fe-FeB}$ vary not only in absolute values but although in behavior slightly.
+(ii)~dependencies of $n_\mathrm{Fe}$ and $n_\mathrm{Fe-FeB}$ differ not only in absolute values but also in behavior, although insignificantly.
 
 \begin{figure}[t]
 \centering
@@ -309,15 +331,20 @@ $T=320$~K (c, d).
 
 \section{Deep neural network models}
 
-Training a deep neural network requires a large number of samples.
-In order to build a training dataset, we used IV characteristics, which
-are simulated with using of 4 $d_p$ values, 9 $N_\mathrm{B}$ values, 11 $T$ values and 19 $N_{\mathrm{Fe}}$ values.
-These base thickness, doping level, temperature, and iron concentration values are regularly (for $T$ and $d_p$ in linear scale, for $N_{\mathrm{Fe}}$ and $N_\mathrm{B}$ in logarithmic scale) distributed over the  ranges $150$--$240$~$\mu$m, $10^{15}$--$10^{17}$~cm$^{-3}$, $290-340$~K, and
+Deep neural network training  requires a large number of samples.
+In order to build a training dataset, we used IV characteristics
+simulated by using 4 $d_p$ values, 9 $N_\mathrm{B}$ values, 11 $T$ values, and 19 $N_{\mathrm{Fe}}$ values
+which are regularly distributed
+(for $T$ and $d_p$ in linear scale,
+for  $N_{\mathrm{Fe}}$ and $N_\mathrm{B}$ in logarithmic scale)
+over the  ranges $150$--$240$~$\mu$m, $10^{15}$--$10^{17}$~cm$^{-3}$, $290-340$~K, and
 $10^{10}$--$10^{13}$~cm$^{-3}$, respectively.
-Thus, 7524 IV characteristics are simulated in Fe-case as well as in Fe-FeB-case to build a training dataset.
+Therefore, 7524 IV characteristics were simulated in Fe-case and in Fe-FeB-case.
 
-Besides, several test datasets are prepared.
-For instance, the test dataset, labeled ``Fe-varied'' consist of two subset.
+
+
+In addition, several test datasets were prepared.
+For instance, the test dataset labeled ``Fe-varied'' consist of two subset.
 The $N_{\mathrm{Fe}}$ values
 $1.300\times10^{10}$, $2.471\times10^{10}$, $4.696\times10^{10}$,
 $8.927\times10^{10}$, $1.697\times10^{11}$, $3.225\times10^{11}$,
@@ -349,29 +376,36 @@ were used to prepare the second subset of Fe-varied test dataset.
 Thus Fe-varied test dataset is based on $605+252=857$~pairs of IV characteristics.
 
 The similar approach was used to prepare ``d-varied'' (1189 samples), ``T-varied'' (832 samples), and ``B-varied'' (514 samples) test datasets.
-The base thickness, doping level, temperature, and iron concentration values, which are divergent from training dataset values, are used to prepare ``All-varied'' (684 samples).
+The base thickness, doping level, temperature, and iron concentration values
+which are different from those in training dataset values were used to prepare ``All-varied'' dataset (684 samples).
 
 The precise values of parameters are listed in Supplementary Material.
 
-We have tried to construct the DNN, which can estimate iron contamination by using
-SC parameters ($d_p$ and $N_\mathrm{B}$),  measurement temperature, and the result of IV fitting (ideality factor value).
-As it is shown in Fig.~\ref{fig_chem} two DNNs with different input parameters were under consideration.
-The input sample of the first one consist of $\{d_p,\log N_\mathrm{B},T,n_\mathrm{Fe-FeB}\}$.
+We have tried to construct a DNN that could estimate iron contamination by using
+SC parameters ($d_p$ and $N_\mathrm{B}$), measured temperatures, and the result of IV fitting (ideality factor value).
+As shown in Fig.~\ref{fig_chem}, two DNNs with different input parameters are under consideration.
+The input sample of the first DNN consist of $\{d_p,\log N_\mathrm{B},T,n_\mathrm{Fe-FeB}\}$.
 In practice, this input set can be obtained from one dark IV measurement.
 This neural network is referred to as DNN$_\mathrm{FeFeB}$ hereafter.
-The second one uses  $\{d_p,\log N_\mathrm{B},T,n_\mathrm{Fe-FeB},n_\mathrm{Fe}\}$ in input layer.
-In practice, the obtaining of such a set requires additional SC processing (e.g., intense illumination) and two IV measurements.
-The label  DNN$_\mathrm{FeFeB-Fe}$ is used below.
+The second DNN uses  $\{d_p,\log N_\mathrm{B},T,n_\mathrm{Fe-FeB},n_\mathrm{Fe}\}$ in the input layer.
+In practice, to obtain a set like this additional SC processing (e.g., intense illumination) and two IV measurements are required.
+Further on this neural network is referred to as DNN$_\mathrm{FeFeB-Fe}$.
 
-The dense deep neural network was implemented through the high-level Keras API provided by TensorFlow \cite{Keras}.
-The input layers consist of 4 or 5 nodes --- see Fig.~\ref{fig_chem}.
-1 node and linear activation were used in the output layer.
-The five configurations oh hidden layers were under consideration:
+The dense deep neural network was implemented through a high-level Keras API provided by TensorFlow [].
+The input layers consisted of four or five nodes -- see Fig. 1.
+In the output layer, one node and linear activation were used.
+The five configurations of the hidden layers  were considered:
+
+The dense deep neural network was implemented through a high-level Keras API provided by TensorFlow \cite{Keras}.
+The input layers consist of four or five nodes --- see Fig.~\ref{fig_chem}.
+In the output layer, one node and linear activation were used.
+The five configurations of the hidden layers  were considered:
 (i)~``pipe'': each hidden layer contains equal number of nodes;
 (ii)~``trapezium'': six hidden layers, number of neurons linearly decreases from 100\% (first layer) to 50\% (last layer);
 (iii)~``triangle'': ten layers, number of neurons linearly decreases from 100\% (first layer) to 10\% (last layer);
 (iv)~``butterfly'': two serial reflected trapezium configurations;
 (v)~``fir'': two serial trapezium configurations.
+
 
 The mean squared relative error (MSRE) was chosen as the loss function:
 \begin{equation}
@@ -380,8 +414,8 @@ The mean squared relative error (MSRE) was chosen as the loss function:
 \end{equation}
 where
 $N_s$ is the number of samples in dataset,
-$N_\mathrm{Fe,TRUE,i}$ is the iron concentration, which was used in simulation of $i$--th sample,
-$N_\mathrm{Fe,PRED,i}$ is the DNN prediction for $i$--th sample.
+$N_\mathrm{Fe,TRUE,i}$ is the iron concentration used in the $i$--th sample simulation, and
+$N_\mathrm{Fe,PRED,i}$ is the DNN prediction for the $i$--th sample.
 
 Hyperparameters include the number of nodes for the first hidden layer,
 the number of hidden layers (in pipe configuration),
@@ -394,7 +428,8 @@ the dropout rate,
 the regularization function,
 the regularization rate,
 and the weight initializer.
-A grid search (coarse tuning to limit one hyperparameter) and random search (fine tuning) were performed over the predefined hyperparameter space, shown in Table~\ref{tabHP}, and the best hyperparameter combination is chosen.
+A grid search (coarse tuning to limit one hyperparameter) and random search (fine tuning) were performed over the predefined hyperparameter space,
+shown in Table~\ref{tabHP}, and the best hyperparameter combination was chosen.
 
 
 \begin{table}%[width=\linewidth,cols=2,pos=h]
@@ -421,16 +456,18 @@ weight initializer& Xavier Normal or Uniform, He Normal or Uniform, Random Norma
 \end{tabular}
 \end{table}
 
-10--fold cross--validation was used to estimate DNN training.
-The MSRE, coefficient of determination $R^2$, and coefficient of correlation $R$ were
-three metrics used to evaluate the performance of the DNN models on test datasets.
-Finally, to increase a DNNs performance, the full dataset, which consists of training dataset and all test datasets,  was used for the training models.
+To estimate DNN training, 10--fold cross--validation was used.
+The performance of the DNN models on test datasets was evaluated by using three metrics:
+MSRE, coefficient of determination $R^2$, and coefficient of correlation $R$.
+Finally, to increase a DNNs performance, a full dataset consisting of training dataset and all the test datasets  was used for training of models.
 
 \section{Results and Discussion}
 \subsection{Synthetic IV curves}
 
-The results of the hyperparameter search are listed in Table~\ref{tabChosenHP}.
-In particular, the trapezium and pipe configurations are chosen for DNN$_\mathrm{FeFeB}$ and DNN$_\mathrm{FeFeB-Fe}$ respectively.
+The results of hyperparameter search are listed in Table~\ref{tabChosenHP}.
+In particular,
+for DNN$_\mathrm{FeFeB}$ and DNN$_\mathrm{FeFeB-Fe}$
+the trapezium and pipe configurations are chosen, respectively.
 
 
 \begin{table}%[width=.9\linewidth,cols=3,pos=h]
@@ -451,20 +488,21 @@ weight initializer& Xavier Normal & Xavier Normal\\
 \end{tabular}
 \end{table}
 
+
 The training and test results of DNN$_\mathrm{FeFeB}$ are presented in Table~\ref{table_CV},
 Table~\ref{table_MSRE}, and Fig.~\ref{fig_TrDNN1}.
-As we can see, that MSRE of DNN$_\mathrm{FeFeB}$ prediction is sufficiently large.
-But it should be noted, that the fraction of prediction with a big difference
-between  $N_\mathrm{Fe,TRUE,i}$ and $N_\mathrm{Fe,PRED,i}$ is not numerous in most cases.
-Thus squared relative error (SRE) does not exceed 0.05 for 87\%, 88\%, and 96\% samples from
+As seen, MSRE of DNN$_\mathrm{FeFeB}$ prediction is sufficiently large.
+However, it should be noted that
+in most cases the predictions with big differences between $N_\mathrm{Fe,TRUE,i}$ and $N_\mathrm{Fe,PRED,i}$ are not numerous.
+In particular, squared relative error (SRE) does not exceed 0.05 for 87\%, 88\%, and 96\% samples in
 T-varied, d-varied and Fe-varid datasets respectively --- see bars in Fig.~\ref{fig_TrDNN1}.
-For the B-varied dataset (with doping level value, non--used in the training dataset)
-the biggest $\mathrm{MSRE}=1.06$  connects to the occurrence of some samples with  a really big SRE (>20).
-While  SRE is less than 0.05 in 54\% of samples from the B-varied test dataset.
+In the case of B-varied dataset (with doping level value non--used in the training dataset),
+the biggest $\mathrm{MSRE}=1.06$  is associated with those not often  samples that have a really great SRE (>20)
+while  SRE is less than 0.05 for 54\% samples.
 The worst predictions are quite expectedly to be observed for the All-varied dataset:
-$R^2$ equals 0.813 and SRE is less than 0.05 for 18\% only.
-On the other hand, the Fe-varied dataset is most similar to real demand.
-And determination and correlation coefficients are high enough (0.991 and 0.996) in this case.
+$R^2$ equals 0.813 and SRE$<0.05$ for only 18\% samples.
+On the other hand, the Fe-varied dataset is most similar to real situation and
+the determination and correlation coefficients are high enough (0.991 and 0.996) in this case.
 
 \begin{table}%[width=.9\linewidth,cols=3,pos=h]
 \caption{Results of 10--fold cross--validation}\label{table_CV}
@@ -517,23 +555,27 @@ The black dashed lines are the identify lines servings as the references.}
 \label{fig_TrDNN1}
 \end{figure}
 
-The dependencies on DNN prediction error on SC parameters values are under consideration too ---
+We have also considered the DNN prediction error versus SC parameters  ---
 see Figs.~\ref{fig_Temp}--~\ref{fig_Fe}.
-These figures represent data for the training dataset, the results for test datasets are similar.
-Thus Fig.~\ref{fig_Temp}(a) shows that the considerable increase in prediction error value is observed at $T>320$~K for DNN$_\mathrm{FeFeB}$.
-So the maximum SRE is about 20 and the SRE is less than 0.01 for 55\% of samples at $T=340$~K
-(Fig.~\ref{fig_Temp}(c)).
-Whereas those values are equal to 0.02 and 83\% at $T=290$~K (Fig.~\ref{fig_Temp}(b)).
-It has been shown previously \cite{OlikhJPS}, that temperature rise causes the increase in
-the intrinsic recombination's contribution to an ideality factor.
-As a result, the sign of Shockley-Read-Hall (SRH) recombination in $n$ value become less evident
-and DNN predictive ability falls.
+The figures present data for training dataset; the results for test datasets are similar
+(see Supplementary Material).
+In particular, Fig.~\ref{fig_Temp}(a) shows a considerable increase in prediction error,
+which is observed at $T>320$~K for DNN$_\mathrm{FeFeB}$.
+As seen from Fig.~\ref{fig_Temp}(c), at $T=340$~K the maximum SRE is about 20 and
+SRE below 0.01 is observed for 55\% of the samples
+whereas these values are equal to 0.02 and 83\% at $T=290$~K
+(Fig.~\ref{fig_Temp}(b)).
+It has been shown previously \cite{OlikhJPS} that temperature rise causes the increase in
+the intrinsic recombination contributions to the ideality factor.
+As a result, the signature of Shockley-Read-Hall (SRH) recombination in $n$ value becomes less prominent
+and DNN predictive ability decreases.
 
-As shown in Fig.~\ref{fig_depth}, the SC base thickness does not influence the prediction error
-(mean value as well as relative frequency) practically.
-But one can see in Fig~\ref{fig_nValues}(c,d), that an ideality factor value depend on
-base thickness at constant $N_\mathrm{Fe}$.
-Therefore $d_p$ is a significant parameter for DNN training.
+As shown in Fig.~\ref{fig_depth}, the SC base thickness practically does not influence the prediction error
+(the mean value as well as relative frequency).
+However, as seen from Fig.~\ref{fig_nValues}(c,d),
+the ideality factor depends on base thickness at constant $N_\mathrm{Fe}$.
+Therefore $d_p$ is a significant parameter for DNN training
+
 
 \begin{figure}[tb]
 \centering
@@ -551,22 +593,23 @@ Red: DNN$_\mathrm{FeFeB}$; blue: DNN$_\mathrm{FeFeB-Fe}$.}
 \label{fig_depth}}
 \end{figure}
 
-The predictive error rises sharply with doping level decrees --- see Fig.~\ref{fig_B}(a).
-Thus maximum SRE is about 0.05 for $N_\mathrm{B}=10^{17}$~cm$^{-3}$ (Fig.~\ref{fig_B}(c))
-whereas squared relative error is less than 0.05 for 56\% of samples only
-for $N_\mathrm{B}=10^{15}$~cm$^{-3}$ (Fig.~\ref{fig_B}(b)).
-The hole occupation of the Fe-related level determines the SRH recombination efficiency.
-Accordingly to the Fermi-Dirac statistics, the probability of a hole
-occupation in a non-degenerate $p$-type semiconductor with full acceptor depletion can be expressed as
+The predictive error increases sharply as the doping level decreases --- see Fig.~\ref{fig_B}(a).
+In particular,  the maximum SRE is about 0.05 for $N_\mathrm{B}=10^{17}$~cm$^{-3}$ (Fig.~\ref{fig_B}(c))
+whereas below 0.05 SRE is only for 56\% of samples with $N_\mathrm{B}=10^{15}$~cm$^{-3}$ (Fig.~\ref{fig_B}(b)).
+The occupation of holes in Fe-related level determines SRH recombination efficiency.
+According to the Fermi-Dirac statistics,
+the probability of hole occupation in a non-degenerate $p$-type semiconductor with full acceptor depletion can be expressed as
 \begin{equation}
 \label{eqfp}
  f_p=\frac{1}{1+\frac{N_V}{N_\mathrm{B}}\exp\left(\frac{E_V-E_{\mathrm{Fe}_i}}{kT}\right)}\,.
 \end{equation}
 If $N_\mathrm{B}$ decreases, the level is filled with an electron,
-the SRH recombination ceases, and the ideality factor value sharply reduces  --- Fig.~\ref{fig_nValues}(a,b).
-Besides, a weak influence of impurities on ideality factor under low doping conditions is a reason
-for observed MSRE increase.
-In our opinion, the level filling is an additional reason for an error increase at high temperatures as well.
+the SRH recombination stops
+and the ideality factor value sharply decreases  --- Fig.~\ref{fig_nValues}(a,b).
+Moreover, in case of low doping,   impurities have only a weak influence
+on the ideality factor and therefore the increase of MSRE is observed.
+And finally, we believe that an additional factor causing the error increase
+at high temperatures is the level filling.
 
 
 \begin{figure}[tb]
@@ -586,21 +629,26 @@ Red: DNN$_\mathrm{FeFeB}$; blue: DNN$_\mathrm{FeFeB-Fe}$.}
 \end{figure}
 
 Fig.~\ref{fig_Fe}(a) shows that MSRE increases at both low and high iron concentrations.
-The first $N_\mathrm{Fe}$ area of bad DNN accuracy is entirely  foreseeable,
-the second one is surprising enough.
-But accordingly to Fig~\ref{fig_Fe}(c), the MSRE increasing at $N_\mathrm{Fe}=10^{13}$~cm$^{-3}$ is most likely determined by  a few samples with big SRE value.
-Whereas SRE increasing is more systematic at $N_\mathrm{Fe}=10^{13}$~cm$^{-3}$ --- Fig~\ref{fig_Fe}(b).
+The first $N_\mathrm{Fe}$ area of poor DNN accuracy is entirely predictable,
+the second one seems to be rather surprising.
+But according to Fig~\ref{fig_Fe}(c), the MSRE increase is most likely to be due to the fact
+that only a few samples are predicted with a great SRE
+at $N_\mathrm{Fe}=10^{13}$~cm$^{-3}$
+whereas SRE increases more systematically when $N_\mathrm{Fe}=10^{13}$~cm$^{-3}$ --- Fig~\ref{fig_Fe}(b).
 
-The ideality factor value for the case of interstitial iron only presence ($n_\mathrm{Fe}$)
-gives additional information about defects in comparing with $n_\mathrm{Fe-FeB}$.
+The ideality factor value for the case when only interstitial iron ($n_\mathrm{Fe}$)
+is available gives additional information about the defects in comparison with $n_\mathrm{Fe-FeB}$.
 It is not surprising that DNN$_\mathrm{FeFeB-Fe}$ has better operating parameters in comparing with
 DNN$_\mathrm{FeFeB}$ --- see Table~\ref{table_CV}, Table~\ref{table_MSRE}, Fig.~\ref{fig_TrDNN2}.
-The operation improvement appearances in the MSRE decrease as well as in
-absence of huge difference between $N_\mathrm{Fe,TRUE}$ and $N_\mathrm{Fe,PRED}$ values
-and narrowing of SRE range (Figs.~\ref{fig_Temp}-\ref{fig_TrDNN2}).
-Really, it is shown in Fig.~\ref{fig_TrDNN2} that the maximum SRE does not exceed one even in the case of All-varied datasets
-and SRE is less than 0.02 for 93\%, 92\%, 73\%, and 97\% of samples of T-varied, d-varied, B-varied, and Fe-varied datasets respectively.
-The $R^2$ (0.999) and $R$ (0.999) values for Fe-varied dataset draws attention as well.
+The predictions improve:
+MSRE decreases,
+there is no huge difference between the values of $N_\mathrm{Fe,TRUE}$ and $N_\mathrm{Fe,PRED}$,
+the range of SRE becomes  narrow
+(Figs.~\ref{fig_Temp}-\ref{fig_TrDNN2}).
+As shown in Fig.~\ref{fig_TrDNN2}, the maximum SRE does not exceed one even in the case of All-varied dataset
+and SRE is below 0.02 for 93\%, 92\%, 73\%, and 97\% of the samples in T-varied, d-varied, B-varied, and Fe-varied datasets respectively.
+It should be noted that  for Fe-varied datasets both $R^2$ and  $R$  are 0.999.
+
 
 \begin{figure}[bt]
 \centering
@@ -623,57 +671,65 @@ The black dashed lines are the identify lines servings as the references.}
 \label{fig_TrDNN2}
 \end{figure}
 
-Despite the difference in predicting accuracy,
-DNN$_\mathrm{FeFeB-Fe}$ features are similar to DNN$_\mathrm{FeFeB}$ ones.
-Thus
-the DNN training with $N_\mathrm{B}$ values, which are expected in object of future research,
+Despite the difference in prediction accuracy,
+the  features of DNN$_\mathrm{FeFeB-Fe}$ and DNN$_\mathrm{FeFeB}$ are similar.
+Thus,
+the DNN training with $N_\mathrm{B}$ values, which are expected to be an object of future research,
 is important for prediction accuracy (Fig.~\ref{fig_TrDNN2});
-the increase in the temperature value (Fig.~\ref{fig_Temp}) as well as decrease
+the increase in the temperature (Fig.~\ref{fig_Temp}) as well as decrease
 in doping level (Fig.~\ref{fig_B}) or iron concentration (Fig.~\ref{fig_Fe})
-results in error rise.
-It should be noted that the prediction error gain with $N_\mathrm{Fe}$ increase not observed in DNN$_\mathrm{FeFeB-Fe}$ case and SRE range at $N_\mathrm{Fe}=10^{13}$~cm$^{-3}$ is more narrow then those at $N_\mathrm{Fe}=10^{10}$~cm$^{-3}$ --- see Fig.~\ref{fig_Fe}(b,c).
+results in error increase.
+It should be noted that the prediction error gain with $N_\mathrm{Fe}$ increase is not observed in case of DNN$_\mathrm{FeFeB-Fe}$ and
+the range of SRE at $N_\mathrm{Fe}=10^{13}$~cm$^{-3}$ is narrower then at $N_\mathrm{Fe}=10^{10}$~cm$^{-3}$ --- see Fig.~\ref{fig_Fe}(b,c).
 
-The results of training both DNN$_\mathrm{FeFeB}$ and DNN$_\mathrm{FeFeB-Fe}$ with full dataset
-are presented in Table~\ref{table_CV}, Fig.~\ref{fig_TrDNN1}(f), and Fig.~\ref{fig_TrDNN2}(f).
-One can see that the extension of the labeled dataset does not practically improve the DNN result in our case.
-In our opinion, there is evidence of
-i)~a good DNN configuration tuning;
-ii)~a limited predictive ability of DNN$_\mathrm{FeFeB}$,
-which caused by ambiguity of dependence $n_\mathrm{Fe-FeB}=f(N_\mathrm{Fe})$ .
+
+The results of both DNN$_\mathrm{FeFeB}$ and DNN$_\mathrm{FeFeB-Fe}$
+training with a full dataset are presented in Table~\ref{table_CV}, Fig.~\ref{fig_TrDNN1}(f), and Fig.~\ref{fig_TrDNN2}(f).
+We can see that in our case the extension of the labeled dataset practically does not improve the result of DNN.
+In our opinion, this is evidence of
+i)~good DNN configuration tuning;
+ii)~restricted predictive ability of DNN$_\mathrm{FeFeB}$,
+which is caused by ambiguity of dependence $n_\mathrm{Fe-FeB}=f(N_\mathrm{Fe})$.
+
 
 \subsection{Experimental IV curves}
 
-The ability of DNNs to predict the iron concentration in real silicon SCs was tested as well.
-The $n^+$--$p$--$p^+$--Si samples were used in the experiment.
-The structures were fabricated from $p$--type boron doped Czochralski silicon wafer with [100] orientation and a resistivity of 10~Ohm$\cdot$cm ($N_B = 1.4\cdot10^{15}$~cm$^{-3}$).
-The $n^+$ emitter with a sheet resistance of about $(20\div30)$~$\Omega/\Box$ and a thickness
-of $0.7$ $\mu$m was formed by phosphorus diffusion at 940$^\circ$C.
-The $p^+$ layer ($(10\div20)$~$\Omega/\Box$, $0.6$~$\mu$m)
-was formed by boron diffusion at 985$^\circ$C.
-The base thickness was equal to 350~$\mu$m.
-The samples used in the experiment had the area of $1.52\times1.535$~cm$^2$.
-The concentration of iron in the SC base $N_\mathrm{Fe,MEAS}$ was determined from kinetic of the short circuit current under monochromatic illumination \cite{2021CMLTP}.
-Two samples, referred to as SC320 and SC349 with $N_\mathrm{Fe,MEAS}$  values
-of $(2.0\pm0.4)\cdot10^{12}$~cm$^{-3}$ and $(6.7\pm0.7)\cdot10^{12}$~cm$^{-3}$,
-respectively, were used in the investigation.
 
-One can see that DNN was faced with a rather difficult task,
-in which complexity is associated with a certain mismatch between the parameters of real structures and those used in the simulation.
+The ability of DNNs to predict iron concentration in real silicon SCs was tested as well.
+The samples used in the experiment were $n^+$--$p$--$p^+$--Si structures.
+The structures were fabricated from $p$--type boron doped Czochralski silicon wafer with [100]
+orientation and resistivity of 10~Ohm$\cdot$cm ($N_B = 1.4\cdot10^{15}$~cm$^{-3}$).
+The $n^+$ emitter with sheet resistance of about $(20\div30)$~$\Omega/\Box$ and a thickness
+of $0.7$ $\mu$m was formed by phosphorus diffusion at 940$^\circ$C.
+$p^+$ layer ($(10\div20)$~$\Omega/\Box$, $0.6$~$\mu$m)
+was formed by boron diffusion at 985$^\circ$C.
+The base thickness was 350~$\mu$m.
+The area of the samples was $1.52\times1.535$~cm$^2$.
+The concentration of iron in the SC base $N_\mathrm{Fe,MEAS}$
+was determined from kinetics of the short circuit current under monochromatic illumination \cite{2021CMLTP}.
+Two samples used in the investigation are referred to as SC320 and SC349 with $N_\mathrm{Fe,MEAS}$
+of $(2.0\pm0.4)\cdot10^{12}$~cm$^{-3}$ and $(6.7\pm0.7)\cdot10^{12}$~cm$^{-3}$,
+respectively.
+
+We can see that DNN was faced with a rather difficult task
+when the complexity was associated with a certain mismatch between the parameters of real structures and those used in the simulation.
 However, the need for iron-related defects, which predominantly determine recombination, was the main criterion for sampling in our case.
 
-The dark $I$--$V$ characteristics of these samples were measured at temperatures
-of 300, 320, and 340~K.
-The measurements were taken after 48~h sample storage in the dark at room temperature
+
+The dark IV characteristics of the samples were measured at temperatures
+300, 320, and 340~K.
+The measurements were carried out after 48~h exposition in the dark at room temperature
 (``Fe-FeB'' case)
-as well as immediately after sample intense illumination with a halogen lamp
+as well as immediately after intense illumination of the sample with a halogen lamp
 (``Fe'' case).
-After that, we used Eq.~(\ref{eqIVd}) to fit the experimental data and determine fitting parameters, in particular $n$, $R_s$, $R_sh$.
-The typical results of measurements and approximations are shown in Fig.~\ref{fig_IVexp}
+To fit the experimental data and determine fitting parameters, in particular $n$, $R_s$, $R_{sh}$,
+we used Eq.~(\ref{eqIVd}).
+The typical results of the measurements and approximations are shown in Fig.~\ref{fig_IVexp}
 and Table~\ref{table_Exp}.
-It should be noted that for real $I$--$V$ curves, in contrast to synthetic ones,
+It should be noted that for real IV curves, in contrast to synthetic ones,
 the influence of series and shunt resistances cannot be neglected
-(the $R_s$ values are about 3 and 6~Ohm for samples SC320 and SC349, respectively,
-the Rsh values are listed in Table~\ref{table_Exp}).
+(the magnitude of $R_s$ is about 3 and 6~Ohm for samples SC320 and SC349, respectively,
+all the values of $R_{sh}$ are listed in Table~\ref{table_Exp}).
 
 \begin{figure}[t]
 \centering
@@ -710,132 +766,137 @@ SC349&$6.7\pm0.7$&300&1.223&$2.9\cdot10^6$&1.222&$2.6\cdot10^6$&8.9&5.6&15&11\\
 \end{tabular}
 \end{table}
 
-The values of the ideality factor, determined from the experimental curves,
+The ideality factors determined from the experimental curves
 and the sample parameters were used as input data for
 DNN$_\mathrm{FeFeB}$ and DNN$_\mathrm{FeFeB-Fe}$,
-which were trained on the training dataset or the full dataset.
+which were trained  either on training dataset or full dataset.
 The predictions are listed in Table~\ref{table_Exp}.
 
-First of all, considering the not extreme high complexity of the simulation model,
-we note that the results even exceed expectations.
-Particularly for DNN$_\mathrm{FeFeB}$,
-where the predicted iron concentrations differ by only several times from the measured ones.
-And in the case of sample SC320 and DNN$_\mathrm{FeFeB}$,
-trained on the full dataset, the error does not exceed 40\%.
+First of all, it should be noted that
+even though we did not use a simulation model of extremely high complexity,
+the results exceeded our expectations.
+In particular, the predicted iron concentrations in DNN$_\mathrm{FeFeB}$
+differed only several times from the measured ones.
+In the case of sample SC320 and DNN$_\mathrm{FeFeB}$ trained on the full dataset,
+the error did not exceed 40\%.
 
 Also, it should be noted that the results confirm
-the trends identified during analyzing synthetic $I$-$V$ curves.
-Namely, the prediction accuracy decreases for $T>320$~K
-and iron concentrations, which are close to the upper limit of the
-considered range ($10^{13}$~cm$^{-3}$).
-These facts fully coincide with the data in Fig.~\ref{fig_Temp}a and Fig.~\ref{fig_Fe}a, respectively.
-In addition, the sample's base doping level ($N_B=1.4\cdot10^{15}$~cm$^{-3}$) is not used in the training dataset but can be found in the d--varied dataset (see Supplementary Material).
-Table~\ref{table_Exp} shows that the prediction of DNN$_\mathrm{FeFeB}$,
-trained by full dataset, is better than in the case of learning by training dataset only, especially for the SC320.
-This feature confirms the conclusion from the previous section about the importance of DNN training with $N_B$ values, which are expected in the object of future research.
+the trends revealed  by the analysis of synthetic IV curves.
+In particular, the prediction accuracy decreases at $T>320$~K
+and iron concentrations close to the upper limit in the range ($10^{13}$~cm$^{-3}$).
+These facts completely coincide with the data in Fig.~\ref{fig_Temp}a and Fig.~\ref{fig_Fe}a, respectively.
+In addition, the sample's base doping level ($N_B=1.4\cdot10^{15}$~cm$^{-3}$) is not used in the training dataset
+but can be found in the d--varied dataset (see Supplementary Material).
+Table~\ref{table_Exp} shows that the prediction of DNN$_\mathrm{FeFeB}$
+trained by a full dataset is better than in the case of learning only by a training dataset, especially for SC320 sample.
+This fact confirms the conclusion made in the previous section about the importance of DNN training with $N_B$ values,
+which are expected to be the object of future research.
 
-On the other hand, contrary to expectations, the DNN$_\mathrm{FeFeB-Fe}$ demonstrate worse performance than DNN$_\mathrm{FeFeB}$ in the case majority.
+
+
+
+On the other hand, contrary to our expectations, DNN$_\mathrm{FeFeB-Fe}$ demonstrates worse performance
+than DNN$_\mathrm{FeFeB}$ in the majority case.
+The likely reasons are the following.
 There can be several reasons.
-Firstly, the use of two ideality factor values enhances the influence of simulation simplifications (e.g., the effect of unaccounted processes that cause the appearance of both shunt and series resistance).
-Secondly, the correct $n_\mathrm{Fe}$ determination is a more complicated experimental task than $n_\mathrm{Fe-FeB}$ identifying.
-For example, it took about 100~s to obtain the $I$--$V$ characteristics
-after intense illumination in our case.
-This interval consisted of time to set the temperature after
-illumination-induced heating
-as well as time to measurement.
+First, the use of two ideality factor values makes the influence of simulation simplifications more significant
+(e.g., the effect of unaccounted processes that cause both shunt and series resistance).
+Secondly, to obtain a correct $n_\mathrm{Fe}$ is a more complicated experimental task than to determine $n_\mathrm{Fe-FeB}$.
+For example, in our experiment it took about 100~s to obtain IV characteristics after intense illumination.
+This interval included the time required to set the temperature after illumination-induced heating and the time of measurement.
 According to \cite{FeBAssJAP2014,FeBKin2019}, the characteristic association time of FeB pairs
 at $T=340$~K and $N_B=1.4\cdot10^{15}$~cm$^{-3}$ is about 600~s.
-Therefore, it cannot be expected that such a value of the ideality factor
-corresponds to the complete dissociation of FeB pairs.
 That is, despite the potentially higher accuracy of the DNN$_\mathrm{FeFeB-Fe}$ predictions
-(shown in the previous section), the practical application of this approach is more complex.
+(shown in the previous section), the practical application of this approach is more complicated.
 
-Generally, the results obtained for real SCs confirm the possibility of estimation for iron contamination by ideality factor value.
+On the whole, the results obtained for real SCs confirm the possibility to estimate iron contamination using ideality factor value.
 
-Finally we would like to suggest some speculations about applicability of the trained DNNs to different SC structures.
+Finally, we would like to suggest some speculations about the applicability of the trained DNNs to different SC structures.
 The speculations are based on assumption that the ideality factor distinguishes
-depletion-region recombination from most other source of recombination \cite{Breitenstein2013,n2McIntosh}.
+depletion-region recombination from most other sources of recombination \cite{Breitenstein2013,n2McIntosh}.
 Certainly, there are some differences from this rule for real structures.
 For instance, our simulation reveals the $n$ dependence on base thickness \cite{OlikhJPS}.
-But this dependence is weak and the ideality factor value is mainly determined
+But this dependence is weak, and the ideality factor value is mainly determined
 by depletion-region recombination nevertheless.
 
-First of all, the DNNs applicability related to requirement of 
+First of all, the DNNs applicability is related to the requirement of
 predominating of Shockley–Read–Hall recombination.
-In the cases of other mechanism of free carrier concentration decrease the
+In the cases of another mechanism of free carrier concentration decrease the
 models which diverge from two-diode is proposed (e.g., tree-diode \cite{TreeDiode,Shah}).
 Moreover, the base must be doped by boron.
-For example, if SC prepared from Si:Al wafer,
-the simulation model which is used for training model preparing must
-be modified: the parameters of $\mathrm{Fe}_i\mathrm{Al}_s$ pair are needed 
-to take into consideration as well as the changes of defect 
+For example, if SC is prepared from Si:Al wafer,
+the simulation model which is used for training dataset preparation  must
+be modified: the parameters of $\mathrm{Fe}_i\mathrm{Al}_s$ pair are needed
+to take into consideration as well as the changes of defect
 distribution (Eq.~(\ref{eqNFeB})).
-Finally, if another type of defects (in addition to iron--related deep levels)
+Finally, if another type of defect (in addition to iron--related deep levels)
 is present in the solar cell, also inducing intensive SRH recombination,
 the simulation model must be more complicated as well.
 The primary competitors of $\mathrm{Fe}_i\mathrm{B}_s$  are  boron-oxygen complexes \cite{LIDRev,LIDRev2}
-and oxide precipitates \cite{MurphySC2014,Oxide:Chen} in Cz-Si; 
+and oxide precipitates \cite{MurphySC2014,Oxide:Chen} in Cz-Si;
 and the corresponding model can be a next step.
-By the way, it is pertinent to note that the indicator of 
-the another defects presence can be a high $n$ value:
+By the way, it is pertinent to note that the indicator of
+the presence of another defect can be a high $n$ value:
 in our simulation $n<1.4$ is observed.
-It is possible that last is most limiting factor of the DNNs applicability;
-in particular, it confined SCs selection for experimental verification of proposed method.
- 
-Thus the trained DNNs can be applied to BSF solar cell prepared from Si:B wafers.
-It would be noted that the modern manufacturing technique allows to substantially restrict
+Last may be the most limiting factor of the DNNs applicability;
+in particular, it confined SCs selection for experimental verification of the proposed method.
+
+Thus the trained DNNs can be applied to BSF solar cells prepared from Si:B wafers.
+It would be noted that the modern  technique of crystal growth allows to substantially restrict
 oxygen concentration in even Cz-Si.
 On the one hand,  the Al is used to produce the doped $p^+$ region
 at the industrial level \cite{GreenRew2019,WilsonRew2020}.
-The $p^{+}$ layer which doped by boron was under our consideration 
-(the monitoring and reproducibility of the boron diffusion from the gas phase 
-$\mathrm{B}\mathrm{Cl}_3$ enable to improve SC quality)
-On the other hand, the $p^+$--layer influence on depletion-region recombination
-process is rather determined by pulling electric field.
-Therefore the kind of doping atom in $p^+$--layer is not very important for simulation
-and in our opinion the  DNNs is applicable for Al BSF cell as well.
-Besides the recombination in the rear surface region is not dominant
+But a boron BSF is one of the promising techniques
+for achieving high quality back contact \cite{Kim2007,B-BSF}
+and the $p^{+}$ layer, which is doped by boron, was under our consideration.
+%The $p^{+}$ layer which doped by boron was under our consideration
+%(the monitoring and reproducibility of the boron diffusion from the gas phase
+%$\mathrm{B}\mathrm{Cl}_3$ enable to improve SC quality)
+On the other hand, the $p^+$--layer influence on the depletion-region recombination
+process is rather determined by the electric field.
+Therefore the kind of doping atom in $p^+$--layer is not very important for simulation,
+and in our opinion, the  DNNs is applicable for Al BSF cell as well.
+Besides, the recombination in the rear surface region is not dominant
 in $n$ value determination.
 In the wake of aforesaid, the trained DNN can be applied to PERC solar cell in which
 i)~the base is boron-doped;
-ii)~the iron-related deep levels are the main reason of defect-assisted recombination.
+ii)~the iron-related deep levels are the main reason for defect-assisted recombination.
 
 
 
 
 \section{Conclusion and Outlook}
-In this paper,
-we extracted the iron concentration in silicon BSF solar cells from an
-ideality factor value and systematically studied the performance
-of deep learning in this problem.
-This work  is the first attempt at using deep learning for deep levels parameter retrieval from the current--voltage curve.
-In this model study, we used simulation to obtain training and test labeled datasets.
-Besides, a DNN was trial-tested by using the parameters of actual solar cells.
-Our results showed the ability of the deep neural network
-to predict iron concentration by using ideality factor values,
-SC base thickness and doping level, and temperature.
-MSRE was up to 0.005 for synthetic datasets.
-The simulation has shown the prospects for the use of two ideality factor values  (for structure with $\mathrm{Fe}_i$ only as well as with $\mathrm{Fe}_i\mathrm{B}_s$ and $\mathrm{Fe}_i$ coexistence)
-for upgrading  a prediction accuracy.
-At the same time, the practical application of such an approach manifested difficulties in obtaining correct data.
-It was important to train DNN with a boron concentration value,
-which agreed with the doping level of investigated structures.
-Moreover, the increase in iron concentration or boron concentration, as well as temperature decrease,
-results in a prediction error reduction.
 
-The proposed approach envisages
-the utilization of a simple and widely applicable setup and
-does not require much time.
-Therefore it could be integrated into a manufacturing environment.
-However, it should be noted that we have simplified the task for our purposes.
-In our opinion, there are two ways of further improve the method.
-The first one connects with the refining of labeled datasets and can be realized by
-using 3D-simulators (e.g., SILVACO TCAD) or real IV measurements in a broad set of SCs.
-The improvement of DNN operation is the second one;
-and the fine-tuning is like most promising in this case.
+In this paper,
+we determined iron concentration in silicon BSF solar cells from
+the ideality factor value and systematically studied the performance
+of deep learning in solving this problem.
+It was  the first attempt to use deep learning for retrieval of deep level parameters from the current--voltage curve.
+In the model study,
+we performed simulation in order to obtain training labeled dataset and test labeled datasets.
+In the end, DNN was trial-tested by using the parameters of actual solar cells.
+Our results showed the DNN ability
+to predict iron concentration by using ideality factor values,
+the thickness and doping level of SC base as well as temperature.
+For synthetic datasets the MSRE was as small as 0.005.
+Our simulation shows the prospects for applying the ideality factor of two values (for structure with $\mathrm{Fe}_i$ only as well as with $\mathrm{Fe}_i\mathrm{B}_s$ and
+$\mathrm{Fe}_i$ coexistence)
+in order to upgrade prediction accuracy.
+At the same time, the practical application of this approach demonstrated difficulties in obtaining correct data.
+It was important to train the DNN with boron concentration values,
+which agreed with the doping level of the structures under study.
+Moreover, the increase in iron or boron concentration, as well as temperature decrease,
+resulted in smaller prediction errors.
+
+The proposed approach uses a simple and widely applied setup and does not take much time.
+Therefore, it could be easily integrated into the manufacturing environment.
+It should be noted, however, that for our purposes the task was  simplified.
+Nevertheless, we believe that this DNN approach can be further improved in two ways.
+The first is to refine labeled datasets by using 3D-simulators (e.g., SILVACO TCAD) or real IV measurements in a broad set of SCs.
+The second is to improve DNN operation, and fine-tuning seems to be most promising in this case.
 For example,
-not numerous input parameters can be multiplied and transformed to the picture and
-apply a vision model (e.g., VGG16).
+innumerous input parameters can be multiplied and transformed into a picture
+so that the vision model (e.g., VGG16) could be applied.
 
 
 

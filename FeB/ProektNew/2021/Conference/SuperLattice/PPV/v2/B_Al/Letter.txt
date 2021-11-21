@@ -1,0 +1,22 @@
+Це посилання на відбиток, де не вказано джерела:
+DS Kim, A Das, K Nakayashiki, B Rounsaville, V Meemongkolkat, A Rohatgi, Silicon solar cells with boron back surface field formed by using boric acid, Proc. 22nd Eur. PV Solar Energy Conf. Exhib, pp. 1730-1733.
+https://scholar.google.com/citations?view_op=view_citation&hl=uk&user=bWcsRMYAAAAJ&cstart=200&pagesize=100&citation_for_view=bWcsRMYAAAAJ:mgoTDWlsYNUC
+
+В принципі, на них посилатися можн на всі. Мені здається, що робота
+
+у SolMat найбільше показує перевагу бора над алюмінієм.
+
+Наша 1 -а робота:
+Горбань  А.П. Костылев В.П.,Черненко В.В. Литовченко В.Г и др.
+Высокоэффективные диффузионно-полевые кремниевые солнечные элементы с термически окисленной поверхностью.
+Тезисы докл. 6-ой Республиканской конференции “Физические проблемы МДП-интегральной электроники”.- Севастополь, 1990 г.
+У цих роботах досліджувалися дифузійно-польові СЕ :
+Compositional modulated DLC films for improvement of solar cells efficiency and radiation stability / V.A. Semenovich, N. I. Klyui, V.P.Kostylyov, V.G. Litovchenko, V.V. Chernenko // Jorn. of Chemical Vapor Deposition.- 1997.-V.5, N3.-P.213-219.
+Разработка физико-технических основ создания высокоэффективных кремниевых фотопреобразователей и солнечных батарей космического и наземного применения / Горбань А. П., Костылев В. П., Саченко А. В.  Серба А. А., Черненко В.В. // Авиационно-космическая техника и технология.- 1999.-  Вып. 8.- С. 83-87.
+
+Silicon solar cells with antireflecting and protective coatings based on diamond-like carbon and silicon carbide films / N.I. Klyui, V.P. Kostylyov, A.G. Rozhin, V.I. Gorbulik, V.G. Litovchenko, M.A. Voronkin, N.I. Zaika // Opto-Electr. Rev. –2000.-V.8, No. 4.- P.127-130.
+State and prospects of a development of silicon photoconverters and batteries for the space use / A.P. Gorban', V.P. Kostylev, V.N. Borschev, A.M. Listratenko // Telecommunications and Radio Engineering.-2001.- V. 55, No 9 .- P. 94-100.
+
+
+
+Proc. of 22nd European Photovoltaic Solar Energy Conference and Exhibition

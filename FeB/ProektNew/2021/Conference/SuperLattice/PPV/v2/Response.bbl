@@ -1,4 +1,4 @@
-\begin{thebibliography}{16}
+\begin{thebibliography}{18}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\urlprefix}{}
@@ -118,5 +118,20 @@ Chen L, Yu X, Chen P, Wang P, Gu X, Lu J, et~al.
 Wilson GM, Al-Jassim M, Metzger WK, Glunz SW, Verlinden P, Xiong G, et~al.
 \newblock The 2020 photovoltaic technologies roadmap.
 \newblock J Phys D: Appl Phys 2020 Sep;53(49):493001.
+
+\bibitem[{Kim et~al.(2007)Kim, Dong Seop and Nakayashiki, Kenta and
+  Rounsaville, B. and Meemongkolkat, V. and Rohatgi, Ashish}]{Kim2007}
+Kim DS, Nakayashiki K, Rounsaville B, Meemongkolkat V, Rohatgi A.
+\newblock Silicon solar cells with boron back surface field formed by using
+  boric acid.
+\newblock In: 22th European Photovoltaic Solar Energy Conference: Proceedings
+  of the International Conference and Exhibition; 2007. p. 1730--1733.
+
+\bibitem[{Du et~al.(2012)Du, Guoping and Chen, Bin and Chen, Nan and Hu,
+  Ruiyi}]{B-BSF}
+Du G, Chen B, Chen N, Hu R.
+\newblock Efficient Boron Doping in the Back Surface Field of Crystalline
+  Silicon Solar Cells via Alloyed-Aluminum–Boron Paste.
+\newblock IEEE Electron Device Letters 2012;33(4):573--575.
 
 \end{thebibliography}
