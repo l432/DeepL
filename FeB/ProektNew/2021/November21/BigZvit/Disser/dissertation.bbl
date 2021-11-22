@@ -606,4 +606,103 @@ Iron-impurities-activated kinetics of the light-induced processes in silicon
 \newblock Mauritius: 2021. ---
 \newblock Pp.~27--31.
 
+\bibitem{GreenRew2019}
+\selectlanguageifdefined{english}
+\BibEmph{Green,~Martin~A}. Photovoltaic technology and visions for the future~/
+  Martin~A~Green~// \BibEmph{Prog. Energy}. ---
+\newblock 2019. --- Jul. ---
+\newblock Vol.~1, no.~1. ---
+\newblock P.~013001.
+
+\bibitem{WilsonRew2020}
+\selectlanguageifdefined{english}
+The 2020 photovoltaic technologies roadmap~/ Gregory~M~Wilson,
+  Mowafak~Al-Jassim, Wyatt~K~Metzger et~al.~// \BibEmph{J. Phys. D: Appl.
+  Phys.} ---
+\newblock 2020. --- Sep. ---
+\newblock Vol.~53, no.~49. ---
+\newblock P.~493001.
+
+\bibitem{n2McIntosh}
+\selectlanguageifdefined{eng}
+\BibEmph{McIntosh,~Keith}. Depletion--region recombination in silicon solar
+  cells. When does $mDR = 2$?~/ Keith~McIntosh, Peter~Altermatt,
+  Gernot~Heiser~// 16th European Photovoltaic Solar Energy Conference:
+  Proceedings of the International Conference and Exhibition. ---
+\newblock Publisher:James and James (Science Publishers) Ltd, 2000. ---
+\newblock Pp.~250--253.
+
+\bibitem{TreeDiode}
+\selectlanguageifdefined{english}
+Method of Extracting Solar Cell Parameters From Derivatives of Dark I–V
+  Curves~/ Brett~J.~Hallam, Phill~G.~Hamer, Ruy~S.~Bonilla et~al.~//
+  \BibEmph{IEEE Journal of Photovoltaics}. ---
+\newblock 2017. --- Sep. ---
+\newblock Vol.~7, no.~5. ---
+\newblock Pp.~1304--1312.
+
+\bibitem{Shah}
+\selectlanguageifdefined{english}
+Experimental analysis and theoretical model for anomalously high ideality
+  factors ($n\gg2.0$) in {A}l{G}a{N}/{G}a{N} p--n junction diodes~/
+  Jay~M.~Shah, Y.-L.~Li, Th.~Gessmann, E.~F.~Schubert~// \BibEmph{J. Appl.
+  Phys.} ---
+\newblock 2003. --- Aug. ---
+\newblock Vol.~94, no.~4. ---
+\newblock Pp.~2627--2630.
+
+\bibitem{LIDRev}
+\selectlanguageifdefined{english}
+\BibEmph{Lindroos,~Jeanette}. Review of light-induced degradation in
+  crystalline silicon solar cells~/ Jeanette~Lindroos, Hele~Savin~//
+  \BibEmph{Sol. Energy Mater. Sol. Cells}. ---
+\newblock 2016. --- Apr. ---
+\newblock Vol. 147. ---
+\newblock Pp.~115--126.
+
+\bibitem{LIDRev2}
+\selectlanguageifdefined{english}
+Degradation of Crystalline Silicon Due to Boron--Oxygen Defects~/ Tim~Niewelt,
+  Jonas~Sch\"{o}on, Wilhelm~Warta et~al.~// \BibEmph{IEEE Journal of
+  Photovoltaics}. ---
+\newblock 2017. --- Jan. ---
+\newblock Vol.~7, no.~1. ---
+\newblock Pp.~383 --398.
+
+\bibitem{MurphySC2014}
+\selectlanguageifdefined{english}
+Minority carrier lifetime in silicon photovoltaics: The effect of oxygen
+  precipitation~/ J.D.~Murphy, J.D.~McGuire, K.~Bothe et~al.~// \BibEmph{Sol.
+  Energy Mater. Sol. Cells}. ---
+\newblock 2014. --- Jan. ---
+\newblock Vol. 120. ---
+\newblock Pp.~402--411.
+
+\bibitem{Oxide:Chen}
+\selectlanguageifdefined{english}
+Effect of oxygen precipitation on the performance of {C}zochralski silicon
+  solar cells~/ Lin~Chen, Xuegong~Yu, Peng~Chen et~al.~// \BibEmph{Sol. Energy
+  Mater. Sol. Cells}. ---
+\newblock 2011. --- Nov. ---
+\newblock Vol.~95, no.~11. ---
+\newblock Pp.~3148--3151.
+
+\bibitem{Kim2007}
+\selectlanguageifdefined{eng}
+Silicon solar cells with boron back surface field formed by using boric acid~/
+  Dong~Seop~Kim, Kenta~Nakayashiki, B.~Rounsaville at al.~// 22th European
+  Photovoltaic Solar Energy Conference: Proceedings of the International
+  Conference and Exhibition. ---
+\newblock 2007. --- 09. ---
+\newblock Pp.~1730--1733.
+
+\bibitem{B-BSF}
+\selectlanguageifdefined{english}
+Efficient Boron Doping in the Back Surface Field of Crystalline Silicon Solar
+  Cells via Alloyed-Aluminum–Boron Paste~/ Guoping~Du, Bin~Chen, Nan~Chen,
+  Ruiyi~Hu~// \BibEmph{IEEE Electron Device Letters}. ---
+\newblock 2012. ---
+\newblock Vol.~33, no.~4. ---
+\newblock Pp.~573--575.
+
 \end{thebibliography}
