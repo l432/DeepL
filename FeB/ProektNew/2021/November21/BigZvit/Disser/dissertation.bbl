@@ -705,4 +705,50 @@ Efficient Boron Doping in the Back Surface Field of Crystalline Silicon Solar
 \newblock Vol.~33, no.~4. ---
 \newblock Pp.~573--575.
 
+\bibitem{McDonalGetter}
+\selectlanguageifdefined{english}
+\BibEmph{Macdonald,~D.} Effect of gettered iron on recombination in diffused
+  regions of crystalline silicon wafers~/ D.~Macdonald, H.~Mäckel,
+  A.~Cuevas~// \BibEmph{Appl. Phys. Lett.} ---
+\newblock 2006. --- Feb. ---
+\newblock Vol.~88, no.~9. ---
+\newblock P.~092105.
+
+\bibitem{TALVITIE2009}
+\selectlanguageifdefined{english}
+Effect of internal gettering of iron on electrical characteristics of devices~/
+  H.~Talvitie, A.~Haarahiltunen, H.~Savin et~al.~// \BibEmph{Materials Science
+  and Engineering: B}. ---
+\newblock 2009. --- Mar. ---
+\newblock Vol. 159-160. ---
+\newblock Pp.~269--273.
+
+\bibitem{LU2017}
+\selectlanguageifdefined{english}
+The influences of the properties of impurities and defects on the dark {I-V}
+  characteristic curve and output parameters of c-{S}i solar cells~/
+  Xiaodong~Lu, Yang~Song, Jie~Gao et~al.~// \BibEmph{Phys. B: Condens. Matter}.
+  ---
+\newblock 2017. --- Sep. ---
+\newblock Vol. 520. ---
+\newblock Pp.~28--36.
+
+\bibitem{Peaker2012}
+\selectlanguageifdefined{english}
+Recombination via point defects and their complexes in solar silicon~/
+  A.~R.~Peaker, V.~P.~Markevich, B.~Hamilton et~al.~// \BibEmph{Phys Status
+  Solidi A}. ---
+\newblock 2012. --- Oct. ---
+\newblock Vol. 209, no.~10. ---
+\newblock Pp.~1884--1893.
+
+\bibitem{FeSchotky}
+\selectlanguageifdefined{english}
+\BibEmph{Bodunrin,~J.O.} Current-voltage characteristics of iron-implanted
+  silicon based {S}chottky diodes~/ J.O.~Bodunrin, D.A.~Oeba, S.J.~Moloi~//
+  \BibEmph{Mater. Sci. Semicond. Process.} ---
+\newblock 2021. --- Mar. ---
+\newblock Vol. 123. ---
+\newblock P.~105524.
+
 \end{thebibliography}
