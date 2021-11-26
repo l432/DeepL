@@ -600,11 +600,28 @@ Acoustically Induced Acceleration of Iron Migration in Silicon Solar Cells~/
 \bibitem{FBNXII2021}
 \selectlanguageifdefined{english}
 Iron-impurities-activated kinetics of the light-induced processes in silicon
-  solar cells~/ V.~Vlasiuk, R.~Korkishko, V.~Kostylyov, O.~Olikh~//
-  International Conference on Electrical, Computer, Communications and
+  solar cells~/ V.~Vlasiuk, R.~Korkishko, V.~Kostylyov, O.~Olikh~// XII
+  International Scientific Conference Functional Basis of Nanoelectronics. ---
+\newblock Kharkiv – Odesa: 2021. ---
+\newblock Pp.~27--31.
+
+\bibitem{ICECCME21}
+\selectlanguageifdefined{english}
+Kinetics of Light-Induced Processes Due to Iron Impurities in Silicon Solar
+  Cells~/ Viktor~Vlasiuk, Roman~Korkishko, Vitaliy~Kostylyov, Oleg~Olikh~//
+  2021 International Conference on Electrical, Computer, Communications and
   Mechatronics Engineering (ICECCME). ---
 \newblock Mauritius: 2021. ---
-\newblock Pp.~27--31.
+\newblock Pp.~1--6.
+
+\bibitem{38EPSE}
+\selectlanguageifdefined{english}
+Development and implementation of a refined model for comprehensive
+  characterization and optimization of highly efficient silicon solar cells~/
+  A.V.~Sachenko, V.P.~Kostylyov, V.M.~Vlasiuk et~al.~// Proceedings 38 European
+  Photovoltaic Solar Energy Conf. and Exhib. ---
+\newblock 2021. ---
+\newblock Pp.~261--264.
 
 \bibitem{GreenRew2019}
 \selectlanguageifdefined{english}
