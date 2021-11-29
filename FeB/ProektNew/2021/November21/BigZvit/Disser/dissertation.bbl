@@ -768,4 +768,31 @@ Recombination via point defects and their complexes in solar silicon~/
 \newblock Vol. 123. ---
 \newblock P.~105524.
 
+\bibitem{JIOMICS}
+\selectlanguageifdefined{english}
+Acoustically Induced Acceleration of Iron Migration in Silicon Solar Cells~/
+  O.~Olikh, V.~Kostylyov, V.~Vlasiuk, Korkishko~R.~// \BibEmph{Journal of
+  integrated OMICS}. ---
+\newblock 2021. ---
+\newblock Vol.~11, no.~1. ---
+\newblock Pp.~1--2.
+
+\bibitem{Fond1}
+\selectlanguageifdefined{english}
+Features of {FeB} pair light-induced dissociation and repair in silicon n+-p-p+
+  structures under ultrasound loading~/ O.~Olikh, V.~Kostylyov, V.~Vlasiuk
+  et~al.~// \BibEmph{J. Appl. Phys.}
+
+\bibitem{Fond2}
+\selectlanguageifdefined{english}
+\BibEmph{Olikh,~A.} Estimation for iron contamination in Si solar cell by
+  ideality factor: deep neural network approach~/ A.~Olikh, O.~Lozitsky,
+  O.~Zavhorodnii~// \BibEmph{Prog. Photovoltaics Res. Appl.}
+
+\bibitem{Fond3}
+\selectlanguageifdefined{english}
+Intensification of iron-boron complex association in silicon solar cells under
+  acoustic wave action~/ O.~Olikh, V.~Kostylyov, V.~Vlasiuk et~al.~//
+  \BibEmph{Appl. Phys. A}.
+
 \end{thebibliography}
