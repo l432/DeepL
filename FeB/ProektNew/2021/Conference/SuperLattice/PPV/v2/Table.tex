@@ -1,0 +1,157 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[num-refs]{wiley-article} % Courtesy Overleaf
+
+% Add additional packages here if required
+\usepackage[numbers]{natbib}
+\usepackage{natmove}
+\usepackage{setspace}
+
+%\changefontsizes{10pt}
+\raggedbottom
+
+
+% Update article type if known
+\papertype{Original Article}
+\paperfield{}
+
+%\abbrevs{%
+%         ABC, a black cat;
+%	     DEF, doesn't ever fret;
+%	     GHI, goes home immediately.
+%     }
+
+\title{Estimation for iron contamination in Si solar cell by ideality factor: deep neural network approach}
+
+\author[1]{Oleg~Olikh}
+\author[1]{Oleg~Lozitsky}
+\author[1]{Oleksii~Zavhorodnii}
+
+%\author[1\authfn{1}]{Oleg~Olikh}
+%\author[1\authfn{1}]{Oleg~Lozitsky}
+%\author[1\authfn{2}]{Oleksii~Zavhorodnii}
+
+
+%\contrib[\authfn{1}]{Equally contributing authors.}
+
+\affil[1]{Taras Shevchenko National University of Kyiv, 64/13, Volodymyrska Street, Kyiv, 01601, Ukraine}
+%\affil[2]{Department, Institution, City, State or Province, Postal Code, Country}
+
+\corraddress{Olikh O, Taras Shevchenko National University of Kyiv, 64/13, Volodymyrska Street, Kyiv, 01601, Ukraine}
+\corremail{olegolikh@knu.ua}
+
+%\presentadd[\authfn{2}]{Department, Institution, City, State or Province, Postal Code, Country}
+
+\fundinginfo{National Research Foundation  of Ukraine, Project Number: 2020.02/0036}
+
+%\runningauthor{F. Author et al.}
+
+\begin{document}
+
+
+
+
+\begin{table}%[width=\linewidth,cols=2,pos=h]
+\caption{Hyperparameter space for DNNs.}\label{tabHP}
+\begin{tabular}{ll}%{\tblwidth}{@{} LL@{} }
+\headrow
+\thead{Hyperparameter}& \thead{Values}\\
+%Hyperparameter & Values\\
+%\midrule
+\# nodes for first
+hidden layer & 30, 40, 50, 75, 100, 120, 150 \\
+\# hidden layers & 4, 5, 6, 8, 10, 15 \\
+ batch size & 8, 16, 32, 64, 128 \\
+activation function & ReLu, sigmoid, tanh, SELU, ELU \\
+optimizer & SGD, RMSprop, Adam, Adadelta, Adagrad, Adamax, Nadam, Ftrl \\
+learning rate & $10^{-5}$, $10^{-4}$, $10^{-3}$, $10^{-2}$\\
+\# epochs & 100, 300, 400, 600, 1000, 1500\\
+preprocessing method & StandartScaler, MinMaxScaler \\
+regularization function& None, L2, L1, Dropout\\
+regularization rate & $10^{-5}$, $10^{-4}$, $10^{-3}$, $10^{-2}$\\
+dropout rate & 0.2, 0.3, 0.4, 0.5 \\
+weight initializer& Xavier Normal or Uniform, He Normal or Uniform, Random Normal or Uniform, Ones\\
+\hline
+\end{tabular}
+\end{table}
+
+
+\clearpage
+
+\begin{table}%[width=.9\linewidth,cols=3,pos=h]
+\caption{Chosen hyperparameter combinations.}\label{tabChosenHP}
+\begin{tabular}{lll}%{\tblwidth}{@{} LLL@{} }
+\headrow
+\thead{Hyperparameter} & \thead{DNN$_\mathrm{FeFeB}$}&\thead{DNN$_\mathrm{FeFeB-Fe}$}\\
+\# nodes for hidden layers & 120, 108, 96, 84, 72, 60& 100, 100, 100, 100 \\
+ batch size & 32 &32 \\
+activation function & ReLu & ELU \\
+optimizer & Adamax & Adamax\\
+learning rate & $10^{-3}$& $10^{-3}$\\
+\# epochs & 400 & 1500\\
+preprocessing method & StandartScaler& StandartScaler\\
+regularization function& None& None\\
+weight initializer& Xavier Normal & Xavier Normal\\
+\hline
+\end{tabular}
+\end{table}
+
+\clearpage
+
+\begin{table}%[width=.9\linewidth,cols=3,pos=h]
+\caption{Results of 10--fold cross--validation}\label{table_CV}
+\begin{tabular}{lcc}%{\tblwidth}{@{} LLL@{} }
+\headrow
+\thead{Dataset} & \multicolumn{2}{c}{MSRE}\\
+\headrow
+ & \thead{DNN$_\mathrm{FeFeB}$}&\thead{DNN$_\mathrm{FeFeB-Fe}$}\\
+training&$0.31\pm0.07$&$0.03\pm0.01$ \\
+full&$0.28\pm0.05$& $0.03\pm0.01$\\
+\hline
+\end{tabular}
+\end{table}
+
+\clearpage
+
+\begin{table}%[width=.9\linewidth,cols=7,pos=h]
+\caption{DNN's testing results}\label{table_MSRE}
+\begin{tabular}{lcccccc}%{\tblwidth}{@{} LLLLLLL@{} }
+\headrow
+\thead{Dataset} & \multicolumn{3}{c}{DNN$_\mathrm{FeFeB}$}& \multicolumn{3}{c}{DNN$_\mathrm{FeFeB-Fe}$}\\
+\headrow
+ & \thead{MSRE} & \thead{$R^2$}& \thead{$R$} & \thead{MSRE} & \thead{$R^2$}& \thead{$R$}\\
+T--varied&0.41 &0.936 &0.967 & 0.020& 0.994&0.997 \\
+d--varied&0.37 &0.961&0.980& 0.018&0.996&0.998\\
+B--varied&1.06&0.881&0.939& 0.084&0.991&0.995\\
+Fe--varied&0.06 &0.991&0.996& 0.005&0.999&0.999\\
+All--varied&0.54 &0.813&0.901& 0.138&0.948&0.974\\
+\hline
+\end{tabular}
+\end{table}
+
+\clearpage
+
+\begin{table}
+\caption{Results of experimental IV fitting and iron contamination testing}\label{table_Exp}
+\begin{tabular}{lcccccccccc}%{\tblwidth}{@{} LLLLLLL@{} }
+\headrow
+\thead{Sample}&$N_\mathrm{Fe,MEAS}$, &$T$,&
+$n_\mathrm{Fe-FeB}$&$R_{sh,\mathrm{Fe-FeB}}$,&
+$n_\mathrm{Fe}$&$R_{sh,\mathrm{Fe}}$,&
+\multicolumn{4}{c}{$N_\mathrm{Fe,PRED}$, $10^{12}$~cm$^{-3}$}\\
+\headrow
+&$10^{12}$~cm$^{-3}$&K&&Ohm&&Ohm&\multicolumn{2}{c}{DNN$_\mathrm{FeFeB}$}&\multicolumn{2}{c}{DNN$_\mathrm{FeFeB-Fe}$}\\
+\headrow
+&&&&&&&training&full&training&full\\
+SC320&$2.0\pm0.4$&300&1.214&$1.6\cdot10^6$&1.195&$1.4\cdot10^6$&3.9&2.8&3.0&2.0\\
+&&320&1.204&$8.6\cdot10^5$&1.148&$8.0\cdot10^5$&6.6&1.9&16&19\\
+&&340&1.118&$4.3\cdot10^5$&1.111&$4.3\cdot10^5$&3.8&1.2&89&574\\
+SC349&$6.7\pm0.7$&300&1.223&$2.9\cdot10^6$&1.222&$2.6\cdot10^6$&8.9&5.6&15&11\\
+&&320&1.183&$1.7\cdot10^6$&1.182&$1.7\cdot10^6$&1.2&0.4&10&32\\
+&&340&1.138&$1.3\cdot10^6$&1.173&$1.3\cdot10^6$&9.8&1.7&26&411\\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+\end{document}

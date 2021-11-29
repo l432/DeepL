@@ -76,9 +76,8 @@ At least, some hint on how results would be with a PERC structure should be give
 \vspace{0.5cm}
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
-The Reviewer is absolutely right and PERC technology will be dominant in close future.
+The Reviewer is absolutely right that PERC technology will be dominant in near future.
 But now the part of BSF solar cells is still big enough --- see Fig.~\ref{fig_BSF}.
-
 
 
 \begin{figure}[b]
@@ -93,29 +92,26 @@ Sources:  https://www.aleo-solar.com/perc-cell-technology-explained/
 \label{fig_BSF}
 \end{figure}
 
-SCAPS-1D is a one-dimensional solar cell simulation program, so to model PERC solar cells with a rear contact, 
-which is inhomogeneous in a surface, is a rather hard job. 
+SCAPS-1D is a one-dimensional solar cell simulation program, so to model PERC solar cells with a rear contact,
+which is inhomogeneous in a surface, is a rather hard job.
 We understand the restrictions of 1D simulators and point out this fact in the Conclusion.
 
 We agree that it would be better to use an Al-doped $p^+$-layer, but our choice was determined by the following considerations.
 The simulated IV curves were used to obtain the ideality factor $n$.
 According to the two-diode model we applied,
-$n$ characterizes the current of the second (or so-called recombination) diode 
+$n$ characterizes the current of the second (or so-called recombination) diode
 which arises due to recombination occurring mainly within the depletion region \citep{Breitenstein2013,n2McIntosh}.
-The p+-layer influences this process mostly via the pulling electric field.
 The probable $p^+$--layer influences this process mostly via the electric field.
 Therefore, the kind of doping atom in the $p^+$--layer is not very important for our simulation.
-In the case the simulations are performed for $n^+-p-p^+$ structure with Al-doped base, 
+In the case of $n^+-p-p^+$ structure with Al-doped base,
 a new dataset will be certainly required for training DNN.
-However, the deep-learning oriented approach we propose for determining the impurity concentration remains quite applicable.
+However, the deep-learning oriented approach for determining impurity concentration that we propose remains quite applicable.
 Besides, the recombination in the rear surface region is not crucially important for estimating the ideality factor.
 In our opinion, the trained DNNs can be applied to PERC solar cell in which
 i)~the base is boron-doped;
 ii)~the iron-related deep levels are the main cause of defect-assisted recombination.
 
-
-The text was revised and some speculations about the applicability of the trained DNNs were added (last tree paragraph before Conclusion).
-
+The text was revised and some speculations about applicability of the trained DNNs were added (last three paragraph before Conclusion).
 
 \vspace{1cm}
 \noindent
@@ -127,18 +123,18 @@ There should be, and they will influence the carrier transport and also the surf
 \vspace{0.5cm}
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
-For metal contacts on the rear and front surfaces, 
-the flat bands' conditions were assumed. 
-An appropriate sentence was added to the text. 
-It should be noted that it is a common practice in SCAPS simulation not to pay much attention to contacts 
+For metal contacts on the rear and front surfaces,
+the flat bands' conditions were assumed.
+The appropriate sentence was added to the text.
+It should be noted that it is a common practice in SCAPS simulation not to pay much attention to contacts
 in case they do not create additional barriers --- e.g., see \cite{SCAPSuseSi4,SCAPSuseSi1,SCAPSuse1,SCAPSuse5,ScapsUse10}.
 
-We share the Reviewer’s view on the way of improving SCAPS simulation. 
-In the present paper, we concentrate on recombination in the SC base region, 
-which mainly determines the ideality factor. 
-As for the non-uniformities of emitter and  BSF-layer, their effect on $n$ is much weaker. 
-In any case, the Reviewer’s suggestion is very interesting, and we are going to consider it in future.
 
+We share the Reviewer’s view on the way of improving SCAPS simulation.
+In the present paper, we concentrate on recombination in the SC base region,
+which mainly determines the ideality factor.
+As for the non-uniformities of emitter and  BSF-layer, their effect on $n$ is much weaker.
+In any case, the Reviewer’s suggestion is very valuable, and we are going to consider it in the future.
 
 \begin{figure}[t]
 \centering
@@ -167,7 +163,7 @@ Wouldn't it influence in the extraction of the ideality factor values?}
 \vspace{0.5cm}
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
-In order to fit the simulated data the two-diode model was used, 
+In order to fit the simulated data the two-diode model was used,
 according to which the dark SC current is given by
 \begin{equation}
 \label{eqIVd}
@@ -179,12 +175,11 @@ where
 $I_{01}$ and $I_{02}$ are saturation currents,
 $R_{sh}$ and $R_s$ are shunt and series resistances.
 The two-diode model is often applied to describe real Si SCs:
-in Eq.~(\ref{eqIVd}) the first diode represents the ``ideal'' diode 
-and the first term in the equation describes recombination 
+in Eq.~(\ref{eqIVd}) the first diode represents the ``ideal'' diode
+and the first term in the equation describes recombination
 in the base depth and emitter, including their surfaces;
-the second diode is the so-called recombination diode 
+the second diode is the so-called recombination diode
 and the second term describes recombination within the depletion region \citep{Breitenstein2013}.
-
 
 
 Typical IV curves are shown in Fig.~\ref{fig_IV}.
@@ -194,13 +189,13 @@ by an order of magnitude greater than the second one
 (see difference between the dotted-dashed fitting line and dashed fitting line).
 A similar situation is observed for
 experimental IV curves --- see Fig.~9 in Manuscript.
-The ideality factor is correlates with  slope of the recombination current
+The ideality factor correlates with  the slope of the recombination current
 plotted against the voltage in a semi-logarithmic scale.
 Therefore the voltage range $(0-0.45)$~V is quite sufficient for determining the ideality factor quite accurately.
 
 
-
-The information was added on page 5, the first paragraph from the top.
+The information was added on page 5, the first paragraph from the top;
+the typical IV curves was added in Supplementary Material.
 
 
 \vspace{1cm}
@@ -220,29 +215,30 @@ and that is Ok... but DNN$_{FeFeB}$ also fails in many cases, isn't it?
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
 On the one hand, the Reviewer is right.
-Unfortunately, DNNs  trained by synthetic data 
+Unfortunately, DNNs  trained by synthetic data
 proved incapable of measuring iron concentration
-with extremely high precision in real solar cells
+with high precision in real solar cells
 (with a certain mismatch between real parameters and those used in the simulation).
 From this point of view the ``glass is half empty''.
 
-On the other hand, there are also some reasons 
+On the other hand, there are also some reasons
 to say that the ``glass is half full''.
-First of all, in our opinion, 
-the low cost express method which uses a widely applied setup and is able 
-to approximately estimate the range of iron concentration
-(even with 100\% error) can be quite useful. 
-At the same time there are possible ways to improve precision  and these are discussed in the Conclusion. 
-Moreover, the results in Table~5 prompt how this method can be appropriately used in practice. 
-Namely, the near room temperature of IV measurement is preferable 
-(this conclusion is similar to those drawn from the analysis of synthetic IVs); 
-the time between FeB pair dissociation and IV measurement must be as short as possible. 
-Finally, in some cases (300~K, ``full'' dataset) the DNN$_\mathrm{FeFeB}$ yields acceptable results.
+First of all, in our opinion,
+the low cost express method which uses a widely applied setup and is able
+to estimate approximately the range of iron concentration
+(even with 100\% error) can be quite useful.
+At the same time there are possible ways to improve precision  and these are discussed in the Conclusion.
+Moreover, the results in Table~5 prompt how this method can be appropriately used in practice.
+First, the near room temperature of IV measurement is preferable
+(this conclusion is similar to those drawn from the analysis of synthetic IVs);
+second, the time between FeB pair dissociation and IV measurement must be as short as possible.
+Finally, in some cases (300~K, ``full'' dataset) the DNN$_\mathrm{FeFeB}$ can yield acceptable results.
 
 
-We hope that the  retrieval of deep level parameters 
-from the current--voltage curve by deep learning 
-will be further improved. 
+We hope that the  retrieval of deep level parameters
+from the current--voltage curve by deep learning
+will be further improved.
+
 
 \vspace{1cm}
 \noindent
@@ -267,7 +263,6 @@ We have revised the text accordingly.
 We apologize for the embarrassment, but there must be some technical confusion:
 Reviewer \#2 mentioned the data in the table of Supplementary Material.
 
-
 \vspace{1cm}
 \noindent
 \textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~7.}}
@@ -282,9 +277,8 @@ and a lot in between: "both for microelectronics, logic technologies and solar c
 \vspace{0.5cm}
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
-We are sorry for our English. 
+We are sorry for our English.
 The text has been revised by a bilingual speaker, and we hope for the language improvement.
-
 
 
 \subsection*{Response to Reviewer \#2 }
@@ -309,7 +303,9 @@ For instance, our simulation reveals the $n$ dependence on base thickness \cite{
 Nevertheless this dependence is weak, and the ideality factor value is mainly determined
 by depletion-region recombination.
 
-First of all, the DNNs applicability depends on the requirement for Shockley–Read–Hall recombinationto be predominant.
+
+
+Also, the DNNs applicability depends on the requirement for Shockley–Read–Hall recombination to be predominant.
 In case,
 if there are other mechanisms causing free carrier concentration to decrease,
 the models which diverge from the two-diode one are proposed
@@ -325,7 +321,7 @@ the simulation model must be more complicated as well.
 The primary competitors of $\mathrm{Fe}_i\mathrm{B}_s$  are  boron-oxygen complexes \cite{LIDRev,LIDRev2}
 and oxide precipitates \cite{MurphySC2014,Oxide:Chen} in Cz-Si.
 So the development of the corresponding model can be our next step.
-To the point, it should be noted that a high $n$ value can serve an indicator of another defect presence:
+To the point, it should be noted that a high $n$ value can serve as an indicator of another defect presence:
 in our simulation this value is $n<1.4$.
 The absence of non-iron active defects may be the most limiting factor of the DNNs applicability;
 in particular, this confined the selection of SCs for our experimental verification of the proposed method.
@@ -336,9 +332,9 @@ makes it possible to restrict
 oxygen concentration substantially even in solar grade Cz-Si.
 On the one hand,  Al is used to produce the doped $p^+$ region
 at the industrial level \cite{GreenRew2019,WilsonRew2020}.
-However, since a boron BSF is one of the promising techniques
+However, boron BSF is one of the promising techniques
 for achieving high quality back contact \cite{Kim2007,B-BSF}
-therefore the $p^{+}$ layer, which is doped by boron, was under our consideration.
+and for this reason  the $p^{+}$ layer, which is doped by boron, was under our consideration.
 On the other hand, the probable $p^+$--layer influence on the depletion-region recombination
 process is determined mainly by the electric field.
 Therefore, the kind of doping atom in $p^+$--layer is not very important for simulation,
@@ -356,7 +352,7 @@ through the heat treatment or high illumination already mentioned. }
 \vspace{0.5cm}
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
-The corresponding corrections were done on page 4, the third  paragraph from the top.
+The corresponding corrections were made on page 4, the third  paragraph from the top.
 
 
 \vspace{1cm}
@@ -372,10 +368,8 @@ base thickness, iron concentration and doping level are not clear for each T-var
 \vspace{0.5cm}
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
-The parameter values used for creating Fe-varied dataset were added, 
-as an example, in the last paragraph on page 5 and the first paragraph on page 6.
-
-
+As an example, we added the parameter values used for creating Fe-varied dataset
+in the last paragraph on page 5 and the first paragraph on page 6.
 
 \vspace{1cm}
 \noindent
@@ -418,12 +412,11 @@ Such results could be showed in Supplementary Material, in the same form as figu
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
 The Supplementary Material has been completed by the figures
-that  represent similar results for test datasets (Figs.~8S--10S).
+that  represent similar results for test datasets (Figs.~8S--11S).
 
-
-However, it should be noted that error statistics for the training dataset is more correct and informative. 
-For instance, let us consider the temperature dependence (Fig.~4(a)). 
-In fact, averaging over 684 values was performed for each of 11 points in the training dataset, 
+However, it should be noted that error statistics for the training dataset is more correct and informative.
+For instance, let us consider the temperature dependence (Fig.~4(a)).
+In fact, averaging over 684 values was performed for each of 11 points in the training dataset,
 and in fact these values correspond to the data uniformly distributed over used $(N_\mathrm{Fe},N_\mathrm{B},d_p)$-space.
 
 In contrast, only 55 IV characteristics correspond to $T=295$~K in the Fe-varied dataset
