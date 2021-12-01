@@ -163,7 +163,7 @@ Microwave
 
 Microelectronics is a field of primary importance today, and the investigation of how semiconductors and their structure properties change under the action of various external factors has become one of the most important tasks in material science.
 A great number of theoretical and experimental researches have been aimed at revealing degradation mechanisms in microelectronic devices and developing new technologies of their production.
-The influence of certain factors, for example, radiation, has been studied quite well ---- see, for instance, \cite{KozlovsEn,RadiationEffectsBook}.
+The influence of certain factors, for example, radiation, has been studied quite well ---- see, for instance, (\cite{KozlovsEn,RadiationEffectsBook,DefByIon}).
 At the same time, new agents begin to attract more attention, such as ultrasound loading (USL)
 (\cite{Olikh2018JAP,Olikh2006TPL}),
 or microwave treatment (MWT)(\cite{MW:Rev,ZOHM2000,BHUNIA1998,Bacherikov2003En,Pashkov1994En,
@@ -213,10 +213,12 @@ As a whole, these facts allow us to consider MWT as one of the most promising wa
 
 %\cite{BelyaevIntac,ProcSPIE,Belyaev1998JTFEn}
 
-
+On the other hand, it is of wide knowledge that the properties of semiconductor structures are determined very much by their defect subsystem.
+In fact, the defects in SiC and GaAs are under active investigation up to now
+(\cite{SiCDavid,SiCWei,GAPel2020,GASobolev2020}).
 At the same time,
 the more detailed information about how MWT influences deep center parameters is practically unknown.
-The aim of our work is to investigate MWT impact on the parameters of deep centers located in the near surface region of $n$–6H–SiC and $n$–GaAs single crystals,
+The aim of our work is to investigate MWT impact on the parameters of deep centers located in the near surface region of $n$–-6H-–SiC and $n$-–GaAs single crystals,
 as well as on  GaAs  epitaxial structures by means of acoustoelectric  transient spectroscopy.
 
 
@@ -448,7 +450,7 @@ a)~decrease of ionization energy due to Pool--Frenkel effect or, for example, Co
 b)~change of $\sigma_n$  value (\cite{Bourgoin2001}).
 As a rule, the change in $(E_c-E_t)$ comprises several hundredth of eV and
 the change in capture cross-section reaches several orders of magnitude:
-for instance, according to (\cite{Bourgoin2001}), at room temperature, 
+for instance, according to (\cite{Bourgoin2001}), at room temperature,
 $\sigma_n$  for $EL2$ center in GaAs decreases 200 times
 at intensity of $10^5$~V/cm.
 As a result, the different methods used for investigating defects yield essentially different parameters for the same centers.
@@ -483,16 +485,29 @@ $S$--center and $R$--center ($E_c-1,27$~eV) are associated with two different ch
 of one and the same defect,
 while according to (\cite{Lebedev2000En})
 $R$--center is a divacancy $\mathrm{V}_\mathrm{Si}\mathrm{V}_\mathrm{C}$.
-A complex of silicon vacancies is associated with level $E1$, which is the center of negative correlation energy (\cite{Lebedev2001En}).
+It would be noted that  divacancy is a typical defect in 6$H$--SiC 
+(\cite{SiCBaran,SiCDavid}).
+On the other hand, the level $E_c-0.39$~eV is more often associated with center $E1$
+(\cite{SiCWei,SiCKoizumi}).
+Thus, in our opinion, the ESC1 level is related to the  complex $\mathrm{V}_\mathrm{Si}\mathrm{V}_\mathrm{C}$.
+
+%A complex of silicon vacancies is associated with level $E1$, which is the center of negative correlation energy (\cite{Lebedev2001En}).
+
 After MWT, the position of the level responsible for TAV generation in SiC moves
 to $E_c-(0.26-0.29)$~eV (level ESC2).
 And this situation is also ambiguous: closely located are donor level $(0/+)$ of
-center $E1$ ($E_c-(0.27-0.28)$~eV (\cite{Hemmingsson}))
+center $E1$ ($E_c-(0.27-0.28)$~eV (\cite{Hemmingsson}),
+$E_c-0.26$~eV (\cite{SiCWei,SiCKoizumi}))
 and center $X1$ ($E_c-0.3$~eV (\cite{Lebedev2001En})).
 The authors of the latter publication report about the essential dependence of $X1$ concentration on the crystal structural perfection.
 They stress that this center is not identical to center $E1$.
-
-
+In turn, the level $E1$ have been identified as the center of negative correlation energy 
+(\cite{Lebedev2001En,SiCWei})
+and dominating intrinsic point defect in $n$--type 6$H$--SiC
+(\cite{SiCSasaki}).
+According to (\cite{SiCSasaki,SiCWei}), $E1$ is related to the carbon vacancy.
+Taking into account the difference between $X1$ and ESC2 energy locations,
+the configuration $\mathrm{V}_\mathrm{C}$ was associated with ESC2 level by us.
 
 %\cite{Lebed1999En,Anikin1991:2En,Anikin1991:3En}
 
@@ -617,7 +632,8 @@ $0.30\div0.33$&-&-&DLTS&no&\cite{Lang:GaAs}\\ %\hline
 \multicolumn{6}{c}{EGA2, ($E_c-E_t)=(0.28\div0.30)$~eV}\\
 0.28&$5\cdot10^{-18}$&V$_\mathrm{As}$As$_i$&TSC&no&\cite{Pavlovic2000}\\ %\hline
 0.26&$3.5\cdot10^{-15}$&-&DLTS&yes&\cite{Yousefi1995}\\ %\hline
-0.277&$5\cdot10^{-17}$&-&TSC&no&\cite{Pavlovic:GaAs}\\ %\hline
+%0.277&$5\cdot10^{-17}$&-&TSC&no&\cite{Pavlovic:GaAs}\\ %\hline
+0.30&-&intrinsic&DLTS&no&\cite{PhysRevB1986}\\ %\hline
 0.284&$1\cdot10^{-17}$&-&TSC&no&\cite{Pavlovic:GaAs}\\ %\hline
 0.28&-&intrinsic&TP&no&\cite{Abele:GaAs}\\ %\hline
 0.28&$8\cdot10^{-15}$&-&DLTS&yes&\cite{Mircea1975}\\ %\hline
@@ -628,7 +644,8 @@ $0.30\div0.33$&-&-&DLTS&no&\cite{Lang:GaAs}\\ %\hline
 0.48&$4\cdot10^{-16}$&As$_\mathrm{Ga}^{++}$&TSC&no&\cite{Pavlovic2000}\\ %\hline
 0.485&$2\cdot10^{-16}$&-&TSC&no&\cite{Pavlovic:GaAs}\\ %\hline
 0.48&-&impurity&TP&no&\cite{Abele:GaAs}\\ %\hline
-0.51&$1\cdot10^{-12}$&-&DLTS&no&\cite{Martin1977}\\ %\hline
+%0.51&$1\cdot10^{-12}$&-&DLTS&no&\cite{Martin1977}\\ %\hline
+0.49&$2\cdot10^{-13}$&impurity+V$_\mathrm{As}$&DLTS&yes&\cite{GaAsBlood}\\ %\hline
 0.48&$3\cdot10^{-13}$&-&DLTS&no&\cite{Lang:GaAs}\\ %\hline
 0.50&$1\cdot10^{-15}$&V$_\mathrm{As}$, V$_\mathrm{Ga}$Ga$_i$V$_\mathrm{As}$ &DLTS&no&\cite{Pons}\\
 \multicolumn{6}{c}{EGA4, ($E_c-E_t)=(0.39-0.41)$~eV}\\
@@ -650,7 +667,8 @@ $0.26$&-&complex with V$_\mathrm{Ga}$&TSC&no&\cite{FANG1990}\\ %\hline
 0.23&-&V$_\mathrm{Ga}$V$_\mathrm{As}$&DLTS&no&\cite{Morrow:EL17}\\ %\hline
 0.23&$1\cdot10^{-14}$&V$_\mathrm{Ga}$V$_\mathrm{As}$&DLTS&no&\cite{Bourgoin:GaAs}\\ %\hline
 0.23&$7\cdot10^{-15}$&-&DLTS&yes&\cite{Mircea1975}\\ %\hline
-0.22&$2\cdot10^{-15}$&-&DLTS&no&\cite{Fang:EL6}\\ %\hline
+%0.22&$2\cdot10^{-15}$&-&DLTS&no&\cite{Fang:EL6}\\ %\hline
+0.236&$1\cdot10^{-16}$&complex with V$_\mathrm{As}$&DLTS&yes&\cite{GaAsBlood}\\ %\hline
 0.258&$4\cdot10^{-16}$&-&DLTS&yes&\cite{Yousefi1995}\\ %\hline
 \multicolumn{6}{c}{EGA6, ($E_c-E_t)=(0.43-0.46)$~eV}\\
 0.44&$1\cdot10^{-14}$&V$_\mathrm{As}$As$_i$, V$_\mathrm{As}$&TSC&no&\cite{Pavlovic2000}\\ %\hline
@@ -721,7 +739,7 @@ To a certain extent, only SIC3 sample was an exclusion, but in this case rather 
 The researchers report (\cite{Bacherikov2003En,Pashkov1994En,BoltovetsEn,Milenin1994En,BelyaevIntac}) that in this stressed state,
 MWT causes redistribution as well as certain weakening of elastic deformations, and this is what happens in SIC3.
 The profilometry data correlate with the results from X-ray measurements.
-The structure investigations show that 
+The structure investigations show that
 in the initial GaAs samples the density of dislocation has a W-like distribution over the plate area; the dislocation density over the plate diameter varies from $2\cdot10^{4}$~cm$^{-2}$ to $2\cdot10^{5}$~cm$^{-2}$.
 This inhomogeneity in dislocation density distribution is the evidence of considerably strong elastic deformations in the sample.
 
@@ -741,20 +759,25 @@ This inhomogeneity in dislocation density distribution is the evidence of consid
 %
 %\cite{Bacherikov2003En,Pashkov1994En,BoltovetsEn,Milenin1994En,BelyaevIntac}
 
-The performed analysis shows that ESC1 and ESC2 centers are complexes of silicon vacancies,
+The performed analysis shows that ESC1 and ESC2 centers are complexes of carbon vacancies,
 EGA1 is associated with V$_\mathrm{As}$,
 and EGA3 — with V$_\mathrm{As}$ or  V$_\mathrm{Ga}$Ga$_i$V$_\mathrm{As}$ complex.
 MWT stimulated diffusion of the point defects, which are mostly intrinsic interstitial atoms, results in trap modifications.
-ESC1 center in silicon carbide turns into ESC2 under the influence of closely located interstitial carbon:
+ESC1 center in silicon carbide turns into ESC2 under the influence of closely located interstitial silicon:
 %\begin{equation}
-\begin{displaymath}
-  \mathrm{V}_\mathrm{Si}\;\mathrm{V}_\mathrm{C}+\mathrm{V}_\mathrm{Si}\;\mathrm{V}_\mathrm{C}+\mathrm{C}_{\,i}+ \mathrm{C}_{\,i} \rightarrow \mathrm{V}_\mathrm{Si}+ \mathrm{V}_\mathrm{Si}\rightarrow \mathrm{V}_\mathrm{Si}\;\mathrm{V}_\mathrm{Si}\,.
-\end{displaymath}
+%\begin{displaymath}
+%  \mathrm{V}_\mathrm{Si}\;\mathrm{V}_\mathrm{C}+\mathrm{V}_\mathrm{Si}\;\mathrm{V}_\mathrm{C}+\mathrm{C}_{\,i}+ \mathrm{C}_{\,i} \rightarrow \mathrm{V}_\mathrm{Si}+ \mathrm{V}_\mathrm{Si}\rightarrow \mathrm{V}_\mathrm{Si}\;\mathrm{V}_\mathrm{Si}\,.
+%\end{displaymath}
 %\end{equation}
+
+\begin{displaymath}
+  \mathrm{V}_\mathrm{Si}\;\mathrm{V}_\mathrm{C}+\mathrm{Si}_{\,i} \rightarrow 
+   \mathrm{V}_\mathrm{C}\,.
+\end{displaymath}
 
 Further modification of ESC2 parameters in SIC3 is caused by the enhanced electric field of dislocation.
 In the samples of GAS2 at $t_\mathrm{MWT}=20$~s,
-V$_\mathrm{As}$ transforms into complex V$_\mathrm{As}$As$_i$ 
+V$_\mathrm{As}$ transforms into complex V$_\mathrm{As}$As$_i$
 (EGA2 center)
 due to increased number of interstitial atoms in the near-surface layer:
 \begin{displaymath}
@@ -766,7 +789,7 @@ it is reported (\cite{ZOHM2000}) that with the growth of resistance the depth of
 and thus, the volume from which defect gettering begins in the near-surface layer grows as well.
 In addition, the cause of weak (in comparison with GAS2) influence of MWT on trap parameters in GAS1 is the absence of pressure stresses,
 which intensify MWT simulated complex formation process in the system’s intrinsic defects.
-This consideration is supported by the data for silicon carbide single crystals. 
+This consideration is supported by the data for silicon carbide single crystals.
 In the GAT sample, which is also characterizes by a high concentration of free electrons,
 transformation of EGA3 to EGA4 (V$_\mathrm{Ga}$Ga$_\mathrm{As}$ complex) is going on in the reaction described in (\cite{FANG1990}):
 \begin{displaymath}
@@ -787,7 +810,7 @@ causes complete annihilation of vacancies (or transformation into antisite defec
   \mathrm{V}_\mathrm{As}+\mathrm{Ga}_{\,i} \rightarrow \mathrm{Ga}_\mathrm{As}\,.
 \end{eqnarray}
 
-It is believed (\cite{OstrovskiiSST,OlikhSSC,OstrovPAN}), that TAV 
+It is believed (\cite{OstrovskiiSST,OlikhSSC,OstrovPAN}), that TAV
 which arise in epitaxial structures
 is mostly caused by the defects located on the epi--layer and substrate interface.
 This difference in deep level location
@@ -812,7 +835,7 @@ for GAE1 and GAE2 and
 \end{displaymath}
 for GAB1 and GAB2.
 The increase in activation energy EGA6 in sample GAE3 is caused, most probably, by the change in
-Coulombic interaction of interstitial--vacancy complexes 
+Coulombic interaction of interstitial--vacancy complexes
 which is due to decrease in their concentration,
 while the growth of capture cross-section EGA4 in GAB1 at $t_\mathrm{MWT}=20$~s
 and EGA6 in GAE3 is associated with the growth of electric field strength caused by charged dislocations.
