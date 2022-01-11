@@ -1,0 +1,47 @@
+Dear Dr. Olikh,
+
+It is a pleasure to accept your manuscript entitled "Estimation for iron contamination in Si solar cell by ideality factor: deep neural network approach" in its current form for publication in Progress in Photovoltaics: Research and Applications.  The comments of the referee(s) who reviewed your manuscript are included at the bottom of this letter.
+
+#TAG_WILEY_COALITION_S#TAG_WILEY_COALITION_S##
+
+Please mind the typos that were spoted. This does not require another round of review, but can be modified at the proofs stage.
+
+Your article cannot be published until the publisher has received the appropriate signed license agreement. Within the next few days the corresponding author will receive an email from Wiley’s Author Services system which will ask them to log in and will present them with the appropriate license for completion.
+
+Thank you for your fine contribution.
+
+Sincerely,
+
+
+Dr. Jean François Guillemoles
+Editor, Progress in Photovoltaics: Research and Applications
+jf.guillemoles@chimie-paristech.fr
+
+Referee(s)' Comments to Author:
+
+Reviewer: 1
+
+Anonymous comments to the Author
+I clearly see that the authors have made a big effort to improve the paper, reacting to the comments in the first review and giving arguments to support some of their statements. The quality of the English has improved enormously, too.
+Let me just list some typos I have detected:
+-In page 9 of 23, line 12, "were" instead of "ware". In line 15,"BSF-layer" instead of SBF-layer".
+-In page 18 of 23, line 20, separate "recombination to". In line 38, "the" not "he"
+
+Reviewer: 2
+
+Anonymous comments to the Author
+In  general authors added useful elements to the manuscript.
+
+The discussion on the applicability of the DNNs trained here (especially discussing the potential presence of other defects, not related to iron impurities) allows to take a step back and to better grasp the extend of the work presented here.
+
+Authors addressed all points mentioned in previous comments. Details on the two possible states for iron (as FeB pairs or as interstitials), on the definition of test datasets, and the corrections of tables in Supplementary Material are correctly done and bring clarity to the manuscript.
+
+Furthermore, in order to assess DNN’s performances, authors justified that error statistics on training datasets are more informative than error statistics on test datasets. Given the respective sizes of training and test datasets (training dataset being one order of magnitude bigger than test datasets), statistics on training dataset can be more intelligible. It is however also informative to compare MSRE values obtained over the various test datasets and the training dataset, as shown in Supplementary Material.
+
+Finally, the present revised version of the manuscript provides a clearer description of the work presented here. Elements and discussions added also allow to take a step back and precisely understand the outlines, strengths and discussible points of the methodology employed here.
+
+Reviewer: 3
+
+Anonymous comments to the Author
+In this paper, the authors have properly used deep learning tools, which are increasingly useful as alternative approaches to conventional techniques in order to solve complex problems in different areas. The results obtained in this work are very useful to contribute to the manufacturing process of silicon solar cells, based on low cost and non-time-consuming procedures, compared with traditional methods.
+In my opinion, the changes made to the original manuscript have made the article stronger.

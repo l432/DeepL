@@ -1,0 +1,88 @@
+Dear Dr. Olikh,
+
+Manuscript ID PIP-21-281 entitled "Estimation for iron contamination in Si solar cell by ideality factor: deep neural network approach" which you submitted to Progress in Photovoltaics: Research and Applications  has been reviewed.  The comments of the referee(s) are included at the bottom of this letter.
+
+A revised version of your manuscript that takes into account the comments of the referee(s) will be reconsidered for publication.
+
+Please note that submitting a revision of your manuscript does not guarantee eventual acceptance, and that your revision may be subject to re-review by the referee(s) before a decision is rendered.
+
+Please upload your revised manuscript WITHIN THE NEXT 4 WEEKS.Log into wiley.atyponrex.com/journal/PIP and click on My Submissions. Sort by journal and submission status to locate this manuscript, then click the “Revise submission” button to submit your revision.
+
+When submitting your revised manuscript, please submit a separate document with direct response to reviewer comments when asked to “Upload your Author Response”.
+
+All supplementary and additional files will be carried over when you submit a revised manuscript. You may be required to provide additional files at the revision stage. If indicated to do so, please upload any additional required files as needed.
+
+To submit your revised manuscript: Log in by clicking on the link below https://wiley.atyponrex.com/submissionBoard/1/22d14373-6b12-4a71-b2a5-ab46e14efbbe/current
+
+(If the above link space is blank, it is because you submitted your original manuscript through our old submission site. Therefore, to return your revision, please go to our new submission site here (wiley.atyponrex.com/journal/PIP) and submit your revision as a new manuscript; answer yes to the question “Are you returning a revision for a manuscript originally submitted to our former submission site (ScholarOne Manuscripts)? If you indicate yes, please enter your original manuscript’s Manuscript ID number in the space below” and include your original submission's Manuscript ID number (PIP-21-281) where indicated. This will help us to link your revision to your original submission.)
+
+
+#TAG_WILEY_COALITION_S#TAG_WILEY_COALITION_S##
+
+There are also some simple steps that you can follow to make your article more discoverable online. Click on this link to find out more:
+http://www.wiley.com/legacy/wileyblackwell/pdf/SEOforAuthorsLINKSrev.pdf
+
+Wiley Editing Services Available to All Authors
+Should you be interested, Wiley Editing Services offers expert help with manuscript, language, and format editing, along with other article preparation services. You can learn more about this service option at www.wileyauthors.com/eeo/preparation. You can also check out Wiley’s collection of free article preparation resources for general guidance about writing and preparing your manuscript at www.wileyauthors.com/eeo/prepresources.
+
+Once again, thank you for submitting your manuscript to Progress in Photovoltaics: Research and Applications and I look forward to receiving your revision.
+
+Sincerely,
+
+
+Dr. Jean François Guillemoles
+
+Referee(s)' Comments to Author:
+
+Reviewer: 1
+
+Anonymous comments to the Author
+Building on previous works that point at the influence of iron in the ideality factor of silicon solar cells, the authors present a deep neural network that can predict the iron content, and explore its range of validity. They train the network with simulated solar cells, and apply it to a couple of experimental solar cells.
+The approach is interesing, and opens a path for further improvement and exploration of machine learning techniques to extract physic parameters from electrical measurements.
+Advancing in the reading of the paper is not an easy task I have to say, but it is true that the steps are well justified and one sees that the authors have made an effort to explain them.
+In my opinion there are some points that should be clarified for the paper to be published in Progress in Photovoltaics:
+
+-A solar cell with BSF is chosen as the basis of the work, claiming that "BSF is one of the popular designs used for industrial mass production...", but this is no longer the case, BSF solar cells are present in the market due to old manufacturing lines that are still operative, but the standard now is PERC technology. If the training of the network is based on SCAPS simulations, why was not trained with a PERC structure? At least, some hint on how results would be with a PERC structure should be given. (By the way, the BSF in this work is made with B-doping, which is also a minoritary approach at the industrial level, where BSF is of Aluminium).
+
+-As far as I understand, the simulation with SCAPS could be improved: emitter and BSF are uniform and this is not the case in reality. There is no mention to the metallization, are there no contacts? There should be, and they will influence the carrier transport and also the surface recombination velocities in the metal-semiconductor interface, among others.
+
+-Why a voltage sweep restricted to 0.45 V? This is rather low when compared to the voltages at the maximum power point of BSF solar cells... Wouldn't it influence in the extraction of the ideality factor values?
+
+-I am not sure that I interpret well the results in table 5. In the text the authors state that "the results even exceed expectations". But what I see is that the predictions fail in general, largely for the trained dataset cases, but also for the full dataset. There is some discussion on why DNN_FeFeB-Fe performs worse than DNN_FeFeB and that is Ok... but DNN_FeFeB also fails in many cases, isn't it? (temperatures higher than 300K for the higher Fe content, 100% or more error for the training dataset...).
+
+-In the jargon, we do not talk of surface resistance, but sheet resistance. Also, it is the first time that I read the "anti-recombination isotype barrier" for a high-low junction or a BSF.
+
+-It is mentioned in the paper that there is Suplementary Material, but I have not had the opportunity to read it.
+
+On the other hand, the paper needs a thorough revision of English, preferably by a native or bilingual speaker. English is not my mother tongue, but I think that there are many expressions that are not correct, and make the reading difficult. From the abstract ("The low-cost and express...", "an ideality factor values"...) to the conclusions ("not numerous input parameters can be multiplied and transformed to the picture and apply a vision model..."(?), and a lot in between: "both for microelectronics, logic technologies and solar cells", "the various semiconductor barrier structures", "practical using", "Fours", "SFB", "in our further calculation", "simulated with using", "in comparing with", "more narrow", etc. etc.
+
+Reviewer: 2
+
+Anonymous comments to the Author
+Authors developed a methodology to determine iron impurity concentrations with Deep Neural Networks (DNN) from parameters that are rather simple to obtain. This is interesting for the PV research community. The use of drift-diffusion simulations to generate training and test sets is generally clearly explained. Tests results of the DNNs are well presented, and finally the comparison of iron concentrations obtained with the method developed here or from experimental measurements is enlightening.
+
+
+However, a few points could be explained more clearly in the text, and discussion of some of them might be important.
+
+2 Simulation details
+It is assumed that all SRH recombination in the device come from iron impurities and the associated deep level defects. It seems necessary to discuss its validity, and it could be interesting to put it against the fact that Al-BSF devices based on Czochralski silicon wafers are considered. More generally, if another type of defects is present in the solar cell, also inducing SRH recombination, is it possible to estimate to what extend are the DNNs trained here still accurate ?
+
+When Fe-FeB and Fe cases are presented, it could be clearer to provide very few more explanations on both types of defects, and the important fact that iron-boron pairs can be temporarily dissociated, providing the Fe case, through the heat treatment or high illumination already mentioned.
+
+
+3 Deep neural network models
+It is clear how the main training dataset is created, and how the 4 * 9 * 11 * 19 = 7524 IV curves are generated. However, the definition of the test datasets and the values for temperature, base thickness, iron concentration and doping level are not clear for each T-varied, d-varied, etc. test set.
+
+For instance, in the case of the T-varied test set, it is mentioned that the same base thickness, iron concentration and doping level values are used as in training dataset. However, 4 * 9 * 19 = 684 and the amount of 894 IVs can’t be explained by multiplying with any number of temperature values. In Supplementary Material, the associated summary table do neither explain this value 894. More generally these tables are difficult to interpret. It is possible that the subset of 144 values for T-varied test has been duplicated.
+
+
+4 Results and discussion
+On figures 4, 5, 6 and 7, very interesting results are presented, and analyses of the dependence of estimation error with temperature, boron or iron densities and base thickness are well done. However, it seems that the same error statistics of results obtained on test datasets (instead of training dataset) would more directly assess the quality of predictions by the DNNs. For instance, the Fe-varied dataset has been identified to be the closest to “real demand” or results obtained with the all-varied dataset would also be most probably very useful. Such results could be showed in Supplementary Material, in the same form as figures 4, 5, 6 and 7.
+
+
+Reviewer: 3
+
+Anonymous comments to the Author
+In this paper, the iron concentration in silicon BSF solar cells was extracted from the ideality factor, base thickness, doping level and temperature values, using deep learning-based approach. The authors have properly used these tools, which are increasingly useful as alternative approaches to conventional techniques in order to solve complex problems in different areas.
+The results obtained in this work are very useful to contribute to the manufacturing process of silicon solar cells, based on low cost and non-time-consuming procedures, compared with traditional methods.
+In my opinion this manuscript is interesting, original and easy to read.

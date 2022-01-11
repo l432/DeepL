@@ -1,0 +1,52 @@
+AQ1: "AUTHOR: ORCID ID [0000-0003-0633-5429, 0000-0001-8080-7661] do not return valid ORCID profiles when checked against the ORCID registry. Please provide the correct ORCID IDs."
+
+The correct ORCID ID are following:
+Oleg Olikh   0000-0003-0633-5429,
+Oleg Lozitsky 0000-0002-6872-6655, and
+Oleksii Zavhorodnii 0000-0001-8080-7661.
+
+The links
+https://orcid.org/0000-0003-0633-5429,
+https://orcid.org/0000-0002-6872-6655, and
+https://orcid.org/0000-0001-8080-7661
+return the correct pages.
+
+AQ2:"AUTHOR: Please confirm that given names (Blue) and surnames/family names (Vermillion) have been identified correctly."
+The given names and family names have been identified correctly.
+
+
+AQ3: "AUTHOR: Please verify that the linked ORCID identifiers are correct for each author."
+The correct ORCID ID are following:
+Oleg Olikh   0000-0003-0633-5429,
+Oleg Lozitsky 0000-0002-6872-6655, and
+Oleksii Zavhorodnii 0000-0001-8080-7661.
+The ORCID IDs were verified.
+The links
+https://orcid.org/0000-0003-0633-5429,
+https://orcid.org/0000-0002-6872-6655, and
+https://orcid.org/0000-0001-8080-7661
+return the correct pages.
+
+
+AQ4: "AUTHOR: Please provide a suitable figure (abstract diagram or illustration selected from the manuscript or an additional eye-catching' figure) and a short ‘GTOC’ abstract (maximum 80 words or 3 sentences) summarizing the key findings presented in the paper for Table of Content (TOC) entry."
+
+
+GTOC abstract:
+"The deep learning‐based approach was applied for estimating iron concentration in silicon solar cells by using ideality factor. The simulation of solar cells with the back surface field design for generating labeled training and test datasets was performed using SCAPS‐1D software. The results for both synthetic and experimental data demonstrate that deep neural networks can predict iron concentration using the ideality factor, temperature, base‐thickness, and doping level of solar cells."
+
+Figure:
+FIGURE 1 from the manuscript.
+
+
+AQ5: "AUTHOR: Please check if “(20 ÷ 30)” is correct."
+The correct variant is “(20-30)”.
+
+
+
+AQ6: "AUTHOR: Please check if “(10 ÷ 20) ” is correct."
+The correct variant is “(10-20)”.
+
+
+EQ7: "As Refs. [19] and [21] were identical, the latter has been removed from the reference list and subsequent references have been renumbered. Please confirm if any further change is required."
+
+All is Ok, further change is not required.
