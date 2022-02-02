@@ -1,0 +1,81 @@
+Dear Dr. Olikh,
+
+I have now received two independent reviews of your manuscript. Reviewer suggested there is insufficient discussion / data on the experiment and theory for iron-boron complex structure in Si-solar cells. After careful evaluation of your manuscript with Reviewer comments, I regret to inform you that the Applied Physics A is unable to accept your manuscript for publication. Therefore, this manuscript was rejected by Applied Physics A. I'm sorry I could not inform you of a good news, however, thank you for giving Applied Physics A the opportunity to review the manuscript.
+
+Although your manuscript was not suitable for Applied Physics A, I would like to invite you to consider transferring* your manuscript to SN Applied Sciences (https://www.springer.com/snas), a fully Open Access, multi-disciplinary, peer-reviewed journal for the disciplines of Engineering, Chemistry, Earth and Environmental Sciences, Material Science and Physics.
+
+SN Applied Sciences publishes quality, scientifically valid, original research papers and strives for rapid review and publication. As a fully Open Access journal, articles published in SN Applied Sciences are freely available to all and reach a wide audience.
+
+SN Applied Sciences is already abstracted/indexed in SCOPUS, Ei Compendex, CNKI, Chemical Abstracts Service (CAS) Dimensions, EBSCO Discovery Service, Emerging Sources Citation Index, Google Scholar ,INSPEC, Institute of Scientific and Technical Information of China, Japanese Science and Technology Agency (JST), Naver, OCLC WorldCat Discovery Service, ProQuest-ExLibris Primo, ProQuest-ExLibris Summon, TD Net Discovery Service and and it will apply for further indexing as soon as possible.
+
+To transfer your paper to SN Applied Sciences, please forward this email to submissionsupport@springernature.com with the wording 'Approve transfer to SN Applied Sciences' in the body of the message*.
+
+Once again, thank you for your interest in Applied Physics A. We sincerely hope that you will return to the journal soon with further research.
+
+With kind regards,
+
+Motonori Watanabe
+Member of the Board of Editors
+Applied Physics A
+
+
+---
+Editor's/Reviewers' comments (if any):
+Reviewer #3: Application of US was claimed to accelerate association of Fe-B.  Si solar cell was irradiated with US and formation of Fe-B associates was claimed from variation of short circuit current after illumination.
+Most of experimental results were analyzed based on diffusion theory.  However, no direct evidence of formation and dissociation of Fe-B were provided and discussion on effect of US was totally based on variation of amount of Isc. 
+Diffusion of metal atoms or ions in covalent solid at ambient condition is very difficult,  theoretical discussion without support of experimental data can hardly be accepted.
+It needs further experimental results or suitable references supporting dissociation and association of Fe and B atoms in silicon.
+
+
+
+
+
+
+Reviewer #4: The paper title (Intensification of iron-boron complex association in silicon solar cells under
+acoustic wave action) presents the ultrasound influence on FeB pair association in silicon solar cells.
+
+The methods well described, the results clearly presented, and the conclusions supported by the results.
+I would recommend its publication in Applied Physics A journal with following corrections:
+
+1.      I would like to request the authors to Re write the abstract of the paper to express the experimental found and address the potential applications.
+2.      In the introduction part: Make the objective of your work clear for the reader and avoid presenting the work as (the first….).
+
+
+
+
+------------------------------------------------------------------------------------------
+Dear Dr. Oleg Olikh,
+
+My name is Aditi Awate, and I am an Editorial Submission Advisor at the Springer Nature Transfer Desk. I help authors find the most relevant journal for their manuscript and provide assistance to minimize the time and effort spent on the submission process. The Editor of APYA - Applied Physics A has recommended SN Applied Sciences as a potential suitable journal for you to consider.
+
+Please see below for more information about this journal(s) recommended by the Editor. Alternatively, If you prefer to submit to a different journal, I have also recommended additional suitable journals:
+
+1. SN Applied Sciences (Impact factor: N/A, CiteScore: N/A, Author Satisfaction: 95%, Average time from submission to first decision: 46 days, Open Access, APC: EUR 1480.00 | GBP 1290.00 | USD 1690.00)
+I recommend that you consider SN Applied Sciences, as it is an interdisciplinary journal with a scope that includes Chemistry, Earth and Environmental Sciences, Engineering, Material Science and Physics. SN Applied Sciences publishes quality, scientifically valid, original research papers and strives for rapid review and publication. SN Applied Sciences is already abstracted/indexed in Scopus, Ei Compendex, DOAJ, INSPEC, Google Scholar, CNKI, EBSCO Discovery Service, and in OCLC, and it will apply for further indexing as soon as possible. As of January 1st 2021, SN Applied Sciences is a fully Open Access journal, with published articles freely available to all and reaching a wide audience.
+
+
+2. The European Physical Journal Plus (Impact factor: 3.911, CiteScore: 4.6, Author Satisfaction: 92%, Average time from submission to first decision: 48 days, Open Choice)
+I recommend that you consider the European Physical Journal Plus, which has a very broad scope encompassing, in particular, original results in general and interdisciplinary physics; the verification and improvement of standards, procedures and performances in all physics methodologies or the independent support and validation of relevant published work. There are no submission costs.
+
+3. Silicon (Impact factor: 2.67, CiteScore: 2.0, Author Satisfaction: 99%, Average time from submission to first decision: 43 days, Open Choice)
+I would recommend submitting to this journal because it welcomes submissions that focus on silicon-based materials or adds significantly to the understanding of such materials including the areas of inorganic and organic chemistry, physics, biology, engineering, nanoscience, environmental science, electronics and optoelectronics, and modeling and theory.
+
+4. Journal of Materials Science: Materials in Electronics (Impact factor: 2.478, CiteScore: 3.9, Author Satisfaction: 99%, Average time from submission to first decision: 32 days, Open Choice)
+I would recommend submitting to this journal because it welcomes submissions that focus on the synthesis, growth and processing of new materials (such as compounds and alloys), structural studies by various experimental techniques, characterization of microstructure, structure-property relationships, electrical, optical, dielectric and magnetic properties.
+
+5. Journal of Electronic Materials (Impact factor: 1.938, CiteScore: 3.0, Author Satisfaction: 96%, Average time from submission to first decision: 45 days, Open Choice)
+I recommend considering Journal of Electronic Materials. Your paper is a good fit for the journal’s focus which examines new applications for semiconductors, metallic and magnetic alloys, insulators, and optical and display materials.
+
+The journal offers both Open Access and (fee-free) traditional subscription-access publishing.
+
+
+Please let me know your choice within 7 days of receiving this message. In most cases, we will be able to send your manuscript, files and other information to the new journal for you, though you will have the opportunity to revise your manuscript before the editor receives it, if you wish. Please also note that if you choose to transfer to one of our Hybrid/Open Choice journals, you have the option to publish your article open access if you wish.
+
+Amid the COVID-19 pandemic, we understand that you might need more time to make a decision. If you do need more time, please reply to this email to let me know.
+
+If you have any questions or need further assistance, please contact me by replying to this email.
+
+With kind regards,
+
+Aditi Awate
+Editorial Submission Advisor
