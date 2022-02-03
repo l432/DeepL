@@ -1,0 +1,126 @@
+\providecommand{\newblock}{}
+\begin{thebibliography}{10}
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{{\tt #1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\providecommand{\eprint}[2][]{\url{#2}}
+% Bibliography created with iopart-num v2.1
+% /biblio/bibtex/contrib/iopart-num
+
+\bibitem{KozlovsEn}
+Kozlovskii V~V, Kozlov V~A and Lomasov V~N 2000 {\em Semiconductors\/} {\bf
+  34}(2) 123--140
+
+\bibitem{RadiationEffectsBook}
+Schrimpf R~D and Fleetwood D~M 2004 {\em Radiation Effects and Soft Errors in
+  Integrated Circuits and Electronic Devices\/} (World Scientific) ISBN
+  981-238-940-7
+
+\bibitem{DefByIon}
+Kabiraj D and Ghosh S 2011 {\em J. Appl. Phys.\/} {\bf 109} 033701
+
+\bibitem{Olikh2018JAP}
+Olikh O~Y, Gorb A~M, Chupryna R~G and Pristay-Fenenkov O~V 2018 {\em J. Appl.
+  Phys.\/} {\bf 123} 161573
+
+\bibitem{Olikh2006TPL}
+Olikh O and Pinchuk T 2006 {\em Tech. Phys. Lett.\/} {\bf 32} 517--519
+
+\bibitem{MW:Rev}
+Kitchen H~J, Vallance S~R, Kennedy J~L, Tapia-Ruiz N, Carassiti L, Harrison A,
+  Whittaker A~G, Drysdale T~D, Kingman S~W and Gregory D~H 2014 {\em Chem.
+  Rev.\/} {\bf 114} 1170--1206
+
+\bibitem{ZOHM2000}
+Zohm H, Kasper E, Mehringer P and Müller G 2000 {\em Microelectron. Eng.\/}
+  {\bf 54} 247--253
+
+\bibitem{BHUNIA1998}
+Bhunia S and Bose D 1998 {\em J. Cryst. Growth\/} {\bf 186} 535--542
+
+\bibitem{Bacherikov2003En}
+Bacherikov Y~Y, Konakova R~V, Kocherov A~N, Lytvyn P~M, Lytvyn O~S, Okhrimenko
+  O~B and Svetlichnyi A~M 2003 {\em Technical Physics\/} {\bf 48}(5) 598--601
+
+\bibitem{Pashkov1994En}
+Pashkov V, Perevoshchikov V and Skupov V 1994 {\em Pis'ma v zhurnal
+  tekhnicheskoy fiziki\/} {\bf 20}(8) 14--18 (in Russian)
+
+\bibitem{BoltovetsEn}
+Boltovets N~S, Kamalov A~B, Kolyadina E~Y, Konakova R~V, Lytvyn P~M, Lytvyn
+  O~S, Matveeva L~A, Milenin V~V and Rengevych O~E 2002 {\em Technical Physics
+  Letters\/} {\bf 28}(2) 154--156
+
+\bibitem{Milenin1994En}
+Milenin V, Konakova R, Statov V, Sklyarevich V, Tkhorik Y, Filatov M and
+  Shevelev M 1994 {\em Pis'ma v zhurnal tekhnicheskoy fiziki\/} {\bf 20}(4)
+  32--36 (in Russian)
+
+\bibitem{BelyaevIntac}
+Belyaev A, Venger E, Ermolovich I, Konakova R, Lytvyn P, Milenin V, Prokopenko
+  I, Svechnikov G, Soloviev E and Fedorenko L 2002 {\em Effect of microwave and
+  laser radiations on the parameters of semiconductor structures\/} (Kyiv:
+  Intac)
+
+\bibitem{ASHKINADZE1996}
+Ashkinadze B, Cohen E, Ron A, Linder E and Pfeiffer L 1996 {\em Solid-State
+  Electron.\/} {\bf 40} 561--565 ISSN 0038-1101
+
+\bibitem{ProcSPIE}
+Ermolovich I~B, Venger E~F, Konakova R~V, Milenin V~V, Svechnikov S~V and
+  Sheveljev M~V 1998 {\em Proc. SPIE\/} {\bf 3359} 265--272
+
+\bibitem{Belyaev1998JTFEn}
+Belyayev A, Belyayev A, Yermolovich I, Komirenko S, Konakova R, Lyapin V,
+  Milenin V, Solov'ev E and Shevelev M 1998 {\em Technical Physics\/} {\bf 43}
+  1445--1449
+
+\bibitem{Bacherikov2008En}
+Bacherikov Y, Konakova R, Milenin V, Okhrimenko O, Svetlichnyi A and Polyakov V
+  2008 {\em Semiconductors\/} {\bf 42}(7) 868--872
+
+\bibitem{Konakova2015En}
+Zayats N~S, Konakova R~V, Milenin V~V, Milenin G~V, Red’ko R~A and Red’ko
+  S~N 2015 {\em Technical Physics\/} {\bf 60}(3) 432--436
+
+\bibitem{Konakova2012FTPEn}
+Belyayev A, Sachenko A, Boltovets N, Ivanov V, Konakova R, Kudryk Y, Matveeva
+  L, Milenin V, Novitskii S and Sheremet V 2012 {\em Semiconductors\/} {\bf
+  46}(4) 541--544
+
+\bibitem{SiCDavid}
+Davidsson J, Ivády V, Armiento R, Ohshima T, Son N~T, Gali A and Abrikosov I~A
+  2019 {\em Appl. Phys. Lett.\/} {\bf 114} 112107
+
+\bibitem{SiCWei}
+Wei Y, Tarekegne A~T and Ou H 2018 {\em J. Appl. Phys.\/} {\bf 124} 054901
+
+\bibitem{GAPel2020}
+Pellegrino C, Gagliardi A and Zimmermann C~G 2020 {\em J. Appl. Phys.\/} {\bf
+  128} 195701
+
+\bibitem{GASobolev2020}
+Sobolev M~M, Soldatenkov F~Y and Danil'chenko V~G 2020 {\em J. Appl. Phys.\/}
+  {\bf 128} 095705
+
+\bibitem{OstrovPAN}
+Ostrovskii I~V, Saiko S~V and Walther H~G 1998 {\em J. Phys. D: Appl. Phys.\/}
+  {\bf 31} 2319--2325
+
+\bibitem{OlikhSSC}
+Ostrovskii I and Olikh O 1998 {\em Solid State Commun.\/} {\bf 107} 341--343
+  ISSN 0038-1098
+
+\bibitem{PANnewEn}
+Gromashevskii V, Tatyanenko N and Snopok B 2013 {\em Semiconductors\/} {\bf
+  47}(4) 579--585
+
+\bibitem{OstrovskiiSST}
+Abbate A, Ostrovskii I~V, Han K~J, Masini G, Palma F and Das P 1995 {\em
+  Semicond. Sci. Technol.\/} {\bf 10} 965--969
+
+\bibitem{Godwod}
+Godwod K, Nagy A~T and Rek Z 1976 {\em Phys. Status Solidi A\/} {\bf 34}
+  705--710
+
+\end{thebibliography}
