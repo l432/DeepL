@@ -1,0 +1,5 @@
+username is: OOlikh-624
+login: el2662421O
+
+
+C:\Program Files\MiKTeX\miktex\bin\x64\bibtex.exe
