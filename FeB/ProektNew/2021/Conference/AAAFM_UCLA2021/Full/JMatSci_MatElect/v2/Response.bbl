@@ -1,0 +1,224 @@
+%% BioMed_Central_Bib_Style_v1.01
+
+\begin{thebibliography}{10}
+% BibTex style file: bmc-mathphys.bst (version 2.1), 2014-07-24
+\ifx \bisbn   \undefined \def \bisbn  #1{ISBN #1}\fi
+\ifx \binits  \undefined \def \binits#1{#1}\fi
+\ifx \bauthor  \undefined \def \bauthor#1{#1}\fi
+\ifx \batitle  \undefined \def \batitle#1{#1}\fi
+\ifx \bjtitle  \undefined \def \bjtitle#1{#1}\fi
+\ifx \bvolume  \undefined \def \bvolume#1{\textbf{#1}}\fi
+\ifx \byear  \undefined \def \byear#1{#1}\fi
+\ifx \bissue  \undefined \def \bissue#1{#1}\fi
+\ifx \bfpage  \undefined \def \bfpage#1{#1}\fi
+\ifx \blpage  \undefined \def \blpage #1{#1}\fi
+\ifx \burl  \undefined \def \burl#1{\textsf{#1}}\fi
+\ifx \doiurl  \undefined \def \doiurl#1{\url{https://doi.org/#1}}\fi
+\ifx \betal  \undefined \def \betal{\textit{et al.}}\fi
+\ifx \binstitute  \undefined \def \binstitute#1{#1}\fi
+\ifx \binstitutionaled  \undefined \def \binstitutionaled#1{#1}\fi
+\ifx \bctitle  \undefined \def \bctitle#1{#1}\fi
+\ifx \beditor  \undefined \def \beditor#1{#1}\fi
+\ifx \bpublisher  \undefined \def \bpublisher#1{#1}\fi
+\ifx \bbtitle  \undefined \def \bbtitle#1{#1}\fi
+\ifx \bedition  \undefined \def \bedition#1{#1}\fi
+\ifx \bseriesno  \undefined \def \bseriesno#1{#1}\fi
+\ifx \blocation  \undefined \def \blocation#1{#1}\fi
+\ifx \bsertitle  \undefined \def \bsertitle#1{#1}\fi
+\ifx \bsnm \undefined \def \bsnm#1{#1}\fi
+\ifx \bsuffix \undefined \def \bsuffix#1{#1}\fi
+\ifx \bparticle \undefined \def \bparticle#1{#1}\fi
+\ifx \barticle \undefined \def \barticle#1{#1}\fi
+\bibcommenthead
+\ifx \bconfdate \undefined \def \bconfdate #1{#1}\fi
+\ifx \botherref \undefined \def \botherref #1{#1}\fi
+\ifx \url \undefined \def \url#1{\textsf{#1}}\fi
+\ifx \bchapter \undefined \def \bchapter#1{#1}\fi
+\ifx \bbook \undefined \def \bbook#1{#1}\fi
+\ifx \bcomment \undefined \def \bcomment#1{#1}\fi
+\ifx \oauthor \undefined \def \oauthor#1{#1}\fi
+\ifx \citeauthoryear \undefined \def \citeauthoryear#1{#1}\fi
+\ifx \endbibitem  \undefined \def \endbibitem {}\fi
+\ifx \bconflocation  \undefined \def \bconflocation#1{#1}\fi
+\ifx \arxivurl  \undefined \def \arxivurl#1{\textsf{#1}}\fi
+\csname PreBibitemsHook\endcsname
+
+%%% 1
+\bibitem{TAYYIB201221}
+\begin{barticle}
+\bauthor{\bsnm{Tayyib}, \binits{M.}},
+\bauthor{\bsnm{Theobald}, \binits{J.}},
+\bauthor{\bsnm{Peter}, \binits{K.}},
+\bauthor{\bsnm{Odden}, \binits{J.O.}},
+\bauthor{\bsnm{Sætre}, \binits{T.O.}}:
+\batitle{Accelerated light-induced defect transformation study of elkem solar
+  grade silicon}.
+\bjtitle{Energy Procedia}
+\bvolume{27},
+\bfpage{21}--\blpage{26}
+(\byear{2012}).
+\doiurl{10.1016/j.egypro.2012.07.023}.
+\bcomment{Proceedings of the 2nd International Conference on Crystalline
+  Silicon Photovoltaics SiliconPV 2012}
+\end{barticle}
+\endbibitem
+
+%%% 2
+\bibitem{JAPSach}
+\begin{barticle}
+\bauthor{\bsnm{Sachenko}, \binits{A.V.}},
+\bauthor{\bsnm{Kryuchenko}, \binits{Y.V.}},
+\bauthor{\bsnm{Kostylyov}, \binits{V.P.}},
+\bauthor{\bsnm{Bobyl}, \binits{A.V.}},
+\bauthor{\bsnm{Terukov}, \binits{E.I.}},
+\bauthor{\bsnm{Abolmasov}, \binits{S.N.}},
+\bauthor{\bsnm{Abramov}, \binits{A.S.}},
+\bauthor{\bsnm{Andronikov}, \binits{D.A.}},
+\bauthor{\bsnm{Shvarts}, \binits{M.Z.}},
+\bauthor{\bsnm{Sokolovskyi}, \binits{I.O.}},
+\bauthor{\bsnm{Evstigneev}, \binits{M.}}:
+\batitle{Temperature dependence of photoconversion efficiency in silicon
+  heterojunction solar cells: Theory vs experiment}.
+\bjtitle{J. Appl. Phys.}
+\bvolume{119}(\bissue{22}),
+\bfpage{225702}
+(\byear{2016})
+{\href{https://arxiv.org/abs/https://doi.org/10.1063/1.4953384}{{https://doi.org/10.1063/1.4953384}}}.
+\doiurl{10.1063/1.4953384}
+\end{barticle}
+\endbibitem
+
+%%% 3
+\bibitem{FeB_Zong}
+\begin{barticle}
+\bauthor{\bsnm{Zoth}, \binits{G.}},
+\bauthor{\bsnm{Bergholz}, \binits{W.}}:
+\batitle{A fast, preperetion-free method to detect iron in silicon}.
+\bjtitle{J. Appl. Phys.}
+\bvolume{67}(\bissue{11}),
+\bfpage{6764}--\blpage{6771}
+(\byear{1990}).
+\doiurl{10.1063/1.345063}
+\end{barticle}
+\endbibitem
+
+%%% 4
+\bibitem{Schmidt2019}
+\begin{barticle}
+\bauthor{\bsnm{Schmidt}, \binits{J.}},
+\bauthor{\bsnm{Bothe}, \binits{K.}},
+\bauthor{\bsnm{Voronkov}, \binits{V.V.}},
+\bauthor{\bsnm{Falster}, \binits{R.}}:
+\batitle{Fast and slow stages of lifetime degradation by boron–oxygen centers
+  in crystalline silicon}.
+\bjtitle{physica status solidi (b)}
+\bvolume{257}(\bissue{1}),
+\bfpage{1900167}
+(\byear{2020}).
+\doiurl{10.1002/pssb.201900167}
+\end{barticle}
+\endbibitem
+
+%%% 5
+\bibitem{FeBLight2}
+\begin{barticle}
+\bauthor{\bsnm{Geerligs}, \binits{L.J.}},
+\bauthor{\bsnm{Macdonald}, \binits{D.}}:
+\batitle{Dynamics of light-induced feb pair dissociation in crystalline
+  silicon}.
+\bjtitle{Appl. Phys. Lett.}
+\bvolume{85}(\bissue{22}),
+\bfpage{5227}--\blpage{5229}
+(\byear{2004}).
+\doiurl{10.1063/1.1823587}
+\end{barticle}
+\endbibitem
+
+%%% 6
+\bibitem{FeBKin2019}
+\begin{barticle}
+\bauthor{\bsnm{Khelifati}, \binits{N.}},
+\bauthor{\bsnm{Laine}, \binits{H.S.}},
+\bauthor{\bsnm{Vähänissi}, \binits{V.}},
+\bauthor{\bsnm{Savin}, \binits{H.}},
+\bauthor{\bsnm{Bouamama}, \binits{F.Z.}},
+\bauthor{\bsnm{Bouhafs}, \binits{D.}}:
+\batitle{Dissociation and formation kinetics of iron–boron pairs in silicon
+  after phosphorus implantation gettering}.
+\bjtitle{Phys Status Solidi A}
+\bvolume{216}(\bissue{17}),
+\bfpage{1900253}
+(\byear{2019}).
+\doiurl{10.1002/pssa.201900253}
+\end{barticle}
+\endbibitem
+
+%%% 7
+\bibitem{Lagowskii1993}
+\begin{barticle}
+\bauthor{\bsnm{Lagowski}, \binits{J.}},
+\bauthor{\bsnm{Edelman}, \binits{P.}},
+\bauthor{\bsnm{Kontkiewicz}, \binits{A.M.}},
+\bauthor{\bsnm{Milic}, \binits{O.}},
+\bauthor{\bsnm{Henley}, \binits{W.}},
+\bauthor{\bsnm{Dexter}, \binits{M.}},
+\bauthor{\bsnm{Jastrzebski}, \binits{L.}},
+\bauthor{\bsnm{Hoff}, \binits{A.M.}}:
+\batitle{Iron detection in the part per quadrillion range in silicon using
+  surface photovoltage and photodissociation of iron‐boron pairs}.
+\bjtitle{Applied Physics Letters}
+\bvolume{63}(\bissue{22}),
+\bfpage{3043}--\blpage{3045}
+(\byear{1993}).
+\doiurl{10.1063/1.110789}
+\end{barticle}
+\endbibitem
+
+%%% 8
+\bibitem{Ostapenko1995SST}
+\begin{barticle}
+\bauthor{\bsnm{Ostapenko}, \binits{S.S.}},
+\bauthor{\bsnm{Jastrzebski}, \binits{L.}},
+\bauthor{\bsnm{Sopori}, \binits{B.}}:
+\batitle{Change of minority carrier diffusion length in polycrystalline silicon
+  by ultrasound treatment}.
+\bjtitle{Semicond. Sci. Technol.}
+\bvolume{10}(\bissue{11}),
+\bfpage{1494}--\blpage{1500}
+(\byear{1995}).
+\doiurl{10.1088/0268-1242/10/11/011}
+\end{barticle}
+\endbibitem
+
+%%% 9
+\bibitem{Ostapenko1994APL}
+\begin{barticle}
+\bauthor{\bsnm{Ostapenko}, \binits{S.S.}},
+\bauthor{\bsnm{Jastrzebski}, \binits{L.}},
+\bauthor{\bsnm{Lagowski}, \binits{J.}},
+\bauthor{\bsnm{Sopori}, \binits{B.}}:
+\batitle{Increasing short minority carrier diffusion lengths in solar--grade
+  polycrystalline silicon by ultrasound treatment}.
+\bjtitle{Appl. Phys. Lett.}
+\bvolume{65}(\bissue{12}),
+\bfpage{1555}--\blpage{1557}
+(\byear{1994}).
+\doiurl{10.1063/1.112942}
+\end{barticle}
+\endbibitem
+
+%%% 10
+\bibitem{Ostapenko1995}
+\begin{barticle}
+\bauthor{\bsnm{Ostapenko}, \binits{S.S.}},
+\bauthor{\bsnm{Bell}, \binits{R.E.}}:
+\batitle{Ultrasound stimulated dissociation of {F}e--{B} pairs in silicon}.
+\bjtitle{J. Appl. Phys.}
+\bvolume{77}(\bissue{10}),
+\bfpage{5458}--\blpage{5460}
+(\byear{1995}).
+\doiurl{10.1063/1.359243}
+\end{barticle}
+\endbibitem
+
+\end{thebibliography}
