@@ -1,0 +1,57 @@
+ear Dr. Olikh:
+
+REF: YOUR PAPER #JMSE-D-22-00483
+"Intensification of iron-boron complex association in silicon solar cells under acoustic wave action"
+Minor revision
+
+Following our acknowledgement of your paper, I have now received the referee reports, which are appended below. As you will see, modifications are required to the manuscript before it can be accepted.
+
+(1) Please modify your manuscript as appropriate, and provide replies to the referee comments. Please identify the revisions in the new manuscript by highlighting them in yellow.
+(2) If you are citing references from this journal that have been published in the last 3 years, please ensure that the references are relevant. We would like to eliminate unnecessary self-citations of the journal itself.
+(3) If the referees have suggested the inclusion of certain references, please ensure that these are relevant to the work and explain to the editor why they are or are not relevant in your reply letter.
+(4) VERY IMPORTANT: You must follow the author instructions in the online document "JMSE Guidelines for Authors on Notation and Best Scientific Practice" at https://www.springer.com/journal/10854/submission-guidelines#linksAndDownloads
+(5) VERY IMPORTANT: Your manuscript must comply with the journal's requirements on notation (including the use of points for decimals and not commas), the use of significant figures, errors and uncertainties, the use of the Scherrer equation, Williamson-Hall analysis and the depiction of smooth curves through the experimental points. Manuscripts that do not comply with JMSE's requirements will be rejected.
+
+The title of your paper must represent the work without superlative adjectives and without unjustifiable claims such as "amazing", "extraordinary", "unbelievable", "outstanding" etc. If necessary, please modify the title of your paper to avoid having your paper returned.(See link under Point (4) above.)
+
+Please explain in your Response how your manuscript complies with all the points above;in particular (4) and (5).
+
+Authorship changes are not allowed unless the new author has contributed to the revisions or was missed out in the original submission by a genuine error. For authorship changes, you must contact the Editorial Office and obtain the authorship change form to fill in. All previous and new authors must sign the form and an explanation must be provided. If the Editor-in-Chief does not accept the authorship change and your explanation, your paper may be rejected.
+
+PLEASE NOTE: YOUR REVISED VERSION CANNOT BE SUBMITTED IN .PS OR .PDF. IN THE EVENT THAT YOUR REVISED VERSION IS ACCEPTED, YOUR PAPER CAN BE SENT TO PRODUCTION WITHOUT DELAY ONLY IF WE HAVE THE SOURCE FILES ON HAND. Submissions without source files will be returned prior to final acceptance.
+
+In order to submit your revised manuscript electronically, please access the Editorial Manager website.
+
+Your username is: OOlikh-624
+If you forgot your password, you can click the 'Send Login Details' link on the EM Login page at https://www.editorialmanager.com/jmse/
+
+Click "Author Login" to submit your revision.
+
+We expect your revision to be submitted within 11 Apr 2022, after which the paper will be withdrawn if we do not hear from you.
+
+Thank you very much.
+
+Yours sincerely,
+
+Nandu B. Chaure
+Journal of Materials Science: Materials in Electronics
+
+COMMENTS TO THE AUTHOR:
+
+Reviewer #1: The authors experimentally investigated the ultrasound influence on FeB pair association in silicon solar cells. The experiment results indicated that ultrasound can be an effective functional tool for
+controlling silicon structure characteristics. There are, however, some recommendations for revision that need attention.
+1. Since Ultrasound Stimulated (US) dissociation of FeB pairs in Silicon has been studied before, the author needs to give a short description of the work of reference 16 in the "Introduction" part.
+2. The font in Figure 4 is obviously too small.
+3. The forms of the separation of axis titles and units are inconsistent in the Figures.
+
+
+
+Reviewer #2: Tittle: Intensification of iron-boron complex association in silicon solar cells under acoustic wave action
+Abstract: This part is precise and concise.  It could be better to mention some points of the light induced degradation in solar cells.
+Introduction: Why not other doping elements ? why iron given more importance ? explanation required. Objective is not well framed.
+Experimental part: How much doping of phosphorus? How do they measure thickness? Why were AWs excited in the samples of 2.4; 4.1; 5.4; 9.0; 14; 18; 31 MHz (longitudinal) or 0.3 MHz (transverse) with frequency fUS ?. Give a reason. Why not selected substitution atoms?
+Result and discussion: In figure 5, x axis when will it reach minimum? Is there any particular reason for selecting 300 to 304K?
+
+
+
+Reviewer #3: Please see the attached file.
