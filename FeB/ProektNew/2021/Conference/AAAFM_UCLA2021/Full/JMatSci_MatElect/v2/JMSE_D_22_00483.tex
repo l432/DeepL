@@ -149,11 +149,26 @@ the process of silicon surface layer amorphization becomes more intensive \cite{
 USL applied during the production of porous silicon  results in structural ordering \cite{Kalem2000}
 and when applied during ZnO deposition provides higher homogeneity of the films \cite{US:ZnOfilm}.
 
-Iron is one of the most widespread as well as harmful impurities in silicon solar cells (SCs).
+The silicon solar cells (SCs) constitute about 90\% of current global photovoltaic production capacity.
+Iron is one of the most relevant, omnipresent, and efficiency--limiting metallic impurities
+in p--type Si SCs \cite{Istratov1999,IronSC}.
+Therefore, the methods of defect engineering aimed at iron have practical importance.
 In silicon photovoltaics, one of the main methods of the impurity deactivation and removing it from the operation zone is gettering Fe atoms at certain centers (at extended defects, at oxygen precipitates, or at interfaces) \cite{LaineIEEEPV2016}.
 It was shown that similar gettering processes can be realized during such standard operations as phosphorus diffusion  \cite{FeB:Vahanissi}
 or production of antireflection coating  \cite{Teimuraz2014JAP}.
 It is clear that the process efficiency depends on the mobility of iron atoms.
+
+On the one hand, shallow acceptors (B, Al, Ga, In) are effective trapping sites for iron around room temperature
+and in darkness in p-Si due to electrostatic attraction between the negatively charged
+acceptors and the positively charged iron ions.
+All Fe-acceptor pairs are similar:
+complexes have two structural configurations
+with trigonal and orthorhombic symmetry and can be broken by
+intense illumination and/or annealing above 200$^\circ$C \cite{Istratov1999,FeBKinAPL2013}.
+On the other hand, the back surface field (BSF) and passivated emitter and rear cell (PERC)
+are the most popular designs that have been used in the mass-production of Si SCs,
+and both BSF and PERC are mainly  based on boron-doped silicon wafers \cite{SCRev2020,GreenRew2019}.
+Therefore the iron--boron pair is one of the most relevant complexes to the defect engineering in real SCs.
 The aim of this work is to investigate experimentally how acoustic waves (AWs) influence the ability of iron to diffuse in silicon solar cells.
 The time of iron--boron pair association after  light-induced dissociation was used as an indicator of iron ion mobility.
 The possibility of the ultrasound to  change the state of FeB was shown previously  \cite{Ostapenko1994APL,Ostapenko1995}.
@@ -176,11 +191,13 @@ Thus the association of FeB pair (the migration  of Fe$_i^+$) was firstly invest
 Experimental studies were performed on the samples of silicon SC with geometric dimensions of $1.52\times1.535$~cm$^2$ made on the basis of single-crystal  $p$--type silicon [100] wafers with resistivity of about 10~$\Omega\cdot$cm
 (boron doping level  $N_A=1.4\times10^{15}$~cm$^{-3}$).
 The thickness of the wafers was 380~$\mu$m.
-On the front surface, the SCs had a separating $n^+$--$p$ junction formed by phosphorus diffusion.
-In addition, to reduce recombination losses and increase the conductivity of the contact layer
-on the rear surface an isotype $p^+$-$p$ barrier was formed by diffusion of boron.
-Electrical contacts were formed by applying a solid layer of aluminum on the rear surface and a layer in the form of a grid on the front surface.
+A diffusion from the gas phase (POCl$_3$) at 940$^\circ$C was performed on wafers resulting in a $n^+$--emitter layer on
+the front side (sheet resistance of about $20-30$~$\Omega/\Box$, thickness of $0.7$~$\mu$m).
+In addition, to reduce recombination losses and increase the conductivity of the contact layer,
+a $p^+$ layer ($10-20$~$\Omega/\Box$, $0.6$~$\mu$m) was formed by boron diffusion from
+the gas phase (BCl$_3$) at 985$^\circ$C on the rear surface.
 Layers of SiO$_2$ and Si$_3$N$_4$ were formed on the surface of the SC to passivate the surface and reduce optical reflectance.
+The solid and grid aluminum contacts were formed by magnetron sputtering on the rear and front surfaces, respectively.
 The scheme of SC is presented in Fig.~\ref{figChem}.
 \begin{figure}
 \centering
@@ -202,9 +219,18 @@ The scheme of SC is presented in Fig.~\ref{figChem}.
 In case of USL, the transverse or longitudinal AWs, which were excited by using LiNbO$_3$ or ceramic piezoelectric transducer,
 were applied to the samples in [100] direction.
 The transducer was attached to the whole area of Al back contact.
-AWs excited in the samples were 2.4; 4.1; 5.4; 9.0; 14; 18; 31 MHz (longitudinal) or 0.3~MHz (transverse)
-with frequency $f_\mathrm{US}$ and had the intensity of $W_\mathrm{US}<1.3$~W/cm$^2$.
-In order to avoid the impact of piezoelectric field on both the measurements and sample parameters,
+It is widely known that the efficiency of ultrasound influences defects
+in semiconductors depends on acoustic wave frequency $f_\mathrm{US}$.
+Moreover, the type of frequency dependence is determined by the mechanism of acousto-defect
+interaction \cite{Brailsford,Pavlovich,PeleshchakUJF2016}.
+The set of longitudinal wave frequencies (2.4, 4.1, 5.4, 9.0, 14, 18, and 31~MHz)
+was used  to establish features of
+ultrasound influence on iron migration.
+Besides,  the effect of the increase in the carrier capture coefficient for defects in silicon SC
+is shown \cite{Olikh2018SM} to be intensified in the case of the transverse acoustic waves using.
+Accordingly, the transverse waves ($f_\mathrm{US}=0.3$~MHz) were used as well.
+The ultrasound intensities $W_\mathrm{US}$  does not overcome 1.3~W/cm$^2$.
+To avoid the effect of the piezoelectric field on the measurements procedure as well as sample parameters,
 the transducer was shielded by Cu foil (see Fig.~\ref{figChem}).
 
 It is known that Fe in silicon can be in two states:
@@ -450,7 +476,11 @@ In particular, saturation $\tau_\mathrm{US}/\tau_{0}$ at $f_\mathrm{US}=2.4$~MHz
 at approximately $W_\mathrm{US}=0.6$~W/cm$^2$,
 while for $9.0$~MHz it is revealed at $0.9$~W/cm$^2$, see Fig.~\ref{figfus}(b).
 As for the saturation magnitude, it does not depend on $f_\mathrm{US}$.
-Transverse waves as well, despite their low frequency, less strongly impact the processes of iron ion diffusion.
+Transverse waves,
+despite lower frequency, less strongly impact the processes of FeB pair association.
+It is previously shown \cite{Olikh2018SM} that the acoustically-induced change of complex defect parameters can be attributed to the variation in the distance of the components, and this effect is intensified in the case of the transverse waves.
+The opposite feature of investigated phenomenon testifies that the AI acceleration of the FeB pair
+association does not deal with iron-boron distance change.
 
 Fig.~\ref{figfus} also gives iron concentrations $N_\mathrm{Fe,0}$ obtained from $I_\mathrm{SC}$ relaxation
 in conditions of complete pair dissociation (i.e. the illumination that causes the maximum short circuit current decrease).

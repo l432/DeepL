@@ -1,6 +1,6 @@
 %% BioMed_Central_Bib_Style_v1.01
 
-\begin{thebibliography}{14}
+\begin{thebibliography}{28}
 % BibTex style file: bmc-mathphys.bst (version 2.1), 2014-07-24
 \ifx \bisbn   \undefined \def \bisbn  #1{ISBN #1}\fi
 \ifx \binits  \undefined \def \binits#1{#1}\fi
@@ -165,6 +165,234 @@
 \endbibitem
 
 %%% 7
+\bibitem{Istratov1999}
+\begin{barticle}
+\bauthor{\bsnm{Istratov}, \binits{A.A.}},
+\bauthor{\bsnm{Hieslmair}, \binits{H.}},
+\bauthor{\bsnm{Weber}, \binits{E.R.}}:
+\batitle{Iron and its complexes in silicon}.
+\bjtitle{Applied Physics A: Materials Science \& Processing}
+\bvolume{69}(\bissue{1}),
+\bfpage{13}--\blpage{44}
+(\byear{1999}).
+\doiurl{10.1007/s003390050968}
+\end{barticle}
+\endbibitem
+
+%%% 8
+\bibitem{IronSC}
+\begin{barticle}
+\bauthor{\bsnm{Schubert}, \binits{M.C.}},
+\bauthor{\bsnm{Padilla}, \binits{M.}},
+\bauthor{\bsnm{Michl}, \binits{B.}},
+\bauthor{\bsnm{Mundt}, \binits{L.}},
+\bauthor{\bsnm{Giesecke}, \binits{J.}},
+\bauthor{\bsnm{Hohl-Ebinger}, \binits{J.}},
+\bauthor{\bsnm{Benick}, \binits{J.}},
+\bauthor{\bsnm{Warta}, \binits{W.}},
+\bauthor{\bsnm{Tajima}, \binits{M.}},
+\bauthor{\bsnm{Ogura}, \binits{A.}}:
+\batitle{Iron related solar cell instability: Imaging analysis and impact on
+  cell performance}.
+\bjtitle{Sol. Energy Mater. Sol. Cells}
+\bvolume{138},
+\bfpage{96}--\blpage{101}
+(\byear{2015}).
+\doiurl{10.1016/j.solmat.2015.03.001}
+\end{barticle}
+\endbibitem
+
+%%% 9
+\bibitem{FeBKinAPL2013}
+\begin{barticle}
+\bauthor{\bsnm{Bartel}, \binits{T.}},
+\bauthor{\bsnm{Gibaja}, \binits{F.}},
+\bauthor{\bsnm{Graf}, \binits{O.}},
+\bauthor{\bsnm{Gross}, \binits{D.}},
+\bauthor{\bsnm{Kaes}, \binits{M.}},
+\bauthor{\bsnm{Heuer}, \binits{M.}},
+\bauthor{\bsnm{Kirscht}, \binits{F.}},
+\bauthor{\bsnm{Möller}, \binits{C.}},
+\bauthor{\bsnm{Lauer}, \binits{K.}}:
+\batitle{Dynamics of iron-acceptor-pair formation in co-doped silicon}.
+\bjtitle{Appl. Phys. Lett.}
+\bvolume{103}(\bissue{20}),
+\bfpage{202109}
+(\byear{2013}).
+\doiurl{10.1063/1.4830227}
+\end{barticle}
+\endbibitem
+
+%%% 10
+\bibitem{SCRev2020}
+\begin{barticle}
+\bauthor{\bsnm{Ajayan}, \binits{J.}},
+\bauthor{\bsnm{Nirmal}, \binits{D.}},
+\bauthor{\bsnm{Mohankumar}, \binits{P.}},
+\bauthor{\bsnm{Saravanan}, \binits{M.}},
+\bauthor{\bsnm{Jagadesh}, \binits{M.}},
+\bauthor{\bsnm{Arivazhagan}, \binits{L.}}:
+\batitle{A review of photovoltaic performance of organic/inorganic solar cells
+  for future renewable and sustainable energy technologies}.
+\bjtitle{Superlattices Microstruct.}
+\bvolume{143},
+\bfpage{106549}
+(\byear{2020}).
+\doiurl{10.1016/j.spmi.2020.106549}
+\end{barticle}
+\endbibitem
+
+%%% 11
+\bibitem{GreenRew2019}
+\begin{barticle}
+\bauthor{\bsnm{Green}, \binits{M.A.}}:
+\batitle{Photovoltaic technology and visions for the future}.
+\bjtitle{Prog. Energy}
+\bvolume{1}(\bissue{1}),
+\bfpage{013001}
+(\byear{2019}).
+\doiurl{10.1088/2516-1083/ab0fa8}
+\end{barticle}
+\endbibitem
+
+%%% 12
+\bibitem{Olikh2018SM}
+\begin{barticle}
+\bauthor{\bsnm{Olikh}, \binits{O.Y.}}:
+\batitle{Acoustically driven degradation in single crystalline silicon solar
+  cell}.
+\bjtitle{Superlattices Microstruct.}
+\bvolume{117},
+\bfpage{173}--\blpage{188}
+(\byear{2018}).
+\doiurl{10.1016/j.spmi.2018.03.027}
+\end{barticle}
+\endbibitem
+
+%%% 13
+\bibitem{Olikh2018JAP}
+\begin{barticle}
+\bauthor{\bsnm{Olikh}, \binits{O.Y.}},
+\bauthor{\bsnm{Gorb}, \binits{A.M.}},
+\bauthor{\bsnm{Chupryna}, \binits{R.G.}},
+\bauthor{\bsnm{Pristay--Fenenkov}, \binits{O.V.}}:
+\batitle{Acousto--defect interaction in irradiated and non--irradiated silicon
+  $n^+$--$p$ structure}.
+\bjtitle{J. Appl. Phys.}
+\bvolume{123}(\bissue{16}),
+\bfpage{161573}
+(\byear{2018}).
+\doiurl{10.1063/1.5001123}
+\end{barticle}
+\endbibitem
+
+%%% 14
+\bibitem{OlikhJAP}
+\begin{barticle}
+\bauthor{\bsnm{Olikh}, \binits{O.Y.}},
+\bauthor{\bsnm{Voytenko}, \binits{K.V.}},
+\bauthor{\bsnm{Burbelo}, \binits{R.M.}}:
+\batitle{Ultrasound influence on {I}--{V}--{T} characteristics of silicon
+  {S}chottky barrier structure}.
+\bjtitle{J. Appl. Phys.}
+\bvolume{117}(\bissue{4}),
+\bfpage{044505}
+(\byear{2015}).
+\doiurl{10.1063/1.4906844}
+\end{barticle}
+\endbibitem
+
+%%% 15
+\bibitem{GORB2020}
+\begin{barticle}
+\bauthor{\bsnm{Gorb}, \binits{A.M.}},
+\bauthor{\bsnm{Korotchenkov}, \binits{O.A.}},
+\bauthor{\bsnm{Olikh}, \binits{O.Y.}},
+\bauthor{\bsnm{Podolian}, \binits{A.O.}},
+\bauthor{\bsnm{Chupryna}, \binits{R.G.}}:
+\batitle{Influence of $\gamma$--irradiation and ultrasound treatment on current
+  mechanism in au-sio$_2$-si structure}.
+\bjtitle{Solid-State Electron.}
+\bvolume{165},
+\bfpage{107712}
+(\byear{2020}).
+\doiurl{10.1016/j.sse.2019.107712}
+\end{barticle}
+\endbibitem
+
+%%% 16
+\bibitem{Olikh:Ultras}
+\begin{barticle}
+\bauthor{\bsnm{Olikh}, \binits{O.}}:
+\batitle{Reversible influence of ultrasound on $\gamma-$irradiated {M}o/n-{S}i
+  {S}chottky barrier structure}.
+\bjtitle{Ultrasonics}
+\bvolume{56},
+\bfpage{545}--\blpage{550}
+(\byear{2015}).
+\doiurl{10.1016/j.ultras.2014.10.008}
+\end{barticle}
+\endbibitem
+
+%%% 17
+\bibitem{Olikh:Ultras2016}
+\begin{barticle}
+\bauthor{\bsnm{Olikh}, \binits{O.}},
+\bauthor{\bsnm{Voytenko}, \binits{K.}}:
+\batitle{On the mechanism of ultrasonic loading effect in silicon--based
+  {S}chottky diodes}.
+\bjtitle{Ultrasonics}
+\bvolume{66}(\bissue{1}),
+\bfpage{1}--\blpage{3}
+(\byear{2016}).
+\doiurl{10.1016/j.ultras.2015.12.001}
+\end{barticle}
+\endbibitem
+
+%%% 18
+\bibitem{Brailsford}
+\begin{barticle}
+\bauthor{\bsnm{Brailsford}, \binits{A.D.}}:
+\batitle{Abrupt--kink model of dislocation motion}.
+\bjtitle{Phys. Rev.}
+\bvolume{122}(\bissue{3}),
+\bfpage{778}--\blpage{786}
+(\byear{1961}).
+\doiurl{10.1103/PhysRev.122.778}
+\end{barticle}
+\endbibitem
+
+%%% 19
+\bibitem{Pavlovich}
+\begin{barticle}
+\bauthor{\bsnm{Pavlovich}, \binits{V.N.}}:
+\batitle{Enhanced diffusion of impurities and defects in crystals in conditions
+  of ultrasonic and radiative excitation of the crystal lattice}.
+\bjtitle{Phys. Status Solidi B}
+\bvolume{180}(\bissue{1}),
+\bfpage{97}--\blpage{105}
+(\byear{1993}).
+\doiurl{10.1002/pssb.2221800108}
+\end{barticle}
+\endbibitem
+
+%%% 20
+\bibitem{PeleshchakUJF2016}
+\begin{barticle}
+\bauthor{\bsnm{Peleshchak}, \binits{R.M.}},
+\bauthor{\bsnm{Kuzyk}, \binits{O.V.}},
+\bauthor{\bsnm{Dan'kiv}, \binits{O.O.}}:
+\batitle{Formation of periodic structures under the influence of an acousti
+  wave in semiconductors with a two-component defect subsystem}.
+\bjtitle{Ukr. J. Phys.}
+\bvolume{61}(\bissue{8}),
+\bfpage{741}--\blpage{746}
+(\byear{2016}).
+\doiurl{10.15407/ujpe61.08.0741}
+\end{barticle}
+\endbibitem
+
+%%% 21
 \bibitem{TAYYIB201221}
 \begin{barticle}
 \bauthor{\bsnm{Tayyib}, \binits{M.}},
@@ -184,7 +412,7 @@
 \end{barticle}
 \endbibitem
 
-%%% 8
+%%% 22
 \bibitem{JAPSach}
 \begin{barticle}
 \bauthor{\bsnm{Sachenko}, \binits{A.V.}},
@@ -209,7 +437,7 @@
 \end{barticle}
 \endbibitem
 
-%%% 9
+%%% 23
 \bibitem{FeB_Zong}
 \begin{barticle}
 \bauthor{\bsnm{Zoth}, \binits{G.}},
@@ -223,7 +451,7 @@
 \end{barticle}
 \endbibitem
 
-%%% 10
+%%% 24
 \bibitem{Schmidt2019}
 \begin{barticle}
 \bauthor{\bsnm{Schmidt}, \binits{J.}},
@@ -240,7 +468,7 @@
 \end{barticle}
 \endbibitem
 
-%%% 11
+%%% 25
 \bibitem{FeBLight2}
 \begin{barticle}
 \bauthor{\bsnm{Geerligs}, \binits{L.J.}},
@@ -255,7 +483,7 @@
 \end{barticle}
 \endbibitem
 
-%%% 12
+%%% 26
 \bibitem{FeBKin2019}
 \begin{barticle}
 \bauthor{\bsnm{Khelifati}, \binits{N.}},
@@ -274,7 +502,7 @@
 \end{barticle}
 \endbibitem
 
-%%% 13
+%%% 27
 \bibitem{Lagowskii1993}
 \begin{barticle}
 \bauthor{\bsnm{Lagowski}, \binits{J.}},
@@ -295,7 +523,7 @@
 \end{barticle}
 \endbibitem
 
-%%% 14
+%%% 28
 \bibitem{Ostapenko1995SST}
 \begin{barticle}
 \bauthor{\bsnm{Ostapenko}, \binits{S.S.}},
