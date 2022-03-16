@@ -1,6 +1,6 @@
 %% BioMed_Central_Bib_Style_v1.01
 
-\begin{thebibliography}{10}
+\begin{thebibliography}{14}
 % BibTex style file: bmc-mathphys.bst (version 2.1), 2014-07-24
 \ifx \bisbn   \undefined \def \bisbn  #1{ISBN #1}\fi
 \ifx \binits  \undefined \def \binits#1{#1}\fi
@@ -75,6 +75,96 @@
 \endbibitem
 
 %%% 3
+\bibitem{LIDRev}
+\begin{barticle}
+\bauthor{\bsnm{Lindroos}, \binits{J.}},
+\bauthor{\bsnm{Savin}, \binits{H.}}:
+\batitle{Review of light-induced degradation in crystalline silicon solar
+  cells}.
+\bjtitle{Sol. Energy Mater. Sol. Cells}
+\bvolume{147},
+\bfpage{115}--\blpage{126}
+(\byear{2016}).
+\doiurl{10.1016/j.solmat.2015.11.047}
+\end{barticle}
+\endbibitem
+
+%%% 4
+\bibitem{LeTID_H}
+\begin{barticle}
+\bauthor{\bsnm{Schmid}, \binits{A.}},
+\bauthor{\bsnm{Fischer}, \binits{C.}},
+\bauthor{\bsnm{Skorka}, \binits{D.}},
+\bauthor{\bsnm{Herguth}, \binits{A.}},
+\bauthor{\bsnm{Winter}, \binits{C.}},
+\bauthor{\bsnm{Zuschlag}, \binits{A.}},
+\bauthor{\bsnm{Hahn}, \binits{G.}}:
+\batitle{On the role of {AlO}$_x$ thickness in {AlO}$_x$/{SiN}$_y$: {H} layer
+  stacks regarding light- and elevated temperature-induced degradation and
+  hydrogen diffusion in c-{S}i}.
+\bjtitle{IEEE Journal of Photovoltaics}
+\bvolume{11}(\bissue{4}),
+\bfpage{967}--\blpage{973}
+(\byear{2021}).
+\doiurl{10.1109/JPHOTOV.2021.3075850}
+\end{barticle}
+\endbibitem
+
+%%% 5
+\bibitem{LeTID_Me}
+\begin{barticle}
+\bauthor{\bsnm{Wagner}, \binits{M.}},
+\bauthor{\bsnm{Wolny}, \binits{F.}},
+\bauthor{\bsnm{Hentsche}, \binits{M.}},
+\bauthor{\bsnm{Krause}, \binits{A.}},
+\bauthor{\bsnm{Sylla}, \binits{L.}},
+\bauthor{\bsnm{Kropfgans}, \binits{F.}},
+\bauthor{\bsnm{Ernst}, \binits{M.}},
+\bauthor{\bsnm{Zierer}, \binits{R.}},
+\bauthor{\bsnm{Bönisch}, \binits{P.}},
+\bauthor{\bsnm{Müller}, \binits{P.}},
+\bauthor{\bsnm{Schmidt}, \binits{N.}},
+\bauthor{\bsnm{Osinniy}, \binits{V.}},
+\bauthor{\bsnm{Hartmann}, \binits{H.-P.}},
+\bauthor{\bsnm{Mehnert}, \binits{R.}},
+\bauthor{\bsnm{Neuhaus}, \binits{H.}}:
+\batitle{Correlation of the {LeTID} amplitude to the {A}luminium bulk
+  concentration and {O}xygen precipitation in {PERC} solar cells}.
+\bjtitle{Sol. Energy Mater. Sol. Cells}
+\bvolume{187},
+\bfpage{176}--\blpage{188}
+(\byear{2018}).
+\doiurl{10.1016/j.solmat.2018.06.009}
+\end{barticle}
+\endbibitem
+
+%%% 6
+\bibitem{LeTID_Me2}
+\begin{barticle}
+\bauthor{\bsnm{Chen}, \binits{D.}},
+\bauthor{\bsnm{Kim}, \binits{M.}},
+\bauthor{\bsnm{Stefani}, \binits{B.V.}},
+\bauthor{\bsnm{Hallam}, \binits{B.J.}},
+\bauthor{\bsnm{Abbott}, \binits{M.D.}},
+\bauthor{\bsnm{Chan}, \binits{C.E.}},
+\bauthor{\bsnm{Chen}, \binits{R.}},
+\bauthor{\bsnm{Payne}, \binits{D.N.R.}},
+\bauthor{\bsnm{Nampalli}, \binits{N.}},
+\bauthor{\bsnm{Ciesla}, \binits{A.}},
+\bauthor{\bsnm{Fung}, \binits{T.H.}},
+\bauthor{\bsnm{Kim}, \binits{K.}},
+\bauthor{\bsnm{Wenham}, \binits{S.R.}}:
+\batitle{Evidence of an identical firing-activated carrier-induced defect in
+  monocrystalline and multicrystalline silicon}.
+\bjtitle{Sol. Energy Mater. Sol. Cells}
+\bvolume{172},
+\bfpage{293}--\blpage{300}
+(\byear{2017}).
+\doiurl{10.1016/j.solmat.2017.08.003}
+\end{barticle}
+\endbibitem
+
+%%% 7
 \bibitem{TAYYIB201221}
 \begin{barticle}
 \bauthor{\bsnm{Tayyib}, \binits{M.}},
@@ -94,7 +184,7 @@
 \end{barticle}
 \endbibitem
 
-%%% 4
+%%% 8
 \bibitem{JAPSach}
 \begin{barticle}
 \bauthor{\bsnm{Sachenko}, \binits{A.V.}},
@@ -119,7 +209,7 @@
 \end{barticle}
 \endbibitem
 
-%%% 5
+%%% 9
 \bibitem{FeB_Zong}
 \begin{barticle}
 \bauthor{\bsnm{Zoth}, \binits{G.}},
@@ -133,7 +223,7 @@
 \end{barticle}
 \endbibitem
 
-%%% 6
+%%% 10
 \bibitem{Schmidt2019}
 \begin{barticle}
 \bauthor{\bsnm{Schmidt}, \binits{J.}},
@@ -150,7 +240,7 @@
 \end{barticle}
 \endbibitem
 
-%%% 7
+%%% 11
 \bibitem{FeBLight2}
 \begin{barticle}
 \bauthor{\bsnm{Geerligs}, \binits{L.J.}},
@@ -165,7 +255,7 @@
 \end{barticle}
 \endbibitem
 
-%%% 8
+%%% 12
 \bibitem{FeBKin2019}
 \begin{barticle}
 \bauthor{\bsnm{Khelifati}, \binits{N.}},
@@ -184,7 +274,7 @@
 \end{barticle}
 \endbibitem
 
-%%% 9
+%%% 13
 \bibitem{Lagowskii1993}
 \begin{barticle}
 \bauthor{\bsnm{Lagowski}, \binits{J.}},
@@ -196,8 +286,8 @@
 \bauthor{\bsnm{Jastrzebski}, \binits{L.}},
 \bauthor{\bsnm{Hoff}, \binits{A.M.}}:
 \batitle{Iron detection in the part per quadrillion range in silicon using
-  surface photovoltage and photodissociation of iron‐boron pairs}.
-\bjtitle{Applied Physics Letters}
+  surface photovoltage and photodissociation of iron-boron pairs}.
+\bjtitle{Appl. Phys. Lett.}
 \bvolume{63}(\bissue{22}),
 \bfpage{3043}--\blpage{3045}
 (\byear{1993}).
@@ -205,7 +295,7 @@
 \end{barticle}
 \endbibitem
 
-%%% 10
+%%% 14
 \bibitem{Ostapenko1995SST}
 \begin{barticle}
 \bauthor{\bsnm{Ostapenko}, \binits{S.S.}},

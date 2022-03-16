@@ -1,6 +1,6 @@
 %% BioMed_Central_Bib_Style_v1.01
 
-\begin{thebibliography}{45}
+\begin{thebibliography}{49}
 % BibTex style file: bmc-mathphys.bst (version 2.1), 2014-07-24
 \ifx \bisbn   \undefined \def \bisbn  #1{ISBN #1}\fi
 \ifx \binits  \undefined \def \binits#1{#1}\fi
@@ -392,6 +392,96 @@ pp. \bfpage{317}--\blpage{336}.
 \endbibitem
 
 %%% 22
+\bibitem{LIDRev}
+\begin{barticle}
+\bauthor{\bsnm{Lindroos}, \binits{J.}},
+\bauthor{\bsnm{Savin}, \binits{H.}}:
+\batitle{Review of light-induced degradation in crystalline silicon solar
+  cells}.
+\bjtitle{Sol. Energy Mater. Sol. Cells}
+\bvolume{147},
+\bfpage{115}--\blpage{126}
+(\byear{2016}).
+\doiurl{10.1016/j.solmat.2015.11.047}
+\end{barticle}
+\endbibitem
+
+%%% 23
+\bibitem{LeTID_H}
+\begin{barticle}
+\bauthor{\bsnm{Schmid}, \binits{A.}},
+\bauthor{\bsnm{Fischer}, \binits{C.}},
+\bauthor{\bsnm{Skorka}, \binits{D.}},
+\bauthor{\bsnm{Herguth}, \binits{A.}},
+\bauthor{\bsnm{Winter}, \binits{C.}},
+\bauthor{\bsnm{Zuschlag}, \binits{A.}},
+\bauthor{\bsnm{Hahn}, \binits{G.}}:
+\batitle{On the role of {AlO}$_x$ thickness in {AlO}$_x$/{SiN}$_y$: {H} layer
+  stacks regarding light- and elevated temperature-induced degradation and
+  hydrogen diffusion in c-{S}i}.
+\bjtitle{IEEE Journal of Photovoltaics}
+\bvolume{11}(\bissue{4}),
+\bfpage{967}--\blpage{973}
+(\byear{2021}).
+\doiurl{10.1109/JPHOTOV.2021.3075850}
+\end{barticle}
+\endbibitem
+
+%%% 24
+\bibitem{LeTID_Me}
+\begin{barticle}
+\bauthor{\bsnm{Wagner}, \binits{M.}},
+\bauthor{\bsnm{Wolny}, \binits{F.}},
+\bauthor{\bsnm{Hentsche}, \binits{M.}},
+\bauthor{\bsnm{Krause}, \binits{A.}},
+\bauthor{\bsnm{Sylla}, \binits{L.}},
+\bauthor{\bsnm{Kropfgans}, \binits{F.}},
+\bauthor{\bsnm{Ernst}, \binits{M.}},
+\bauthor{\bsnm{Zierer}, \binits{R.}},
+\bauthor{\bsnm{Bönisch}, \binits{P.}},
+\bauthor{\bsnm{Müller}, \binits{P.}},
+\bauthor{\bsnm{Schmidt}, \binits{N.}},
+\bauthor{\bsnm{Osinniy}, \binits{V.}},
+\bauthor{\bsnm{Hartmann}, \binits{H.-P.}},
+\bauthor{\bsnm{Mehnert}, \binits{R.}},
+\bauthor{\bsnm{Neuhaus}, \binits{H.}}:
+\batitle{Correlation of the {LeTID} amplitude to the {A}luminium bulk
+  concentration and {O}xygen precipitation in {PERC} solar cells}.
+\bjtitle{Sol. Energy Mater. Sol. Cells}
+\bvolume{187},
+\bfpage{176}--\blpage{188}
+(\byear{2018}).
+\doiurl{10.1016/j.solmat.2018.06.009}
+\end{barticle}
+\endbibitem
+
+%%% 25
+\bibitem{LeTID_Me2}
+\begin{barticle}
+\bauthor{\bsnm{Chen}, \binits{D.}},
+\bauthor{\bsnm{Kim}, \binits{M.}},
+\bauthor{\bsnm{Stefani}, \binits{B.V.}},
+\bauthor{\bsnm{Hallam}, \binits{B.J.}},
+\bauthor{\bsnm{Abbott}, \binits{M.D.}},
+\bauthor{\bsnm{Chan}, \binits{C.E.}},
+\bauthor{\bsnm{Chen}, \binits{R.}},
+\bauthor{\bsnm{Payne}, \binits{D.N.R.}},
+\bauthor{\bsnm{Nampalli}, \binits{N.}},
+\bauthor{\bsnm{Ciesla}, \binits{A.}},
+\bauthor{\bsnm{Fung}, \binits{T.H.}},
+\bauthor{\bsnm{Kim}, \binits{K.}},
+\bauthor{\bsnm{Wenham}, \binits{S.R.}}:
+\batitle{Evidence of an identical firing-activated carrier-induced defect in
+  monocrystalline and multicrystalline silicon}.
+\bjtitle{Sol. Energy Mater. Sol. Cells}
+\bvolume{172},
+\bfpage{293}--\blpage{300}
+(\byear{2017}).
+\doiurl{10.1016/j.solmat.2017.08.003}
+\end{barticle}
+\endbibitem
+
+%%% 26
 \bibitem{Bube}
 \begin{bbook}
 \bauthor{\bsnm{Fahrenbruch}, \binits{A.}},
@@ -404,7 +494,7 @@ p. \bfpage{580}.
 \end{bbook}
 \endbibitem
 
-%%% 23
+%%% 27
 \bibitem{Razeghi}
 \begin{barticle}
 \bauthor{\bsnm{Razeghi}, \binits{M.}},
@@ -418,7 +508,7 @@ p. \bfpage{580}.
 \end{barticle}
 \endbibitem
 
-%%% 24
+%%% 28
 \bibitem{Si:Absorb}
 \begin{barticle}
 \bauthor{\bsnm{Rajkanan}, \binits{K.}},
@@ -433,7 +523,7 @@ p. \bfpage{580}.
 \end{barticle}
 \endbibitem
 
-%%% 25
+%%% 29
 \bibitem{GreenOptic}
 \begin{barticle}
 \bauthor{\bsnm{Green}, \binits{M.A.}},
@@ -447,7 +537,7 @@ p. \bfpage{580}.
 \end{barticle}
 \endbibitem
 
-%%% 26
+%%% 30
 \bibitem{KostRefl2000}
 \begin{barticle}
 \bauthor{\bsnm{Klyui}, \binits{N.I.}},
@@ -466,7 +556,7 @@ p. \bfpage{580}.
 \end{barticle}
 \endbibitem
 
-%%% 27
+%%% 31
 \bibitem{KostRefl2000A}
 \begin{barticle}
 \bauthor{\bsnm{Litovchenko}, \binits{V.G.}},
@@ -483,7 +573,7 @@ p. \bfpage{580}.
 \end{barticle}
 \endbibitem
 
-%%% 28
+%%% 32
 \bibitem{KLAASSEN953}
 \begin{barticle}
 \bauthor{\bsnm{Klaassen}, \binits{D.B.M.}}:
@@ -497,7 +587,7 @@ p. \bfpage{580}.
 \end{barticle}
 \endbibitem
 
-%%% 29
+%%% 33
 \bibitem{Si_BtB}
 \begin{barticle}
 \bauthor{\bsnm{Nguyen}, \binits{H.T.}},
@@ -513,7 +603,7 @@ p. \bfpage{580}.
 \end{barticle}
 \endbibitem
 
-%%% 30
+%%% 34
 \bibitem{Si_Auger}
 \begin{barticle}
 \bauthor{\bsnm{Altermatt}, \binits{P.P.}},
@@ -530,7 +620,7 @@ p. \bfpage{580}.
 \end{barticle}
 \endbibitem
 
-%%% 31
+%%% 35
 \bibitem{Si_ni_Couderc}
 \begin{barticle}
 \bauthor{\bsnm{Couderc}, \binits{R.}},
@@ -546,7 +636,7 @@ p. \bfpage{580}.
 \end{barticle}
 \endbibitem
 
-%%% 32
+%%% 36
 \bibitem{Nc:Green}
 \begin{barticle}
 \bauthor{\bsnm{Green}, \binits{M.A.}}:
@@ -560,7 +650,7 @@ p. \bfpage{580}.
 \end{barticle}
 \endbibitem
 
-%%% 33
+%%% 37
 \bibitem{ROUGIEUX2018}
 \begin{barticle}
 \bauthor{\bsnm{Rougieux}, \binits{F.E.}},
@@ -576,7 +666,7 @@ p. \bfpage{580}.
 \end{barticle}
 \endbibitem
 
-%%% 34
+%%% 38
 \bibitem{MurphyJAP2011}
 \begin{barticle}
 \bauthor{\bsnm{Murphy}, \binits{J.D.}},
@@ -594,7 +684,7 @@ p. \bfpage{580}.
 \end{barticle}
 \endbibitem
 
-%%% 35
+%%% 39
 \bibitem{EBLSHADE}
 \begin{barticle}
 \bauthor{\bsnm{Mohamed}, \binits{A.W.}},
@@ -610,7 +700,7 @@ p. \bfpage{580}.
 \end{barticle}
 \endbibitem
 
-%%% 36
+%%% 40
 \bibitem{FeBkinAPL2008}
 \begin{barticle}
 \bauthor{\bsnm{Macdonald}, \binits{D.}},
@@ -626,7 +716,7 @@ p. \bfpage{580}.
 \end{barticle}
 \endbibitem
 
-%%% 37
+%%% 41
 \bibitem{FeBKin2019}
 \begin{barticle}
 \bauthor{\bsnm{Khelifati}, \binits{N.}},
@@ -645,7 +735,7 @@ p. \bfpage{580}.
 \end{barticle}
 \endbibitem
 
-%%% 38
+%%% 42
 \bibitem{AZIZ2001}
 \begin{barticle}
 \bauthor{\bsnm{Aziz}, \binits{M.J.}}:
@@ -658,7 +748,7 @@ p. \bfpage{580}.
 \end{barticle}
 \endbibitem
 
-%%% 39
+%%% 43
 \bibitem{Stavola}
 \begin{bbook}
 \beditor{\bsnm{Stavola}, \binits{M.}} (ed.):
@@ -669,7 +759,7 @@ p. \bfpage{580}.
 \end{bbook}
 \endbibitem
 
-%%% 40
+%%% 44
 \bibitem{WeberFe}
 \begin{barticle}
 \bauthor{\bsnm{Weber}, \binits{E.R.}}:
@@ -682,7 +772,7 @@ p. \bfpage{580}.
 \end{barticle}
 \endbibitem
 
-%%% 41
+%%% 45
 \bibitem{Ostapenko1999}
 \begin{barticle}
 \bauthor{\bsnm{Ostapenko}, \binits{S.}}:
@@ -696,7 +786,7 @@ p. \bfpage{580}.
 \end{barticle}
 \endbibitem
 
-%%% 42
+%%% 46
 \bibitem{Zaveryukhin2002}
 \begin{barticle}
 \bauthor{\bsnm{Zaveryukhin}, \binits{B.N.}},
@@ -712,7 +802,7 @@ p. \bfpage{580}.
 \end{barticle}
 \endbibitem
 
-%%% 43
+%%% 47
 \bibitem{FeStrain}
 \begin{barticle}
 \bauthor{\bsnm{Ziebarth}, \binits{B.}},
@@ -729,7 +819,7 @@ p. \bfpage{580}.
 \end{barticle}
 \endbibitem
 
-%%% 44
+%%% 48
 \bibitem{GORB2020}
 \begin{barticle}
 \bauthor{\bsnm{Gorb}, \binits{A.M.}},
@@ -747,7 +837,7 @@ p. \bfpage{580}.
 \end{barticle}
 \endbibitem
 
-%%% 45
+%%% 49
 \bibitem{UST:Medvid}
 \begin{barticle}
 \bauthor{\bsnm{Kropman}, \binits{D.}},
