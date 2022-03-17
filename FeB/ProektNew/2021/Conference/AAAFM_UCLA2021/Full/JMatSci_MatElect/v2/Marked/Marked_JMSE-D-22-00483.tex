@@ -34,20 +34,7 @@
 
 %%%% Standard Packages
 %%<additional latex packages if required can be included here>
-%%%%
 
-%%%%%=============================================================================%%%%
-%%%%  Remarks: This template is provided to aid authors with the preparation
-%%%%  of original research articles intended for submission to journals published
-%%%%  by Springer Nature. The guidance has been prepared in partnership with
-%%%%  production teams to conform to Springer Nature technical requirements.
-%%%%  Editorial and presentation requirements differ among journal portfolios and
-%%%%  research disciplines. You may find sections in this template are irrelevant
-%%%%  to your work and are empowered to omit any such section if allowed by the
-%%%%  journal you intend to submit to. The submission guidelines and policies
-%%%%  of the journal take precedence. A detailed User Manual is available in the
-%%%%  template package for technical guidance.
-%%%%%=============================================================================%%%%
 \usepackage{color,soul}
 \jyear{2021}%
 
@@ -147,23 +134,23 @@ The experimentally observed phenomena are related to the decrease in iron migrat
 \section{Introduction}\label{sec1}
 
 It is well known that ultrasound (US) can act efficiently on defect subsystems of semiconductor crystals and devices due to dissipation of US vibration energy, which is particularly intense in the regions with periodicity disorder \cite{ostapenko2002,Savkina2013,Olikh2018JAP}.
-At US of prethreshold intensity, acoustically induced (AI) reconstruction of defects causes the reverse changes in charge concentration and mobility in crystals \cite{Davletova2008,Olikh2020JEM},
+At US of \hl{subthreshold} intensity, acoustically induced (AI) reconstruction of defects causes the \hl{reversible} changes in charge concentration and mobility in crystals \cite{Davletova2008,Olikh2020JEM},
 barrier height in Schottky structures \cite{Olikh:Ultras,OlikhJAP}
-as well as magnitude of tunnel and recombination components in p-n structures \cite{Teterkin2009,Olikh2018JAP}.
-Also it seems promising to apply the US as an additional factor of influence during conventional technological processes.
-In this case semiconductor structures are usually found in  nonequilibrium conditions and the defect--impurity subsystem is capable of modifying easier under the action of elastic oscillations.
-For instance, the application of ultrasound loading (USL) in conditions of ion implantation facilitates
-the formation of ultra-shallow junctions \cite{USImplant:JVacSci},
-the process of silicon surface layer amorphization becomes more intensive \cite{RomanyukSST};
+as well as tunnel and recombination currents in p-n structures \cite{Teterkin2009,Olikh2018JAP}.
+Also, it seems promising to apply the US as an additional factor of influence during conventional technological processes.
+In this case, semiconductor structures are usually found in  nonequilibrium conditions, and the defect--impurity subsystem is capable of modifying easier under the action of elastic oscillations.
+For instance, the application of ultrasound loading (USL) \hl{during}  ion implantation facilitates
+the formation of ultra-shallow junctions \cite{USImplant:JVacSci} 
+and intensives the silicon surface layer amorphization \cite{RomanyukSST};
 USL applied during the production of porous silicon  results in structural ordering \cite{Kalem2000}
 and when applied during ZnO deposition provides higher homogeneity of the films \cite{US:ZnOfilm}.
 
-\hl{ The silicon solar cells (SCs) constitute about 90\% of current global photovoltaic production capacity.
+\hl{ The silicon solar cells (SCs) constitute about 90\% of the global photovoltaic production capacity.
 Iron is one of the most relevant, omnipresent, and efficiency--limiting metallic impurities
 in p--type Si SCs} \cite{Istratov1999,IronSC}.
 \hl{ Therefore, the methods of defect engineering aimed at iron have practical importance.}
-In silicon photovoltaics, one of the main methods of the impurity deactivation and removing it from the operation zone is gettering Fe atoms at certain centers (at extended defects, at oxygen precipitates, or at interfaces) \cite{LaineIEEEPV2016}.
-It was shown that similar gettering processes can be realized during such standard operations as phosphorus diffusion  \cite{FeB:Vahanissi}
+In silicon photovoltaics, one of the main methods of impurity deactivation and removing it from the operation zone is gettering Fe atoms at certain centers (extended defects, oxygen precipitates, or interfaces) \cite{LaineIEEEPV2016}.
+A similar gettering can be realized during standard operations as phosphorus diffusion \cite{FeB:Vahanissi}
 or production of antireflection coating  \cite{Teimuraz2014JAP}.
 It is clear that the process efficiency depends on the mobility of iron atoms.
 
@@ -307,7 +294,7 @@ I_\mathrm{SC}(t)=\frac{P_{ph}(1-R_{ph})\,q\beta\lambda}{hc}\frac{\alpha_{ph}L_n(
 where
 \hl{$P_{ph}$ is the LED light power,
 $\lambda$ is the light wavelength (940~nm),
-$q$ is the electron charge,
+$q$ is elementary charge,
 $h$ is the Planck constant,
 $c$ is the speed of light,}
 $\alpha_{ph}=\alpha_{ph}(T,\lambda)$ is the coefficient of light absorption,
@@ -406,7 +393,7 @@ N_\mathrm{FeB}(t)=N_\mathrm{Fe_i,0}-N_\mathrm{Fe_i}(t)\,.
 \end{equation}
 
 We fitted experimentally measured dependencies of short circuit current
-according to the complex of the above equations (see the example in Fig.~\ref{figIsc}.
+according to the complex of the above equations (see the examples in Fig.~\ref{figIsc}).
 The fitting was performed by metaheuristic method EBLSHADE \cite{EBLSHADE},
 the parameters to be found were $P_{ph}$, $\tau_{other}$, $N_\mathrm{Fe_i,0}$, and $\tau_{ass}$.
 
