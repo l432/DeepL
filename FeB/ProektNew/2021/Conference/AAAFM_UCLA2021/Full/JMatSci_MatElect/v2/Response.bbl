@@ -1,6 +1,6 @@
 %% BioMed_Central_Bib_Style_v1.01
 
-\begin{thebibliography}{28}
+\begin{thebibliography}{32}
 % BibTex style file: bmc-mathphys.bst (version 2.1), 2014-07-24
 \ifx \bisbn   \undefined \def \bisbn  #1{ISBN #1}\fi
 \ifx \binits  \undefined \def \binits#1{#1}\fi
@@ -393,6 +393,89 @@
 \endbibitem
 
 %%% 21
+\bibitem{FeB:kinetic}
+\begin{barticle}
+\bauthor{\bsnm{Wijaranakula}, \binits{W.}}:
+\batitle{The reaction kinetics of iron--boron pair formation and dissociation
+  in p--type silicon}.
+\bjtitle{J. Electrochem. Soc.}
+\bvolume{140}(\bissue{1}),
+\bfpage{275}--\blpage{281}
+(\byear{1993}).
+\doiurl{10.1149/1.2056102}
+\end{barticle}
+\endbibitem
+
+%%% 22
+\bibitem{FeBKin2019}
+\begin{barticle}
+\bauthor{\bsnm{Khelifati}, \binits{N.}},
+\bauthor{\bsnm{Laine}, \binits{H.S.}},
+\bauthor{\bsnm{Vähänissi}, \binits{V.}},
+\bauthor{\bsnm{Savin}, \binits{H.}},
+\bauthor{\bsnm{Bouamama}, \binits{F.Z.}},
+\bauthor{\bsnm{Bouhafs}, \binits{D.}}:
+\batitle{Dissociation and formation kinetics of iron–boron pairs in silicon
+  after phosphorus implantation gettering}.
+\bjtitle{Phys Status Solidi A}
+\bvolume{216}(\bissue{17}),
+\bfpage{1900253}
+(\byear{2019}).
+\doiurl{10.1002/pssa.201900253}
+\end{barticle}
+\endbibitem
+
+%%% 23
+\bibitem{FeBAssJAP2014}
+\begin{barticle}
+\bauthor{\bsnm{M\"{o}ller}, \binits{C.}},
+\bauthor{\bsnm{Bartel}, \binits{T.}},
+\bauthor{\bsnm{Gibaja}, \binits{F.}},
+\bauthor{\bsnm{Lauer}, \binits{K.}}:
+\batitle{Iron-boron pairing kinetics in illuminated p-type and in
+  boron/phosphorus co-doped n-type silicon}.
+\bjtitle{J. Appl. Phys.}
+\bvolume{116}(\bissue{2}),
+\bfpage{024503}
+(\byear{2014}).
+\doiurl{10.1063/1.4889817}
+\end{barticle}
+\endbibitem
+
+%%% 24
+\bibitem{FeBAssSST2011}
+\begin{barticle}
+\bauthor{\bsnm{Tan}, \binits{J.}},
+\bauthor{\bsnm{Macdonald}, \binits{D.}},
+\bauthor{\bsnm{Rougieux}, \binits{F.}},
+\bauthor{\bsnm{Cuevas}, \binits{A.}}:
+\batitle{Accurate measurement of the formation rate of iron--boron pairs in
+  silicon}.
+\bjtitle{Semicond Sci. Technol.}
+\bvolume{26}(\bissue{5}),
+\bfpage{055019}
+(\byear{2011}).
+\doiurl{10.1088/0268-1242/26/5/055019}
+\end{barticle}
+\endbibitem
+
+%%% 25
+\bibitem{FeBkinAPL2008}
+\begin{barticle}
+\bauthor{\bsnm{Macdonald}, \binits{D.}},
+\bauthor{\bsnm{Cuevas}, \binits{A.}},
+\bauthor{\bsnm{Geerligs}, \binits{L.J.}}:
+\batitle{Measuring dopant concentrations in compensated p--type crystalline
+  silicon via iron--acceptor pairing}.
+\bjtitle{Appl. Phys. Lett.}
+\bvolume{92}(\bissue{20}),
+\bfpage{202119}
+(\byear{2008}).
+\doiurl{10.1063/1.2936840}
+\end{barticle}
+\endbibitem
+
+%%% 26
 \bibitem{TAYYIB201221}
 \begin{barticle}
 \bauthor{\bsnm{Tayyib}, \binits{M.}},
@@ -412,7 +495,7 @@
 \end{barticle}
 \endbibitem
 
-%%% 22
+%%% 27
 \bibitem{JAPSach}
 \begin{barticle}
 \bauthor{\bsnm{Sachenko}, \binits{A.V.}},
@@ -437,7 +520,7 @@
 \end{barticle}
 \endbibitem
 
-%%% 23
+%%% 28
 \bibitem{FeB_Zong}
 \begin{barticle}
 \bauthor{\bsnm{Zoth}, \binits{G.}},
@@ -451,7 +534,7 @@
 \end{barticle}
 \endbibitem
 
-%%% 24
+%%% 29
 \bibitem{Schmidt2019}
 \begin{barticle}
 \bauthor{\bsnm{Schmidt}, \binits{J.}},
@@ -468,7 +551,7 @@
 \end{barticle}
 \endbibitem
 
-%%% 25
+%%% 30
 \bibitem{FeBLight2}
 \begin{barticle}
 \bauthor{\bsnm{Geerligs}, \binits{L.J.}},
@@ -483,26 +566,7 @@
 \end{barticle}
 \endbibitem
 
-%%% 26
-\bibitem{FeBKin2019}
-\begin{barticle}
-\bauthor{\bsnm{Khelifati}, \binits{N.}},
-\bauthor{\bsnm{Laine}, \binits{H.S.}},
-\bauthor{\bsnm{Vähänissi}, \binits{V.}},
-\bauthor{\bsnm{Savin}, \binits{H.}},
-\bauthor{\bsnm{Bouamama}, \binits{F.Z.}},
-\bauthor{\bsnm{Bouhafs}, \binits{D.}}:
-\batitle{Dissociation and formation kinetics of iron–boron pairs in silicon
-  after phosphorus implantation gettering}.
-\bjtitle{Phys Status Solidi A}
-\bvolume{216}(\bissue{17}),
-\bfpage{1900253}
-(\byear{2019}).
-\doiurl{10.1002/pssa.201900253}
-\end{barticle}
-\endbibitem
-
-%%% 27
+%%% 31
 \bibitem{Lagowskii1993}
 \begin{barticle}
 \bauthor{\bsnm{Lagowski}, \binits{J.}},
@@ -523,7 +587,7 @@
 \end{barticle}
 \endbibitem
 
-%%% 28
+%%% 32
 \bibitem{Ostapenko1995SST}
 \begin{barticle}
 \bauthor{\bsnm{Ostapenko}, \binits{S.S.}},

@@ -172,7 +172,7 @@ and in darkness in p-Si due to electrostatic attraction between the negatively c
 acceptors and the positively charged iron ions.
 All Fe-acceptor pairs are similar:
 complexes have two structural configurations
-with trigonal and orthorhombic symmetry and can be broken by 
+with trigonal and orthorhombic symmetry and can be broken by
 intense illumination and/or annealing above 200$^\circ$C} \cite{Istratov1999,FeBKinAPL2013}.
 \hl{ On the other hand, the back surface field (BSF) and passivated emitter and rear cell (PERC)
 are the most popular designs that have been used in the mass-production of Si SCs,
@@ -209,21 +209,21 @@ a $p^+$ layer ($10-20$~$\Omega/\Box$, $0.6$~$\mu$m) was formed by boron diffusio
 the gas phase (BCl$_3$) at 985$^\circ$C on the rear surface.}
 Layers of SiO$_2$ and Si$_3$N$_4$ were formed on the surface of the SC to passivate the surface and reduce optical reflectance.
 \hl{ The solid and grid aluminum contacts were formed by magnetron sputtering on the rear and front surfaces, respectively.}
-The scheme of SC is presented in Fig.~\ref{figChem}.
+The \hl{schematic structure} of SC is presented in Fig.~\ref{figChem}.
 \begin{figure}
 \centering
 \includegraphics[width=0.5\textwidth]{Fig1}
-\caption{Scheme of the sample and USL.
-1 –-- frontal metallic comb electrode (Al);
-2 --– Si$_3$N$_4$ (40 nm);
-3 –-- SiO$_2$ (30 nm);
-4 –-- induced $n^{++}$-layer;
-5 –-- diffusion $n^+$-layer;
-6 –-- quasineutral base region of $p$-type (350 $\mu$m);
-7 –-- diffusion $p^+$-layer;
-8 –-- rear metallization (Al);
-9 –-- piezoelectric transducer;
-10 –-- metal foil (Cu)}
+\caption{\hl{Schematic structure} of the sample and USL.
+1 --- frontal \hl{grid} electrode (Al);
+2 --- Si$_3$N$_4$ (40 nm);
+3 --- SiO$_2$ (30 nm);
+4 --- induced $n^{++}$--layer;
+5 --- diffusion $n^+$--layer;
+6 --- quasineutral base region of $p$--type (350 $\mu$m);
+7 --- diffusion $p^+$--layer;
+8 --- rear metallization (Al);
+9 --- piezoelectric transducer;
+10 --- metal foil (Cu)}
 \label{figChem}       % Give a unique label
 \end{figure}
 
@@ -255,7 +255,7 @@ To dissociate the pairs the frontal side of the sample was illuminated for 30~s.
 
 \hl{The different light-induced degradation (LID) phenomena exist that affect the efficiency
 of Cz-silicon solar cells due to a decrease in lifetime of generated excess charge carriers.
-The main reasons for this transformation are boron--oxygen complex formation (BO-LID)} \cite{LIDRev} 
+The main reasons for this transformation are boron--oxygen complex formation (BO-LID)} \cite{LIDRev}
 \hl{ and
 iron--boron pair dissociation.
 Besides, the light- and elevated-temperature-induced degradation (LeTID) is observed.
@@ -282,25 +282,37 @@ The SC temperature was controlled by STS--21 sensor, which was placed on the fro
 \begin{figure}
 \centering
 \includegraphics[width=0.5\textwidth]{Fig2}
-\caption{Kinetics of short circuit current magnitude after intensive illumination.
-Points indicate experimental data and the solid lines represent approximation
-according to Eqs.~(\ref{eqIsc})-(\ref{eqNFeBt}).
-$T$, K: 300 (1), 330 (2).}
+\caption{
+\hl{Measured under low-intensive (LED) illumination short circuit current
+ plotted as a function of the time after high-intensive (halogen lamp) illumination.
+The marks are the experimental results, the lines are the fitted curves using} Eqs.~(\ref{eqIsc})-(\ref{eqNFeBt}).
+\hl{The zero of time corresponds to the moment of intensive illumination termination.}
+$T$, K: 300 (1, \hl{ green squares}), 330 (2, \hl{red circles})}
 \label{figIsc}       % Give a unique label
 \end{figure}
 
-The parameters of pair association were determined by approximation of the measured kinetic
-dependencies $I_\mathrm{SC}(t)$ in the following way.
-In conditions of LED illumination mentioned above,
-it is quite possible to use the approximation of homogeneous carrier generation in the SC base.
-In this case the short circuit current can be described as follows \cite{Bube,Razeghi}
+\hl{The FeB pair association in the dark was accompanied by the $\tau$ increase and
+was monitored by measuring the $I_\mathrm{SC}$ under LED illumination.
+The LED illumination induced excess carrier density $<10^{12}$~cm$^{-3})$,
+had duty cycle 0.5\% while $I_\mathrm{SC}(t)$ measuring,
+and did not cause FeB dissociation.
+Moreover, the fitting of the measured dependencies $I_\mathrm{SC}(t)$ after high-intensive illumination
+allows determining  the pair concentration and the characteristic time of the FeB complex formation.
+In fact, in conditions of homogeneous carrier generation in the base  by the LED illumination,}
+the short circuit current can be described as follows \cite{Bube,Razeghi}:
 \begin{equation}
 \label{eqIsc}
-I_\mathrm{SC}=\frac{P_{ph}(1-R_{ph})\,q\beta\lambda}{hc}\frac{\alpha_{ph}L_n}{1+\alpha_{ph}L_n}\,,
+I_\mathrm{SC}(t)=\frac{P_{ph}(1-R_{ph})\,q\beta\lambda}{hc}\frac{\alpha_{ph}L_n(t)}{1+\alpha_{ph}L_n(t)}\,,
 \end{equation}
 where
+\hl{$P_{ph}$ is the LED light power,
+$\lambda$ is the light wavelength (940~nm),
+$q$ is the electron charge,
+$h$ is the Planck constant,
+$c$ is the speed of light,}
 $\alpha_{ph}=\alpha_{ph}(T,\lambda)$ is the coefficient of light absorption,
 which was calculated according to \cite{Si:Absorb,GreenOptic},
+\hl{$T$ is the cell temperature,}
 $R_{ph}$ is the coefficient of reflection;
 as shown by the calculations with using recurrent correlations for coefficients of amplitude reflections \cite{KostRefl2000,KostRefl2000A},
 in our case from the silicon SC with two layered antireflection coating $R_{ph}$(940~nm)$=0.14$;
@@ -312,17 +324,18 @@ which justifies the usage of expression~(\ref{eqIsc}).
 In its turn
 \begin{equation}
 \label{eqLn}
-L_n=\sqrt{\frac{\mu_nkT\tau}{q}}\,,
+L_n(t)=\sqrt{\frac{\mu_nkT\tau(t)}{q}}\,,
 \end{equation}
 where
-$\mu_n$ is the electron mobility, was calculated by Klaassen theory \cite{KLAASSEN953}.
+$\mu_n$ is the electron mobility, was calculated by Klaassen theory \cite{KLAASSEN953},
+\hl{$k$ is the Boltzmann constant}.
 
 In the assumption that it is the iron related defects that play an essential role in the recombination,
 the following expression can be used to estimate $\tau$ according to Mattisen rule:
 \begin{equation}
 \label{eqTau}
-\tau^{-1}=\tau_{rad}^{-1}+\tau_{Aug}^{-1}+(\tau_{SRH}^{\mathrm{Fe_i}})^{-1}
-+(\tau_{SRH}^\mathrm{FeB})^{-1}+\tau_{other}^{-1}\,,
+\tau(t)^{-1}=\tau_{rad}^{-1}+\tau_{Aug}^{-1}+(\tau_{SRH}^{\mathrm{Fe_i}}(t))^{-1}
++(\tau_{SRH}^\mathrm{FeB}(t))^{-1}+\tau_{other}^{-1}\,,
 \end{equation}
 where
 $\tau_{rad}$ is the lifetime associated with band-to-band radiation recombination
@@ -345,12 +358,12 @@ In order to calculate $\tau_{SRH}^{\mathrm{Fe_i}}$  and $\tau_{SRH}^\mathrm{FeB}
 Shockley--Read--Hall model was used:
 \begin{equation}
 \label{eqTauSRH}
-\tau_{SRH}^{\mathrm{Fe_i,FeB}}=\frac{\tau_{p0}(n_0+n_1+\Delta n)+\tau_{n0}(N_A+p_1+\Delta n)}
+\tau_{SRH}^{\mathrm{Fe_i,FeB}}(t)=\frac{\tau_{p0}(t)(n_0+n_1+\Delta n)+\tau_{n0}(t)(N_A+p_1+\Delta n)}
                              {N_A+n_0+\Delta n}\,,
 \end{equation}
 where
-$\tau_{p0,n0}=(N_t \sigma_{p,n}\upsilon_{th}^{p,n})^{-1}$,
-$N_t$ is the concentration of recombination centers
+$\tau_{p0,n0}(t)=(N_{trap}(t) \sigma_{p,n}\upsilon_{th}^{p,n})^{-1}$,
+$N_{trap}(t)$ is the \hl{trap} concentration
 ($N_\mathrm{Fe_i}$ and $N_\mathrm{FeB}$ for Fe$_i$ and FeB, respectively),
 $\sigma_n$, $\sigma_p$  are the cross sections of the recombination centers for electrons and holes, respectively,
 $\upsilon_{th}^{n}$, $\upsilon_{th}^{p}$ are the average thermal velocities of electrons and holes calculated according to \cite{Nc:Green},
@@ -371,9 +384,9 @@ N_\mathrm{Fe_i}(t)=(N_\mathrm{Fe_i,0}-N_\mathrm{Fe_i,eq})\cdot
 \exp(-t/\tau_{ass})+N_\mathrm{Fe_i,eq}\,,
 \end{equation}
 where
-$\tau_{ass}$ is the characteristic time of the complex association,
-$N_\mathrm{Fe_i,0}$ is the interstitial iron atom concentration
-immediately after intensive illumination,
+$\tau_{ass}$ is the characteristic time \hl{of the formation of FeB pair},
+$N_\mathrm{Fe_i,0}$ is the concentration of interstitial iron atoms
+\hl{formed due to high-intensive illumination},
 $N_\mathrm{Fe_i,eq}$ is the part of interstitial iron atoms with $N_\mathrm{Fe_i,0}$
 that remain unpaired in equilibrium state (after a long exposition in darkness)\cite{FeB:kinetic}:
 \begin{equation}
@@ -452,7 +465,7 @@ Kinetics of short circuit current  after intensive illumination under USL
 ($f_\mathrm{US} = 2.4$~MHz, filled red marks on the chart)
 and without USL (empty green marks).
 Solid lines indicate fitting according to Eqs.~(\ref{eqIsc})-(\ref{eqNFeBt}).
-$T$, K: 300 (a), 320 (b), 340 (c).
+$T$, K: 300 (a), 320 (b), 340 (c)
 }
 \label{figIscUs}       % Give a unique label
 \end{figure}
@@ -474,7 +487,7 @@ which corresponds to about 0.7$\tau_{0}$.
 The dependencies of the degree of AI time decrease on the applied US intensity at different $f_\mathrm{US}$.
 Parts a and b present the samples with different iron concentrations.
 $T=340$~K.
-The marks are the experimental results, the lines are given for convenience only.
+The marks are the experimental results, the lines are given for convenience only
 }
 \label{figfus}       % Give a unique label
 \end{figure}
@@ -505,7 +518,7 @@ The dependencies of the degree of AI association time decrease on applied US int
 in SC with different content of iron atoms.
 $T=340$~K.
 $f_\mathrm{US}=5.4$~MHz.
-The marks are the experimental results, the lines are given for convenience only.
+The marks are the experimental results, the lines are given for convenience only
 }
 \label{figNFe}       % Give a unique label
 \end{figure}
@@ -521,7 +534,7 @@ In general, these curves are close to linear.
  \includegraphics[width=0.5\textwidth]{Fig6}
 \caption{
 Temperature dependencies of  acoustically induced FeB association time decrease.
-The marks are the experimental results, the lines are the linear fitted curves.
+The marks are the experimental results, the lines are the linear fitted curves
 }
 \label{figTemp}       % Give a unique label
 \end{figure}
@@ -558,7 +571,7 @@ The decrease in interstitial iron atom migration energy can be given as
 A schematic picture showing the spatial variation of the potential energy of
 iron interstitial atom in Si as a function of position near the boron substitutional atom.
 US stress lowers the energy barrier for Fe migration.
-The curves are scaled arbitrarily.
+The curves are scaled arbitrarily
 }
 \label{figUSChem}       % Give a unique label
 \end{figure}
