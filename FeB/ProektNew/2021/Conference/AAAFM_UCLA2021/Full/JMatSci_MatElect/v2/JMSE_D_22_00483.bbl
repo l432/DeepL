@@ -1,6 +1,6 @@
 %% BioMed_Central_Bib_Style_v1.01
 
-\begin{thebibliography}{58}
+\begin{thebibliography}{59}
 % BibTex style file: bmc-mathphys.bst (version 2.1), 2014-07-24
 \ifx \bisbn   \undefined \def \bisbn  #1{ISBN #1}\fi
 \ifx \binits  \undefined \def \binits#1{#1}\fi
@@ -849,6 +849,20 @@ p. \bfpage{580}.
 \endbibitem
 
 %%% 49
+\bibitem{FeB_Zong}
+\begin{barticle}
+\bauthor{\bsnm{Zoth}, \binits{G.}},
+\bauthor{\bsnm{Bergholz}, \binits{W.}}:
+\batitle{A fast, preperetion-free method to detect iron in silicon}.
+\bjtitle{J. Appl. Phys.}
+\bvolume{67}(\bissue{11}),
+\bfpage{6764}--\blpage{6771}
+(\byear{1990}).
+\doiurl{10.1063/1.345063}
+\end{barticle}
+\endbibitem
+
+%%% 50
 \bibitem{FeBkinAPL2008}
 \begin{barticle}
 \bauthor{\bsnm{Macdonald}, \binits{D.}},
@@ -864,7 +878,7 @@ p. \bfpage{580}.
 \end{barticle}
 \endbibitem
 
-%%% 50
+%%% 51
 \bibitem{FeBKin2019}
 \begin{barticle}
 \bauthor{\bsnm{Khelifati}, \binits{N.}},
@@ -883,7 +897,7 @@ p. \bfpage{580}.
 \end{barticle}
 \endbibitem
 
-%%% 51
+%%% 52
 \bibitem{AZIZ2001}
 \begin{barticle}
 \bauthor{\bsnm{Aziz}, \binits{M.J.}}:
@@ -896,7 +910,7 @@ p. \bfpage{580}.
 \end{barticle}
 \endbibitem
 
-%%% 52
+%%% 53
 \bibitem{Stavola}
 \begin{bbook}
 \beditor{\bsnm{Stavola}, \binits{M.}} (ed.):
@@ -907,7 +921,7 @@ p. \bfpage{580}.
 \end{bbook}
 \endbibitem
 
-%%% 53
+%%% 54
 \bibitem{WeberFe}
 \begin{barticle}
 \bauthor{\bsnm{Weber}, \binits{E.R.}}:
@@ -920,7 +934,7 @@ p. \bfpage{580}.
 \end{barticle}
 \endbibitem
 
-%%% 54
+%%% 55
 \bibitem{Ostapenko1999}
 \begin{barticle}
 \bauthor{\bsnm{Ostapenko}, \binits{S.}}:
@@ -934,7 +948,7 @@ p. \bfpage{580}.
 \end{barticle}
 \endbibitem
 
-%%% 55
+%%% 56
 \bibitem{Zaveryukhin2002}
 \begin{barticle}
 \bauthor{\bsnm{Zaveryukhin}, \binits{B.N.}},
@@ -950,7 +964,7 @@ p. \bfpage{580}.
 \end{barticle}
 \endbibitem
 
-%%% 56
+%%% 57
 \bibitem{FeStrain}
 \begin{barticle}
 \bauthor{\bsnm{Ziebarth}, \binits{B.}},
@@ -967,7 +981,7 @@ p. \bfpage{580}.
 \end{barticle}
 \endbibitem
 
-%%% 57
+%%% 58
 \bibitem{GORB2020}
 \begin{barticle}
 \bauthor{\bsnm{Gorb}, \binits{A.M.}},
@@ -985,7 +999,7 @@ p. \bfpage{580}.
 \end{barticle}
 \endbibitem
 
-%%% 58
+%%% 59
 \bibitem{UST:Medvid}
 \begin{barticle}
 \bauthor{\bsnm{Kropman}, \binits{D.}},
