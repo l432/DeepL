@@ -601,6 +601,10 @@ The marks are the experimental results, the lines are given for convenience only
 Also, Fig.~\ref{figfus} shows that the efficiency of AI accelerating of FeB pair formation
 decreases with the increase in US frequency.
 This feature is observed for the samples with different iron content.
+The iron concentrations were determined by fitting of $I_\mathrm{SC}(t)$ dependencies,
+which were measured at complete FeB pairs dissociation conditions
+(i.e., in the case of high-intensive illumination with duration $\geq 30$~s,
+which cause a maximum decrease in short circuit current value).
 The US intensity $W_\mathrm{US,sat}$, which corresponds to saturation in
 $\tau_\mathrm{US}/\tau_{0}$, depends on $f_\mathrm{US}$ as well:
 in fact, $W_\mathrm{US,sat}\simeq0.6$~W/cm$^2$ at $f_\mathrm{US}=2.4$~MHz
@@ -610,12 +614,15 @@ Transverse waves, despite lower frequency, affect the processes of \hl{FeB pair 
 It is previously shown} \cite{Olikh2018SM} \hl{that the acoustically-induced change of complex defect parameters can be attributed to the variation in the distance of the components, and this effect is intensified in the case of the transverse waves.
 The opposite feature of investigated phenomenon testifies that the AI acceleration of the FeB pair
 association does not deal with change in the iron-boron distance.}
-
-Fig.~\ref{figfus} also gives iron concentrations $N_\mathrm{Fe,0}$ obtained from $I_\mathrm{SC}$ relaxation
-in conditions of complete pair dissociation (i.e. the illumination that causes the maximum short circuit current decrease).
-The next figure, Fig.~\ref{figNFe}, presents $\tau_\mathrm{US}/\tau_{0}$  dependencies
+The following figure, Fig.~\ref{figNFe}, presents $\tau_\mathrm{US}/\tau_{0}$  dependencies
 for the samples with different iron concentrations under USL of the same US frequency.
-It is evident that the magnitude of AI effect in fact does not depend on $N_\mathrm{Fe,0}$.
+As seen from the figure, the AI effect does not practically depend on $N_\mathrm{Fe,0}$.
+
+%Fig.~\ref{figfus} also gives iron concentrations $N_\mathrm{Fe,0}$ obtained from $I_\mathrm{SC}$ relaxation
+%in conditions of complete pair dissociation (i.e. the illumination that causes the maximum short circuit current decrease).
+%The next figure, Fig.~\ref{figNFe}, presents $\tau_\mathrm{US}/\tau_{0}$  dependencies
+%for the samples with different iron concentrations under USL of the same US frequency.
+%It is evident that the magnitude of AI effect in fact does not depend on $N_\mathrm{Fe,0}$.
 
 \begin{figure}
 \centering
@@ -630,11 +637,19 @@ The marks are the experimental results, the lines are given for convenience only
 \label{figNFe}       % Give a unique label
 \end{figure}
 
-Our experiments have shown that
-as the temperature decreases the efficiency of US impact on $\tau_{ass}$ increases
-(see Fig.~\ref{figTemp} which presents the temperature dependence of $\tau_\mathrm{US}/\tau_{0}$)
-at a constant intensity of US application.
-In general, these curves are close to linear.
+Figure~\ref{figTemp} illustrates the variation of US impact on
+the characteristic FeB pair association time over the explored temperature range.
+The data for $f_\mathrm{US}=9.0$~MHz is correspond to the saturation region of
+$\tau_\mathrm{US}/\tau_{0}=f(W_\mathrm{US})$ dependency,
+other data --- to the linear region.
+As seen from the figure, the temperature decrease causes the decrease in efficiency of US influence,
+and the dependencies of $\tau_\mathrm{US}/\tau_{0}$ on $T$ are close to linear.
+
+%Our experiments have shown that
+%as the temperature decreases the efficiency of US impact on $\tau_{ass}$ increases
+%(see Fig.~\ref{figTemp} which presents the temperature dependence of $\tau_\mathrm{US}/\tau_{0}$)
+%at a constant intensity of US application.
+%In general, these curves are close to linear.
 
 \begin{figure}
 \centering
@@ -646,26 +661,28 @@ The marks are the experimental results, the lines are the linear fitted curves
 \label{figTemp}       % Give a unique label
 \end{figure}
 
-The association of FeB complex happens at the  expense of  Fe$_i$ diffusion towards the
-boron atoms located in substituting positions and strongly bound with the neighbour due to forming covalent bonds with them.
+The association of the FeB complex happens at the expense of  Fe$_i$ diffusion towards the
+boron atoms located in substituting positions and strongly bound with the neighbor due to forming covalent bonds with them.
 Therefore, the $\tau_{ass}$ depends on the coefficient of iron diffusion $D_\mathrm{Fe}$,
-so a more detailed, in comparison with Eq.~(\ref{eqTass}), expression takes the following form \cite{FeBAssJAP2014,FeBJAP2005,FeBKin2019}:
+so a more detailed, in comparison with Eq.~(\ref{eqTass}), the expression takes the following form \cite{FeBAssJAP2014,FeBJAP2005,FeBKin2019}:
 \begin{equation}
 \label{eqTass2}
 \tau_{ass}=\frac{\varepsilon\varepsilon_0 kT}{q^2D_\mathrm{Fe}N_A}=
 \frac{\varepsilon\varepsilon_0 kT}{q^2D_\mathrm{0,Fe}N_A}\exp\left(\frac{E_m}{kT}\right)\,,
 \end{equation}
 where
+$\varepsilon$ is the dielectric constant of silicon,
+$\varepsilon_0$ is the vacuum permittivity,
 $D_\mathrm{Fe}=D_\mathrm{0,Fe}\exp(-E_m/kT)$,
-$D_\mathrm{0,Fe}$ is a temperature-independent multiplier,
+$D_\mathrm{0,Fe}$ is the temperature-independent multiplier,
 in the general case \cite{AZIZ2001,Stavola,WeberFe}
 $D_\mathrm{0,Fe}=\beta\nu a^2\exp(\delta S_\mathrm{Fe}/k)$,
-$\beta$ is a correlation factor,
-$\nu$  is an effective vibrational (attempt) frequency,
-$a$ is a jump distance,
+$\beta$ is the correlation factor,
+$\nu$  is the effective vibrational (attempt) frequency,
+$a$ is the jump distance,
 $\delta S_\mathrm{Fe}$ is the migration entropy.
 
-As evident from Eq.~(\ref{eqTass2}), the decrease in FeB association time under USL testifies about
+As seen from the Eq.~(\ref{eqTass2}), the decrease in FeB association time under USL testifies about
 AI increase in $D_\mathrm{Fe}$.
 It is, most probable, due to the increase in diffusion energy (see Fig.~\ref{figUSChem}).
 Enhanced diffusion of impurities in the US field was observed previously
@@ -687,13 +704,17 @@ The curves are scaled arbitrarily
 \label{eqEmUs}
 E_m \xrightarrow{ultrasound} E_{m,0}-\Delta E_\mathrm{US}\,,
 \end{equation}
-where $E_{m,0}$ is the migration energy without elastic oscillations in silicon SC,
-which is $E_{m,0}\sim0.66$~eV according to \cite{FeBAssJAP2014,FeBkinAPL2008} and our experimental data;
-$\Delta E_\mathrm{US}$ is the AI change in this quantity value.
-According to the performed investigations  $\Delta E_\mathrm{US}=f(W_\mathrm{US},f_\mathrm{US},T)$ and does not exceed 10~meV.
+where $E_{m,0}$ is the migration energy without USL,
+according to \cite{FeBAssJAP2014,FeBkinAPL2008} and our estimation, $E_{m,0}\sim0.66$~eV;
+$\Delta E_\mathrm{US}$ is the AI change in migration energy.
+According to the obtained results, energy change depends on temperature and US characteristics ($\Delta E_\mathrm{US}=f(W_\mathrm{US},f_\mathrm{US}, \mathrm{wave type}, T)$) and does not exceed 10~meV.
+%where $E_{m,0}$ is the migration energy without elastic oscillations in silicon SC,
+%which is $E_{m,0}\sim0.66$~eV according to \cite{FeBAssJAP2014,FeBkinAPL2008} and our experimental data;
+%$\Delta E_\mathrm{US}$ is the AI change in this quantity value.
+%According to the performed investigations  $\Delta E_\mathrm{US}=f(W_\mathrm{US},f_\mathrm{US},T)$ and does not exceed 10~meV.
 
-The physics of the found AI effect can be the following.
-By using thermodynamic formalism it was shown in \cite{AZIZ2001} that the ability of
+The mechanism of the found AI phenomenon can be the following.
+By using thermodynamic formalism, it was shown \cite{AZIZ2001} that the ability of
 impurities in Si to diffuse depends on mechanical stress $\eta$:
 \begin{equation}
 \label{eqTeor}
@@ -701,44 +722,71 @@ impurities in Si to diffuse depends on mechanical stress $\eta$:
 \exp\left(\frac{\eta [-\Omega+V^r+V^m]}{kT}\right)\,,
 \end{equation}
 where
-$V^*$ is an activation strain tensor,
+$V^*$ is the activation strain tensor,
 $\Omega$ is the atomic volume representing  crystal dimension changes
 upon the formation of lattice site before the lattice relaxation
 around the newly created point defect is permitted,
-$V^r$ is a relaxation volume,
-$V^m$ is a migration strain tensor, which characterizes stress impact on the defect mobility.
+$V^r$ is the relaxation volume,
+$V^m$ is the migration strain tensor, which characterizes stress impact on the defect mobility.
 The enhance Fe$_i$ diffusivity in the strain field is discussed in \cite{FeStrain} as well.
 
-In our opinion, this is the mechanism, which explains the found US impact on FeB pairs association in silicon SC.
-As seen from Eq.~(\ref{eqTeor}), the diffusion coefficient change caused
-by the applied stress is thermally  activated, which explains the observed
-temperature dependence of AI changes in $\tau_{ass}$.
-In addition, generally $V^*$ contains 81 component  \cite{AZIZ2001},
-and therefore change in $D$ depends on the direction of atom elastic displacements.
-This accounts for less effective AI impact of transverse waves.
-It should be noted, that it is the absorption of oscillation energy that the authors \cite{GORB2020,UST:Medvid}
-use to reveal the causes of USL impact on defect system in Si--SiO$_2$ structures,
-and in particular AI increase in impurities mobility.
+%In our opinion, this is the mechanism, which explains the found US impact on FeB pairs association in silicon SC.
+%As seen from Eq.~(\ref{eqTeor}), the diffusion coefficient change caused
+%by the applied stress is thermally  activated, which explains the observed
+%temperature dependence of AI changes in $\tau_{ass}$.
+%In addition, generally $V^*$ contains 81 component  \cite{AZIZ2001},
+%and therefore change in $D$ depends on the direction of atom elastic displacements.
+%This accounts for less effective AI impact of transverse waves.
+%It should be noted, that it is the absorption of oscillation energy that the authors \cite{GORB2020,UST:Medvid}
+%use to reveal the causes of USL impact on defect system in Si--SiO$_2$ structures,
+%and in particular AI increase in impurities mobility.
 
-The observation reported here opens up new possibilities in manipulating electronic
-properties of silicon barrier devices.
-For example, as mentioned above, during phosphor diffusion, the iron impurity gettering occurs as well.
-This happens at high temperatures (near 900$^\circ$C),
-and for this reason iron is found in unpaired interstitial state.
-USL applied during this technological process should increase the degree of the SC basic region
-cleaning due to AI increase in Fe coefficient and as a result improve SC performance.
+In our opinion, this reason explains the found US impact on FeB pairs formation in silicon solar cell.
+In fact, as seen from the Eq.~(\ref{eqTeor}), the stress--induced change in diffusion coefficient is
+thermally  activated.
+As a result, the AI variation in $\tau_{ass}$ depends on temperature.
+In addition, generally $V^*$ contains 81 components \cite{AZIZ2001};
+therefore change in $D_\mathrm{Fe}$ depends on the direction of atom elastic displacements.
+This accounts for the less effective impact of transverse waves.
+It should be noted, that the absorption of oscillation energy is used \cite{GORB2020,UST:Medvid}
+to reveal the cause of USL impact on defect system in Si--SiO$_2$ structures,
+and, in particular, AI increase in impurities mobility.
+
+%The observation reported here opens up new possibilities in manipulating electronic
+%properties of silicon barrier devices.
+%For example, as mentioned above, during phosphor diffusion, the iron impurity gettering occurs as well.
+%This happens at high temperatures (near 900$^\circ$C),
+%and for this reason iron is found in unpaired interstitial state.
+%USL applied during this technological process should increase the degree of the SC basic region
+%cleaning due to AI increase in Fe coefficient and as a result improve SC performance.
+The results reported here open up new possibilities in manipulating
+electronic properties of silicon barrier devices.
+For example, as mentioned above, during phosphor diffusion,
+the iron impurity gettering occurs as well.
+The diffusion happens at high temperatures, and iron is in an unpaired interstitial state.
+USL applied during this technological process should increase
+the degree of the SC base region cleaning due to AI increase
+in Fe diffusion coefficient and, as a result, improve SC performance.
 
 \section{Conclusion}
 
-The ultrasound influence on
-FeB pair association in silicon solar cells has been investigated experimentally.
-The investigation has revealed that pair associations are accelerated due to enhance of iron
-atom diffusion under the action of ultrasound field.
-The effect gets stronger with the increase in temperature and decrease in USL frequency.
-The application of longitudinal waves is more effective than that of transverse waves.
-The effect can be related to a nearly room--temperature decrease in iron migration energy (to 10 meV) in the ultrasound stress ﬁelds.
-Thus, ultrasound can be an effective functional tool for controlling silicon structure characteristics.
+%The ultrasound influence on
+%FeB pair association in silicon solar cells has been investigated experimentally.
+%The investigation has revealed that pair associations are accelerated due to enhance of iron
+%atom diffusion under the action of ultrasound field.
+%The effect gets stronger with the increase in temperature and decrease in USL frequency.
+%The application of longitudinal waves is more effective than that of transverse waves.
+%The effect can be related to a nearly room--temperature decrease in iron migration energy (to 10 meV) in the ultrasound stress ﬁelds.
+%Thus, ultrasound can be an effective functional tool for controlling silicon structure characteristics.
 
+The ultrasound influence on Feb pair formation in silicon solar cells has been investigated experimentally.
+The investigation has revealed an acoustically driven decrease in the association characteristic time,
+which was caused by enhancing in iron atom diffusivity under ultrasound action.
+The effect is intensified with the increase in temperature and the decrease in ultrasound frequency.
+The application of longitudinal acoustic waves is more effective than transverse waves.
+The phenomenon can be related to reducing iron migration energy (up to 10 meV) in silicon
+under ultrasound stress at nearly-room temperature.
+Thus, ultrasound can be an effective functional tool for controlling silicon structure characteristics.
 
 \backmatter
 
