@@ -7,6 +7,18 @@
 % Bibliography created with iopart-num v2.1
 % /biblio/bibtex/contrib/iopart-num
 
+\bibitem{Ed:GaAs}
+Chen N, Gray S, Hernandez-Rivera E, Huang D, LeVan P~D and Gao F 2017 {\em J
+  Mater Res\/} {\bf 32} 1555--1562
+
+\bibitem{Ed:SiC}
+Debelle A, Thom{\'{e}} L, Dompoint D, Boulle A, Garrido F, Jagielski J and
+  Chaussende D 2010 {\em J. Phys. D: Appl. Phys.\/} {\bf 43} 455408
+
+\bibitem{Bacherikov2008En}
+Bacherikov Y, Konakova R, Milenin V, Okhrimenko O, Svetlichnyi A and Polyakov V
+  2008 {\em Semiconductors\/} {\bf 42}(7) 868--872
+
 \bibitem{OstrovskiiSST}
 Abbate A, Ostrovskii I~V, Han K~J, Masini G, Palma F and Das P 1995 {\em
   Semicond. Sci. Technol.\/} {\bf 10} 965--969
