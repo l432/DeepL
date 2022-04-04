@@ -36,6 +36,58 @@
 }
 
 
+
+@ARTICLE{Milenin:SPQEO2019,
+  author = {Milenin, G. V. and Red’ko, R. A.},
+  title = {Transformation of structural defects in semiconductors under action
+      of electromagnetic and magnetic fields causing resonant phenomena},
+  journal = {Semiconductor Physics, Quantum Electronics \& Optoelectronics},
+  year = {2019},
+  volume = {22},
+  pages = {39--46},
+  number = {1},
+  doi = {10.15407/spqeo22.01.39},
+}
+
+@ARTICLE{Milenin:SPQEO2020,
+  author = {Milenin, G. V. and Red’ko, R. A.},
+  title = {Transformation of defects in semiconductor structures under
+          the influence of microwave electromagnetic radiation,
+           which is stimulated by drift phenomena},
+  journal = {Semiconductor Physics, Quantum Electronics \& Optoelectronics},
+  year = {2020},
+  volume = {23},
+  pages = {46--51},
+  number = {1},
+  doi = {10.15407/spqeo23.01.46},
+}
+
+@article{MWT:PandForce97,
+  title = {Dynamics of microwave-induced currents in ionic crystals},
+  author = {Rybakov, K. I. and Semenov, V. E. and Freeman, S. A. and Booske, J. H. and Cooper, R. F.},
+  journal = {Phys. Rev. B},
+  volume = {55},
+  issue = {6},
+  pages = {3559--3567},
+  year = {1997},
+  month = {Feb},
+  doi = {10.1103/PhysRevB.55.3559},
+}
+
+@article{MWT:PandForce92,
+  title = {Mass transport in ionic crystals induced by the ponderomotive action of a high-frequency electric field},
+  author = {Rybakov, K. I. and Semenov, V. E.},
+  journal = {Phys. Rev. B},
+  volume = {52},
+  issue = {5},
+  pages = {3030--3033},
+  year = {1995},
+  month = {Aug},
+  doi = {10.1103/PhysRevB.52.3030},
+}
+
+
+
 @ARTICLE{Konakova2015En,
   author = {Zayats, N. S. and Konakova, R. V. and Milenin, V. V. and Milenin, G. V.
 	and Red’ko, R. A. and Red’ko, S. N.},
@@ -9900,48 +9952,4 @@ author = {Daniel Chen and Moonyong Kim and Bruno V. Stefani and Brett J. Hallam 
 }
 
 @Article{GAPel2020,
-  author  = {Pellegrino,C. and Gagliardi,A. and Zimmermann,C. G.},
-  title   = {Defect spectroscopy and non-ionizing energy loss analysis of proton and electron irradiated p-type {GaAs} solar cells},
-  journal = {J. Appl. Phys.},
-  year    = {2020},
-  volume  = {128},
-  number  = {19},
-  pages   = {195701},
-  month   = {Nov},
-  doi     = {10.1063/5.0028029},
-}
-
-@Article{GASobolev2020,
-  author  = {Sobolev,M. M. and Soldatenkov,F. Y. and Danil'chenko,V. G.},
-  title   = {Deep-level defects in high-voltage {AlGaAs} p–i–n diodes and the effect of these defects on the temperature dependence of the minority carrier lifetime},
-  journal = {J. Appl. Phys.},
-  year    = {2020},
-  volume  = {128},
-  number  = {9},
-  pages   = {095705},
-  month   = {Sep},
-  doi     = {10.1063/5.0018317},
-}
-
-@Article{Ed:GaAs,
-  author  = {Chen, Nanjun and Gray, Sean and Hernandez-Rivera, Efrain and Huang, Danhong and LeVan, Paul D. and Gao, Fei},
-  journal = {J Mater Res},
-  title   = {Computational simulation of threshold displacement energies of {GaAs}},
-  year    = {2017},
-  month   = apr,
-  number  = {8},
-  pages   = {1555--1562},
-  volume  = {32},
-  doi     = {10.1557/jmr.2017.46},
-}
-
-@Article{Ed:SiC,
-  author  = {A Debelle and L Thom{\'{e}} and D Dompoint and A Boulle and F Garrido and J Jagielski and D Chaussende},
-  journal = {J. Phys. D: Appl. Phys.},
-  title   = {Characterization and modelling of the ion-irradiation induced disorder in 6{H}-{SiC} and 3{C}-{SiC} single crystals},
-  year    = {2010},
-  month   = {Oct},
-  number  = {45},
-  pages   = {455408},
-  volume  = {43},
-  doi     = {
+  author  = {Pellegrino
