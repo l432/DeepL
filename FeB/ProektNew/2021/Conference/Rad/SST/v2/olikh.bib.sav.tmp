@@ -21,6 +21,16 @@
   doi = {10.1103/PhysRevB.34.4048},
 }
 
+@Article{6HSiC:VPAS,
+  author  = {Lam, C. H. and Ling, C. C. andBeling, C. D. and Fung, S. and Weng, H. M. and Hang, D. S.},
+  journal = {Mat. Res. Soc. Symp. Proc.},
+  title   = {Vacancies in electron irradiated {6H} silicon carbide studied by positron annihilation spectroscopy},
+  year    = {203},
+  pages   = {292--297},
+  volume  = {792},
+  doi     = {doi.org/10.1557/PROC-792-R3.19},
+}
+
 
 
 @Article{BoltovetsEn,
@@ -113,6 +123,19 @@
   pages = {1617--1626},
   issue  = {9},
   language = {russian}
+}
+
+@article{6HSiC:Vsi2021,
+  title = {Optical spin initialization of spin-$\frac{3}{2}$ silicon vacancy centers in $6H\text{\ensuremath{-}}\mathrm{SiC}$ at room temperature},
+  author = {Singh, Harpreet and Anisimov, Andrei N. and Breev, Ilia D. and Baranov, Pavel G. and Suter, Dieter},
+  journal = {Phys. Rev. B},
+  volume = {103},
+  issue = {10},
+  pages = {104103},
+  numpages = {11},
+  year = {2021},
+  month = {Mar},
+  doi = {10.1103/PhysRevB.103.104103},
 }
 
 @ARTICLE{KolFTP1989En,
@@ -9952,4 +9975,214 @@ author = {Daniel Chen and Moonyong Kim and Bruno V. Stefani and Brett J. Hallam 
 }
 
 @Article{GAPel2020,
-  author  = {Pellegrino
+  author  = {Pellegrino,C. and Gagliardi,A. and Zimmermann,C. G.},
+  title   = {Defect spectroscopy and non-ionizing energy loss analysis of proton and electron irradiated p-type {GaAs} solar cells},
+  journal = {J. Appl. Phys.},
+  year    = {2020},
+  volume  = {128},
+  number  = {19},
+  pages   = {195701},
+  month   = {Nov},
+  doi     = {10.1063/5.0028029},
+}
+
+@Article{GASobolev2020,
+  author  = {Sobolev,M. M. and Soldatenkov,F. Y. and Danil'chenko,V. G.},
+  title   = {Deep-level defects in high-voltage {AlGaAs} p–i–n diodes and the effect of these defects on the temperature dependence of the minority carrier lifetime},
+  journal = {J. Appl. Phys.},
+  year    = {2020},
+  volume  = {128},
+  number  = {9},
+  pages   = {095705},
+  month   = {Sep},
+  doi     = {10.1063/5.0018317},
+}
+
+@Article{Ed:GaAs,
+  author  = {Chen, Nanjun and Gray, Sean and Hernandez-Rivera, Efrain and Huang, Danhong and LeVan, Paul D. and Gao, Fei},
+  journal = {J Mater Res},
+  title   = {Computational simulation of threshold displacement energies of {GaAs}},
+  year    = {2017},
+  month   = apr,
+  number  = {8},
+  pages   = {1555--1562},
+  volume  = {32},
+  doi     = {10.1557/jmr.2017.46},
+}
+
+@Article{Ed:SiC,
+  author  = {A Debelle and L Thom{\'{e}} and D Dompoint and A Boulle and F Garrido and J Jagielski and D Chaussende},
+  journal = {J. Phys. D: Appl. Phys.},
+  title   = {Characterization and modelling of the ion-irradiation induced disorder in 6{H}-{SiC} and 3{C}-{SiC} single crystals},
+  year    = {2010},
+  month   = {Oct},
+  number  = {45},
+  pages   = {455408},
+  volume  = {43},
+  doi     = {10.1088/0022-3727/43/45/455408},
+}
+
+@Article{Bacherikov_2008,
+  author    = {Yu. Yu. Bacherikov and R. V. Konakova and V. V. Milenin and O. B. Okhrimenko and A. M. Svetlichnyi and V. V. Polyakov},
+  journal   = {Semiconductors},
+  title     = {Changes in characteristics of gadolinium, titanium, and erbium oxide films on the {SiC} surface under microwave treatment},
+  year      = {2008},
+  month     = {jul},
+  number    = {7},
+  pages     = {868--872},
+  volume    = {42},
+  doi       = {10.1134/s1063782608070191},
+  publisher = {Pleiades Publishing Ltd},
+}
+
+@Article{Bacherikov_2008,
+  author    = {Yu. Yu. Bacherikov and R. V. Konakova and V. V. Milenin and O. B. Okhrimenko and A. M. Svetlichnyi and V. V. Polyakov},
+  journal   = {Semiconductors},
+  title     = {Changes in characteristics of gadolinium, titanium, and erbium oxide films on the {SiC} surface under microwave treatment},
+  year      = {2008},
+  month     = {jul},
+  number    = {7},
+  pages     = {868--872},
+  volume    = {42},
+  doi       = {10.1134/s1063782608070191},
+  publisher = {Pleiades Publishing Ltd},
+}
+
+@Article{MWT:Rew2001,
+  author  = {Yu V Bykov and K I Rybakov and V E Semenov},
+  journal = {J. Phys. D: Appl. Phys.},
+  title   = {High-temperature microwave processing of materials},
+  year    = {2001},
+  month   = {Jun},
+  number  = {13},
+  pages   = {R55--R75},
+  volume  = {34},
+  doi     = {10.1088/0022-3727/34/13/201},
+}
+
+@Article{MW:Force,
+  author  = {Boris M Bolotovski{\u{\i}} and Alexander V Serov},
+  journal = {Phys.-Uspekhi},
+  title   = {Special features of motion of particles in an electromagnetic wave},
+  year    = {2003},
+  month   = {Jun},
+  number  = {6},
+  pages   = {645--655},
+  volume  = {46},
+  doi     = {10.1070/pu2003v046n06abeh001349},
+}
+
+
+
+
+
+@Article{LightNeuIrrad:1,
+  author  = {Xu,Jianxing and Wang,Rong and Zhang,Liang and Zhang,Shiyong and Zheng,Penghui and Zhang,Ying and Song,Yu and Tong,Xiaodong},
+  journal = {Appl. Phys. Lett.},
+  title   = {Early stage degradation related to dislocation evolution in neutron irradiated {AlGaN/GaN} {HEMT}s},
+  year    = {2020},
+  month   = {Jul},
+  number  = {2},
+  pages   = {023501},
+  volume  = {117},
+  doi     = {10.1063/5.0011995},
+}
+
+@Article{LightNeuIrrad:2,
+  author  = {Wang, Rong and Xu, Jianxing and Zhang, Shiyong and Zhang, Ying and Zheng, Penghui and Cheng, Zhe and Zhang, Lian and Chen, Feng-Xiang and Tong, Xiaodong and Zhang, Yun and Tan, Wei},
+  journal = {J. Mater. Chem. C},
+  title   = {Reducing the reverse leakage current of {AlGaN/GaN} heterostructures via low-fluence neutron irradiation},
+  year    = {2021},
+  month   = {Mar},
+  number  = {9},
+  pages   = {3177--3182},
+  volume  = {9},
+  doi     = {10.1039/D0TC05652A},
+  issue   = {9},
+}
+
+@Article{MWT:JLumin,
+  author  = {R.A. Red’ko and G.V. Milenin and V.V. Milenin},
+  journal = {J Lumin},
+  title   = {Mechanisms and possibilities of defect reorganization in {III–V} compounds due to the non--thermal microwave radiation treatment},
+  year    = {2017},
+  month   = {Dec},
+  pages   = {1295-1299},
+  volume  = {192},
+  doi     = {https://doi.org/10.1016/j.jlumin.2017.09.013},
+}
+
+@Article{6HSiC:Vsi,
+  author  = {Th. Lingner and S. Greulich-Weber and J.-M. Spaeth and U. Gerstmann and E. Rauls and H. Overhof},
+  journal = {Phys. B Condens. Matter},
+  title   = {The annealing product of the silicon vacancy in {6H–SiC}},
+  year    = {2001},
+  month   = {Dec},
+  note    = {International Conference on Defects in Semiconductors},
+  pages   = {625-628},
+  volume  = {308-310},
+  doi     = {10.1016/S0921-4526(01)00762-1},
+}
+
+
+
+
+
+@Article{4HSiC:Vc,
+  author  = {Wang,Xiuhong and Zhao,Junlei and Xu,Zongwei and Djurabekova,Flyura and Rommel,Mathias and Song,Ying and Fang,Fengzhou},
+  journal = {Nanotechnology and Precision Engineering},
+  title   = {Density functional theory calculation of the properties of carbon vacancy defects in silicon carbide},
+  year    = {2020},
+  month   = {Dec},
+  number  = {4},
+  pages   = {211-217},
+  volume  = {3},
+  doi     = {10.1016/j.npe.2020.11.002},
+}
+
+
+
+
+
+@Article{6HSiC:VV2019,
+  author  = {Davidsson,Joel and Ivády,Viktor and Armiento,Rickard and Ohshima,Takeshi and Son,N. T. and Gali,Adam and Abrikosov,Igor A.},
+  journal = {Appl Phys Lett},
+  title   = {Identification of divacancy and silicon vacancy qubits in {6H-SiC}},
+  year    = {2019},
+  month   = {Mar},
+  number  = {11},
+  pages   = {112107},
+  volume  = {114},
+  doi     = {10.1063/1.5083031},
+}
+
+@Article{6HSiC:def,
+  author  = {Gian Carlo Capitani and Simonpietro Di Pierro and Gioacchino Tempesta},
+  journal = {Am Mineral},
+  title   = {The {6H-SiC} structure model: {F}urther refinement from {SCXRD} data from a terrestrial moissanite},
+  year    = {2007},
+  number  = {2-3},
+  pages   = {403--407},
+  volume  = {92},
+  doi     = {10.2138/am.2007.2346},
+}
+
+@Article{4HSiC:Vacan,
+  author  = {E. Janzén and N.T. Son and B. Magnusson and A. Ellison},
+  journal = {Microelectron Eng},
+  title   = {Intrinsic defects in high-purity {SiC}},
+  year    = {2006},
+  month   = {Jan},
+  note    = {The Symposium K Proceedings of the 3rd International Conference on Materials for Advanced Technologies (ICMAT 2005)},
+  number  = {1},
+  pages   = {130-134},
+  volume  = {83},
+  doi     = {10.1016/j.mee.2005.10.038},
+}
+
+@Article{SiC:defEPR,
+  author  = {Isoya, J. and Umeda, T. and Mizuochi, N. and Son, N. T. and Janzén, E. and Ohshima, T.},
+  journal = {Phys Status Solidi B},
+  title   = {{EPR} identification of intrinsic defects in {SiC}},
+  year    = {2008},
+ 
