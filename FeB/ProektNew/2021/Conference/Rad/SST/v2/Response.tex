@@ -51,6 +51,108 @@ The $\Delta T$ magnitude was confirmed by measurements using a T--type thermocou
 As a result, the influence of microwave heating can be neglected.
 
 There are many experimental observations that suggest
+non-thermal influence of microwave fields \cite{MW:Si2018,MWT:Rew2001}.
+These phenomena can be related to various physical reasons.
+First, it is known \cite{MW:Force,Milenin:SPQEO2020} that a free charged particle in an electromagnetic field
+performs a drift in parallel to the electric component.
+The drift velocity magnitude is given by $\upsilon_{\bot}\propto (E_0/m \nu)$
+(where
+$E_0$ is the amplitude of the electric field,
+$m$ is the mass of the particle)
+and velocity direction depends on the phase
+of the field at the initial time.
+Consequently, along with the systematic drift of individual charged
+particles, directional movement of the entire
+set of particles is absent.
+Besides, the particle drifts in the direction of
+wave propagation with the velocity $\upsilon_\|\propto(E_0/m \nu)^2$.
+However, the charged point defects in
+semiconductor crystal are not free and
+have to overcome potential barriers when moving.
+It can be taken into account by using effective
+mass $m_{\rm eff}$, which exponentially depends on barrier height \cite{Milenin:SPQEO2020}.
+In our opinion, the mentioned features testify that
+such MW-induced movement is not responsible for revealed effects.
+
+Second, the ponderomotive forces can arise under MW action.
+Under inhomogeneous microwave electromagnetic field conditions, the
+induced oscillatory defect fluxes are rectified,
+leading to directional, macroscopic mass transport \cite{MWT:Rew2001,MWT:PandForce97,MWT:PandForce92}.
+The ponderomotive force can be described as follows \cite{MWT:PandForce97,Milenin:SPQEO2020}:
+\begin{equation}\label{eqFpan}
+  F_p(x)=\frac{q^2\beta E_0^2}{8 m_{\rm eff} \pi^2 \nu^2} \exp(-2\beta x)\,,
+\end{equation}
+where
+$q$ is the charge of the defect,
+and $\beta$ is the coefficient of electromagnetic wave absorption,
+the axis $x$ is along the direction of wave propagation.
+On the one hand, the both the MW attenuation and ponderomotive force are essential
+when $d\geq\beta^{-1}$
+(where $d$ is the thickness of the semiconductor crystal).
+On the other hand, the following expression can be used to estimate $\beta$ \cite{Milenin:SPQEO2020}:
+\begin{equation}\label{eqBeta}
+  \beta=\frac{1}{c}\left(\frac{\sigma\pi\nu}{\varepsilon_0}\right)^{\frac{1}{2}}\,,
+\end{equation}
+where
+$\sigma=e n \mu_n$ is crystal conductivity;
+$\mu_n$  is the electron mobility,
+8500~cm$^2$/sV for GaAs, 400~cm$^2$/sV for SiC.
+Accordind to \cite{Milenin:SPQEO2020},
+the Eq.~(\ref{eqBeta}) is correct in the case of
+$(\sigma/2\pi\varepsilon_0\varepsilon\nu)\gg1$
+(where
+$\varepsilon$ is the dielectric perminity;
+12.9 for GaAs, 10.03 for SiC),
+which corresponds to the samples under investigation.
+The calculations show that
+$\beta^{-1}$ is $(57-90)$~$\mu$m for SiC crystals,
+138~$\mu$m for GAS2,
+20~$\mu$m for GAS1 and substrate of epitaxial structures,
+$(100-470)$~$\mu$m for epi-layers.
+Thus the ponderomotive forces are able to cause the movement of the
+charged point defects both in the single-crystal samples and
+substrate of epitaxial structures, and the effect is maximal in the near--surface region.
+Though ponderomotive influence can  not be the only reason for observed effects.
+In fact $\beta(\mathrm{GAS1})>\beta(\mathrm{GAS2})$,
+however, MWT with $t_\mathtt{MWT}=20$~s does not lead to defect transformation
+in GAS1, unlike in GAS1 --- see table~1.
+Similar results are observed for SIC1(2) and SIC3.
+
+Third, it was shown \cite{MWT:JLumin,Konakova2007JTFEn,Milenin:SPQEO2019} that under resonance conditions
+(the coincidence of eigenfrequencies of the dislocation segment vibrations and electrical component of the microwave radiation),
+multiple dislocation loops occur.
+Besides, the MWT causes the  movement of dislocations.
+In particular, at $\nu=2.45$~GHz for GaAs, resonant detachment 
+of numerous dislocations with the length $L\leq4$~$\mu$m becomes possible \cite{Milenin:SPQEO2019}.
+The dislocation climb is accompanied by intrinsic defect generation.
+In addition, the behavior of the dislocation segment in a MW electric field may be strongly affected by
+impurity atoms, which decorate dislocations. 
+Having accumulated at dislocations, they, on the one hand,
+decrease resonance frequency; 
+on the other hand, impurity atoms may detach from dislocations at
+high oscillation amplitudes, and free impurity atoms may appear in the crystal \cite{MWT:JLumin,Konakova2007JTFEn}.
+In turn, the appearance of free doping atoms can result in an intrinsic defect concentration increase.
+In our case, the dislocation generation is confirmed by a change in both curvature radius and 
+deformation of the near-surface crystallographic planes after MWT.
+
+Fourth, the MW-induced destruction of impurity complexes, united in clusters, 
+is described \cite{MWT:JLumin,Konakova2007JTFEn,Milenin:SPQEO2019}.
+This is resonant phenomenon as well, and it is expected if the
+irradiation frequency is close to ion--plasma frequency 
+$\nu_r=\sqrt{e^2N_\mathtt{com}/4\pi^2\varepsilon_0\varepsilon\mu}$
+(where
+$N_\mathtt{com}$ is the complex concentration in the cluster,
+$\mu$ is the reduced mass of complex ions).
+For example, $\nu_r$ equals to 2.01~GHz for 
+Te$^+$--Cu$^-$ complex with $N_\mathtt{com}=5\cdot10^{16}$~cm$^{-3}$
+in GaAs \cite{MWT:JLumin}.
+But since the revealed transformation of deep levels
+relates to intrinsic defects, this mechanism seems unlikely.
+
+
+
+
+There are many experimental observations that suggest
 non-thermal influence of microwave fields \cite{MW:Si2018,MWT:Rew2001}
 
 One of the phenomena first observed and still not yet explained
@@ -58,12 +160,16 @@ in full was
 
 Some non-thermal
 
+
+
+
 \cite{Milenin:SPQEO2020,MW:Force,Milenin:SPQEO2019,MWT:PandForce97,MWT:PandForce92,LightNeuIrrad:1,LightNeuIrrad:2}
 
 The additional information was added to the revised manuscript
 (last paragraph in ``Introduction'').
 
-
+Single crystalline SiC is a suitable material for realization of high power, high frequency and high
+temperature devices
 
 \vspace{1cm}
 \noindent
