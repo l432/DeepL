@@ -105,6 +105,61 @@ Zargaleh S~A, Eble B, Hameau S, Cantin J~L, Legrand L, Bernard M, Margaillan F,
 Cs\'or\'e A, von Bardeleben H~J, Cantin J~L and Gali A 2017 {\em Phys. Rev.
   B\/} {\bf 96}(8) 085204
 
+\bibitem{TAV:1992ZnSeGaAsphoto}
+Han K~J, Abbate A, Bhat I~B and Das P 1992 {\em Appl. Phys. Lett.\/} {\bf 60}
+  862--864
+
+\bibitem{TAV:2003MIS_hetero}
+Bury P, Jamnicky I and Hockicko P 2003 {\em Communications - Scientific Letters
+  of the University of Zilina\/} {\bf 5} 5--13
+
+\bibitem{TAV:1989hetero}
+Tabib-Azar M and Hajjar F 1989 {\em IEEE Trans. Electron Devices\/} {\bf 36}
+  1189--1195
+
+\bibitem{TAV:1993general}
+Abbate A, Han K and Das P 1993 {\em IEEE Trans. Electron Devices\/} {\bf 40}
+  1830--1835
+
+\bibitem{TAV:1991SiSiO2}
+Palma F, de~Cesare G, Abbate A and Das P 1991 {\em IEEE Trans. Ultrason.,
+  Ferroelectr., Freq. Control\/} {\bf 38} 503--509
+
+\bibitem{TAV:1989SiGaAsnodefect}
+Abedin M~N, Schowalter L~J and Das P 1989 {\em J. Appl. Phys.\/} {\bf 66}
+  4218--4222
+
+\bibitem{TAV:1991gener}
+Tabib‐Azar M, Abedin M~N, Abbate A and Das P 1991 {\em Journal of Vacuum
+  Science \& Technology B\/} {\bf 9} 95--110
+
+\bibitem{TAV:1999GaAs_AlGaAs}
+Bury P, Jamnický I and Rampton V 1999 {\em Physica B: Condensed Matter\/} {\bf
+  263-264} 94--97
+
+\bibitem{TAV:1993MIS}
+Jamnický I and Bury P 1993 {\em physica status solidi (a)\/} {\bf 139}
+  K35--K38
+
+\bibitem{TAV:1991SiMOS}
+Bury P, Jamnicky I and Ďurček J 1991 {\em physica status solidi (a)\/} {\bf
+  126} 151--161
+
+\bibitem{TAV:1993GaAs}
+Abbate A, Han K, Ostrovskii I and Das P 1993 {\em Solid-State Electron.\/} {\bf
+  36} 697--703
+
+\bibitem{OstrovPAN}
+Ostrovskii I~V, Saiko S~V and Walther H~G 1998 {\em J. Phys. D: Appl. Phys.\/}
+  {\bf 31} 2319--2325
+
+\bibitem{OlikhSSC}
+Ostrovskii I and Olikh O 1998 {\em Solid State Commun.\/} {\bf 107} 341--343
+
+\bibitem{OstrovskiiSST}
+Abbate A, Ostrovskii I~V, Han K~J, Masini G, Palma F and Das P 1995 {\em
+  Semicond. Sci. Technol.\/} {\bf 10} 965--969
+
 \bibitem{LightNeuIrrad:1}
 Xu J, Wang R, Zhang L, Zhang S, Zheng P, Zhang Y, Song Y and Tong X 2020 {\em
   Appl. Phys. Lett.\/} {\bf 117} 023501
@@ -116,9 +171,5 @@ Wang R, Xu J, Zhang S, Zhang Y, Zheng P, Cheng Z, Zhang L, Chen F~X, Tong X,
 \bibitem{SiC:bookCh17}
 Csóré A and Gali A 2021 {\em Point Defects in Silicon Carbide for Quantum
   Technology\/} (John Wiley \& Sons, Ltd) chap~17, pp 503--528
-
-\bibitem{OstrovskiiSST}
-Abbate A, Ostrovskii I~V, Han K~J, Masini G, Palma F and Das P 1995 {\em
-  Semicond. Sci. Technol.\/} {\bf 10} 965--969
 
 \end{thebibliography}
