@@ -88,9 +88,9 @@ Belyayev A, Sachenko A, Boltovets N, Ivanov V, Konakova R, Kudryk Y, Matveeva
   L, Milenin V, Novitskii S and Sheremet V 2012 {\em Semiconductors\/} {\bf
   46}(4) 541--544
 
-\bibitem{SiCDavid}
+\bibitem{6HSiC:VV2019}
 Davidsson J, Ivády V, Armiento R, Ohshima T, Son N~T, Gali A and Abrikosov I~A
-  2019 {\em Appl. Phys. Lett.\/} {\bf 114} 112107
+  2019 {\em Appl Phys Lett\/} {\bf 114} 112107
 
 \bibitem{SiCWei}
 Wei Y, Tarekegne A~T and Ou H 2018 {\em J. Appl. Phys.\/} {\bf 124} 054901
@@ -110,13 +110,17 @@ Ostrovskii I~V, Saiko S~V and Walther H~G 1998 {\em J. Phys. D: Appl. Phys.\/}
 \bibitem{OlikhSSC}
 Ostrovskii I and Olikh O 1998 {\em Solid State Commun.\/} {\bf 107} 341--343
 
+\bibitem{OstrovskiiSST}
+Abbate A, Ostrovskii I~V, Han K~J, Masini G, Palma F and Das P 1995 {\em
+  Semicond. Sci. Technol.\/} {\bf 10} 965--969
+
 \bibitem{PANnewEn}
 Gromashevskii V, Tatyanenko N and Snopok B 2013 {\em Semiconductors\/} {\bf
   47}(4) 579--585
 
-\bibitem{OstrovskiiSST}
-Abbate A, Ostrovskii I~V, Han K~J, Masini G, Palma F and Das P 1995 {\em
-  Semicond. Sci. Technol.\/} {\bf 10} 965--969
+\bibitem{TAV:1993MIS}
+Jamnický I and Bury P 1993 {\em physica status solidi (a)\/} {\bf 139}
+  K35--K38
 
 \bibitem{Godwod}
 Godwod K, Nagy A~T and Rek Z 1976 {\em Phys. Status Solidi A\/} {\bf 34}

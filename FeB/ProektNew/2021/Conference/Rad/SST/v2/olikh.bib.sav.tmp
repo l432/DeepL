@@ -1,4 +1,4 @@
-@Article{B-BSF,
+﻿@Article{B-BSF,
   author  = {Du, Guoping and Chen, Bin and Chen, Nan and Hu, Ruiyi},
   journal = {IEEE Electron Device Letters},
   title   = {Efficient Boron Doping in the Back Surface Field of Crystalline Silicon Solar Cells via Alloyed-Aluminum–Boron Paste},
@@ -96,6 +96,16 @@
   doi = {10.1103/PhysRevB.52.3030},
 }
 
+@Article{SiC:Falk13,
+  author  = {Falk, Abram L. and Buckley, Bob B. and Calusine, Greg and Koehl, William F. and Dobrovitski, Viatcheslav V. and Politi, Alberto and Zorman, Christian A. and Feng, Philip X.-L. and Awschalom, David D.},
+  title   = {Polytype control of spin qubits in silicon carbide},
+  journal = {Nat Commun},
+  year    = {2013},
+  volume  = {4},
+  pages   = {1819},
+  doi     = {10.1038/ncomms2854},
+}
+
 
 
 @ARTICLE{Konakova2015En,
@@ -173,6 +183,33 @@
   issue  = {6},
   language = {russian}
 }
+
+@article{4HSiC:NV,
+  title = {Evidence for near-infrared photoluminescence of nitrogen vacancy centers in $4H\text{-SiC}$},
+  author = {Zargaleh, S. A. and Eble, B. and Hameau, S. and Cantin, J.-L. and Legrand, L. and Bernard, M. and Margaillan, F. and Lauret, J.-S. and Roch, J.-F. and von Bardeleben, H. J. and Rauls, E. and Gerstmann, U. and Treussart, F.},
+  journal = {Phys. Rev. B},
+  volume = {94},
+  issue = {6},
+  pages = {060102},
+  year = {2016},
+  month = {Aug},
+  doi = {10.1103/PhysRevB.94.060102},
+}
+
+
+@article{SiC:NV,
+  title = {Characterization and formation of {NV} centers in $3C, 4H$, and $6H$ SiC: An ab initio study},
+  author = {Cs\'or\'e, A. and von Bardeleben, H. J. and Cantin, J. L. and Gali, A.},
+  journal = {Phys. Rev. B},
+  volume = {96},
+  issue = {8},
+  pages = {085204},
+  numpages = {11},
+  year = {2017},
+  month = {Aug},
+  doi = {10.1103/PhysRevB.96.085204},
+}
+
 
 @ARTICLE{Milenin1994En,
   author = {Milenin, V.V. and Konakova, R.V. and Statov, V.A. and Sklyarevich, V.Ye. and Tkhorik, Yu.A. and Filatov, M.Yu. and Shevelev, M.V.},
@@ -6062,19 +6099,18 @@ author = {Daniel Chen and Moonyong Kim and Bruno V. Stefani and Brett J. Hallam 
   timestamp = {2014.01.31}
 }
 
-@ARTICLE{OlikhSSC,
-  author = {I.V. Ostrovskii and O.Ya. Olikh},
-  title = {Characterization of interface deep levels in As vapor grown EPI--{G}a{A}s},
-  journal = {Solid State Commun.},
-  year = {1998},
-  volume = {107},
-  pages = {341--343},
-  number = {7},
-  month = {Jul},
-  doi = {https://doi.org/10.1016/S0038-1098(98)00236-1},
-  issn = {0038-1098},
-  owner = {Admin},
-  timestamp = {2018.03.17}
+@Article{OlikhSSC,
+  author    = {I.V. Ostrovskii and O.Ya. Olikh},
+  title     = {Characterization of interface deep levels in As vapor grown EPI--{G}a{A}s},
+  journal   = {Solid State Commun.},
+  year      = {1998},
+  volume    = {107},
+  number    = {7},
+  pages     = {341--343},
+  month     = {Jul},
+  doi       = {10.1016/S0038-1098(98)00236-1},
+  owner     = {Admin},
+  timestamp = {2018.03.17},
 }
 
 @ARTICLE{UST:OstrovCsI,
@@ -10023,30 +10059,17 @@ author = {Daniel Chen and Moonyong Kim and Bruno V. Stefani and Brett J. Hallam 
 }
 
 @Article{Bacherikov_2008,
-  author    = {Yu. Yu. Bacherikov and R. V. Konakova and V. V. Milenin and O. B. Okhrimenko and A. M. Svetlichnyi and V. V. Polyakov},
+  author    = {Bacherikov, Yu. Yu. and Konakova, R. V. and Milenin, V. V. and Okhrimenko, O. B. and Svetlichnyi, A. M. and Polyakov, V. V.},
   journal   = {Semiconductors},
   title     = {Changes in characteristics of gadolinium, titanium, and erbium oxide films on the {SiC} surface under microwave treatment},
   year      = {2008},
-  month     = {jul},
+  month     = {Jul},
   number    = {7},
   pages     = {868--872},
   volume    = {42},
   doi       = {10.1134/s1063782608070191},
-  publisher = {Pleiades Publishing Ltd},
 }
 
-@Article{Bacherikov_2008,
-  author    = {Yu. Yu. Bacherikov and R. V. Konakova and V. V. Milenin and O. B. Okhrimenko and A. M. Svetlichnyi and V. V. Polyakov},
-  journal   = {Semiconductors},
-  title     = {Changes in characteristics of gadolinium, titanium, and erbium oxide films on the {SiC} surface under microwave treatment},
-  year      = {2008},
-  month     = {jul},
-  number    = {7},
-  pages     = {868--872},
-  volume    = {42},
-  doi       = {10.1134/s1063782608070191},
-  publisher = {Pleiades Publishing Ltd},
-}
 
 @Article{MWT:Rew2001,
   author  = {Yu V Bykov and K I Rybakov and V E Semenov},
@@ -10162,27 +10185,4 @@ author = {Daniel Chen and Moonyong Kim and Bruno V. Stefani and Brett J. Hallam 
   title   = {The {6H-SiC} structure model: {F}urther refinement from {SCXRD} data from a terrestrial moissanite},
   year    = {2007},
   number  = {2-3},
-  pages   = {403--407},
-  volume  = {92},
-  doi     = {10.2138/am.2007.2346},
-}
-
-@Article{4HSiC:Vacan,
-  author  = {E. Janzén and N.T. Son and B. Magnusson and A. Ellison},
-  journal = {Microelectron Eng},
-  title   = {Intrinsic defects in high-purity {SiC}},
-  year    = {2006},
-  month   = {Jan},
-  note    = {The Symposium K Proceedings of the 3rd International Conference on Materials for Advanced Technologies (ICMAT 2005)},
-  number  = {1},
-  pages   = {130-134},
-  volume  = {83},
-  doi     = {10.1016/j.mee.2005.10.038},
-}
-
-@Article{SiC:defEPR,
-  author  = {Isoya, J. and Umeda, T. and Mizuochi, N. and Son, N. T. and Janzén, E. and Ohshima, T.},
-  journal = {Phys Status Solidi B},
-  title   = {{EPR} identification of intrinsic defects in {SiC}},
-  year    = {2008},
- 
+  pages   = {40
