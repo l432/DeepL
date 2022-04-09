@@ -296,8 +296,8 @@ For example, $\sigma_n$ was found to change by an order of magnitude when the le
 For instance, the $(E_c-E_t)$ in GAB1 practically did not change after 20~s of MW exposure, whereas $\sigma_n$ grew approximately four times.
 
 \noindent
-ii)~In single crystals, the  MW-induced changes become stronger 
-with a decrease in free charge carrier concentration 
+ii)~In single crystals, the  MW-induced changes become stronger
+with a decrease in free charge carrier concentration
 (see  GAS1 and GAS2 data)
 and an increase in the relative deformation (the surface curvature).
 
@@ -308,14 +308,14 @@ This fact correlates with the data  from \cite{Belyaev1998JTFEn},
 who reported a decrease in the concentration of centers with levels in the upper half of the band gap as a result of MW annealing.
 
 \noindent
-iv)~The irradiation dose required to essentially change the parameters of the trap 
+iv)~The irradiation dose required to essentially change the parameters of the trap
 in the epitaxial structures was higher than one in single-crystal samples.
 In particular, \tref{tabMW} provides  data for the GAT (GAS) and GAB series samples after 20~s of MWT,
 which supports this fact.
 Notably, the doping levels of  the GAB and GAE substrates were the same as those of samples GAS1 and GAT,
 and the doping level of the GAB epitaxial layer was similar to that of GAS2.
 In addition, GAB, GAE, and GAT contain the same doping impurities.
-Thus, the observed differences were determined by the sample's structures 
+Thus, the observed differences were determined by the sample's structures
 but not by the difference in their conductivities.
 
 
@@ -330,7 +330,7 @@ while for GAE and GAB, the capture cross section increased.
 We now consider the possible configurations of the defects detected in the structures under study.
 For this purpose, we should take into account that the reported data for the main trap parameters vary over a wide range;
 in particular, the difference between the values of capture cross sections can be as large as four orders of magnitude \cite{Pavlovic2000}.
-One of the possible reasons for such a large spread of parameters is the strong  
+One of the possible reasons for such a large spread of parameters is the strong
 dependence of the charge thermal emission on the electric field strength \cite{Bulyarskii2000,Makram} caused by
 a)~decrease in ionization energy due to the Pool--Frenkel effect or, for example, Coulombic interactions of defect \cite{Stellmacher} and
 b)~change in the $\sigma_n$  magnitude \cite{Bourgoin2001}.
@@ -343,7 +343,7 @@ Consequently, the different methods used to investigate defects yield  different
 For example, from reviews on various traps in gallium arsenide,  we can compare the data  obtained by deep-level transient spectroscopy \cite{Bourgoin:GaAs}
 and thermally stimulated currents \cite{Pavlovic2000}.
 Data were obtained for defects with closely located levels and very different capture cross section values.
-Generalizing the above-mentioned, we should note that it is the energy level that 
+Generalizing the above-mentioned, we should note that it is the energy level that
 we shall be oriented towards in defect configuration determination.
 If the change in $(E_c-E_t)$ after MWT has exceeded the experimental errors limit (about 20~meV),
 we supposed the microwave-induced configuration change.
@@ -489,27 +489,125 @@ for instance, the change in ionization energy was reported \cite{Stellmacher} to
 
 Analysis of the observed phenomena should consider
 the probable mechanisms of the impact of microwave radiation on the crystals.
-First, the effect of the temperature increase should be analyzed.
+The primary process, which determines defect production under irradiation,
+is a displacement of the atoms from the sites of the lattice.
+But the energy of a photon with frequency 2.45~GHz is about $10^{-5}$~eV only;
+the threshold displacement energies in GaAs and SiC are (8-28)~eV \cite{Ed:GaAs} and (20-35)~eV \cite{Ed:SiC}, respectively.
+Therefore such a channel of microwave-induced modification of defect subsystem is unreal.
+
+Microwave energy is known to transform into heat inside the material.
 It is believed that the structural modification in the MWT result  is mostly caused by the change
 in the defect charge state and elastic stress fields arising in instantly heated defect regions.
-However, these processes are known to intensify with increasing free charge carrier concentrations \cite{MW:Rev},
-whereas in our case, the effects weaken with the concentration increase (samples GAS1 and GAS2).
-Moreover, the applied irradiation mode did not imply long-term continuous exposure to MW oscillations,
-which reduced the overall heating of the structure.
+Processes based on microwave heating find many industrial applications.
+But the used experimental procedure
+(pulsed microwave radiation with a period of 500~s and a duty cycle of 1\%)
+allowed prevention of essential heating.
+The calculation according to Bacherikov~\emph{et al}. \cite{Bacherikov2008En} shows that
+the maximum possible heating temperature of the sample $\Delta T$ is about 1~K.
+The $\Delta T$ magnitude was confirmed by measurements using a T--type thermocouple.
+Besides, the heating are known to intensify with increase in free charge carrier concentrations \cite{MW:Rev},
+whereas in our case, the revealed effects weaken with the concentration increase (samples GAS1 and GAS2).
+As a result, the influence of microwave heating can be neglected.
+
 However, numerous studies have shown that the observed effects of MWT cannot be explained only by the mechanisms of fast  annealing;
-therefore, non-thermal factors should also be considered.
-In recent research, more attention has been paid to the non-thermal mechanisms of MWT action
-(see, for example, \cite{MW:Si2018} and the references it contains),
-which cause dislocation generation and result in smaller  clusters of point defects in semiconductor wafers \cite{Konakova2007JTFEn}
-or even trigger recrystallization processes \cite{MW:Si2018}.
-Possible non-thermal processes causing changes in the structural characteristics of binary semiconductors have been reported in \cite{Konakova2007JTFEn}.
-In particular, the processes of dislocation oscillations under the action of an electric field were analyzed,
-and the decorating impurities were found to influence the behavior of the dislocation segments.
-On the one hand, the available impurities decrease the resonance frequency of oscillations
-and provide the presence of electric charge,
-on the other hand, at high oscillation amplitudes they can escape the dislocation,
-which causes new chemical defects to arise.
-In turn, the point defects can perform superhigh-frequency oscillations and diffuse as a result of the MWT.
+therefore, non-thermal factors should also be considered \cite{MW:Si2018,MWT:Rew2001}.
+These phenomena can be related to various physical reasons.
+First, it is known \cite{MW:Force,Milenin:SPQEO2020} that a free charged particle in an electromagnetic field
+performs a drift in parallel to the electric component.
+The drift velocity magnitude is given by $\upsilon_{\bot}\propto (E_0/m \nu)$
+(where
+$E_0$ is the amplitude of the electric field,
+$m$ is the mass of the particle)
+and velocity direction depends on the phase
+of the field at the initial time.
+Consequently, along with the systematic drift of individual charged
+particles, directional movement of the entire
+set of particles is absent.
+Besides, the particle drifts in the direction of
+wave propagation with the velocity $\upsilon_\|\propto(E_0/m \nu)^2$.
+However, the charged point defects in
+semiconductor crystal are not free and
+have to overcome potential barriers when moving.
+It can be taken into account by using effective
+mass $m_{\rm eff}$, which exponentially depends on barrier height \cite{Milenin:SPQEO2020}.
+In our opinion, the mentioned features testify that
+such MW-induced movement is not responsible for revealed effects.
+
+Second, the ponderomotive forces can arise under MW action.
+Under inhomogeneous microwave electromagnetic field conditions, the
+induced oscillatory defect fluxes are rectified,
+leading to directional, macroscopic mass transport \cite{MWT:Rew2001,MWT:PandForce97,MWT:PandForce92}.
+The ponderomotive force can be described as follows \cite{MWT:PandForce97,Milenin:SPQEO2020}:
+\begin{equation}\label{eqFpan}
+  F_p(x)=\frac{q^2\beta E_0^2}{8 m_{\rm eff} \pi^2 \nu^2} \exp(-2\beta x)\,,
+\end{equation}
+where
+$q$ is the charge of the defect,
+and $\beta$ is the coefficient of electromagnetic wave absorption,
+the axis $x$ is along the direction of wave propagation.
+On the one hand, the both the MW attenuation and ponderomotive force are essential
+when $d\geq\beta^{-1}$
+(where $d$ is the thickness of the semiconductor crystal).
+On the other hand, the following expression can be used to estimate $\beta$ \cite{Milenin:SPQEO2020}:
+\begin{equation}\label{eqBeta}
+  \beta=\frac{1}{c}\left(\frac{\sigma\pi\nu}{\varepsilon_0}\right)^{\frac{1}{2}}\,,
+\end{equation}
+where
+$\sigma=e n \mu_n$ is crystal conductivity;
+$\mu_n$  is the electron mobility,
+8500~cm$^2$/sV for GaAs, 400~cm$^2$/sV for SiC.
+Accordind to \cite{Milenin:SPQEO2020},
+the equation~\eref{eqBeta} is correct in the case of
+$(\sigma/2\pi\varepsilon_0\varepsilon\nu)\gg1$
+(where
+$\varepsilon$ is the dielectric perminity;
+12.9 for GaAs, 10.03 for SiC),
+which corresponds to the samples under investigation.
+The calculations show that
+$\beta^{-1}$ is $(57-90)$~$\mu$m for SiC crystals,
+138~$\mu$m for GAS2,
+20~$\mu$m for GAS1 and substrate of epitaxial structures,
+$(100-470)$~$\mu$m for epi-layers.
+Thus the ponderomotive forces are able to cause the movement of the
+charged point defects both in the single-crystal samples and
+substrate of epitaxial structures, and the effect is maximal in the near--surface region.
+Though ponderomotive influence can  not be the only reason for observed effects.
+In fact $\beta(\mathrm{GAS1})>\beta(\mathrm{GAS2})$,
+however, MWT with $t_\mathtt{MWT}=20$~s does not lead to defect transformation
+in GAS1, unlike in GAS1 --- see \tref{tabMW}.
+Similar results are observed for SIC1(2) and SIC3.
+
+Third, it was shown \cite{MWT:JLumin,Konakova2007JTFEn,Milenin:SPQEO2019} that under resonance conditions
+(the coincidence of eigenfrequencies of the dislocation segment vibrations and electrical component of the microwave radiation),
+multiple dislocation loops occur.
+Besides, the MWT causes the  movement of dislocations.
+In particular, at $\nu=2.45$~GHz for GaAs, resonant detachment
+of numerous dislocations with the length $L\leq4$~$\mu$m becomes possible \cite{Milenin:SPQEO2019}.
+The dislocation climb is accompanied by intrinsic defect generation.
+In addition, the behavior of the dislocation segment in a MW electric field may be strongly affected by
+impurity atoms, which decorate dislocations.
+Having accumulated at dislocations, they, on the one hand,
+decrease resonance frequency;
+on the other hand, impurity atoms may detach from dislocations at
+high oscillation amplitudes, and free impurity atoms may appear in the crystal \cite{MWT:JLumin,Konakova2007JTFEn}.
+In turn, the appearance of free doping atoms can result in an intrinsic defect concentration increase.
+In our case, the dislocation generation is confirmed by a change in both curvature radius and
+deformation of the near-surface crystallographic planes after MWT.
+
+Fourth, the MW-induced destruction of impurity complexes, united in clusters,
+is described \cite{MWT:JLumin,Konakova2007JTFEn,Milenin:SPQEO2019}.
+This is resonant phenomenon as well, and it is expected if the
+irradiation frequency is close to ion--plasma frequency
+$\nu_r=\sqrt{e^2N_\mathtt{com}/4\pi^2\varepsilon_0\varepsilon\mu}$
+(where
+$N_\mathtt{com}$ is the complex concentration in the cluster,
+$\mu$ is the reduced mass of complex ions).
+For example, $\nu_r$ equals to 2.01~GHz for
+Te$^+$--Cu$^-$ complex with $N_\mathtt{com}=5\cdot10^{16}$~cm$^{-3}$
+in GaAs \cite{MWT:JLumin}.
+But since the revealed transformation of deep levels
+relates to intrinsic defects, this mechanism seems unlikely.
+Besides, data about defect clusters in the samples under investigation are absent.
 
 The observed modifications of deep-level parameters are the result of the above-mentioned
 structural reconstruction in semiconductor near-surface regions  owing to the MWT.
@@ -525,6 +623,49 @@ The profilometry data correlated with X--ray measurements.
 Structural investigations show that
 in the initial GaAs samples, the density of dislocations has a W-like distribution over the plate area; the dislocation density over the plate diameter varied from $2\cdot10^{4}$~cm$^{-2}$ to $2\cdot10^{5}$~cm$^{-2}$.
 This inhomogeneity in the dislocation density distribution is evidence of  considerably strong elastic deformation in the sample.
+
+
+In our opinion, the process of MWT influence was two-stage.
+Initially, the resonant movement of the dislocation segment
+has caused an increase in the concentration of point defects, which are mostly intrinsic interstitial atoms.
+The approach of primary vacancy-related defects and secondary defects under
+the ponderomotive forces action and subsequent defect reactions occurred at the final stage.
+If the time of MW processing is not long enough for an essential increase in interstitial atom concentration or effective mass transport, 
+the defect transformation does not occur, and the energy level does not change.
+In this case, the modification of electron capture cross-section is able under a 
+field of newly formed dislocations  (or distant point defects).
+
+For example, let's consider a microwave influence on silicon carbide.
+MWT with $t_{\rm MWT}=20$~s leads to a decrease in $\sigma_n$ magnitude for ESC1 
+($\mathrm{V}_\mathrm{Si}\mathrm{V}_\mathrm{C}$) in SIC1 and SIC2.
+The further irradiation causes the  trap modification,
+and the ESC1 center transforms into 
+ESC2 ($\mathrm{V}_\mathrm{C}$) under the influence of closely located interstitial silicon:
+\begin{equation*}
+\mathrm{V}_\mathrm{Si}\;\mathrm{V}_\mathrm{C}+\mathrm{Si}_{\,i} \rightarrow
+   \mathrm{V}_\mathrm{C}\,.
+\end{equation*}
+In the case of SIC3 sample, the defect transformation occurred at a low dose 
+because MW-induced effects are enhanced by intensive lattice strain.
+In fact, the deformation of the near-surface crystallographic
+planes in SIC3 is significant compared with SIC1 and SIC2 ones
+--- see \tref{tabMW}.
+Further MW-induced modification of the ESC2 parameters in SIC3 is caused 
+by the enhanced electric field of the newly formed dislocation.
+
+Similar processes occur in a GaAs single-crystal.
+The transformations EGA1$\rightarrow$EGA2 (GAS2 sample)
+and  EGA3$\rightarrow$EGA4 (GAT sample), which
+because of the increased number of interstitial atoms in the near-surface layer,
+can be described  by using the following reaction:
+\begin{eqnarray}
+  \nonumber
+  \mathrm{V}_\mathrm{As}+ \mathrm{As}_{\,i} \rightarrow \mathrm{V}_\mathrm{As}\;\mathrm{As}_{\,i}\,;\\
+  \nonumber
+  \mathrm{V}_\mathrm{Ga}\;\mathrm{Ga}_{\,i}\;\mathrm{V}_\mathrm{As}\rightarrow \mathrm{Ga}_\mathrm{Ga}\;\mathrm{V}_\mathrm{As}
+  \rightarrow \mathrm{Ga}_\mathrm{As}\;\mathrm{V}_\mathrm{Ga}\,.
+\end{eqnarray}
+
 
 The analysis showed that the ESC1 and ESC2 centers are complexes of carbon vacancies,
 EGA1 is associated with V$_\mathrm{As}$,

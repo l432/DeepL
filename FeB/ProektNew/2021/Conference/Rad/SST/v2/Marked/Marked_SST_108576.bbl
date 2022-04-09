@@ -277,12 +277,46 @@ Lef{\`e}vre H and Schulz M 1977 {\em Applied physics\/} {\bf 12} 45--53
 Kol'chenko T, Lomako V, Rodionov A and Sveshnikov Y 1989 {\em Fizika i tekhnika
   poluprovodnikov\/} {\bf 23}(4) 626--629 (in Russian)
 
+\bibitem{Ed:GaAs}
+Chen N, Gray S, Hernandez-Rivera E, Huang D, LeVan P~D and Gao F 2017 {\em J
+  Mater Res\/} {\bf 32} 1555--1562
+
+\bibitem{Ed:SiC}
+Debelle A, Thom{\'{e}} L, Dompoint D, Boulle A, Garrido F, Jagielski J and
+  Chaussende D 2010 {\em J. Phys. D: Appl. Phys.\/} {\bf 43} 455408
+
 \bibitem{MW:Si2018}
 Nozariasbmarz A, Dsouza K and Vashaee D 2018 {\em Appl. Phys. Lett.\/} {\bf
   112} 093103
 
+\bibitem{MWT:Rew2001}
+Bykov Y~V, Rybakov K~I and Semenov V~E 2001 {\em J. Phys. D: Appl. Phys.\/}
+  {\bf 34} R55--R75
+
+\bibitem{MW:Force}
+Bolotovski{\u{\i}} B~M and Serov A~V 2003 {\em Phys.-Uspekhi\/} {\bf 46}
+  645--655
+
+\bibitem{Milenin:SPQEO2020}
+Milenin G~V and Red’ko R~A 2020 {\em Semiconductor Physics, Quantum
+  Electronics \& Optoelectronics\/} {\bf 23} 46--51
+
+\bibitem{MWT:PandForce97}
+Rybakov K~I, Semenov V~E, Freeman S~A, Booske J~H and Cooper R~F 1997 {\em
+  Phys. Rev. B\/} {\bf 55}(6) 3559--3567
+
+\bibitem{MWT:PandForce92}
+Rybakov K~I and Semenov V~E 1995 {\em Phys. Rev. B\/} {\bf 52}(5) 3030--3033
+
+\bibitem{MWT:JLumin}
+Red’ko R, Milenin G and Milenin V 2017 {\em J Lumin\/} {\bf 192} 1295--1299
+
 \bibitem{Konakova2007JTFEn}
 Ermolovich I, Milenin G, Milenin V, Konakova R and Red'ko R 2007 {\em Technical
   Physics\/} {\bf 77}(9) 1173--1177
+
+\bibitem{Milenin:SPQEO2019}
+Milenin G~V and Red’ko R~A 2019 {\em Semiconductor Physics, Quantum
+  Electronics \& Optoelectronics\/} {\bf 22} 39--46
 
 \end{thebibliography}
