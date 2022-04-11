@@ -1,0 +1,13 @@
+Average MSE = 0.00005
+Std = 0.00002
+#Input Nodes = 7
+ConfigurationType - Pipe
+[200, 200, 200, 200, 200, 200, 200, 200, 200]
+Batch Size = 64
+# Epochs = 1500
+Learning Rate = 0.0003
+Ortimizer = Nadam
+Activation = elu
+Initializer = XavierUniform
+Regularizer = None
+Dropout is not used

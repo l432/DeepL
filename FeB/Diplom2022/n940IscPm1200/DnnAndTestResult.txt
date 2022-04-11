@@ -1,0 +1,13 @@
+Average MSE = 0.00296749
+Std = 0.00084663
+#Input Nodes = 5
+ConfigurationType - Pipe
+[150, 150, 150, 150, 150, 150]
+Batch Size = 64
+# Epochs = 1200
+Learning Rate = 0.00015
+Ortimizer = Adam
+Activation = selu
+Initializer = RandomNormal
+Regularizer = None
+Dropout is not used
