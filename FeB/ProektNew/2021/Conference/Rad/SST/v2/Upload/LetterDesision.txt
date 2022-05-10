@@ -1,0 +1,45 @@
+Dear Dr Olikh,
+
+Re: "Defect engineering using microwave processing in SiC and GaAs"
+Article reference: SST-108576.R1
+
+We are pleased to tell you that we have provisionally accepted your Paper for publication in Semiconductor Science and Technology. Any further comments from the referees can be found below and/or attached to this message. Our editorial team will now perform some final checks to ensure that we have everything we need to publish your Paper. These checks will enable our production team to publish your Paper as quickly and efficiently as possible. Once this is confirmed, your article will be formally accepted and we will inform you of this via email.
+
+Your accepted manuscript (http://iopscience.iop.org/page/acceptedmanuscripts) will be made available online within 24 hours of formal acceptance, unless you decided to opt out during the submission process.
+
+If you have chosen to publish your Paper on an Open Access basis, and if it is not eligible for funding through a transformative agreement between IOPP and your institution, you will be responsible for ensuring that the article publication charge (APC) is paid in full. Once your Paper has been accepted, we will not be able to change the Open Access status of your manuscript.
+You will receive an email from Accountsreceivable@finance.iop.org with your invoice and payment options. This will include a secure link to our articlecharging.iop.org site offering the option to pay by credit card or bank transfer. If you have any concerns about an email requesting APC payment, please email invoice.request@ioppublishing.org
+
+All articles published by IOP Publishing are available online to readers at http://iopscience.org/. For more information, please contact our Customer Services department at customerservices@ioppublishing.org. For advice on complying with US funder requirements, please go to http://iopscience.iop.org/info/page/chorus.
+
+Thank you for choosing to publish in Semiconductor Science and Technology. We look forward to publishing your Paper.
+
+Yours sincerely
+
+Hector Murphy
+
+On behalf of:
+
+Semiconductor Science and Technology
+Editor-in-Chief: Koji Ishibashi
+
+iopscience.org/sst | sst@ioppublishing.org
+Impact Factor: 2.352 | Citescore: 3.8
+
+Want to find out what is happening to your submission?
+Track your article on:
+Publishing support https://bit.ly/39t9yPz
+WeChat https://bit.ly/2L0M9uz
+
+ioppublishing.org | twitter.com/IOPPublishing
+
+REFEREE REPORT(S):
+Referee: 2
+
+COMMENTS TO THE AUTHOR(S)
+The authors have clarified my concerns on the doping variations, and the effect of dislocations. I recommend  the paper to be published in Semiconductor Science and Technology as it is.
+
+Board Member: 3
+
+COMMENTS TO THE AUTHOR(S)
+The issues raised in comments by the Reviewers were basically appropriately addressed. Although the authors have no possibility to complement their investigations by DLTS or DLOS experiments, their additional arguments about the advantages of the used TAV method make the revised version of the manuscript suitable for publication in Semiconductor Science and Technology.
