@@ -5,7 +5,8 @@ uses
   main in 'main.pas' {MainForm},
   IV_Class in 'IV_Class.pas',
   ResultAll in 'ResultAll.pas',
-  SomeFunction in 'SomeFunction.pas';
+  SomeFunction in 'SomeFunction.pas',
+  EpiLayers in 'EpiLayers.pas';
 
 {$R *.res}
 

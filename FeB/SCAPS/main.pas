@@ -6,7 +6,7 @@ uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, StdCtrls, FileCtrl, StrUtils,OlegFunction,OlegType,OlegShowTypes, 
   IniFiles,OlegMaterialSamples,Math,SomeFunction, OlegVector, OlegDefectsSi, 
-  IV_Class, Vcl.ExtCtrls;
+  IV_Class, Vcl.ExtCtrls, EpiLayers;
 
 type
   TMainForm = class(TForm)
@@ -82,7 +82,7 @@ type
     EmiterThick,BSFThick:TDoubleParameterShow;
 
     ConfigFile:TIniFile;
-    SCAPS_Folder,Result_Folder:string;
+//    SCAPS_Folder,Result_Folder:string;
     IVparameter:TIVparameter;
     Procedure FoldersToForm();
     {виведення на форму розташувань директорій}    
@@ -105,6 +105,7 @@ type
     function SearchInFolders(StartFolder:string):string;
     function DatFileLocationCreateAndDetermine(InnerDir, Tdir, Ddir, Bdir: string):string;
   public
+   SCAPS_Folder,Result_Folder:string;
     { Public declarations }
   end;
 
@@ -507,7 +508,18 @@ end;
 
 procedure TMainForm.Button1Click(Sender: TObject);
 begin
- ShowArrarOfString(ParametersPsevdo);
+// ShowArrarOfString(ParametersPsevdo);
+//EmiterGradingFileCreate();
+//EmiterGradingFileCreate(0.8,3e26,'eND1');
+//EmiterGradingFileCreate(0.39,1e25,'eND2');
+
+BSFGradingFileCreate();
+BSFGradingFileCreate(7.75,4.8e24,7.1e22,'eNA1');
+//BSFGradingFileCreate(dn:double=7.75;
+//                               Na:double=4.8e24;
+//                               Nb:double=7.1e21;
+//                               FileName:string='eNA');
+
 end;
 
 procedure TMainForm.B_ResFSelectClick(Sender: TObject);
@@ -713,6 +725,16 @@ begin
 // tempstr:=tempBegin+tempstr+tempEnd;
 // StringReplaceMy(FeScaps,tempStr,135);
 
+//'S'+Copy(inttostr(round(T)),2,2)+'.abs')
+
+tempstr:='absorptionfile pure A material (y=0) : '+'S'+Copy(inttostr(round(T)),2,2)+'.abs';
+StringReplaceMy(FeBScaps,tempStr,179);
+StringReplaceMy(FeBScaps,tempStr,253);
+StringReplaceMy(FeBScaps,tempStr,327);
+StringReplaceMy(FeScaps,tempStr,167);
+StringReplaceMy(FeScaps,tempStr,224);
+StringReplaceMy(FeScaps,tempStr,281);
+
  tempBegin:='d : ';
  tempEnd:=' [m]';
  tempstr:=LowerCase(floattostrF(BSFThick.Data*1e-6,ffExponent,4,2));
@@ -764,6 +786,14 @@ begin
  StringReplaceMy(FeBScaps,tempStr,237);
  StringReplaceMy(FeBScaps,tempStr,311);
 
+ tempstr:='Sn :  '
+           +LowerCase(floattostrF(Silicon.Vth_n(T),ffExponent,4,2))
+           +' [m/s]';
+ StringReplaceMy(FeScaps,tempStr,137);
+ StringReplaceMy(FeScaps,tempStr,295);
+ StringReplaceMy(FeBScaps,tempStr,149);
+ StringReplaceMy(FeBScaps,tempStr,341);
+
  tempBegin:='v_th_p :	 ';
  tempstr:=LowerCase(floattostrF(Silicon.Vth_p(T),ffExponent,4,2));
  tempstr:=tempBegin+tempstr+tempMidle+tempstr+'	 '+tempstr+tempEnd;
@@ -773,6 +803,14 @@ begin
  StringReplaceMy(FeBScaps,tempStr,164);
  StringReplaceMy(FeBScaps,tempStr,238);
  StringReplaceMy(FeBScaps,tempStr,312);
+
+ tempstr:='Sp :  '
+           +LowerCase(floattostrF(Silicon.Vth_p(T),ffExponent,4,2))
+           +' [m/s]';
+ StringReplaceMy(FeScaps,tempStr,138);
+ StringReplaceMy(FeScaps,tempStr,296);
+ StringReplaceMy(FeBScaps,tempStr,150);
+ StringReplaceMy(FeBScaps,tempStr,342);
 
  tempBegin:='Eg :	  ';
  tempMidle:='	  1.200000	  0.500000	  1.000000	  1.000000	  ';
@@ -847,14 +885,33 @@ begin
  tempBegin:='K_rad :	 ';
  tempMidle:='	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 ';
  tempEnd:='	 1	 0	[m^3/s]';
- tempstr:=LowerCase(floattostrF( Silicon.Brad(T),ffExponent,7,2));
+// tempstr:=LowerCase(floattostrF( Silicon.Brad(T),ffExponent,7,2));
+ tempstr:=LowerCase(floattostrF( Silicon.Brad(T,BSFCon.Data*1e6,False,
+     (BSFThick.Data+BaseThick.Data+EmiterThick.Data)*1e-6,False),ffExponent,7,2));
  tempstr:=tempBegin+tempstr+tempMidle+tempstr+'	 '+tempstr+tempEnd;
  StringReplaceMy(FeScaps,tempStr,160);
- StringReplaceMy(FeScaps,tempStr,217);
- StringReplaceMy(FeScaps,tempStr,274);
  StringReplaceMy(FeBScaps,tempStr,172);
+ tempstr:=LowerCase(floattostrF( Silicon.Brad(T,Boron.Data*1e6,False,
+     (BSFThick.Data+BaseThick.Data+EmiterThick.Data)*1e-6,False),ffExponent,7,2));
+ tempstr:=tempBegin+tempstr+tempMidle+tempstr+'	 '+tempstr+tempEnd;
+ StringReplaceMy(FeScaps,tempStr,217);
  StringReplaceMy(FeBScaps,tempStr,246);
+ tempstr:=LowerCase(floattostrF( Silicon.Brad(T,EmiterCon.Data*1e6,True,
+     (BSFThick.Data+BaseThick.Data+EmiterThick.Data)*1e-6,False),ffExponent,7,2));
+ tempstr:=tempBegin+tempstr+tempMidle+tempstr+'	 '+tempstr+tempEnd;
+ StringReplaceMy(FeScaps,tempStr,274);
  StringReplaceMy(FeBScaps,tempStr,320);
+
+// tempstr:=tempBegin+tempstr+tempMidle+tempstr+'	 '+tempstr+tempEnd;
+// StringReplaceMy(FeScaps,tempStr,160);
+// StringReplaceMy(FeScaps,tempStr,217);
+// StringReplaceMy(FeScaps,tempStr,274);
+// StringReplaceMy(FeBScaps,tempStr,172);
+// StringReplaceMy(FeBScaps,tempStr,246);
+// StringReplaceMy(FeBScaps,tempStr,320);
+
+
+
 
  tempBegin:='c_n_auger :	 ';
  tempMidle:='	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 ';
@@ -892,15 +949,39 @@ begin
  tempEnd:='	 0	 2	[/m^3]';
  tempstr:=LowerCase(floattostrF(BSFCon.Data*1e6,ffExponent,7,2));
  tempstr:=tempBegin+tempstr+'	 '+tempstr+tempMidle+tempstr+'	 '+tempstr+tempEnd;
- StringReplaceMy(FeScaps,tempStr,163);
- StringReplaceMy(FeBScaps,tempStr,175);
+// StringReplaceMy(FeScaps,tempStr,163);
+// StringReplaceMy(FeBScaps,tempStr,175);
  tempstr:=LowerCase(floattostrF(Boron.Data*1e6,ffExponent,7,2));
  tempstr:=tempBegin+tempstr+'	 '+tempstr+tempMidle+tempstr+'	 '+tempstr+tempEnd;
  StringReplaceMy(FeScaps,tempStr,220);
  StringReplaceMy(FeBScaps,tempStr,249);
- tempBegin:='Nd(uniform) :	 ';
- tempstr:=LowerCase(floattostrF(EmiterCon.Data*1e6,ffExponent,7,2));
- tempstr:=tempBegin+tempstr+'	 '+tempstr+tempMidle+tempstr+'	 '+tempstr+tempEnd;
+
+
+
+// Na(x) :	 2.600000e+24  7.100000e+21	 1.000000e+01	 1.000000e+01	 1.000000e+01	 2.600000e+24	 4.724001e+24	12	 1 eNA.grd	[/m^3]
+ BSFGradingFileCreate(BSFThick.Data,BSFCon.Data*1e6,Boron.Data*1e6);
+ tempBegin:='Na(x) :	 ';
+ tempEnd:=' 12  1 eNA.grd	[/m^3]';
+ tempstr:=tempBegin+LowerCase(floattostrF(2.6e24/4.8e18*BSFCon.Data,ffExponent,7,2))+'  ';
+ tempstr:=tempstr+LowerCase(floattostrF(Boron.Data*1e6,ffExponent,7,2))+tempMidle;
+ tempstr:=tempstr+LowerCase(floattostrF(2.6e24/4.8e18*BSFCon.Data,ffExponent,7,2))+'	 ';
+ tempstr:=tempstr+LowerCase(floattostrF(4.724001e+24/4.8e18*BSFCon.Data,ffExponent,7,2));
+ tempstr:=tempstr+tempEnd;
+ StringReplaceMy(FeScaps,tempStr,163);
+ StringReplaceMy(FeBScaps,tempStr,175);
+
+
+ EmiterGradingFileCreate(EmiterThick.Data,EmiterCon.Data*1e6);
+ tempBegin:='Nd(x) :	 ';
+ tempEnd:='	12	 1	eND.grd	[/m^3]';
+ tempstr:=tempBegin+LowerCase(floattostrF(1.1e21/3e20*EmiterCon.Data,ffExponent,7,2))+'	 ';
+ tempstr:=tempstr+LowerCase(floattostrF(EmiterCon.Data*1e6,ffExponent,7,2))+tempMidle;
+ tempstr:=tempstr+LowerCase(floattostrF(1.1e21/3e20*EmiterCon.Data,ffExponent,7,2))+'	 ';
+ tempstr:=tempstr+LowerCase(floattostrF(3.331666e+24/3e20*EmiterCon.Data,ffExponent,7,2));
+ tempstr:=tempstr+tempEnd;
+// tempBegin:='Nd(uniform) :	 ';
+// tempstr:=LowerCase(floattostrF(EmiterCon.Data*1e6,ffExponent,7,2));
+// tempstr:=tempBegin+tempstr+'	 '+tempstr+tempMidle+tempstr+'	 '+tempstr+tempEnd;
  StringReplaceMy(FeScaps,tempStr,278);
  StringReplaceMy(FeBScaps,tempStr,324);
 
@@ -1724,7 +1805,8 @@ end;
 procedure GradFileTitleCreate(SL:TStringList);
 begin
   SL.Clear;
-  SL.Add('interpolation: linear');
+//  SL.Add('interpolation: linear');
+  SL.Add('interpolation: logarithmic');
   SL.Add('');
   SL.Add('x (micrometer)	Nt (1/m3)');
 end;
@@ -1825,9 +1907,11 @@ begin
 
         for I := 0 to 99 do
          begin
-          FeBGRDFile.Add(FloatToStrF(Vec.X[i+100]-1,ffExponent,10,2)+'	'+
+//          FeBGRDFile.Add(FloatToStrF(Vec.X[i+100]-1,ffExponent,10,2)+'	'+
+          FeBGRDFile.Add(FloatToStrF(Vec.X[i+100]-BSFThick.Data,ffExponent,10,2)+'	'+
                         FloatToStrF(Vec.Y[i+100]*Power(10,Nfe)*1e6,ffExponent,8,2));
-          FeGRDFile.Add(FloatToStrF(Vec.X[i+100]-1,ffExponent,10,2)+'	'+
+//          FeGRDFile.Add(FloatToStrF(Vec.X[i+100]-1,ffExponent,10,2)+'	'+
+          FeGRDFile.Add(FloatToStrF(Vec.X[i+100]-BSFThick.Data,ffExponent,10,2)+'	'+
                         FloatToStrF((1-Vec.Y[i+100])*Power(10,Nfe)*1e6,ffExponent,8,2));
           FeBGRDFilePP.Add(FloatToStrF(Vec.X[i],ffExponent,10,2)+'	'+
                         FloatToStrF(Vec.Y[i]*Power(10,Nfe)*1e6,ffExponent,8,2));
