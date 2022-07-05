@@ -2,6 +2,9 @@ unit EpiLayers;
 
 interface
 
+uses
+  OlegVector, System.Classes;
+
 const
 
 //IEEEJPhotovol_5_p1250-1263.pdf
@@ -33,7 +36,44 @@ BSFConcentration:array[0..BSFPointNumber]of double=
  3.4E24, 2.9E24, 2.1E24, 1.6E24, 1.2E24, 8E23, 5E23, 3E23, 2E23,
  1.2E23, 8E22, 5E22, 2.4E22, 1.4E22, 1E22, 7.1E21);
 
+ EmiterThickness=0.39;
+ EmiterConc=3e26;
+ BSFThickness=7.75;
+ BSFConc=4.8e24;
+ BaseCons=7.1e21;
 
+type
+
+TEpiLayersDistribution=class
+ private
+  fEmiterLayer:TVector;
+  fBSFLayer:TVector;
+  fGrdFile:TStringList;
+  fEmiterLayerAdapted:TVector;
+  fBSFLayerAdapted:TVector;
+  fDataVector:Tvector;
+  procedure GRDFileCreate(IsLogInterp:boolean;
+                          Header:string;
+                          Data:TVector;
+                          FileName:string);
+ public
+  property EmiterLayerAdapted:TVector read fEmiterLayerAdapted;
+  property BSFLayerAdapted:TVector read fBSFLayerAdapted;
+  property DataVector:TVector read fDataVector;
+  constructor Create;
+  destructor Destroy; override;
+  procedure AdaptEmiter(dn:double=EmiterThickness;
+                        Nd:double=EmiterConc);
+  procedure AdaptBSF(dp:double=BSFThickness;
+                     Na:double=BSFConc;
+                     Nb:double=BaseCons);
+end;
+
+//x (micrometer)	composition
+//y (composition)	Eg(y)
+//Interpolation: logarithmic  (this is the key word for SCAPS)
+//Thickness: relative    (this is the key word for SCAPS)
+//x/d [-]	Nt (1/m3)
 
 Procedure EmiterGradingFileCreate(dn:double=0.39;
                                   Nd:double=3e26;
@@ -47,7 +87,7 @@ Procedure BSFGradingFileCreate(dn:double=7.75;
 implementation
 
 uses
-  OlegVector, System.Classes, System.SysUtils, main;
+  System.SysUtils, main;
 
 
 Procedure EmiterGradingFileCreate(dn:double=0.39;
@@ -119,6 +159,104 @@ begin
  GRDFile.SaveToFile(MainForm.SCAPS_Folder+'\grading\'+FileName+'.grd');
  FreeAndNil(GRDFile);
  FreeAndNil(Vec);
+end;
+
+{ TEpiLayersDistribution }
+
+procedure TEpiLayersDistribution.AdaptBSF(dp, Na, Nb: double);
+  var i:integer;
+  y1,y2:double;
+begin
+ if Na<>BSFConc then
+   for I := 0 to 25 do
+      fBSFLayerAdapted.Y[i]:=fBSFLayer.Y[i]/BSFConc*Na
+                else
+   for I := 0 to 25 do
+      fBSFLayerAdapted.Y[i]:=fBSFLayer.Y[i];
+
+
+ if (Nb<>BaseCons)or(Na<>BSFConc) then
+   for I := 26 to BSFPointNumber do
+      begin
+        y1:=exp(ln(2.9e24)+(ln(BaseCons)-ln(2.9e24))/(7.75-5)*(fBSFLayer.X[i]-5));
+        y2:=exp(ln(fBSFLayerAdapted.Y[25])+(ln(Nb)-ln(fBSFLayerAdapted.Y[25]))/(7.75-5)*(fBSFLayer.X[i]-5));
+        fBSFLayerAdapted.Y[i]:=fBSFLayer.Y[i]/y1*y2;
+      end
+                                  else
+   for I := 26 to BSFPointNumber do
+        fBSFLayerAdapted.Y[i]:=fBSFLayer.Y[i];
+
+ if dp<>BSFThickness then
+   for I := 0 to BSFPointNumber do
+      fBSFLayerAdapted.X[i]:=fBSFLayer.X[i]/BSFThickness*dp
+                     else
+   for I := 0 to BSFPointNumber do
+      fBSFLayerAdapted.X[i]:=fBSFLayer.X[i];
+
+end;
+
+procedure TEpiLayersDistribution.AdaptEmiter(dn, Nd: double);
+ var i:integer;
+begin
+ if dn<>EmiterPoints[EmiterPointNumber] then
+   for I := 0 to EmiterPointNumber do
+      fEmiterLayerAdapted.X[i]:=fEmiterLayer.X[i]/EmiterPoints[EmiterPointNumber]*dn
+                                        else
+   for I := 0 to EmiterPointNumber do
+      fEmiterLayerAdapted.X[i]:=fEmiterLayer.X[i];
+
+ if Nd<>EmiterConcentration[EmiterPointNumber] then
+   for I := 0 to EmiterPointNumber do
+      fEmiterLayerAdapted.Y[i]:=fEmiterLayer.Y[i]/EmiterConcentration[EmiterPointNumber]*Nd
+                                               else
+   for I := 0 to EmiterPointNumber do
+      fEmiterLayerAdapted.Y[i]:=fEmiterLayer.Y[i];
+end;
+
+constructor TEpiLayersDistribution.Create;
+ var i:byte;
+begin
+ inherited Create;
+ fEmiterLayer:=TVector.Create;
+  for I := 0 to EmiterPointNumber do
+   fEmiterLayer.Add(EmiterPoints[i],EmiterConcentration[i]);
+
+ fBSFLayer:=TVector.Create;
+ for I := 0 to BSFPointNumber do
+   fBSFLayer.Add(BSFPoints[i],BSFConcentration[i]);
+
+ fGrdFile:=TStringList.Create;
+
+ fEmiterLayerAdapted:=TVector.Create(fEmiterLayer);
+ fBSFLayerAdapted:=TVector.Create(fBSFLayer);
+end;
+
+destructor TEpiLayersDistribution.Destroy;
+begin
+  fDataVector.Free;
+  fBSFLayerAdapted.Free;
+  fEmiterLayer.Free;
+  fGrdFile.Clear;
+  fGrdFile.Free;
+  fEmiterLayer.Free;
+  fBSFLayer.Free;
+  inherited;
+end;
+
+procedure TEpiLayersDistribution.GRDFileCreate(IsLogInterp: boolean;
+  Header: string; Data: TVector; FileName: string);
+ var i:integer;
+begin
+ fGRDFile.Clear;
+ if IsLogInterp
+    then fGRDFile.Add('interpolation: logarithmic')
+    else fGRDFile.Add('interpolation: linear');
+ fGRDFile.Add('');
+ fGRDFile.Add(Header);
+ for I := 0 to Data.HighNumber do
+   fGRDFile.Add(FloatToStrF(Data.X[i],ffExponent,8,2)+'	'+
+                        FloatToStrF(Data.Y[i],ffExponent,8,2));
+ fGRDFile.SaveToFile(MainForm.SCAPS_Folder+'\grading\'+FileName+'.grd');
 end;
 
 end.
