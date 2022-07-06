@@ -1,15 +1,15 @@
 > SCAPS 3.3.10 ELIS-UGent: Version scaps3310.exe, dated 19-09-2021, 12:47:26
-> SCAPS All SCAPS Settings file, saved on 	19-09-2021 at 20:24:16
+> SCAPS All SCAPS Settings file, saved on 	06-07-2022 at 18:20:46
 > problem definition file loaded :
-> D:\Samples\DeepL\FeB\Scaps3310\def\FeD38T290B7p100e15.scaps
-> last saved: 	19-09-2021 at 20:23:24
+> d:\Samples\DeepL\FeB\Scaps3310\def\Fe2.scaps
+> last saved: 	06-07-2022 at 18:15:26
 > 
 
 
 >> begin of problem definition file
 
 > SCAPS 3.3.10 ELIS-UGent: Version scaps3310.exe, dated 19-09-2021, 12:47:26 Problem definition file
-> last saved by SCAPS: 	19-09-2021 at 20:24:17
+> last saved by SCAPS: 	06-07-2022 at 18:20:47
 > 
 > 
 > Comments (to be) included in the def file
@@ -41,54 +41,6 @@
 > No doping type nor extrinsic doping is set! (NA = ND = 1E10/cm3 = about ni)
 > 
 > Should be OK for low doped silicon. For higher doping, the mobilities should be set to an appropriate lower value; th
-> 
-> > end of problem definition file
-> 
-> > end of problem definition file
-> 
-> > end of problem definition file
-> 
-> > end of problem definition file
-> 
-> > end of problem definition file
-> 
-> > end of problem definition file
-> 
-> > end of problem definition file
-> 
-> > end of problem definition file
-> 
-> > end of problem definition file
-> 
-> > end of problem definition file
-> 
-> > end of problem definition file
-> 
-> > end of problem definition file
-> 
-> > end of problem definition file
-> 
-> > end of problem definition file
-> 
-> > end of problem definition file
-> 
-> > end of problem definition file
-> 
-> > end of problem definition file
-> 
-> > end of problem definition file
-> 
-> > end of problem definition file
-> 
-> > end of problem definition file
-> 
-> > end of problem definition file
-> 
-> > end of problem definition file
-> 
-> > end of problem definition file
-> 
-> > end of problem definition file
 > 
 > > end of problem definition file
 > 
@@ -144,35 +96,31 @@ Relative hole mass :   1.0000e+00
 layer
 
 name : p+_Si
-d : 7.750e-06 [m]
+d : 5.000e-06 [m]
 Tunneling in layer: 0
-Relative electron mass :	  3.5677e-01	  1.0000e+00	  1.0000e+00	  1.0000e+00	  1.0000e+00	  3.5677e-01	  3.5677e-01	 1	 0	[-]
-Relative hole mass :	  8.0241e-01	  1.0000e+00	  1.0000e+00	  1.0000e+00	  1.0000e+00	  8.0241e-01	  8.0241e-01	 1	 0	[-]
-composition grading :	  0.00000	  0.00000	  0.00000	  0.00000	  0.00000	  0.00000	  0.00000	 0	 1	[-]
-v_th_n :	 1.999e+05	 1.000e+05	 1.000e+01	 1.000e+01	 1.000e+01	 1.999e+05	 1.999e+05	 1	 0	[m/s]
-v_th_p :	 1.652e+05	 1.000e+05	 1.000e+01	 1.000e+01	 1.000e+01	 1.652e+05	 1.652e+05	 1	 0	[m/s]
-eps :	    11.900000	    10.000000	    10.000000	    10.000000	    10.000000	    11.900000	    11.900000	 1	 0	[-]
-chi :	  4.050000	  4.500000	  1.000000	  1.000000	  1.000000	  4.050000	  4.050000	 1	 0	[eV]
-Eg :	  1.067751	  1.200000	  0.500000	  1.000000	  1.000000	  1.067751 	 1.067751	 1	 0	[eV]
-Nc :	 2.850432e+25	 1.000000e+25	 1.000000e+01	 1.000000e+01	 1.000000e+01	 2.850432e+25	 2.850432e+25	 1	 0	[/m^3]
-Nv :	 2.481827e+25	 1.000000e+25	 1.000000e+01	 1.000000e+01	 1.000000e+01	 2.481827e+25	 2.481827e+25	 1	 0	[/m^3]
-mu_n :	 1.692373e-02	 5.000000e-03	 1.000000e-03	 1.000000e+00	 1.000000e+00	 1.692373e-02	 1.692373e-02	 1	 0	[m^2/Vs]
-mu_p :	 8.801514e-03	 5.000000e-03	 1.000000e-03	 1.000000e+00	 1.000000e+00	 8.801514e-03	 8.801514e-03	 1	 0	[m^2/Vs]
-K_rad :	 1.253674e-23	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 1.253674e-23	 1.253674e-23	 1	 0	[m^3/s]
-c_n_auger :	 3.410013e-43	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 3.410013e-43	 3.410013e-43	 1	 0	[m^6/s]
-c_p_auger :	 9.196966e-44	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 9.196966e-44	 9.196966e-44	 1	 0	[m^6/s]
-Na(x) :	 2.600000e+24  7.100000e+21	 1.000000e+01	 1.000000e+01	 1.000000e+01	 2.600000e+24	 4.724001e+24 12  1 eNA.grd	[/m^3]
+Relative electron mass :	  3.5677e-01	  1.0000e+00	  1.0000e+00	  1.0000e+00	  1.0000e+00	  3.5677e-01	  1.0000e+00	 1	 0	[-]
+Relative hole mass :	  8.0241e-01	  1.0000e+00	  1.0000e+00	  1.0000e+00	  1.0000e+00	  8.0241e-01	  1.0000e+00	 1	 0	[-]
+composition grading :	  0.00000	  1.00000	  0.00000	  0.00000	  0.00000	  0.00000	  1.00000	12	 1	BsC.grd	[-]
+Grading file: BsC.grd
+v_th_n :	 1.999e+05	 1.999e+05	 1.000e+01	 1.000e+01	 1.000e+01	 1.999e+05	 1.999e+05	 1	 0	[m/s]
+v_th_p :	 1.652e+05	 1.652e+05	 1.000e+01	 1.000e+01	 1.000e+01	 1.652e+05	 1.652e+05	 1	 0	[m/s]
+eps :	    11.900000	    11.900000	    10.000000	    10.000000	    10.000000	    11.900000	    11.900000	 1	 0	[-]
+chi :	  4.050000	  4.050000	  1.000000	  1.000000	  1.000000	  4.050000	  4.050000	 1	 0	[eV]
+Eg :	  1.089014	  1.124037	  0.500000	  1.000000	  1.000000	  1.089014	  1.124037	12	 0	E91.grd	[eV]
+Nc :	 2.850432e+25	 2.850000e+25	 1.000000e+01	 1.000000e+01	 1.000000e+01	 2.850432e+25	 2.850000e+25	 1	 0	[/m^3]
+Nv :	 2.481827e+25	 2.482000e+25	 1.000000e+01	 1.000000e+01	 1.000000e+01	 2.481827e+25	 2.482000e+25	 1	 0	[/m^3]
+mu_n :	 2.491625e-02	 1.245567e-01	 1.000000e-03	 1.000000e+00	 1.000000e+00	 2.491625e-02	 1.245567e-01	12	 0	M91.grd	[m^2/Vs]
+mu_p :	 1.504268e-02	 4.769578e-02	 1.000000e-03	 1.000000e+00	 1.000000e+00	 1.504268e-02	 4.769578e-02	12	 0	M93.grd	[m^2/Vs]
+K_rad :	 2.935864e-23	 1.190774e-22	 1.000000e+01	 1.000000e+01	 1.000000e+01	 2.935864e-23	 1.190774e-22	12	 0	R91.grd	[m^3/s]
+c_n_auger :	 3.410000e-43	 3.410900e-43	 1.000000e+01	 1.000000e+01	 1.000000e+01	 3.410000e-43	 3.410900e-43	 1	 0	[m^6/s]
+c_p_auger :	 9.196966e-44	 9.197000e-44	 1.000000e+01	 1.000000e+01	 1.000000e+01	 9.196966e-44	 9.197000e-44	 1	 0	[m^6/s]
+Na(x) :	 1.083333e+24	 1.968334e+24	 1.000000e+01	 1.000000e+01	 1.000000e+01	 1.083333e+24	 1.968334e+24	12	 1	eNA.grd	[/m^3]
 Nd(uniform) :	 0.000000e+00	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 0.000000e+00	 0.000000e+00	 0	 2	[/m^3]
-absorption grading :	 1161.30	 1033.31	  250.00	  250.00	    0.00	    1.20	    1.20	 7	 0	[nm]
+absorption grading :	 1138.62	 1103.15	  250.00	  250.00	    0.00	    1.20	    1.20	 7	 0	[nm]
 absorptionmodel pure A material (y=0) : from file
 absorptionfile pure A material (y=0) : S90.abs
-absorption pure B material (y=1), model : coefficients A and B (line inserted for compatibility with SCAPS until 3.3.06)
-pure B material (y=1), A : 1.000e+07 [/(m*sqrt(eV))] (line inserted for compatibility with SCAPS until 3.3.06)
-pure B material (y=1), B : 0.000e+00 [sqrt(eV)/m] (line inserted for compatibility with SCAPS until 3.3.06)
-absorptionmodel pure B material (y=1) : from model
-absorption model B, model : sqrt(hv-Eg) law (SCAPS traditional)
-absorption model B, value of parameter 1 :   1.095445e+05
-absorption model B, value of parameter 2 :   0.000000e+00
+absorption pure B material (y=1), model : from file
+absorption pure B material (y=1), file : S90.abs
 
 srhrecombination
 
@@ -210,15 +158,15 @@ v_th_n :	 1.999e+05	 1.000e+05	 1.000e+01	 1.000e+01	 1.000e+01	 1.999e+05	 1.99
 v_th_p :	 1.652e+05	 1.000e+05	 1.000e+01	 1.000e+01	 1.000e+01	 1.652e+05	 1.652e+05	 1	 0	[m/s]
 eps :	    11.900000	    10.000000	    10.000000	    10.000000	    10.000000	    11.900000	    11.900000	 1	 0	[-]
 chi :	  4.050000	  4.500000	  1.000000	  1.000000	  1.000000	  4.050000	  4.050000	 1	 0	[eV]
-Eg :	  1.123207	  1.200000	  0.500000	  1.000000	  1.000000	  1.123207	  1.123207	 1	 0	[eV]
+Eg :	  1.124037	  1.200000	  0.500000	  1.000000	  1.000000	  1.124037	  1.124037	 1	 0	[eV]
 Nc :	 2.850432e+25	 1.000000e+25	 1.000000e+01	 1.000000e+01	 1.000000e+01	 2.850432e+25	 2.850432e+25	 1	 0	[/m^3]
 Nv :	 2.481827e+25	 1.000000e+25	 1.000000e+01	 1.000000e+01	 1.000000e+01	 2.481827e+25	 2.481827e+25	 1	 0	[/m^3]
-mu_n :	 1.187111e-01	 5.000000e-03	 1.000000e-03	 1.000000e+00	 1.000000e+00	 1.187111e-01	 1.187111e-01	 1	 0	[m^2/Vs]
-mu_p :	 4.688610e-02	 5.000000e-03	 1.000000e-03	 1.000000e+00	 1.000000e+00	 4.688610e-02	 4.688610e-02	 1	 0	[m^2/Vs]
-K_rad :	 1.150977e-22	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 1.150977e-22	 1.150977e-22	 1	 0	[m^3/s]
-c_n_auger :	 1.639718e-42	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 1.639718e-42	 1.639718e-42	 1	 0	[m^6/s]
-c_p_auger :	 4.609064e-43	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 4.609064e-43	 4.609064e-43	 1	 0	[m^6/s]
-Na(uniform) :	 7.100000e+21	 7.100000e+21	 1.000000e+01	 1.000000e+01	 1.000000e+01	 7.100000e+21	 7.100000e+21	 0	 2	[/m^3]
+mu_n :	 1.245567e-01	 5.000000e-03	 1.000000e-03	 1.000000e+00	 1.000000e+00	 1.245567e-01	 1.245567e-01	 1	 0	[m^2/Vs]
+mu_p :	 4.769578e-02	 5.000000e-03	 1.000000e-03	 1.000000e+00	 1.000000e+00	 4.769578e-02	 4.769578e-02	 1	 0	[m^2/Vs]
+K_rad :	 1.190774e-22	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 1.190774e-22	 1.190774e-22	 1	 0	[m^3/s]
+c_n_auger :	 1.639728e-42	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 1.639728e-42	 1.639728e-42	 1	 0	[m^6/s]
+c_p_auger :	 4.609980e-43	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 4.609980e-43	 4.609980e-43	 1	 0	[m^6/s]
+Na(uniform) :	 5.000000e+21	 5.000000e+21	 1.000000e+01	 1.000000e+01	 1.000000e+01	 5.000000e+21	 5.000000e+21	 0	 2	[/m^3]
 Nd(uniform) :	 0.000000e+00	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 0.000000e+00	 0.000000e+00	 0	 2	[/m^3]
 absorption grading :	 1103.49	 1033.31	  250.00	  250.00	    0.00	    1.20	    1.20	 7	 0	[nm]
 absorptionmodel pure A material (y=0) : from file
@@ -267,16 +215,16 @@ v_th_n :	 1.999e+05	 1.000e+05	 1.000e+01	 1.000e+01	 1.000e+01	 1.999e+05	 1.99
 v_th_p :	 1.652e+05	 1.000e+05	 1.000e+01	 1.000e+01	 1.000e+01	 1.652e+05	 1.652e+05	 1	 0	[m/s]
 eps :	    11.900000	    10.000000	    10.000000	    10.000000	    10.000000	    11.900000	    11.900000	 1	 0	[-]
 chi :	  4.050000	  4.500000	  1.000000	  1.000000	  1.000000	  4.050000	  4.050000	 1	 0	[eV]
-Eg :	  0.987533	  1.200000	  0.500000	  1.000000	  1.000000	  0.987533	  0.987533	 1	 0	[eV]
+Eg :	  1.016111	  1.200000	  0.500000	  1.000000	  1.000000	  1.016111	  1.016111	 1	 0	[eV]
 Nc :	 2.850432e+25	 1.000000e+25	 1.000000e+01	 1.000000e+01	 1.000000e+01	 2.850432e+25	 2.850432e+25	 1	 0	[/m^3]
 Nv :	 2.481827e+25	 1.000000e+25	 1.000000e+01	 1.000000e+01	 1.000000e+01	 2.481827e+25	 2.481827e+25	 1	 0	[/m^3]
-mu_n :	 7.406124e-03	 5.000000e-03	 1.000000e-03	 1.000000e+00	 1.000000e+00	 7.406124e-03	 7.406124e-03	 1	 0	[m^2/Vs]
-mu_p :	 6.435337e-03	 5.000000e-03	 1.000000e-03	 1.000000e+00	 1.000000e+00	 6.435337e-03	 6.435337e-03	 1	 0	[m^2/Vs]
-K_rad :	 5.074060e-25	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 5.074060e-25	 5.074060e-25	 1	 0	[m^3/s]
+mu_n :	 7.899686e-03	 5.000000e-03	 1.000000e-03	 1.000000e+00	 1.000000e+00	 7.899686e-03	 7.899686e-03	 1	 0	[m^2/Vs]
+mu_p :	 1.463176e-02	 5.000000e-03	 1.000000e-03	 1.000000e+00	 1.000000e+00	 1.463176e-02	 1.463176e-02	 1	 0	[m^2/Vs]
+K_rad :	 1.591854e-24	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 1.591854e-24	 1.591854e-24	 1	 0	[m^3/s]
 c_n_auger :	 3.410000e-43	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 3.410000e-43	 3.410000e-43	 1	 0	[m^6/s]
 c_p_auger :	 9.196966e-44	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 9.196966e-44	 9.196966e-44	 1	 0	[m^6/s]
 Na(uniform) :	 0.000000e+00	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 0.000000e+00	 0.000000e+00	 0	 2	[/m^3]
-Nd(x) :	 1.100000e+21	 3.000000e+26	 1.000000e+01	 1.000000e+01	 1.000000e+01	 1.100000e+21	 3.331666e+24	12	 1	eND.grd	[/m^3]
+Nd(x) :	 3.666667e+20	 1.000000e+26	 1.000000e+01	 1.000000e+01	 1.000000e+01	 3.666667e+20	 1.110555e+24	12	 1	eND.grd	[/m^3]
 absorption grading :	 1255.63	 1033.31	  250.00	  250.00	    0.00	    1.20	    1.20	 7	 0	[nm]
 absorptionmodel pure A material (y=0) : from file
 absorptionfile pure A material (y=0) : S90.abs
@@ -293,8 +241,8 @@ front contact
 
 flatband : 1 (1: flatband contact imposed; 0: fixed Phi_m value)
 recalculate : 1 (1 = do or 0 = do not recalculate phi_m to set flatband in each batch step)
-Sn :  1.999e+05 [m/s]
-Sp :  1.652e+05 [m/s]
+Sn : 1.999e+05 [m/s]
+Sp : 1.652e+05 [m/s]
 Tunneling to contact: 0
 Relative electron mass :   1.0000e+00
 Relative hole mass :   1.0000e+00
@@ -379,7 +327,7 @@ values from a list :  0
 logarithmic variation :  1
 startvalue :   1.00000000e+10
 stopvalue :   1.00000000e+14
-number of steps :   5
+number of steps :    5
 
 Batch parameter 1 :
 
@@ -392,7 +340,7 @@ values from a list :  0
 logarithmic variation :  1
 startvalue :   1.00000000e+10
 stopvalue :   1.00000000e+14
-number of steps :   5
+number of steps :    5
 
 >> end of batch settings file
 

@@ -67,6 +67,29 @@ TEpiLayersDistribution=class
   procedure AdaptBSF(dp:double=BSFThickness;
                      Na:double=BSFConc;
                      Nb:double=BaseCons);
+  procedure EmiterEgData(const T: Double);
+  procedure BSFEgData(const T: Double);
+  procedure EmiterMu_nData(const T: Double);
+  procedure BSFMu_nData(const T: Double);
+  procedure EmiterMu_pData(const T: Double);
+  procedure BSFMu_pData(const T: Double);
+  procedure EmiterBradData(const T: Double; const w:double);
+  procedure BSFBradData(const T: Double; const w:double);
+  procedure EmiterC_n_augerData(const T: Double);
+  procedure BSFC_n_augerData(const T: Double);
+  procedure EmiterC_p_augerData(const T: Double);
+  procedure BSFC_p_augerData(const T: Double);
+
+  procedure EmiterDopingFileCreate(FileName:string='eND');
+  procedure BSFDopingFileCreate(FileName:string='eNA');
+  procedure EmiterCompositionFileCreate(FileName:string='EmC');
+  procedure BSFCompositionFileCreate(FileName:string='BsC');
+  procedure EgFileCreate(FileName:string='E00');
+  procedure Mu_nFileCreate(FileName:string='M00');
+  procedure Mu_pFileCreate(FileName:string='M02');
+  procedure BradFileCreate(FileName:string='R00');
+  procedure C_n_augerFileCreate(FileName:string='A00');
+  procedure C_p_augerFileCreate(FileName:string='A02');
 end;
 
 //x (micrometer)	composition
@@ -84,10 +107,13 @@ Procedure BSFGradingFileCreate(dn:double=7.75;
                                Nb:double=7.1e21;
                                FileName:string='eNA');
 
+var
+  EpiLayersDistribution:TEpiLayersDistribution;
+
 implementation
 
 uses
-  System.SysUtils, main;
+  System.SysUtils, main, OlegMaterialSamples;
 
 
 Procedure EmiterGradingFileCreate(dn:double=0.39;
@@ -213,6 +239,96 @@ begin
       fEmiterLayerAdapted.Y[i]:=fEmiterLayer.Y[i];
 end;
 
+procedure TEpiLayersDistribution.BradFileCreate(FileName: string);
+begin
+ GRDFileCreate(True,'y (composition)	K_rad (m^3/s)',fDataVector,FileName);
+end;
+
+procedure TEpiLayersDistribution.BSFBradData(const T, w: double);
+  var i:integer;
+begin
+ BSFLayerAdapted.CopyTo(fDataVector);
+ for I := 0 to fDataVector.HighNumber do
+   begin
+    fDataVector.X[i]:=fDataVector.X[i]/BSFLayerAdapted.X[BSFLayerAdapted.HighNumber];
+    fDataVector.Y[i]:=Silicon.Brad(T,fDataVector.Y[i],False,w,False);
+   end;
+end;
+
+procedure TEpiLayersDistribution.BSFCompositionFileCreate(FileName: string);
+ var i:integer;
+begin
+ BSFLayerAdapted.CopyTo(fDataVector);
+ for I := 0 to fDataVector.HighNumber do
+   fDataVector.Y[i]:=fDataVector.X[i]/BSFLayerAdapted.X[BSFLayerAdapted.HighNumber];
+ GRDFileCreate(False,'x (micrometer)	composition',fDataVector,FileName);
+end;
+
+procedure TEpiLayersDistribution.BSFC_n_augerData(const T: Double);
+  var i:integer;
+begin
+ BSFLayerAdapted.CopyTo(fDataVector);
+ for I := 0 to fDataVector.HighNumber do
+   begin
+    fDataVector.X[i]:=fDataVector.X[i]/BSFLayerAdapted.X[BSFLayerAdapted.HighNumber];
+    fDataVector.Y[i]:=Silicon.Cn_AugerNew( Silicon.MinorityN(fDataVector.Y[i], T),fDataVector.Y[i], T);
+   end;
+end;
+
+procedure TEpiLayersDistribution.BSFC_p_augerData(const T: Double);
+  var i:integer;
+begin
+ BSFLayerAdapted.CopyTo(fDataVector);
+ for I := 0 to fDataVector.HighNumber do
+   begin
+    fDataVector.X[i]:=fDataVector.X[i]/BSFLayerAdapted.X[BSFLayerAdapted.HighNumber];
+    fDataVector.Y[i]:=Silicon.Cp_AugerNew( Silicon.MinorityN(fDataVector.Y[i], T),fDataVector.Y[i], T);
+   end;
+end;
+
+procedure TEpiLayersDistribution.BSFDopingFileCreate(FileName: string);
+begin
+ GRDFileCreate(True,'x (micrometer)	NA (1/m3)',fBSFLayerAdapted,FileName);
+end;
+
+procedure TEpiLayersDistribution.BSFEgData(const T: Double);
+  var i:integer;
+begin
+ BSFLayerAdapted.CopyTo(fDataVector);
+ for I := 0 to fDataVector.HighNumber do
+   begin
+    fDataVector.X[i]:=fDataVector.X[i]/BSFLayerAdapted.X[BSFLayerAdapted.HighNumber];
+    fDataVector.Y[i]:=Silicon.Eg(T)-Silicon.BGN(fDataVector.Y[i],False);
+   end;
+end;
+
+procedure TEpiLayersDistribution.BSFMu_nData(const T: Double);
+  var i:integer;
+begin
+ BSFLayerAdapted.CopyTo(fDataVector);
+ for I := 0 to fDataVector.HighNumber do
+   begin
+    fDataVector.X[i]:=fDataVector.X[i]/BSFLayerAdapted.X[BSFLayerAdapted.HighNumber];
+    fDataVector.Y[i]:=Silicon.mu_n(T,fDataVector.Y[i],False);
+   end;
+end;
+
+procedure TEpiLayersDistribution.BSFMu_pData(const T: Double);
+  var i:integer;
+begin
+ BSFLayerAdapted.CopyTo(fDataVector);
+ for I := 0 to fDataVector.HighNumber do
+   begin
+    fDataVector.X[i]:=fDataVector.X[i]/BSFLayerAdapted.X[BSFLayerAdapted.HighNumber];
+    fDataVector.Y[i]:=Silicon.mu_p(T,fDataVector.Y[i],True);
+   end;
+end;
+
+procedure TEpiLayersDistribution.EgFileCreate(FileName: string);
+begin
+ GRDFileCreate(False,'y (composition)	Eg (eV)',fDataVector,FileName);
+end;
+
 constructor TEpiLayersDistribution.Create;
  var i:byte;
 begin
@@ -229,18 +345,111 @@ begin
 
  fEmiterLayerAdapted:=TVector.Create(fEmiterLayer);
  fBSFLayerAdapted:=TVector.Create(fBSFLayer);
+ fDataVector:=TVector.Create;
+end;
+
+procedure TEpiLayersDistribution.C_n_augerFileCreate(FileName: string);
+begin
+ GRDFileCreate(True,'y (composition)	c_n_auger (m^6/s)',fDataVector,FileName);
+end;
+
+procedure TEpiLayersDistribution.C_p_augerFileCreate(FileName: string);
+begin
+ GRDFileCreate(True,'y (composition)	c_p_auger (m^6/s)',fDataVector,FileName);
 end;
 
 destructor TEpiLayersDistribution.Destroy;
 begin
   fDataVector.Free;
   fBSFLayerAdapted.Free;
-  fEmiterLayer.Free;
+  fEmiterLayerAdapted.Free;
   fGrdFile.Clear;
   fGrdFile.Free;
   fEmiterLayer.Free;
   fBSFLayer.Free;
   inherited;
+end;
+
+procedure TEpiLayersDistribution.EmiterEgData(const T: Double);
+  var i:integer;
+begin
+ EmiterLayerAdapted.CopyTo(fDataVector);
+ for I := 0 to fDataVector.HighNumber do
+   begin
+    fDataVector.X[i]:=fDataVector.X[i]/EmiterLayerAdapted.X[EmiterLayerAdapted.HighNumber];
+    fDataVector.Y[i]:=Silicon.Eg(T)-Silicon.BGN(fDataVector.Y[i],True);
+   end;
+end;
+
+procedure TEpiLayersDistribution.EmiterMu_nData(const T: Double);
+  var i:integer;
+begin
+ EmiterLayerAdapted.CopyTo(fDataVector);
+ for I := 0 to fDataVector.HighNumber do
+   begin
+    fDataVector.X[i]:=fDataVector.X[i]/EmiterLayerAdapted.X[EmiterLayerAdapted.HighNumber];
+    fDataVector.Y[i]:=Silicon.mu_n(T,fDataVector.Y[i],True);
+   end;
+end;
+
+procedure TEpiLayersDistribution.EmiterMu_pData(const T: Double);
+  var i:integer;
+begin
+ EmiterLayerAdapted.CopyTo(fDataVector);
+ for I := 0 to fDataVector.HighNumber do
+   begin
+    fDataVector.X[i]:=fDataVector.X[i]/EmiterLayerAdapted.X[EmiterLayerAdapted.HighNumber];
+    fDataVector.Y[i]:=Silicon.mu_p(T,fDataVector.Y[i],False);
+   end;
+end;
+
+procedure TEpiLayersDistribution.EmiterBradData(const T, w: double);
+  var i:integer;
+begin
+ EmiterLayerAdapted.CopyTo(fDataVector);
+ for I := 0 to fDataVector.HighNumber do
+   begin
+    fDataVector.X[i]:=fDataVector.X[i]/EmiterLayerAdapted.X[EmiterLayerAdapted.HighNumber];
+    fDataVector.Y[i]:=Silicon.Brad(T,fDataVector.Y[i],True,w,False);
+   end;
+end;
+
+procedure TEpiLayersDistribution.EmiterCompositionFileCreate(FileName: string);
+ var i:integer;
+begin
+ EmiterLayerAdapted.CopyTo(fDataVector);
+ for I := 0 to fDataVector.HighNumber do
+   fDataVector.Y[i]:=fDataVector.X[i]/EmiterLayerAdapted.X[EmiterLayerAdapted.HighNumber];
+ GRDFileCreate(False,'x (micrometer)	composition',fDataVector,FileName);
+
+
+end;
+
+procedure TEpiLayersDistribution.EmiterC_n_augerData(const T: Double);
+  var i:integer;
+begin
+ EmiterLayerAdapted.CopyTo(fDataVector);
+ for I := 0 to fDataVector.HighNumber do
+   begin
+    fDataVector.X[i]:=fDataVector.X[i]/EmiterLayerAdapted.X[EmiterLayerAdapted.HighNumber];
+    fDataVector.Y[i]:=Silicon.Cn_AugerNew(fDataVector.Y[i], Silicon.MinorityN(fDataVector.Y[i], T), T);
+   end;
+end;
+
+procedure TEpiLayersDistribution.EmiterC_p_augerData(const T: Double);
+  var i:integer;
+begin
+ EmiterLayerAdapted.CopyTo(fDataVector);
+ for I := 0 to fDataVector.HighNumber do
+   begin
+    fDataVector.X[i]:=fDataVector.X[i]/EmiterLayerAdapted.X[EmiterLayerAdapted.HighNumber];
+    fDataVector.Y[i]:=Silicon.Cp_AugerNew(fDataVector.Y[i], Silicon.MinorityN(fDataVector.Y[i], T), T);
+   end;
+end;
+
+procedure TEpiLayersDistribution.EmiterDopingFileCreate(FileName: string);
+begin
+ GRDFileCreate(True,'x (micrometer)	ND (1/m3)',fEmiterLayerAdapted,FileName);
 end;
 
 procedure TEpiLayersDistribution.GRDFileCreate(IsLogInterp: boolean;
@@ -259,4 +468,18 @@ begin
  fGRDFile.SaveToFile(MainForm.SCAPS_Folder+'\grading\'+FileName+'.grd');
 end;
 
+procedure TEpiLayersDistribution.Mu_nFileCreate(FileName: string);
+begin
+  GRDFileCreate(False,'y (composition)	mu_n (m2/Vs)',fDataVector,FileName);
+end;
+
+procedure TEpiLayersDistribution.Mu_pFileCreate(FileName: string);
+begin
+   GRDFileCreate(False,'y (composition)	mu_p (m2/Vs)',fDataVector,FileName);
+end;
+
+initialization
+ EpiLayersDistribution:=TEpiLayersDistribution.Create;
+finalization
+ EpiLayersDistribution.Free;
 end.
