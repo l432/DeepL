@@ -44,66 +44,6 @@
 > 
 > > end of problem definition file
 > 
-> > end of problem definition file
-> 
-> > end of problem definition file
-> 
-> > end of problem definition file
-> 
-> > end of problem definition file
-> 
-> > end of problem definition file
-> 
-> > end of problem definition file
-> 
-> > end of problem definition file
-> 
-> > end of problem definition file
-> 
-> > end of problem definition file
-> 
-> > end of problem definition file
-> 
-> > end of problem definition file
-> 
-> > end of problem definition file
-> 
-> > end of problem definition file
-> 
-> > end of problem definition file
-> 
-> > end of problem definition file
-> 
-> > end of problem definition file
-> 
-> > end of problem definition file
-> 
-> > end of problem definition file
-> 
-> > end of problem definition file
-> 
-> > end of problem definition file
-> 
-> > end of problem definition file
-> 
-> > end of problem definition file
-> 
-> > end of problem definition file
-> 
-> > end of problem definition file
-> 
-> > end of problem definition file
-> 
-> > end of problem definition file
-> 
-> > end of problem definition file
-> 
-> > end of problem definition file
-> 
-> > end of problem definition file
-> 
-> > end of problem definition file
-> 
 convergence
 
 clamp_psi :  5.00e-01 units kT
@@ -172,7 +112,7 @@ mu_n :	 1.929318e-02	 5.000000e-03	 1.000000e-03	 1.000000e+00	 1.000000e+00	 1.
 mu_p :	 1.118321e-02	 5.000000e-03	 1.000000e-03	 1.000000e+00	 1.000000e+00	 1.118321e-02	 1.118321e-02	 1	 0	[m^2/Vs]
 K_rad :	 2.125833e-23	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 2.125833e-23	 2.125833e-23	 1	 0	[m^3/s]
 c_n_auger :	 3.410000e-43	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 3.410000e-43	 3.410000e-43	 1	 0	[m^6/s]
-c_p_auger :	 1.007054e-43	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 1.007054e-43	 1.007054e-43	 1	 0	[m^6/s]
+c_p_auger :	 1.007054e-43	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 1.007054e-43	 1.007054e-43.grd	[m^3/s]
 Na(x) :	 1.083333e+24  5.000000e+21	 1.000000e+01	 1.000000e+01	 1.000000e+01	 1.083333e+24	 1.968334e+24 12  1 eNA.grd	[/m^3]
 Nd(uniform) :	 0.000000e+00	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 0.000000e+00	 0.000000e+00	 0	 2	[/m^3]
 absorption grading :	 1161.30	 1033.31	  250.00	  250.00	    0.00	    1.20	    1.20	 7	 0	[nm]
@@ -245,8 +185,8 @@ Nv :	 2.629291e+25	 1.000000e+25	 1.000000e+01	 1.000000e+01	 1.000000e+01	 2.62
 mu_n :	 9.327613e-02	 5.000000e-03	 1.000000e-03	 1.000000e+00	 1.000000e+00	 9.327613e-02	 9.327613e-02	 1	 0	[m^2/Vs]
 mu_p :	 3.411181e-02	 5.000000e-03	 1.000000e-03	 1.000000e+00	 1.000000e+00	 3.411181e-02	 3.411181e-02	 1	 0	[m^2/Vs]
 K_rad :	 9.218341e-23	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 9.218341e-23	 9.218341e-23	 1	 0	[m^3/s]
-c_n_auger :	 3.410000e-43	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 3.410000e-43	 3.410000e-43	 1	 0	[m^6/s]
-c_p_auger :	 3.879828e-43	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 3.879828e-43	 3.879828e-43	 1	 0	[m^6/s]
+c_n_auger :	 1.291176e-42	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 1.291176e-42	 1.291176e-42	 1	 0	[m^6/s]
+c_p_auger :	 3.879828e-43	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 3.879828e-43	 3.879828e-43.grd	[m^3/s]
 Na(uniform) :	 5.000000e+21	 5.000000e+21	 1.000000e+01	 1.000000e+01	 1.000000e+01	 5.000000e+21	 5.000000e+21	 0	 2	[/m^3]
 Nd(uniform) :	 0.000000e+00	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 0.000000e+00	 0.000000e+00	 0	 2	[/m^3]
 absorption grading :	 1104.82	 1033.31	  250.00	  250.00	    0.00	    1.20	    1.20	 7	 0	[nm]
@@ -320,7 +260,7 @@ mu_n :	 7.336371e-03	 5.000000e-03	 1.000000e-03	 1.000000e+00	 1.000000e+00	 7.
 mu_p :	 1.241825e-02	 5.000000e-03	 1.000000e-03	 1.000000e+00	 1.000000e+00	 1.241825e-02	 1.241825e-02	 1	 0	[m^2/Vs]
 K_rad :	 2.324364e-24	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 2.324364e-24	 2.324364e-24	 1	 0	[m^3/s]
 c_n_auger :	 3.410000e-43	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 3.410000e-43	 3.410000e-43	 1	 0	[m^6/s]
-c_p_auger :	 1.007054e-43	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 1.007054e-43	 1.007054e-43	 1	 0	[m^6/s]
+c_p_auger :	 1.007054e-43	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 1.007054e-43	 1.007054e-43.grd	[m^3/s]
 Na(uniform) :	 0.000000e+00	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 0.000000e+00	 0.000000e+00	 0	 2	[/m^3]
 Nd(x) :	 3.666667e+20	 1.000000e+26	 1.000000e+01	 1.000000e+01	 1.000000e+01	 3.666667e+20	 1.110555e+24	12	 1	eND.grd	[/m^3]
 absorption grading :	 1255.63	 1033.31	  250.00	  250.00	    0.00	    1.20	    1.20	 7	 0	[nm]
