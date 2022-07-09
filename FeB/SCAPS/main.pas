@@ -1254,7 +1254,7 @@ tempFileName:='S'+Copy(inttostr(round(T)),2,2);
 tempstr:='absorptionfile pure A material (y=0) : '+tempFileName+'.abs';
 StringReplaceMy(FeBScaps,tempStr,120);
 StringReplaceMy(FeBScaps,tempStr,189);
-StringReplaceMy(FeBScaps,tempStr,263);
+StringReplaceMy(FeBScaps,tempStr,264);
 StringReplaceMy(FeScaps,tempStr,120);
 StringReplaceMy(FeScaps,tempStr,172);
 StringReplaceMy(FeScaps,tempStr,230);
@@ -1262,7 +1262,8 @@ StringReplaceMy(FeScaps,tempStr,230);
 tempstr:='absorption pure B material (y=1), file : '+tempFileName+'.abs';
 StringReplaceMy(FeScaps,tempStr,122);
 StringReplaceMy(FeBScaps,tempStr,122);
-
+StringReplaceMy(FeScaps,tempStr,232);
+StringReplaceMy(FeBScaps,tempStr,266);
 
  tempBegin:='d : ';
  tempEnd:=' [m]';
@@ -1285,46 +1286,37 @@ StringReplaceMy(FeBScaps,tempStr,122);
  tempEnd:='	 1	 0	[-]';
  tempstr:=LowerCase(floattostrF( Silicon.Meff_e(T),ffExponent,5,2));
  tempstr:=tempBegin+tempstr+tempMidle+tempstr+'	  '+tempstr+tempEnd;
-// StringReplaceMy(FeScaps,tempStr,100);
  StringReplaceMy(FeScaps,tempStr,153);
- StringReplaceMy(FeScaps,tempStr,210);
-// StringReplaceMy(FeBScaps,tempStr,100);
  StringReplaceMy(FeBScaps,tempStr,170);
- StringReplaceMy(FeBScaps,tempStr,244);
  tempEnd:='	  1.0000e+00	 1	 0	[-]';
  tempstr:=LowerCase(floattostrF( Silicon.Meff_e(T),ffExponent,5,2));
  tempstr:=tempBegin+tempstr+tempMidle+tempstr+tempEnd;
  StringReplaceMy(FeScaps,tempStr,100);
  StringReplaceMy(FeBScaps,tempStr,100);
+ StringReplaceMy(FeScaps,tempStr,210);
+ StringReplaceMy(FeBScaps,tempStr,244);
 
  tempBegin:='Relative hole mass :	  ';
  tempEnd:='	 1	 0	[-]';
  tempstr:=LowerCase(floattostrF(Silicon.Meff_h(T),ffExponent,5,2));
  tempstr:=tempBegin+tempstr+tempMidle+tempstr+'	  '+tempstr+tempEnd;
-// StringReplaceMy(FeScaps,tempStr,101);
  StringReplaceMy(FeScaps,tempStr,154);
- StringReplaceMy(FeScaps,tempStr,211);
-// StringReplaceMy(FeBScaps,tempStr,101);
  StringReplaceMy(FeBScaps,tempStr,171);
- StringReplaceMy(FeBScaps,tempStr,245);
  tempEnd:='	  1.0000e+00	 1	 0	[-]';
  tempstr:=LowerCase(floattostrF( Silicon.Meff_h(T),ffExponent,5,2));
  tempstr:=tempBegin+tempstr+tempMidle+tempstr+tempEnd;
  StringReplaceMy(FeScaps,tempStr,101);
  StringReplaceMy(FeBScaps,tempStr,101);
-
+ StringReplaceMy(FeScaps,tempStr,211);
+ StringReplaceMy(FeBScaps,tempStr,245);
 
  tempBegin:='v_th_n :	 ';
  tempMidle:='	 1.000e+05	 1.000e+01	 1.000e+01	 1.000e+01	 ';
  tempEnd:='	 1	 0	[m/s]';
  tempstr:=LowerCase(floattostrF(Silicon.Vth_n(T),ffExponent,4,2));
  tempstr:=tempBegin+tempstr+tempMidle+tempstr+'	 '+tempstr+tempEnd;
-// StringReplaceMy(FeScaps,tempStr,104);
  StringReplaceMy(FeScaps,tempStr,156);
- StringReplaceMy(FeScaps,tempStr,214);
-// StringReplaceMy(FeBScaps,tempStr,104);
  StringReplaceMy(FeBScaps,tempStr,173);
- StringReplaceMy(FeBScaps,tempStr,247);
 
  tempMidle:='	 1.000e+01	 1.000e+01	 1.000e+01	 ';
  tempEnd:='	 0	 0	[m/s]';
@@ -1332,6 +1324,8 @@ StringReplaceMy(FeBScaps,tempStr,122);
  tempstr:=tempBegin+tempstr+'	 '+tempstr+tempMidle+tempstr+'	 '+tempstr+tempEnd;
  StringReplaceMy(FeScaps,tempStr,104);
  StringReplaceMy(FeBScaps,tempStr,104);
+ StringReplaceMy(FeScaps,tempStr,214);
+  StringReplaceMy(FeBScaps,tempStr,248);
 
  tempstr:='Sn :  '
            +LowerCase(floattostrF(Silicon.Vth_n(T),ffExponent,4,2))
@@ -1339,28 +1333,24 @@ StringReplaceMy(FeBScaps,tempStr,122);
  StringReplaceMy(FeScaps,tempStr,89);
  StringReplaceMy(FeScaps,tempStr,239);
  StringReplaceMy(FeBScaps,tempStr,89);
- StringReplaceMy(FeBScaps,tempStr,277);
+ StringReplaceMy(FeBScaps,tempStr,273);
 
  tempBegin:='v_th_p :	 ';
  tempMidle:='	 1.000e+05	 1.000e+01	 1.000e+01	 1.000e+01	 ';
  tempEnd:='	 1	 0	[m/s]';
  tempstr:=LowerCase(floattostrF(Silicon.Vth_p(T),ffExponent,4,2));
  tempstr:=tempBegin+tempstr+tempMidle+tempstr+'	 '+tempstr+tempEnd;
-// StringReplaceMy(FeScaps,tempStr,105);
  StringReplaceMy(FeScaps,tempStr,157);
- StringReplaceMy(FeScaps,tempStr,215);
-// StringReplaceMy(FeBScaps,tempStr,105);
  StringReplaceMy(FeBScaps,tempStr,174);
- StringReplaceMy(FeBScaps,tempStr,248);
-// v_th_p :	 1.652e+05	 1.652e+05	 1.000e+01	 1.000e+01	 1.000e+01	 1.652e+05	 1.652e+05	 1	 0	[m/s]
-// v_th_p :	 1.652e+05	 1.000e+05	 1.000e+01	 1.000e+01	 1.000e+01	 1.652e+05	 1.652e+05	 1	 0	[m/s]
+
  tempMidle:='	 1.000e+01	 1.000e+01	 1.000e+01	 ';
  tempEnd:='	 0	 0	[m/s]';
  tempstr:=LowerCase(floattostrF(Silicon.Vth_p(T),ffExponent,4,2));
  tempstr:=tempBegin+tempstr+'	 '+tempstr+tempMidle+tempstr+'	 '+tempstr+tempEnd;
  StringReplaceMy(FeScaps,tempStr,105);
  StringReplaceMy(FeBScaps,tempStr,105);
-
+ StringReplaceMy(FeScaps,tempStr,215);
+ StringReplaceMy(FeBScaps,tempStr,249);
 
  tempstr:='Sp :  '
            +LowerCase(floattostrF(Silicon.Vth_p(T),ffExponent,4,2))
@@ -1368,14 +1358,9 @@ StringReplaceMy(FeBScaps,tempStr,122);
  StringReplaceMy(FeScaps,tempStr,90);
  StringReplaceMy(FeScaps,tempStr,240);
  StringReplaceMy(FeBScaps,tempStr,90);
- StringReplaceMy(FeBScaps,tempStr,278);
+ StringReplaceMy(FeBScaps,tempStr,274);
 
 //---------------------------------
- EpiLayersDistribution.EmiterEgData(T);
- EpiLayersDistribution.EgFileCreate('E'+Copy(inttostr(round(T)),2,2));
-// EpiLayersDistribution.BSFEgData(T);
-// EpiLayersDistribution.EgFileCreate('E'+Copy(inttostr(round(T+1)),2,2));
-
  tempBegin:='Eg :	  ';
  tempMidle:='	  1.200000	  0.500000	  1.000000	  1.000000	  ';
  tempEnd:='	 1	 0	[eV]';
@@ -1384,16 +1369,6 @@ StringReplaceMy(FeBScaps,tempStr,122);
  tempstr:=tempBegin+tempstr+tempMidle+tempstr+'	  '+tempstr+tempEnd;
  StringReplaceMy(FeScaps,tempStr,160);
  StringReplaceMy(FeBScaps,tempStr,177);
-
- tempstr:=LowerCase(floattostrF(Silicon.Eg(T)-Silicon.BGN(EmiterCon.Data*1e6,True),ffFixed,7,6));
- tempstr:=tempBegin+tempstr+tempMidle+tempstr+'	  '+tempstr+tempEnd;
- StringReplaceMy(FeScaps,tempStr,218);
- StringReplaceMy(FeBScaps,tempStr,251);
-
-// tempstr:=LowerCase(floattostrF( Silicon.Eg(T)-Silicon.BGN(BSFCon.Data*1e6,False),ffFixed,7,6));
-// tempstr:=tempBegin+tempstr+tempMidle+tempstr+' 	 '+tempstr+tempEnd;
-// StringReplaceMy(FeScaps,tempStr,108);
-// StringReplaceMy(FeBScaps,tempStr,108);
 
  EpiLayersDistribution.BSFEgData(T);
  tempFileName:='E'+Copy(inttostr(round(T+1)),2,2);
@@ -1405,20 +1380,26 @@ StringReplaceMy(FeBScaps,tempStr,122);
  tempstr:=tempBegin+tempstr+tempMidle+tempstr+'	12	 0	'+tempFileName+tempEnd;
  StringReplaceMy(FeScaps,tempStr,108);
  StringReplaceMy(FeBScaps,tempStr,108);
+
+ EpiLayersDistribution.EmiterEgData(T);
+ tempFileName:='E'+Copy(inttostr(round(T)),2,2);
+ EpiLayersDistribution.EgFileCreate(tempFileName);
+ tempstr:=LowerCase(floattostrF(EpiLayersDistribution.DataVector.Y[0],ffFixed,7,6))
+          +'	 '+LowerCase(floattostrF(EpiLayersDistribution.DataVector.Y[EpiLayersDistribution.DataVector.HighNumber],ffFixed,7,6));
+ tempMidle:='	  0.500000	  1.000000	  1.000000	  ';
+ tempEnd:='.grd	[eV]';
+ tempstr:=tempBegin+tempstr+tempMidle+tempstr+'	12	 0	'+tempFileName+tempEnd;
+ StringReplaceMy(FeScaps,tempStr,218);
+ StringReplaceMy(FeBScaps,tempStr,252);
+
 //----------------------------------------
-
-
  tempBegin:='Nc :	 ';
  tempMidle:='	 1.000000e+25	 1.000000e+01	 1.000000e+01	 1.000000e+01	 ';
  tempEnd:='	 1	 0	[/m^3]';
  tempstr:=LowerCase(floattostrF( Silicon.Nc(T)*Power((300/T),1.5),ffExponent,7,2));
  tempstr:=tempBegin+tempstr+tempMidle+tempstr+'	 '+tempstr+tempEnd;
-// StringReplaceMy(FeScaps,tempStr,109);
  StringReplaceMy(FeScaps,tempStr,161);
- StringReplaceMy(FeScaps,tempStr,219);
-// StringReplaceMy(FeBScaps,tempStr,109);
  StringReplaceMy(FeBScaps,tempStr,178);
- StringReplaceMy(FeBScaps,tempStr,252);
 
  tempMidle:='	 1.000000e+01	 1.000000e+01	 1.000000e+01	 ';
  tempEnd:='	 0	 0	[/m^3]';
@@ -1426,6 +1407,8 @@ StringReplaceMy(FeBScaps,tempStr,122);
  tempstr:=tempBegin+tempstr+'	 '+tempstr+tempMidle+tempstr+'	 '+tempstr+tempEnd;
  StringReplaceMy(FeScaps,tempStr,109);
  StringReplaceMy(FeBScaps,tempStr,109);
+ StringReplaceMy(FeScaps,tempStr,219);
+ StringReplaceMy(FeBScaps,tempStr,253);
 
 //-----------------------------------------------------------
  tempBegin:='Nv :	 ';
@@ -1433,12 +1416,8 @@ StringReplaceMy(FeBScaps,tempStr,122);
  tempEnd:='	 1	 0	[/m^3]';
  tempstr:=LowerCase(floattostrF( Silicon.Nv(T)*Power((300/T),1.5),ffExponent,7,2));
  tempstr:=tempBegin+tempstr+tempMidle+tempstr+'	 '+tempstr+tempEnd;
-// StringReplaceMy(FeScaps,tempStr,110);
  StringReplaceMy(FeScaps,tempStr,164);
- StringReplaceMy(FeScaps,tempStr,220);
-// StringReplaceMy(FeBScaps,tempStr,110);
  StringReplaceMy(FeBScaps,tempStr,179);
- StringReplaceMy(FeBScaps,tempStr,253);
 
  tempMidle:='	 1.000000e+01	 1.000000e+01	 1.000000e+01	 ';
  tempEnd:='	 0	 0	[/m^3]';
@@ -1446,29 +1425,17 @@ StringReplaceMy(FeBScaps,tempStr,122);
  tempstr:=tempBegin+tempstr+'	 '+tempstr+tempMidle+tempstr+'	 '+tempstr+tempEnd;
  StringReplaceMy(FeScaps,tempStr,110);
  StringReplaceMy(FeBScaps,tempStr,110);
+ StringReplaceMy(FeScaps,tempStr,220);
+ StringReplaceMy(FeBScaps,tempStr,254);
 
 // -------------------------------------------------------
- EpiLayersDistribution.EmiterMu_nData(T);
- EpiLayersDistribution.Mu_nFileCreate('M'+Copy(inttostr(round(T)),2,2));
-// EpiLayersDistribution.BSFMu_nData(T);
-// EpiLayersDistribution.Mu_nFileCreate('M'+Copy(inttostr(round(T+1)),2,2));
-
  tempBegin:='mu_n :	 ';
  tempMidle:='	 5.000000e-03	 1.000000e-03	 1.000000e+00	 1.000000e+00	 ';
  tempEnd:='	 1	 0	[m^2/Vs]';
-// tempstr:=LowerCase(floattostrF(Silicon.mu_n(T,BSFCon.Data*1e6,False),ffExponent,7,2));
-// tempstr:=tempBegin+tempstr+tempMidle+tempstr+'	 '+tempstr+tempEnd;
-// StringReplaceMy(FeScaps,tempStr,111);
-// StringReplaceMy(FeBScaps,tempStr,111);
  tempstr:=LowerCase(floattostrF( Silicon.mu_n(T,Boron.Data*1e6,False),ffExponent,7,2));
  tempstr:=tempBegin+tempstr+tempMidle+tempstr+'	 '+tempstr+tempEnd;
  StringReplaceMy(FeScaps,tempStr,163);
  StringReplaceMy(FeBScaps,tempStr,180);
- tempstr:=LowerCase(floattostrF( Silicon.mu_n(T,EmiterCon.Data*1e6,True),ffExponent,7,2));
- tempstr:=tempBegin+tempstr+tempMidle+tempstr+'	 '+tempstr+tempEnd;
- StringReplaceMy(FeScaps,tempStr,221);
- StringReplaceMy(FeBScaps,tempStr,254);
-
 
  EpiLayersDistribution.BSFMu_nData(T);
  tempFileName:='M'+Copy(inttostr(round(T+1)),2,2);
@@ -1480,28 +1447,26 @@ StringReplaceMy(FeBScaps,tempStr,122);
  tempstr:=tempBegin+tempstr+tempMidle+tempstr+'	12	 0	'+tempFileName+tempEnd;
  StringReplaceMy(FeScaps,tempStr,111);
  StringReplaceMy(FeBScaps,tempStr,111);
+
+ EpiLayersDistribution.EmiterMu_nData(T);
+ tempFileName:='M'+Copy(inttostr(round(T)),2,2);
+ EpiLayersDistribution.Mu_nFileCreate(tempFileName);
+ tempstr:=LowerCase(floattostrF(EpiLayersDistribution.DataVector.Y[0],ffExponent,7,2))
+          +'  '+LowerCase(floattostrF(EpiLayersDistribution.DataVector.Y[EpiLayersDistribution.DataVector.HighNumber],ffExponent,7,2));
+ tempMidle:='	 1.000000e-03	 1.000000e+00	 1.000000e+00	 ';
+ tempEnd:='.grd	[m^2/Vs]';
+ tempstr:=tempBegin+tempstr+tempMidle+tempstr+'	12	 0	'+tempFileName+tempEnd;
+ StringReplaceMy(FeScaps,tempStr,221);
+ StringReplaceMy(FeBScaps,tempStr,255);
+
 // ----------------------------------------------------------
-
- EpiLayersDistribution.EmiterMu_pData(T);
- EpiLayersDistribution.Mu_pFileCreate('M'+Copy(inttostr(round(T+2)),2,2));
- EpiLayersDistribution.BSFMu_pData(T);
- EpiLayersDistribution.Mu_pFileCreate('M'+Copy(inttostr(round(T+3)),2,2));
-
  tempBegin:='mu_p :	 ';
   tempMidle:='	 5.000000e-03	 1.000000e-03	 1.000000e+00	 1.000000e+00	 ';
  tempEnd:='	 1	 0	[m^2/Vs]';
-// tempstr:=LowerCase(floattostrF(Silicon.mu_p(T,BSFCon.Data*1e6,True),ffExponent,7,2));
-// tempstr:=tempBegin+tempstr+tempMidle+tempstr+'	 '+tempstr+tempEnd;
-// StringReplaceMy(FeScaps,tempStr,112);
-// StringReplaceMy(FeBScaps,tempStr,112);
  tempstr:=LowerCase(floattostrF( Silicon.mu_p(T,Boron.Data*1e6,True),ffExponent,7,2));
  tempstr:=tempBegin+tempstr+tempMidle+tempstr+'	 '+tempstr+tempEnd;
  StringReplaceMy(FeScaps,tempStr,164);
  StringReplaceMy(FeBScaps,tempStr,181);
- tempstr:=LowerCase(floattostrF( Silicon.mu_p(T,EmiterCon.Data*1e6,False),ffExponent,7,2));
- tempstr:=tempBegin+tempstr+tempMidle+tempstr+'	 '+tempstr+tempEnd;
- StringReplaceMy(FeScaps,tempStr,222);
- StringReplaceMy(FeBScaps,tempStr,255);
 
  EpiLayersDistribution.BSFMu_pData(T);
  tempFileName:='M'+Copy(inttostr(round(T+3)),2,2);
@@ -1514,33 +1479,26 @@ StringReplaceMy(FeBScaps,tempStr,122);
  StringReplaceMy(FeScaps,tempStr,112);
  StringReplaceMy(FeBScaps,tempStr,112);
 
+ EpiLayersDistribution.EmiterMu_pData(T);
+ tempFileName:='M'+Copy(inttostr(round(T+2)),2,2);
+ EpiLayersDistribution.Mu_pFileCreate(tempFileName);
+ tempstr:=LowerCase(floattostrF(EpiLayersDistribution.DataVector.Y[0],ffExponent,7,2))
+          +'	 '+LowerCase(floattostrF(EpiLayersDistribution.DataVector.Y[EpiLayersDistribution.DataVector.HighNumber],ffExponent,7,2));
+ tempMidle:='	 1.000000e-03	 1.000000e+00	 1.000000e+00	 ';
+ tempEnd:='.grd	[m^2/Vs]';
+ tempstr:=tempBegin+tempstr+tempMidle+tempstr+'	12	 0	'+tempFileName+tempEnd;
+ StringReplaceMy(FeScaps,tempStr,222);
+ StringReplaceMy(FeBScaps,tempStr,256);
+
 // ----------------------------------------------------------------------
-
-
- EpiLayersDistribution.EmiterBradData(T,(BSFThick.Data+BaseThick.Data+EmiterThick.Data)*1e-6);
- EpiLayersDistribution.BradFileCreate('R'+Copy(inttostr(round(T)),2,2));
-// EpiLayersDistribution.BSFBradData(T,(BSFThick.Data+BaseThick.Data+EmiterThick.Data)*1e-6);
-// EpiLayersDistribution.BradFileCreate('R'+Copy(inttostr(round(T+1)),2,2));
-
  tempBegin:='K_rad :	 ';
  tempMidle:='	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 ';
  tempEnd:='	 1	 0	[m^3/s]';
-// tempstr:=LowerCase(floattostrF( Silicon.Brad(T),ffExponent,7,2));
-// tempstr:=LowerCase(floattostrF( Silicon.Brad(T,BSFCon.Data*1e6,False,
-//     (BSFThick.Data+BaseThick.Data+EmiterThick.Data)*1e-6,False),ffExponent,7,2));
-// tempstr:=tempBegin+tempstr+tempMidle+tempstr+'	 '+tempstr+tempEnd;
-// StringReplaceMy(FeScaps,tempStr,113);
-// StringReplaceMy(FeBScaps,tempStr,113);
- tempstr:=LowerCase(floattostrF( Silicon.Brad(T,Boron.Data*1e6,False,
+ tempstr:=LowerCase(floattostrF(Silicon.Brad(T,Boron.Data*1e6,False,
      (BSFThick.Data+BaseThick.Data+EmiterThick.Data)*1e-6,False),ffExponent,7,2));
  tempstr:=tempBegin+tempstr+tempMidle+tempstr+'	 '+tempstr+tempEnd;
  StringReplaceMy(FeScaps,tempStr,165);
  StringReplaceMy(FeBScaps,tempStr,182);
- tempstr:=LowerCase(floattostrF( Silicon.Brad(T,EmiterCon.Data*1e6,True,
-     (BSFThick.Data+BaseThick.Data+EmiterThick.Data)*1e-6,False),ffExponent,7,2));
- tempstr:=tempBegin+tempstr+tempMidle+tempstr+'	 '+tempstr+tempEnd;
- StringReplaceMy(FeScaps,tempStr,223);
- StringReplaceMy(FeBScaps,tempStr,256);
 
  EpiLayersDistribution.BSFBradData(T,(BSFThick.Data+BaseThick.Data+EmiterThick.Data)*1e-6);
  tempFileName:='R'+Copy(inttostr(round(T+1)),2,2);
@@ -1553,28 +1511,26 @@ StringReplaceMy(FeBScaps,tempStr,122);
  StringReplaceMy(FeScaps,tempStr,113);
  StringReplaceMy(FeBScaps,tempStr,113);
 
-// --------------------------------------------------
- EpiLayersDistribution.EmiterC_n_augerData(T);
-// EpiLayersDistribution.C_n_augerFileCreate('A'+Copy(inttostr(round(T)),2,2));
-// EpiLayersDistribution.BSFC_n_augerData(T);
-// EpiLayersDistribution.C_n_augerFileCreate('A'+Copy(inttostr(round(T+1)),2,2));
+ EpiLayersDistribution.EmiterBradData(T,(BSFThick.Data+BaseThick.Data+EmiterThick.Data)*1e-6);
+ tempFileName:='R'+Copy(inttostr(round(T)),2,2);
+ EpiLayersDistribution.BradFileCreate(tempFileName);
+ tempstr:=LowerCase(floattostrF(EpiLayersDistribution.DataVector.Y[0],ffExponent,7,2))
+          +'	 '+LowerCase(floattostrF(EpiLayersDistribution.DataVector.Y[EpiLayersDistribution.DataVector.HighNumber],ffExponent,7,2));
+ tempMidle:='	 1.000000e+01	 1.000000e+01	 1.000000e+01	 ';
+ tempEnd:='.grd	[m^3/s]';
+ tempstr:=tempBegin+tempstr+tempMidle+tempstr+'	12	 0	'+tempFileName+tempEnd;
+ StringReplaceMy(FeScaps,tempStr,223);
+ StringReplaceMy(FeBScaps,tempStr,257);
 
+// --------------------------------------------------
  tempBegin:='c_n_auger :	 ';
  tempMidle:='	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 ';
  tempEnd:='	 1	 0	[m^6/s]';
-// tempstr:=LowerCase(floattostrF(Silicon.Cn_AugerNew( Silicon.MinorityN(BSFCon.Data*1e6, T),BSFCon.Data*1e6, T),ffExponent,7,2));
-// tempstr:=tempBegin+tempstr+tempMidle+tempstr+'	 '+tempstr+tempEnd;
-// StringReplaceMy(FeScaps,tempStr,114);
-// StringReplaceMy(FeBScaps,tempStr,114);
 
- tempstr:=LowerCase(floattostrF(Silicon.Cn_AugerNew( Silicon.MinorityN(Boron.Data*1e6, T),Boron.Data*1e6, T),ffExponent,7,2));
+ tempstr:=LowerCase(floattostrF(Silicon.Cn_AugerNew(Silicon.MinorityN(Boron.Data*1e6, T),Boron.Data*1e6, T),ffExponent,7,2));
  tempstr:=tempBegin+tempstr+tempMidle+tempstr+'	 '+tempstr+tempEnd;
  StringReplaceMy(FeScaps,tempStr,166);
  StringReplaceMy(FeBScaps,tempStr,183);
- tempstr:=LowerCase(floattostrF( Silicon.Cn_Auger(EmiterCon.Data*1e6,T),ffExponent,7,2));
- tempstr:=tempBegin+tempstr+tempMidle+tempstr+'	 '+tempstr+tempEnd;
- StringReplaceMy(FeScaps,tempStr,224);
- StringReplaceMy(FeBScaps,tempStr,257);
 
  EpiLayersDistribution.BSFC_n_augerData(T);
  tempFileName:='A'+Copy(inttostr(round(T+1)),2,2);
@@ -1587,29 +1543,31 @@ StringReplaceMy(FeBScaps,tempStr,122);
  StringReplaceMy(FeScaps,tempStr,114);
  StringReplaceMy(FeBScaps,tempStr,114);
 
-// -------------------------------------------------------------
- EpiLayersDistribution.EmiterC_p_augerData(T);
-// EpiLayersDistribution.C_p_augerFileCreate('A'+Copy(inttostr(round(T+2)),2,2));
-// EpiLayersDistribution.BSFC_p_augerData(T);
-// EpiLayersDistribution.C_p_augerFileCreate('A'+Copy(inttostr(round(T+3)),2,2));
+ EpiLayersDistribution.EmiterC_n_augerData(T);
+ tempFileName:='A'+Copy(inttostr(round(T)),2,2);
+ EpiLayersDistribution.C_n_augerFileCreate(tempFileName);
+ tempstr:=LowerCase(floattostrF(EpiLayersDistribution.DataVector.Y[0],ffExponent,7,2))
+          +'	'+LowerCase(floattostrF(EpiLayersDistribution.DataVector.Y[EpiLayersDistribution.DataVector.HighNumber],ffExponent,7,2));
+ tempMidle:='	1.000000e+01 1.000000e+01	 1.000000e+01	 ';
+ tempEnd:='.grd	[m^6/s]';
+ tempstr:=tempBegin+tempstr+tempMidle+tempstr+'	12  0	'+tempFileName+tempEnd;
+ StringReplaceMy(FeScaps,tempStr,224);
+ StringReplaceMy(FeBScaps,tempStr,258);
 
+
+// -------------------------------------------------------------
  tempBegin:='c_p_auger :	 ';
  tempMidle:='	 0.000000e+00	 1.000000e+01	 1.000000e+01	 1.000000e+01	 ';
  tempEnd:='	 1	 0	[m^6/s]';
-// tempstr:=LowerCase(floattostrF(Silicon.Cp_AugerNew(Silicon.MinorityN(BSFCon.Data*1e6, T), BSFCon.Data*1e6, T),ffExponent,7,2));
-// tempstr:=tempBegin+tempstr+tempMidle+tempstr+'	 '+tempstr+tempEnd;
-// StringReplaceMy(FeScaps,tempStr,115);
-// StringReplaceMy(FeBScaps,tempStr,115);
  tempstr:=LowerCase(floattostrF(Silicon.Cp_AugerNew(Silicon.MinorityN(Boron.Data*1e6, T), Boron.Data*1e6, T),ffExponent,7,2));
  tempstr:=tempBegin+tempstr+tempMidle+tempstr+'	 '+tempstr+tempEnd;
  StringReplaceMy(FeScaps,tempStr,167);
  StringReplaceMy(FeBScaps,tempStr,184);
- tempstr:=LowerCase(floattostrF( Silicon.Cp_Auger(Silicon.MinorityN(EmiterCon.Data*1e6),T),ffExponent,7,2));
+ tempstr:=LowerCase(floattostrF(Silicon.Cn_AugerNew(EmiterCon.Data*1e6, Silicon.MinorityN(EmiterCon.Data*1e6, T), T),
+                                 ffExponent,7,2));
  tempstr:=tempBegin+tempstr+tempMidle+tempstr+'	 '+tempstr+tempEnd;
- StringReplaceMy(FeScaps,tempStr,225);
- StringReplaceMy(FeBScaps,tempStr,258);
 
-  EpiLayersDistribution.BSFC_p_augerData(T);
+ EpiLayersDistribution.BSFC_p_augerData(T);
  tempFileName:='A'+Copy(inttostr(round(T+3)),2,2);
  EpiLayersDistribution.C_p_augerFileCreate(tempFileName);
  tempstr:=LowerCase(floattostrF(EpiLayersDistribution.DataVector.Y[0],ffExponent,7,2))
@@ -1620,16 +1578,20 @@ StringReplaceMy(FeBScaps,tempStr,122);
  StringReplaceMy(FeScaps,tempStr,115);
  StringReplaceMy(FeBScaps,tempStr,115);
 
-// tempMidle:='	 1.000000e+01	 1.000000e+01	 1.000000e+01	 ';
-// tempstr:=LowerCase(floattostrF(Silicon.Cp_AugerNew(Silicon.MinorityN(BSFCon.Data*1e6, T), BSFCon.Data*1e6, T),ffExponent,7,2));
-// tempstr:=tempBegin+tempstr+'	 '+tempstr+tempMidle+tempstr+'	 '+tempstr+tempEnd;
-// StringReplaceMy(FeScaps,tempStr,115);
+ EpiLayersDistribution.EmiterC_p_augerData(T);
+ tempFileName:='A'+Copy(inttostr(round(T+2)),2,2);
+ EpiLayersDistribution.C_p_augerFileCreate(tempFileName);
+ tempstr:=LowerCase(floattostrF(EpiLayersDistribution.DataVector.Y[0],ffExponent,7,2))
+          +'	'+LowerCase(floattostrF(EpiLayersDistribution.DataVector.Y[EpiLayersDistribution.DataVector.HighNumber],ffExponent,7,2));
+ tempMidle:='	1.000000e+01 1.000000e+01	 1.000000e+01	 ';
+ tempEnd:='.grd	[m^6/s]';
+ tempstr:=tempBegin+tempstr+tempMidle+tempstr+'	12  0	'+tempFileName+tempEnd;
+ StringReplaceMy(FeScaps,tempStr,225);
+ StringReplaceMy(FeBScaps,tempStr,259);
 // ---------------------------------------------------------------
  tempBegin:='Na(uniform) :	 ';
  tempMidle:='	 1.000000e+01	 1.000000e+01	 1.000000e+01	 ';
  tempEnd:='	 0	 2	[/m^3]';
-// tempstr:=LowerCase(floattostrF(BSFCon.Data*1e6,ffExponent,7,2));
-// tempstr:=tempBegin+tempstr+'	 '+tempstr+tempMidle+tempstr+'	 '+tempstr+tempEnd;
  tempstr:=LowerCase(floattostrF(Boron.Data*1e6,ffExponent,7,2));
  tempstr:=tempBegin+tempstr+'	 '+tempstr+tempMidle+tempstr+'	 '+tempstr+tempEnd;
  StringReplaceMy(FeScaps,tempStr,168);
@@ -1656,7 +1618,7 @@ StringReplaceMy(FeBScaps,tempStr,122);
  tempstr:=tempstr+LowerCase(floattostrF(3.331666e+24/3e20*EmiterCon.Data,ffExponent,7,2));
  tempstr:=tempstr+tempEnd;
  StringReplaceMy(FeScaps,tempStr,227);
- StringReplaceMy(FeBScaps,tempStr,260);
+ StringReplaceMy(FeBScaps,tempStr,261);
 
  tempBegin:='sigma_n : ';
  tempEnd:='	[m^2]';
@@ -1698,16 +1660,14 @@ StringReplaceMy(FeBScaps,tempStr,122);
  StringReplaceMy(FeBScaps,tempStr,213);
 
 
- // Et :   1.024	  0.260	[eV]
-
  tempBegin:='Temperature :   ';
  tempEnd:=' K';
  tempstr:=LowerCase(floattostrf(T*1.0,ffFixed,5,2));
  StringReplaceMy(FeScaps,tempBegin+tempstr+tempEnd,258);
- StringReplaceMy(FeBScaps,tempBegin+tempstr+tempEnd,296);
+ StringReplaceMy(FeBScaps,tempBegin+tempstr+tempEnd,292);
  tempBegin:='Secondworkpoint Temperature :   ';
  StringReplaceMy(FeScaps,tempBegin+tempstr+tempEnd,271);
- StringReplaceMy(FeBScaps,tempBegin+tempstr+tempEnd,309);
+ StringReplaceMy(FeBScaps,tempBegin+tempstr+tempEnd,305);
 
  case RGIllumination.ItemIndex of
   0:begin
@@ -1716,11 +1676,11 @@ StringReplaceMy(FeBScaps,tempStr,122);
      StringReplaceMy(FeScaps,'IV_stopV :     0.4500 V',285);
      StringReplaceMy(FeScaps,'IV_points :  46',286);
      StringReplaceMy(FeScaps,'stop after Voc :  0',289);
-     StringReplaceMy(FeBScaps,'dark :  1',300);
-     StringReplaceMy(FeBScaps,'incident spectrum from file :AM1_5G 1 sun.spe',302);
-     StringReplaceMy(FeBScaps,'IV_stopV :     0.4500 V',323);
-     StringReplaceMy(FeBScaps,'IV_points :  46',324);
-     StringReplaceMy(FeBScaps,'stop after Voc :  0',327);
+     StringReplaceMy(FeBScaps,'dark :  1',296);
+     StringReplaceMy(FeBScaps,'incident spectrum from file :AM1_5G 1 sun.spe',298);
+     StringReplaceMy(FeBScaps,'IV_stopV :     0.4500 V',319);
+     StringReplaceMy(FeBScaps,'IV_points :  46',320);
+     StringReplaceMy(FeBScaps,'stop after Voc :  0',323);
     end;
   1:begin
      StringReplaceMy(FeScaps,'dark :  0',262);
@@ -1728,11 +1688,11 @@ StringReplaceMy(FeBScaps,tempStr,122);
      StringReplaceMy(FeScaps,'IV_stopV :     0.7500 V',285);
      StringReplaceMy(FeScaps,'IV_points :  76',286);
       StringReplaceMy(FeScaps,'stop after Voc :  1',289);
-     StringReplaceMy(FeBScaps,'dark :  0',300);
-     StringReplaceMy(FeBScaps,'incident spectrum from file :AM1.5G ed2 1 sun.spe',302);
-     StringReplaceMy(FeBScaps,'IV_stopV :     0.7500 V',323);
-     StringReplaceMy(FeBScaps,'IV_points :  76',324);
-     StringReplaceMy(FeBScaps,'stop after Voc :  1',327);
+     StringReplaceMy(FeBScaps,'dark :  0',296);
+     StringReplaceMy(FeBScaps,'incident spectrum from file :AM1.5G ed2 1 sun.spe',298);
+     StringReplaceMy(FeBScaps,'IV_stopV :     0.7500 V',319);
+     StringReplaceMy(FeBScaps,'IV_points :  76',320);
+     StringReplaceMy(FeBScaps,'stop after Voc :  1',323);
     end;
   2:begin
      StringReplaceMy(FeScaps,'dark :  0',262);
@@ -1740,11 +1700,11 @@ StringReplaceMy(FeBScaps,tempStr,122);
      StringReplaceMy(FeScaps,'IV_stopV :     0.7500 V',285);
      StringReplaceMy(FeScaps,'IV_points :  76',286);
       StringReplaceMy(FeScaps,'stop after Voc :  1',289);
-     StringReplaceMy(FeBScaps,'dark :  0',300);
-     StringReplaceMy(FeBScaps,'incident spectrum from file :940nmSim.spe',302);
-     StringReplaceMy(FeBScaps,'IV_stopV :     0.7500 V',323);
-     StringReplaceMy(FeBScaps,'IV_points :  76',324);
-     StringReplaceMy(FeBScaps,'stop after Voc :  1',327);
+     StringReplaceMy(FeBScaps,'dark :  0',296);
+     StringReplaceMy(FeBScaps,'incident spectrum from file :940nmSim.spe',298);
+     StringReplaceMy(FeBScaps,'IV_stopV :     0.7500 V',319);
+     StringReplaceMy(FeBScaps,'IV_points :  76',320);
+     StringReplaceMy(FeBScaps,'stop after Voc :  1',323);
     end;
  end;
 
@@ -1772,8 +1732,8 @@ StringReplaceMy(FeBScaps,tempStr,122);
 
 
 // ----------------------------------------------
- for I := 0 to round(FloatDataFromRow(FeBScaps[458],6)) - 1 do
-       FeBScaps.Delete(460);
+ for I := 0 to round(FloatDataFromRow(FeBScaps[454],6)) - 1 do
+       FeBScaps.Delete(456);
  for I := FeStepNumber.Data - 1 downto 0 do
        begin
         tempBegin:=inttostr(i);
@@ -1784,18 +1744,18 @@ StringReplaceMy(FeBScaps,tempStr,122);
              end
                 else
              tempstr:=tempBegin;
-        FeBScaps.Insert(460,'file  '+tempBegin+':F'+tempstr+'.grd');
+        FeBScaps.Insert(456,'file  '+tempBegin+':F'+tempstr+'.grd');
        end;
 
  tempBegin:='number of file names :   ';
  tempstr:=LowerCase(inttostr(FeStepNumber.Data));
  tempstr:=tempBegin+tempStr;
- StringReplaceMy(FeBScaps,tempstr,458);
+ StringReplaceMy(FeBScaps,tempstr,454);
 
 
 
- for I := 0 to round(FloatDataFromRow(FeBScaps[426],6)) - 1 do
-       FeBScaps.Delete(428);
+ for I := 0 to round(FloatDataFromRow(FeBScaps[422],6)) - 1 do
+       FeBScaps.Delete(424);
  for I := FeStepNumber.Data - 1 downto 0 do
        begin
         tempBegin:=inttostr(i);
@@ -1806,16 +1766,16 @@ StringReplaceMy(FeBScaps,tempStr,122);
              end
                 else
              tempstr:=tempBegin;
-        FeBScaps.Insert(428,'file  '+tempBegin+':B'+tempstr+'.grd');
+        FeBScaps.Insert(424,'file  '+tempBegin+':B'+tempstr+'.grd');
        end;
 
  tempBegin:='number of file names :   ';
  tempstr:=LowerCase(inttostr(FeStepNumber.Data));
  tempstr:=tempBegin+tempStr;
- StringReplaceMy(FeBScaps,tempstr,426);
+ StringReplaceMy(FeBScaps,tempstr,422);
 
-  for I := 0 to round(FloatDataFromRow(FeBScaps[394],6)) - 1 do
-       FeBScaps.Delete(396);
+  for I := 0 to round(FloatDataFromRow(FeBScaps[390],6)) - 1 do
+       FeBScaps.Delete(392);
  for I := FeStepNumber.Data - 1 downto 0 do
        begin
         tempBegin:=inttostr(i);
@@ -1826,16 +1786,16 @@ StringReplaceMy(FeBScaps,tempStr,122);
              end
                 else
              tempstr:=tempBegin;
-        FeBScaps.Insert(396,'file  '+tempBegin+':S'+tempstr+'.grd');
+        FeBScaps.Insert(392,'file  '+tempBegin+':S'+tempstr+'.grd');
        end;
 
  tempBegin:='number of file names :   ';
  tempstr:=LowerCase(inttostr(FeStepNumber.Data));
  tempstr:=tempBegin+tempStr;
- StringReplaceMy(FeBScaps,tempstr,394);
+ StringReplaceMy(FeBScaps,tempstr,390);
 
- for I := 0 to round(FloatDataFromRow(FeBScaps[362],6)) - 1 do
-       FeBScaps.Delete(364);
+ for I := 0 to round(FloatDataFromRow(FeBScaps[358],6)) - 1 do
+       FeBScaps.Delete(360);
  for I := FeStepNumber.Data - 1 downto 0 do
        begin
         tempBegin:=inttostr(i);
@@ -1846,13 +1806,13 @@ StringReplaceMy(FeBScaps,tempStr,122);
              end
                 else
              tempstr:=tempBegin;
-        FeBScaps.Insert(364,'file  '+tempBegin+':P'+tempstr+'.grd');
+        FeBScaps.Insert(360,'file  '+tempBegin+':P'+tempstr+'.grd');
        end;
 
  tempBegin:='number of file names :   ';
  tempstr:=LowerCase(inttostr(FeStepNumber.Data));
  tempstr:=tempBegin+tempStr;
- StringReplaceMy(FeBScaps,tempstr,362);
+ StringReplaceMy(FeBScaps,tempstr,358);
 // -----------------------------------------------------------------
 
  if SetCurrentDir(SCAPS_Folder+'\def') then
