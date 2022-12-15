@@ -129,26 +129,44 @@ begin
 end;
 
 function DataStringConvertNew(Souce:string;StartPosition:word=0):string;
- var nFe,nFeSRH,nFeB,nFeBSRH:double;
+ var
+//     nFe,nFeSRH,nFeB,nFeBSRH:double;
      i:byte;
 begin
- nFe:=FloatDataFromRow(Souce,1+StartPosition);
- nFeSRH:=FloatDataFromRow(Souce,2+StartPosition);
- nFeB:=FloatDataFromRow(Souce,3+StartPosition);
- nFeBSRH:=FloatDataFromRow(Souce,4+StartPosition);
- Result:='';
+// nFe:=FloatDataFromRow(Souce,1+StartPosition);
+// nFeSRH:=FloatDataFromRow(Souce,2+StartPosition);
+// nFeB:=FloatDataFromRow(Souce,3+StartPosition);
+// nFeBSRH:=FloatDataFromRow(Souce,4+StartPosition);
+// Result:='';
+// for I := 1 to StartPosition
+//  do Result:=Result+StringDataFromRow(Souce,i)+' ';
+//
+// Result:=Result
+//         +StringDataFromRow(Souce,2+StartPosition)+' '
+//         +StringDataFromRow(Souce,4+StartPosition)+' '
+//         +FloatToStrF(nFeSRH-nFeBSRH,ffExponent,10,2)+' '
+//         +StringDataFromRow(Souce,1+StartPosition)+' '
+//         +StringDataFromRow(Souce,3+StartPosition)+' '
+//         +FloatToStrF(nFe-nFeB,ffExponent,10,2)+' '
+//         +FloatToStrF(nFeSRH-nFe,ffExponent,10,2)+' '
+//         +FloatToStrF(nFeBSRH-nFeB,ffExponent,10,2);
+
  for I := 1 to StartPosition
   do Result:=Result+StringDataFromRow(Souce,i)+' ';
 
  Result:=Result
-         +StringDataFromRow(Souce,2+StartPosition)+' '
-         +StringDataFromRow(Souce,4+StartPosition)+' '
-         +FloatToStrF(nFeSRH-nFeBSRH,ffExponent,10,2)+' '
          +StringDataFromRow(Souce,1+StartPosition)+' '
+         +StringDataFromRow(Souce,2+StartPosition)+' '
          +StringDataFromRow(Souce,3+StartPosition)+' '
-         +FloatToStrF(nFe-nFeB,ffExponent,10,2)+' '
-         +FloatToStrF(nFeSRH-nFe,ffExponent,10,2)+' '
-         +FloatToStrF(nFeBSRH-nFeB,ffExponent,10,2);
+         +StringDataFromRow(Souce,4+StartPosition)+' '
+         +StringDataFromRow(Souce,5+StartPosition)+' '
+         +StringDataFromRow(Souce,6+StartPosition)+' '
+         +StringDataFromRow(Souce,7+StartPosition)+' '
+         +StringDataFromRow(Souce,8+StartPosition)+' '
+         +StringDataFromRow(Souce,9+StartPosition)+' '
+         +StringDataFromRow(Souce,10+StartPosition)+' '
+         +StringDataFromRow(Souce,11+StartPosition)+' '
+         +StringDataFromRow(Souce,12+StartPosition);
 end;
 
 

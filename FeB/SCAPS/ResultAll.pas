@@ -16,7 +16,8 @@ const
        ('Fe','Bo','T','d');
       FileHeaderNames:array[TArguments]of string=
        ('N_Fe','N_B','T','d');
-      FileHeaderNew='nFsrh nFBsrh dnsrh nF nFB dn dnF dnFB';
+//      FileHeaderNew='nFsrh nFBsrh dnsrh nF nFB dn dnF dnFB';
+      FileHeaderNew='JscF EtaF VocF FFF JscFB EtaFB VocFB FFFB eJsc eEta eVoc eFF';
 
       ParametersNames:array[TArguments]of string=
        ('N_Fe','N_B','T','d');
