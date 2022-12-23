@@ -113,6 +113,7 @@ TArrKeyStrList=class
   {шлях, куди будуть записуватися файли}
   fArgumentNumber:integer;
  public
+//  ArrKeyStrList:array of TKeyStrList;
   Constructor Create(SL:TStringList;
                      DataNumber:integer=4;
     {DataNumber - кількість величин, які розраховувалися,
@@ -500,6 +501,7 @@ procedure TArrKeyStrList.SaveData;
       ValueName:string;
 begin
  SimpleDataFile:=TStringList.Create;
+// showmessage(inttostr(fArgumentNumber));
 
  if fArgumentNumber=1 then
   begin

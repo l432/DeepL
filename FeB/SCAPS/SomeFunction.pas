@@ -151,6 +151,7 @@ begin
 //         +FloatToStrF(nFeSRH-nFe,ffExponent,10,2)+' '
 //         +FloatToStrF(nFeBSRH-nFeB,ffExponent,10,2);
 
+ Result:='';
  for I := 1 to StartPosition
   do Result:=Result+StringDataFromRow(Souce,i)+' ';
 
