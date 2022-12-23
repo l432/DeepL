@@ -595,8 +595,6 @@ begin
         Directory:=ExtractFilePath(OpenDialog1.FileName);
         ResultFile.LoadFromFile(OpenDialog1.FileName);
         ArrKeyStrList:=TArrKeyStrList.Create(ResultFile,12,Directory);
-        showmessage('hhh');
-//        ArrKeyStrList.ArrKeyStrList[i]
         ArrKeyStrList.SaveData;
         ArrKeyStrList.Free;
         ResultFile.Free;
