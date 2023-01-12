@@ -23,3 +23,23 @@ I hope for your help with the conversion plugin.
 With my best regards,
  
 Oleg
+-------------------------------------------------------
+
+Dear Dr.Ziv Hameiri,
+
+Thank you very much for the full text!
+I read your paper "Deep Learning Extraction of the Temperature-Dependent Parameters of Bulk Defects" with great interest.
+
+Maybe, you can help me with one detail yet.
+I am interested in a plugin for the conversion of data files (CSV format, three columns, or matrix with numbers) into images. In your paper, the numbers were temperature, excess carrier concentration, and lifetime values. Can you advise about a similar plugin for automatic converting? The hand conversion of thousand images is very waste of time; in the case of a hundred thousand, it is unreal.
+
+I hope for your help with the conversion plugin.
+
+With my best regards,
+ 
+Oleg Olikh,
+professor of Physics Faculty, 
+Taras Shevchenko National University of Kyiv, 
+Ukraine
+https://gen.phys.univ.kiev.ua/280-olikh/
+https://www.scopus.com/authid/detail.uri?authorId=6506623724
