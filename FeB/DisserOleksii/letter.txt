@@ -43,3 +43,90 @@ Taras Shevchenko National University of Kyiv,
 Ukraine
 https://gen.phys.univ.kiev.ua/280-olikh/
 https://www.scopus.com/authid/detail.uri?authorId=6506623724
+
+-------------------------------------------
+Hi Oleg,
+
+Great to hear from you.
+
+Please send me an email and I will forward to the student who led the work.
+
+---------------------------------------------------------
+Ziv.hameiri@unsw.edu.au
+
+Dear Dr.Ziv Hameiri,
+
+Thank you for your attention to my request.
+
+I am interested in a plugin for converting data files (CSV format, three columns, or matrix with numbers) into images. In your paper, the numbers were temperature, excess carrier concentration, and lifetime values. Can you advise about a similar plugin for automatic converting? The hand conversion of thousand images is very waste of time; in the case of a hundred thousand, it is unreal.
+
+I hope for your help with the conversion plugin.
+
+With my best regards,
+ 
+Oleg Olikh,
+professor of Physics Faculty, 
+Taras Shevchenko National University of Kyiv, 
+Ukraine
+-------------------------------------------------------------------
+Dear Oleg,
+
+No worries at all.
+
+The lead author (Yoann) indicated that the function he used in the DPDL is:
+row_to_img in https://github.com/acdc-pv-unsw/DPML/blob/master/DPDL/dataset.py
+
+He is not sure if this will be suitable for your desired application.
+
+Have a great weekend.
+Best regards,
+Ziv
+-------------------------------------------------------
+import torch.utils.data as Data
+from PIL import Image
+import pandas as pd
+import numpy as np
+
+
+class Dataset(Data.Dataset):
+    'Dataset for CNN of SRH maps'
+    def __init__(self,df,Ycol,non_feature_col,dn_len,t_len, transform=None):
+        self.non_feature_col=non_feature_col
+        self.dn_len=dn_len
+        self.t_len=t_len
+        self.labels=df[Ycol].values
+        self.features=df.drop(self.non_feature_col, axis=1).values
+        self.transform=transform
+
+    def row_to_img(self,row):
+        'x: min Dn to max Dn -> ; y: min T to max T ||^'
+        a=[row[t*self.dn_len:(t+1)*self.dn_len].tolist() for t in range(self.t_len)]
+        a=np.transpose(np.log10(a))
+        a_norm=(a-a.min())/(a.max()-a.min())
+        img=Image.fromarray(np.uint8(a_norm*255))
+        return img
+
+    def __len__(self):
+        'Denotes the total number of samples'
+        return len(self.features)
+
+    def __getitem__(self, index):
+        'Generates one sample of data'
+        row=self.features[index]
+        label=self.labels[index]
+        img=self.row_to_img(row)
+        if self.transform != None: img=self.transform(img)
+        return img, label
+
+---------------------------------------
+
+Dear Ziv,
+
+Thank you so much! 
+You took me the first information about the Image module, which is terrific! I am not a prominent specialist in Python, and a hint about existing modules is helpful.
+
+Have a nice day.
+
+With my best regards,
+ 
+Oleg.
