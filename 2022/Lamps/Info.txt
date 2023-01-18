@@ -3,3 +3,20 @@
 широкосмуговий датчик S401C (0,19-20 мкм, Pmax=1 W)
 
 вузькосмуговий датчик S120C (0,4-1,1 мкм, Pmax=50 mW)
+
+
+Orion Halogen 
+Haltlichtspiegel
+24 V  200W
+52240.0
+
+
+General Electric
+43537
+H271
+DDL
+20V 150W
+
+Osram
+64653 HLX ELC
+24 V 250W
