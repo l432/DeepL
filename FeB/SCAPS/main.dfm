@@ -71,7 +71,7 @@ object MainForm: TMainForm
     TabOrder = 2
     object LTemp_start: TLabel
       Left = 11
-      Top = 24
+      Top = 25
       Width = 33
       Height = 16
       Caption = 'Start:'
