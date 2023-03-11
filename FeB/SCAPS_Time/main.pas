@@ -17,10 +17,10 @@ type
     GBTemp: TGroupBox;
     LTemp_start: TLabel;
     STTemp_start: TStaticText;
-    STTemp_Finish: TStaticText;
-    LTemp_Finish: TLabel;
-    STTemp_Step: TStaticText;
-    LTemp_Step: TLabel;
+    STActEnergy: TStaticText;
+    LActEnerg: TLabel;
+    STDisPart: TStaticText;
+    LDisPart: TLabel;
     GBBoron: TGroupBox;
     STBoron: TStaticText;
     BDatesDat: TButton;
@@ -81,11 +81,11 @@ type
     procedure Button1Click(Sender: TObject);
   private
     { Private declarations }
-    TempStart,TempFinish,TempStep: TIntegerParameterShow;
+    TemperatureValue{,TempFinish,TempStep}: TIntegerParameterShow;
     TimeStart,TimeFinish,TimeStep: TIntegerParameterShow;
     FeLow,FeHi:TDoubleParameterShow;
     FeStepNumber: TIntegerParameterShow;
-    Boron,EmiterCon,BSFCon:TDoubleParameterShow;
+    Boron,EmiterCon,BSFCon,ActivEnergyValue,DissPart:TDoubleParameterShow;
     BaseThick:TIntegerParameterShow;
     EmiterThick,BSFThick:TDoubleParameterShow;
 
@@ -99,6 +99,7 @@ type
 //    function NumberToString(Number:double;DigitNumber:word=4):string;
 //    function EditString(str:string):string;
     function BaseThickToString():string;
+    function TimeToString(tm:integer):string;
     function Nfeb(Nb,T,Ef:double):double;
     {рівноважна частка пар FeB по відношенню до загальної
     кількості Fe,
@@ -110,6 +111,7 @@ type
     function PartOfFileNameCreate(T,time:integer):string;overload;
     procedure SetCurrentFolders;
     procedure SetTemperatureFolders(T: Integer);
+    procedure SetTimeFolders(tm: Integer);
     procedure AdDataFromDatesDat(FullFilename:string);
     function SearchInFolders(StartFolder:string):string;
     function DatFileLocationCreateAndDetermine(InnerDir, Tdir, Ddir, Bdir: string):string;
@@ -631,7 +633,7 @@ begin
  EpiLayersDistribution.EmiterCompositionFileCreate;
  EpiLayersDistribution.BSFCompositionFileCreate;
 
- T:=TempStart.Data;
+ T:=TemperatureValue.Data;
  time:=TimeStart.Data;
 
 // для SCAPS 3.10 номери рядочків після 92 збільшили на 2
@@ -725,7 +727,7 @@ StringReplaceMy(FeBScaps,tempStr,266);
  StringReplaceMy(FeScaps,tempStr,104);
  StringReplaceMy(FeBScaps,tempStr,104);
  StringReplaceMy(FeScaps,tempStr,214);
-  StringReplaceMy(FeBScaps,tempStr,248);
+ StringReplaceMy(FeBScaps,tempStr,248);
 
  tempstr:='Sn :  '
            +LowerCase(floattostrF(Silicon.Vth_n(T),ffExponent,4,2))
@@ -1221,7 +1223,8 @@ StringReplaceMy(FeBScaps,tempStr,266);
     FeBScaps.SaveToFile(fileName2);
     end;
 
-  SetTemperatureFolders(T);
+//  SetTemperatureFolders(T);
+  SetTimeFolders(time);
 //  FeScaps.SaveToFile(fileName);
   FeBScaps.SaveToFile(fileName2);
 
@@ -1233,7 +1236,8 @@ StringReplaceMy(FeBScaps,tempStr,266);
  for I := 181 to 196 do FeScaps.Delete(181);
  for I := 124 to 139 do FeScaps.Delete(124);
 
- fileName:='D1'+'T'+inttostr(T)+NBoronToString+'.scaps';
+ fileName:='D1'+'T'+inttostr(T)+NBoronToString+'C'+TimeToString(time)+'.scaps';
+
  if SetCurrentDir(SCAPS_Folder+'\def') then
     FeScaps.SaveToFile(fileName);
 
@@ -1853,7 +1857,7 @@ procedure TMainForm.BFeB_xClick(Sender: TObject);
      Row:Int64;
      i,j:word;
      T:word;
-     delFe,Nfe:double;
+     delFe,Nfe,Nfe_tot,Nfe_eq,Nfe_t:double;
      tempstr:string;
 
 begin
@@ -1901,8 +1905,12 @@ begin
          Inc(ROW);
        end;
 //      Vec.DeleteDuplicate;
-      SetTemperatureFolders(T);
-      Vec.WriteToFile('Ef_'+PartOfFileNameCreate(T)+'.dat',10);
+//      SetTemperatureFolders(T);
+//      Vec.WriteToFile('Ef_'+PartOfFileNameCreate(T)+'.dat',10);
+
+//      SetTimeFolders(tm);!!!!!!!!!!!!!!!!!!!!!!!
+//      Vec.WriteToFile('Ef_'+PartOfFileNameCreate(T, tm)+'.dat',10); !!!!!!!!!!!
+
       while not (SetCurrentDir(GetCurrentDir + '\grd')) do
         MkDir('grd');
 
@@ -1920,44 +1928,32 @@ begin
         GradFileTitleCreate(FeGRDFilePP);
         GradFileTitleCreate(FeBGRDFilePP);
 
-//        FeGRDFile.Clear;
-//        FeBGRDFile.Clear;
-//        FeGRDFile.Add('interpolation: linear');
-//        FeGRDFile.Add('');
-//        FeGRDFile.Add('x (micrometer)	Nt (1/m3)');
-//
-//        FeBGRDFile.Add('interpolation: linear');
-//        FeBGRDFile.Add('');
-//        FeBGRDFile.Add('x (micrometer)	Nt (1/m3)');
-//
-//        FeGRDFilePP.Clear;
-//        FeBGRDFilePP.Clear;
-//        FeGRDFilePP.Add('interpolation: linear');
-//        FeGRDFilePP.Add('');
-//        FeGRDFilePP.Add('x (micrometer)	Nt (1/m3)');
-//
-//        FeBGRDFilePP.Add('interpolation: linear');
-//        FeBGRDFilePP.Add('');
-//        FeBGRDFilePP.Add('x (micrometer)	Nt (1/m3)');
+        Nfe_tot:=Power(10,Nfe)*1e6;
 
         for I := 0 to 99 do
          begin
-//          FeBGRDFile.Add(FloatToStrF(Vec.X[i+100]-1,ffExponent,10,2)+'	'+
+          Nfe_eq:=(1-Vec.Y[i+100])*Nfe_tot;
+          Nfe_t:=(Nfe_tot-Nfe_eq)*DissPart.Data*exp(-IVparameter.fTimeAfter
+                  /t_assFeB(Boron.Data,T,ActivEnergyValue.Data))+Nfe_eq;
           FeBGRDFile.Add(FloatToStrF(Vec.X[i+100]-BSFThick.Data,ffExponent,10,2)+'	'+
-                        FloatToStrF(Vec.Y[i+100]*Power(10,Nfe)*1e6,ffExponent,8,2));
-//          FeGRDFile.Add(FloatToStrF(Vec.X[i+100]-1,ffExponent,10,2)+'	'+
+                        FloatToStrF(Nfe_tot-Nfe_t,ffExponent,8,2));
           FeGRDFile.Add(FloatToStrF(Vec.X[i+100]-BSFThick.Data,ffExponent,10,2)+'	'+
-                        FloatToStrF((1-Vec.Y[i+100])*Power(10,Nfe)*1e6,ffExponent,8,2));
+                        FloatToStrF(Nfe_t,ffExponent,8,2));
+
+
+          Nfe_eq:=(1-Vec.Y[i])*Nfe_tot;
           FeBGRDFilePP.Add(FloatToStrF(Vec.X[i],ffExponent,10,2)+'	'+
                         FloatToStrF(Vec.Y[i]*Power(10,Nfe)*1e6,ffExponent,8,2));
           FeGRDFilePP.Add(FloatToStrF(Vec.X[i],ffExponent,10,2)+'	'+
                         FloatToStrF((1-Vec.Y[i])*Power(10,Nfe)*1e6,ffExponent,8,2));
          end;
-//        tempstr:= LowerCase(floattostrF(Power(10,Nfe),ffExponent,4,2));
-//        tempstr:=AnsiReplaceStr(tempstr,'.','p');
-//        tempstr:=AnsiReplaceStr(tempstr,'+','');
-//        FeBGRDFile.SaveToFile('FeB'+tempstr+'.grd');
-//        FeGRDFile.SaveToFile('Fe'+tempstr+'.grd');
+
+//      Function t_assFeB(N_A:double;T:double=300;
+//                 Em:double=0.68):double;
+//{характерний час спарювання пари залізо-бор,
+//N_A - концентрація бору, []=см-3}
+
+
         tempstr:=IntToStr(j);
         if j<10 then tempstr:='0'+tempstr;
 
@@ -2253,15 +2249,25 @@ begin
   SCAPSFile:=TStringList.Create;
   SCAPSFile.Sorted:=False;
    ConfigFile:=TIniFile.Create(ExtractFilePath(Application.ExeName)+'SCapsConv.ini');
-  TempStart:=TIntegerParameterShow. Create(STTemp_start,LTemp_start,'Start:',290);
-  TempStart.SetName('Temperature');
-  TempStart.ReadFromIniFile(ConfigFile);
-  TempFinish:=TIntegerParameterShow. Create(STTemp_Finish,LTemp_Finish,'Finish:',340);
-  TempFinish.SetName('Temperature');
-  TempFinish.ReadFromIniFile(ConfigFile);
-  TempStep:=TIntegerParameterShow. Create(STTemp_Step,LTemp_Step,'Step:',5);
-  TempStep.SetName('Temperature');
-  TempStep.ReadFromIniFile(ConfigFile);
+  TemperatureValue:=TIntegerParameterShow. Create(STTemp_start,LTemp_start,'Temperature:',340);
+  TemperatureValue.SetName('Temperature');
+  TemperatureValue.ReadFromIniFile(ConfigFile);
+//  TempFinish:=TIntegerParameterShow. Create(STTemp_Finish,LTemp_Finish,'Finish:',340);
+//  TempFinish.SetName('Temperature');
+//  TempFinish.ReadFromIniFile(ConfigFile);
+//  TempStep:=TIntegerParameterShow. Create(STTemp_Step,LTemp_Step,'Step:',5);
+//  TempStep.SetName('Temperature');
+//  TempStep.ReadFromIniFile(ConfigFile);
+
+  ActivEnergyValue:=TDoubleParameterShow. Create(STActEnergy,'ActEnergy',0.655,3);
+  ActivEnergyValue.SetName('SC');
+  ActivEnergyValue.ReadFromIniFile(ConfigFile);
+
+  DissPart:=TDoubleParameterShow. Create(STDisPart,'DisPart',0.5,3);
+  DissPart.SetName('SC');
+  DissPart.ReadFromIniFile(ConfigFile);
+  DissPart.Limits.SetLimits(0,1);
+
 
   TimeStart:=TIntegerParameterShow. Create(STTime_start,LTime_start,'Start:',30);
   TimeStart.SetName('Time');
@@ -2305,6 +2311,8 @@ begin
   FeStepNumber.SetName('Iron');
   FeStepNumber.ReadFromIniFile(ConfigFile);
 
+  RGIllumination.ItemIndex:=ConfigFile.ReadInteger('SC','Illum',0);
+
 
   SCAPS_Folder:=ConfigFile.ReadString('Folders','SCAPS',GetCurrentDir);
   Result_Folder:=ConfigFile.ReadString('Folders','Results',GetCurrentDir);
@@ -2345,12 +2353,17 @@ begin
   BaseThick.WriteToIniFile(ConfigFile);;
   BaseThick.Free;
 
-  TempFinish.WriteToIniFile(ConfigFile);
-  TempFinish.Free;
-  TempStep.WriteToIniFile(ConfigFile);
-  TempStep.Free;
-  TempStart.WriteToIniFile(ConfigFile);
-  TempStart.Free;
+//  TempFinish.WriteToIniFile(ConfigFile);
+//  TempFinish.Free;
+//  TempStep.WriteToIniFile(ConfigFile);
+//  TempStep.Free;
+  TemperatureValue.WriteToIniFile(ConfigFile);
+  TemperatureValue.Free;
+
+  ActivEnergyValue.WriteToIniFile(ConfigFile);
+  ActivEnergyValue.Free;
+  DissPart.WriteToIniFile(ConfigFile);
+  DissPart.Free;
 
   TimeFinish.WriteToIniFile(ConfigFile);
   TimeFinish.Free;
@@ -2366,6 +2379,9 @@ begin
   FeStepNumber.WriteToIniFile(ConfigFile);
   FeStepNumber.Free;
 //  Diod.WriteToIniFile(ConfigFile);
+
+  ConfigFile.WriteInteger('SC','Illum',RGIllumination.ItemIndex);
+
   IVparameter.Free;
   Diod.Semiconductor.Material.Free;
   Diod.Free;
@@ -2389,7 +2405,7 @@ end;
 
 function TMainForm.PartOfFileNameCreate(T, time: integer): string;
 begin
- Result:=BaseThickToString+'T'+inttostr(T)+NBoronToString+'C'+inttostr(time);
+ Result:=BaseThickToString+'T'+inttostr(T)+NBoronToString+'C'+TimeToString(time);
 end;
 
 function TMainForm.PartOfFileNameCreate(T: integer): string;
@@ -2446,6 +2462,15 @@ begin
     MkDir('T' + inttostr(T));
 end;
 
+procedure TMainForm.SetTimeFolders(tm: Integer);
+ Var  tempStr:string;
+begin
+  tempStr := Result_Folder + '\' + BaseThickToString + '\' + NBoronToString;
+  SetCurrentDir(tempStr);
+  while not (SetCurrentDir(tempSTR + '\' + 'C' + TimeToString(tm))) do
+    MkDir('C' + TimeToString(tm));
+end;
+
 procedure TMainForm.StringReplaceMy(StringList: TStringList; Str: string;
   IndexOfString: integer);
 begin
@@ -2456,6 +2481,27 @@ begin
   finally
 
   end;
+end;
+
+function TMainForm.TimeToString(tm: integer): string;
+begin
+ Result:=inttostr(tm);
+ if tm<10 then
+    begin
+    Result:='000'+Result;
+    Exit;
+    end;
+ if tm<100 then
+    begin
+    Result:='00'+Result;
+    Exit;
+    end;
+ if tm<1000 then
+    begin
+    Result:='0'+Result;
+    Exit;
+    end;
+
 end;
 
 //function TMainForm.NumberToString(Number: double; DigitNumber: word): string;

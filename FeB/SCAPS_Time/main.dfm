@@ -19,7 +19,7 @@ object MainForm: TMainForm
   TextHeight = 16
   object LFile: TLabel
     Left = 292
-    Top = 289
+    Top = 369
     Width = 238
     Height = 24
     Alignment = taCenter
@@ -34,7 +34,7 @@ object MainForm: TMainForm
   end
   object BtFileSelect: TButton
     Left = 8
-    Top = 285
+    Top = 365
     Width = 241
     Height = 34
     Caption = 'Process .iv file'
@@ -63,52 +63,54 @@ object MainForm: TMainForm
     OnClick = BtCloseClick
   end
   object GBTemp: TGroupBox
-    Left = 415
-    Top = 227
-    Width = 97
-    Height = 105
-    Caption = 'Temperature'
+    Left = 271
+    Top = 214
+    Width = 403
+    Height = 71
+    Caption = 'Parameters'
     TabOrder = 2
     object LTemp_start: TLabel
       Left = 11
       Top = 24
-      Width = 33
+      Width = 80
       Height = 16
-      Caption = 'Start:'
+      Caption = 'Temperature:'
     end
-    object LTemp_Finish: TLabel
-      Left = 3
-      Top = 46
-      Width = 38
-      Height = 16
-      Caption = 'Finish:'
+    object LActEnerg: TLabel
+      Left = 157
+      Top = 22
+      Width = 59
+      Height = 32
+      Caption = 'Activation energy'
+      WordWrap = True
     end
-    object LTemp_Step: TLabel
-      Left = 11
-      Top = 68
-      Width = 31
-      Height = 16
-      Caption = 'Step:'
+    object LDisPart: TLabel
+      Left = 281
+      Top = 20
+      Width = 71
+      Height = 32
+      Caption = 'Dissociation Part'
+      WordWrap = True
     end
     object STTemp_start: TStaticText
-      Left = 64
+      Left = 102
       Top = 24
       Width = 25
       Height = 20
       Caption = '300'
       TabOrder = 0
     end
-    object STTemp_Finish: TStaticText
-      Left = 63
-      Top = 47
+    object STActEnergy: TStaticText
+      Left = 233
+      Top = 31
       Width = 25
       Height = 20
       Caption = '350'
       TabOrder = 1
     end
-    object STTemp_Step: TStaticText
-      Left = 64
-      Top = 68
+    object STDisPart: TStaticText
+      Left = 360
+      Top = 28
       Width = 18
       Height = 20
       Caption = '10'
@@ -181,7 +183,7 @@ object MainForm: TMainForm
   end
   object BDatesDat: TButton
     Left = 8
-    Top = 433
+    Top = 489
     Width = 129
     Height = 48
     Caption = 'dates.dat convert'
@@ -197,7 +199,7 @@ object MainForm: TMainForm
   end
   object BFeB_x: TButton
     Left = 8
-    Top = 339
+    Top = 419
     Width = 130
     Height = 48
     Caption = 'Fe(x) and FeB(x) create'
@@ -212,8 +214,8 @@ object MainForm: TMainForm
     OnClick = BFeB_xClick
   end
   object GBFerum: TGroupBox
-    Left = 551
-    Top = 227
+    Left = 8
+    Top = 212
     Width = 240
     Height = 73
     Caption = 'Iron concentration, cm-3'
@@ -226,14 +228,14 @@ object MainForm: TMainForm
       Caption = 'Start:'
     end
     object LFe_Hi: TLabel
-      Left = 99
+      Left = 78
       Top = 24
       Width = 38
       Height = 16
       Caption = 'Finish:'
     end
     object LFe_steps: TLabel
-      Left = 173
+      Left = 149
       Top = 24
       Width = 31
       Height = 16
@@ -248,7 +250,7 @@ object MainForm: TMainForm
       TabOrder = 0
     end
     object STFe_Hi: TStaticText
-      Left = 99
+      Left = 78
       Top = 47
       Width = 25
       Height = 20
@@ -256,7 +258,7 @@ object MainForm: TMainForm
       TabOrder = 1
     end
     object STFe_steps: TStaticText
-      Left = 179
+      Left = 155
       Top = 47
       Width = 18
       Height = 20
@@ -266,7 +268,7 @@ object MainForm: TMainForm
   end
   object BDatesDatCorrect: TButton
     Left = 169
-    Top = 433
+    Top = 489
     Width = 130
     Height = 48
     Caption = 'correct dates.dat'
@@ -434,7 +436,7 @@ object MainForm: TMainForm
   end
   object BScapsFileCreate: TButton
     Left = 8
-    Top = 227
+    Top = 307
     Width = 228
     Height = 36
     Caption = '.scaps file create'
@@ -562,7 +564,7 @@ object MainForm: TMainForm
   end
   object RGIllumination: TRadioGroup
     Left = 662
-    Top = 306
+    Top = 354
     Width = 129
     Height = 105
     Caption = 'Illumination'

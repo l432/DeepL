@@ -27,6 +27,7 @@ type
    fTemperatura:double;
    fFileNumber:word;
    fSCAPSFileName:string;
+   fTimeAfter:integer;
    Constructor Create();
    Procedure Clear();
    Procedure Empty();
@@ -195,6 +196,12 @@ begin
      end;
     Exit;
   end;
+
+  if fSCAPSFileName<>'' then
+   begin
+     fTimeAfter:=StrToInt(Copy(fSCAPSFileName,AnsiPos('C',fSCAPSFileName)+1,4));
+     showmessage(inttostr(fTimeAfter));
+   end;
 
   for I := 0 to fDescription.Count - 1 do
      if AnsiStartsStr(fDescription[i], DataString) then
