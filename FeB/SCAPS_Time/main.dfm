@@ -186,7 +186,7 @@ object MainForm: TMainForm
     Top = 489
     Width = 129
     Height = 48
-    Caption = 'dates.dat convert'
+    Caption = 'IV.txt convert'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -20
@@ -198,8 +198,8 @@ object MainForm: TMainForm
     OnClick = BDatesDatClick
   end
   object BFeB_x: TButton
-    Left = 8
-    Top = 419
+    Left = 373
+    Top = 303
     Width = 130
     Height = 48
     Caption = 'Fe(x) and FeB(x) create'
@@ -266,35 +266,20 @@ object MainForm: TMainForm
       TabOrder = 2
     end
   end
-  object BDatesDatCorrect: TButton
-    Left = 169
-    Top = 489
-    Width = 130
-    Height = 48
-    Caption = 'correct dates.dat'
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -20
-    Font.Name = 'Tahoma'
-    Font.Style = [fsBold]
-    ParentFont = False
-    TabOrder = 7
-    WordWrap = True
-    OnClick = BDatesDatCorrectClick
-  end
   object GBFinal: TGroupBox
     Left = 600
     Top = 511
     Width = 231
     Height = 148
     Caption = 'Final'
-    TabOrder = 8
+    TabOrder = 7
     object BResult: TButton
       Left = 29
       Top = 53
       Width = 178
       Height = 71
       Caption = 'ResultAll.dat convert'
+      Enabled = False
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -20
@@ -312,7 +297,7 @@ object MainForm: TMainForm
     Width = 202
     Height = 120
     Caption = 'SBF layer'
-    TabOrder = 9
+    TabOrder = 8
     object LSBF_Conc: TLabel
       Left = 11
       Top = 19
@@ -376,7 +361,7 @@ object MainForm: TMainForm
     Width = 210
     Height = 120
     Caption = 'Emiter'
-    TabOrder = 10
+    TabOrder = 9
     object LEmiter_Conc: TLabel
       Left = 11
       Top = 19
@@ -446,7 +431,7 @@ object MainForm: TMainForm
     Font.Name = 'Tahoma'
     Font.Style = [fsBold]
     ParentFont = False
-    TabOrder = 11
+    TabOrder = 10
     WordWrap = True
     OnClick = BScapsFileCreateClick
   end
@@ -456,7 +441,7 @@ object MainForm: TMainForm
     Width = 724
     Height = 77
     Caption = 'Folder Select'
-    TabOrder = 12
+    TabOrder = 11
     object L_SCAPSF: TLabel
       Left = 323
       Top = 19
@@ -551,20 +536,20 @@ object MainForm: TMainForm
     Top = 564
     Width = 156
     Height = 48
-    Caption = 'all dates.dat convert'
+    Caption = 'all IV.txt convert'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -20
     Font.Name = 'Tahoma'
     Font.Style = [fsBold]
     ParentFont = False
-    TabOrder = 13
+    TabOrder = 12
     WordWrap = True
     OnClick = BAllDatesDatClick
   end
   object RGIllumination: TRadioGroup
-    Left = 662
-    Top = 354
+    Left = 706
+    Top = 214
     Width = 129
     Height = 105
     Caption = 'Illumination'
@@ -579,7 +564,7 @@ object MainForm: TMainForm
       'AM1.5'
       '940nm')
     ParentFont = False
-    TabOrder = 14
+    TabOrder = 13
   end
   object GBTime: TGroupBox
     Left = 14
@@ -587,7 +572,7 @@ object MainForm: TMainForm
     Width = 97
     Height = 105
     Caption = 'Time'
-    TabOrder = 15
+    TabOrder = 14
     object LTime_start: TLabel
       Left = 11
       Top = 24

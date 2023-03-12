@@ -42,6 +42,7 @@ type
                       FeLow:double=1e10;FeHi:double=1e13; StepNumber:integer=19);
    function NameIsPresent(NameStr:string):boolean;
    Procedure SCAPSFileNameDetermination(SCAPSFile:TStringList);
+   procedure NamesShow;
  end;
 
 implementation
@@ -129,6 +130,20 @@ begin
    Result:=(Result or (fName[i]=NameStr));
 end;
 
+procedure TIVparameter.NamesShow;
+ var temp:string;
+   i:integer;
+begin
+ temp:='';
+ if fName.Count>0
+   then
+     for I := 0 to fName.Count-1 do
+       temp:=temp+ fName[i]+#10
+   else
+    temp:='no names';
+ showmessage(temp);
+end;
+
 procedure TIVparameter.ParameterDetermination(DataString: String;
                       FeLow:double=1e10;FeHi:double=1e13; StepNumber:integer=19);
 var
@@ -191,17 +206,19 @@ begin
     Delete(DataString, 1, AnsiPos ('def\', DataString)+3);
      try
        fSCAPSFileName:=Copy(DataString, 1, AnsiPos ('.', DataString)-1);
+       fTimeAfter:=StrToInt(Copy(fSCAPSFileName,AnsiPos('C',fSCAPSFileName)+1,4));
+//       showmessage(inttostr(fTimeAfter));
      except
 
      end;
     Exit;
   end;
 
-  if fSCAPSFileName<>'' then
-   begin
-     fTimeAfter:=StrToInt(Copy(fSCAPSFileName,AnsiPos('C',fSCAPSFileName)+1,4));
-     showmessage(inttostr(fTimeAfter));
-   end;
+//  if fSCAPSFileName<>'' then
+//   begin
+//     fTimeAfter:=StrToInt(Copy(fSCAPSFileName,AnsiPos('C',fSCAPSFileName)+1,4));
+//     showmessage(inttostr(fTimeAfter));
+//   end;
 
   for I := 0 to fDescription.Count - 1 do
      if AnsiStartsStr(fDescription[i], DataString) then
@@ -234,35 +251,6 @@ begin
                     then  fData[i]:=FeValue[j];
 //                    showmessage(floattostr(FeValue[j]));
 
-
-//              if (AnsiPos('00',tempStr)>0) then fData[i]:=1.000000E+10;
-//              if (AnsiPos('01',tempStr)>0) then fData[i]:=3.162000E+10;
-//              if (AnsiPos('02',tempStr)>0) then fData[i]:=1.000000E+11;
-//              if (AnsiPos('03',tempStr)>0) then fData[i]:=3.162000E+11;
-//              if (AnsiPos('04',tempStr)>0) then fData[i]:=1.000000E+12;
-//              if (AnsiPos('05',tempStr)>0) then fData[i]:=3.162000E+12;
-//              if (AnsiPos('06',tempStr)>0) then fData[i]:=1.000000E+13;
-
-
-//              if (AnsiPos('00',tempStr)>0) then fData[i]:=1.000000E+10;
-//              if (AnsiPos('01',tempStr)>0) then fData[i]:=1.468000E+10;
-//              if (AnsiPos('02',tempStr)>0) then fData[i]:=2.154000E+10;
-//              if (AnsiPos('03',tempStr)>0) then fData[i]:=3.162000E+10;
-//              if (AnsiPos('04',tempStr)>0) then fData[i]:=4.642000E+10;
-//              if (AnsiPos('05',tempStr)>0) then fData[i]:=6.813000E+10;
-//              if (AnsiPos('06',tempStr)>0) then fData[i]:=1.000000E+11;
-//              if (AnsiPos('07',tempStr)>0) then fData[i]:=1.468000E+11;
-//              if (AnsiPos('08',tempStr)>0) then fData[i]:=2.154000E+11;
-//              if (AnsiPos('09',tempStr)>0) then fData[i]:=3.162000E+11;
-//              if (AnsiPos('10',tempStr)>0) then fData[i]:=4.642000E+11;
-//              if (AnsiPos('11',tempStr)>0) then fData[i]:=6.813000E+11;
-//              if (AnsiPos('12',tempStr)>0) then fData[i]:=1.000000E+12;
-//              if (AnsiPos('13',tempStr)>0) then fData[i]:=1.468000E+12;
-//              if (AnsiPos('14',tempStr)>0) then fData[i]:=2.154000E+12;
-//              if (AnsiPos('15',tempStr)>0) then fData[i]:=3.162000E+12;
-//              if (AnsiPos('16',tempStr)>0) then fData[i]:=4.642000E+12;
-//              if (AnsiPos('17',tempStr)>0) then fData[i]:=6.813000E+12;
-//              if (AnsiPos('18',tempStr)>0) then fData[i]:=1.000000E+13;
              end;
          end;
         Exit;
@@ -297,7 +285,7 @@ begin
      begin
        repeat
         Inc(Row);
-        if  ((Row>=SCAPSFile.Count) or (SCAPSFile[ROW]=''))
+        if  ((Row>=SCAPSFile.Count) or (SCAPSFile[ROW]='')) //or ( AnsiPos ('.grd', SCAPSFile[ROW])>0)
            then Break;
         SCAPSFile[ROW]:=SomeSpaceToOne(SCAPSFile[ROW]);
         Description:=Copy(SCAPSFile[ROW], 1, AnsiPos (':', SCAPSFile[ROW])-1);
@@ -307,7 +295,8 @@ begin
         if AnsiContainsStr(Name,'[') then
            Name:=Copy(Name,1,AnsiPos('[',Name)-1);
         Name:=Acronym(Name);
-        while NameIsPresent(Name) do  Name:=Name+'1';
+        if NameIsPresent(Name) then Continue;
+//        while NameIsPresent(Name) do  Name:=Name+'1';
         Add(Name,Description,'');
        until false;
      end;

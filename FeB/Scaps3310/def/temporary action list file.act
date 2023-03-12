@@ -5,7 +5,7 @@ Frequency :   1.0000e+06 Hz
 Number of points :   5
 dark :  0
 incident illumination specified
-incident spectrum from file :940nmSim.spe
+incident spectrum from file :AM1.5G ed2 1 sun.spe
 spectrum cut off :  0
 short wavelength cut off :   200.00 nm
 long wavelength cut off :  4000.00 nm

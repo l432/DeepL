@@ -5,32 +5,32 @@ interface
 uses
   Classes,OlegFunction,SomeFunction,OlegMath, OlegType;
 
-type TArguments=(aFe,aB,aT,aD);
-     TExtractedDataDark=(edn2);
-     TExtractedDataLight=(edVoc,edIsc,edFF,edEta);
+type TArguments=(aFe,aTime,aB,aT,aD);
+//     TExtractedDataDark=(edn2);
+     TExtractedDataLight=(edVoc,edIsc,edFF,edEta,edVmpp,edImpp);
 
 const
       DirectoryNames:array[TArguments]of string=
-      ('Iron','Boron','Temperature','Thickness');
+      ('Iron','TimeAfter','Boron','Temperature','Thickness');
       ShortDirectoryNames:array[TArguments]of string=
-       ('Fe','Bo','T','d');
+       ('Fe','Time','Bo','T','d');
       FileHeaderNames:array[TArguments]of string=
-       ('N_Fe','N_B','T','d');
+       ('N_Fe','Time','N_B','T','d');
 //      FileHeaderNew='nFsrh nFBsrh dnsrh nF nFB dn dnF dnFB';
       FileHeaderNew='JscF EtaF VocF FFF JscFB EtaFB VocFB FFFB eJsc eEta eVoc eFF';
 
       ParametersNames:array[TArguments]of string=
-       ('N_Fe','N_B','T','d');
+       ('N_Fe','Time','N_B','T','d');
       ParametersPsevdo:array[TArguments]of string=
-       ('TDD','N_B','T','d');
+       ('TDD','Time','N_B','T','d');
 
-      ExtractedDataDarkNames:array[TExtractedDataDark]of string=
-      ('n');
+//      ExtractedDataDarkNames:array[TExtractedDataDark]of string=
+//      ('n');
       ExtractedDataLightNames:array[TExtractedDataLight]of string=
-      ('Jsc', 'Eta','Voc','FF');
-      ExtractedDataDarkPsevdo:array[TExtractedDataDark]of string=('n2');
+      ('Jsc', 'Eta','Voc','FF','Vm','Jm');
+//      ExtractedDataDarkPsevdo:array[TExtractedDataDark]of string=('n2');
       ExtractedDataLightPsevdo:array[TExtractedDataLight]of string=
-      ('Jsc','eta','Voc','FF');
+      ('Jsc','eta','Voc','FF','Vmpp','Jmpp');
 
 type
 

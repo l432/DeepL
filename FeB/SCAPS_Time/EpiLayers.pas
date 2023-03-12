@@ -113,7 +113,7 @@ var
 implementation
 
 uses
-  System.SysUtils, main, OlegMaterialSamples;
+  System.SysUtils, main, OlegMaterialSamples, Vcl.Dialogs;
 
 
 Procedure EmiterGradingFileCreate(dn:double=0.39;
@@ -193,12 +193,14 @@ procedure TEpiLayersDistribution.AdaptBSF(dp, Na, Nb: double);
   var i:integer;
   y1,y2:double;
 begin
+
  if Na<>BSFConc then
    for I := 0 to 25 do
       fBSFLayerAdapted.Y[i]:=fBSFLayer.Y[i]/BSFConc*Na
                 else
    for I := 0 to 25 do
       fBSFLayerAdapted.Y[i]:=fBSFLayer.Y[i];
+
 
 
  if (Nb<>BaseCons)or(Na<>BSFConc) then
