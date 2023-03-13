@@ -1,7 +1,7 @@
 > SCAPS 3.3.10 ELIS-UGent: Version scaps3310.exe, dated 19-09-2021, 12:47:26
 > SCAPS All SCAPS Settings file, saved on 	19-09-2021 at 23:08:33
 > problem definition file loaded :
-> D:\Samples\DeepL\FeB\Scaps3310\def\FeBD38T340B1p400e15C1030.scaps
+> D:\Samples\DeepL\FeB\Scaps3310\def\FeBD38T340B1p400e15C2540.scaps
 > last saved: 	19-09-2021 at 22:59:51
 > 
 
@@ -296,7 +296,7 @@ Frequency :   1.0000e+06 Hz
 Number of points :   5
 dark :  0
 incident illumination specified
-incident spectrum from file :AM1.5G ed2 1 sun.spe
+incident spectrum from file :940nmSim.spe
 spectrum cut off :  0
 short wavelength cut off :   200.00 nm
 long wavelength cut off :  4000.00 nm
