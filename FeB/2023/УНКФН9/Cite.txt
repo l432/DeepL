@@ -1,0 +1,20 @@
+Multicrystalline float zone silicon with Fe and Mo impurities: Solar cell process and lifetime studies (English) 
+
+Coletti, G. / Geerligs, L.J. / Manshanden, P. / Riepe, S. / Warta, W. / Arumughan, J. / Kopecek, R.
+In: European Photovoltaic Solar Energy Conference, 21   ;  1277-1280  ;  2006
+
+    ISBN:
+    3-936338-20-5
+
+
+
+European Photovoltaic Solar Energy Conference. 21st European Photovoltaic Solar Energy Conference : Proceedings of the International Conference Held in Dresden Germany 4-8 September 2006. Mu?nchen Germany: WIP-Renewable Energies; 2006.
+
+@misc{etde_20838406,
+title = {Multicrystalline Float Zone Silicon with Fe and Mo Impurities. Solar Cell Process and Lifetime Studies}
+author = {Coletti, G, Geerligs, L J, Manshanden, P, Riepe, S, Warta, W, Arumughan, J, and Kopecek, R}
+abstractNote = {The aim of this work is to provide an updated reference of the incorporation and the impact of impurities on solar cells performance in the current process technology for monocrystalline and multicrystalline silicon (Si) wafers. Molybdenum (Mo) and iron (Fe) are introduced in the Si melt from which Float Zone (FZ) ingots are crystallised. The impurity concentration in the feedstock ranges from 2.6 to 900 ppma for Fe and from 25 to 2800 ppma for Mo. A major drop in Voc and IQE is visible for samples with the highest Mo level. Fe results in different behaviour in mono and multicrystalline FZ Si wafers. In monocrystalline wafers the solar cell process is able to largely remove the Fe from the Si-bulk for concentrations up to 54 ppma. In multicrystalline Si, for all the Fe-impurity levels investigated, the results are equivalent and comparable to the worst results obtained for industrial directionally solidified mc-Si reference wafers.}
+place = {Netherlands}
+year = {2006}
+month = {Sep}
+}
