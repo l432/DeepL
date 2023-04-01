@@ -2,7 +2,7 @@ object MainForm: TMainForm
   Left = 0
   Top = 0
   BorderIcons = [biSystemMenu, biMinimize]
-  Caption = 'SCAPS Conversion'
+  Caption = 'SCAPS Conversion Time'
   ClientHeight = 690
   ClientWidth = 843
   Color = clBtnFace
