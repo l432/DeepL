@@ -11,12 +11,13 @@ simultaneous :  0
 values from a list :  1
 logarithmic variation :  0
 values are file names :  1
-number of file names :   4
+number of file names :   5
 list of filenames saved :  0
 file   0:P00.grd
 file   1:P01.grd
 file   2:P02.grd
 file   3:P03.grd
+file   4:P04.grd
 
 Batch parameter 1 :
 
@@ -28,12 +29,13 @@ simultaneous :  1
 values from a list :  1
 logarithmic variation :  0
 values are file names :  1
-number of file names :   4
+number of file names :   5
 list of filenames saved :  0
 file   0:S00.grd
 file   1:S01.grd
 file   2:S02.grd
 file   3:S03.grd
+file   4:S04.grd
 
 Batch parameter 2 :
 
@@ -45,12 +47,13 @@ simultaneous :  1
 values from a list :  1
 logarithmic variation :  0
 values are file names :  1
-number of file names :   4
+number of file names :   5
 list of filenames saved :  0
 file   0:B00.grd
 file   1:B01.grd
 file   2:B02.grd
 file   3:B03.grd
+file   4:B04.grd
 
 Batch parameter 3 :
 
@@ -62,11 +65,12 @@ simultaneous :  1
 values from a list :  1
 logarithmic variation :  0
 values are file names :  1
-number of file names :   4
+number of file names :   5
 list of filenames saved :  0
 file   0:F00.grd
 file   1:F01.grd
 file   2:F02.grd
 file   3:F03.grd
+file   4:F04.grd
 
 >> end of batch settings file
