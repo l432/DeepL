@@ -1,12 +1,12 @@
 Name I01 n1 Rsh1 I02 n2 Rsh2 Rs Iph rmsre 
 DE Sqr Sqr 0 0 Sqr Sqr 0 0 0
 EBLSHADE Sqr 0 0 0 0 0 0 0 0
-ADELI 0 0 0 0 0 0 0 0 0
+ADELI Sqr 0 0 0 0 0 0 0 0
 NDE 0 0 0 0 0 0 0 Sqr Sqr
 MABC 0 Sqr 0 0 0 0 0 0 Sqr
 TLBO Sqr Sqr Sqr Sqr Sqr Sqr Sqr Sqr Sqr
 GOTLBO 0 0 0 0 0 Sqr 0 0 0
-STLBO 0 0 0 0 0 0 0 0 0
+STLBO Sqr 0 0 0 0 0 0 0 0
 PSO 0 0 0 0 0 0 0 0 Sqr
 IJAYA 0 0 0 0 Sqr 0 0 0 0
 ISCA 0 0 0 0 Sqr 0 0 0 Sqr
