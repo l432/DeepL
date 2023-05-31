@@ -1,0 +1,33 @@
+\begin{thebibliography}{3}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\providecommand{\bibinfo}[2]{#2}
+\ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
+%Type = Article
+\bibitem[{de~Castro et~al.(2010)de~Castro, Heier, N{\"u}esch, and
+  Hany}]{Castro2010}
+\bibinfo{author}{F.~A. de~Castro}, \bibinfo{author}{J.~Heier},
+  \bibinfo{author}{F.~A. N{\"u}esch}, \bibinfo{author}{R.~Hany},
+\newblock \bibinfo{title}{Origin of the kink in current-density versus voltage
+  curves and efficiency enhancement of polymer--{C}$_{60}$ heterojunction solar
+  cells},
+\newblock \bibinfo{journal}{IEEE J. Sel. Top. Quantum Electron.}
+  \bibinfo{volume}{16} (\bibinfo{year}{2010}) \bibinfo{pages}{1690--1699}.
+%Type = Article
+\bibitem[{Romero et~al.(2012)Romero, {del Pozo}, and
+  Arredondo}]{CastroSolution}
+\bibinfo{author}{B.~Romero}, \bibinfo{author}{G.~{del Pozo}},
+  \bibinfo{author}{B.~Arredondo},
+\newblock \bibinfo{title}{Exact analytical solution of a two diode circuit
+  model for organic solar cells showing {S}--shape using {L}ambert
+  {W}--functions},
+\newblock \bibinfo{journal}{Sol. Energy} \bibinfo{volume}{86}
+  (\bibinfo{year}{2012}) \bibinfo{pages}{3026--3029}.
+%Type = Article
+\bibitem[{Lóczi(2022)}]{LambertNew}
+\bibinfo{author}{L.~Lóczi},
+\newblock \bibinfo{title}{Guaranteed- and high-precision evaluation of the
+  {L}ambert {W} function},
+\newblock \bibinfo{journal}{Appl. Math. Comput.} \bibinfo{volume}{433}
+  (\bibinfo{year}{2022}) \bibinfo{pages}{127406}.
+
+\end{thebibliography}

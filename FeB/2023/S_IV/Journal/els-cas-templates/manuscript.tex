@@ -101,7 +101,53 @@ SCAPS \sep Iron contamination \sep Machine learning
 \maketitle
 
 % Main text
-\section{}\label{}
+\section{Introduction}\label{}
+
+
+\section{Solar cell model}\label{}
+Fig.~\ref{fig_chem}
+vividly reveals the structure of the used model \cite{Castro2010}. 
+It can be seen from the figure that model contains a current source accompanied by a diode D1, a shunt
+resistor $R_\mathrm{p1}$ to show the leakage current, and a series resistor $R_\mathrm{s}$ to consider the
+losses associated with the load current.
+Besides, the second diode D2 with a second parallel resistance $R_\mathrm{p2}$ is placed opposite to the first one and is essential to
+simulate the non-ideal effects of the active layer/cathode interface.
+In this model, D1 is responsible for the exponential behavior of the I--V curve,
+the main contribution of D2 is to simulate the S--shape.
+The analytical solution $V(I)$ of the opposed two--diode equivalent circuit model was
+ obtained \cite{CastroSolution} using Lambert $W$-function \cite{LambertNew}:
+
+
+\begin{figure}[]
+	\centering
+		\includegraphics[width=0.9\columnwidth]{Chem}
+	  \caption{The opposed two--diode equivalent--circuit model of a solar cell.}\label{fig_chem}
+\end{figure}
+
+
+\begin{eqnarray}
+% \nonumber to remove numbering (before each equation)
+\label{eqIV_W}
+V&=& (I+I_\mathrm{ph}+I_{01})R_\mathrm{p1} \nonumber \\
+  &&-\frac{n_1kT}{q}W\left\{\frac{qI_{01}R_\mathrm{p1}}{n_1kT}\exp\left[\frac{qR_\mathrm{p1}(I+I_\mathrm{ph}+I_{01})}{n_1kT}\right]\right\} \nonumber \\
+  &&+\frac{n_2kT}{q}W\left\{\frac{qI_{02}R_\mathrm{p2}}{n_2kT}\exp\left[-\frac{qR_\mathrm{p2}(I-I_{02})}{n_2kT}\right]\right\} \nonumber \\
+  &&+(I-I_{02})R_\mathrm{p2}+IR_\mathrm{s}\,,
+\end{eqnarray}
+where
+$I_{01}$ and $I_{02}$ are the saturation currents and 
+$n_1$ and $n_2$ are
+the ideality factors for D1 and D2 respectively, 
+and $I_\mathrm{ph}$ is the ideal photocurrent.
+Thus, the model employs eight lumped parameters 
+($I_{01}$, $n_1$, $R_\mathrm{p1}$, $I_{02}$, $n_2$, $R_\mathrm{p2}$,
+$R_\mathrm{s}$, and $I_\mathrm{ph}$)
+that need to be determined from the I-V curve.
+
+The expression~(\ref{eqIV_W}) has a drawback in that it tends to stray from the range of numbers that can be accommodated by the standard 64-bit floating-point format owing to the presence of exponential functions for larger numbers.
+To overcome this drawback, the use of the $g$--function $g(x)=\ln(W(\exp(x)))$ was suggested.
+
+
+
 
 In our previous work, we have shown that the SC ideality factor value ($n$) can be used to estimate the iron concentration ($N_{\mathrm{Fe}}$).
 It should be noted that the ideality factor is quite often  used to characterize the various
@@ -237,11 +283,9 @@ Fours, the DNN testing.
 %\printcredits
 
 %% Loading bibliography style file
-%\bibliographystyle{model1-num-names}
-\bibliographystyle{cas-model2-names}
-
-% Loading bibliography database
-\bibliography{}
+%\bibliographystyle{elsarticle-num-names}
+\bibliographystyle{model1-num-names}
+\bibliography{olikh_Methods}
 
 
 \end{document}
