@@ -101,12 +101,12 @@ SCAPS \sep Iron contamination \sep Machine learning
 \maketitle
 
 % Main text
-\section{Introduction}\label{}
+\section{Introduction}\label{Int}
 
-
-\section{Solar cell model}\label{}
+\section{Models and Methods}\label{MM}
+\subsection{Solar cell model}\label{SCModel}
 Fig.~\ref{fig_chem}
-vividly reveals the structure of the used model \cite{Castro2010}. 
+vividly reveals the structure of the used model \cite{Castro2010}.
 It can be seen from the figure that model contains a current source accompanied by a diode D1, a shunt
 resistor $R_\mathrm{p1}$ to show the leakage current, and a series resistor $R_\mathrm{s}$ to consider the
 losses associated with the load current.
@@ -134,55 +134,54 @@ V&=& (I+I_\mathrm{ph}+I_{01})R_\mathrm{p1} \nonumber \\
   &&+(I-I_{02})R_\mathrm{p2}+IR_\mathrm{s}\,,
 \end{eqnarray}
 where
-$I_{01}$ and $I_{02}$ are the saturation currents and 
+$I_{01}$ and $I_{02}$ are the saturation currents and
 $n_1$ and $n_2$ are
-the ideality factors for D1 and D2 respectively, 
+the ideality factors for D1 and D2 respectively,
 and $I_\mathrm{ph}$ is the ideal photocurrent.
-Thus, the model employs eight lumped parameters 
+Thus, the model employs eight lumped parameters
 ($I_{01}$, $n_1$, $R_\mathrm{p1}$, $I_{02}$, $n_2$, $R_\mathrm{p2}$,
 $R_\mathrm{s}$, and $I_\mathrm{ph}$)
 that need to be determined from the I-V curve.
 
 The expression~(\ref{eqIV_W}) has a drawback in that it tends to stray from the range of numbers that can be accommodated by the standard 64-bit floating-point format owing to the presence of exponential functions for larger numbers.
-To overcome this drawback, the use of the $g$--function $g(x)=\ln(W(\exp(x)))$ was suggested.
+To overcome this drawback, the use of the $g$--function $g(x)=\ln(W(\exp(x)))$ was suggested \cite{roberts2015calculating}.
+The analytical solution $V(I)$ using the $g$--function is as follows \cite{roberts2015calculating}
+\begin{equation}
+\label{eqIV_g}
+\begin{split}
+V(I)= &IR_\mathrm{s}+\frac{n_1kT}{q}g(x_1)-\frac{n_2kT}{q}g(x_2) \\
+  &-\frac{n_1kT}{q}\ln\left[\frac{qI_{01}R_\mathrm{p1}}{n_1kT}\right] +\frac{n_2kT}{q}\ln\left[\frac{qI_{02}R_\mathrm{p2}}{n_2kT}\right]\,,
+\end{split}
+\end{equation}
+with
+\begin{equation}
+\label{eqx1}
+x_1= \ln\left(\frac{qI_{01}R_\mathrm{p1}}{n_1kT}\right)+\frac{q(I+I_\mathrm{ph}+I_{01})R_\mathrm{p1}}{n_1kT}\,,
+\end{equation}
+and
+\begin{equation}
+\label{eqx2}
+x_2= \ln\left(\frac{qI_{02}R_\mathrm{p2}}{n_2kT}\right)-\frac{q(I-I_{02})R_\mathrm{p2}}{n_2kT}\,.
+\end{equation}
+We used Eqs.~(\ref{eqIV_g})--(\ref{eqx2}) both for simulation I--V curves and during the approximation procedure.
+The $g$--function was evaluated by using iterative procedure \cite{roberts2015calculating}.
+
+\subsection{Meta-heuristic algorithms}\label{MHA}
+In the literature, meta-heuristics are frequently categorized based on their sources of inspiration. 
+This categorization involves incorporating elements of true simulations and principles that incorporate stochasticity, 
+with the objective of emulating diverse characteristics observed in biological behavior, the lives of creatures in nature, human behavior, or natural phenomena.
+On this basis, any meta-heuristic algorithm can fall into one of the following main classes \cite{WhiteShark,Gannet}:
+evolution-based methods (emulate the principles of evolutionary behavior observed in creatures in nature by relying on the concept of survival of the fittest), 
+swarm intelligence-based methods (simulate the collective, dynamic, intelligent, and concerted gregarious conduct of collections of flocks or communities found in nature), 
+%nature-based methods, 
+chemical \& physical-based methods (simulate physical phenomena or chemical laws existed in the universe), 
+human-society-based methods (inspired by human beings, including physical and non--physical
+activities such as thinking and social behavior), 
+and math-based methods.
 
 
 
-
-In our previous work, we have shown that the SC ideality factor value ($n$) can be used to estimate the iron concentration ($N_{\mathrm{Fe}}$).
-It should be noted that the ideality factor is quite often  used to characterize the various
-semiconductor barrier structures.
-However, a defect's signature in an ideality factor is convoluted with those from so many other physical processes.
-As a result, obtained analytic expressions $N_{\mathrm{Fe}}=f(n)$ are not general and the numerous grading curves are required to determine $N_{\mathrm{Fe}}$;
-besides the IV measurements over a temperature range are necessary.
-On the other hand, in the last decade, the deep learning, which enables to solve problems without clear algorithmization, have been successfully used in various fields of theoretical and applied physics.
-Furthermore, materials informatics
-(combination of material property calculations/measurements and informatics algorithms)
-has been asserted to become the fourth (along with theory, simulations, and experiments) paradigm of science.
-The aim of this work is to apply the deep learning approach for predicting of the iron concentration from ideality factor
-(so to say "deep learning for deep levels").
-Further, unlike in previous work, the back surface field (BSF) $n^+$--$p$--$p^+$ structure was under consideration
-and the influence of the base thickness on ideality factor was taken into account as well.
-
-As the approximation to the practical using, the paper considers a fairly simple system
-which consists of crystalline silicon (c-Si) SC  and iron impurity.
-However, the system is important in practice.
-Silicon solar cells constitute ~90\% of current global production capacity and
-BSF  is one of  popular designs used for industrial mass production of c-Si SCs .
-Iron is a major as well as one of the most detrimental metallic impurities in c-Si SCs .
-The flowchart of the used heuristic approach is shown in Fig.~\ref{fig_chem}.
-The following constituents can be distinguished.
-First, the dark IV characteristics are simulated for SCs with both known contaminant composition and various parameters.
-In our numerical simulation we applied SCAPS-1D,
-which widely used to model solar cells .
-Second, the obtained characteristic is fitted according to the double-diode model and the ideality factor is estimated.
-As a result of aforesaid steps, the labeled datasets were produced.
-Obviously, the labeled dataset from experimental IVs  would be preferable,
-but it is practically difficult to find the thousands of samples with the required parameters.
-Third, the training of deep neural network (DNN) to estimate an iron contamination  by using SC's base thickness, doping level,
-temperature, and ideality factor value.
-Fours, the DNN testing.
-
+%перекласти на англійську "Ми використовували формули (1)-(3) як для моделювання кривих, так і під час процедури апроксимації."
 
 % Numbered list
 % Use the style of numbering in square brackets.
@@ -241,41 +240,9 @@ Fours, the DNN testing.
 %% appendix sections are then done as normal sections
 %% \appendix
 
-\section{}\label{}
+%\section{}\label{}
 
-In our previous work, we have shown that the SC ideality factor value ($n$) can be used to estimate the iron concentration ($N_{\mathrm{Fe}}$).
-It should be noted that the ideality factor is quite often  used to characterize the various
-semiconductor barrier structures.
-However, a defect's signature in an ideality factor is convoluted with those from so many other physical processes.
-As a result, obtained analytic expressions $N_{\mathrm{Fe}}=f(n)$ are not general and the numerous grading curves are required to determine $N_{\mathrm{Fe}}$;
-besides the IV measurements over a temperature range are necessary.
-On the other hand, in the last decade, the deep learning, which enables to solve problems without clear algorithmization, have been successfully used in various fields of theoretical and applied physics.
-Furthermore, materials informatics
-(combination of material property calculations/measurements and informatics algorithms)
-has been asserted to become the fourth (along with theory, simulations, and experiments) paradigm of science.
-The aim of this work is to apply the deep learning approach for predicting of the iron concentration from ideality factor
-(so to say "deep learning for deep levels").
-Further, unlike in previous work, the back surface field (BSF) $n^+$--$p$--$p^+$ structure was under consideration
-and the influence of the base thickness on ideality factor was taken into account as well.
 
-As the approximation to the practical using, the paper considers a fairly simple system
-which consists of crystalline silicon (c-Si) SC  and iron impurity.
-However, the system is important in practice.
-Silicon solar cells constitute ~90\% of current global production capacity and
-BSF  is one of  popular designs used for industrial mass production of c-Si SCs .
-Iron is a major as well as one of the most detrimental metallic impurities in c-Si SCs .
-The flowchart of the used heuristic approach is shown in Fig.~\ref{fig_chem}.
-The following constituents can be distinguished.
-First, the dark IV characteristics are simulated for SCs with both known contaminant composition and various parameters.
-In our numerical simulation we applied SCAPS-1D,
-which widely used to model solar cells .
-Second, the obtained characteristic is fitted according to the double-diode model and the ideality factor is estimated.
-As a result of aforesaid steps, the labeled datasets were produced.
-Obviously, the labeled dataset from experimental IVs  would be preferable,
-but it is practically difficult to find the thousands of samples with the required parameters.
-Third, the training of deep neural network (DNN) to estimate an iron contamination  by using SC's base thickness, doping level,
-temperature, and ideality factor value.
-Fours, the DNN testing.
 
 
 

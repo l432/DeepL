@@ -1,4 +1,4 @@
-\begin{thebibliography}{3}
+\begin{thebibliography}{6}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\bibinfo}[2]{#2}
 \ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
@@ -29,5 +29,29 @@
   {L}ambert {W} function},
 \newblock \bibinfo{journal}{Appl. Math. Comput.} \bibinfo{volume}{433}
   (\bibinfo{year}{2022}) \bibinfo{pages}{127406}.
+%Type = Misc
+\bibitem[{Roberts and Valluri(2015)}]{roberts2015calculating}
+\bibinfo{author}{K.~Roberts}, \bibinfo{author}{S.~R. Valluri},
+  \bibinfo{title}{On calculating the current-voltage characteristic of
+  multi-diode models for organic solar cells}, \bibinfo{year}{2015}.
+%Type = Article
+\bibitem[{Braik et~al.(2022)Braik, Hammouri, Atwan, Al-Betar, and
+  Awadallah}]{WhiteShark}
+\bibinfo{author}{M.~Braik}, \bibinfo{author}{A.~Hammouri},
+  \bibinfo{author}{J.~Atwan}, \bibinfo{author}{M.~A. Al-Betar},
+  \bibinfo{author}{M.~A. Awadallah},
+\newblock \bibinfo{title}{White shark optimizer: A novel bio-inspired
+  meta-heuristic algorithm for global optimization problems},
+\newblock \bibinfo{journal}{Knowledge-Based Systems} \bibinfo{volume}{243}
+  (\bibinfo{year}{2022}) \bibinfo{pages}{108457}.
+%Type = Article
+\bibitem[{Pan et~al.(2022)Pan, Zhang, Wang, Snášel, and Chu}]{Gannet}
+\bibinfo{author}{J.-S. Pan}, \bibinfo{author}{L.-G. Zhang},
+  \bibinfo{author}{R.-B. Wang}, \bibinfo{author}{V.~Snášel},
+  \bibinfo{author}{S.-C. Chu},
+\newblock \bibinfo{title}{Gannet optimization algorithm : A new metaheuristic
+  algorithm for solving engineering optimization problems},
+\newblock \bibinfo{journal}{Math. Comput. Simulation} \bibinfo{volume}{202}
+  (\bibinfo{year}{2022}) \bibinfo{pages}{343--373}.
 
 \end{thebibliography}
