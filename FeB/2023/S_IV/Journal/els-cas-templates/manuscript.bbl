@@ -1,4 +1,4 @@
-\begin{thebibliography}{6}
+\begin{thebibliography}{7}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\bibinfo}[2]{#2}
 \ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
@@ -53,5 +53,13 @@
   algorithm for solving engineering optimization problems},
 \newblock \bibinfo{journal}{Math. Comput. Simulation} \bibinfo{volume}{202}
   (\bibinfo{year}{2022}) \bibinfo{pages}{343--373}.
+%Type = Article
+\bibitem[{Zhao et~al.(2022)Zhao, Zhang, Ma, and Chen}]{Dandelion}
+\bibinfo{author}{S.~Zhao}, \bibinfo{author}{T.~Zhang}, \bibinfo{author}{S.~Ma},
+  \bibinfo{author}{M.~Chen},
+\newblock \bibinfo{title}{Dandelion optimizer: A nature-inspired metaheuristic
+  algorithm for engineering applications},
+\newblock \bibinfo{journal}{Eng. Appl. Artif. Intell.} \bibinfo{volume}{114}
+  (\bibinfo{year}{2022}) \bibinfo{pages}{105075}.
 
 \end{thebibliography}
