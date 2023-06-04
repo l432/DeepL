@@ -142,6 +142,7 @@ Thus, the model employs eight lumped parameters
 ($I_{01}$, $n_1$, $R_\mathrm{p1}$, $I_{02}$, $n_2$, $R_\mathrm{p2}$,
 $R_\mathrm{s}$, and $I_\mathrm{ph}$)
 that need to be determined from the I-V curve.
+Thus, from an optimization perspective, the dimension of the problem is $D=8$.
 
 The expression~(\ref{eqIV_W}) has a drawback in that it tends to stray from the range of numbers that can be accommodated by the standard 64-bit floating-point format owing to the presence of exponential functions for larger numbers.
 To overcome this drawback, the use of the $g$--function $g(x)=\ln(W(\exp(x)))$ was suggested \cite{roberts2015calculating}.
@@ -177,14 +178,47 @@ bio--based methods (use biological processes unrelated to group behavior),
 chemical \& physical--based methods (originate from the physical phenomena or chemical laws that exist in the universe),
 human-society--based methods (inspired by human beings, including various activities such as thinking and social behavior),
 and math--based methods (borrow the mathematical functions).
+Generally, there are hundreds of meta-heuristic optimization methods available.
+While we acknowledge that our selection may not be fully comprehensive,  
+we utilized 14 methods, representing all classes mentioned above, 
+to tackle the parameter estimation task within the framework of the opposed two-diode model for a solar cell.
+Hereafter, we provide a succinct description of each method alongside the parameters employed during the fitting process.
 
+\emph{Differential evolution} (\textbf{DE}).
+DE is one of the classical methods, 
+and  it is based on the natural selection law and uses the randomly generated initial population, 
+differential mutation, and probability crossover \cite{DEWang}. 
+During the implementation, we employed a penalty function suggested by Ishaque \emph{et al} \cite{P-DE_Ishaque}. 
+Besides, according to Wang and Ye \cite{DEWang}, the values of mutation scaling factor $F=0.8$,
+crossover rate $C\!r=0.3$, and population size $N\!p=8\times D=64$ were used in this work.
 
+\emph{Adaptive differential evolution with the Lagrange interpolation argument} (\textbf{ADELI}).
+The method is based on DE, which integrates an adaptive local search scheme with Lagrange interpolation \cite{ADELI}. 
+This incorporation aims to enhance the exploitation capability and accelerate the convergence speed.
+In ADELI, the scaling factor and crossover rate are set to self--adapting to optimize the results. 
+We used parameter values recommended by Huang \emph{et al} \cite{ADELI} during the implementation process. 
+Additionally, we set $N\!p$ to 64 for our numerical experiments.
+
+\emph{Differential evolution with neighborhood--based adaptive evolution mechanism} (\textbf{NDE}).
+The method uses a mutation strategy, which takes into account neighborhood and individual information, and an adaptive evolution mechanism \cite{NDE}.
+The determination of $F$ and $C\!r$ values is achieved through the utilization of the weighted adaptive procedure \cite{Tanabe2014},
+and an adaptive adjustment of the population size is implemented using a simple reduction method (from $10\times D=80$ to 5).
+
+\emph{Success history based DE with hybridization mutation strategies and population size reduction} (\textbf{EBLSHADE}).
+The method is the hybridization framework between \emph{pbest} and \emph{ord\_pbest} mutation strategies 
+and stores a set of $Cr$ and $F$ values that have performed well in the recent past \cite{EBLSHADE}. 
+A linear $N\!p$ reduction (from $18\times D=144$ to 4) is used as well.
 
 
 %Neural network algorithm (NNA) is one of the newest meta-heuristic algorithms, which is inspired
 %by biological nervous systems and artificial neural networks.
 
-%перекласти на англійську "Опираються на біологічні процеси, не пов'язані з груповою поведінкою."
+%the maximum number of function evaluations (FEs) is set to 3000  D.
+
+
+%перекласти на англійську "під час реалізації цих процедур ми використовувати значення параметрів, запропоновані в роботі [3], та Np=64 "
+
+%покращити стилістику, виправити граматичні та стилістичні помилки, використовуючи стиль наукової статті "The method is based on DE by incorporating an adaptive local search scheme with Lagrange interpolation to enhance the exploitation capability to accelerate the convergence speed."
 
 % Numbered list
 % Use the style of numbering in square brackets.
@@ -197,9 +231,9 @@ and math--based methods (borrow the mathematical functions).
 
 % Unnumbered list
 %\begin{itemize}
-%\item
-%\item
-%\item
+%\item ff
+%\item ff
+%\item ff
 %\end{itemize}
 
 % Description list

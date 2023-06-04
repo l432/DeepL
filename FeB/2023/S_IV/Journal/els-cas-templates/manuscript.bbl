@@ -1,4 +1,4 @@
-\begin{thebibliography}{7}
+\begin{thebibliography}{13}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\bibinfo}[2]{#2}
 \ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
@@ -61,5 +61,52 @@
   algorithm for engineering applications},
 \newblock \bibinfo{journal}{Eng. Appl. Artif. Intell.} \bibinfo{volume}{114}
   (\bibinfo{year}{2022}) \bibinfo{pages}{105075}.
+%Type = Article
+\bibitem[{Wang and Ye(2009)}]{DEWang}
+\bibinfo{author}{K.~Wang}, \bibinfo{author}{M.~Ye},
+\newblock \bibinfo{title}{Parameter determination of {S}chottky--barrier diode
+  model using differential evolution},
+\newblock \bibinfo{journal}{Solid-State Electron.} \bibinfo{volume}{53}
+  (\bibinfo{year}{2009}) \bibinfo{pages}{234--240}.
+%Type = Article
+\bibitem[{Ishaque et~al.(2011)Ishaque, Salam, Taheri, and
+  Shamsudin}]{P-DE_Ishaque}
+\bibinfo{author}{K.~Ishaque}, \bibinfo{author}{Z.~Salam},
+  \bibinfo{author}{H.~Taheri}, \bibinfo{author}{A.~Shamsudin},
+\newblock \bibinfo{title}{A critical evaluation of ea computational methods for
+  photovoltaic cell parameter extraction based on two diode model},
+\newblock \bibinfo{journal}{Solar Energy} \bibinfo{volume}{85}
+  (\bibinfo{year}{2011}) \bibinfo{pages}{1768--1779}.
+%Type = Article
+\bibitem[{Huang et~al.(2019)Huang, Zhang, Song, Zhang, and Shi}]{ADELI}
+\bibinfo{author}{Q.~Huang}, \bibinfo{author}{K.~Zhang},
+  \bibinfo{author}{J.~Song}, \bibinfo{author}{Y.~Zhang},
+  \bibinfo{author}{J.~Shi},
+\newblock \bibinfo{title}{Adaptive differential evolution with a lagrange
+  interpolation argument algorithm},
+\newblock \bibinfo{journal}{Inform. Sci.} \bibinfo{volume}{472}
+  (\bibinfo{year}{2019}) \bibinfo{pages}{180--202}.
+%Type = Article
+\bibitem[{Tian and Gao(2019)}]{NDE}
+\bibinfo{author}{M.~Tian}, \bibinfo{author}{X.~Gao},
+\newblock \bibinfo{title}{Differential evolution with neighborhood-based
+  adaptive evolution mechanism for numerical optimization},
+\newblock \bibinfo{journal}{Inform. Sci.} \bibinfo{volume}{478}
+  (\bibinfo{year}{2019}) \bibinfo{pages}{422--448}.
+%Type = Inproceedings
+\bibitem[{Tanabe and Fukunaga(2014)}]{Tanabe2014}
+\bibinfo{author}{R.~Tanabe}, \bibinfo{author}{A.~S. Fukunaga},
+\newblock \bibinfo{title}{Improving the search performance of shade using
+  linear population size reduction},
+\newblock in: \bibinfo{booktitle}{2014 IEEE Congress on Evolutionary
+  Computation (CEC)}, pp. \bibinfo{pages}{1658--1665}.
+%Type = Article
+\bibitem[{Mohamed et~al.(2019)Mohamed, Hadi, and Jambi}]{EBLSHADE}
+\bibinfo{author}{A.~W. Mohamed}, \bibinfo{author}{A.~A. Hadi},
+  \bibinfo{author}{K.~M. Jambi},
+\newblock \bibinfo{title}{Novel mutation strategy for enhancing {SHADE} and
+  {LSHADE} algorithms for global numerical optimization},
+\newblock \bibinfo{journal}{Swarm Evol. Comput.} \bibinfo{volume}{50}
+  (\bibinfo{year}{2019}) \bibinfo{pages}{100455}.
 
 \end{thebibliography}
