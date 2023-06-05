@@ -1,4 +1,4 @@
-\begin{thebibliography}{13}
+\begin{thebibliography}{27}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\bibinfo}[2]{#2}
 \ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
@@ -108,5 +108,111 @@
   {LSHADE} algorithms for global numerical optimization},
 \newblock \bibinfo{journal}{Swarm Evol. Comput.} \bibinfo{volume}{50}
   (\bibinfo{year}{2019}) \bibinfo{pages}{100455}.
+%Type = Article
+\bibitem[{Ye et~al.(2009)Ye, Wang, and Xu}]{PSO}
+\bibinfo{author}{M.~Ye}, \bibinfo{author}{X.~Wang}, \bibinfo{author}{Y.~Xu},
+\newblock \bibinfo{title}{{Parameter extraction of solar cells using particle
+  swarm optimization}},
+\newblock \bibinfo{journal}{J. Appl. Phys.} \bibinfo{volume}{105}
+  (\bibinfo{year}{2009}) \bibinfo{pages}{094502}.
+%Type = Article
+\bibitem[{Karaboga et~al.(2013)Karaboga, Kockanat, and Dogan}]{MABC}
+\bibinfo{author}{N.~Karaboga}, \bibinfo{author}{S.~Kockanat},
+  \bibinfo{author}{H.~Dogan},
+\newblock \bibinfo{title}{The parameter extraction of the thermally annealed
+  schottky barrier diode using the modified artificial bee colony},
+\newblock \bibinfo{journal}{Appl. Intell.} \bibinfo{volume}{38}
+  (\bibinfo{year}{2013}) \bibinfo{pages}{279--288}.
+%Type = Article
+\bibitem[{Mirjalili and Lewis(2016)}]{WOA}
+\bibinfo{author}{S.~Mirjalili}, \bibinfo{author}{A.~Lewis},
+\newblock \bibinfo{title}{The whale optimization algorithm},
+\newblock \bibinfo{journal}{Adv. Eng. Software} \bibinfo{volume}{95}
+  (\bibinfo{year}{2016}) \bibinfo{pages}{51--67}.
+%Type = Article
+\bibitem[{Oliva et~al.(2017)Oliva, {Abd El Aziz}, and {Ella Hassanien}}]{CWOA}
+\bibinfo{author}{D.~Oliva}, \bibinfo{author}{M.~{Abd El Aziz}},
+  \bibinfo{author}{A.~{Ella Hassanien}},
+\newblock \bibinfo{title}{Parameter estimation of photovoltaic cells using an
+  improved chaotic whale optimization algorithm},
+\newblock \bibinfo{journal}{Appl. Energy} \bibinfo{volume}{200}
+  (\bibinfo{year}{2017}) \bibinfo{pages}{141--154}.
+%Type = Article
+\bibitem[{Sadollah et~al.(2018)Sadollah, Sayyaadi, and Yadav}]{NNA}
+\bibinfo{author}{A.~Sadollah}, \bibinfo{author}{H.~Sayyaadi},
+  \bibinfo{author}{A.~Yadav},
+\newblock \bibinfo{title}{A dynamic metaheuristic optimization model inspired
+  by biological nervous systems: Neural network algorithm},
+\newblock \bibinfo{journal}{Appl. Soft Comput.} \bibinfo{volume}{71}
+  (\bibinfo{year}{2018}) \bibinfo{pages}{747--782}.
+%Type = Article
+\bibitem[{Patel et~al.(2014)Patel, Panchal, and Kheraj}]{TLBO_Patel}
+\bibinfo{author}{S.~J. Patel}, \bibinfo{author}{A.~K. Panchal},
+  \bibinfo{author}{V.~Kheraj},
+\newblock \bibinfo{title}{Extraction of solar cell parameters from a single
+  current--voltage characteristic using teaching learning based optimization
+  algorithm},
+\newblock \bibinfo{journal}{Applied Energy} \bibinfo{volume}{119}
+  (\bibinfo{year}{2014}) \bibinfo{pages}{384--393}.
+%Type = Article
+\bibitem[{Chen et~al.(2016)Chen, Yu, Du, Zhao, and Liu}]{GOTLBO}
+\bibinfo{author}{X.~Chen}, \bibinfo{author}{K.~Yu}, \bibinfo{author}{W.~Du},
+  \bibinfo{author}{W.~Zhao}, \bibinfo{author}{G.~Liu},
+\newblock \bibinfo{title}{Parameters identification of solar cell models using
+  generalized oppositional teaching learning based optimization},
+\newblock \bibinfo{journal}{Energy} \bibinfo{volume}{99} (\bibinfo{year}{2016})
+  \bibinfo{pages}{170--180}.
+%Type = Article
+\bibitem[{Niu et~al.(2014)Niu, Zhang, and Li}]{STLBO}
+\bibinfo{author}{Q.~Niu}, \bibinfo{author}{H.~Zhang}, \bibinfo{author}{K.~Li},
+\newblock \bibinfo{title}{An improved {TLBO} with elite strategy for parameters
+  identification of {PEM} fuel cell and solar cell models},
+\newblock \bibinfo{journal}{Int. J. Hydrogen Energy} \bibinfo{volume}{39}
+  (\bibinfo{year}{2014}) \bibinfo{pages}{3837--3854}.
+%Type = Article
+\bibitem[{Zheng(2015)}]{WW}
+\bibinfo{author}{Y.-J. Zheng},
+\newblock \bibinfo{title}{Water wave optimization: A new nature-inspired
+  metaheuristic},
+\newblock \bibinfo{journal}{Comput. Oper. Res.} \bibinfo{volume}{55}
+  (\bibinfo{year}{2015}) \bibinfo{pages}{1--11}.
+%Type = Article
+\bibitem[{Rao(2016)}]{JAYA}
+\bibinfo{author}{R.~Rao},
+\newblock \bibinfo{title}{Jaya: A simple and new optimization algorithm for
+  solving constrained and unconstrained optimization problems},
+\newblock \bibinfo{journal}{International Journal of Industrial Engineering
+  Computations} \bibinfo{volume}{7} (\bibinfo{year}{2016})
+  \bibinfo{pages}{19--34}.
+%Type = Article
+\bibitem[{Yu et~al.(2017)Yu, Liang, Qu, Chen, and Wang}]{IJAYA}
+\bibinfo{author}{K.~Yu}, \bibinfo{author}{J.~Liang}, \bibinfo{author}{B.~Qu},
+  \bibinfo{author}{X.~Chen}, \bibinfo{author}{H.~Wang},
+\newblock \bibinfo{title}{Parameters identification of photovoltaic models
+  using an improved {JAYA} optimization algorithm},
+\newblock \bibinfo{journal}{Energy Conversion and Management}
+  \bibinfo{volume}{150} (\bibinfo{year}{2017}) \bibinfo{pages}{742--753}.
+%Type = Article
+\bibitem[{Mirjalili(2016)}]{SCA}
+\bibinfo{author}{S.~Mirjalili},
+\newblock \bibinfo{title}{{SCA}: A sine cosine algorithm for solving
+  optimization problems},
+\newblock \bibinfo{journal}{Knowledge-Based Systems} \bibinfo{volume}{96}
+  (\bibinfo{year}{2016}) \bibinfo{pages}{120--133}.
+%Type = Article
+\bibitem[{Long et~al.(2019)Long, Wu, Liang, and Xu}]{ISCA2}
+\bibinfo{author}{W.~Long}, \bibinfo{author}{T.~Wu}, \bibinfo{author}{X.~Liang},
+  \bibinfo{author}{S.~Xu},
+\newblock \bibinfo{title}{Solving high-dimensional global optimization problems
+  using an improved sine cosine algorithm},
+\newblock \bibinfo{journal}{Expert Syst. Appl.} \bibinfo{volume}{123}
+  (\bibinfo{year}{2019}) \bibinfo{pages}{108--126}.
+%Type = Article
+\bibitem[{Gupta and Deep(2019)}]{ISCA3}
+\bibinfo{author}{S.~Gupta}, \bibinfo{author}{K.~Deep},
+\newblock \bibinfo{title}{A hybrid self-adaptive sine cosine algorithm with
+  opposition based learning},
+\newblock \bibinfo{journal}{Expert Syst. Appl.} \bibinfo{volume}{119}
+  (\bibinfo{year}{2019}) \bibinfo{pages}{210--230}.
 
 \end{thebibliography}

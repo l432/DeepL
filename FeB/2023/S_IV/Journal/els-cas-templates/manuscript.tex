@@ -179,24 +179,24 @@ chemical \& physical--based methods (originate from the physical phenomena or ch
 human-society--based methods (inspired by human beings, including various activities such as thinking and social behavior),
 and math--based methods (borrow the mathematical functions).
 Generally, there are hundreds of meta-heuristic optimization methods available.
-While we acknowledge that our selection may not be fully comprehensive,  
-we utilized 14 methods, representing all classes mentioned above, 
+While we acknowledge that our selection may not be fully comprehensive,
+we utilized 14 methods, representing all classes mentioned above,
 to tackle the parameter estimation task within the framework of the opposed two-diode model for a solar cell.
 Hereafter, we provide a succinct description of each method alongside the parameters employed during the fitting process.
 
 \emph{Differential evolution} (\textbf{DE}).
-DE is one of the classical methods, 
-and  it is based on the natural selection law and uses the randomly generated initial population, 
-differential mutation, and probability crossover \cite{DEWang}. 
-During the implementation, we employed a penalty function suggested by Ishaque \emph{et al} \cite{P-DE_Ishaque}. 
+DE is one of the classical methods,
+and  it is based on the natural selection law and uses the randomly generated initial population,
+differential mutation, and probability crossover \cite{DEWang}.
+During the implementation, we employed a penalty function suggested by Ishaque \emph{et al} \cite{P-DE_Ishaque}.
 Besides, according to Wang and Ye \cite{DEWang}, the values of mutation scaling factor $F=0.8$,
 crossover rate $C\!r=0.3$, and population size $N\!p=8\times D=64$ were used in this work.
 
 \emph{Adaptive differential evolution with the Lagrange interpolation argument} (\textbf{ADELI}).
-The method is based on DE, which integrates an adaptive local search scheme with Lagrange interpolation \cite{ADELI}. 
+The method is based on DE, which integrates an adaptive local search scheme with Lagrange interpolation \cite{ADELI}.
 This incorporation aims to enhance the exploitation capability and accelerate the convergence speed.
-In ADELI, the scaling factor and crossover rate are set to self--adapting to optimize the results. 
-We used parameter values recommended by Huang \emph{et al} \cite{ADELI} during the implementation process. 
+In ADELI, the scaling factor and crossover rate are set to self--adapting to optimize the results.
+We used parameter values recommended by Huang \emph{et al} \cite{ADELI} during the implementation process.
 Additionally, we set $N\!p$ to 64 for our numerical experiments.
 
 \emph{Differential evolution with neighborhood--based adaptive evolution mechanism} (\textbf{NDE}).
@@ -205,18 +205,100 @@ The determination of $F$ and $C\!r$ values is achieved through the utilization o
 and an adaptive adjustment of the population size is implemented using a simple reduction method (from $10\times D=80$ to 5).
 
 \emph{Success history based DE with hybridization mutation strategies and population size reduction} (\textbf{EBLSHADE}).
-The method is the hybridization framework between \emph{pbest} and \emph{ord\_pbest} mutation strategies 
-and stores a set of $Cr$ and $F$ values that have performed well in the recent past \cite{EBLSHADE}. 
+The method is the hybridization framework between \emph{pbest} and \emph{ord\_pbest} mutation strategies
+and stores a set of $Cr$ and $F$ values that have performed well in the recent past \cite{EBLSHADE}.
 A linear $N\!p$ reduction (from $18\times D=144$ to 4) is used as well.
 
+\emph{Particle swarm optimization} (\textbf{PSO}).
+It is another classic method based on observations of the social behavior of animals,
+such as bird flocking, fish schooling, and swarm theory.
+According to Ye et al. \cite{PSO},  the values of learning factors $l_1=l_2=2$,
+the final weight and the initial weight $w_{max}=0.9$, $w_{min}=0.4$, and
+$N\!p=15\times D=120$ are used in this work.
 
-%Neural network algorithm (NNA) is one of the newest meta-heuristic algorithms, which is inspired
-%by biological nervous systems and artificial neural networks.
+The \emph{modified artificial bee colony} (\textbf{MABC}) algorithm is based
+on the intelligent foraging behavior of honey bee swarms \cite{MABC}.
+The control parameters include the population size ($N\!p=8\times D=64$)
+and the maximum number of generations after which each non-improved food source is to be discarded ($L_{imit}=36$).
+
+\emph{Chaotic Whale Optimization Algorithm} (\textbf{CWOA}).
+WOA draws inspiration from the hunting behavior of humpback whales \cite{WOA}.
+On the other hand, CWOA employs chaotic maps to compute and dynamically adjust its internal parameters \cite{CWOA}.
+In our study, we utilized the Singer chaotic map and set $N\!p=100$ for the identification of the parameters of the solar cell.
+
+The \emph{Neural Network Algorithm} (\textbf{NNA}) is a meta-heuristic algorithm that draws inspiration from
+both biological nervous systems and artificial neural networks \cite{NNA}.
+The recommended \cite{NNA} value $N\!p=50$ is used in our paper.
+
+The \emph{teaching learning based optimization} (\textbf{TLBO}) algorithm employs the concept of passing on knowledge
+within a classroom.
+Similar to learners acquiring knowledge from a teacher and interacting with their peers,
+TLBO incorporates such interactions \cite{TLBO_Patel}.
+In this study, a value of $N\!p=100$ is utilized.
+
+\emph{Generalized oppositional teaching learning based optimization} (\textbf{GOTLBO}).
+This method integrates a concept that incorporates both the current estimate
+and its opposite estimate simultaneously into the original TLBO algorithm
+through the initialization step and generation jumping \cite{GOTLBO}.
+The values of jumping rate $J\!r=1.0$ and $N\!p=20$ were used.
+
+\emph{Simplified teaching-learning based optimization algorithm} (\textbf{STLBO}).
+In STLBO, an elite strategy is employed to improve the searching capability,
+and a the chaotic map is used to enrich the uniformity of random values in the mutation phase \cite{STLBO}.
+The logistic chaotic map and $N\!p=20$ were used.
+
+
+\emph{Water wave optimization} (\textbf{WWO}) takes inspiration from shallow water wave models
+and borrows ideas from wave propagation, refraction, and breaking \cite{WW}.
+WWO is easy to implement with a small-size population, and there are four control parameters:
+the maximum wave height $h_{max}$,
+the wavelength reduction coefficient $\alpha$,
+the breaking coefficient $\beta$,
+and the maximum number $k_{max}$ of breaking directions.
+According to Zheng \cite{WW}, we used
+the values $h_{max}=6$, $\alpha=1.026$,  $N\!p=10$,
+$k_{max}=\min(12,D/2)=4$, and $\beta$ linearly decreased from 0.25 to 0.001.
+
+\emph{Improved JAYA} (\textbf{IJAYA}).
+Jaya algorithm is based on the concept
+that the solution obtained for a given problem should move toward the best solution and should
+avoid the worst solution and does not require any algorithm-specific parameter \cite{JAYA}.
+In IJAYA, a self-adaptive weight is introduced to adjust the tendency of approaching the best solution
+and avoiding the worst solution;
+an experience-based learning strategy is employed to maintain the population diversity and enhance the exploration ability,
+and a chaotic elite learning method is proposed to refine the quality of the best solution in each generation \cite{IJAYA}.
+The logistic chaotic map and $N\!p=4\times D=32$ were used.
+
+\emph{Improved sine cosine algorithm} (\textbf{ISCA}).
+SCA based on simulating the behaviors of sine and cosine mathematical functions \cite{SCA}.
+ISCA implementation included a modified position-updating equation based on inertia weight 
+($w_{start}=1$, $w_{end}=1$), 
+a nonlinear conversion parameter strategy based on the Gaussian function 
+($a_{start}=2$, $a_{end}=0$) \cite{ISCA2}, 
+the creation of the opposite population to jump out from the local optima with $J\!r=0.1$ \cite{ISCA3}, 
+a greedy selection, and $N\!p=30$.
+
+
+
+%In this simulation study, each algorithm of the basic ABC,
+%MABC and PSO was run 30 times with different random
+%seed.
+%and each algorithm is run 30 times independently
+
+%The search ranges were set as follows ΦSB ∈ [0.1,1],
+%n ∈ [1,2] and RS ∈ [0,50].
+
+%The
+%experiments were implemented in Matlab and run on Windows
+%7 operative system with 64-bit support with a 2.0 GHz Intel
+%dual-core processor and 4 GB RAM.
 
 %the maximum number of function evaluations (FEs) is set to 3000  D.
+%The
+%quality of them is evaluated in terms of the objective function
+%(Root Mean Square Error)
 
-
-%перекласти на англійську "під час реалізації цих процедур ми використовувати значення параметрів, запропоновані в роботі [3], та Np=64 "
+%перекласти на англійську "Це ще один класичний метод"
 
 %покращити стилістику, виправити граматичні та стилістичні помилки, використовуючи стиль наукової статті "The method is based on DE by incorporating an adaptive local search scheme with Lagrange interpolation to enhance the exploitation capability to accelerate the convergence speed."
 
