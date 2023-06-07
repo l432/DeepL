@@ -103,7 +103,8 @@ SCAPS \sep Iron contamination \sep Machine learning
 % Main text
 \section{Introduction}\label{Int}
 
-\section{Models and Methods}\label{MM}
+%\section{Models and Methods}\label{MM}
+\section{Problem definition}\label{MM}
 \subsection{Solar cell model}\label{SCModel}
 Fig.~\ref{fig_chem}
 vividly reveals the structure of the used model \cite{Castro2010}.
@@ -164,8 +165,58 @@ and
 \label{eqx2}
 x_2= \ln\left(\frac{qI_{02}R_\mathrm{p2}}{n_2kT}\right)-\frac{q(I-I_{02})R_\mathrm{p2}}{n_2kT}\,.
 \end{equation}
-We used Eqs.~(\ref{eqIV_g})--(\ref{eqx2}) both for simulation I--V curves and during the approximation procedure.
+We used Eqs.~(\ref{eqIV_g})--(\ref{eqx2}) both for simulation IV curves and during the approximation procedure.
 The $g$--function was evaluated by using iterative procedure \cite{roberts2015calculating}.
+
+\subsection{Synthetic IV curves}\label{SynIV}
+The research involved the parameter estimation of solar cells using meta-heuristic algorithms based
+on synthetic IV characteristics simulated using the opposed two--diode model.
+This approach allows for assessing the accuracy of the employed optimization methods,
+as the simulation was performed using known parameter values.
+
+In one part of the study, a detailed analysis was conducted on a single IV curve,
+evaluating the performance of meta--heuristic algorithms for parameter estimation in a one-time application.
+Additionally, the suitability of employing two different fitness functions was examined.
+In the second part, we simulated a set of IV characteristics and evaluated the average performance metrics of various algorithms.
+
+\subsubsection{Single--IV case}\label{SingleIV}
+
+Previous studies have demonstrated \cite{Tada2015Organic,Tada2021} that when the ideality factor of D2 is either equal to or significantly larger than $n_1$, 
+($n_1=n_2=1.92$ or $n_1=1.00$, $n_2=3.00$) the nonlinear least--squares method successfully determines a set of equivalent circuit parameters 
+that accurately replicate the experimental data of an organic photovoltaic cell.
+Therefore this approach does not allow for distinguishing between similar IV curves obtained from solar cells with different parameters.
+To overcome this issue, Tada \cite{Tada2021} successfully employed Bayesian estimation of parameters.
+To assess the capabilities of meta-heuristic methods in overcoming additional similar challenges, 
+they were applied to a IV curve corresponding to such a problematic case.
+The parameter values were taken from \cite{Tada2021}
+($I_{01}=1.6\cdot10^{-6}$~mA,
+$n_1=1.92$,
+$R_\mathrm{p1}=190$~$\Omega$,
+$I_{02}=0.16$~mA,
+$n_2=1.92$,
+$R_\mathrm{p2}=190$~$\Omega$,
+$R_\mathrm{s}=45$~$\Omega$,
+$I_\mathrm{ph}=8$~mA),
+and the IV curve was simulated over a range of 0-0.8~V with step 10~mV at $T=300$~K.
+The simulation result is presented on Fig.~\ref{figSigleIV} by symbols.
+
+\begin{figure}[]
+	\centering
+		\includegraphics[width=1.0\columnwidth]{IVsimple}
+	  \caption{Fitting results (lines) for the simulated current-voltage characteristic (symbols). The values from  Sec.~\ref{SingleIV} were assumed under simulation.}\label{figSigleIV}
+\end{figure}
+
+%It has been shown previously whether the ideality factor of D2 ($n_2$) is the same as that of D1
+%($n_1=n_2=1.92$) or very larger than $n_1$ ($n_1=1.00$, $n_2=3.00$),
+%the nonlinear least--squares method finds a set of equivalent circuit parameters that reproduces the experimental
+%data of an organic photovoltaic cell.
+
+
+\subsubsection{IV--set case}
+
+%перекласти на англійську ""
+
+%Estimation of parameters for solar cells with S--shaped current--voltage characteristics using meta--heuristic algorithms
 
 \subsection{Meta-heuristic algorithms}\label{MHA}
 In the literature, meta-heuristics are frequently categorized based on their sources of inspiration.
@@ -271,22 +322,71 @@ The logistic chaotic map and $N\!p=4\times D=32$ were used.
 
 \emph{Improved sine cosine algorithm} (\textbf{ISCA}).
 SCA based on simulating the behaviors of sine and cosine mathematical functions \cite{SCA}.
-ISCA implementation included a modified position-updating equation based on inertia weight 
-($w_{start}=1$, $w_{end}=1$), 
-a nonlinear conversion parameter strategy based on the Gaussian function 
-($a_{start}=2$, $a_{end}=0$) \cite{ISCA2}, 
-the creation of the opposite population to jump out from the local optima with $J\!r=0.1$ \cite{ISCA3}, 
+ISCA implementation included a modified position-updating equation based on inertia weight
+($w_{start}=1$, $w_{end}=1$),
+a nonlinear conversion parameter strategy based on the Gaussian function
+($a_{start}=2$, $a_{end}=0$) \cite{ISCA2},
+the creation of the opposite population to jump out from the local optima with $J\!r=0.1$ \cite{ISCA3},
 a greedy selection, and $N\!p=30$.
 
+The majority of the utilized algorithms demonstrate excellent performance when
+it comes to parameter estimation of solar cells within conventional models (single or double diode) \cite{CWOA,DEWang,GOTLBO,IJAYA,MABC,PSO,STLBO,TLBO_Patel,LSHADE,IWOA}.
 
+The performance of the extracted parameters is evaluated using the fitness function at
+every iteration.
+In our investigation, two fitness function were used:
+\begin{equation}
+\label{eqFae}
+F_\mathrm{AE}(Y)= \sum_{k=1}^p \left|V^\mathrm{tr}(I_k)-V^\mathrm{cal}(I_k,Y)\right|\,,
+\end{equation}
+\begin{equation}
+\label{eqFse}
+F_\mathrm{SE}(Y)= \sum_{k=1}^p \left[V^\mathrm{tr}(I_k)-V^\mathrm{cal}(I_k,Y)\right]^2\,,
+\end{equation}
+where
+$V^\mathrm{tr}(I_k)$ is the simulated value of voltage at current $I_k$,
+$V^\mathrm{cal}(I_k,Y)$ is the calculated values of voltage, which can be obtained
+by Eqs.~(\ref{eqIV_g})--(\ref{eqx2}),
+for given set of parameters (i.e. $Y = \{I_{01},n_1,R_\mathrm{p1},I_{02},n_2,R_\mathrm{p2},R_\mathrm{s},I_\mathrm{ph}\}$)
+at current $I_k$,
+and $p$ is the total number of voltage steps in the IV characteristic.
+
+
+Each algorithm was run 51 times with different random seed for each simulated IV curves.
+The search ranges were set as follows:
+
+\noindent
+$I_{01}(\mathrm{mA})\in[10^{-13},1]$,
+$n_1\in[0.5,50]$,
+$R_\mathrm{p1}(\Omega)\in[10,10^6]$,
+$I_{02}(\mathrm{mA})\in[10^{-7},10]$,
+$n_2\in[0.5,50]$,
+$R_\mathrm{p2}(\Omega)\in[10,5\cdot10^4]$,
+$R_\mathrm{s}(\Omega)\in[0.1,1000]$,
+$I_\mathrm{ph}(\mathrm{mA})\in[10^{-3},100]$.
+%\begin{eqnarray}
+%\label{eqSR}
+%I_{01}(\mathrm{mA})&\in&[10^{-13},1]\nonumber, \\
+%n_1&\in&[0.5,50]\nonumber, \\
+%R_\mathrm{p1}(\Omega)&\in&[10,10^6]\nonumber, \\
+%I_{02}(\mathrm{mA})&\in&[10^{-7},10]\nonumber, \\
+%n_2&\in&[0.5,50]\nonumber, \\
+%R_\mathrm{p2}(\Omega)&\in&[10,5\cdot10^4]\nonumber, \\
+%R_\mathrm{s}(\Omega)&\in&[0.1,1000]\nonumber, \\
+%I_\mathrm{ph}(\mathrm{mA})&\in&[10^{-3},100]\nonumber .
+%\end{eqnarray}
+
+\subsection{Evaluation criteria}\label{EvalCr}
+
+
+\section{Simulation results and analysis}\label{Result}
 
 %In this simulation study, each algorithm of the basic ABC,
 %MABC and PSO was run 30 times with different random
 %seed.
 %and each algorithm is run 30 times independently
 
-%The search ranges were set as follows ΦSB ∈ [0.1,1],
-%n ∈ [1,2] and RS ∈ [0,50].
+%
 
 %The
 %experiments were implemented in Matlab and run on Windows
@@ -297,8 +397,18 @@ a greedy selection, and $N\!p=30$.
 %The
 %quality of them is evaluated in terms of the objective function
 %(Root Mean Square Error)
+%
+%CPU time
 
-%перекласти на англійську "Це ще один класичний метод"
+%For all the algorithms, a population size and maximum iteration
+%equal to 30 and 500 have been utilized. The number of search
+%agents n and number of iteration T are commonly set based on trial
+%and error basis and should be proportional to the size of the search
+%space and the complexity of the fitness function. In this work, we
+%adopted the same setting for n and T as in the original paper by
+%in Mirjalili
+
+%перекласти на англійську "Переважна більшість використаних алгоритмів показують гарні результати при оцінці параметрів сонячних елементів в межах звичних моделей "
 
 %покращити стилістику, виправити граматичні та стилістичні помилки, використовуючи стиль наукової статті "The method is based on DE by incorporating an adaptive local search scheme with Lagrange interpolation to enhance the exploitation capability to accelerate the convergence speed."
 
