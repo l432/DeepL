@@ -103,6 +103,16 @@ SCAPS \sep Iron contamination \sep Machine learning
 % Main text
 \section{Introduction}\label{Int}
 
+
+
+%According to No Free Lunch (NFL), it is logically proved that
+%no metaheuristic can respond to all correct optimization problems. In other words, the especial metaheuristic method can
+%demonstrate promising results to solve some problems. But this
+%algorithm may show the weaker performance and efficiency for
+%some other problems. Hence the researchers try to create the
+%better optimization techniques each year
+
+
 %\section{Models and Methods}\label{MM}
 \section{Problem definition}\label{MM}
 \subsection{Solar cell model}\label{SCModel}
@@ -181,12 +191,12 @@ In the second part, we simulated a set of IV characteristics and evaluated the a
 
 \subsubsection{Single--IV case}\label{SingleIV}
 
-Previous studies have demonstrated \cite{Tada2015Organic,Tada2021} that when the ideality factor of D2 is either equal to or significantly larger than $n_1$, 
-($n_1=n_2=1.92$ or $n_1=1.00$, $n_2=3.00$) the nonlinear least--squares method successfully determines a set of equivalent circuit parameters 
+Previous studies have demonstrated \cite{Tada2015Organic,Tada2021} that when the ideality factor of D2 is either equal to or significantly larger than $n_1$,
+($n_1=n_2=1.92$ or $n_1=1.00$, $n_2=3.00$) the nonlinear least--squares method successfully determines a set of equivalent circuit parameters
 that accurately replicate the experimental data of an organic photovoltaic cell.
 Therefore this approach does not allow for distinguishing between similar IV curves obtained from solar cells with different parameters.
 To overcome this issue, Tada \cite{Tada2021} successfully employed Bayesian estimation of parameters.
-To assess the capabilities of meta-heuristic methods in overcoming additional similar challenges, 
+To assess the capabilities of meta-heuristic methods in overcoming additional similar challenges,
 they were applied to a IV curve corresponding to such a problematic case.
 The parameter values were taken from \cite{Tada2021}
 ($I_{01}=1.6\cdot10^{-6}$~mA,
@@ -352,6 +362,9 @@ at current $I_k$,
 and $p$ is the total number of voltage steps in the IV characteristic.
 
 
+%The numbers of independent algorithmic runs are
+%equal to 30 utilized to generate the statistical results.
+
 Each algorithm was run 51 times with different random seed for each simulated IV curves.
 The search ranges were set as follows:
 
@@ -379,12 +392,84 @@ $I_\mathrm{ph}(\mathrm{mA})\in[10^{-3},100]$.
 \subsection{Evaluation criteria}\label{EvalCr}
 
 
+%To appropriately evaluate the performance of the
+%proposed NNA compared with the other state-of-art algorithms,
+%four quality indicators are utilized. The first one is the value-based
+%method which is the solution quality in terms of four performance
+%metrics including the best, average, median, worst, and standard
+%deviation (SD).
+%The second metric is the rank-based method, which have been
+%suggested by different authors in the literature. In this paper, the
+%Friedman test [37] which is a nonparametric statistical test is
+%used to distinguish the differences among reported algorithms.
+%Therefore, the average rankings of the algorithms according to the
+%Friedman test are reported.
+%The third and fourth metrics are Kruskal-Wallis test [38] and
+%Multiple Comparison Test [39]. Tables 8–13 tabulate the obtained
+%optimization results using different optimizers for the benchmarks
+%given in Tables 5 and 6 with dimensions of 50–200. Looking at
+%Tables 8–13, performance of well-used optimizers such as GA, PSO,
+%HS has not surpassed the results of recent optimizers for the most
+%reported functions. Therefore, the competition is mostly among
+%recent developed optimization methods
+
+%With the aim of obtaining rigorous and fair conclusion, two other
+%statistical tests have been carried out in this research including the
+%Kruskal-Wallis H test [38] and Multiple Comparison Test [39]. These
+%tests have been conducted for proving if there are significant differences in the results obtained by all methods and each method
+%compared with the another.
+
+
+%For each benchmark function, individual optimizer runs Nruns
+%times starting from different populations randomly generated and
+%the following seven evaluation indicators are computed per optimizer:
+%1. Mean fitness: is an average value of all the solutions in
+%the final sets obtained by an optimizer in some individual
+%runs [35].
+%2. Statistical standard deviation (std): is used to ensure that the
+%optimizer convergences to the same optimal and ensures
+%repeatability of the results. It is computed over all the sets
+%of final solutions obtained by an optimizer in a number of
+%individual runs [36].
+%3. Wilcoxon rank sum test: assigns a rank to all the scores
+%considered as one group and then sums the ranks of each
+%group [37]. The rank-sum test is often described as the
+%nonparametric version of the t test for two independent
+%groups.
+%4. T-test: is statistical significance shows despite whether the
+%contrast between the two groups’ midpoints in all possibility
+%mirrors a real distinction in the population from the groups
+%were inspected [38].
+%5. Run time average: is the average run time in seconds for an
+%individual optimizer on a given function. The results were
+%conducted on 64-bit windows 10 computer with i7 core
+%3.6 GHz and 8 GB RAM.
+
+Table 17
+Run time average for the different optimizers adopted in the study for the different functions
+
+
 \section{Simulation results and analysis}\label{Result}
 
-%In this simulation study, each algorithm of the basic ABC,
-%MABC and PSO was run 30 times with different random
-%seed.
-%and each algorithm is run 30 times independently
+
+%In metaheuristic algorithms, a different termination can be
+%defined. For instance, a termination condition can be a specific
+%number of iterations, constraints on the number of function evaluations, a specific rate of precision, a specific time, no sign of
+%change in solutions after a specific number of iterations, or a combination of these cases. In the proposed method, the termination
+%condition was defined as imposing constraints on the number
+%of function evaluations (MaxFEs) and reaching a specific rate of
+%precision.
+
+%3.5. Computational time analysis
+%Another evaluation criterion used to compare the algorithms’
+%performance is to compare their execution time in terms of
+%solving different problems. The mean sum of 30 different runs
+%in each algorithm is shown in Fig. 10 to solve 39 functions
+%(unimodal, multimodal, fixed dimension multimodal, composite
+%functions and CEC2019 functions). According to the figure, execution time of ICO is less than execution time of known and
+%efficient algorithms like DE, LASHADE-SPACMA, LSHADE-cnEpSin
+%and HGSO.
+
 
 %
 
@@ -411,6 +496,126 @@ $I_\mathrm{ph}(\mathrm{mA})\in[10^{-3},100]$.
 %перекласти на англійську "Переважна більшість використаних алгоритмів показують гарні результати при оцінці параметрів сонячних елементів в межах звичних моделей "
 
 %покращити стилістику, виправити граматичні та стилістичні помилки, використовуючи стиль наукової статті "The method is based on DE by incorporating an adaptive local search scheme with Lagrange interpolation to enhance the exploitation capability to accelerate the convergence speed."
+
+
+%3.2.6. Wilcoxon signed-rank test
+%In order to show the obtained results of ICO that is significantly different from the other randomized algorithms, the
+%Wilcoxon Signed-Rank Test was used for pairwise comparison.
+%The test was performed by using the global minimum values
+%obtained by performing 30 runs for problem based pairwise comparison of the algorithms. The significance value α was chosen to
+%be 0.05 with null hypothesis H0; that is, there is no difference
+%between the median of the solutions obtained after the same
+%test problem is executed by algorithms A and B, i.e. median (A)
+%= median(B). Also, to determine whether algorithm A yielded
+%statistically the better solution than algorithm B or whether alternative hypothesis was valid, the sizes of the ranks provided
+%by the Wilcoxon Signed-Rank test (T+ and T−) were thoroughly
+%examined.
+%The non-parametric statistical results of the ICO algorithm
+%versus other algorithms based on the Wilcoxon Signed-Rank Test
+%with the statistical significance level α = 0.05 are also summarized in Tables 13–17. In these tables, ‘+’ indicated that the null
+%hypothesis H0 was rejected and ICO performed better, while ‘−’
+%indicated that the null hypothesis H0 was rejected; however, ICO
+%performed worse. The ‘=’ indicates a failure to reject the null
+%hypothesis, and also there is no statistical difference between the
+%two algorithms. The counts of statistical significant cases (+/−/=)
+%are presented in the last row of Tables 13–17
+%The Wilcoxon Signed-Rank Test results for each test category
+%are presented in Table 18. In this table, each cell shows total count
+%of three statistical significance cases (+/ = /−) in the pairwise
+%comparison. The results show that ICO can achieve statistically
+%better results than comparison algorithms except SASS, with a
+%level of significance α = 0.05. However, the numerical results
+%provided for some algorithms such as DE in fixed-dimension
+%multimodal functions is not sufficient to make a statistically
+%convincing inference. With regard to Wilcoxon Signed-Rank Test
+%in Table 18, the performance success of ICO in fixed-dimension
+%multimodal functions is relatively low compared to others. This
+%fits ‘‘No-Free-Lunch’’ (NFL) theorem.
+
+
+%див
+%Table 13
+%The results of two-sided Wilcoxon Signed-Rank test with α = 0.05 for (F1–F7), with 30 dimensions.
+%ApplSoftComp_115_108126
+%Table 19
+%Ranking of algorithm according to Friedman ranking based on mean error value. (FR: Friedman Ranking)
+
+%3.2.7. Friedman ranking (FR) test
+%The Friedman test was employed to compare the proposed
+%method with other state-of-art algorithms presented in this paper. It is a nonparametric test and equivalent to the analysis
+%of variance with repetitive sizes (within groups). This test is
+%utilized to compare mean of ranks between k variables (groups).
+%According to the ranking performed through the Friedman test,
+%the proposed method was ranked as the highest in all existing
+%methods by considering 39 different test functions. Table 19
+%shows the rank of each method. The following equation can be
+%employed to determine the superiority of ICO in other methods:
+%(new_value − original_value)/|original_value| × 100 (24)
+%Where new_value shows the rank of ICO when original_value
+%indicates the rank of each technique used to calculate the superiority of ICO to that method. According to the results, ICO could
+%outperform EO, GWO, WOA, MFO, PSO, DE, GSA, SSA, SHO, GAMPC, LSHADE, LSHADE-cnEpSin, LSHADE-SPACMA, SASS, AOA and
+%HGSO 28%, 47%, 53%, 61%, 47%, 21%, 44%, 52%, 56%, 47%, 31%, 27%,
+%22%, 7%, 61% and 52% respectively in 39 benchmark functions. The
+%P-value of Friedman rank test was reported 7.2868e−25. Since
+%it is smaller than 0.05, it can be concluded that the results of
+%different algorithms are significantly different.
+
+
+%Table 15
+%Sum of average ranking using Friedman test for applied optimization methods.
+%Methods Total Average Ranking by Friedman Test (Rank)
+
+%As can be seen from Table 15, the NNA has been placed at first
+%rank and the DE and TLBO have been located at the second and third
+%ranks, respectively. The RS, as expected, is the worst algorithm for
+%solving the reported benchmarks and could not even find acceptable results for all cases (see Table 14). Looking at huge gaps in the
+%obtained optimization results by the NNA and RS, we can conclude
+%that the NNA is not based on the simple random search even in its
+%exploration phase.
+
+
+%ApplSoftComp_71_p747
+%The second column of Table 16 represent the methods which
+%are compared. The third and fifth columns show lower and upper
+%limits (LL and UL) for 95% confidence intervals for the true mean
+%difference. The fourth column show the difference between the
+%estimated method means. The sixth column (i.e., last column) contains the p-value for a hypothesis test that the corresponding mean
+%difference is equal to zero obtained by Kruskal-Wallis H test with
+%˛ = 0.05. Figs. 6–9 depict the boxplot and multiple comparison plot
+%among the considered optimizers for all considered benchmarks.
+%In Figs. 6–9, vertical axis in Kruskal-Wallis H test is the value of
+%objective function obtained by the studied optimizers
+
+%The obtained
+%p-values in last column of Table 16 prove this comparison. For
+%instance, looking at F17 in Fig. 9, we can see the NNA statistically
+%has outperformed six optimizers (i.e., TLBO, WCA, ICA, PSO, DE, and
+%CMA-ES), while the optimization results obtained by the CS, GSA,
+%HS, GA, and SA are the same with no significance difference. Lines
+%right side of the NNA (i.e., blue lines) show the methods which are
+%not significantly better than the NNA, while lines left side of the
+%NNA show the methods which are statistically better than the NNA
+%for a specific benchmark.
+%Furthermore, Table 17 tabulates the obtained optimization
+%results along with their statistical tests and ranking for dimension
+%200 (˛ = 0.05) for 1E + 06 NFEs. Due to the limitation of execution
+%time, only the TLBO and GSA have been selected in the comparison
+%pool.
+%From Table 17, the NNA obtained the lower total average ranking
+%which shows its overall efficiency compared with the considered
+%optimizers. For the most cases, the NNA has been placed in the first
+%or second ranks. Now, it is interesting to see the performance of
+%the NNA over few iterations. Therefore, Figs. 10 and 11 display the
+%total cost reduction history of reported optimizers over only 200
+%iterations between selected optimizer given in Table 17. It is worth
+%mentioning that all reported optimizers start with a random initial
+%population between the lower and upper bounds.
+
+
+%Table 18,19
+
+
+
 
 % Numbered list
 % Use the style of numbering in square brackets.
