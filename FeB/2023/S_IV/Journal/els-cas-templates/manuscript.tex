@@ -5,6 +5,13 @@
 
 %\documentclass[a4paper,fleqn,longmktitle]{cas-dc}
 
+\usepackage{color,colortbl}
+\definecolor{ligthYellow}{RGB}{255,255,204}
+\definecolor{ligthBlue}{RGB}{193,255,255}
+\definecolor{ligthRed}{RGB}{255,231,231}
+\definecolor{ligthViolet}{RGB}{235,235,255}
+\definecolor{ligthGreen}{RGB}{204,255,204}
+
 \usepackage[numbers]{natbib}
 %\usepackage[authoryear]{natbib}
 %\usepackage[authoryear,longnamesfirst]{natbib}
@@ -845,7 +852,7 @@ $I_\mathrm{ph}(\mathrm{mA})\in[10^{-3},100]$.
 %between the algorithms, which means that the null hypothesis is
 %rejected. It is evidently seen from the results shown in Table 22
 %that WSO achieved a reasonable score among all other competitors. The rank of the algorithms in Table 22 are in succession
-  
+
 %ще пару сторінок подібного аналізу
 %
 %As a key inference dragged from the statistical analysis results
@@ -866,9 +873,9 @@ $I_\mathrm{ph}(\mathrm{mA})\in[10^{-3},100]$.
 %optimization diversity. These endings are encouraging points to
 %apply this algorithm to solve other hard real-world optimization
 %problems.
-  
-  
-  
+
+
+
 %--------------------------------------
 % Numbered list
 % Use the style of numbering in square brackets.
@@ -901,19 +908,43 @@ $I_\mathrm{ph}(\mathrm{mA})\in[10^{-3},100]$.
 %\end{figure}
 
 
+%\definecolor{ligthYellow}{RGB}{255,255,204}
+%\definecolor{ligthBlue}{RGB}{193,255,255}
+%\definecolor{ligthRed}{RGB}{255,231,231}
+%\definecolor{ligthViolet}{RGB}{235,235,255}
+%\definecolor{ligthGreen}{RGB}{204,255,204}
+
+\newcolumntype{G}{>{\columncolor{ligthGreen}}C}
+\newcolumntype{Y}{>{\columncolor{ligthYellow}}C}
+
 \begin{table}[<options>]
 \caption{}\label{tbl1}
-\begin{tabular*}{\tblwidth}{@{}LL@{}}
+\begin{tabular*}{\tblwidth}{@{}CL@{}}
 \toprule
   &  \\ % Table header row
 \midrule
  & \\
- & \\
- & \\
+\rowcolor{ligthYellow}
+ A&B \\
+ \cellcolor{ligthBlue} C& \cellcolor{ligthRed}D\\
  & \\
 \bottomrule
 \end{tabular*}
 \end{table}
+
+%\begin{table}[<options>]
+%\caption{}\label{tbl1}
+%\begin{tabular*}{\tblwidth}{@{}LL@{}}
+%\toprule
+%  &  \\ % Table header row
+%\midrule
+% & \\
+% & \\
+% & \\
+% & \\
+%\bottomrule
+%\end{tabular*}
+%\end{table}
 
 % Uncomment and use as the case may be
 %\begin{theorem}
