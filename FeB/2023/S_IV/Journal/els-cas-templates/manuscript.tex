@@ -112,6 +112,18 @@ SCAPS \sep Iron contamination \sep Machine learning
 %some other problems. Hence the researchers try to create the
 %better optimization techniques each year
 
+%On the other hand, The No Free Lunch theory (NFL) states that
+%no metaheuristic algorithm is able to solve all optimization tasks.
+%In other words, the optimization algorithm can have brilliant
+%results in a specific class of problems and at the same time fails
+%to solve other classes of problems [85].
+%The above-mentioned facts motivate and encourage us to propose a novel population-based algorithm with swarm intelligence
+%characteristics to solve global optimization problems. The proposed algorithm called Snake Optimizer (SO) is inspired by the
+%mating behavior of the snakes. To the best of our knowledge,
+%there is no such study exist in the literature and this is the first
+%time to propose such a behavior.
+\cite{NFL}
+
 
 %\section{Models and Methods}\label{MM}
 \section{Problem definition}\label{MM}
@@ -365,6 +377,8 @@ and $p$ is the total number of voltage steps in the IV characteristic.
 %The numbers of independent algorithmic runs are
 %equal to 30 utilized to generate the statistical results.
 
+%we executed each tested algorithm for 51 independent runs on each test function.
+
 Each algorithm was run 51 times with different random seed for each simulated IV curves.
 The search ranges were set as follows:
 
@@ -390,6 +404,62 @@ $I_\mathrm{ph}(\mathrm{mA})\in[10^{-3},100]$.
 %\end{eqnarray}
 
 \subsection{Evaluation criteria}\label{EvalCr}
+
+%used parameters to estimate error: the root mean square error (RMSE) and the mean absolute
+%percentage of error (MAPE). RMSE and MAPE are two statistical parameters defined by the
+%following formulas:
+%JRenSusEner_10_053505 p12
+
+%This section is to compare the performance between EJAYA
+%and the other eight metaheuristic algorithms on CEC 2014 and
+%CEC 2015 test suites from the following four aspects, i.e. solution accuracy, algorithm rank, statistical test, and convergence
+%performance.
+
+%In this section, in order to study the effectiveness of the proposed gannet optimization algorithm, the statistical
+%results such as the average fitness value, standard deviation and Wilcoxon Rank-sum test are compared; the proposed
+%algorithm is more intuitively compared through the fitness value iteration curve performance, and finally, compare
+%the execution time of the algorithms.
+
+%4.2.2. Evaluation metrics
+%To better show the performance differences between EJAYA
+%and the compared algorithms, three evaluation metrics are considered, which can be described as follows:
+%1.Mean value and standard deviance
+%Mean value (MEAN) and standard deviance (STD) are often
+%used to measure the solution quality [21,52–54]. Take the
+%minimum problem as an example, the smaller the obtained
+%MEAN, the closer to the global optimal solution the obtained solution; the smaller the obtained STD, the higher
+%the stable of the algorithm. The obtained MEAN and STD by
+%the applied algorithms are presented in Table 3. The best
+%results were in bold type in Table 3
+%2.Friedman Mean Rank Test
+%As a common statistical tool in the field of optimization,
+%Friedman Mean Rank Test has been widely used for comparing the performance differences among optimization
+%algorithms [55–58]. Here, the optimal solutions obtained
+%by EJAYA from 30 independent runs and the compared
+%algorithms are tested by Friedman Mean Rank Test. The
+%test results can be found in Table 4 and Fig. 4.
+%3.Wilcoxon sign-rank test
+%Wilcoxon sign-rank test is used widely to compare the
+%performance among different optimization algorithms [59–
+%62]. Tables 5 and 6 give the statistical results produced by
+%Wilcoxon sign-rank test with a significant level α = 0.05.
+%In Tables 5 and 6, R+ means the sum of ranks for the
+%problems in which EJAYA outperformed the compared algorithm and R− indicates the sum of ranks for the opposite.
+%As can be seen from Tables 5 and 6, there are the following
+%three cases:
+%(1) Case 1: If R+ is more than R− and the obtained
+%p-value is less than the set significant level α, the
+%symbol is marked with ‘+’ and EJAYA outperforms
+%the compared algorithm on the considered case.
+%(2) Case 2: If R+ is less than R− and the obtained p-value
+%is less than the set significant level α, the symbol is
+%marked with ‘-’ and the compared algorithm beats
+%EJAYA on the considered case.
+%(3) Case 3: If R+, R− and p-value do not meet Case 1
+%and Case 2, the symbol is marked with ‘=’ and there
+%is no significant difference between EJAYA and the
+%compared algorithm on the considered case.
+
 
 
 %To appropriately evaluate the performance of the
@@ -445,12 +515,50 @@ $I_\mathrm{ph}(\mathrm{mA})\in[10^{-3},100]$.
 %conducted on 64-bit windows 10 computer with i7 core
 %3.6 GHz and 8 GB RAM.
 
-Table 17
-Run time average for the different optimizers adopted in the study for the different functions
+%Table 17
+%Run time average for the different optimizers adopted in the study for the different functions
 
+
+%It should be noted that the standard deviation and mean indicators
+%are not enough lonely for comparing these algorithm. To this end, three
+%well-known and strong nonparametric statistical tests include Wilcoxon
+%test, Kruskal Wallis Test, and Friedman test are selected to more analyze
+%the performance of these eight mentioned algorithms.
+%Wilcoxon signed-rank test is a nonparametric statistical test used to
+%evaluate the similarity of two dependent degree-scale samples. This test
+%takes into account the difference between rankings, so variables can
+%have different or spaced solutions. This test, corresponds to the two
+%dependent sample t test, and if not the conditions to perform the t
+%test, Wilcoxon as a successor can be used. Also, the Friedman test is
+%used for two-way analysis of variance (for nonparametric data) through
+%ranking. The nonparametric Friedman test’s power is the same as the
+%strongest parametric F test. To achieve more detail about these three
+%nonparametric statistical tests, refers to the Derrac et al. (2011).
+
+%TGA shows an improvement over LADA, with a level of significance 𝛼 = 0.01
+
+
+%We then employed
+%the pairwise Wilcoxon rank-sum test (Wilcoxon, 1945), with 5% significance level, as well as the sequentially rejective Holm–Bonferroni
+%procedure (Garcia et al., 2008; Holm, 1979), to rank the mean errors of the runs for each value of 𝛽 on the 30 CEC
+%2014 benchmark functions.
+
+%In order to validate SO results statistically, Wilcoxon Rank
+%Sum (WRS) has been used to perform a nonparametric test
 
 \section{Simulation results and analysis}\label{Result}
+%Results and analysis of the experiment
 
+
+%Box Plot of some functions from F1–F10 for all algorithms using CEC2017 and Dim = 30
+
+%KnowBasSys_233_107555
+%Fig. 5. The statistical results produced by Wilcoxon sign-rank test on 45 test functions. ‘‘Win’’ denotes EJAYA beat the compared algorithm; ‘‘Lose’’ indicates EJAYA
+%is inferior to the compared algorithms; ‘‘Tie’’ denotes EJAYA has the same performance with the compared algorithms
+%стовпчикова діаграма з кількостями перемог, поразк, нічий
+%Table 6
+%The results between EJAYA and the compared algorithms (GWO, WOA, SCA and JAYA) produced by Wilcoxon sign-rank test with a significant level α = 0.05 on 45
+%test functions.
 
 %In metaheuristic algorithms, a different termination can be
 %defined. For instance, a termination condition can be a specific
@@ -469,14 +577,45 @@ Run time average for the different optimizers adopted in the study for the diffe
 %functions and CEC2019 functions). According to the figure, execution time of ICO is less than execution time of known and
 %efficient algorithms like DE, LASHADE-SPACMA, LSHADE-cnEpSin
 %and HGSO.
+%To evaluate the usability of the GOA relative to other algorithms, we conduct time tests on all three dimensions.
 
 
 %
-
+%All the applied algorithms have been
+%coded and implemented in MATLAB programming software. In
+%addition, each algorithm for every test function was executed in
+%30 independent runs and then the results were recorded
 %The
 %experiments were implemented in Matlab and run on Windows
 %7 operative system with 64-bit support with a 2.0 GHz Intel
 %dual-core processor and 4 GB RAM.
+
+%All these experiments have been performed using
+%MATLAB 2015a on 8.1 Windows Operating System with 6 GB RAM
+%memory and core i5 CPU
+
+%The GOA was experimented with using a desktop computer with Windows 10 Professional 64-bit, Intel(R) Core
+%(TM) i3-8100 CPU @ 3.60 GHz, 24.0 GB RAM, Matlab R2014b.
+
+%In order to statistically verify the excellent results obtained by GOA, we use the nonparametric Wilcoxon Ranksum test to determine whether the GOA algorithm is significantly different from other comparison algorithms. The
+%significance level alpha is taken as 0.05, the p-values of the tests are given in Tables 5–7, and the data with p-values
+%greater than 0.05 have been shown in bold.
+
+%In this subsection, we show and analyze the statistical results
+%of SO and other seven state-of-art algorithms using 30 CEC 2017
+%functions. Table 4 shows the results of SO and other comparative algorithms in terms of mean (average), best (min), worst
+%(max), median, and standard deviation (STD). from this table, it
+%can be seen that SO outperform other mentioned metaheuristic
+%algorithms. It is notable that SO has the best average results in 22
+%functions from 29 ones and the second-best in 3 other functions
+%whereas it ranked third in other 2 functions. GOA has ranked first
+%in only 3 functions however, each of MFO, and HHO has achieved
+%the best average in only 2 functions. On the other hand, SO has
+%ranked first in 11 functions in standard deviation (STD) and has
+%the second-best STD values in other 8 functions. Also, LSHADEEpSin has recorded the second-best algorithm in terms of STD
+%values as it ranked first in 7 functions. Each of L-SHADE, HHO,
+%and TEO has ranked first twice.
+
 
 %the maximum number of function evaluations (FEs) is set to 3000  D.
 %The
@@ -574,6 +713,10 @@ Run time average for the different optimizers adopted in the study for the diffe
 %exploration phase.
 
 
+%Ranks achieved by the Friedman and Kruskal Wallis tests.
+%Algorithms Mean rank Final priority
+
+
 %ApplSoftComp_71_p747
 %The second column of Table 16 represent the methods which
 %are compared. The third and fifth columns show lower and upper
@@ -614,9 +757,119 @@ Run time average for the different optimizers adopted in the study for the diffe
 
 %Table 18,19
 
+%-------------------------------
+
+%KnowBasSys_243_108457
+
+%Results of Holm’s test for the CEC-2017 test functions with dimensions of 30 for each function.
+%i WSO vs. z-value p-value α/i (0.05) Hypothesis
+%Average ranking of WSO and other algorithms using Friedman’s test based
+%upon their results on the CEC-2017 test
+%functions, each with dimensions of 50.
 
 
-
+%The substantive statistical analysis using the mean and standard deviation score metrics of the results gives an in-depth
+%understanding of the accuracy and stability of WSO. These tests
+%revealed cogent exploration and exploitation capabilities of WSO,
+%but they are incapable of proving how good the WSO is. Therefore,
+%other statistical tests are needed to ensure that the results of
+%WSO are not typically generated fortuitously. Statistical tests
+%are essential to study the consistency and performance of WSO
+%through the use of the mean values achieved in all of independent
+%runs performed.
+%In this section, two statistical tests were conducted to order
+%the optimization methods and to grasp whether the differences in
+%terms of quality between all methods are statistically significant.
+%The first test performed in this work was Friedman’s statistical
+%test [112]. To realize a dependable comparison by this test, a
+%comparison of more than 10 test functions is required, whereby
+%the comparison must be made between more than 5 different
+%methods [113]. In this regard, this study compared between
+%more than 5 different methods, each of which was tested on 51
+%functions. These functions are grouped into two test bunches,
+%as follows: (1) the first test set is the CEC-2017 with 29 test
+%functions, and (3) the second test set is the CEC-2011 which
+%consists of 22 test cases.
+%To rank the algorithms using Friedman’s test, there is a need
+%to calculate the average ranked value. A comparison is then made
+%to assess the critical values obtained for the significance level
+%(p-value) which was defined to be α = 0.05. In the event that
+%the significance level divulged by Friedman’s test is less than
+%or equal to 0.05, the null hypothesis is rejected, indicating the
+%there is no difference between the accuracy of all the compared
+%methods. The alternative hypothesis asserts that there is a difference between the performances of all the compared methods.
+%When applying Friedman’s test, the best algorithm is the one that
+%receives the lowest rank while the worst algorithm receives the
+%highest rank. The best algorithm is used as a control method for
+%subsequent analysis. In order to assess the statistical performance
+%of WSO and each other method on the CEC-2017 test suite, the
+%mean error values of all methods in all dimensions and the rank
+%of each method in each dimension were taken into account. The
+%average rankings of WSO in conjunction with other methods
+%using Friedman’s test on CEC-2017 with a dimension of 10 for
+%all functions in this group are summarized in Table 20.
+%In Table 20, the p-value got by the application of Friedman’s
+%test on CEC-2017 with dimension 10 is 1.03360431E−10. This
+%indicates that there are statistically major differences in performance between the competing algorithms. As per the results in
+%Table 20, AMO is the control algorithm. In this table, WSO is
+%ranked fourth after AMO, DE and SFS, but the differences between
+%WSO and those algorithms are small, with WSO followed in order
+%by: GSK, TLBO, PSO, BBO, GA, and ACO.
+%More steps are needed to figure out which algorithms perform
+%significantly different from WSO and which ones are alike. These
+%steps are important to verify whether the performance of WSO
+%statistically deviates from that of other algorithms. To this end,
+%a post-hoc statistical method, referred to as Holm’s test [114]
+%was considered. This method is important for finding out which
+%methods are worse or better than WSO. Holm’s test sorts all
+%algorithms based on their p-values and compares them to α/k−i,
+%where k is the freedom degree and i is the method number. This
+%method starts with the most important p-value and consecutively
+%rejects the null hypothesis under the condition that pi < α/k − i.
+%Once the method is under to reject the hypothesis, it ceases and
+%all remaining hypotheses are deemed acceptable.
+%The results of applying Holm’s test, as a post-hoc method after
+%Friedman’s test, on the CEC-2017 test group with a dimension of
+%10 are shown in Table 21.
+%In Table 21, hypotheses that have a p-value ≤ 0.0125 are
+%rejected based on Holm’s test. As can be inferred from this table,
+%the performance of WSO is statistically significant and better than
+%some of the competing methods mentioned above, with little
+%difference from those better algorithms.
+%Table 22 provides a summary of the ranking results generated
+%by Friedman’s test when applied to the mean error results of the
+%CEC-2017 benchmark with dimensions 30 for all functions.
+%The p-value revealed by Friedman’s test on the results of the
+%CEC-2017 functions with a dimension of 30 is 9.34508026E−11.
+%This p-value indicates that there is a statistically large difference
+%between the algorithms, which means that the null hypothesis is
+%rejected. It is evidently seen from the results shown in Table 22
+%that WSO achieved a reasonable score among all other competitors. The rank of the algorithms in Table 22 are in succession
+  
+%ще пару сторінок подібного аналізу
+%
+%As a key inference dragged from the statistical analysis results
+%described above, in general, WSO performed better than many
+%robust state-of-the-art methods aforesaid in the literature such
+%as and TLBO, PSO and GA. This points out the favorable performance of WSO, and affirms that this algorithm can successfully
+%explore the search space, whether it contains one optima or many
+%optimums, or whether the optimization problems are of small,
+%medium, or high dimensionality. Besides, the average ranking
+%reveals that the performance score of WSO is not far behind
+%that of AMO, GSK and SFS while the performance of WSO, AMO
+%and GSK is far from all other competitors like PSO, GA and ACO
+%Precisely, we can draw that the outstanding superiority of WSO in
+%CEC-2011 and CEC-2017 is attributable to the splendid and purposeful mathematical model of WSO. In sum, the consequences
+%of this statistical analysis denote that WSO is an effective and
+%reliable optimizer with well-tuned exploration and exploitation
+%features that maintain a balance of local optimization and global
+%optimization diversity. These endings are encouraging points to
+%apply this algorithm to solve other hard real-world optimization
+%problems.
+  
+  
+  
+%--------------------------------------
 % Numbered list
 % Use the style of numbering in square brackets.
 % If nothing is used, default style will be taken.
