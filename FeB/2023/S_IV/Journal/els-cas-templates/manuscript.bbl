@@ -1,4 +1,4 @@
-\begin{thebibliography}{32}
+\begin{thebibliography}{42}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\bibinfo}[2]{#2}
 \ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
@@ -55,6 +55,95 @@
   of photovoltaic cell with {S}--shaped current–voltage characteristic},
 \newblock \bibinfo{journal}{Phys. Status Solidi A} \bibinfo{volume}{218}
   (\bibinfo{year}{2021}) \bibinfo{pages}{2100403}.
+%Type = Book
+\bibitem[{Sze and Lee(2012)}]{Sze2012}
+\bibinfo{author}{S.~M. Sze}, \bibinfo{author}{M.~Lee},
+  \bibinfo{title}{Semiconductor Devices: Physics and Technology},
+  \bibinfo{publisher}{John Wiley \& Sons, Inc}, \bibinfo{address}{New York},
+  \bibinfo{edition}{third} edition, \bibinfo{year}{2012}.
+%Type = Article
+\bibitem[{Kondratenko et~al.(2019)Kondratenko, Lysenko, Gomeniuk, Kondratenko,
+  Kozyrev, Selyshchev, Dzhagan, and Zahn}]{Kondratenko2019}
+\bibinfo{author}{S.~Kondratenko}, \bibinfo{author}{V.~Lysenko},
+  \bibinfo{author}{Y.~V. Gomeniuk}, \bibinfo{author}{O.~Kondratenko},
+  \bibinfo{author}{Y.~Kozyrev}, \bibinfo{author}{O.~Selyshchev},
+  \bibinfo{author}{V.~Dzhagan}, \bibinfo{author}{D.~R.~T. Zahn},
+\newblock \bibinfo{title}{Charge carrier transport, trapping, and recombination
+  in pedot:pss/n-si solar cells},
+\newblock \bibinfo{journal}{ACS Appl. Energy Mater.} \bibinfo{volume}{2}
+  (\bibinfo{year}{2019}) \bibinfo{pages}{5983--5991}.
+%Type = Article
+\bibitem[{Green(2003)}]{Green2003}
+\bibinfo{author}{M.~A. Green},
+\newblock \bibinfo{title}{General temperature dependence of solar cell
+  performance and implications for device modelling},
+\newblock \bibinfo{journal}{Progress in Photovoltaics: Research and
+  Applications} \bibinfo{volume}{11} (\bibinfo{year}{2003})
+  \bibinfo{pages}{333--340}.
+%Type = Article
+\bibitem[{Eberle et~al.(2021)Eberle, Fell, Schindler, Shahid, and
+  Schubert}]{Eberle2021}
+\bibinfo{author}{R.~Eberle}, \bibinfo{author}{A.~Fell},
+  \bibinfo{author}{F.~Schindler}, \bibinfo{author}{J.~Shahid},
+  \bibinfo{author}{M.~C. Schubert},
+\newblock \bibinfo{title}{Breakdown of temperature sensitivity of silicon solar
+  cells by simulation input parameters},
+\newblock \bibinfo{journal}{Sol. Energ. Mat. Sol.} \bibinfo{volume}{219}
+  (\bibinfo{year}{2021}) \bibinfo{pages}{110836}.
+%Type = Article
+\bibitem[{Ibrahim and Anani(2017)}]{Ibrahim2017}
+\bibinfo{author}{H.~Ibrahim}, \bibinfo{author}{N.~Anani},
+\newblock \bibinfo{title}{Variations of {PV} module parameters with irradiance
+  and temperature},
+\newblock \bibinfo{journal}{Energy Procedia} \bibinfo{volume}{134}
+  (\bibinfo{year}{2017}) \bibinfo{pages}{276--285}.
+%Type = Article
+\bibitem[{Bradaschia et~al.(2019)Bradaschia, Cavalcanti, do~Nascimento,
+  da~Silva, and de~Souza~Azevedo}]{Bradaschia2019}
+\bibinfo{author}{F.~Bradaschia}, \bibinfo{author}{M.~C. Cavalcanti},
+  \bibinfo{author}{A.~J. do~Nascimento}, \bibinfo{author}{E.~A. da~Silva},
+  \bibinfo{author}{G.~M. de~Souza~Azevedo},
+\newblock \bibinfo{title}{Parameter identification for {PV} modules based on an
+  environment-dependent double-diode model},
+\newblock \bibinfo{journal}{IEEE J. Photovolt.} \bibinfo{volume}{9}
+  (\bibinfo{year}{2019}) \bibinfo{pages}{1388--1397}.
+%Type = Article
+\bibitem[{{Tuan Le} et~al.(2021){Tuan Le}, Basnet, Yan, Chen, Nandakumar,
+  Duttagupta, Seif, and Hameiri}]{TuanLe2021}
+\bibinfo{author}{A.~H. {Tuan Le}}, \bibinfo{author}{R.~Basnet},
+  \bibinfo{author}{D.~Yan}, \bibinfo{author}{W.~Chen},
+  \bibinfo{author}{N.~Nandakumar}, \bibinfo{author}{S.~Duttagupta},
+  \bibinfo{author}{J.~P. Seif}, \bibinfo{author}{Z.~Hameiri},
+\newblock \bibinfo{title}{Temperature-dependent performance of silicon solar
+  cells with polysilicon passivating contacts},
+\newblock \bibinfo{journal}{Sol. Energ. Mat. Sol.} \bibinfo{volume}{225}
+  (\bibinfo{year}{2021}) \bibinfo{pages}{111020}.
+%Type = Article
+\bibitem[{Dupré et~al.(2016)Dupré, Vaillon, and Green}]{Dupre2016}
+\bibinfo{author}{O.~Dupré}, \bibinfo{author}{R.~Vaillon},
+  \bibinfo{author}{M.~A. Green},
+\newblock \bibinfo{title}{Experimental assessment of temperature coefficient
+  theories for silicon solar cells},
+\newblock \bibinfo{journal}{IEEE J. Photovolt.} \bibinfo{volume}{6}
+  (\bibinfo{year}{2016}) \bibinfo{pages}{56--60}.
+%Type = Article
+\bibitem[{Riesen et~al.(2016)Riesen, Stuckelberger, Haug, Ballif, and
+  Wyrsch}]{Riesen2016}
+\bibinfo{author}{Y.~Riesen}, \bibinfo{author}{M.~Stuckelberger},
+  \bibinfo{author}{F.-J. Haug}, \bibinfo{author}{C.~Ballif},
+  \bibinfo{author}{N.~Wyrsch},
+\newblock \bibinfo{title}{{Temperature dependence of hydrogenated amorphous
+  silicon solar cell performances}},
+\newblock \bibinfo{journal}{J. Appl. Phys.} \bibinfo{volume}{119}
+  (\bibinfo{year}{2016}) \bibinfo{pages}{044505}.
+%Type = Article
+\bibitem[{Rana et~al.(2018)Rana, Kumar, Chand, and Singh}]{Rana2018}
+\bibinfo{author}{A.~Rana}, \bibinfo{author}{A.~Kumar},
+  \bibinfo{author}{S.~Chand}, \bibinfo{author}{R.~K. Singh},
+\newblock \bibinfo{title}{{Exploring deep defect state impact on open circuit
+  voltage of conventional and inverted organic solar cells}},
+\newblock \bibinfo{journal}{J. Appl. Phys.} \bibinfo{volume}{124}
+  (\bibinfo{year}{2018}) \bibinfo{pages}{103101}.
 %Type = Article
 \bibitem[{Braik et~al.(2022)Braik, Hammouri, Atwan, Al-Betar, and
   Awadallah}]{WhiteShark}
