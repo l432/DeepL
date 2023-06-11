@@ -11,7 +11,7 @@ simultaneous :  0
 values from a list :  1
 logarithmic variation :  0
 values are file names :  1
-number of file names :   34
+number of file names :   25
 list of filenames saved :  0
 file   0:P00.grd
 file   1:P01.grd
@@ -38,15 +38,6 @@ file  21:P21.grd
 file  22:P22.grd
 file  23:P23.grd
 file  24:P24.grd
-file  25:P25.grd
-file  26:P26.grd
-file  27:P27.grd
-file  28:P28.grd
-file  29:P29.grd
-file  30:P30.grd
-file  31:P31.grd
-file  32:P32.grd
-file  33:P33.grd
 
 Batch parameter 1 :
 
@@ -58,7 +49,7 @@ simultaneous :  1
 values from a list :  1
 logarithmic variation :  0
 values are file names :  1
-number of file names :   34
+number of file names :   25
 list of filenames saved :  0
 file   0:S00.grd
 file   1:S01.grd
@@ -85,15 +76,6 @@ file  21:S21.grd
 file  22:S22.grd
 file  23:S23.grd
 file  24:S24.grd
-file  25:S25.grd
-file  26:S26.grd
-file  27:S27.grd
-file  28:S28.grd
-file  29:S29.grd
-file  30:S30.grd
-file  31:S31.grd
-file  32:S32.grd
-file  33:S33.grd
 
 Batch parameter 2 :
 
@@ -105,7 +87,7 @@ simultaneous :  1
 values from a list :  1
 logarithmic variation :  0
 values are file names :  1
-number of file names :   34
+number of file names :   25
 list of filenames saved :  0
 file   0:B00.grd
 file   1:B01.grd
@@ -132,15 +114,6 @@ file  21:B21.grd
 file  22:B22.grd
 file  23:B23.grd
 file  24:B24.grd
-file  25:B25.grd
-file  26:B26.grd
-file  27:B27.grd
-file  28:B28.grd
-file  29:B29.grd
-file  30:B30.grd
-file  31:B31.grd
-file  32:B32.grd
-file  33:B33.grd
 
 Batch parameter 3 :
 
@@ -152,7 +125,7 @@ simultaneous :  1
 values from a list :  1
 logarithmic variation :  0
 values are file names :  1
-number of file names :   34
+number of file names :   25
 list of filenames saved :  0
 file   0:F00.grd
 file   1:F01.grd
@@ -179,14 +152,5 @@ file  21:F21.grd
 file  22:F22.grd
 file  23:F23.grd
 file  24:F24.grd
-file  25:F25.grd
-file  26:F26.grd
-file  27:F27.grd
-file  28:F28.grd
-file  29:F29.grd
-file  30:F30.grd
-file  31:F31.grd
-file  32:F32.grd
-file  33:F33.grd
 
 >> end of batch settings file
