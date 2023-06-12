@@ -559,24 +559,36 @@ Wilcoxon signed-rank test is a nonparametric statistical test used for pairwise 
 This test assigns a rank to all the scores considered as one group and then sums the ranks of each group.
 
 \item
-Friedman, Friedman Aligned Ranks, and Quade tests are widely used for comparing the performance differences 
-among optimization algorithms 
-(multiple comparisons with a control method).
+Friedman, Friedman Aligned Ranks, and Quade tests are used for comparing the performance differences
+among optimization algorithms
+(multiple comparisons $1\times N$ with a control method).
 Therefore, the average rankings of the algorithms according to the
 tests are reported.
-Besides, the post--hoc  Finner, Holm, Hochberg, and Holland procedures 
-are used to establish proper comparisons between each algorithm and a set of other algorithms. 
+Besides, the post--hoc  Finner, Holm, Hochberg, and Holland procedures
+are used to establish proper comparisons between each algorithm and a set of other algorithms.
 
 \item
-Multiple Comparison Tests with Shaffer’s static, Nemenyi, and Holm procedures 
-are employed to make pairwise comparisons between groups and identify the differences.
+Multiple Comparison Test (Friedman) with Shaffer’s static, Nemenyi, and Holm procedures
+are employed to compute all possible pairwise comparisons between groups ($N\times N$)
+and identify the differences.
 
 \end{enumerate}
 
+In the single--IV case, all nonparametric statistical tests were used to compare the performance of meta--heuristic algorithms in assessing each of the eight model parameters. 
+The $\mathrm{APE}_i$ values were used, and the number of case problems in the study $n$ was equal to $N_\mathrm{runs}=51$.
+Additionally, algorithms were compared in terms of curve-fitting accuracy by using RMSPE values.
+Furthermore, tests were employed on a composite parameter. 
+This parameter, referred to as "Comp" hereafter, includes $\mathrm{APE}_\mathrm{MEDIAN}$ for each of the eight defined model parameters, 
+the median value for RMSPE, and $t_\mathrm{run}$.
+This parameter may provide the most valuable insights for comparing algorithms. However, it is important to note that the value of $n$ is only 10.
+According to Derrac \emph{et al} \cite{Derrac2011}, the number of case problems should be $n\geq 2k$, 
+where $k$ is the number of algorithms ($k=14$ in our study). 
+Therefore, the use of the Comp parameter is not strictly rigorous.
 
-\cite{Derrac2011}
 
-%перекласти на англійську "RMSPE ілюструє наскільки апроксимуюча крива збігається з ВАХ"
+
+
+%перекласти на англійську ""
 
 %used parameters to estimate error: the root mean square error (RMSE) and the mean absolute
 %percentage of error (MAPE). RMSE and MAPE are two statistical parameters defined by the
