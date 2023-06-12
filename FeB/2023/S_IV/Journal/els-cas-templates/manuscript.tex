@@ -204,7 +204,7 @@ This approach allows for assessing the accuracy of the employed optimization met
 as the simulation was performed using known parameter values.
 
 In first part of the study, a detailed analysis was conducted on a single IV curve,
-evaluating the performance of meta--heuristic algorithms for parameter estimation in a one-time application mainly.
+evaluating the performance of meta--heuristic algorithms for parameter estimation in a one--time application mainly.
 Additionally, the suitability of employing two different fitness functions was examined.
 In the second part, we simulated a set of IV characteristics and evaluated the average performance metrics of various algorithms.
 
@@ -246,7 +246,7 @@ The simulation result is presented on Fig.~\ref{figSigleIV} by symbols.
 \begin{figure}[]
 	\centering
 		\includegraphics[width=1.0\columnwidth]{IVsimple}
-	  \caption{Fitting results (lines) for the simulated current-voltage characteristic (symbols). 
+	  \caption{Fitting results (lines) for the simulated current-voltage characteristic (symbols).
              The values from  Eq.~(\ref{eqParSingleIV}) were assumed under simulation.}\label{figSigleIV}
 \end{figure}
 
@@ -257,33 +257,33 @@ The simulation result is presented on Fig.~\ref{figSigleIV} by symbols.
 
 
 \subsubsection{IV--set case}\label{SetIV}
-Employing various meta--heuristic algorithms to analyze a single IV curve 
+Employing various meta--heuristic algorithms to analyze a single IV curve
 is insufficient to obtain comprehensive insights into the methods' efficacy in parameter estimation.
 The accuracy of parameter determination is closely tied to their absolute values.
-For instance, an increase in the $R_\mathrm{p}$ value can pose challenges for accurately estimating resistance 
+For instance, an increase in the $R_\mathrm{p}$ value can pose challenges for accurately estimating resistance
 because the shunt will have a lesser impact on the overall shape of IV curve.
 In addition, the ratio between the parameter values also plays a crucial role.
 
 To test the methods across different parameter values, we generated synthetic data in a temperature range from 260 K to 350 K.
 During the simulation process, we considered various temperature dependencies of the parameters.
-We based our approach on known physical mechanisms but focused on achieving parameter diversity 
+We based our approach on known physical mechanisms but focused on achieving the diversity of parameter ratio
 instead of attempting to replicate real--life photovoltaic converters precisely.
-Furthermore, an S--shaped IV curve is observed in solar cells of various types, 
-and diverse charge transport mechanisms significantly complicate the selection of 
+Furthermore, an S--shaped IV curve is observed in solar cells of various types,
+and diverse charge transport mechanisms significantly complicate the selection of
 the only possible temperature dependence for each of the eight model parameters.
-Therefore, we assumed that the current conduction mechanism through D1 is close to tunneling, 
-and hence, $I_{01}$, $R_\mathrm{p1}$, and $n_1kT$ remain constant, 
+Therefore, we assumed that the current conduction mechanism through D1 is close to tunneling,
+and hence, $I_{01}$, $R_\mathrm{p1}$, and $n_1kT$ remain constant,
 with $I_{01}=0.015$~mA, $R_\mathrm{p1}=10^4$~$\Omega$, $n_1kT=7$~eV.
-In the case of D2, the thermionic emission current was suggested 
-and $I_{02}$ and $n_2$ increased and decreased, respectively, with temperature rise \cite{Sze2012}: 
+In the case of D2, the thermionic emission current was suggested
+and $I_{02}$ and $n_2$ increased and decreased, respectively, with temperature rise \cite{Sze2012}:
 \begin{eqnarray}
 %\label{eqIV_W}
 I_{02}&=& I_{002}\exp\left(-\frac{E_I}{kT}\right)\,,\\
 n_2&=&1+\frac{T^*}{T}\,,
 \end{eqnarray}
-where $I_{002}$, $E_I$, and $T^*$ are the constants which are independent of temperature. 
+where $I_{002}$, $E_I$, and $T^*$ are the constants which are independent of temperature.
 The values of $I_{002}=500$~A, $E_I=0.40$~eV, and $T^*=500$~K were used.
-For $R_\mathrm{p2}$, an exponential temperature dependence was employed, 
+For $R_\mathrm{p2}$, an exponential temperature dependence was employed,
 as it is widely observed \cite{Kondratenko2019} in modern solar cells for the shunt resistance:
 \begin{equation}
 R_\mathrm{p2}=R_\mathrm{p20}\exp\left(\frac{E_R}{kT}\right)\,.
@@ -291,7 +291,7 @@ R_\mathrm{p2}=R_\mathrm{p20}\exp\left(\frac{E_R}{kT}\right)\,.
 with
 $R_\mathrm{p20}=9$~m$\Omega$,
 $E_R=0.32$~eV.
-The linear temperature dependencies is expected for both $I_\mathrm{ph}$ \cite{Green2003,Eberle2021} and $R_\mathrm{s}$ \cite{Ibrahim2017,Bradaschia2019}: 
+The linear temperature dependencies is expected for both $I_\mathrm{ph}$ \cite{Green2003,Eberle2021} and $R_\mathrm{s}$ \cite{Ibrahim2017,Bradaschia2019}:
 \begin{equation}
 y=y_{0}[1+\mathrm{TC}_y(T-300)]\,,
 \end{equation}
@@ -299,13 +299,13 @@ where
 $y=I_\mathrm{ph}$ or $R_\mathrm{s}$,
 $y_0$ is the parameter value at room temperature,
 $\mathrm{TC}_y$ is the temperature coefficient of parameter.
-For most types of monocrystalline silicon solar cells, the $\mathrm{TC}_{I_\mathrm{ph}}$ typically ranges from around $-0.0004$~K$^{-1}$ \cite{TuanLe2021}. 
+For most types of monocrystalline silicon solar cells, the $\mathrm{TC}_{I_\mathrm{ph}}$ typically ranges from around $-0.0004$~K$^{-1}$ \cite{TuanLe2021}.
 However, as the base thickness decreases, the temperature coefficient can increase to $-0.0014$~K$^{-1}$ \cite{Dupre2016}.
 For hydrogenated amorphous silicon solar cells, $\mathrm{TC}_{I_\mathrm{ph}}$ is equal to $-10^{-3}$~K$^{-1}$ \cite{Riesen2016}.
 For organic solar cells, the temperature coefficient can reach a magnitude of $-0.003$~K$^{-1}$ \cite{Rana2018}.
-During the simulation, we assumed $\mathrm{TC}_{I_\mathrm{ph}}=-10^{-3}$~K$^{-1}$. 
-Furthermore, the values of $I_\mathrm{ph0}T=1$~mA, 
-$\mathrm{TC}_{R_\mathrm{s}}=0.02$~K$^{-1}$, 
+During the simulation, we assumed $\mathrm{TC}_{I_\mathrm{ph}}=-10^{-3}$~K$^{-1}$.
+Furthermore, the values of $I_\mathrm{ph0}T=1$~mA,
+$\mathrm{TC}_{R_\mathrm{s}}=0.02$~K$^{-1}$,
 and $R_\mathrm{s0}=50$~$\Omega$ were used.
 
 
@@ -325,15 +325,15 @@ and $R_\mathrm{s0}=50$~$\Omega$ were used.
 %\end{split}
 %\end{equation}
 The set of I–V data was composed of 10 curves,
-which were simulated at 10~K intervals from 260 to 350~K; 
-in this case, 
+which were simulated at 10~K intervals from 260 to 350~K;
+in this case,
 $n_1$,
 $I_{02}$,
 $n_2$,
 $R_\mathrm{p2}$,
 $R_\mathrm{s}$,
 and $I_\mathrm{ph}$
-varied 
+varied
 from 6.37 to 4.73,
 from 9 to 880 $\mu$A,
 from 2.92 to 2.43,
@@ -351,7 +351,7 @@ The simulation results are presented on Fig.~\ref{figSetIV} by symbols.
 %перекласти на англійську "Таким чином, узагальнюючи, при створенні набору штучних ВАХ були використані наступні температурні залежності параметрів"
 
 
- 
+
 %виправити стилістичні помилки ""
 
 %Estimation of parameters for solar cells with S--shaped current--voltage characteristics using meta--heuristic algorithms
@@ -494,7 +494,7 @@ and $p$ is the total number of voltage steps in the IV characteristic.
 %Each algorithm was run 51 times with different random seed for each simulated IV curves.
 %The numbers of independent algorithmic runs are equal to 51 on each simulated IV curve
 %to generate the statistical results.
-We executed each tested algorithm for 51 independent runs on each simulated IV curve
+We executed each tested algorithm for $N_\mathrm{runs}=51$ independent runs on each simulated IV curve
 to generate the statistical results.
 The search ranges were set as follows:
 
@@ -519,7 +519,64 @@ $I_\mathrm{ph}(\mathrm{mA})\in[10^{-3},100]$.
 %I_\mathrm{ph}(\mathrm{mA})&\in&[10^{-3},100]\nonumber .
 %\end{eqnarray}
 
-\subsection{Evaluation criteria}\label{EvalCr}
+\subsection{Evaluation metrics}\label{EvalCr}
+
+To better show the performance differences between compared algorithms,
+several evaluation metrics are considered, which can be described as follows:
+\begin{enumerate}[1.]
+\item
+Mean value (MEAN), median value (MEDIAN), standard deviance (STD), and interquartile range (IQR)
+for each two--diode model parameter $y$
+($y$ is one of $\left\{I_{01}\right.$, $n_1$, $R_\mathrm{p1}$, $I_{02}$, $n_2$, $R_\mathrm{p2}$, $R_\mathrm{s}$, $\left.I_\mathrm{ph}\right\}$).
+MEAN and MEDIAN are often used to measure the solution quality.
+The closer the obtained MEAN and MEDIAN values are to the actual parameter values,
+the closer the obtained solution is to the optimal solution.
+To quantify, we used the  absolute percentage of error (APE):
+\begin{equation}
+\label{eqAPE}
+\mathrm{APE}\,(y)= \left| \frac{y-y^\mathrm{tr}}{y^\mathrm{tr}}\right|\,,
+\end{equation}
+where
+$y^\mathrm{tr}$ is the parameter value used during the IV curve simulation.
+APE was calculated for $y_i$, obtained by one--run algorithm application ($\mathrm{APE}_i$),
+MEAN ($\mathrm{APE}_\mathrm{MEAN}$), and MEDIAN ($\mathrm{APE}_\mathrm{MEDIAN}$).
+Reducing STD and IQR result in a more stable algorithm performance.
+
+\item
+Run time average $t_\mathrm{run}$: is the average run time in seconds for an
+individual optimizer on a IV curve.
+
+\item
+Root mean square percentage of error (RMSPE) is a statistical measure that indicates
+how well the fitted curve matches the actual IV curve:
+\begin{equation}
+\label{eqRMSPE}
+\mathrm{RMSPE}= \sqrt{\frac{1}{p} \sum_{k=1}^p \left[\frac{V^\mathrm{tr}(I_k)-V^\mathrm{cal}(I_k,Y)}{V^\mathrm{tr}(I_k)} \right]^2}\,.
+\end{equation}
+
+\item
+Wilcoxon signed-rank test is a nonparametric statistical test used for pairwise comparisons of algorithms.
+This test assigns a rank to all the scores considered as one group and then sums the ranks of each group.
+
+\item
+Friedman, Friedman Aligned Ranks, and Quade tests are widely used for comparing the performance differences 
+among optimization algorithms 
+(multiple comparisons with a control method).
+Therefore, the average rankings of the algorithms according to the
+tests are reported.
+Besides, the post--hoc  Finner, Holm, Hochberg, and Holland procedures 
+are used to establish proper comparisons between each algorithm and a set of other algorithms. 
+
+\item
+Multiple Comparison Tests with Shaffer’s static, Nemenyi, and Holm procedures 
+are employed to make pairwise comparisons between groups and identify the differences.
+
+\end{enumerate}
+
+
+\cite{Derrac2011}
+
+%перекласти на англійську "RMSPE ілюструє наскільки апроксимуюча крива збігається з ВАХ"
 
 %used parameters to estimate error: the root mean square error (RMSE) and the mean absolute
 %percentage of error (MAPE). RMSE and MAPE are two statistical parameters defined by the

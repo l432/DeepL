@@ -1,4 +1,4 @@
-\begin{thebibliography}{42}
+\begin{thebibliography}{43}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\bibinfo}[2]{#2}
 \ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
@@ -341,5 +341,14 @@
   using an improved whale optimization algorithm},
 \newblock \bibinfo{journal}{Energy Convers. Manage.} \bibinfo{volume}{174}
   (\bibinfo{year}{2018}) \bibinfo{pages}{388--405}.
+%Type = Article
+\bibitem[{Derrac et~al.(2011)Derrac, García, Molina, and Herrera}]{Derrac2011}
+\bibinfo{author}{J.~Derrac}, \bibinfo{author}{S.~García},
+  \bibinfo{author}{D.~Molina}, \bibinfo{author}{F.~Herrera},
+\newblock \bibinfo{title}{A practical tutorial on the use of nonparametric
+  statistical tests as a methodology for comparing evolutionary and swarm
+  intelligence algorithms},
+\newblock \bibinfo{journal}{Swarm Evol. Comput.} \bibinfo{volume}{1}
+  (\bibinfo{year}{2011}) \bibinfo{pages}{3--18}.
 
 \end{thebibliography}
