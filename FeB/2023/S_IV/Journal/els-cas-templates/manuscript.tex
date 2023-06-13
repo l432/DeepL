@@ -470,7 +470,7 @@ a greedy selection, and $N\!p=30$.
 The majority of the utilized algorithms demonstrate excellent performance when
 it comes to parameter estimation of solar cells within conventional models (single or double diode) \cite{CWOA,DEWang,GOTLBO,IJAYA,MABC,PSO,STLBO,TLBO_Patel,LSHADE,IWOA}.
 
-The performance of the extracted parameters is evaluated using the fitness function at
+In meta-heuristic optimization methods, the quality of the extracted parameters is evaluated using the fitness function at
 every iteration.
 In our investigation, two fitness function were used:
 \begin{equation}
@@ -574,26 +574,27 @@ and identify the differences.
 
 \end{enumerate}
 
-In the single--IV case, all nonparametric statistical tests were used to compare the performance of meta--heuristic algorithms in assessing each of the eight model parameters. 
+In the single--IV case, all nonparametric statistical tests were used to compare the performance of meta--heuristic algorithms in assessing each of the eight model parameters.
 The $\mathrm{APE}_i$ values were used, and the number of case problems in the study $n$ was equal to $N_\mathrm{runs}=51$.
 Additionally, algorithms were compared in terms of curve-fitting accuracy by using RMSPE values.
-Furthermore, tests were employed on a composite parameter. 
-This parameter, referred to as "Comp" hereafter, includes $\mathrm{APE}_\mathrm{MEDIAN}$ for each of the eight defined model parameters, 
+Furthermore, tests were employed on a composite parameter.
+This parameter, referred to as ``Comp'' hereafter, includes $\mathrm{APE}_\mathrm{MEDIAN}$ for each of the eight defined model parameters,
 the median value for RMSPE, and $t_\mathrm{run}$.
 This parameter may provide the most valuable insights for comparing algorithms. However, it is important to note that the value of $n$ is only 10.
-According to Derrac \emph{et al} \cite{Derrac2011}, the number of case problems should be $n\geq 2k$, 
-where $k$ is the number of algorithms ($k=14$ in our study). 
+According to Derrac \emph{et al} \cite{Derrac2011}, the number of case problems should be $n\geq 2k$,
+where $k$ is the number of algorithms ($k=14$ in our study).
 Therefore, the use of the Comp parameter is not strictly rigorous.
 
+In the IV--set case, a comprehensive nonparametric statistical analysis of algorithms efficiency was performed on all parameters collected from all simulated curves.
+In this scenario, $n$ had a value of 81:
+\begin{equation*}
+n= 10\,T\mathrm{values}\times(8\,\mathrm{APE}_\mathrm{MEDIAN}+1\,\mathrm{RMSPE}_\mathrm{MEDIAN})+1\,t_\mathrm{run}\,.
+\end{equation*}
+%10 temperature values $\times(\mathrm{APE}_\mathrm{MEDIAN}+1\mathrm{RMSPE}_\mathrm{MEDIAN})+1t_\mathrm{run}$.
 
 
+%перекласти на англійську "При цьому n дорівнювало 81"
 
-%перекласти на англійську ""
-
-%used parameters to estimate error: the root mean square error (RMSE) and the mean absolute
-%percentage of error (MAPE). RMSE and MAPE are two statistical parameters defined by the
-%following formulas:
-%JRenSusEner_10_053505 p12
 
 %This section is to compare the performance between EJAYA
 %and the other eight metaheuristic algorithms on CEC 2014 and
@@ -605,23 +606,11 @@ Therefore, the use of the Comp parameter is not strictly rigorous.
 %algorithm is more intuitively compared through the fitness value iteration curve performance, and finally, compare
 %the execution time of the algorithms.
 
-%4.2.2. Evaluation metrics
-%To better show the performance differences between EJAYA
-%and the compared algorithms, three evaluation metrics are considered, which can be described as follows:
-%1.Mean value and standard deviance
-%Mean value (MEAN) and standard deviance (STD) are often
-%used to measure the solution quality [21,52–54]. Take the
-%minimum problem as an example, the smaller the obtained
-%MEAN, the closer to the global optimal solution the obtained solution; the smaller the obtained STD, the higher
-%the stable of the algorithm. The obtained MEAN and STD by
+%The obtained MEAN and STD by
 %the applied algorithms are presented in Table 3. The best
 %results were in bold type in Table 3
 %2.Friedman Mean Rank Test
-%As a common statistical tool in the field of optimization,
-%Friedman Mean Rank Test has been widely used for comparing the performance differences among optimization
-%algorithms [55–58]. Here, the optimal solutions obtained
-%by EJAYA from 30 independent runs and the compared
-%algorithms are tested by Friedman Mean Rank Test. The
+% The
 %test results can be found in Table 4 and Fig. 4.
 %3.Wilcoxon sign-rank test
 %Wilcoxon sign-rank test is used widely to compare the
@@ -731,9 +720,116 @@ Therefore, the use of the Comp parameter is not strictly rigorous.
 %In order to validate SO results statistically, Wilcoxon Rank
 %Sum (WRS) has been used to perform a nonparametric test
 
-\section{Simulation results and analysis}\label{Result}
+\section{Numerical results and discussion}\label{Result}
 %Results and analysis of the experiment
 
+\subsection{Comparison of algorithms time}
+In meta--heuristic algorithms, a different termination can be defined.
+For instance, a termination condition can be a specific number of iterations $N_\mathrm{it}$,
+constraints on the number of fitness function evaluations $N_\mathrm{FE}$,
+a specific rate of precision,
+a specific time,
+no sign of change in solutions after a specific number of iterations,
+or a combination of these cases.
+In this study, the primary focus was on the accuracy of parameter estimation,
+and therefore, the termination criterion used was the absence of changes in the solution.
+Based on this condition, the required number of iterations $N_\mathrm{it}$ was determined,
+and the corresponding calculation time was measured $t_\mathrm{run}$.
+In addition, the $N_\mathrm{FE}$ was evaluated.
+
+All the applied algorithms have been coded and implemented in Embarcadero\textregistered Delphi $10.3$ programming software.
+$t_\mathrm{run}$ was estimated by using WinAPI-functions \emph{QueryPerformanceCounter()} and \emph{QueryPerformanceFrequency()}.
+The experiments were performed on Windows 10 Pro 64-bit,
+2.9 GHz AMD Ryzen 7 4800H CPU, and 8~GB RAM.
+
+
+\begin{table}[<options>]
+\caption{Comparison of optimization algorithms for single IV curve parameter estimation}\label{tblRun}
+\begin{tabular*}{\tblwidth}{@{}LCCC@{}}
+\toprule
+Method  &  $N_\mathrm{it}$ & $N_\mathrm{FE}$ & $t_\mathrm{run}$ (s)\\ % Table header row
+\midrule
+DE & 8000& 1024000& $42\pm1$\\
+EBLSHADE & 3000& 444600& $22\pm1$\\
+ADELI & 12000& 1800000& $93\pm2$\\
+NDE & 5000& 430000&$20.2\pm0.3$ \\
+MABC & 8000& 1024000&$48\pm11$ \\
+TLBO & 5000& 1000000&$56.1\pm0.3$ \\
+GOTLBO & 6000& 360000&$15\pm1$ \\
+STLBO & 13000& 273000&$13.8\pm0.3$ \\
+PSO & 4000& 480000&$19\pm3$ \\
+IJAYA & 30000& 960000&$37\pm1$ \\
+ISCA & 5000& 150000&$6.5\pm0.1$ \\
+NNA & 5000& 250000&$10.6\pm0.5$ \\
+CWOA & 3000& 300000&$16.6\pm0.5$ \\
+WW & 3000& 35000&$1.4\pm0.1$ \\
+\bottomrule
+\end{tabular*}
+\end{table}
+
+The obtained results are listed in Table~\ref{tblRun}.
+As can be seen from the table, the number of iterations required for an algorithm does not always correlate directly
+with the number of fitness function evaluations or computation time needed to converge.
+The reason is the unique features of each algorithm.
+The run time of the algorithms varies considerably, with a range of 1.5 seconds to 93 seconds.
+Notably, WW, ISCA, NNA, and STLBO converge the fastest, while ADELI, TLBO, and MABC require the most time.
+
+\subsection{Fitness function selection}
+
+To choose the more suitable fitness function, we evaluated each algorithm using the IV curve generated from the parameters 
+provided in Eq.~(\ref{eqParSingleIV}) with both $F_\mathrm{AE}$ and $F_\mathrm{SE}$ functions (see Eqs.~(\ref{eqFae}) and (\ref{eqFse})).
+Afterward, the results obtained using each of the functions were compared through pairwise comparisons.
+Table~\ref{tblFF} gives the statistical results produced by Wilcoxon sign-rank test with a significant level $\alpha = 0.05$.
+A cell marked with the symbol ``SE'' indicates that evaluation of parameter specified in the column by the algorithm with $F_\mathrm{SE}$ outperforms result obtained by this  algorithm with $F_\mathrm{AE}$.
+A cell marked with the symbol ``AE'' indicates better results for function $F_\mathrm{AE}$.
+In the case of the symbol ``='', there is no significant difference between function $F_\mathrm{SE}$ and function $F_\mathrm{AE}$ aplication.
+
+
+%symbol is marked with ‘+’ and EJAYA outperforms
+%the compared algorithm on the considered case.
+
+
+
+%перекласти на англійську "Ячейка з символом SE свідчить, що точність алгоритму, вказаному у рядку, щодо визначення параметра, вказаного у колонці, при використанні функції Аф перевищує результати, отримані з використанням функції Ив. Ячейка з символои АА свідчить про кращі результати Аф. У випадку символу = is no significant difference between АА та ВА"
+
+\newcolumntype{G}{>{\columncolor{ligthGreen}}C}
+\newcolumntype{Y}{>{\columncolor{ligthYellow}}C}
+
+
+\begin{table}[<options>]
+\caption{Wilcoxon signed ranks test results of fitness functions comparison with a level of significance $\alpha = 0.05$}\label{tblFF}
+\begin{tabular*}{\tblwidth}{@{}LCCCCCCCCC@{}}
+\toprule
+Method  & $I_{01}$& $n_1$ & $R_\mathrm{p1}$ &$I_{02}$& $n_2$& $R_\mathrm{p2}$&$R_\mathrm{s}$&$I_\mathrm{ph}$&RMSPE\\ % Table header row
+\midrule
+%\rowcolor{ligthYellow}
+DE &\cellcolor{ligthRed}SE &\cellcolor{ligthRed}SE &\cellcolor{ligthYellow}= & \cellcolor{ligthYellow}= &\cellcolor{ligthRed}SE &\cellcolor{ligthRed}SE &\cellcolor{ligthYellow}=  &\cellcolor{ligthYellow}=  &\cellcolor{ligthYellow}= \\
+EBLSHADE &\cellcolor{ligthRed}SE &\cellcolor{ligthYellow}=  &\cellcolor{ligthYellow}=  &\cellcolor{ligthYellow}=  &\cellcolor{ligthYellow}=  &\cellcolor{ligthYellow}=  &\cellcolor{ligthYellow}=  &\cellcolor{ligthYellow}=  &\cellcolor{ligthBlue} AE \\
+ADELI &\cellcolor{ligthRed}SE &\cellcolor{ligthYellow}=  & \cellcolor{ligthYellow}= & \cellcolor{ligthYellow}= & \cellcolor{ligthYellow}= & \cellcolor{ligthYellow}= &\cellcolor{ligthYellow}=  &\cellcolor{ligthYellow}=  & \cellcolor{ligthBlue} AE\\
+NDE &\cellcolor{ligthYellow}=  &\cellcolor{ligthYellow}=  &\cellcolor{ligthYellow}=  &\cellcolor{ligthYellow}=  &\cellcolor{ligthYellow}=  &\cellcolor{ligthYellow}=  & \cellcolor{ligthYellow}= &\cellcolor{ligthRed}SE &\cellcolor{ligthRed}SE \\
+MABC & \cellcolor{ligthYellow}= &\cellcolor{ligthRed}SE &\cellcolor{ligthYellow}=  & \cellcolor{ligthYellow}= &\cellcolor{ligthYellow}=  &\cellcolor{ligthYellow}=  &\cellcolor{ligthYellow}=  &\cellcolor{ligthYellow}=  &\cellcolor{ligthRed}SE \\
+TLBO &\cellcolor{ligthRed}SE &\cellcolor{ligthRed}SE &\cellcolor{ligthRed}SE & \cellcolor{ligthRed}SE& \cellcolor{ligthRed}SE&\cellcolor{ligthRed}SE &\cellcolor{ligthRed}SE &\cellcolor{ligthRed}SE &\cellcolor{ligthRed}SE \\
+GOTLBO &\cellcolor{ligthYellow}=  &\cellcolor{ligthYellow}=  &\cellcolor{ligthYellow}=  &\cellcolor{ligthYellow}=  &\cellcolor{ligthYellow}=  &\cellcolor{ligthRed}SE &\cellcolor{ligthYellow}=  &\cellcolor{ligthYellow}=  &\cellcolor{ligthYellow}=  \\
+STLBO &\cellcolor{ligthRed}SE &\cellcolor{ligthYellow}=  &\cellcolor{ligthYellow}=  &\cellcolor{ligthYellow}=  &\cellcolor{ligthYellow}=  &\cellcolor{ligthYellow}=  &\cellcolor{ligthYellow}=  &\cellcolor{ligthYellow}=  &\cellcolor{ligthBlue} AE \\
+PSO &\cellcolor{ligthYellow}=  &\cellcolor{ligthYellow}=  &\cellcolor{ligthYellow}=  &\cellcolor{ligthYellow}=  &\cellcolor{ligthYellow}=  &\cellcolor{ligthYellow}=  &\cellcolor{ligthBlue} AE &\cellcolor{ligthYellow}=  &\cellcolor{ligthYellow}=  \\
+IJAYA &\cellcolor{ligthBlue} AE &\cellcolor{ligthBlue} AE & \cellcolor{ligthYellow}= &\cellcolor{ligthYellow}=  &\cellcolor{ligthRed}SE & \cellcolor{ligthYellow}= & \cellcolor{ligthYellow}= &\cellcolor{ligthYellow}=  &\cellcolor{ligthYellow}=  \\
+ISCA &\cellcolor{ligthYellow}=  &\cellcolor{ligthYellow}=  &\cellcolor{ligthYellow}=  &\cellcolor{ligthYellow}=  &\cellcolor{ligthYellow}=  &\cellcolor{ligthYellow}=  &\cellcolor{ligthYellow}=  &\cellcolor{ligthYellow}=  &\cellcolor{ligthYellow}=  \\
+NNA &\cellcolor{ligthYellow}=  &\cellcolor{ligthYellow}=  &\cellcolor{ligthYellow}=  &\cellcolor{ligthYellow}=  &\cellcolor{ligthYellow}=  &\cellcolor{ligthYellow}=  &\cellcolor{ligthYellow}=  &\cellcolor{ligthYellow}=  & \cellcolor{ligthRed}SE\\
+CWOA &\cellcolor{ligthYellow}=  &\cellcolor{ligthYellow}=  & \cellcolor{ligthRed}SE&\cellcolor{ligthYellow}=  & \cellcolor{ligthBlue} AE&\cellcolor{ligthYellow}=  &\cellcolor{ligthYellow}=  &\cellcolor{ligthYellow}=  &\cellcolor{ligthRed}SE \\
+WW &\cellcolor{ligthYellow}=  &\cellcolor{ligthYellow}=  & \cellcolor{ligthRed}SE& \cellcolor{ligthYellow}= &\cellcolor{ligthBlue} AE & \cellcolor{ligthYellow}= &\cellcolor{ligthYellow}=  &\cellcolor{ligthYellow}=  & \cellcolor{ligthRed}SE\\
+\bottomrule
+\end{tabular*}
+\end{table}
+
+
+
+%Estimation of parameters for solar cells with S--shaped current--voltage characteristics using meta--heuristic algorithms
+
+\subsection{Performance comparison}
+
+\subsubsection{Evaluation of single--IV}
+
+\subsubsection{Evaluation of IV--set}
 
 %Box Plot of some functions from F1–F10 for all algorithms using CEC2017 and Dim = 30
 
@@ -1092,23 +1188,7 @@ Therefore, the use of the Comp parameter is not strictly rigorous.
 %\definecolor{ligthViolet}{RGB}{235,235,255}
 %\definecolor{ligthGreen}{RGB}{204,255,204}
 
-\newcolumntype{G}{>{\columncolor{ligthGreen}}C}
-\newcolumntype{Y}{>{\columncolor{ligthYellow}}C}
 
-\begin{table}[<options>]
-\caption{}\label{tbl1}
-\begin{tabular*}{\tblwidth}{@{}CL@{}}
-\toprule
-  &  \\ % Table header row
-\midrule
- & \\
-\rowcolor{ligthYellow}
- A&B \\
- \cellcolor{ligthBlue} C& \cellcolor{ligthRed}D\\
- & \\
-\bottomrule
-\end{tabular*}
-\end{table}
 
 %\begin{table}[<options>]
 %\caption{}\label{tbl1}
