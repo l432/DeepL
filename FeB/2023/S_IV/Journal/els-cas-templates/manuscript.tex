@@ -472,7 +472,7 @@ it comes to parameter estimation of solar cells within conventional models (sing
 
 In meta-heuristic optimization methods, the quality of the extracted parameters is evaluated using the fitness function at
 every iteration.
-In our investigation, two fitness function were used:
+In our investigation, absolute error and square error fitness functions were under consideration:
 \begin{equation}
 \label{eqFae}
 F_\mathrm{AE}(Y)= \sum_{k=1}^p \left|V^\mathrm{tr}(I_k)-V^\mathrm{cal}(I_k,Y)\right|\,,
@@ -730,9 +730,10 @@ constraints on the number of fitness function evaluations $N_\mathrm{FE}$,
 a specific rate of precision,
 a specific time,
 no sign of change in solutions after a specific number of iterations,
-or a combination of these cases.
-In this study, the primary focus was on the accuracy of parameter estimation,
-and therefore, the termination criterion used was the absence of changes in the solution.
+or a combination of these cases \cite{IntelligentChaoticClonal}.
+In this study, the primary focus was on the accuracy of parameter estimation.
+Therefore to ensure that both exploration and exploitation processes could be fully realized 
+by each algorithm with an equal opportunity, the termination criterion used was the absence of changes in the solution.
 Based on this condition, the required number of iterations $N_\mathrm{it}$ was determined,
 and the corresponding calculation time was measured $t_\mathrm{run}$.
 In addition, the $N_\mathrm{FE}$ was evaluated.
@@ -742,12 +743,14 @@ $t_\mathrm{run}$ was estimated by using WinAPI-functions \emph{QueryPerformanceC
 The experiments were performed on Windows 10 Pro 64-bit,
 2.9 GHz AMD Ryzen 7 4800H CPU, and 8~GB RAM.
 
+%перекласти на англійську "Тому для того, щоб дати кожному з алгоритмів шанс повністю реалізувати процеси exploration and exploitation, кретиріем зупинки був вибраний наступний"
+
 
 \begin{table}[<options>]
 \caption{Comparison of optimization algorithms for single IV curve parameter estimation}\label{tblRun}
 \begin{tabular*}{\tblwidth}{@{}LCCC@{}}
 \toprule
-Method  &  $N_\mathrm{it}$ & $N_\mathrm{FE}$ & $t_\mathrm{run}$ (s)\\ % Table header row
+Algorithm  &  $N_\mathrm{it}$ & $N_\mathrm{FE}$ & $t_\mathrm{run}$ (s)\\ % Table header row
 \midrule
 DE & 8000& 1024000& $42\pm1$\\
 EBLSHADE & 3000& 444600& $22\pm1$\\
@@ -776,7 +779,7 @@ Notably, WW, ISCA, NNA, and STLBO converge the fastest, while ADELI, TLBO, and M
 
 \subsection{Fitness function selection}
 
-To choose the more suitable fitness function, we evaluated each algorithm using the IV curve generated from the parameters 
+To choose the more suitable fitness function, we evaluated each algorithm using the IV curve generated from the parameters
 provided in Eq.~(\ref{eqParSingleIV}) with both $F_\mathrm{AE}$ and $F_\mathrm{SE}$ functions (see Eqs.~(\ref{eqFae}) and (\ref{eqFse})).
 Afterward, the results obtained using each of the functions were compared through pairwise comparisons.
 Table~\ref{tblFF} gives the statistical results produced by Wilcoxon sign-rank test with a significant level $\alpha = 0.05$.
@@ -785,22 +788,16 @@ A cell marked with the symbol ``AE'' indicates better results for function $F_\m
 In the case of the symbol ``='', there is no significant difference between function $F_\mathrm{SE}$ and function $F_\mathrm{AE}$ aplication.
 
 
-%symbol is marked with ‘+’ and EJAYA outperforms
-%the compared algorithm on the considered case.
-
-
-
-%перекласти на англійську "Ячейка з символом SE свідчить, що точність алгоритму, вказаному у рядку, щодо визначення параметра, вказаного у колонці, при використанні функції Аф перевищує результати, отримані з використанням функції Ив. Ячейка з символои АА свідчить про кращі результати Аф. У випадку символу = is no significant difference between АА та ВА"
-
-\newcolumntype{G}{>{\columncolor{ligthGreen}}C}
-\newcolumntype{Y}{>{\columncolor{ligthYellow}}C}
+%\newcolumntype{G}{>{\columncolor{ligthGreen}}C}
+%\newcolumntype{Y}{>{\columncolor{ligthYellow}}C}
 
 
 \begin{table}[<options>]
 \caption{Wilcoxon signed ranks test results of fitness functions comparison with a level of significance $\alpha = 0.05$}\label{tblFF}
 \begin{tabular*}{\tblwidth}{@{}LCCCCCCCCC@{}}
 \toprule
-Method  & $I_{01}$& $n_1$ & $R_\mathrm{p1}$ &$I_{02}$& $n_2$& $R_\mathrm{p2}$&$R_\mathrm{s}$&$I_\mathrm{ph}$&RMSPE\\ % Table header row
+\multirow{2}{*}{Algorithm}& \multicolumn{9}{C}{Parameter} \\
+  & $I_{01}$& $n_1$ & $R_\mathrm{p1}$ &$I_{02}$& $n_2$& $R_\mathrm{p2}$&$R_\mathrm{s}$&$I_\mathrm{ph}$&RMSPE\\ % Table header row
 \midrule
 %\rowcolor{ligthYellow}
 DE &\cellcolor{ligthRed}SE &\cellcolor{ligthRed}SE &\cellcolor{ligthYellow}= & \cellcolor{ligthYellow}= &\cellcolor{ligthRed}SE &\cellcolor{ligthRed}SE &\cellcolor{ligthYellow}=  &\cellcolor{ligthYellow}=  &\cellcolor{ligthYellow}= \\
@@ -821,13 +818,31 @@ WW &\cellcolor{ligthYellow}=  &\cellcolor{ligthYellow}=  & \cellcolor{ligthRed}S
 \end{tabular*}
 \end{table}
 
-
+As evidenced in the provided data, utilizing the square error fitness function more frequently yields better outcomes in comparison to $F_\mathrm{AE}$.
+In rare cases, the absolute error fitness function can enhance the alignment between the fitted and actual curves,
+as well as improve the accuracy of some parameter evaluations by PSO, IJAVA, CWOA, and WW algorithms.
+However, RMSPE is not the most crucial factor in determining model parameters, and the mentioned methods,
+as will be shown later, do not provide the highest accuracy.
+As such, the results presented in the following sections are exclusive to the application of the $F_\mathrm{SE}$ function.
+Therefore, it can be recommended that researchers consider 
+the square error fitness function as a more effective and reliable option for the task of opposed two--diode model parameter evaluation.
 
 %Estimation of parameters for solar cells with S--shaped current--voltage characteristics using meta--heuristic algorithms
 
 \subsection{Performance comparison}
 
 \subsubsection{Evaluation of single--IV}
+
+
+
+\begin{figure*}[]
+	\centering
+		\includegraphics[width=.32\textwidth]{Fig3a}
+        \includegraphics[width=.32\textwidth]{Fig3b}
+        \includegraphics[width=.32\textwidth]{Fig3c}
+	  \caption{Box--plot of  two--diode model parameter evaluation from single IV curve using different optimizers.
+      Squares are the mean values, and dashed lines correspond to the true parameter values.}\label{figBoxSingleIV}
+\end{figure*}
 
 \subsubsection{Evaluation of IV--set}
 
