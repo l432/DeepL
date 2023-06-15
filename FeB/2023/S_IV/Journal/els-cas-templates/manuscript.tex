@@ -304,7 +304,7 @@ However, as the base thickness decreases, the temperature coefficient can increa
 For hydrogenated amorphous silicon solar cells, $\mathrm{TC}_{I_\mathrm{ph}}$ is equal to $-10^{-3}$~K$^{-1}$ \cite{Riesen2016}.
 For organic solar cells, the temperature coefficient can reach a magnitude of $-0.003$~K$^{-1}$ \cite{Rana2018}.
 During the simulation, we assumed $\mathrm{TC}_{I_\mathrm{ph}}=-10^{-3}$~K$^{-1}$.
-Furthermore, the values of $I_\mathrm{ph0}T=1$~mA,
+Furthermore, the values of $I_\mathrm{ph0}=1$~mA,
 $\mathrm{TC}_{R_\mathrm{s}}=0.02$~K$^{-1}$,
 and $R_\mathrm{s0}=50$~$\Omega$ were used.
 
@@ -543,8 +543,11 @@ MEAN ($\mathrm{APE}_\mathrm{MEAN}$), and MEDIAN ($\mathrm{APE}_\mathrm{MEDIAN}$)
 Reducing STD and IQR result in a more stable algorithm performance.
 
 \item
-Run time average $t_\mathrm{run}$: is the average run time in seconds for an
-individual optimizer on a IV curve.
+%Run time average $t_\mathrm{run}$: is the average run time in seconds for an
+%individual optimizer on a IV curve.
+Another evaluation criterion used to compare the algorithms’ performance is to compare their execution time.
+We used average run time $t_\mathrm{run}$ in seconds for an
+individual optimizer on one IV curve.
 
 \item
 Root mean square percentage of error (RMSPE) is a statistical measure that indicates
@@ -732,7 +735,7 @@ a specific time,
 no sign of change in solutions after a specific number of iterations,
 or a combination of these cases \cite{IntelligentChaoticClonal}.
 In this study, the primary focus was on the accuracy of parameter estimation.
-Therefore to ensure that both exploration and exploitation processes could be fully realized 
+Therefore to ensure that both exploration and exploitation processes could be fully realized
 by each algorithm with an equal opportunity, the termination criterion used was the absence of changes in the solution.
 Based on this condition, the required number of iterations $N_\mathrm{it}$ was determined,
 and the corresponding calculation time was measured $t_\mathrm{run}$.
@@ -824,7 +827,7 @@ as well as improve the accuracy of some parameter evaluations by PSO, IJAVA, CWO
 However, RMSPE is not the most crucial factor in determining model parameters, and the mentioned methods,
 as will be shown later, do not provide the highest accuracy.
 As such, the results presented in the following sections are exclusive to the application of the $F_\mathrm{SE}$ function.
-Therefore, it can be recommended that researchers consider 
+Therefore, it can be recommended that researchers consider
 the square error fitness function as a more effective and reliable option for the task of opposed two--diode model parameter evaluation.
 
 %Estimation of parameters for solar cells with S--shaped current--voltage characteristics using meta--heuristic algorithms
@@ -844,6 +847,54 @@ the square error fitness function as a more effective and reliable option for th
       Squares are the mean values, and dashed lines correspond to the true parameter values.}\label{figBoxSingleIV}
 \end{figure*}
 
+
+\begin{figure}[]
+	\centering
+		\includegraphics[width=1.0\columnwidth]{Fig4}
+	  \caption{The results of Wilcoxon signed-rank test with a level of significance $\alpha = 0.05$ in the single-IV case.
+               Each colored small square indicates that the algorithm specified in the row outperforms the algorithm 
+               specified in the column in evaluating one of the parameters of the two--diode model.
+               The correspondence between the color and position of the square to a model parameter 
+               is shown in a legend at the figure bottom.
+               The advantage of the row algorithm in the Comp parameter is indicated by the presence of a dashed circle.}\label{figWilSingleIV}
+\end{figure}
+
+\begin{figure}[]
+	\centering
+		\includegraphics[width=1.0\columnwidth]{Fig5}
+	  \caption{The total number of wins and losses for each algorithm in pairwise comparisons using the 
+               Wilcoxon signed-rank test with a significance level of $\alpha = 0.05$ in the single-IV case.}\label{figWilTotSingleIV}
+\end{figure}
+
+
+\begin{figure}[]
+	\centering
+		\includegraphics[width=.8\columnwidth]{Friedman}
+        \includegraphics[width=.8\columnwidth]{FriedmanAlignedRank}
+        \includegraphics[width=.8\columnwidth]{QuadeRank}
+	  \caption{Box--plot of  two--diode model parameter evaluation from single IV curve using different optimizers.
+      Squares are the mean values, and dashed lines correspond to the true parameter values.}\label{figRanksSingleIV}
+\end{figure}
+
+%The p-values computed through the statistics of each of the
+%tests considered (0.000018, 0.006357, and 1.20327·10−07) and the
+%Iman–Davenport extension (Ff = 5.267817, p-value: 0.000006)
+%strongly suggest the existence of significant differences among the
+%algorithms considered.
+
+%62]. Tables 5 and 6 give the statistical results produced by
+%Wilcoxon sign-rank test with a significant level α = 0.05.
+%In Tables 5 and 6, R+ means the sum of ranks for the
+%problems in which EJAYA outperformed the compared algorithm and R− indicates the sum of ranks for the opposite.
+%As can be seen from Tables 5 and 6, there are the following
+%three cases:
+%(1) Case 1: If R+ is more than R− and the obtained
+%p-value is less than the set significant level α, the
+%symbol is marked with ‘+’ and EJAYA outperforms
+%the compared algorithm on the considered case.
+
+%перекласти на англійську "Загальна кількість перемог та поразок кожного з алгоритмів при попарному порівняння з використанням Wilcoxon signed-rank test with a level of significance $\alpha = 0.05$ in the single-IV case"
+
 \subsubsection{Evaluation of IV--set}
 
 %Box Plot of some functions from F1–F10 for all algorithms using CEC2017 and Dim = 30
@@ -855,14 +906,6 @@ the square error fitness function as a more effective and reliable option for th
 %Table 6
 %The results between EJAYA and the compared algorithms (GWO, WOA, SCA and JAYA) produced by Wilcoxon sign-rank test with a significant level α = 0.05 on 45
 %test functions.
-
-%In metaheuristic algorithms, a different termination can be
-%defined. For instance, a termination condition can be a specific
-%number of iterations, constraints on the number of function evaluations, a specific rate of precision, a specific time, no sign of
-%change in solutions after a specific number of iterations, or a combination of these cases. In the proposed method, the termination
-%condition was defined as imposing constraints on the number
-%of function evaluations (MaxFEs) and reaching a specific rate of
-%precision.
 
 %3.5. Computational time analysis
 %Another evaluation criterion used to compare the algorithms’
@@ -876,22 +919,6 @@ the square error fitness function as a more effective and reliable option for th
 %To evaluate the usability of the GOA relative to other algorithms, we conduct time tests on all three dimensions.
 
 
-%
-%All the applied algorithms have been
-%coded and implemented in MATLAB programming software. In
-%addition, each algorithm for every test function was executed in
-%30 independent runs and then the results were recorded
-%The
-%experiments were implemented in Matlab and run on Windows
-%7 operative system with 64-bit support with a 2.0 GHz Intel
-%dual-core processor and 4 GB RAM.
-
-%All these experiments have been performed using
-%MATLAB 2015a on 8.1 Windows Operating System with 6 GB RAM
-%memory and core i5 CPU
-
-%The GOA was experimented with using a desktop computer with Windows 10 Professional 64-bit, Intel(R) Core
-%(TM) i3-8100 CPU @ 3.60 GHz, 24.0 GB RAM, Matlab R2014b.
 
 %In order to statistically verify the excellent results obtained by GOA, we use the nonparametric Wilcoxon Ranksum test to determine whether the GOA algorithm is significantly different from other comparison algorithms. The
 %significance level alpha is taken as 0.05, the p-values of the tests are given in Tables 5–7, and the data with p-values
@@ -912,13 +939,6 @@ the square error fitness function as a more effective and reliable option for th
 %values as it ranked first in 7 functions. Each of L-SHADE, HHO,
 %and TEO has ranked first twice.
 
-
-%the maximum number of function evaluations (FEs) is set to 3000  D.
-%The
-%quality of them is evaluated in terms of the objective function
-%(Root Mean Square Error)
-%
-%CPU time
 
 %For all the algorithms, a population size and maximum iteration
 %equal to 30 and 500 have been utilized. The number of search
