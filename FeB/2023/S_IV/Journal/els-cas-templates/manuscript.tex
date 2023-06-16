@@ -852,9 +852,9 @@ the square error fitness function as a more effective and reliable option for th
 	\centering
 		\includegraphics[width=1.0\columnwidth]{Fig4}
 	  \caption{The results of Wilcoxon signed-rank test with a level of significance $\alpha = 0.05$ in the single-IV case.
-               Each colored small square indicates that the algorithm specified in the row outperforms the algorithm 
+               Each colored small square indicates that the algorithm specified in the row outperforms the algorithm
                specified in the column in evaluating one of the parameters of the two--diode model.
-               The correspondence between the color and position of the square to a model parameter 
+               The correspondence between the color and position of the square to a model parameter
                is shown in a legend at the figure bottom.
                The advantage of the row algorithm in the Comp parameter is indicated by the presence of a dashed circle.}\label{figWilSingleIV}
 \end{figure}
@@ -862,19 +862,20 @@ the square error fitness function as a more effective and reliable option for th
 \begin{figure}[]
 	\centering
 		\includegraphics[width=1.0\columnwidth]{Fig5}
-	  \caption{The total number of wins and losses for each algorithm in pairwise comparisons using the 
+	  \caption{The total number of wins and losses for each algorithm in pairwise comparisons using the
                Wilcoxon signed-rank test with a significance level of $\alpha = 0.05$ in the single-IV case.}\label{figWilTotSingleIV}
 \end{figure}
 
 
 \begin{figure}[]
 	\centering
-		\includegraphics[width=.8\columnwidth]{Friedman}
-        \includegraphics[width=.8\columnwidth]{FriedmanAlignedRank}
-        \includegraphics[width=.8\columnwidth]{QuadeRank}
-	  \caption{Box--plot of  two--diode model parameter evaluation from single IV curve using different optimizers.
-      Squares are the mean values, and dashed lines correspond to the true parameter values.}\label{figRanksSingleIV}
+		\includegraphics[width=.77\columnwidth]{Friedman}
+        \includegraphics[width=.77\columnwidth]{FriedmanAlignedRank}
+        \includegraphics[width=.77\columnwidth]{QuadeRank}
+	  \caption{Ranking of the algorithms according to Friedman (a), Friedman Aligned (b), and Quade (c) tests in the single-IV case.}\label{figRanksSingleIV}
 \end{figure}
+
+
 
 %The p-values computed through the statistics of each of the
 %tests considered (0.000018, 0.006357, and 1.20327·10−07) and the
@@ -896,6 +897,13 @@ the square error fitness function as a more effective and reliable option for th
 %перекласти на англійську "Загальна кількість перемог та поразок кожного з алгоритмів при попарному порівняння з використанням Wilcoxon signed-rank test with a level of significance $\alpha = 0.05$ in the single-IV case"
 
 \subsubsection{Evaluation of IV--set}
+
+
+\begin{figure}[]
+	\centering
+		\includegraphics[width=1.0\columnwidth]{FigRankT}
+	  \caption{Ranking of the algorithms according to Friedman, Friedman Aligned, and Quade tests in the IV-set case.}\label{figRankIVset}
+\end{figure}
 
 %Box Plot of some functions from F1–F10 for all algorithms using CEC2017 and Dim = 30
 
