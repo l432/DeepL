@@ -905,6 +905,99 @@ the square error fitness function as a more effective and reliable option for th
 	  \caption{Ranking of the algorithms according to Friedman, Friedman Aligned, and Quade tests in the IV-set case.}\label{figRankIVset}
 \end{figure}
 
+
+\begin{table*}[<options>]
+\caption{Adjusted p-values for multiple comparisons $1\times N$ tests in IV--set case (STLBO is the control algorithm).}\label{tbl1NSTLBO}
+\begin{tabular*}{\tblwidth}{@{}LLCCCC@{}}
+\toprule
+\multirow{2}{*}{Algorithm}& \multirow{2}{*}{Test}& \multicolumn{4}{C}{post-hoc procedure} \\
+  & &Finner & Holm & Hochberg &Holland\\ % Table header row
+\midrule
+GOTLBO&	Friedman&<1E-13&<1E-13&<1E-13&<1E-13\\
+&Friedman Aligned&1.35278E-10&5.09895E-10&5.09895E-10&5.09895E-10\\
+&Quade&1.11445E-03&4.11614E-03&4.11614E-03&4.10873E-03\\
+PSO&Friedman&<1E-13&<1E-13&<1E-13&<1E-13\\
+&Friedman Aligned&<1E-13&<1E-13&<1E-13&<1E-13\\
+&Quade&8.22938E-06&8.22941E-06&8.22941E-06&8.22938E-06\\
+NNA&Friedman&<1E-13&<1E-13&<1E-13&<1E-13\\
+&Friedman Aligned&<1E-13&<1E-13&<1E-13&<1E-13\\
+&Quade&2.21284E-05&5.61727E-05&5.61727E-05&5.61713E-05\\
+CWOA&Friedman&<1E-13&<1E-13&<1E-13&<1E-13\\
+&Friedman Aligned&<1E-13&<1E-13&<1E-13&<1E-13\\
+&Quade&1.48311E-05&2.73807E-05&2.73807E-05&2.73803E-05\\
+DE&Friedman&2.32081E-13&8.03357E-13&8.03357E-13&8.03357E-13\\
+&Friedman Aligned&1.74950E-09&6.45968E-09&6.45968E-09&6.45968E-09\\
+&Quade&6.44257E-03&2.38175E-02&2.38175E-02&2.35824E-02\\
+IJAYA&Friedman&2.17645E-10&8.03613E-10&8.03613E-10&8.03613E-10\\
+&Friedman Aligned&3.63299E-09&1.25757E-08&1.25757E-08&1.25757E-08\\
+&Quade&3.78757E-02&1.31885E-01&1.31885E-01&1.25109E-01\\
+MABC&Friedman&1.75608E-09&6.61909E-09&6.61909E-09&6.61909E-09\\
+&Friedman Aligned&<1E-13&<1E-13&<1E-13&<1E-13\\
+&Quade&1.54776E-03&5.83595E-03&5.83595E-03&5.82137E-03\\
+WW&Friedman&7.44635E-09&2.74942E-08&2.74942E-08&2.74942E-08\\
+&Friedman Aligned&<1E-13&<1E-13&<1E-13&<1E-13\\
+&Quade&1.10078E-04&3.81053E-04&3.81053E-04&3.80989E-04\\
+ISCA&Friedman&1.32325E-08&4.58048E-08&4.58048E-08&4.58048E-08\\
+&Friedman Aligned&<1E-13&<1E-13&<1E-13&<1E-13\\
+&Quade&5.64886E-05&1.73815E-04&1.73815E-04&1.73801E-04\\
+NDE&Friedman&9.57698E-04&2.94709E-03&2.94709E-03&2.94383E-03\\
+&Friedman Aligned&2.69373E-03&8.29097E-03&8.29097E-03&8.26522E-03\\
+&Quade&2.98714E-01&9.55486E-01&9.55486E-01&6.64392E-01\\
+EBLSHADE&Friedman&8.62842E-02&2.20533E-01&2.20533E-01&2.04719E-01\\
+&Friedman Aligned&3.10807E-02&7.90881E-02&7.90881E-02&7.70214E-02\\
+&Quade&5.99120E-01&1.0&1.0&9.01765E-01\\
+ADELI&Friedman&1.0&1.0&1.0&1.0\\
+&Friedman Aligned&3.64522E-01&6.83937E-01&3.45600E-01&5.66995E-01\\
+&Quade&1.0&1.0&1.0&1.0\\
+TLBO&Friedman&1.0&1.0&1.0&1.0\\
+&Friedman Aligned&3.64522E-01&6.83937E-01&3.45600E-01&5.66995E-01\\
+&Quade&1.0&1.0&1.0&1.0\\
+\bottomrule
+\end{tabular*}
+\end{table*}
+
+
+%\begin{table}[<options>]
+%\caption{Adjusted p-values for multiple comparisons $1\times N$ tests in IV--set case (STLBO is the control algorithm).}\label{tbl1NSTLBO}
+%\begin{tabular*}{\tblwidth}{@{}LCCCCCCCCC@{}}
+%\toprule
+%\multirow{2}{*}{Algorithm}& \multicolumn{9}{C}{Parameter} \\
+%  & $I_{01}$& $n_1$ & $R_\mathrm{p1}$ &$I_{02}$& $n_2$& $R_\mathrm{p2}$&$R_\mathrm{s}$&$I_\mathrm{ph}$&RMSPE\\ % Table header row
+%\midrule
+%%\rowcolor{ligthYellow}
+%DE & SE & SE & = &  = & SE & SE & =  & =  & = \\
+%EBLSHADE & SE & =  & =  & =  & =  & =  & =  & =  &  AE \\
+%ADELI & SE & =  &  = &  = &  = &  = & =  & =  &   AE\\
+%NDE & =  & =  & =  & =  & =  & =  &  = & SE & SE \\
+%MABC &  = & SE & =  &  = & =  & =  & =  & =  & SE \\
+%TLBO & SE & SE & SE &  SE&  SE& SE & SE & SE & SE \\
+%GOTLBO & =  & =  & =  & =  & =  & SE & =  & =  & =  \\
+%STLBO & SE & =  & =  & =  & =  & =  & =  & =  &  AE \\
+%PSO & =  & =  & =  & =  & =  & =  &  AE & =  & =  \\
+%IJAYA &  AE &  AE &  = & =  & SE &  = &  = & =  & =  \\
+%ISCA & =  & =  & =  & =  & =  & =  & =  & =  & =  \\
+%NNA & =  & =  & =  & =  & =  & =  & =  & =  &  SE\\
+%CWOA & =  & =  &  SE& =  &   AE& =  & =  & =  & SE \\
+%WW & =  & =  &  SE&  = &  AE &  = & =  & =  &  SE\\
+%\bottomrule
+%\end{tabular*}
+%\end{table}
+
+
+\begin{figure}[]
+	\centering
+		\includegraphics[width=1.0\columnwidth]{N1Tresult}
+	  \caption{The results of Friedman, Friedman Aligned, and Quade tests in the IV-set case.
+               The control algorithms are in rows.
+               Each colored hexagon indicates that the adjusted p-value does not exceed 0.1  
+               for every post-hoc procedure.
+               The shaded hexagon indicates that the adjusted p-value does not exceed 0.1
+               for the Finner procedure only.
+               The correspondence between the color and position of the hexagon to a test
+               is shown in a legend at the figure bottom.
+               }\label{figN1RezIVset}
+\end{figure}
+
 %Box Plot of some functions from F1–F10 for all algorithms using CEC2017 and Dim = 30
 
 %KnowBasSys_233_107555
