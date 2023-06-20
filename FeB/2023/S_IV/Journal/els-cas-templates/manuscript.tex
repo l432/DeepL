@@ -875,7 +875,84 @@ the square error fitness function as a more effective and reliable option for th
 	  \caption{Ranking of the algorithms according to Friedman (a), Friedman Aligned (b), and Quade (c) tests in the single-IV case.}\label{figRanksSingleIV}
 \end{figure}
 
+\begin{table*}[<options>]
+\caption{Adjusted p-values for multiple comparisons $1\times N$ tests in single-IV case (ADELI is the control algorithm, $R_\mathrm{p1}$ evaluation task}\label{tbl1NADELI}
+\begin{tabular*}{\tblwidth}{@{}LLCCCC@{}}
+\toprule
+\multirow{2}{*}{Algorithm}& \multirow{2}{*}{Test}& \multicolumn{4}{C}{post-hoc procedure} \\
+  & &Finner & Holm & Hochberg &Holland\\ % Table header row
+\midrule
+GOTLBO&	Friedman&<1E-13&<1E-13&<1E-13&<1E-13\\
+&Friedman Aligned&2.23361E-09&6.87266E-09&6.87266E-09&6.87266E-09\\
+&Quade&2.57827E-03&4.09880E-03&3.90245E-03&4.09117E-03\\
+PSO&Friedman&<1E-13&<1E-13&<1E-13&<1E-13\\
+&Friedman Aligned&<1E-13&<1E-13&<1E-13&<1E-13\\
+&Quade&2.57827E-03&2.58134E-03&2.58134E-03&2.57827E-03\\
+MABC&Friedman&6.35048E-13&1.61204E-12&1.61204E-12&1.61204E-12\\
+&Friedman Aligned&7.88131E-06&2.97065E-05&2.97065E-05&2.97062E-05\\
+&Quade&1.73550E-02&6.56791E-02&6.56791E-02&6.38590E-02\\
+WW&Friedman&1.84926E-10&5.69003E-10&5.69003E-10&5.69003E-10\\
+&Friedman Aligned&3.15599E-13&8.01137E-13&8.01137E-13&8.01137E-13\\
+&Quade&5.31725E-03&1.96611E-02&1.96611E-02&1.94928E-02\\
+DE&Friedman&4.61292E-09&1.59678E-08&1.59678E-08&1.59678E-08\\
+&Friedman Aligned&3.62181E-04&1.33738E-03&1.33738E-03&1.33663E-03\\
+&Quade&7.62673E-02&2.85885E-01&2.49968E-01&2.53918E-01\\
+IJAYA&Friedman&6.88175E-09&2.54096E-08&2.54096E-08&2.54096E-08\\
+&Friedman Aligned&8.79672E-04&3.04543E-03&3.04543E-03&3.04172E-03\\
+&Quade&7.62673E-02&2.85885E-01&2.49968E-01&2.53918E-01\\
+CWOA&Friedman&8.73483E-09&3.29236E-08&3.29236E-08&3.29236E-08\\
+&Friedman Aligned&4.27917E-09&1.58000E-08&1.58000E-08&1.58000E-08\\
+&Quade&2.57827E-03&5.93402E-03&5.93402E-03&5.91840E-03\\
+NNA&Friedman&1.17491E-08&4.33811E-08&4.27586E-08&4.33811E-08\\
+&Friedman Aligned&2.23361E-09&7.25937E-09&7.25937E-09&7.25937E-09\\
+&Quade&2.57827E-03&4.09880E-03&3.90245E-03&4.09117E-03\\
+ISCA&Friedman&1.23525E-08&4.33811E-08&4.27586E-08&4.33811E-08\\
+&Friedman Aligned&<1E-13&<1E-13&<1E-13&<1E-13\\
+&Quade&2.57827E-03&3.65691E-03&3.65691E-03&3.65079E-03\\
+NDE&Friedman&2.55436E-06&7.85957E-06&7.85957E-06&7.85955E-06\\
+&Friedman Aligned&4.19953E-02&1.29854E-01&1.29854E-01&1.23666E-01\\
+&Quade&1.60056E-01&5.02233E-01&5.02233E-01&4.15313E-01\\
+TLBO&Friedman&1.57702E-01&4.05499E-01&4.05499E-01&3.53159E-01\\
+&Friedman Aligned&6.48054E-01&1.0&1.0&9.29409E-01\\
+&Quade&7.18467E-01&1.0&1.0&9.59945E-01\\
+EBLSHADE&Friedman&9.13338E-01&1.0&9.23824E-01&9.89059E-01\\
+&Friedman Aligned&8.67482E-01&1.0&1.0&9.76034E-01\\
+&Quade&9.98363E-01&1.0&1.0&9.99993E-01\\
+STLBO&Friedman&9.23824E-01&1.0&9.23824E-01&9.89059E-01\\
+&Friedman Aligned&1.0&1.0&1.0&1.0\\
+&Quade&1.0&1.0&1.0&1.0\\
+\bottomrule
+\end{tabular*}
+\end{table*}
 
+
+
+\begin{figure*}[]
+	\centering
+		\includegraphics[width=.495\textwidth]{Rp1shotN1}
+        \includegraphics[width=.495\textwidth]{I02shotN1}
+        \includegraphics[width=.48\textwidth]{Titleshot11N}
+		\includegraphics[width=.48\textwidth]{Titleshot21N}
+	  \caption{Box--plot of  two--diode model parameter evaluation from single IV curve using different optimizers.
+      Squares are the mean values, and dashed lines correspond to the true parameter values.}\label{figN1RezSingleIV}
+\end{figure*}
+
+%\begin{figure*}[]
+%	\centering
+%		\includegraphics[width=.32\textwidth]{I01N1}
+%        \includegraphics[width=.32\textwidth]{n1N1}
+%        \includegraphics[width=.32\textwidth]{Rp1N1}
+%		\includegraphics[width=.32\textwidth]{I02N1}
+%        \includegraphics[width=.32\textwidth]{n2N1}
+%        \includegraphics[width=.32\textwidth]{Rp2N1}
+%		\includegraphics[width=.32\textwidth]{RsN1}
+%        \includegraphics[width=.32\textwidth]{IphN1}
+%        \includegraphics[width=.32\textwidth]{RMSPEN1}
+%        \includegraphics[width=.32\textwidth]{ComplN1}
+%        \includegraphics[width=.32\textwidth]{Title1N}
+%	  \caption{Box--plot of  two--diode model parameter evaluation from single IV curve using different optimizers.
+%      Squares are the mean values, and dashed lines correspond to the true parameter values.}\label{figN1RezSingleIV}
+%\end{figure*}
 
 %The p-values computed through the statistics of each of the
 %tests considered (0.000018, 0.006357, and 1.20327·10−07) and the
@@ -989,7 +1066,7 @@ TLBO&Friedman&1.0&1.0&1.0&1.0\\
 		\includegraphics[width=1.0\columnwidth]{N1Tresult}
 	  \caption{The results of Friedman, Friedman Aligned, and Quade tests in the IV-set case.
                The control algorithms are in rows.
-               Each colored hexagon indicates that the adjusted p-value does not exceed 0.1  
+               Each colored hexagon indicates that the adjusted p-value does not exceed 0.1
                for every post-hoc procedure.
                The shaded hexagon indicates that the adjusted p-value does not exceed 0.1
                for the Finner procedure only.
