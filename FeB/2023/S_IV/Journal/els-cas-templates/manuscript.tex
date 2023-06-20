@@ -876,7 +876,8 @@ the square error fitness function as a more effective and reliable option for th
 \end{figure}
 
 \begin{table*}[<options>]
-\caption{Adjusted p-values for multiple comparisons $1\times N$ tests in single-IV case (ADELI is the control algorithm, $R_\mathrm{p1}$ evaluation task}\label{tbl1NADELI}
+\caption{Adjusted p-values for Friedman, Friedman Aligned, and Quade tests in single--IV case. 
+ ADELI is the control algorithm, and the task of $R_\mathrm{p1}$ evaluation is under consideration.}\label{tbl1NADELI}
 \begin{tabular*}{\tblwidth}{@{}LLCCCC@{}}
 \toprule
 \multirow{2}{*}{Algorithm}& \multirow{2}{*}{Test}& \multicolumn{4}{C}{post-hoc procedure} \\
@@ -933,8 +934,16 @@ STLBO&Friedman&9.23824E-01&1.0&9.23824E-01&9.89059E-01\\
         \includegraphics[width=.495\textwidth]{I02shotN1}
         \includegraphics[width=.48\textwidth]{Titleshot11N}
 		\includegraphics[width=.48\textwidth]{Titleshot21N}
-	  \caption{Box--plot of  two--diode model parameter evaluation from single IV curve using different optimizers.
-      Squares are the mean values, and dashed lines correspond to the true parameter values.}\label{figN1RezSingleIV}
+	  \caption{The results of algorithm comparison in $R_\mathrm{p1}$ (a) and $I_{02}$ (b) evaluation 
+               by Friedman, Friedman Aligned, and Quade tests in the single--IV case.
+               The colored hexagon indicates that the adjusted p-value, 
+               which tests the hypothesis that an algorithm in a row outperforms an algorithm in a column, 
+               is not greater than $p_{lim}=0.1$.
+               The solid fill signifies that every post-hoc procedure resulted in $p<p_{lim}$; 
+               the patterned fill indicates that only specific post-hoc procedures achieved this outcome.
+               The correspondence between the color and position of the hexagon to a test 
+               as well as the fill pattern to procedures are shown in a legend at the bottom of the figure.
+               }\label{figN1RezSingleIV}
 \end{figure*}
 
 %\begin{figure*}[]
@@ -984,7 +993,8 @@ STLBO&Friedman&9.23824E-01&1.0&9.23824E-01&9.89059E-01\\
 
 
 \begin{table*}[<options>]
-\caption{Adjusted p-values for multiple comparisons $1\times N$ tests in IV--set case (STLBO is the control algorithm).}\label{tbl1NSTLBO}
+\caption{Adjusted p-values for Friedman, Friedman Aligned, and Quade tests in IV--set case.
+ STLBO is the control algorithm.}\label{tbl1NSTLBO}
 \begin{tabular*}{\tblwidth}{@{}LLCCCC@{}}
 \toprule
 \multirow{2}{*}{Algorithm}& \multirow{2}{*}{Test}& \multicolumn{4}{C}{post-hoc procedure} \\
@@ -1064,14 +1074,14 @@ TLBO&Friedman&1.0&1.0&1.0&1.0\\
 \begin{figure}[]
 	\centering
 		\includegraphics[width=1.0\columnwidth]{N1Tresult}
-	  \caption{The results of Friedman, Friedman Aligned, and Quade tests in the IV-set case.
-               The control algorithms are in rows.
-               Each colored hexagon indicates that the adjusted p-value does not exceed 0.1
-               for every post-hoc procedure.
-               The shaded hexagon indicates that the adjusted p-value does not exceed 0.1
-               for the Finner procedure only.
-               The correspondence between the color and position of the hexagon to a test
-               is shown in a legend at the figure bottom.
+	  \caption{The results of algorithm comparison in $R_\mathrm{p1}$ (a) and $I_{02}$ (b) evaluation
+               by Friedman, Friedman Aligned, and Quade tests in the IV-set case.
+               The colored hexagon indicates that the adjusted p-value,
+               which tests the hypothesis that an algorithm in a row outperforms an algorithm in a column,
+               is not greater than $p_{lim}=0.1$.
+               The solid fill signifies that every post-hoc procedure resulted in $p<p_{lim}$;
+               the dashed fill indicates that the Finner post-hoc procedure was the only method that produced this result.
+               The correspondence between the color and position of the hexagon to a test.
                }\label{figN1RezIVset}
 \end{figure}
 
