@@ -876,7 +876,7 @@ the square error fitness function as a more effective and reliable option for th
 \end{figure}
 
 \begin{table*}[<options>]
-\caption{Adjusted p-values for Friedman, Friedman Aligned, and Quade tests in single--IV case. 
+\caption{Adjusted $p$-values for Friedman, Friedman Aligned, and Quade tests in single--IV case.
  ADELI is the control algorithm, and the task of $R_\mathrm{p1}$ evaluation is under consideration.}\label{tbl1NADELI}
 \begin{tabular*}{\tblwidth}{@{}LLCCCC@{}}
 \toprule
@@ -934,14 +934,14 @@ STLBO&Friedman&9.23824E-01&1.0&9.23824E-01&9.89059E-01\\
         \includegraphics[width=.495\textwidth]{I02shotN1}
         \includegraphics[width=.48\textwidth]{Titleshot11N}
 		\includegraphics[width=.48\textwidth]{Titleshot21N}
-	  \caption{The results of algorithm comparison in $R_\mathrm{p1}$ (a) and $I_{02}$ (b) evaluation 
+	  \caption{The results of algorithm comparison in $R_\mathrm{p1}$ (a) and $I_{02}$ (b) evaluation
                by Friedman, Friedman Aligned, and Quade tests in the single--IV case.
-               The colored hexagon indicates that the adjusted p-value, 
-               which tests the hypothesis that an algorithm in a row outperforms an algorithm in a column, 
+               The colored hexagon indicates that the adjusted $p$-value,
+               which tests the hypothesis that an algorithm in a row outperforms the algorithm in a column,
                is not greater than $p_{lim}=0.1$.
-               The solid fill signifies that every post-hoc procedure resulted in $p<p_{lim}$; 
+               The solid fill signifies that every post-hoc procedure resulted in $p<p_{lim}$;
                the patterned fill indicates that only specific post-hoc procedures achieved this outcome.
-               The correspondence between the color and position of the hexagon to a test 
+               The correspondence between the color and position of the hexagon to a test
                as well as the fill pattern to procedures are shown in a legend at the bottom of the figure.
                }\label{figN1RezSingleIV}
 \end{figure*}
@@ -993,7 +993,7 @@ STLBO&Friedman&9.23824E-01&1.0&9.23824E-01&9.89059E-01\\
 
 
 \begin{table*}[<options>]
-\caption{Adjusted p-values for Friedman, Friedman Aligned, and Quade tests in IV--set case.
+\caption{Adjusted $p$-values for Friedman, Friedman Aligned, and Quade tests in IV--set case.
  STLBO is the control algorithm.}\label{tbl1NSTLBO}
 \begin{tabular*}{\tblwidth}{@{}LLCCCC@{}}
 \toprule
@@ -1074,15 +1074,26 @@ TLBO&Friedman&1.0&1.0&1.0&1.0\\
 \begin{figure}[]
 	\centering
 		\includegraphics[width=1.0\columnwidth]{N1Tresult}
-	  \caption{The results of algorithm comparison in $R_\mathrm{p1}$ (a) and $I_{02}$ (b) evaluation
-               by Friedman, Friedman Aligned, and Quade tests in the IV-set case.
-               The colored hexagon indicates that the adjusted p-value,
-               which tests the hypothesis that an algorithm in a row outperforms an algorithm in a column,
+	  \caption{The results of algorithm comparison by Friedman, Friedman Aligned, and Quade tests in the IV-set case.
+               The colored hexagon indicates that the adjusted $p$-value,
+               which tests the hypothesis that an algorithm in a row outperforms the algorithm in a column,
                is not greater than $p_{lim}=0.1$.
                The solid fill signifies that every post-hoc procedure resulted in $p<p_{lim}$;
                the dashed fill indicates that the Finner post-hoc procedure was the only method that produced this result.
-               The correspondence between the color and position of the hexagon to a test.
+               The correspondence between the color and position of the hexagon to a test
+               is shown in a legend at the bottom of the figure.
                }\label{figN1RezIVset}
+\end{figure}
+
+\begin{figure}[]
+	\centering
+		\includegraphics[width=1.0\columnwidth]{NNresult}
+	  \caption{The results of multiple comparisons among all algorithms in the IV-set case.
+               The colored cylinder indicates that the adjusted p-value,
+               which tests the control algorithm outperforms the comparison algorithm,
+               is not greater than $p_{lim}=0.1$.
+               The correspondence between the color of the cylinder to a post-hoc procedure is shown in a figure legend.
+               }\label{figNNRezIVset}
 \end{figure}
 
 %Box Plot of some functions from F1–F10 for all algorithms using CEC2017 and Dim = 30
