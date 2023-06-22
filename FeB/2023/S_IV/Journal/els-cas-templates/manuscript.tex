@@ -946,6 +946,77 @@ STLBO&Friedman&9.23824E-01&1.0&9.23824E-01&9.89059E-01\\
                }\label{figN1RezSingleIV}
 \end{figure*}
 
+\begin{table*}[<options>]
+\caption{Adjusted $p$-values for tests for multiple comparisons of $I_{01}$ evaluation
+         among all methods in the single--IV case ($p<1.0$ are only shown).}\label{tblNNpValueI01}
+\begin{tabular*}{\tblwidth}{@{}LCCC@{}}
+\toprule
+\multirow{2}{*}{Hypothesis}& \multicolumn{3}{C}{post-hoc procedure} \\
+  &Nemenyi & Holm & Shaffer\\ % Table header row
+\midrule
+ADELI versus WW&<1E-13&<1E-13&<1E-13\\
+ADELI versus NDE&1.17195E-12&1.15907E-12&1.00453E-12\\
+STLBO versus CWOA&1.17195E-12&1.15907E-12&1.00453E-12\\
+TLBO versus PSO&1.21236E-12&1.17240E-12&1.03917E-12\\
+STLBO versus GOTLBO&1.21236E-12&1.17240E-12&1.03917E-12\\
+ADELI versus DE&1.73772E-12&1.64224E-12&1.48948E-12\\
+STLBO versus DE&1.83875E-12&1.71752E-12&1.57607E-12\\
+ADELI versus CWOA&3.83915E-12&3.50164E-12&3.29070E-12\\
+EBLSHADE versus GOTLBO&4.20286E-12&3.78719E-12&3.60245E-12\\
+STLBO versus NDE&5.01110E-12&4.46043E-12&4.29523E-12\\
+ADELI versus GOTLBO&5.41522E-12&4.76064E-12&4.64162E-12\\
+EBLSHADE versus CWOA&5.98099E-12&5.19229E-12&5.12657E-12\\
+EBLSHADE versus ISCA&1.17195E-11&1.00453E-11&1.00453E-11\\
+EBLSHADE versus DE&1.45282E-11&1.22931E-11&1.06966E-11\\
+EBLSHADE versus NDE&4.17053E-11&3.43725E-11&3.07061E-11\\
+STLBO versus ISCA&8.17133E-11&6.64482E-11&6.01625E-11\\
+TLBO versus WW&8.82197E-11&7.07696E-11&6.49529E-11\\
+TLBO versus MABC&1.07900E-10&8.53717E-11&7.94431E-11\\
+EBLSHADE versus MABC&3.09961E-10&2.38431E-10&2.28213E-10\\
+ADELI versus NNA&3.24570E-10&2.46102E-10&2.38969E-10\\
+ADELI versus ISCA&3.83410E-10&2.86504E-10&2.82291E-10\\
+STLBO versus MABC&1.58351E-09&1.16588E-09&1.16588E-09\\
+STLBO versus NNA&1.83408E-09&1.33021E-09&1.33021E-09\\
+TLBO versus ISCA&3.49326E-09&2.49519E-09&2.22648E-09\\
+ADELI versus MABC&5.83612E-09&4.10452E-09&3.71972E-09\\
+EBLSHADE versus NNA&1.23520E-08&8.55140E-09&7.87272E-09\\
+EBLSHADE versus PSO&1.47150E-08&1.00256E-08&9.37877E-09\\
+STLBO versus PSO&5.32586E-08&3.57008E-08&3.39450E-08\\
+ADELI versus PSO&1.50038E-07&9.89261E-08&.56286E-08\\
+TLBO versus GOTLBO&2.16253E-07&1.40208E-07&1.37831E-07\\
+EBLSHADE versus WW&2.39169E-07&1.52438E-07&1.52438E-07\\
+TLBO versus CWOA&2.89034E-07&1.81043E-07&1.77867E-07\\
+TLBO versus DE&5.91345E-07&3.63905E-07&3.63905E-07\\
+STLBO versus WW&6.86296E-07&4.14794E-07&4.14794E-07\\
+TLBO versus NDE&1.37158E-06&8.13904E-07&7.68687E-07\\
+TLBO versus NNA&1.17758E-04&6.72904E-05&6.59964E-05\\
+NNA versus WW&2.21281E-02&1.24015E-02&1.24015E-02\\
+IJAYA versus WW&2.36193E-01&1.29777E-01&1.24585E-01\\
+NNA versus PSO&2.36193E-01&1.29777E-01&1.24585E-01\\
+NDE versus WW&4.04596E-01&2.13413E-01&2.13413E-01\\
+DE versus WW&6.28685E-01&3.24706E-01&3.24706E-01\\
+CWOA versus WW&8.94683E-01&4.52257E-01&4.52257E-01\\
+GOTLBO versus WW&1.0&5.07626E-01&5.07626E-01\\
+IJAYA versus PSO&1.0&8.15876E-01&7.97333E-01\\
+NNA versus MABC&1.0&9.64793E-01&9.64793E-01\\
+\bottomrule
+\end{tabular*}
+\end{table*}
+
+
+\begin{figure*}[]
+	\centering
+		\includegraphics[width=.495\textwidth]{Rp1shot_NN}
+        \includegraphics[width=.495\textwidth]{I02shot_NN}
+	  \caption{The results of multiple comparisons of $R_\mathrm{p1}$ (a) and $I_{02}$ (b) evaluation
+               among all algorithms in the single--IV case.
+               The colored cylinder indicates that the adjusted p-value,
+               which tests the control algorithm outperforms the comparison algorithm,
+               is not greater than $p_{lim}=0.1$.
+               The correspondence between the color of the cylinder to a post-hoc procedure is shown in the figure legend.
+               }\label{figNNRezSingleIV}
+\end{figure*}
+
 %\begin{figure*}[]
 %	\centering
 %		\includegraphics[width=.32\textwidth]{I01N1}
@@ -1085,6 +1156,99 @@ TLBO&Friedman&1.0&1.0&1.0&1.0\\
                }\label{figN1RezIVset}
 \end{figure}
 
+
+\begin{table*}[<options>]
+\caption{Adjusted $p$-values for tests for multiple comparisons among all methods 
+         in the IV--set case ($p<p_{lim}$ are only shown).}\label{tblNNpValue}
+\begin{tabular*}{\tblwidth}{@{}LCCC@{}}
+\toprule
+\multirow{2}{*}{Hypothesis}& \multicolumn{3}{C}{post-hoc procedure} \\
+  &Nemenyi & Holm & Shaffer\\ % Table header row
+\midrule
+%EBLSHADE versus WW,&<1E-13&<1E-13&<1E-13\\
+%ADELI versus MABC&<1E-13&<1E-13&<1E-13\\
+%ADELI versus PSO&<1E-13&<1E-13&<1E-13\\
+%ADELI versus ISCA&<1E-13&<1E-13&<1E-13\\
+%ADELI versus NNA&<1E-13&<1E-13&<1E-13\\
+%ADELI versus CWOA&<1E-13&<1E-13&<1E-13\\
+%ADELI versus WW&<1E-13&<1E-13&<1E-13\\
+%NDE versus NNA&<1E-13&<1E-13&<1E-13\\
+%TLBO versus GOTLBO&<1E-13&<1E-13&<1E-13\\
+%TLBO versus PSO&<1E-13&<1E-13&<1E-13\\
+%TLBO versus ISCA&<1E-13&<1E-13&<1E-13\\
+%TLBO versus NNA&<1E-13&<1E-13&<1E-13\\
+%TLBO versus CWOA&<1E-13&<1E-13&<1E-13\\
+%STLBO versus GOTLBO&<1E-13&<1E-13&<1E-13\\
+%STLBO versus PSO&<1E-13&<1E-13&<1E-13\\
+%STLBO versus NNA&<1E-13&<1E-13&<1E-13\\
+%STLBO versus CWOA&<1E-13&<1E-13&<1E-13\\
+EBLSHADE versus WW,
+ADELI versus MABC,&&&\\
+ADELI versus PSO,
+ADELI versus ISCA,&&&\\
+ADELI versus NNA, 
+ADELI versus CWOA,&&&\\
+ADELI versus WW,
+NDE versus NNA,&&&\\
+TLBO versus GOTLBO, 
+TLBO versus PSO,&&&\\
+TLBO versus ISCA, 
+TLBO versus NNA,&&&\\
+TLBO versus CWOA,
+STLBO versus GOTLBO, &&&\\
+STLBO versus PSO, 
+STLBO versus NNA, &&&\\
+STLBO versus CWOA&<1E-13&<1E-13&<1E-13\\
+IJAYA versus NNA&1.61648E-12&1.31450E-12&1.19016E-12\\
+EBLSHADE versus MABC&3.75833E-12&3.01492E-12&2.76712E-12\\
+NDE versus GOTLBO&4.20286E-12&3.32534E-12&3.09441E-12\\
+STLBO versus DE&8.12284E-12&6.33760E-12&5.98055E-12\\
+IJAYA versus CWOA&2.31157E-11&1.75273E-11&1.70193E-11\\
+TLBO versus DE&4.02505E-11&3.00773E-11&2.96350E-11\\
+IJAYA versus PSO&9.52918E-11&7.01599E-11&7.01599E-11\\
+IJAYA versus ISCA&1.29115E-09&9.36436E-10&9.36436E-10\\
+ADELI versus DE&2.22329E-09&1.56363E-09&1.41704E-09\\
+EBLSHADE versus GOTLBO&3.53238E-09&2.44550E-09&2.25141E-09\\
+NDE versus MABC&9.68759E-09&6.49388E-09&6.17451E-09\\
+IJAYA versus WW&1.72440E-08&1.13697E-08&1.09907E-08\\
+NDE versus WW&1.75252E-08&1.13697E-08&1.11699E-08\\
+EBLSHADE versus DE&1.82602E-08&1.16384E-08&1.16384E-08\\
+EBLSHADE versus ISCA&1.88327E-08&1.17963E-08&1.16384E-08\\
+EBLSHADE versus PSO&4.78066E-08&2.94194E-08&2.94194E-08\\
+ADELI versus GOTLBO&4.98663E-08&3.01390E-08&3.01390E-08\\
+EBLSHADE versus CWOA&7.52618E-08&4.46609E-08&4.21797E-08\\
+STLBO versus MABC&8.60481E-08&5.01159E-08&4.82248E-08\\
+NDE versus ISCA&9.60138E-08&5.48650E-08&5.38099E-08\\
+DE versus NNA&1.60867E-07&9.01562E-08&9.01562E-08\\
+EBLSHADE versus NNA&1.68788E-07&9.27404E-08&9.01562E-08\\
+TLBO versus MABC&2.16163E-07&1.16396E-07&1.14020E-07\\
+NDE versus PSO&4.07575E-07&2.14985E-07&2.14985E-07\\
+STLBO versus WW&4.16995E-07&2.15371E-07&2.15371E-07\\
+TLBO versus WW&6.32636E-07&3.19794E-07&3.19794E-07\\
+NDE versus CWOA&8.17751E-07&4.04382E-07&4.04382E-07\\
+STLBO versus ISCA&8.33647E-07&4.04382E-07&4.04382E-07\\
+DE versus CWOA&1.47836E-06&6.98567E-07&6.98567E-07\\
+DE versus PSO&4.48549E-06&2.07023E-06&2.07023E-06\\
+DE versus ISCA&3.33823E-05&1.50404E-05&1.46735E-05\\
+NDE versus DE&1.56228E-04&6.86718E-05&6.86718E-05\\
+DE versus WW&2.41908E-04&1.03675E-04&1.03675E-04\\
+IJAYA versus GOTLBO&7.27786E-04&2.95913E-04&2.95913E-04\\
+MABC versus NNA&1.28945E-03&5.10114E-04&5.10114E-04\\
+ADELI versus NDE&1.70688E-03&6.56493E-04&6.56493E-04\\
+MABC versus CWOA&6.56486E-03&2.45281E-03&2.45281E-03\\
+MABC versus PSO&1.46075E-02&5.29723E-03&5.13671E-03\\
+TLBO versus NDE&2.83112E-02&9.95560E-03&9.95560E-03\\
+MABC versus ISCA&6.08528E-02&2.07301E-02&2.07301E-02\\
+STLBO versus NDE&6.70463E-02&2.21032E-02&2.21032E-02\\
+IJAYA versus MABC&6.92376E-02&2.21032E-02&2.21032E-02\\
+GOTLBO versus NNA&1.07776E-01&3.31618E-02&3.31618E-02\\
+MABC versus WW&2.35963E-01&6.74180E-02&6.74180E-02\\
+\bottomrule
+\end{tabular*}
+\end{table*}
+
+
+
 \begin{figure}[]
 	\centering
 		\includegraphics[width=1.0\columnwidth]{NNresult}
@@ -1092,7 +1256,7 @@ TLBO&Friedman&1.0&1.0&1.0&1.0\\
                The colored cylinder indicates that the adjusted p-value,
                which tests the control algorithm outperforms the comparison algorithm,
                is not greater than $p_{lim}=0.1$.
-               The correspondence between the color of the cylinder to a post-hoc procedure is shown in a figure legend.
+               The correspondence between the color of the cylinder to a post-hoc procedure is shown in the figure legend.
                }\label{figNNRezIVset}
 \end{figure}
 
