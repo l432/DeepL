@@ -1,4 +1,8 @@
 // the setup routine runs once when you press reset:
+
+#include <avr/delay.h>
+#define F_CPU 16000000UL;
+
 const byte PS_128=(1<<ADPS2)|(1<<ADPS1)|(1<<ADPS0);
 const byte PS_16=(1<<ADPS2);
 
@@ -19,7 +23,8 @@ void setup() {
 void loop() {
   for (byte i = 0; i < Np; i++) {
     myByte[i] = analogRead(A0);
-    delayMicroseconds(20);
+    // delayMicroseconds(20);
+    _delay_us(20);
   };
   for (byte i = 0; i < Np; i++) {
     Serial.print(i);
