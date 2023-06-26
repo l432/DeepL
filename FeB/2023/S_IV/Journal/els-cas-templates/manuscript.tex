@@ -212,8 +212,8 @@ In the second part, we simulated a set of IV characteristics and evaluated the a
 
 \subsubsection{Single--IV case}\label{SingleIV}
 
-Previous studies have demonstrated \cite{Tada2015Organic,Tada2021} that when the ideality factor of D2 is either equal to or significantly larger than $n_1$,
-($n_1=n_2=1.92$ or $n_1=1.00$, $n_2=3.00$) the nonlinear least--squares method successfully determines a set of equivalent circuit parameters
+Previous studies have demonstrated \cite{Tada2015Organic,Tada2021} that when the ideality factor of D2 is either equal to or significantly larger than $n_1$
+($n_1=n_2=1.92$ or $n_1=1.00$, $n_2=3.00$), the nonlinear least--squares method successfully determines a set of equivalent circuit parameters
 that accurately replicate the experimental data of an organic photovoltaic cell.
 Therefore this approach does not allow for distinguishing between similar IV curves obtained from solar cells with different parameters.
 To overcome this issue, Tada \cite{Tada2021} successfully employed Bayesian estimation of parameters.
@@ -579,151 +579,8 @@ and identify the differences.
 
 \end{enumerate}
 
-In the single--IV case, all nonparametric statistical tests were used to compare the performance of meta--heuristic algorithms in assessing each of the eight model parameters.
-The $\mathrm{APE}_i$ values were used, and the number of case problems in the study $n$ was equal to $N_\mathrm{runs}=51$.
-Additionally, algorithms were compared in terms of curve-fitting accuracy by using RMSPE values.
-Furthermore, tests were employed on a composite parameter.
-This parameter, referred to as ``Comp'' hereafter, includes $\mathrm{APE}_\mathrm{MEDIAN}$ for each of the eight defined model parameters,
-the median value for RMSPE, and $t_\mathrm{run}$.
-This parameter may provide the most valuable insights for comparing algorithms. However, it is important to note that the value of $n$ is only 10.
-According to Derrac \emph{et al} \cite{Derrac2011}, the number of case problems should be $n\geq 2k$,
-where $k$ is the number of algorithms ($k=14$ in our study).
-Therefore, the use of the Comp parameter is not strictly rigorous.
-
-In the IV--set case, a comprehensive nonparametric statistical analysis of algorithms efficiency was performed on all parameters collected from all simulated curves.
-In this scenario, $n$ had a value of 81:
-\begin{equation*}
-n= 10\,T\mathrm{values}\times(8\,\mathrm{APE}_\mathrm{MEDIAN}+1\,\mathrm{RMSPE}_\mathrm{MEDIAN})+1\,t_\mathrm{run}\,.
-\end{equation*}
-%10 temperature values $\times(\mathrm{APE}_\mathrm{MEDIAN}+1\mathrm{RMSPE}_\mathrm{MEDIAN})+1t_\mathrm{run}$.
 
 
-%перекласти на англійську "При цьому n дорівнювало 81"
-
-
-%This section is to compare the performance between EJAYA
-%and the other eight metaheuristic algorithms on CEC 2014 and
-%CEC 2015 test suites from the following four aspects, i.e. solution accuracy, algorithm rank, statistical test, and convergence
-%performance.
-
-%In this section, in order to study the effectiveness of the proposed gannet optimization algorithm, the statistical
-%results such as the average fitness value, standard deviation and Wilcoxon Rank-sum test are compared; the proposed
-%algorithm is more intuitively compared through the fitness value iteration curve performance, and finally, compare
-%the execution time of the algorithms.
-
-%The obtained MEAN and STD by
-%the applied algorithms are presented in Table 3. The best
-%results were in bold type in Table 3
-%2.Friedman Mean Rank Test
-% The
-%test results can be found in Table 4 and Fig. 4.
-%3.Wilcoxon sign-rank test
-%Wilcoxon sign-rank test is used widely to compare the
-%performance among different optimization algorithms [59–
-%62]. Tables 5 and 6 give the statistical results produced by
-%Wilcoxon sign-rank test with a significant level α = 0.05.
-%In Tables 5 and 6, R+ means the sum of ranks for the
-%problems in which EJAYA outperformed the compared algorithm and R− indicates the sum of ranks for the opposite.
-%As can be seen from Tables 5 and 6, there are the following
-%three cases:
-%(1) Case 1: If R+ is more than R− and the obtained
-%p-value is less than the set significant level α, the
-%symbol is marked with ‘+’ and EJAYA outperforms
-%the compared algorithm on the considered case.
-%(2) Case 2: If R+ is less than R− and the obtained p-value
-%is less than the set significant level α, the symbol is
-%marked with ‘-’ and the compared algorithm beats
-%EJAYA on the considered case.
-%(3) Case 3: If R+, R− and p-value do not meet Case 1
-%and Case 2, the symbol is marked with ‘=’ and there
-%is no significant difference between EJAYA and the
-%compared algorithm on the considered case.
-
-
-
-%To appropriately evaluate the performance of the
-%proposed NNA compared with the other state-of-art algorithms,
-%four quality indicators are utilized. The first one is the value-based
-%method which is the solution quality in terms of four performance
-%metrics including the best, average, median, worst, and standard
-%deviation (SD).
-%The second metric is the rank-based method, which have been
-%suggested by different authors in the literature. In this paper, the
-%Friedman test [37] which is a nonparametric statistical test is
-%used to distinguish the differences among reported algorithms.
-%Therefore, the average rankings of the algorithms according to the
-%Friedman test are reported.
-%The third and fourth metrics are Kruskal-Wallis test [38] and
-%Multiple Comparison Test [39]. Tables 8–13 tabulate the obtained
-%optimization results using different optimizers for the benchmarks
-%given in Tables 5 and 6 with dimensions of 50–200. Looking at
-%Tables 8–13, performance of well-used optimizers such as GA, PSO,
-%HS has not surpassed the results of recent optimizers for the most
-%reported functions. Therefore, the competition is mostly among
-%recent developed optimization methods
-
-%With the aim of obtaining rigorous and fair conclusion, two other
-%statistical tests have been carried out in this research including the
-%Kruskal-Wallis H test [38] and Multiple Comparison Test [39]. These
-%tests have been conducted for proving if there are significant differences in the results obtained by all methods and each method
-%compared with the another.
-
-
-%For each benchmark function, individual optimizer runs Nruns
-%times starting from different populations randomly generated and
-%the following seven evaluation indicators are computed per optimizer:
-%1. Mean fitness: is an average value of all the solutions in
-%the final sets obtained by an optimizer in some individual
-%runs [35].
-%2. Statistical standard deviation (std): is used to ensure that the
-%optimizer convergences to the same optimal and ensures
-%repeatability of the results. It is computed over all the sets
-%of final solutions obtained by an optimizer in a number of
-%individual runs [36].
-%3. Wilcoxon rank sum test: assigns a rank to all the scores
-%considered as one group and then sums the ranks of each
-%group [37]. The rank-sum test is often described as the
-%nonparametric version of the t test for two independent
-%groups.
-%4. T-test: is statistical significance shows despite whether the
-%contrast between the two groups’ midpoints in all possibility
-%mirrors a real distinction in the population from the groups
-%were inspected [38].
-%5. Run time average: is the average run time in seconds for an
-%individual optimizer on a given function. The results were
-%conducted on 64-bit windows 10 computer with i7 core
-%3.6 GHz and 8 GB RAM.
-
-%Table 17
-%Run time average for the different optimizers adopted in the study for the different functions
-
-
-%It should be noted that the standard deviation and mean indicators
-%are not enough lonely for comparing these algorithm. To this end, three
-%well-known and strong nonparametric statistical tests include Wilcoxon
-%test, Kruskal Wallis Test, and Friedman test are selected to more analyze
-%the performance of these eight mentioned algorithms.
-%Wilcoxon signed-rank test is a nonparametric statistical test used to
-%evaluate the similarity of two dependent degree-scale samples. This test
-%takes into account the difference between rankings, so variables can
-%have different or spaced solutions. This test, corresponds to the two
-%dependent sample t test, and if not the conditions to perform the t
-%test, Wilcoxon as a successor can be used. Also, the Friedman test is
-%used for two-way analysis of variance (for nonparametric data) through
-%ranking. The nonparametric Friedman test’s power is the same as the
-%strongest parametric F test. To achieve more detail about these three
-%nonparametric statistical tests, refers to the Derrac et al. (2011).
-
-%TGA shows an improvement over LADA, with a level of significance 𝛼 = 0.01
-
-
-%We then employed
-%the pairwise Wilcoxon rank-sum test (Wilcoxon, 1945), with 5% significance level, as well as the sequentially rejective Holm–Bonferroni
-%procedure (Garcia et al., 2008; Holm, 1979), to rank the mean errors of the runs for each value of 𝛽 on the 30 CEC
-%2014 benchmark functions.
-
-%In order to validate SO results statistically, Wilcoxon Rank
-%Sum (WRS) has been used to perform a nonparametric test
 
 \section{Numerical results and discussion}\label{Result}
 %Results and analysis of the experiment
@@ -838,9 +695,20 @@ the square error fitness function as a more effective and reliable option for th
 
 \subsubsection{Evaluation of single--IV}
 
+In this subsection, we show and analyze the statistical results of different meta-heuristic algorithm 
+applications to an IV curve, simulated with Eq.~(\ref{eqParSingleIV}) values.
+Several typical fitting results of the synthesized curve are shown in Fig.~\ref{figSigleIV}.
+A more comprehensive version, including the fitting results obtained using each algorithm, 
+is provided in the supplementary materials (figure S1).
+It can be seen, that the closest match between the approximation curves and the IV curve points is 
+observed for EBLSHADE, ADELI, NDE, IJAYA, TLBO, and STLBO.
+On the contrary, the PSO and GOTLBO fitting curves had the least replication of the original data.
 
-
-
+Fig.~\ref{figBoxSingleIV} shows the results of cell parameters evaluation by comparative algorithms.
+In addition, the figure presents the RMSPE data, 
+which confirms the conclusions of the visual comparison between the fitting lines and the points of the IV curve.
+The results in terms of MEAN, MEDIAN, STD, and IQR are tabulated as well (table~S1 in the supplementary material). 
+ 
 
 \begin{figure*}[]
 	\centering
@@ -848,8 +716,53 @@ the square error fitness function as a more effective and reliable option for th
         \includegraphics[width=.32\textwidth]{Fig3b}
         \includegraphics[width=.32\textwidth]{Fig3c}
 	  \caption{Box--plot of  two--diode model parameter evaluation from single IV curve using different optimizers.
-      Squares are the mean values, and dashed lines correspond to the true parameter values.}\label{figBoxSingleIV}
+      The squares are the mean values, and the dashed lines correspond to the true parameter values.}\label{figBoxSingleIV}
 \end{figure*}
+
+We would like to stress the following. 
+In most cases, median values are more relevant to the actual parameter values than the mean values.
+Possible exceptions only apply to the evaluation of $R_\mathrm{s}$ and $R_\mathrm{p2}$ only.
+However, in cases where a method allows for parameter estimation with high accuracy (EBLSHADE, ADELI, TLBO, and STLBO), 
+MEDIANs are at least as good as the MEANs.
+As a result, we will utilize median values as a robust measure of central tendency in nonparametric statistical tests.
+Secondly, the increase in algorithm stability (reduction in STD and IQR values) in determining each model parameter correlates with the accuracy of parameter evaluation. Furthermore, IQR values are generally no worse than STD values.
+
+
+%  & $I_{01}$& $n_1$ & $R_\mathrm{p1}$ &$I_{02}$& $n_2$& $R_\mathrm{p2}$&$R_\mathrm{s}$&$I_\mathrm{ph}$&RMSPE\\ % Table header row
+
+
+
+
+%The energy band diagram of the inverted device structure ITO/ZnO/PTB7:PC71BM/MoO3/Ag is given in
+%the supplementary material (figure S1 is available online at stacks.iop.org/MRX/5/116203/mmedia).
+% The cell parameters obtained from the J-V characteristics are tabulated
+%(table S1 in the supplementary material).
+%Light intensity dependent C-F plots for the
+%devices with 70, 150 and 250 nm ZnO layer thicknesses are given in the supplementary material (figure S2)
+%The presence of leakage current can be
+%correlated with the shunt resistance (Rsh) values obtained from the dark J-V curve (table S1 in thesupplementary
+%material).
+%The reader is referred to supplementary material for more information on the simulated BHJ morphologies.28
+%The reader is referred to the supplementary material for more information on the cut-off
+%approximation.
+%However, in the supplementary material28 we show that for the aforementioned
+%trap densities the trap population is essentially a small perturbation to the total energy landscape and the reduction in the
+%standard deviation of energetic disorder is negligible.
+%This saturation effect was also seen in the
+%evolution of exciton diffusion with trap depth (see supplementary material28).
+
+
+In the single--IV case, all nonparametric statistical tests were used to compare the performance of meta--heuristic algorithms in assessing each of the eight model parameters.
+
+The $\mathrm{APE}_i$ values were used, and the number of case problems in the study $n$ was equal to $N_\mathrm{runs}=51$.
+Additionally, algorithms were compared in terms of curve-fitting accuracy by using RMSPE values.
+Furthermore, tests were employed for a composite parameter as well.
+This parameter, referred to as ``Comp'' hereafter, includes $\mathrm{APE}_\mathrm{MEDIAN}$ for each of the eight defined model parameters,
+the median value for RMSPE, and $t_\mathrm{run}$.
+This parameter may provide the most valuable insights for comparing algorithms. However, it is important to note that the value of $n$ is only 10.
+According to Derrac \emph{et al} \cite{Derrac2011}, the number of case problems should be $n\geq 2k$,
+where $k$ is the number of algorithms ($k=14$ in our study).
+Therefore, the use of the Comp parameter is not strictly rigorous.
 
 
 \begin{figure}[]
@@ -1080,12 +993,20 @@ NNA versus MABC&1.0&9.64793E-01&9.64793E-01\\
                $n_2$ (g, h), $R_\mathrm{p2}$ (i, j), $R_\mathrm{s}$ (k), $I_\mathrm{ph}$ (l, m), and RMSPE (n, o)
                evaluation by different algorithm on the synthesis temperature.
                The IV-set is used.
-               Circles represent the values, which have been used in IV curve simulations,
-               squares represent the median values, and stars represent the mean values.
+               The circles represent the values, which have been used in IV curve simulations,
+               the filled marks represent the median values, and the empty marks represent the mean values.
                The colored regions correspond to the IQR.
                The lines only serve as guide to the eye.
                }\label{figTDepIVset}
 \end{figure*}
+
+
+In the IV--set case, a comprehensive nonparametric statistical analysis of algorithms efficiency was performed on all parameters collected from all simulated curves.
+In this scenario, $n$ had a value of 81:
+\begin{equation*}
+n= 10\,T\mathrm{values}\times(8\,\mathrm{APE}_\mathrm{MEDIAN}+1\,\mathrm{RMSPE}_\mathrm{MEDIAN})+1\,t_\mathrm{run}\,.
+\end{equation*}
+%10 temperature values $\times(\mathrm{APE}_\mathrm{MEDIAN}+1\mathrm{RMSPE}_\mathrm{MEDIAN})+1t_\mathrm{run}$.
 
 %In these tables, ‘+’ indicated that the null
 %hypothesis H0 was rejected and ICO performed better, while ‘−’
@@ -1328,6 +1249,9 @@ MABC versus WW&2.35963E-01&6.74180E-02&6.74180E-02\\
                The correspondence between the color of the cylinder to a post-hoc procedure is shown in the figure legend.
                }\label{figNNRezIVset}
 \end{figure}
+
+
+\section{Conclusion}
 
 %Box Plot of some functions from F1–F10 for all algorithms using CEC2017 and Dim = 30
 
@@ -1655,6 +1579,136 @@ MABC versus WW&2.35963E-01&6.74180E-02&6.74180E-02\\
 %\definecolor{ligthViolet}{RGB}{235,235,255}
 %\definecolor{ligthGreen}{RGB}{204,255,204}
 
+
+
+
+
+%перекласти на англійську "При цьому n дорівнювало 81"
+
+
+%This section is to compare the performance between EJAYA
+%and the other eight metaheuristic algorithms on CEC 2014 and
+%CEC 2015 test suites from the following four aspects, i.e. solution accuracy, algorithm rank, statistical test, and convergence
+%performance.
+
+%In this section, in order to study the effectiveness of the proposed gannet optimization algorithm, the statistical
+%results such as the average fitness value, standard deviation and Wilcoxon Rank-sum test are compared; the proposed
+%algorithm is more intuitively compared through the fitness value iteration curve performance, and finally, compare
+%the execution time of the algorithms.
+
+%The obtained MEAN and STD by
+%the applied algorithms are presented in Table 3. The best
+%results were in bold type in Table 3
+%2.Friedman Mean Rank Test
+% The
+%test results can be found in Table 4 and Fig. 4.
+%3.Wilcoxon sign-rank test
+%Wilcoxon sign-rank test is used widely to compare the
+%performance among different optimization algorithms [59–
+%62]. Tables 5 and 6 give the statistical results produced by
+%Wilcoxon sign-rank test with a significant level α = 0.05.
+%In Tables 5 and 6, R+ means the sum of ranks for the
+%problems in which EJAYA outperformed the compared algorithm and R− indicates the sum of ranks for the opposite.
+%As can be seen from Tables 5 and 6, there are the following
+%three cases:
+%(1) Case 1: If R+ is more than R− and the obtained
+%p-value is less than the set significant level α, the
+%symbol is marked with ‘+’ and EJAYA outperforms
+%the compared algorithm on the considered case.
+%(2) Case 2: If R+ is less than R− and the obtained p-value
+%is less than the set significant level α, the symbol is
+%marked with ‘-’ and the compared algorithm beats
+%EJAYA on the considered case.
+%(3) Case 3: If R+, R− and p-value do not meet Case 1
+%and Case 2, the symbol is marked with ‘=’ and there
+%is no significant difference between EJAYA and the
+%compared algorithm on the considered case.
+
+
+
+%To appropriately evaluate the performance of the
+%proposed NNA compared with the other state-of-art algorithms,
+%four quality indicators are utilized. The first one is the value-based
+%method which is the solution quality in terms of four performance
+%metrics including the best, average, median, worst, and standard
+%deviation (SD).
+%The second metric is the rank-based method, which have been
+%suggested by different authors in the literature. In this paper, the
+%Friedman test [37] which is a nonparametric statistical test is
+%used to distinguish the differences among reported algorithms.
+%Therefore, the average rankings of the algorithms according to the
+%Friedman test are reported.
+%The third and fourth metrics are Kruskal-Wallis test [38] and
+%Multiple Comparison Test [39]. Tables 8–13 tabulate the obtained
+%optimization results using different optimizers for the benchmarks
+%given in Tables 5 and 6 with dimensions of 50–200. Looking at
+%Tables 8–13, performance of well-used optimizers such as GA, PSO,
+%HS has not surpassed the results of recent optimizers for the most
+%reported functions. Therefore, the competition is mostly among
+%recent developed optimization methods
+
+%With the aim of obtaining rigorous and fair conclusion, two other
+%statistical tests have been carried out in this research including the
+%Kruskal-Wallis H test [38] and Multiple Comparison Test [39]. These
+%tests have been conducted for proving if there are significant differences in the results obtained by all methods and each method
+%compared with the another.
+
+
+%For each benchmark function, individual optimizer runs Nruns
+%times starting from different populations randomly generated and
+%the following seven evaluation indicators are computed per optimizer:
+%1. Mean fitness: is an average value of all the solutions in
+%the final sets obtained by an optimizer in some individual
+%runs [35].
+%2. Statistical standard deviation (std): is used to ensure that the
+%optimizer convergences to the same optimal and ensures
+%repeatability of the results. It is computed over all the sets
+%of final solutions obtained by an optimizer in a number of
+%individual runs [36].
+%3. Wilcoxon rank sum test: assigns a rank to all the scores
+%considered as one group and then sums the ranks of each
+%group [37]. The rank-sum test is often described as the
+%nonparametric version of the t test for two independent
+%groups.
+%4. T-test: is statistical significance shows despite whether the
+%contrast between the two groups’ midpoints in all possibility
+%mirrors a real distinction in the population from the groups
+%were inspected [38].
+%5. Run time average: is the average run time in seconds for an
+%individual optimizer on a given function. The results were
+%conducted on 64-bit windows 10 computer with i7 core
+%3.6 GHz and 8 GB RAM.
+
+%Table 17
+%Run time average for the different optimizers adopted in the study for the different functions
+
+
+%It should be noted that the standard deviation and mean indicators
+%are not enough lonely for comparing these algorithm. To this end, three
+%well-known and strong nonparametric statistical tests include Wilcoxon
+%test, Kruskal Wallis Test, and Friedman test are selected to more analyze
+%the performance of these eight mentioned algorithms.
+%Wilcoxon signed-rank test is a nonparametric statistical test used to
+%evaluate the similarity of two dependent degree-scale samples. This test
+%takes into account the difference between rankings, so variables can
+%have different or spaced solutions. This test, corresponds to the two
+%dependent sample t test, and if not the conditions to perform the t
+%test, Wilcoxon as a successor can be used. Also, the Friedman test is
+%used for two-way analysis of variance (for nonparametric data) through
+%ranking. The nonparametric Friedman test’s power is the same as the
+%strongest parametric F test. To achieve more detail about these three
+%nonparametric statistical tests, refers to the Derrac et al. (2011).
+
+%TGA shows an improvement over LADA, with a level of significance 𝛼 = 0.01
+
+
+%We then employed
+%the pairwise Wilcoxon rank-sum test (Wilcoxon, 1945), with 5% significance level, as well as the sequentially rejective Holm–Bonferroni
+%procedure (Garcia et al., 2008; Holm, 1979), to rank the mean errors of the runs for each value of 𝛽 on the 30 CEC
+%2014 benchmark functions.
+
+%In order to validate SO results statistically, Wilcoxon Rank
+%Sum (WRS) has been used to perform a nonparametric test
 
 
 %\begin{table}[<options>]
