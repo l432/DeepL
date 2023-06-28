@@ -695,20 +695,20 @@ the square error fitness function as a more effective and reliable option for th
 
 \subsubsection{Evaluation of single--IV}
 
-In this subsection, we show and analyze the statistical results of different meta-heuristic algorithm 
+In this subsection, we show and analyze the statistical results of different meta-heuristic algorithm
 applications to an IV curve, simulated with Eq.~(\ref{eqParSingleIV}) values.
 Several typical fitting results of the synthesized curve are shown in Fig.~\ref{figSigleIV}.
-A more comprehensive version, including the fitting results obtained using each algorithm, 
+A more comprehensive version, including the fitting results obtained using each algorithm,
 is provided in the supplementary materials (figure S1).
-It can be seen, that the closest match between the approximation curves and the IV curve points is 
+It can be seen, that the closest match between the approximation curves and the IV curve points is
 observed for EBLSHADE, ADELI, NDE, IJAYA, TLBO, and STLBO.
 On the contrary, the PSO and GOTLBO fitting curves had the least replication of the original data.
 
 Fig.~\ref{figBoxSingleIV} shows the results of cell parameters evaluation by comparative algorithms.
-In addition, the figure presents the RMSPE data, 
+In addition, the figure presents the RMSPE data,
 which confirms the conclusions of the visual comparison between the fitting lines and the points of the IV curve.
-The results in terms of MEAN, MEDIAN, STD, and IQR are tabulated as well (table~S1 in the supplementary material). 
- 
+The results in terms of MEAN, MEDIAN, STD, and IQR are tabulated as well (table~S1 in the supplementary material).
+
 
 \begin{figure*}[]
 	\centering
@@ -719,41 +719,32 @@ The results in terms of MEAN, MEDIAN, STD, and IQR are tabulated as well (table~
       The squares are the mean values, and the dashed lines correspond to the true parameter values.}\label{figBoxSingleIV}
 \end{figure*}
 
-We would like to stress the following. 
+We would like to stress the following.
 In most cases, median values are more relevant to the actual parameter values than the mean values.
 Possible exceptions only apply to the evaluation of $R_\mathrm{s}$ and $R_\mathrm{p2}$ only.
-However, in cases where a method allows for parameter estimation with high accuracy (EBLSHADE, ADELI, TLBO, and STLBO), 
+However, in cases where a method allows for parameter estimation with high accuracy (EBLSHADE, ADELI, TLBO, and STLBO),
 MEDIANs are at least as good as the MEANs.
 As a result, we will utilize median values as a robust measure of central tendency in nonparametric statistical tests.
 Secondly, the increase in algorithm stability (reduction in STD and IQR values) in determining each model parameter correlates with the accuracy of parameter evaluation. Furthermore, IQR values are generally no worse than STD values.
+Finally, small RMSPE values (close match between the fitting curve and the IV points)
+do not always indicate high accuracy in determining the parameters of a solar cell --- see IJAYA and NDE data.
+For example, the difference between the $\mathrm{MEDIAN}_\mathrm{RMSPE}$ values for NDE and ADELI is approximately 0.0001
+(about 0.08\% of their absolute value).
+At the same time, in the ADELI case, the values of $\mathrm{APE}_\mathrm{MEDIAN}$ do not exceed $6\cdot 10^{-4}$
+for all model parameters evaluation,
+whereas for the NDE algorithm application, the obtained $\mathrm{APE}_\mathrm{MEDIAN}$ values are significantly higher
+and range from 0.04 for $I_\mathrm{ph}$ to 11.4 for $I_{01}$.
+On one hand, this confirms the issue identified by Tada \cite{Tada2015Organic,Tada2021}, which arises when estimating
+parameters according to the opposed two--diode model from similar IV curves corresponding to photovoltaic cells with distinct characteristics.
+Furthermore, the results indicate that some metaheuristic algorithms, such as NDE and IJAYA, can fall into a similar trap.
+On the other hand, the high accuracy in parameter estimation demonstrated by EBLSHADE, ADELI, and STLBO indicates
+that these algorithms are able to overcome the mentioned issue when applied.
+It should be noted that a similar problem has been previously addressed by employing Bayesian estimation of parameters \cite{Tada2021}.
+However, each Bayesian calculation took approximately half a day on a computer better equipped than ours \cite{Tada2021}.
+In our case, when applying meta--heuristic algorithms, the worst--case run time did not exceed 100 seconds.
 
-
-%  & $I_{01}$& $n_1$ & $R_\mathrm{p1}$ &$I_{02}$& $n_2$& $R_\mathrm{p2}$&$R_\mathrm{s}$&$I_\mathrm{ph}$&RMSPE\\ % Table header row
-
-
-
-
-%The energy band diagram of the inverted device structure ITO/ZnO/PTB7:PC71BM/MoO3/Ag is given in
-%the supplementary material (figure S1 is available online at stacks.iop.org/MRX/5/116203/mmedia).
-% The cell parameters obtained from the J-V characteristics are tabulated
-%(table S1 in the supplementary material).
-%Light intensity dependent C-F plots for the
-%devices with 70, 150 and 250 nm ZnO layer thicknesses are given in the supplementary material (figure S2)
-%The presence of leakage current can be
-%correlated with the shunt resistance (Rsh) values obtained from the dark J-V curve (table S1 in thesupplementary
-%material).
-%The reader is referred to supplementary material for more information on the simulated BHJ morphologies.28
-%The reader is referred to the supplementary material for more information on the cut-off
-%approximation.
-%However, in the supplementary material28 we show that for the aforementioned
-%trap densities the trap population is essentially a small perturbation to the total energy landscape and the reduction in the
-%standard deviation of energetic disorder is negligible.
-%This saturation effect was also seen in the
-%evolution of exciton diffusion with trap depth (see supplementary material28).
-
-
+In order to statistically compare the algorithm under consideration, we use nonparametric tests.
 In the single--IV case, all nonparametric statistical tests were used to compare the performance of meta--heuristic algorithms in assessing each of the eight model parameters.
-
 The $\mathrm{APE}_i$ values were used, and the number of case problems in the study $n$ was equal to $N_\mathrm{runs}=51$.
 Additionally, algorithms were compared in terms of curve-fitting accuracy by using RMSPE values.
 Furthermore, tests were employed for a composite parameter as well.
@@ -763,6 +754,7 @@ This parameter may provide the most valuable insights for comparing algorithms. 
 According to Derrac \emph{et al} \cite{Derrac2011}, the number of case problems should be $n\geq 2k$,
 where $k$ is the number of algorithms ($k=14$ in our study).
 Therefore, the use of the Comp parameter is not strictly rigorous.
+
 
 
 \begin{figure}[]
@@ -784,13 +776,129 @@ Therefore, the use of the Comp parameter is not strictly rigorous.
 \end{figure}
 
 
-\begin{figure}[]
+
+
+Fig.~\ref{figWilSingleIV} graphically show
+the non--parametric statistical results of pairwise comparisons of algorithms
+based on the Wilcoxon signed--rank test.
+In the case of Comp comparisons, the differences in performance scores
+were normalized to the interval $[0,\, 1]$.
+As seen from the figure, no algorithm outperforms all others in evaluating each parameter.
+Furthermore, no algorithm surpasses all others in the evaluation even a single parameter.
+For example, as the figure states, STLBO shows a significant improvement over
+DE, NDE, MABC, GOTLBO, PSO, IJAYA, ISCA, NNA, CWOA, and WW across all the parameters considered
+with a level of significance $\alpha = 0.05$.
+Simultaneously, it was not detected the significant differences
+between STLBO and both EBLSHADE and ADELI for all parameter evaluations
+as well as between STLBO and TLBO in the Comp case.
+EBLSHADE outperforms nearly all other algorithms in the complex parameter, except for STLBO.
+According to the Wilcoxon test victories number,
+the worst performances are exhibited by PSO and CWOA.
+PSO achieved better results than ISCA, NNA, and CWOA in terms of RMSPE value,
+as well as outperformed WW in $n_2$ evaluation and RMSPE.
+Test detected significant differences between CWOA and WW in $n_2$ and $I_{01}$ evaluations,
+between CWOA and PSO in $I_{01}$, $I_{02}$, $R_\mathrm{s}$, and $I_\mathrm{ph}$ evaluations),
+and between CWOA and both ISCA and NNA in $R_\mathrm{s}$  evaluation case only.
+
+
+
+Looking at the results of the Wilcoxon signed-rank test from another perspective,
+it can be observed that neither EBLSHADE nor STLBO had any defeats in pairwise comparisons,
+while ADELI had only one loss.
+ADELI was only outperformed by EBLSHADE in terms of the Comp parameter, primarily due to its significantly longer run time.
+The highest number of defeats was observed for the PSO and WW algorithms (104 and 84, respectively).
+The data regarding the total number of wins and losses when applying the Wilcoxon test
+for each algorithm are summarized in Fig.~\ref{figWilTotSingleIV}.
+
+\begin{figure}[!ht]
 	\centering
-		\includegraphics[width=.77\columnwidth]{Friedman}
-        \includegraphics[width=.77\columnwidth]{FriedmanAlignedRank}
-        \includegraphics[width=.77\columnwidth]{QuadeRank}
+		\includegraphics[width=.76\columnwidth]{Friedman}
+        \includegraphics[width=.76\columnwidth]{FriedmanAlignedRank}
+        \includegraphics[width=.76\columnwidth]{QuadeRank}
 	  \caption{Ranking of the algorithms according to Friedman (a), Friedman Aligned (b), and Quade (c) tests in the single-IV case.}\label{figRanksSingleIV}
 \end{figure}
+
+It is recommended \cite{Derrac2011} to begin the multiple comparison tests by examining the null hypothesis $H_0$,
+which asserts the equality of medians between the populations of results obtained by different algorithms.
+The null hypothesis $p$--values computed through the statistics of  Friedman, Friedman Aligned, and Quade test
+and the Iman–Davenport extension
+are given in the supplementary material (table S2).
+The highest observed $p(H_0)$--values were found to be $2.7\cdot10^{-5}$ (Friedman Aligned test for the task of $R_\mathrm{p1}$ evaluation),
+$4.4\cdot10^{-4}$ (Friedman Aligned test for the composite parameter case),
+and $8.3\cdot10^{-6}$ (Quade test, Comp parameter).
+Thus obtained data strongly suggest the existence of significant differences
+among the considered algorithms in the accuracy of all model parameter determination, RMSPE values, and Comp parameter.
+
+
+
+Fig.~\ref{figRanksSingleIV} shows
+ranks achieved by the Friedman, Friedman Aligned, and Quade tests for applied optimization algorithms in different tasks.
+Ranks are tabulated in the supplementary material as well (table S3).
+
+
+
+
+%  & $I_{01}$& $n_1$ & $R_\mathrm{p1}$ &$I_{02}$& $n_2$& $R_\mathrm{p2}$&$R_\mathrm{s}$&$I_\mathrm{ph}$&RMSPE\\ % Table header row
+%DE,EBLSHADE,ADELI,NDE,MABC,TLBO,GOTLBO,STLBO,PSO,IJAYA,ISCA,NNA,CWOA,WW
+
+
+%$\mathrm{APE}_\mathrm{MEAN}$
+%перекласти на англійську ""
+
+
+%According to the ranking performed through the Friedman test,
+%the proposed method was ranked as the highest in all existing
+%methods by considering 39 different test functions. Table 19
+%shows the rank of each method. The following equation can be
+%employed to determine the superiority of ICO in other methods:
+%(new_value − original_value)/|original_value| × 100 (24)
+%Where new_value shows the rank of ICO when original_value
+%indicates the rank of each technique used to calculate the superiority of ICO to that method. According to the results, ICO could
+%outperform EO, GWO, WOA, MFO, PSO, DE, GSA, SSA, SHO, GAMPC, LSHADE, LSHADE-cnEpSin, LSHADE-SPACMA, SASS, AOA and
+%HGSO 28%, 47%, 53%, 61%, 47%, 21%, 44%, 52%, 56%, 47%, 31%, 27%,
+%22%, 7%, 61% and 52% respectively in 39 benchmark functions. The
+
+%Sum of average ranking using Friedman test for applied optimization methods.
+
+%Ranks achieved by the Friedman and Kruskal Wallis tests.
+%From Table 17, the NNA obtained the lower total average ranking
+%which shows its overall efficiency compared with the considered
+%optimizers. For the most cases, the NNA has been placed in the first
+%or second ranks. Now, it is interesting to see the performance of
+
+%whereas it ranked third in other 2 functions. GOA has ranked first
+%in only 3 functions however, each of MFO, and HHO has achieved
+%the best average in only 2 functions. On the other hand, SO has
+%ranked first in 11 functions in standard deviation (STD) and has
+%the second-best STD values in other 8 functions. Also, LSHADEEpSin has recorded the second-best algorithm in terms of STD
+%values as it ranked first in 7 functions. Each of L-SHADE, HHO,
+%and TEO has ranked first twice.
+
+%As can be seen from Table 15, the NNA has been placed at first
+%rank and the DE and TLBO have been located at the second and third
+%ranks, respectively. The RS, as expected, is the worst algorithm for
+%solving the reported benchmarks and could not even find acceptable results for all cases (see Table 14). Looking at huge gaps in the
+
+
+
+%The energy band diagram of the inverted device structure ITO/ZnO/PTB7:PC71BM/MoO3/Ag is given in
+%the supplementary material (figure S1 is available online at stacks.iop.org/MRX/5/116203/mmedia).
+% The cell parameters obtained from the J-V characteristics are tabulated
+%(table S1 in the supplementary material).
+%Light intensity dependent C-F plots for the
+%devices with 70, 150 and 250 nm ZnO layer thicknesses are given in the supplementary material (figure S2)
+%The presence of leakage current can be
+%correlated with the shunt resistance (Rsh) values obtained from the dark J-V curve (table S1 in thesupplementary
+%material).
+%The reader is referred to supplementary material for more information on the simulated BHJ morphologies.28
+%The reader is referred to the supplementary material for more information on the cut-off
+%approximation.
+%However, in the supplementary material28 we show that for the aforementioned
+%trap densities the trap population is essentially a small perturbation to the total energy landscape and the reduction in the
+%standard deviation of energetic disorder is negligible.
+%This saturation effect was also seen in the
+%evolution of exciton diffusion with trap depth (see supplementary material28).
+
 
 \begin{table*}[<options>]
 \caption{Adjusted $p$-values for Friedman, Friedman Aligned, and Quade tests in single--IV case.
@@ -845,6 +953,8 @@ STLBO&Friedman&9.23824E-01&1.0&9.23824E-01&9.89059E-01\\
 
 
 
+
+
 \begin{figure*}[]
 	\centering
 		\includegraphics[width=.495\textwidth]{Rp1shotN1}
@@ -862,6 +972,10 @@ STLBO&Friedman&9.23824E-01&1.0&9.23824E-01&9.89059E-01\\
                as well as the fill pattern to procedures are shown in a legend at the bottom of the figure.
                }\label{figN1RezSingleIV}
 \end{figure*}
+
+
+
+
 
 \begin{table*}[<options>]
 \caption{Adjusted $p$-values for tests for multiple comparisons of $I_{01}$ evaluation
@@ -951,11 +1065,7 @@ NNA versus MABC&1.0&9.64793E-01&9.64793E-01\\
 %      Squares are the mean values, and dashed lines correspond to the true parameter values.}\label{figN1RezSingleIV}
 %\end{figure*}
 
-%The p-values computed through the statistics of each of the
-%tests considered (0.000018, 0.006357, and 1.20327·10−07) and the
-%Iman–Davenport extension (Ff = 5.267817, p-value: 0.000006)
-%strongly suggest the existence of significant differences among the
-%algorithms considered.
+
 
 %62]. Tables 5 and 6 give the statistical results produced by
 %Wilcoxon sign-rank test with a significant level α = 0.05.
@@ -968,7 +1078,6 @@ NNA versus MABC&1.0&9.64793E-01&9.64793E-01\\
 %symbol is marked with ‘+’ and EJAYA outperforms
 %the compared algorithm on the considered case.
 
-%перекласти на англійську "Загальна кількість перемог та поразок кожного з алгоритмів при попарному порівняння з використанням Wilcoxon signed-rank test with a level of significance $\alpha = 0.05$ in the single-IV case"
 
 \subsubsection{Evaluation of IV--set}
 
@@ -1008,6 +1117,15 @@ n= 10\,T\mathrm{values}\times(8\,\mathrm{APE}_\mathrm{MEDIAN}+1\,\mathrm{RMSPE}_
 \end{equation*}
 %10 temperature values $\times(\mathrm{APE}_\mathrm{MEDIAN}+1\mathrm{RMSPE}_\mathrm{MEDIAN})+1t_\mathrm{run}$.
 
+%subsequent analysis. In order to assess the statistical performance
+%of WSO and each other method on the CEC-2017 test suite, the
+%mean error values of all methods in all dimensions and the rank
+%of each method in each dimension were taken into account. The
+%average rankings of WSO in conjunction with other methods
+
+
+
+
 %In these tables, ‘+’ indicated that the null
 %hypothesis H0 was rejected and ICO performed better, while ‘−’
 %indicated that the null hypothesis H0 was rejected; however, ICO
@@ -1025,7 +1143,7 @@ n= 10\,T\mathrm{values}\times(8\,\mathrm{APE}_\mathrm{MEDIAN}+1\,\mathrm{RMSPE}_
 \begin{tabular*}{\tblwidth}{@{}LCCCCCCCCCCCCCCC@{}}
 \toprule
 Control & \multicolumn{14}{C}{Comparison algorithm}&Total \\
-algorithm  &DE&EBLSHADE&ADELI&NDE&MABC&TLBO&GOTLBO&STLBO&PSO&IJAYA&ISCA&NNA&CWOA&WW&	$(+/=/-)$\\ % Table header row
+algorithm  &DE&EBLSHADE&ADELI&NDE&MABC&TLBO&GOTLBO&STLBO&PSO&IJAYA&ISCA&NNA&CWOA&WW&$(+/=/-)$\\ % Table header row
 \midrule
 DE&$\blacksquare$&0&0&0&+&0&+&0&+&0&+&+&+&+&7/0/6\\
 EBLSHADE&+&$\blacksquare$&0&+&+&0&+&0&+&+&+&+&+&+&10/0/3\\
@@ -1105,31 +1223,6 @@ TLBO&Friedman&1.0&1.0&1.0&1.0\\
 \end{table*}
 
 
-%\begin{table}[<options>]
-%\caption{Adjusted p-values for multiple comparisons $1\times N$ tests in IV--set case (STLBO is the control algorithm).}\label{tbl1NSTLBO}
-%\begin{tabular*}{\tblwidth}{@{}LCCCCCCCCC@{}}
-%\toprule
-%\multirow{2}{*}{Algorithm}& \multicolumn{9}{C}{Parameter} \\
-%  & $I_{01}$& $n_1$ & $R_\mathrm{p1}$ &$I_{02}$& $n_2$& $R_\mathrm{p2}$&$R_\mathrm{s}$&$I_\mathrm{ph}$&RMSPE\\ % Table header row
-%\midrule
-%%\rowcolor{ligthYellow}
-%DE & SE & SE & = &  = & SE & SE & =  & =  & = \\
-%EBLSHADE & SE & =  & =  & =  & =  & =  & =  & =  &  AE \\
-%ADELI & SE & =  &  = &  = &  = &  = & =  & =  &   AE\\
-%NDE & =  & =  & =  & =  & =  & =  &  = & SE & SE \\
-%MABC &  = & SE & =  &  = & =  & =  & =  & =  & SE \\
-%TLBO & SE & SE & SE &  SE&  SE& SE & SE & SE & SE \\
-%GOTLBO & =  & =  & =  & =  & =  & SE & =  & =  & =  \\
-%STLBO & SE & =  & =  & =  & =  & =  & =  & =  &  AE \\
-%PSO & =  & =  & =  & =  & =  & =  &  AE & =  & =  \\
-%IJAYA &  AE &  AE &  = & =  & SE &  = &  = & =  & =  \\
-%ISCA & =  & =  & =  & =  & =  & =  & =  & =  & =  \\
-%NNA & =  & =  & =  & =  & =  & =  & =  & =  &  SE\\
-%CWOA & =  & =  &  SE& =  &   AE& =  & =  & =  & SE \\
-%WW & =  & =  &  SE&  = &  AE &  = & =  & =  &  SE\\
-%\bottomrule
-%\end{tabular*}
-%\end{table}
 
 
 \begin{figure}[]
@@ -1155,23 +1248,6 @@ TLBO&Friedman&1.0&1.0&1.0&1.0\\
 \multirow{2}{*}{Hypothesis}& \multicolumn{3}{C}{post-hoc procedure} \\
   &Nemenyi & Holm & Shaffer\\ % Table header row
 \midrule
-%EBLSHADE versus WW,&<1E-13&<1E-13&<1E-13\\
-%ADELI versus MABC&<1E-13&<1E-13&<1E-13\\
-%ADELI versus PSO&<1E-13&<1E-13&<1E-13\\
-%ADELI versus ISCA&<1E-13&<1E-13&<1E-13\\
-%ADELI versus NNA&<1E-13&<1E-13&<1E-13\\
-%ADELI versus CWOA&<1E-13&<1E-13&<1E-13\\
-%ADELI versus WW&<1E-13&<1E-13&<1E-13\\
-%NDE versus NNA&<1E-13&<1E-13&<1E-13\\
-%TLBO versus GOTLBO&<1E-13&<1E-13&<1E-13\\
-%TLBO versus PSO&<1E-13&<1E-13&<1E-13\\
-%TLBO versus ISCA&<1E-13&<1E-13&<1E-13\\
-%TLBO versus NNA&<1E-13&<1E-13&<1E-13\\
-%TLBO versus CWOA&<1E-13&<1E-13&<1E-13\\
-%STLBO versus GOTLBO&<1E-13&<1E-13&<1E-13\\
-%STLBO versus PSO&<1E-13&<1E-13&<1E-13\\
-%STLBO versus NNA&<1E-13&<1E-13&<1E-13\\
-%STLBO versus CWOA&<1E-13&<1E-13&<1E-13\\
 EBLSHADE versus WW,
 ADELI versus MABC,&&&\\
 ADELI versus PSO,
@@ -1321,6 +1397,7 @@ MABC versus WW&2.35963E-01&6.74180E-02&6.74180E-02\\
 %statistically the better solution than algorithm B or whether alternative hypothesis was valid, the sizes of the ranks provided
 %by the Wilcoxon Signed-Rank test (T+ and T−) were thoroughly
 %examined.
+%-------------------------------------------------------------
 %The non-parametric statistical results of the ICO algorithm
 %versus other algorithms based on the Wilcoxon Signed-Rank Test
 %with the statistical significance level α = 0.05 are also summarized in Tables 13–17. In these tables, ‘+’ indicated that the null
@@ -1376,6 +1453,8 @@ MABC versus WW&2.35963E-01&6.74180E-02&6.74180E-02\\
 %Sum of average ranking using Friedman test for applied optimization methods.
 %Methods Total Average Ranking by Friedman Test (Rank)
 
+
+
 %As can be seen from Table 15, the NNA has been placed at first
 %rank and the DE and TLBO have been located at the second and third
 %ranks, respectively. The RS, as expected, is the worst algorithm for
@@ -1427,6 +1506,7 @@ MABC versus WW&2.35963E-01&6.74180E-02&6.74180E-02\\
 %population between the lower and upper bounds.
 
 
+
 %Table 18,19
 
 %-------------------------------
@@ -1462,6 +1542,7 @@ MABC versus WW&2.35963E-01&6.74180E-02&6.74180E-02\\
 %as follows: (1) the first test set is the CEC-2017 with 29 test
 %functions, and (3) the second test set is the CEC-2011 which
 %consists of 22 test cases.
+%===============================================================
 %To rank the algorithms using Friedman’s test, there is a need
 %to calculate the average ranked value. A comparison is then made
 %to assess the critical values obtained for the significance level

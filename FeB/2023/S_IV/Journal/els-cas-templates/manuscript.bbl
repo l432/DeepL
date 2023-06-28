@@ -342,6 +342,14 @@
 \newblock \bibinfo{journal}{Energy Convers. Manage.} \bibinfo{volume}{174}
   (\bibinfo{year}{2018}) \bibinfo{pages}{388--405}.
 %Type = Article
+\bibitem[{Sahargahi et~al.(2022)Sahargahi, Majidnezhad, Afshord, and
+  Jafari}]{IntelligentChaoticClonal}
+\bibinfo{author}{V.~Sahargahi}, \bibinfo{author}{V.~Majidnezhad},
+  \bibinfo{author}{S.~T. Afshord}, \bibinfo{author}{Y.~Jafari},
+\newblock \bibinfo{title}{An intelligent chaotic clonal optimizer},
+\newblock \bibinfo{journal}{Appl. Soft Comput.} \bibinfo{volume}{115}
+  (\bibinfo{year}{2022}) \bibinfo{pages}{108126}.
+%Type = Article
 \bibitem[{Derrac et~al.(2011)Derrac, García, Molina, and Herrera}]{Derrac2011}
 \bibinfo{author}{J.~Derrac}, \bibinfo{author}{S.~García},
   \bibinfo{author}{D.~Molina}, \bibinfo{author}{F.~Herrera},
@@ -350,13 +358,5 @@
   intelligence algorithms},
 \newblock \bibinfo{journal}{Swarm Evol. Comput.} \bibinfo{volume}{1}
   (\bibinfo{year}{2011}) \bibinfo{pages}{3--18}.
-%Type = Article
-\bibitem[{Sahargahi et~al.(2022)Sahargahi, Majidnezhad, Afshord, and
-  Jafari}]{IntelligentChaoticClonal}
-\bibinfo{author}{V.~Sahargahi}, \bibinfo{author}{V.~Majidnezhad},
-  \bibinfo{author}{S.~T. Afshord}, \bibinfo{author}{Y.~Jafari},
-\newblock \bibinfo{title}{An intelligent chaotic clonal optimizer},
-\newblock \bibinfo{journal}{Appl. Soft Comput.} \bibinfo{volume}{115}
-  (\bibinfo{year}{2022}) \bibinfo{pages}{108126}.
 
 \end{thebibliography}
