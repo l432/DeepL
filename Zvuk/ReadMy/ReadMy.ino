@@ -7,7 +7,8 @@
 
 //#define F_CPU 16000000UL;
 
-const int analogPin = A0;
+const byte analogPin = A0;
+const byte AlarmPin = 13;
 const long GAIN = 10;
 
 
@@ -17,12 +18,12 @@ const byte PS_16 = (1 << ADPS2);
 
 const byte MeasureDelay = 50;
 //time between measuring, us
-const int Np = 256;
+const int Np = 128;
 volatile uint16_t myByte[Np];
 volatile int ArrayIndex;
 int8_t im[Np];
 int8_t data[Np];
-const byte ThresholdValue=2;
+const byte ThresholdValue = 5;
 
 unsigned long myTimer;
 
@@ -31,6 +32,7 @@ void setup() {
   ADCSRA &= -PS_128;
   ADCSRA |= PS_16;
   Serial.begin(9600);
+  pinMode(AlarmPin, OUTPUT);
 
   cli();
   TCCR1B = 0;
@@ -42,22 +44,24 @@ void setup() {
 
 // the loop routine runs over and over again forever:
 void loop() {
-  myTimer = millis();
+  //  myTimer = millis();
   MeasureSignal();
   sampleWindowFull();
-  fix_fft(data, im, 8, 0);
+  fix_fft(data, im, 7, 0);
   updateData();
+
 //    showSpectrum();
-//  showMeasurement();  
-   Serial.println(millis()-myTimer);
-//  Serial.println(findF());
+//    showMeasurement();
+  //   Serial.println(millis()-myTimer);
+
+  //  Serial.println(findF());
   if (findF() > 0) {
     AlarmSgnal();
   }
- delay(10);
+  delay(10);
   Narcoleptic.delay(200);
-//  Serial.println(' ');
-//  delay(5000);
+   Serial.println(' ');
+   delay(5000);
 }
 
 void MeasureSignal()
@@ -92,7 +96,8 @@ void updateData()
 {
   for (int i = 0; i < (Np / 2 ); i++)
   {
-    data[i] = sqrt(data[i] * data[i] + im[i] * im[i]);
+//    data[i] = sqrt(data[i] * data[i] + im[i] * im[i]);
+    data[i] = (data[i] * data[i] + im[i] * im[i]);
   }
 }
 
@@ -105,18 +110,17 @@ void showSpectrum()
     //    Serial.println(myByte[i]);
     //    int p = data[i];
     Serial.println(data[i]);
-    //    Serial.print(",");
   }
   Serial.println();
 }
 
 void showMeasurement()
 {
-     for (int i = 0; i < Np; i++) {
-      Serial.print(i);
-      Serial.print(' ');
-      Serial.println(myByte[i]); 
- }
+  for (int i = 0; i < Np; i++) {
+    Serial.print(i);
+    Serial.print(' ');
+    Serial.println(myByte[i]);
+  }
 }
 
 long  findF()
@@ -139,8 +143,12 @@ long  findF()
   }
 }
 
-void AlarmSgnal(){
-  Serial.println("Alarm");
+void AlarmSgnal() {
+  //  Serial.println("Alarm");
+//  Serial.println(findF());
+  digitalWrite(AlarmPin, HIGH);
+  Narcoleptic.delay(100);
+  digitalWrite(AlarmPin, LOW);
 }
 
 //  for (byte i = 0; i < Np; i++) {
