@@ -50,9 +50,9 @@ void loop() {
   fix_fft(data, im, 7, 0);
   updateData();
 
-//    showSpectrum();
-//    showMeasurement();
-  //   Serial.println(millis()-myTimer);
+  //  showSpectrum();
+    // showMeasurement();
+    // Serial.println(millis()-myTimer);
 
   //  Serial.println(findF());
   if (findF() > 0) {

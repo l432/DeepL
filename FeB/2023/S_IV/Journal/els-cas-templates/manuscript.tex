@@ -754,6 +754,8 @@ This parameter may provide the most valuable insights for comparing algorithms. 
 According to Derrac \emph{et al} \cite{Derrac2011}, the number of case problems should be $n\geq 2k$,
 where $k$ is the number of algorithms ($k=14$ in our study).
 Therefore, the use of the Comp parameter is not strictly rigorous.
+Indeed, it would have been possible to increase the $n$ value using, for example, $\mathrm{APE}_\mathrm{MEAN}$. 
+However, considering the deliberate utilization of a suboptimal parameter would have appeared inappropriate.
 
 
 
@@ -791,7 +793,7 @@ with a level of significance $\alpha = 0.05$.
 Simultaneously, it was not detected the significant differences
 between STLBO and both EBLSHADE and ADELI for all parameter evaluations
 as well as between STLBO and TLBO in the Comp case.
-EBLSHADE outperforms nearly all other algorithms in the complex parameter, except for STLBO.
+EBLSHADE outperforms nearly all other algorithms in the composite parameter, except for STLBO.
 According to the Wilcoxon test victories number,
 the worst performances are exhibited by PSO and CWOA.
 PSO achieved better results than ISCA, NNA, and CWOA in terms of RMSPE value,
@@ -834,8 +836,64 @@ among the considered algorithms in the accuracy of all model parameter determina
 Fig.~\ref{figRanksSingleIV} shows
 ranks achieved by the Friedman, Friedman Aligned, and Quade tests for applied optimization algorithms in different tasks.
 Ranks are tabulated in the supplementary material as well (table S3).
+In almost all cases, the algorithms EBLSHADE, ADELI, and STLBO consistently achieve the top (smallest value) three ranks.
+For example, in assessing the accuracy of model parameter evaluation, ADELI has ranked first 22 times.
+The STLBO algorithm ranked first six times, 
+taking the sole first place twice ($I_{01}$ evaluation according Friedman Aligned test and  
+$R_\mathrm{p1}$ evaluation according Quade test) 
+and sharing it with ADELI four times ($n_1$, $R_\mathrm{p1}$, $n_2$, and $I_\mathrm{ph}$ evaluation according Friedman Aligned test).
+In the RMSPE value case, ADELI and STLBO achieved equal and best ranks by all three used tests.
+When comparing based on the Comp parameter, 
+the STLBO algorithm obtained the top rank according to the Friedman Aligned test, 
+while the Friedman and Quade tests recognized EBLSHADE as the best.
+In most cases, the TLBO algorithm secured the fourth position, and in four cases, it even ranked third.
+In the majority of cases, the TLBO algorithm consistently ranked fourth out of all the algorithms tested. 
+Interestingly, in four cases ($I_{01}$ evaluation, RMSPE value, and Comp parameter by Friedman Aligned test, 
+and Comp parameter by Quade test), 
+it even achieved a commendable third-place ranking.
+We must note that overall, the absolute values of ranks for ADELI, STLBO, EBLSHADE and TLBO algorithms differ little, 
+and the difference between the first and fourth ranks is often less than 0.5.
+The worst ranks are observed for PSO, NNA, CWOA, and WW.
 
+It is known \cite{Derrac2011} that 
+the Friedman, Friedman Aligned, and Quade tests are insufficient in establishing accurate comparisons between the algorithms considered.
+To compare a control method (1 of 14 compared) with a set of other algorithms (rest 13), 
+one can define a family of hypotheses related to the control method. 
+Applying a post-hoc test makes it possible to obtain a $p$--value that indicates the extent to which each hypothesis can be rejected.
+We calculated $p$--values using four post-hoc procedures (Finner, Holm, Hochberg, and Holland) for all algorithms, tests, and tasks.
+By following the indications given for the four post-hoc procedures considered, Table~\ref{tbl1NADELI} shows the $p$--values
+obtained, using the ranks computed by the Friedman, Friedman Aligned, and Quade tests for the case of control algorithm ADELI 
+and the task of $R_\mathrm{p1}$ evaluation.
+The reader is referred to the supplementary material for rest of $p$-values (Tables S4-S143).
 
+As we can see in the table, the Finner tests exhibit the most powerful behavior,
+reaching the lowest $p$-values in the comparisons.
+The Friedman test shows a significant improvement in $R_\mathrm{p1}$ evaluation of ADELI over 
+DE, NDE, MABC, GOTLBO, PSO, IJAYA, ISCA, NNA, CWOA, and WW
+for all the post-hoc procedures considered.
+The Friedman Aligned test only confirms the improvement of ADELI 
+over the aforementioned 10 algorithms for every post-hoc procedure considered, 
+except Holm, Hochberg, and Holland, 
+which fail to highlight the differences between ADELI and NDE as significant.
+
+%As we can see in the tables, the Friedman test shows a significant
+%improvement of DE-Exp over PSO, CHC, SSGA, and SS-Arit for all the
+%post-hoc procedures considered, except for the Bonferroni–Dunn
+%one. The Finner and Li tests exhibit the most powerful behavior,
+%reaching the lowest p-values in the comparisons.
+%The Friedman Aligned test only confirms the improvement of
+%DE-Exp over PSO, CHC, and SSGA for every post-hoc procedure
+%considered, except Bonferroni–Dunn and Li, which fail to highlight
+%the differences between DE-Exp and SSGA as significant. The Finner
+%and Rom procedures show the most powerful behavior in this
+%category.
+%Finally, the Quade test does not find any significant difference
+%between DE-Exp and the rest of algorithms. This result support the
+%conclusion that, although DE-Exp obtains better results than the
+%weaker algorithms of our experimental study (PSO, CHC, and so
+%on), these behave similarly or better in the most difficult problems,
+%and thus performance differences are not detected if the relative
+%difficulties of the problems are taken into account.
 
 
 %  & $I_{01}$& $n_1$ & $R_\mathrm{p1}$ &$I_{02}$& $n_2$& $R_\mathrm{p2}$&$R_\mathrm{s}$&$I_\mathrm{ph}$&RMSPE\\ % Table header row
@@ -843,7 +901,7 @@ Ranks are tabulated in the supplementary material as well (table S3).
 
 
 %$\mathrm{APE}_\mathrm{MEAN}$
-%перекласти на англійську ""
+%перекласти на англійську "Найгірші ранги спостерігаються для PSO,NNA,CWOA,WW"
 
 
 %According to the ranking performed through the Friedman test,
@@ -957,8 +1015,8 @@ STLBO&Friedman&9.23824E-01&1.0&9.23824E-01&9.89059E-01\\
 
 \begin{figure*}[]
 	\centering
-		\includegraphics[width=.495\textwidth]{Rp1shotN1}
-        \includegraphics[width=.495\textwidth]{I02shotN1}
+		\includegraphics[width=.49\textwidth]{Rp1shotN1}
+        \includegraphics[width=.49\textwidth]{I02shotN1}
         \includegraphics[width=.48\textwidth]{Titleshot11N}
 		\includegraphics[width=.48\textwidth]{Titleshot21N}
 	  \caption{The results of algorithm comparison in $R_\mathrm{p1}$ (a) and $I_{02}$ (b) evaluation
@@ -974,7 +1032,18 @@ STLBO&Friedman&9.23824E-01&1.0&9.23824E-01&9.89059E-01\\
 \end{figure*}
 
 
-
+\begin{figure*}[!ht]
+	\centering
+		\includegraphics[width=.49\textwidth]{Rp1shot_NN}
+        \includegraphics[width=.49\textwidth]{I02shot_NN}
+	  \caption{The results of multiple comparisons of $R_\mathrm{p1}$ (a) and $I_{02}$ (b) evaluation
+               among all algorithms in the single--IV case.
+               The colored cylinder indicates that the adjusted p-value,
+               which tests the control algorithm outperforms the comparison algorithm,
+               is not greater than $p_{lim}=0.1$.
+               The correspondence between the color of the cylinder to a post-hoc procedure is shown in the figure legend.
+               }\label{figNNRezSingleIV}
+\end{figure*}
 
 
 \begin{table*}[<options>]
@@ -1035,18 +1104,7 @@ NNA versus MABC&1.0&9.64793E-01&9.64793E-01\\
 \end{table*}
 
 
-\begin{figure*}[]
-	\centering
-		\includegraphics[width=.495\textwidth]{Rp1shot_NN}
-        \includegraphics[width=.495\textwidth]{I02shot_NN}
-	  \caption{The results of multiple comparisons of $R_\mathrm{p1}$ (a) and $I_{02}$ (b) evaluation
-               among all algorithms in the single--IV case.
-               The colored cylinder indicates that the adjusted p-value,
-               which tests the control algorithm outperforms the comparison algorithm,
-               is not greater than $p_{lim}=0.1$.
-               The correspondence between the color of the cylinder to a post-hoc procedure is shown in the figure legend.
-               }\label{figNNRezSingleIV}
-\end{figure*}
+
 
 %\begin{figure*}[]
 %	\centering
