@@ -929,17 +929,17 @@ over the aforementioned 10 algorithms for every post-hoc procedure considered,
 except Holm, Hochberg, and Holland,
 which fail to highlight the differences between ADELI and NDE as significant.
 
-Finally, the Quade test find significant difference between ADELI and 
+Finally, the Quade test find significant difference between ADELI and
 MABC, GOTLBO, PSO, ISCA, NNA, CWOA, WW for every post-hoc procedure.
 In the DE and IJAYA cases, ADELI obtains better results in $R_\mathrm{p1}$ evaluation
 according Finner post-hoc procedure only.
-This result supports the conclusion that, 
-although ADELI outperforms the weaker algorithms of our study,  
+This result supports the conclusion that,
+although ADELI outperforms the weaker algorithms of our study,
 its performance differences are not significant when compared to other power algorithms (STLBO, EBLSHADE, TLBO).
 
-In our study, a threshold value of $p_{lim}=0.1$ was adopted to establish a limit level 
+In our study, a threshold value of $p_{lim}=0.1$ was adopted to establish a limit level
 for comparing the effectiveness of two algorithms in both multiple $1\times N$ and $N\times N$ comparisons.
-That is, it was determined that the likelihood of obtaining a result as extreme as the observed one, 
+That is, it was determined that the likelihood of obtaining a result as extreme as the observed one,
 under the assumption that there is no difference between the two algorithms (null hypothesis), was less than 10\%.
 
 
@@ -963,99 +963,72 @@ under the assumption that there is no difference between the two algorithms (nul
 \end{figure*}
 
 
-\begin{figure*}[!ht]
-	\centering
-		\includegraphics[width=.49\textwidth]{Rp1shot_NN}
-        \includegraphics[width=.49\textwidth]{I02shot_NN}
-	  \caption{The results of $N\times N$ multiple comparisons of $R_\mathrm{p1}$ (a) and $I_{02}$ (b) evaluation
-               among all algorithms in the single--IV case.
-               The colored cylinder indicates that the adjusted $p$-value,
-               which tests the control algorithm outperforms the comparison algorithm,
-               is not greater than $p_{lim}=0.1$.
-               The correspondence between the color of the cylinder to a post-hoc procedure is shown in the figure legend.
-               }\label{figNNRezSingleIV}
-\end{figure*}
+\begin{table*}[<options>]
+\caption{The total number of wins and losses for each algorithm in $1\times N$ multiple comparison using the
+Friedman, Friedman Aligned, and Quade tests and Finner, Holm, Hochberg, and Holland post-hoc procedures
+in single--IV case.
+The criterion for victory was a adjusted $p$-value less than 0.1.
+}\label{tbl1NWins}
+\begin{tabular*}{\tblwidth}{@{}LCCCCCCCCCCC@{}}
+\toprule
+\multirow{3}{*}{Algorithm}& \multicolumn{11}{C}{Win / Lose number} \\
+&  \multicolumn{10}{C}{task}  &\multirow{2}{*}{Total}\\
+  & $I_{01}$& $n_1$ & $R_\mathrm{p1}$ &$I_{02}$& $n_2$& $R_\mathrm{p2}$&$R_\mathrm{s}$&$I_\mathrm{ph}$&RMSPE&Comp&\\ % Table header row
+\midrule
+DE & 24/43 & 56/34 & 48/35 &  4/73 & 48/43 & 49/34 & 49/40  & 45/35  & 49/48 & 16/27  & 388/412\\
+EBLSHADE & 108/\textbf{0} & 108/\textbf{0}  & \textbf{107}/\textbf{0}  & 103/\textbf{0}  & 107/\textbf{0}  & 104/\textbf{0}  & 111/2  & \textbf{105}/\textbf{0}  &  \textbf{109}/\textbf{0}& \textbf{88}/\textbf{0}  & 1050/2 \\
+ADELI & \textbf{122}/\textbf{0} & \textbf{110}/\textbf{0}  &  \textbf{107}/\textbf{0} &  \textbf{128}/\textbf{0} &  \textbf{110}/\textbf{0} &  \textbf{122}/\textbf{0} & \textbf{119}/\textbf{0}  & \textbf{105}/\textbf{0}  &  \textbf{109}/\textbf{0}& 61/2  & \textbf{1093}/2\\
+NDE & 35/19  & 56/32  & 56/19  & 36/49  & 77/32  & 23/45  &  73/32 & 48/8 & 83/29 & 23/20  & 519/285\\
+MABC &  8/61 & 28/69 & 44/45  &  9/57 & 40/55  & 4/82  & 32/51  & 32/66  & 44/62 & 8/30  & 249/578\\
+TLBO & 80/3 & 102/\textbf{0} & 101/\textbf{0} &  84/13&  99/\textbf{0}& 87/18 & 93/10 & 94/\textbf{0} & 100/\textbf{0} & 65/2  & 905/46\\
+GOTLBO & 8/60  & 12/73  & 4/84  & 16/49  & 20/74  & 13/54 & 20/61  & 4/80 & 16/85  & 13/28  & 126/648\\
+STLBO & 109/\textbf{0} & \textbf{110}/\textbf{0}  & \textbf{107}/\textbf{0}  & 125/\textbf{0}  & 107/\textbf{0}  & 119/\textbf{0}  & 116/\textbf{0}  & \textbf{105}/\textbf{0}  & \textbf{109}/\textbf{0} & 81/\textbf{0}  & 1088/\textbf{0}\\
+PSO & 0/84  & 8/88  & 0/100  & 0/108  & 4/101  & 0/96  &  0/124 & 0/96  & 20/70  & 4/49  & 72/916\\
+IJAYA &  28/28 &  56/34 &  48/35 & 13/52  & 45/43 &  54/34 &  20/61 & 56/29  & 57/38  & 16/34  & 393/388\\
+ISCA & 8/56  & 12/76  & 4/84  & 12/45  & 28/65  & 16/51  & 8/61  & 17/68  & 0/92  & 16/32  & 121/630\\
+NNA & 33/29  & 0/92  & 4/84  & 12/49  & 12/84  & 12/57  & 8/77  & 12/80  & 0/92& 0/52  & 93/696\\
+CWOA & 8/60  & 0/96  &  4/80& 8/52  & 8/84& 4/83  & 20/61  & 0/88  & 0/92 & 0/52  & 52/748\\
+WW & 0/96  & 12/76  & 16/76&  36/43 & 0/108 & 10/60 & 12/77  & 12/66  & 0/92& 0/52  & 98/844\\
+\bottomrule
+\end{tabular*}
+\end{table*}
 
 
-The statistical results of algorithm's effectiveness comparison in task of $R_\mathrm{p1}$ evaluation are shown in Fig.~\ref{figN1RezSingleIV}(a).
-In figure the outperforming of an algorithm in row over the an algorithm in column is indicated by colored hexagon in corresponding cell.
+%\begin{table}[<options>]
+%\caption{Wilcoxon signed ranks test results of fitness functions comparison with a level of significance $\alpha = 0.05$}\label{tblFF}
+%\begin{tabular*}{\tblwidth}{@{}LCCCCCCCCC@{}}
+%\toprule
+%\multirow{2}{*}{Algorithm}& \multicolumn{9}{C}{Parameter} \\
+%  & $I_{01}$& $n_1$ & $R_\mathrm{p1}$ &$I_{02}$& $n_2$& $R_\mathrm{p2}$&$R_\mathrm{s}$&$I_\mathrm{ph}$&RMSPE\\ % Table header row
+%\midrule
+%DE & SE & SE & = &  = & SE & SE & =  & =  & = \\
+%EBLSHADE & SE & =  & =  & =  & =  & =  & =  & =  &  AE \\
+%ADELI & SE & =  &  = &  = &  = &  = & =  & =  &   AE\\
+%NDE & =  & =  & =  & =  & =  & =  &  = & SE & SE \\
+%MABC &  = & SE & =  &  = & =  & =  & =  & =  & SE \\
+%TLBO & SE & SE & SE &  SE&  SE& SE & SE & SE & SE \\
+%GOTLBO & =  & =  & =  & =  & =  & SE & =  & =  & =  \\
+%STLBO & SE & =  & =  & =  & =  & =  & =  & =  &  AE \\
+%PSO & =  & =  & =  & =  & =  & =  &  AE & =  & =  \\
+%IJAYA &  AE &  AE &  = & =  & SE &  = &  = & =  & =  \\
+%ISCA & =  & =  & =  & =  & =  & =  & =  & =  & =  \\
+%NNA & =  & =  & =  & =  & =  & =  & =  & =  &  SE\\
+%CWOA & =  & =  &  SE& =  &   AE& =  & =  & =  & SE \\
+%WW & =  & =  &  SE&  = &  AE &  = & =  & =  &  SE\\
+%\bottomrule
+%\end{tabular*}
+%\end{table}
+
+
+The statistical results of the algorithm's effectiveness comparison in the task  of $R_\mathrm{p1}$ evaluation are shown in Fig.~\ref{figN1RezSingleIV}(a).
+In the figure, the outperforming of an algorithm in a row over the algorithm in the column is indicated by a colored hexagon in the corresponding cell.
 The white hexagon suggests a strong likelihood of the null hypothesis.
+In fact, the data in Table~\ref{tbl1NADELI} were used to create the third row in Fig.~\ref{figN1RezSingleIV}(a).
 The panel (b) of figure presents the statistical results for $I_{02}$ evaluation.
 The results of the comparison of algorithms based on the other eight parameters are given in the supplementary materials (figure S2).
 
- 
-%Light intensity dependent C-F plots for the
-%devices with 70, 150 and 250 nm ZnO layer thicknesses are given in the supplementary material (figure S2)
-
-%This is the definition of the p-value, which is the
-%probability of obtaining a result at least as extreme as the one that
-%was actually observed, assuming that H0 is true.
-
-%  & $I_{01}$& $n_1$ & $R_\mathrm{p1}$ &$I_{02}$& $n_2$& $R_\mathrm{p2}$&$R_\mathrm{s}$&$I_\mathrm{ph}$&RMSPE\\ % Table header row
-%DE,EBLSHADE,ADELI,NDE,MABC,TLBO,GOTLBO,STLBO,PSO,IJAYA,ISCA,NNA,CWOA,WW
-
-
-%$\mathrm{APE}_\mathrm{MEAN}$
-%перекласти на англійську "Результати порівняння алгоритмів за іншими восьмами параметрів подані в додаткових матеріалах"
-
-
-%According to the ranking performed through the Friedman test,
-%the proposed method was ranked as the highest in all existing
-%methods by considering 39 different test functions. Table 19
-%shows the rank of each method. The following equation can be
-%employed to determine the superiority of ICO in other methods:
-%(new_value − original_value)/|original_value| × 100 (24)
-%Where new_value shows the rank of ICO when original_value
-%indicates the rank of each technique used to calculate the superiority of ICO to that method. According to the results, ICO could
-%outperform EO, GWO, WOA, MFO, PSO, DE, GSA, SSA, SHO, GAMPC, LSHADE, LSHADE-cnEpSin, LSHADE-SPACMA, SASS, AOA and
-%HGSO 28%, 47%, 53%, 61%, 47%, 21%, 44%, 52%, 56%, 47%, 31%, 27%,
-%22%, 7%, 61% and 52% respectively in 39 benchmark functions. The
-
-%Sum of average ranking using Friedman test for applied optimization methods.
-
-%Ranks achieved by the Friedman and Kruskal Wallis tests.
-%From Table 17, the NNA obtained the lower total average ranking
-%which shows its overall efficiency compared with the considered
-%optimizers. For the most cases, the NNA has been placed in the first
-%or second ranks. Now, it is interesting to see the performance of
-
-%whereas it ranked third in other 2 functions. GOA has ranked first
-%in only 3 functions however, each of MFO, and HHO has achieved
-%the best average in only 2 functions. On the other hand, SO has
-%ranked first in 11 functions in standard deviation (STD) and has
-%the second-best STD values in other 8 functions. Also, LSHADEEpSin has recorded the second-best algorithm in terms of STD
-%values as it ranked first in 7 functions. Each of L-SHADE, HHO,
-%and TEO has ranked first twice.
-
-%As can be seen from Table 15, the NNA has been placed at first
-%rank and the DE and TLBO have been located at the second and third
-%ranks, respectively. The RS, as expected, is the worst algorithm for
-%solving the reported benchmarks and could not even find acceptable results for all cases (see Table 14). Looking at huge gaps in the
-
-
-
-%The energy band diagram of the inverted device structure ITO/ZnO/PTB7:PC71BM/MoO3/Ag is given in
-%the supplementary material (figure S1 is available online at stacks.iop.org/MRX/5/116203/mmedia).
-% The cell parameters obtained from the J-V characteristics are tabulated
-%(table S1 in the supplementary material).
-%Light intensity dependent C-F plots for the
-%devices with 70, 150 and 250 nm ZnO layer thicknesses are given in the supplementary material (figure S2)
-%The presence of leakage current can be
-%correlated with the shunt resistance (Rsh) values obtained from the dark J-V curve (table S1 in thesupplementary
-%material).
-%The reader is referred to supplementary material for more information on the simulated BHJ morphologies.28
-%The reader is referred to the supplementary material for more information on the cut-off
-%approximation.
-%However, in the supplementary material28 we show that for the aforementioned
-%trap densities the trap population is essentially a small perturbation to the total energy landscape and the reduction in the
-%standard deviation of energetic disorder is negligible.
-%This saturation effect was also seen in the
-%evolution of exciton diffusion with trap depth (see supplementary material28).
-
-
-
 \begin{table*}[<options>]
-\caption{Adjusted $p$-values for tests for multiple comparisons of $I_{01}$ evaluation
+\caption{Adjusted $p$-values for tests for $N\times N$ multiple comparisons of $I_{01}$ evaluation
          among all methods in the single--IV case ($p<1.0$ are only shown).}\label{tblNNpValueI01}
 \begin{tabular*}{\tblwidth}{@{}LCCC@{}}
 \toprule
@@ -1111,25 +1084,135 @@ NNA versus MABC&1.0&9.64793E-01&9.64793E-01\\
 \end{tabular*}
 \end{table*}
 
+The results displayed in Fig.~\ref{figN1RezSingleIV} demonstrate a consistent trend across all parameters. 
+Among the compared algorithms, EBLSHADE, ADELI, and STLBO consistently outperform the others in $1\times N$ multiple comparisons. 
+On the other hand, algorithms such as PSO, ISCA, CWOA, and NNA consistently produce lower-quality results.
+The main changes observed in nonparametric statistical estimation of different parameters evaluation
+mainly concern algorithms with moderate effectiveness.
+
+For example, when comparing the accuracy of determining $R_\mathrm{p1}$ and $I_{02}$, 
+the IJAYA algorithm performs better in the former case. 
+As evident from Figure 3a, 
+IJAYA outperforms GOTLBO, PSO, ISCA, NNA, CWOA, and WW in the results of Friedman 
+and Friedman Aligned tests for every post-hoc procedure considered.
+While for $I_{02}$, IJAYA only outperforms DE, MABC, PSO, and CWOA according to the Friedman test, 
+and in the latter case, only for Finner post-hoc procedure.
+For DE, the situation is similar in the case of $I_{02}$ compared to $R_\mathrm{p1}$. 
+According to the results of the Friedman and Friedman Aligned tests, the algorithm loses its advantage over GOTLBO, SCA, NNA, CWOA, and WW.
+Additionally, the Friedman test no longer shows the improvement of DE over PSO.
 
 
 
-%\begin{figure*}[]
-%	\centering
-%		\includegraphics[width=.32\textwidth]{I01N1}
-%        \includegraphics[width=.32\textwidth]{n1N1}
-%        \includegraphics[width=.32\textwidth]{Rp1N1}
-%		\includegraphics[width=.32\textwidth]{I02N1}
-%        \includegraphics[width=.32\textwidth]{n2N1}
-%        \includegraphics[width=.32\textwidth]{Rp2N1}
-%		\includegraphics[width=.32\textwidth]{RsN1}
-%        \includegraphics[width=.32\textwidth]{IphN1}
-%        \includegraphics[width=.32\textwidth]{RMSPEN1}
-%        \includegraphics[width=.32\textwidth]{ComplN1}
-%        \includegraphics[width=.32\textwidth]{Title1N}
-%	  \caption{Box--plot of  two--diode model parameter evaluation from single IV curve using different optimizers.
-%      Squares are the mean values, and dashed lines correspond to the true parameter values.}\label{figN1RezSingleIV}
-%\end{figure*}
+\begin{figure*}[!ht]
+	\centering
+		\includegraphics[width=.49\textwidth]{Rp1shot_NN}
+        \includegraphics[width=.49\textwidth]{I02shot_NN}
+	  \caption{The results of $N\times N$ multiple comparisons of $R_\mathrm{p1}$ (a) and $I_{02}$ (b) evaluation
+               among all algorithms in the single--IV case.
+               The colored cylinder indicates that the adjusted $p$-value,
+               which tests the control algorithm outperforms the comparison algorithm,
+               is not greater than $p_{lim}=0.1$.
+               The correspondence between the color of the cylinder to a post-hoc procedure is shown in the figure's legend.
+               }\label{figNNRezSingleIV}
+\end{figure*}
+
+\begin{table*}[<options>]
+\caption{The total number of wins and losses for each algorithm in $N\times N$ multiple comparison using the
+Friedman test and Shaffer's static, Nemenyi, and Holm post-hoc procedures
+in single--IV case.
+The criterion for victory was a adjusted $p$-value less than 0.1.
+}\label{tblNNWins}
+\begin{tabular*}{\tblwidth}{@{}LCCCCCCCCCCC@{}}
+\toprule
+\multirow{3}{*}{Algorithm}& \multicolumn{11}{C}{Win / Lose number} \\
+&  \multicolumn{10}{C}{task}  &\multirow{2}{*}{Total}\\
+  & $I_{01}$& $n_1$ & $R_\mathrm{p1}$ &$I_{02}$& $n_2$& $R_\mathrm{p2}$&$R_\mathrm{s}$&$I_\mathrm{ph}$&RMSPE&Comp&\\ % Table header row
+\midrule
+DE & 0/12 & 17/12 & 17/12 &  0/12 & 12/12 & 14/12 & 5/12  & 17/12  & 15/15 & 0/0  & 97/111\\
+EBLSHADE & 27/0 & 27/0  & 27/0  & 27/0  & 27/0  & 27/0  & 27/0 & 27/0  &  26/0& 21/0  & \textbf{263}/\textbf{0} \\
+ADELI & 27/0 & 27/0  &  27/0 &  27/0 &  27/0 &  27/0 & 27/0  & 27/0  &  27/0& 14/0  & 257/\textbf{0}\\
+NDE & 0/12  & 21/12  & 18/11  & 3/12  & 18/9  & 3/12  &  18/11 & 21/9 & 24/8 & 0/0  & 126/96\\
+MABC &  0/12& 0/15& 10/12  &  0/12 & 11/12  & 0/17  & 3/12  & 2/15  & 12/15 & 0/3  & 38/125\\
+TLBO & 27/0& 27/0 & 26/0 &  27/0&  24/0& 27/0 & 26/0 & 24/0 & 24/0 & 10/0  & 242/0\\
+GOTLBO & 0/12  & 0/18  & 0/24  & 0/12  & 3/15  & 0/12 & 3/15  & 0/21 & 0/21  & 0/5  & 6/155\\
+STLBO & 27/0 & 27/0  & 27/0  & 27/0  & 27/0  & 27/0  & 27/0  & 27/0  & 27/0 & 11/0  & 254/\textbf{0}\\
+PSO & 0/12  & 0/21  & 0/24  & 0/15  & 0/24  & 0/21  &  0/34 & 0/23  & 0/18  & 0/12  & 0/204\\
+IJAYA &  0/0 &  16/0 &  18/0 & 0/0  & 12/0 &  11/0 &  3/0 & 18/0  & 18/0  & 0/0  & 96/\textbf{0}\\
+ISCA & 0/12  & 0/21  & 0/23  & 0/12  & 3/15  & 0/12  & 2/15  & 0/21  & 0/24 & 0/3  & 5/158\\
+NNA & 3/12  & 0/21  & 0/23  & 0/12  & 0/23  & 0/14  & 0/17  & 0/21  & 0/24& 0/9  & 3/176\\
+CWOA & 0/12  & 0/21  &  0/21& 0/12  & 0/24& 0/18  & 3/15  & 0/21  & 0/24 & 0/12  & 3/180\\
+WW & 0/15  & 0/21  & 0/20&  0/12 & 0/30 & 0/18 & 2/15  & 0/20  & 0/24& 0/12  & 2/187\\
+\bottomrule
+\end{tabular*}
+\end{table*}
+
+In all cases, the Quade test yields higher adjusted $p$-values.
+In particular, in the case of the complex parameter, none of the conducted comparisons exceeded the chosen threshold value of the $p$-value.
+
+The adjusted $p$-values obtained from the direct comparison of EBLSHADE, ADELI, and STLBO
+do not allow for determining the best algorithm among them.
+However, for this purpose, the results of this top trio of algorithms can be used,
+obtained from their comparison with less efficient optimization methods.
+Table~\ref{tbl1NWins} summarizes number of wins and losses for each algorithm in $1\times N$ multiple comparison.
+The maximum possible number of wins achieved in every 10 tasks is 156,
+obtained from comparing with 13 algorithms in 3 tests using 4 procedures.
+As can be seen, among the compared algorithms,
+ADELI showed the highest number of statistically confirmed improvements (1093) over others,
+indicating its superior performance.
+Conversely, STLBO demonstrated the lowest number of defeats (0) in similar comparisons, suggesting its consistently strong performance.
+
+Previously, we employed procedures that controlled the Family-Wise Error Rate (FWER)
+for comparisons with a control algorithm.
+We tested each of the 14 algorithms individually to determine if any of them were superior to the others.
+Below are the results of the carried out a multiple comparison in which
+all possible pairwise comparisons need to be computed ( $N\times N$ comparison),
+and three procedures (Shaffer’s static, Nemenyi, and Holm) have been used to control FWER.
+These procedures take into account that the hypotheses being tested belonging
+to a family of all pairwise comparisons are logically interrelated;
+thus not all combinations of true and false hypotheses are possible.
+
+Starting from the analysis performed by the Friedman test over our results, we can raise the
+91 hypotheses of equality among the 14 algorithms of our study for each task,
+and apply the methods mentioned earlier to contrast them.
+Table~\ref{tblNNpValueI01} lists the part of the hypotheses
+and the adjusted $p$-values achieved on the task of $I_{01}$ evaluation.
+For the remaining 46 hypotheses not indicated in the table,
+a $p$-value of 1 was obtained after applying each of the procedures.
+The full version of the table as well as the data, obtained for other task,
+are given in the supplementary material (tables~S144-S153).
+
+It can be seen that using a level of significance 0.1, only 37 hypotheses
+are rejected by the Nemenyi, Holm, and Shaffer methods.
+These hypotheses show the improvement of EBLSHADE, ADELI,  TLBO, and STLBO
+over DE, NDE, MABC, GOTLBO, PSO, ISCA, NNA, CWOA, and WW,
+and NNA over WW.
+None of the remaining 54 hypotheses can be rejected using these procedures.
+
+%  & $I_{01}$& $n_1$ & $R_\mathrm{p1}$ &$I_{02}$& $n_2$& $R_\mathrm{p2}$&$R_\mathrm{s}$&$I_\mathrm{ph}$&RMSPE\\ % Table header row
+%DE, EBLSHADE, ADELI, NDE, MABC, TLBO, GOTLBO, STLBO, PSO, IJAYA, ISCA, NNA, CWOA, WW
+
+
+%$\mathrm{APE}_\mathrm{MEAN}$
+%перекласти на англійську "Результати порівняння алгоритмів за іншими восьмами параметрів подані в додаткових матеріалах"
+
+
+%The energy band diagram of the inverted device structure ITO/ZnO/PTB7:PC71BM/MoO3/Ag is given in
+%the supplementary material (figure S1 is available online at stacks.iop.org/MRX/5/116203/mmedia).
+% The cell parameters obtained from the J-V characteristics are tabulated
+%(table S1 in the supplementary material).
+%Light intensity dependent C-F plots for the
+%devices with 70, 150 and 250 nm ZnO layer thicknesses are given in the supplementary material (figure S2)
+%The presence of leakage current can be
+%correlated with the shunt resistance (Rsh) values obtained from the dark J-V curve (table S1 in thesupplementary
+%material).
+%The reader is referred to supplementary material for more information on the simulated BHJ morphologies.28
+%The reader is referred to the supplementary material for more information on the cut-off
+%approximation.
+%However, in the supplementary material28 we show that for the aforementioned
+%trap densities the trap population is essentially a small perturbation to the total energy landscape and the reduction in the
+%standard deviation of energetic disorder is negligible.
+%This saturation effect was also seen in the
+%evolution of exciton diffusion with trap depth (see supplementary material28).
 
 
 
@@ -1388,7 +1471,7 @@ MABC versus WW&2.35963E-01&6.74180E-02&6.74180E-02\\
                The colored cylinder indicates that the adjusted p-value,
                which tests the control algorithm outperforms the comparison algorithm,
                is not greater than $p_{lim}=0.1$.
-               The correspondence between the color of the cylinder to a post-hoc procedure is shown in the figure legend.
+               The correspondence between the color of the cylinder to a post-hoc procedure is shown in the figure's legend.
                }\label{figNNRezIVset}
 \end{figure}
 
