@@ -773,7 +773,7 @@ However, considering the deliberate utilization of a suboptimal parameter would 
 \begin{figure}[]
 	\centering
 		\includegraphics[width=1.0\columnwidth]{Fig5}
-	  \caption{The total number of wins and losses for each algorithm in pairwise comparisons using the
+	  \caption{The total count of wins and losses for each algorithm in pairwise comparisons using the
                Wilcoxon signed-rank test with a significance level of $\alpha = 0.05$ in the single-IV case.}\label{figWilTotSingleIV}
 \end{figure}
 
@@ -794,7 +794,7 @@ Simultaneously, it was not detected the significant differences
 between STLBO and both EBLSHADE and ADELI for all parameter evaluations
 as well as between STLBO and TLBO in the Comp case.
 EBLSHADE outperforms nearly all other algorithms in the composite parameter, except for STLBO.
-According to the Wilcoxon test victories number,
+According to the Wilcoxon test victories count,
 the worst performances are exhibited by PSO and CWOA.
 PSO achieved better results than ISCA, NNA, and CWOA in terms of RMSPE value,
 as well as outperformed WW in $n_2$ evaluation and RMSPE.
@@ -807,8 +807,8 @@ Looking at the results of the Wilcoxon signed-rank test from another perspective
 it can be observed that neither EBLSHADE nor STLBO had any defeats in pairwise comparisons,
 while ADELI had only one loss.
 ADELI was only outperformed by EBLSHADE in terms of the Comp parameter, primarily due to its significantly longer run time.
-The highest number of defeats was observed for the PSO and WW algorithms (104 and 84, respectively).
-The data regarding the total number of wins and losses when applying the Wilcoxon test
+The highest count of defeats was observed for the PSO and WW algorithms (104 and 84, respectively).
+The data regarding the total count of wins and losses when applying the Wilcoxon test
 for each algorithm are summarized in Fig.~\ref{figWilTotSingleIV}.
 
 \begin{figure}[!ht]
@@ -964,14 +964,14 @@ under the assumption that there is no difference between the two algorithms (nul
 
 
 \begin{table*}[<options>]
-\caption{The total number of wins and losses for each algorithm in $1\times N$ multiple comparison using the
+\caption{The total count of wins and losses for each algorithm in $1\times N$ multiple comparison using the
 Friedman, Friedman Aligned, and Quade tests and Finner, Holm, Hochberg, and Holland post-hoc procedures
 in single--IV case.
 The criterion for victory was a adjusted $p$-value less than 0.1.
 }\label{tbl1NWins}
 \begin{tabular*}{\tblwidth}{@{}LCCCCCCCCCCC@{}}
 \toprule
-\multirow{3}{*}{Algorithm}& \multicolumn{11}{C}{Win / Lose number} \\
+\multirow{3}{*}{Algorithm}& \multicolumn{11}{C}{Win / Lose count} \\
 &  \multicolumn{10}{C}{task}  &\multirow{2}{*}{Total}\\
   & $I_{01}$& $n_1$ & $R_\mathrm{p1}$ &$I_{02}$& $n_2$& $R_\mathrm{p2}$&$R_\mathrm{s}$&$I_\mathrm{ph}$&RMSPE&Comp&\\ % Table header row
 \midrule
@@ -1026,6 +1026,62 @@ The white hexagon suggests a strong likelihood of the null hypothesis.
 In fact, the data in Table~\ref{tbl1NADELI} were used to create the third row in Fig.~\ref{figN1RezSingleIV}(a).
 The panel (b) of figure presents the statistical results for $I_{02}$ evaluation.
 The results of the comparison of algorithms based on the other eight parameters are given in the supplementary materials (figure S2).
+
+
+The results displayed in Fig.~\ref{figN1RezSingleIV} demonstrate a consistent trend across all parameters.
+Among the compared algorithms, EBLSHADE, ADELI, and STLBO consistently outperform the others in $1\times N$ multiple comparisons.
+On the other hand, algorithms such as PSO, ISCA, CWOA, and NNA consistently produce lower-quality results.
+The main changes observed in nonparametric statistical estimation of different parameters evaluation
+mainly concern algorithms with moderate effectiveness.
+
+For example, when comparing the accuracy of determining $R_\mathrm{p1}$ and $I_{02}$,
+the IJAYA algorithm performs better in the former case.
+As evident from Figure 3a,
+IJAYA outperforms GOTLBO, PSO, ISCA, NNA, CWOA, and WW in the results of Friedman
+and Friedman Aligned tests for every post-hoc procedure considered.
+While for $I_{02}$, IJAYA only outperforms DE, MABC, PSO, and CWOA according to the Friedman test,
+and in the latter case, only for Finner post-hoc procedure.
+For DE, the situation is similar in the case of $I_{02}$ compared to $R_\mathrm{p1}$.
+According to the results of the Friedman and Friedman Aligned tests, the algorithm loses its advantage over GOTLBO, SCA, NNA, CWOA, and WW.
+Additionally, the Friedman test no longer shows the improvement of DE over PSO.
+
+
+
+
+In all cases, the Quade test yields higher adjusted $p$-values.
+In particular, in the case of the complex parameter, none of the conducted comparisons exceeded the chosen threshold value of the $p$-value.
+
+The adjusted $p$-values obtained from the direct comparison of EBLSHADE, ADELI, and STLBO
+do not allow for determining the best algorithm among them.
+However, for this purpose, the results of this top trio of algorithms can be used,
+obtained from their comparison with less efficient optimization methods.
+Table~\ref{tbl1NWins} summarizes count of wins and losses for each algorithm in $1\times N$ multiple comparison.
+The maximum possible number of wins achieved in every 10 tasks is 156,
+obtained from comparing with 13 algorithms in 3 tests using 4 procedures.
+As can be seen, among the compared algorithms,
+ADELI showed the highest count of statistically confirmed improvements (1093) over others,
+indicating its superior performance.
+Conversely, STLBO demonstrated the lowest count of defeats (0) in similar comparisons, suggesting its consistently strong performance.
+
+Previously, we employed procedures that controlled the Family-Wise Error Rate (FWER)
+for comparisons with a control algorithm.
+We tested each of the 14 algorithms individually to determine if any of them were superior to the others.
+Below are the results of the carried out a multiple comparison in which
+all possible pairwise comparisons need to be computed ( $N\times N$ comparison),
+and three procedures (Shaffer’s static, Nemenyi, and Holm) have been used to control FWER.
+These procedures take into account that the hypotheses being tested belonging
+to a family of all pairwise comparisons are logically interrelated;
+thus not all combinations of true and false hypotheses are possible.
+
+Starting from the analysis performed by the Friedman test over our results, we can raise the
+91 hypotheses of equality among the 14 algorithms of our study for each task,
+and apply the methods mentioned earlier to contrast them.
+Table~\ref{tblNNpValueI01} lists the part of the hypotheses
+and the adjusted $p$-values achieved on the task of $I_{01}$ evaluation.
+For the remaining 46 hypotheses not indicated in the table,
+a $p$-value of 1 was obtained after applying each of the procedures.
+The full version of the table as well as the data, obtained for other task,
+are given in the supplementary material (tables~S144-S153).
 
 \begin{table*}[<options>]
 \caption{Adjusted $p$-values for tests for $N\times N$ multiple comparisons of $I_{01}$ evaluation
@@ -1084,24 +1140,27 @@ NNA versus MABC&1.0&9.64793E-01&9.64793E-01\\
 \end{tabular*}
 \end{table*}
 
-The results displayed in Fig.~\ref{figN1RezSingleIV} demonstrate a consistent trend across all parameters. 
-Among the compared algorithms, EBLSHADE, ADELI, and STLBO consistently outperform the others in $1\times N$ multiple comparisons. 
-On the other hand, algorithms such as PSO, ISCA, CWOA, and NNA consistently produce lower-quality results.
-The main changes observed in nonparametric statistical estimation of different parameters evaluation
-mainly concern algorithms with moderate effectiveness.
 
-For example, when comparing the accuracy of determining $R_\mathrm{p1}$ and $I_{02}$, 
-the IJAYA algorithm performs better in the former case. 
-As evident from Figure 3a, 
-IJAYA outperforms GOTLBO, PSO, ISCA, NNA, CWOA, and WW in the results of Friedman 
-and Friedman Aligned tests for every post-hoc procedure considered.
-While for $I_{02}$, IJAYA only outperforms DE, MABC, PSO, and CWOA according to the Friedman test, 
-and in the latter case, only for Finner post-hoc procedure.
-For DE, the situation is similar in the case of $I_{02}$ compared to $R_\mathrm{p1}$. 
-According to the results of the Friedman and Friedman Aligned tests, the algorithm loses its advantage over GOTLBO, SCA, NNA, CWOA, and WW.
-Additionally, the Friedman test no longer shows the improvement of DE over PSO.
+It can be seen that using a level of significance 0.1, only 37 hypotheses of equality 
+are rejected by the Nemenyi, Holm, and Shaffer methods.
+These hypotheses show the improvement of EBLSHADE, ADELI,  TLBO, and STLBO
+over DE, NDE, MABC, GOTLBO, PSO, ISCA, NNA, CWOA, and WW,
+and NNA over WW.
+None of the remaining 54 hypotheses can be rejected using these procedures.
 
-
+It should be noted that when testing complementary hypotheses 
+(``algorithm A vs algorithm B'' and ``algorithm B vs algorithm A''), 
+only in one out of the two cases can a $p$-value less than 1 be obtained.
+For instance, when using the Nemenyi procedure to task $I_{01}$ evaluating of comparing ``ADELI vs MABC'' 
+a $p$-value of $5.84\cdot10^{-9}$ was obtained. 
+Conversely, when comparing ``MABC vs ADELI'', the $p$-value was 1.
+The $p$-values were computed for all possible hypotheses in the study to identify algorithms whose results statistically deviate from those of other algorithms. 
+In this case, a threshold value of $p_{lim}=0.1$ was used, similar to the $1\times N$ multiple comparisons.
+Typical examples of the obtained results for specific parameter cases are presented in Fig.~\ref{figNNRezSingleIV}. 
+For more comprehensive data, please refer to figure S3 in the supplementary materials.
+Generalized results regarding the total count of victories and defeats in the $N\times N$ comparisons are listed in Table~\ref{tblNNWins}.
+In the case of $N\times N$ comparisons, the maximum possible number of wins achieved in every 10 tasks is 39,
+obtained from comparing 13 algorithms in 3 post-hoc procedures.
 
 \begin{figure*}[!ht]
 	\centering
@@ -1117,14 +1176,14 @@ Additionally, the Friedman test no longer shows the improvement of DE over PSO.
 \end{figure*}
 
 \begin{table*}[<options>]
-\caption{The total number of wins and losses for each algorithm in $N\times N$ multiple comparison using the
+\caption{The total count of wins and losses for each algorithm in $N\times N$ multiple comparison using the
 Friedman test and Shaffer's static, Nemenyi, and Holm post-hoc procedures
 in single--IV case.
 The criterion for victory was a adjusted $p$-value less than 0.1.
 }\label{tblNNWins}
 \begin{tabular*}{\tblwidth}{@{}LCCCCCCCCCCC@{}}
 \toprule
-\multirow{3}{*}{Algorithm}& \multicolumn{11}{C}{Win / Lose number} \\
+\multirow{3}{*}{Algorithm}& \multicolumn{11}{C}{Win / Lose count} \\
 &  \multicolumn{10}{C}{task}  &\multirow{2}{*}{Total}\\
   & $I_{01}$& $n_1$ & $R_\mathrm{p1}$ &$I_{02}$& $n_2$& $R_\mathrm{p2}$&$R_\mathrm{s}$&$I_\mathrm{ph}$&RMSPE&Comp&\\ % Table header row
 \midrule
@@ -1146,47 +1205,211 @@ WW & 0/15  & 0/21  & 0/20&  0/12 & 0/30 & 0/18 & 2/15  & 0/20  & 0/24& 0/12  & 2
 \end{tabular*}
 \end{table*}
 
-In all cases, the Quade test yields higher adjusted $p$-values.
-In particular, in the case of the complex parameter, none of the conducted comparisons exceeded the chosen threshold value of the $p$-value.
 
-The adjusted $p$-values obtained from the direct comparison of EBLSHADE, ADELI, and STLBO
-do not allow for determining the best algorithm among them.
-However, for this purpose, the results of this top trio of algorithms can be used,
-obtained from their comparison with less efficient optimization methods.
-Table~\ref{tbl1NWins} summarizes number of wins and losses for each algorithm in $1\times N$ multiple comparison.
-The maximum possible number of wins achieved in every 10 tasks is 156,
-obtained from comparing with 13 algorithms in 3 tests using 4 procedures.
-As can be seen, among the compared algorithms,
-ADELI showed the highest number of statistically confirmed improvements (1093) over others,
-indicating its superior performance.
-Conversely, STLBO demonstrated the lowest number of defeats (0) in similar comparisons, suggesting its consistently strong performance.
+In the majority of cases, all post-hoc procedures considered lead to similar conclusions regarding the outperforming of one algorithm over another.
+For example, in the case of the $R_\mathrm{p1}$ evaluation task, 
+the Nemenyi procedure disagrees with Holm and Shaffer methods in only 4 out of 57 cases.
+Specifically, this occurs for the hypotheses "DE vs WW," "MABC vs ISCA," "MABC vs NNA," and "TLBO vs NDE" --- see Fig.~\ref{figNNRezSingleIV}(a). 
+On the other hand, as evident from Fig.~\ref{figNNRezSingleIV}(b), such situations are not observed at all for the $I_{02}$ task.
+The Holm procedure results, in general, differs from the Shaffer procedure ones in only two comparisons: 
+the improvement of IJAYA over GOTLBO in the $n_1$ evaluation and the outperforming of TLBO over NNA for the composite parameter.
 
-Previously, we employed procedures that controlled the Family-Wise Error Rate (FWER)
-for comparisons with a control algorithm.
-We tested each of the 14 algorithms individually to determine if any of them were superior to the others.
-Below are the results of the carried out a multiple comparison in which
-all possible pairwise comparisons need to be computed ( $N\times N$ comparison),
-and three procedures (Shaffer’s static, Nemenyi, and Holm) have been used to control FWER.
-These procedures take into account that the hypotheses being tested belonging
-to a family of all pairwise comparisons are logically interrelated;
-thus not all combinations of true and false hypotheses are possible.
+Totally $1\times N$ multiple comparisons exhibit more powerful behavior than $N\times N$ ones, reaching the lower $p$-values.
+As a result, IJAYA did not lose in any of the $N\times N$ comparisons --- see Table~\ref{tblNNWins}.
+Another striking  example can be observed when considering the case of the composite parameter. 
+Based on the $1\times N$ comparisons, conclusions were drawn about the outperforming of one algorithm over another in 67 cases, 
+whereas for the $N\times N$ comparisons, such situations were found in only 20 cases: 
+the improvement of EBLSHADE over MABC, GOTLBO, PSO, ISCA, NNA, CWOA, and WW,
+the statistically significant difference ADELI and GOTLBO, PSO, NNA, CWOA, and WW,
+and outperforming of both TLBO and STLBO over PSO, NNA, CWOA, and WW.
+Consequently, $N\times N$ comparisons provide a less precise ranking of all algorithms. 
+However, it is still possible to identify the best and worst-performing algorithms. 
+The obtained data reveal that EBLSHADE, ADELI, and STLBO are the top-performing algorithms in all tasks, 
+while PSO, ISCA, NNA, CWOA, and WW are the worst-performing.
 
-Starting from the analysis performed by the Friedman test over our results, we can raise the
-91 hypotheses of equality among the 14 algorithms of our study for each task,
-and apply the methods mentioned earlier to contrast them.
-Table~\ref{tblNNpValueI01} lists the part of the hypotheses
-and the adjusted $p$-values achieved on the task of $I_{01}$ evaluation.
-For the remaining 46 hypotheses not indicated in the table,
-a $p$-value of 1 was obtained after applying each of the procedures.
-The full version of the table as well as the data, obtained for other task,
-are given in the supplementary material (tables~S144-S153).
+Thus, the results presented in this subsection demonstrate that 
+among the examined algorithms, none can be applied for the maximally accurate determination 
+of a specific individual parameter (e.g., only $R_\mathrm{p2}$ or only $I_{02}$) in the opposite two-diode model.
+The algorithms that exhibit high efficiency (EBLSHADE, ADELI, and STLBO) allow for the most precise estimation of all parameters. 
+However, certain algorithms really display higher accuracy in determining specific parameters.
+Indeed, DE and IJAYA are the most effective in estimating $R_\mathrm{p2}$ and $I_\mathrm{ph}$ --- see table~S1.
+Nevertheless, this highest level of accuracy appears unworthy of significant attention when compared to other optimization methods.
+As a result, the performance metrics of algorithms for individual parameters will not be analyzed 
+in the following subsection, dedicated to the analysis of IV curves with different parameter ratios.
 
-It can be seen that using a level of significance 0.1, only 37 hypotheses
-are rejected by the Nemenyi, Holm, and Shaffer methods.
-These hypotheses show the improvement of EBLSHADE, ADELI,  TLBO, and STLBO
-over DE, NDE, MABC, GOTLBO, PSO, ISCA, NNA, CWOA, and WW,
-and NNA over WW.
-None of the remaining 54 hypotheses can be rejected using these procedures.
+
+
+
+\subsubsection{Evaluation of IV--set}
+
+
+\begin{figure*}[]
+	\centering
+		\includegraphics[width=.32\textwidth]{AfigA}
+        \includegraphics[width=.32\textwidth]{AfigB}
+        \includegraphics[width=.32\textwidth]{AfigC}
+		\includegraphics[width=.32\textwidth]{AfigD}
+        \includegraphics[width=.32\textwidth]{AfigE}
+        \includegraphics[width=.32\textwidth]{AfigF}
+		\includegraphics[width=.32\textwidth]{AfigG}
+        \includegraphics[width=.32\textwidth]{AfigH}
+        \includegraphics[width=.32\textwidth]{AfigI}
+		\includegraphics[width=.32\textwidth]{AfigJ}
+        \includegraphics[width=.32\textwidth]{AfigK}
+        \includegraphics[width=.32\textwidth]{AfigL}
+		\includegraphics[width=.32\textwidth]{AfigM}
+        \includegraphics[width=.32\textwidth]{AfigN}
+        \includegraphics[width=.32\textwidth]{AfigO}
+	  \caption{Dependences of the $I_{01}$ (a, b), $n_1$ (c), $R_\mathrm{p1}$ (d), $I_{02}$ (e, f),
+               $n_2$ (g, h), $R_\mathrm{p2}$ (i, j), $R_\mathrm{s}$ (k), $I_\mathrm{ph}$ (l, m), and RMSPE (n, o)
+               evaluation by different algorithm on the synthesis temperature.
+               The IV-set is used.
+               The circles represent the values, which have been used in IV curve simulations,
+               the filled marks represent the median values, and the empty marks represent the mean values.
+               The colored regions correspond to the IQR.
+               The lines only serve as guide to the eye.
+               }\label{figTDepIVset}
+\end{figure*}
+
+Fig.~\ref{figSetIV} shows several typical fitting results of a set of synthetic IV curves
+simulated according to the opposite two-diode model using the parameter values described in Sec.~\ref{SetIV}.
+A more comprehensive and enhanced version, including the fitting results obtained using each algorithm,
+is provided in the supplementary materials (figure S4).
+Similar to the single--IV case,
+the algorithms EBLSHADE, ADELI, NDE, IJAYA, TLBO, and STLBO show
+the highest agreement between the fitting curves and the points of synthesized current-voltage curves.
+Fig.~\ref{figTDepIVset} represents a portion of the results obtained from evaluating solar cell parameters using various algorithms,
+along with the corresponding RMSPE data.
+The supplementary material provides the dependencies of all parameters on synthesis temperature
+as determined by all the algorithms --- see figures~S5-S13.
+The results in terms of MEAN, MEDIAN, STD, and IQR are tabulated as well (table~S154 in the supplementary material).
+
+It should be noted that in several cases, the accuracy of parameter evaluation depends on temperature, even for constant parameters.
+For instance, as the temperature increases, the errors in determining $R_\mathrm{p1}$ by NDE, MABC, GOTLBO, IJAYA, ISCA, and WW decrease. 
+However, under the same conditions, the estimation quality of $I_{01}$ using DE, ISCA, and WW worsens.
+These results indicate that the accuracy of parameter evaluation depends not only on the parameter value itself but also on its ratio with other parameters.
+A comprehensive investigation into the specific dependencies of parameter evaluation accuracy for each algorithm has not been conducted.
+This study aimed to determine the best algorithms rather than elucidate the peculiarities of their application in the context of opposite the dual-diode model.
+
+\begin{table*}[<options>]
+\caption{The results of Wilcoxon signed-rank test with a level of significance $\alpha = 0.05$ in the IV-set case.
+         The ``+'' indicated that the null hypothesis was rejected, and the control algorithm (in the row) performed better
+         then the comparison algorithm (in the column).
+         The ``0'' indicates to rejection of the hypothesis about outperforming the control algorithm.
+         }\label{tblWilIVset}
+\begin{tabular*}{\tblwidth}{@{}LCCCCCCCCCCCCCCC@{}}
+\toprule
+Control & \multicolumn{14}{C}{Comparison algorithm}&Total \\
+algorithm  &DE&EBLSHADE&ADELI&NDE&MABC&TLBO&GOTLBO&STLBO&PSO&IJAYA&ISCA&NNA&CWOA&WW&$(+/=/-)$\\ % Table header row
+\midrule
+DE&$\blacksquare$&0&0&0&+&0&+&0&+&0&+&+&+&+&7/0/6\\
+EBLSHADE&+&$\blacksquare$&0&+&+&0&+&0&+&+&+&+&+&+&10/0/3\\
+ADELI&+&+&$\blacksquare$&+&+&+&+&+&+&+&+&+&+&+&13/0/0\\
+NDE&+&0&0&$\blacksquare$&+&0&+&0&+&+&+&+&+&+&9/0/4\\
+MABC&0&0&0&0&$\blacksquare$&0&+&0&+&0&+&+&+&+&6/0/7\\
+TLBO&+&+&0&+&+&$\blacksquare$&+&0&+&+&+&+&+&+&11/1/1\\
+GOTLBO&0&0&0&0&0&0&$\blacksquare$&0&+&0&+&+&+&+&5/0/8\\
+STLBO&+&+&0&+&+&0&+&$\blacksquare$&+&+&+&+&+&+&11/1/1\\
+PSO&0&0&0&0&0&0&0&0&$\blacksquare$&0&0&0&0&0&0/4/9\\
+IJAYA&+&0&0&0&+&0&+&0&+&$\blacksquare$&+&+&+&+&8/0/5\\
+ISCA&0&0&0&0&0&0&0&0&0&0&$\blacksquare$&0&0&0&0/3/10\\
+NNA&0&0&0&0&0&0&0&0&0&0&0&$\blacksquare$&0&0&0/3/10\\
+CWOA&0&0&0&0&0&0&0&0&0&0&0&0&$\blacksquare$&0&0/4/9\\
+WW&0&0&0&0&0&0&0&0&0&0&0&+&0&$\blacksquare$&1/3/9\\
+\bottomrule
+\end{tabular*}
+\end{table*}
+
+\begin{figure}[]
+	\centering
+		\includegraphics[width=1.0\columnwidth]{FigRankT}
+	  \caption{Ranking of the algorithms according to Friedman, Friedman Aligned, and Quade tests in the IV-set case.}\label{figRankIVset}
+\end{figure}
+
+The presented data display several characteristics that were also observed in the single-IV case.
+For instance, the error in parameters estimating by mean values is higher compared to that of median values in the majority of cases.
+Exceptions are observed at some temperatures only when evaluating $I_{01}$ using IJAYA, 
+$n_1$ using IJAYA and DE, 
+$R_\mathrm{p1}$ using DE and MABC, 
+and $R_s$ using DE and WW.
+However, for high-precision algorithms, the deviation of MEDIAN from the true value does not exceed the deviation of MEAN.
+Additionally, these algorithms exhibit small IQR values that do not exceed STD.
+Similar to the previous case, small RMSPE values do not always indicate high accuracy in determining the parameters of a solar cell.
+
+At the same time, the number of algorithms exhibiting minimal errors has decreased.
+Significant deviations from true values are observed for median values 
+of $I_{01}$, $n_{1}$, $R_\mathrm{p1}$, $n_2$, $R_s$, and $I_\mathrm{ph}$ evaluated by EBLSHADE at various temperatures,
+as well as for median values of diode D1 characteristics and series resistor determined using TLBO at 260~K.
+Thus, only ADELI and STLBO remain as algorithms without visible errors.
+Although this claim of infallibility applies only to median values, 
+substantial errors are observed for mean values in several cases.
+Simultaneously, EBLSHADE, TLBO, IJAYA, and NDE form a group of algorithms with low RMSPE values but imperfect model parameter estimation.
+
+In the IV--set case, a comprehensive nonparametric statistical analysis of algorithms efficiency was performed on all parameters collected from all simulated curves.
+This approach is similar to the use of the Comp parameter in the previous subsection;
+however, in this scenario, $n=81$ is employed:
+\begin{equation*}
+n= 10\,T_\mathrm{values}\times(8\,\mathrm{APE}_\mathrm{MEDIAN}+1\,\mathrm{RMSPE}_\mathrm{MEDIAN})+1\,t_\mathrm{run}\,.
+\end{equation*}
+%10 temperature values $\times(\mathrm{APE}_\mathrm{MEDIAN}+1\mathrm{RMSPE}_\mathrm{MEDIAN})+1t_\mathrm{run}$.
+
+
+%Fig.~\ref{figWilSingleIV} graphically show
+%the non--parametric statistical results of pairwise comparisons of algorithms
+%based on the Wilcoxon signed--rank test.
+%In the case of Comp comparisons, the differences in performance scores
+%were normalized to the interval $[0,\, 1]$.
+%As seen from the figure, no algorithm outperforms all others in evaluating each parameter.
+%Furthermore, no algorithm surpasses all others in the evaluation even a single parameter.
+%For example, as the figure states, STLBO shows a significant improvement over
+%DE, NDE, MABC, GOTLBO, PSO, IJAYA, ISCA, NNA, CWOA, and WW across all the parameters considered
+%with a level of significance $\alpha = 0.05$.
+%Simultaneously, it was not detected the significant differences
+%between STLBO and both EBLSHADE and ADELI for all parameter evaluations
+%as well as between STLBO and TLBO in the Comp case.
+%EBLSHADE outperforms nearly all other algorithms in the composite parameter, except for STLBO.
+%According to the Wilcoxon test victories count,
+%the worst performances are exhibited by PSO and CWOA.
+%PSO achieved better results than ISCA, NNA, and CWOA in terms of RMSPE value,
+%as well as outperformed WW in $n_2$ evaluation and RMSPE.
+%Test detected significant differences between CWOA and WW in $n_2$ and $I_{01}$ evaluations,
+%between CWOA and PSO in $I_{01}$, $I_{02}$, $R_\mathrm{s}$, and $I_\mathrm{ph}$ evaluations),
+%and between CWOA and both ISCA and NNA in $R_\mathrm{s}$  evaluation case only.
+%
+%
+%Looking at the results of the Wilcoxon signed-rank test from another perspective,
+%it can be observed that neither EBLSHADE nor STLBO had any defeats in pairwise comparisons,
+%while ADELI had only one loss.
+%ADELI was only outperformed by EBLSHADE in terms of the Comp parameter, primarily due to its significantly longer run time.
+%The highest count of defeats was observed for the PSO and WW algorithms (104 and 84, respectively).
+%The data regarding the total count of wins and losses when applying the Wilcoxon test
+%for each algorithm are summarized in Fig.~\ref{figWilTotSingleIV}.
+%
+%
+%
+%Fig.~\ref{figRanksSingleIV} shows
+%ranks achieved by the Friedman, Friedman Aligned, and Quade tests for applied optimization algorithms in different tasks.
+%Ranks are tabulated in the supplementary material as well (table S3).
+%In almost all cases, the algorithms EBLSHADE, ADELI, and STLBO consistently achieve the top (smallest value) three ranks.
+%For example, in assessing the accuracy of model parameter evaluation, ADELI has ranked first 22 times.
+%The STLBO algorithm ranked first six times,
+%taking the sole first place twice ($I_{01}$ evaluation according Friedman Aligned test and
+%$R_\mathrm{p1}$ evaluation according Quade test)
+%and sharing it with ADELI four times ($n_1$, $R_\mathrm{p1}$, $n_2$, and $I_\mathrm{ph}$ evaluation according Friedman Aligned test).
+%In the RMSPE value case, ADELI and STLBO achieved equal and best ranks by all three used tests.
+%When comparing based on the Comp parameter,
+%the STLBO algorithm obtained the top rank according to the Friedman Aligned test,
+%while the Friedman and Quade tests recognized EBLSHADE as the best.
+%In most cases, the TLBO algorithm secured the fourth position, and in four cases, it even ranked third.
+%In the majority of cases, the TLBO algorithm consistently ranked fourth out of all the algorithms tested.
+%Interestingly, in four cases ($I_{01}$ evaluation, RMSPE value, and Comp parameter by Friedman Aligned test,
+%and Comp parameter by Quade test),
+%it even achieved a commendable third-place ranking.
+%We must note that overall, the absolute values of ranks for ADELI, STLBO, EBLSHADE and TLBO algorithms differ little,
+%and the difference between the first and fourth ranks is often less than 0.5.
+%The worst ranks are observed for PSO, NNA, CWOA, and WW.
+
+
 
 %  & $I_{01}$& $n_1$ & $R_\mathrm{p1}$ &$I_{02}$& $n_2$& $R_\mathrm{p2}$&$R_\mathrm{s}$&$I_\mathrm{ph}$&RMSPE\\ % Table header row
 %DE, EBLSHADE, ADELI, NDE, MABC, TLBO, GOTLBO, STLBO, PSO, IJAYA, ISCA, NNA, CWOA, WW
@@ -1228,43 +1451,7 @@ None of the remaining 54 hypotheses can be rejected using these procedures.
 %the compared algorithm on the considered case.
 
 
-\subsubsection{Evaluation of IV--set}
 
-\begin{figure*}[]
-	\centering
-		\includegraphics[width=.32\textwidth]{AfigA}
-        \includegraphics[width=.32\textwidth]{AfigB}
-        \includegraphics[width=.32\textwidth]{AfigC}
-		\includegraphics[width=.32\textwidth]{AfigD}
-        \includegraphics[width=.32\textwidth]{AfigE}
-        \includegraphics[width=.32\textwidth]{AfigF}
-		\includegraphics[width=.32\textwidth]{AfigG}
-        \includegraphics[width=.32\textwidth]{AfigH}
-        \includegraphics[width=.32\textwidth]{AfigI}
-		\includegraphics[width=.32\textwidth]{AfigJ}
-        \includegraphics[width=.32\textwidth]{AfigK}
-        \includegraphics[width=.32\textwidth]{AfigL}
-		\includegraphics[width=.32\textwidth]{AfigM}
-        \includegraphics[width=.32\textwidth]{AfigN}
-        \includegraphics[width=.32\textwidth]{AfigO}
-	  \caption{Dependences of the $I_{01}$ (a, b), $n_1$ (c), $R_\mathrm{p1}$ (d), $I_{02}$ (e, f),
-               $n_2$ (g, h), $R_\mathrm{p2}$ (i, j), $R_\mathrm{s}$ (k), $I_\mathrm{ph}$ (l, m), and RMSPE (n, o)
-               evaluation by different algorithm on the synthesis temperature.
-               The IV-set is used.
-               The circles represent the values, which have been used in IV curve simulations,
-               the filled marks represent the median values, and the empty marks represent the mean values.
-               The colored regions correspond to the IQR.
-               The lines only serve as guide to the eye.
-               }\label{figTDepIVset}
-\end{figure*}
-
-
-In the IV--set case, a comprehensive nonparametric statistical analysis of algorithms efficiency was performed on all parameters collected from all simulated curves.
-In this scenario, $n$ had a value of 81:
-\begin{equation*}
-n= 10\,T\mathrm{values}\times(8\,\mathrm{APE}_\mathrm{MEDIAN}+1\,\mathrm{RMSPE}_\mathrm{MEDIAN})+1\,t_\mathrm{run}\,.
-\end{equation*}
-%10 temperature values $\times(\mathrm{APE}_\mathrm{MEDIAN}+1\mathrm{RMSPE}_\mathrm{MEDIAN})+1t_\mathrm{run}$.
 
 %subsequent analysis. In order to assess the statistical performance
 %of WSO and each other method on the CEC-2017 test suite, the
@@ -1283,93 +1470,61 @@ n= 10\,T\mathrm{values}\times(8\,\mathrm{APE}_\mathrm{MEDIAN}+1\,\mathrm{RMSPE}_
 %two algorithms. The counts of statistical significant cases (+/−/=)
 %are presented in the last row of Tables 13–17
 
-\begin{table*}[<options>]
-\caption{The results of Wilcoxon signed-rank test with a level of significance $\alpha = 0.05$ in the IV-set case.
-         The ``+'' indicated that the null hypothesis was rejected, and the control algorithm (in the row) performed better
-         then the comparison algorithm (in the column).
-         The ``0'' indicates to rejection of the hypothesis about outperforming the control algorithm.
-         }\label{tblWilIVset}
-\begin{tabular*}{\tblwidth}{@{}LCCCCCCCCCCCCCCC@{}}
-\toprule
-Control & \multicolumn{14}{C}{Comparison algorithm}&Total \\
-algorithm  &DE&EBLSHADE&ADELI&NDE&MABC&TLBO&GOTLBO&STLBO&PSO&IJAYA&ISCA&NNA&CWOA&WW&$(+/=/-)$\\ % Table header row
-\midrule
-DE&$\blacksquare$&0&0&0&+&0&+&0&+&0&+&+&+&+&7/0/6\\
-EBLSHADE&+&$\blacksquare$&0&+&+&0&+&0&+&+&+&+&+&+&10/0/3\\
-ADELI&+&+&$\blacksquare$&+&+&+&+&+&+&+&+&+&+&+&13/0/0\\
-NDE&+&0&0&$\blacksquare$&+&0&+&0&+&+&+&+&+&+&9/0/4\\
-MABC&0&0&0&0&$\blacksquare$&0&+&0&+&0&+&+&+&+&6/0/7\\
-TLBO&+&+&0&+&+&$\blacksquare$&+&0&+&+&+&+&+&+&11/1/1\\
-GOTLBO&0&0&0&0&0&0&$\blacksquare$&0&+&0&+&+&+&+&5/0/8\\
-STLBO&+&+&0&+&+&0&+&$\blacksquare$&+&+&+&+&+&+&11/1/1\\
-PSO&0&0&0&0&0&0&0&0&$\blacksquare$&0&0&0&0&0&0/4/9\\
-IJAYA&+&0&0&0&+&0&+&0&+&$\blacksquare$&+&+&+&+&8/0/5\\
-ISCA&0&0&0&0&0&0&0&0&0&0&$\blacksquare$&0&0&0&0/3/10\\
-NNA&0&0&0&0&0&0&0&0&0&0&0&$\blacksquare$&0&0&0/3/10\\
-CWOA&0&0&0&0&0&0&0&0&0&0&0&0&$\blacksquare$&0&0/4/9\\
-WW&0&0&0&0&0&0&0&0&0&0&0&+&0&$\blacksquare$&1/3/9\\
-\bottomrule
-\end{tabular*}
-\end{table*}
 
 
-\begin{figure}[]
-	\centering
-		\includegraphics[width=1.0\columnwidth]{FigRankT}
-	  \caption{Ranking of the algorithms according to Friedman, Friedman Aligned, and Quade tests in the IV-set case.}\label{figRankIVset}
-\end{figure}
 
 
-\begin{table*}[<options>]
-\caption{Adjusted $p$-values for Friedman, Friedman Aligned, and Quade tests in IV--set case.
- STLBO is the control algorithm.}\label{tbl1NSTLBO}
-\begin{tabular*}{\tblwidth}{@{}LLCCCC@{}}
-\toprule
-\multirow{2}{*}{Algorithm}& \multirow{2}{*}{Test}& \multicolumn{4}{C}{post-hoc procedure} \\
-  & &Finner & Holm & Hochberg &Holland\\ % Table header row
-\midrule
-GOTLBO&	Friedman&<1E-13&<1E-13&<1E-13&<1E-13\\
-&Friedman Aligned&1.35278E-10&5.09895E-10&5.09895E-10&5.09895E-10\\
-&Quade&1.11445E-03&4.11614E-03&4.11614E-03&4.10873E-03\\
-PSO&Friedman&<1E-13&<1E-13&<1E-13&<1E-13\\
-&Friedman Aligned&<1E-13&<1E-13&<1E-13&<1E-13\\
-&Quade&8.22938E-06&8.22941E-06&8.22941E-06&8.22938E-06\\
-NNA&Friedman&<1E-13&<1E-13&<1E-13&<1E-13\\
-&Friedman Aligned&<1E-13&<1E-13&<1E-13&<1E-13\\
-&Quade&2.21284E-05&5.61727E-05&5.61727E-05&5.61713E-05\\
-CWOA&Friedman&<1E-13&<1E-13&<1E-13&<1E-13\\
-&Friedman Aligned&<1E-13&<1E-13&<1E-13&<1E-13\\
-&Quade&1.48311E-05&2.73807E-05&2.73807E-05&2.73803E-05\\
-DE&Friedman&2.32081E-13&8.03357E-13&8.03357E-13&8.03357E-13\\
-&Friedman Aligned&1.74950E-09&6.45968E-09&6.45968E-09&6.45968E-09\\
-&Quade&6.44257E-03&2.38175E-02&2.38175E-02&2.35824E-02\\
-IJAYA&Friedman&2.17645E-10&8.03613E-10&8.03613E-10&8.03613E-10\\
-&Friedman Aligned&3.63299E-09&1.25757E-08&1.25757E-08&1.25757E-08\\
-&Quade&3.78757E-02&1.31885E-01&1.31885E-01&1.25109E-01\\
-MABC&Friedman&1.75608E-09&6.61909E-09&6.61909E-09&6.61909E-09\\
-&Friedman Aligned&<1E-13&<1E-13&<1E-13&<1E-13\\
-&Quade&1.54776E-03&5.83595E-03&5.83595E-03&5.82137E-03\\
-WW&Friedman&7.44635E-09&2.74942E-08&2.74942E-08&2.74942E-08\\
-&Friedman Aligned&<1E-13&<1E-13&<1E-13&<1E-13\\
-&Quade&1.10078E-04&3.81053E-04&3.81053E-04&3.80989E-04\\
-ISCA&Friedman&1.32325E-08&4.58048E-08&4.58048E-08&4.58048E-08\\
-&Friedman Aligned&<1E-13&<1E-13&<1E-13&<1E-13\\
-&Quade&5.64886E-05&1.73815E-04&1.73815E-04&1.73801E-04\\
-NDE&Friedman&9.57698E-04&2.94709E-03&2.94709E-03&2.94383E-03\\
-&Friedman Aligned&2.69373E-03&8.29097E-03&8.29097E-03&8.26522E-03\\
-&Quade&2.98714E-01&9.55486E-01&9.55486E-01&6.64392E-01\\
-EBLSHADE&Friedman&8.62842E-02&2.20533E-01&2.20533E-01&2.04719E-01\\
-&Friedman Aligned&3.10807E-02&7.90881E-02&7.90881E-02&7.70214E-02\\
-&Quade&5.99120E-01&1.0&1.0&9.01765E-01\\
-ADELI&Friedman&1.0&1.0&1.0&1.0\\
-&Friedman Aligned&3.64522E-01&6.83937E-01&3.45600E-01&5.66995E-01\\
-&Quade&1.0&1.0&1.0&1.0\\
-TLBO&Friedman&1.0&1.0&1.0&1.0\\
-&Friedman Aligned&3.64522E-01&6.83937E-01&3.45600E-01&5.66995E-01\\
-&Quade&1.0&1.0&1.0&1.0\\
-\bottomrule
-\end{tabular*}
-\end{table*}
+
+%\begin{table*}[<options>]
+%\caption{Adjusted $p$-values for Friedman, Friedman Aligned, and Quade tests in IV--set case.
+% STLBO is the control algorithm.}\label{tbl1NSTLBO}
+%\begin{tabular*}{\tblwidth}{@{}LLCCCC@{}}
+%\toprule
+%\multirow{2}{*}{Algorithm}& \multirow{2}{*}{Test}& \multicolumn{4}{C}{post-hoc procedure} \\
+%  & &Finner & Holm & Hochberg &Holland\\ % Table header row
+%\midrule
+%GOTLBO&	Friedman&<1E-13&<1E-13&<1E-13&<1E-13\\
+%&Friedman Aligned&1.35278E-10&5.09895E-10&5.09895E-10&5.09895E-10\\
+%&Quade&1.11445E-03&4.11614E-03&4.11614E-03&4.10873E-03\\
+%PSO&Friedman&<1E-13&<1E-13&<1E-13&<1E-13\\
+%&Friedman Aligned&<1E-13&<1E-13&<1E-13&<1E-13\\
+%&Quade&8.22938E-06&8.22941E-06&8.22941E-06&8.22938E-06\\
+%NNA&Friedman&<1E-13&<1E-13&<1E-13&<1E-13\\
+%&Friedman Aligned&<1E-13&<1E-13&<1E-13&<1E-13\\
+%&Quade&2.21284E-05&5.61727E-05&5.61727E-05&5.61713E-05\\
+%CWOA&Friedman&<1E-13&<1E-13&<1E-13&<1E-13\\
+%&Friedman Aligned&<1E-13&<1E-13&<1E-13&<1E-13\\
+%&Quade&1.48311E-05&2.73807E-05&2.73807E-05&2.73803E-05\\
+%DE&Friedman&2.32081E-13&8.03357E-13&8.03357E-13&8.03357E-13\\
+%&Friedman Aligned&1.74950E-09&6.45968E-09&6.45968E-09&6.45968E-09\\
+%&Quade&6.44257E-03&2.38175E-02&2.38175E-02&2.35824E-02\\
+%IJAYA&Friedman&2.17645E-10&8.03613E-10&8.03613E-10&8.03613E-10\\
+%&Friedman Aligned&3.63299E-09&1.25757E-08&1.25757E-08&1.25757E-08\\
+%&Quade&3.78757E-02&1.31885E-01&1.31885E-01&1.25109E-01\\
+%MABC&Friedman&1.75608E-09&6.61909E-09&6.61909E-09&6.61909E-09\\
+%&Friedman Aligned&<1E-13&<1E-13&<1E-13&<1E-13\\
+%&Quade&1.54776E-03&5.83595E-03&5.83595E-03&5.82137E-03\\
+%WW&Friedman&7.44635E-09&2.74942E-08&2.74942E-08&2.74942E-08\\
+%&Friedman Aligned&<1E-13&<1E-13&<1E-13&<1E-13\\
+%&Quade&1.10078E-04&3.81053E-04&3.81053E-04&3.80989E-04\\
+%ISCA&Friedman&1.32325E-08&4.58048E-08&4.58048E-08&4.58048E-08\\
+%&Friedman Aligned&<1E-13&<1E-13&<1E-13&<1E-13\\
+%&Quade&5.64886E-05&1.73815E-04&1.73815E-04&1.73801E-04\\
+%NDE&Friedman&9.57698E-04&2.94709E-03&2.94709E-03&2.94383E-03\\
+%&Friedman Aligned&2.69373E-03&8.29097E-03&8.29097E-03&8.26522E-03\\
+%&Quade&2.98714E-01&9.55486E-01&9.55486E-01&6.64392E-01\\
+%EBLSHADE&Friedman&8.62842E-02&2.20533E-01&2.20533E-01&2.04719E-01\\
+%&Friedman Aligned&3.10807E-02&7.90881E-02&7.90881E-02&7.70214E-02\\
+%&Quade&5.99120E-01&1.0&1.0&9.01765E-01\\
+%ADELI&Friedman&1.0&1.0&1.0&1.0\\
+%&Friedman Aligned&3.64522E-01&6.83937E-01&3.45600E-01&5.66995E-01\\
+%&Quade&1.0&1.0&1.0&1.0\\
+%TLBO&Friedman&1.0&1.0&1.0&1.0\\
+%&Friedman Aligned&3.64522E-01&6.83937E-01&3.45600E-01&5.66995E-01\\
+%&Quade&1.0&1.0&1.0&1.0\\
+%\bottomrule
+%\end{tabular*}
+%\end{table*}
 
 
 
@@ -1389,81 +1544,6 @@ TLBO&Friedman&1.0&1.0&1.0&1.0\\
 \end{figure}
 
 
-\begin{table*}[<options>]
-\caption{Adjusted $p$-values for tests for multiple $N\times N$ comparisons among all methods
-         in the IV--set case ($p<p_{lim}$ are only shown).}\label{tblNNpValue}
-\begin{tabular*}{\tblwidth}{@{}LCCC@{}}
-\toprule
-\multirow{2}{*}{Hypothesis}& \multicolumn{3}{C}{post-hoc procedure} \\
-  &Nemenyi & Holm & Shaffer\\ % Table header row
-\midrule
-EBLSHADE versus WW,
-ADELI versus MABC,&&&\\
-ADELI versus PSO,
-ADELI versus ISCA,&&&\\
-ADELI versus NNA,
-ADELI versus CWOA,&&&\\
-ADELI versus WW,
-NDE versus NNA,&&&\\
-TLBO versus GOTLBO,
-TLBO versus PSO,&&&\\
-TLBO versus ISCA,
-TLBO versus NNA,&&&\\
-TLBO versus CWOA,
-STLBO versus GOTLBO, &&&\\
-STLBO versus PSO,
-STLBO versus NNA, &&&\\
-STLBO versus CWOA&<1E-13&<1E-13&<1E-13\\
-IJAYA versus NNA&1.61648E-12&1.31450E-12&1.19016E-12\\
-EBLSHADE versus MABC&3.75833E-12&3.01492E-12&2.76712E-12\\
-NDE versus GOTLBO&4.20286E-12&3.32534E-12&3.09441E-12\\
-STLBO versus DE&8.12284E-12&6.33760E-12&5.98055E-12\\
-IJAYA versus CWOA&2.31157E-11&1.75273E-11&1.70193E-11\\
-TLBO versus DE&4.02505E-11&3.00773E-11&2.96350E-11\\
-IJAYA versus PSO&9.52918E-11&7.01599E-11&7.01599E-11\\
-IJAYA versus ISCA&1.29115E-09&9.36436E-10&9.36436E-10\\
-ADELI versus DE&2.22329E-09&1.56363E-09&1.41704E-09\\
-EBLSHADE versus GOTLBO&3.53238E-09&2.44550E-09&2.25141E-09\\
-NDE versus MABC&9.68759E-09&6.49388E-09&6.17451E-09\\
-IJAYA versus WW&1.72440E-08&1.13697E-08&1.09907E-08\\
-NDE versus WW&1.75252E-08&1.13697E-08&1.11699E-08\\
-EBLSHADE versus DE&1.82602E-08&1.16384E-08&1.16384E-08\\
-EBLSHADE versus ISCA&1.88327E-08&1.17963E-08&1.16384E-08\\
-EBLSHADE versus PSO&4.78066E-08&2.94194E-08&2.94194E-08\\
-ADELI versus GOTLBO&4.98663E-08&3.01390E-08&3.01390E-08\\
-EBLSHADE versus CWOA&7.52618E-08&4.46609E-08&4.21797E-08\\
-STLBO versus MABC&8.60481E-08&5.01159E-08&4.82248E-08\\
-NDE versus ISCA&9.60138E-08&5.48650E-08&5.38099E-08\\
-DE versus NNA&1.60867E-07&9.01562E-08&9.01562E-08\\
-EBLSHADE versus NNA&1.68788E-07&9.27404E-08&9.01562E-08\\
-TLBO versus MABC&2.16163E-07&1.16396E-07&1.14020E-07\\
-NDE versus PSO&4.07575E-07&2.14985E-07&2.14985E-07\\
-STLBO versus WW&4.16995E-07&2.15371E-07&2.15371E-07\\
-TLBO versus WW&6.32636E-07&3.19794E-07&3.19794E-07\\
-NDE versus CWOA&8.17751E-07&4.04382E-07&4.04382E-07\\
-STLBO versus ISCA&8.33647E-07&4.04382E-07&4.04382E-07\\
-DE versus CWOA&1.47836E-06&6.98567E-07&6.98567E-07\\
-DE versus PSO&4.48549E-06&2.07023E-06&2.07023E-06\\
-DE versus ISCA&3.33823E-05&1.50404E-05&1.46735E-05\\
-NDE versus DE&1.56228E-04&6.86718E-05&6.86718E-05\\
-DE versus WW&2.41908E-04&1.03675E-04&1.03675E-04\\
-IJAYA versus GOTLBO&7.27786E-04&2.95913E-04&2.95913E-04\\
-MABC versus NNA&1.28945E-03&5.10114E-04&5.10114E-04\\
-ADELI versus NDE&1.70688E-03&6.56493E-04&6.56493E-04\\
-MABC versus CWOA&6.56486E-03&2.45281E-03&2.45281E-03\\
-MABC versus PSO&1.46075E-02&5.29723E-03&5.13671E-03\\
-TLBO versus NDE&2.83112E-02&9.95560E-03&9.95560E-03\\
-MABC versus ISCA&6.08528E-02&2.07301E-02&2.07301E-02\\
-STLBO versus NDE&6.70463E-02&2.21032E-02&2.21032E-02\\
-IJAYA versus MABC&6.92376E-02&2.21032E-02&2.21032E-02\\
-GOTLBO versus NNA&1.07776E-01&3.31618E-02&3.31618E-02\\
-MABC versus WW&2.35963E-01&6.74180E-02&6.74180E-02\\
-\bottomrule
-\end{tabular*}
-\end{table*}
-
-
-
 \begin{figure}[]
 	\centering
 		\includegraphics[width=1.0\columnwidth]{NNresult}
@@ -1474,6 +1554,115 @@ MABC versus WW&2.35963E-01&6.74180E-02&6.74180E-02\\
                The correspondence between the color of the cylinder to a post-hoc procedure is shown in the figure's legend.
                }\label{figNNRezIVset}
 \end{figure}
+
+\begin{table}[<options>]
+\caption{The total count of wins and losses for each algorithm in $1\times N$ and $N\times N$ multiple comparisons using the
+all tests and post-hoc procedures in the IV-set case.
+The criterion for victory was a adjusted $p$-value less than 0.1.
+The best results are bolded.
+}\label{tblAllWins}
+\begin{tabular*}{\tblwidth}{@{}LCC@{}}
+\toprule
+\multirow{2}{*}{Algorithm}& \multicolumn{2}{C}{Win / Lose count} \\
+  & $1\times N$ comparisons& $N\times N$ comparisons\\ % Table header row
+\midrule
+DE & 44/53 & 15/15\\
+EBLSHADE & 100/6 & 24/\textbf{0} \\
+ADELI & 117/\textbf{0} & \textbf{27}/\textbf{0}\\
+NDE & 97/18 & 24/9\\
+MABC &  44/69 & 14/18\\
+TLBO & 111/\textbf{0} & \textbf{27}/\textbf{0}\\
+GOTLBO & 25/80 & 2/18\\
+STLBO & \textbf{118}/\textbf{0} & \textbf{27}/\textbf{0}\\
+PSO & 0/112 & 0/24\\
+IJAYA &  63/46 & 21/\textbf{0}\\
+ISCA & 4/97 & 0/24\\
+NNA & 12/93 & 0/26\\
+CWOA & 4/101 & 0/24\\
+WW & 12/80 & 0/23\\
+\bottomrule
+\end{tabular*}
+\end{table}
+
+
+
+
+%\begin{table*}[<options>]
+%\caption{Adjusted $p$-values for tests for multiple $N\times N$ comparisons among all methods
+%         in the IV--set case ($p<p_{lim}$ are only shown).}\label{tblNNpValue}
+%\begin{tabular*}{\tblwidth}{@{}LCCC@{}}
+%\toprule
+%\multirow{2}{*}{Hypothesis}& \multicolumn{3}{C}{post-hoc procedure} \\
+%  &Nemenyi & Holm & Shaffer\\ % Table header row
+%\midrule
+%EBLSHADE versus WW,
+%ADELI versus MABC,&&&\\
+%ADELI versus PSO,
+%ADELI versus ISCA,&&&\\
+%ADELI versus NNA,
+%ADELI versus CWOA,&&&\\
+%ADELI versus WW,
+%NDE versus NNA,&&&\\
+%TLBO versus GOTLBO,
+%TLBO versus PSO,&&&\\
+%TLBO versus ISCA,
+%TLBO versus NNA,&&&\\
+%TLBO versus CWOA,
+%STLBO versus GOTLBO, &&&\\
+%STLBO versus PSO,
+%STLBO versus NNA, &&&\\
+%STLBO versus CWOA&<1E-13&<1E-13&<1E-13\\
+%IJAYA versus NNA&1.61648E-12&1.31450E-12&1.19016E-12\\
+%EBLSHADE versus MABC&3.75833E-12&3.01492E-12&2.76712E-12\\
+%NDE versus GOTLBO&4.20286E-12&3.32534E-12&3.09441E-12\\
+%STLBO versus DE&8.12284E-12&6.33760E-12&5.98055E-12\\
+%IJAYA versus CWOA&2.31157E-11&1.75273E-11&1.70193E-11\\
+%TLBO versus DE&4.02505E-11&3.00773E-11&2.96350E-11\\
+%IJAYA versus PSO&9.52918E-11&7.01599E-11&7.01599E-11\\
+%IJAYA versus ISCA&1.29115E-09&9.36436E-10&9.36436E-10\\
+%ADELI versus DE&2.22329E-09&1.56363E-09&1.41704E-09\\
+%EBLSHADE versus GOTLBO&3.53238E-09&2.44550E-09&2.25141E-09\\
+%NDE versus MABC&9.68759E-09&6.49388E-09&6.17451E-09\\
+%IJAYA versus WW&1.72440E-08&1.13697E-08&1.09907E-08\\
+%NDE versus WW&1.75252E-08&1.13697E-08&1.11699E-08\\
+%EBLSHADE versus DE&1.82602E-08&1.16384E-08&1.16384E-08\\
+%EBLSHADE versus ISCA&1.88327E-08&1.17963E-08&1.16384E-08\\
+%EBLSHADE versus PSO&4.78066E-08&2.94194E-08&2.94194E-08\\
+%ADELI versus GOTLBO&4.98663E-08&3.01390E-08&3.01390E-08\\
+%EBLSHADE versus CWOA&7.52618E-08&4.46609E-08&4.21797E-08\\
+%STLBO versus MABC&8.60481E-08&5.01159E-08&4.82248E-08\\
+%NDE versus ISCA&9.60138E-08&5.48650E-08&5.38099E-08\\
+%DE versus NNA&1.60867E-07&9.01562E-08&9.01562E-08\\
+%EBLSHADE versus NNA&1.68788E-07&9.27404E-08&9.01562E-08\\
+%TLBO versus MABC&2.16163E-07&1.16396E-07&1.14020E-07\\
+%NDE versus PSO&4.07575E-07&2.14985E-07&2.14985E-07\\
+%STLBO versus WW&4.16995E-07&2.15371E-07&2.15371E-07\\
+%TLBO versus WW&6.32636E-07&3.19794E-07&3.19794E-07\\
+%NDE versus CWOA&8.17751E-07&4.04382E-07&4.04382E-07\\
+%STLBO versus ISCA&8.33647E-07&4.04382E-07&4.04382E-07\\
+%DE versus CWOA&1.47836E-06&6.98567E-07&6.98567E-07\\
+%DE versus PSO&4.48549E-06&2.07023E-06&2.07023E-06\\
+%DE versus ISCA&3.33823E-05&1.50404E-05&1.46735E-05\\
+%NDE versus DE&1.56228E-04&6.86718E-05&6.86718E-05\\
+%DE versus WW&2.41908E-04&1.03675E-04&1.03675E-04\\
+%IJAYA versus GOTLBO&7.27786E-04&2.95913E-04&2.95913E-04\\
+%MABC versus NNA&1.28945E-03&5.10114E-04&5.10114E-04\\
+%ADELI versus NDE&1.70688E-03&6.56493E-04&6.56493E-04\\
+%MABC versus CWOA&6.56486E-03&2.45281E-03&2.45281E-03\\
+%MABC versus PSO&1.46075E-02&5.29723E-03&5.13671E-03\\
+%TLBO versus NDE&2.83112E-02&9.95560E-03&9.95560E-03\\
+%MABC versus ISCA&6.08528E-02&2.07301E-02&2.07301E-02\\
+%STLBO versus NDE&6.70463E-02&2.21032E-02&2.21032E-02\\
+%IJAYA versus MABC&6.92376E-02&2.21032E-02&2.21032E-02\\
+%GOTLBO versus NNA&1.07776E-01&3.31618E-02&3.31618E-02\\
+%MABC versus WW&2.35963E-01&6.74180E-02&6.74180E-02\\
+%\bottomrule
+%\end{tabular*}
+%\end{table*}
+
+
+
+
 
 
 \section{Conclusion}
