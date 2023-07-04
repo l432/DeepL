@@ -971,7 +971,7 @@ The criterion for victory was a adjusted $p$-value less than 0.1.
 }\label{tbl1NWins}
 \begin{tabular*}{\tblwidth}{@{}LCCCCCCCCCCC@{}}
 \toprule
-\multirow{3}{*}{Algorithm}& \multicolumn{11}{C}{Win / Lose count} \\
+\multirow{3}{*}{Algorithm}& \multicolumn{11}{C}{Wins / Loses} \\
 &  \multicolumn{10}{C}{task}  &\multirow{2}{*}{Total}\\
   & $I_{01}$& $n_1$ & $R_\mathrm{p1}$ &$I_{02}$& $n_2$& $R_\mathrm{p2}$&$R_\mathrm{s}$&$I_\mathrm{ph}$&RMSPE&Comp&\\ % Table header row
 \midrule
@@ -1141,22 +1141,22 @@ NNA versus MABC&1.0&9.64793E-01&9.64793E-01\\
 \end{table*}
 
 
-It can be seen that using a level of significance 0.1, only 37 hypotheses of equality 
+It can be seen that using a level of significance 0.1, only 37 hypotheses of equality
 are rejected by the Nemenyi, Holm, and Shaffer methods.
 These hypotheses show the improvement of EBLSHADE, ADELI,  TLBO, and STLBO
 over DE, NDE, MABC, GOTLBO, PSO, ISCA, NNA, CWOA, and WW,
 and NNA over WW.
 None of the remaining 54 hypotheses can be rejected using these procedures.
 
-It should be noted that when testing complementary hypotheses 
-(``algorithm A vs algorithm B'' and ``algorithm B vs algorithm A''), 
+It should be noted that when testing complementary hypotheses
+(``algorithm A vs algorithm B'' and ``algorithm B vs algorithm A''),
 only in one out of the two cases can a $p$-value less than 1 be obtained.
-For instance, when using the Nemenyi procedure to task $I_{01}$ evaluating of comparing ``ADELI vs MABC'' 
-a $p$-value of $5.84\cdot10^{-9}$ was obtained. 
+For instance, when using the Nemenyi procedure to task $I_{01}$ evaluating of comparing ``ADELI vs MABC''
+a $p$-value of $5.84\cdot10^{-9}$ was obtained.
 Conversely, when comparing ``MABC vs ADELI'', the $p$-value was 1.
-The $p$-values were computed for all possible hypotheses in the study to identify algorithms whose results statistically deviate from those of other algorithms. 
+The $p$-values were computed for all possible hypotheses in the study to identify algorithms whose results statistically deviate from those of other algorithms.
 In this case, a threshold value of $p_{lim}=0.1$ was used, similar to the $1\times N$ multiple comparisons.
-Typical examples of the obtained results for specific parameter cases are presented in Fig.~\ref{figNNRezSingleIV}. 
+Typical examples of the obtained results for specific parameter cases are presented in Fig.~\ref{figNNRezSingleIV}.
 For more comprehensive data, please refer to figure S3 in the supplementary materials.
 Generalized results regarding the total count of victories and defeats in the $N\times N$ comparisons are listed in Table~\ref{tblNNWins}.
 In the case of $N\times N$ comparisons, the maximum possible number of wins achieved in every 10 tasks is 39,
@@ -1183,7 +1183,7 @@ The criterion for victory was a adjusted $p$-value less than 0.1.
 }\label{tblNNWins}
 \begin{tabular*}{\tblwidth}{@{}LCCCCCCCCCCC@{}}
 \toprule
-\multirow{3}{*}{Algorithm}& \multicolumn{11}{C}{Win / Lose count} \\
+\multirow{3}{*}{Algorithm}& \multicolumn{11}{C}{Wins / Loses} \\
 &  \multicolumn{10}{C}{task}  &\multirow{2}{*}{Total}\\
   & $I_{01}$& $n_1$ & $R_\mathrm{p1}$ &$I_{02}$& $n_2$& $R_\mathrm{p2}$&$R_\mathrm{s}$&$I_\mathrm{ph}$&RMSPE&Comp&\\ % Table header row
 \midrule
@@ -1207,34 +1207,34 @@ WW & 0/15  & 0/21  & 0/20&  0/12 & 0/30 & 0/18 & 2/15  & 0/20  & 0/24& 0/12  & 2
 
 
 In the majority of cases, all post-hoc procedures considered lead to similar conclusions regarding the outperforming of one algorithm over another.
-For example, in the case of the $R_\mathrm{p1}$ evaluation task, 
+For example, in the case of the $R_\mathrm{p1}$ evaluation task,
 the Nemenyi procedure disagrees with Holm and Shaffer methods in only 4 out of 57 cases.
-Specifically, this occurs for the hypotheses "DE vs WW," "MABC vs ISCA," "MABC vs NNA," and "TLBO vs NDE" --- see Fig.~\ref{figNNRezSingleIV}(a). 
+Specifically, this occurs for the hypotheses "DE vs WW," "MABC vs ISCA," "MABC vs NNA," and "TLBO vs NDE" --- see Fig.~\ref{figNNRezSingleIV}(a).
 On the other hand, as evident from Fig.~\ref{figNNRezSingleIV}(b), such situations are not observed at all for the $I_{02}$ task.
-The Holm procedure results, in general, differs from the Shaffer procedure ones in only two comparisons: 
+The Holm procedure results, in general, differs from the Shaffer procedure ones in only two comparisons:
 the improvement of IJAYA over GOTLBO in the $n_1$ evaluation and the outperforming of TLBO over NNA for the composite parameter.
 
 Totally $1\times N$ multiple comparisons exhibit more powerful behavior than $N\times N$ ones, reaching the lower $p$-values.
 As a result, IJAYA did not lose in any of the $N\times N$ comparisons --- see Table~\ref{tblNNWins}.
-Another striking  example can be observed when considering the case of the composite parameter. 
-Based on the $1\times N$ comparisons, conclusions were drawn about the outperforming of one algorithm over another in 67 cases, 
-whereas for the $N\times N$ comparisons, such situations were found in only 20 cases: 
+Another striking  example can be observed when considering the case of the composite parameter.
+Based on the $1\times N$ comparisons, conclusions were drawn about the outperforming of one algorithm over another in 67 cases,
+whereas for the $N\times N$ comparisons, such situations were found in only 20 cases:
 the improvement of EBLSHADE over MABC, GOTLBO, PSO, ISCA, NNA, CWOA, and WW,
 the statistically significant difference ADELI and GOTLBO, PSO, NNA, CWOA, and WW,
 and outperforming of both TLBO and STLBO over PSO, NNA, CWOA, and WW.
-Consequently, $N\times N$ comparisons provide a less precise ranking of all algorithms. 
-However, it is still possible to identify the best and worst-performing algorithms. 
-The obtained data reveal that EBLSHADE, ADELI, and STLBO are the top-performing algorithms in all tasks, 
+Consequently, $N\times N$ comparisons provide a less precise ranking of all algorithms.
+However, it is still possible to identify the best and worst-performing algorithms.
+The obtained data reveal that EBLSHADE, ADELI, and STLBO are the top-performing algorithms in all tasks,
 while PSO, ISCA, NNA, CWOA, and WW are the worst-performing.
 
-Thus, the results presented in this subsection demonstrate that 
-among the examined algorithms, none can be applied for the maximally accurate determination 
+Thus, the results presented in this subsection demonstrate that
+among the examined algorithms, none can be applied for the maximally accurate determination
 of a specific individual parameter (e.g., only $R_\mathrm{p2}$ or only $I_{02}$) in the opposite two-diode model.
-The algorithms that exhibit high efficiency (EBLSHADE, ADELI, and STLBO) allow for the most precise estimation of all parameters. 
+The algorithms that exhibit high efficiency (EBLSHADE, ADELI, and STLBO) allow for the most precise estimation of all parameters.
 However, certain algorithms really display higher accuracy in determining specific parameters.
 Indeed, DE and IJAYA are the most effective in estimating $R_\mathrm{p2}$ and $I_\mathrm{ph}$ --- see table~S1.
 Nevertheless, this highest level of accuracy appears unworthy of significant attention when compared to other optimization methods.
-As a result, the performance metrics of algorithms for individual parameters will not be analyzed 
+As a result, the performance metrics of algorithms for individual parameters will not be analyzed
 in the following subsection, dedicated to the analysis of IV curves with different parameter ratios.
 
 
@@ -1285,7 +1285,7 @@ as determined by all the algorithms --- see figures~S5-S13.
 The results in terms of MEAN, MEDIAN, STD, and IQR are tabulated as well (table~S154 in the supplementary material).
 
 It should be noted that in several cases, the accuracy of parameter evaluation depends on temperature, even for constant parameters.
-For instance, as the temperature increases, the errors in determining $R_\mathrm{p1}$ by NDE, MABC, GOTLBO, IJAYA, ISCA, and WW decrease. 
+For instance, as the temperature increases, the errors in determining $R_\mathrm{p1}$ by NDE, MABC, GOTLBO, IJAYA, ISCA, and WW decrease.
 However, under the same conditions, the estimation quality of $I_{01}$ using DE, ISCA, and WW worsens.
 These results indicate that the accuracy of parameter evaluation depends not only on the parameter value itself but also on its ratio with other parameters.
 A comprehensive investigation into the specific dependencies of parameter evaluation accuracy for each algorithm has not been conducted.
@@ -1328,20 +1328,20 @@ WW&0&0&0&0&0&0&0&0&0&0&0&+&0&$\blacksquare$&1/3/9\\
 
 The presented data display several characteristics that were also observed in the single-IV case.
 For instance, the error in parameters estimating by mean values is higher compared to that of median values in the majority of cases.
-Exceptions are observed at some temperatures only when evaluating $I_{01}$ using IJAYA, 
-$n_1$ using IJAYA and DE, 
-$R_\mathrm{p1}$ using DE and MABC, 
+Exceptions are observed at some temperatures only when evaluating $I_{01}$ using IJAYA,
+$n_1$ using IJAYA and DE,
+$R_\mathrm{p1}$ using DE and MABC,
 and $R_s$ using DE and WW.
 However, for high-precision algorithms, the deviation of MEDIAN from the true value does not exceed the deviation of MEAN.
 Additionally, these algorithms exhibit small IQR values that do not exceed STD.
 Similar to the previous case, small RMSPE values do not always indicate high accuracy in determining the parameters of a solar cell.
 
 At the same time, the number of algorithms exhibiting minimal errors has decreased.
-Significant deviations from true values are observed for median values 
+Significant deviations from true values are observed for median values
 of $I_{01}$, $n_{1}$, $R_\mathrm{p1}$, $n_2$, $R_s$, and $I_\mathrm{ph}$ evaluated by EBLSHADE at various temperatures,
 as well as for median values of diode D1 characteristics and series resistor determined using TLBO at 260~K.
 Thus, only ADELI and STLBO remain as algorithms without visible errors.
-Although this claim of infallibility applies only to median values, 
+Although this claim of infallibility applies only to median values,
 substantial errors are observed for mean values in several cases.
 Simultaneously, EBLSHADE, TLBO, IJAYA, and NDE form a group of algorithms with low RMSPE values but imperfect model parameter estimation.
 
@@ -1352,41 +1352,28 @@ however, in this scenario, $n=81$ is employed:
 n= 10\,T_\mathrm{values}\times(8\,\mathrm{APE}_\mathrm{MEDIAN}+1\,\mathrm{RMSPE}_\mathrm{MEDIAN})+1\,t_\mathrm{run}\,.
 \end{equation*}
 %10 temperature values $\times(\mathrm{APE}_\mathrm{MEDIAN}+1\mathrm{RMSPE}_\mathrm{MEDIAN})+1t_\mathrm{run}$.
+Therefore, such an approach is well-suited for nonparametric statistical analysis of $k=14$ meta-heuristic algorithms.
+Certainly, at first sight, it would be interesting to consider incorporating an additional 80 values of the interquartile range into the dataset. 
+This approach could provide consideration into the stability of algorithm performance as well.
+However, it is known \cite{Derrac2011} that for multiple comparisons, a value of $n\geq 8\cdot k=112$ could be too high, obtaining
+no significant comparisons as a result.
+
+Table~\ref{tblWilIVset}  gives the statistical results produced by the Wilcoxon sign--rank test.
+As the table states, ADELI outperforms all other algorithms with a level of significance $\alpha = 0.05$.
+STLBO and TLBO show an improvement over 
+DE, EBLSHADE, NDE, MABC, GOTLBO, PSO, IJAYA, ISCA, NNA, CWOA, and WW.
+The counts of statistical significant cases $(+/=/-)$ are presented in the last row of Table~\ref{tblWilIVset}.
+It can be seen than PSO, ISCA, NNA, and CWOA did not outperform any of the algorithms, 
+whereas WW statistically significantly improved over  NNA only. 
+Therefore, although these algorithms have promising run times, 
+they are not recommended for parameter estimation of a solar cell based on the opposite two-diode model.
+
+The $p$-values required to test the null hypothesis, 
+computed using the Friedman, Friedman Aligned, Quade tests, and the Iman--Davenport extension, 
+can be found in table~S2 of the supplementary materials.
+None of these values exceeds $2.3\cdot10^{-6}$, thereby rejecting the hypothesis of equivalent medians in all tests.
 
 
-%Fig.~\ref{figWilSingleIV} graphically show
-%the non--parametric statistical results of pairwise comparisons of algorithms
-%based on the Wilcoxon signed--rank test.
-%In the case of Comp comparisons, the differences in performance scores
-%were normalized to the interval $[0,\, 1]$.
-%As seen from the figure, no algorithm outperforms all others in evaluating each parameter.
-%Furthermore, no algorithm surpasses all others in the evaluation even a single parameter.
-%For example, as the figure states, STLBO shows a significant improvement over
-%DE, NDE, MABC, GOTLBO, PSO, IJAYA, ISCA, NNA, CWOA, and WW across all the parameters considered
-%with a level of significance $\alpha = 0.05$.
-%Simultaneously, it was not detected the significant differences
-%between STLBO and both EBLSHADE and ADELI for all parameter evaluations
-%as well as between STLBO and TLBO in the Comp case.
-%EBLSHADE outperforms nearly all other algorithms in the composite parameter, except for STLBO.
-%According to the Wilcoxon test victories count,
-%the worst performances are exhibited by PSO and CWOA.
-%PSO achieved better results than ISCA, NNA, and CWOA in terms of RMSPE value,
-%as well as outperformed WW in $n_2$ evaluation and RMSPE.
-%Test detected significant differences between CWOA and WW in $n_2$ and $I_{01}$ evaluations,
-%between CWOA and PSO in $I_{01}$, $I_{02}$, $R_\mathrm{s}$, and $I_\mathrm{ph}$ evaluations),
-%and between CWOA and both ISCA and NNA in $R_\mathrm{s}$  evaluation case only.
-%
-%
-%Looking at the results of the Wilcoxon signed-rank test from another perspective,
-%it can be observed that neither EBLSHADE nor STLBO had any defeats in pairwise comparisons,
-%while ADELI had only one loss.
-%ADELI was only outperformed by EBLSHADE in terms of the Comp parameter, primarily due to its significantly longer run time.
-%The highest count of defeats was observed for the PSO and WW algorithms (104 and 84, respectively).
-%The data regarding the total count of wins and losses when applying the Wilcoxon test
-%for each algorithm are summarized in Fig.~\ref{figWilTotSingleIV}.
-%
-%
-%
 %Fig.~\ref{figRanksSingleIV} shows
 %ranks achieved by the Friedman, Friedman Aligned, and Quade tests for applied optimization algorithms in different tasks.
 %Ranks are tabulated in the supplementary material as well (table S3).
@@ -1563,7 +1550,7 @@ The best results are bolded.
 }\label{tblAllWins}
 \begin{tabular*}{\tblwidth}{@{}LCC@{}}
 \toprule
-\multirow{2}{*}{Algorithm}& \multicolumn{2}{C}{Win / Lose count} \\
+\multirow{2}{*}{Algorithm}& \multicolumn{2}{C}{Wins / Loses} \\
   & $1\times N$ comparisons& $N\times N$ comparisons\\ % Table header row
 \midrule
 DE & 44/53 & 15/15\\

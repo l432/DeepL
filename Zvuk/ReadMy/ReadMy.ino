@@ -1,5 +1,5 @@
 #include <fix_fft.h>
-#include  <Narcoleptic.h>
+#include <Narcoleptic.h>
 
 //#include <avr/delay.h>
 //#include <TimerOne.h>
@@ -18,12 +18,14 @@ const byte PS_16 = (1 << ADPS2);
 
 const byte MeasureDelay = 50;
 //time between measuring, us
-const int Np = 128;
+const uint16_t Np = 128;
 volatile uint16_t myByte[Np];
 volatile int ArrayIndex;
+uint16_t MaxMeasureValue;
+uint16_t MinMeasureValue;
 int8_t im[Np];
 int8_t data[Np];
-const byte ThresholdValue = 5;
+const byte ThresholdValue = 10;
 
 unsigned long myTimer;
 
@@ -46,26 +48,34 @@ void setup() {
 void loop() {
   //  myTimer = millis();
   MeasureSignal();
+  MaxMinInMeasedSignal();
+  // showMeasurement();
   sampleWindowFull();
+
+  Serial.print("MaxMeasureValue=");
+  Serial.println(MaxMeasureValue);
+  Serial.print("MinxMeasureValue=");
+  Serial.println(MinMeasureValue);
+  //  showDataArray();
+
   fix_fft(data, im, 7, 0);
   updateData();
 
-  //  showSpectrum();
-    // showMeasurement();
-    // Serial.println(millis()-myTimer);
+  showSpectrum();
+  // Serial.println(millis()-myTimer);
 
-  //  Serial.println(findF());
+  Serial.println(findF());
   if (findF() > 0) {
     AlarmSgnal();
   }
   delay(10);
-  Narcoleptic.delay(200);
-   Serial.println(' ');
-   delay(5000);
+  // Narcoleptic.delay(200);
+  delay(200);
+  Serial.println(' ');
+  delay(5000);
 }
 
-void MeasureSignal()
-{
+void MeasureSignal() {
   cli();
   TCCR1B |= (1 << WGM12);
   TCCR1B |= (1 << CS10);
@@ -76,46 +86,66 @@ void MeasureSignal()
   TCCR1B = 0;
 }
 
-ISR(TIMER1_COMPA_vect)
-{
+ISR(TIMER1_COMPA_vect) {
   myByte[ArrayIndex] = analogRead(analogPin);
   ArrayIndex++;
 }
 
-void sampleWindowFull()
-{
-  for (int i = 0; i < Np; i++)
-  {
-    //    int val = (analogRead(analogPin) - 512) * GAIN;
-    data[i] = myByte[i] * GAIN / 4;
-    im[i] = 0;
+void MaxMinInMeasedSignal() {
+  MaxMeasureValue = myByte[0];
+  MinMeasureValue = myByte[0];
+
+  for (int i = 1; i < Np; i++) {
+    if (myByte[i] > MaxMeasureValue) {
+      MaxMeasureValue = myByte[i];
+    }
+    if (myByte[i] < MinMeasureValue) {
+      MinMeasureValue = myByte[i];
+    }
   }
 }
 
-void updateData()
-{
-  for (int i = 0; i < (Np / 2 ); i++)
-  {
-//    data[i] = sqrt(data[i] * data[i] + im[i] * im[i]);
-    data[i] = (data[i] * data[i] + im[i] * im[i]);
+void sampleWindowFull() {
+  if ((MaxMeasureValue - MinMeasureValue) > 15) {
+    for (int i = 0; i < Np; i++) {
+      data[i] = map(myByte[i], MinMeasureValue, MaxMeasureValue, -127, 127);
+      im[i] = 0;
+    }
+  } else {
+    for (int i = 0; i < Np; i++) {
+      data[i] = myByte[i] - MinMeasureValue;
+      im[i] = 0;
+    }
+  }
+
+  // for (int i = 0; i < Np; i++) {
+  //   //    int val = (analogRead(analogPin) - 512) * GAIN;
+  //   data[i] = myByte[i] * GAIN / 4;
+  //   im[i] = 0;
+  // }
+}
+
+void updateData() {
+  for (int i = 0; i < (Np / 2); i++) {
+    //    data[i] = sqrt(data[i] * data[i] + im[i] * im[i]);
+    // data[i] = (data[i] * data[i] + im[i] * im[i]);
+    myByte[i] = sq(data[i]) + sq(im[i]);
   }
 }
 
-void showSpectrum()
-{
-  for (int i = 1; i < (Np / 2 ); i++)
-  {
+void showSpectrum() {
+  for (int i = 1; i < (Np / 2); i++) {
     Serial.print(i);
     Serial.print(' ');
-    //    Serial.println(myByte[i]);
-    //    int p = data[i];
-    Serial.println(data[i]);
+    // Serial.println(myByte[i]);
+    uint16_t p = myByte[i];
+    // Serial.println(data[i]);
+    Serial.println(p);
   }
   Serial.println();
 }
 
-void showMeasurement()
-{
+void showMeasurement() {
   for (int i = 0; i < Np; i++) {
     Serial.print(i);
     Serial.print(' ');
@@ -123,15 +153,21 @@ void showMeasurement()
   }
 }
 
-long  findF()
-{
-  int8_t maxValue = 0;
+void showDataArray() {
+  for (int i = 0; i < Np; i++) {
+    Serial.print(i);
+    Serial.print(' ');
+    Serial.println(data[i]);
+  }
+}
+
+long findF() {
+  uint16_t maxValue = 0;
   int maxIndex = 0;
-  for (int i = 1; i < (Np / 2 ); i++)
-  {
-    int p = data[i];
-    if (p > maxValue)
-    {
+  for (int i = 2; i < (Np / 2); i++) {
+    // int p = data[i];
+    int p = myByte[i];
+    if (p > maxValue) {
       maxValue = p;
       maxIndex = i;
     }
@@ -139,15 +175,16 @@ long  findF()
   if (maxValue > ThresholdValue) {
     return maxIndex * 1e6 / MeasureDelay / Np;
   } else {
-    return 0 ;
+    return 0;
   }
 }
 
 void AlarmSgnal() {
   //  Serial.println("Alarm");
-//  Serial.println(findF());
+  //  Serial.println(findF());
   digitalWrite(AlarmPin, HIGH);
-  Narcoleptic.delay(100);
+  // Narcoleptic.delay(100);
+  delay(100);
   digitalWrite(AlarmPin, LOW);
 }
 
@@ -156,5 +193,3 @@ void AlarmSgnal() {
 //    // delayMicroseconds(20);
 //    _delay_us(20);
 //  };
-
-
