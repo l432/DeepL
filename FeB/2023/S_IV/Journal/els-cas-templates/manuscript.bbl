@@ -1,13 +1,49 @@
-\begin{thebibliography}{44}
+\begin{thebibliography}{51}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\bibinfo}[2]{#2}
 \ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
 %Type = Article
-\bibitem[{Wolpert and Macready(1997)}]{NFL}
-\bibinfo{author}{D.~Wolpert}, \bibinfo{author}{W.~Macready},
-\newblock \bibinfo{title}{No free lunch theorems for optimization},
-\newblock \bibinfo{journal}{IEEE Trans. Evol. Comput.} \bibinfo{volume}{1}
-  (\bibinfo{year}{1997}) \bibinfo{pages}{67--82}.
+\bibitem[{Divya et~al.(2023)Divya, Adish, Kaustubh, and Zade}]{Divya2023}
+\bibinfo{author}{A.~Divya}, \bibinfo{author}{T.~Adish},
+  \bibinfo{author}{P.~Kaustubh}, \bibinfo{author}{P.~Zade},
+\newblock \bibinfo{title}{Review on recycling of solar modules/panels},
+\newblock \bibinfo{journal}{Sol. Energ. Mat. Sol.} \bibinfo{volume}{253}
+  (\bibinfo{year}{2023}) \bibinfo{pages}{112151}.
+%Type = Article
+\bibitem[{Wang et~al.(2022)Wang, Tian, Chen, Ren, and Geng}]{Wang2022}
+\bibinfo{author}{X.~Wang}, \bibinfo{author}{X.~Tian},
+  \bibinfo{author}{X.~Chen}, \bibinfo{author}{L.~Ren},
+  \bibinfo{author}{C.~Geng},
+\newblock \bibinfo{title}{A review of end-of-life crystalline silicon solar
+  photovoltaic panel recycling technology},
+\newblock \bibinfo{journal}{Sol. Energ. Mat. Sol.} \bibinfo{volume}{248}
+  (\bibinfo{year}{2022}) \bibinfo{pages}{111976}.
+%Type = Article
+\bibitem[{Sesa et~al.(2019)Sesa, Darwis, Zhou, Belcher, and Dastoor}]{Sesa2019}
+\bibinfo{author}{E.~Sesa}, \bibinfo{author}{D.~Darwis},
+  \bibinfo{author}{X.~Zhou}, \bibinfo{author}{W.~J. Belcher},
+  \bibinfo{author}{P.~C. Dastoor},
+\newblock \bibinfo{title}{{Experimental determination of the relationship
+  between the elements of a back-to-back diode model for organic photovoltaic
+  cells’ S-shaped I-V characteristics and cell structure}},
+\newblock \bibinfo{journal}{AIP Adv.} \bibinfo{volume}{9}
+  (\bibinfo{year}{2019}) \bibinfo{pages}{025014}.
+%Type = Article
+\bibitem[{Finck and Schwartz(2013)}]{Finck2013}
+\bibinfo{author}{B.~Y. Finck}, \bibinfo{author}{B.~J. Schwartz},
+\newblock \bibinfo{title}{{Understanding the origin of the S-curve in
+  conjugated polymer/fullerene photovoltaics from drift-diffusion
+  simulations}},
+\newblock \bibinfo{journal}{Appl. Phys. Lett.} \bibinfo{volume}{103}
+  (\bibinfo{year}{2013}) \bibinfo{pages}{053306}.
+%Type = Article
+\bibitem[{Zuo et~al.(2014)Zuo, Yao, Li, and Chen}]{Zuo2014}
+\bibinfo{author}{L.~Zuo}, \bibinfo{author}{J.~Yao}, \bibinfo{author}{H.~Li},
+  \bibinfo{author}{H.~Chen},
+\newblock \bibinfo{title}{Assessing the origin of the {S}-shaped {I–V} curve
+  in organic solar cells: {A}n improved equivalent circuit model},
+\newblock \bibinfo{journal}{Sol. Energ. Mat. Sol.} \bibinfo{volume}{122}
+  (\bibinfo{year}{2014}) \bibinfo{pages}{88--93}.
 %Type = Article
 \bibitem[{de~Castro et~al.(2010)de~Castro, Heier, N{\"u}esch, and
   Hany}]{Castro2010}
@@ -18,6 +54,35 @@
   cells},
 \newblock \bibinfo{journal}{IEEE J. Sel. Top. Quantum Electron.}
   \bibinfo{volume}{16} (\bibinfo{year}{2010}) \bibinfo{pages}{1690--1699}.
+%Type = Article
+\bibitem[{Romero et~al.(2017)Romero, del Pozo, Arredondo, Martín-Martín,
+  Gordoa, Pickering, Pérez-Rodríguez, Barrena, and
+  García-Sánchez}]{Romero2017}
+\bibinfo{author}{B.~Romero}, \bibinfo{author}{G.~del Pozo},
+  \bibinfo{author}{B.~Arredondo}, \bibinfo{author}{D.~Martín-Martín},
+  \bibinfo{author}{M.~P.~R. Gordoa}, \bibinfo{author}{A.~Pickering},
+  \bibinfo{author}{A.~Pérez-Rodríguez}, \bibinfo{author}{E.~Barrena},
+  \bibinfo{author}{F.~J. García-Sánchez},
+\newblock \bibinfo{title}{S-shaped ${I}$ – ${V}$ characteristics of organic
+  solar cells: Solving mazhari’s lumped-parameter equivalent circuit model},
+\newblock \bibinfo{journal}{IEEE Trans. Electron Devices} \bibinfo{volume}{64}
+  (\bibinfo{year}{2017}) \bibinfo{pages}{4622--4627}.
+%Type = Article
+\bibitem[{Gao et~al.(2011)Gao, Luther, Semonin, Ellingson, Nozik, and
+  Beard}]{Gao2011}
+\bibinfo{author}{J.~Gao}, \bibinfo{author}{J.~M. Luther},
+  \bibinfo{author}{O.~E. Semonin}, \bibinfo{author}{R.~J. Ellingson},
+  \bibinfo{author}{A.~J. Nozik}, \bibinfo{author}{M.~C. Beard},
+\newblock \bibinfo{title}{Quantom dot size dependent {J-V} characteristics in
+  heterojunction {ZnO/PbS} quantum dot solar cells},
+\newblock \bibinfo{journal}{Nano Lett.} \bibinfo{volume}{11}
+  (\bibinfo{year}{2011}) \bibinfo{pages}{1002--1008}.
+%Type = Article
+\bibitem[{Wolpert and Macready(1997)}]{NFL}
+\bibinfo{author}{D.~Wolpert}, \bibinfo{author}{W.~Macready},
+\newblock \bibinfo{title}{No free lunch theorems for optimization},
+\newblock \bibinfo{journal}{IEEE Trans. Evol. Comput.} \bibinfo{volume}{1}
+  (\bibinfo{year}{1997}) \bibinfo{pages}{67--82}.
 %Type = Article
 \bibitem[{Romero et~al.(2012)Romero, {del Pozo}, and
   Arredondo}]{CastroSolution}

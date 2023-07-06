@@ -112,6 +112,246 @@ Meta--heuristic algorithms \sep Nonparametric statistical procedure \sep Solar c
 % Main text
 \section{Introduction}\label{Int}
 
+Photovoltaics (PV) is widely regarded as the most promising sustainable 
+clean energy technology to meet the rising energy demand of our global population.
+By the end of 2021, the installed capacity of global solar PV panels reached an impressive 971 GW, 
+with an additional 183 GW added in 2021 alone \cite{Divya2023}.
+According to the International Energy Agency (IEA) reports, the cumulative installed PV capacity 
+was predicted to increase to 1.826 TW by 2026 [6] and 14.5 TW by 2050 \cite{Wang2022}.
+Currently, silicon solar cells make up approximately 90\% of the global photovoltaic production capacity.
+But recently, intensive research is underway for innovative developments, 
+further experiments, and practical PV applications of various new-generation solar cells.
+However recently, intensive research is underway for innovative developments, further experiments, 
+and practical photovoltaic applications of various new-generation solar cells. 
+The operating principle of new-generation solar cells is qualitatively similar to silicon-based ones. 
+However, it is important to note that the fourth quadrant of their current-voltage (IV) characteristics 
+often exhibits an S-shaped deformation or kink.
+This kink’s origin has been attributed to various physical phenomena:
+charge trapping at the cathode interface \cite{Sesa2019,Finck2013},
+rectifying Schottky junction at the anode interface \cite{Zuo2014}
+change of the electric field distribution \cite{Castro2010}, 
+presence of strong interface dipoles \cite{Romero2017},
+unbalanced charge transport \cite{Gao2011}.
+
+
+
+
+%------------------------------------
+%perovskite SC with fullerene electron transport layer and the carbon nanotube  top electrode \cite{CastroUsePerovskitIonikLiquid}
+%Ionic Liquid Gating in Perovskite Solar Cells with Fullerene/Carbon Nanotube Collectors \cite{CastroUsePerovskitFullerene}
+%\cite{CastroUseBook}
+%
+%organic solar cells through gold ion implantation in the PEDOT:PSS laye \cite{BrenesBadilla2018}
+%---------------------------------------------
+%An S-shaped current–voltage characteristic is frequently observed in a photovoltaic
+%cell using emerging materials such as organic semiconductors and organic–
+%inorganic perovskite materials. \cite{Tada2021}
+%
+%small molecular bulk heterojunction photocells
+%using a composite consisting of p-DTS(FBTTh2)2 and neat
+%C70 (organic) \cite{Tada2015Organic}
+%
+%polymer photocell \cite{Tada2017}
+%
+%ternary organic solar cells \cite{Makha2018}
+%
+%organic \cite{delPozo2012}
+% typical phenomenon in BHJ
+%solar cells is the appearance of a ‘‘kink’’ or S-shape in the J–V
+%characteristic.
+%This bulk
+%heterojunction (BHJ)
+%
+%organic \cite{Arredondo2018}
+%-----------------------------------------------------
+%\cite{Yu2019a}
+%
+%
+%In fact, the most important attribution of our manuscript is
+%deriving the analytical solutions of the reported circuits [7,14,17] to
+%improve the simulation efficiency and giving the detailed discussions
+%about the effects from the model parameters on
+%
+%Recently, many kinds of new generation solar cells are undergoing
+%the intensive researches for innovative developments, further experiments, and practical photovoltaic applications. These new generation
+%solar cells include non-crystalline hetero-junction solar cells [1], silicon
+%quantum dot solar cells [2], perovskite semiconductor solar cells [3,4],
+%organic semiconductor-based solar cells [5,6], and so on. Among all of
+%these above solar cells, i.e., the most promising candidates for the next
+%generation photovoltaic devices, the S-shaped I-V characteristics show
+%up under the dark and illumination conditions and impair energy
+%conversion capacity because of the decrease of the fill factor [7].
+%Especially, the presence of the anomalous S-shaped kink [8] at large
+%forward voltages in the first quadrant of the I–V characteristics, resulting from contact and other interface phenomena [9], must be
+%minimized or suppressed [10].
+%Compared with the conventional solar cell lumped-parameter
+%models [11], more suitable specialized lumped-parameter equivalent
+%circuit models [7,12–17] are introduced to specifically represent the Sshaped I-V characteristics of solar cells by adding an additional subcircuit, which are regarded as a tool for analysis of the effects from the
+%
+%-------------------------------------
+%Equivalent circuit models are becoming increasingly important for the development of large scale demonstrations of organic
+%photovoltaics. The ‘S’ shaped profile is a common feature of OPV current-voltage (I-V) curves and consequently equivalent
+%circuit models that replicate these features are urgently required.
+% to a non-ideal ‘S’ shape with
+%a ‘kink’ in the current-voltage (I-V) plot when under AM1.5G
+%illumination
+% new back-to-back diode model (B2BDM)
+% ‘S’ shaped IV curve arises from charge trapping due to the presence of highly oxidised aluminium at the active-layer/cathode interface.
+% One of the most common approaches to understanding the electrical characteristics of PV devices is to use an equivalent circuit model to fit the shape of the I-V curve
+% \cite{Sesa2019}
+%
+%
+%de Castro et al. reported that isolated metal nanoclusters formed upon cathode evaporation lead to interfacial
+%defect states and change the electric field of the device; resulting in ‘S’ shaped I-V curves. \cite{Castro2010}
+%
+%Zuo et al. showed that ‘S’-shaped
+%curves could be produced in planar bilayer devices by creating a rectifying Schottky junction at the anode interface \cite{Zuo2014}
+%тут же запропонована модель - два послідовних діода (в одному напрямі), паралельно кожному з них опір
+%
+%while Finck argued that S’-shaped
+%curves are caused by factors that affect the extraction of
+%charge at the device cathode.
+%conjugated polymer/fullerene photovoltaics \cite{Finck2013}
+%
+%
+%
+%----------------------------------------------------------------
+%\cite{SshapeRewShot} загалом це огляд моделей
+%
+%A most
+%troubling occurrence is the presence of an illumination
+%intensity-dependent S-shaped kink in the power-producing
+%fourth (also the first) quadrant of the I-V characteristics of
+%some developmental solar cells while they are still unoptimized, or when they have deteriorated [2]. Such S-shaped
+%kinks are typically observed in the I-V curves of certain classes
+%of emergent photovoltaic devices, such as small molecule and
+%polymeric bulk heterojunction in normal and inverted organic
+%solar cells (OSCs) [2]-[7]. They also show up in some other
+%types of unconventional amorphous, inorganic and hybrid
+%solar cells [8]-[13] that are potential candidates for nextgeneration photovoltaics.
+%
+%The circuit model proposed by De Castro et al [15], shown
+%in Fig. 5.b, represents an outstanding step, because it
+%satisfactorily reproduces the S-shaped kink within the powerproducing fourth quadrant of the illuminated I-V
+%characteristics. Unfortunately, however, it cannot adequately
+%describe the I-V curve beyond the open-circuit point in the first
+%quadrant, where the current of many practical devices often
+%keep on growing, describing an exponential-like upward turn
+%
+%---------------------------------------------------------------------
+%\cite{GarciaSanchez2013}
+%покращення кастро-моделі за рахунок заміни опору на діод
+%
+%The occurrence of this anomalous “kink” also seems to be dependent on
+%fabrication and postdeposition treatment. Th
+%
+%n the first quadrant of their already anomalous
+%S-shaped I–V characteristics for voltages  VOC
+%
+%----------------------------------------------
+
+%\cite{Romero2015}
+%кастро модель згадується, але я так і не зрозумів, чи використовується вона для опису органічних SC
+%
+%However, OSCs frequently show the so-called S-shape, a
+%curvature change in the current–voltage (I–V) characteristic
+%[6]–[9].
+%The physical origin of the S-shape
+%is still a matter of controversy. The most extended hypothesis
+%points out that S-shape is caused by an accumulation of
+%carriers inside the device, which results in a change of the
+%electric field distribution [10], or in other words, S-shape is
+%related to poor electron extraction layers [11], [12]. S-shape
+%has been found in devices with different structures, both
+%direct and inverted, and in devices with different active
+%
+%---------------------------------------------------------------
+%\cite{Mazhari2006}
+%
+%модель Mazhari - модифікована стандартна 2-діодна модель за рахунок включення третього діоду,
+%проста, бо опорів немає
+%
+%-------------------------------------------------------------------
+%покращена модель Mazhari за рахунок введення двох додаткових опорів
+%
+%\cite{Yu2019}
+%OOSolEner_177_p229
+%-------------------------------------------------------------
+%\cite{Gaur2014}
+%
+%Polymer solar cells
+%
+%модель як дводіодна, тільки один діод перевернули
+%
+%
+%--------------------------------------------------------------
+%
+%\cite{Romero2017}
+%
+%сама по собі стаття може й не потрібна
+
+%One important issue often encountered in OSCs is the
+%so-called S-shaped deformation, or kink, that sometimes
+%emerges near the open-circuit voltage point in the I–V curves
+%measured under illumination.
+
+
+%
+%This kink’s origin has been attributed in
+%OSCs to various physical phenomena: charge accumulation
+%at the cathode interface [8], [9], presence of strong interface dipoles [10], unbalanced charge transport, and interfacial
+%energy barriers. S-shaped I–V curves have been observed in
+%the cells of different materials and structures [11]–[13], as well
+%as in inorganic solar cells, such as PbS quantum dots [14],
+%CdTe [15], [16], III–V tandems [17], and graphene-silicon
+%Schottky barrier solar cells [18]
+%
+%Equivalent circuit modeling allows simulation, analysis, and
+%optimization of device performance.
+%
+%-----------------------------------------------------
+%\cite{Gao2011}
+%
+%inorganic solar cells, such as PbS quantum dots (S-0shape) +
+%модель: два протилежні діоди (не зустрічні), два джерела струму, опорів немає
+%
+%One of the most frequent failure
+%modes of OSCs that appeared in literatures is the formation of Sshaped I–V curve
+%
+%By changing the device structures, controlled S-shaped
+%I–V curves were formed and these results indicated that the
+%S-shaped I–V curve could be induced by different reasons: interfacial dipole, charge accumulation at interface, unbalanced charge
+%transportation, and electrode/active layer interfacial Schottky
+%barriers.
+%
+%An equivalent circuit model helps in understanding the work
+%principles of OSCs, interpreting the I–V characteristics and device
+%performances, and optimizing the performance of OSCs, through a
+%quantitative simulation.
+%-----------------------------------------------------
+%\cite{DeCastro2016}
+%
+%sometimes a kink (that
+%we will refer to as s-shape) is observed in the current voltage
+%curves
+%
+%покращення Кастро - діод і опір додаткові
+%
+%-------------------------------------------------
+%\cite{Roland2016}
+%
+%So-called S-kink current vs. voltage (J-V) curves have been reported for solar cells based on numerous different materials and architectures, including but not limited to devices based on organic materials, chalcogenides including CIGS and CdTe, and passivated c-Si heterojunction devices.
+%
+%таке ж саме покращення, як і в попередньому
+%
+%-----------------------------------------------
+%\cite{Saive2019}
+%
+%типи сонячних елементів, де спостерігаються
+%
+%S-Shaped Current–Voltage Characteristics in Solar Cells: A Review
+%
+%----------------------------------------------------------------------
 
 
 %According to No Free Lunch (NFL), it is logically proved that
@@ -144,7 +384,7 @@ resistor $R_\mathrm{p1}$ to show the leakage current, and a series resistor $R_\
 losses associated with the load current.
 Besides, the second diode D2 with a second parallel resistance $R_\mathrm{p2}$ is placed opposite to the first one and is essential to
 simulate the non-ideal effects of the active layer/cathode interface.
-In this model, D1 is responsible for the exponential behavior of the I--V curve,
+In this model, D1 is responsible for the exponential behavior of the IV curve,
 the main contribution of D2 is to simulate the S--shape.
 The analytical solution $V(I)$ of the opposed two--diode equivalent circuit model was
  obtained \cite{CastroSolution} using Lambert $W$-function \cite{LambertNew}:
@@ -173,7 +413,7 @@ and $I_\mathrm{ph}$ is the ideal photocurrent.
 Thus, the model employs eight lumped parameters
 ($I_{01}$, $n_1$, $R_\mathrm{p1}$, $I_{02}$, $n_2$, $R_\mathrm{p2}$,
 $R_\mathrm{s}$, and $I_\mathrm{ph}$)
-that need to be determined from the I-V curve.
+that need to be determined from the IV curve.
 Thus, from an optimization perspective, the dimension of the problem is $D=8$.
 
 The expression~(\ref{eqIV_W}) has a drawback in that it tends to stray from the range of numbers that can be accommodated by the standard 64-bit floating-point format owing to the presence of exponential functions for larger numbers.
@@ -644,6 +884,7 @@ Notably, WW, ISCA, NNA, and STLBO converge the fastest, while ADELI, TLBO, and M
 To choose the more suitable fitness function, we evaluated each algorithm using the IV curve generated from the parameters
 provided in Eq.~(\ref{eqParSingleIV}) with both $F_\mathrm{AE}$ and $F_\mathrm{SE}$ functions (see Eqs.~(\ref{eqFae}) and (\ref{eqFse})).
 Afterward, the results obtained using each of the functions were compared through pairwise comparisons.
+In this case, the absolute percentage error values obtained for one-run algorithm application ($\mathrm{APE}_i$) were used.
 Table~\ref{tblFF} gives the statistical results produced by Wilcoxon sign-rank test with a significant level $\alpha = 0.05$.
 A cell marked with the symbol ``SE'' indicates that estimation of parameter specified in the column by the algorithm with $F_\mathrm{SE}$ outperforms result obtained by this  algorithm with $F_\mathrm{AE}$.
 A cell marked with the symbol ``AE'' indicates better results for function $F_\mathrm{AE}$.
@@ -725,7 +966,7 @@ Possible exceptions only apply to the estimation of $R_\mathrm{s}$ and $R_\mathr
 However, in cases where a method allows for parameter estimation with high accuracy (EBLSHADE, ADELI, TLBO, and STLBO),
 MEDIANs are at least as good as the MEANs.
 As a result, we will utilize median values as a robust measure of central tendency in nonparametric statistical tests.
-Secondly, the increase in algorithm stability (reduction in STD and IQR values) in determining each model parameter correlates with the accuracy of parameter estimation. 
+Secondly, the increase in algorithm stability (reduction in STD and IQR values) in determining each model parameter correlates with the accuracy of parameter estimation.
 Furthermore, IQR values are generally no worse than STD values.
 Finally, small RMSPE values (close match between the fitting curve and the IV points)
 do not always indicate high accuracy in determining the parameters of a solar cell --- see IJAYA and NDE data.
@@ -746,16 +987,16 @@ In our case, when applying meta--heuristic algorithms, the worst--case run time 
 
 In order to statistically compare the algorithm under consideration, we use nonparametric tests.
 In the single--IV case, all nonparametric statistical tests were used to compare the performance of meta--heuristic algorithms in assessing each of the eight model parameters.
-The $\mathrm{APE}_i$ values were used, and the number of case problems in the study $n$ was equal to $N_\mathrm{runs}=51$.
+The $\mathrm{APE}_i$ values were used, and the number of case problems in the study $N_\mathrm{pr}$ was equal to $N_\mathrm{runs}=51$.
 Additionally, algorithms were compared in terms of curve-fitting accuracy by using RMSPE values.
 Furthermore, tests were employed for a composite parameter as well.
 This parameter, referred to as ``Comp'' hereafter, includes $\mathrm{APE}_\mathrm{MEDIAN}$ for each of the eight defined model parameters,
 the median value for RMSPE, and $t_\mathrm{run}$.
-This parameter may provide the most valuable insights for comparing algorithms. However, it is important to note that the value of $n$ is only 10.
-According to Derrac \emph{et al} \cite{Derrac2011}, the number of case problems should be $n\geq 2k$,
+This parameter may provide the most valuable insights for comparing algorithms. However, it is important to note that the value of $N_\mathrm{pr}$ is only 10.
+According to Derrac \emph{et al} \cite{Derrac2011}, the number of case problems should be $N_\mathrm{pr}\geq 2k$,
 where $k$ is the number of algorithms ($k=14$ in our study).
 Therefore, the use of the Comp parameter is not strictly rigorous.
-Indeed, it would have been possible to increase the $n$ value using, for example, $\mathrm{APE}_\mathrm{MEAN}$.
+Indeed, it would have been possible to increase the $N_\mathrm{pr}$ value using, for example, $\mathrm{APE}_\mathrm{MEAN}$.
 However, considering the deliberate utilization of a suboptimal parameter would have appeared inappropriate.
 
 
@@ -1350,15 +1591,15 @@ Simultaneously, EBLSHADE, TLBO, IJAYA, and NDE form a group of algorithms with l
 In the IV--set case, to assess the statistical performance of compared algorithms,
 the run time and all $\mathrm{APE}_\mathrm{MEDIAN}$ and $\mathrm{RMSPE}_\mathrm{MEDIAN}$ for each IV curve were taken into account.
 This approach is similar to the use of the Comp parameter in the previous subsection;
-however, in this scenario, $n=81$ is employed:
+however, in this scenario, $N_\mathrm{pr}=81$ is employed:
 \begin{equation*}
-n= 10\,T_\mathrm{values}\times(8\,\mathrm{APE}_\mathrm{MEDIAN}+1\,\mathrm{RMSPE}_\mathrm{MEDIAN})+1\,t_\mathrm{run}\,.
+N_\mathrm{pr}= 10\,T_\mathrm{values}\times(8\,\mathrm{APE}_\mathrm{MEDIAN}+1\,\mathrm{RMSPE}_\mathrm{MEDIAN})+1\,t_\mathrm{run}\,.
 \end{equation*}
 %10 temperature values $\times(\mathrm{APE}_\mathrm{MEDIAN}+1\mathrm{RMSPE}_\mathrm{MEDIAN})+1t_\mathrm{run}$.
 Therefore, such an approach is well-suited for nonparametric statistical analysis of $k=14$ meta-heuristic algorithms.
 Certainly, at first sight, it would be interesting to consider incorporating an additional 80 values of the interquartile range into the dataset.
 This approach could provide consideration into the stability of algorithm performance as well.
-However, it is known \cite{Derrac2011} that for multiple comparisons, a value of $n\geq 8\cdot k=112$ could be too high, obtaining
+However, it is known \cite{Derrac2011} that for multiple comparisons, a value of $N_\mathrm{pr}\geq 8\cdot k=112$ could be too high, obtaining
 no significant comparisons as a result.
 
 Table~\ref{tblWilIVset}  gives the statistical results produced by the Wilcoxon sign--rank test.
@@ -1594,21 +1835,21 @@ using ADELI, TLBO, and STLBO algorithms for $N\times N$ comparisons in the oppos
 In $1\times N$ comparisons, TLBO demonstrates lower performance compared to ADELI and STLBO,
 in terms of efficiency when compared to the EBLSHADE algorithm.
 Specifically, the improvement of TLBO over EBLSHADE is proved only by the Finner procedure applied in the Friedman test.
-Based on $1\times N$ comparisons, it is observed as well that there are slight differences between ADELI and STLBO, 
+Based on $1\times N$ comparisons, it is observed as well that there are slight differences between ADELI and STLBO,
 primarily when compared to the non-worst algorithms.
 For instance, the Quade test confirms the improvement of ADELI over EBLSHADE for every post-hoc procedure,
 however, the Friedman and Friedman Aligned tests did not show statistically significant differences between these algorithms.
-Meanwhile, the Friedman Aligned and Quade tests find a difference between STLBO and EBLSHADE 
+Meanwhile, the Friedman Aligned and Quade tests find a difference between STLBO and EBLSHADE
 for every post-hoc procedure and Finner procedure only, respectively.
-Regarding comparison with NDE, the Friedman Aligned test demonstrated that STLBO is better according to all post-hoc procedures. 
+Regarding comparison with NDE, the Friedman Aligned test demonstrated that STLBO is better according to all post-hoc procedures.
 In contrast, for ADELI, this outperforming was only observed using the Finner method.
-In the case of IJAYA, 
-the results of the Friedman Aligned test show a reversal: 
-only the Finner procedure indicates an improvement for STLBO, 
+In the case of IJAYA,
+the results of the Friedman Aligned test show a reversal:
+only the Finner procedure indicates an improvement for STLBO,
 whereas ADELI outperforms all post-hoc methods utilized.
 
-In deciding the optimal algorithm for parameter estimation of solar cell parameters 
-from the IV curve using the opposed two-diode model, 
+In deciding the optimal algorithm for parameter estimation of solar cell parameters
+from the IV curve using the opposed two-diode model,
 the practical choices boil down to EBLSHADE, ADELI, TLBO, and STLBO.
 However, TLBO exhibited lower performance when applied in the single-IV case.
 The parameter estimation error when using EBLSHADE was not always minimal in the IV-set case.
@@ -1623,37 +1864,38 @@ In our opinion, STLBO and ADELI both hold the top position in the competition co
 
 \section{Conclusion}
 
-In this paper, the possibility of using a meta--heuristic algorithms 
-to solve the parameter estimation problems of photovoltaic cells 
+In this paper, the possibility of using a meta--heuristic algorithms
+to solve the parameter estimation problems of photovoltaic cells
 with S--shaped current--voltage characteristics has been explored.
 The parameter estimation has been performed within the framework of the opposed two-diode model.
-A total of 16 meta--heuristic algorithms from various classes were implemented 
+A total of 16 meta--heuristic algorithms from various classes were implemented
 to extract the solar cell parameters from synthetic IV curves, which were generated with a range of parameter values.
-The obtained results have been compared using nonparametric statistical procedures, 
+The obtained results have been compared using nonparametric statistical procedures,
 including pairwise comparisons, $1\times N$ multiple comparisons, and $N\times N$ multiple comparisons.
 
 Research has demonstrated that utilizing a squared error-based fitness function offers clear advantages in tackling a provided problem.
-The overall performance results of various algorithms generally fit the ‘‘No-Free-Lunch’’ theorem.
+The overall performance results of various algorithms generally fit the No Free Lunch theory.
+%‘‘No-Free-Lunch’’ theorem.
 GOTLBO, PSO, ISCA, NNA, CWOA, and WW are completely unsuitable for parameter estimation according to the opposed two-diode model.
-The results of DE, NDE, MABC, and IJAYA are not as poor as those in the previous group; 
+The results of DE, NDE, MABC, and IJAYA are not as poor as those in the previous group;
 however, in general, it is still not recommended to use these algorithms for solving parameter identification problems.
 Generally, the EBLSHADE and TLBO are effective in accurately determining parameter values in most cases.
 However, investigation has shown that these algorithms may make mistakes under certain conditions.
 Therefore, EBLSHADE and TLBO applications in the case of solar cells with S-shaped IV curves should be approached with caution.
-Finally, results have illustrated that STLBO and ADELI have superior performance in terms of accuracy and reliability 
+Finally, results have illustrated that STLBO and ADELI have superior performance in terms of accuracy and reliability
 when compared with other used algorithms.
-In particular, these two algorithms successfully solve the task of accurately determining parameters 
+In particular, these two algorithms successfully solve the task of accurately determining parameters
 from similar IV curves corresponding to photovoltaic cells with distinct characteristics.
 
-It is important to note that in this study, 
-the parameters were obtained from idealized IV curves, 
+It is important to note that in this study,
+the parameters were obtained from idealized IV curves,
 where the voltage-current relationships were precisely defined by Eq.~(\ref{eqIV_g}).
 In a real experiment, there is a potential for errors in the measurement of both current and voltage.
 Hence,  it would be worthwhile to explore the efficacy of various meta--heuristic algorithms
 in determining parameters from IV data corrupted by noise in future research.
 
 This work of test and comparative analysis of
-different meta--heuristic algorithms  for determination 
+different meta--heuristic algorithms  for determination
 of solar cell parameters should be useful for further research and development on photovoltaic systems.
 
 
