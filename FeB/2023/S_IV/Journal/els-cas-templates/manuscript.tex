@@ -112,26 +112,49 @@ Meta--heuristic algorithms \sep Nonparametric statistical procedure \sep Solar c
 % Main text
 \section{Introduction}\label{Int}
 
-Photovoltaics (PV) is widely regarded as the most promising sustainable 
+Photovoltaics (PV) is widely regarded as the most promising sustainable
 clean energy technology to meet the rising energy demand of our global population.
-By the end of 2021, the installed capacity of global solar PV panels reached an impressive 971 GW, 
+By the end of 2021, the installed capacity of global solar PV panels reached an impressive 971 GW,
 with an additional 183 GW added in 2021 alone \cite{Divya2023}.
-According to the International Energy Agency (IEA) reports, the cumulative installed PV capacity 
-was predicted to increase to 1.826 TW by 2026 [6] and 14.5 TW by 2050 \cite{Wang2022}.
+According to the International Energy Agency (IEA) reports, the cumulative installed PV capacity
+was predicted to increase to 1.826 TW by 2026 and 14.5 TW by 2050 \cite{Wang2022}.
 Currently, silicon solar cells make up approximately 90\% of the global photovoltaic production capacity.
-But recently, intensive research is underway for innovative developments, 
-further experiments, and practical PV applications of various new-generation solar cells.
-However recently, intensive research is underway for innovative developments, further experiments, 
-and practical photovoltaic applications of various new-generation solar cells. 
-The operating principle of new-generation solar cells is qualitatively similar to silicon-based ones. 
-However, it is important to note that the fourth quadrant of their current-voltage (IV) characteristics 
+But recently, intensive research is underway for innovative developments,
+further experiments, and practical PV applications of various new-generation solar cells (SCs).
+The operating principle of new-generation solar cells is qualitatively similar to silicon-based ones.
+However, it is important to note that the fourth quadrant of their current-voltage (IV) characteristics
 often exhibits an S-shaped deformation or kink.
 This kink’s origin has been attributed to various physical phenomena:
 charge trapping at the cathode interface \cite{Sesa2019,Finck2013},
 rectifying Schottky junction at the anode interface \cite{Zuo2014}
-change of the electric field distribution \cite{Castro2010}, 
+change of the electric field distribution \cite{Castro2010},
 presence of strong interface dipoles \cite{Romero2017},
 unbalanced charge transport \cite{Gao2011}.
+Furthermore, it is worth noting that such a feature of the IV characteristics is typical
+in the most promising candidates for the next generation of photovoltaic devices.
+Specifically, S-shaped IV curves have been observed in silicon heterojunction SCs \cite{Saive2019}, 
+thin-film SCs such as CdTe, CI(G)S, and amorphous silicon PV devices \cite{Saive2019,Roland2016}, 
+normal and inverted organic SCs \cite{Gaur2014,Tran2017,Lastra2019}, 
+perovskite SCs \cite{Saive2019,Xu2016}, 
+quantum dot SCs \cite{Gao2011,Yu2019a}, 
+and hybrid SCs \cite{VeinbergVidal2016,Romero2017,Finck2013}.
+
+
+%Equivalent circuit models are becoming increasingly important for the development of large scale demonstrations of organic
+%photovoltaics. 
+% One of the most common approaches to understanding the electrical characteristics of PV devices is to use an equivalent circuit model to fit the shape of the I-V curve
+
+%Equivalent circuit modeling allows simulation, analysis, and
+%optimization of device performance.
+
+%
+%An equivalent circuit model helps in understanding the work
+%principles of OSCs, interpreting the I–V characteristics and device
+%performances, and optimizing the performance of OSCs, through a
+%quantitative simulation.
+
+%Compared with the conventional solar cell lumped-parameter
+%models [11], 
 
 
 
@@ -172,18 +195,6 @@ unbalanced charge transport \cite{Gao2011}.
 %improve the simulation efficiency and giving the detailed discussions
 %about the effects from the model parameters on
 %
-%Recently, many kinds of new generation solar cells are undergoing
-%the intensive researches for innovative developments, further experiments, and practical photovoltaic applications. These new generation
-%solar cells include non-crystalline hetero-junction solar cells [1], silicon
-%quantum dot solar cells [2], perovskite semiconductor solar cells [3,4],
-%organic semiconductor-based solar cells [5,6], and so on. Among all of
-%these above solar cells, i.e., the most promising candidates for the next
-%generation photovoltaic devices, the S-shaped I-V characteristics show
-%up under the dark and illumination conditions and impair energy
-%conversion capacity because of the decrease of the fill factor [7].
-%Especially, the presence of the anomalous S-shaped kink [8] at large
-%forward voltages in the first quadrant of the I–V characteristics, resulting from contact and other interface phenomena [9], must be
-%minimized or suppressed [10].
 %Compared with the conventional solar cell lumped-parameter
 %models [11], more suitable specialized lumped-parameter equivalent
 %circuit models [7,12–17] are introduced to specifically represent the Sshaped I-V characteristics of solar cells by adding an additional subcircuit, which are regarded as a tool for analysis of the effects from the
@@ -218,17 +229,6 @@ unbalanced charge transport \cite{Gao2011}.
 %----------------------------------------------------------------
 %\cite{SshapeRewShot} загалом це огляд моделей
 %
-%A most
-%troubling occurrence is the presence of an illumination
-%intensity-dependent S-shaped kink in the power-producing
-%fourth (also the first) quadrant of the I-V characteristics of
-%some developmental solar cells while they are still unoptimized, or when they have deteriorated [2]. Such S-shaped
-%kinks are typically observed in the I-V curves of certain classes
-%of emergent photovoltaic devices, such as small molecule and
-%polymeric bulk heterojunction in normal and inverted organic
-%solar cells (OSCs) [2]-[7]. They also show up in some other
-%types of unconventional amorphous, inorganic and hybrid
-%solar cells [8]-[13] that are potential candidates for nextgeneration photovoltaics.
 %
 %The circuit model proposed by De Castro et al [15], shown
 %in Fig. 5.b, represents an outstanding step, because it
@@ -256,14 +256,6 @@ unbalanced charge transport \cite{Gao2011}.
 %However, OSCs frequently show the so-called S-shape, a
 %curvature change in the current–voltage (I–V) characteristic
 %[6]–[9].
-%The physical origin of the S-shape
-%is still a matter of controversy. The most extended hypothesis
-%points out that S-shape is caused by an accumulation of
-%carriers inside the device, which results in a change of the
-%electric field distribution [10], or in other words, S-shape is
-%related to poor electron extraction layers [11], [12]. S-shape
-%has been found in devices with different structures, both
-%direct and inverted, and in devices with different active
 %
 %---------------------------------------------------------------
 %\cite{Mazhari2006}
@@ -285,7 +277,6 @@ unbalanced charge transport \cite{Gao2011}.
 %
 %
 %--------------------------------------------------------------
-%
 %\cite{Romero2017}
 %
 %сама по собі стаття може й не потрібна
@@ -318,11 +309,6 @@ unbalanced charge transport \cite{Gao2011}.
 %One of the most frequent failure
 %modes of OSCs that appeared in literatures is the formation of Sshaped I–V curve
 %
-%By changing the device structures, controlled S-shaped
-%I–V curves were formed and these results indicated that the
-%S-shaped I–V curve could be induced by different reasons: interfacial dipole, charge accumulation at interface, unbalanced charge
-%transportation, and electrode/active layer interfacial Schottky
-%barriers.
 %
 %An equivalent circuit model helps in understanding the work
 %principles of OSCs, interpreting the I–V characteristics and device
@@ -340,16 +326,11 @@ unbalanced charge transport \cite{Gao2011}.
 %-------------------------------------------------
 %\cite{Roland2016}
 %
-%So-called S-kink current vs. voltage (J-V) curves have been reported for solar cells based on numerous different materials and architectures, including but not limited to devices based on organic materials, chalcogenides including CIGS and CdTe, and passivated c-Si heterojunction devices.
+%So-called S-kink current vs. voltage (J-V) curves have been reported 
+%for solar cells based on numerous different materials and architectures,
+%including but not limited to devices based on organic materials, chalcogenides including CIGS and CdTe, and passivated c-Si heterojunction devices.
 %
 %таке ж саме покращення, як і в попередньому
-%
-%-----------------------------------------------
-%\cite{Saive2019}
-%
-%типи сонячних елементів, де спостерігаються
-%
-%S-Shaped Current–Voltage Characteristics in Solar Cells: A Review
 %
 %----------------------------------------------------------------------
 
