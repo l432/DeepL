@@ -132,34 +132,101 @@ presence of strong interface dipoles \cite{Romero2017},
 unbalanced charge transport \cite{Gao2011}.
 Furthermore, it is worth noting that such a feature of the IV characteristics is typical
 in the most promising candidates for the next generation of photovoltaic devices.
-Specifically, S-shaped IV curves have been observed in silicon heterojunction SCs \cite{Saive2019}, 
-thin-film SCs such as CdTe, CI(G)S, and amorphous silicon PV devices \cite{Saive2019,Roland2016}, 
-normal and inverted organic SCs \cite{Gaur2014,Tran2017,Lastra2019}, 
-perovskite SCs \cite{Saive2019,Xu2016}, 
-quantum dot SCs \cite{Gao2011,Yu2019a}, 
+Specifically, S-shaped IV curves have been observed in silicon heterojunction SCs \cite{Saive2019},
+thin-film SCs such as CdTe, CI(G)S, and amorphous silicon PV devices \cite{Saive2019,Roland2016},
+normal and inverted organic SCs \cite{Gaur2014,Tran2017,Lastra2019},
+perovskite SCs \cite{Saive2019,Xu2016},
+quantum dot SCs \cite{Gao2011,Yu2019a},
 and hybrid SCs \cite{VeinbergVidal2016,Romero2017,Finck2013}.
 
 
-%Equivalent circuit models are becoming increasingly important for the development of large scale demonstrations of organic
-%photovoltaics. 
-% One of the most common approaches to understanding the electrical characteristics of PV devices is to use an equivalent circuit model to fit the shape of the I-V curve
+One of the most common approaches to understanding the electrical characteristics of PV devices
+is to use an equivalent circuit model to fit the shape of the IV curve.
+Such lumped-parameter modeling allows simulation, analysis, and optimization of device performance.
+The most frequently used conventional solar cell lumped-parameter models are single-diode model (SDM), double-diode
+model (DDM), and three-diode model (TDM) models.
+The models incorporate parallel-connected diodes that activate in one direction,
+a photo-current source, a parallel shunt resistance, and a series resistance.
+The PV module model (PVMM) is based on SDM and is made up of several diodes in series or parallel.
 
-%Equivalent circuit modeling allows simulation, analysis, and
-%optimization of device performance.
+Unfortunately, the conventional models failed in describing the S-shaped kink.
+Thus, new models are proposed to give some reasonable IV curve shape explanations on the IV curve shape from the view of electricity.
+One of the earliest attempts to develop such a model was proposed by Mazhari \cite{Mazhari2006}.
+This model is essentially a simplified version of the SDM, achieved by excluding resistances and incorporating an additional diode.
+Up to now, Mazhari’s model is the simplest circuit because the least fitting parameters are required for simulations.
+Mazhari’s model fails to capture the linear-like rise S-shaped kink in the third quadrant,
+and the model, which improved by incorporating two resistance, proposed for organic SCs \cite{Yu2019}.
+Gaur and Kumar \cite{Gaur2014} proposed equivalent circuit models to represent the behavior of polymer solar in the dark.
+This model is almost identical to the DDM, except one of the diodes is the opposite.
+Another way to develop equivalent models involved using multiple series diodes, unlike conventional approaches.
+Zuo \emph{et al}. \cite{Zuo2014} offered to explain the S-shape by utilizing a model consisting
+of two series diodes connected in the same direction, two shunt resistors, and one series resistor.
+Another lumped-parameter equivalent circuit holds two opposed diodes, two opposed current sources, and no resistors \cite{Gao2011}.
+De Castro et al \cite{Castro2010} proposed a model consisting of two opposed diodes with shunt resistance for each,
+a series resistance, and a photo-current source.
+The last model represents a significant advancement 
+as it successfully reproduces the S-shaped kink in the power-producing fourth quadrant 
+of the illuminated IV characteristics. 
+However, it falls short of adequately describing the IV curve 
+beyond the open-circuit point in the first quadrant, 
+where the current of many practical devices tends to continue increasing \cite{SshapeRewShot}.
+To address this challenge, a potential solution was suggested --- 
+incorporating a third diode that would either replace one of the shunt resistances \cite{GarciaSanchez2013} 
+or be placed in parallel with it \cite{DeCastro2016,Roland2016}.
+In general, the developing models to describe S-shaped IV curves continues. 
+For instance, a relatively recent proposal \cite{Sesa2019} is the B2BDM model:
+back-to-back diodes in parallel with a shunt resistor and the photo-current source, all in series with an offset voltage source, and
+then connected in parallel to another diode and shunt resistor, again in series with a resistor.
+Some review about models for PV devices with S-shaped IV curves can be found in \cite{SshapeRewShot,GarciaSanchez2017}.
 
-%
-%An equivalent circuit model helps in understanding the work
-%principles of OSCs, interpreting the I–V characteristics and device
-%performances, and optimizing the performance of OSCs, through a
-%quantitative simulation.
+Наступним кроком після розробки моделі є визначення відповідних параметрів з ВАХ. 
+Така задача по своїй суті є однією проблемою оптимізації.
+Одним з популярних шляхів вирішення подібних задач є застосування метаеврістичних алгоритмів.
+Загалом таких алгоритмів розроблено дуже багато. 
+Підгрунтям для такого різноманіття є No Free Lunch theory (NFL), яка стверджує, що no metaheuristic algorithm is able to solve all optimization tasks.
+In other words, the optimization algorithm can have brilliant results in a specific class of problems and at the same time fails to solve other classes of problems.
+Як наслідок, кожна проблема, зокрема оцінка параметрів кожної еквівалентної моделі, потребує індивідуального підбору алгоритму.
+З літератури відомо чимало, робіт, які присвячені порівнянню ефективності метаеврістичних алгоритмів щодо визначення параметрів відповідно до загальноприйнятих моделей сонячних елементів. У деяких з них в центрі уваги перебуває одна з моделей (наприклад SDM, DDM або TDM), деякі одночасно розглядають SDM та DDM.
+У багатьох роботах розглянуто ефективність метаеврістичних алгоритмів у задачі обробки ВАХ відповідно до трьох моделей: SDM, DDM та PVMM.
+Зокрема, використання моделей сонячних елементів для тестування новостворених алгоритмів є чи ненайбільш популярним після використання CEC test functions. 
+Різноманіття метаеврістичних методів оптимізації дозволяє реалізуватися ситуації, коли різні роботи сфокусовані на різних наборах алгоритмів.
 
-%Compared with the conventional solar cell lumped-parameter
-%models [11], 
+Що ж до оцінки параметрів відповідно до  models for PV devices with S-shaped IV curves, то тут ситуація не настільки ж райдужна.
+Звичайно, метаеврістичні алгоритми застосовуються до обробки екпериментальних S-подібних ВАХ [], проте роботи, присвячені вибору найбільш ефективного підходу до вирішення подібної задачі нам нажаль невідомі. Хоча, відповідно до NFL theory, не можна очікувати, що алгоритми, які показали чудові результати для моделей кремнієвих монокристалічних сонячних елементів, будуть настільки ж ефективні у і випадку моделей для next generation of photovoltaic devices with S-shaped IV curves.
+
+Метою даного дослідження було порівняння ефективності визначення параметрів відповідно до дво-діодної моделі Кастро для набору з 14 метаеврістичних алгоритмів та визначення кращого з них. Вибір саме цієї моделі з усього різноманіття зумовлений тим що вона є достатньо універсальною. Незважаючи на вказані вище її недоліки у першому квадранті,
+вона широко використовується 
+
+This study aimed to determine the best
+algorithms
 
 
 
+In the literature, meta-heuristics are frequently categorized based on their sources of inspiration.
+
+%According to No Free Lunch (NFL), it is logically proved that
+%no metaheuristic can respond to all correct optimization problems. In other words, the especial metaheuristic method can
+%demonstrate promising results to solve some problems. But this
+%algorithm may show the weaker performance and efficiency for
+%some other problems. Hence the researchers try to create the
+%better optimization techniques each year
+
+%On the other hand, The No Free Lunch theory (NFL) states that
+%no metaheuristic algorithm is able to solve all optimization tasks.
+%In other words, the optimization algorithm can have brilliant
+%results in a specific class of problems and at the same time fails
+%to solve other classes of problems [85].
+%The above-mentioned facts motivate and encourage us to propose a novel population-based algorithm with swarm intelligence
+%characteristics to solve global optimization problems. The proposed algorithm called Snake Optimizer (SO) is inspired by the
+%mating behavior of the snakes. To the best of our knowledge,
+%there is no such study exist in the literature and this is the first
+%time to propose such a behavior.
+\cite{NFL}
 
 %------------------------------------
+%organic \cite{Pillai2017} GA
+
+
 %perovskite SC with fullerene electron transport layer and the carbon nanotube  top electrode \cite{CastroUsePerovskitIonikLiquid}
 %Ionic Liquid Gating in Perovskite Solar Cells with Fullerene/Carbon Nanotube Collectors \cite{CastroUsePerovskitFullerene}
 %\cite{CastroUseBook}
@@ -178,7 +245,7 @@ and hybrid SCs \cite{VeinbergVidal2016,Romero2017,Finck2013}.
 %
 %ternary organic solar cells \cite{Makha2018}
 %
-%organic \cite{delPozo2012}
+%polymer/fullerene  organic \cite{delPozo2012}
 % typical phenomenon in BHJ
 %solar cells is the appearance of a ‘‘kink’’ or S-shape in the J–V
 %characteristic.
@@ -215,10 +282,8 @@ and hybrid SCs \cite{VeinbergVidal2016,Romero2017,Finck2013}.
 %de Castro et al. reported that isolated metal nanoclusters formed upon cathode evaporation lead to interfacial
 %defect states and change the electric field of the device; resulting in ‘S’ shaped I-V curves. \cite{Castro2010}
 %
-%Zuo et al. showed that ‘S’-shaped
-%curves could be produced in planar bilayer devices by creating a rectifying Schottky junction at the anode interface \cite{Zuo2014}
-%тут же запропонована модель - два послідовних діода (в одному напрямі), паралельно кожному з них опір
-%
+
+
 %while Finck argued that S’-shaped
 %curves are caused by factors that affect the extraction of
 %charge at the device cathode.
@@ -258,25 +323,6 @@ and hybrid SCs \cite{VeinbergVidal2016,Romero2017,Finck2013}.
 %[6]–[9].
 %
 %---------------------------------------------------------------
-%\cite{Mazhari2006}
-%
-%модель Mazhari - модифікована стандартна 2-діодна модель за рахунок включення третього діоду,
-%проста, бо опорів немає
-%
-%-------------------------------------------------------------------
-%покращена модель Mazhari за рахунок введення двох додаткових опорів
-%
-%\cite{Yu2019}
-%OOSolEner_177_p229
-%-------------------------------------------------------------
-%\cite{Gaur2014}
-%
-%Polymer solar cells
-%
-%модель як дводіодна, тільки один діод перевернули
-%
-%
-%--------------------------------------------------------------
 %\cite{Romero2017}
 %
 %сама по собі стаття може й не потрібна
@@ -326,7 +372,7 @@ and hybrid SCs \cite{VeinbergVidal2016,Romero2017,Finck2013}.
 %-------------------------------------------------
 %\cite{Roland2016}
 %
-%So-called S-kink current vs. voltage (J-V) curves have been reported 
+%So-called S-kink current vs. voltage (J-V) curves have been reported
 %for solar cells based on numerous different materials and architectures,
 %including but not limited to devices based on organic materials, chalcogenides including CIGS and CdTe, and passivated c-Si heterojunction devices.
 %
@@ -335,24 +381,7 @@ and hybrid SCs \cite{VeinbergVidal2016,Romero2017,Finck2013}.
 %----------------------------------------------------------------------
 
 
-%According to No Free Lunch (NFL), it is logically proved that
-%no metaheuristic can respond to all correct optimization problems. In other words, the especial metaheuristic method can
-%demonstrate promising results to solve some problems. But this
-%algorithm may show the weaker performance and efficiency for
-%some other problems. Hence the researchers try to create the
-%better optimization techniques each year
 
-%On the other hand, The No Free Lunch theory (NFL) states that
-%no metaheuristic algorithm is able to solve all optimization tasks.
-%In other words, the optimization algorithm can have brilliant
-%results in a specific class of problems and at the same time fails
-%to solve other classes of problems [85].
-%The above-mentioned facts motivate and encourage us to propose a novel population-based algorithm with swarm intelligence
-%characteristics to solve global optimization problems. The proposed algorithm called Snake Optimizer (SO) is inspired by the
-%mating behavior of the snakes. To the best of our knowledge,
-%there is no such study exist in the literature and this is the first
-%time to propose such a behavior.
-\cite{NFL}
 
 
 %\section{Models and Methods}\label{MM}
