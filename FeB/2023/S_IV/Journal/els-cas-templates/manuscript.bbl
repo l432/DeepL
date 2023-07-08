@@ -1,4 +1,4 @@
-\begin{thebibliography}{76}
+\begin{thebibliography}{84}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\bibinfo}[2]{#2}
 \ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
@@ -328,6 +328,100 @@
 \newblock \bibinfo{journal}{Energy Convers. Manage.} \bibinfo{volume}{150}
   (\bibinfo{year}{2017}) \bibinfo{pages}{742--753}.
 %Type = Article
+\bibitem[{Pillai et~al.(2017)Pillai, Sahoo, Ram, Laudani, Rajasekar, and
+  Sudhakar}]{Pillai2017}
+\bibinfo{author}{D.~S. Pillai}, \bibinfo{author}{B.~Sahoo},
+  \bibinfo{author}{J.~P. Ram}, \bibinfo{author}{A.~Laudani},
+  \bibinfo{author}{N.~Rajasekar}, \bibinfo{author}{N.~Sudhakar},
+\newblock \bibinfo{title}{Modellingof organic photovoltaic cells based on an
+  improved reverse double diode model},
+\newblock \bibinfo{journal}{Energy Procedia} \bibinfo{volume}{117}
+  (\bibinfo{year}{2017}) \bibinfo{pages}{1054--1061}.
+%Type = Book
+\bibitem[{Dakin and Brown(2017)}]{CastroUseBook}
+\bibinfo{editor}{J.~Dakin}, \bibinfo{editor}{R.~Brown} (Eds.),
+  \bibinfo{title}{Handbook of Optoelectronics: Enabling Technologies (Volume
+  Two)}, \bibinfo{publisher}{CRC Press.}, \bibinfo{edition}{2nd} edition,
+  \bibinfo{year}{2017}.
+%Type = Article
+\bibitem[{Arredondo et~al.(2018)Arredondo, Romero, Beliatis, {del Pozo},
+  Martín-Martín, Blakesley, Dibb, Krebs, Gevorgyan, and
+  Castro}]{Arredondo2018}
+\bibinfo{author}{B.~Arredondo}, \bibinfo{author}{B.~Romero},
+  \bibinfo{author}{M.~Beliatis}, \bibinfo{author}{G.~{del Pozo}},
+  \bibinfo{author}{D.~Martín-Martín}, \bibinfo{author}{J.~Blakesley},
+  \bibinfo{author}{G.~Dibb}, \bibinfo{author}{F.~Krebs},
+  \bibinfo{author}{S.~Gevorgyan}, \bibinfo{author}{F.~Castro},
+\newblock \bibinfo{title}{Analysing impact of oxygen and water exposure on
+  roll-coated organic solar cell performance using impedance spectroscopy},
+\newblock \bibinfo{journal}{Sol. Energ. Mat. Sol.} \bibinfo{volume}{176}
+  (\bibinfo{year}{2018}) \bibinfo{pages}{397--404}.
+%Type = Article
+\bibitem[{{del Pozo} et~al.(2012){del Pozo}, Romero, and
+  Arredondo}]{delPozo2012}
+\bibinfo{author}{G.~{del Pozo}}, \bibinfo{author}{B.~Romero},
+  \bibinfo{author}{B.~Arredondo},
+\newblock \bibinfo{title}{Evolution with annealing of solar cell parameters
+  modeling the s-shape of the current–voltage characteristic},
+\newblock \bibinfo{journal}{Sol. Energ. Mat. Sol.} \bibinfo{volume}{104}
+  (\bibinfo{year}{2012}) \bibinfo{pages}{81--86}.
+%Type = Article
+\bibitem[{Brenes-Badilla et~al.(2018)Brenes-Badilla, Coutinho, Amorim, Faria,
+  and Salvadori}]{BrenesBadilla2018}
+\bibinfo{author}{D.~Brenes-Badilla}, \bibinfo{author}{D.~J. Coutinho},
+  \bibinfo{author}{D.~R.~B. Amorim}, \bibinfo{author}{R.~M. Faria},
+  \bibinfo{author}{M.~C. Salvadori},
+\newblock \bibinfo{title}{{Reversing an S-kink effect caused by interface
+  degradation in organic solar cells through gold ion implantation in the
+  PEDOT:PSS layer}},
+\newblock \bibinfo{journal}{J. Appl. Phys.} \bibinfo{volume}{123}
+  (\bibinfo{year}{2018}) \bibinfo{pages}{155502}.
+%Type = Article
+\bibitem[{Tada(2015)}]{Tada2015Organic}
+\bibinfo{author}{K.~Tada},
+\newblock \bibinfo{title}{Parameter extraction from {S}-shaped
+  current–voltage characteristics in organic photocell with opposed two-diode
+  model: Effects of ideality factors and series resistance},
+\newblock \bibinfo{journal}{Phys. Status Solidi A} \bibinfo{volume}{212}
+  (\bibinfo{year}{2015}) \bibinfo{pages}{1731--1734}.
+%Type = Article
+\bibitem[{Makha et~al.(2018)Makha, Schwaller, Strassel, Anantharaman, Nüesch,
+  Hany, and Heier}]{Makha2018}
+\bibinfo{author}{M.~Makha}, \bibinfo{author}{P.~Schwaller},
+  \bibinfo{author}{K.~Strassel}, \bibinfo{author}{S.~B. Anantharaman},
+  \bibinfo{author}{F.~Nüesch}, \bibinfo{author}{R.~Hany},
+  \bibinfo{author}{J.~Heier},
+\newblock \bibinfo{title}{Insights into photovoltaic properties of ternary
+  organic solar cells from phase diagrams},
+\newblock \bibinfo{journal}{Sci. Technol. Adv. Mater.} \bibinfo{volume}{19}
+  (\bibinfo{year}{2018}) \bibinfo{pages}{669--682}.
+%Type = Article
+\bibitem[{Verkhogliadov et~al.(2023)Verkhogliadov, Mahmoodpoor, Voroshilov,
+  Haroldson, Alahbakhshi, Nasibulin, Makarov, and
+  Zakhidov}]{CastroUsePerovskitIonikLiquid}
+\bibinfo{author}{G.~Verkhogliadov}, \bibinfo{author}{A.~Mahmoodpoor},
+  \bibinfo{author}{P.~Voroshilov}, \bibinfo{author}{R.~Haroldson},
+  \bibinfo{author}{M.~Alahbakhshi}, \bibinfo{author}{A.~G. Nasibulin},
+  \bibinfo{author}{S.~V. Makarov}, \bibinfo{author}{A.~A. Zakhidov},
+\newblock \bibinfo{title}{Photoinduced self-gating of perovskite photovoltaic
+  cells in ionic liquid},
+\newblock \bibinfo{journal}{ACS Materials Au} \bibinfo{volume}{0}
+  (\bibinfo{year}{2023}) \bibinfo{pages}{null}.
+%Type = Article
+\bibitem[{Mahmoodpoor et~al.(2022)Mahmoodpoor, Verkhogliadov, Melnikov,
+  Saranin, Voroshilov, Sapori, Haroldson, Nasibulin, Ishteev, Ulyantsev,
+  Makarov, and Zakhidov}]{CastroUsePerovskitFullerene}
+\bibinfo{author}{A.~Mahmoodpoor}, \bibinfo{author}{G.~Verkhogliadov},
+  \bibinfo{author}{R.~Melnikov}, \bibinfo{author}{D.~S. Saranin},
+  \bibinfo{author}{P.~M. Voroshilov}, \bibinfo{author}{D.~Sapori},
+  \bibinfo{author}{R.~Haroldson}, \bibinfo{author}{A.~G. Nasibulin},
+  \bibinfo{author}{A.~R. Ishteev}, \bibinfo{author}{V.~Ulyantsev},
+  \bibinfo{author}{S.~V. Makarov}, \bibinfo{author}{A.~A. Zakhidov},
+\newblock \bibinfo{title}{Ionic liquid gating in perovskite solar cells with
+  fullerene/carbon nanotube collectors},
+\newblock \bibinfo{journal}{Energy Technology} \bibinfo{volume}{10}
+  (\bibinfo{year}{2022}) \bibinfo{pages}{2200485}.
+%Type = Article
 \bibitem[{Romero et~al.(2012)Romero, {del Pozo}, and
   Arredondo}]{CastroSolution}
 \bibinfo{author}{B.~Romero}, \bibinfo{author}{G.~{del Pozo}},
@@ -349,14 +443,6 @@
 \bibinfo{author}{K.~Roberts}, \bibinfo{author}{S.~R. Valluri},
   \bibinfo{title}{On calculating the current-voltage characteristic of
   multi-diode models for organic solar cells}, \bibinfo{year}{2015}.
-%Type = Article
-\bibitem[{Tada(2015)}]{Tada2015Organic}
-\bibinfo{author}{K.~Tada},
-\newblock \bibinfo{title}{Parameter extraction from {S}-shaped
-  current–voltage characteristics in organic photocell with opposed two-diode
-  model: Effects of ideality factors and series resistance},
-\newblock \bibinfo{journal}{Phys. Status Solidi A} \bibinfo{volume}{212}
-  (\bibinfo{year}{2015}) \bibinfo{pages}{1731--1734}.
 %Type = Article
 \bibitem[{Tada(2021)}]{Tada2021}
 \bibinfo{author}{K.~Tada},
