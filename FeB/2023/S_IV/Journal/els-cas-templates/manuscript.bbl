@@ -254,20 +254,21 @@
 \newblock \bibinfo{journal}{Energy} \bibinfo{volume}{224}
   (\bibinfo{year}{2021}) \bibinfo{pages}{120136}.
 %Type = Article
-\bibitem[{Niu et~al.(2014)Niu, Zhang, and Li}]{BBO_M}
-\bibinfo{author}{Q.~Niu}, \bibinfo{author}{L.~Zhang}, \bibinfo{author}{K.~Li},
-\newblock \bibinfo{title}{A biogeography-based optimization algorithm with
-  mutation strategies for model parameter estimation of solar and fuel cells},
-\newblock \bibinfo{journal}{Energy Convers. Manage.} \bibinfo{volume}{86}
-  (\bibinfo{year}{2014}) \bibinfo{pages}{1173--1185}.
+\bibitem[{{Rezaee Jordehi}(2018)}]{ELPSO}
+\bibinfo{author}{A.~{Rezaee Jordehi}},
+\newblock \bibinfo{title}{Enhanced leader particle swarm optimisation
+  ({ELPSO}): {A}n efficient algorithm for parameter estimation of photovoltaic
+  ({PV}) cells and modules},
+\newblock \bibinfo{journal}{Sol. Energy} \bibinfo{volume}{159}
+  (\bibinfo{year}{2018}) \bibinfo{pages}{78--87}.
 %Type = Article
-\bibitem[{Guo et~al.(2016)Guo, Meng, Sun, and Wang}]{CSO}
-\bibinfo{author}{L.~Guo}, \bibinfo{author}{Z.~Meng}, \bibinfo{author}{Y.~Sun},
-  \bibinfo{author}{L.~Wang},
-\newblock \bibinfo{title}{Parameter identification and sensitivity analysis of
-  solar cell models with cat swarm optimization algorithm},
-\newblock \bibinfo{journal}{Energy Convers. Manage.} \bibinfo{volume}{108}
-  (\bibinfo{year}{2016}) \bibinfo{pages}{520--528}.
+\bibitem[{Lin et~al.(2017)Lin, Cheng, Yeh, Chen, and Wu}]{MSSO}
+\bibinfo{author}{P.~Lin}, \bibinfo{author}{S.~Cheng}, \bibinfo{author}{W.~Yeh},
+  \bibinfo{author}{Z.~Chen}, \bibinfo{author}{L.~Wu},
+\newblock \bibinfo{title}{Parameters extraction of solar cell models using a
+  modified simplified swarm optimization algorithm},
+\newblock \bibinfo{journal}{Sol. Energy} \bibinfo{volume}{144}
+  (\bibinfo{year}{2017}) \bibinfo{pages}{594--603}.
 %Type = Article
 \bibitem[{Ram et~al.(2017)Ram, Babu, Dragicevic, and Rajasekar}]{BPFPA}
 \bibinfo{author}{J.~P. Ram}, \bibinfo{author}{T.~S. Babu},
@@ -304,13 +305,12 @@
 \newblock \bibinfo{journal}{Energy Convers. Manage.} \bibinfo{volume}{195}
   (\bibinfo{year}{2019}) \bibinfo{pages}{927--942}.
 %Type = Article
-\bibitem[{Merchaoui et~al.(2018)Merchaoui, Sakly, and Mimouni}]{MPSO}
-\bibinfo{author}{M.~Merchaoui}, \bibinfo{author}{A.~Sakly},
-  \bibinfo{author}{M.~F. Mimouni},
-\newblock \bibinfo{title}{Particle swarm optimisation with adaptive mutation
-  strategy for photovoltaic solar cell/module parameter extraction},
-\newblock \bibinfo{journal}{Energy Convers. Manage.} \bibinfo{volume}{175}
-  (\bibinfo{year}{2018}) \bibinfo{pages}{151--163}.
+\bibitem[{Beigi and Maroosi(2018)}]{HFAPS}
+\bibinfo{author}{A.~M. Beigi}, \bibinfo{author}{A.~Maroosi},
+\newblock \bibinfo{title}{Parameter identification for solar cells and module
+  using a {H}ybrid {F}irefly and {P}attern {S}earch {A}lgorithms},
+\newblock \bibinfo{journal}{Sol. Energy} \bibinfo{volume}{171}
+  (\bibinfo{year}{2018}) \bibinfo{pages}{435--446}.
 %Type = Article
 \bibitem[{Xiong et~al.(2018)Xiong, Zhang, Shi, and He}]{IWOA}
 \bibinfo{author}{G.~Xiong}, \bibinfo{author}{J.~Zhang},
@@ -319,14 +319,6 @@
   using an improved whale optimization algorithm},
 \newblock \bibinfo{journal}{Energy Convers. Manage.} \bibinfo{volume}{174}
   (\bibinfo{year}{2018}) \bibinfo{pages}{388--405}.
-%Type = Article
-\bibitem[{Yu et~al.(2017)Yu, Liang, Qu, Chen, and Wang}]{IJAYA}
-\bibinfo{author}{K.~Yu}, \bibinfo{author}{J.~Liang}, \bibinfo{author}{B.~Qu},
-  \bibinfo{author}{X.~Chen}, \bibinfo{author}{H.~Wang},
-\newblock \bibinfo{title}{Parameters identification of photovoltaic models
-  using an improved {JAYA} optimization algorithm},
-\newblock \bibinfo{journal}{Energy Convers. Manage.} \bibinfo{volume}{150}
-  (\bibinfo{year}{2017}) \bibinfo{pages}{742--753}.
 %Type = Article
 \bibitem[{Pillai et~al.(2017)Pillai, Sahoo, Ram, Laudani, Rajasekar, and
   Sudhakar}]{Pillai2017}
@@ -688,6 +680,14 @@
 \newblock \bibinfo{journal}{International Journal of Industrial Engineering
   Computations} \bibinfo{volume}{7} (\bibinfo{year}{2016})
   \bibinfo{pages}{19--34}.
+%Type = Article
+\bibitem[{Yu et~al.(2017)Yu, Liang, Qu, Chen, and Wang}]{IJAYA}
+\bibinfo{author}{K.~Yu}, \bibinfo{author}{J.~Liang}, \bibinfo{author}{B.~Qu},
+  \bibinfo{author}{X.~Chen}, \bibinfo{author}{H.~Wang},
+\newblock \bibinfo{title}{Parameters identification of photovoltaic models
+  using an improved {JAYA} optimization algorithm},
+\newblock \bibinfo{journal}{Energy Convers. Manage.} \bibinfo{volume}{150}
+  (\bibinfo{year}{2017}) \bibinfo{pages}{742--753}.
 %Type = Article
 \bibitem[{Mirjalili(2016)}]{SCA}
 \bibinfo{author}{S.~Mirjalili},

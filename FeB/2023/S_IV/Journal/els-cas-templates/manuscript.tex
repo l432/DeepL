@@ -198,8 +198,12 @@ and at the same time fails to solve other ones.
 As a result, each problem, including the parameter estimation of each equivalent model, necessitates a distinct algorithm selection.
 Numerous studies have been conducted to compare the efficiency of meta-heuristic algorithms for parameter estimation under conventional SC models.
 Some studies focus on a single model, such as SDM \cite{DE_EM}, DDM \cite{SSA,FWA}, or TDM \cite{ELSHADE_INR},
-while others examine both SDM and DDM concurrently \cite{BBO_M,CSO,BPFPA,MPALW}.
-Several papers have investigated algorithms' efficiency in processing IV curves according to three models: SDM, DDM, and PVMM \cite{IMPA,SCA_NM_OBL,MPSO,IWOA,IJAYA}.
+while others examine both SDM and DDM concurrently 
+%\cite{BBO_M,CSO,BPFPA,MPALW}.
+\cite{ELPSO,MSSO,BPFPA,MPALW}.
+Several papers have investigated algorithms' efficiency in processing IV curves according to three models: SDM, DDM, and PVMM 
+%\cite{IMPA,SCA_NM_OBL,MPSO,IWOA,IJAYA}.
+\cite{IMPA,SCA_NM_OBL,HFAPS,IWOA}.
 Indeed, the utilization of conventional SC models for testing newly developed
 algorithms is among the most popular approaches after using CEC20XX benchmark functions.
 The wide range of metaheuristic optimization methods allows for situations in which
@@ -532,9 +536,9 @@ and a the chaotic map is used to enrich the uniformity of random values in the m
 The logistic chaotic map and $N\!p=20$ were used.
 
 
-\emph{Water wave optimization} (\textbf{WWO}) takes inspiration from shallow water wave models
+\emph{Water wave optimization} (\textbf{WW}) takes inspiration from shallow water wave models
 and borrows ideas from wave propagation, refraction, and breaking \cite{WW}.
-WWO is easy to implement with a small-size population, and there are four control parameters:
+WW is easy to implement with a small-size population, and there are four control parameters:
 the maximum wave height $h_{max}$,
 the wavelength reduction coefficient $\alpha$,
 the breaking coefficient $\beta$,
