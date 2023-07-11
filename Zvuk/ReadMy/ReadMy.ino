@@ -16,9 +16,9 @@ const byte PS_128 = (1 << ADPS2) | (1 << ADPS1) | (1 << ADPS0);
 const byte PS_16 = (1 << ADPS2);
 
 
-const byte MeasureDelay = 50;
+const byte MeasureDelay = 40;
 //time between measuring, us
-const uint16_t Np = 128;
+const uint16_t Np = 256;
 volatile uint16_t myByte[Np];
 volatile int ArrayIndex;
 uint16_t MaxMeasureValue;
@@ -52,16 +52,21 @@ void loop() {
   // showMeasurement();
   sampleWindowFull();
 
-  Serial.print("MaxMeasureValue=");
-  Serial.println(MaxMeasureValue);
-  Serial.print("MinxMeasureValue=");
-  Serial.println(MinMeasureValue);
+  // Serial.print("MaxMeasureValue=");
+  // Serial.println(MaxMeasureValue);
+  // Serial.print("MinxMeasureValue=");
+  // Serial.println(MinMeasureValue);
   //  showDataArray();
 
-  fix_fft(data, im, 7, 0);
+  fix_fft(data, im, 8, 0);
   updateData();
 
   showSpectrum();
+
+    Serial.print("MaxMeasureValue=");
+  Serial.println(MaxMeasureValue);
+  Serial.print("MinxMeasureValue=");
+  Serial.println(MinMeasureValue);
   // Serial.println(millis()-myTimer);
 
   Serial.println(findF());
