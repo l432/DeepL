@@ -7,7 +7,7 @@
 
 //#define F_CPU 16000000UL;
 
-const byte analogPin = A0;
+const byte analogPin = A1;
 const byte AlarmPin = 13;
 const long GAIN = 10;
 
