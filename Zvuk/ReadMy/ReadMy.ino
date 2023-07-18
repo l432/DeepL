@@ -9,7 +9,7 @@
 
 const byte analogPin = A1;
 const byte AlarmPin = 13;
-const long GAIN = 10;
+// const long GAIN = 10;
 
 
 const byte PS_128 = (1 << ADPS2) | (1 << ADPS1) | (1 << ADPS0);
@@ -26,6 +26,9 @@ uint16_t MinMeasureValue;
 int8_t im[Np];
 int8_t data[Np];
 const byte ThresholdValue = 10;
+
+const boolean DraftMode = false;
+// const boolean DraftMode = true;
 
 unsigned long myTimer;
 
@@ -52,32 +55,32 @@ void loop() {
   // showMeasurement();
   sampleWindowFull();
 
-  // Serial.print("MaxMeasureValue=");
-  // Serial.println(MaxMeasureValue);
-  // Serial.print("MinxMeasureValue=");
-  // Serial.println(MinMeasureValue);
-  //  showDataArray();
-
   fix_fft(data, im, 8, 0);
   updateData();
 
-  showSpectrum();
 
-    Serial.print("MaxMeasureValue=");
-  Serial.println(MaxMeasureValue);
-  Serial.print("MinxMeasureValue=");
-  Serial.println(MinMeasureValue);
   // Serial.println(millis()-myTimer);
+  if (DraftMode) {
+    // showSpectrum();
+    Serial.print("MaxMeasureValue=");
+    Serial.println(MaxMeasureValue);
+    Serial.print("MinxMeasureValue=");
+    Serial.println(MinMeasureValue);
+    Serial.println(findF());
+  }
 
-  Serial.println(findF());
+
   if (findF() > 0) {
     AlarmSgnal();
   }
-  delay(10);
-  // Narcoleptic.delay(200);
-  delay(200);
-  Serial.println(' ');
-  delay(5000);
+
+  if (DraftMode) {
+    delay(200);
+    Serial.println(' ');
+    delay(5000);
+  } else {
+    Narcoleptic.delay(200);
+  }
 }
 
 void MeasureSignal() {
@@ -169,7 +172,7 @@ void showDataArray() {
 long findF() {
   uint16_t maxValue = 0;
   int maxIndex = 0;
-  for (int i = 2; i < (Np / 2); i++) {
+  for (int i = 2; i < (Np / 4); i++) {
     // int p = data[i];
     int p = myByte[i];
     if (p > maxValue) {
