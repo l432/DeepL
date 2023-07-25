@@ -27,8 +27,8 @@ int8_t im[Np];
 int8_t data[Np];
 const byte ThresholdValue = 10;
 
-// const boolean DraftMode = false;
-const boolean DraftMode = true;
+const boolean DraftMode = false;
+// const boolean DraftMode = true;
 
 unsigned long myTimer;
 

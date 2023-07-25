@@ -262,13 +262,13 @@
 \newblock \bibinfo{journal}{Sol. Energy} \bibinfo{volume}{159}
   (\bibinfo{year}{2018}) \bibinfo{pages}{78--87}.
 %Type = Article
-\bibitem[{Lin et~al.(2017)Lin, Cheng, Yeh, Chen, and Wu}]{MSSO}
-\bibinfo{author}{P.~Lin}, \bibinfo{author}{S.~Cheng}, \bibinfo{author}{W.~Yeh},
-  \bibinfo{author}{Z.~Chen}, \bibinfo{author}{L.~Wu},
-\newblock \bibinfo{title}{Parameters extraction of solar cell models using a
-  modified simplified swarm optimization algorithm},
-\newblock \bibinfo{journal}{Sol. Energy} \bibinfo{volume}{144}
-  (\bibinfo{year}{2017}) \bibinfo{pages}{594--603}.
+\bibitem[{Barth et~al.(2016)Barth, Jovanovic, Ahzi, and Khaleel}]{Barth2016}
+\bibinfo{author}{N.~Barth}, \bibinfo{author}{R.~Jovanovic},
+  \bibinfo{author}{S.~Ahzi}, \bibinfo{author}{M.~A. Khaleel},
+\newblock \bibinfo{title}{Pv panel single and double diode models: Optimization
+  of the parameters and temperature dependence},
+\newblock \bibinfo{journal}{Sol. Energ. Mat. Sol.} \bibinfo{volume}{148}
+  (\bibinfo{year}{2016}) \bibinfo{pages}{87--98}.
 %Type = Article
 \bibitem[{Ram et~al.(2017)Ram, Babu, Dragicevic, and Rajasekar}]{BPFPA}
 \bibinfo{author}{J.~P. Ram}, \bibinfo{author}{T.~S. Babu},

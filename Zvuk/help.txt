@@ -3,3 +3,9 @@ https://alexgyver.ru/lessons/how-to-sketch/
 https://alexgyver.ru/lessons/code-optimisation/
 
 https://audiogeek.ru/i-u-preobrazovatel/
+
+http://microsin.net/programming/avr/battery-powered-arduino-applications-through-freertos.html
+
+https://easymcu.ucoz.ru/publ/11-1-0-79
+
+https://tsibrov.blogspot.com/2019/06/arduino-interrupts-part2.html
