@@ -120,10 +120,10 @@ Meta--heuristic algorithms \sep Nonparametric statistical procedure \sep Solar c
 %with an additional 183 GW added in 2021 alone \cite{Divya2023}.
 %According to the International Energy Agency (IEA) reports, the cumulative installed PV capacity
 %was predicted to increase to 1.826 TW by 2026 and 14.5 TW by 2050 \cite{Wang2022}.
-Photovoltaics (PV) is the most promising clean energy technology to meet global energy demands. 
+Photovoltaics (PV) is the most promising clean energy technology to meet global energy demands.
 The installed capacity of solar PV panels reached 971 GW by the end of 2021, with an additional 183 GW added in 2021 \cite{Divya2023}.
 %Currently, silicon solar cells make up approximately 90\% of the global photovoltaic production capacity.
-Currently, silicon solar cells (SCs) dominate approximately 90\% of global photovoltaic production capacity. 
+Currently, silicon solar cells (SCs) dominate approximately 90\% of global photovoltaic production capacity.
 But recently, intensive research is underway for innovative developments,
 further experiments, and practical PV applications of various new-generation SCs.
 The operating principle of new-generation solar cells is qualitatively similar to silicon-based ones.
@@ -137,8 +137,8 @@ often exhibits an S-shaped deformation or kink.
 %unbalanced charge transport \cite{Gao2011}.
 Furthermore, it is worth noting that such a feature of the IV characteristics is typical
 in the most promising candidates for the next generation of photovoltaic devices.
-This kink’s origin has been attributed to various physical phenomena \cite{Sesa2019,Finck2013,Romero2017,Gao2011}. 
-Still, it is worth noting that such a feature of the IV characteristics is 
+This kink’s origin has been attributed to various physical phenomena \cite{Sesa2019,Finck2013,Romero2017,Gao2011}.
+Still, it is worth noting that such a feature of the IV characteristics is
 typical in the most promising candidates for the next generation of photovoltaic devices.
 Specifically, S-shaped IV curves have been observed in silicon heterojunction SCs \cite{Saive2019},
 thin-film SCs such as CdTe, CI(G)S, and amorphous silicon PV devices \cite{Saive2019,Roland2016},
@@ -157,18 +157,18 @@ and hybrid SCs \cite{VeinbergVidal2016,Romero2017,Finck2013}.
 %a photo-current source, a parallel shunt resistance, and a series resistance.
 %The PV module model (PVMM) is based on SDM and is made up of several diodes in series or parallel.
 
-One common approach to understanding the electrical characteristics of PV devices 
-is using equivalent circuit models to fit the IV curve. 
-These lumped-parameter models enable simulation, analysis, and optimization of device performance. 
+One common approach to understanding the electrical characteristics of PV devices
+is using equivalent circuit models to fit the IV curve.
+These lumped-parameter models enable simulation, analysis, and optimization of device performance.
 The most frequently used conventional models are single-diode (SDM), double-diode (DDM), and three-diode (TDM) models.
 Unfortunately, the conventional models failed in describing the S-shaped kink.
 Thus, numerous new models for PV devices with S-shaped IV are proposed \cite{Mazhari2006,Yu2019,Sesa2019,Gaur2014}, and
 some review can be found in \cite{SshapeRewShot,GarciaSanchez2017}.
 In particular, De Castro et al \cite{Castro2010} proposed a opposed two-diode model (O2DM),
 which successfully reproduces the kink in the power-producing fourth quadrant.
-O2DM falls short of describing the current in the first quadrant, 
+O2DM falls short of describing the current in the first quadrant,
 and a potential solution is incorporating a third diode in parallel \cite{DeCastro2016,Roland2016}
-or instead of shunt resistance \cite{GarciaSanchez2013}. 
+or instead of shunt resistance \cite{GarciaSanchez2013}.
 
 
 %One of the most common approaches to understanding the electrical characteristics of PV devices
@@ -236,14 +236,14 @@ algorithms is among the most popular approaches after using CEC20XX benchmark fu
 %Nevertheless, studies aimed at identifying the most optimal approach for solving these problems are absent to our knowledge.
 %However, the NFL suggests that algorithms that have demonstrated exceptional results for silicon monocrystalline SC models
 %may not yield the same effectiveness for models of the next-generation PV devices.
-Regarding parameter estimation for PV device models with S-shaped IV curves, 
-the situation is not well-explored. 
-Meta-heuristic algorithms have been used to process experimental S-shaped IV curves \cite{Pillai2017}. 
-However, studies determining the most optimal approach for solving these problems are lacking. 
+Regarding parameter estimation for PV device models with S-shaped IV curves,
+the situation is not well-explored.
+Meta-heuristic algorithms have been used to process experimental S-shaped IV curves \cite{Pillai2017}.
+However, studies determining the most optimal approach for solving these problems are lacking.
 The NFL suggests that algorithms that excel for silicon SC models
  may not be as effective for next-generation PV device models.
 
-This study aimed to compare the effectiveness of parameter estimation according to O2DM\cite{Castro2010}
+This study aimed to compare the effectiveness of parameter estimation according to O2DM \cite{Castro2010}
 using a set of 14 meta-heuristic algorithms and determine the best-performing among them.
 The selection of this particular model from the diverse range is motivated by its universality.
 Despite the mentioned drawbacks in the first quadrant,
@@ -256,31 +256,26 @@ ternary organic solar cells \cite{Makha2018},
 and other types of organic structures \cite{Pillai2017,Arredondo2018},
 perovskite solar cells with fullerene transport layer and carbon nanotube electrode \cite{CastroUsePerovskitFullerene},
 and perovskite solar cells with ionic liquid gating \cite{CastroUsePerovskitIonikLiquid}.
-The popularity of the De Castro model is also associated with the fact that in experiments,
-IV curves are typically measured only within the range
-from short-circuit current to open-circuit voltage, i.e., only in the fourth quadrant.
-The considered metaheuristic algorithms belong to different categories based on their sources of inspiration.
-Some of these algorithms have been well-known for a long time and have proven their effectiveness in solving a wide range of problems.
-Other algorithms are more recent, developed with the knowledge gained from their predecessors.
-The obtained results are compared using various nonparametric statistical methods.
+The popularity of O2DM is related to the fact that experiments typically measure IV curves only in the fourth quadrant 
+(from short-circuit current to open-circuit voltage). 
+The algorithms considered here have different inspiration sources. 
+Some of these algorithms have been well-known for a long time 
+and have proven their effectiveness in solving a wide range of problems. 
+Other algorithms are more recent, developed with the knowledge gained from their predecessors. 
+The results are compared using diverse nonparametric statistical methods.
+%The O2DM popularity is also associated with the fact that in experiments,
+%IV curves are typically measured only within the range
+%from short-circuit current to open-circuit voltage, i.e., only in the fourth quadrant.
+%The considered metaheuristic algorithms belong to different categories based on their sources of inspiration.
+%Some of these algorithms have been well-known for a long time and have proven their effectiveness in solving a wide range of problems.
+%Other algorithms are more recent, developed with the knowledge gained from their predecessors.
+%The obtained results are compared using various nonparametric statistical methods.
 
 
 
 %\section{Models and Methods}\label{MM}
 \section{Problem definition}\label{MM}
 \subsection{Solar cell model}\label{SCModel}
-Fig.~\ref{fig_chem}
-vividly reveals the structure of the used model \cite{Castro2010}.
-It can be seen from the figure that model contains a current source accompanied by a diode D1, a shunt
-resistor $R_\mathrm{p1}$ to show the leakage current, and a series resistor $R_\mathrm{s}$ to consider the
-losses associated with the load current.
-Besides, the second diode D2 with a second parallel resistance $R_\mathrm{p2}$ is placed opposite to the first one and is essential to
-simulate the non-ideal effects of the active layer/cathode interface.
-In this model, D1 is responsible for the exponential behavior of the IV curve,
-the main contribution of D2 is to simulate the S--shape.
-The analytical solution $V(I)$ of the opposed two--diode equivalent circuit model was
- obtained \cite{CastroSolution} using Lambert $W$-function \cite{LambertNew}:
-
 
 \begin{figure}[]
 	\centering
@@ -288,29 +283,30 @@ The analytical solution $V(I)$ of the opposed two--diode equivalent circuit mode
 	  \caption{The opposed two--diode equivalent--circuit model of a solar cell.}\label{fig_chem}
 \end{figure}
 
+Fig.~\ref{fig_chem}
+vividly reveals the structure of the used model \cite{Castro2010}.
+It can be seen from the figure that model contains a current source accompanied by a diode D1, a shunt
+resistor $R_\mathrm{p1}$ to show the leakage current, and a series resistor $R_\mathrm{s}$ to consider the
+losses associated with the load current.
+Besides, the second diode D2 with a second parallel resistance $R_\mathrm{p2}$ is placed opposite to the first one and is essential to
+simulate the non-ideal effects of the active layer/cathode interface.
+%In this model, D1 is responsible for the exponential behavior of the IV curve,
+%the main contribution of D2 is to simulate the S--shape.
+%The analytical solution $V(I)$ of the opposed two--diode equivalent circuit model was
+% obtained \cite{CastroSolution} using Lambert $W$-function \cite{LambertNew}:
+The analytical solution $V(I)$ of the opposed two--diode equivalent circuit model 
+is as follows \cite{CastroSolution,roberts2015calculating}
 
-\begin{eqnarray}
-% \nonumber to remove numbering (before each equation)
-\label{eqIV_W}
-V&=& (I+I_\mathrm{ph}+I_{01})R_\mathrm{p1} \nonumber \\
-  &&-\frac{n_1kT}{q}W\left\{\frac{qI_{01}R_\mathrm{p1}}{n_1kT}\exp\left[\frac{qR_\mathrm{p1}(I+I_\mathrm{ph}+I_{01})}{n_1kT}\right]\right\} \nonumber \\
-  &&+\frac{n_2kT}{q}W\left\{\frac{qI_{02}R_\mathrm{p2}}{n_2kT}\exp\left[-\frac{qR_\mathrm{p2}(I-I_{02})}{n_2kT}\right]\right\} \nonumber \\
-  &&+(I-I_{02})R_\mathrm{p2}+IR_\mathrm{s}\,,
-\end{eqnarray}
-where
-$I_{01}$ and $I_{02}$ are the saturation currents and
-$n_1$ and $n_2$ are
-the ideality factors for D1 and D2 respectively,
-and $I_\mathrm{ph}$ is the ideal photocurrent.
-Thus, the model employs eight lumped parameters
-($I_{01}$, $n_1$, $R_\mathrm{p1}$, $I_{02}$, $n_2$, $R_\mathrm{p2}$,
-$R_\mathrm{s}$, and $I_\mathrm{ph}$)
-that need to be determined from the IV curve.
-Thus, from an optimization perspective, the dimension of the problem is $D=8$.
+%
+%\begin{eqnarray}
+%% \nonumber to remove numbering (before each equation)
+%\label{eqIV_W}
+%V&=& (I+I_\mathrm{ph}+I_{01})R_\mathrm{p1} \nonumber \\
+%  &&-\frac{n_1kT}{q}W\left\{\frac{qI_{01}R_\mathrm{p1}}{n_1kT}\exp\left[\frac{qR_\mathrm{p1}(I+I_\mathrm{ph}+I_{01})}{n_1kT}\right]\right\} \nonumber \\
+%  &&+\frac{n_2kT}{q}W\left\{\frac{qI_{02}R_\mathrm{p2}}{n_2kT}\exp\left[-\frac{qR_\mathrm{p2}(I-I_{02})}{n_2kT}\right]\right\} \nonumber \\
+%  &&+(I-I_{02})R_\mathrm{p2}+IR_\mathrm{s}\,,
+%\end{eqnarray}
 
-The expression~(\ref{eqIV_W}) has a drawback in that it tends to stray from the range of numbers that can be accommodated by the standard 64-bit floating-point format owing to the presence of exponential functions for larger numbers.
-To overcome this drawback, the use of the $g$--function $g(x)=\ln(W(\exp(x)))$ was suggested \cite{roberts2015calculating}.
-The analytical solution $V(I)$ using the $g$--function is as follows \cite{roberts2015calculating}
 \begin{equation}
 \label{eqIV_g}
 \begin{split}
@@ -328,6 +324,43 @@ and
 \label{eqx2}
 x_2= \ln\left(\frac{qI_{02}R_\mathrm{p2}}{n_2kT}\right)-\frac{q(I-I_{02})R_\mathrm{p2}}{n_2kT}\,.
 \end{equation}
+where
+$g(x)=\ln(W(\exp(x)))$,
+$W$ is the Lambert function \cite{LambertNew},
+$I_{01}$ and $I_{02}$ are the saturation currents and
+$n_1$ and $n_2$ are
+the ideality factors for D1 and D2 respectively,
+and $I_\mathrm{ph}$ is the ideal photocurrent.
+Thus, the model employs eight lumped parameters
+($I_{01}$, $n_1$, $R_\mathrm{p1}$, $I_{02}$, $n_2$, $R_\mathrm{p2}$,
+$R_\mathrm{s}$, and $I_\mathrm{ph}$)
+that need to be determined from the IV curve.
+Thus, from an optimization perspective, the dimension of the problem is $D=8$.
+
+%The expression~(\ref{eqIV_W}) has a drawback in that it tends to stray from the range of numbers that can be accommodated by the standard 64-bit floating-point format owing to the presence of exponential functions for larger numbers.
+%To overcome this drawback, the use of the $g$--function $g(x)=\ln(W(\exp(x)))$ was suggested \cite{roberts2015calculating}.
+%The analytical solution $V(I)$ using the $g$--function is as follows \cite{roberts2015calculating}
+
+
+
+
+%\begin{equation}
+%\label{eqIV_g}
+%\begin{split}
+%V(I)= &IR_\mathrm{s}+\frac{n_1kT}{q}g(x_1)-\frac{n_2kT}{q}g(x_2) \\
+%  &-\frac{n_1kT}{q}\ln\left[\frac{qI_{01}R_\mathrm{p1}}{n_1kT}\right] +\frac{n_2kT}{q}\ln\left[\frac{qI_{02}R_\mathrm{p2}}{n_2kT}\right]\,,
+%\end{split}
+%\end{equation}
+%with
+%\begin{equation}
+%\label{eqx1}
+%x_1= \ln\left(\frac{qI_{01}R_\mathrm{p1}}{n_1kT}\right)+\frac{q(I+I_\mathrm{ph}+I_{01})R_\mathrm{p1}}{n_1kT}\,,
+%\end{equation}
+%and
+%\begin{equation}
+%\label{eqx2}
+%x_2= \ln\left(\frac{qI_{02}R_\mathrm{p2}}{n_2kT}\right)-\frac{q(I-I_{02})R_\mathrm{p2}}{n_2kT}\,.
+%\end{equation}
 We used Eqs.~(\ref{eqIV_g})--(\ref{eqx2}) both for simulation IV curves and during the approximation procedure.
 The $g$--function was evaluated by using iterative procedure \cite{roberts2015calculating}.
 
@@ -1822,19 +1855,29 @@ to extract the solar cell parameters from synthetic IV curves, which were genera
 The obtained results have been compared using nonparametric statistical procedures,
 including pairwise comparisons, $1\times N$ multiple comparisons, and $N\times N$ multiple comparisons.
 
-Research has demonstrated that utilizing a squared error-based fitness function offers clear advantages in tackling a provided problem.
-The overall performance results of various algorithms generally fit the No Free Lunch theory.
-%‘‘No-Free-Lunch’’ theorem.
-GOTLBO, PSO, ISCA, NNA, CWOA, and WW are completely unsuitable for parameter estimation according to the opposed two-diode model.
-The results of DE, NDE, MABC, and IJAYA are not as poor as those in the previous group;
-however, in general, it is still not recommended to use these algorithms for solving parameter identification problems.
-Generally, the EBLSHADE and TLBO are effective in accurately determining parameter values in most cases.
-However, investigation has shown that these algorithms may make mistakes under certain conditions.
-Therefore, EBLSHADE and TLBO applications in the case of solar cells with S-shaped IV curves should be approached with caution.
-Finally, results have illustrated that STLBO and ADELI have superior performance in terms of accuracy and reliability
-when compared with other used algorithms.
-In particular, these two algorithms successfully solve the task of accurately determining parameters
-from similar IV curves corresponding to photovoltaic cells with distinct characteristics.
+Research has shown that using a squared error-based fitness function offers clear advantages in tackling the given problem. 
+The overall performance results of various algorithms generally align with the NFL. 
+GOTLBO, PSO, ISCA, NNA, CWOA, and WW are unsuitable for parameter estimation in the opposed two-diode model. 
+DE, NDE, MABC, and IJAYA yield better results than the previous group, 
+but using these algorithms for parameter identification is not recommended. 
+EBLSHADE and TLBO are generally effective in accurately determining parameters, 
+but they may make mistakes under certain conditions. 
+Thus, their application for solar cells with S-shaped IV curves should be approached cautiously. 
+STLBO and ADELI have shown superior performance in accuracy and reliability compared to other algorithms. 
+Particularly, these two algorithms successfully determine parameters from similar IV curves of photovoltaic cells with distinct characteristics.
+
+%Research has demonstrated that utilizing a squared error-based fitness function offers clear advantages in tackling a provided problem.
+%The overall performance results of various algorithms generally fit the NFL.
+%GOTLBO, PSO, ISCA, NNA, CWOA, and WW are completely unsuitable for parameter estimation according to the opposed two-diode model.
+%The results of DE, NDE, MABC, and IJAYA are not as poor as those in the previous group;
+%however, in general, it is still not recommended to use these algorithms for solving parameter identification problems.
+%Generally, the EBLSHADE and TLBO are effective in accurately determining parameter values in most cases.
+%However, investigation has shown that these algorithms may make mistakes under certain conditions.
+%Therefore, EBLSHADE and TLBO applications in the case of solar cells with S-shaped IV curves should be approached with caution.
+%Finally, results have illustrated that STLBO and ADELI have superior performance in terms of accuracy and reliability
+%when compared with other used algorithms.
+%In particular, these two algorithms successfully solve the task of accurately determining parameters
+%from similar IV curves corresponding to photovoltaic cells with distinct characteristics.
 
 %It is important to note that in this study,
 %the parameters were obtained from idealized IV curves,

@@ -406,6 +406,11 @@
   {W}--functions},
 \newblock \bibinfo{journal}{Sol. Energy} \bibinfo{volume}{86}
   (\bibinfo{year}{2012}) \bibinfo{pages}{3026--3029}.
+%Type = Misc
+\bibitem[{Roberts and Valluri(2015)}]{roberts2015calculating}
+\bibinfo{author}{K.~Roberts}, \bibinfo{author}{S.~R. Valluri},
+  \bibinfo{title}{On calculating the current-voltage characteristic of
+  multi-diode models for organic solar cells}, \bibinfo{year}{2015}.
 %Type = Article
 \bibitem[{Lóczi(2022)}]{LambertNew}
 \bibinfo{author}{L.~Lóczi},
@@ -413,11 +418,6 @@
   {L}ambert {W} function},
 \newblock \bibinfo{journal}{Appl. Math. Comput.} \bibinfo{volume}{433}
   (\bibinfo{year}{2022}) \bibinfo{pages}{127406}.
-%Type = Misc
-\bibitem[{Roberts and Valluri(2015)}]{roberts2015calculating}
-\bibinfo{author}{K.~Roberts}, \bibinfo{author}{S.~R. Valluri},
-  \bibinfo{title}{On calculating the current-voltage characteristic of
-  multi-diode models for organic solar cells}, \bibinfo{year}{2015}.
 %Type = Article
 \bibitem[{Tada(2021)}]{Tada2021}
 \bibinfo{author}{K.~Tada},
