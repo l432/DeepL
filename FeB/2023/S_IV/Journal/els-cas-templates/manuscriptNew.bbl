@@ -1,4 +1,4 @@
-\begin{thebibliography}{84}
+\begin{thebibliography}{81}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\bibinfo}[2]{#2}
 \ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
@@ -9,15 +9,6 @@
 \newblock \bibinfo{title}{Review on recycling of solar modules/panels},
 \newblock \bibinfo{journal}{Sol. Energ. Mat. Sol.} \bibinfo{volume}{253}
   (\bibinfo{year}{2023}) \bibinfo{pages}{112151}.
-%Type = Article
-\bibitem[{Wang et~al.(2022)Wang, Tian, Chen, Ren, and Geng}]{Wang2022}
-\bibinfo{author}{X.~Wang}, \bibinfo{author}{X.~Tian},
-  \bibinfo{author}{X.~Chen}, \bibinfo{author}{L.~Ren},
-  \bibinfo{author}{C.~Geng},
-\newblock \bibinfo{title}{A review of end-of-life crystalline silicon solar
-  photovoltaic panel recycling technology},
-\newblock \bibinfo{journal}{Sol. Energ. Mat. Sol.} \bibinfo{volume}{248}
-  (\bibinfo{year}{2022}) \bibinfo{pages}{111976}.
 %Type = Article
 \bibitem[{Sesa et~al.(2019)Sesa, Darwis, Zhou, Belcher, and Dastoor}]{Sesa2019}
 \bibinfo{author}{E.~Sesa}, \bibinfo{author}{D.~Darwis},
@@ -36,24 +27,6 @@
   simulations}},
 \newblock \bibinfo{journal}{Appl. Phys. Lett.} \bibinfo{volume}{103}
   (\bibinfo{year}{2013}) \bibinfo{pages}{053306}.
-%Type = Article
-\bibitem[{Zuo et~al.(2014)Zuo, Yao, Li, and Chen}]{Zuo2014}
-\bibinfo{author}{L.~Zuo}, \bibinfo{author}{J.~Yao}, \bibinfo{author}{H.~Li},
-  \bibinfo{author}{H.~Chen},
-\newblock \bibinfo{title}{Assessing the origin of the {S}-shaped {I–V} curve
-  in organic solar cells: {A}n improved equivalent circuit model},
-\newblock \bibinfo{journal}{Sol. Energ. Mat. Sol.} \bibinfo{volume}{122}
-  (\bibinfo{year}{2014}) \bibinfo{pages}{88--93}.
-%Type = Article
-\bibitem[{de~Castro et~al.(2010)de~Castro, Heier, N{\"u}esch, and
-  Hany}]{Castro2010}
-\bibinfo{author}{F.~A. de~Castro}, \bibinfo{author}{J.~Heier},
-  \bibinfo{author}{F.~A. N{\"u}esch}, \bibinfo{author}{R.~Hany},
-\newblock \bibinfo{title}{Origin of the kink in current-density versus voltage
-  curves and efficiency enhancement of polymer--{C}$_{60}$ heterojunction solar
-  cells},
-\newblock \bibinfo{journal}{IEEE J. Sel. Top. Quantum Electron.}
-  \bibinfo{volume}{16} (\bibinfo{year}{2010}) \bibinfo{pages}{1690--1699}.
 %Type = Article
 \bibitem[{Romero et~al.(2017)Romero, del Pozo, Arredondo, Martín-Martín,
   Gordoa, Pickering, Pérez-Rodríguez, Barrena, and
@@ -179,24 +152,6 @@
 \newblock in: \bibinfo{booktitle}{2019 8th International Symposium on Next
   Generation Electronics (ISNE)}, pp. \bibinfo{pages}{1--4}.
 %Type = Article
-\bibitem[{García-Sánchez et~al.(2013)García-Sánchez, Lugo-Muñoz, Muci, and
-  Ortiz-Conde}]{GarciaSanchez2013}
-\bibinfo{author}{F.~J. García-Sánchez}, \bibinfo{author}{D.~Lugo-Muñoz},
-  \bibinfo{author}{J.~Muci}, \bibinfo{author}{A.~Ortiz-Conde},
-\newblock \bibinfo{title}{Lumped parameter modeling of organic solar cells’
-  {S}-shaped {I–V} characteristics},
-\newblock \bibinfo{journal}{IEEE J. Photovolt.} \bibinfo{volume}{3}
-  (\bibinfo{year}{2013}) \bibinfo{pages}{330--335}.
-%Type = Article
-\bibitem[{{De Castro} et~al.(2016){De Castro}, Laudani, {Riganti Fulginei}, and
-  Salvini}]{DeCastro2016}
-\bibinfo{author}{F.~{De Castro}}, \bibinfo{author}{A.~Laudani},
-  \bibinfo{author}{F.~{Riganti Fulginei}}, \bibinfo{author}{A.~Salvini},
-\newblock \bibinfo{title}{An in-depth analysis of the modelling of organic
-  solar cells using multiple-diode circuits},
-\newblock \bibinfo{journal}{Sol. Energy} \bibinfo{volume}{135}
-  (\bibinfo{year}{2016}) \bibinfo{pages}{590--597}.
-%Type = Article
 \bibitem[{Garc{\'i}a-S{\'a}nchez et~al.(2017)Garc{\'i}a-S{\'a}nchez, Romero,
   Lugo-Mu{\~n}oz, del Pozo, Arredondo, Liou, and
   Ortiz-Conde}]{GarciaSanchez2017}
@@ -209,6 +164,34 @@
 \newblock \bibinfo{journal}{Facta universitatis. Series electronics and
   energetics} \bibinfo{volume}{30} (\bibinfo{year}{2017})
   \bibinfo{pages}{327--350}.
+%Type = Article
+\bibitem[{de~Castro et~al.(2010)de~Castro, Heier, N{\"u}esch, and
+  Hany}]{Castro2010}
+\bibinfo{author}{F.~A. de~Castro}, \bibinfo{author}{J.~Heier},
+  \bibinfo{author}{F.~A. N{\"u}esch}, \bibinfo{author}{R.~Hany},
+\newblock \bibinfo{title}{Origin of the kink in current-density versus voltage
+  curves and efficiency enhancement of polymer--{C}$_{60}$ heterojunction solar
+  cells},
+\newblock \bibinfo{journal}{IEEE J. Sel. Top. Quantum Electron.}
+  \bibinfo{volume}{16} (\bibinfo{year}{2010}) \bibinfo{pages}{1690--1699}.
+%Type = Article
+\bibitem[{{De Castro} et~al.(2016){De Castro}, Laudani, {Riganti Fulginei}, and
+  Salvini}]{DeCastro2016}
+\bibinfo{author}{F.~{De Castro}}, \bibinfo{author}{A.~Laudani},
+  \bibinfo{author}{F.~{Riganti Fulginei}}, \bibinfo{author}{A.~Salvini},
+\newblock \bibinfo{title}{An in-depth analysis of the modelling of organic
+  solar cells using multiple-diode circuits},
+\newblock \bibinfo{journal}{Sol. Energy} \bibinfo{volume}{135}
+  (\bibinfo{year}{2016}) \bibinfo{pages}{590--597}.
+%Type = Article
+\bibitem[{García-Sánchez et~al.(2013)García-Sánchez, Lugo-Muñoz, Muci, and
+  Ortiz-Conde}]{GarciaSanchez2013}
+\bibinfo{author}{F.~J. García-Sánchez}, \bibinfo{author}{D.~Lugo-Muñoz},
+  \bibinfo{author}{J.~Muci}, \bibinfo{author}{A.~Ortiz-Conde},
+\newblock \bibinfo{title}{Lumped parameter modeling of organic solar cells’
+  {S}-shaped {I–V} characteristics},
+\newblock \bibinfo{journal}{IEEE J. Photovolt.} \bibinfo{volume}{3}
+  (\bibinfo{year}{2013}) \bibinfo{pages}{330--335}.
 %Type = Article
 \bibitem[{Wolpert and Macready(1997)}]{NFL}
 \bibinfo{author}{D.~Wolpert}, \bibinfo{author}{W.~Macready},
@@ -589,13 +572,6 @@
   adaptive evolution mechanism for numerical optimization},
 \newblock \bibinfo{journal}{Inform. Sci.} \bibinfo{volume}{478}
   (\bibinfo{year}{2019}) \bibinfo{pages}{422--448}.
-%Type = Inproceedings
-\bibitem[{Tanabe and Fukunaga(2014)}]{Tanabe2014}
-\bibinfo{author}{R.~Tanabe}, \bibinfo{author}{A.~S. Fukunaga},
-\newblock \bibinfo{title}{Improving the search performance of shade using
-  linear population size reduction},
-\newblock in: \bibinfo{booktitle}{2014 IEEE Congress on Evolutionary
-  Computation (CEC)}, pp. \bibinfo{pages}{1658--1665}.
 %Type = Article
 \bibitem[{Mohamed et~al.(2019)Mohamed, Hadi, and Jambi}]{EBLSHADE}
 \bibinfo{author}{A.~W. Mohamed}, \bibinfo{author}{A.~A. Hadi},
@@ -625,14 +601,6 @@
 \newblock \bibinfo{title}{The whale optimization algorithm},
 \newblock \bibinfo{journal}{Adv. Eng. Software} \bibinfo{volume}{95}
   (\bibinfo{year}{2016}) \bibinfo{pages}{51--67}.
-%Type = Article
-\bibitem[{Oliva et~al.(2017)Oliva, {Abd El Aziz}, and {Ella Hassanien}}]{CWOA}
-\bibinfo{author}{D.~Oliva}, \bibinfo{author}{M.~{Abd El Aziz}},
-  \bibinfo{author}{A.~{Ella Hassanien}},
-\newblock \bibinfo{title}{Parameter estimation of photovoltaic cells using an
-  improved chaotic whale optimization algorithm},
-\newblock \bibinfo{journal}{Appl. Energy} \bibinfo{volume}{200}
-  (\bibinfo{year}{2017}) \bibinfo{pages}{141--154}.
 %Type = Article
 \bibitem[{Sadollah et~al.(2018)Sadollah, Sayyaadi, and Yadav}]{NNA}
 \bibinfo{author}{A.~Sadollah}, \bibinfo{author}{H.~Sayyaadi},
@@ -673,14 +641,6 @@
 \newblock \bibinfo{journal}{Comput. Oper. Res.} \bibinfo{volume}{55}
   (\bibinfo{year}{2015}) \bibinfo{pages}{1--11}.
 %Type = Article
-\bibitem[{Rao(2016)}]{JAYA}
-\bibinfo{author}{R.~Rao},
-\newblock \bibinfo{title}{Jaya: A simple and new optimization algorithm for
-  solving constrained and unconstrained optimization problems},
-\newblock \bibinfo{journal}{International Journal of Industrial Engineering
-  Computations} \bibinfo{volume}{7} (\bibinfo{year}{2016})
-  \bibinfo{pages}{19--34}.
-%Type = Article
 \bibitem[{Yu et~al.(2017)Yu, Liang, Qu, Chen, and Wang}]{IJAYA}
 \bibinfo{author}{K.~Yu}, \bibinfo{author}{J.~Liang}, \bibinfo{author}{B.~Qu},
   \bibinfo{author}{X.~Chen}, \bibinfo{author}{H.~Wang},
@@ -710,6 +670,21 @@
   opposition based learning},
 \newblock \bibinfo{journal}{Expert Syst. Appl.} \bibinfo{volume}{119}
   (\bibinfo{year}{2019}) \bibinfo{pages}{210--230}.
+%Type = Inproceedings
+\bibitem[{Tanabe and Fukunaga(2014)}]{Tanabe2014}
+\bibinfo{author}{R.~Tanabe}, \bibinfo{author}{A.~S. Fukunaga},
+\newblock \bibinfo{title}{Improving the search performance of shade using
+  linear population size reduction},
+\newblock in: \bibinfo{booktitle}{2014 IEEE Congress on Evolutionary
+  Computation (CEC)}, pp. \bibinfo{pages}{1658--1665}.
+%Type = Article
+\bibitem[{Oliva et~al.(2017)Oliva, {Abd El Aziz}, and {Ella Hassanien}}]{CWOA}
+\bibinfo{author}{D.~Oliva}, \bibinfo{author}{M.~{Abd El Aziz}},
+  \bibinfo{author}{A.~{Ella Hassanien}},
+\newblock \bibinfo{title}{Parameter estimation of photovoltaic cells using an
+  improved chaotic whale optimization algorithm},
+\newblock \bibinfo{journal}{Appl. Energy} \bibinfo{volume}{200}
+  (\bibinfo{year}{2017}) \bibinfo{pages}{141--154}.
 %Type = Article
 \bibitem[{Biswas et~al.(2019)Biswas, Suganthan, Wu, and Amaratunga}]{LSHADE}
 \bibinfo{author}{P.~P. Biswas}, \bibinfo{author}{P.~Suganthan},
