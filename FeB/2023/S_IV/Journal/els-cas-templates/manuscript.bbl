@@ -1,4 +1,4 @@
-\begin{thebibliography}{84}
+\begin{thebibliography}{85}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\bibinfo}[2]{#2}
 \ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
@@ -18,65 +18,6 @@
   photovoltaic panel recycling technology},
 \newblock \bibinfo{journal}{Sol. Energ. Mat. Sol.} \bibinfo{volume}{248}
   (\bibinfo{year}{2022}) \bibinfo{pages}{111976}.
-%Type = Article
-\bibitem[{Sesa et~al.(2019)Sesa, Darwis, Zhou, Belcher, and Dastoor}]{Sesa2019}
-\bibinfo{author}{E.~Sesa}, \bibinfo{author}{D.~Darwis},
-  \bibinfo{author}{X.~Zhou}, \bibinfo{author}{W.~J. Belcher},
-  \bibinfo{author}{P.~C. Dastoor},
-\newblock \bibinfo{title}{{Experimental determination of the relationship
-  between the elements of a back-to-back diode model for organic photovoltaic
-  cells’ S-shaped I-V characteristics and cell structure}},
-\newblock \bibinfo{journal}{AIP Adv.} \bibinfo{volume}{9}
-  (\bibinfo{year}{2019}) \bibinfo{pages}{025014}.
-%Type = Article
-\bibitem[{Finck and Schwartz(2013)}]{Finck2013}
-\bibinfo{author}{B.~Y. Finck}, \bibinfo{author}{B.~J. Schwartz},
-\newblock \bibinfo{title}{{Understanding the origin of the S-curve in
-  conjugated polymer/fullerene photovoltaics from drift-diffusion
-  simulations}},
-\newblock \bibinfo{journal}{Appl. Phys. Lett.} \bibinfo{volume}{103}
-  (\bibinfo{year}{2013}) \bibinfo{pages}{053306}.
-%Type = Article
-\bibitem[{Zuo et~al.(2014)Zuo, Yao, Li, and Chen}]{Zuo2014}
-\bibinfo{author}{L.~Zuo}, \bibinfo{author}{J.~Yao}, \bibinfo{author}{H.~Li},
-  \bibinfo{author}{H.~Chen},
-\newblock \bibinfo{title}{Assessing the origin of the {S}-shaped {I–V} curve
-  in organic solar cells: {A}n improved equivalent circuit model},
-\newblock \bibinfo{journal}{Sol. Energ. Mat. Sol.} \bibinfo{volume}{122}
-  (\bibinfo{year}{2014}) \bibinfo{pages}{88--93}.
-%Type = Article
-\bibitem[{de~Castro et~al.(2010)de~Castro, Heier, N{\"u}esch, and
-  Hany}]{Castro2010}
-\bibinfo{author}{F.~A. de~Castro}, \bibinfo{author}{J.~Heier},
-  \bibinfo{author}{F.~A. N{\"u}esch}, \bibinfo{author}{R.~Hany},
-\newblock \bibinfo{title}{Origin of the kink in current-density versus voltage
-  curves and efficiency enhancement of polymer--{C}$_{60}$ heterojunction solar
-  cells},
-\newblock \bibinfo{journal}{IEEE J. Sel. Top. Quantum Electron.}
-  \bibinfo{volume}{16} (\bibinfo{year}{2010}) \bibinfo{pages}{1690--1699}.
-%Type = Article
-\bibitem[{Romero et~al.(2017)Romero, del Pozo, Arredondo, Martín-Martín,
-  Gordoa, Pickering, Pérez-Rodríguez, Barrena, and
-  García-Sánchez}]{Romero2017}
-\bibinfo{author}{B.~Romero}, \bibinfo{author}{G.~del Pozo},
-  \bibinfo{author}{B.~Arredondo}, \bibinfo{author}{D.~Martín-Martín},
-  \bibinfo{author}{M.~P.~R. Gordoa}, \bibinfo{author}{A.~Pickering},
-  \bibinfo{author}{A.~Pérez-Rodríguez}, \bibinfo{author}{E.~Barrena},
-  \bibinfo{author}{F.~J. García-Sánchez},
-\newblock \bibinfo{title}{S-shaped ${I}$ – ${V}$ characteristics of organic
-  solar cells: Solving mazhari’s lumped-parameter equivalent circuit model},
-\newblock \bibinfo{journal}{IEEE Trans. Electron Devices} \bibinfo{volume}{64}
-  (\bibinfo{year}{2017}) \bibinfo{pages}{4622--4627}.
-%Type = Article
-\bibitem[{Gao et~al.(2011)Gao, Luther, Semonin, Ellingson, Nozik, and
-  Beard}]{Gao2011}
-\bibinfo{author}{J.~Gao}, \bibinfo{author}{J.~M. Luther},
-  \bibinfo{author}{O.~E. Semonin}, \bibinfo{author}{R.~J. Ellingson},
-  \bibinfo{author}{A.~J. Nozik}, \bibinfo{author}{M.~C. Beard},
-\newblock \bibinfo{title}{Quantom dot size dependent {J-V} characteristics in
-  heterojunction {ZnO/PbS} quantum dot solar cells},
-\newblock \bibinfo{journal}{Nano Lett.} \bibinfo{volume}{11}
-  (\bibinfo{year}{2011}) \bibinfo{pages}{1002--1008}.
 %Type = Article
 \bibitem[{Saive(2019)}]{Saive2019}
 \bibinfo{author}{R.~Saive},
@@ -132,6 +73,16 @@
 \newblock \bibinfo{journal}{Sol. Energ. Mat. Sol.} \bibinfo{volume}{157}
   (\bibinfo{year}{2016}) \bibinfo{pages}{981--988}.
 %Type = Article
+\bibitem[{Gao et~al.(2011)Gao, Luther, Semonin, Ellingson, Nozik, and
+  Beard}]{Gao2011}
+\bibinfo{author}{J.~Gao}, \bibinfo{author}{J.~M. Luther},
+  \bibinfo{author}{O.~E. Semonin}, \bibinfo{author}{R.~J. Ellingson},
+  \bibinfo{author}{A.~J. Nozik}, \bibinfo{author}{M.~C. Beard},
+\newblock \bibinfo{title}{Quantom dot size dependent {J-V} characteristics in
+  heterojunction {ZnO/PbS} quantum dot solar cells},
+\newblock \bibinfo{journal}{Nano Lett.} \bibinfo{volume}{11}
+  (\bibinfo{year}{2011}) \bibinfo{pages}{1002--1008}.
+%Type = Article
 \bibitem[{Yu et~al.(2019)Yu, Huang, Lin, Xu, Deng, Ma, and Huang}]{Yu2019a}
 \bibinfo{author}{F.~Yu}, \bibinfo{author}{G.~Huang}, \bibinfo{author}{W.~Lin},
   \bibinfo{author}{C.~Xu}, \bibinfo{author}{W.~Deng}, \bibinfo{author}{X.~Ma},
@@ -157,6 +108,27 @@
 \newblock \bibinfo{journal}{Energy Procedia} \bibinfo{volume}{92}
   (\bibinfo{year}{2016}) \bibinfo{pages}{242--247}.
 %Type = Article
+\bibitem[{Romero et~al.(2017)Romero, del Pozo, Arredondo, Martín-Martín,
+  Gordoa, Pickering, Pérez-Rodríguez, Barrena, and
+  García-Sánchez}]{Romero2017}
+\bibinfo{author}{B.~Romero}, \bibinfo{author}{G.~del Pozo},
+  \bibinfo{author}{B.~Arredondo}, \bibinfo{author}{D.~Martín-Martín},
+  \bibinfo{author}{M.~P.~R. Gordoa}, \bibinfo{author}{A.~Pickering},
+  \bibinfo{author}{A.~Pérez-Rodríguez}, \bibinfo{author}{E.~Barrena},
+  \bibinfo{author}{F.~J. García-Sánchez},
+\newblock \bibinfo{title}{S-shaped ${I}$ – ${V}$ characteristics of organic
+  solar cells: Solving mazhari’s lumped-parameter equivalent circuit model},
+\newblock \bibinfo{journal}{IEEE Trans. Electron Devices} \bibinfo{volume}{64}
+  (\bibinfo{year}{2017}) \bibinfo{pages}{4622--4627}.
+%Type = Article
+\bibitem[{Finck and Schwartz(2013)}]{Finck2013}
+\bibinfo{author}{B.~Y. Finck}, \bibinfo{author}{B.~J. Schwartz},
+\newblock \bibinfo{title}{{Understanding the origin of the S-curve in
+  conjugated polymer/fullerene photovoltaics from drift-diffusion
+  simulations}},
+\newblock \bibinfo{journal}{Appl. Phys. Lett.} \bibinfo{volume}{103}
+  (\bibinfo{year}{2013}) \bibinfo{pages}{053306}.
+%Type = Article
 \bibitem[{Mazhari(2006)}]{Mazhari2006}
 \bibinfo{author}{B.~Mazhari},
 \newblock \bibinfo{title}{An improved solar cell circuit model for organic
@@ -171,6 +143,24 @@
   organic solar cells using lumped-parameter equivalent circuit model},
 \newblock \bibinfo{journal}{Sol. Energy} \bibinfo{volume}{177}
   (\bibinfo{year}{2019}) \bibinfo{pages}{229--240}.
+%Type = Article
+\bibitem[{Zuo et~al.(2014)Zuo, Yao, Li, and Chen}]{Zuo2014}
+\bibinfo{author}{L.~Zuo}, \bibinfo{author}{J.~Yao}, \bibinfo{author}{H.~Li},
+  \bibinfo{author}{H.~Chen},
+\newblock \bibinfo{title}{Assessing the origin of the {S}-shaped {I–V} curve
+  in organic solar cells: {A}n improved equivalent circuit model},
+\newblock \bibinfo{journal}{Sol. Energ. Mat. Sol.} \bibinfo{volume}{122}
+  (\bibinfo{year}{2014}) \bibinfo{pages}{88--93}.
+%Type = Article
+\bibitem[{de~Castro et~al.(2010)de~Castro, Heier, N{\"u}esch, and
+  Hany}]{Castro2010}
+\bibinfo{author}{F.~A. de~Castro}, \bibinfo{author}{J.~Heier},
+  \bibinfo{author}{F.~A. N{\"u}esch}, \bibinfo{author}{R.~Hany},
+\newblock \bibinfo{title}{Origin of the kink in current-density versus voltage
+  curves and efficiency enhancement of polymer--{C}$_{60}$ heterojunction solar
+  cells},
+\newblock \bibinfo{journal}{IEEE J. Sel. Top. Quantum Electron.}
+  \bibinfo{volume}{16} (\bibinfo{year}{2010}) \bibinfo{pages}{1690--1699}.
 %Type = Inproceedings
 \bibitem[{García-Sánchez and Romero(2019)}]{SshapeRewShot}
 \bibinfo{author}{F.~J. García-Sánchez}, \bibinfo{author}{B.~Romero},
@@ -196,6 +186,16 @@
   solar cells using multiple-diode circuits},
 \newblock \bibinfo{journal}{Sol. Energy} \bibinfo{volume}{135}
   (\bibinfo{year}{2016}) \bibinfo{pages}{590--597}.
+%Type = Article
+\bibitem[{Sesa et~al.(2019)Sesa, Darwis, Zhou, Belcher, and Dastoor}]{Sesa2019}
+\bibinfo{author}{E.~Sesa}, \bibinfo{author}{D.~Darwis},
+  \bibinfo{author}{X.~Zhou}, \bibinfo{author}{W.~J. Belcher},
+  \bibinfo{author}{P.~C. Dastoor},
+\newblock \bibinfo{title}{{Experimental determination of the relationship
+  between the elements of a back-to-back diode model for organic photovoltaic
+  cells’ S-shaped I-V characteristics and cell structure}},
+\newblock \bibinfo{journal}{AIP Adv.} \bibinfo{volume}{9}
+  (\bibinfo{year}{2019}) \bibinfo{pages}{025014}.
 %Type = Article
 \bibitem[{Garc{\'i}a-S{\'a}nchez et~al.(2017)Garc{\'i}a-S{\'a}nchez, Romero,
   Lugo-Mu{\~n}oz, del Pozo, Arredondo, Liou, and
@@ -320,6 +320,13 @@
 \newblock \bibinfo{journal}{Energy Convers. Manage.} \bibinfo{volume}{174}
   (\bibinfo{year}{2018}) \bibinfo{pages}{388--405}.
 %Type = Article
+\bibitem[{Li et~al.(2021)Li, Gong, and Gu}]{Li2021}
+\bibinfo{author}{S.~Li}, \bibinfo{author}{W.~Gong}, \bibinfo{author}{Q.~Gu},
+\newblock \bibinfo{title}{A comprehensive survey on meta-heuristic algorithms
+  for parameter extraction of photovoltaic models},
+\newblock \bibinfo{journal}{Renewable Sustainable Energy Rev.}
+  \bibinfo{volume}{141} (\bibinfo{year}{2021}) \bibinfo{pages}{110828}.
+%Type = Article
 \bibitem[{Pillai et~al.(2017)Pillai, Sahoo, Ram, Laudani, Rajasekar, and
   Sudhakar}]{Pillai2017}
 \bibinfo{author}{D.~S. Pillai}, \bibinfo{author}{B.~Sahoo},
@@ -423,6 +430,11 @@
   {W}--functions},
 \newblock \bibinfo{journal}{Sol. Energy} \bibinfo{volume}{86}
   (\bibinfo{year}{2012}) \bibinfo{pages}{3026--3029}.
+%Type = Misc
+\bibitem[{Roberts and Valluri(2015)}]{roberts2015calculating}
+\bibinfo{author}{K.~Roberts}, \bibinfo{author}{S.~R. Valluri},
+  \bibinfo{title}{On calculating the current-voltage characteristic of
+  multi-diode models for organic solar cells}, \bibinfo{year}{2015}.
 %Type = Article
 \bibitem[{Lóczi(2022)}]{LambertNew}
 \bibinfo{author}{L.~Lóczi},
@@ -430,11 +442,6 @@
   {L}ambert {W} function},
 \newblock \bibinfo{journal}{Appl. Math. Comput.} \bibinfo{volume}{433}
   (\bibinfo{year}{2022}) \bibinfo{pages}{127406}.
-%Type = Misc
-\bibitem[{Roberts and Valluri(2015)}]{roberts2015calculating}
-\bibinfo{author}{K.~Roberts}, \bibinfo{author}{S.~R. Valluri},
-  \bibinfo{title}{On calculating the current-voltage characteristic of
-  multi-diode models for organic solar cells}, \bibinfo{year}{2015}.
 %Type = Article
 \bibitem[{Tada(2021)}]{Tada2021}
 \bibinfo{author}{K.~Tada},

@@ -1,4 +1,5 @@
-\documentclass[a4paper,fleqn]{cas-dc}
+%\documentclass[a4paper,fleqn]{cas-dc}
+\documentclass[a4paper,fleqn]{cas-sc}
 
 % If the frontmatter runs over more than one page
 % use the longmktitle option.
@@ -37,13 +38,14 @@
 \def\textpagefraction{.001}
 
 % Short title
-\shorttitle{Meta--heuristic parameter estimation of solar cells with S--shaped IV characteristics}
+\shorttitle{Meta--heuristic parameter extraction of SCs with S--shaped IV curves}
+
 
 % Short author
 \shortauthors{O. Olikh}
 
 % Main title of the paper
-\title [mode = title]{Estimation of parameters for solar cells with S--shaped current--voltage characteristics using meta--heuristic algorithms}
+\title [mode = title]{A test of meta-heuristic algorithms for parameter extraction of next-generation solar cells with S-shaped current-voltage curves}
 
 % First author
 %
@@ -76,7 +78,7 @@
 % For a title note without a number/mark
 %\nonumnote{}
 
-% Here goes the abstract
+
 \begin{abstract}
 Identifying the parameters of photovoltaic (PV) models based on measured current-voltage (IV) characteristic curves
 is crucial for simulating, evaluating, and controlling PV systems.
@@ -95,12 +97,7 @@ Research has demonstrated that utilizing a squared error-based fitness function 
 Comprehensive results and analyses indicate that STLBO and ADELI algorithms have highly competitive performance in terms of accuracy and reliability.
 \end{abstract}
 
-% Use if graphical abstract is present
-%\begin{graphicalabstract}
-%\includegraphics{}
-%\end{graphicalabstract}
 
-% Research highlights
 \begin{highlights}
 \item 14 meta-heuristic algorithms are applied to parameter estimation from S-shaped IV curves.
 \item The algorithms' efficiencies are compared by using nonparametric statistic methods.
@@ -108,8 +105,7 @@ Comprehensive results and analyses indicate that STLBO and ADELI algorithms have
 \item STLBO and ADELI feature the superior performance in identifying parameters of opposed two-diode model.
 \end{highlights}
 
-% Keywords
-% Each keyword is seperated by \sep
+
 \begin{keywords}
 S--shaped IV characteristics \sep Opposed two-diode model \sep Parameter estimation \sep
 Meta--heuristic algorithms \sep Nonparametric statistical procedure \sep Solar cell models
@@ -128,18 +124,12 @@ According to the International Energy Agency (IEA) reports, the cumulative insta
 was predicted to increase to 1.826 TW by 2026 and 14.5 TW by 2050 \cite{Wang2022}.
 Currently, silicon solar cells make up approximately 90\% of the global photovoltaic production capacity.
 But recently, intensive research is underway for innovative developments,
-further experiments, and practical PV applications of various new-generation solar cells (SCs).
-The operating principle of new-generation solar cells is qualitatively similar to silicon-based ones.
-However, it is important to note that the fourth quadrant of their current-voltage (IV) characteristics
-often exhibits an S-shaped deformation or kink.
-This kink’s origin has been attributed to various physical phenomena:
-charge trapping at the cathode interface \cite{Sesa2019,Finck2013},
-rectifying Schottky junction at the anode interface \cite{Zuo2014}
-change of the electric field distribution \cite{Castro2010},
-presence of strong interface dipoles \cite{Romero2017},
-unbalanced charge transport \cite{Gao2011}.
-Furthermore, it is worth noting that such a feature of the IV characteristics is typical
-in the most promising candidates for the next generation of photovoltaic devices.
+further experiments, and practical PV applications of various new-generation solar cells (NG-SCs).
+The operating principle of NG-SCs is qualitatively similar to Si-SCs,
+but the fourth quadrant of their current-voltage  characteristics (IVCs)
+often exhibits an S-shaped kink.
+The kink origin has been attributed to various physical phenomena
+and such IVC feature is typical in the most promising candidates for the NG-SCs.
 Specifically, S-shaped IV curves have been observed in silicon heterojunction SCs \cite{Saive2019},
 thin-film SCs such as CdTe, CI(G)S, and amorphous silicon PV devices \cite{Saive2019,Roland2016},
 normal and inverted organic SCs \cite{Gaur2014,Tran2017,Lastra2019},
@@ -149,24 +139,22 @@ and hybrid SCs \cite{VeinbergVidal2016,Romero2017,Finck2013}.
 
 
 One of the most common approaches to understanding the electrical characteristics of PV devices
-is to use an equivalent circuit model to fit the shape of the IV curve.
+is to use an equivalent circuit model.
 Such lumped-parameter modeling allows simulation, analysis, and optimization of device performance.
-The most frequently used conventional solar cell lumped-parameter models are single-diode model (SDM), double-diode
+The most frequently used conventional SC lumped-parameter models are single-diode model (SDM), double-diode
 model (DDM), and three-diode model (TDM) models.
 The models incorporate parallel-connected diodes that activate in one direction,
 a photo-current source, a parallel shunt resistance, and a series resistance.
 The PV module model (PVMM) is based on SDM and is made up of several diodes in series or parallel.
-
 Unfortunately, the conventional models failed in describing the S-shaped kink.
 Thus, new models are proposed to give some reasonable IV curve shape explanations on the IV curve shape from the view of electricity.
 One of the earliest attempts to develop such a model was proposed by Mazhari \cite{Mazhari2006}.
 This model is essentially a simplified version of the SDM, achieved by excluding resistances and incorporating an additional diode.
-Up to now, Mazhari’s model is the simplest circuit because the least fitting parameters are required for simulations.
 Mazhari’s model fails to capture the linear-like rise S-shaped kink in the third quadrant,
 and the model, which improved by incorporating two resistance, proposed for organic SCs \cite{Yu2019}.
-Gaur and Kumar \cite{Gaur2014} proposed equivalent circuit models to represent the behavior of polymer solar in the dark.
+Gaur and Kumar \cite{Gaur2014} offered equivalent model to represent the behavior of polymer SC in the dark.
 This model is almost identical to the DDM, except one of the diodes is the opposite.
-Another way to develop equivalent models involved using multiple series diodes, unlike conventional approaches.
+Another way to develop equivalent models involves using multiple series diodes.
 Zuo \emph{et al}. \cite{Zuo2014} offered to explain the S-shape by utilizing a model consisting
 of two series diodes connected in the same direction, two shunt resistors, and one series resistor.
 Another lumped-parameter equivalent circuit holds two opposed diodes, two opposed current sources, and no resistors \cite{Gao2011}.
@@ -174,7 +162,7 @@ De Castro et al \cite{Castro2010} proposed a model consisting of two opposed dio
 a series resistance, and a photo-current source.
 The last model represents a significant advancement
 as it successfully reproduces the S-shaped kink in the power-producing fourth quadrant
-of the illuminated IV characteristics.
+of the illuminated IVCs.
 However, it falls short of adequately describing the IV curve
 beyond the open-circuit point in the first quadrant,
 where the current of many practical devices tends to continue increasing \cite{SshapeRewShot}.
@@ -187,35 +175,31 @@ back-to-back diodes in parallel with a shunt resistor and the photo-current sour
 then connected in parallel to another diode and shunt resistor, again in series with a resistor.
 Some review about models for PV devices with S-shaped IV curves can be found in \cite{SshapeRewShot,GarciaSanchez2017}.
 
-The next step after developing the model is to identify the corresponding parameters from the IV characteristics.
+The next step after the model development is the identification of corresponding parameters from the IVCs.
 Essentially, this task is an optimization problem.
 One popular approach for solving such problems is the application of meta--heuristic algorithms.
-In fact, there have been numerous meta--heuristic algorithms developed specifically for this purpose.
-No Free Lunch theory (NFL) \cite{NFL} provides the foundation for such diversity,
-stating that no single meta--heuristic algorithm can solve all optimization tasks effectively.
-In other words, the optimization algorithm can have brilliant results in a specific class of problems
-and at the same time fails to solve other ones.
+No Free Lunch theory (NFL) \cite{NFL} provides the foundation for meta--heuristic algorithm diversity,
+stating that no single algorithm can solve all optimization tasks effectively.
 As a result, each problem, including the parameter estimation of each equivalent model, necessitates a distinct algorithm selection.
 Numerous studies have been conducted to compare the efficiency of meta-heuristic algorithms for parameter estimation under conventional SC models.
 Some studies focus on a single model, such as SDM \cite{DE_EM}, DDM \cite{SSA,FWA}, or TDM \cite{ELSHADE_INR},
 while others examine both SDM and DDM concurrently
-%\cite{BBO_M,CSO,BPFPA,MPALW}.
 \cite{ELPSO,Barth2016,BPFPA,MPALW}.
 Several papers have investigated algorithms' efficiency in processing IV curves according to three models: SDM, DDM, and PVMM
-%\cite{IMPA,SCA_NM_OBL,MPSO,IWOA,IJAYA}.
 \cite{IMPA,SCA_NM_OBL,HFAPS,IWOA}.
 Indeed, the utilization of conventional SC models for testing newly developed
 algorithms is among the most popular approaches after using CEC20XX benchmark functions.
-The wide range of metaheuristic optimization methods allows for situations in which
-various studies examine identical models but prioritize different algorithms array.
+A comprehensive survey of meta-heuristic algorithms for parameter
+extraction of conventional PV models can be found in \cite{Li2021}.
 
-Regarding the estimation of parameters for models of PV devices with S-shaped IV curves, the situation is not as well-explored.
+
+Regarding the estimation of parameters from S-shaped IV curves, the situation is not as well-explored.
 Certainly, meta--heuristic algorithms have been utilized in processing experimental S-shaped IV curves \cite{Pillai2017}.
 Nevertheless, studies aimed at identifying the most optimal approach for solving these problems are absent to our knowledge.
 However, the NFL theory suggests that algorithms that have demonstrated exceptional results for silicon monocrystalline SC models
-may not yield the same effectiveness for models of the next-generation PV devices.
+may not yield the same effectiveness for NG-SC models.
 
-This study aimed to compare the effectiveness of parameter estimation according to the De Castro two-diode model \cite{Castro2010}
+This study aimed to review  the effectiveness of parameter estimation according to the De Castro two-diode model \cite{Castro2010}
 using a set of 14 meta-heuristic algorithms and determine the best-performing among them.
 The selection of this particular model from the diverse range is motivated by its universality.
 Despite the mentioned drawbacks in the first quadrant,
@@ -240,7 +224,14 @@ The obtained results are compared using various nonparametric statistical method
 
 %\section{Models and Methods}\label{MM}
 \section{Problem definition}\label{MM}
-\subsection{Solar cell model}\label{SCModel}
+\subsection{Mathematical formulation of opposed two--diode model}\label{SCModel}
+\begin{figure}[]
+	\centering
+%		\includegraphics[width=0.75\columnwidth]{Chem}
+		\includegraphics[width=0.35\columnwidth]{Chem}
+	  \caption{The opposed two--diode equivalent--circuit model of a solar cell.}\label{fig_chem}
+\end{figure}
+
 Fig.~\ref{fig_chem}
 vividly reveals the structure of the used model \cite{Castro2010}.
 It can be seen from the figure that model contains a current source accompanied by a diode D1, a shunt
@@ -248,28 +239,40 @@ resistor $R_\mathrm{p1}$ to show the leakage current, and a series resistor $R_\
 losses associated with the load current.
 Besides, the second diode D2 with a second parallel resistance $R_\mathrm{p2}$ is placed opposite to the first one and is essential to
 simulate the non-ideal effects of the active layer/cathode interface.
-In this model, D1 is responsible for the exponential behavior of the IV curve,
-the main contribution of D2 is to simulate the S--shape.
-The analytical solution $V(I)$ of the opposed two--diode equivalent circuit model was
- obtained \cite{CastroSolution} using Lambert $W$-function \cite{LambertNew}:
+The analytical solution $V(I)$ of the opposed two--diode equivalent circuit model
+is as follows \cite{CastroSolution,roberts2015calculating}
 
+%\begin{equation}
+%\label{eqIV_g}
+%\begin{split}
+%V(I)= &IR_\mathrm{s}+\frac{n_1kT}{q}g(x_1)-\frac{n_2kT}{q}g(x_2) \\
+%  &-\frac{n_1kT}{q}\ln\left[\frac{qI_{01}R_\mathrm{p1}}{n_1kT}\right] +\frac{n_2kT}{q}\ln\left[\frac{qI_{02}R_\mathrm{p2}}{n_2kT}\right]\,,
+%\end{split}
+%\end{equation}
+\begin{equation}
+\label{eqIV_g}
+V(I)= IR_\mathrm{s}+\frac{n_1kT}{q}g(x_1)-\frac{n_2kT}{q}g(x_2)
+  -\frac{n_1kT}{q}\ln\left[\frac{qI_{01}R_\mathrm{p1}}{n_1kT}\right] +\frac{n_2kT}{q}\ln\left[\frac{qI_{02}R_\mathrm{p2}}{n_2kT}\right]\,,
+\end{equation}
 
-\begin{figure}[]
-	\centering
-		\includegraphics[width=0.75\columnwidth]{Chem}
-	  \caption{The opposed two--diode equivalent--circuit model of a solar cell.}\label{fig_chem}
-\end{figure}
-
-
-\begin{eqnarray}
-% \nonumber to remove numbering (before each equation)
-\label{eqIV_W}
-V&=& (I+I_\mathrm{ph}+I_{01})R_\mathrm{p1} \nonumber \\
-  &&-\frac{n_1kT}{q}W\left\{\frac{qI_{01}R_\mathrm{p1}}{n_1kT}\exp\left[\frac{qR_\mathrm{p1}(I+I_\mathrm{ph}+I_{01})}{n_1kT}\right]\right\} \nonumber \\
-  &&+\frac{n_2kT}{q}W\left\{\frac{qI_{02}R_\mathrm{p2}}{n_2kT}\exp\left[-\frac{qR_\mathrm{p2}(I-I_{02})}{n_2kT}\right]\right\} \nonumber \\
-  &&+(I-I_{02})R_\mathrm{p2}+IR_\mathrm{s}\,,
-\end{eqnarray}
+with
+%\begin{equation}
+%\label{eqx1}
+%x_1= \ln\left(\frac{qI_{01}R_\mathrm{p1}}{n_1kT}\right)+\frac{q(I+I_\mathrm{ph}+I_{01})R_\mathrm{p1}}{n_1kT}\,,
+%\end{equation}
+%and
+%\begin{equation}
+%\label{eqx2}
+%x_2= \ln\left(\frac{qI_{02}R_\mathrm{p2}}{n_2kT}\right)-\frac{q(I-I_{02})R_\mathrm{p2}}{n_2kT}\,,
+%\end{equation}
+\begin{equation}
+\label{eqx2}
+x_1= \ln\left(\frac{qI_{01}R_\mathrm{p1}}{n_1kT}\right)+\frac{q(I+I_\mathrm{ph}+I_{01})R_\mathrm{p1}}{n_1kT}\,,\quad
+x_2= \ln\left(\frac{qI_{02}R_\mathrm{p2}}{n_2kT}\right)-\frac{q(I-I_{02})R_\mathrm{p2}}{n_2kT}\,,
+\end{equation}
 where
+$g(x)=\ln(W(\exp(x)))$,
+$W$ is the Lambert function \cite{LambertNew},
 $I_{01}$ and $I_{02}$ are the saturation currents and
 $n_1$ and $n_2$ are
 the ideality factors for D1 and D2 respectively,
@@ -280,26 +283,6 @@ $R_\mathrm{s}$, and $I_\mathrm{ph}$)
 that need to be determined from the IV curve.
 Thus, from an optimization perspective, the dimension of the problem is $D=8$.
 
-The expression~(\ref{eqIV_W}) has a drawback in that it tends to stray from the range of numbers that can be accommodated by the standard 64-bit floating-point format owing to the presence of exponential functions for larger numbers.
-To overcome this drawback, the use of the $g$--function $g(x)=\ln(W(\exp(x)))$ was suggested \cite{roberts2015calculating}.
-The analytical solution $V(I)$ using the $g$--function is as follows \cite{roberts2015calculating}
-\begin{equation}
-\label{eqIV_g}
-\begin{split}
-V(I)= &IR_\mathrm{s}+\frac{n_1kT}{q}g(x_1)-\frac{n_2kT}{q}g(x_2) \\
-  &-\frac{n_1kT}{q}\ln\left[\frac{qI_{01}R_\mathrm{p1}}{n_1kT}\right] +\frac{n_2kT}{q}\ln\left[\frac{qI_{02}R_\mathrm{p2}}{n_2kT}\right]\,,
-\end{split}
-\end{equation}
-with
-\begin{equation}
-\label{eqx1}
-x_1= \ln\left(\frac{qI_{01}R_\mathrm{p1}}{n_1kT}\right)+\frac{q(I+I_\mathrm{ph}+I_{01})R_\mathrm{p1}}{n_1kT}\,,
-\end{equation}
-and
-\begin{equation}
-\label{eqx2}
-x_2= \ln\left(\frac{qI_{02}R_\mathrm{p2}}{n_2kT}\right)-\frac{q(I-I_{02})R_\mathrm{p2}}{n_2kT}\,.
-\end{equation}
 We used Eqs.~(\ref{eqIV_g})--(\ref{eqx2}) both for simulation IV curves and during the approximation procedure.
 The $g$--function was evaluated by using iterative procedure \cite{roberts2015calculating}.
 
@@ -324,42 +307,32 @@ To overcome this issue, Tada \cite{Tada2021} successfully employed Bayesian esti
 To assess the capabilities of meta-heuristic methods in overcoming additional similar challenges,
 they were applied to a IV curve corresponding to such a problematic case.
 The parameter values were taken from \cite{Tada2021}:
+%\begin{equation}
+%\label{eqParSingleIV}
+%\begin{split}
+%I_{01}&=1.6\cdot10^{-6}\,\text{mA},\quad n_1=1.92,\quad R_\mathrm{p1}=190\,\Omega,\\
+%I_{02}&=0.16\,\text{mA},\quad n_2=1.92, \quad R_\mathrm{p2}=190\,\Omega,\\
+%R_\mathrm{s}&=45\,\Omega,\quad I_\mathrm{ph}=8\,\text{mA},
+%\end{split}
+%\end{equation}
 \begin{equation}
 \label{eqParSingleIV}
 \begin{split}
-I_{01}&=1.6\cdot10^{-6}\,\text{mA},\\
-n_1&=1.92,\\
-R_\mathrm{p1}&=190\,\Omega,\\
-I_{02}&=0.16\,\text{mA},\\
-n_2&=1.92,\\
-R_\mathrm{p2}&=190\,\Omega,\\
-R_\mathrm{s}&=45\,\Omega,\\
-I_\mathrm{ph}&=8\,\text{mA},
+I_{01}&=1.6\cdot10^{-6}\,\text{mA},\quad n_1=1.92,\quad R_\mathrm{p1}=190\,\Omega,\quad I_{02}=0.16\,\text{mA},\\
+\quad n_2&=1.92, \quad R_\mathrm{p2}=190\,\Omega,\quad R_\mathrm{s}=45\,\Omega,\quad I_\mathrm{ph}=8\,\text{mA},\\
 \end{split}
 \end{equation}
-%($I_{01}=1.6\cdot10^{-6}$~mA,
-%$n_1=1.92$,
-%$R_\mathrm{p1}=190$~$\Omega$,
-%$I_{02}=0.16$~mA,
-%$n_2=1.92$,
-%$R_\mathrm{p2}=190$~$\Omega$,
-%$R_\mathrm{s}=45$~$\Omega$,
-%$I_\mathrm{ph}=8$~mA),
 and the IV curve was simulated over a range of 0-0.8~V with step 10~mV at $T=300$~K.
 The simulation result is presented on Fig.~\ref{figSigleIV} by symbols.
 
 
 \begin{figure}[]
 	\centering
-		\includegraphics[width=1.0\columnwidth]{IVsimple}
+%		\includegraphics[width=1.0\columnwidth]{IVsimple}
+		\includegraphics[width=0.5\columnwidth]{IVsimple}
 	  \caption{Fitting results (lines) for the simulated current-voltage characteristic (symbols).
              The values from  Eq.~(\ref{eqParSingleIV}) were assumed under simulation.}\label{figSigleIV}
 \end{figure}
-
-%It has been shown previously whether the ideality factor of D2 ($n_2$) is the same as that of D1
-%($n_1=n_2=1.92$) or very larger than $n_1$ ($n_1=1.00$, $n_2=3.00$),
-%the nonlinear least--squares method finds a set of equivalent circuit parameters that reproduces the experimental
-%data of an organic photovoltaic cell.
 
 
 \subsubsection{IV--set case}\label{SetIV}
@@ -384,15 +357,15 @@ In the case of D2, the thermionic emission current was suggested
 and $I_{02}$ and $n_2$ increased and decreased, respectively, with temperature rise \cite{Sze2012}:
 \begin{eqnarray}
 %\label{eqIV_W}
-I_{02}&=& I_{002}\exp\left(-\frac{E_I}{kT}\right)\,,\\
-n_2&=&1+\frac{T^*}{T}\,,
+I_{02}&=& I_{002}\exp\left(-E_I/kT\right)\,,\\
+n_2&=&1+T^*/T\,,
 \end{eqnarray}
 where $I_{002}$, $E_I$, and $T^*$ are the constants which are independent of temperature.
 The values of $I_{002}=500$~A, $E_I=0.40$~eV, and $T^*=500$~K were used.
 For $R_\mathrm{p2}$, an exponential temperature dependence was employed,
 as it is widely observed \cite{Kondratenko2019} in modern solar cells for the shunt resistance:
 \begin{equation}
-R_\mathrm{p2}=R_\mathrm{p20}\exp\left(\frac{E_R}{kT}\right)\,.
+R_\mathrm{p2}=R_\mathrm{p20}\exp\left(E_R/kT\right)\,
 \end{equation}
 with
 $R_\mathrm{p20}=9$~m$\Omega$,
@@ -416,20 +389,6 @@ and $R_\mathrm{s0}=50$~$\Omega$ were used.
 
 
 
-%Thus, the set of synthetic IV curves was generated using the following temperature dependencies of the parameters:
-%\begin{equation}
-%\label{eqParSetIV}
-%\begin{split}
-%I_{01}(T)[\text{mA}]&=0.015\,,\\
-%n_1(T)&=(7kT)^{-1},\\
-%R_\mathrm{p1}(T)[\Omega]&=10^4\,,\\
-%I_{02}(T)[\text{mA}]&=10^3\exp\left(-\frac{0.40}{kT}\right)\,,\\
-%n_2&=1.92,\\
-%R_\mathrm{p2}&=190\,\Omega,\\
-%R_\mathrm{s}&=45\,\Omega,\\
-%I_\mathrm{ph}&=8\,\text{mA},
-%\end{split}
-%\end{equation}
 The set of I–V data was composed of 10 curves,
 which were simulated at 10~K intervals from 260 to 350~K;
 in this case,
@@ -449,7 +408,8 @@ and from 0.96 to 1.05~mA, respectively.
 The simulation results are presented on Fig.~\ref{figSetIV} by symbols.
 \begin{figure}[]
 	\centering
-		\includegraphics[width=1.0\columnwidth]{IVset}
+%		\includegraphics[width=1.0\columnwidth]{IVset}
+		\includegraphics[width=0.5\columnwidth]{IVset}
 	  \caption{Fitting results (lines) for the simulated current-voltage characteristic (symbols).
              The values from  Sec.~\ref{SetIV} were assumed under simulation.}\label{figSetIV}
 \end{figure}
@@ -572,27 +532,22 @@ it comes to parameter estimation of SCs within conventional models (SDM or DDM) 
 In meta-heuristic optimization methods, the quality of the extracted parameters is evaluated using the fitness function at
 every iteration.
 In our investigation, absolute error and square error fitness functions were under consideration:
-\begin{equation}
+\begin{gather}
 \label{eqFae}
-F_\mathrm{AE}(Y)= \sum_{k=1}^p \left|V^\mathrm{tr}(I_k)-V^\mathrm{cal}(I_k,Y)\right|\,,
-\end{equation}
-\begin{equation}
+F_\mathrm{AE}(Y)= \sum_{k=1}^p \left|V^\mathrm{tr}(I_k)-V^\mathrm{cal}(I_k,Y)\right|\,,\\
 \label{eqFse}
 F_\mathrm{SE}(Y)= \sum_{k=1}^p \left[V^\mathrm{tr}(I_k)-V^\mathrm{cal}(I_k,Y)\right]^2\,,
-\end{equation}
+\end{gather}
 where
 $V^\mathrm{tr}(I_k)$ is the simulated value of voltage at current $I_k$,
 $V^\mathrm{cal}(I_k,Y)$ is the calculated values of voltage, which can be obtained
 by Eqs.~(\ref{eqIV_g})--(\ref{eqx2}),
 for given set of parameters (i.e. $Y = \{I_{01},n_1,R_\mathrm{p1},I_{02},n_2,R_\mathrm{p2},R_\mathrm{s},I_\mathrm{ph}\}$)
 at current $I_k$,
-and $p$ is the total number of voltage steps in the IV characteristic.
+and $p$ is the total number of voltage steps in the IVC.
 
 
 
-%Each algorithm was run 51 times with different random seed for each simulated IV curves.
-%The numbers of independent algorithmic runs are equal to 51 on each simulated IV curve
-%to generate the statistical results.
 We executed each tested algorithm for $N_\mathrm{runs}=51$ independent runs on each simulated IV curve
 to generate the statistical results.
 The search ranges were set as follows:
@@ -606,17 +561,7 @@ $n_2\in[0.5,50]$,
 $R_\mathrm{p2}(\Omega)\in[10,5\cdot10^4]$,
 $R_\mathrm{s}(\Omega)\in[0.1,1000]$,
 $I_\mathrm{ph}(\mathrm{mA})\in[10^{-3},100]$.
-%\begin{eqnarray}
-%\label{eqSR}
-%I_{01}(\mathrm{mA})&\in&[10^{-13},1]\nonumber, \\
-%n_1&\in&[0.5,50]\nonumber, \\
-%R_\mathrm{p1}(\Omega)&\in&[10,10^6]\nonumber, \\
-%I_{02}(\mathrm{mA})&\in&[10^{-7},10]\nonumber, \\
-%n_2&\in&[0.5,50]\nonumber, \\
-%R_\mathrm{p2}(\Omega)&\in&[10,5\cdot10^4]\nonumber, \\
-%R_\mathrm{s}(\Omega)&\in&[0.1,1000]\nonumber, \\
-%I_\mathrm{ph}(\mathrm{mA})&\in&[10^{-3},100]\nonumber .
-%\end{eqnarray}
+
 
 \subsection{Evaluation metrics}\label{EvalCr}
 
@@ -748,9 +693,6 @@ A cell marked with the symbol ``AE'' indicates better results for function $F_\m
 In the case of the symbol ``='', there is no significant difference between function $F_\mathrm{SE}$ and function $F_\mathrm{AE}$ aplication.
 
 
-%\newcolumntype{G}{>{\columncolor{ligthGreen}}C}
-%\newcolumntype{Y}{>{\columncolor{ligthYellow}}C}
-
 
 \begin{table}[<options>]
 \caption{Wilcoxon signed ranks test results of fitness functions comparisons with a level of significance $\alpha = 0.05$}\label{tblFF}
@@ -860,7 +802,7 @@ However, considering the deliberate utilization of a suboptimal parameter would 
 
 \begin{figure}[]
 	\centering
-		\includegraphics[width=1.0\columnwidth]{Fig4}
+		\includegraphics[width=0.45\columnwidth]{Fig4}
 	  \caption{The results of Wilcoxon signed-rank test with a level of significance $\alpha = 0.05$ in the single-IV case.
                Each colored small square indicates that the algorithm specified in the row outperforms the algorithm
                specified in the column in evaluating one of the parameters of the two--diode model.
@@ -871,7 +813,7 @@ However, considering the deliberate utilization of a suboptimal parameter would 
 
 \begin{figure}[]
 	\centering
-		\includegraphics[width=1.0\columnwidth]{Fig5}
+		\includegraphics[width=0.45\columnwidth]{Fig5}
 	  \caption{The total count of wins and losses for each algorithm in pairwise comparisons using the
                Wilcoxon signed-rank test with a significance level of $\alpha = 0.05$ in the single-IV case.}\label{figWilTotSingleIV}
 \end{figure}
@@ -910,13 +852,22 @@ The highest count of defeats was observed for the PSO and WW algorithms (104 and
 The data regarding the total count of wins and losses when applying the Wilcoxon test
 for each algorithm are summarized in Fig.~\ref{figWilTotSingleIV}.
 
+%\begin{figure}[!ht]
+%	\centering
+%		\includegraphics[width=.76\columnwidth]{Friedman}
+%        \includegraphics[width=.76\columnwidth]{FriedmanAlignedRank}
+%        \includegraphics[width=.76\columnwidth]{QuadeRank}
+%	  \caption{Ranking of the algorithms according to Friedman (a), Friedman Aligned (b), and Quade (c) tests in the single-IV case.}\label{figRanksSingleIV}
+%\end{figure}
+
 \begin{figure}[!ht]
 	\centering
-		\includegraphics[width=.76\columnwidth]{Friedman}
-        \includegraphics[width=.76\columnwidth]{FriedmanAlignedRank}
-        \includegraphics[width=.76\columnwidth]{QuadeRank}
+		\includegraphics[width=.32\columnwidth]{Friedman}
+        \includegraphics[width=.32\columnwidth]{FriedmanAlignedRank}
+        \includegraphics[width=.32\columnwidth]{QuadeRank}
 	  \caption{Ranking of the algorithms according to Friedman (a), Friedman Aligned (b), and Quade (c) tests in the single-IV case.}\label{figRanksSingleIV}
 \end{figure}
+
 
 It is recommended \cite{Derrac2011} to begin the multiple comparisons tests by examining the null hypothesis $H_0$,
 which asserts the equality of medians between the populations of results obtained by different algorithms.
@@ -959,107 +910,17 @@ To compare a control method (1 of 14 compared) with a set of other algorithms (r
 one can define a family of hypotheses related to the control method.
 Applying a post-hoc test makes it possible to obtain a $p$--value that indicates the extent to which each hypothesis can be rejected.
 We calculated $p$--values using four post-hoc procedures (Finner, Holm, Hochberg, and Holland) for all algorithms, tests, and tasks.
-By following the indications given for the four post-hoc procedures considered, Table~\ref{tbl1NADELI} shows the $p$--values
-obtained, using the ranks computed by the Friedman, Friedman Aligned, and Quade tests for the case of control algorithm ADELI
-and the task of $R_\mathrm{p1}$ estimation.
-These are typical results, the reader is referred to the supplementary material for rest of $p$-values (Tables S4-S143).
+The reader is referred to the supplementary material for all $p$-values (Tables S4-S143).
+In particular, the common feature of all comparisons is that
+the Finner post-hoc procedure exhibits the most powerful behavior,
+reaching the lowest $p$-values.
 
-
-\begin{table*}[<options>]
-\caption{Adjusted $p$-values for Friedman, Friedman Aligned, and Quade tests in single--IV case.
- ADELI is the control algorithm, and the task of $R_\mathrm{p1}$ estimation is under consideration.}\label{tbl1NADELI}
-\begin{tabular*}{\tblwidth}{@{}LLCCCC@{}}
-\toprule
-\multirow{2}{*}{Algorithm}& \multirow{2}{*}{Test}& \multicolumn{4}{C}{post-hoc procedure} \\
-  & &Finner & Holm & Hochberg &Holland\\ % Table header row
-\midrule
-GOTLBO&	Friedman&<1E-13&<1E-13&<1E-13&<1E-13\\
-&Friedman Aligned&2.23361E-09&6.87266E-09&6.87266E-09&6.87266E-09\\
-&Quade&2.57827E-03&4.09880E-03&3.90245E-03&4.09117E-03\\
-PSO&Friedman&<1E-13&<1E-13&<1E-13&<1E-13\\
-&Friedman Aligned&<1E-13&<1E-13&<1E-13&<1E-13\\
-&Quade&2.57827E-03&2.58134E-03&2.58134E-03&2.57827E-03\\
-MABC&Friedman&6.35048E-13&1.61204E-12&1.61204E-12&1.61204E-12\\
-&Friedman Aligned&7.88131E-06&2.97065E-05&2.97065E-05&2.97062E-05\\
-&Quade&1.73550E-02&6.56791E-02&6.56791E-02&6.38590E-02\\
-WW&Friedman&1.84926E-10&5.69003E-10&5.69003E-10&5.69003E-10\\
-&Friedman Aligned&3.15599E-13&8.01137E-13&8.01137E-13&8.01137E-13\\
-&Quade&5.31725E-03&1.96611E-02&1.96611E-02&1.94928E-02\\
-DE&Friedman&4.61292E-09&1.59678E-08&1.59678E-08&1.59678E-08\\
-&Friedman Aligned&3.62181E-04&1.33738E-03&1.33738E-03&1.33663E-03\\
-&Quade&7.62673E-02&2.85885E-01&2.49968E-01&2.53918E-01\\
-IJAYA&Friedman&6.88175E-09&2.54096E-08&2.54096E-08&2.54096E-08\\
-&Friedman Aligned&8.79672E-04&3.04543E-03&3.04543E-03&3.04172E-03\\
-&Quade&7.62673E-02&2.85885E-01&2.49968E-01&2.53918E-01\\
-CWOA&Friedman&8.73483E-09&3.29236E-08&3.29236E-08&3.29236E-08\\
-&Friedman Aligned&4.27917E-09&1.58000E-08&1.58000E-08&1.58000E-08\\
-&Quade&2.57827E-03&5.93402E-03&5.93402E-03&5.91840E-03\\
-NNA&Friedman&1.17491E-08&4.33811E-08&4.27586E-08&4.33811E-08\\
-&Friedman Aligned&2.23361E-09&7.25937E-09&7.25937E-09&7.25937E-09\\
-&Quade&2.57827E-03&4.09880E-03&3.90245E-03&4.09117E-03\\
-ISCA&Friedman&1.23525E-08&4.33811E-08&4.27586E-08&4.33811E-08\\
-&Friedman Aligned&<1E-13&<1E-13&<1E-13&<1E-13\\
-&Quade&2.57827E-03&3.65691E-03&3.65691E-03&3.65079E-03\\
-NDE&Friedman&2.55436E-06&7.85957E-06&7.85957E-06&7.85955E-06\\
-&Friedman Aligned&4.19953E-02&1.29854E-01&1.29854E-01&1.23666E-01\\
-&Quade&1.60056E-01&5.02233E-01&5.02233E-01&4.15313E-01\\
-TLBO&Friedman&1.57702E-01&4.05499E-01&4.05499E-01&3.53159E-01\\
-&Friedman Aligned&6.48054E-01&1.0&1.0&9.29409E-01\\
-&Quade&7.18467E-01&1.0&1.0&9.59945E-01\\
-EBLSHADE&Friedman&9.13338E-01&1.0&9.23824E-01&9.89059E-01\\
-&Friedman Aligned&8.67482E-01&1.0&1.0&9.76034E-01\\
-&Quade&9.98363E-01&1.0&1.0&9.99993E-01\\
-STLBO&Friedman&9.23824E-01&1.0&9.23824E-01&9.89059E-01\\
-&Friedman Aligned&1.0&1.0&1.0&1.0\\
-&Quade&1.0&1.0&1.0&1.0\\
-\bottomrule
-\end{tabular*}
-\end{table*}
-
-
-As we can see in the table, the Finner post-hoc procedure exhibits the most powerful behavior,
-reaching the lowest $p$-values in the comparisons.
-The Friedman test shows a significant improvement in $R_\mathrm{p1}$ estimation of ADELI over
-DE, NDE, MABC, GOTLBO, PSO, IJAYA, ISCA, NNA, CWOA, and WW
-for all the post-hoc procedures considered.
-
-The Friedman Aligned test only confirms the improvement of ADELI
-over the aforementioned 10 algorithms for every post-hoc procedure considered,
-except Holm, Hochberg, and Holland,
-which fail to highlight the differences between ADELI and NDE as significant.
-
-Finally, the Quade test find significant difference between ADELI and
-MABC, GOTLBO, PSO, ISCA, NNA, CWOA, WW for every post-hoc procedure.
-In the DE and IJAYA cases, ADELI obtains better results in $R_\mathrm{p1}$ estimation
-according Finner post-hoc procedure only.
-This result supports the conclusion that,
-although ADELI outperforms the weaker algorithms of our study,
-its performance differences are not significant when compared to other power algorithms (STLBO, EBLSHADE, TLBO).
 
 In our study, a threshold value of $p_{cr}=0.1$ was adopted to establish a critical level
 for comparing the effectiveness of two algorithms in both multiple $1\times N$ and $N\times N$ comparisons.
 That is, it was determined that the likelihood of obtaining a result as extreme as the observed one,
 under the assumption that there is no difference between the two algorithms (null hypothesis), was less than 10\%.
 
-
-
-\begin{figure*}[]
-	\centering
-		\includegraphics[width=.49\textwidth]{Rp1shotN1}
-        \includegraphics[width=.49\textwidth]{I02shotN1}
-        \includegraphics[width=.48\textwidth]{Titleshot11N}
-		\includegraphics[width=.48\textwidth]{Titleshot21N}
-	  \caption{The results of algorithm $1\times N$ comparisons in $R_\mathrm{p1}$ (a) and $I_{02}$ (b) estimation
-               by Friedman, Friedman Aligned, and Quade tests in the single--IV case.
-               The colored hexagon indicates that the adjusted $p$-value,
-               which tests the hypothesis that an algorithm in a row outperforms the algorithm in a column,
-               is not greater than $p_{cr}=0.1$.
-               The solid fill signifies that every post-hoc procedure resulted in $p<p_{cr}$;
-               the patterned fill indicates that only specific post-hoc procedures achieved this outcome.
-               The correspondence between the color and position of the hexagon to a test
-               as well as the fill pattern to procedures are shown in a legend at the bottom of the figure.
-               }\label{figN1RezSingleIV}
-\end{figure*}
 
 
 \begin{table*}[<options>]
@@ -1093,57 +954,11 @@ WW & 0/96  & 12/76  & 16/76&  36/43 & 0/108 & 10/60 & 12/77  & 12/66  & 0/92& 0/
 \end{table*}
 
 
-%\begin{table}[<options>]
-%\caption{Wilcoxon signed ranks test results of fitness functions comparisons with a level of significance $\alpha = 0.05$}\label{tblFF}
-%\begin{tabular*}{\tblwidth}{@{}LCCCCCCCCC@{}}
-%\toprule
-%\multirow{2}{*}{Algorithm}& \multicolumn{9}{C}{Parameter} \\
-%  & $I_{01}$& $n_1$ & $R_\mathrm{p1}$ &$I_{02}$& $n_2$& $R_\mathrm{p2}$&$R_\mathrm{s}$&$I_\mathrm{ph}$&RMSPE\\ % Table header row
-%\midrule
-%DE & SE & SE & = &  = & SE & SE & =  & =  & = \\
-%EBLSHADE & SE & =  & =  & =  & =  & =  & =  & =  &  AE \\
-%ADELI & SE & =  &  = &  = &  = &  = & =  & =  &   AE\\
-%NDE & =  & =  & =  & =  & =  & =  &  = & SE & SE \\
-%MABC &  = & SE & =  &  = & =  & =  & =  & =  & SE \\
-%TLBO & SE & SE & SE &  SE&  SE& SE & SE & SE & SE \\
-%GOTLBO & =  & =  & =  & =  & =  & SE & =  & =  & =  \\
-%STLBO & SE & =  & =  & =  & =  & =  & =  & =  &  AE \\
-%PSO & =  & =  & =  & =  & =  & =  &  AE & =  & =  \\
-%IJAYA &  AE &  AE &  = & =  & SE &  = &  = & =  & =  \\
-%ISCA & =  & =  & =  & =  & =  & =  & =  & =  & =  \\
-%NNA & =  & =  & =  & =  & =  & =  & =  & =  &  SE\\
-%CWOA & =  & =  &  SE& =  &   AE& =  & =  & =  & SE \\
-%WW & =  & =  &  SE&  = &  AE &  = & =  & =  &  SE\\
-%\bottomrule
-%\end{tabular*}
-%\end{table}
-
-
-The statistical results of the algorithm's effectiveness comparison in the task  of $R_\mathrm{p1}$ estimation are shown in Fig.~\ref{figN1RezSingleIV}(a).
-In the figure, the outperforming of an algorithm in a row over the algorithm in the column is indicated by a colored hexagon in the corresponding cell.
-The white hexagon suggests a strong likelihood of the null hypothesis.
-In fact, the data in Table~\ref{tbl1NADELI} were used to create the third row in Fig.~\ref{figN1RezSingleIV}(a).
-The panel (b) of figure presents the statistical results for $I_{02}$ estimation.
-The results of the comparison of algorithms based on the other eight parameters are given in the supplementary materials (figure S2).
-
-
-The results displayed in Fig.~\ref{figN1RezSingleIV} demonstrate a consistent trend across all parameters.
+The statistical results of the algorithm's effectiveness comparison are given in the supplementary materials (figure S2).
 Among the compared algorithms, EBLSHADE, ADELI, and STLBO consistently outperform the others in $1\times N$ multiple comparisons.
 On the other hand, algorithms such as PSO, ISCA, CWOA, and NNA consistently produce lower-quality results.
 The main changes observed in nonparametric statistical estimation of different parameters estimation
 mainly concern algorithms with moderate effectiveness.
-
-For example, when comparing the accuracy of determining $R_\mathrm{p1}$ and $I_{02}$,
-the IJAYA algorithm performs better in the former case.
-As evident from Figure 3a,
-IJAYA outperforms GOTLBO, PSO, ISCA, NNA, CWOA, and WW in the results of Friedman
-and Friedman Aligned tests for every post-hoc procedure considered.
-While for $I_{02}$, IJAYA only outperforms DE, MABC, PSO, and CWOA according to the Friedman test,
-and in the latter case, only for Finner post-hoc procedure.
-For DE, the situation is similar in the case of $I_{02}$ compared to $R_\mathrm{p1}$.
-According to the results of the Friedman and Friedman Aligned tests, the algorithm loses its advantage over GOTLBO, SCA, NNA, CWOA, and WW.
-Additionally, the Friedman test no longer shows the improvement of DE over PSO.
-
 
 
 
@@ -1421,7 +1236,8 @@ WW&0&0&0&0&0&0&0&0&0&0&0&+&0&$\blacksquare$&1/3/9\\
 
 \begin{figure}[]
 	\centering
-		\includegraphics[width=1.0\columnwidth]{FigRankT}
+%		\includegraphics[width=1.0\columnwidth]{FigRankT}
+		\includegraphics[width=0.5\columnwidth]{FigRankT}
 	  \caption{Ranking of the algorithms according to Friedman, Friedman Aligned, and Quade tests in the IV-set case.}\label{figRankIVset}
 \end{figure}
 
@@ -1481,63 +1297,14 @@ TLBO has been recorded the as second-best algorithm by all three tests.
 Furthermore, PSO was recognized as the worst-performing algorithm by the tests' unanimous decision.
 
 
-%\begin{table*}[<options>]
-%\caption{Adjusted $p$-values for Friedman, Friedman Aligned, and Quade tests in IV--set case.
-% STLBO is the control algorithm.}\label{tbl1NSTLBO}
-%\begin{tabular*}{\tblwidth}{@{}LLCCCC@{}}
-%\toprule
-%\multirow{2}{*}{Algorithm}& \multirow{2}{*}{Test}& \multicolumn{4}{C}{post-hoc procedure} \\
-%  & &Finner & Holm & Hochberg &Holland\\ % Table header row
-%\midrule
-%GOTLBO&	Friedman&<1E-13&<1E-13&<1E-13&<1E-13\\
-%&Friedman Aligned&1.35278E-10&5.09895E-10&5.09895E-10&5.09895E-10\\
-%&Quade&1.11445E-03&4.11614E-03&4.11614E-03&4.10873E-03\\
-%PSO&Friedman&<1E-13&<1E-13&<1E-13&<1E-13\\
-%&Friedman Aligned&<1E-13&<1E-13&<1E-13&<1E-13\\
-%&Quade&8.22938E-06&8.22941E-06&8.22941E-06&8.22938E-06\\
-%NNA&Friedman&<1E-13&<1E-13&<1E-13&<1E-13\\
-%&Friedman Aligned&<1E-13&<1E-13&<1E-13&<1E-13\\
-%&Quade&2.21284E-05&5.61727E-05&5.61727E-05&5.61713E-05\\
-%CWOA&Friedman&<1E-13&<1E-13&<1E-13&<1E-13\\
-%&Friedman Aligned&<1E-13&<1E-13&<1E-13&<1E-13\\
-%&Quade&1.48311E-05&2.73807E-05&2.73807E-05&2.73803E-05\\
-%DE&Friedman&2.32081E-13&8.03357E-13&8.03357E-13&8.03357E-13\\
-%&Friedman Aligned&1.74950E-09&6.45968E-09&6.45968E-09&6.45968E-09\\
-%&Quade&6.44257E-03&2.38175E-02&2.38175E-02&2.35824E-02\\
-%IJAYA&Friedman&2.17645E-10&8.03613E-10&8.03613E-10&8.03613E-10\\
-%&Friedman Aligned&3.63299E-09&1.25757E-08&1.25757E-08&1.25757E-08\\
-%&Quade&3.78757E-02&1.31885E-01&1.31885E-01&1.25109E-01\\
-%MABC&Friedman&1.75608E-09&6.61909E-09&6.61909E-09&6.61909E-09\\
-%&Friedman Aligned&<1E-13&<1E-13&<1E-13&<1E-13\\
-%&Quade&1.54776E-03&5.83595E-03&5.83595E-03&5.82137E-03\\
-%WW&Friedman&7.44635E-09&2.74942E-08&2.74942E-08&2.74942E-08\\
-%&Friedman Aligned&<1E-13&<1E-13&<1E-13&<1E-13\\
-%&Quade&1.10078E-04&3.81053E-04&3.81053E-04&3.80989E-04\\
-%ISCA&Friedman&1.32325E-08&4.58048E-08&4.58048E-08&4.58048E-08\\
-%&Friedman Aligned&<1E-13&<1E-13&<1E-13&<1E-13\\
-%&Quade&5.64886E-05&1.73815E-04&1.73815E-04&1.73801E-04\\
-%NDE&Friedman&9.57698E-04&2.94709E-03&2.94709E-03&2.94383E-03\\
-%&Friedman Aligned&2.69373E-03&8.29097E-03&8.29097E-03&8.26522E-03\\
-%&Quade&2.98714E-01&9.55486E-01&9.55486E-01&6.64392E-01\\
-%EBLSHADE&Friedman&8.62842E-02&2.20533E-01&2.20533E-01&2.04719E-01\\
-%&Friedman Aligned&3.10807E-02&7.90881E-02&7.90881E-02&7.70214E-02\\
-%&Quade&5.99120E-01&1.0&1.0&9.01765E-01\\
-%ADELI&Friedman&1.0&1.0&1.0&1.0\\
-%&Friedman Aligned&3.64522E-01&6.83937E-01&3.45600E-01&5.66995E-01\\
-%&Quade&1.0&1.0&1.0&1.0\\
-%TLBO&Friedman&1.0&1.0&1.0&1.0\\
-%&Friedman Aligned&3.64522E-01&6.83937E-01&3.45600E-01&5.66995E-01\\
-%&Quade&1.0&1.0&1.0&1.0\\
-%\bottomrule
-%\end{tabular*}
-%\end{table*}
 
 
 
 
 \begin{figure}[]
 	\centering
-		\includegraphics[width=1.0\columnwidth]{N1Tresult}
+%		\includegraphics[width=1.0\columnwidth]{N1Tresult}
+		\includegraphics[width=0.5\columnwidth]{N1Tresult}
 	  \caption{The results of algorithm $1\times N$ comparisons by Friedman, Friedman Aligned, and Quade tests in the IV-set case.
                The colored hexagon indicates that the adjusted $p$-value,
                which tests the hypothesis that an algorithm in a row outperforms the algorithm in a column,
@@ -1552,7 +1319,8 @@ Furthermore, PSO was recognized as the worst-performing algorithm by the tests' 
 
 \begin{figure}[]
 	\centering
-		\includegraphics[width=1.0\columnwidth]{NNresult}
+%		\includegraphics[width=1.0\columnwidth]{NNresult}
+		\includegraphics[width=0.5\columnwidth]{NNresult}
 	  \caption{The results of multiple comparisons among all algorithms in the IV-set case.
                The colored cylinder indicates that the adjusted p-value,
                which tests the control algorithm outperforms the comparison algorithm,
@@ -1592,84 +1360,6 @@ WW & 12/80 & 0/23\\
 
 
 
-
-%\begin{table*}[<options>]
-%\caption{Adjusted $p$-values for tests for multiple $N\times N$ comparisons among all methods
-%         in the IV--set case ($p<p_{lim}$ are only shown).}\label{tblNNpValue}
-%\begin{tabular*}{\tblwidth}{@{}LCCC@{}}
-%\toprule
-%\multirow{2}{*}{Hypothesis}& \multicolumn{3}{C}{post-hoc procedure} \\
-%  &Nemenyi & Holm & Shaffer\\ % Table header row
-%\midrule
-%EBLSHADE versus WW,
-%ADELI versus MABC,&&&\\
-%ADELI versus PSO,
-%ADELI versus ISCA,&&&\\
-%ADELI versus NNA,
-%ADELI versus CWOA,&&&\\
-%ADELI versus WW,
-%NDE versus NNA,&&&\\
-%TLBO versus GOTLBO,
-%TLBO versus PSO,&&&\\
-%TLBO versus ISCA,
-%TLBO versus NNA,&&&\\
-%TLBO versus CWOA,
-%STLBO versus GOTLBO, &&&\\
-%STLBO versus PSO,
-%STLBO versus NNA, &&&\\
-%STLBO versus CWOA&<1E-13&<1E-13&<1E-13\\
-%IJAYA versus NNA&1.61648E-12&1.31450E-12&1.19016E-12\\
-%EBLSHADE versus MABC&3.75833E-12&3.01492E-12&2.76712E-12\\
-%NDE versus GOTLBO&4.20286E-12&3.32534E-12&3.09441E-12\\
-%STLBO versus DE&8.12284E-12&6.33760E-12&5.98055E-12\\
-%IJAYA versus CWOA&2.31157E-11&1.75273E-11&1.70193E-11\\
-%TLBO versus DE&4.02505E-11&3.00773E-11&2.96350E-11\\
-%IJAYA versus PSO&9.52918E-11&7.01599E-11&7.01599E-11\\
-%IJAYA versus ISCA&1.29115E-09&9.36436E-10&9.36436E-10\\
-%ADELI versus DE&2.22329E-09&1.56363E-09&1.41704E-09\\
-%EBLSHADE versus GOTLBO&3.53238E-09&2.44550E-09&2.25141E-09\\
-%NDE versus MABC&9.68759E-09&6.49388E-09&6.17451E-09\\
-%IJAYA versus WW&1.72440E-08&1.13697E-08&1.09907E-08\\
-%NDE versus WW&1.75252E-08&1.13697E-08&1.11699E-08\\
-%EBLSHADE versus DE&1.82602E-08&1.16384E-08&1.16384E-08\\
-%EBLSHADE versus ISCA&1.88327E-08&1.17963E-08&1.16384E-08\\
-%EBLSHADE versus PSO&4.78066E-08&2.94194E-08&2.94194E-08\\
-%ADELI versus GOTLBO&4.98663E-08&3.01390E-08&3.01390E-08\\
-%EBLSHADE versus CWOA&7.52618E-08&4.46609E-08&4.21797E-08\\
-%STLBO versus MABC&8.60481E-08&5.01159E-08&4.82248E-08\\
-%NDE versus ISCA&9.60138E-08&5.48650E-08&5.38099E-08\\
-%DE versus NNA&1.60867E-07&9.01562E-08&9.01562E-08\\
-%EBLSHADE versus NNA&1.68788E-07&9.27404E-08&9.01562E-08\\
-%TLBO versus MABC&2.16163E-07&1.16396E-07&1.14020E-07\\
-%NDE versus PSO&4.07575E-07&2.14985E-07&2.14985E-07\\
-%STLBO versus WW&4.16995E-07&2.15371E-07&2.15371E-07\\
-%TLBO versus WW&6.32636E-07&3.19794E-07&3.19794E-07\\
-%NDE versus CWOA&8.17751E-07&4.04382E-07&4.04382E-07\\
-%STLBO versus ISCA&8.33647E-07&4.04382E-07&4.04382E-07\\
-%DE versus CWOA&1.47836E-06&6.98567E-07&6.98567E-07\\
-%DE versus PSO&4.48549E-06&2.07023E-06&2.07023E-06\\
-%DE versus ISCA&3.33823E-05&1.50404E-05&1.46735E-05\\
-%NDE versus DE&1.56228E-04&6.86718E-05&6.86718E-05\\
-%DE versus WW&2.41908E-04&1.03675E-04&1.03675E-04\\
-%IJAYA versus GOTLBO&7.27786E-04&2.95913E-04&2.95913E-04\\
-%MABC versus NNA&1.28945E-03&5.10114E-04&5.10114E-04\\
-%ADELI versus NDE&1.70688E-03&6.56493E-04&6.56493E-04\\
-%MABC versus CWOA&6.56486E-03&2.45281E-03&2.45281E-03\\
-%MABC versus PSO&1.46075E-02&5.29723E-03&5.13671E-03\\
-%TLBO versus NDE&2.83112E-02&9.95560E-03&9.95560E-03\\
-%MABC versus ISCA&6.08528E-02&2.07301E-02&2.07301E-02\\
-%STLBO versus NDE&6.70463E-02&2.21032E-02&2.21032E-02\\
-%IJAYA versus MABC&6.92376E-02&2.21032E-02&2.21032E-02\\
-%GOTLBO versus NNA&1.07776E-01&3.31618E-02&3.31618E-02\\
-%MABC versus WW&2.35963E-01&6.74180E-02&6.74180E-02\\
-%\bottomrule
-%\end{tabular*}
-%\end{table*}
-
-
-%\label{figN1RezIVset}
-%\label{figNNRezIVset}
-%\label{tblAllWins}
 
 The $p$-values, obtained for $1\times N$ multiple comparisons are shown in tables~S155-168 in the supplementary material.
 There are results of applying  Finner, Holm, Hochberg, and Holland procedures,
@@ -1757,45 +1447,19 @@ of solar cell parameters should be useful for further research and development o
 
 
 \section*{Supplementary data}
-Supplementary data associated with this article 
+Supplementary data associated with this article
 can be found in at
-\url{bit.ly/44Y24gL}
+\url{bit.ly/3OUELiU}
 
-%\href{bit.ly/44Y24gL}{Supplementary data}
+%https://www.mediafire.com/file/io7oz2rh59s7k6b/SupplementaryMaterial.pdf/file
+%https://www.mediafire.com/file/29s6gxrz4l19u6k/SupplementaryMaterial.pdf/file
 
-%https://drive.google.com/file/d/1-YuqRA2AA8eNrRXPiaYlJhI3BvkTVBpp/view?usp=drive_link
-%bit.ly/3YdZWzp
-
-%https://www.mediafire.com/file/vw516nexcfajk0c/SupplementaryMaterial.pdf/file
-%bit.ly/44Y24gL
-
-% To print the credit authorship contribution details
-%\printcredits
-
-%% Loading bibliography style file
-%\bibliographystyle{elsarticle-num-names}
 \bibliographystyle{model1-num-names}
 \bibliography{olikh_Methods}
 
 
 \end{document}
 
-%According to No Free Lunch (NFL), it is logically proved that
-%no metaheuristic can respond to all correct optimization problems. In other words, the especial metaheuristic method can
-%demonstrate promising results to solve some problems. But this
-%algorithm may show the weaker performance and efficiency for
-%some other problems. Hence the researchers try to create the
-%better optimization techniques each year
 
-%On the other hand, The No Free Lunch theory (NFL) states that
-%no metaheuristic algorithm is able to solve all optimization tasks.
-%In other words, the optimization algorithm can have brilliant
-%results in a specific class of problems and at the same time fails
-%to solve other classes of problems [85].
-%The above-mentioned facts motivate and encourage us to propose a novel population-based algorithm with swarm intelligence
-%characteristics to solve global optimization problems. The proposed algorithm called Snake Optimizer (SO) is inspired by the
-%mating behavior of the snakes. To the best of our knowledge,
-%there is no such study exist in the literature and this is the first
-%time to propose such a behavior.
 
 

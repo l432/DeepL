@@ -1,0 +1,116 @@
+%\documentclass[a4paper,fleqn]{cas-dc}
+\documentclass[a4paper,fleqn]{cas-sc}
+
+% If the frontmatter runs over more than one page
+% use the longmktitle option.
+
+%\documentclass[a4paper,fleqn,longmktitle]{cas-dc}
+
+\usepackage{color,colortbl}
+\definecolor{ligthYellow}{RGB}{255,255,204}
+\definecolor{ligthBlue}{RGB}{193,255,255}
+\definecolor{ligthRed}{RGB}{255,231,231}
+\definecolor{ligthViolet}{RGB}{235,235,255}
+\definecolor{ligthGreen}{RGB}{204,255,204}
+
+\usepackage{makecell}
+
+\usepackage[numbers]{natbib}
+%\usepackage[authoryear]{natbib}
+%\usepackage[authoryear,longnamesfirst]{natbib}
+
+%%%Author macros
+\def\tsc#1{\csdef{#1}{\textsc{\lowercase{#1}}\xspace}}
+\tsc{WGM}
+\tsc{QE}
+%%%
+
+% Uncomment and use as if needed
+%\newtheorem{theorem}{Theorem}
+%\newtheorem{lemma}[theorem]{Lemma}
+%\newdefinition{rmk}{Remark}
+%\newproof{pf}{Proof}
+%\newproof{pot}{Proof of Theorem \ref{thm}}
+
+\begin{document}
+\let\WriteBookmarks\relax
+\def\floatpagepagefraction{1}
+\def\textpagefraction{.001}
+
+% Short title
+\shorttitle{Meta--heuristic parameter extraction of SCs with S--shaped IV curves}
+
+
+% Short author
+\shortauthors{O. Olikh}
+
+% Main title of the paper
+\title [mode = title]{A test of meta-heuristic algorithms for parameter extraction of next-generation solar cells with S-shaped current-voltage curves}
+
+% First author
+%
+% Options: Use if required
+% eg: \author[1,3]{Author Name}[type=editor,
+%       style=chinese,
+%       auid=000,
+%       bioid=1,
+%       prefix=Sir,
+%       orcid=0000-0000-0000-0000,
+%       facebook=<facebook id>,
+%       twitter=<twitter id>,
+%       linkedin=<linkedin id>,
+%       gplus=<gplus id>]
+\author{Oleg~Olikh}
+%\cormark[1]
+\ead{olegolikh@knu.ua}
+%\address[1]{Taras Shevchenko National University of Kyiv, 64/13, Volodymyrska Street, City of Kyiv, Ukraine, 01601}
+
+
+% Address/affiliation
+\affiliation{organization={Taras Shevchenko National University of Kyiv},
+            addressline={64/13, Volodymyrska Street},
+            city={Kyiv},
+%          citysep={}, % Uncomment if no comma needed between city and postcode
+            postcode={01601},
+ %           state={},
+            country={Ukraine}}
+
+% For a title note without a number/mark
+%\nonumnote{}
+
+
+\begin{abstract}
+Identifying the parameters of photovoltaic (PV) models based on measured current-voltage (IV) characteristic curves
+is crucial for simulating, evaluating, and controlling PV systems.
+IV characteristics of new-generation solar cells (SCs) often exhibit an S-shaped deformation.
+In this paper, the potential of using meta--heuristic algorithms
+to solve the parameter estimation problems of PV cells
+with S--shaped IV characteristics has been explored.
+The parameter estimation has been performed within the framework of the opposed two-diode model.
+A total of 14 algorithms from various classes were implemented
+to extract the SC parameters from synthetic IV curves, which were generated with a range of parameter values.
+The obtained results have been compared using nonparametric statistical methods,
+including Wilcoxon signed-rank test for pairwise comparisons,
+Friedman, Friedman Aligned, and Quade tests for multiple comparisons,
+and post--hoc Finner, Holm, Hochberg, Holland,  Shaffer, and Nemenyi procedures.
+Research has demonstrated that utilizing a squared error-based fitness function offers clear advantages in tackling a provided problem.
+Comprehensive results and analyses indicate that STLBO and ADELI algorithms have highly competitive performance in terms of accuracy and reliability.
+\end{abstract}
+
+
+
+\begin{keywords}
+S--shaped IV characteristics \sep Opposed two-diode model \sep Parameter estimation \sep
+Meta--heuristic algorithms \sep Nonparametric statistical procedure \sep Solar cell models
+\end{keywords}
+
+\maketitle
+
+% Main text
+
+
+\end{document}
+
+
+
+

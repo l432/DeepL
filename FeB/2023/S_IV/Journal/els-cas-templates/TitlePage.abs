@@ -1,0 +1,15 @@
+Identifying the parameters of photovoltaic (PV) models based on measured current-voltage (IV) characteristic curves
+is crucial for simulating, evaluating, and controlling PV systems.
+IV characteristics of new-generation solar cells (SCs) often exhibit an S-shaped deformation.
+In this paper, the potential of using meta--heuristic algorithms
+to solve the parameter estimation problems of PV cells
+with S--shaped IV characteristics has been explored.
+The parameter estimation has been performed within the framework of the opposed two-diode model.
+A total of 14 algorithms from various classes were implemented
+to extract the SC parameters from synthetic IV curves, which were generated with a range of parameter values.
+The obtained results have been compared using nonparametric statistical methods,
+including Wilcoxon signed-rank test for pairwise comparisons,
+Friedman, Friedman Aligned, and Quade tests for multiple comparisons,
+and post--hoc Finner, Holm, Hochberg, Holland,  Shaffer, and Nemenyi procedures.
+Research has demonstrated that utilizing a squared error-based fitness function offers clear advantages in tackling a provided problem.
+Comprehensive results and analyses indicate that STLBO and ADELI algorithms have highly competitive performance in terms of accuracy and reliability.
