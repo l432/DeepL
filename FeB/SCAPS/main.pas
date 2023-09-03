@@ -619,7 +619,15 @@ begin
         Directory:=ExtractFilePath(OpenDialog1.FileName);
         ResultFile.LoadFromFile(OpenDialog1.FileName);
         ArrKeyStrList:=TArrKeyStrList.Create(ResultFile,12,Directory);
-        ArrKeyStrList.SaveData;
+
+        ArrKeyStrList.ShowKeysNames;
+//        showmessage(inttostr(ArrKeyStrList.fArgumentNumber));
+//        showmessage('ArrKeyStrList='+inttostr(High(ArrKeyStrList.ArrKeyStrList)));
+//        showmessage('Chields number='+inttostr(High(ArrKeyStrList.fChields)));
+//        showmessage('FileNamePart '+ArrKeyStrList.fFileNamePart);
+//        showmessage('DirectoryPath'+ArrKeyStrList.DirectoryPath);
+
+//        ArrKeyStrList.SaveData;
         ArrKeyStrList.Free;
         ResultFile.Free;
        end;

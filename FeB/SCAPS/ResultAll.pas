@@ -73,20 +73,38 @@ StringHeader - заголовок файлу  ResultAll.dat  за виключенням  KeysName
   property Count:word read GetCount;
   property SList[index:integer]:TStringList read GetSList;
   class function KeysNameDetermine(fileHeader:string):string;
-  class function BigFolderNameDetermine(KeysName:string):string;
+  {якщо fileHeader  одне з  ('N_Fe','N_B','T','d'),
+  то повертається  відповідне з  ('Fe','Bo','T','d');
+  інакше "None";
+  фактично йде мова про перетворення заголовка стовпця
+  у коротке ім'я директорії}
+  class function ShortDirNameToDirName(KeysName:string):string;
+  {замість одно з ('Fe','Bo','T','d')
+  повертає одне з ('Iron','Boron','Temperature','Thickness')}
   class function PartOfDataFileName(Key:string):string;
+  {перетворення значення параметру, записаного у вигляді
+  рядка, в те скорочене значення, що пишеться в назву файлу
+  або директорії}
   procedure AddKey(Key,SringKey:string);
   {якщо Key вже є в наборі Keys,
   то SringKey додається у відповідний StringLists,
   інакше Key додається до Keys і створюється
-  ще один StringLists з рядком SringKey}
+  ще один StringLists з рядком SringKey;
+  якщо подається заголовок стовпця та рядок
+  із заголовками (початковий рядок "Result.all"),
+  то заповнюються  KeysName та StringHeader}
   procedure AddKeysFromStringList(StringList:TStringList;PartNumber:word);
   {вважаючи, що у колонці PartNumber (нумерація
   з одиниці) StringList розташовані ключі,
-  створюється набори даних ключ-набір рядків}
+  створюється набори даних ключ-набір рядків
+  за допомогою функції AddKey}
   procedure SortingByKeyValue();
+  {в Keys значення по зростанню;
+  в StringLists також переставлені набори відповідно}
   procedure DataConvert(StartPosition:word=0);
   procedure KeysAndListsToStringList(StringList:TStringList);
+  {Keys[i] на першому місці, далі значення з StringLists[i],
+  перший рядок вихідного файлу містить відповідний заголовок}
 end;
 
 
@@ -105,14 +123,15 @@ TArrKeyStrList=class
 лише один параметр і розраховані величини,
 у відповідному нащадку лише нульовий елемент в ArrKeyStrList
 }
- private
+ public
+// private
   ArrKeyStrList:array of TKeyStrList;
   fFileNamePart:string;
   fChields:array of TArrKeyStrList;
   DirectoryPath:string;
   {шлях, куди будуть записуватися файли}
   fArgumentNumber:integer;
- public
+// public
 //  ArrKeyStrList:array of TKeyStrList;
   Constructor Create(SL:TStringList;
                      DataNumber:integer=4;
@@ -120,8 +139,8 @@ TArrKeyStrList=class
     за замовчуванням - чотири значення фактору неідеальності}
                      FolderName:string='';
                      FileNamePart:string='');
-//                     Parent:TArrKeyStrList=nil);
  destructor Destroy;override;
+ procedure ShowKeysNames;
  procedure SaveData;
 end;
 
@@ -325,7 +344,7 @@ begin
                              DataNumber,
                              DirectoryPath
                              +'\'
-                             +TKeyStrList.BigFolderNameDetermine(ArrKeyStrList[i].KeysName),
+                             +TKeyStrList.ShortDirNameToDirName(ArrKeyStrList[i].KeysName),
                              fFileNamePart
                              +ArrKeyStrList[i].KeysName
                              +TKeyStrList.PartOfDataFileName(ArrKeyStrList[i].Keys[j]));
@@ -380,7 +399,7 @@ begin
              DeleteStringDataFromRow(StringList[i],PartNumber));
 end;
 
-class function TKeyStrList.BigFolderNameDetermine(KeysName: string): string;
+class function TKeyStrList.ShortDirNameToDirName(KeysName: string): string;
  var i:TArguments;
 begin
  for I := Low(TArguments) to High(TArguments) do
@@ -519,7 +538,7 @@ begin
  for I := 0 to High(ArrKeyStrList) do
   begin
     SetCurrentDir(DirectoryPath);
-    tempStr:=TKeyStrList.BigFolderNameDetermine(ArrKeyStrList[i].KeysName);
+    tempStr:=TKeyStrList.ShortDirNameToDirName(ArrKeyStrList[i].KeysName);
 
     while not(SetCurrentDir(DirectoryPath+'\'+tempStr))
           do MkDir(tempStr);
@@ -530,7 +549,7 @@ begin
  for I := 0 to High(ArrKeyStrList) do
   begin
     tempStr:=DirectoryPath+'\'
-             +TKeyStrList.BigFolderNameDetermine(ArrKeyStrList[i].KeysName);
+             +TKeyStrList.ShortDirNameToDirName(ArrKeyStrList[i].KeysName);
     for j := 0 to ArrKeyStrList[i].Count - 1 do
      begin
       SetCurrentDir(tempStr);
@@ -652,6 +671,16 @@ begin
 
    SimpleDataFile.Free;
 
+end;
+
+procedure TArrKeyStrList.ShowKeysNames;
+ var temp:string;
+     i:integer;
+begin
+ temp:='';
+ for i := 0 to High(ArrKeyStrList)
+   do temp:=temp+ArrKeyStrList[i].KeysName+#10#13;
+ showmessage(temp);
 end;
 
 Procedure delIllumParamCalculate(var str:string);
