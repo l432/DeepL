@@ -65,6 +65,7 @@ StringHeader - заголовок файлу  ResultAll.dat  за виключенням  KeysName
  private
   function GetCount:word;
   function GetSList(index:integer):TStringList;
+  function GetSListNumber: integer;
  public
   KeysName:string;
   StringHeader:string;
@@ -72,6 +73,7 @@ StringHeader - заголовок файлу  ResultAll.dat  за виключенням  KeysName
   StringLists:array of TStringList;
   property Count:word read GetCount;
   property SList[index:integer]:TStringList read GetSList;
+  property SListHighNumber:integer read GetSListNumber;
   class function KeysNameDetermine(fileHeader:string):string;
   {якщо fileHeader  одне з  ('N_Fe','N_B','T','d'),
   то повертається  відповідне з  ('Fe','Bo','T','d');
@@ -105,6 +107,12 @@ StringHeader - заголовок файлу  ResultAll.dat  за виключенням  KeysName
   procedure KeysAndListsToStringList(StringList:TStringList);
   {Keys[i] на першому місці, далі значення з StringLists[i],
   перший рядок вихідного файлу містить відповідний заголовок}
+  procedure ShowKeys();
+  procedure ShowStringList(Number:integer);
+  procedure TCtoStringList(SL: TStringList; T0: Double=300);
+  {вважаємо, що у всіх StringLists лише температурні залежності
+  і записуємо в SL їхні температурні коефіцієнти та значення Keys;
+  з самого початку SL очищуємо}
 end;
 
 
@@ -141,6 +149,10 @@ TArrKeyStrList=class
                      FileNamePart:string='');
  destructor Destroy;override;
  procedure ShowKeysNames;
+ procedure ShowKeys;
+ procedure ShowChieldsNumber;
+ procedure ShowArrKeyStrListNumber;
+ procedure ShowInformation;
  procedure SaveData;
 end;
 
@@ -411,6 +423,24 @@ begin
   Result:='None';
 end;
 
+procedure TKeyStrList.ShowKeys;
+ var temp:string;
+     i:integer;
+begin
+ temp:='';
+ for i := 0 to High(Keys)
+   do temp:=temp+Keys[i]+#10#13;
+ showmessage(temp);
+end;
+
+procedure TKeyStrList.ShowStringList(Number: integer);
+begin
+ try
+  StringListShow(StringLists[Number]);
+ except
+ end;
+end;
+
 procedure TKeyStrList.DataConvert(StartPosition:word=0);
  var i,j:integer;
      tempstr,header:string;
@@ -438,6 +468,11 @@ end;
 function TKeyStrList.GetSList(index: integer): TStringList;
 begin
  Result:=StringLists[index];
+end;
+
+function TKeyStrList.GetSListNumber: integer;
+begin
+ Result:=High(StringLists);
 end;
 
 procedure TKeyStrList.KeysAndListsToStringList(StringList: TStringList);
@@ -501,6 +536,14 @@ begin
         StringLists[j+1].Assign(tempStringList);
        end;
  tempStringList.Free;
+end;
+
+procedure TKeyStrList.TCtoStringList(SL: TStringList; T0: Double);
+ var i:integer;
+begin
+ SL.Clear;
+ for I := 0 to Count-1 do
+   SL.Add(Keys[i]+' '+StringWithTC(StringLists[i],T0))
 end;
 
 destructor TArrKeyStrList.Destroy;
@@ -671,6 +714,30 @@ begin
 
    SimpleDataFile.Free;
 
+end;
+
+procedure TArrKeyStrList.ShowArrKeyStrListNumber;
+begin
+ showmessage('ArrKeyStrList='+inttostr(High(Self.ArrKeyStrList)));
+end;
+
+procedure TArrKeyStrList.ShowChieldsNumber;
+begin
+ showmessage('Chields number='+inttostr(High(Self.fChields)));
+end;
+
+procedure TArrKeyStrList.ShowInformation;
+begin
+ ShowKeysNames;
+ ShowKeys;
+ ShowChieldsNumber;
+end;
+
+procedure TArrKeyStrList.ShowKeys;
+ var i:integer;
+begin
+ for i := 0 to High(ArrKeyStrList)
+  do  ArrKeyStrList[i].ShowKeys;
 end;
 
 procedure TArrKeyStrList.ShowKeysNames;

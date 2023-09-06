@@ -26,10 +26,26 @@ function MatrixFileName(Number1:word;Key1:string):string;
 procedure KeysAndStringListToStringList(Key:string;Souce,Target:TStringList);
 function LogKey(Key:string):string;
 
+function TCfromStringList(const SL:TStringList; const ColumnNumber:byte;
+                         const T0:double=300):double;
+{вважається, що в SL температурні залежності:
+температура в першій колонці, змінні величині  - в інших;
+перший рядок - заголовки;
+повертається значення температурного коефіцієнту;
+якщо ColumnNumber<2 або >числа колонок, то повертається ErResult}
+
+function StringWithTC(const SL:TStringList; const T0:double=300):string;
+{повертає рядок, в якому розташовані температурні коефіцієнти
+всіх залежностей, що є у SL - див. попередню функцію}
+
+//procedure AddSyffixToStringList(SL:TStringList; Syffix:string; SyffixHeader:string='');
+{додає на початку кожного рядка SL Syffix;
+якщо SyffixHeader не порожній, то у першому рядку додають саме його, а не Syffix}
+
 implementation
 
 uses
-  StrUtils, SysUtils, OlegFunction, Math;
+  StrUtils, SysUtils, OlegFunction, Math, OlegVectorManipulation, OlegType;
 
 function EditString(str:string):string;
 begin
@@ -249,5 +265,40 @@ begin
    Target.Add(Key+' '+LogKey(StringDataFromRow(Souce[i],1))
             +' '+DeleteStringDataFromRow(Souce[i],1));
 end;
+
+function TCfromStringList(const SL:TStringList; const ColumnNumber:byte;
+                         const T0:double=300):double;
+{вважається, що в SL температурні залежності:
+температура в першій колонці, змінні величині  - в інших;
+перший рядок - заголовки;
+повертається значення температурного коефіцієнту;
+якщо ColumnNumber<2 або >числа колонок, то повертається ErResult}
+ var Vec:TVectorTransform;
+     TotalColumnNumber:integer;
+     i:integer;
+begin
+ Result:=ErResult;
+ if SL.Count<1 then Exit;
+ TotalColumnNumber:=NumberOfSubstringInRow(SL[0]);
+ if TotalColumnNumber<2 then Exit;
+ if (ColumnNumber<2)or(ColumnNumber>TotalColumnNumber)
+   then Exit;
+
+ Vec:=TVectorTransform.Create;
+ for I := 1 to SL.Count-1 do
+   Vec.Add(FloatDataFromRow(SL[i],1),FloatDataFromRow(SL[i],ColumnNumber));
+  Result:=Vec.TC();
+ FreeAndNil(Vec);
+end;
+
+function StringWithTC(const SL:TStringList; const T0:double=300):string;
+ var i:integer;
+ begin
+  Result:='';
+  for I := 2 to NumberOfSubstringInRow(SL[0]) do
+    Result:=Result+FloatToStrF(TCfromStringList(SL,i,T0),ffExponent,8,2)+' ';
+  Delete(Result,Length(Result),1);
+ end;
+
 
 end.

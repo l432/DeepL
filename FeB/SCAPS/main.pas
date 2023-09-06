@@ -596,16 +596,12 @@ end;
 //end;
 
 procedure TMainForm.BResultClick(Sender: TObject);
-// const DirecName:array[1..3]of string=('Iron','Boron','Temperature');
-//   ShortDirecName:array[1..3]of string=('Fe','B','T');
 
- var  ResultFile{,SimpleDataFile,MatrixDataFile}:TStringList;
-//      ArrayKeyStringList,AKSL2,AKSL3:TArrayKeyStringList;
-//      Number,Number2:word;
-//      I,j:integer;
-//      Key,KeyString:string;
-//      DirectoryN,DirectoryN2:string;
+ var  ResultFile:TStringList;
       ArrKeyStrList:TArrKeyStrList;
+//      для температурних коефіцієнтів
+//      TCFile,tempSL:TStringList;
+//      i,j:integer;
 
 begin
 
@@ -620,14 +616,24 @@ begin
         ResultFile.LoadFromFile(OpenDialog1.FileName);
         ArrKeyStrList:=TArrKeyStrList.Create(ResultFile,12,Directory);
 
-        ArrKeyStrList.ShowKeysNames;
-//        showmessage(inttostr(ArrKeyStrList.fArgumentNumber));
-//        showmessage('ArrKeyStrList='+inttostr(High(ArrKeyStrList.ArrKeyStrList)));
-//        showmessage('Chields number='+inttostr(High(ArrKeyStrList.fChields)));
-//        showmessage('FileNamePart '+ArrKeyStrList.fFileNamePart);
-//        showmessage('DirectoryPath'+ArrKeyStrList.DirectoryPath);
+//      для температурних коефіцієнтів
+//         TCFile:=TStringList.Create;
+//         tempSL:=TStringList.Create;
+//         for j := 0 to 24 do
+//           for I := 0 to 8 do
+//            begin
+//            ArrKeyStrList.fChields[j].fChields[i].ArrKeyStrList[1].TCtoStringList(tempSL);
+//            AddSyffixToStringList(tempSL,ArrKeyStrList.fChields[0].ArrKeyStrList[0].Keys[i]);
+//            AddSyffixToStringList(tempSL,ArrKeyStrList.ArrKeyStrList[0].Keys[j]);
+//            TCFile.AddStrings(tempSL);
+//            end;
+//         TCFile.Insert(0,DeleteStringDataFromRow(ResultFile[0],3));
+//         TCFile.SaveToFile(Directory+'TCResultAll.dat');
+//         tempSL.Free;
+//         TCFile.Free;
 
-//        ArrKeyStrList.SaveData;
+
+        ArrKeyStrList.SaveData;
         ArrKeyStrList.Free;
         ResultFile.Free;
        end;
