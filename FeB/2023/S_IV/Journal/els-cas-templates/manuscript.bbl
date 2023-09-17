@@ -1,4 +1,4 @@
-\begin{thebibliography}{85}
+\begin{thebibliography}{86}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\bibinfo}[2]{#2}
 \ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
@@ -326,6 +326,17 @@
   for parameter extraction of photovoltaic models},
 \newblock \bibinfo{journal}{Renewable Sustainable Energy Rev.}
   \bibinfo{volume}{141} (\bibinfo{year}{2021}) \bibinfo{pages}{110828}.
+%Type = Article
+\bibitem[{Yang et~al.(2020)Yang, Wang, Zhang, Yu, Yao, Shu, Zeng, and
+  Sun}]{SC_Yang2020}
+\bibinfo{author}{B.~Yang}, \bibinfo{author}{J.~Wang},
+  \bibinfo{author}{X.~Zhang}, \bibinfo{author}{T.~Yu},
+  \bibinfo{author}{W.~Yao}, \bibinfo{author}{H.~Shu},
+  \bibinfo{author}{F.~Zeng}, \bibinfo{author}{L.~Sun},
+\newblock \bibinfo{title}{Comprehensive overview of meta-heuristic algorithm
+  applications on pv cell parameter identification},
+\newblock \bibinfo{journal}{Energy Convers. Manage.} \bibinfo{volume}{208}
+  (\bibinfo{year}{2020}) \bibinfo{pages}{112595}.
 %Type = Article
 \bibitem[{Pillai et~al.(2017)Pillai, Sahoo, Ram, Laudani, Rajasekar, and
   Sudhakar}]{Pillai2017}
