@@ -1,0 +1,4 @@
+tuner.choice("num_trees", [100, 150, 200, 250])
+tuner.choice("max_depth", [10, 15, 20])
+tuner.choice("min_examples", [5, 10, 15]) 
+tuner.choice("num_candidate_attributes_ratio", [1.0, 0.8, 0.6])
