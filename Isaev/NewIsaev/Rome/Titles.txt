@@ -1,0 +1,15 @@
+Used:
+
+Estimation for iron contamination in Si solar cell by ideality factor: Deep neural network approach
+
+Deep Learning-Based Impurity Evaluation: Targeting Silicon Solar Cells' Photovoltaic Parameters
+
+Evaluation of iron contamination in silicon solar cells via photovoltaic parameters 
+(ECRES2023)
+
+
+New
+
+Characterization of impurity contamination in solar cells with the assistance of machine learning
+
+
