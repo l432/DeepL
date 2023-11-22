@@ -1,0 +1,20 @@
+Дослідження, що стосуються sustainable clean energy technology та штучного інтелекту викликають на сьогодні чи не найбільшу зацікавленість. Також зустрічаються також публікації, що знаходяться на перетині цих двох важливих напрямків. Наприклад, методи машинного навчання використовуються під час дизайну solar cells та передбачення властивостей матеріалів, які використовуються для їхнього виготовлення. Наша робота спрямована на розробку фізичних основ методу, що має на меті оцінку концентрації домішок в solar cells та базується на застосуванні machine learning до даних, отриманих в результаті вимірювання вольт-амперних характеристик. Подібний метод є експресним, недорогим та таким, що не вимагає додаткового обладнання і тому є важливим для material engineering applications.
+Можливості методу розглянуті на прикладі монокристалічних кремнієвих сонячних елементів, які  make up approximately 90% of the global photovoltaic production capacity, та атомів заліза, що є omnipresent and efficiency-limiting impurity. Ознаками, що використовувалися для визначення концентрації заліза, були параметри solar cell (base depth and doping level) та зміни фотоелектричних параметрів (short-circuit current, open-circuit voltage, efficiency, and fill factor) після розпаду пар залізо-бор. При цьому використовувалися такі методи machine learning як deep neural network (DNN) та random forest (RF).
+The train and test datasets were отримані by SC simulation, which was performed using SCAPS-1D software for a temperature range of 290-340 K. The AM1.5 and monochromatic light (940 nm) illumination conditions were used. Проведено налаштування гіперпараметрів DNN та RF. Досліджено можливості передбачення глибокими мережами та випадковим лісом концентрації заліза (range of 1010-1014 cm-3) в залежності від кількості використаних ознак. Виявлено, що mean squared error для тестового набору може досягати 2 10-3 і при цьому передбачення випадкового лісу є менш точними – див. Fig.
+
+
+Шановний Оргкомітет!
+
+Прошу розглянути можливість включення до програми joint workshop on "Digitalization and Automation boost Energy Materials Research" доповіді 
+"Characterization of impurity contamination in solar cells with the assistance of machine learning" (автори Oleg Olikh, Oleksii Zavhorodnii).
+
+Presenting author is Management Committee Member the COST Action CA22123 (EU-MACE).
+---------------------------------------
+Dear Organizing Committee,
+
+I kindly request the consideration of including the presentation "Characterization of impurity contamination in solar cells with the assistance of machine learning" (authors: Oleg Olikh, Oleksii Zavhorodnii) in the program of the joint workshop on "Digitalization and Automation boost Energy Materials Research."
+
+The presenting author (O.Olikh) is a Management Committee Member of the COST Action CA22123 (EU-MACE).
+
+Sincerely,
+Oleg Olikh
