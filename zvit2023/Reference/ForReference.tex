@@ -1,0 +1,62 @@
+\documentclass[12pt,a4paper,titlepage,oneside]{book}
+%\documentclass{article} % Specifies the document class
+%\usepackage[cp1251]{inputenc}
+
+
+\usepackage[T1,T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+
+
+%\usepackage[T1,T2A]{fontenc}
+%\usepackage[cp1251]{inputenc}
+
+
+\usepackage[intlimits,sumlimits]{amsmath}
+
+\usepackage{enumerate,graphicx,dcolumn,amsthm}
+\usepackage[english,ukrainian]{babel}
+\usepackage{indentfirst}
+\usepackage{caption}[2013/01/20]
+%\captionsetup{labelsep=period,font=sf, labelfont=bf, format=plain, justification=centerlast, tablename=Таблиця}
+\captionsetup{labelsep=period,font=sf, labelfont=bf, format=plain, justification=justified, tablename=Таблиця, tablewithin=none}
+
+
+ \usepackage[left=20mm,right=15mm,top=15mm,bottom=16mm,bindingoffset=0mm,footskip=6mm,includefoot]{geometry}
+\setlength{\parindent}{5mm}
+\usepackage[hang,flushmargin]{footmisc}
+
+
+
+
+\usepackage {titlesec}
+\titleformat{\chapter}{\hyphenpenalty=10000\sf\Large\bfseries}{
+\thechapter. }{0pt}{\Large}
+
+\titlespacing*{\chapter}{0pt}{1.1\baselineskip}{\baselineskip}
+
+\titleformat{\section}{\hyphenpenalty=10000\sf\large\bfseries}{
+\thesection. }{0pt}{\large}
+
+
+\usepackage{cite}
+\bibliographystyle{utf8gost780u}
+
+
+\begin{document}           % End of preamble and beginning of text.
+
+
+
+\renewcommand\bibname{Рекомендована та використана література}
+
+
+
+Додаткову інформацію щодо як розглянутих методів, так і низки інших можна знайти в
+ \cite{tuomisto2019,Stavola,ThoricBook,Lanno,Schroder2006,Peaker,Mironov,ReinLS,PAS,LockInThermography,ACMMR10,Eliseev,Krause}.
+
+
+\bibliography{defMethodLit}
+
+
+
+
+\end{document}
