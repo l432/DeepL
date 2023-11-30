@@ -1,4 +1,4 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{1}
 \def\selectlanguageifdefined#1{
 \expandafter\ifx\csname date#1\endcsname\relax
 \else\language\csname l@#1\endcsname\fi}
@@ -7,113 +7,75 @@
 \ifx\undefined\BibAnnote\long\def\BibAnnote#1{}\else\fi
 \ifx\undefined\BibEmph\def\BibEmph#1{\emph{#1}}\else\fi
 
-\bibitem{tuomisto2019}
+\bibitem{FeBStrongIll}
 \selectlanguageifdefined{english}
-Characterisation and Control of Defects in Semiconductors~/ Ed. by F.~Tuomisto.
+Iron--boron pair dissociation in silicon under strong illumination~/
+  Xiaodong~Zhu, Deren~Yang, Xuegong~Yu et~al.~// \BibEmph{AIP Adv.} ---
+\newblock 2013. --- Aug. ---
+\newblock Vol.~3, no.~8. ---
+\newblock P.~082124.
+
+\bibitem{FeBAssJAP2014}
+\selectlanguageifdefined{english}
+Iron-boron pairing kinetics in illuminated p-type and in boron/phosphorus
+  co-doped n-type silicon~/ Christian~M\"{o}ller, Til~Bartel, Fabien~Gibaja,
+  Kevin~Lauer~// \BibEmph{J. Appl. Phys.} ---
+\newblock 2014. --- Jul. ---
+\newblock Vol. 116, no.~2. ---
+\newblock P.~024503.
+
+\bibitem{FeBKin2019}
+\selectlanguageifdefined{english}
+Dissociation and Formation Kinetics of Iron–Boron Pairs in Silicon after
+  Phosphorus Implantation Gettering~/ Nabil~Khelifati, Hannu~S.~Laine,
+  Ville~Vähänissi et~al.~// \BibEmph{Phys Status Solidi A}. ---
+\newblock 2019. --- Sep. ---
+\newblock Vol. 216, no.~17. ---
+\newblock P.~1900253.
+
+\bibitem{FeBLight2}
+\selectlanguageifdefined{english}
+\BibEmph{Geerligs,~L.~J.} Dynamics of light-induced FeB pair dissociation in
+  crystalline silicon~/ L.~J.~Geerligs, Daniel~Macdonald~// \BibEmph{Appl.
+  Phys. Lett.} ---
+\newblock 2004. --- Nov. ---
+\newblock Vol.~85, no.~22. ---
+\newblock Pp.~5227--5229.
+
+\bibitem{OlikhJAP2021}
+\selectlanguageifdefined{english}
+{Features of FeB pair light-induced dissociation and repair in silicon n+-p-p+
+  structures under ultrasound loading}~/ O.~Olikh, V.~Kostylyov, V.~Vlasiuk
+  et~al.~// \BibEmph{J. Appl. Phys.} ---
+\newblock 2021. --- Dec. ---
+\newblock Vol. 130, no.~23. ---
+\newblock P.~235703.
+
+\bibitem{MurphyJAP2011}
+\selectlanguageifdefined{english}
+The effect of oxide precipitates on minority carrier lifetime in p--type
+  silicon~/ J.~D.~Murphy, K.~Bothe, M.~Olmo et~al.~// \BibEmph{J. Appl. Phys.}
   ---
-\newblock Institution of Engineering \& Technology, 2019. ---
-\newblock Vol.~45 of \BibEmph{Materials, Circuits and Devices}. ---
-\newblock P.~596.
+\newblock 2011. --- Sep. ---
+\newblock Vol. 110, no.~5. ---
+\newblock P.~053713.
 
-\bibitem{Stavola}
+\bibitem{Macdonald2004}
 \selectlanguageifdefined{english}
-Identification of Defects in Semiconductors~/ Ed. by Michael~Stavola. ---
-\newblock Academic Press, 1998. ---
-\newblock Vol.~51B of \BibEmph{Semiconductors and Semimetals}. ---
-\newblock P.~434.
+\BibEmph{Macdonald,~D.~H.} {Iron detection in crystalline silicon by carrier
+  lifetime measurements for arbitrary injection and doping}~/ D.~H.~Macdonald,
+  L.~J.~Geerligs, A.~Azzizi~// \BibEmph{J. Appl. Phys.} ---
+\newblock 2004. --- Jan. ---
+\newblock Vol.~95, no.~3. ---
+\newblock Pp.~1021--1028.
 
-\bibitem{ThoricBook}
-\selectlanguageifdefined{russian}
-Структурная релаксация в
-  полупроводниковых кристаллах и приборных
-  структурах (механизмы релаксации, методы
-  исследования, роль в деградации
-  приборов)~/ Е.~Ф.~Венгер, М.~Грендель,
-  В.~Данишка {и~др.}; {Под ред. }Ю.А~Тхорика. ---
-\newblock Київ: Видавництво <<Фенiкс>>, 1994. ---
-\newblock 246~{с.}
-
-\bibitem{Lanno}
-\selectlanguageifdefined{russian}
-\BibEmph{Ланно,~М.} Точечные дефекты в
-  полупроводниках. Экспериментальные
-  аспекты~/ М.~Ланно, Ж.~Бургуэн. ---
-\newblock М.: Мир, 1985. ---
-\newblock {С.}~304.
-
-\bibitem{Schroder2006}
+\bibitem{Olikh2022}
 \selectlanguageifdefined{english}
-\BibEmph{Schroder,~D.~K.} Semiconductor Material and Device Characterization~/
-  D.~K.~Schroder. ---
-\newblock Third edition. ---
-\newblock New Jersey: John Wiley \& Sons, 2006. ---
-\newblock 781~pp.
-
-\bibitem{Peaker}
-\selectlanguageifdefined{english}
-\BibEmph{Peaker,~A.~R.} Tutorial: Junction spectroscopy techniques and
-  deep--level defects in semiconductors~/ A.~R.~Peaker, V.~P.~Markevich,
-  J.~Coutinho~// \BibEmph{Journal of Applied Physics}. ---
-\newblock 2018. --- Apr. ---
-\newblock Vol. 123, no.~16. ---
-\newblock P.~161559.
-
-\bibitem{Mironov}
-\selectlanguageifdefined{russian}
-\BibEmph{Миронов,~В.Л.} Основы сканирующей
-  зондовой микроскопии~/ В.Л.~Миронов. ---
-\newblock Нижний Новгород: Ин-т физики
-  микроструктур, 2004. ---
-\newblock {С.}~114.
-
-\bibitem{ReinLS}
-\selectlanguageifdefined{english}
-\BibEmph{Rein,~Stefan}. Lifetime Spectroscopy~/ Stefan~Rein. ---
-\newblock Springer-Verlag Berlin Heidelberg, 205. ---
-\newblock Vol.~85 of \BibEmph{Springer Series in Materials Science}. ---
-\newblock P.~492.
-
-\bibitem{PAS}
-\selectlanguageifdefined{english}
-\BibEmph{Tuomisto,~Filip}. Defect identification in semiconductors with
-  positron annihilation: Experiment and theory~/ Filip~Tuomisto,
-  Ilja~Makkonen~// \BibEmph{Rev. Mod. Phys.} ---
-\newblock 2013. --- Nov. ---
-\newblock Vol.~85. ---
-\newblock Pp.~1583--1631.
-
-\bibitem{LockInThermography}
-\selectlanguageifdefined{english}
-\BibEmph{Breitenstein,~Otwin}. Lock-in Thermography~/ Otwin~Breitenstein,
-  Wilhelm~Warta, Martin~Langenkamp. ---
-\newblock 2nd edition. ---
-\newblock Springer-Verlag Berlin Heidelberg, 2010. ---
-\newblock Vol.~10 of \BibEmph{Springer Series in Advanced Microelectronics}.
-  ---
-\newblock P.~258.
-
-\bibitem{ACMMR10}
-\selectlanguageifdefined{english}
-Advances in Condensed Matter and Materials Research~/ Ed. by Hans~Geelvinck,
-  Sjaak~Reynst. ---
-\newblock Nova Science Publishers Inc, 2011. ---
-\newblock Vol.~10. ---
-\newblock P.~424.
-
-\bibitem{Eliseev}
-\selectlanguageifdefined{russian}
-\BibEmph{Елисеев,~А.А.} Функциональные
-  наноматериалы~/ А.А.~Елисеев, А.В.~Лукашин.
-  ---
-\newblock М.: Физматлит, 2010. ---
-\newblock {С.}~456.
-
-\bibitem{Krause}
-\selectlanguageifdefined{english}
-\BibEmph{Krause-Rehberg,~Reinhard}. Positron Annihilation in Semiconductors:
-  Defect Studies~/ Reinhard~Krause-Rehberg, Hartmut~S.~Leipner. ---
-\newblock Springe, 2003. ---
-\newblock Vol.~127 of \BibEmph{Springer Series in Solid-State Sciences}. ---
-\newblock P.~383.
+Intensification of iron--boron complex association in silicon solar cells under
+  acoustic wave action~/ Oleg~Olikh, Vitaliy~Kostylyov, Victor~Vlasiuk
+  et~al.~// \BibEmph{J. Mater. Sci.: Mater. Electron.} ---
+\newblock 2022. --- Jun. ---
+\newblock Vol.~33, no.~16. ---
+\newblock Pp.~13133--13142.
 
 \end{thebibliography}
