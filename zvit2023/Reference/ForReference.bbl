@@ -78,4 +78,13 @@ Intensification of iron--boron complex association in silicon solar cells under
 \newblock Vol.~33, no.~16. ---
 \newblock Pp.~13133--13142.
 
+\bibitem{Green2022}
+\selectlanguageifdefined{english}
+\BibEmph{Green,~Martin~A.} Improved silicon optical parameters at 25$^\circ$C,
+  295 K and 300 K including temperature coefficients~/ Martin~A.~Green~//
+  \BibEmph{Prog. Photovoltaics Res. Appl.} ---
+\newblock 2022. --- Feb. ---
+\newblock Vol.~30, no.~2. ---
+\newblock Pp.~164--179.
+
 \end{thebibliography}
