@@ -1,0 +1,13 @@
+Average MSE = 0.04357089
+Std = 0.00719130
+#Input Nodes = 4
+ConfigurationType - Trapezoi
+[200, 180, 160, 140, 120, 100]
+Batch Size = 16
+# Epochs = 500
+Learning Rate = 0.0004
+Ortimizer = Adam
+Activation = relu
+Initializer = XavierNormal
+Regularizer = None
+Dropout is not used
