@@ -8,3 +8,31 @@
 
 Показано важливість використання напруги холостого ходу, окрім струму короткого замикання та ефективності, для підвищення точності оцінки.
 Крім того, продемонстровано необхідність створення тренувального набору з використанням значень рівня легування бази, який відповідає реальним структурам.
+
+Перекласти англійською, використовуючи стиль ділового листа
+
+"
+Шановна Моніка!
+
+Надсилаю електронний варіант постеру Oleg Olikh (KNU, Ukraine) "Characterization of impurity contamination in solar cells with the assistance of machine learning" (both JPEG and PPT files).
+Сподіваюся, що надісланий варіант відповідає вимогам.
+
+З повагою,
+Оліх Олег
+professor at the general physics department,
+Taras Shevchenko National University of Kyiv, 
+Kyiv (Ukraine)
+olegolikh@knu.ua
+"
+
+Dear Monica,
+
+I am sending the electronic version of the poster by Oleg Olikh (KNU, Ukraine) titled "Characterization of impurity contamination in solar cells with the assistance of machine learning" (both JPEG and PPT files).
+I hope the submitted version meets the requirements.
+
+Best regards,
+Oleg Olikh
+Professor at the General Physics Department,
+Taras Shevchenko National University of Kyiv,
+Kyiv, Ukraine
+olegolikh@knu.ua
