@@ -2,6 +2,7 @@ Energy Conversion and Management
 Energy
 Solar Energy
 Renewable Energy
+Applied Energy 
 
 transfer
 Energy Reports
@@ -12,7 +13,8 @@ Heliyon
 ----------------------------------
 Sustainable Energy Technologies and Assessments
 International Journal of Energy and Environmental Engineering
-Applied Energy 
+Journal of Cleaner Production
+
 Applied Soft Computing
 Engineering Applications of Artificial Intelligence
 Expert Systems with Applications
