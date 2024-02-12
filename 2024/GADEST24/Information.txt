@@ -1,0 +1,18 @@
+Title: Defect content characterization in solar cells with the assistance of machine learning
+Authors: Oleg Olikh, Oleksii Zavhorodnii
+Presenting author: Oleg Olikh
+Corresponding author and his/her email: Oleg Olikh, olegolikh@knu.ua
+Related number(s) from the list of the conference topics: III.ii
+Desired form of presentation: Oral presentation or Poster presentation: Oral
+Publication in the special conference issue: planned
+
+
+
+
+Title
+Authors
+Presenting author
+Corresponding author and his/her email
+Related number(s) from the list of the conference topics (e.g. I.i or I.ii. or II.iv, etc.)
+Desired form of presentation: Oral presentation or Poster presentation
+Publication in the special conference issue: planned, not planned
