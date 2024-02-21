@@ -38,6 +38,10 @@ function StringWithTC(const SL:TStringList; const T0:double=300):string;
 {повертає рядок, в якому розташовані температурні коефіцієнти
 всіх залежностей, що є у SL - див. попередню функцію}
 
+procedure Create940spe(const Wph:integer;const DirToSave:string);
+{створюється файл з інтенсивністю Wph при монохроматичному освітленні,
+[Wph]=W/m2}
+
 //procedure AddSyffixToStringList(SL:TStringList; Syffix:string; SyffixHeader:string='');
 {додає на початку кожного рядка SL Syffix;
 якщо SyffixHeader не порожній, то у першому рядку додають саме його, а не Syffix}
@@ -299,6 +303,35 @@ function StringWithTC(const SL:TStringList; const T0:double=300):string;
     Result:=Result+FloatToStrF(TCfromStringList(SL,i,T0),ffExponent,8,2)+' ';
   Delete(Result,Length(Result),1);
  end;
+
+
+ procedure Create940spe(const Wph:integer;const DirToSave:string);
+{створюється файл з інтенсивністю Wph при монохроматичному освітленні,
+[Wph]=W/m2}
+ var SL:TStringList;
+begin
+ SL:=TStringList.Create;
+ SL.Add('> monochromatic spectrum, lambda = 940 nm, linewidth = 5 nm; '+inttostr(Wph)+'e-4W/cm2');
+ SL.Add('> first column: lambda (nm)');
+ SL.Add('> second column: spectrum (W/m2, from half-away preceeding to half-away next lambda-interval)');
+ SL.Add('> sum of second column equals '+inttostr(Wph)+'e-4W/cm2');
+ SL.Add('934	0');
+ SL.Add('935	'+FloatToStrF(0.0166667*Wph/4,ffFixed,7,5));
+ SL.Add('936	'+FloatToStrF(0.1166667*Wph/4,ffFixed,7,5));
+ SL.Add('937	'+FloatToStrF(0.3333333*Wph/4,ffFixed,7,5));
+ SL.Add('938	'+FloatToStrF(0.55*Wph/4,ffFixed,7,5));
+ SL.Add('939	'+FloatToStrF(0.65*Wph/4,ffFixed,7,5));
+ SL.Add('940	'+FloatToStrF(0.666667*Wph/4,ffFixed,7,5));
+ SL.Add('941	'+FloatToStrF(0.65*Wph/4,ffFixed,7,5));
+ SL.Add('942	'+FloatToStrF(0.55*Wph/4,ffFixed,7,5));
+ SL.Add('943	'+FloatToStrF(0.3333333*Wph/4,ffFixed,7,5));
+ SL.Add('944	'+FloatToStrF(0.1166667*Wph/4,ffFixed,7,5));
+ SL.Add('945	'+FloatToStrF(0.0166667*Wph/4,ffFixed,7,5));
+ SL.Add('946	0');
+ SL.SaveToFile(DirToSave+'\940nmSim.spe');
+ FreeAndNil(SL);
+end;
+
 
 
 end.

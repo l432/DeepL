@@ -60,6 +60,8 @@ type
     BAllDatesDat: TButton;
     RGIllumination: TRadioGroup;
     Button1: TButton;
+    LLightIntens: TLabel;
+    STLightIntens: TStaticText;
     procedure BtFileSelectClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
@@ -73,20 +75,24 @@ type
     procedure B_ResFSelectClick(Sender: TObject);
     procedure BAllDatesDatClick(Sender: TObject);
     procedure Button1Click(Sender: TObject);
+    procedure RGIlluminationClick(Sender: TObject);
   private
     { Private declarations }
     TempStart,TempFinish,TempStep: TIntegerParameterShow;
     FeLow,FeHi:TDoubleParameterShow;
     FeStepNumber: TIntegerParameterShow;
     Boron,EmiterCon,BSFCon:TDoubleParameterShow;
-    BaseThick:TIntegerParameterShow;
+    BaseThick,IllumIntens:TIntegerParameterShow;
     EmiterThick,BSFThick:TDoubleParameterShow;
 
     ConfigFile:TIniFile;
 //    SCAPS_Folder,Result_Folder:string;
     IVparameter:TIVparameter;
     Procedure FoldersToForm();
-    {виведення на форму розташувань директорій}    
+    {виведення на форму розташувань директорій}
+    procedure EnableLightIntensity();
+    {вмикає доступність налаштування інтенсивності
+    монохроматичного освітлення}
 //    Direc:string;
     function NBoronToString():string;
 //    function NumberToString(Number:double;DigitNumber:word=4):string;
@@ -516,20 +522,22 @@ var
   pw:integer;
 begin
 
- SetLength(FeValue,FeStepNumber.Data);
- FeStep:=(log10(FeHi.Data)-log10(FeLow.Data))/(FeStepNumber.Data-1);
- for I := 0 to FeStepNumber.Data - 1 do
-  begin
-   temp:=Power(10,log10(FeLow.Data)+FeStep*i);
-//   showmessage(inttostr(i)+' '+floattostrf(temp,ffExponent,9,2));
-   pw:=trunc(ln(temp)/ln(10));
-   temp:=temp/Power(10,pw);
-//   showmessage(inttostr(pw)+' '+floattostrf(temp,ffExponent,9,2));
+Create940spe(8, SCAPS_Folder);
 
-   FeValue[i]:=round(temp*1000)*round(Power(10,pw-3));
-//   showmessage(floattostr(FeValue[i]));
-  end;
-  showmessage(ArrayToString(FeValue));
+// SetLength(FeValue,FeStepNumber.Data);
+// FeStep:=(log10(FeHi.Data)-log10(FeLow.Data))/(FeStepNumber.Data-1);
+// for I := 0 to FeStepNumber.Data - 1 do
+//  begin
+//   temp:=Power(10,log10(FeLow.Data)+FeStep*i);
+////   showmessage(inttostr(i)+' '+floattostrf(temp,ffExponent,9,2));
+//   pw:=trunc(ln(temp)/ln(10));
+//   temp:=temp/Power(10,pw);
+////   showmessage(inttostr(pw)+' '+floattostrf(temp,ffExponent,9,2));
+//
+//   FeValue[i]:=round(temp*1000)*round(Power(10,pw-3));
+////   showmessage(floattostr(FeValue[i]));
+//  end;
+//  showmessage(ArrayToString(FeValue));
 
 
 //// ShowArrarOfString(ParametersPsevdo);
@@ -583,6 +591,12 @@ begin
     Result := tempStr + '\';
   end;
 
+end;
+
+procedure TMainForm.EnableLightIntensity;
+begin
+ STLightIntens.Enabled:=(RGIllumination.ItemIndex=2);
+ LLightIntens.Enabled:=STLightIntens.Enabled;
 end;
 
 //function TMainForm.EditString(str: string): string;
@@ -654,6 +668,9 @@ begin
  dFei:=TDefect.Create(Fei);
  dFeBd:=TDefect.Create(FeB_don);
  dFeBa:=TDefect.Create(FeB_ac);
+
+ if RGIllumination.ItemIndex = 2 then
+   Create940spe(IllumIntens.Data, SCAPS_Folder+'\spectrum');
 
  EpiLayersDistribution.AdaptEmiter(EmiterThick.Data,EmiterCon.Data*1e6);
  EpiLayersDistribution.AdaptBSF(BSFThick.Data,BSFCon.Data*1e6,Boron.Data*1e6);
@@ -2308,7 +2325,9 @@ begin
   BaseThick:=TIntegerParameterShow. Create(STBase_Thick,LSBF_Thick, 'Thickness (mkm)',180);
   BaseThick.SetName('SC');
   BaseThick.ReadFromIniFile(ConfigFile);
-
+  IllumIntens:=TIntegerParameterShow. Create(STLightIntens, LLightIntens, 'Light intensity (W m-2)', 5);
+  IllumIntens.SetName('SC');
+  IllumIntens.ReadFromIniFile(ConfigFile);
 
 
   FeLow:=TDoubleParameterShow. Create(STFe_Lo,LFe_Lo,'Low limit:',1e10,5);
@@ -2326,6 +2345,8 @@ begin
   SCAPS_Folder:=ConfigFile.ReadString('Folders','SCAPS',GetCurrentDir);
   Result_Folder:=ConfigFile.ReadString('Folders','Results',GetCurrentDir);
   FoldersToForm();
+
+  EnableLightIntensity;
 
   IVparameter:=TIVparameter.Create;
 
@@ -2361,6 +2382,8 @@ begin
   BSFThick.Free;
   BaseThick.WriteToIniFile(ConfigFile);;
   BaseThick.Free;
+  IllumIntens.WriteToIniFile(ConfigFile);;
+  IllumIntens.Free;
 
   TempFinish.WriteToIniFile(ConfigFile);
   TempFinish.Free;
@@ -2403,6 +2426,11 @@ begin
  Result:=BaseThickToString+'T'+inttostr(T)+NBoronToString;
 end;
 
+
+procedure TMainForm.RGIlluminationClick(Sender: TObject);
+begin
+ EnableLightIntensity();
+end;
 
 function TMainForm.SearchInFolders(StartFolder: string): string;
  var sr: TSearchRec;

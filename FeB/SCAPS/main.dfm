@@ -32,6 +32,20 @@ object MainForm: TMainForm
     Font.Style = []
     ParentFont = False
   end
+  object LLightIntens: TLabel
+    Left = 637
+    Top = 417
+    Width = 114
+    Height = 36
+    Caption = 'Light intensity (W m-2)'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clMaroon
+    Font.Height = -15
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    WordWrap = True
+  end
   object BtFileSelect: TButton
     Left = 8
     Top = 285
@@ -578,15 +592,30 @@ object MainForm: TMainForm
       '940nm')
     ParentFont = False
     TabOrder = 14
+    OnClick = RGIlluminationClick
   end
   object Button1: TButton
-    Left = 752
-    Top = 432
+    Left = 760
+    Top = 480
     Width = 75
     Height = 25
     Caption = 'Button1'
     TabOrder = 15
     OnClick = Button1Click
+  end
+  object STLightIntens: TStaticText
+    Left = 770
+    Top = 420
+    Width = 15
+    Height = 28
+    Caption = '8'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -20
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 16
   end
   object OpenDialog1: TOpenDialog
     Filter = 'Scaps files (*.iv)|*.iv'
