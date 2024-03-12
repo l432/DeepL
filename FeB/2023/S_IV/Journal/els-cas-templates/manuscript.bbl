@@ -1,4 +1,4 @@
-\begin{thebibliography}{85}
+\begin{thebibliography}{86}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\bibinfo}[2]{#2}
 \ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
@@ -116,6 +116,16 @@
 \newblock \bibinfo{journal}{Energy Convers. Manage.} \bibinfo{volume}{174}
   (\bibinfo{year}{2018}) \bibinfo{pages}{388--405}.
 %Type = Article
+\bibitem[{Abdel-Basset et~al.(2023)Abdel-Basset, Mohamed, Azeem, Jameel, and
+  Abouhawwash}]{Kepler}
+\bibinfo{author}{M.~Abdel-Basset}, \bibinfo{author}{R.~Mohamed},
+  \bibinfo{author}{S.~A.~A. Azeem}, \bibinfo{author}{M.~Jameel},
+  \bibinfo{author}{M.~Abouhawwash},
+\newblock \bibinfo{title}{Kepler optimization algorithm: A new metaheuristic
+  algorithm inspired by kepler’s laws of planetary motion},
+\newblock \bibinfo{journal}{Knowledge-Based Systems} \bibinfo{volume}{268}
+  (\bibinfo{year}{2023}) \bibinfo{pages}{110454}.
+%Type = Article
 \bibitem[{Li et~al.(2021)Li, Gong, and Gu}]{Li2021}
 \bibinfo{author}{S.~Li}, \bibinfo{author}{W.~Gong}, \bibinfo{author}{Q.~Gu},
 \newblock \bibinfo{title}{A comprehensive survey on meta-heuristic algorithms
@@ -124,7 +134,7 @@
   \bibinfo{volume}{141} (\bibinfo{year}{2021}) \bibinfo{pages}{110828}.
 %Type = Article
 \bibitem[{Yang et~al.(2020)Yang, Wang, Zhang, Yu, Yao, Shu, Zeng, and
-  Sun}]{SC_Yang2020}
+  Sun}]{Yang2020}
 \bibinfo{author}{B.~Yang}, \bibinfo{author}{J.~Wang},
   \bibinfo{author}{X.~Zhang}, \bibinfo{author}{T.~Yu},
   \bibinfo{author}{W.~Yao}, \bibinfo{author}{H.~Shu},
@@ -659,7 +669,7 @@
 \newblock \bibinfo{title}{Extraction of solar cell parameters from a single
   current--voltage characteristic using teaching learning based optimization
   algorithm},
-\newblock \bibinfo{journal}{Applied Energy} \bibinfo{volume}{119}
+\newblock \bibinfo{journal}{Appl. Energy} \bibinfo{volume}{119}
   (\bibinfo{year}{2014}) \bibinfo{pages}{384--393}.
 %Type = Article
 \bibitem[{Chen et~al.(2016)Chen, Yu, Du, Zhao, and Liu}]{GOTLBO}
