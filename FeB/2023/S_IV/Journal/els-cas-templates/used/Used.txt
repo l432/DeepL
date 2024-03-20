@@ -3,6 +3,7 @@ Energy
 Solar Energy
 Renewable Energy
 Applied Energy 
+Expert Systems with Applications
 
 transfer
 Energy Reports
@@ -12,9 +13,20 @@ Advanced in Applied Energy
 
 ----------------------------------
 Sustainable Energy Technologies and Assessments - має бути слів менше, ніж 5000
-International Journal of Energy and Environmental Engineering
-Journal of Cleaner Production
+International Journal of Energy and Environmental Engineering - може бути вже не у скопусі
+Journal of Cleaner Production - дуже великий рейтинг
 
 Applied Soft Computing
 Engineering Applications of Artificial Intelligence
-Expert Systems with Applications
+
+
+
+
+Current Applied Physics
+Materials Science and Engineering: B
+
+Applied Physics A: Materials Science and Processing - Springer
+
+
+Journal of Materials Science: Materials in Electronics - не дуже по темі, Springer
+Journal of Electronic Materials  - те саме, квартиль 3 напевно
