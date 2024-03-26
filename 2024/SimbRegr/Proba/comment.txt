@@ -25,6 +25,8 @@ Eg за формулою Passler,
 діапазон зміни темпратури - 100 - 500 К
 [J0]= mA cm^-2
 
+спочатку спрощений варіант - Eg=1 eV.
+
 
 LOnIscTtrain.dat (4train.dat)
 LOnIscTtest.dat (4test.dat)
