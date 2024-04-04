@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\urlprefix}{URL }
 
@@ -24,5 +24,25 @@ M.~K. Juhl, F.~D. Heinz, G.~Coletti, D.~Macdonald, F.~E. Rougieux, F.~Schindle,
 \bibitem{Sun2021}
 C.~Sun, Y.~Zhu, M.~Juhl, W.~Yang, F.~Rougieux, Z.~Hameiri, D.~Macdonald,
 \newblock \emph{Phys. Status Solidi RRL} \textbf{2021}, \emph{15}, 12 2000520.
+
+\bibitem{WeberFe}
+E.~Weber,
+\newblock \emph{Appl. Phys. A} \textbf{1983}, \emph{30}, 1 1.
+
+\bibitem{FeB:PhysRevB49}
+H.~Nakashima, T.~Sadoh, T.~Tsurushima,
+\newblock \emph{Phys. Rev. B} \textbf{1994}, \emph{49}, 24 16983.
+
+\bibitem{ROUGIEUX2018}
+F.~E. Rougieux, C.~Sun, D.~Macdonald,
+\newblock \emph{Sol. Energy Mater. Sol. Cells} \textbf{2018}, \emph{187} 263 .
+
+\bibitem{Ning2022}
+L.~Ning, L.~Song, J.~Zhang,
+\newblock \emph{J. Alloys Compd.} \textbf{2022}, \emph{912} 165120.
+
+\bibitem{FeBAssJAP2014}
+C.~M\"{o}ller, T.~Bartel, F.~Gibaja, K.~Lauer,
+\newblock \emph{J. Appl. Phys.} \textbf{2014}, \emph{116}, 2 024503.
 
 \end{thebibliography}
