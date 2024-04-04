@@ -1,0 +1,28 @@
+\begin{thebibliography}{1}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+
+\bibitem{Cai2023}
+X.~Cai, S.-H. Wei,
+\newblock \emph{J. Appl. Phys.} \textbf{2023}, \emph{134}, 22 220901.
+
+\bibitem{Vobecky2021}
+J.~Vobecky,
+\newblock \emph{Phys. Status Solidi A} \textbf{2021}, \emph{218}, 23 2100169.
+
+\bibitem{Frascaroli2021}
+J.~Frascaroli, P.~Monge~Roffarello, I.~Mica,
+\newblock \emph{Phys. Status Solidi A} \textbf{2021}, \emph{218}, 23 2100206.
+
+\bibitem{Juhl2018}
+M.~K. Juhl, F.~D. Heinz, G.~Coletti, D.~Macdonald, F.~E. Rougieux, F.~Schindle,
+  T.~Niewelt, M.~C. Schubert,
+\newblock In \emph{2018 IEEE 7th World Conference on Photovoltaic Energy
+  Conversion (WCPEC) (A Joint Conference of 45th IEEE PVSC, 28th PVSEC \& 34th
+  EU PVSEC)}. \textbf{2018} 0328--0332.
+
+\bibitem{Sun2021}
+C.~Sun, Y.~Zhu, M.~Juhl, W.~Yang, F.~Rougieux, Z.~Hameiri, D.~Macdonald,
+\newblock \emph{Phys. Status Solidi RRL} \textbf{2021}, \emph{15}, 12 2000520.
+
+\end{thebibliography}

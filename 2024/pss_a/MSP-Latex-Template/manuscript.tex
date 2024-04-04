@@ -7,7 +7,7 @@
 \rhead{\includegraphics[width=2.5cm]{vch-logo.png}}
 
 
-\title{Please insert your title here}
+\title{Influence of illumination spectrum on dissociation kinetic of iron-boron pairs in silicon}
 
 \maketitle
 
@@ -15,15 +15,13 @@
 
 % Author: Please give full first and last names for authors and include * after the name of all corresponding authors
 
-\author{Author One}
-\author{Author Two}
-\author{Author Three*}
-
-
+\author{Oleg Olikh*}
+\author{Oleksandr Datsenko}
+\author{Serhiy Kondratenko}
 
 % Dedication
 
-\dedication{Optional dedication here. If no dedication is required, please leave blank}
+\dedication{}
 
 
 
@@ -32,19 +30,19 @@
 
 % Affiliations: Please provide adacemic titles (Prof. or Dr.) for all authors where applicable, and include an institutional email address for all corresponding authors
 \begin{affiliations}
-A. N. Author, A. N. O. Author\\
-Address\\
-Email Address:
+Prof. O. Olikh, Dr. O. Datsenko, Prof. S. Kondratenko\\
+Taras Shevchenko National University of Kyiv, 64/13, Volodymyrska Street, 01601, Kyiv, Ukraine\\
+Email Address: olegolikh@knu.ua
 
-A. N. O. Author\\
-Address
+%A. N. O. Author\\
+%Address
 
 \end{affiliations}
 
 
 % Keywords: Please provide a minimum of three and a maximum of seven keywords, separated by commas
 
-\keywords{Keyword 1, Keyword 2, Keyword 3}
+\keywords{silicon, iron-boron pairs, light-induced dissociation}
 
 
 
@@ -62,16 +60,76 @@ Please insert your abstract here
 % Please do not use footnotes in the text, additional information can be added to the Reference list.
 
 
-\section{First Section}
+\section{Introduction}
+
+Defects significantly impact semiconductor properties.
+Although minimizing device dimensions to nanometers shifts some focus from extensive to point defects, 
+physical properties still rely heavily on the presence and distribution of these irregularities. 
+Hence, many strategies for enhancing semiconductor structures, including radiation and temperature treatments or certain fabrication conditions, strive to decrease the defect concentration or neutralize its effects \cite{Cai2023,Vobecky2021,Frascaroli2021}.
+For instance, in the case of photovoltaic devices, we must understand and optimize the carrier properties tied to defects and impurities  \cite{Cai2023}.
+Such controlled alteration methods of the defective subsystem have been generalized under the term ``defect engineering'' and are extremely important from a practical standpoint.
+
+Successful defect engineering hinges on an in-depth understanding of defect properties.
+Key factors are defect formation energy, transition energy levels, self-compensating effects, nonradiative recombination caused by defects, and the methods of reconstruction and diffusion  \cite{Cai2023}.
+Considering the extraordinary diversity of possible intrinsic and impurity defects, complete information on all of them is lacking even for silicon, which is the most studied semiconductor.
+Nevertheless, it must be noted that considerable data have been amassed on silicon, and have a solid understanding of some defects \cite{Juhl2018}.
 
 
+For instance, a similar situation is observed for iron contamination, which is a common and often unavoidable contaminant in photovoltaic silicon materials \cite{Frascaroli2021,Sun2021}.
+Зокрема відомо, що атоми заліза у кремнії знаходяться у міжвузіллях і у додатньо зарядженому стані є надзвичайно ефективними рекомбінаційними центрами.
+У p-type Si at room temperature, iron atoms in Si : B are almost completely bound in complexes з легуючими атомами (B, Ga, Al, In).
+Ця пара є bistable дефектом: основному стану відповідає конфігурація при якій атом заліза знаходиться on the first nearest Td interstitial site 
+по відношенню до заміщуючого атому, тоді як в metastable конфігурації Fe  знаходиться в second Td site. 
+Також добре відомі положення енергетичних рівнів, які відповідають залізу та його комплексам та відповідні перерізи захоплення носіїв заряду.
+Серед згаданих пар акцептор-залізо найбільш дослідженим є комплекс FeB насамперед через те, що саме Si:B переважно використовується для створення різноманітних пристроїв,
+наприклад сонячних елементів. 
+Хоча мусимо зауважити, що все частіше у ролі акцепторної домішки використовується галій, що дозволяє, наприклад, зменшити ефекти light and elevated temperature-induced degradation \cite{Ning2022}.
+It is known that
+FeB pairs can be dissociated by illumination, minority carrier injection and thermal treatment at 200С FeBAssJAP2014.
+
+
+
+FeB:PhysRevB49
+
+
+
+
+%Загальновідомо, що дефекти є визначальними для властивостей напівпровідникових приладів.
+%Навіть зменшення розмірів пристроїв до нанометрового діапазону лише частково зміщує акценти від протяжних дефектів до точкових дефектів,
+%проте суттєва залежність фізичних властивостей від наявності та розташування порушень періодичності залишається.
+%Як наслідок, більшість шляхів покращення властивостей різноманітних напівпровідникових структур, пов'язаних, наприклад,
+%з опроміненням, температурними обробками чи вибором умов створення мають на меті зменшити концентрацію дефектів чи перевести їх у неактивний стан.
+%Наприклад, для photovoltaic пристроїв, it is of paramount importance to comprehend and
+%optimize the carrier properties associated with defects and impurities.
+%Подібні методи контрольованої зміни дефектної підсистеми дістали узагальнену назву інженерія дефектів і вони є надзвичайно важливими
+%з точки зору практичного використання.
+%
+%Цілком очевидно, що для успішного вирішення задач інженерії дефектів необхідно знати властивості самих дефектів.
+%Ключовими з них є the defect formation energy, transition energy level, self-compensating effect,
+%defect-induced nonradiative recombination, механізми перебудови та дифузії.
+%Враховуючи надзвичайну різноманітність можливих власних та домішкових дефектів, повна інформація про всі з них відсутня навіть для кремнію,
+%який is the most studied semiconductor.
+%Хоча мусимо зауважити, що саме для Si накопичено чи не найбільше подібної інформації і деякі дефекти є достатньо вивченими.
+%
+%Наприклад, це стосується домішки заліза, яка is a common and often unavoidable contaminant  in photovoltaic silicon materials.
+
+
+
+
+
+
+
+%\subsection{First Subsection}
+%
+%
+%\subsubsection{First Sub Subsection}
+%
+%
+%\threesubsection{First lowest-level subsection}
+
+
+\section{Results and Discussion}
 \subsection{First Subsection}
-
-
-\subsubsection{First Sub Subsection}
-
-
-\threesubsection{First lowest-level subsection}
 
 
 \section{Conclusion}
@@ -106,20 +164,21 @@ Please insert your acknowledgements here
 % Please also include your BibTeX data base file(s) in your submission
 % so that we can re-run BibTeX if necessary.
 %
-%\bibliographystyle{MSP}
-%\bibliography{MSP-template}
+
+\bibliographystyle{MSP}
+\bibliography{olikh}
 
 \textbf{References}\\
 
-1	((Journal articles)) a) A. B. Author 1, C. D. Author 2, Adv. Mater. 2006, 18, 1; b) A. Author 1, B. Author 2, Adv. Funct. Mater. 2006, 16, 1.\\
-2	((Work accepted)) A. B. Author 1, C. D. Author 2, Macromol. Rapid Commun., DOI: 10.1002/marc.DOI.\\
-3	((Books)) H. R. Allcock, Introduction to Materials Chemistry, Wiley, Hoboken, NJ, USA 2008.\\
-4	((Edited books or proceedings volumes)) J. W. Grate, G. C. Frye, in Sensors Update, Vol. 2 (Eds: H. Baltes, W. Göpel, J. Hesse), Wiley-VCH, Weinheim, Germany 1996, Ch. 2.\\
-5	((Presentation at a conference, proceeding not published)) Author, presented at Abbrev. Conf. Title, Location of Conference, Date of Conference ((Month, Year)).\\
-6	((Thesis)) Author, Degree Thesis, University (location if not obvious), Month, Year.\\
-7	((Patents)) a) A. B. Author 1, C. D. Author 2 (Company), Country Patent Number, Year; b) W. Lehmann, H. Rinke (Bayer AG) Ger. 838217, 1952.\\
-8	((Website)) Author, Short description or title, URL, accessed: Month, Year.\\
-9	…((Please include all authors, and do not use “et al.”))\\
+%1	((Journal articles)) a) A. B. Author 1, C. D. Author 2, Adv. Mater. 2006, 18, 1; b) A. Author 1, B. Author 2, Adv. Funct. Mater. 2006, 16, 1.\\
+%2	((Work accepted)) A. B. Author 1, C. D. Author 2, Macromol. Rapid Commun., DOI: 10.1002/marc.DOI.\\
+%3	((Books)) H. R. Allcock, Introduction to Materials Chemistry, Wiley, Hoboken, NJ, USA 2008.\\
+%4	((Edited books or proceedings volumes)) J. W. Grate, G. C. Frye, in Sensors Update, Vol. 2 (Eds: H. Baltes, W. Göpel, J. Hesse), Wiley-VCH, Weinheim, Germany 1996, Ch. 2.\\
+%5	((Presentation at a conference, proceeding not published)) Author, presented at Abbrev. Conf. Title, Location of Conference, Date of Conference ((Month, Year)).\\
+%6	((Thesis)) Author, Degree Thesis, University (location if not obvious), Month, Year.\\
+%7	((Patents)) a) A. B. Author 1, C. D. Author 2 (Company), Country Patent Number, Year; b) W. Lehmann, H. Rinke (Bayer AG) Ger. 838217, 1952.\\
+%8	((Website)) Author, Short description or title, URL, accessed: Month, Year.\\
+%9	…((Please include all authors, and do not use “et al.”))\\
 
 
 
