@@ -90,9 +90,9 @@ primarily due to the widespread use of Si:B in the fabrication of various device
 However, it is worth mentioning that gallium is gaining increasing attention as an acceptor dopant whose incorporation,
 for instance, can help mitigate the light and elevated temperature-induced degradation \cite{Ning2022}.
 
-The dynamics of FeB pairs are also examined. 
+The dynamics of FeB pairs are also examined.
 It's established that FeB pairs can be dissociated through illumination, minority carrier injection, and thermal treatment at 200~$^\circ$C \cite{FeBAssJAP2014}.
-In the context of illumination, the dissociation rate $R_d$ is influenced by the overall carrier generation rate $G$ \cite{FeBLight2,FeBAssJAP2014,FeBKin2019,FeMethod2012}: 
+In the context of illumination, the dissociation rate $R_d$ is influenced by the overall carrier generation rate $G$ \cite{FeBLight2,FeBAssJAP2014,FeBKin2019,FeMethod2012}:
 \begin{equation}
 \label{eqRd}
 R_d=K\left(\frac{G}{N_\mathrm{FeB}}\right)^2\,,
@@ -101,20 +101,20 @@ where
 $N_\mathrm{FeB}$ is the pair concentration,
 $K$ is the constant of material.
 To achieve almost complete dissociation of the FeB pair, it is necessary for the illumination power to exceed 0.1~W~cm$^{-2}$ \cite{Macdonald2004}.
-The dissociation process of FeB pairs by electron capture unfolds in two stages \cite{KIMERLINGFeB,FeBAssJAP2014}: 
-the initial stage involves the neutralization of Fe and the elimination of the Coulombic attraction between the pair components. 
-The mechanism of the second stage is contentious; it may involve either the recharge of the iron ion or the recombination-enhanced defect reaction 
+The dissociation process of FeB pairs by electron capture unfolds in two stages \cite{KIMERLINGFeB,FeBAssJAP2014}:
+the initial stage involves the neutralization of Fe and the elimination of the Coulombic attraction between the pair components.
+The mechanism of the second stage is contentious; it may involve either the recharge of the iron ion or the recombination-enhanced defect reaction
 (REDR) triggered by electron-hole recombination.
 
 
-It should be noted that despite the extensive data on the properties of iron-related defects in silicon, intensive research persists. 
-In particular, efforts focus on analyzing the impact of high-intensive  illumination \cite{FeBStrongIll} 
-or dopant compensation \cite{Zhu2015}, 
+It should be noted that despite the extensive data on the properties of iron-related defects in silicon, intensive research persists.
+In particular, efforts focus on analyzing the impact of high-intensive  illumination \cite{FeBStrongIll}
+or dopant compensation \cite{Zhu2015},
 alongside clarifying the second-stage mechanism of dissociation \cite{Sun2021}
 or reassessing recombination parameters \cite{Le2024}.
 
 This study aims to investigate the effect of the light spectrum on the dissociation kinetics of FeB pairs in silicon.
-While pair dissociation is typically carried out using a halogen lamp \cite{FeBLight2,Sun2021} 
+While pair dissociation is typically carried out using a halogen lamp \cite{FeBLight2,Sun2021}
 or 904 nm laser \cite{FeBStrongIll,FeBAssJAP2014,lauer2016}, there is limited understanding of how the light source influences this process.
 By studying the impact of different illumination spectra on FeB dissociation,
 we aim to provide valuable insights for defect engineering and the efficient transformation of detrimental impurity iron atoms into a highly mobile interstitial state
@@ -135,7 +135,7 @@ To determine the carrier generation rate, spectra of sample illumination using v
 \end{figure}
 
 In Figure 1, the main stages of the research are illustrated.
-First step was determination of the dissociation rate of FeB pairs under illumination with different integrated intensities. 
+First step was determination of the dissociation rate of FeB pairs under illumination with different integrated intensities.
 Three light sources from different manufacturers were used (further details are described in Section~\ref{SecExp}).
 To measure number of interstitial iron atoms formed over fixed time under strong illumination the kinetics of short-circuit current was used.
 The result is presented in Section~\ref{SecR}.
@@ -158,17 +158,57 @@ Finally, we conclude this paper in Section~\ref{SecConsl}.
 
 \subsection{Dissociation rate determination}\label{SecR}
 
-The equilibrium between free Fe$_i$ and Fe$_i$B$_s$ is known to be determined by the following equations \cite{FeB:kinetic,Sun2021}
+The equilibrium between free Fe$_i$ and Fe$_i$B$_s$ is known to be determined by the following equations \cite{FeB:kinetic,Sun2021,FeBAssJAP2014}
 \begin{equation}
 \label{eqReac}
-\mathrm{Fe}_i+\mathrm{B}_s  \overset{R_a}{\underset{R_d}{\rightleftharpoons{}}} \mathrm{FeB}
+\mathrm{Fe}_i+\mathrm{B}_s  \overset{R_a}{\underset{R_d}{\rightleftharpoons{}}} \mathrm{FeB}\,,
 \end{equation}
+where
+$R_a$ is the association rate.
+As a result, the concentration of interstitial iron atoms $N_\mathrm{Fe_i}$ depending on illumination time $t_\mathrm{ill}$ 
+during light-induced dissociation can be described as follows \cite{FeBLight2,FeBKin2019,Olikh2021JAP}
+\begin{equation}
+\label{eqNfeill}
+N_\mathrm{Fe_i}(t_\mathrm{ill})=\left(N_\mathrm{Fe,eq}-N_\mathrm{Fe,tot}
+\frac{R_d}{R_d+R_a}\right)\exp[-(R_d+R_a)t_\mathrm{ill}]+N_\mathrm{Fe,tot}\frac{R_d}{R_d+R_a}\,,
+\end{equation}
+where
+$N_\mathrm{Fe,tot}$ is the total concentration of the impurity iron,
+$N_\mathrm{Fe,eq}$ represents the concentration of unpaired interstitial iron atoms in the equilibrium state 
+(in darkness, $N_\mathrm{Fe,eq}=N_\mathrm{Fe_i}(t_\mathrm{ill}=0)$).
+It's important to highlight that $N_\mathrm{Fe,eq}$ is significantly influenced 
+by temperature and the Fermi level location \cite{FeB:kinetic}. 
+Specifically, in the case of p-type Si with a hole concentration of $1.36\times10^{15}$~cm$^{-3}$ 
+(which corresponds to the base of the structure under investigation),  
+at a temperature of $T=300$~K, $N_\mathrm{Fe,eq}$ constitutes merely about 1\% of $N_\mathrm{Fe,tot}$, 
+rendering it negligible for practical considerations. 
+However, when the temperature rises to 340~K, the proportion of $N_\mathrm{Fe,eq}$ increases to approximately 14.5\%.
 
-%\begin{eqnarray}
-%\label{eqkinet}
-%\mathrm{Fe}_i+\mathrm{B}_s\xrightarrow{R_a}\mathrm{FeB}\,,\nonumber\\
-%\mathrm{FeB}\xrightarrow{R_d}\mathrm{Fe}_i+\mathrm{B}_s\,,
-%\end{eqnarray}
+After the cessation of illumination, only the process of association occurs, 
+and the time dependence of Fe$_i$ concentration can be expressed as follows \cite{FeB:kinetic,MurphyJAP2011}:
+\begin{equation}
+\label{eqNFet}
+N_\mathrm{Fe_i}(t_\mathrm{dark})=(N_\mathrm{Fe,0}-N_\mathrm{Fe,eq})\times
+\exp(-R_a t_\mathrm{dark})+N_\mathrm{Fe,eq}\,,
+\end{equation}
+where $t_\mathrm{dark}$ is the time after strong illumination stopping,
+$N_\mathrm{Fe,0}$ is the concentration of interstitial iron atoms formed after illumination,
+$N_\mathrm{Fe,0}=N_\mathrm{Fe_i}(t_\mathrm{dark}=0)=N_\mathrm{Fe_i}(t_\mathrm{ill})$.
+
+The study examined the dependence of $N_\mathrm{Fe,0}$ in silicon solar cells on illumination time $t_\mathrm{ill}$
+using different illumination intensities $W_\mathrm{ill}$ ($200-750$~mW) and light sources
+(three halogen lamps, labeled as Orion, Osram, and GE, and described in detail in Section~\ref{SecExp}). 
+The experiments were conducted at a temperature of 340~K. 
+The values of $N_\mathrm{Fe,0}$ were  determined using a methodology \cite{Olikh2022:JMatSci,Olikh2021JAP}
+based on the study of the kinetics of short-circuit current $I_{SC}$ under low-intensity monochromatic illumination. 
+Specifically, after strong illumination with a duration of $t_\mathrm{ill}$, 
+the current-voltage characteristic (IV) of the solar cell was measured every 21 seconds over a time $t_\mathrm{dark}$ interval of approximately 3000 seconds.
+
+Figure~\ref{fig2}a shows some typical IV curves.
+It can be seen that upon cessation of illumination, there exists a gradual augmentation in both the short-circuit current and the open-circuit voltage.
+This phenomenon is indicative of a decrease in the recombination activity of the defective subsystem, 
+which is a result of the transition of interstitial iron to a bound state with an acceptor.
+Moreover, at the end of the measurement interval, the minute changes in the IV curves denote that the selected interval of 50 minutes is sufficient to complete the association. 
 
 
 \begin{figure}
@@ -182,10 +222,27 @@ The equilibrium between free Fe$_i$ and Fe$_i$B$_s$ is known to be determined by
   The marks are the experimental results and the lines on panel b are the curves fitted according to \cite{Olikh2022:JMatSci,Olikh2021JAP}.
   Light sources: GE (a), Osram (b).
   $t_\mathrm{ill}$, s: 50 (a), 5(b).
-  $W_\mathrm{ill}=50$~mW (b).
+  $W_\mathrm{ill}=400$~mW (a).
   $T=340$~K.}
   \label{fig2}
 \end{figure}
+
+Figure~\ref{fig2}b illustrates the dependencies $I_{SC}(t_\mathrm{dark})$ after illumination with different intensities. 
+As previously shown \cite{Olikh2021JAP}, the magnitude of the change in $I_{SC}$ after the dark recovery period 
+inherently correlates with the concentration of Fe$_i$ formed as a result of light-induced dissociation of FeB pairs. 
+From examining the presented data, it is evident that escalating $W_\mathrm{ill}$ leads to an augmentation in the dissociation efficiency. 
+Concurrently, the recovery time remains insensitive to the illumination parameters, which conforms to expectations, 
+given that the latter is determined by $R_a$ --- see Equation~(\ref{eqNFet}).
+
+Зазначимо, що окрім $N_\mathrm{Fe,0}$ values, використана методика дозволяє оцінити the energy of Fei migration Em and
+
+τSRH,others is the bulk SRH lifetime which stems from defects other than FeGa
+
+τother describes further
+recombination channels (other impurities, lattice defects, surface
+recombination).
+
+Shockley–Read–Hall (SRH)
 
 \begin{figure}
 \centering
