@@ -1,5 +1,7 @@
 \documentclass{WileyMSP-template}
 
+\usepackage{amsmath}
+
 \begin{document}
 
 
@@ -42,7 +44,7 @@ Email Address: olegolikh@knu.ua
 
 % Keywords: Please provide a minimum of three and a maximum of seven keywords, separated by commas
 
-\keywords{silicon, iron-boron pairs, light-induced dissociation}
+\keywords{silicon, iron-boron pairs, light-induced dissociation, light source impact}
 
 
 
@@ -88,33 +90,42 @@ primarily due to the widespread use of Si:B in the fabrication of various device
 However, it is worth mentioning that gallium is gaining increasing attention as an acceptor dopant whose incorporation,
 for instance, can help mitigate the light and elevated temperature-induced degradation \cite{Ning2022}.
 
-It is known that
-FeB pairs can be dissociated by illumination, minority carrier injection and thermal treatment at 200~$^\circ$ \cite{FeBAssJAP2014}.
+The dynamics of FeB pairs are also examined. 
+It's established that FeB pairs can be dissociated through illumination, minority carrier injection, and thermal treatment at 200~$^\circ$C \cite{FeBAssJAP2014}.
+In the context of illumination, the dissociation rate $R_d$ is influenced by the overall carrier generation rate $G$ \cite{FeBLight2,FeBAssJAP2014,FeBKin2019,FeMethod2012}: 
+\begin{equation}
+\label{eqRd}
+R_d=K\left(\frac{G}{N_\mathrm{FeB}}\right)^2\,,
+\end{equation}
+where
+$N_\mathrm{FeB}$ is the pair concentration,
+$K$ is the constant of material.
+To achieve almost complete dissociation of the FeB pair, it is necessary for the illumination power to exceed 0.1~W~cm$^{-2}$ \cite{Macdonald2004}.
+The dissociation process of FeB pairs by electron capture unfolds in two stages \cite{KIMERLINGFeB,FeBAssJAP2014}: 
+the initial stage involves the neutralization of Fe and the elimination of the Coulombic attraction between the pair components. 
+The mechanism of the second stage is contentious; it may involve either the recharge of the iron ion or the recombination-enhanced defect reaction 
+(REDR) triggered by electron-hole recombination.
 
 
-Reassessing iron–gallium recombination activity in silicon \cite{Le2024}
+It should be noted that despite the extensive data on the properties of iron-related defects in silicon, intensive research persists. 
+In particular, efforts focus on analyzing the impact of high-intensive  illumination \cite{FeBStrongIll} 
+or dopant compensation \cite{Zhu2015}, 
+alongside clarifying the second-stage mechanism of dissociation \cite{Sun2021}
+or reassessing recombination parameters \cite{Le2024}.
 
-AIPAdv 3 082124 \cite{FeBStrongIll}
+This study aims to investigate the effect of the light spectrum on the dissociation kinetics of FeB pairs in silicon.
+While pair dissociation is typically carried out using a halogen lamp \cite{FeBLight2,Sun2021} 
+or 904 nm laser \cite{FeBStrongIll,FeBAssJAP2014,lauer2016}, there is limited understanding of how the light source influences this process.
+By studying the impact of different illumination spectra on FeB dissociation,
+we aim to provide valuable insights for defect engineering and the efficient transformation of detrimental impurity iron atoms into a highly mobile interstitial state
+within the active region of a silicon device.
+Besides, such information, in our opinion, can help make the right choice between existing options for the second stage of pair decay.
 
-Effect of Dopant Compensation on the Behavior of Dissolved
-Iron and Iron-Boron Related Complexes in Silicon InterJPhotoener 2015 154574 \cite{Zhu2015}
 
-JApplPhys 116 024503 \cite{FeBAssJAP2014}
 
-PhysStatSolA 216 1900253 \cite{FeBKin2019}
 
-PhysStatSolRRL 15 2100520 \cite{Sun2021}
-
-PR ApplPhysLett 85 p5227 5229 \cite{FeBLight2}
-
-PR JApplPhys 98 083509 \cite{FeBJAP2005}
-
-SolStPhenom 242 p230 \cite{lauer2016}
-
-JApplPhys 95 p1021 \cite{Macdonald2004}
-
-PR PhysStSolRRL 6 p1 \cite{FeMethod2012}
-
+Figure~\ref{fig1} illustrates the main stages of the research. Initially, the dissociation rate of FeB pairs under illumination of the solar cell with different integrated intensities was determined. For this purpose, the dependence of the quantity of interstitial iron atoms formed over time under intense illumination was measured. The concentrations of formed pairs were measured by investigating the kinetics of short-circuit current. Three light sources from different manufacturers were used (further details are described in Section 1).
+To determine the carrier generation rate, spectra of sample illumination using various light sources were measured, taking into account the effects of light reflection, absorption by free carriers, and effective absorption depths. The obtained results led to the conclusion that the efficiency of light-induced dissociation increases with decreasing photon wavelength.
 
 \begin{figure}
 \centering
@@ -122,6 +133,16 @@ PR PhysStSolRRL 6 p1 \cite{FeMethod2012}
   \caption{Investigation framework}
   \label{fig1}
 \end{figure}
+
+In Figure 1, the main stages of the research are illustrated.
+First step was determination of the dissociation rate of FeB pairs under illumination with different integrated intensities. 
+Three light sources from different manufacturers were used (further details are described in Section~\ref{SecExp}).
+To measure number of interstitial iron atoms formed over fixed time under strong illumination the kinetics of short-circuit current was used.
+The result is presented in Section~\ref{SecR}.
+Section~\ref{SecG} deals with estimating the carrier generation rate using spectra of sample illumination and considering the effects of light reflection, absorption by free carriers, and effective absorption depths.
+The obtained results showed that the efficiency of light-induced dissociation increases with decreasing photon wavelength --- see Section~\ref{SecLast}.
+Finally, we conclude this paper in Section~\ref{SecConsl}.
+
 
 
 %\subsection{First Subsection}
@@ -134,7 +155,21 @@ PR PhysStSolRRL 6 p1 \cite{FeMethod2012}
 
 
 \section{Results and Discussion}
-\subsection{First Subsection}
+
+\subsection{Dissociation rate determination}\label{SecR}
+
+The equilibrium between free Fe$_i$ and Fe$_i$B$_s$ is known to be determined by the following equations \cite{FeB:kinetic,Sun2021}
+\begin{equation}
+\label{eqReac}
+\mathrm{Fe}_i+\mathrm{B}_s  \overset{R_a}{\underset{R_d}{\rightleftharpoons{}}} \mathrm{FeB}
+\end{equation}
+
+%\begin{eqnarray}
+%\label{eqkinet}
+%\mathrm{Fe}_i+\mathrm{B}_s\xrightarrow{R_a}\mathrm{FeB}\,,\nonumber\\
+%\mathrm{FeB}\xrightarrow{R_d}\mathrm{Fe}_i+\mathrm{B}_s\,,
+%\end{eqnarray}
+
 
 \begin{figure}
 \centering
@@ -195,7 +230,41 @@ Coefficient of determination is listed as well.}
   \end{tabular}
 \end{table}
 
-\subsection{Second Subsection}
+
+
+
+%solar simulator setup FeBKin2019
+%white light illumination FeBJAP2005
+
+Reassessing iron–gallium recombination activity in silicon \cite{Le2024}
+
+AIPAdv 3 082124 \cite{FeBStrongIll}
+
+Effect of Dopant Compensation on the Behavior of Dissolved
+Iron and Iron-Boron Related Complexes in Silicon InterJPhotoener 2015 154574 \cite{Zhu2015}
+
+JApplPhys 116 024503 \cite{FeBAssJAP2014}
+
+PhysStatSolA 216 1900253 \cite{FeBKin2019}
+
+PhysStatSolRRL 15 2100520 \cite{Sun2021}
+
+PR ApplPhysLett 85 p5227 5229 \cite{FeBLight2}
+
+PR JApplPhys 98 083509 \cite{FeBJAP2005}
+
+SolStPhenom 242 p230 \cite{lauer2016}
+
+JApplPhys 95 p1021 \cite{Macdonald2004}
+
+PR PhysStSolRRL 6 p1 \cite{FeMethod2012}
+
+
+
+
+
+
+\subsection{Carrier generation rate estimation}\label{SecG}
 
 \begin{figure}
 \centering
@@ -237,13 +306,20 @@ $\alpha_\mathrm{fca}$ \cite{SiFCA}
 \end{figure}
 
 
+
+
+\subsection{Effect of illumination spectrum on FeB pair decay}\label{SecLast}
+
+
+
+
 \begin{figure}
 \centering
   \includegraphics[width=0.4\linewidth]{Fig6a.png}
   \includegraphics[width=0.4\linewidth]{Fig6b.png}
   \caption{
   (a) FeB pair dissociation rate plotted as $R_d\cdot N_\mathrm{FeB}^2$ over the light induced
-  generation rate. The solid lines show the quadratic dependence according to Equation~(\ref{eqIsc}).
+  generation rate. The solid lines show the quadratic dependence according to Equation~(\ref{eqRd}).
   (b) Dependencies of average photon energy on illumination intensity for different light sources.
   The inset shows prefactor $K$ vs average photon energy for the different light sources and illumination intensities.
   The lines are linear fitted curves. Coefficients of correlation are shown as well.
@@ -253,17 +329,25 @@ $\alpha_\mathrm{fca}$ \cite{SiFCA}
 
 
 
-\section{Conclusion}
-\cite{KLAASSEN953,ROUGIEUX2018,FeB:kinetic},\cite{Brad2022,AugerSi2022,EBLSHADE}, 
+\section{Conclusion}\label{SecConsl}
+\cite{KLAASSEN953,ROUGIEUX2018,FeB:kinetic},\cite{Brad2022,AugerSi2022,EBLSHADE},
 
 Klyui \emph{et al.}\cite{KostRefl2000})
 
+As explained in Refs.[6,21], the local vibrational energy released
+from a recombination event at the defect center can promote defect reactions such as dissociation
+and diffusion.
 
 % Experimental section
 
 \section{Experimental Section}
+\label{SecExp}
 
 The temperature was maintained constant using a PID (proportional-integral-derivative controller) algorithm which is implemented in the software which serves the system.
+
+Therefore, the temperature of the
+wafers was regulated and controlled through a thermoelectric
+cooling system based on the Peltier effect
 
 \threesubsection{First part of experimental section}\\
 \threesubsection{Second part of experimental section}\\
