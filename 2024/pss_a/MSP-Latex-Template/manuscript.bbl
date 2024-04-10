@@ -102,31 +102,13 @@ O.~Olikh, V.~Kostylyov, V.~Vlasiuk, R.~Korkishko, R.~Chupryna,
 \newblock \emph{J. Mater. Sci.: Mater. Electron.} \textbf{2022}, \emph{33}, 16
   13133.
 
-\bibitem{FeBJAP2005}
-D.~Macdonald, T.~Roth, P.~N.~K. Deenapanray, K.~Bothe, P.~Pohl, J.~Schmidt,
-\newblock \emph{J. Appl. Phys.} \textbf{2005}, \emph{98}, 8 083509.
+\bibitem{FeBAssSST2011}
+J.~Tan, D.~Macdonald, F.~Rougieux, A.~Cuevas,
+\newblock \emph{Semicond Sci. Technol.} \textbf{2011}, \emph{26}, 5 055019.
 
-\bibitem{Libra2017}
-M.~Libra, V.~Poulek, P.~Kourim,
-\newblock \emph{Research in Agricultural Engineering} \textbf{2017}, \emph{63},
-  1 10.
-
-\bibitem{Bowden2007}
-S.~Bowden, R.~A. Sinton,
-\newblock \emph{J. Appl. Phys.} \textbf{2007}, \emph{102}, 12 124501.
-
-\bibitem{Schaefer2018}
-S.~Schäfer, R.~Brendel,
-\newblock \emph{IEEE J. Photovolt.} \textbf{2018}, \emph{8}, 4 1156.
-
-\bibitem{Green2022}
-M.~A. Green,
-\newblock \emph{Prog. Photovoltaics Res. Appl.} \textbf{2022}, \emph{30}, 2
-  164.
-
-\bibitem{SiFCA}
-S.~C. Baker-Finch, K.~R. McIntosh, D.~Yan, K.~C. Fong, T.~C. Kho,
-\newblock \emph{J. Appl. Phys.} \textbf{2014}, \emph{116}, 6 063106.
+\bibitem{FeBkinAPL2008}
+D.~Macdonald, A.~Cuevas, L.~J. Geerligs,
+\newblock \emph{Appl. Phys. Lett.} \textbf{2008}, \emph{92}, 20 202119.
 
 \bibitem{KLAASSEN953}
 D.~Klaassen,
@@ -142,13 +124,43 @@ T.~Niewelt, B.~Steinhauser, A.~Richter, B.~Veith-Wolf, A.~Fell, B.~Hammann,
 L.~E. Black, D.~H. Macdonald,
 \newblock \emph{Sol. Energ. Mat. Sol.} \textbf{2022}, \emph{234} 111428.
 
-\bibitem{EBLSHADE}
-A.~W. Mohamed, A.~A. Hadi, K.~M. Jambi,
-\newblock \emph{Swarm Evol. Comput.} \textbf{2019}, \emph{50} 100455.
+\bibitem{Libra2017}
+M.~Libra, V.~Poulek, P.~Kourim,
+\newblock \emph{Research in Agricultural Engineering} \textbf{2017}, \emph{63},
+  1 10.
+
+\bibitem{Pasler}
+R.~P\"assler,
+\newblock \emph{Phys. Rev. B} \textbf{2002}, \emph{66} 085201.
 
 \bibitem{KostRefl2000}
 N.~Klyui, V.~Kostylyov, A.~Rozhin, V.~Gorbulik, V.~Litovchenko, M.~Voronkin,
   N.~Zaika,
 \newblock \emph{Opto-Electr. Rev.} \textbf{2000}, \emph{8}, 4 402.
+
+\bibitem{Schaefer2018}
+S.~Schäfer, R.~Brendel,
+\newblock \emph{IEEE J. Photovolt.} \textbf{2018}, \emph{8}, 4 1156.
+
+\bibitem{Bowden2007}
+S.~Bowden, R.~A. Sinton,
+\newblock \emph{J. Appl. Phys.} \textbf{2007}, \emph{102}, 12 124501.
+
+\bibitem{Green2022}
+M.~A. Green,
+\newblock \emph{Prog. Photovoltaics Res. Appl.} \textbf{2022}, \emph{30}, 2
+  164.
+
+\bibitem{SiFCA}
+S.~C. Baker-Finch, K.~R. McIntosh, D.~Yan, K.~C. Fong, T.~C. Kho,
+\newblock \emph{J. Appl. Phys.} \textbf{2014}, \emph{116}, 6 063106.
+
+\bibitem{FeBJAP2005}
+D.~Macdonald, T.~Roth, P.~N.~K. Deenapanray, K.~Bothe, P.~Pohl, J.~Schmidt,
+\newblock \emph{J. Appl. Phys.} \textbf{2005}, \emph{98}, 8 083509.
+
+\bibitem{EBLSHADE}
+A.~W. Mohamed, A.~A. Hadi, K.~M. Jambi,
+\newblock \emph{Swarm Evol. Comput.} \textbf{2019}, \emph{50} 100455.
 
 \end{thebibliography}
