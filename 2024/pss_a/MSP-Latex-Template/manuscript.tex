@@ -1,6 +1,8 @@
 \documentclass{WileyMSP-template}
 
 \usepackage{amsmath}
+\usepackage{amssymb}
+
 
 \begin{document}
 
@@ -434,6 +436,17 @@ $\alpha_\mathrm{fca}$ is the absorption coefficient due to free carrier absorpti
 $n_r$ is the refractive index;
 $d$ is the width of the device.
 
+In our calculations of $A_\mathrm{bb}$ by using Equations~(\ref{eqAbb}), we took  $\alpha_\mathrm{bb}$ and 
+$n_r$ from Green\cite{Green2022}, $\alpha_\mathrm{fca}$  from Baker-Finch \emph{et al.} \cite{SiFCA}.
+The spectral dependence of the fraction of the band-to-band transitions can be found in Supplementary materials (Figure~S5). 
+
+When determining the carrier generation volume, we applied Bowden\&Sinton  approach \cite{Bowden2007} to thick silicon wafers, 
+where the diffusion length or light absorption depth is significantly less than the sample thickness. 
+In these cases, the distribution of carriers is heavily skewed toward the illuminated surface, 
+rendering the use of the arithmetic mean of carrier concentration unsuitable. 
+Consequently, the average values are computed using carrier concentration as a weighting function, 
+and effective generation region width is determined as follows \cite{Bowden2007}:
+
 \begin{equation}
 \label{eqdeff}
 d_\mathrm{eff}(\lambda)=\frac{\left(\int_0^d \Delta n dx\right)^2}{\int_0^d \Delta n^2 dx}\,,
@@ -445,16 +458,19 @@ $\Delta n$ is the increase in minority carrier density due to illumination
 \Delta n (x)=\frac{\alpha_\mathrm{bb} n_\mathrm{ph} L_n^2 q}{(\alpha_\mathrm{bb}^2 L_n^2-1)kT\mu_n}
 \left[\exp\left(-\frac{x}{L_n}\right)-\exp\left(-\alpha_\mathrm{bb} x\right)\right]\,.
 \end{equation}
+In calculations, we used $L_n$ value, determined in Section~\ref{SecR}. 
+Some dependencies for different $L_n$ values are shown in Figure~S4 (Supplementary materials). 
 
-
-$d_\mathrm{eff}$ \cite{Bowden2007}
-
-$A_\mathrm{bb}$ \cite{Schaefer2018}
-
-$\alpha_\mathrm{bb}$, refractive index $n$ \cite{Green2022}
-
-$\alpha_\mathrm{fca}$ \cite{SiFCA}
-
+The consideration of dependencies $R(\lambda)$, $A_\mathrm{bb}(\lambda)$, and $d_\mathrm{eff}(\lambda)$ alters 
+the spectral carrier generation rate compared to the spectral photon flux, 
+leading to an increased contribution to e-h pairs generating from shorter wavelength light, 
+as illustrated in Figure~\ref{fig5}a. 
+In Figure~\ref{fig5}b, variations in the total carrier generation rate are depicted with increasing light intensity for different light sources. 
+It is evident that differences exist between the light sources, 
+yet the absolute contrasts in the magnitude of $G$ for various light sources under $W_\mathrm{ill}=const$ conditions do not surpass 2 percent, 
+with Orion registering the highest carrier generation rate value. 
+Notably, without considering $R$, $A_\mathrm{bb}$, and $d_\mathrm{eff}$ and calculating $G$  as the ratio of incident photons number 
+to the total sample volume, the qualitative outcomes would remain quite similar. The main difference would lie in the absolute values of the carrier generation rate.
 
 \begin{figure}
 \centering
@@ -468,37 +484,24 @@ $\alpha_\mathrm{fca}$ \cite{SiFCA}
   \label{fig5}
 \end{figure}
 
-
+Thus, the discrepancies previously (Section~\ref{SecR}) noticed  in the value of $R_d$ under identical illumination intensity levels 
+cannot be attributed to variations in the carrier generation rate among different light sources, 
+even when factoring in the quadratic dependency of the dissociation rate on $G$. 
+Hence, there must be another underlying cause for these differences.
 
 
 \subsection{Effect of illumination spectrum on FeB pair decay}\label{SecLast}
 
-
-%solar simulator setup FeBKin2019
-%white light illumination FeBJAP2005
-%будь-ласка, покращ англійську мову, виправивши граматичні та силістичні помилки:
-
-AIPAdv 3 082124 \cite{FeBStrongIll}
-
-Effect of Dopant Compensation on the Behavior of Dissolved
-Iron and Iron-Boron Related Complexes in Silicon InterJPhotoener 2015 154574 \cite{Zhu2015}
-
-JApplPhys 116 024503 \cite{FeBAssJAP2014}
-
-PhysStatSolA 216 1900253 \cite{FeBKin2019}
-
-PhysStatSolRRL 15 2100520 \cite{Sun2021}
-
-PR ApplPhysLett 85 p5227 5229 \cite{FeBLight2}
-
-PR JApplPhys 98 083509 \cite{FeBJAP2005}
-
-SolStPhenom 242 p230 \cite{lauer2016}
-
-JApplPhys 95 p1021 \cite{Macdonald2004}
-
-PR PhysStSolRRL 6 p1 \cite{FeMethod2012}
-
+The dependencies $R_d (G)$ in logarithmic scale are presented in Figure~\ref{fig6}a. 
+The linear patterns observed in the data indicate a clear power law relationship between 
+the dissociation rates of FeB pairs and the carrier generation rate. 
+The figure also exhibits the fit results using Equation~(\ref{eqRd}). 
+High correlation coefficients exceeding 0.998 validate the applicability of the quadratic dependence expressed by Equation~(\ref{eqRd}) to our data. 
+It should be noted that Khelifati \emph{et al.} \cite{FeBKin2019} stipulate the inclusion of 
+$Rd\left(1+\tau_\mathrm{FeB}/\tau_\mathrm{other}\right)^2$ (where $\tau_\mathrm{FeB}$ is the lifetime associated with recombination on FeB pairs)
+on the left-hand side of Equation~(\ref{eqRd}) rather than $R_d$. 
+However, in our cases $\tau_\mathrm{other}\gg \tau_\mathrm{FeB}$, as previously acknowledged in Section~\ref{SecR}, 
+this additional multiplier can be disregarded.
 
 
 \begin{figure}
@@ -515,31 +518,141 @@ PR PhysStSolRRL 6 p1 \cite{FeMethod2012}
   \label{fig6}
 \end{figure}
 
-2\%
+The prefactor $K$ values determined from the fitting are  
+$3.8\times10^{-15}$~s for the GE light source, 
+$2.0\times10^{-15}$~s for the Osram, and 
+$1.5\times10^{-15}$~s for the Orion source. 
+$K$ serves as a important parameter linked to the phenomenon of FeB pairs' dissociation by illumination \cite{FeBKin2019}, 
+and the values obtained in this study are compared with those ($4.2\times10^{-17}-5\times10^{-15}$~s) previously presented \cite{FeBLight2,FeBAssJAP2014,FeBKin2019}. 
+It is essential to note that in prior research, disparities in the constant $K$ value for diverse samples were ascribed 
+to variations in defect composition and the presence of alternative recombination channels apart from iron-related defects \cite{FeBLight2,FeBAssJAP2014}. 
+However, in our case, distinct $K$ values were obtained for the same structure under identical conditions, such as temperature and integrated light intensity, 
+with differences in the illumination spectra only.
 
-$3.8\times10^{-15}$~s GE
-$2.0\times10^{-15}$~s Osram
-$1.5\times10^{-15}$~s Orion
-
-
-
+In other words, the obtained data indicate that in the analysis of light-induced dissociation of FeB pairs, 
+it is necessary to consider not only the quantity of photo-generated excess charge carriers 
+but also the energies of the photons that lead to their appearance. 
+For such an energy characterization of light sources, we used the average photon energy $<E_\mathrm{ph}>$:
 \begin{equation}
 \label{eqEaver}
-<E>=\frac{\int \frac{hc}{\lambda}n_\mathrm{ph}(\lambda)d\lambda}{\int n_\mathrm{ph}(\lambda)d\lambda}\,.
+<E_\mathrm{ph}>=\frac{\int \frac{hc}{\lambda}n_\mathrm{ph}(\lambda)d\lambda}{\int n_\mathrm{ph}(\lambda)d\lambda}\,.
 \end{equation}
+
+
+The summary of the results concerning the $<E_\mathrm{ph}>$ values is shown in Figure~\ref{fig6}b. 
+In particular, it demonstrates the shift of the emission spectrum of light sources 
+towards the short-wavelength region with an increase in the $W_\mathrm{ill}$ value, as illustrated in Figure~\ref{fig4}a. 
+And a clear conclusion can be drawn upon comparing the data in Figures~\ref{fig3},\ref{fig5}b, \ref{fig6}a, \ref{fig6}b
+and Table~\ref{tb1}: 
+with rising average photon energy, the light-induced dissociation of FeB pairs becomes more pronounced. 
+Specifically, the constant $K$ increases, the dissociation rate $R_d$ escalates, 
+and correspondingly, the illumination time necessary for a complete complex decay decreases. 
+Consequently, for the dissociation of FeB pairs, the energy expended during the thermalization of non-equilibrium carriers also holds significance.
+
+The obtained results offer some conclusions about the mechanism of FeB dissociation. 
+As discussed in the literature and previously mentioned, two possible ways of the second decay stage 
+are typically considered: REDR and the recharge of the iron ion. 
+REDR arises from strong electron-lattice coupling at the defect site 
+and involves the utilization of local vibrational energy to promote pair dissociation \cite{FeBAssJAP2014,Sun2021,Macdonald2004}. 
+The observed correlation between dissociation rate and photon energy in this study supports the REDR process. 
+Specifically, as photon energy increases, the production of non-equilibrium phonons during thermalization also rises. 
+Furthermore, the increase in $R_d$ value, as found in the experiment, signifies the active involvement of these quasi-particles in the dissociation of FeB pairs. 
+Notably, recent research \cite{Sun2021} focusing on a detailed analysis of the dissociation and association reactions of the iron-boron pairs similarly concluded the predominant role of REDR processes.
+
 
 
 \section{Conclusion}\label{SecConsl}
 
 
-As explained in Refs.[6,21], the local vibrational energy released
-from a recombination event at the defect center can promote defect reactions such as dissociation
-and diffusion.
+
 
 % Experimental section
 
 \section{Experimental Section}
 \label{SecExp}
+
+The $n^+$-$p$-$p^+$-Si samples were used in the experiment.
+The structure was fabricated from a 380~$\mu$m thick $p$-type boron-doped
+Czochralski silicon (100) wafer with hole concentration $p=1.36\times10^{15}$~cm$^{-3}$.
+The $n^+$ emitter with sheet resistance of about $20-30$~$\Omega/\Box$
+and  thickness of $0.7$~$\mu$m was formed by phosphorus diffusion.
+The anti-recombination isotype barrier was created by using $p^+$
+layer ($10-20$~$\Omega/\Box$, $0.6$~$\mu$m) formed by boron diffusion.
+On the front surface, the antireflective and passivating SiO$_2$ (40~nm) and Si$_3$N$_4$ (30~nm) layers
+were formed.
+The solid and grid Al contacts were formed by magnetron sputtering on the rear and front surfaces respectively.
+
+Three powerful halogen lamps from different manufacturers were employed for the light-induced dissociation of FeB pairs:
+\begin{itemize}
+  \item Orion Haltlichtspiegel 52240.0, 24 V, 200 W (labeled Orion in the paper);
+  \item Osram 64653 HLX ELC, 24 V, 250 W (Osram);
+  \item General Electric 43537 H271, 20 V, 150 W (GE);
+\end{itemize}
+
+
+Frequency dependent capacitance-voltage (C–V-f) and conductancevoltage (G-V-f) measurements have been performed using a HP 4194
+A Impedance Analyzer (Fig. 3)
+The current-voltage (I–V) characteristics have been measured with
+the experimental setup shown in Fig. 3. The setup contains a GPIB
+connection to enable data transfer and acquisition between a Keithley
+Model 2400 Source Meter Unit (SMU) and a computer. 
+
+All capacitance-voltage and photodiode measurements were performed inside a Vötsch VCL
+4006 climatic chamber after a 15 min waiting period to let the samples adapt to the set temperature. For C − V measurements an Agilent E4990 A LCR meter was used. An RMS
+value of 30 mV was set during all measurements to maintain
+the linearity of the response and to stay below the current
+limit of the LCR meter. The device irradiance was measured
+with a Thorlabs FDS10x10 photodiode. The LED was driven
+and measured by a Keithley 2602 A. The EL spectra of the
+LEDs were measured using a Thorlabs IS200-4 Integrating
+sphere and an AvaSpec-ULS2048x64TEC spectrometer from
+Avantes. The spectrometer was calibrated in the wavelength
+range of 350 nm to 1100 nm with an Avalight-HAL-CAL mini
+lamp from Avantes. All measurements were controlled with a
+Matlab program.
+
+Current-density–voltage (J–V) and Suns–Voc measurements were
+performed in-house using an FCT-450 tool from Sinton instruments at
+standard test conditions. Impedance spectroscopy (IS) and the capacitance–voltage (C–V) measurements were performed at room temperature using a computer-controlled Keysight B1500A Semiconductor
+Device Analyzer with B1520A multi-frequency capacitance measurement unit (MFCMU). The impedance was measured as a function of
+frequency from 1 kHz to 1 MHz, with an AC perturbation signal of 10
+mV. The measured impedance was fitted using the EIS Spectrum
+Analyzer software
+
+J-V curves were measured using a Keithley 2400 Sourcemeter
+and a Steuernagel SolarCellTest 575 sun-simulator. Impedance
+spectra were measured using an IM6 Electrochemical Workstation
+from Zahner-elektrik. Samples were measured inside a flow
+cell, where a constant nitrogen flow was set in order to avoid
+degradation. A halogen lamp was used for illumination. Impedance spectra were recorded by applying a small voltage perturbation (20 mV rms) at frequencies from 1 MHz to 1 Hz in dark
+conditions (for voltages varying from 3to 1 V). Illumination
+measurements were performed varying the irradiation intensity
+up to one sun (i.e., simulated AM 1.5 G, 1000 W/m2), under opencircuit conditions
+
+The J-V measurements are performed in a N2-filled
+glovebox under AM1.5G 100 mW=cm2 illumination from
+a class AAA solar simulator (Abet Technologies) using a
+low-noise sourcemeter (2635 A, Keithley) controlled by a
+LabVIEW program. The solar simulator intensity is set using a
+National Institute of Standards and Technology-traceable
+calibrated photodiode (Abet RR_227KG5). A 2.5-mmdiameter aperture is placed in front of each device to
+rigorously define the illumination area of 0.049 cm2.
+Impedance spectroscopy (IS) measurements used for
+extracting the capacitance value are carried out in an O-ring
+sealed sample holder containing N2 at room temperature
+using a Zahner IM6 electrochemical workstation. They are
+performed in the dark with an ac bias (20 mV) modulating
+between 1 Hz and 1 MHz.
+
+Device Characterization. The current density-voltage-luminance
+characteristics were measured using a Keithley 2450 source meter and
+a Konica Minolta luminance meter LS-150. The electroluminescence
+spectra were collected using a Topcon SR-UL2 Spectroradiometer. The
+photoluminescence spectra were obtained using a fluorescence spectrometer (Edinburgh, FLS 920). The capacitance spectra were recorded
+using an impedance analyzer (Keysight, E4990A). The optical permittivity was measured using a dual rotating-compensator Mueller matrix
+ellipsometer (Wuhan Eoptics Technology Co., ME-L ellipsometer). The
+low temperature environment in the experiments was provided by a
+cryostat system (Janis, ST-100).
 
 The temperature was maintained constant using a PID (proportional-integral-derivative controller) algorithm which is implemented in the software which serves the system.
 

@@ -142,10 +142,6 @@ N.~Klyui, V.~Kostylyov, A.~Rozhin, V.~Gorbulik, V.~Litovchenko, M.~Voronkin,
 S.~Schäfer, R.~Brendel,
 \newblock \emph{IEEE J. Photovolt.} \textbf{2018}, \emph{8}, 4 1156.
 
-\bibitem{Bowden2007}
-S.~Bowden, R.~A. Sinton,
-\newblock \emph{J. Appl. Phys.} \textbf{2007}, \emph{102}, 12 124501.
-
 \bibitem{Green2022}
 M.~A. Green,
 \newblock \emph{Prog. Photovoltaics Res. Appl.} \textbf{2022}, \emph{30}, 2
@@ -155,12 +151,8 @@ M.~A. Green,
 S.~C. Baker-Finch, K.~R. McIntosh, D.~Yan, K.~C. Fong, T.~C. Kho,
 \newblock \emph{J. Appl. Phys.} \textbf{2014}, \emph{116}, 6 063106.
 
-\bibitem{FeBJAP2005}
-D.~Macdonald, T.~Roth, P.~N.~K. Deenapanray, K.~Bothe, P.~Pohl, J.~Schmidt,
-\newblock \emph{J. Appl. Phys.} \textbf{2005}, \emph{98}, 8 083509.
-
-\bibitem{EBLSHADE}
-A.~W. Mohamed, A.~A. Hadi, K.~M. Jambi,
-\newblock \emph{Swarm Evol. Comput.} \textbf{2019}, \emph{50} 100455.
+\bibitem{Bowden2007}
+S.~Bowden, R.~A. Sinton,
+\newblock \emph{J. Appl. Phys.} \textbf{2007}, \emph{102}, 12 124501.
 
 \end{thebibliography}
