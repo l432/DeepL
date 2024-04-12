@@ -46,16 +46,24 @@ Email Address: olegolikh@knu.ua
 
 % Keywords: Please provide a minimum of three and a maximum of seven keywords, separated by commas
 
-\keywords{silicon, iron-boron pairs, light-induced dissociation, light source impact}
+\keywords{silicon, iron-boron pairs, light-induced dissociation, light source impact, dissociation rate}
 
 
 
 % Abstract should be written in the present tense and impersonal style (i.e., avoid we), and be at most 200 words long
 \begin{abstract}
 
-Please insert your abstract here
+Herein, the results of an experimental study on the kinetic of photo-dissociation of iron–boron (FeB) pairs 
+in boron-doped Czochralski silicon using different light sources are reported.
+It was shown that the FeB dissociation rate depends not only on integrated light intensity 
+and overall carrier generation rate but also on spectral composition of illumination.
+The value of the material constant $K$ varies and has been determined to fall within $(1.5-3.8)\times10^{-15}$~s.
+The investigation has revealed  increase in the dissociation rate with an increase in photon energy.
+The results allowed us to conclude the dominant role of the recombination-enhanced defect reaction 
+in the second stage of dissociating the pairs.
 
 \end{abstract}
+
 
 % Text: Please use section headings and subheadings as specified below. For communications, all section headings apart from Experimental Section should be removed
 % Please make the first reference to a display item bold: \textbf{Figure 1}
@@ -126,7 +134,7 @@ Besides, such information, in our opinion, can help make the right choice betwee
 
 
 
-Figure~\ref{fig1} illustrates the main stages of the research. Initially, the dissociation rate of FeB pairs under illumination of the solar cell with different integral intensities was determined. For this purpose, the dependence of the quantity of interstitial iron atoms formed over time under intense illumination was measured. The concentrations of formed pairs were measured by investigating the kinetics of short-circuit current. Three light sources from different manufacturers were used (further details are described in Section 1).
+\textbf{Figure~\ref{fig1}} illustrates the main stages of the research. Initially, the dissociation rate of FeB pairs under illumination of the solar cell with different integral intensities was determined. For this purpose, the dependence of the quantity of interstitial iron atoms formed over time under intense illumination was measured. The concentrations of formed pairs were measured by investigating the kinetics of short-circuit current. Three light sources from different manufacturers were used (further details are described in Section 1).
 To determine the carrier generation rate, spectra of sample illumination using various light sources were measured, taking into account the effects of light reflection, absorption by free carriers, and effective absorption depths. The obtained results led to the conclusion that the efficiency of light-induced dissociation increases with decreasing photon wavelength.
 
 \begin{figure}
@@ -204,7 +212,7 @@ based on the study of the kinetics of short-circuit current $I_{SC}$ under low-i
 Specifically, after strong illumination with a duration of $t_\mathrm{ill}$,
 the current-voltage characteristic (IV) of the solar cell was measured every 21 seconds over a time $t_\mathrm{dark}$ interval of approximately 3000 seconds.
 
-Figure~\ref{fig2}a shows some typical IV curves.
+\textbf{Figure~\ref{fig2}a} shows some typical IV curves.
 It can be seen that upon cessation of illumination, there exists a gradual augmentation in both the short-circuit current and the open-circuit voltage.
 This phenomenon is indicative of a decrease in the recombination activity of the defective subsystem,
 which is a result of the transition of interstitial iron to a bound state with an acceptor.
@@ -227,7 +235,7 @@ Moreover, at the end of the measurement interval, the minute changes in the IV c
   \label{fig2}
 \end{figure}
 
-Figure~\ref{fig2}b illustrates the dependencies $I_{SC}(t_\mathrm{dark})$ after illumination with different intensities.
+\textbf{Figure~\ref{fig2}b} illustrates the dependencies $I_{SC}(t_\mathrm{dark})$ after illumination with different intensities.
 As previously shown \cite{Olikh2021JAP}, the magnitude of the change in $I_{SC}$ after the dark recovery period
 inherently correlates with the concentration of Fe$_i$ formed as a result of light-induced dissociation of FeB pairs.
 From examining the presented data, it is evident that escalating $W_\mathrm{ill}$ leads to an augmentation in the dissociation efficiency.
@@ -253,7 +261,7 @@ Notably, according M\"{o}ller~\emph{et al.} \cite{FeBAssJAP2014},
 such a condition is essential for the accurate determination of the constant $K$, which is included in Equation~(\ref{eqRd}).
 
 
-The dependencies of the concentration of interstitial atoms on illumination time are shown in Figure~\ref{fig3}.
+The dependencies of the concentration of interstitial atoms on illumination time are shown in \textbf{Figure~\ref{fig3}}.
 From the data, it's evident that the pair dissociation rate is significantly influenced by the illumination intensity.
 This effect is consistent across all utilized light sources.
 Nonetheless, the $W_\mathrm{ill}$ value is not the exclusive determining factor for the pair dissociation rate,
@@ -287,7 +295,7 @@ N_\mathrm{Fe,0}(t_\mathrm{ill})=A\exp(-t_\mathrm{ill}/\tau_\mathrm{dis})
 where
 $\tau_\mathrm{dis}$ is the characteristic dissociation time,
 and $N_\mathrm{Fe,fit}$ concentration of dissociated pairs at saturation.
-The fitting results, shown in Figure~\ref{fig3} as lines and listed in the Table~\ref{tb1},
+The fitting results, shown in Figure~\ref{fig3} as lines and listed in the \textbf{Table~\ref{tb1}},
 include the coefficients of determination $R^2$.
 The high values of $R^2$ (greater than 0.99) confirm the suitability of the chosen approximation formula.
 
@@ -330,13 +338,22 @@ The high values of $R^2$ (greater than 0.99) confirm the suitability of the chos
 
 The comparison of Equations~(\ref{eqNfeill}) and (\ref{eqNfe0Exp}) reveals a relationship between
 the fitting parameters and defect characteristics, specifically:
-\begin{eqnarray}
+\begin{equation}
 \label{eqTauRd}
-\tau_\mathrm{dis}^{-1}&=&R_a+R_d\,,\\
+\tau_\mathrm{dis}^{-1}=R_a+R_d\,,
+\end{equation}
+\begin{equation}
 \label{eqFefit}
-N_\mathrm{Fe,fit}&=&N_\mathrm{Fe,tot}\frac{R_d}{R_d+R_a}\,.
-%A&=&N_\mathrm{Fe,eq}-N_\mathrm{Fe,tot}\frac{R_d}{R_d+R_a}\,.
-\end{eqnarray}
+N_\mathrm{Fe,fit}=N_\mathrm{Fe,tot}\frac{R_d}{R_d+R_a}\,.
+\end{equation}
+
+%\begin{eqnarray}
+%\label{eqTauRd}
+%\tau_\mathrm{dis}^{-1}&=&R_a+R_d\,,\\
+%\label{eqFefit}
+%N_\mathrm{Fe,fit}&=&N_\mathrm{Fe,tot}\frac{R_d}{R_d+R_a}\,.
+%%A&=&N_\mathrm{Fe,eq}-N_\mathrm{Fe,tot}\frac{R_d}{R_d+R_a}\,.
+%\end{eqnarray}
 
 Table~\ref{tb1} suggests that regardless of the light source used and $W_\mathrm{ill}$,
 the observed total concentration of impurity iron atom is consistently
@@ -364,7 +381,7 @@ The dissociation rate of FeB pairs during light-induced decay is well known
 to be dependent on the carrier generation rate --- see Equation~(\ref{eqRd}).
 Our subsequent objective involved determining the values of $G$ for various light sources.
 The measured dependencies of spectral intensity $w_\mathrm{ill}$ of illumination incident on the sample under diverse conditions,
-are shown in Figure~\ref{fig4}.
+are shown in \textbf{Figure~\ref{fig4}}.
 It is crucial to highlight that our focus is specifically on the light reaching the sample;
 hence, the spectrum is altered not only by the infrared transparency of the lamp reflector but also by absorption in the fiber
 utilized to transmit the light flux to the solar cell.
@@ -403,7 +420,7 @@ G=\int g(\lambda) d\lambda\,,
 \end{equation}
 where spectral carrier generation rate $g$
 \begin{equation}
-\label{eqGint}
+\label{eqGspectr}
 g=\frac{w_\mathrm{ill}\lambda}{hc}\frac{(1-R)A_\mathrm{bb}}{S\,d_\mathrm{eff}}\,,
 \end{equation}
 where $n_\mathrm{ph}=\frac{w_\mathrm{ill}\lambda}{hc}$ is the spectral photon flux,
@@ -464,8 +481,8 @@ Some dependencies for different $L_n$ values are shown in Figure~S4 (Supplementa
 The consideration of dependencies $R(\lambda)$, $A_\mathrm{bb}(\lambda)$, and $d_\mathrm{eff}(\lambda)$ alters
 the spectral carrier generation rate compared to the spectral photon flux,
 leading to an increased contribution to e-h pairs generating from shorter wavelength light,
-as illustrated in Figure~\ref{fig5}a.
-In Figure~\ref{fig5}b, variations in the total carrier generation rate are depicted with increasing light intensity for different light sources.
+as illustrated in \textbf{Figure~\ref{fig5}a}.
+In \textbf{Figure~\ref{fig5}b}, variations in the total carrier generation rate are depicted with increasing light intensity for different light sources.
 It is evident that differences exist between the light sources,
 yet the absolute contrasts in the magnitude of $G$ for various light sources under $W_\mathrm{ill}=const$ conditions do not surpass 2 percent,
 with Orion registering the highest carrier generation rate value.
@@ -492,7 +509,7 @@ Hence, there must be another underlying cause for these differences.
 
 \subsection{Effect of illumination spectrum on FeB pair decay}\label{SecLast}
 
-The dependencies $R_d (G)$ in logarithmic scale are presented in Figure~\ref{fig6}a.
+The dependencies $R_d (G)$ in logarithmic scale are presented in \textbf{Figure~\ref{fig6}a}.
 The linear patterns observed in the data indicate a clear power law relationship between
 the dissociation rates of FeB pairs and the carrier generation rate.
 The figure also exhibits the fit results using Equation~(\ref{eqRd}).
@@ -526,6 +543,7 @@ $K$ serves as a important parameter linked to the phenomenon of FeB pairs' disso
 and the values obtained in this study are compared with those ($4.2\times10^{-17}-5\times10^{-15}$~s) previously presented \cite{FeBLight2,FeBAssJAP2014,FeBKin2019}.
 It is essential to note that in prior research, disparities in the constant $K$ value for diverse samples were ascribed
 to variations in defect composition and the presence of alternative recombination channels apart from iron-related defects \cite{FeBLight2,FeBAssJAP2014}.
+Early, the dependence of $R_d$ on temperature was reported as well \cite{Lagowskii1993}.
 However, in our case, distinct $K$ values were obtained for the same structure under identical conditions, such as temperature and integrated light intensity,
 with differences in the illumination spectra only.
 
@@ -539,10 +557,10 @@ For such an energy characterization of light sources, we used the average photon
 \end{equation}
 
 
-The summary of the results concerning the $<E_\mathrm{ph}>$ values is shown in Figure~\ref{fig6}b.
+The summary of the results concerning the $<E_\mathrm{ph}>$ values is shown in \textbf{Figure~\ref{fig6}b}.
 In particular, it demonstrates the shift of the emission spectrum of light sources
 towards the short-wavelength region with an increase in the $W_\mathrm{ill}$ value, as illustrated in Figure~\ref{fig4}a.
-And a clear conclusion can be drawn upon comparing the data in Figures~\ref{fig3},\ref{fig5}b, \ref{fig6}a, \ref{fig6}b
+And a clear conclusion can be drawn upon comparing the data in Figure~\ref{fig3},\ref{fig5}b, \ref{fig6}a, \ref{fig6}b
 and Table~\ref{tb1}:
 with rising average photon energy, the light-induced dissociation of FeB pairs becomes more pronounced.
 Specifically, the constant $K$ increases, the dissociation rate $R_d$ escalates,
@@ -563,7 +581,25 @@ Notably, recent research \cite{Sun2021} focusing on a detailed analysis of the d
 
 \section{Conclusion}\label{SecConsl}
 
+The effect of the illumination spectra on the on the dissociation of
+FeB pairs in p-Si was investigated in this paper.
+We reported the results of a experimental systematic study on FeB dissociation rate in solar cell based on Cz-Si,
+which were carried out using different light source and illumination intensities.
 
+The findings showed that the time required for a total dissociation of the FeB pairs 
+not only becomes shorter with the increase of illumination intensity but also significantly depends
+on light source.
+As a result, the value of material constant $K$  varies and has been determined to be 
+$3.8\times10^{-15}$~s, $2.0\times10^{-15}$~s, and $1.5\times10^{-15}$~s
+for three different light sources.
+The study of the illumination spectrum led to the conclusion that the
+efficiency of FeB photo-dissociation increases with a decrease in light wavelength.
+The observation of an increase in the dissociation rate 
+with an increase in photon energy indicates that 
+the REDR effect prevails as the dominant factor during the second stage of light-induced dissociation of FeB pairs.
+Furthermore, the obtained results could help develop defect engineering procedures 
+for effectively converting iron impurities in silicon into high-mobility states, 
+which could significantly impact semiconductor technology.
 
 
 % Experimental section
@@ -591,20 +627,20 @@ Three powerful halogen lamps from different manufacturers were used for sample i
 The light sources were powered by the DC Power Supply ITECH IT6332B, which allowed setting the current passing through the lamp with an accuracy of up to 1 mA.
 
 The illumination originating from the sources was transmitted to the sample via fiber.
-The sources' emission underwent calibration at the fiber output, 
+The sources' emission underwent calibration at the fiber output,
 thereby enabling a direct assessment of the light flux incident on the sample.
-The relationships between the integral illumination intensity 
+The relationships between the integral illumination intensity
 and the current consumed by the sources were measured using an optical power and energy meter Thorlabs PM100D and a high-resolution sensor S401C.
 The illumination spectra measurements were performed using spectrometer IKC-6 with germanium photodiode.
 When analyzing the spectra, the spectral sensitivity of the photodiode was considered.
 
-The current-voltage characteristics were measured using a Keithley 2450 source meter and 
+The current-voltage characteristics were measured using a Keithley 2450 source meter and
 low--intensity monochromatic light source (light--emitting diode SN--HPIR940nm--1W with light wavelength 940~nm).
 The LED radiation intensity was stabilized by utilizing the W1209 thermostat and a power supply regulated by a circuit incorporating positive feedback and digital control.
 
-The measurements were carried out at a temperature of 340~K. 
-The sample temperature was driven by a thermoelectric cooler, 
-controlled by an STS-21 sensor, 
+The measurements were carried out at a temperature of 340~K.
+The sample temperature was driven by a thermoelectric cooler,
+controlled by an STS-21 sensor,
 and maintained constant through a PID algorithm embedded in the software that serves the experimental setup.
 
 
@@ -614,7 +650,7 @@ and maintained constant through a PID algorithm embedded in the software that se
 
 %All capacitance-voltage and photodiode measurements were performed inside a Vötsch VCL 4006 climatic chamber
 %after a 15 min waiting period to let the samples adapt to the set temperature.
-%For C − V measurements an Agilent E4990 A LCR meter was used. 
+%For C − V measurements an Agilent E4990 A LCR meter was used.
 %An RMS value of 30 mV was set during all measurements to maintain the linearity of the response and to stay below the current limit of the LCR meter.
 %The device irradiance was measured with a Thorlabs FDS10x10 photodiode.
 %The LED was driven and measured by a Keithley 2602 A.
@@ -678,7 +714,7 @@ Supporting Information is available from the Wiley Online Library or from the au
 The authors are grateful for the help with calculating the coefficient of reflection by solar cells to Prof. Vitaliy Kostylyov.
 
 \medskip
-\textbf{Conflict of Interest}
+\textbf{Conflict of Interest}\par
 The authors declare no conflict of interest.
 
 % References
@@ -688,7 +724,7 @@ The authors declare no conflict of interest.
 \bibliographystyle{MSP}
 \bibliography{olikh}
 
-
+%покращ англійську мову, використавши стиль наукової статті, та виправ граматичні і стилістичні помилки
 
 
 % Figures/tables and captions
@@ -753,17 +789,22 @@ The authors declare no conflict of interest.
 %\end{figure}
 %
 %
+
+
 %% Table of contents entry should be 50 - 60 words long
 %% Image should be 55 mm broad and 50 mm high or 110 mm broad and 20 mm high
 %
 %
-%\begin{figure}
-%\textbf{Table of Contents}\\
-%\medskip
-%  \includegraphics{toc-image.png}
-%  \medskip
-%  \caption*{ToC Entry}
-%\end{figure}
+\begin{figure}
+\textbf{Table of Contents}\\
+\medskip
+  \includegraphics{toc-image.png}
+  \medskip
+  \caption*{The results of an study on the kinetic of dissociation of FeB pairs in Cz-Si:B using different light sources are reported.
+Dissociation rate was shown to depend not only on intensity but also on spectral composition of illumination.
+The investigation has revealed increase in the dissociation efficiency with a decrease in wavelength and dominant role of the recombination-enhanced defect reaction}
+\end{figure}
+
 
 
 \end{document}
