@@ -46,6 +46,19 @@ object MainForm: TMainForm
     ParentFont = False
     WordWrap = True
   end
+  object LNoiseLevel: TLabel
+    Left = 163
+    Top = 631
+    Width = 120
+    Height = 18
+    Caption = 'Noise level (%)'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clNavy
+    Font.Height = -15
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
   object BtFileSelect: TButton
     Left = 8
     Top = 365
@@ -62,8 +75,8 @@ object MainForm: TMainForm
     OnClick = BtFileSelectClick
   end
   object BtClose: TButton
-    Left = 169
-    Top = 648
+    Left = 424
+    Top = 642
     Width = 105
     Height = 25
     Caption = '&Close'
@@ -648,13 +661,41 @@ object MainForm: TMainForm
     ParentFont = False
     TabOrder = 15
   end
+  object CBNoise: TCheckBox
+    Left = 24
+    Top = 632
+    Width = 100
+    Height = 17
+    Caption = 'Add Noise'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -15
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 16
+  end
+  object STNoiseLevel: TStaticText
+    Left = 312
+    Top = 628
+    Width = 15
+    Height = 28
+    Caption = '5'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -20
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 17
+  end
   object OpenDialog1: TOpenDialog
     Filter = 'Scaps files (*.iv)|*.iv'
     Left = 426
     Top = 564
   end
   object OpenDialog2: TOpenDialog
-    Left = 336
-    Top = 600
+    Left = 776
+    Top = 632
   end
 end
