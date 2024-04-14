@@ -91,8 +91,8 @@ type
     FeLow,FeHi:TDoubleParameterShow;
     FeStepNumber: TIntegerParameterShow;
     Boron,EmiterCon,BSFCon,ActivEnergyValue,DissPart:TDoubleParameterShow;
-    BaseThick,IllumIntens,NoiseLevel:TIntegerParameterShow;
-    EmiterThick,BSFThick:TDoubleParameterShow;
+    BaseThick,IllumIntens:TIntegerParameterShow;
+    EmiterThick,BSFThick,NoiseLevel:TDoubleParameterShow;
 
     ConfigFile:TIniFile;
 //    SCAPS_Folder,Result_Folder:string;
@@ -1294,10 +1294,11 @@ procedure TMainForm.AdDataFromDatesDat(FullFilename: string);
  var
     DatesDatFile,ResultFile,nDat:TStringList;
     SR : TSearchRec;
-    i:integer;
+    i,j:integer;
     tempString:string;
     RowIsFound:boolean;
     ParameterNumbers,ExtractedDataNumbers:TArrInteger;
+    tempDouble:double;
 begin
        Directory:=ExtractFilePath(FullFilename);
        SetCurrentDir(Directory);
@@ -1316,8 +1317,21 @@ begin
                 +' '+NewStringFromStringArray(ExtractedDataLightNames));
        for I := 1 to DatesDatFile.Count - 1 do
          begin
-           nDat.Add(NewStringByNumbers(DatesDatFile[i],ParameterNumbers)
-                          +' '+NewStringByNumbers(DatesDatFile[i],ExtractedDataNumbers));
+           tempString:=NewStringByNumbers(DatesDatFile[i],ParameterNumbers);
+           if CBNoise.Checked
+             then
+              begin
+               Randomize();
+               for j := 0 to High(ExtractedDataNumbers) do
+                begin
+                 tempDouble:=FloatDataFromRow(DatesDatFile[i],ExtractedDataNumbers[j]);
+                 tempString:=tempString+' '+FloatToStrF(RandG(tempDouble,tempDouble*NoiseLevel.Data/100),ffExponent,7,0)
+                end;
+              end
+             else tempString:=tempString+' '+NewStringByNumbers(DatesDatFile[i],ExtractedDataNumbers);
+           nDat.Add(tempString);
+//           nDat.Add(NewStringByNumbers(DatesDatFile[i],ParameterNumbers)
+//                          +' '+NewStringByNumbers(DatesDatFile[i],ExtractedDataNumbers));
          end;
 
        DatesDatFile.Clear;
@@ -1915,7 +1929,7 @@ begin
   IllumIntens.SetName('SC');
   IllumIntens.ReadFromIniFile(ConfigFile);
 
-  NoiseLevel:=TIntegerParameterShow. Create(STNoiseLevel, LNoiseLevel, 'Noise level (%)', 5);
+  NoiseLevel:=TDoubleParameterShow. Create(STNoiseLevel, LNoiseLevel, 'Noise level (%)', 5);
   NoiseLevel.SetName('SC');
   NoiseLevel.ReadFromIniFile(ConfigFile);
 
