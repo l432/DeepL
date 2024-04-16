@@ -46,21 +46,21 @@ Email Address: olegolikh@knu.ua
 
 % Keywords: Please provide a minimum of three and a maximum of seven keywords, separated by commas
 
-\keywords{silicon, iron-boron pairs, light-induced dissociation, light source impact, dissociation rate}
+\keywords{silicon, iron-boron pairs, light-induced dissociation, wavelength impact, dissociation rate}
 
 
 
 % Abstract should be written in the present tense and impersonal style (i.e., avoid we), and be at most 200 words long
 \begin{abstract}
 
-Herein, the results of an experimental study on the kinetic of photo-dissociation of iron–boron (FeB) pairs 
+Herein, the results of an experimental study on the photo-dissociation kinetic of iron–boron (FeB) pairs
 in boron-doped Czochralski silicon using different light sources are reported.
-It was shown that the FeB dissociation rate depends not only on integrated light intensity 
-and overall carrier generation rate but also on spectral composition of illumination.
-The value of the material constant $K$ varies and has been determined to fall within $(1.5-3.8)\times10^{-15}$~s.
+It was shown that the FeB dissociation rate depends not only on integrated light intensity
+and overall carrier generation rate, but also on spectral composition of illumination.
+The value of the material constant of dissociation $K$ varies and has been determined to be within $(1.5-3.8)\times10^{-15}$~s.
 The investigation has revealed  increase in the dissociation rate with an increase in photon energy.
-The results allowed us to conclude the dominant role of the recombination-enhanced defect reaction 
-in the second stage of dissociating the pairs.
+The results allowed us to conclude the dominant role of the recombination-enhanced defect reaction
+at the second stage of the pair dissociation.
 
 \end{abstract}
 
@@ -75,7 +75,7 @@ in the second stage of dissociating the pairs.
 \section{Introduction}
 
 Defects significantly impact semiconductor properties.
-Although minimizing device dimensions to nanometers shifts some focus from extensive to point defects,
+Although minimizing device dimensions to nanometers shifts some focus from extended to point defects,
 physical properties still rely heavily on the presence and distribution of these irregularities.
 Hence, many strategies for enhancing semiconductor structures, including radiation and temperature treatments or certain fabrication conditions, strive to decrease the defect concentration or neutralize its effects \cite{Cai2023,Vobecky2021,Frascaroli2021}.
 For instance, in the case of photovoltaic devices, we must understand and optimize the carrier properties tied to defects and impurities  \cite{Cai2023}.
@@ -90,7 +90,7 @@ Nevertheless, it must be noted that considerable data have been amassed on silic
 For instance, such defects are iron impurity, a common, detrimental, and often unavoidable contaminant
 in photovoltaic silicon \cite{Frascaroli2021,Sun2021}, and iron-boron pair.
 Specifically, iron atoms are known to be at the interstitial sites, and Fe$_i^+$ are highly efficient recombination centers \cite{WeberFe}.
-In p-type Si at room temperature, iron atoms are almost predominantly bound in complexes with dopants (B, Ga, Al, In).
+In p-type Si at room temperature, iron atoms are almost predominantly bound into complexes with dopants (B, Ga, Al, In).
 This defect demonstrates bistable behavior: the stable state is defined by the configuration in which the Fe occupies
 the first nearest tetrahedral interstitial site closest to the substituent atom,
 whereas, in the metastable configuration, Fe is at the second $T_d$ interstitial site \cite{FeB:PhysRevB49}.
@@ -98,7 +98,7 @@ The energy levels associated with iron and its complexes, as well as the respect
 Among the acceptor-iron pairs, the complex FeB is the most thoroughly investigated,
 primarily due to the widespread use of Si:B in the fabrication of various devices, such as solar cells.
 However, it is worth mentioning that gallium is gaining increasing attention as an acceptor dopant whose incorporation,
-for instance, can help mitigate the light and elevated temperature-induced degradation \cite{Ning2022}.
+for instance, can help to mitigate the light and elevated temperature-induced degradation \cite{Ning2022}.
 
 The dynamics of FeB pairs are also examined.
 It's established that FeB pairs can be dissociated through illumination, minority carrier injection, and thermal treatment at 200~$^\circ$C \cite{FeBAssJAP2014}.
@@ -110,7 +110,7 @@ R_d=K\left(\frac{G}{N_\mathrm{FeB}}\right)^2\,,
 where
 $N_\mathrm{FeB}$ is the pair concentration,
 $K$ is the constant of material.
-To achieve almost complete dissociation of the FeB pair, it is necessary for the illumination power to exceed 0.1~W~cm$^{-2}$ \cite{Macdonald2004}.
+To achieve almost complete dissociation of the FeB pairs, it is necessary for the illumination power to exceed 0.1~W~cm$^{-2}$ \cite{Macdonald2004}.
 The dissociation process of FeB pairs by electron capture unfolds in two stages \cite{KIMERLINGFeB,FeBAssJAP2014}:
 the initial stage involves the neutralization of Fe and the elimination of the Coulombic attraction between the pair components.
 The mechanism of the second stage is contentious; it may involve either the recharge of the iron ion or the recombination-enhanced defect reaction
@@ -131,11 +131,15 @@ we aim to provide valuable insights for defect engineering and the efficient tra
 within the active region of a silicon device.
 Besides, such information, in our opinion, can help make the right choice between existing options for the second stage of pair decay.
 
-
-
-
-\textbf{Figure~\ref{fig1}} illustrates the main stages of the research. Initially, the dissociation rate of FeB pairs under illumination of the solar cell with different integral intensities was determined. For this purpose, the dependence of the quantity of interstitial iron atoms formed over time under intense illumination was measured. The concentrations of formed pairs were measured by investigating the kinetics of short-circuit current. Three light sources from different manufacturers were used (further details are described in Section 1).
-To determine the carrier generation rate, spectra of sample illumination using various light sources were measured, taking into account the effects of light reflection, absorption by free carriers, and effective absorption depths. The obtained results led to the conclusion that the efficiency of light-induced dissociation increases with decreasing photon wavelength.
+In \textbf{Figure~\ref{fig1}}, the main stages of the research are illustrated.
+First step was determination of the dissociation rate of FeB pairs under illumination with different integral intensities.
+Three light sources from different manufacturers were used (further details are described in Section~\ref{SecExp}).
+To measure number of interstitial iron atoms formed over fixed time under strong illumination the kinetics of short-circuit current was used.
+The result is presented in Subsection~\ref{SecR}.
+Subsection~\ref{SecG} deals with estimating the carrier generation rate using spectra of sample illumination and considering the effects of light reflection,
+absorption by free carriers, and effective absorption depths.
+The obtained results showed that the efficiency of light-induced dissociation increases with decreasing photon wavelength --- see Subsection~\ref{SecLast}.
+Finally, we conclude this paper in Section~\ref{SecConsl}.
 
 \begin{figure}
 \centering
@@ -144,14 +148,7 @@ To determine the carrier generation rate, spectra of sample illumination using v
   \label{fig1}
 \end{figure}
 
-In Figure 1, the main stages of the research are illustrated.
-First step was determination of the dissociation rate of FeB pairs under illumination with different integral intensities.
-Three light sources from different manufacturers were used (further details are described in Section~\ref{SecExp}).
-To measure number of interstitial iron atoms formed over fixed time under strong illumination the kinetics of short-circuit current was used.
-The result is presented in Section~\ref{SecR}.
-Section~\ref{SecG} deals with estimating the carrier generation rate using spectra of sample illumination and considering the effects of light reflection, absorption by free carriers, and effective absorption depths.
-The obtained results showed that the efficiency of light-induced dissociation increases with decreasing photon wavelength --- see Section~\ref{SecLast}.
-Finally, we conclude this paper in Section~\ref{SecConsl}.
+
 
 %\subsection{First Subsection}
 %
@@ -166,14 +163,14 @@ Finally, we conclude this paper in Section~\ref{SecConsl}.
 
 \subsection{Dissociation rate determination}\label{SecR}
 
-The equilibrium between free Fe$_i$ and Fe$_i$B$_s$ is known to be determined by the following equations \cite{FeB:kinetic,Sun2021,FeBAssJAP2014}
+The equilibrium between free Fe$_i$ and Fe$_i$B$_\mathrm{Si}$ is known to be determined by the following equations \cite{FeB:kinetic,Sun2021,FeBAssJAP2014}
 \begin{equation}
 \label{eqReac}
-\mathrm{Fe}_i+\mathrm{B}_s  \overset{R_a}{\underset{R_d}{\rightleftharpoons{}}} \mathrm{FeB}\,,
+\mathrm{Fe}_i+\mathrm{B}_\mathrm{Si}  \overset{R_a}{\underset{R_d}{\rightleftharpoons{}}} \mathrm{FeB}\,,
 \end{equation}
 where
 $R_a$ is the association rate.
-As a result, the concentration of interstitial iron atoms $N_\mathrm{Fe_i}$ depending on illumination time $t_\mathrm{ill}$
+As a result, the concentration of unpaired interstitial iron atoms $N_\mathrm{Fe_i}$ depending on illumination time $t_\mathrm{ill}$
 during light-induced dissociation can be described as follows \cite{FeBLight2,FeBKin2019,Olikh2021JAP}
 \begin{equation}
 \label{eqNfeill}
@@ -183,7 +180,7 @@ N_\mathrm{Fe_i}(t_\mathrm{ill})=\left(N_\mathrm{Fe,eq}-N_\mathrm{Fe,tot}
 where
 $N_\mathrm{Fe,tot}$ is the total concentration of the impurity iron,
 $N_\mathrm{Fe,eq}$ represents the concentration of unpaired interstitial iron atoms in the equilibrium state
-(in darkness, $N_\mathrm{Fe,eq}=N_\mathrm{Fe_i}(t_\mathrm{ill}=0)$).
+(in darkness, $N_\mathrm{Fe,eq}=N_\mathrm{Fe_i}(t_\mathrm{ill}\leq0)$).
 It's important to highlight that $N_\mathrm{Fe,eq}$ is significantly influenced
 by temperature and the Fermi level location \cite{FeB:kinetic}.
 Specifically, in the case of p-type Si with a hole concentration of $1.36\times10^{15}$~cm$^{-3}$
@@ -199,24 +196,24 @@ and the time dependence of Fe$_i$ concentration can be expressed as follows \cit
 N_\mathrm{Fe_i}(t_\mathrm{dark})=(N_\mathrm{Fe,0}-N_\mathrm{Fe,eq})\times
 \exp(-R_a t_\mathrm{dark})+N_\mathrm{Fe,eq}\,,
 \end{equation}
-where $t_\mathrm{dark}$ is the time after strong illumination stopping,
+where $t_\mathrm{dark}$ is the time after stopping of strong illumination,
 $N_\mathrm{Fe,0}$ is the concentration of interstitial iron atoms formed after illumination,
 $N_\mathrm{Fe,0}=N_\mathrm{Fe_i}(t_\mathrm{dark}=0)=N_\mathrm{Fe_i}(t_\mathrm{ill})$.
 
 The study examined the dependence of $N_\mathrm{Fe,0}$ in silicon solar cells on illumination time $t_\mathrm{ill}$
-using different illumination intensities $W_\mathrm{ill}$ ($200-750$~mW) and light sources
+using different integral illumination intensities $W_\mathrm{ill}$ ($200-750$~mW) and light sources
 (three halogen lamps, labeled as Orion, Osram, and GE, and described in detail in Section~\ref{SecExp}).
 The experiments were conducted at a temperature of 340~K.
 The values of $N_\mathrm{Fe,0}$ were  determined using a methodology \cite{Olikh2022:JMatSci,Olikh2021JAP}
-based on the study of the kinetics of short-circuit current $I_{SC}$ under low-intensity monochromatic illumination.
+based on the fitting of the kinetics of short-circuit current $I_{SC}$ under low-intensity monochromatic illumination.
 Specifically, after strong illumination with a duration of $t_\mathrm{ill}$,
-the current-voltage characteristic (IV) of the solar cell was measured every 21 seconds over a time $t_\mathrm{dark}$ interval of approximately 3000 seconds.
+the current-voltage characteristic ($I$-$V$) of the solar cell was measured every 21 seconds over a time $t_\mathrm{dark}$ interval of approximately 3000 seconds.
 
-\textbf{Figure~\ref{fig2}a} shows some typical IV curves.
+\textbf{Figure~\ref{fig2}a} shows some typical $I$-$V$ curves.
 It can be seen that upon cessation of illumination, there exists a gradual augmentation in both the short-circuit current and the open-circuit voltage.
 This phenomenon is indicative of a decrease in the recombination activity of the defective subsystem,
 which is a result of the transition of interstitial iron to a bound state with an acceptor.
-Moreover, at the end of the measurement interval, the minute changes in the IV curves denote that the selected interval of 50 minutes is sufficient to complete the association.
+Moreover, at the end of the measurement interval, the minute changes in the $I$-$V$ curves denote that the selected interval of 50 minutes is sufficient to complete the association.
 
 
 \begin{figure}
@@ -224,7 +221,7 @@ Moreover, at the end of the measurement interval, the minute changes in the IV c
   \includegraphics[width=0.4\linewidth]{Fig2a.png}
   \includegraphics[width=0.4\linewidth]{Fig2b.png}
   \caption{Typical current-voltage characteristics measured
-  under low-intensive (LED) illumination across different periods following exposure to strong light (halogen lamp) (panel a) and
+  under low-intensive LED illumination at 940~nm across different periods following exposure to strong light (halogen lamp) (panel a) and
   short circuit current plotted as a function of the time after high-intensive illumination (panel b).
   %The marks are the experimental results and the lines are given for convenience only (b) and the curves fitted according to \cite{Olikh2022:JMatSci,Olikh2021JAP}.
   The marks are the experimental results and the lines on panel b are the curves fitted according to \cite{Olikh2022:JMatSci,Olikh2021JAP}.
@@ -243,12 +240,12 @@ Concurrently, the recovery time remains insensitive to the illumination paramete
 given that the latter is determined by $R_a$ --- see Equation~(\ref{eqNFet}).
 
 It should be noted that besides $N_\mathrm{Fe,0}$ values,
-the methodology used allows for the estimation of the energy of Fe$_i$ migration $E_m$
+the fitting of short-circuit current \cite{Olikh2022:JMatSci,Olikh2021JAP} allows for the estimation of the energy of Fe$_i$ migration $E_m$
 and bulk lifetime $\tau_\mathrm{other}$, which arises from recombination channels other than Fe-related defects and intrinsic recombination.
 The obtained value $E_m=(0.650\pm0.005)$~eV coincides with that wellknown value \cite{FeBKin2019,FeBAssSST2011,FeBkinAPL2008}.
 This coincidence confirms that the investigated processes are indeed associated with rebuilding,
 as described by Equation~(\ref{eqReac}).
-The value of $E_m$ allows for the estimation of the recombination rate \cite{FeBAssJAP2014,FeBKin2019,FeBAssSST2011}:
+In turn, the value of $E_m$ allows for the estimation of the recombination rate \cite{FeBAssJAP2014,FeBKin2019,FeBAssSST2011}:
 \begin{equation}
 \label{eqTass}
 R_a^{-1}=5.7\times10^5\,\frac{\mathrm{s}}{\mathrm{K}\;\mathrm{cm}^3}\times\frac{T}{p}\exp\left(\frac{E_m}{kT}\right)\,.
@@ -256,7 +253,7 @@ R_a^{-1}=5.7\times10^5\,\frac{\mathrm{s}}{\mathrm{K}\;\mathrm{cm}^3}\times\frac{
 Thus, in our case, $R_a=(1.68\pm0.03)\times10^{-3}$~s$^{-1}$.
 
 Regarding the value of $\tau_\mathrm{other}$, it was found to significantly exceed the
-lifetime associated with Shockley-Read–Hall (SRH) recombination on Fe-related defects.
+lifetime associated with Shockley-Read–Hall (SRH) recombination on Fe-related defects (about $2.2$~$\mu$m).
 Notably, according M\"{o}ller~\emph{et al.} \cite{FeBAssJAP2014},
 such a condition is essential for the accurate determination of the constant $K$, which is included in Equation~(\ref{eqRd}).
 
@@ -286,7 +283,7 @@ and illumination with Orion, under otherwise identical conditions, proves to be 
 \end{figure}
 
 
-The $N_\mathrm{Fe,0}(t_\mathrm{ill})$ dependencies were fitted using the equation
+The experimentally obtained dependencies $N_\mathrm{Fe,0}(t_\mathrm{ill})$ were fitted using the equation
 \begin{equation}
 \label{eqNfe0Exp}
 N_\mathrm{Fe,0}(t_\mathrm{ill})=A\exp(-t_\mathrm{ill}/\tau_\mathrm{dis})
@@ -355,7 +352,9 @@ N_\mathrm{Fe,fit}=N_\mathrm{Fe,tot}\frac{R_d}{R_d+R_a}\,.
 %%A&=&N_\mathrm{Fe,eq}-N_\mathrm{Fe,tot}\frac{R_d}{R_d+R_a}\,.
 %\end{eqnarray}
 
-Table~\ref{tb1} suggests that regardless of the light source used and $W_\mathrm{ill}$,
+The fitting parameters and recombination rate of  $1.68\times10^{-3}$~s obtained 
+were used to calculate the $N_\mathrm{Fe,tot}$ and $R_d$ values listed in the Table~\ref{tb1}.
+Data suggest that regardless of the light source used and $W_\mathrm{ill}$,
 the observed total concentration of impurity iron atom is consistently
 $N_\mathrm{Fe,tot}=(8.7\pm0.1)\times10^{12}$~cm$^{-3}$.
 This stability supports the accuracy of the analysis.
@@ -380,7 +379,7 @@ which is remarkably close to the value of 86~$\mu$m  obtained from the study of 
 The dissociation rate of FeB pairs during light-induced decay is well known
 to be dependent on the carrier generation rate --- see Equation~(\ref{eqRd}).
 Our subsequent objective involved determining the values of $G$ for various light sources.
-The measured dependencies of spectral intensity $w_\mathrm{ill}$ of illumination incident on the sample under diverse conditions,
+The measured dependencies of spectral intensity $w_\mathrm{ill}$ of illumination incident on the sample under diverse conditions
 are shown in \textbf{Figure~\ref{fig4}}.
 It is crucial to highlight that our focus is specifically on the light reaching the sample;
 hence, the spectrum is altered not only by the infrared transparency of the lamp reflector but also by absorption in the fiber
@@ -389,7 +388,7 @@ Analogous modifications to the illumination spectra have been observed previousl
 Figure~\ref{fig4}a displays discrepancies in the illumination spectra obtained from different light sources,
 attributed to variations in the operational temperatures of the halogen lamps and differences in reflectors
 (photos of the lamps are in the inset of Figure~\ref{fig4}a).
-It is important to note that the upper limit of the spectra in Fig~\ref{fig4}
+It is important to note that the upper limit of the spectra in Fig~\ref{fig4} (1120~nm)
 is limited by the silicon bandgap, which, according to Passler \cite{Pasler}, corresponds to 1.11~eV at 340 K.
 Furthermore, Figure~\ref{fig4}b demonstrates the change in the Osram spectrum with integral intensity increasing.
 Notably, in addition to the expected increase in the curve's area, a minor spectrum shift towards shorter wavelengths is observed.
@@ -424,9 +423,9 @@ where spectral carrier generation rate $g$
 g=\frac{w_\mathrm{ill}\lambda}{hc}\frac{(1-R)A_\mathrm{bb}}{S\,d_\mathrm{eff}}\,,
 \end{equation}
 where $n_\mathrm{ph}=\frac{w_\mathrm{ill}\lambda}{hc}$ is the spectral photon flux,
-$R$ is the is the coefficient of reflection,
+$R$ is the is the reflectance,
 $A_\mathrm{bb}$ is the fraction of the band-to-band transitions,
-$S$ is illuminated square of sample,
+$S$ is the illuminated area of sample,
 $d_\mathrm{eff}$ is the effective width of carrier generation.
 
 In calculating the value of $R$, we employed an approach \cite{KostRefl2000},
@@ -515,7 +514,7 @@ the dissociation rates of FeB pairs and the carrier generation rate.
 The figure also exhibits the fit results using Equation~(\ref{eqRd}).
 High correlation coefficients exceeding 0.998 validate the applicability of the quadratic dependence expressed by Equation~(\ref{eqRd}) to our data.
 It should be noted that Khelifati \emph{et al.} \cite{FeBKin2019} stipulate the inclusion of
-$Rd\left(1+\tau_\mathrm{FeB}/\tau_\mathrm{other}\right)^2$ (where $\tau_\mathrm{FeB}$ is the lifetime associated with recombination on FeB pairs)
+$R_d\left(1+\tau_\mathrm{FeB}/\tau_\mathrm{other}\right)^2$ (where $\tau_\mathrm{FeB}$ is the lifetime associated with recombination on FeB pairs)
 on the left-hand side of Equation~(\ref{eqRd}) rather than $R_d$.
 However, in our cases $\tau_\mathrm{other}\gg \tau_\mathrm{FeB}$, as previously acknowledged in Section~\ref{SecR},
 this additional multiplier can be disregarded.
@@ -530,7 +529,7 @@ this additional multiplier can be disregarded.
   generation rate. The solid lines show the quadratic dependence according to Equation~(\ref{eqRd}).
   (b) Dependencies of average photon energy on illumination intensity for different light sources.
   The inset shows prefactor $K$ vs average photon energy for the different light sources and illumination intensities.
-  The lines are linear fitted curves. Coefficients of correlation are shown as well.
+  The lines are linear fitting curves. Coefficients of correlation are shown as well.
   }
   \label{fig6}
 \end{figure}
@@ -581,24 +580,24 @@ Notably, recent research \cite{Sun2021} focusing on a detailed analysis of the d
 
 \section{Conclusion}\label{SecConsl}
 
-The effect of the illumination spectra on the on the dissociation of
+The effect of the illumination spectra on the dissociation of
 FeB pairs in p-Si was investigated in this paper.
 We reported the results of a experimental systematic study on FeB dissociation rate in solar cell based on Cz-Si,
 which were carried out using different light source and illumination intensities.
 
-The findings showed that the time required for a total dissociation of the FeB pairs 
+The findings showed that the time required for a total dissociation of the FeB pairs
 not only becomes shorter with the increase of illumination intensity but also significantly depends
 on light source.
-As a result, the value of material constant $K$  varies and has been determined to be 
+As a result, the value of material constant $K$  varies and has been determined to be
 $3.8\times10^{-15}$~s, $2.0\times10^{-15}$~s, and $1.5\times10^{-15}$~s
 for three different light sources.
 The study of the illumination spectrum led to the conclusion that the
 efficiency of FeB photo-dissociation increases with a decrease in light wavelength.
-The observation of an increase in the dissociation rate 
-with an increase in photon energy indicates that 
+The observation of an increase in the dissociation rate
+with photon energy indicates that
 the REDR effect prevails as the dominant factor during the second stage of light-induced dissociation of FeB pairs.
-Furthermore, the obtained results could help develop defect engineering procedures 
-for effectively converting iron impurities in silicon into high-mobility states, 
+Furthermore, the obtained results could help to develop defect engineering procedures
+for effectively converting iron impurities in silicon into high-mobility states,
 which could significantly impact semiconductor technology.
 
 
@@ -612,7 +611,7 @@ The structure was fabricated from a 380~$\mu$m thick $p$-type boron-doped
 Czochralski silicon (100) wafer with hole concentration $p=1.36\times10^{15}$~cm$^{-3}$.
 The $n^+$ emitter with sheet resistance of about $20-30$~$\Omega/\Box$
 and  thickness of $0.7$~$\mu$m was formed by phosphorus diffusion.
-The anti-recombination isotype barrier was created by using $p^+$
+The anti-recombination isotype barrier was created by using a $p^+$
 layer ($10-20$~$\Omega/\Box$, $0.6$~$\mu$m) formed by boron diffusion.
 On the front surface, the antireflective and passivating SiO$_2$ (40~nm) and Si$_3$N$_4$ (30~nm) layers
 were formed.
@@ -635,7 +634,7 @@ The illumination spectra measurements were performed using spectrometer IKC-6 wi
 When analyzing the spectra, the spectral sensitivity of the photodiode was considered.
 
 The current-voltage characteristics were measured using a Keithley 2450 source meter and
-low--intensity monochromatic light source (light--emitting diode SN--HPIR940nm--1W with light wavelength 940~nm).
+low--intensity monochromatic light source (light--emitting diode SN--HPIR940nm--1W with light wavelength 940~nm and intensity of about 400~$\mu$W).
 The LED radiation intensity was stabilized by utilizing the W1209 thermostat and a power supply regulated by a circuit incorporating positive feedback and digital control.
 
 The measurements were carried out at a temperature of 340~K.
@@ -697,8 +696,8 @@ and maintained constant through a PID algorithm embedded in the software that se
 %wafers was regulated and controlled through a thermoelectric
 %cooling system based on the Peltier effect
 
-\threesubsection{First part of experimental section}\\
-\threesubsection{Second part of experimental section}\\
+%\threesubsection{First part of experimental section}\\
+%\threesubsection{Second part of experimental section}\\
 
 
 
@@ -711,12 +710,15 @@ Supporting Information is available from the Wiley Online Library or from the au
 % Acknowledgements
 \medskip
 \textbf{Acknowledgements} \par %delete if not applicable))
-The authors are grateful for the help with calculating the coefficient of reflection by solar cells to Prof. Vitaliy Kostylyov.
+The authors are grateful for the help with calculating the reflectance by solar cells to Prof.~Vitaliy Kostylyov.
 
 \medskip
 \textbf{Conflict of Interest}\par
 The authors declare no conflict of interest.
 
+\medskip
+\textbf{Data Availability Statement}\par
+The data that support the findings of this study are available from the corresponding author upon reasonable request.
 % References
 \medskip
 
