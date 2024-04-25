@@ -1,5 +1,5 @@
 
-Temperature :   330.00 K
+Temperature :   340.00 K
 Voltage :     0.0000 V
 Frequency :   1.0000e+06 Hz
 Number of points :   5
@@ -12,7 +12,7 @@ long wavelength cut off :  4000.00 nm
 neutral density :     0.0000
 transmission :   100.0000 %
 attenuation :   100.0000 %
-Secondworkpoint Temperature :   330.00 K
+Secondworkpoint Temperature :   340.00 K
 Secondworkpoint Voltage :     0.0000 V
 Secondworkpoint Number of points :   5
 Secondworkpoint dark :  1
@@ -29,7 +29,7 @@ IV_startV :     0.0000 V
 IV_stopV :     0.7500 V
 IV_points :  76
 IV_increment :     0.010000 V
-IV_calculate :  1
+IV_calculate :  0
 stop after Voc :  1
 CV_startV :    -0.8000 V
 CV_stopV :     0.8000 V
