@@ -1,0 +1,56 @@
+\begin{thebibliography}{7}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\providecommand{\bibinfo}[2]{#2}
+\ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
+%Type = Article
+\bibitem[{Singh et~al.(2019)Singh, Goyal, and A.}]{PratapSingh2019}
+\bibinfo{author}{B.~P. Singh}, \bibinfo{author}{S.~K. Goyal},
+  \bibinfo{author}{S.~S. A.},
+\newblock \bibinfo{title}{Grid connected-photovoltaic system (gc-pvs): Issues
+  and challenges},
+\newblock \bibinfo{journal}{IOP Conf. Ser. Mater. Sci. Eng.}
+  \bibinfo{volume}{594} (\bibinfo{year}{2019}) \bibinfo{pages}{012032}.
+%Type = Book
+\bibitem[{Claeys and Simoen(2018)}]{Claers2018}
+\bibinfo{author}{C.~Claeys}, \bibinfo{author}{E.~Simoen}, \bibinfo{title}{Metal
+  Impurities in Silicon- and Germanium-Based Technologies: Origin,
+  Characterization, Control, and Device Impact}, volume \bibinfo{volume}{270}
+  of \textit{\bibinfo{series}{Springer Ser. Mater. Sci.}},
+  \bibinfo{year}{2018}.
+%Type = Article
+\bibitem[{Goetzberger and Shockley(1960)}]{Goetzberger1960}
+\bibinfo{author}{A.~Goetzberger}, \bibinfo{author}{W.~Shockley},
+\newblock \bibinfo{title}{Metal precipitates in silicon p‐n junctions},
+\newblock \bibinfo{journal}{J. Appl. Phys.} \bibinfo{volume}{31}
+  (\bibinfo{year}{1960}) \bibinfo{pages}{1821--1824}.
+%Type = Article
+\bibitem[{Breitenstein et~al.(2004)Breitenstein, Rakotoniaina, Al~Rifai, and
+  Werner}]{Breitenstein2004}
+\bibinfo{author}{O.~Breitenstein}, \bibinfo{author}{J.~P. Rakotoniaina},
+  \bibinfo{author}{M.~H. Al~Rifai}, \bibinfo{author}{M.~Werner},
+\newblock \bibinfo{title}{Shunt types in crystalline silicon solar cells},
+\newblock \bibinfo{journal}{Prog. Photovolt.: Res. Appl.} \bibinfo{volume}{12}
+  (\bibinfo{year}{2004}) \bibinfo{pages}{529--538}.
+%Type = Article
+\bibitem[{Lee and Nussbaum(1980)}]{Lee1980}
+\bibinfo{author}{K.~Lee}, \bibinfo{author}{A.~Nussbaum},
+\newblock \bibinfo{title}{The influences of traps on the
+  generation-recombination current in silicon diodes},
+\newblock \bibinfo{journal}{Solid-State Electron.} \bibinfo{volume}{23}
+  (\bibinfo{year}{1980}) \bibinfo{pages}{655--660}.
+%Type = Article
+\bibitem[{Istratov et~al.(2000)Istratov, Hieslmair, and Weber}]{Istratov2000}
+\bibinfo{author}{A.~A. Istratov}, \bibinfo{author}{H.~Hieslmair},
+  \bibinfo{author}{E.~Weber},
+\newblock \bibinfo{title}{Iron contamination in silicon technology},
+\newblock \bibinfo{journal}{Appl. Phys. A} \bibinfo{volume}{70}
+  (\bibinfo{year}{2000}) \bibinfo{pages}{489–534}.
+%Type = Article
+\bibitem[{Pearce and McMahon(1977)}]{Pearce1977}
+\bibinfo{author}{C.~W. Pearce}, \bibinfo{author}{R.~G. McMahon},
+\newblock \bibinfo{title}{Role of metallic contamination in the formation of
+  ’’saucer’’ pit defects in epitaxial silicon},
+\newblock \bibinfo{journal}{J. Vac. Sci. Technol.} \bibinfo{volume}{14}
+  (\bibinfo{year}{1977}) \bibinfo{pages}{40--43}.
+
+\end{thebibliography}

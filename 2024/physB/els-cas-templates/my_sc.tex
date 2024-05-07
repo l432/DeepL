@@ -1,0 +1,397 @@
+%%
+%% Copyright 2019-2021 Elsevier Ltd
+%%
+%% This file is part of the 'CAS Bundle'.
+%% --------------------------------------
+%%
+%% It may be distributed under the conditions of the LaTeX Project Public
+%% License, either version 1.2 of this license or (at your option) any
+%% later version.  The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.2 or later is part of all distributions of LaTeX
+%% version 1999/12/01 or later.
+%%
+%% The list of all files belonging to the 'CAS Bundle' is
+%% given in the file `manifest.txt'.
+%%
+%% Template article for cas-sc documentclass for
+%% single column output.
+
+\documentclass[a4paper,fleqn]{cas-sc}
+
+% If the frontmatter runs over more than one page
+% use the longmktitle option.
+
+%\documentclass[a4paper,fleqn,longmktitle]{cas-sc}
+
+\usepackage[numbers]{natbib}
+%\usepackage[authoryear]{natbib}
+%\usepackage[authoryear,longnamesfirst]{natbib}
+\usepackage{mhchem}
+%%%Author macros
+\def\tsc#1{\csdef{#1}{\textsc{\lowercase{#1}}\xspace}}
+\tsc{WGM}
+\tsc{QE}
+%%%
+
+% Uncomment and use as if needed
+%\newtheorem{theorem}{Theorem}
+%\newtheorem{lemma}[theorem]{Lemma}
+%\newdefinition{rmk}{Remark}
+%\newproof{pf}{Proof}
+%\newproof{pot}{Proof of Theorem \ref{thm}}
+
+\begin{document}
+\let\WriteBookmarks\relax
+\def\floatpagepagefraction{1}
+\def\textpagefraction{.001}
+
+% Short title
+\shorttitle{<short title of the paper for running head>}
+
+% Short author
+\shortauthors{<short author list for running head>}
+
+% Main title of the paper
+\title [mode = title]{Modeling the Impact of Iron Defect Variability on Silicon Solar Cell Performance Across Different Scenarios}
+
+% Title footnote mark
+% eg: \tnotemark[1]
+%\tnotemark[<tnote number>]
+
+% Title footnote 1.
+% eg: \tnotetext[1]{Title footnote text}
+%\tnotetext[<tnote number>]{<tnote text>}
+
+% First author
+%
+% Options: Use if required
+% eg: \author[1,3]{Author Name}[type=editor,
+%       style=chinese,
+%       auid=000,
+%       bioid=1,
+%       prefix=Sir,
+%       orcid=0000-0000-0000-0000,
+%       facebook=<facebook id>,
+%       twitter=<twitter id>,
+%       linkedin=<linkedin id>,
+%       gplus=<gplus id>]
+
+%\author[1,3]{Oleg Olikh}[type=Co-ordinator,
+%       style=chinese,
+%       auid=000,
+%       bioid=1,
+%       prefix=Dr.,
+%       orcid=0000-0003-0633-5429,
+%%       facebook=<facebook id>,
+%%       twitter=<twitter id>,
+%%       linkedin=<linkedin id>,
+%       gplus=<gplus id>]
+\author{Oleg Olikh}[
+%type=Co-ordinator,
+%       style=chinese,
+%       auid=000,
+%       bioid=1,
+%       prefix=Dr.,
+       orcid=0000-0003-0633-5429
+       % ,
+%       facebook=<facebook id>,
+%       twitter=<twitter id>,
+%       linkedin=<linkedin id>,
+%       gplus=<gplus id>
+       ]
+
+% Corresponding author indication
+\cormark[1]
+
+% Footnote of the first author
+%\fnmark[1]
+
+% Email id of the first author
+\ead{olegolikh@knu.ua}
+
+% URL of the first author
+%\ead[url]{https://gen.phys.univ.kiev.ua/280-olikh/}
+
+% Credit authorship
+% eg: \credit{Conceptualization of this study, Methodology, Software}
+%\credit{<Credit authorship details>}
+
+% Address/affiliation
+\affiliation{organization={Taras Shevchenko National University of Kyiv},
+            addressline={64/13, Volodymyrska Street},
+            city={Kyiv},
+%          citysep={}, % Uncomment if no comma needed between city and postcode
+            postcode={01601},
+ %           state={},
+            country={Ukraine}}
+            
+%\affiliation[<aff no>]{organization={Taras Shevchenko National University of Kyiv, Faculty of Physics},
+%            addressline={ave Glushkov 2},
+%            city={Kyiv},
+%%          citysep={}, % Uncomment if no comma needed between city and postcode
+%            postcode={03022},
+%            state={},
+%            country={Ukraine}}
+
+%\author[1,3]{Zavhorodnii Oleksii}[type=editor,
+%       style=chinese,
+%       auid=000,
+%       bioid=1,
+%%       prefix=Mr,
+%       orcid=0000-0001-8080-7661,
+%%       facebook=<facebook id>,
+%%       twitter=<twitter id>,
+%%       linkedin=<linkedin id>,
+%       gplus=<gplus id>]
+       
+\author{Zavhorodnii Oleksii}[
+       orcid=0000-0001-8080-7661]       
+
+% Footnote of the second author
+%\fnmark[2]
+
+% Email id of the second author
+\ead{nevermor464@gmail.com}
+
+% URL of the second author
+%\ead[url]{https://gen.phys.univ.kiev.ua/}
+
+% Credit authorship
+%\credit{}
+
+% Address/affiliation
+%\affiliation[<aff no>]{organization={Taras Shevchenko National University of Kyiv, Faculty of Physics},
+%            addressline={ave Glushkov 2},
+%            city={Kyiv},
+%%          citysep={}, % Uncomment if no comma needed between city and postcode
+%            postcode={03022},
+%            state={},
+%            country={Ukraine}}
+
+% Corresponding author text
+%\cortext[1]{Corresponding author}
+
+% Footnote text
+%\fntext[1]{}
+
+% For a title note without a number/mark
+%\nonumnote{}
+
+% Here goes the abstract
+\begin{abstract}
+abstract
+\end{abstract}
+
+% Use if graphical abstract is present
+%\begin{graphicalabstract}
+%\includegraphics{}
+%\end{graphicalabstract}
+
+% Research highlights
+\begin{highlights}
+\item
+\item
+\item
+\end{highlights}
+
+% Keywords
+% Each keyword is seperated by \sep
+\begin{keywords}
+ \sep \sep \sep
+\end{keywords}
+
+\maketitle
+
+% Main text
+\section{Introduction}\label{}
+\par
+The necessity for renewable energy sources to meet the growing global demand for sustainable and environmentally friendly energy alternatives has become apparent. Among the wide range of renewable energy sources, sunlight is the cleanest, safest, and most abundant source for use in sustainable energy for economic growth \cite{PratapSingh2019} [1]. The utilization of solar energy heavily depends on the use of photovoltaic cells, with silicon-based devices playing a critical role [?].
+
+
+The issue of semiconductor purity has become increasingly significant since the advent of the transistor in 1947 \cite{Claers2018} [2]. The 1960 study by Shockley and Queisser \cite{Goetzberger1960} [3] demonstrated that the electrical properties of $n^{+}$-p silicon diodes deteriorate when impurity atoms of metals such as Cu, Fe, Mn, Au, Zn, and Ni are present. This study prompted investigations focused on preventing contaminating metals from entering semiconductors during manufacturing. In particular, metallic impurities are known to reduce the efficiency of silicon-based devices through direct shunting \cite{Breitenstein2004} [7], increased leakage current \cite{Lee1980} [6], or bulk recombination \cite{Istratov2000} [5]. Despite extensive study of metallic impurities in silicon over the past fifty years [\cite{Claers2018} [2], \cite{Pearce1977} [4]], the problem continues to attract significant attention [?].
+
+cm$^{-3}\mathrm{Fe,tot}n$
+
+%Iron is prominent among metallic contaminants, with its atoms being among the most prevalent and detrimental impurities in silicon solar cells (SSCs) \cite{Buonassisi2006} [8]. Even in small concentrations (~$\mathrm{10}^{10}$ $\mathrm{cm}^{-3}$), point defects related to Fe can significantly influence the performance of SSCs [\cite{Schubert2015} [9] , \cite{Herguth2022} [13]]. Therefore, it is of critical importance to assess the concentration of iron impurities. In response to this challenge, various methodologies have been put forward, often based on the property of iron atoms to form pairs with acceptors. In particular, iron atoms are predominantly located in interstitial positions in silicon, forming the $Fe_i$ defect. In p-type crystals, without external illumination, iron atoms carry positive charges and tend to bond with negatively charged doping atoms (boron, aluminum, gallium, or indium), forming $Fe_iB_s$ pairs \cite{Kimerling1983} [10]. However, these pairs can destabilized by intense illumination, electron injection, or heating up to 200°C [?]. The recombination properties of iron-related defects $Fe_i$ and $Fe_iB_s$ differ significantly, which profoundly affects the overall characteristics of the crystal. This fact formed the basis for the first method of assessing iron concentration \cite{Zoth1990} [11], which relied on measuring the diffusion length of minority carriers using the surface photovoltage method \cite{Tousek2008} [12]. Many other methods involve measurements of carrier lifetime [?], Quasi-Steady-State Photoconductance [?], or photoluminescence signal distribution [?] before and after pair dissolution, or the study of kinetic dependencies of short-circuit current [?] or photoluminescence intensity during the reaction passage  \(\text{Fe}_i\text{B}_{\text{Si}} \rightarrow \text{Fe}_i + \text{B}_{\text{Si}}\).
+%
+%
+%Notably, the presence of Fe-related defects affects the dynamics of electron and hole movement within the solar cell, which is reflected in changes to the appearance of the current-voltage (IV) characteristics of SSCs overall, as well as modifications to the main photoelectric parameters (short-circuit current density $J_{sc}$, open-circuit voltage $V_{oc}$, efficiency $\eta$, and fill factor $FF$) in particular. These findings create fundamental possibilities to advance methods for estimating iron concentration by measuring IV characteristics before and after pair dissolution. The advantages of such an approach are associated with the possibility of directly characterizing finished solar cells, as well as the absence of the need for additional equipment other than that required for IV measurements, which is extremely common. Efforts have been made initially in developing such methods. For instance, in \cite{Olikh2019} [14,?], the authors proposed an approach to estimate the concentration of iron in SSCs based on changes in the ideality factor. Likewise, in \cite{Herguth2022} [13], the concentration of iron in SSCs was determined using the open-circuit voltage. However, developing such approaches requires evaluating how a particular parameter changes when iron-containing pairs dissolve and determining whether it can estimate the iron concentration $N_{Fe}$. For example, the most evident conditions for utilizing a specific parameter include its change due to the transformation  \(\text{Fe}_i\text{B}_{\text{Si}} \rightarrow \text{Fe}_i + \text{B}_{\text{Si}}\), even by 10\%, along with a consistent dependence of these changes on $N_{Fe}$.
+%
+%
+%This study intends to determine the variations of $J_{sc}$, $V_{oc}$, $\eta$, and $FF$ resulting from the decay of iron-containing pairs in boron-doped silicon solar cells. Previous similar calculations have been conducted [?], but the results presented in these works typically pertain to particular temperatures, illumination levels (often AM1.5), and solar cells with distinct structures. In this study, we performed calculations over a sufficiently wide temperature range (290-340 $\mathrm{K}$) and for solar cells with varying base thickness (180-380 $\mu$m) and doping levels (boron concentration in the base ranging from $\mathrm{10}^{15}$ to $\mathrm{10}^{17}$ $\mathrm{cm}^{-3}$). The results obtained allow us to assess the feasibility and potential of using the main photovoltaic parameters of specific solar cells to estimate the $N_{Fe}$ value across a range of temperatures, including conditions similar to those encountered in typical SSC applications. Furthermore, investigations have explored changes in photoelectric performance under solar illumination (AM1.5G) and low-intensity monochromatic light (wavelength of 940 $\mathrm{nm}$, intensities of 5 and 10 W/$\mathrm{m}^{2}$).
+%
+%
+%In the first case, while it is customary to adhere to standard conditions, it's essential to consider that illumination at 1000 W/$\mathrm{m}^{2}$ can lead to the disintegration of $Fe_iB_s$ complexes. Therefore, measurements for cases requiring the presence of undissociated pairs in silicon must meet specific constraints. On the other hand, intentionally chosen monochromatic illumination penetrates the emitter with negligible losses and does not reach the rear side. In this context, the photoelectric parameters demonstrate a remarkable sensitivity to recombination processes occurring within the solar cell base, making them responsive to variations in iron concentration.
+%
+%
+%Finally, in our calculations, we attempted to use the latest literature data concerning the exact values of silicon parameters, including light absorption values [?] and coefficients characterizing intrinsic recombination [?].
+%
+%\section{Experimental Methodology}\label{}
+%\par
+%The study involved modeling IV curves of SSCs with an $n^+-p-p^+$ structure, as illustrated in Figure \ref{fig1}. A notable feature observed in both Al-BSF cells (full area), which are gradually losing relevance, and PERC cells (locally), which are the most widely used in mass production, is the presence of a back surface field (BSF). We considered structures with a base uniformly doped with boron. The doping concentration $N_B$, and the base thickness $d_p$ were varied during the modeling process, as detailed in Table \ref{table1}. The concentration profiles of the dopants, their maximum values ($N^{+}_{p,max}$ and $N^{+}_{n,min}$), and layer thicknesses (refer to Figure \ref{fig1}) were selected based on the work of Fell et al. [?]
+%
+%
+\begin{table}[width=.8\textwidth, cols=2,pos=h]
+\caption{Parameters varied during the simulation}\label{table1}
+\begin{tabular*}{\tblwidth}{@{}LL@{}}
+\toprule
+  Parameter & Value \\ % Table header row
+\midrule
+ $d_p$, $\mu$m                & $180\div 380$\\
+ $N_B$, $\mathrm{cm}^{-3}$    & $10^{15}\div 10^{17}$\\
+ $N_{Fe}$, $\mathrm{cm}^{-3}$ & $10^{10}\div 10^{14}$\\
+ $T, K$                       & $290\div 340$\\
+ Illumination                 & AM1.5G, 1000 W/$\mathrm{m}^{2}$; 940 nm 5 W/$\mathrm{m}^{2}$; 940 nm 10 W/$\mathrm{m}^{2}$\\
+\bottomrule
+\end{tabular*}
+\end{table}
+%
+%
+%The simulation was conducted using the SCAPS3.3.11 code [?]. SCAPS-1D software, developed by the University of Gent, is founded on theoretical computations that involve solving Poisson's equation, continuity equations for holes and electrons, and drift-diffusion at each position within the solar cell, considering the boundary conditions. Despite its one-dimensional modeling approach, SCAPS is extensively used for modeling various types of solar cells [??] and for investigating the effects of defects on their performance [?].
+%
+%
+%As can be seen from Table \ref{table1}, calculations spanned a broad range of temperatures and base doping levels. Therefore, to improve the accuracy of the calculations when inputting the initial parameters into SCAPS, temperature and concentration dependencies (where applicable) of the following silicon parameters were taken into account:
+%
+%\begin{enumerate}
+%    \item bandgap according to \cite{Passler2002} [15];
+%    \item doping induced bandgap narrowing according to \cite{Yan2014} [16];
+%    \item effective density of states at conduction and valence band and intrinsic carrier concentration according to \cite{Couderc2014} [17];
+%    \item thermal carrier velocities according to \cite{Green1990} [18];
+%    \item free carrier effective masses according to \cite{O'Mara1990} [19];
+%    \item carrier mobilities according to \cite{Klaassen1992} [20];
+%\end{enumerate}
+
+\begin{itemize}
+  \item 4
+  \item 4
+  \item 4
+\end{itemize}
+%
+%
+%The values of surface recombination coefficients were considered equal to the thermal velocities of carriers [?]. The calculations addressed recombination processes within the structural volume, incorporating both intrinsic recombination and Shockley-Read-Hall recombination at iron-related defects. In the first case, processes of band-to-band radiation recombination were considered (where the calculation of the corresponding coefficient included the fraction of radiatively emitted photons reabsorbed via band-to-band processes according to Niewelt et al. [?]) and Auger recombination (where the coefficients considered the effect of Coulomb enhancement [?] and temperature dependence [?]).
+%
+%
+%When accounting for the influence of iron impurities, we considered that Fe atoms were uniformly distributed within the base and $p^+$ layer, with a total concentration of $N_{Fe}$ (see Table \ref{table1}). We considered two cases:
+%
+%
+%Case 1. The concentration of interstitial iron defects [$Fe_i$] = $N_{Fe}$  at each position throughout the solar cell, with no pairs present [$Fe_iB_s$] = 0. This case corresponds to the state of the structure immediately after intense illumination, for example.
+%
+%
+%Case 2.  Iron atoms predominantly form pairs with acceptors, [$Fe_iB_s$] > > [$Fe_i$], but the exact concentration ratio depends on the position of the Fermi level and temperature [?] and varies from point to point within the solar cell. Further details about how we calculated the concentration profiles of $Fe_iB_s$ and $Fe_i$ are provided in \cite{PratapSingh2019} [1]. This case corresponds to prolonged storage of the structure in darkness or under conditions of low-intensity (< 0.01 J/$\mathrm{cm}^{-3}$ [?]) illumination.
+%
+%
+%During the calculations, we assumed that $Fe_i$ forms a single donor level, while the $Fe_iB_s$ pair has a trigonal configuration and acts as an amphoteric defect. We obtained defect parameters (including level positions within the bandgap and electron and hole capture cross-sections) from relevant studies [?].
+%
+%
+%As previously mentioned, we modeled how the solar cell behaves under different illumination conditions, including solar light (AM1.5G) and monochromatic light (wavelength 940 nm, intensities of Will = 5 W/$\mathrm{m}^{2}$ or 10 W/$\mathrm{m}^{2}$) – see Table \ref{table1}. The calculations incorporated the light absorption values in silicon based on Green's study [Photovoltaics 30 164] [?].
+%
+%
+%The I-V characteristics were simulated for both Case 1 and Case 2 (see Fig. 2), and from each curve, the short-circuit current density, open-circuit voltage, efficiency, and fill factor were determined. Assessing the influence of iron defect variability relied on the relative changes in each photovoltaic conversion parameter:
+%
+\begin{equation}
+    \epsilon A = \frac{A^{FeB} - A^{Fe}}{A^{FeB}} \times 100 \%
+\end{equation}
+%
+%where A represents one of the parameters ($I_{sc}$, $V_{oc}$, $FF$ i $\eta$), superscript "FeB" corresponds to the parameter value for coexistence of $Fe_i$ and $Fe_iB_s$ (Case 2), superscript "Fe" is related to the decay of all pairs (Case 1).
+%
+%
+%Impact of change of iron defects was investigated as a function of temperature from 290 K to 340 K, base depth from 180 $\mu$m to 380 $\mu$m, base doping level from $10^{15}$ $\mathrm{cm}^{-3}$ to $10^{17}$ $\mathrm{cm}^{-3}$, and total impurity iron atom concentration from $10^{10}$ $\mathrm{cm}^{-3}$ to $10^{14}$ $\mathrm{cm}^{-3}$. For each illumination scenario, calculations were carried out with 11 different temperature values (T) and 5 base depth values ($d_p$), evenly distributed within the specified ranges. The concentration values were distributed equally on a logarithmic scale with 4 ($N_B$ case) and 6 ($N_{Fe}$ case) steps per decade. As a result, for the AM1.5 illumination scenario, for instance, 24750 IV characteristics were simulated. An exception occurred with monochromatic illumination at Will  = 10 W/$\mathrm{m}^{2}$, where we used only two base depth values.
+%
+\begin{figure}
+	\centering
+		\includegraphics[scale=.80]{Figure1.png}
+	  \caption{Schematic diagram of analyzed solar cells.}\label{fig1}
+\end{figure}
+
+\begin{figure}
+	\centering
+		\includegraphics[scale=.80]{Figure2.png}
+	  \caption{Typical IV characteristics, calculated for structure with $d_b$ = 180 $\mu$, $N_B$ = $10^{17}$ $\mathrm{cm}^{-3}$, $N_{Fe}$ = $10^{14}$ $\mathrm{cm}^{-3}$ at T = 290 K. Illumination: AM1.5 (curves 1, 2), 940 nm 10 W~cm$^{-2}$ (3, 4) and 940~nm 5 W/$\mathrm{cm}^{2}$ (5, 6). Solid and dotted lines correspond to Case 1 and Case 2, respectively.}\label{fig2}
+\end{figure}
+%
+
+%--------------------------------------------------------
+
+
+% Numbered list
+% Use the style of numbering in square brackets.
+% If nothing is used, default style will be taken.
+%\begin{enumerate}[a)]
+%\item
+%\item
+%\item
+%\end{enumerate}
+
+% Unnumbered list
+%\begin{itemize}
+%\item
+%\item
+%\item
+%\end{itemize}
+
+% Description list
+%\begin{description}
+%\item[]
+%\item[]
+%\item[]
+%\end{description}
+
+% Figure
+%\begin{figure}[<options>]
+%	\centering
+%		\includegraphics[<options>]{}
+%	  \caption{}\label{fig1}
+%\end{figure}
+
+
+%\begin{table}[<options>]
+%\caption{}\label{tbl1}
+%\begin{tabular*}{\tblwidth}{@{}LL@{}}
+%\toprule
+%  &  \\ % Table header row
+%\midrule
+% & \\
+% & \\
+% & \\
+% & \\
+%\bottomrule
+%\end{tabular*}
+%\end{table}
+
+% Uncomment and use as the case may be
+%\begin{theorem}
+%\end{theorem}
+
+% Uncomment and use as the case may be
+%\begin{lemma}
+%\end{lemma}
+
+%% The Appendices part is started with the command \appendix;
+%% appendix sections are then done as normal sections
+%% \appendix
+
+\section{}\label{}
+
+% To print the credit authorship contribution details
+\printcredits
+
+%% Loading bibliography style file
+\bibliographystyle{model1-num-names}
+
+%\bibliographystyle{cas-model2-names}
+
+% Loading bibliography database
+\bibliography{article}
+
+% Biography
+%\bio{}
+%% Here goes the biography details.
+%\endbio
+%
+%\bio{pic1}
+%% Here goes the biography details.
+%\endbio
+
+\end{document}
+
