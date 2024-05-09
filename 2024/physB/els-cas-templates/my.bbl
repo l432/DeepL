@@ -1,0 +1,158 @@
+\begin{thebibliography}{20}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\providecommand{\bibinfo}[2]{#2}
+\ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
+%Type = Article
+\bibitem[{Singh et~al.(2019)Singh, Goyal, and A.}]{PratapSingh2019}
+\bibinfo{author}{B.~P. Singh}, \bibinfo{author}{S.~K. Goyal},
+  \bibinfo{author}{S.~S. A.},
+\newblock \bibinfo{title}{Grid connected-photovoltaic system (gc-pvs): Issues
+  and challenges},
+\newblock \bibinfo{journal}{IOP Conference Series: Materials Science and
+  Engineering} \bibinfo{volume}{594} (\bibinfo{year}{2019})
+  \bibinfo{pages}{012032}.
+%Type = Book
+\bibitem[{Claeys and Simoen(2018)}]{Claers2018}
+\bibinfo{author}{C.~Claeys}, \bibinfo{author}{E.~Simoen}, \bibinfo{title}{Metal
+  Impurities in Silicon- and Germanium-Based Technologies: Origin,
+  Characterization, Control, and Device Impact}, volume \bibinfo{volume}{270}
+  of \textit{\bibinfo{series}{Springer Series in Materials Science}},
+  \bibinfo{publisher}{Springer International Publishing},
+  \bibinfo{address}{Berlin/New York}, \bibinfo{year}{2018}.
+%Type = Article
+\bibitem[{Goetzberger and Shockley(1960)}]{Goetzberger1960}
+\bibinfo{author}{A.~Goetzberger}, \bibinfo{author}{W.~Shockley},
+\newblock \bibinfo{title}{{Metal Precipitates in Silicon p‐n Junctions}},
+\newblock \bibinfo{journal}{J. Appl. Phys.} \bibinfo{volume}{31}
+  (\bibinfo{year}{1960}) \bibinfo{pages}{1821--1824}.
+%Type = Article
+\bibitem[{Breitenstein et~al.(2004)Breitenstein, Rakotoniaina, Al~Rifai, and
+  Werner}]{Rsh:Breitenstein}
+\bibinfo{author}{O.~Breitenstein}, \bibinfo{author}{J.~P. Rakotoniaina},
+  \bibinfo{author}{M.~H. Al~Rifai}, \bibinfo{author}{M.~Werner},
+\newblock \bibinfo{title}{Shunt types in crystalline silicon solar cells},
+\newblock \bibinfo{journal}{Prog. Photovolt.: Res. Appl.} \bibinfo{volume}{12}
+  (\bibinfo{year}{2004}) \bibinfo{pages}{529--538}.
+%Type = Article
+\bibitem[{Lee and Nussbaum(1980)}]{Lee1980}
+\bibinfo{author}{K.~Lee}, \bibinfo{author}{A.~Nussbaum},
+\newblock \bibinfo{title}{The influences of traps on the
+  generation-recombination current in silicon diodes},
+\newblock \bibinfo{journal}{Solid-State Electron.} \bibinfo{volume}{23}
+  (\bibinfo{year}{1980}) \bibinfo{pages}{655--660}.
+%Type = Article
+\bibitem[{Istratov et~al.(2000)Istratov, Hieslmair, and Weber}]{Istratov2000}
+\bibinfo{author}{A.~A. Istratov}, \bibinfo{author}{H.~Hieslmair},
+  \bibinfo{author}{E.~Weber},
+\newblock \bibinfo{title}{Iron contamination in silicon technology},
+\newblock \bibinfo{journal}{Appl. Phys. A} \bibinfo{volume}{70}
+  (\bibinfo{year}{2000}) \bibinfo{pages}{489–534}.
+%Type = Article
+\bibitem[{Pearce and McMahon(1977)}]{Pearce1977}
+\bibinfo{author}{C.~W. Pearce}, \bibinfo{author}{R.~G. McMahon},
+\newblock \bibinfo{title}{{Role of metallic contamination in the formation of
+  ’’saucer’’ pit defects in epitaxial silicon}},
+\newblock \bibinfo{journal}{J. Vac. Sci. Technol.} \bibinfo{volume}{14}
+  (\bibinfo{year}{1977}) \bibinfo{pages}{40--43}.
+%Type = Article
+\bibitem[{Buonassisi et~al.(2006)Buonassisi, Istratov, Pickett, Heuer, Kalejs,
+  Hahn, Marcus, Lai, Cai, and Heald}]{Buonassisi2006}
+\bibinfo{author}{T.~Buonassisi}, \bibinfo{author}{A.~A. Istratov},
+  \bibinfo{author}{M.~D. Pickett}, \bibinfo{author}{M.~Heuer},
+  \bibinfo{author}{J.~P. Kalejs}, \bibinfo{author}{G.~Hahn},
+  \bibinfo{author}{M.~A. Marcus}, \bibinfo{author}{B.~Lai},
+  \bibinfo{author}{Z.~Cai}, \bibinfo{author}{S.~M. Heald},
+\newblock \bibinfo{title}{Chemical natures and distributions of metal
+  impurities in multicrystalline silicon materials},
+\newblock \bibinfo{journal}{Prog. Photovolt.: Res. Appl.} \bibinfo{volume}{14}
+  (\bibinfo{year}{2006}) \bibinfo{pages}{513--531}.
+%Type = Article
+\bibitem[{Schubert et~al.(2015)Schubert, Padilla, Michl, Mundt, Giesecke,
+  Hohl-Ebinger, Benick, Warta, Tajima, and Ogura}]{Schubert2015}
+\bibinfo{author}{M.~Schubert}, \bibinfo{author}{M.~Padilla},
+  \bibinfo{author}{B.~Michl}, \bibinfo{author}{L.~Mundt},
+  \bibinfo{author}{J.~Giesecke}, \bibinfo{author}{J.~Hohl-Ebinger},
+  \bibinfo{author}{J.~Benick}, \bibinfo{author}{W.~Warta},
+  \bibinfo{author}{M.~Tajima}, \bibinfo{author}{A.~Ogura},
+\newblock \bibinfo{title}{Iron related solar cell instability: Imaging analysis
+  and impact on cell performance},
+\newblock \bibinfo{journal}{Sol. Energy Mater. Sol. Cells}
+  \bibinfo{volume}{138} (\bibinfo{year}{2015}) \bibinfo{pages}{96--101}.
+%Type = Article
+\bibitem[{Herguth(2022)}]{Herguth2022}
+\bibinfo{author}{A.~Herguth},
+\newblock \bibinfo{title}{Quantification of iron in boron-doped silicon solar
+  cells from open circuit voltage measurements},
+\newblock \bibinfo{journal}{IEEE J. Photovolt.} \bibinfo{volume}{12}
+  (\bibinfo{year}{2022}) \bibinfo{pages}{937--947}.
+%Type = Article
+\bibitem[{Kimerling and Benton(1983)}]{Kimerling1983}
+\bibinfo{author}{L.~Kimerling}, \bibinfo{author}{J.~Benton},
+\newblock \bibinfo{title}{Electronically controlled reactions of interstitial
+  iron in silicon},
+\newblock \bibinfo{journal}{Physica B+C} \bibinfo{volume}{116}
+  (\bibinfo{year}{1983}) \bibinfo{pages}{297--300}.
+%Type = Article
+\bibitem[{Zoth and Bergholz(1990)}]{Zoth1990}
+\bibinfo{author}{G.~Zoth}, \bibinfo{author}{W.~Bergholz},
+\newblock \bibinfo{title}{{A fast, preparation‐free method to detect iron in
+  silicon}},
+\newblock \bibinfo{journal}{J. Appl. Phys.} \bibinfo{volume}{67}
+  (\bibinfo{year}{1990}) \bibinfo{pages}{6764--6771}.
+%Type = Article
+\bibitem[{Tou\v{s}ek and Tou\v{s}kov\'a(2008)}]{Tousek2008}
+\bibinfo{author}{J.~Tou\v{s}ek}, \bibinfo{author}{J.~Tou\v{s}kov\'a},
+\newblock \bibinfo{title}{A novel approach to the surface photovoltage method},
+\newblock \bibinfo{journal}{Sol. Energy Mater. Sol. Cells} \bibinfo{volume}{92}
+  (\bibinfo{year}{2008}) \bibinfo{pages}{1020--1024}.
+%Type = Article
+\bibitem[{Olikh(2019)}]{Olikh2019}
+\bibinfo{author}{O.~Olikh},
+\newblock \bibinfo{title}{Relationship between the ideality factor and the iron
+  concentration in silicon solar cells},
+\newblock \bibinfo{journal}{Superlattices Microstruct.} \bibinfo{volume}{136}
+  (\bibinfo{year}{2019}) \bibinfo{pages}{106309}.
+%Type = Article
+\bibitem[{P\"assler(2002)}]{Passler2002}
+\bibinfo{author}{R.~P\"assler},
+\newblock \bibinfo{title}{Dispersion-related description of temperature
+  dependencies of band gaps in semiconductors},
+\newblock \bibinfo{journal}{Phys. Rev. B} \bibinfo{volume}{66}
+  (\bibinfo{year}{2002}) \bibinfo{pages}{085201}.
+%Type = Article
+\bibitem[{Yan and Cuevas(2014)}]{EgNarrow}
+\bibinfo{author}{D.~Yan}, \bibinfo{author}{A.~Cuevas},
+\newblock \bibinfo{title}{Empirical determination of the energy band gap
+  narrowing in p$^+$ silicon heavily doped with boron},
+\newblock \bibinfo{journal}{J. Appl. Phys.} \bibinfo{volume}{116}
+  (\bibinfo{year}{2014}) \bibinfo{pages}{194505}.
+%Type = Article
+\bibitem[{Couderc et~al.(2014)Couderc, Amara, and Lemiti}]{Si_ni_Couderc}
+\bibinfo{author}{R.~Couderc}, \bibinfo{author}{M.~Amara},
+  \bibinfo{author}{M.~Lemiti},
+\newblock \bibinfo{title}{Reassessment of the intrinsic carrier density
+  temperature dependence in crystalline silicon},
+\newblock \bibinfo{journal}{J. Appl. Phys.} \bibinfo{volume}{115}
+  (\bibinfo{year}{2014}) \bibinfo{pages}{093705}.
+%Type = Article
+\bibitem[{Green(1990)}]{Nc:Green}
+\bibinfo{author}{M.~A. Green},
+\newblock \bibinfo{title}{Intrinsic concentration, effective densities of
+  states, and effective mass in silicon},
+\newblock \bibinfo{journal}{J. Appl. Phys.} \bibinfo{volume}{67}
+  (\bibinfo{year}{1990}) \bibinfo{pages}{2944--2954}.
+%Type = Book
+\bibitem[{O'Mara et~al.(1990)O'Mara, Herring, and Hant}]{OMara}
+\bibinfo{author}{W.~O'Mara}, \bibinfo{author}{R.~Herring},
+  \bibinfo{author}{L.~Hant}, \bibinfo{title}{Handbook of semiconductor silicon
+  technology}, \bibinfo{publisher}{Noyes Publications}, \bibinfo{address}{New
+  Jersey, USA}, \bibinfo{year}{1990}.
+%Type = Article
+\bibitem[{Klaassen(1992)}]{KLAASSEN953}
+\bibinfo{author}{D.~Klaassen},
+\newblock \bibinfo{title}{A unified mobility model for device simulation ---
+  {I}. model equations and concentration dependence},
+\newblock \bibinfo{journal}{Solid-State Electron.} \bibinfo{volume}{35}
+  (\bibinfo{year}{1992}) \bibinfo{pages}{953-- 959}.
+
+\end{thebibliography}
