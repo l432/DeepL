@@ -60,7 +60,7 @@ Identifying parameters of photovoltaic (PV) models based on measured current-vol
 In this paper, we explore the potential of meta-heuristic algorithms to address the parameter estimation problems
 associated with PV cells that exhibit S-shaped IV characteristics.
 This estimation is performed within the framework of the opposed two-diode model.
-We implemented a total of 14 algorithms from various classes to extract the SC parameters 
+We implemented a total of 14 algorithms from various classes to extract the SC parameters
 from synthetic \emph{IV} curves, which were generated using a range of parameter values.
 The results were compared by using nonparametric statistical methods.
 These methods include the Wilcoxon signed-rank test for pairwise comparisons, and the Friedman, Friedman Aligned, and Quade tests for multiple comparisons.
@@ -90,25 +90,25 @@ Meta--heuristic algorithms \sep Nonparametric statistical procedure \sep Solar c
 \section{Introduction}\label{Int}
 
 
-%to improve English and correct grammatical errors
 
-The intensive use of fossil fuels has led to numerous ecological and energy-related challenges for humanity. 
-Addressing these issues, the most hopeful solution appears to be the adoption of renewable green energy sources. 
-However, this requires tackling several key tasks, 
-the primary among them being the direct generation of energy and the ability to store it to ensure a reliable supply. 
-Whereas the latter can be addressed through the development of energy storage devices 
-(such as lithium-ion batteries or next-generation dual-ion batteries  \cite{Zhang2024,Wang2018,Zhang2016}), 
-photovoltaics (PV) is widely regarded as the most promising clean technology for energy-producing 
+
+The intensive use of fossil fuels has led to numerous ecological and energy-related challenges for humanity.
+Addressing these issues, the most hopeful solution appears to be the adoption of renewable green energy sources.
+However, this requires tackling several key tasks,
+the primary among them being the direct generation of energy and the ability to store it to ensure a reliable supply.
+Whereas the latter can be addressed through the development of energy storage devices
+(such as lithium-ion batteries or next-generation dual-ion batteries  \cite{Zhang2024,Wang2018,Zhang2016}),
+photovoltaics (PV) is widely regarded as the most promising clean technology for energy-producing
 to meet the escalating energy demands of Earth's population.
-According to the International Energy Agency reports, 
-the cumulative installed PV capacity was forecasted to rise to 1.826~TW by 2026 and 14.5~TW by 2050 \cite{Wang2022}..
+According to the International Energy Agency reports,
+the cumulative installed PV capacity was forecasted to rise to 1.826~TW by 2026 and 14.5~TW by 2050 \cite{Wang2022}.
 
-One of the most common approaches to understanding the electrical characteristics of PV devices is the use of an equivalent circuit model. 
+One of the most common approaches to understanding the electrical characteristics of PV devices is the use of an equivalent circuit model.
 Such lumped-parameter modeling enables simulation, analysis, and optimization of device performance.
-Currently, silicon solar cells (Si-SCs) comprise approximately 90\% of the global PV production capacity. 
+Currently, silicon solar cells (Si-SCs) comprise approximately 90\% of the global PV production capacity.
 For describing the operation of these conventional SCs, the following models are most widely utilized:
 single-diode model (SDM), double-diode model (DDM), and three-diode model (TDM).
-These models incorporate 
+These models incorporate
 parallel-connected diodes that activate unidirectionally,
 a photo-current source, a parallel shunt resistance, and a series resistance.
 The PV module model (PVMM) is based on the SDM and consists of multiple diodes connected in series and/or parallel.
@@ -116,64 +116,67 @@ In addition to developing these models, identifying the relevant parameters from
 
 One prevalent approach for addressing such issues is the utilization of meta-heuristic algorithms.
 Numerous studies have been undertaken to compare the efficiency of meta-heuristic algorithms for parameter estimation under conventional SC models.
-Some research studies have focused on a single model, such as SDM \cite{DE_EM}, DDM \cite{SSA,FWA}, or TDM \cite{ELSHADE_INR}, 
+Some research studies have focused on a single model, such as SDM \cite{DE_EM}, DDM \cite{SSA,FWA}, or TDM \cite{ELSHADE_INR},
 while others have examined both SDM and DDM simultaneously \cite{ELPSO,Barth2016,BPFPA,MPALW}.
-Additionally, several publications have investigated the efficiency of algorithms in processing \emph{IV} curves 
-according to three different models: 
+Additionally, several publications have investigated the efficiency of algorithms in processing \emph{IV} curves
+according to three different models:
 SDM, DDM, and PVMM \cite{IMPA,SCA_NM_OBL,HFAPS,IWOA}, or SDM, DDM, and TDM \cite{Kepler}.
-Furthermore, a comprehensive survey of meta-heuristic algorithms used for parameter extraction 
+A comprehensive survey of meta-heuristic algorithms used for parameter extraction
 of conventional PV models can be found in the literature \cite{Li2021,Yang2020}.
-Furthermore, the use of conventional SC models for testing newly developed algorithms 
+Furthermore, the use of conventional SC models for testing newly developed algorithms
 is one of the most common approaches, following the utilization of benchmark functions from the Congress on Evolutionary Computation.
+The diversity of algorithms employed in analyzing conventional models is linked to the No Free Lunch (NFL) theorem \cite{NFL}.
+NFL theorem states that no single algorithm can solve all optimization tasks effectively.
+Consequently, each problem, including the parameter estimation for every equivalent model, requires the selection of a distinct algorithm.
 
-
-The variety of algorithms used for the analysis of conventional models is associated with the existence of the No Free Lunch (NFL) theorem \cite{NFL}.
-NFL states that no single algorithm can solve all optimization tasks effectively.
-As a result, each problem, including the parameter estimation of each equivalent model, necessitates a distinct algorithm selection.
-Recently, intensive research is underway for innovative developments,
-further experiments, and practical PV applications of various new-generation SCs (NG-SCs).
-The operating principle of NG-SCs is qualitatively similar to Si-SCs,
-but the fourth quadrant of IVC often exhibits an S-shaped kink.
-The kink origin has been attributed to various physical phenomena
-and such IVC feature is typical in the most promising candidates for the NG-SCs.
+Recently, there has been intensive research focused on innovative developments, 
+further experiments, and practical PV applications of various new-generation solar cells (NG-SCs).
+The operating principle of NG-SCs is qualitatively similar to that of Si-SCs, 
+but the fourth quadrant of their \emph{IV} characteristics often exhibits an S-shaped kink.
+The origin of the kink has been attributed to various physical phenomena, 
+and this \emph{IV} characteristics feature is typical among the most promising candidates for NG-SCs.
 Specifically, S-shaped IV curves have been observed in silicon heterojunction SCs \cite{Saive2019},
 thin-film SCs such as CdTe, CI(G)S, and amorphous silicon PV devices \cite{Saive2019,Roland2016},
 normal and inverted organic SCs \cite{Gaur2014,Tran2017,Lastra2019},
 perovskite SCs \cite{Saive2019,Xu2016},
 quantum dot SCs \cite{Gao2011,Yu2019a},
-and hybrid SCs \cite{VeinbergVidal2016,Romero2017,Finck2013}.
-Unfortunately, the conventional models failed in describing the S-shaped kink.
-Thus, new models are proposed to give some reasonable IV curve shape explanations from the view of electricity.
-However, the NFL theory suggests that algorithms that have demonstrated exceptional results for Si-SC models
-may not yield the same effectiveness for NG-SC models.
-Thus, the relevant task arises of choosing metaheuristic algorithms for extracting parameters from S-shaped IV curves.
-Certainly, meta--heuristic algorithms have been utilized in processing experimental S-shaped IV curves \cite{Pillai2017}.
-Nevertheless, studies aimed at identifying the most optimal approach for solving these problems are absent to our knowledge.
-The novelty of this work is associated with determining the metaheuristic algorithm most appropriate for extracting the parameters of NG-SCs.
+as well as in hybrid SCs \cite{VeinbergVidal2016,Romero2017,Finck2013}.
+Unfortunately, the conventional models have failed to describe the S-shaped kink adequately.
+Consequently, new models have been proposed to provide reasonable explanations for the shape of the \emph{IV} curves from an electrical perspective.
+However, the NFL theorem suggests that algorithms that have demonstrated exceptional results 
+for silicon solar cell models may not yield the same level of effectiveness for NG-SC models.
+Thus, the relevant task arises of selecting appropriate metaheuristic algorithms for extracting 
+parameters from the S-shaped current-voltage \emph{IV} curves.
+Certainly, metaheuristic algorithms have been utilized in processing experimental S-shaped IV curves \cite{Pillai2017}.
+Nevertheless, to our knowledge, studies aimed at identifying the most optimal approach for solving these problems are currently lacking.
+The novelty of this work lies in determining the most appropriate metaheuristic algorithm for extracting the parameters of NG-SCs. 
 
 
-Today, a considerable number of models have been proposed with the aim of explaining S-shaped IV curves
+Today, a considerable number of models have been proposed with the aim of explaining S-shaped \emph{IV} curves.
 One of the earliest attempts was proposed by Mazhari \cite{Mazhari2006}.
 This model is essentially a simplified version of the SDM, achieved by excluding resistances and incorporating an additional diode.
-Mazhari’s model fails to capture the linear-like rise S-shaped kink in the third quadrant,
-and the model, which improved by incorporating two resistance, proposed for organic SCs \cite{Yu2019}.
+But Mazhari's model fails to capture the linear-like rise of the S-shaped kink in the third quadrant. 
+An improved model, which incorporates two resistances, was proposed for organic SCs \cite{Yu2019}.
 Gaur and Kumar \cite{Gaur2014} offered equivalent model to represent the behavior of polymer SC in the dark.
-This model is almost identical to the DDM, except one of the diodes is the opposite.
-Another way to develop equivalent models involves using multiple series diodes.
-Zuo \emph{et al}. \cite{Zuo2014} offered to explain the S-shape by utilizing a model consisting
-of two series diodes connected in the same direction, two shunt resistors, and one series resistor.
+This model is almost identical to the DDM, except that one of the diodes has the opposite polarity.
+Another approach to develop equivalent models involves using multiple series-connected diodes.
+Zuo \emph{et al}. \cite{Zuo2014} proposed a model consisting of two series-connected diodes in the same direction, 
+two shunt resistors, and one series resistor.
 Another equivalent circuit holds two opposed diodes, two opposed current sources, and no resistors \cite{Gao2011}.
-De Castro et al \cite{Castro2010} proposed a model consisting of two opposed diodes with shunt resistance for each,
+De Castro \emph{et al}. \cite{Castro2010} proposed a model consisting of two opposed diodes with shunt resistance for each,
 a series resistance, and a photo-current source.
-The last model represents a significant advancement
+This model represents a significant advancement
 as it successfully reproduces the S-shaped kink in the power-producing fourth quadrant
-of the illuminated IVCs.
+of the illuminated \emph{IV} characteristics.
 However, it falls short of adequately describing the IV curve
 beyond the open-circuit point in the first quadrant,
 where the current of many practical devices tends to continue increasing \cite{SshapeRewShot}.
-To address this challenge, a potential solution was suggested ---
-incorporating a third diode that would either replace one of the shunt resistances \cite{GarciaSanchez2013}
-or be placed in parallel with it \cite{DeCastro2016,Roland2016}.
+To address this shortcoming, a potential solution was suggested. 
+This involves incorporating a third diode that would either replace one of the shunt resistances \cite{GarciaSanchez2013}
+or be placed in parallel \cite{DeCastro2016,Roland2016}.
+
+
+
 In general, the developing models to describe S-shaped IV curves continues.
 For instance, a relatively recent proposal \cite{Sesa2019} is the B2BDM model:
 back-to-back diodes in parallel with a shunt resistor and the photo-current source, all in series with an offset voltage source, and
@@ -202,9 +205,10 @@ Some of these algorithms have been well-known for a long time and have proven th
 Other algorithms are more recent, developed with the knowledge gained from their predecessors.
 The obtained results are compared using various nonparametric statistical methods.
 
+%Будь-ласка, покращ англійську і в наступних реченнях, які я буду пропонувати. Якщо можна, не розшифровуй абревіатури та уникай пасиву у реченнях.
 
 
-%\section{Models and Methods}\label{MM}
+
 \section{Problem definition}\label{MM}
 \subsection{Mathematical formulation of opposed two--diode model}\label{SCModel}
 \begin{figure}[]
