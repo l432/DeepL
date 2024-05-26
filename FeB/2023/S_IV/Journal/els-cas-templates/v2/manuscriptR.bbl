@@ -329,13 +329,6 @@
   cells},
 \newblock \bibinfo{journal}{IEEE J. Sel. Top. Quantum Electron.}
   \bibinfo{volume}{16} (\bibinfo{year}{2010}) \bibinfo{pages}{1690--1699}.
-%Type = Inproceedings
-\bibitem[{García-Sánchez and Romero(2019)}]{SshapeRewShot}
-\bibinfo{author}{F.~J. García-Sánchez}, \bibinfo{author}{B.~Romero},
-\newblock \bibinfo{title}{Equivalent circuit models for next generation
-  photovoltaic devices with {S}-shaped {I}-{V} curves},
-\newblock in: \bibinfo{booktitle}{2019 8th International Symposium on Next
-  Generation Electronics (ISNE)}, pp. \bibinfo{pages}{1--4}.
 %Type = Article
 \bibitem[{García-Sánchez et~al.(2013)García-Sánchez, Lugo-Muñoz, Muci, and
   Ortiz-Conde}]{GarciaSanchez2013}
@@ -364,6 +357,13 @@
   cells’ S-shaped I-V characteristics and cell structure}},
 \newblock \bibinfo{journal}{AIP Adv.} \bibinfo{volume}{9}
   (\bibinfo{year}{2019}) \bibinfo{pages}{025014}.
+%Type = Inproceedings
+\bibitem[{García-Sánchez and Romero(2019)}]{SshapeRewShot}
+\bibinfo{author}{F.~J. García-Sánchez}, \bibinfo{author}{B.~Romero},
+\newblock \bibinfo{title}{Equivalent circuit models for next generation
+  photovoltaic devices with {S}-shaped {I}-{V} curves},
+\newblock in: \bibinfo{booktitle}{2019 8th International Symposium on Next
+  Generation Electronics (ISNE)}, pp. \bibinfo{pages}{1--4}.
 %Type = Article
 \bibitem[{Garc{\'i}a-S{\'a}nchez et~al.(2017)Garc{\'i}a-S{\'a}nchez, Romero,
   Lugo-Mu{\~n}oz, del Pozo, Arredondo, Liou, and

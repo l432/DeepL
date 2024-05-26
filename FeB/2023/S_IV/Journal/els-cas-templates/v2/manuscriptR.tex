@@ -35,7 +35,7 @@
 \shortauthors{O.~Olikh}
 
 % Main title of the paper
-\title [mode = title]{A test of meta-heuristic algorithms for parameter extraction of next-generation solar cells with S-shaped current-voltage curves}
+\title [mode = title]{A test of meta--heuristic algorithms for parameter extraction of next-generation solar cells with S-shaped current-voltage curves}
 
 \author{Oleg~Olikh}[orcid=0000-0003-0633-5429]
 %\cormark[1]
@@ -57,7 +57,7 @@
 \begin{abstract}
 Identifying parameters of photovoltaic (PV) models based on measured current-voltage (\emph{IV}) characteristic curves is critical for simulating, evaluating, and controlling PV systems.
 \emph{IV} characteristics of the latest-generation solar cells (SCs) often display an S-shaped deformation.
-In this paper, we explore the potential of meta-heuristic algorithms to address the parameter estimation problems
+In this paper, we explore the potential of meta--heuristic algorithms to address the parameter estimation problems
 associated with PV cells that exhibit S-shaped IV characteristics.
 This estimation is performed within the framework of the opposed two-diode model.
 We implemented a total of 14 algorithms from various classes to extract the SC parameters
@@ -65,14 +65,14 @@ from synthetic \emph{IV} curves, which were generated using a range of parameter
 The results were compared by using nonparametric statistical methods.
 These methods include the Wilcoxon signed-rank test for pairwise comparisons, and the Friedman, Friedman Aligned, and Quade tests for multiple comparisons.
 Comprehensive results and analyses show that the STLBO (Simplified teaching-learning based optimization algorithm) and ADELI (Adaptive differential evolution with the Lagrange interpolation argument) algorithms demonstrate highly competitive performance in terms of accuracy and reliability.
-This paper underscores the efficacy of advanced meta-heuristic algorithms in solving complex non-linear optimization problems in the domain of photovoltaic research, particularly concerning the unique challenges posed by S-shaped \emph{IV} characteristics of new-generation solar cells.
+This paper underscores the efficacy of advanced meta--heuristic algorithms in solving complex non-linear optimization problems in the domain of photovoltaic research, particularly concerning the unique challenges posed by S-shaped \emph{IV} characteristics of new-generation solar cells.
 \end{abstract}
 
 
 
 
 \begin{highlights}
-\item 14 meta-heuristic algorithms are used to parameter estimation from S-shaped \emph{IV} curves
+\item 14 meta--heuristic algorithms are used to parameter estimation from S-shaped \emph{IV} curves
 \item The algorithms' efficiencies are compared by using nonparametric statistic methods
 \item The relevance of using the square error fitness function has been demonstrated
 \item STLBO and ADELI excel in identifying parameters of the opposed two-diode model
@@ -114,14 +114,14 @@ a photo-current source, a parallel shunt resistance, and a series resistance.
 The PV module model (PVMM) is based on the SDM and consists of multiple diodes connected in series and/or parallel.
 In addition to developing these models, identifying the relevant parameters from current-voltage (\emph{IV}) characteristics is a crucial task.
 
-One prevalent approach for addressing such issues is the utilization of meta-heuristic algorithms.
-Numerous studies have been undertaken to compare the efficiency of meta-heuristic algorithms for parameter estimation under conventional SC models.
+One prevalent approach for addressing such issues is the utilization of meta--heuristic algorithms.
+Numerous studies have been undertaken to compare the efficiency of meta--heuristic algorithms for parameter estimation under conventional SC models.
 Some research studies have focused on a single model, such as SDM \cite{DE_EM}, DDM \cite{SSA,FWA}, or TDM \cite{ELSHADE_INR},
 while others have examined both SDM and DDM simultaneously \cite{ELPSO,Barth2016,BPFPA,MPALW}.
 Additionally, several publications have investigated the efficiency of algorithms in processing \emph{IV} curves
 according to three different models:
 SDM, DDM, and PVMM \cite{IMPA,SCA_NM_OBL,HFAPS,IWOA}, or SDM, DDM, and TDM \cite{Kepler}.
-A comprehensive survey of meta-heuristic algorithms used for parameter extraction
+A comprehensive survey of meta--heuristic algorithms used for parameter extraction
 of conventional PV models can be found in the literature \cite{Li2021,Yang2020}.
 Furthermore, the use of conventional SC models for testing newly developed algorithms
 is one of the most common approaches, following the utilization of benchmark functions from the Congress on Evolutionary Computation.
@@ -129,11 +129,11 @@ The diversity of algorithms employed in analyzing conventional models is linked 
 NFL theorem states that no single algorithm can solve all optimization tasks effectively.
 Consequently, each problem, including the parameter estimation for every equivalent model, requires the selection of a distinct algorithm.
 
-Recently, there has been intensive research focused on innovative developments, 
+Recently, there has been intensive research focused on innovative developments,
 further experiments, and practical PV applications of various new-generation solar cells (NG-SCs).
-The operating principle of NG-SCs is qualitatively similar to that of Si-SCs, 
+The operating principle of NG-SCs is qualitatively similar to that of Si-SCs,
 but the fourth quadrant of their \emph{IV} characteristics often exhibits an S-shaped kink.
-The origin of the kink has been attributed to various physical phenomena, 
+The origin of the kink has been attributed to various physical phenomena,
 and this \emph{IV} characteristics feature is typical among the most promising candidates for NG-SCs.
 Specifically, S-shaped IV curves have been observed in silicon heterojunction SCs \cite{Saive2019},
 thin-film SCs such as CdTe, CI(G)S, and amorphous silicon PV devices \cite{Saive2019,Roland2016},
@@ -143,52 +143,70 @@ quantum dot SCs \cite{Gao2011,Yu2019a},
 as well as in hybrid SCs \cite{VeinbergVidal2016,Romero2017,Finck2013}.
 Unfortunately, the conventional models have failed to describe the S-shaped kink adequately.
 Consequently, new models have been proposed to provide reasonable explanations for the shape of the \emph{IV} curves from an electrical perspective.
-However, the NFL theorem suggests that algorithms that have demonstrated exceptional results 
+However, the NFL theorem suggests that algorithms that have demonstrated exceptional results
 for silicon solar cell models may not yield the same level of effectiveness for NG-SC models.
-Thus, the relevant task arises of selecting appropriate metaheuristic algorithms for extracting 
-parameters from the S-shaped current-voltage \emph{IV} curves.
-Certainly, metaheuristic algorithms have been utilized in processing experimental S-shaped IV curves \cite{Pillai2017}.
+Thus, the relevant task arises of selecting appropriate meta--heuristic algorithms for extracting
+parameters from the S-shaped \emph{IV} curves.
+Certainly, meta--heuristic algorithms have been utilized in processing experimental S-shaped IV curves \cite{Pillai2017}.
 Nevertheless, to our knowledge, studies aimed at identifying the most optimal approach for solving these problems are currently lacking.
-The novelty of this work lies in determining the most appropriate metaheuristic algorithm for extracting the parameters of NG-SCs. 
 
+This study aimed to compare the effectiveness of meta-heuristic algorithms in extracting the parameters of NG-SCs from the S-shaped \emph{IV} curves 
+and to determine the most suitable ones for addressing this optimization problem. 
+The parameters extraction has been done according to the De Castro two-diode model based on synthetic \emph{IV} characteristics.
+The peculiarities of the De Castro model compared to others proposed for describing S-shaped curves,
+as well as the rationale for its selection, are detailed in Subsection~\ref{SCModel}.
+Subsection~\ref{SynIV} deals with the procedure for generating synthetic \emph{IV} curves.
+The investigation focused on 14 metaheuristic algorithms, briefly outlined in Subsection~\ref{MHA}.
+Some of these algorithms have been well-known for a long time and have proven their effectiveness in solving a wide range of problems.
+Other algorithms are more recent and have been developed using the knowledge gained from their predecessors.
+When comparing the efficiency of algorithms, considerations were taken into account for computation speed, accuracy of parameter determination, and result repeatability.
+The comparison was carried out using various nonparametric statistical methods.
+The specific comparison criteria and nonparametric methods utilized are detailed in Subsection~\ref{EvalCr}.
+The results of both pairwise and multiple comparisons are detailed in Section~\ref{Result}.
+Finally, we conclude this paper in Section~\ref{SecConsl}.
+
+
+
+\section{Problem definition}\label{MM}
+\subsection{Opposed two--diode model}\label{SCModel}
 
 Today, a considerable number of models have been proposed with the aim of explaining S-shaped \emph{IV} curves.
 One of the earliest attempts was proposed by Mazhari \cite{Mazhari2006}.
 This model is essentially a simplified version of the SDM, achieved by excluding resistances and incorporating an additional diode.
-But Mazhari's model fails to capture the linear-like rise of the S-shaped kink in the third quadrant. 
+But Mazhari's model fails to capture the linear-like rise of the S-shaped kink in the third quadrant.
 An improved model, which incorporates two resistances, was proposed for organic SCs \cite{Yu2019}.
 Gaur and Kumar \cite{Gaur2014} offered equivalent model to represent the behavior of polymer SC in the dark.
 This model is almost identical to the DDM, except that one of the diodes has the opposite polarity.
-Another approach to develop equivalent models involves using multiple series-connected diodes.
-Zuo \emph{et al}. \cite{Zuo2014} proposed a model consisting of two series-connected diodes in the same direction, 
+Another approach to developing equivalent models involves using multiple series-connected diodes.
+Zuo \emph{et al}. \cite{Zuo2014} proposed a model consisting of two series-connected diodes in the same direction,
 two shunt resistors, and one series resistor.
 Another equivalent circuit holds two opposed diodes, two opposed current sources, and no resistors \cite{Gao2011}.
 De Castro \emph{et al}. \cite{Castro2010} proposed a model consisting of two opposed diodes with shunt resistance for each,
-a series resistance, and a photo-current source.
+a series resistance, and a photo-current source --- see Fig.~\ref{fig_chem}.
+Further modifications to this model include adding a third diode
+that would either replace one of the shunt resistances \cite{GarciaSanchez2013}
+or be placed in parallel \cite{DeCastro2016,Roland2016}.
+In general, the development of models to describe S-shaped IV curves continues.
+For instance, a relatively recent proposal is the B2BDM model \cite{Sesa2019}.
+This model includes back-to-back diodes parallel
+with a shunt resistor and the photo-current source, all in series with an offset voltage source.
+This assembly is then connected in parallel to another diode and shunt resistor, again in series with a resistor.
+Some review about models for PV devices with S-shaped IV curves can be found in \cite{SshapeRewShot,GarciaSanchez2017}.
+
+\begin{figure}[]
+	\centering
+		\includegraphics[width=0.35\columnwidth]{Fig1}
+	  \caption{The opposed two--diode equivalent--circuit model of a solar cell  \cite{Castro2010}.}\label{fig_chem}
+\end{figure}
+
+
+Our study focused on the opposed two--diode model, proposed by De Castro \cite{Castro2010}.
 This model represents a significant advancement
 as it successfully reproduces the S-shaped kink in the power-producing fourth quadrant
 of the illuminated \emph{IV} characteristics.
-However, it falls short of adequately describing the IV curve
-beyond the open-circuit point in the first quadrant,
-where the current of many practical devices tends to continue increasing \cite{SshapeRewShot}.
-To address this shortcoming, a potential solution was suggested. 
-This involves incorporating a third diode that would either replace one of the shunt resistances \cite{GarciaSanchez2013}
-or be placed in parallel \cite{DeCastro2016,Roland2016}.
-
-
-
-In general, the developing models to describe S-shaped IV curves continues.
-For instance, a relatively recent proposal \cite{Sesa2019} is the B2BDM model:
-back-to-back diodes in parallel with a shunt resistor and the photo-current source, all in series with an offset voltage source, and
-then connected in parallel to another diode and shunt resistor, again in series with a resistor.
-Some review about models for PV devices with S-shaped IV curves can be found in \cite{SshapeRewShot,GarciaSanchez2017}.
-
-
-This study aimed to review  the effectiveness of parameter estimation according to the De Castro two-diode model \cite{Castro2010}
-using a set of 14 meta-heuristic algorithms and determine the best-performing among them.
-The selection of this particular model from the diverse range is motivated by its universality.
-Despite the mentioned drawbacks in the first quadrant,
-the model attracts attention in deriving the analytical solutions of the equivalent circuits \cite{Yu2019a}
+However, it encounters difficulties in accurately describing the \emph{IV} curve beyond the open-circuit point in the first quadrant.
+Despite this drawback, the model is gaining attention for deriving analytical solutions
+of equivalent circuits \cite{Yu2019a}
 and is widely used to describe experimental IV curves of SCs with different structures
 \cite{CastroUseBook,Pillai2017,Arredondo2018,delPozo2012,BrenesBadilla2018,Tada2015Organic,Makha2018,CastroUsePerovskitIonikLiquid,CastroUsePerovskitFullerene}.
 In particular, these include polymer \cite{Tada2015Organic}
@@ -197,44 +215,20 @@ ternary organic solar cells \cite{Makha2018},
 and other types of organic structures \cite{Pillai2017,Arredondo2018},
 perovskite solar cells with fullerene transport layer and carbon nanotube electrode \cite{CastroUsePerovskitFullerene},
 and perovskite solar cells with ionic liquid gating \cite{CastroUsePerovskitIonikLiquid}.
-The popularity of the De Castro model is also associated with the fact that in experiments,
-IV curves are typically measured only within the range
-from short-circuit current to open-circuit voltage, i.e., only in the fourth quadrant.
-The considered metaheuristic algorithms belong to different categories based on their sources of inspiration.
-Some of these algorithms have been well-known for a long time and have proven their effectiveness in solving a wide range of problems.
-Other algorithms are more recent, developed with the knowledge gained from their predecessors.
-The obtained results are compared using various nonparametric statistical methods.
+The popularity of the De Castro model is also because, in experiments,
+\emph{IV} curves are typically measured only in the fourth quadrant from short-circuit current to open-circuit voltage.
+Therefore, our selection of the two-diode model is based on its universality and widespread applicability.
 
-%Будь-ласка, покращ англійську і в наступних реченнях, які я буду пропонувати. Якщо можна, не розшифровуй абревіатури та уникай пасиву у реченнях.
+It can be seen from the model structure, as shown in Fig.~\ref{fig_chem}, that some elements are identical to SDM.
+It is a current source accompanied by a diode D1, a shunt resistor $R_\mathrm{p1}$ to represent the leakage current,
+and a series resistor $R_\mathrm{s}$ to account for the losses associated with the load current.
+However, SDM fails to describe the S-shaped kink, which requires additional elements. 
+As a result, a second diode  (D2) and a second parallel resistor ($R_\mathrm{p2}$) are used.
+D2 is placed opposite D1 and represents the effect of traps at the active layer/cathode interface \cite{Castro2010}.
 
-
-
-\section{Problem definition}\label{MM}
-\subsection{Mathematical formulation of opposed two--diode model}\label{SCModel}
-\begin{figure}[]
-	\centering
-%		\includegraphics[width=0.75\columnwidth]{Chem}
-		\includegraphics[width=0.35\columnwidth]{Chem}
-	  \caption{The opposed two--diode equivalent--circuit model of a solar cell.}\label{fig_chem}
-\end{figure}
-
-Fig.~\ref{fig_chem}
-vividly reveals the structure of the used model \cite{Castro2010}.
-It can be seen from the figure that model contains a current source accompanied by a diode D1, a shunt
-resistor $R_\mathrm{p1}$ to show the leakage current, and a series resistor $R_\mathrm{s}$ to consider the
-losses associated with the load current.
-Besides, the second diode D2 with a second parallel resistance $R_\mathrm{p2}$ is placed opposite to the first one and is essential to
-simulate the non-ideal effects of the active layer/cathode interface.
 The analytical solution $V(I)$ of the opposed two--diode equivalent circuit model
-is as follows \cite{CastroSolution,roberts2015calculating}
+is as follows \cite{CastroSolution,roberts2015calculating}:
 
-%\begin{equation}
-%\label{eqIV_g}
-%\begin{split}
-%V(I)= &IR_\mathrm{s}+\frac{n_1kT}{q}g(x_1)-\frac{n_2kT}{q}g(x_2) \\
-%  &-\frac{n_1kT}{q}\ln\left[\frac{qI_{01}R_\mathrm{p1}}{n_1kT}\right] +\frac{n_2kT}{q}\ln\left[\frac{qI_{02}R_\mathrm{p2}}{n_2kT}\right]\,,
-%\end{split}
-%\end{equation}
 \begin{equation}
 \label{eqIV_g}
 V(I)= IR_\mathrm{s}+\frac{n_1kT}{q}g(x_1)-\frac{n_2kT}{q}g(x_2)
@@ -242,15 +236,6 @@ V(I)= IR_\mathrm{s}+\frac{n_1kT}{q}g(x_1)-\frac{n_2kT}{q}g(x_2)
 \end{equation}
 
 with
-%\begin{equation}
-%\label{eqx1}
-%x_1= \ln\left(\frac{qI_{01}R_\mathrm{p1}}{n_1kT}\right)+\frac{q(I+I_\mathrm{ph}+I_{01})R_\mathrm{p1}}{n_1kT}\,,
-%\end{equation}
-%and
-%\begin{equation}
-%\label{eqx2}
-%x_2= \ln\left(\frac{qI_{02}R_\mathrm{p2}}{n_2kT}\right)-\frac{q(I-I_{02})R_\mathrm{p2}}{n_2kT}\,,
-%\end{equation}
 \begin{equation}
 \label{eqx2}
 x_1= \ln\left(\frac{qI_{01}R_\mathrm{p1}}{n_1kT}\right)+\frac{q(I+I_\mathrm{ph}+I_{01})R_\mathrm{p1}}{n_1kT}\,,\quad
@@ -261,65 +246,70 @@ $g(x)=\ln(W(\exp(x)))$,
 $W$ is the Lambert function \cite{LambertNew},
 $I_{01}$ and $I_{02}$ are the saturation currents and
 $n_1$ and $n_2$ are
-the ideality factors for D1 and D2 respectively,
+the ideality factors for D1 and D2, respectively,
 and $I_\mathrm{ph}$ is the ideal photocurrent.
 Thus, the model employs eight lumped parameters
 ($I_{01}$, $n_1$, $R_\mathrm{p1}$, $I_{02}$, $n_2$, $R_\mathrm{p2}$,
 $R_\mathrm{s}$, and $I_\mathrm{ph}$)
-that need to be determined from the IV curve.
+that need to be determined from the \emph{IV} curve.
 Thus, from an optimization perspective, the dimension of the problem is $D=8$.
 
-We used Eqs.~(\ref{eqIV_g})--(\ref{eqx2}) both for simulation IV curves and during the approximation procedure.
-The $g$--function was evaluated by using iterative procedure \cite{roberts2015calculating}.
+We used Eqs.~(\ref{eqIV_g})--(\ref{eqx2}) for initial simulating \emph{IV} curves 
+and during the subsequent fitting \emph{IV} curves procedure with the help of meta--heuristic algorithms.
+The $g$--function was evaluated using an iterative procedure \cite{roberts2015calculating}.
+
+
 
 \subsection{Synthetic IV curves}\label{SynIV}
-The research involved the parameter estimation of solar cells using meta-heuristic algorithms based
-on synthetic IV characteristics simulated using the opposed two--diode model.
-This approach allows for assessing the accuracy of the employed optimization methods,
+
+The research involved estimating the SC parameters from synthetic \emph{IV} characteristics simulated using the opposed two-diode model.
+This approach enables us to assess the accuracy of the optimization meta--heuristic methods used, 
 as the simulation was performed using known parameter values.
 
-In first part of the study, a detailed analysis was conducted on a single IV curve,
-evaluating the performance of meta--heuristic algorithms for parameter estimation in a one--time application mainly.
-Additionally, the suitability of employing two different fitness functions was examined.
-In the second part, we simulated a set of IV characteristics and evaluated the average performance metrics of various algorithms.
+
+In the first part of the study, the performance of meta--heuristic algorithms for parameter estimation was evaluated using a single \emph{IV} curve.
+This curve represents the experimental data of bulk heterojunction photocells prepared 
+using a composite of $p$--DTS(FBTTh$_2$)$_2$ and neat C$_{70}$ \cite{Tada2015Organic}.
+In this case (referred to below as the ‘‘Single--\emph{IV} case’’), meta--heuristic algorithms were primarily evaluated through a one--time application.
+Additionally, the appropriateness of using two different fitness functions was examined.
+In the second part, we simulated a set of \emph{IV} characteristics and evaluated the average performance metrics of various algorithms.
+These curves correspond to the temperature range from 260~K to 350~K. 
+The simulation took into account the temperature dependencies of parameters, closely resembling real SCs.
+From now on, this case will be referred to as the ‘‘\emph{IV}--set case’’.
+The precise parameter values used in the simulation are listed below.
+
 
 \subsubsection{Single--IV case}\label{SingleIV}
 
-Previous studies have demonstrated \cite{Tada2015Organic,Tada2021} that when the ideality factor of D2 is either equal to or significantly larger than $n_1$
-($n_1=n_2=1.92$ or $n_1=1.00$, $n_2=3.00$), the nonlinear least--squares method successfully determines a set of equivalent circuit parameters
-that accurately replicate the experimental data of an organic photovoltaic cell.
-Therefore this approach does not allow for distinguishing between similar IV curves obtained from solar cells with different parameters.
+Previous studies \cite{Tada2015Organic,Tada2021} have shown that the nonlinear least squares method (NLSM) can be used to fit experimental data from an organic SC, 
+based on the opposed two--diode model, with minimal fitting error.
+However, the parameter values obtained from the same \emph{IV} curve with repeated applications of NLSM may differ significantly.
+Hence, this approach fails to differentiate between similar \emph{IV} curves derived from SCs with varying parameters.
+
 To overcome this issue, Tada \cite{Tada2021} successfully employed Bayesian estimation of parameters.
-To assess the capabilities of meta-heuristic methods in overcoming additional similar challenges,
-they were applied to a IV curve corresponding to such a problematic case.
+To assess the capabilities of meta--heuristic methods in overcoming similar challenges, 
+they were applied to an \emph{IV} curve corresponding to such a problematic case.
 The parameter values were taken from \cite{Tada2021}:
-%\begin{equation}
-%\label{eqParSingleIV}
-%\begin{split}
-%I_{01}&=1.6\cdot10^{-6}\,\text{mA},\quad n_1=1.92,\quad R_\mathrm{p1}=190\,\Omega,\\
-%I_{02}&=0.16\,\text{mA},\quad n_2=1.92, \quad R_\mathrm{p2}=190\,\Omega,\\
-%R_\mathrm{s}&=45\,\Omega,\quad I_\mathrm{ph}=8\,\text{mA},
-%\end{split}
-%\end{equation}
 \begin{equation}
 \label{eqParSingleIV}
 \begin{split}
 I_{01}&=1.6\cdot10^{-6}\,\text{mA},\quad n_1=1.92,\quad R_\mathrm{p1}=190\,\Omega,\quad I_{02}=0.16\,\text{mA},\\
-\quad n_2&=1.92, \quad R_\mathrm{p2}=190\,\Omega,\quad R_\mathrm{s}=45\,\Omega,\quad I_\mathrm{ph}=8\,\text{mA},\\
+\quad n_2&=1.92, \quad R_\mathrm{p2}=190\,\Omega,\quad R_\mathrm{s}=45\,\Omega,\quad I_\mathrm{ph}=8\,\text{mA}.\\
 \end{split}
 \end{equation}
-and the IV curve was simulated over a range of 0-0.8~V with step 10~mV at $T=300$~K.
+The \emph{IV} curve was simulated using Eqs.~(\ref{eqIV_g})--(\ref{eqx2}) over a voltage range of 0-0.8~V with a 10~mV step at $T=300$~K.
 The simulation result is presented on Fig.~\ref{figSigleIV} by symbols.
-
 
 \begin{figure}[]
 	\centering
-%		\includegraphics[width=1.0\columnwidth]{IVsimple}
-		\includegraphics[width=0.5\columnwidth]{IVsimple}
-	  \caption{Fitting results (lines) for the simulated current-voltage characteristic (symbols).
-             The values from  Eq.~(\ref{eqParSingleIV}) were assumed under simulation.}\label{figSigleIV}
+		\includegraphics[width=0.5\columnwidth]{Fig2}
+	  \caption{The current-voltage characteristic, which used in single-IV case (symbols). 
+        The values from Eq.~(\ref{eqParSingleIV}) were assumed during the simulation. 
+        The fitting results of various meta---heuristic algorithms are represented by lines.}\label{figSigleIV}
 \end{figure}
 
+
+%Будь-ласка, покращ англійську і в наступних реченнях, які я буду пропонувати. Зокрема, треба буде виправити граматичні та стилістичні помилки
 
 \subsubsection{IV--set case}\label{SetIV}
 Employing various meta--heuristic algorithms to analyze a single IV curve
@@ -401,18 +391,18 @@ The simulation results are presented on Fig.~\ref{figSetIV} by symbols.
 \end{figure}
 
 
-\subsection{Meta-heuristic algorithms}\label{MHA}
-In the literature, meta-heuristics are frequently categorized based on their sources of inspiration.
+\subsection{Meta--heuristic algorithms}\label{MHA}
+In the literature, meta--heuristics are frequently categorized based on their sources of inspiration.
 This categorization involves incorporating elements of true simulations and principles that incorporate stochasticity,
 with the objective of emulating diverse characteristics observed in biological behavior, the lives of creatures in nature, human behavior, or natural phenomena.
-On this basis, any meta-heuristic algorithm can fall into one of the following main classes \cite{WhiteShark,Gannet,Dandelion}:
+On this basis, any meta--heuristic algorithm can fall into one of the following main classes \cite{WhiteShark,Gannet,Dandelion}:
 evolution-based methods (emulate the principles of evolutionary behavior observed in creatures in nature by relying on the concept of survival of the fittest),
 swarm intelligence--based methods (simulate the collective, dynamic, intelligent, and concerted gregarious conduct of collections of flocks or communities found in nature),
 bio--based methods (use biological processes unrelated to group behavior),
 chemical \& physical--based methods (originate from the physical phenomena or chemical laws that exist in the universe),
 human-society--based methods (inspired by human beings, including various activities such as thinking and social behavior),
 and math--based methods (borrow the mathematical functions).
-Generally, there are hundreds of meta-heuristic optimization methods available.
+Generally, there are hundreds of meta--heuristic optimization methods available.
 While we acknowledge that our selection may not be fully comprehensive,
 we utilized 14 methods, representing all classes mentioned above,
 to tackle the parameter estimation task within the framework of the opposed two-diode model for a solar cell.
@@ -460,7 +450,7 @@ WOA draws inspiration from the hunting behavior of humpback whales \cite{WOA}.
 On the other hand, CWOA employs chaotic maps to compute and dynamically adjust its internal parameters \cite{CWOA}.
 In our study, we utilized the Singer chaotic map and set $N\!p=100$ for the identification of the parameters of the solar cell.
 
-The \emph{Neural Network Algorithm} (\textbf{NNA}) is a meta-heuristic algorithm that draws inspiration from
+The \emph{Neural Network Algorithm} (\textbf{NNA}) is a meta--heuristic algorithm that draws inspiration from
 both biological nervous systems and artificial neural networks \cite{NNA}.
 The recommended \cite{NNA} value $N\!p=50$ is used in our paper.
 
@@ -515,7 +505,7 @@ a greedy selection, and $N\!p=30$.
 The majority of the utilized algorithms demonstrate excellent performance when
 it comes to parameter estimation of SCs within conventional models (SDM or DDM) \cite{CWOA,DEWang,GOTLBO,IJAYA,MABC,PSO,STLBO,TLBO_Patel,LSHADE,IWOA}.
 
-In meta-heuristic optimization methods, the quality of the extracted parameters is evaluated using the fitness function at
+In meta--heuristic optimization methods, the quality of the extracted parameters is evaluated using the fitness function at
 every iteration.
 In our investigation, absolute error and square error fitness functions were under consideration:
 \begin{gather}
@@ -721,7 +711,7 @@ the square error fitness function as a more effective and reliable option for th
 
 \subsubsection{Evaluation of single--IV}
 
-In this subsection, we show and analyze the statistical results of different meta-heuristic algorithm
+In this subsection, we show and analyze the statistical results of different meta--heuristic algorithm
 applications to an IV curve, simulated with Eq.~(\ref{eqParSingleIV}) values.
 Several typical fitting results of the synthesized curve are shown in Fig.~\ref{figSigleIV}.
 A more comprehensive version, including the fitting results obtained using each algorithm,
@@ -763,7 +753,7 @@ whereas for the NDE algorithm application, the obtained $\mathrm{APE}_\mathrm{ME
 and range from 0.04 for $I_\mathrm{ph}$ to 11.4 for $I_{01}$.
 On one hand, this confirms the issue identified by Tada \cite{Tada2015Organic,Tada2021}, which arises when estimating
 parameters according to the opposed two--diode model from similar IV curves corresponding to photovoltaic cells with distinct characteristics.
-Furthermore, the results indicate that some metaheuristic algorithms, such as NDE and IJAYA, can fall into a similar trap.
+Furthermore, the results indicate that some met--aheuristic algorithms, such as NDE and IJAYA, can fall into a similar trap.
 On the other hand, the high accuracy in parameter estimation demonstrated by EBLSHADE, ADELI, and STLBO indicates
 that these algorithms are able to overcome the mentioned issue when applied.
 It should be noted that a similar problem has been previously addressed by employing Bayesian estimation of parameters \cite{Tada2021}.
@@ -1255,7 +1245,7 @@ however, in this scenario, $N_\mathrm{pr}=81$ is employed:
 N_\mathrm{pr}= 10\,T_\mathrm{values}\times(8\,\mathrm{APE}_\mathrm{MEDIAN}+1\,\mathrm{RMSPE}_\mathrm{MEDIAN})+1\,t_\mathrm{run}\,.
 \end{equation*}
 %10 temperature values $\times(\mathrm{APE}_\mathrm{MEDIAN}+1\mathrm{RMSPE}_\mathrm{MEDIAN})+1t_\mathrm{run}$.
-Therefore, such an approach is well-suited for nonparametric statistical analysis of $k=14$ meta-heuristic algorithms.
+Therefore, such an approach is well-suited for nonparametric statistical analysis of $k=14$ meta--heuristic algorithms.
 Certainly, at first sight, it would be interesting to consider incorporating an additional 80 values of the interquartile range into the dataset.
 This approach could provide consideration into the stability of algorithm performance as well.
 However, it is known \cite{Derrac2011} that for multiple comparisons, a value of $N_\mathrm{pr}\geq 8\cdot k=112$ could be too high, obtaining
@@ -1395,7 +1385,7 @@ In our opinion, STLBO and ADELI both hold the top position in the competition co
 
 
 
-\section{Conclusion}
+\section{Conclusion}\label{SecConsl}
 
 In this paper, the possibility of using meta--heuristic algorithms
 to solve the parameter estimation problems of photovoltaic cells
