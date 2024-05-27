@@ -150,8 +150,8 @@ parameters from the S-shaped \emph{IV} curves.
 Certainly, meta--heuristic algorithms have been utilized in processing experimental S-shaped IV curves \cite{Pillai2017}.
 Nevertheless, to our knowledge, studies aimed at identifying the most optimal approach for solving these problems are currently lacking.
 
-This study aimed to compare the effectiveness of meta-heuristic algorithms in extracting the parameters of NG-SCs from the S-shaped \emph{IV} curves 
-and to determine the most suitable ones for addressing this optimization problem. 
+This study aimed to compare the effectiveness of meta-heuristic algorithms in extracting the parameters of NG-SCs from the S-shaped \emph{IV} curves
+and to determine the most suitable ones for addressing this optimization problem.
 The parameters extraction has been done according to the De Castro two-diode model based on synthetic \emph{IV} characteristics.
 The peculiarities of the De Castro model compared to others proposed for describing S-shaped curves,
 as well as the rationale for its selection, are detailed in Subsection~\ref{SCModel}.
@@ -222,7 +222,7 @@ Therefore, our selection of the two-diode model is based on its universality and
 It can be seen from the model structure, as shown in Fig.~\ref{fig_chem}, that some elements are identical to SDM.
 It is a current source accompanied by a diode D1, a shunt resistor $R_\mathrm{p1}$ to represent the leakage current,
 and a series resistor $R_\mathrm{s}$ to account for the losses associated with the load current.
-However, SDM fails to describe the S-shaped kink, which requires additional elements. 
+However, SDM fails to describe the S-shaped kink, which requires additional elements.
 As a result, a second diode  (D2) and a second parallel resistor ($R_\mathrm{p2}$) are used.
 D2 is placed opposite D1 and represents the effect of traps at the active layer/cathode interface \cite{Castro2010}.
 
@@ -254,7 +254,7 @@ $R_\mathrm{s}$, and $I_\mathrm{ph}$)
 that need to be determined from the \emph{IV} curve.
 Thus, from an optimization perspective, the dimension of the problem is $D=8$.
 
-We used Eqs.~(\ref{eqIV_g})--(\ref{eqx2}) for initial simulating \emph{IV} curves 
+We used Eqs.~(\ref{eqIV_g})--(\ref{eqx2}) for initial simulating \emph{IV} curves
 and during the subsequent fitting \emph{IV} curves procedure with the help of meta--heuristic algorithms.
 The $g$--function was evaluated using an iterative procedure \cite{roberts2015calculating}.
 
@@ -263,17 +263,17 @@ The $g$--function was evaluated using an iterative procedure \cite{roberts2015ca
 \subsection{Synthetic IV curves}\label{SynIV}
 
 The research involved estimating the SC parameters from synthetic \emph{IV} characteristics simulated using the opposed two-diode model.
-This approach enables us to assess the accuracy of the optimization meta--heuristic methods used, 
+This approach enables us to assess the accuracy of the optimization meta--heuristic methods used,
 as the simulation was performed using known parameter values.
 
 
 In the first part of the study, the performance of meta--heuristic algorithms for parameter estimation was evaluated using a single \emph{IV} curve.
-This curve represents the experimental data of bulk heterojunction photocells prepared 
+This curve represents the experimental data of bulk heterojunction photocells prepared
 using a composite of $p$--DTS(FBTTh$_2$)$_2$ and neat C$_{70}$ \cite{Tada2015Organic}.
 In this case (referred to below as the ‘‘Single--\emph{IV} case’’), meta--heuristic algorithms were primarily evaluated through a one--time application.
 Additionally, the appropriateness of using two different fitness functions was examined.
 In the second part, we simulated a set of \emph{IV} characteristics and evaluated the average performance metrics of various algorithms.
-These curves correspond to the temperature range from 260~K to 350~K. 
+These curves correspond to the temperature range from 260~K to 350~K.
 The simulation took into account the temperature dependencies of parameters, closely resembling real SCs.
 From now on, this case will be referred to as the ‘‘\emph{IV}--set case’’.
 The precise parameter values used in the simulation are listed below.
@@ -281,13 +281,13 @@ The precise parameter values used in the simulation are listed below.
 
 \subsubsection{Single--IV case}\label{SingleIV}
 
-Previous studies \cite{Tada2015Organic,Tada2021} have shown that the nonlinear least squares method (NLSM) can be used to fit experimental data from an organic SC, 
+Previous studies \cite{Tada2015Organic,Tada2021} have shown that the nonlinear least squares method (NLSM) can be used to fit experimental data from an organic SC,
 based on the opposed two--diode model, with minimal fitting error.
 However, the parameter values obtained from the same \emph{IV} curve with repeated applications of NLSM may differ significantly.
 Hence, this approach fails to differentiate between similar \emph{IV} curves derived from SCs with varying parameters.
 
 To overcome this issue, Tada \cite{Tada2021} successfully employed Bayesian estimation of parameters.
-To assess the capabilities of meta--heuristic methods in overcoming similar challenges, 
+To assess the capabilities of meta--heuristic methods in overcoming similar challenges,
 they were applied to an \emph{IV} curve corresponding to such a problematic case.
 The parameter values were taken from \cite{Tada2021}:
 \begin{equation}
@@ -303,8 +303,8 @@ The simulation result is presented on Fig.~\ref{figSigleIV} by symbols.
 \begin{figure}[]
 	\centering
 		\includegraphics[width=0.5\columnwidth]{Fig2}
-	  \caption{The current-voltage characteristic, which used in single-IV case (symbols). 
-        The values from Eq.~(\ref{eqParSingleIV}) were assumed during the simulation. 
+	  \caption{The current-voltage characteristic, which used in single-\emph{IV} case (symbols).
+        The values from Eq.~(\ref{eqParSingleIV}) were assumed during the simulation.
         The fitting results of various meta---heuristic algorithms are represented by lines.}\label{figSigleIV}
 \end{figure}
 
@@ -312,34 +312,38 @@ The simulation result is presented on Fig.~\ref{figSigleIV} by symbols.
 %Будь-ласка, покращ англійську і в наступних реченнях, які я буду пропонувати. Зокрема, треба буде виправити граматичні та стилістичні помилки
 
 \subsubsection{IV--set case}\label{SetIV}
-Employing various meta--heuristic algorithms to analyze a single IV curve
-is insufficient to obtain comprehensive insights into the methods' efficacy in parameter estimation.
-The accuracy of parameter determination is closely tied to their absolute values.
-For instance, an increase in the $R_\mathrm{p}$ value can pose challenges for accurately estimating resistance
-because the shunt will have a lesser impact on the overall shape of IV curve.
-In addition, the ratio between the parameter values also plays a crucial role.
 
-To test the methods across different parameter values, we generated synthetic data in a temperature range from 260 K to 350 K.
-During the simulation process, we considered various temperature dependencies of the parameters.
-We based our approach on known physical mechanisms but focused on achieving the diversity of parameter ratio
-instead of attempting to replicate real--life photovoltaic converters precisely.
-Furthermore, an S--shaped IV curve is observed in solar cells of various types,
-and diverse charge transport mechanisms significantly complicate the selection of
-the only possible temperature dependence for each of the eight model parameters.
-Therefore, we assumed that the current conduction mechanism through D1 is close to tunneling,
-and hence, $I_{01}$, $R_\mathrm{p1}$, and $(n_1kT)$ remain constant,
-with $I_{01}=0.015$~mA, $R_\mathrm{p1}=10^4$~$\Omega$, $n_1kT=7$~eV.
-In the case of D2, the thermionic emission current was suggested
-and $I_{02}$ and $n_2$ increased and decreased, respectively, with temperature rise \cite{Sze2012}:
+Employing various meta--heuristic algorithms to analyze a single \emph{IV} curve 
+is insufficient for gaining comprehensive insights into the efficacy of these methods in parameter estimation.
+Furthermore, the accuracy of parameter determination is closely tied to their exact values.
+For example, an increase in the $R_\mathrm{p}$ value can create challenges in accurately estimating resistance 
+because the shunt will have a reduced impact on the overall shape of the IV curve.
+Additionally, the ratio between the parameter values is also crucial.
+
+To test the methods across different parameter values, we generated synthetic data within a temperature range of 260~K to 350~K.
+In the simulation process, we considered the temperature dependencies of the parameters.
+We based our approach on known physical mechanisms of current flow in NG-SCs and 
+used the reported temperature dependencies of saturation current, ideality factor, shunt resistance, and series resistance.
+However, the main focus was on achieving a diversity of parameter ratios rather 
+than attempting to precisely replicate real--life PV converters of a specific type.
+Furthermore, an S--shaped \emph{IV} curve is observed in various types of solar cells, 
+and diverse charge transport mechanisms significantly complicate the selection of a single possible temperature dependence for each of the eight model parameters.
+
+Therefore, we assumed that the current conduction mechanism through D1 is close to tunneling. 
+Hence, $I_{01}$, $R_\mathrm{p1}$, and $(n_1kT)$ remain constant with the selected values 
+$I_{01}=0.015$~mA, $R_\mathrm{p1}=10^4$~$\Omega$, $n_1kT=7$~eV.
+In the case of D2, the thermionic emission current was suggested, 
+and $I_{02}$ and $n_2$ increased and decreased, respectively, with rising temperature \cite{Sze2012}:
 \begin{eqnarray}
 %\label{eqIV_W}
 I_{02}&=& I_{002}\exp\left(-E_I/kT\right)\,,\\
 n_2&=&1+T^*/T\,,
 \end{eqnarray}
-where $I_{002}$, $E_I$, and $T^*$ are the constants which are independent of temperature.
+where 
+$I_{002}$, $E_I$, and $T^*$ are the constants which are independent of temperature.
 The values of $I_{002}=500$~A, $E_I=0.40$~eV, and $T^*=500$~K were used.
-For $R_\mathrm{p2}$, an exponential temperature dependence was employed,
-as it is widely observed \cite{Kondratenko2019} in modern solar cells for the shunt resistance:
+For $R_\mathrm{p2}$, an exponential temperature dependence was used, 
+as it is commonly observed \cite{Kondratenko2019} in NG-SCs for shunt resistance:
 \begin{equation}
 R_\mathrm{p2}=R_\mathrm{p20}\exp\left(E_R/kT\right)\,
 \end{equation}
@@ -348,7 +352,7 @@ $R_\mathrm{p20}=9$~m$\Omega$,
 $E_R=0.32$~eV.
 The linear temperature dependencies is expected for both $I_\mathrm{ph}$ \cite{Green2003,Eberle2021} and $R_\mathrm{s}$ \cite{Ibrahim2017,Bradaschia2019}:
 \begin{equation}
-y=y_{0}[1+\mathrm{TC}_y(T-300)]\,,
+y=y_{0}[1-\mathrm{TC}_y(T-300)]\,,
 \end{equation}
 where
 $y=I_\mathrm{ph}$ or $R_\mathrm{s}$,
@@ -364,9 +368,8 @@ $\mathrm{TC}_{R_\mathrm{s}}=0.02$~K$^{-1}$,
 and $R_\mathrm{s0}=50$~$\Omega$ were used.
 
 
-
-The set of I–V data was composed of 10 curves,
-which were simulated at 10~K intervals from 260 to 350~K;
+The set of \emph{IV} data consisted of 10 curves, 
+simulated at 10~K intervals from 260~K to 350~K;
 in this case,
 $n_1$,
 $I_{02}$,
@@ -381,13 +384,16 @@ from 2.92 to 2.43,
 from $1.4\cdot10^4$ to 360~$\Omega$,
 from 10 to 100~$\Omega$,
 and from 0.96 to 1.05~mA, respectively.
-The simulation results are presented on Fig.~\ref{figSetIV} by symbols.
+The \emph{IV} curves were simulated over a voltage range of 0-1.0~V with a 10~mV step.
+The simulation results are depicted in Fig.~\ref{figSetIV} using symbols.
+
 \begin{figure}[]
 	\centering
 %		\includegraphics[width=1.0\columnwidth]{IVset}
-		\includegraphics[width=0.5\columnwidth]{IVset}
-	  \caption{Fitting results (lines) for the simulated current-voltage characteristic (symbols).
-             The values from  Sec.~\ref{SetIV} were assumed under simulation.}\label{figSetIV}
+		\includegraphics[width=0.5\columnwidth]{Fig3}
+	  \caption{The current-voltage characteristics, which used in \emph{IV}-set case (symbols).
+        The values from ec.~\ref{SetIV} were assumed during the simulation.
+        The fitting results of various meta---heuristic algorithms are represented by lines.}\label{figSetIV}
 \end{figure}
 
 
