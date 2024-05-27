@@ -309,40 +309,40 @@ The simulation result is presented on Fig.~\ref{figSigleIV} by symbols.
 \end{figure}
 
 
-%Будь-ласка, покращ англійську і в наступних реченнях, які я буду пропонувати. Зокрема, треба буде виправити граматичні та стилістичні помилки
+
 
 \subsubsection{IV--set case}\label{SetIV}
 
-Employing various meta--heuristic algorithms to analyze a single \emph{IV} curve 
+Employing various meta--heuristic algorithms to analyze a single \emph{IV} curve
 is insufficient for gaining comprehensive insights into the efficacy of these methods in parameter estimation.
 Furthermore, the accuracy of parameter determination is closely tied to their exact values.
-For example, an increase in the $R_\mathrm{p}$ value can create challenges in accurately estimating resistance 
+For example, an increase in the $R_\mathrm{p}$ value can create challenges in accurately estimating resistance
 because the shunt will have a reduced impact on the overall shape of the IV curve.
 Additionally, the ratio between the parameter values is also crucial.
 
 To test the methods across different parameter values, we generated synthetic data within a temperature range of 260~K to 350~K.
 In the simulation process, we considered the temperature dependencies of the parameters.
-We based our approach on known physical mechanisms of current flow in NG-SCs and 
+We based our approach on known physical mechanisms of current flow in NG-SCs and
 used the reported temperature dependencies of saturation current, ideality factor, shunt resistance, and series resistance.
-However, the main focus was on achieving a diversity of parameter ratios rather 
+However, the main focus was on achieving a diversity of parameter ratios rather
 than attempting to precisely replicate real--life PV converters of a specific type.
-Furthermore, an S--shaped \emph{IV} curve is observed in various types of solar cells, 
+Furthermore, an S--shaped \emph{IV} curve is observed in various types of solar cells,
 and diverse charge transport mechanisms significantly complicate the selection of a single possible temperature dependence for each of the eight model parameters.
 
-Therefore, we assumed that the current conduction mechanism through D1 is close to tunneling. 
-Hence, $I_{01}$, $R_\mathrm{p1}$, and $(n_1kT)$ remain constant with the selected values 
+Therefore, we assumed that the current conduction mechanism through D1 is close to tunneling.
+Hence, $I_{01}$, $R_\mathrm{p1}$, and $(n_1kT)$ remain constant with the selected values
 $I_{01}=0.015$~mA, $R_\mathrm{p1}=10^4$~$\Omega$, $n_1kT=7$~eV.
-In the case of D2, the thermionic emission current was suggested, 
+In the case of D2, the thermionic emission current was suggested,
 and $I_{02}$ and $n_2$ increased and decreased, respectively, with rising temperature \cite{Sze2012}:
 \begin{eqnarray}
 %\label{eqIV_W}
 I_{02}&=& I_{002}\exp\left(-E_I/kT\right)\,,\\
 n_2&=&1+T^*/T\,,
 \end{eqnarray}
-where 
+where
 $I_{002}$, $E_I$, and $T^*$ are the constants which are independent of temperature.
 The values of $I_{002}=500$~A, $E_I=0.40$~eV, and $T^*=500$~K were used.
-For $R_\mathrm{p2}$, an exponential temperature dependence was used, 
+For $R_\mathrm{p2}$, an exponential temperature dependence was used,
 as it is commonly observed \cite{Kondratenko2019} in NG-SCs for shunt resistance:
 \begin{equation}
 R_\mathrm{p2}=R_\mathrm{p20}\exp\left(E_R/kT\right)\,
@@ -368,7 +368,7 @@ $\mathrm{TC}_{R_\mathrm{s}}=0.02$~K$^{-1}$,
 and $R_\mathrm{s0}=50$~$\Omega$ were used.
 
 
-The set of \emph{IV} data consisted of 10 curves, 
+The set of \emph{IV} data consisted of 10 curves,
 simulated at 10~K intervals from 260~K to 350~K;
 in this case,
 $n_1$,
@@ -399,8 +399,9 @@ The simulation results are depicted in Fig.~\ref{figSetIV} using symbols.
 
 \subsection{Meta--heuristic algorithms}\label{MHA}
 In the literature, meta--heuristics are frequently categorized based on their sources of inspiration.
-This categorization involves incorporating elements of true simulations and principles that incorporate stochasticity,
-with the objective of emulating diverse characteristics observed in biological behavior, the lives of creatures in nature, human behavior, or natural phenomena.
+This categorization involves blending true simulations with stochastic elements 
+to mimic various biological behaviors, natural phenomena, and human behavior characteristics.
+
 On this basis, any meta--heuristic algorithm can fall into one of the following main classes \cite{WhiteShark,Gannet,Dandelion}:
 evolution-based methods (emulate the principles of evolutionary behavior observed in creatures in nature by relying on the concept of survival of the fittest),
 swarm intelligence--based methods (simulate the collective, dynamic, intelligent, and concerted gregarious conduct of collections of flocks or communities found in nature),
@@ -412,31 +413,33 @@ Generally, there are hundreds of meta--heuristic optimization methods available.
 While we acknowledge that our selection may not be fully comprehensive,
 we utilized 14 methods, representing all classes mentioned above,
 to tackle the parameter estimation task within the framework of the opposed two-diode model for a solar cell.
-Hereafter, we provide a succinct description of each method alongside the parameters employed during the fitting process.
+Hereafter, we will briefly describe each method and the parameters used during the fitting process.
 
 \emph{Differential evolution} (\textbf{DE}).
 DE is one of the classical methods,
-and  it is based on the natural selection law and uses the randomly generated initial population,
+and  it is based on the natural selection law, utilizing randomly generated initial populations, 
 differential mutation, and probability crossover \cite{DEWang}.
-During the implementation, we employed a penalty function suggested by Ishaque \emph{et al} \cite{P-DE_Ishaque}.
-Besides, according to Wang and Ye \cite{DEWang}, the values of mutation scaling factor $F=0.8$,
-crossover rate $C\!r=0.3$, and population size $N\!p=8\times D=64$ were used in this work.
+We used a penalty function recommended by Ishaque \emph{et al} \cite{P-DE_Ishaque} during the implementation process.
+According to Wang and Ye \cite{DEWang}, this work used the following values: 
+mutation scaling factor $F=0.8$, 
+crossover rate $C\!r=0.3$, 
+and population size $N\!p=8\times D=64$.
 
 \emph{Adaptive differential evolution with the Lagrange interpolation argument} (\textbf{ADELI}).
-The method is based on DE, which integrates an adaptive local search scheme with Lagrange interpolation \cite{ADELI}.
-This incorporation aims to enhance the exploitation capability and accelerate the convergence speed.
-In ADELI, the scaling factor and crossover rate are set to self--adapting to optimize the results.
+The method is based on DE and incorporates an adaptive local search algorithm using Lagrange interpolation \cite{ADELI}.
+This incorporation aims to enhance the exploitation capability and speed up the convergence.
+In ADELI, the scaling factor and crossover rate are self-adapting to optimize the results.
 We used parameter values recommended by Huang \emph{et al} \cite{ADELI} during the implementation process.
 Additionally, we set $N\!p$ to 64 for our numerical experiments.
 
 \emph{Differential evolution with neighborhood--based adaptive evolution mechanism} (\textbf{NDE}).
-The method uses a mutation strategy, which takes into account neighborhood and individual information, and an adaptive evolution mechanism \cite{NDE}.
-The determination of $F$ and $C\!r$ values is achieved through the utilization of the weighted adaptive procedure \cite{Tanabe2014},
-and an adaptive adjustment of the population size is implemented using a simple reduction method (from $10\times D=80$ to 5).
+The method employs a mutation strategy that considers neighborhood and individual information, along with an adaptive evolutionary mechanism \cite{NDE}.
+$F$ and $C\!r$ values are determined using a weighted adaptive procedure \cite{Tanabe2014}.
+The population size is adjusted adaptively using a simple reduction method from $10\times D=80$ to 5.
 
 \emph{Success history based DE with hybridization mutation strategies and population size reduction} (\textbf{EBLSHADE}).
-The method is the hybridization framework between \emph{pbest} and \emph{ord\_pbest} mutation strategies
-and stores a set of $Cr$ and $F$ values that have performed well in the recent past \cite{EBLSHADE}.
+The method represents a hybridization framework between the \emph{pbest} and \emph{ord\_pbest} mutation strategies. 
+It stores a set of $Cr$ and $F$ values that have shown good performance in the recent past \cite{EBLSHADE}.
 A linear $N\!p$ reduction (from $18\times D=144$ to 4) is used as well.
 
 \emph{Particle swarm optimization} (\textbf{PSO}).
@@ -445,6 +448,8 @@ such as bird flocking, fish schooling, and swarm theory.
 According to Ye et al. \cite{PSO},  the values of learning factors $l_1=l_2=2$,
 the final weight and the initial weight $w_{max}=0.9$, $w_{min}=0.4$, and
 $N\!p=15\times D=120$ are used in this work.
+
+%Будь-ласка, покращ англійську в наступних реченнях, які я буду пропонувати. Зокрема, треба буде виправити граматичні та стилістичні помилки
 
 The \emph{modified artificial bee colony} (\textbf{MABC}) algorithm is based
 on the intelligent foraging behavior of honey bee swarms \cite{MABC}.
