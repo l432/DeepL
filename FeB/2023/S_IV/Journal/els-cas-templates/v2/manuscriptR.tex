@@ -399,7 +399,7 @@ The simulation results are depicted in Fig.~\ref{figSetIV} using symbols.
 
 \subsection{Meta--heuristic algorithms}\label{MHA}
 In the literature, meta--heuristics are frequently categorized based on their sources of inspiration.
-This categorization involves blending true simulations with stochastic elements 
+This categorization involves blending true simulations with stochastic elements
 to mimic various biological behaviors, natural phenomena, and human behavior characteristics.
 
 On this basis, any meta--heuristic algorithm can fall into one of the following main classes \cite{WhiteShark,Gannet,Dandelion}:
@@ -417,19 +417,26 @@ Hereafter, we will briefly describe each method and the parameters used during t
 
 \emph{Differential evolution} (\textbf{DE}).
 DE is one of the classical methods,
-and  it is based on the natural selection law, utilizing randomly generated initial populations, 
+and  it is based on the natural selection law, utilizing randomly generated initial populations,
 differential mutation, and probability crossover \cite{DEWang}.
-We used a penalty function recommended by Ishaque \emph{et al} \cite{P-DE_Ishaque} during the implementation process.
-According to Wang and Ye \cite{DEWang}, this work used the following values: 
-mutation scaling factor $F=0.8$, 
-crossover rate $C\!r=0.3$, 
+We used a penalty function recommended by Ishaque \emph{et al}. \cite{P-DE_Ishaque} during the implementation process.
+According to Wang and Ye \cite{DEWang}, this work used the following values:
+mutation scaling factor $F=0.8$,
+crossover rate $C\!r=0.3$,
 and population size $N\!p=8\times D=64$.
 
 \emph{Adaptive differential evolution with the Lagrange interpolation argument} (\textbf{ADELI}).
-The method is based on DE and incorporates an adaptive local search algorithm using Lagrange interpolation \cite{ADELI}.
-This incorporation aims to enhance the exploitation capability and speed up the convergence.
-In ADELI, the scaling factor and crossover rate are self-adapting to optimize the results.
-We used parameter values recommended by Huang \emph{et al} \cite{ADELI} during the implementation process.
+This improved version of DE incorporates three main elements: 
+local search using Lagrange interpolation, self-adaptive DE control parameter settings, 
+and an adaptive mutational strategy \cite{ADELI}.
+The first element involves interpolating three potential solutions using a 
+polynomial function to calculate the local minimum value. 
+The self-adaptive control parameter settings include randomly altering the 
+scaling factor and crossover rate values in each iteration. 
+The adaptive mutational strategy determines the probability of 
+employing Lagrange interpolation in each generation based on the best fitness function value.
+These incorporations aim to enhance exploitation capability and speed up the convergence.
+We used parameter values recommended by Huang \emph{et al.} \cite{ADELI} during the implementation process.
 Additionally, we set $N\!p$ to 64 for our numerical experiments.
 
 \emph{Differential evolution with neighborhood--based adaptive evolution mechanism} (\textbf{NDE}).
@@ -438,7 +445,7 @@ $F$ and $C\!r$ values are determined using a weighted adaptive procedure \cite{T
 The population size is adjusted adaptively using a simple reduction method from $10\times D=80$ to 5.
 
 \emph{Success history based DE with hybridization mutation strategies and population size reduction} (\textbf{EBLSHADE}).
-The method represents a hybridization framework between the \emph{pbest} and \emph{ord\_pbest} mutation strategies. 
+The method represents a hybridization framework between the \emph{pbest} and \emph{ord\_pbest} mutation strategies.
 It stores a set of $Cr$ and $F$ values that have shown good performance in the recent past \cite{EBLSHADE}.
 A linear $N\!p$ reduction (from $18\times D=144$ to 4) is used as well.
 
@@ -449,42 +456,51 @@ According to Ye et al. \cite{PSO},  the values of learning factors $l_1=l_2=2$,
 the final weight and the initial weight $w_{max}=0.9$, $w_{min}=0.4$, and
 $N\!p=15\times D=120$ are used in this work.
 
-%Будь-ласка, покращ англійську в наступних реченнях, які я буду пропонувати. Зокрема, треба буде виправити граматичні та стилістичні помилки
 
-The \emph{modified artificial bee colony} (\textbf{MABC}) algorithm is based
-on the intelligent foraging behavior of honey bee swarms \cite{MABC}.
+The \emph{modified artificial bee colony} (\textbf{MABC}) algorithm is inspired 
+by the intelligent foraging behavior of honey bee swarms \cite{MABC}.
 The control parameters include the population size ($N\!p=8\times D=64$)
-and the maximum number of generations after which each non-improved food source is to be discarded ($L_{imit}=36$).
+and the maximum number of generations, ($L_{imit}=36$), after which each non-improved food source is discarded.
+
 
 \emph{Chaotic Whale Optimization Algorithm} (\textbf{CWOA}).
-WOA draws inspiration from the hunting behavior of humpback whales \cite{WOA}.
-On the other hand, CWOA employs chaotic maps to compute and dynamically adjust its internal parameters \cite{CWOA}.
-In our study, we utilized the Singer chaotic map and set $N\!p=100$ for the identification of the parameters of the solar cell.
+Initial algorithm (WOA) draws inspiration from the hunting behavior of humpback whales \cite{WOA}.
+Whereas CWOA employs chaotic maps to compute and dynamically adjust its internal parameters \cite{CWOA}.
+In our study, we utilized the Singer chaotic map and set $N\!p=100$ to identify the SC parameters.
 
-The \emph{Neural Network Algorithm} (\textbf{NNA}) is a meta--heuristic algorithm that draws inspiration from
-both biological nervous systems and artificial neural networks \cite{NNA}.
-The recommended \cite{NNA} value $N\!p=50$ is used in our paper.
+The \emph{neural network algorithm} (\textbf{NNA}) is a meta--heuristic method 
+inspired by both biological nervous systems and artificial neural networks \cite{NNA}. 
+In our paper, we used the recommended \cite{NNA} value of $N\!p=50$.
 
-The \emph{teaching learning based optimization} (\textbf{TLBO}) algorithm employs the concept of passing on knowledge
-within a classroom.
-Similar to learners acquiring knowledge from a teacher and interacting with their peers,
-TLBO incorporates such interactions \cite{TLBO_Patel}.
-In this study, a value of $N\!p=100$ is utilized.
+The \emph{teaching learning based optimization} (\textbf{TLBO}) algorithm utilizes the idea of knowledge transfer within a classroom.
+Similar to learners acquiring knowledge from a teacher and interacting with their peers, 
+TLBO incorporates these interactions \cite{TLBO_Patel}.
+In this study, a value of $N\!p=100$ is used.
 
 \emph{Generalized oppositional teaching learning based optimization} (\textbf{GOTLBO}).
-This method integrates a concept that incorporates both the current estimate
-and its opposite estimate simultaneously into the original TLBO algorithm
-through the initialization step and generation jumping \cite{GOTLBO}.
+This method utilizes generalized opposition-based learning to enhance basic TLBO 
+through the initialization step and generation jumping, improving convergence speed \cite{GOTLBO}.
 The values of jumping rate $J\!r=1.0$ and $N\!p=20$ were used.
 
 \emph{Simplified teaching-learning based optimization algorithm} (\textbf{STLBO}).
-In STLBO, an elite strategy is employed to improve the searching capability,
-and a the chaotic map is used to enrich the uniformity of random values in the mutation phase \cite{STLBO}.
+In STLBO, the teacher phase is redefined and simplified, while the learner phase remains unchanged \cite{STLBO}. 
+In the redefined teacher phase, the mutation of potential solutions is possible, 
+with the mutation probability decreasing as the iteration number increases. 
+During the early stages, a higher mutation probability helps explore a larger solution space 
+and approach the optimum quickly. 
+However, in the latter stages of optimization, when the teacher (best solution) is near the global optimum, 
+a lower mutation probability serves as a fine-tuning mechanism 
+to enhance local search capability, proving to be an effective strategy.
+To enrich the mutation behavior, a chaotic sequence is introduced to generate values for the mutation parameters. 
+A chaotic sequence is a deterministic, random-like process found in nonlinear dynamic systems, 
+which is non-periodic, non-converging, and bounded \cite{May1976}. 
+Additionally, the elite strategy replaces the worst solutions in the current population with new solutions based on objective function values.
 The logistic chaotic map and $N\!p=20$ were used.
 
 
+
 \emph{Water wave optimization} (\textbf{WW}) takes inspiration from shallow water wave models
-and borrows ideas from wave propagation, refraction, and breaking \cite{WW}.
+and incorporates  ideas from wave propagation, refraction, and breaking \cite{WW}.
 WW is easy to implement with a small-size population, and there are four control parameters:
 the maximum wave height $h_{max}$,
 the wavelength reduction coefficient $\alpha$,
@@ -498,14 +514,14 @@ $k_{max}=\min(12,D/2)=4$, and $\beta$ linearly decreased from 0.25 to 0.001.
 Jaya algorithm is based on the concept
 that the solution obtained for a given problem should move toward the best solution and should
 avoid the worst solution and does not require any algorithm-specific parameter \cite{JAYA}.
-In IJAYA, a self-adaptive weight is introduced to adjust the tendency of approaching the best solution
-and avoiding the worst solution;
-an experience-based learning strategy is employed to maintain the population diversity and enhance the exploration ability,
-and a chaotic elite learning method is proposed to refine the quality of the best solution in each generation \cite{IJAYA}.
+In IJAYA \cite{IJAYA}, a self-adaptive weight mechanism is introduced to balance 
+the approach towards the optimal solution while simultaneously avoiding the suboptimal solutions. 
+An experience-based learning strategy is utilized to preserve population diversity and enhance exploration capabilities. 
+Additionally, a chaotic elite learning method is proposed to refine the quality of the best solution in each generation.
 The logistic chaotic map and $N\!p=4\times D=32$ were used.
 
 \emph{Improved sine cosine algorithm} (\textbf{ISCA}).
-SCA based on simulating the behaviors of sine and cosine mathematical functions \cite{SCA}.
+SCA is based on simulating the behaviors of sine and cosine mathematical functions \cite{SCA}.
 ISCA implementation included a modified position-updating equation based on inertia weight
 ($w_{start}=1$, $w_{end}=1$),
 a nonlinear conversion parameter strategy based on the Gaussian function
@@ -513,12 +529,14 @@ a nonlinear conversion parameter strategy based on the Gaussian function
 the creation of the opposite population to jump out from the local optima with $J\!r=0.1$ \cite{ISCA3},
 a greedy selection, and $N\!p=30$.
 
-The majority of the utilized algorithms demonstrate excellent performance when
-it comes to parameter estimation of SCs within conventional models (SDM or DDM) \cite{CWOA,DEWang,GOTLBO,IJAYA,MABC,PSO,STLBO,TLBO_Patel,LSHADE,IWOA}.
+The majority of the algorithms used show excellent performance 
+in estimating the SC parameter within conventional models such as SDM or DDM
+\cite{CWOA,DEWang,GOTLBO,IJAYA,MABC,PSO,STLBO,TLBO_Patel,LSHADE,IWOA}.
+
 
 In meta--heuristic optimization methods, the quality of the extracted parameters is evaluated using the fitness function at
 every iteration.
-In our investigation, absolute error and square error fitness functions were under consideration:
+In our investigation, we considered absolute error and square error fitness functions:
 \begin{gather}
 \label{eqFae}
 F_\mathrm{AE}(Y)= \sum_{k=1}^p \left|V^\mathrm{tr}(I_k)-V^\mathrm{cal}(I_k,Y)\right|\,,\\
@@ -527,15 +545,13 @@ F_\mathrm{SE}(Y)= \sum_{k=1}^p \left[V^\mathrm{tr}(I_k)-V^\mathrm{cal}(I_k,Y)\ri
 \end{gather}
 where
 $V^\mathrm{tr}(I_k)$ is the simulated value of voltage at current $I_k$,
-$V^\mathrm{cal}(I_k,Y)$ is the calculated values of voltage, which can be obtained
-by Eqs.~(\ref{eqIV_g})--(\ref{eqx2}),
-for given set of parameters (i.e. $Y = \{I_{01},n_1,R_\mathrm{p1},I_{02},n_2,R_\mathrm{p2},R_\mathrm{s},I_\mathrm{ph}\}$)
-at current $I_k$,
-and $p$ is the total number of voltage steps in the IVC.
+$V^\mathrm{cal}(I_k,Y)$ represents the voltage, 
+which is calculated using a set of parameters 
+(i.e. $Y = \{I_{01},n_1,R_\mathrm{p1},I_{02},n_2,R_\mathrm{p2},R_\mathrm{s},I_\mathrm{ph}\}$)
+estimated with the help of an algorithm and Eqs.~(\ref{eqIV_g})--(\ref{eqx2});
+and $p$ is the total number of voltage steps in the \emph{IV} characteristic.
 
-
-
-We executed each tested algorithm for $N_\mathrm{runs}=51$ independent runs on each simulated IV curve
+We executed each tested algorithm for $N_\mathrm{runs}=51$ independent runs on every  simulated \emph{IV} curve
 to generate the statistical results.
 The search ranges were set as follows:
 
@@ -550,10 +566,14 @@ $R_\mathrm{s}(\Omega)\in[0.1,1000]$,
 $I_\mathrm{ph}(\mathrm{mA})\in[10^{-3},100]$.
 
 
+
+
+
 \subsection{Evaluation metrics}\label{EvalCr}
 
-To better show the performance differences between compared algorithms,
-several evaluation metrics are considered, which can be described as follows:
+To better illustrate the performance differences between the algorithms being compared, 
+we considered several evaluation metrics. 
+These metrics can be described as follows:
 \begin{enumerate}[1.]
 \item
 Mean value (MEAN), median value (MEDIAN), standard deviance (STD), and interquartile range (IQR)
@@ -562,27 +582,25 @@ for each two--diode model parameter $y$
 MEAN and MEDIAN are often used to measure the solution quality.
 The closer the obtained MEAN and MEDIAN values are to the actual parameter values,
 the closer the obtained solution is to the optimal solution.
-To quantify, we used the  absolute percentage of error (APE):
+To quantify, we used the  absolute percentage error (APE):
 \begin{equation}
 \label{eqAPE}
 \mathrm{APE}\,(y)= \left| \frac{y-y^\mathrm{tr}}{y^\mathrm{tr}}\right|\,,
 \end{equation}
 where
-$y^\mathrm{tr}$ is the parameter value used during the IV curve simulation.
+$y^\mathrm{tr}$ is the parameter value used during the \emph{IV} curve simulation.
 APE was calculated for $y_i$, obtained by one--run algorithm application ($\mathrm{APE}_i$),
 MEAN ($\mathrm{APE}_\mathrm{MEAN}$), and MEDIAN ($\mathrm{APE}_\mathrm{MEDIAN}$).
 Reducing STD and IQR result in a more stable algorithm performance.
 
 \item
-%Run time average $t_\mathrm{run}$: is the average run time in seconds for an
-%individual optimizer on a IV curve.
-Another evaluation criterion used to compare the algorithms’ performance is to compare their execution time.
+Another criterion for evaluating and comparing algorithm performance is their execution time.
 We used average run time $t_\mathrm{run}$ in seconds for an
 individual optimizer on one IV curve.
 
 \item
-Root mean square percentage of error (RMSPE) is a statistical measure that indicates
-how well the fitted curve matches the actual IV curve:
+The root mean square percentage error (RMSPE) is a statistical measure that indicates 
+how well the fitted curve matches the actual (simulated) \emph{IV} curve.
 \begin{equation}
 \label{eqRMSPE}
 \mathrm{RMSPE}= \sqrt{\frac{1}{p} \sum_{k=1}^p \left[\frac{V^\mathrm{tr}(I_k)-V^\mathrm{cal}(I_k,Y)}{V^\mathrm{tr}(I_k)} \right]^2}\,.
@@ -595,7 +613,7 @@ This test assigns a rank to all the scores considered as one group and then sums
 \item
 Friedman, Friedman Aligned, and Quade tests are used for comparing the performance differences
 among optimization algorithms
-(multiple comparisons $1\times N$ with a control method).
+(multiple comparisons with a control method).
 Therefore, the average rankings of the algorithms according to the
 tests are reported.
 Besides, the post--hoc  Finner, Holm, Hochberg, and Holland procedures
@@ -609,36 +627,62 @@ and identify the differences.
 \end{enumerate}
 
 
+Wilcoxon test is used to assess whether there are statistically significant differences between pairs of algorithms. 
+Meanwhile, the Friedman, Friedman Aligned, and Quade tests are employed when it's necessary to compare three or more related groups of results (algorithms). 
+Friedman test evaluates whether there are statistically significant differences between the medians of the ranks of these algorithms. 
+Friedman Aligned Ranks test addresses the issue of rank correlation in the original Friedman test, providing more precise results. 
+Finally, the Quade test helps account for the effects of observed factors, such as random variations, 
+to more accurately determine the statistical differences between groups.
+
+The main drawback of the Friedman, Friedman Aligned, and Quade tests is that 
+they can only detect significant differences over the whole set of multiple comparisons, 
+making it difficult to establish proper comparisons between specific algorithms \cite{Derrac2011}.
+To address these issues, it is necessary to employ post-hoc procedures.
+Post-hoc methods are applied after the initial analysis and allow for controlling the overall error rate 
+when comparing multiple algorithms, thereby reducing the likelihood of randomly identifying statistically significant differences.
+
+$1\times N$ designs help determine if there are statistically significant differences between one algorithm 
+(the control algorithm) and each of the other algorithms. 
+Multidimensional comparisons $N\times N$ designs involve analyzing statistical differences between all possible pairs of algorithms.
+Typically, different post-hoc procedures are used for $1\times N$ and $N\times N$ comparisons.
+Description of all the used post-hoc procedures can be found in Derrac \emph{et al.} \cite{Derrac2011}.
+
+All mentioned methods are standard for comparing metaheuristic algorithms \cite{Derrac2011}. 
+Their comprehensive application enables making the most well-founded conclusions.
+
+
 
 
 \section{Numerical results and discussion}\label{Result}
-%Results and analysis of the experiment
 
-\subsection{Comparison of algorithms time}
-In meta--heuristic algorithms, a different termination can be defined.
+%Будь-ласка, покращ англійську в наступних реченнях, які я буду пропонувати. Зокрема, треба буде виправити граматичні та стилістичні помилки
+%якщо можна, окрім виправленого речення, наводь інформацію про зміни, які зроблені
+
+\subsection{Comparison of algorithm convergence}
+In meta--heuristic algorithms, various termination conditions can be defined.
 For instance, a termination condition can be a specific number of iterations $N_\mathrm{it}$,
 constraints on the number of fitness function evaluations $N_\mathrm{FE}$,
 a specific rate of precision,
 a specific time,
 no sign of change in solutions after a specific number of iterations,
 or a combination of these cases \cite{IntelligentChaoticClonal}.
-In this study, the primary focus was on the accuracy of parameter estimation.
-Therefore to ensure that both exploration and exploitation processes could be fully realized
-by each algorithm with an equal opportunity, the termination criterion used was the absence of changes in the solution.
+In this study, the main focus was on accurately estimating parameters.
+Therefore, to ensure that both exploration and exploitation processes 
+could be fully realized by each algorithm with an equal opportunity, 
+the termination criterion used was the absence of changes in the solution.
 Based on this condition, the required number of iterations $N_\mathrm{it}$ was determined,
 and the corresponding calculation time was measured $t_\mathrm{run}$.
-In addition, the $N_\mathrm{FE}$ was evaluated.
+Fig.~S1 in the supplementary material shows the convergence curve for the algorithms used.
+In addition, the $N_\mathrm{FE}$ were evaluated.
 
 All the applied algorithms have been coded and implemented in Embarcadero\textregistered Delphi $10.3$ programming software.
 The run time was estimated by using WinAPI-functions \emph{QueryPerformanceCounter()} and \emph{QueryPerformanceFrequency()}.
 The experiments were performed on Windows 10 Pro 64-bit,
 2.9 GHz AMD Ryzen 7 4800H CPU, and 8~GB RAM.
 
-%перекласти на англійську "Тому для того, щоб дати кожному з алгоритмів шанс повністю реалізувати процеси exploration and exploitation, кретиріем зупинки був вибраний наступний"
-
 
 \begin{table}[<options>]
-\caption{Comparison of optimization algorithms for single IV curve parameter estimation}\label{tblRun}
+\caption{The convergence parameters for metaheuristic algorithms in a single--\emph{IV} case}\label{tblRun}
 \begin{tabular*}{\tblwidth}{@{}LCCC@{}}
 \toprule
 Algorithm  &  $N_\mathrm{it}$ & $N_\mathrm{FE}$ & $t_\mathrm{run}$ (s)\\ % Table header row
@@ -664,7 +708,7 @@ WW & 3000& 35000&$1.4\pm0.1$ \\
 The obtained results are listed in Table~\ref{tblRun}.
 As can be seen from the table, the number of iterations required for an algorithm does not always correlate directly
 with the number of fitness function evaluations or computation time needed to converge.
-The reason is the unique features of each algorithm.
+The reason for this is the unique mathematical operations required by each algorithm.
 The run time of the algorithms varies considerably, with a range of 1.5 seconds to 93 seconds.
 Notably, WW, ISCA, NNA, and STLBO converge the fastest, while ADELI, TLBO, and MABC require the most time.
 
@@ -672,17 +716,18 @@ Notably, WW, ISCA, NNA, and STLBO converge the fastest, while ADELI, TLBO, and M
 
 To choose the more suitable fitness function, we evaluated each algorithm using the IV curve generated from the parameters
 provided in Eq.~(\ref{eqParSingleIV}) with both $F_\mathrm{AE}$ and $F_\mathrm{SE}$ functions (see Eqs.~(\ref{eqFae}) and (\ref{eqFse})).
-Afterward, the results obtained using each of the functions were compared through pairwise comparisons.
-In this case, the absolute percentage error values obtained for one-run algorithm application ($\mathrm{APE}_i$) were used.
+The results obtained from each of the functions were then compared with each other using pairwise comparisons.
+The absolute percentage error values obtained for one-run algorithm application ($\mathrm{APE}_i$) were used.
 Table~\ref{tblFF} gives the statistical results produced by Wilcoxon sign-rank test with a significant level $\alpha = 0.05$.
-A cell marked with the symbol ``SE'' indicates that estimation of parameter specified in the column by the algorithm with $F_\mathrm{SE}$ outperforms result obtained by this  algorithm with $F_\mathrm{AE}$.
-A cell marked with the symbol ``AE'' indicates better results for function $F_\mathrm{AE}$.
-In the case of the symbol ``='', there is no significant difference between function $F_\mathrm{SE}$ and function $F_\mathrm{AE}$ aplication.
+The symbol ``SE'' in a cell indicates that the estimation of the parameter (specified in the column title) 
+by the algorithm (defined in the first column) with $F_\mathrm{SE}$ outperforms the result obtained by this algorithm with $F_\mathrm{AE}$.
+A cell with ``AE'' indicates better results for function $F_\mathrm{AE}$.
+In the case of the symbol ``='', there is no significant difference between function $F_\mathrm{SE}$ and function $F_\mathrm{AE}$ application.
 
 
 
 \begin{table}[<options>]
-\caption{Wilcoxon signed ranks test results of fitness functions comparisons with a level of significance $\alpha = 0.05$}\label{tblFF}
+\caption{Wilcoxon signed rank test results (level of significance $\alpha = 0.05$) for comparing fitness functions.}\label{tblFF}
 \begin{tabular*}{\tblwidth}{@{}LCCCCCCCCC@{}}
 \toprule
 \multirow{2}{*}{Algorithm}& \multicolumn{9}{C}{Parameter} \\
@@ -707,43 +752,45 @@ WW &\cellcolor{ligthYellow}=  &\cellcolor{ligthYellow}=  & \cellcolor{ligthRed}S
 \end{tabular*}
 \end{table}
 
-As evidenced in the provided data, utilizing the square error fitness function more frequently yields better outcomes in comparison to $F_\mathrm{AE}$.
-In rare cases, the absolute error fitness function can enhance the alignment between the fitted and actual curves,
-as well as improve the accuracy of some parameter estimations by PSO, IJAVA, CWOA, and WW algorithms.
+As evidenced in the provided data, utilizing the square error fitness function more frequently yields better outcomes than $F_\mathrm{AE}$.
+In some rare cases, the absolute error fitness function can improve the alignment 
+between the fitted and actual curves and 
+enhance the accuracy of parameter estimations by PSO, IJAVA, CWOA, and WW algorithms.
 However, RMSPE is not the most crucial factor in determining model parameters, and the mentioned methods,
 as will be shown later, do not provide the highest accuracy.
-As such, the results presented in the following sections are exclusive to the application of the $F_\mathrm{SE}$ function.
-Therefore, it can be recommended that researchers consider
-the square error fitness function as a more effective and reliable option for the task of opposed two--diode model parameter estimation.
+As such, the results presented in the following sections exclusively apply the $F_\mathrm{SE}$ function.
+%$F_\mathrm{SE}$​ function.
+%As such, the results presented in the following sections exclusively apply the $F_\mathrm{SE}$​ function.
+Therefore, it is recommended that researchers consider 
+the squared error fitness function as a more effective and reliable option for the task of opposed two-diode model parameter estimation.
 
-%Estimation of parameters for solar cells with S--shaped current--voltage characteristics using meta--heuristic algorithms
 
-\subsection{Performance comparison}
+\subsection{Comparison of algorithm performance}
 
-\subsubsection{Evaluation of single--IV}
-
-In this subsection, we show and analyze the statistical results of different meta--heuristic algorithm
-applications to an IV curve, simulated with Eq.~(\ref{eqParSingleIV}) values.
-Several typical fitting results of the synthesized curve are shown in Fig.~\ref{figSigleIV}.
+\subsubsection{Parameter extraction in single--IV case}
+In this subsection, we present and analyze the statistical results of 
+applying different meta-heuristic algorithms to an \emph{IV} curve simulated with the values from Eq.~(\ref{eqParSingleIV}).
+Several typical fitting results are shown in Fig.~\ref{figSigleIV}.
 A more comprehensive version, including the fitting results obtained using each algorithm,
 is provided in the supplementary materials (figure S1).
-It can be seen, that the closest match between the approximation curves and the IV curve points is
+It can be seen that the closest match between the approximation curves and the \emph{IV} curve points is 
 observed for EBLSHADE, ADELI, NDE, IJAYA, TLBO, and STLBO.
-On the contrary, the PSO and GOTLBO fitting curves had the least replication of the original data.
+On the contrary, the fitting curves of PSO and GOTLBO had the least replication of the original data.
 
-Fig.~\ref{figBoxSingleIV} shows the results of cell parameters estimation by comparative algorithms.
-In addition, the figure presents the RMSPE data,
-which confirms the conclusions of the visual comparison between the fitting lines and the points of the IV curve.
-The results in terms of MEAN, MEDIAN, STD, and IQR are tabulated as well (table~S1 in the supplementary material).
+Fig.~\ref{figBoxSingleIV} shows the results of SC parameters estimation by algorithms to be compared.
+Additionally, the figure presents the RMSPE data, 
+which confirms the conclusions of the visual comparison between the fitting lines and the points of the \emph{IV} curve. 
+The results for MEAN, MEDIAN, STD, and IQR are presented in table~S1 of the supplementary material.
 
 
 \begin{figure*}[]
 	\centering
-		\includegraphics[width=.32\textwidth]{Fig3a}
-        \includegraphics[width=.32\textwidth]{Fig3b}
-        \includegraphics[width=.32\textwidth]{Fig3c}
-	  \caption{Box--plot of  two--diode model parameter estimation from single IV curve using different optimizers.
-      The squares are the mean values, and the dashed lines correspond to the true parameter values.}\label{figBoxSingleIV}
+		\includegraphics[width=.32\textwidth]{Fig4a}
+        \includegraphics[width=.32\textwidth]{Fig4b}
+        \includegraphics[width=.32\textwidth]{Fig4c}
+	  \caption{Box--plot of parameter estimation results by using different optimization algorithms. 
+      The single--\emph{IV} case.
+      The squares represent the mean values, and the dashed lines correspond to the true parameter values.}\label{figBoxSingleIV}
 \end{figure*}
 
 We would like to stress the following.
@@ -779,7 +826,7 @@ Furthermore, tests were employed for a composite parameter as well.
 This parameter, referred to as ``Comp'' hereafter, includes $\mathrm{APE}_\mathrm{MEDIAN}$ for each of the eight defined model parameters,
 the median value for RMSPE, and $t_\mathrm{run}$.
 This parameter may provide the most valuable insights for comparing algorithms. However, it is important to note that the value of $N_\mathrm{pr}$ is only 10.
-According to Derrac \emph{et al} \cite{Derrac2011}, the number of case problems should be $N_\mathrm{pr}\geq 2k$,
+According to Derrac \emph{et al.} \cite{Derrac2011}, the number of case problems should be $N_\mathrm{pr}\geq 2k$,
 where $k$ is the number of algorithms ($k=14$ in our study).
 Therefore, the use of the Comp parameter is not strictly rigorous.
 Indeed, it would have been possible to increase the $N_\mathrm{pr}$ value using, for example, $\mathrm{APE}_\mathrm{MEAN}$.
@@ -1141,7 +1188,7 @@ in the following subsection, dedicated to the analysis of IV curves with differe
 
 
 
-\subsubsection{Evaluation of IV--set}
+\subsubsection{Parameter extraction in IV--set case}
 
 
 \begin{figure*}[]
@@ -1392,6 +1439,14 @@ Despite the minimal advantage in terms of win counts in $1\times N$ comparisons
 we hesitate to declare STLBO as the best.
 In our opinion, STLBO and ADELI both hold the top position in the competition conducted in this study.
 
+
+
+Over the last few decades, researchers have strived to enhance the performance of metaheuristic algorithms using various concepts, including \cite{Kepler}:
+hybridization between two or more metaheuristics, quantum computing concept, opposition-based theory, chaotic maps,  L\'{e}vy-Flight strategy.
+Our research has revealed that the most promising approaches to solving 
+the parameter estimation problem for S-shaped \emph{IV} curves involve the use of enhanced mutation strategies. 
+Specifically, this entails employing chaotic maps to tune mutation coefficients and utilizing the elite strategy (STLBO). 
+Furthermore, highly productive results were achieved through the application of nonlinear (polynomial) approximation of potential solutions (ADELI).
 
 
 

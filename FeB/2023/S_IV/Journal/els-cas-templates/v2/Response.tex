@@ -46,7 +46,7 @@ The research objective was added in the introduction part (page~2, last paragrap
 
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
-Figure captions were revised. 
+Figure captions were revised.
 
 The Fig.~3 is referenced on page 5 in the revised manuscript (last line in Subsection~2.2.2).
 
@@ -180,16 +180,45 @@ doi: https://doi.org/10.1016/j.enganabound.2023.08.018''.
 
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
-More detailed descriptions of the STLBO and ADELI algorithms were added.
+
+ADELI improved version of DE incorporates three main elements:
+local search using Lagrange interpolation, self-adaptive DE control parameter settings,
+and an adaptive mutational strategy \cite{ADELI}.
+The first element involves interpolating three potential solutions using a
+polynomial function to calculate the local minimum value.
+The self-adaptive control parameter settings include randomly altering the
+scaling factor and crossover rate values in each iteration.
+The adaptive mutational strategy determines the probability of
+employing Lagrange interpolation in each generation based on the best fitness function value.
+These incorporations aim to enhance exploitation capability and speed up the convergence.
+
+The information was added to the revised manuscript (page~6, paragraph~2).
+
+In STLBO, the teacher phase is redefined and simplified, while the learner phase remains unchanged \cite{STLBO}.
+In the redefined teacher phase, the mutation of potential solutions is possible,
+with the mutation probability decreasing as the iteration number increases.
+During the early stages, a higher mutation probability helps explore a larger solution space
+and approach the optimum quickly.
+However, in the latter stages of optimization, when the teacher (best solution) is near the global optimum,
+a lower mutation probability serves as a fine-tuning mechanism
+to enhance local search capability, proving to be an effective strategy.
+To enrich the mutation behavior, a chaotic sequence is introduced to generate values for the mutation parameters.
+A chaotic sequence is a deterministic, random-like process found in nonlinear dynamic systems,
+which is non-periodic, non-converging, and bounded \cite{May1976}.
+Additionally, the elite strategy replaces the worst solutions in the current population with new solutions based on objective function values.
+
+The information was added to the revised manuscript (page~7, paragraph~3).
+
+Unfortunately, providing a detailed description of each algorithm requires too much space. 
+However, the paper includes references that allow obtaining additional information.
+
+Furthermore, some speculation about possible modification of meta--heuristic algorithms 
+to successful solving the parameter estimation problem for S-shaped \emph{IV} curves was added (page 17, last paragraph before Conclusion)
 
 We would also like to express our gratitude to the Reviewer for providing exceptionally insightful references.
 We hope the Reviewer will not object to their inclusion in the revised manuscript (references 1, 2, 3).
 
 Additionally, the idea of employing meta-heuristic algorithms during the optimization of dual-ion batteries appears to be particularly intriguing.
-
-
-
-
 
 
 
@@ -219,7 +248,7 @@ Furthermore, an S--shaped \emph{IV} curve is observed in various types of solar 
 and diverse charge transport mechanisms significantly complicate the selection of a single possible temperature dependence for each of the eight model parameters.
 The specific temperature dependencies and parameter values utilized are detailed in Subsection~2.2.2.
 
-The \emph{IV} curves ware simulated using Eqs.~(1)--(2) over a voltage range of 0-0.8~V (in ‘‘Single--\emph{IV} case’’) or 
+The \emph{IV} curves ware simulated using Eqs.~(1)--(2) over a voltage range of 0-0.8~V (in ‘‘Single--\emph{IV} case’’) or
 0-1.0~V (in ‘‘\emph{IV}--set case’’) with a 10~mV step.
 The information was added to the revised manuscript (last paragraphs of Subsection~2.2.1 and Subsection~2.2.2).
 
@@ -245,7 +274,34 @@ For instance, discussing why particular tests were chosen, the statistical signi
 
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
-The text was revised.
+
+Wilcoxon test is used to assess whether there are statistically significant differences between pairs of algorithms.
+Meanwhile, the Friedman, Friedman Aligned, and Quade tests are employed when it's necessary to compare three or more related groups of results (algorithms).
+Friedman test evaluates whether there are statistically significant differences between the medians of the ranks of these algorithms.
+Friedman Aligned Ranks test addresses the issue of rank correlation in the original Friedman test, providing more precise results.
+Finally, the Quade test helps account for the effects of observed factors, such as random variations,
+to more accurately determine the statistical differences between groups.
+
+The main drawback of the Friedman, Friedman Aligned, and Quade tests is that
+they can only detect significant differences over the whole set of multiple comparisons,
+making it difficult to establish proper comparisons between specific algorithms \cite{Derrac2011}.
+To address these issues, it is necessary to employ post-hoc procedures.
+Post-hoc methods are applied after the initial analysis and allow for controlling the overall error rate
+when comparing multiple algorithms, thereby reducing the likelihood of randomly identifying statistically significant differences.
+
+$1\times N$ designs help determine if there are statistically significant differences between one algorithm
+(the control algorithm) and each of the other algorithms.
+Multidimensional comparisons $N\times N$ designs involve analyzing statistical differences between all possible pairs of algorithms.
+Typically, different post-hoc procedures are used for $1\times N$ and $N\times N$ comparisons.
+Description of all the used post-hoc procedures can be found in Derrac \emph{et al.} \cite{Derrac2011}.
+
+All mentioned methods are standard for comparing metaheuristic algorithms \cite{Derrac2011}.
+Their comprehensive application enables making the most well-founded conclusions.
+
+In most cases, the study used the widely accepted significance level of 0.05.
+
+The information was added to the revised manuscript (page~8, last 4 paragraphs).
+
 
 
 \vspace{1cm}
@@ -257,7 +313,15 @@ This would also help in visually comparing the efficiency and accuracy of the al
 
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
-The text was revised.
+
+The convergence graphs for  algorithms were added (see Fig.S1 in the supplementary materials).
+Information about the existence of convergence graphs has been added to the revised manuscript (first paragraph in Subsection 3.1).
+ 
+Besides the scatter plots for parameter determination results are represented in Figs.~S15-S22 (supplementary materials). 
+
+Simultaneously, the interquartile range (IQR) for estimated parameter values deals with error distributions. 
+IQR data is represented in Figs.~4, 9, and S6--S14. 
+Therefore, we believe that the separate error distribution graphs are somewhat redundant.
 
 
 \vspace{1cm}
