@@ -426,14 +426,14 @@ crossover rate $C\!r=0.3$,
 and population size $N\!p=8\times D=64$.
 
 \emph{Adaptive differential evolution with the Lagrange interpolation argument} (\textbf{ADELI}).
-This improved version of DE incorporates three main elements: 
-local search using Lagrange interpolation, self-adaptive DE control parameter settings, 
+This improved version of DE incorporates three main elements:
+local search using Lagrange interpolation, self-adaptive DE control parameter settings,
 and an adaptive mutational strategy \cite{ADELI}.
-The first element involves interpolating three potential solutions using a 
-polynomial function to calculate the local minimum value. 
-The self-adaptive control parameter settings include randomly altering the 
-scaling factor and crossover rate values in each iteration. 
-The adaptive mutational strategy determines the probability of 
+The first element involves interpolating three potential solutions using a
+polynomial function to calculate the local minimum value.
+The self-adaptive control parameter settings include randomly altering the
+scaling factor and crossover rate values in each iteration.
+The adaptive mutational strategy determines the probability of
 employing Lagrange interpolation in each generation based on the best fitness function value.
 These incorporations aim to enhance exploitation capability and speed up the convergence.
 We used parameter values recommended by Huang \emph{et al.} \cite{ADELI} during the implementation process.
@@ -457,7 +457,7 @@ the final weight and the initial weight $w_{max}=0.9$, $w_{min}=0.4$, and
 $N\!p=15\times D=120$ are used in this work.
 
 
-The \emph{modified artificial bee colony} (\textbf{MABC}) algorithm is inspired 
+The \emph{modified artificial bee colony} (\textbf{MABC}) algorithm is inspired
 by the intelligent foraging behavior of honey bee swarms \cite{MABC}.
 The control parameters include the population size ($N\!p=8\times D=64$)
 and the maximum number of generations, ($L_{imit}=36$), after which each non-improved food source is discarded.
@@ -468,32 +468,32 @@ Initial algorithm (WOA) draws inspiration from the hunting behavior of humpback 
 Whereas CWOA employs chaotic maps to compute and dynamically adjust its internal parameters \cite{CWOA}.
 In our study, we utilized the Singer chaotic map and set $N\!p=100$ to identify the SC parameters.
 
-The \emph{neural network algorithm} (\textbf{NNA}) is a meta--heuristic method 
-inspired by both biological nervous systems and artificial neural networks \cite{NNA}. 
+The \emph{neural network algorithm} (\textbf{NNA}) is a meta--heuristic method
+inspired by both biological nervous systems and artificial neural networks \cite{NNA}.
 In our paper, we used the recommended \cite{NNA} value of $N\!p=50$.
 
 The \emph{teaching learning based optimization} (\textbf{TLBO}) algorithm utilizes the idea of knowledge transfer within a classroom.
-Similar to learners acquiring knowledge from a teacher and interacting with their peers, 
+Similar to learners acquiring knowledge from a teacher and interacting with their peers,
 TLBO incorporates these interactions \cite{TLBO_Patel}.
 In this study, a value of $N\!p=100$ is used.
 
 \emph{Generalized oppositional teaching learning based optimization} (\textbf{GOTLBO}).
-This method utilizes generalized opposition-based learning to enhance basic TLBO 
+This method utilizes generalized opposition-based learning to enhance basic TLBO
 through the initialization step and generation jumping, improving convergence speed \cite{GOTLBO}.
 The values of jumping rate $J\!r=1.0$ and $N\!p=20$ were used.
 
 \emph{Simplified teaching-learning based optimization algorithm} (\textbf{STLBO}).
-In STLBO, the teacher phase is redefined and simplified, while the learner phase remains unchanged \cite{STLBO}. 
-In the redefined teacher phase, the mutation of potential solutions is possible, 
-with the mutation probability decreasing as the iteration number increases. 
-During the early stages, a higher mutation probability helps explore a larger solution space 
-and approach the optimum quickly. 
-However, in the latter stages of optimization, when the teacher (best solution) is near the global optimum, 
-a lower mutation probability serves as a fine-tuning mechanism 
+In STLBO, the teacher phase is redefined and simplified, while the learner phase remains unchanged \cite{STLBO}.
+In the redefined teacher phase, the mutation of potential solutions is possible,
+with the mutation probability decreasing as the iteration number increases.
+During the early stages, a higher mutation probability helps explore a larger solution space
+and approach the optimum quickly.
+However, in the latter stages of optimization, when the teacher (best solution) is near the global optimum,
+a lower mutation probability serves as a fine-tuning mechanism
 to enhance local search capability, proving to be an effective strategy.
-To enrich the mutation behavior, a chaotic sequence is introduced to generate values for the mutation parameters. 
-A chaotic sequence is a deterministic, random-like process found in nonlinear dynamic systems, 
-which is non-periodic, non-converging, and bounded \cite{May1976}. 
+To enrich the mutation behavior, a chaotic sequence is introduced to generate values for the mutation parameters.
+A chaotic sequence is a deterministic, random-like process found in nonlinear dynamic systems,
+which is non-periodic, non-converging, and bounded \cite{May1976}.
 Additionally, the elite strategy replaces the worst solutions in the current population with new solutions based on objective function values.
 The logistic chaotic map and $N\!p=20$ were used.
 
@@ -514,9 +514,9 @@ $k_{max}=\min(12,D/2)=4$, and $\beta$ linearly decreased from 0.25 to 0.001.
 Jaya algorithm is based on the concept
 that the solution obtained for a given problem should move toward the best solution and should
 avoid the worst solution and does not require any algorithm-specific parameter \cite{JAYA}.
-In IJAYA \cite{IJAYA}, a self-adaptive weight mechanism is introduced to balance 
-the approach towards the optimal solution while simultaneously avoiding the suboptimal solutions. 
-An experience-based learning strategy is utilized to preserve population diversity and enhance exploration capabilities. 
+In IJAYA \cite{IJAYA}, a self-adaptive weight mechanism is introduced to balance
+the approach towards the optimal solution while simultaneously avoiding the suboptimal solutions.
+An experience-based learning strategy is utilized to preserve population diversity and enhance exploration capabilities.
 Additionally, a chaotic elite learning method is proposed to refine the quality of the best solution in each generation.
 The logistic chaotic map and $N\!p=4\times D=32$ were used.
 
@@ -529,7 +529,7 @@ a nonlinear conversion parameter strategy based on the Gaussian function
 the creation of the opposite population to jump out from the local optima with $J\!r=0.1$ \cite{ISCA3},
 a greedy selection, and $N\!p=30$.
 
-The majority of the algorithms used show excellent performance 
+The majority of the algorithms used show excellent performance
 in estimating the SC parameter within conventional models such as SDM or DDM
 \cite{CWOA,DEWang,GOTLBO,IJAYA,MABC,PSO,STLBO,TLBO_Patel,LSHADE,IWOA}.
 
@@ -545,8 +545,8 @@ F_\mathrm{SE}(Y)= \sum_{k=1}^p \left[V^\mathrm{tr}(I_k)-V^\mathrm{cal}(I_k,Y)\ri
 \end{gather}
 where
 $V^\mathrm{tr}(I_k)$ is the simulated value of voltage at current $I_k$,
-$V^\mathrm{cal}(I_k,Y)$ represents the voltage, 
-which is calculated using a set of parameters 
+$V^\mathrm{cal}(I_k,Y)$ represents the voltage,
+which is calculated using a set of parameters
 (i.e. $Y = \{I_{01},n_1,R_\mathrm{p1},I_{02},n_2,R_\mathrm{p2},R_\mathrm{s},I_\mathrm{ph}\}$)
 estimated with the help of an algorithm and Eqs.~(\ref{eqIV_g})--(\ref{eqx2});
 and $p$ is the total number of voltage steps in the \emph{IV} characteristic.
@@ -571,8 +571,8 @@ $I_\mathrm{ph}(\mathrm{mA})\in[10^{-3},100]$.
 
 \subsection{Evaluation metrics}\label{EvalCr}
 
-To better illustrate the performance differences between the algorithms being compared, 
-we considered several evaluation metrics. 
+To better illustrate the performance differences between the algorithms being compared,
+we considered several evaluation metrics.
 These metrics can be described as follows:
 \begin{enumerate}[1.]
 \item
@@ -599,7 +599,7 @@ We used average run time $t_\mathrm{run}$ in seconds for an
 individual optimizer on one IV curve.
 
 \item
-The root mean square percentage error (RMSPE) is a statistical measure that indicates 
+The root mean square percentage error (RMSPE) is a statistical measure that indicates
 how well the fitted curve matches the actual (simulated) \emph{IV} curve.
 \begin{equation}
 \label{eqRMSPE}
@@ -627,27 +627,27 @@ and identify the differences.
 \end{enumerate}
 
 
-Wilcoxon test is used to assess whether there are statistically significant differences between pairs of algorithms. 
-Meanwhile, the Friedman, Friedman Aligned, and Quade tests are employed when it's necessary to compare three or more related groups of results (algorithms). 
-Friedman test evaluates whether there are statistically significant differences between the medians of the ranks of these algorithms. 
-Friedman Aligned Ranks test addresses the issue of rank correlation in the original Friedman test, providing more precise results. 
-Finally, the Quade test helps account for the effects of observed factors, such as random variations, 
+Wilcoxon test is used to assess whether there are statistically significant differences between pairs of algorithms.
+Meanwhile, the Friedman, Friedman Aligned, and Quade tests are employed when it's necessary to compare three or more related groups of results (algorithms).
+Friedman test evaluates whether there are statistically significant differences between the medians of the ranks of these algorithms.
+Friedman Aligned Ranks test addresses the issue of rank correlation in the original Friedman test, providing more precise results.
+Finally, the Quade test helps account for the effects of observed factors, such as random variations,
 to more accurately determine the statistical differences between groups.
 
-The main drawback of the Friedman, Friedman Aligned, and Quade tests is that 
-they can only detect significant differences over the whole set of multiple comparisons, 
+The main drawback of the Friedman, Friedman Aligned, and Quade tests is that
+they can only detect significant differences over the whole set of multiple comparisons,
 making it difficult to establish proper comparisons between specific algorithms \cite{Derrac2011}.
 To address these issues, it is necessary to employ post-hoc procedures.
-Post-hoc methods are applied after the initial analysis and allow for controlling the overall error rate 
+Post-hoc methods are applied after the initial analysis and allow for controlling the overall error rate
 when comparing multiple algorithms, thereby reducing the likelihood of randomly identifying statistically significant differences.
 
-$1\times N$ designs help determine if there are statistically significant differences between one algorithm 
-(the control algorithm) and each of the other algorithms. 
+$1\times N$ designs help determine if there are statistically significant differences between one algorithm
+(the control algorithm) and each of the other algorithms.
 Multidimensional comparisons $N\times N$ designs involve analyzing statistical differences between all possible pairs of algorithms.
 Typically, different post-hoc procedures are used for $1\times N$ and $N\times N$ comparisons.
 Description of all the used post-hoc procedures can be found in Derrac \emph{et al.} \cite{Derrac2011}.
 
-All mentioned methods are standard for comparing metaheuristic algorithms \cite{Derrac2011}. 
+All mentioned methods are standard for comparing metaheuristic algorithms \cite{Derrac2011}.
 Their comprehensive application enables making the most well-founded conclusions.
 
 
@@ -655,8 +655,7 @@ Their comprehensive application enables making the most well-founded conclusions
 
 \section{Numerical results and discussion}\label{Result}
 
-%Будь-ласка, покращ англійську в наступних реченнях, які я буду пропонувати. Зокрема, треба буде виправити граматичні та стилістичні помилки
-%якщо можна, окрім виправленого речення, наводь інформацію про зміни, які зроблені
+
 
 \subsection{Comparison of algorithm convergence}
 In meta--heuristic algorithms, various termination conditions can be defined.
@@ -667,8 +666,8 @@ a specific time,
 no sign of change in solutions after a specific number of iterations,
 or a combination of these cases \cite{IntelligentChaoticClonal}.
 In this study, the main focus was on accurately estimating parameters.
-Therefore, to ensure that both exploration and exploitation processes 
-could be fully realized by each algorithm with an equal opportunity, 
+Therefore, to ensure that both exploration and exploitation processes
+could be fully realized by each algorithm with an equal opportunity,
 the termination criterion used was the absence of changes in the solution.
 Based on this condition, the required number of iterations $N_\mathrm{it}$ was determined,
 and the corresponding calculation time was measured $t_\mathrm{run}$.
@@ -719,7 +718,7 @@ provided in Eq.~(\ref{eqParSingleIV}) with both $F_\mathrm{AE}$ and $F_\mathrm{S
 The results obtained from each of the functions were then compared with each other using pairwise comparisons.
 The absolute percentage error values obtained for one-run algorithm application ($\mathrm{APE}_i$) were used.
 Table~\ref{tblFF} gives the statistical results produced by Wilcoxon sign-rank test with a significant level $\alpha = 0.05$.
-The symbol ``SE'' in a cell indicates that the estimation of the parameter (specified in the column title) 
+The symbol ``SE'' in a cell indicates that the estimation of the parameter (specified in the column title)
 by the algorithm (defined in the first column) with $F_\mathrm{SE}$ outperforms the result obtained by this algorithm with $F_\mathrm{AE}$.
 A cell with ``AE'' indicates better results for function $F_\mathrm{AE}$.
 In the case of the symbol ``='', there is no significant difference between function $F_\mathrm{SE}$ and function $F_\mathrm{AE}$ application.
@@ -753,33 +752,31 @@ WW &\cellcolor{ligthYellow}=  &\cellcolor{ligthYellow}=  & \cellcolor{ligthRed}S
 \end{table}
 
 As evidenced in the provided data, utilizing the square error fitness function more frequently yields better outcomes than $F_\mathrm{AE}$.
-In some rare cases, the absolute error fitness function can improve the alignment 
-between the fitted and actual curves and 
+In some rare cases, the absolute error fitness function can improve the alignment
+between the fitted and actual curves and
 enhance the accuracy of parameter estimations by PSO, IJAVA, CWOA, and WW algorithms.
 However, RMSPE is not the most crucial factor in determining model parameters, and the mentioned methods,
 as will be shown later, do not provide the highest accuracy.
 As such, the results presented in the following sections exclusively apply the $F_\mathrm{SE}$ function.
-%$F_\mathrm{SE}$​ function.
-%As such, the results presented in the following sections exclusively apply the $F_\mathrm{SE}$​ function.
-Therefore, it is recommended that researchers consider 
+Therefore, it is recommended that researchers consider
 the squared error fitness function as a more effective and reliable option for the task of opposed two-diode model parameter estimation.
 
 
 \subsection{Comparison of algorithm performance}
 
 \subsubsection{Parameter extraction in single--IV case}
-In this subsection, we present and analyze the statistical results of 
+In this subsection, we present and analyze the statistical results of
 applying different meta-heuristic algorithms to an \emph{IV} curve simulated with the values from Eq.~(\ref{eqParSingleIV}).
 Several typical fitting results are shown in Fig.~\ref{figSigleIV}.
 A more comprehensive version, including the fitting results obtained using each algorithm,
-is provided in the supplementary materials (figure S1).
-It can be seen that the closest match between the approximation curves and the \emph{IV} curve points is 
+is provided in the supplementary materials (figure S2).
+It can be seen that the closest match between the approximation curves and the \emph{IV} curve points is
 observed for EBLSHADE, ADELI, NDE, IJAYA, TLBO, and STLBO.
 On the contrary, the fitting curves of PSO and GOTLBO had the least replication of the original data.
 
 Fig.~\ref{figBoxSingleIV} shows the results of SC parameters estimation by algorithms to be compared.
-Additionally, the figure presents the RMSPE data, 
-which confirms the conclusions of the visual comparison between the fitting lines and the points of the \emph{IV} curve. 
+Additionally, the figure presents the RMSPE data,
+which confirms the conclusions of the visual comparison between the fitting lines and the points of the \emph{IV} curve.
 The results for MEAN, MEDIAN, STD, and IQR are presented in table~S1 of the supplementary material.
 
 
@@ -788,55 +785,61 @@ The results for MEAN, MEDIAN, STD, and IQR are presented in table~S1 of the supp
 		\includegraphics[width=.32\textwidth]{Fig4a}
         \includegraphics[width=.32\textwidth]{Fig4b}
         \includegraphics[width=.32\textwidth]{Fig4c}
-	  \caption{Box--plot of parameter estimation results by using different optimization algorithms. 
+	  \caption{Box--plot of parameter estimation results by using different optimization algorithms.
       The single--\emph{IV} case.
       The squares represent the mean values, and the dashed lines correspond to the true parameter values.}\label{figBoxSingleIV}
 \end{figure*}
 
-We would like to stress the following.
-In most cases, median values are more relevant to the actual parameter values than the mean values.
-Possible exceptions only apply to the estimation of $R_\mathrm{s}$ and $R_\mathrm{p2}$ only.
-However, in cases where a method allows for parameter estimation with high accuracy (EBLSHADE, ADELI, TLBO, and STLBO),
-MEDIANs are at least as good as the MEANs.
+We want to emphasize the following. 
+Firstly, in most cases, median values are more relevant to the actual parameter values than mean values. 
+The only exceptions to this are in the estimation of $R_\mathrm{s}$ and $R_\mathrm{p2}$. 
+However, in cases where a method allows for highly accurate parameter estimation (such as EBLSHADE, ADELI, TLBO, and STLBO), 
+the MEDIANs are at least as good as the MEANs.
 As a result, we will utilize median values as a robust measure of central tendency in nonparametric statistical tests.
-Secondly, the increase in algorithm stability (reduction in STD and IQR values) in determining each model parameter correlates with the accuracy of parameter estimation.
-Furthermore, IQR values are generally no worse than STD values.
-Finally, small RMSPE values (close match between the fitting curve and the IV points)
+Secondly, the increased algorithm stability, as indicated by the reduction in STD and IQR values 
+when determining each model parameter, correlates with improved accuracy in estimating those parameters.
+Furthermore, IQR values are generally no worse than STD values. 
+Finally, small RMSPE values (a close match between the fitting curve and the \emph{IV} points) 
 do not always indicate high accuracy in determining the parameters of a solar cell --- see IJAYA and NDE data.
-For example, the difference between the $\mathrm{MEDIAN}_\mathrm{RMSPE}$ values for NDE and ADELI is approximately 0.0001
-(about 0.08\% of their absolute value).
-At the same time, in the ADELI case, the values of $\mathrm{APE}_\mathrm{MEDIAN}$ do not exceed $6\cdot 10^{-4}$
-for all model parameters estimation,
-whereas for the NDE algorithm application, the obtained $\mathrm{APE}_\mathrm{MEDIAN}$ values are significantly higher
-and range from 0.04 for $I_\mathrm{ph}$ to 11.4 for $I_{01}$.
-On one hand, this confirms the issue identified by Tada \cite{Tada2015Organic,Tada2021}, which arises when estimating
-parameters according to the opposed two--diode model from similar IV curves corresponding to photovoltaic cells with distinct characteristics.
-Furthermore, the results indicate that some met--aheuristic algorithms, such as NDE and IJAYA, can fall into a similar trap.
-On the other hand, the high accuracy in parameter estimation demonstrated by EBLSHADE, ADELI, and STLBO indicates
-that these algorithms are able to overcome the mentioned issue when applied.
-It should be noted that a similar problem has been previously addressed by employing Bayesian estimation of parameters \cite{Tada2021}.
-However, each Bayesian calculation took approximately half a day on a computer better equipped than ours \cite{Tada2021}.
-In our case, when applying meta--heuristic algorithms, the worst--case run time did not exceed 100 seconds.
+For example, the difference between the $\mathrm{MEDIAN}_\mathrm{RMSPE}$ values for NDE and ADELI is approximately 0.0001 
+(about 0.08\% of their absolute value). 
+However, in the ADELI case, the values of $\mathrm{APE}_\mathrm{MEDIAN}$ do not exceed $6\cdot 10^{-4}$ 
+for all model parameter estimations. 
+In contrast, when applying the NDE algorithm, the obtained $\mathrm{APE}_\mathrm{MEDIAN}$ values are significantly higher, 
+ranging from 0.04 for $I_\mathrm{ph}$ to 11.4 for $I_{01}$.
+On the one hand, this confirms the previously mentioned issue identified by Tada \cite{Tada2015Organic,Tada2021}, 
+which arises when estimating parameters according to the opposed two--diode model from similar \emph{IV} curves 
+corresponding to PV cells with distinct characteristics. 
+Furthermore, the results indicate that some meta--heuristic algorithms, such as NDE and IJAYA, can fall into a similar trap. 
+On the other hand, the high accuracy in parameter estimation demonstrated by EBLSHADE, ADELI, and STLBO indicates 
+that these algorithms can overcome the mentioned issue when applied.
+It should be noted that a similar problem has been previously addressed using Bayesian parameter estimation \cite{Tada2021}.  
+However, each Bayesian calculation took approximately half a day on a more powerful computer than ours \cite{Tada2021}.  
+In contrast, when applying meta-heuristic algorithms in our case, the worst-case run time did not exceed 100 seconds.
 
-In order to statistically compare the algorithm under consideration, we use nonparametric tests.
-In the single--IV case, all nonparametric statistical tests were used to compare the performance of meta--heuristic algorithms in assessing each of the eight model parameters.
-The $\mathrm{APE}_i$ values were used, and the number of case problems in the study $N_\mathrm{pr}$ was equal to $N_\mathrm{runs}=51$.
-Additionally, algorithms were compared in terms of curve-fitting accuracy by using RMSPE values.
-Furthermore, tests were employed for a composite parameter as well.
-This parameter, referred to as ``Comp'' hereafter, includes $\mathrm{APE}_\mathrm{MEDIAN}$ for each of the eight defined model parameters,
-the median value for RMSPE, and $t_\mathrm{run}$.
-This parameter may provide the most valuable insights for comparing algorithms. However, it is important to note that the value of $N_\mathrm{pr}$ is only 10.
+To statistically compare the algorithms under consideration, we used nonparametric tests. 
+In the single--\emph{IV} case, all nonparametric statistical tests were applied to compare the performance 
+of meta-heuristic algorithms in assessing each of the eight model parameters. 
+$\mathrm{APE}_i$ values were used, and the number of case problems in the study, $N_\mathrm{pr}$, was equal to $N_\mathrm{runs}=51$. 
+Additionally, algorithms were compared in terms of curve--fitting accuracy using RMSPE values. 
+Furthermore, we employed tests for a composite parameter as well.
+This parameter, referred to as ``Comp'' hereafter, 
+includes $\mathrm{APE}_\mathrm{MEDIAN}$ for each of the eight defined model parameters, 
+the median value for RMSPE, and $t_\mathrm{run}$. 
+This composite parameter may provide the most valuable insights for comparing the performance of the algorithms.  
+However, it is important to note that the value of $N_\mathrm{pr}$ is only 10.
 According to Derrac \emph{et al.} \cite{Derrac2011}, the number of case problems should be $N_\mathrm{pr}\geq 2k$,
 where $k$ is the number of algorithms ($k=14$ in our study).
-Therefore, the use of the Comp parameter is not strictly rigorous.
-Indeed, it would have been possible to increase the $N_\mathrm{pr}$ value using, for example, $\mathrm{APE}_\mathrm{MEAN}$.
-However, considering the deliberate utilization of a suboptimal parameter would have appeared inappropriate.
+Therefore, the use of the Comp parameter is not strictly rigorous. 
+Indeed, it would have been possible to increase the $N_\mathrm{pr}$ value by using, 
+for example, $\mathrm{APE}_\mathrm{MEAN}$. 
+However, deliberately using a suboptimal parameter would have seemed inappropriate.
 
 
 
 \begin{figure}[]
 	\centering
-		\includegraphics[width=0.45\columnwidth]{Fig4}
+		\includegraphics[width=0.45\columnwidth]{Fig5}
 	  \caption{The results of Wilcoxon signed-rank test with a level of significance $\alpha = 0.05$ in the single-IV case.
                Each colored small square indicates that the algorithm specified in the row outperforms the algorithm
                specified in the column in evaluating one of the parameters of the two--diode model.
@@ -847,52 +850,45 @@ However, considering the deliberate utilization of a suboptimal parameter would 
 
 \begin{figure}[]
 	\centering
-		\includegraphics[width=0.45\columnwidth]{Fig5}
+		\includegraphics[width=0.45\columnwidth]{Fig6}
 	  \caption{The total count of wins and losses for each algorithm in pairwise comparisons using the
                Wilcoxon signed-rank test with a significance level of $\alpha = 0.05$ in the single-IV case.}\label{figWilTotSingleIV}
 \end{figure}
 
+Fig.~\ref{figWilSingleIV} graphically depicts 
+the non-parametric statistical results of pairwise comparisons of the algorithms 
+based on the Wilcoxon signed--rank test. 
+For the Comp parameter comparisons, the differences in the performance scores 
+were normalized to the interval $[0,\, 1]$ to facilitate the comparison. 
+The figure shows that no single algorithm outperforms all the others in evaluating each parameter. 
+Furthermore, no algorithm surpasses all the others when estimating even a single parameter.
 
 
-
-Fig.~\ref{figWilSingleIV} graphically show
-the non--parametric statistical results of pairwise comparisons of algorithms
-based on the Wilcoxon signed--rank test.
-In the case of Comp comparisons, the differences in performance scores
-were normalized to the interval $[0,\, 1]$.
-As seen from the figure, no algorithm outperforms all others in evaluating each parameter.
-Furthermore, no algorithm surpasses all others in the estimation even a single parameter.
-For example, as the figure states, STLBO shows a significant improvement over
-DE, NDE, MABC, GOTLBO, PSO, IJAYA, ISCA, NNA, CWOA, and WW across all the parameters considered
-with a level of significance $\alpha = 0.05$.
-Simultaneously, it was not detected the significant differences
-between STLBO and both EBLSHADE and ADELI for all parameter estimations
-as well as between STLBO and TLBO in the Comp case.
-EBLSHADE outperforms nearly all other algorithms in the composite parameter, except for STLBO.
-According to the Wilcoxon test victories count,
-the worst performances are exhibited by PSO and CWOA.
-PSO achieved better results than ISCA, NNA, and CWOA in terms of RMSPE value,
-as well as outperformed WW in $n_2$ estimation and RMSPE.
+For example, as the figure states, STLBO shows a significant improvement over 
+DE, NDE, MABC, GOTLBO, PSO, IJAYA, ISCA, NNA, CWOA, and WW across all the parameters 
+considered with a level of significance $\alpha = 0.05$. 
+Simultaneously, no significant differences were detected between the STLBO algorithm 
+and both the EBLSHADE and ADELI algorithms for the estimation of all parameters. 
+Additionally, no significant differences were found between STLBO and TLBO for the Comp parameter comparisons.
+EBLSHADE outperforms almost all other algorithms in the composite parameter except STLBO. 
+According to the count of victories in the Wilcoxon test, 
+the worst performances are exhibited by PSO and CWOA. 
+PSO achieved better results than ISCA, NNA, and CWOA in RMSPE value and 
+also outperformed WW in $n_2$ estimation and RMSPE.
 Test detected significant differences between CWOA and WW in $n_2$ and $I_{01}$ estimations,
-between CWOA and PSO in $I_{01}$, $I_{02}$, $R_\mathrm{s}$, and $I_\mathrm{ph}$ estimations),
-and between CWOA and both ISCA and NNA in $R_\mathrm{s}$  estimation case only.
+between CWOA and PSO in $I_{01}$, $I_{02}$, $R_\mathrm{s}$, and $I_\mathrm{ph}$ estimations,
+and between CWOA and both ISCA and NNA in $R_\mathrm{s}$  estimation only.
+
+Looking at the results of the Wilcoxon test from another perspective, 
+it can be observed that neither EBLSHADE nor STLBO suffered any defeats in pairwise comparisons, 
+while ADELI experienced only one loss.
+ADELI was defeated in the Comp parameter only by  EBLSHADE, 
+primarily due to significantly longer run time. 
+The highest number of defeats was observed for the PSO and WW algorithms 
+(104 and 84, respectively). 
+Fig.~\ref{figWilTotSingleIV} summarizes the total number of wins and losses in the Wilcoxon test for each algorithm.
 
 
-Looking at the results of the Wilcoxon signed-rank test from another perspective,
-it can be observed that neither EBLSHADE nor STLBO had any defeats in pairwise comparisons,
-while ADELI had only one loss.
-ADELI was only outperformed by EBLSHADE in terms of the Comp parameter, primarily due to its significantly longer run time.
-The highest count of defeats was observed for the PSO and WW algorithms (104 and 84, respectively).
-The data regarding the total count of wins and losses when applying the Wilcoxon test
-for each algorithm are summarized in Fig.~\ref{figWilTotSingleIV}.
-
-%\begin{figure}[!ht]
-%	\centering
-%		\includegraphics[width=.76\columnwidth]{Friedman}
-%        \includegraphics[width=.76\columnwidth]{FriedmanAlignedRank}
-%        \includegraphics[width=.76\columnwidth]{QuadeRank}
-%	  \caption{Ranking of the algorithms according to Friedman (a), Friedman Aligned (b), and Quade (c) tests in the single-IV case.}\label{figRanksSingleIV}
-%\end{figure}
 
 \begin{figure}[!ht]
 	\centering
@@ -902,58 +898,57 @@ for each algorithm are summarized in Fig.~\ref{figWilTotSingleIV}.
 	  \caption{Ranking of the algorithms according to Friedman (a), Friedman Aligned (b), and Quade (c) tests in the single-IV case.}\label{figRanksSingleIV}
 \end{figure}
 
-
-It is recommended \cite{Derrac2011} to begin the multiple comparisons tests by examining the null hypothesis $H_0$,
-which asserts the equality of medians between the populations of results obtained by different algorithms.
-The null hypothesis $p$--values computed through the statistics of  Friedman, Friedman Aligned, and Quade test
-and the Iman–Davenport extension
-are given in the supplementary material (table S2).
-The highest observed $p(H_0)$--values were found to be $2.7\cdot10^{-5}$ (Friedman Aligned test for the task of $R_\mathrm{p1}$ estimation),
-$4.4\cdot10^{-4}$ (Friedman Aligned test for the composite parameter case),
-and $8.3\cdot10^{-6}$ (Quade test, Comp parameter).
-Thus obtained data strongly suggest the existence of significant differences
-among the considered algorithms in the accuracy of all model parameter determination, RMSPE values, and Comp parameter.
+It is recommended \cite{Derrac2011} to initiate the multiple comparison tests by examining the null hypothesis $H_0$, 
+which asserts the equality of medians among the populations of results obtained by different algorithms. 
+The $p$--values for the null hypothesis, computed through the statistics of Friedman, Friedman Aligned, 
+and Quade tests and the Iman--Davenport extension, are provided in the supplementary material (table S2).
+The highest observed $p(H_0)$--values were found to be $2.7\cdot10^{-5}$  (Friedman Aligned test for the task of Rp estimation),
+$4.4\cdot10^{-4}$ (Friedman Aligned test for the composite parameter case), 
+and $8.3\cdot10^{-6}$ (Quade test, Comp parameter). 
+Thus, the obtained data strongly suggest the significant differences among the considered algorithms 
+in the accuracy of all model parameter determination, RMSPE values, and the Comp parameter.
 
 
-
-Fig.~\ref{figRanksSingleIV} shows
-ranks achieved by the Friedman, Friedman Aligned, and Quade tests for applied optimization algorithms in different tasks.
-Ranks are tabulated in the supplementary material as well (table S3).
-In almost all cases, the algorithms EBLSHADE, ADELI, and STLBO consistently achieve the top (smallest value) three ranks.
-For example, in assessing the accuracy of model parameter estimation, ADELI has ranked first 22 times.
-The STLBO algorithm ranked first six times,
-taking the sole first place twice ($I_{01}$ estimation according Friedman Aligned test and
-$R_\mathrm{p1}$ estimation according Quade test)
-and sharing it with ADELI four times ($n_1$, $R_\mathrm{p1}$, $n_2$, and $I_\mathrm{ph}$ estimation according Friedman Aligned test).
-In the RMSPE value case, ADELI and STLBO achieved equal and best ranks by all three used tests.
-When comparing based on the Comp parameter,
-the STLBO algorithm obtained the top rank according to the Friedman Aligned test,
-while the Friedman and Quade tests recognized EBLSHADE as the best.
-In most cases, the TLBO algorithm secured the fourth position, and in four cases, it even ranked third.
-In the majority of cases, the TLBO algorithm consistently ranked fourth out of all the algorithms tested.
+Fig.~\ref{figRanksSingleIV} illustrates the ranks achieved 
+by the Friedman, Friedman Aligned, and Quade tests for the applied optimization algorithms in different tasks. 
+These ranks are also tabulated in the supplementary material (table S3). 
+In nearly all cases, the algorithms EBLSHADE, ADELI, and STLBO consistently achieve the top three ranks. 
+For instance, in assessing the accuracy of model parameter estimation, ADELI has ranked first  22 times.
+The STLBO algorithm ranked first six times, 
+taking the sole first place twice ($I_{01}$ estimation according to Friedman Aligned test and
+$R_\mathrm{p1}$ estimation according to Quade test) 
+and sharing it with ADELI four times ($n_1$, $R_\mathrm{p1}$, $n_2$, and $I_\mathrm{ph}$ 
+estimation according to Friedman Aligned test).
+In the RMSPE  case, ADELI and STLBO attained equal and top ranks across all three tests utilized.
+When comparing based on the Comp parameter, 
+the STLBO algorithm secured the top rank according to the Friedman Aligned test, 
+whereas the Friedman and Quade tests identified EBLSHADE as the best performer.
+For the most part, the TLBO algorithm consistently ranked fourth among all the tested algorithms.
 Interestingly, in four cases ($I_{01}$ estimation, RMSPE value, and Comp parameter by Friedman Aligned test,
 and Comp parameter by Quade test),
 it even achieved a commendable third-place ranking.
-We must note that overall, the absolute values of ranks for ADELI, STLBO, EBLSHADE and TLBO algorithms differ little,
-and the difference between the first and fourth ranks is often less than 0.5.
+We must note that overall, the absolute values of ranks for the ADELI, STLBO, EBLSHADE, 
+and TLBO algorithms differ only slightly, and the difference between the first and fourth ranks is often less than 0.5.
 The worst ranks are observed for PSO, NNA, CWOA, and WW.
 
-It is known \cite{Derrac2011} that
-the Friedman, Friedman Aligned, and Quade tests are insufficient in establishing accurate comparisons between the algorithms considered.
-To compare a control method (1 of 14 compared) with a set of other algorithms (rest 13),
-one can define a family of hypotheses related to the control method.
-Applying a post-hoc test makes it possible to obtain a $p$--value that indicates the extent to which each hypothesis can be rejected.
+It is known \cite{Derrac2011} that 
+the Friedman, Friedman Aligned, and Quade tests are inadequate for establishing accurate comparisons between the considered algorithms.
+To compare a control method (one of 14 tested) 
+with a set of other algorithms (the remaining 13), 
+one can define a family of null hypotheses related to the control method.
+Applying a post-hoc procedure makes it possible to obtain a $p$--value that indicates 
+the probability of obtaining the observed results if the corresponding hypothesis is true.
 We calculated $p$--values using four post-hoc procedures (Finner, Holm, Hochberg, and Holland) for all algorithms, tests, and tasks.
 The reader is referred to the supplementary material for all $p$-values (Tables S4-S143).
-In particular, the common feature of all comparisons is that
-the Finner post-hoc procedure exhibits the most powerful behavior,
-reaching the lowest $p$-values.
+In particular, a common feature of all comparisons is that 
+the Finner post-hoc procedure demonstrates the most powerful behavior, yielding the lowest $p$--values.
 
 
-In our study, a threshold value of $p_{cr}=0.1$ was adopted to establish a critical level
-for comparing the effectiveness of two algorithms in both multiple $1\times N$ and $N\times N$ comparisons.
-That is, it was determined that the likelihood of obtaining a result as extreme as the observed one,
-under the assumption that there is no difference between the two algorithms (null hypothesis), was less than 10\%.
+In our study, we adopted a threshold value of $p_{cr}=0.1$ 
+to establish a critical level for comparing the algorithms' effectiveness 
+in both multiple $1\times N$  and $N\times N$ comparisons.
+That is, it was defined that the likelihood of obtaining a result as extreme as the observed one 
+if there is no difference between the two algorithms (null hypothesis), was less than 10\%.
 
 
 
@@ -988,16 +983,21 @@ WW & 0/96  & 12/76  & 16/76&  36/43 & 0/108 & 10/60 & 12/77  & 12/66  & 0/92& 0/
 \end{table*}
 
 
-The statistical results of the algorithm's effectiveness comparison are given in the supplementary materials (figure S2).
+The statistical results of the comparison of algorithm effectiveness are available in the supplementary materials (figure S3).
 Among the compared algorithms, EBLSHADE, ADELI, and STLBO consistently outperform the others in $1\times N$ multiple comparisons.
-On the other hand, algorithms such as PSO, ISCA, CWOA, and NNA consistently produce lower-quality results.
-The main changes observed in nonparametric statistical estimation of different parameters estimation
+On the other hand, algorithms such as PSO, ISCA, CWOA, and NNA consistently yield lower-quality results.
+The main changes observed in nonparametric statistical estimation of different parameters evaluation 
 mainly concern algorithms with moderate effectiveness.
 
 
 
 In all cases, the Quade test yields higher adjusted $p$-values.
-In particular, in the case of the complex parameter, none of the conducted comparisons exceeded the chosen threshold value of the $p$-value.
+In particular, in the case of the complex parameter, the $p$-value for any comparison did not exceed the chosen threshold value $p_{cr}$.
+
+
+%Будь-ласка, покращ англійську в наступних реченнях, які я буду пропонувати. Зокрема, треба буде виправити граматичні та стилістичні помилки
+%якщо можна, окрім виправленого речення, наводь інформацію про зміни, які зроблені
+
 
 The adjusted $p$-values obtained from the direct comparisons of EBLSHADE, ADELI, and STLBO
 do not allow for determining the best algorithm among them.
@@ -1443,9 +1443,9 @@ In our opinion, STLBO and ADELI both hold the top position in the competition co
 
 Over the last few decades, researchers have strived to enhance the performance of metaheuristic algorithms using various concepts, including \cite{Kepler}:
 hybridization between two or more metaheuristics, quantum computing concept, opposition-based theory, chaotic maps,  L\'{e}vy-Flight strategy.
-Our research has revealed that the most promising approaches to solving 
-the parameter estimation problem for S-shaped \emph{IV} curves involve the use of enhanced mutation strategies. 
-Specifically, this entails employing chaotic maps to tune mutation coefficients and utilizing the elite strategy (STLBO). 
+Our research has revealed that the most promising approaches to solving
+the parameter estimation problem for S-shaped \emph{IV} curves involve the use of enhanced mutation strategies.
+Specifically, this entails employing chaotic maps to tune mutation coefficients and utilizing the elite strategy (STLBO).
 Furthermore, highly productive results were achieved through the application of nonlinear (polynomial) approximation of potential solutions (ADELI).
 
 
