@@ -790,49 +790,49 @@ The results for MEAN, MEDIAN, STD, and IQR are presented in table~S1 of the supp
       The squares represent the mean values, and the dashed lines correspond to the true parameter values.}\label{figBoxSingleIV}
 \end{figure*}
 
-We want to emphasize the following. 
-Firstly, in most cases, median values are more relevant to the actual parameter values than mean values. 
-The only exceptions to this are in the estimation of $R_\mathrm{s}$ and $R_\mathrm{p2}$. 
-However, in cases where a method allows for highly accurate parameter estimation (such as EBLSHADE, ADELI, TLBO, and STLBO), 
+We want to emphasize the following.
+Firstly, in most cases, median values are more relevant to the actual parameter values than mean values.
+The only exceptions to this are in the estimation of $R_\mathrm{s}$ and $R_\mathrm{p2}$.
+However, in cases where a method allows for highly accurate parameter estimation (such as EBLSHADE, ADELI, TLBO, and STLBO),
 the MEDIANs are at least as good as the MEANs.
 As a result, we will utilize median values as a robust measure of central tendency in nonparametric statistical tests.
-Secondly, the increased algorithm stability, as indicated by the reduction in STD and IQR values 
+Secondly, the increased algorithm stability, as indicated by the reduction in STD and IQR values
 when determining each model parameter, correlates with improved accuracy in estimating those parameters.
-Furthermore, IQR values are generally no worse than STD values. 
-Finally, small RMSPE values (a close match between the fitting curve and the \emph{IV} points) 
+Furthermore, IQR values are generally no worse than STD values.
+Finally, small RMSPE values (a close match between the fitting curve and the \emph{IV} points)
 do not always indicate high accuracy in determining the parameters of a solar cell --- see IJAYA and NDE data.
-For example, the difference between the $\mathrm{MEDIAN}_\mathrm{RMSPE}$ values for NDE and ADELI is approximately 0.0001 
-(about 0.08\% of their absolute value). 
-However, in the ADELI case, the values of $\mathrm{APE}_\mathrm{MEDIAN}$ do not exceed $6\cdot 10^{-4}$ 
-for all model parameter estimations. 
-In contrast, when applying the NDE algorithm, the obtained $\mathrm{APE}_\mathrm{MEDIAN}$ values are significantly higher, 
+For example, the difference between the $\mathrm{MEDIAN}_\mathrm{RMSPE}$ values for NDE and ADELI is approximately 0.0001
+(about 0.08\% of their absolute value).
+However, in the ADELI case, the values of $\mathrm{APE}_\mathrm{MEDIAN}$ do not exceed $6\cdot 10^{-4}$
+for all model parameter estimations.
+In contrast, when applying the NDE algorithm, the obtained $\mathrm{APE}_\mathrm{MEDIAN}$ values are significantly higher,
 ranging from 0.04 for $I_\mathrm{ph}$ to 11.4 for $I_{01}$.
-On the one hand, this confirms the previously mentioned issue identified by Tada \cite{Tada2015Organic,Tada2021}, 
-which arises when estimating parameters according to the opposed two--diode model from similar \emph{IV} curves 
-corresponding to PV cells with distinct characteristics. 
-Furthermore, the results indicate that some meta--heuristic algorithms, such as NDE and IJAYA, can fall into a similar trap. 
-On the other hand, the high accuracy in parameter estimation demonstrated by EBLSHADE, ADELI, and STLBO indicates 
+On the one hand, this confirms the previously mentioned issue identified by Tada \cite{Tada2015Organic,Tada2021},
+which arises when estimating parameters according to the opposed two--diode model from similar \emph{IV} curves
+corresponding to PV cells with distinct characteristics.
+Furthermore, the results indicate that some meta--heuristic algorithms, such as NDE and IJAYA, can fall into a similar trap.
+On the other hand, the high accuracy in parameter estimation demonstrated by EBLSHADE, ADELI, and STLBO indicates
 that these algorithms can overcome the mentioned issue when applied.
-It should be noted that a similar problem has been previously addressed using Bayesian parameter estimation \cite{Tada2021}.  
-However, each Bayesian calculation took approximately half a day on a more powerful computer than ours \cite{Tada2021}.  
+It should be noted that a similar problem has been previously addressed using Bayesian parameter estimation \cite{Tada2021}.
+However, each Bayesian calculation took approximately half a day on a more powerful computer than ours \cite{Tada2021}.
 In contrast, when applying meta-heuristic algorithms in our case, the worst-case run time did not exceed 100 seconds.
 
-To statistically compare the algorithms under consideration, we used nonparametric tests. 
-In the single--\emph{IV} case, all nonparametric statistical tests were applied to compare the performance 
-of meta-heuristic algorithms in assessing each of the eight model parameters. 
-$\mathrm{APE}_i$ values were used, and the number of case problems in the study, $N_\mathrm{pr}$, was equal to $N_\mathrm{runs}=51$. 
-Additionally, algorithms were compared in terms of curve--fitting accuracy using RMSPE values. 
+To statistically compare the algorithms under consideration, we used nonparametric tests.
+In the single--\emph{IV} case, all nonparametric statistical tests were applied to compare the performance
+of meta-heuristic algorithms in assessing each of the eight model parameters.
+$\mathrm{APE}_i$ values were used, and the number of case problems in the study, $N_\mathrm{pr}$, was equal to $N_\mathrm{runs}=51$.
+Additionally, algorithms were compared in terms of curve--fitting accuracy using RMSPE values.
 Furthermore, we employed tests for a composite parameter as well.
-This parameter, referred to as ``Comp'' hereafter, 
-includes $\mathrm{APE}_\mathrm{MEDIAN}$ for each of the eight defined model parameters, 
-the median value for RMSPE, and $t_\mathrm{run}$. 
-This composite parameter may provide the most valuable insights for comparing the performance of the algorithms.  
+This parameter, referred to as ``Comp'' hereafter,
+includes $\mathrm{APE}_\mathrm{MEDIAN}$ for each of the eight defined model parameters,
+the median value for RMSPE, and $t_\mathrm{run}$.
+This composite parameter may provide the most valuable insights for comparing the performance of the algorithms. 
 However, it is important to note that the value of $N_\mathrm{pr}$ is only 10.
 According to Derrac \emph{et al.} \cite{Derrac2011}, the number of case problems should be $N_\mathrm{pr}\geq 2k$,
 where $k$ is the number of algorithms ($k=14$ in our study).
-Therefore, the use of the Comp parameter is not strictly rigorous. 
-Indeed, it would have been possible to increase the $N_\mathrm{pr}$ value by using, 
-for example, $\mathrm{APE}_\mathrm{MEAN}$. 
+Therefore, the use of the Comp parameter is not strictly rigorous.
+Indeed, it would have been possible to increase the $N_\mathrm{pr}$ value by using,
+for example, $\mathrm{APE}_\mathrm{MEAN}$.
 However, deliberately using a suboptimal parameter would have seemed inappropriate.
 
 
@@ -855,37 +855,37 @@ However, deliberately using a suboptimal parameter would have seemed inappropria
                Wilcoxon signed-rank test with a significance level of $\alpha = 0.05$ in the single-IV case.}\label{figWilTotSingleIV}
 \end{figure}
 
-Fig.~\ref{figWilSingleIV} graphically depicts 
-the non-parametric statistical results of pairwise comparisons of the algorithms 
-based on the Wilcoxon signed--rank test. 
-For the Comp parameter comparisons, the differences in the performance scores 
-were normalized to the interval $[0,\, 1]$ to facilitate the comparison. 
-The figure shows that no single algorithm outperforms all the others in evaluating each parameter. 
+Fig.~\ref{figWilSingleIV} graphically depicts
+the non-parametric statistical results of pairwise comparisons of the algorithms
+based on the Wilcoxon signed--rank test.
+For the Comp parameter comparisons, the differences in the performance scores
+were normalized to the interval $[0,\, 1]$ to facilitate the comparison.
+The figure shows that no single algorithm outperforms all the others in evaluating each parameter.
 Furthermore, no algorithm surpasses all the others when estimating even a single parameter.
 
 
-For example, as the figure states, STLBO shows a significant improvement over 
-DE, NDE, MABC, GOTLBO, PSO, IJAYA, ISCA, NNA, CWOA, and WW across all the parameters 
-considered with a level of significance $\alpha = 0.05$. 
-Simultaneously, no significant differences were detected between the STLBO algorithm 
-and both the EBLSHADE and ADELI algorithms for the estimation of all parameters. 
+For example, as the figure states, STLBO shows a significant improvement over
+DE, NDE, MABC, GOTLBO, PSO, IJAYA, ISCA, NNA, CWOA, and WW across all the parameters
+considered with a level of significance $\alpha = 0.05$.
+Simultaneously, no significant differences were detected between the STLBO algorithm
+and both the EBLSHADE and ADELI algorithms for the estimation of all parameters.
 Additionally, no significant differences were found between STLBO and TLBO for the Comp parameter comparisons.
-EBLSHADE outperforms almost all other algorithms in the composite parameter except STLBO. 
-According to the count of victories in the Wilcoxon test, 
-the worst performances are exhibited by PSO and CWOA. 
-PSO achieved better results than ISCA, NNA, and CWOA in RMSPE value and 
+EBLSHADE outperforms almost all other algorithms in the composite parameter except STLBO.
+According to the count of victories in the Wilcoxon test,
+the worst performances are exhibited by PSO and CWOA.
+PSO achieved better results than ISCA, NNA, and CWOA in RMSPE value and
 also outperformed WW in $n_2$ estimation and RMSPE.
 Test detected significant differences between CWOA and WW in $n_2$ and $I_{01}$ estimations,
 between CWOA and PSO in $I_{01}$, $I_{02}$, $R_\mathrm{s}$, and $I_\mathrm{ph}$ estimations,
 and between CWOA and both ISCA and NNA in $R_\mathrm{s}$  estimation only.
 
-Looking at the results of the Wilcoxon test from another perspective, 
-it can be observed that neither EBLSHADE nor STLBO suffered any defeats in pairwise comparisons, 
+Looking at the results of the Wilcoxon test from another perspective,
+it can be observed that neither EBLSHADE nor STLBO suffered any defeats in pairwise comparisons,
 while ADELI experienced only one loss.
-ADELI was defeated in the Comp parameter only by  EBLSHADE, 
-primarily due to significantly longer run time. 
-The highest number of defeats was observed for the PSO and WW algorithms 
-(104 and 84, respectively). 
+ADELI was defeated in the Comp parameter only by  EBLSHADE,
+primarily due to significantly longer run time.
+The highest number of defeats was observed for the PSO and WW algorithms
+(104 and 84, respectively).
 Fig.~\ref{figWilTotSingleIV} summarizes the total number of wins and losses in the Wilcoxon test for each algorithm.
 
 
@@ -898,56 +898,56 @@ Fig.~\ref{figWilTotSingleIV} summarizes the total number of wins and losses in t
 	  \caption{Ranking of the algorithms according to Friedman (a), Friedman Aligned (b), and Quade (c) tests in the single-IV case.}\label{figRanksSingleIV}
 \end{figure}
 
-It is recommended \cite{Derrac2011} to initiate the multiple comparison tests by examining the null hypothesis $H_0$, 
-which asserts the equality of medians among the populations of results obtained by different algorithms. 
-The $p$--values for the null hypothesis, computed through the statistics of Friedman, Friedman Aligned, 
+It is recommended \cite{Derrac2011} to initiate the multiple comparison tests by examining the null hypothesis $H_0$,
+which asserts the equality of medians among the populations of results obtained by different algorithms.
+The $p$--values for the null hypothesis, computed through the statistics of Friedman, Friedman Aligned,
 and Quade tests and the Iman--Davenport extension, are provided in the supplementary material (table S2).
 The highest observed $p(H_0)$--values were found to be $2.7\cdot10^{-5}$  (Friedman Aligned test for the task of Rp estimation),
-$4.4\cdot10^{-4}$ (Friedman Aligned test for the composite parameter case), 
-and $8.3\cdot10^{-6}$ (Quade test, Comp parameter). 
-Thus, the obtained data strongly suggest the significant differences among the considered algorithms 
+$4.4\cdot10^{-4}$ (Friedman Aligned test for the composite parameter case),
+and $8.3\cdot10^{-6}$ (Quade test, Comp parameter).
+Thus, the obtained data strongly suggest the significant differences among the considered algorithms
 in the accuracy of all model parameter determination, RMSPE values, and the Comp parameter.
 
 
-Fig.~\ref{figRanksSingleIV} illustrates the ranks achieved 
-by the Friedman, Friedman Aligned, and Quade tests for the applied optimization algorithms in different tasks. 
-These ranks are also tabulated in the supplementary material (table S3). 
-In nearly all cases, the algorithms EBLSHADE, ADELI, and STLBO consistently achieve the top three ranks. 
+Fig.~\ref{figRanksSingleIV} illustrates the ranks achieved
+by the Friedman, Friedman Aligned, and Quade tests for the applied optimization algorithms in different tasks.
+These ranks are also tabulated in the supplementary material (table S3).
+In nearly all cases, the algorithms EBLSHADE, ADELI, and STLBO consistently achieve the top three ranks.
 For instance, in assessing the accuracy of model parameter estimation, ADELI has ranked first  22 times.
-The STLBO algorithm ranked first six times, 
+The STLBO algorithm ranked first six times,
 taking the sole first place twice ($I_{01}$ estimation according to Friedman Aligned test and
-$R_\mathrm{p1}$ estimation according to Quade test) 
-and sharing it with ADELI four times ($n_1$, $R_\mathrm{p1}$, $n_2$, and $I_\mathrm{ph}$ 
+$R_\mathrm{p1}$ estimation according to Quade test)
+and sharing it with ADELI four times ($n_1$, $R_\mathrm{p1}$, $n_2$, and $I_\mathrm{ph}$
 estimation according to Friedman Aligned test).
 In the RMSPE  case, ADELI and STLBO attained equal and top ranks across all three tests utilized.
-When comparing based on the Comp parameter, 
-the STLBO algorithm secured the top rank according to the Friedman Aligned test, 
+When comparing based on the Comp parameter,
+the STLBO algorithm secured the top rank according to the Friedman Aligned test,
 whereas the Friedman and Quade tests identified EBLSHADE as the best performer.
 For the most part, the TLBO algorithm consistently ranked fourth among all the tested algorithms.
 Interestingly, in four cases ($I_{01}$ estimation, RMSPE value, and Comp parameter by Friedman Aligned test,
 and Comp parameter by Quade test),
 it even achieved a commendable third-place ranking.
-We must note that overall, the absolute values of ranks for the ADELI, STLBO, EBLSHADE, 
+We must note that overall, the absolute values of ranks for the ADELI, STLBO, EBLSHADE,
 and TLBO algorithms differ only slightly, and the difference between the first and fourth ranks is often less than 0.5.
 The worst ranks are observed for PSO, NNA, CWOA, and WW.
 
-It is known \cite{Derrac2011} that 
+It is known \cite{Derrac2011} that
 the Friedman, Friedman Aligned, and Quade tests are inadequate for establishing accurate comparisons between the considered algorithms.
-To compare a control method (one of 14 tested) 
-with a set of other algorithms (the remaining 13), 
+To compare a control method (one of 14 tested)
+with a set of other algorithms (the remaining 13),
 one can define a family of null hypotheses related to the control method.
-Applying a post-hoc procedure makes it possible to obtain a $p$--value that indicates 
+Applying a post-hoc procedure makes it possible to obtain a $p$--value that indicates
 the probability of obtaining the observed results if the corresponding hypothesis is true.
 We calculated $p$--values using four post-hoc procedures (Finner, Holm, Hochberg, and Holland) for all algorithms, tests, and tasks.
 The reader is referred to the supplementary material for all $p$-values (Tables S4-S143).
-In particular, a common feature of all comparisons is that 
+In particular, a common feature of all comparisons is that
 the Finner post-hoc procedure demonstrates the most powerful behavior, yielding the lowest $p$--values.
 
 
-In our study, we adopted a threshold value of $p_{cr}=0.1$ 
-to establish a critical level for comparing the algorithms' effectiveness 
+In our study, we adopted a threshold value of $p_{cr}=0.1$
+to establish a critical level for comparing the algorithms' effectiveness
 in both multiple $1\times N$  and $N\times N$ comparisons.
-That is, it was defined that the likelihood of obtaining a result as extreme as the observed one 
+That is, it was defined that the likelihood of obtaining a result as extreme as the observed one
 if there is no difference between the two algorithms (null hypothesis), was less than 10\%.
 
 
@@ -986,7 +986,7 @@ WW & 0/96  & 12/76  & 16/76&  36/43 & 0/108 & 10/60 & 12/77  & 12/66  & 0/92& 0/
 The statistical results of the comparison of algorithm effectiveness are available in the supplementary materials (figure S3).
 Among the compared algorithms, EBLSHADE, ADELI, and STLBO consistently outperform the others in $1\times N$ multiple comparisons.
 On the other hand, algorithms such as PSO, ISCA, CWOA, and NNA consistently yield lower-quality results.
-The main changes observed in nonparametric statistical estimation of different parameters evaluation 
+The main changes observed in nonparametric statistical estimation of different parameters evaluation
 mainly concern algorithms with moderate effectiveness.
 
 
@@ -995,31 +995,33 @@ In all cases, the Quade test yields higher adjusted $p$-values.
 In particular, in the case of the complex parameter, the $p$-value for any comparison did not exceed the chosen threshold value $p_{cr}$.
 
 
+
+The adjusted $p$--values obtained from the direct comparisons of EBLSHADE, ADELI, and STLBO 
+do not allow us to determine the best algorithm among them. 
+However, we can use the results of these top three algorithms, 
+obtained from their comparisons with less efficient optimization methods, for this purpose.
+Table~\ref{tbl1NWins} summarizes the counts of wins and losses for each algorithm in $1\times N$ multiple comparisons.
+The maximum possible number of wins achieved in every 10 tasks is 156, 
+obtained from comparisons with 13 algorithms across 3 tests using 4 procedures. 
+Among the compared algorithms, ADELI showed the highest number of statistically 
+significant improvements (1093) over others, 
+indicating its superior performance. 
+Conversely, STLBO demonstrated the lowest number of defeats (0) 
+in similar comparisons, suggesting its consistently strong performance.
+
+
+The results above show the outcomes of the procedures used to control the Family-Wise Error Rate (FWER) 
+for comparisons with a control algorithm. 
+We individually tested each of the 14 algorithms to determine if any of them were superior to the others. 
+The results below display the multiple comparisons carried out, 
+involving the computation of all possible pairwise comparisons ($N\times N$ comparison). 
+Three procedures (Shaffer’s static, Nemenyi, and Holm) were employed to control FWER.
+These procedures consider that the hypotheses being tested belong to a family of all 
+pairwise comparisons and are logically interrelated; thus, 
+not all combinations of true and false hypotheses are possible.
+
 %Будь-ласка, покращ англійську в наступних реченнях, які я буду пропонувати. Зокрема, треба буде виправити граматичні та стилістичні помилки
 %якщо можна, окрім виправленого речення, наводь інформацію про зміни, які зроблені
-
-
-The adjusted $p$-values obtained from the direct comparisons of EBLSHADE, ADELI, and STLBO
-do not allow for determining the best algorithm among them.
-However, for this purpose, the results of this top trio of algorithms can be used,
-obtained from their comparisons with less efficient optimization methods.
-Table~\ref{tbl1NWins} summarizes count of wins and losses for each algorithm in $1\times N$ multiple comparisons.
-The maximum possible number of wins achieved in every 10 tasks is 156,
-obtained from comparing with 13 algorithms in 3 tests using 4 procedures.
-As can be seen, among the compared algorithms,
-ADELI showed the highest count of statistically confirmed improvements (1093) over others,
-indicating its superior performance.
-Conversely, STLBO demonstrated the lowest count of defeats (0) in similar comparisons, suggesting its consistently strong performance.
-
-Previously, we employed procedures that controlled the Family-Wise Error Rate (FWER)
-for comparisons with a control algorithm.
-We tested each of the 14 algorithms individually to determine if any of them were superior to the others.
-Below are the results of the carried out a multiple comparisons in which
-all possible pairwise comparisons need to be computed ( $N\times N$ comparison),
-and three procedures (Shaffer’s static, Nemenyi, and Holm) have been used to control FWER.
-These procedures take into account that the hypotheses being tested belonging
-to a family of all pairwise comparisons are logically interrelated;
-thus not all combinations of true and false hypotheses are possible.
 
 Starting from the analysis performed by the Friedman test over our results, we can raise the
 91 hypotheses of equality among the 14 algorithms of our study for each task,
