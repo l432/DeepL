@@ -1020,18 +1020,18 @@ These procedures consider that the hypotheses being tested belong to a family of
 pairwise comparisons and are logically interrelated; thus,
 not all combinations of true and false hypotheses are possible.
 
-Starting from the analysis performed by the Friedman test on our results, 
-we can raise the 91 null hypotheses of equality among 
+Starting from the analysis performed by the Friedman test on our results,
+we can raise the 91 null hypotheses of equality among
 the 14 algorithms in our study for each task and apply the previously mentioned methods to contrast them.
 
 Starting from the analysis performed by the Friedman test over our results, we can raise the
 91 hypotheses of equality among the 14 algorithms of our study for each task,
 and apply the methods mentioned earlier to contrast them.
-Table~\ref{tblNNpValueI01} lists a portion of the hypotheses and the 
+Table~\ref{tblNNpValueI01} lists a portion of the hypotheses and the
 adjusted $p$-values achieved for the task of $I_{01}$ estimation.
 For the remaining 46 hypotheses not indicated in the table,
 a $p$-value of 1 was obtained after applying each of the procedures.
-The full version of the table, as well as the data obtained for other tasks, 
+The full version of the table, as well as the data obtained for other tasks,
 are given in the supplementary material (tables S144-S153).
 
 
@@ -1094,27 +1094,27 @@ NNA versus MABC&1.0&9.64793E-01&9.64793E-01\\
 
 
 
-It can be seen that at a significance level of 0.1, 
+It can be seen that at a significance level of 0.1,
 only 37 hypotheses of equality are rejected by the Nemenyi, Holm, and Shaffer methods.
-These hypotheses show the improvement of EBLSHADE, ADELI, TLBO, and STLBO 
-over DE, NDE, MABC, GOTLBO, PSO, ISCA, NNA, CWOA, and WW, 
-as well as NNA over WW. 
+These hypotheses show the improvement of EBLSHADE, ADELI, TLBO, and STLBO
+over DE, NDE, MABC, GOTLBO, PSO, ISCA, NNA, CWOA, and WW,
+as well as NNA over WW.
 None of the remaining 54 hypotheses can be rejected using these procedures.
 
 
-It should be noted that when testing complementary hypotheses 
-(``algorithm A vs algorithm B'' and ``algorithm B vs algorithm A''), 
+It should be noted that when testing complementary hypotheses
+(``algorithm A vs algorithm B'' and ``algorithm B vs algorithm A''),
 a $p$--value less than 1 can be obtained in only one of the two cases.
-For instance, when using the Nemenyi procedure to $I_{01}$ evaluating by comparing ``ADELI vs MABC'', 
-a $p$--value of $5.84\cdot10^{-9}$ was obtained. 
+For instance, when using the Nemenyi procedure to $I_{01}$ evaluating by comparing ``ADELI vs MABC'',
+a $p$--value of $5.84\cdot10^{-9}$ was obtained.
 Conversely, when comparing ``MABC vs ADELI'', the $p$--value was 1.
 The $p$-values were computed for all possible hypotheses in the study to identify algorithms whose results statistically deviate from those of other algorithms.
 In this case, a critical value of $p_{cr}=0.1$ was used, similar to the $1\times N$ multiple comparisons.
 Typical examples of the obtained results for specific parameter cases are presented in Fig.~\ref{figNNRezSingleIV}.
 Please refer to figure S4 in the supplementary materials for more detailed and comprehensive data.
-Generalized results regarding the total count of victories and defeats in the $N\times N$ comparisons 
+Generalized results regarding the total count of victories and defeats in the $N\times N$ comparisons
 are listed in Table~\ref{tblNNWins}.
- In the case of $N\times N$ comparisons, the maximum possible number of wins achieved in every 10 tasks is 39, 
+ In the case of $N\times N$ comparisons, the maximum possible number of wins achieved in every 10 tasks is 39,
 obtained from comparing 13 algorithms in 3 post-hoc procedures.
 
 
@@ -1161,14 +1161,14 @@ WW & 0/15  & 0/21  & 0/20&  0/12 & 0/30 & 0/18 & 2/15  & 0/20  & 0/24& 0/12  & 2
 \end{tabular*}
 \end{table*}
 
-In most instances, all post-hoc procedures considered lead to similar conclusions 
-regarding the outperformance of one algorithm over another. 
-For example, in the case of the $R_\mathrm{p1}$ estimation task, 
+In most instances, all post-hoc procedures considered lead to similar conclusions
+regarding the outperformance of one algorithm over another.
+For example, in the case of the $R_\mathrm{p1}$ estimation task,
 the Nemenyi procedure disagrees with the Holm and Shaffer methods in only 4 out of 57 cases.
 Particularly, this happens for the hypotheses "DE vs WW," "MABC vs ISCA," "MABC vs NNA," and "TLBO vs NDE" --- see Fig.~\ref{figNNRezSingleIV}(a).
-On the other hand, as evident from Fig.~\ref{figNNRezSingleIV}(b), 
+On the other hand, as evident from Fig.~\ref{figNNRezSingleIV}(b),
 such situations are not observed at all for the $I_{02}$ evaluation task.
-In general, the results of the Holm procedure differ from those of the Shaffer procedure in only two comparisons: 
+In general, the results of the Holm procedure differ from those of the Shaffer procedure in only two comparisons:
 the improvement of IJAYA over GOTLBO in the $n_1$  estimation and the outperformance of TLBO over NNA for the composite parameter.
 
 
@@ -1180,25 +1180,21 @@ whereas for the $N\times N$ comparisons, such situations were identified in only
 the improvement of EBLSHADE over MABC, GOTLBO, PSO, ISCA, NNA, CWOA, and WW,
 the statistically significant difference ADELI and GOTLBO, PSO, NNA, CWOA, and WW,
 and outperformance of both TLBO and STLBO over PSO, NNA, CWOA, and WW.
-As a result, $N\times N$ comparisons yield a less precise ranking of all algorithms. 
-Nonetheless, it remains feasible to discern the best and worst-performing algorithms. 
-The data obtained reveal that EBLSHADE, ADELI, and STLBO consistently emerge as the top-performing algorithms across all tasks, 
+As a result, $N\times N$ comparisons yield a less precise ranking of all algorithms.
+Nonetheless, it remains feasible to discern the best and worst-performing algorithms.
+The data obtained reveal that EBLSHADE, ADELI, and STLBO consistently emerge as the top-performing algorithms across all tasks,
 while PSO, ISCA, NNA, CWOA, and WW consistently rank among the worst performers.
 
-Thus, the results presented in this subsection demonstrate that 
-no examined algorithm can be defined as one that allows for precisely estimating only one 
+Thus, the results presented in this subsection demonstrate that
+no examined algorithm can be defined as one that allows for precisely estimating only one
 (e.g., only $R_\mathrm{p2}$ or only $I_{02}$) parameter in the opposed two-diode model.
-The algorithms that exhibit high efficiency (EBLSHADE, ADELI, and STLBO) 
-allow for the most precise estimation of all parameters. 
+The algorithms that exhibit high efficiency (EBLSHADE, ADELI, and STLBO)
+allow for the most precise estimation of all parameters.
 However, certain algorithms indeed display higher accuracy in determining specific parameters.
 Indeed, DE and IJAYA are the most effective in estimating $R_\mathrm{p2}$ and $I_\mathrm{ph}$, as shown in see table~S1.
-Nevertheless, this highest level of accuracy appears not worth significant attention when compared to other optimization methods. 
-As a result, the performance metrics of algorithms for individual parameter evaluation will not be analyzed in the following subsection, 
+Nevertheless, this highest level of accuracy appears not worth significant attention when compared to other optimization methods.
+As a result, the performance metrics of algorithms for individual parameter evaluation will not be analyzed in the following subsection,
 which is dedicated to the analysis of \emph{IV} curves with different parameter ratios.
-
-
-%Будь-ласка, покращ англійську в наступних реченнях, які я буду пропонувати. Зокрема, треба буде виправити граматичні та стилістичні помилки
-%якщо можна, окрім виправленого речення, наводь інформацію про зміни, які зроблені
 
 
 \subsubsection{Parameter extraction in IV--set case}
@@ -1236,23 +1232,23 @@ Fig.~\ref{figSetIV} shows several typical fitting results of a set of synthetic 
 simulated according to the opposed two-diode model using the parameter values described in Sec.~\ref{SetIV}.
 A more comprehensive and enhanced version, including the fitting results obtained using each algorithm,
 is provided in the supplementary materials (figure S4).
-Similar to the single--\emph{IV} case, the algorithms EBLSHADE, ADELI, NDE, IJAYA, TLBO, and STLBO 
+Similar to the single--\emph{IV} case, the algorithms EBLSHADE, ADELI, NDE, IJAYA, TLBO, and STLBO
 demonstrate the highest agreement between the fitting curves and the points of simulated current-voltage curves.
 Fig.~\ref{figTDepIVset} represents a portion of the results obtained from evaluating solar cell parameters using various algorithms,
 as well as the corresponding RMSPE data.
-The supplementary material contains the temperature dependencies of all 
+The supplementary material contains the temperature dependencies of all
 parameters determined by all algorithms applied --- see figures~S5-S13.
 The results, including MEAN, MEDIAN, STD, and IQR, are also tabulated (table S154 in the supplementary material).
 
 
 It should be noted that in several cases, the accuracy of parameter estimation depends on temperature, even for constant parameters.
-For instance, as the temperature increases, 
-the errors in determining $R_\mathrm{p1}$ decrease for NDE, MABC, GOTLBO, IJAYA, ISCA, and WW. 
+For instance, as the temperature increases,
+the errors in determining $R_\mathrm{p1}$ decrease for NDE, MABC, GOTLBO, IJAYA, ISCA, and WW.
 However, under the same conditions, the estimation quality of $I_{01}$ worsens using DE, ISCA, and WW.
 These results indicate that some parameter determination accuracy
 depends on the value of this parameter and other parameter values.
-However, the specific dependencies of parameter estimation accuracy 
-for each algorithm were beyond the scope of the study. 
+However, the specific dependencies of parameter estimation accuracy
+for each algorithm were beyond the scope of the study.
 We aimed to determine the best algorithms only.
 
 
@@ -1296,15 +1292,15 @@ WW&0&0&0&0&0&0&0&0&0&0&0&+&0&$\blacksquare$&1/3/9\\
 
 The presented data display several features similarly found in the single--\emph{IV} case.
 For instance, the error in parameter estimation by mean values is higher than median value errors in most instances.
-Exceptions arise at some temperatures, 
-particularly when evaluating $I_{01}$ using IJAYA, 
-$n_1$ using IJAYA and DE, 
-$R_\mathrm{p1}$ using DE and MABC, 
+Exceptions arise at some temperatures,
+particularly when evaluating $I_{01}$ using IJAYA,
+$n_1$ using IJAYA and DE,
+$R_\mathrm{p1}$ using DE and MABC,
 and $R_s$ using DE and WW.
-However, with high-precision algorithms, the deviation of MEDIAN from 
-the true value does not exceed that of MEAN. 
-Additionally, these algorithms exhibit small IQR values that do not exceed STD. 
-Similar to the previous case, small RMSPE values do not always indicate high accuracy 
+However, with high-precision algorithms, the deviation of MEDIAN from
+the true value does not exceed that of MEAN.
+Additionally, these algorithms exhibit small IQR values that do not exceed STD.
+Similar to the previous case, small RMSPE values do not always indicate high accuracy
 in determining the parameters of a solar cell.
 
 
@@ -1312,16 +1308,16 @@ At the same time, the number of algorithms exhibiting minimal errors has decreas
 Significant deviations from true values are observed for median values
 of $I_{01}$, $n_{1}$, $R_\mathrm{p1}$, $n_2$, $R_s$, and $I_\mathrm{ph}$ evaluated by EBLSHADE at various temperatures,
 as well as for median values of diode D1 characteristics and series resistor determined using TLBO at 260~K.
-Thus, only ADELI and STLBO remain as algorithms without visible errors. 
-Although this claim of infallibility applies only to median values, 
-substantial errors are observed for mean values in several cases. 
-Simultaneously, EBLSHADE, TLBO, IJAYA, and NDE constitute a group of algorithms with low RMSPE values 
+Thus, only ADELI and STLBO remain as algorithms without visible errors.
+Although this claim of infallibility applies only to median values,
+substantial errors are observed for mean values in several cases.
+Simultaneously, EBLSHADE, TLBO, IJAYA, and NDE constitute a group of algorithms with low RMSPE values
 but imperfect model parameter estimation.
 
 
 
 In the \emph{IV}--set case, to assess the statistical performance of compared algorithms,
-the run time and all $\mathrm{APE}_\mathrm{MEDIAN}$ and $\mathrm{RMSPE}_\mathrm{MEDIAN}$ values 
+the run time and all $\mathrm{APE}_\mathrm{MEDIAN}$ and $\mathrm{RMSPE}_\mathrm{MEDIAN}$ values
 for each \emph{IV} curve were taken into account.
 This approach mirrors the use of the Comp parameter in the previous subsection;
 however, in this scenario, $N_\mathrm{pr}=81$ is employed:
@@ -1329,39 +1325,37 @@ however, in this scenario, $N_\mathrm{pr}=81$ is employed:
 N_\mathrm{pr}= 10\,T_\mathrm{values}\times(8\,\mathrm{APE}_\mathrm{MEDIAN}+1\,\mathrm{RMSPE}_\mathrm{MEDIAN})+1\,t_\mathrm{run}\,.
 \end{equation*}
 Therefore, this approach is well--suited for nonparametric statistical analysis of $k=14$ meta--heuristic algorithms.
-Certainly, at first glance, it would be interesting to consider incorporating an additional 80 values of the interquartile range into the dataset. 
+Certainly, at first glance, it would be interesting to consider incorporating an additional 80 values of the interquartile range into the dataset.
 This strategy could offer insight into the stability of algorithm performance as well.
 However, it is known \cite{Derrac2011} that for multiple comparisons,
 a value of$N_\mathrm{pr}\geq 8\cdot k=112$ could be too high, resulting in no significant comparisons.
 
-%Будь-ласка, покращ англійську в наступних реченнях, які я буду пропонувати. Зокрема, треба буде виправити граматичні та стилістичні помилки
-%якщо можна, окрім виправленого речення, наводь інформацію про зміни, які зроблені
 
-Table~\ref{tblWilIVset} presents the statistical results generated by the Wilcoxon test. 
-According to the table, ADELI outperforms all other algorithms with a significance level of $\alpha = 0.05$. 
+Table~\ref{tblWilIVset} presents the statistical results generated by the Wilcoxon test.
+According to the table, ADELI outperforms all other algorithms with a significance level of $\alpha = 0.05$.
 STLBO and TLBO demonstrate improvements over DE, EBLSHADE, NDE, MABC, GOTLBO, PSO, IJAYA, ISCA, NNA, CWOA, and WW.
 
-The counts of statistically significant cases $(+/=/-)$ are presented in the last row of Table~\ref{tblWilIVset}. 
+The counts of statistically significant cases $(+/=/-)$ are presented in the last row of Table~\ref{tblWilIVset}.
 It can be seen that PSO, ISCA, NNA, and CWOA did not outperform any of the algorithms,
 whereas WW statistically significantly improved over NNA only.
-Therefore, although these algorithms boast promising run times, 
+Therefore, although these algorithms boast promising run times,
 they are not recommended for SC parameter estimation based on the opposed two-diode model.
 
-The $p$--values required to test the null hypothesis, computed using the 
+The $p$--values required to test the null hypothesis, computed using the
 Friedman, Friedman Aligned, Quade tests, and the Iman-Davenport extension,
-can be found in table~S2 of the supplementary materials. 
+can be found in table~S2 of the supplementary materials.
 None of these values exceeds $2.3\cdot10^{-6}$, thus rejecting the hypothesis of equivalent medians in all tests.
 
 
-Ranks achieved by the Friedman, Friedman Aligned, and Quade tests are shown in Fig..~\ref{figRankIVset} 
-and table~S3 (supplementary material). 
-According to the given results, ADELI has been placed first by the Friedman and Quade tests, 
+Ranks achieved by the Friedman, Friedman Aligned, and Quade tests are shown in Fig.~\ref{figRankIVset}
+and table~S3 (supplementary material).
+According to the given results, ADELI has been placed first by the Friedman and Quade tests,
 while STLBO has ranked first by the Friedman Aligned test.
 
 Ranks achieved by the Friedman, Friedman Aligned, and Quade tests are shown in Fig.~\ref{figRankIVset} and table~S3 in the supplementary material.
 As per the given results, ADELI has been placed at first rank by Friedman and Quade tests,
 and STLBO has ranked first by the Friedman Aligned test.
-TLBO has been recorded as the second-best algorithm by all three tests. 
+TLBO has been recorded as the second-best algorithm by all three tests.
 Furthermore, PSO was identified as the worst-performing algorithm by the tests' unanimous decision.
 
 
@@ -1426,40 +1420,46 @@ WW & 12/80 & 0/23\\
 
 
 
-
-The $p$-values, obtained for $1\times N$ multiple comparisons are shown in tables~S155-168 in the supplementary material.
-There are results of applying  Finner, Holm, Hochberg, and Holland procedures,
-as a post-hoc method after Friedman, Friedman Aligned, and Quade tests.
-The reader is referred to supplementary material (table~S169) for $p$-values of
-applying  Shaffer, Nemenyi, and Holm post-hoc procedures after the Friedman test in the
-case of $N\times N$ multiple comparisons.
-The results, which determine whether one algorithm yielded a statistically better estimation of parameters
-than the other (with a $p$-value $\leq p_{cr}=0.1$), are summarized in Fig.~\ref{figN1RezIVset} and \ref{figNNRezIVset}
+The $p$-values obtained for $1\times N$ multiple comparisons are shown in tables~S155-168 (supplementary material).
+These are the results of applying  the Finner, Holm, Hochberg, and Holland procedures,
+as a post-hoc method after the Friedman, Friedman Aligned, and Quade tests.
+Additionally, Shaffer, Nemenyi, and Holm post-hoc procedures were applied 
+after the Friedman test for $N\times N$ multiple comparisons, 
+and the corresponding $p$--values can be found in table~S169 (supplementary material).
+The results of determining whether one algorithm yielded a statistically better 
+estimation of parameters than another (with a$p$-value $\leq p_{cr}=0.1$) 
+are summarized in Figures~\ref{figN1RezIVset} and \ref{figNNRezIVset}
 for $1\times N$ and $N\times N$ comparisons, respectively.
-The counts of statistically  significant cases are presented in the Table~\ref{tblAllWins}.
+The counts of statistically significant cases are listed in Table~\ref{tblAllWins}.
 
-As can be seen,
-ADELI, TLBO, and STLBO were never outperformed by any of the algorithms,
-both in the case of $1\times N$ and $N\times N$ multiple comparisons.
-By the way, for $N\times N$ comparisons, the same property is observed with EBLSHADE and IJAYA.
-Overall, the parameter estimation results obtained from the set of IV curves
-using ADELI, TLBO, and STLBO algorithms for $N\times N$ comparisons in the opposed two-diode model are practically indistinguishable
-(when it comes to precise $p$-values, only minor differences can be observed).
-In $1\times N$ comparisons, TLBO demonstrates lower performance compared to ADELI and STLBO,
-in terms of efficiency when compared to the EBLSHADE algorithm.
-Specifically, the improvement of TLBO over EBLSHADE is proved only by the Finner procedure applied in the Friedman test.
-Based on $1\times N$ comparisons, it is observed as well that there are slight differences between ADELI and STLBO,
-primarily when compared to the non-worst algorithms.
-For instance, the Quade test confirms the improvement of ADELI over EBLSHADE for every post-hoc procedure,
-however, the Friedman and Friedman Aligned tests did not show statistically significant differences between these algorithms.
-Meanwhile, the Friedman Aligned and Quade tests find a difference between STLBO and EBLSHADE
-for every post-hoc procedure and Finner procedure only, respectively.
-Regarding comparison with NDE, the Friedman Aligned test demonstrated that STLBO is better according to all post-hoc procedures.
-In contrast, for ADELI, this outperforming was only observed using the Finner method.
-In the case of IJAYA,
-the results of the Friedman Aligned test show a reversal:
-only the Finner procedure indicates an improvement for STLBO,
-whereas ADELI outperforms all post-hoc methods utilized.
+As can be seen, ADELI, TLBO, and STLBO were never outperformed by any other algorithms 
+in both  $1\times N$ and $N\times N$ multiple comparison cases.
+Additionally, the same property (unbeaten) is observed with EBLSHADE and IJAYA for $N\times N$ comparisons as well.
+Overall, the parameter estimation results obtained from the set of \emph{IV} curves 
+in the opposed two-diode model using ADELI, TLBO, and STLBO algorithms 
+are practically indistinguishable in $N\times N$  comparisons 
+(differences in p-values are very small).
+In $1\times N$ comparisons, TLBO shows lower performance than ADELI and STLBO.
+The improvement of TLBO over EBLSHADE is proved only by the Finner procedure applied in the Friedman test.
+Based on $1\times N$ comparisons, slight differences between 
+ADELI and STLBO are observed, especially for comparisons versus the non-worst algorithms.
+For example, the Quade test confirms ADELI's improvement 
+over EBLSHADE across all post-hoc procedures. 
+However, neither the Friedman test nor the Friedman Aligned test showed 
+statistically significant differences between these algorithms. 
+Meanwhile, the Quade and  Friedman Aligned tests reveal differences between STLBO and EBLSHADE 
+for only the Finner procedure and every post-hoc procedure, respectively.
+Regarding comparison with NDE, the Friedman Aligned test demonstrated 
+that STLBO is better than NDE according to all post--hoc procedures. 
+In contrast, the ADELI outperformance over NDE was only observed using the Finner method.
+In the case of comparisons versus IJAYA, 
+the results of the Friedman Aligned test show a reversal: 
+only the Finner procedure indicates an STLBO advantage, 
+whereas ADELI outperforms IJAVA according to all utilized post-hoc methods.
+
+
+%Будь-ласка, покращ англійську в наступних реченнях, які я буду пропонувати. Зокрема, треба буде виправити граматичні та стилістичні помилки
+%якщо можна, окрім виправленого речення, наводь інформацію про зміни, які зроблені
 
 In deciding the optimal algorithm for parameter estimation of solar cell parameters
 from the IV curve using the opposed two-diode model,
