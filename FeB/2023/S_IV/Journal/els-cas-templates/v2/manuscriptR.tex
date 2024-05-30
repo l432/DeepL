@@ -649,7 +649,8 @@ Description of all the used post-hoc procedures can be found in Derrac \emph{et 
 
 All mentioned methods are standard for comparing metaheuristic algorithms \cite{Derrac2011}.
 Their comprehensive application enables making the most well-founded conclusions.
-
+As shown below in our case, only applying the entire set of tests and post-hoc methods 
+has enabled us to detect slight differences in the accuracy of model parameter evaluation by different algorithms.
 
 
 
@@ -1231,13 +1232,14 @@ which is dedicated to the analysis of \emph{IV} curves with different parameter 
 Fig.~\ref{figSetIV} shows several typical fitting results of a set of synthetic \emph{IV} curves
 simulated according to the opposed two-diode model using the parameter values described in Sec.~\ref{SetIV}.
 A more comprehensive and enhanced version, including the fitting results obtained using each algorithm,
-is provided in the supplementary materials (figure S4).
+is provided in the supplementary materials (figure S5).
 Similar to the single--\emph{IV} case, the algorithms EBLSHADE, ADELI, NDE, IJAYA, TLBO, and STLBO
 demonstrate the highest agreement between the fitting curves and the points of simulated current-voltage curves.
 Fig.~\ref{figTDepIVset} represents a portion of the results obtained from evaluating solar cell parameters using various algorithms,
 as well as the corresponding RMSPE data.
 The supplementary material contains the temperature dependencies of all
-parameters determined by all algorithms applied --- see figures~S5-S13.
+parameters determined by all algorithms applied (figures~S6-S14) and scatter plots,
+which depict the relationship between all model parameters' true and evaluated values (figures~S15-S22).
 The results, including MEAN, MEDIAN, STD, and IQR, are also tabulated (table S154 in the supplementary material).
 
 
@@ -1423,54 +1425,51 @@ WW & 12/80 & 0/23\\
 The $p$-values obtained for $1\times N$ multiple comparisons are shown in tables~S155-168 (supplementary material).
 These are the results of applying  the Finner, Holm, Hochberg, and Holland procedures,
 as a post-hoc method after the Friedman, Friedman Aligned, and Quade tests.
-Additionally, Shaffer, Nemenyi, and Holm post-hoc procedures were applied 
-after the Friedman test for $N\times N$ multiple comparisons, 
+Additionally, Shaffer, Nemenyi, and Holm post-hoc procedures were applied
+after the Friedman test for $N\times N$ multiple comparisons,
 and the corresponding $p$--values can be found in table~S169 (supplementary material).
-The results of determining whether one algorithm yielded a statistically better 
-estimation of parameters than another (with a$p$-value $\leq p_{cr}=0.1$) 
+The results of determining whether one algorithm yielded a statistically better
+estimation of parameters than another (with a$p$-value $\leq p_{cr}=0.1$)
 are summarized in Figures~\ref{figN1RezIVset} and \ref{figNNRezIVset}
 for $1\times N$ and $N\times N$ comparisons, respectively.
 The counts of statistically significant cases are listed in Table~\ref{tblAllWins}.
 
-As can be seen, ADELI, TLBO, and STLBO were never outperformed by any other algorithms 
+As can be seen, ADELI, TLBO, and STLBO were never outperformed by any other algorithms
 in both  $1\times N$ and $N\times N$ multiple comparison cases.
 Additionally, the same property (unbeaten) is observed with EBLSHADE and IJAYA for $N\times N$ comparisons as well.
-Overall, the parameter estimation results obtained from the set of \emph{IV} curves 
-in the opposed two-diode model using ADELI, TLBO, and STLBO algorithms 
-are practically indistinguishable in $N\times N$  comparisons 
+Overall, the parameter estimation results obtained from the set of \emph{IV} curves
+in the opposed two-diode model using ADELI, TLBO, and STLBO algorithms
+are practically indistinguishable in $N\times N$  comparisons
 (differences in p-values are very small).
 In $1\times N$ comparisons, TLBO shows lower performance than ADELI and STLBO.
 The improvement of TLBO over EBLSHADE is proved only by the Finner procedure applied in the Friedman test.
-Based on $1\times N$ comparisons, slight differences between 
+Based on $1\times N$ comparisons, slight differences between
 ADELI and STLBO are observed, especially for comparisons versus the non-worst algorithms.
-For example, the Quade test confirms ADELI's improvement 
-over EBLSHADE across all post-hoc procedures. 
-However, neither the Friedman test nor the Friedman Aligned test showed 
-statistically significant differences between these algorithms. 
-Meanwhile, the Quade and  Friedman Aligned tests reveal differences between STLBO and EBLSHADE 
+For example, the Quade test confirms ADELI's improvement
+over EBLSHADE across all post-hoc procedures.
+However, neither the Friedman test nor the Friedman Aligned test showed
+statistically significant differences between these algorithms.
+Meanwhile, the Quade and  Friedman Aligned tests reveal differences between STLBO and EBLSHADE
 for only the Finner procedure and every post-hoc procedure, respectively.
-Regarding comparison with NDE, the Friedman Aligned test demonstrated 
-that STLBO is better than NDE according to all post--hoc procedures. 
+Regarding comparison with NDE, the Friedman Aligned test demonstrated
+that STLBO is better than NDE according to all post--hoc procedures.
 In contrast, the ADELI outperformance over NDE was only observed using the Finner method.
-In the case of comparisons versus IJAYA, 
-the results of the Friedman Aligned test show a reversal: 
-only the Finner procedure indicates an STLBO advantage, 
+In the case of comparisons versus IJAYA,
+the results of the Friedman Aligned test show a reversal:
+only the Finner procedure indicates an STLBO advantage,
 whereas ADELI outperforms IJAVA according to all utilized post-hoc methods.
 
 
-%Будь-ласка, покращ англійську в наступних реченнях, які я буду пропонувати. Зокрема, треба буде виправити граматичні та стилістичні помилки
-%якщо можна, окрім виправленого речення, наводь інформацію про зміни, які зроблені
 
-In deciding the optimal algorithm for parameter estimation of solar cell parameters
-from the IV curve using the opposed two-diode model,
-the practical choices boil down to EBLSHADE, ADELI, TLBO, and STLBO.
-However, TLBO exhibited lower performance when applied in the single-IV case.
-The parameter estimation error when using EBLSHADE was not always minimal in the IV-set case.
+When deciding on the optimal algorithm for SC parameter extraction from 
+the \emph{IV} curve using the opposed two-diode model, 
+one must choose between EBLSHADE, ADELI, TLBO, and STLBO in fact.
+However, TLBO exhibited lower performance when applied to the single--\emph{IV} case.
+The parameter evaluation error when using EBLSHADE was not always minimal in the \emph{IV}--set case.
 Despite the minimal advantage in terms of win counts in $1\times N$ comparisons
 (see Table~\ref{tblAllWins}),
 we hesitate to declare STLBO as the best.
-In our opinion, STLBO and ADELI both hold the top position in the competition conducted in this study.
-
+We believe STLBO and ADELI jointly hold the top position in this study's competition.
 
 
 Over the last few decades, researchers have strived to enhance the performance of metaheuristic algorithms using various concepts, including \cite{Kepler}:
@@ -1485,39 +1484,163 @@ Furthermore, highly productive results were achieved through the application of 
 
 \section{Conclusion}\label{SecConsl}
 
-In this paper, the possibility of using meta--heuristic algorithms
-to solve the parameter estimation problems of photovoltaic cells
-with S--shaped current--voltage characteristics has been explored.
-The parameter estimation has been performed within the framework of the opposed two-diode model.
-A total of 14 meta--heuristic algorithms from various classes were implemented
-to extract the solar cell parameters from synthetic IV curves, which were generated with a range of parameter values.
-The obtained results have been compared using nonparametric statistical procedures,
-including pairwise comparisons, $1\times N$ multiple comparisons, and $N\times N$ multiple comparisons.
+%Будь-ласка, покращ англійську в наступних реченнях, які я буду пропонувати. Зокрема, треба буде виправити граматичні та стилістичні помилки
+%якщо можна, окрім виправленого речення, наводь інформацію про зміни, які зроблені
+This paper explores the feasibility of employing meta--heuristic algorithms 
+to address parameter extraction challenges of photovoltaic cells 
+exhibiting S-shaped current-voltage characteristics. 
+The parameter evaluation is carried out within the framework of the opposed two--diode model. 
+A total of 14 meta--heuristic algorithms from diverse classes are implemented 
+to extract solar cell parameters from synthetic \emph{IV} curves, 
+which have been initially generated by using a wide range of parameter values. 
+The results are compared using nonparametric statistical procedures, 
+including pairwise comparisons,  $1\times N$ multiple comparisons, and $N\times N$ multiple comparisons.
 
-Research has demonstrated that utilizing a squared error-based fitness function offers clear advantages in tackling a provided problem.
-The overall performance results of various algorithms generally fit the No Free Lunch theory.
-%‘‘No-Free-Lunch’’ theorem.
-GOTLBO, PSO, ISCA, NNA, CWOA, and WW are completely unsuitable for parameter estimation according to the opposed two-diode model.
-The results of DE, NDE, MABC, and IJAYA are not as poor as those in the previous group;
-however, in general, it is still not recommended to use these algorithms for solving parameter identification problems.
-Generally, the EBLSHADE and TLBO are effective in accurately determining parameter values in most cases.
-However, investigation has shown that these algorithms may make mistakes under certain conditions.
-Therefore, EBLSHADE and TLBO applications in the case of solar cells with S-shaped IV curves should be approached with caution.
-Finally, results have illustrated that STLBO and ADELI have superior performance in terms of accuracy and reliability
-when compared with other used algorithms.
-In particular, these two algorithms successfully solve the task of accurately determining parameters
-from similar IV curves corresponding to photovoltaic cells with distinct characteristics.
+Research has shown that employing 
+a square error-based fitness function provides 
+clear advantages in addressing the given problem compared to 
+an absolute error-based fitness function.
+The overall results of various algorithms' performance align with the No Free Lunch theorem.
+GOTLBO, PSO, ISCA, NNA, CWOA, and WW are entirely unsuitable for parameter evaluation using the opposed two-diode model.
+The results of DE, NDE, MABC, and IJAYA are not as subpar as those in the previous group; 
+however, overall, it is not advisable to utilize these algorithms for parameter extraction.
+In general, EBLSHADE and TLBO prove effective in accurately determining parameter values in most instances.
+However, investigation has revealed that these algorithms may falter under certain conditions.
+Thus, caution is warranted when applying EBLSHADE and TLBO to solar cells with S-shaped IV curves.
+In conclusion, STLBO and ADELI exhibit superior performance in accuracy and reliability compared to other algorithms.
+In particular, these two algorithms successfully determine parameters from similar \emph{IV} curves corresponding to photovoltaic cells with distinct characteristics.
 
-It is important to note that in this study,
-the parameters were obtained from idealized IV curves,
-where the voltage-current relationships were precisely defined by Eq.~(\ref{eqIV_g}).
-In a real experiment, there is a potential for errors in the measurement of both current and voltage.
-Hence,  it would be worthwhile to explore the efficacy of various meta--heuristic algorithms
-in determining parameters from IV data corrupted by noise in future research.
 
-This work of testing and comparative analysis of
-different meta--heuristic algorithms for the estimation
-of solar cell parameters should be useful for further research and development on photovoltaic systems.
+It's worth noting that in this study, 
+the parameters were obtained from idealized \emph{IV} curves, 
+where the voltage-current relationships have been precisely defined by Eq.~(\ref{eqIV_g}).
+In an actual experiment, there is potential for errors in both current and voltage measurements. 
+Therefore, it would be valuable to investigate the effectiveness of various meta--heuristic algorithms 
+in determining parameters from \emph{IV} data corrupted by noise in future research.
+
+
+This work involving testing and comparative analysis of various meta--heuristic 
+algorithms for estimating solar cell parameters should significantly contribute 
+to further research and development in photovoltaic systems.
+
+
+%-----------------------------------
+When analyzing the significance of the results, it is essential to consider the following points.
+
+
+
+
+Аналізуючи важливість отриманих результатів, мусимо зауважити наступне.
+
+I–V curves are also commonly used to calibrate the parameters of physics-based performance models of PV devices, such as single- or double-diode models.
+
+The current–voltage (IV) values of solar cells represent the heart
+of their characterization in industry and research. 
+
+The current-voltage (IV) characteristics is one of the most important
+measurements in the analysis of solar cells in both, 
+research and industrial mass production. 
+It allows the extraction of central performance indicators such as efficiency η, fill factor FF, maximum power Pmax,
+short-circuit current Isc and open-circuit voltage Voc. 
+
+Applied Energy 237 (2019) 519–533
+The precise knowledge of the model parameters values is crucial for
+many practical applications. For example, they are used in the simulation
+and emulation of PV systems [17–19], which are imperative for energy yield
+prediction and the characterization of power converter hardware. Further,
+these parameters are valuable for the quality control of PV cell during the
+manufacturing process [20]. Another area where these parameters are useful
+is in the study of the PV cell degradation [21–24]. 
+
+Such lumped-parameter modeling enables simulation, analysis, and optimization of
+device performance. 
+
+
+
+У доповіді можна було б обговорити практичні наслідки впровадження цих алгоритмів
+в реальних умовах тестування та виробництва сонячних елементів.
+Пропозиції щодо того, як інтегрувати ці алгоритми в існуючі системи, очікувані покращення
+точності оцінки параметрів, а також потенційні виклики при розгортанні були б корисними для практиків у цій галузі.
+
+With these merits,
+the proposed method is envisaged to be a valuable tool for the
+development of a reliable computational engine for a PV
+simulator.
+
+a successful realization of the solar PV system, the
+availability of an accurate, fast and reliable computer
+simulation tool is indispensable. The most crucial component
+that directly affects the accuracy of the simulator is the model
+
+The algorithms that we use to determine parameters of PV generators (solar cells, modules and arrays) 
+must be efficient and sufficiently accurate for process optimization and photovoltaic systems design tasks. 
+
+PV diagnostics can be possible by monitoring the PV parameters and
+comparing them with those at their initial states. A PV module simulator using equivalent circuit model parameters evaluates some MPPT control methods under the same condition
+
+The model parameters are
+closely related to the internal physical mechanisms acting within the solar cell. Their
+knowledge is therefore important, not only for cell array and system simulation, but
+also as an analysis tool to gain an understanding of the processes involved.
+Optimization efforts and quantitative studies to asses the capabilities of a particular
+technology greatly benefit from the correct extraction of the model parameters under
+various test conditions.
+
+
+Очікувані Практичні Наслідки:
+
+    Підвищення Точності Характеризації:
+        Застосування алгоритму дозволяє точніше визначати параметри моделей, що сприяє більш точній оцінці продуктивності сонячних елементів.
+
+    Оптимізація Виробничого Процесу:
+        Завдяки більш точній характеристиці сонячних елементів можна оптимізувати процес виробництва, мінімізуючи дефекти та підвищуючи ефективність.
+
+    Підвищення Якості Продукції:
+        Алгоритм допомагає виявляти та виправляти недоліки на ранніх стадіях виробництва, що підвищує загальну якість продукції.
+
+    Прискорення Тестування:
+        Автоматизоване визначення параметрів моделі може скоротити час, необхідний для тестування кожного елемента, що дозволяє збільшити обсяги виробництва без втрати якості.
+
+    Зменшення Витрат:
+        Оптимізація процесу тестування та зниження кількості бракованих елементів знижує витрати на виробництво.
+
+Інтеграція Алгоритму в Існуючі Системи:
+
+    Аналіз Поточних Тестових Систем:
+        Оцінка існуючих систем тестування та ідентифікація місць, де можна інтегрувати новий алгоритм.
+
+    Розробка Інтерфейсів:
+        Створення програмних інтерфейсів для взаємодії нового алгоритму з існуючими системами керування та моніторингу.
+
+    Навчання Персоналу:
+        Навчання технічного персоналу щодо використання нового алгоритму та інтерпретації отриманих даних.
+
+    Тестування та Валідація:
+        Пілотне тестування алгоритму в реальних умовах виробництва для виявлення та виправлення можливих недоліків.
+
+    Модернізація Обладнання:
+        За необхідності, оновлення або модернізація обладнання для забезпечення сумісності з новими методами тестування.
+
+Потенційні Виклики:
+
+    Технічна Складність:
+        Високий рівень складності алгоритму може вимагати значних ресурсів для його реалізації та інтеграції.
+
+    Вартість Впровадження:
+        Витрати на розробку, інтеграцію та навчання можуть бути значними, особливо для великих виробничих ліній.
+
+    Сумісність:
+        Необхідність забезпечення сумісності нового алгоритму з існуючими системами та обладнанням.
+
+    Підтримка та Обслуговування:
+        Забезпечення належної підтримки та обслуговування алгоритму, включаючи регулярні оновлення та виправлення помилок.
+
+    Реакція Ринку:
+        Необхідність врахування реакції ринку на зміни в технологіях та можливе небажання змінювати усталені процеси.
+
+В цілому, впровадження нового алгоритму для визначення параметрів моделей сонячних елементів може суттєво покращити якість та ефективність виробництва, проте потребує ретельної підготовки та врахування потенційних викликів.
+
+
 
 
 \section*{Supplementary data}
