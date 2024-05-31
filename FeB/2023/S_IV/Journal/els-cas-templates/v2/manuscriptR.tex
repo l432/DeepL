@@ -783,9 +783,15 @@ The results for MEAN, MEDIAN, STD, and IQR are presented in table~S1 of the supp
 
 \begin{figure*}[]
 	\centering
-		\includegraphics[width=.32\textwidth]{Fig4a}
-        \includegraphics[width=.32\textwidth]{Fig4b}
-        \includegraphics[width=.32\textwidth]{Fig4c}
+        \includegraphics[width=.45\textwidth]{Fig4a}
+        \includegraphics[width=.45\textwidth]{Fig4b}
+        \includegraphics[width=.45\textwidth]{Fig4c}
+        \includegraphics[width=.45\textwidth]{Fig4d}
+        \includegraphics[width=.45\textwidth]{Fig4e}
+        \includegraphics[width=.45\textwidth]{Fig4f}
+        \includegraphics[width=.45\textwidth]{Fig4g}
+        \includegraphics[width=.45\textwidth]{Fig4h}
+        \includegraphics[width=.45\textwidth]{Fig4i}
 	  \caption{Box--plot of parameter estimation results by using different optimization algorithms.
       The single--\emph{IV} case.
       The squares represent the mean values, and the dashed lines correspond to the true parameter values.}\label{figBoxSingleIV}
@@ -1551,7 +1557,7 @@ the parameters were obtained from idealized \emph{IV} curves,
 where the voltage-current relationships have been precisely defined by Eq.~(\ref{eqIV_g}).
 In an actual experiment, there is potential for errors in both current and voltage measurements.
 Therefore, it would be valuable to investigate the effectiveness of various meta--heuristic algorithms
-in determining parameters from \emph{IV} data corrupted by noise in future research 
+in determining parameters from \emph{IV} data corrupted by noise in future research
 (the results of some preliminary simulations are presented in the Appendix~\ref{Noisy}).
 
 
@@ -1579,34 +1585,34 @@ Data will be made available on request.
 
 \section{Noisy data}\label{Noisy}
 
-To account for possible random errors during measurements, 
+To account for possible random errors during measurements,
 noisy synthetic \emph{IV} characteristics were also simulated.
-Then, the meta-heuristic algorithm was applied to extract the opposed two-diode model parameters, 
+Then, the meta-heuristic algorithm was applied to extract the opposed two-diode model parameters,
 and the noise impact on the algorithm's effectiveness was evaluated.
 
 In this case, the voltage $V_i$ and the
-current $I_i$ of each $i$--th point of a \emph{IV} characteristic were random values with a Gaussian distribution. 
-The voltage mean value $\bar{V}_i$ varied over a voltage range of 0-1.0~V with a 10~mV step; 
-the current mean value $\bar{I}_i$ was calculated using Eqs.~(\ref{eqIV_g})--(\ref{eqx2}), $\bar{V}_i$, 
+current $I_i$ of each $i$--th point of a \emph{IV} characteristic were random values with a Gaussian distribution.
+The voltage mean value $\bar{V}_i$ varied over a voltage range of 0-1.0~V with a 10~mV step;
+the current mean value $\bar{I}_i$ was calculated using Eqs.~(\ref{eqIV_g})--(\ref{eqx2}), $\bar{V}_i$,
 and parameter values from Subsection~\ref{SetIV} at $T = 300$~K.
-The voltage standard deviation ($\mathrm{SD}_V$) was up to 0.1~mV, 
+The voltage standard deviation ($\mathrm{SD}_V$) was up to 0.1~mV,
 and the current standard deviation ($\mathrm{SD}_I$) was up to 1~$\mu$A.
-Since the current in the IV curves varied from -1~mA to 1~mA 
-and the voltage up to 1~V (see Fig.~\ref{figSetIV}), the selected standard deviation values are entirely consistent 
+Since the current in the IV curves varied from -1~mA to 1~mA
+and the voltage up to 1~V (see Fig.~\ref{figSetIV}), the selected standard deviation values are entirely consistent
 with the measurement capabilities of modern instruments, such as the Keithley~2450 source meter.
-Thus, the different noisy \emph{IV} curves were characterized by different $\mathrm{SD}_V$ and $\mathrm{SD}_I$ values; 
+Thus, the different noisy \emph{IV} curves were characterized by different $\mathrm{SD}_V$ and $\mathrm{SD}_I$ values;
 the idealized characteristic was defined by $\mathrm{SD}_V=0$~V and $\mathrm{SD}_I=0$~A.
 
 When applying STLBO and ADELI to a single noisy IV curve, remarkably close parameter values were obtained.
-We used the absolute percentage error of the median value $\mathrm{APE}_\mathrm{MEDIAN}$ 
+We used the absolute percentage error of the median value $\mathrm{APE}_\mathrm{MEDIAN}$
 (see Eq.~\ref{eqAPE}) to quantify the error in parameter evaluation.
 Fig.2 illustrates the increase in $I_{01}$ and $I_{02}$ extraction error by STLBO use
 with the rise in measurement error (standard deviation values increase).
-It should be noted that the presented error results are averaged for 100 \emph{IV} curves 
-simulated with the same standard deviation values for voltage and current. 
-As the characteristics are generated using a random process, these 100 curves are distinct, 
-resulting in varying parameter estimation error values. 
-Additional materials include figure~S23, which illustrates the corresponding dependencies 
+It should be noted that the presented error results are averaged for 100 \emph{IV} curves
+simulated with the same standard deviation values for voltage and current.
+As the characteristics are generated using a random process, these 100 curves are distinct,
+resulting in varying parameter estimation error values.
+Additional materials include figure~S23, which illustrates the corresponding dependencies
 for all eight model parameters.
 
 
@@ -1614,20 +1620,20 @@ for all eight model parameters.
 	\centering
 		\includegraphics[width=0.40\columnwidth]{I01}
 		\includegraphics[width=0.45\columnwidth]{FigA-I02}
-	  \caption{The accuracy of the $I_{01}$ (a) and $I_{02}$ (b) evaluations from noisy \emph{IV} curves versus voltage and current standard deviations. 
-               The STLBO algorithm was used for parameter extraction. 
+	  \caption{The accuracy of the $I_{01}$ (a) and $I_{02}$ (b) evaluations from noisy \emph{IV} curves versus voltage and current standard deviations.
+               The STLBO algorithm was used for parameter extraction.
                The $\mathrm{APE}_\mathrm{MEDIAN}$ values were averaged over 100 \emph{IV} curves, all simulated with equal values of $\mathrm{SD}_V$ and $\mathrm{SD}_I$.
 }\label{figNoisy}
 \end{figure}
 
-For the idealized characteristic, the $\mathrm{APE}_\mathrm{MEDIAN}$ 
+For the idealized characteristic, the $\mathrm{APE}_\mathrm{MEDIAN}$
 value ranged from $1.3\cdot10^{-4}$~\% (for $I_{02}$) to $5.6\cdot10^{-2}$~\% (for $R_\mathrm{p1}$).
-As anticipated, the accuracy of parameter determination decreases for noisy \emph{IV} curves. 
-At the most intense noise level, the errors in determining $I_{01}$ and $R_\mathrm{s}$ do not exceed 29\%, 
+As anticipated, the accuracy of parameter determination decreases for noisy \emph{IV} curves.
+At the most intense noise level, the errors in determining $I_{01}$ and $R_\mathrm{s}$ do not exceed 29\%,
 while for $R_\mathrm{p1}$, it is 26\%.
-These parameters are extracted with the lowest accuracy. 
-For $I_\mathrm{ph}$, $I_{02}$, and $R_\mathrm{p2}$, 
-the percentage error does not exceed 1\%, which is an excellent result. 
+These parameters are extracted with the lowest accuracy.
+For $I_\mathrm{ph}$, $I_{02}$, and $R_\mathrm{p2}$,
+the percentage error does not exceed 1\%, which is an excellent result.
 The error in determining $n_2$ is slightly higher at 2\%.
 $n_1$ demonstrates moderate accuracy, with an error rate of around 8\%.
 Overall, STLBO and ADELI demonstrate resilience to measurement errors.
