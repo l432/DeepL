@@ -214,10 +214,10 @@ Unfortunately, providing a detailed description of each algorithm requires too m
 However, the paper includes references that allow obtaining additional information.
 
 Furthermore, some speculation about possible modification of meta--heuristic algorithms
-to successful solving the parameter estimation problem for S-shaped \emph{IV} curves was added (page 17, last paragraph before Conclusion)
+to successful solving the parameter estimation problem for S-shaped \emph{IV} curves was added (page 17, 2--nd paragraph from the bottom)
 
 We would also like to express our gratitude to the Reviewer for providing exceptionally insightful references.
-We hope the Reviewer will not object to their inclusion in the revised manuscript (references 1, 2, 3).
+We hope the Reviewer will not object to their inclusion in the revised manuscript (references 1, 2, 3, 91, 92).
 
 Additionally, the idea of employing meta-heuristic algorithms during the optimization of dual-ion batteries appears to be particularly intriguing.
 
@@ -263,7 +263,8 @@ Even basic insights could provide significant value in understanding the robustn
 
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
-The text was revised.
+The results of some preliminary simulations on how noise influences the effectiveness of 
+the meta-heuristic algorithm are presented in the Appendix~B of revised manuscript.
 
 
 \vspace{1cm}
@@ -338,6 +339,51 @@ in parameter estimation accuracy, and potential challenges in deployment would b
 
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+When analyzing the significance of the results, it is essential to consider the following points.
+The \emph{IV} characteristics are one of the key measurements  in the analysis
+of solar cells in both research and industrial mass production.
+Typically, \emph{IV} curves are analyzed using a specific model,
+and the model parameters are closely related to the internal physical mechanisms acting within the solar cell.
+Therefore, their efficient and sufficiently accurate extraction is important
+as an analysis tool for understanding the processes involved.
+Thus, the algorithms selected in our study can significantly aid in modeling NG-SCs,
+aiming to enhance the understanding of their internal processes.
+Specifically, this includes the underlying causes of the S--shaped kink
+and the peculiarities of PV conversion in advanced solar cells, such as those employing phase--change materials \cite{Zhu2024,Zhu2023}.
+
+Precise knowledge of the model parameter values is crucial for many practical applications.
+For example, they are used in the simulation and emulation of PV systems,
+for quality control of PV cells during manufacturing,
+and in the study of SC degradation \cite{Chin2019}.
+So, for a successful implementation of a PV system, the availability of an accurate,
+fast, and reliable computer simulation tool is indispensable.
+The algorithm for model parameter extraction can be a valuable tool for developing a
+reliable computational engine for a PV simulator \cite{Chin2017}.
+Diagnosing PV degradation can be achieved by monitoring and comparing the SC parameters with those in their initial states.
+In this case, it is impossible to overstate the importance of the ability to parameter extraction with high precision.
+Finally, optimization efforts and quantitative studies to assess the capabilities of a particular technology greatly benefit from the correct extraction of the model parameters under various test conditions \cite{OrtizConde2006}.
+Implementing selected algorithms in real-world solar cell testing and production environments allows for
+enhanced characterization precision (due to precise determination of model parameters),
+production process optimization (more accurate SC characterization leads to minimizing defects and increasing efficiency),
+quality improvement (the algorithm helps identify shortcomings at early production stages,
+thereby enhancing overall product quality),
+testing acceleration (the automated model parameter determination can shorten the time
+required for testing each element, enabling increased production volumes),
+and cost reduction (optimizing the testing process and reducing the number of defective elements decreases production costs).
+Moreover, potential challenges in deployment are minimal, given the algorithms'
+low resource requirements and compatibility with modern computers.
+There is no need for personnel training, as understanding the intricacies of the algorithms is unnecessary for their use.
+Additionally, constant maintenance, updates, and bug fixes are not required.
+The only requirements for implementation involve developing software interfaces to integrate the new algorithms with existing control and monitoring systems and ensuring the market's readiness to adapt established processes to these changes.
+
+The information was added to the revised manuscript (page~17 and 18, last two  paragraph before Conclusion).
+
+Unfortunately, we cannot offer insights into expected improvements in parameter estimation accuracy 
+because, to our knowledge, 
+the studies dedicated to examining the accuracy of parameter determination from S-shaped current-voltage curves are currently absent.
+
+
+
 The text was revised.
 the text was revised (page~5, column~1, paragraph~2).
 
