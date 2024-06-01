@@ -303,9 +303,10 @@ The simulation result is presented on Fig.~\ref{figSigleIV} by symbols.
 \begin{figure}[]
 	\centering
 		\includegraphics[width=0.5\columnwidth]{Fig2}
-	  \caption{The current-voltage characteristic, which used in single-\emph{IV} case (symbols).
+	  \caption{The current-voltage characteristic is used in the single--\emph{IV} case (represented by circles).
         The values from Eq.~(\ref{eqParSingleIV}) were assumed during the simulation.
-        The fitting results of various meta--heuristic algorithms are represented by lines.}\label{figSigleIV}
+        Lines display the fitting results of different meta-heuristic algorithms.
+        }\label{figSigleIV}
 \end{figure}
 
 
@@ -391,7 +392,11 @@ The simulation results are depicted in Fig.~\ref{figSetIV} using symbols.
 	\centering
 %		\includegraphics[width=1.0\columnwidth]{IVset}
 		\includegraphics[width=0.5\columnwidth]{Fig3}
-	  \caption{The current-voltage characteristics, which used in \emph{IV}-set case (symbols).
+	  \caption{
+        The current-voltage characteristics are used in the \emph{IV}-set case (represented by symbols).
+        The values from Subsection~\ref{SetIV} were assumed during the simulation.
+        Lines display the fitting results of different meta-heuristic algorithms.
+The current-voltage characteristics, which used in \emph{IV}-set case (symbols).
         The values from Subsection~\ref{SetIV} were assumed during the simulation.
         The fitting results of various meta--heuristic algorithms are represented by lines.}\label{figSetIV}
 \end{figure}
@@ -846,7 +851,10 @@ However, deliberately using a suboptimal parameter would have seemed inappropria
 
 \begin{figure}[]
 	\centering
-		\includegraphics[width=0.45\columnwidth]{Fig5}
+		\includegraphics[width=0.49\columnwidth]{Fig5a}
+		\includegraphics[width=0.49\columnwidth]{Fig5b}
+		\includegraphics[width=0.49\columnwidth]{Fig5c}
+		\includegraphics[width=0.4\columnwidth]{Fig5d}
 	  \caption{The results of Wilcoxon signed-rank test with a level of significance $\alpha = 0.05$ in the single-IV case.
                Each colored small square indicates that the algorithm specified in the row outperforms the algorithm
                specified in the column in evaluating one of the parameters of the two--diode model.
@@ -1023,17 +1031,13 @@ We individually tested each of the 14 algorithms to determine if any of them wer
 The results below display the multiple comparisons carried out,
 involving the computation of all possible pairwise comparisons ($N\times N$ comparison).
 Three procedures (Shaffer’s static, Nemenyi, and Holm) were employed to control FWER.
-These procedures consider that the hypotheses being tested belong to a family of all
+These methods consider that the hypotheses being tested belong to a family of all
 pairwise comparisons and are logically interrelated; thus,
 not all combinations of true and false hypotheses are possible.
 
 Starting from the analysis performed by the Friedman test on our results,
 we can raise the 91 null hypotheses of equality among
-the 14 algorithms in our study for each task and apply the previously mentioned methods to contrast them.
-
-Starting from the analysis performed by the Friedman test over our results, we can raise the
-91 hypotheses of equality among the 14 algorithms of our study for each task,
-and apply the methods mentioned earlier to contrast them.
+the 14 algorithms in our study for each task and apply the previously mentioned procedures to contrast them.
 Table~\ref{tblNNpValueI01} lists a portion of the hypotheses and the
 adjusted $p$-values achieved for the task of $I_{01}$ estimation.
 For the remaining 46 hypotheses not indicated in the table,
@@ -1041,14 +1045,22 @@ a $p$-value of 1 was obtained after applying each of the procedures.
 The full version of the table, as well as the data obtained for other tasks,
 are given in the supplementary material (tables S144-S153).
 
+%\renewcommand{\arraystretch}{0.9}
 
 \begin{table*}[<options>]
-\caption{Adjusted $p$-values for tests for $N\times N$ multiple comparisons of $I_{01}$ estimation
-         among all methods in the single--IV case ($p<1.0$ are only shown).}\label{tblNNpValueI01}
+\renewcommand{\arraystretch}{0.95}
+
+\caption{Adjusted $p$-values for null hypotheses in $I_{01}$ extraction task.
+         $N\times N$ multiple comparisons,
+         single--\emph{IV} case. 
+          Only $p$--values less than 1.0 are shown.
+         %$p<1.0$ are only shown.
+         }\label{tblNNpValueI01}
 \begin{tabular*}{\tblwidth}{@{}LCCC@{}}
 \toprule
-\multirow{2}{*}{Hypothesis}& \multicolumn{3}{C}{post-hoc procedure} \\
-  &Nemenyi & Holm & Shaffer\\ % Table header row
+%\multirow{2}{*}{Comparison}& \multicolumn{3}{C}{post-hoc procedure} \\
+%  &Nemenyi & Holm & Shaffer\\ % Table header row
+Comparison& Nemenyi procedure& Holm procedure& Shaffer’s static procedure\\ % Table header row
 \midrule
 ADELI versus WW&<1E-13&<1E-13&<1E-13\\
 ADELI versus NDE&1.17195E-12&1.15907E-12&1.00453E-12\\
@@ -1209,21 +1221,21 @@ which is dedicated to the analysis of \emph{IV} curves with different parameter 
 
 \begin{figure*}[]
 	\centering
-		\includegraphics[width=.32\textwidth]{AfigA}
-        \includegraphics[width=.32\textwidth]{AfigB}
-        \includegraphics[width=.32\textwidth]{AfigC}
-		\includegraphics[width=.32\textwidth]{AfigD}
-        \includegraphics[width=.32\textwidth]{AfigE}
-        \includegraphics[width=.32\textwidth]{AfigF}
-		\includegraphics[width=.32\textwidth]{AfigG}
-        \includegraphics[width=.32\textwidth]{AfigH}
-        \includegraphics[width=.32\textwidth]{AfigI}
-		\includegraphics[width=.32\textwidth]{AfigJ}
-        \includegraphics[width=.32\textwidth]{AfigK}
-        \includegraphics[width=.32\textwidth]{AfigL}
-		\includegraphics[width=.32\textwidth]{AfigM}
-        \includegraphics[width=.32\textwidth]{AfigN}
-        \includegraphics[width=.32\textwidth]{AfigO}
+		\includegraphics[width=.25\textwidth]{AfigA}
+        \includegraphics[width=.25\textwidth]{AfigB}
+        \includegraphics[width=.25\textwidth]{AfigC}
+		\includegraphics[width=.25\textwidth]{AfigD}
+        \includegraphics[width=.25\textwidth]{AfigE}
+        \includegraphics[width=.25\textwidth]{AfigF}
+		\includegraphics[width=.25\textwidth]{AfigG}
+        \includegraphics[width=.25\textwidth]{AfigH}
+        \includegraphics[width=.25\textwidth]{AfigI}
+		\includegraphics[width=.25\textwidth]{AfigJ}
+        \includegraphics[width=.25\textwidth]{AfigK}
+        \includegraphics[width=.25\textwidth]{AfigL}
+		\includegraphics[width=.25\textwidth]{AfigM}
+        \includegraphics[width=.25\textwidth]{AfigN}
+        \includegraphics[width=.25\textwidth]{AfigO}
 	  \caption{Dependences of the $I_{01}$ (a, b), $n_1$ (c), $R_\mathrm{p1}$ (d), $I_{02}$ (e, f),
                $n_2$ (g, h), $R_\mathrm{p2}$ (i, j), $R_\mathrm{s}$ (k), $I_\mathrm{ph}$ (l, m), and RMSPE (n, o)
                estimation by different algorithm on the synthesis temperature.
@@ -1648,6 +1660,8 @@ Supplementary data to this article can be found online at
 \bibliographystyle{model1-num-names}
 \bibliography{olikh_Methods}
 
+%Будь-ласка, покращ англійську в наступних реченнях, які я буду пропонувати. Зокрема, треба буде виправити граматичні та стилістичні помилки
+%якщо можна, окрім виправленого речення, наводь інформацію про зміни, які зроблені
 
 \end{document}
 
