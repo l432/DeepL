@@ -15,11 +15,11 @@
 %% given in the file `manifest.txt'.
 %% 
 
-%% $Id: cas-sc.cls 66 2021-05-11 14:17:42Z rishi $
+%% $Id: cas-sc.cls 96 2024-05-04 09:29:44Z rishi $
 
  \def\RCSfile{cas-sc}%
- \def\RCSversion{2.3}%
- \def\RCSdate{2021/05/11}%
+ \def\RCSversion{2.4}%
+ \def\RCSdate{2024/05/04}%
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
 \ProvidesClass{\RCSfile}[\RCSdate, \RCSversion: Formatting class
    for CAS single column articles]
@@ -63,6 +63,8 @@
 \RequirePackage{booktabs,makecell,multirow,array,colortbl,dcolumn,stfloats}
 \RequirePackage{xspace,xstring,footmisc}
 \RequirePackage[svgnames,dvipsnames]{xcolor}
+
+\ifbool{casreviewlayout}{\RequirePackage{setspace}}{}
 
 \RequirePackage[colorlinks]{hyperref}
 \colorlet{scolor}{black}
@@ -161,8 +163,6 @@
 { \RequirePackage[scaled=.85]{inconsolata} }
 { \tex_gdef:D \ttdefault { cmtt } }
 
-\ifbool{casreviewlayout}{\RequirePackage{setspace}}{}
-
 \ExplSyntaxOff
 
 %
@@ -185,4 +185,5 @@
 %
 % End of class 'cas-sc'
 %
+
 

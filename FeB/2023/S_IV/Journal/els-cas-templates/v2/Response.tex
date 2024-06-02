@@ -6,10 +6,6 @@
 
 \usepackage[numbers]{natbib}
 
-\usepackage{graphicx}% Include figure files
-\usepackage{dcolumn}
-\usepackage{color}
-%\draft % marks overfull lines with a black rule on the right
 
 \begin{document}
 \shorttitle{}
@@ -33,10 +29,12 @@ Below we refer to each of the reviewer’s comments.
 
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
-This study aimed to compare the effectiveness of meta-heuristic algorithms in extracting the parameters of NG-SCs from the S-shaped \emph{IV} curves
+This study aimed to compare the effectiveness of meta-heuristic algorithms in extracting 
+the parameters of new-generation solar cells from the S-shaped \emph{IV} curves
 and to determine the most suitable ones for addressing this optimization problem.
 
-The aim of the research was added in the introduction part (page~2, last paragraph in the Introduction).
+The aim of the research was added in the introduction part 
+(page~2, paragraph~3 (last paragraph in the Introduction), line~1-2).
 
 
 \vspace{1cm}
@@ -48,8 +46,9 @@ The aim of the research was added in the introduction part (page~2, last paragra
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
 Figure captions were revised.
 
-The Fig.~3 is referenced on page 5 (last line in Subsection~2.2.2) and on page 16 (first line in Subsection~3.3.2)
+The Fig.~3 is referenced on page~5 (last line in Subsection~2.2.2) and on page~18 (first line in Subsection~3.3.2)
 in the revised manuscript.
+Fig.~3 located at page~5.
 
 
 \vspace{1cm}
@@ -59,7 +58,17 @@ in the revised manuscript.
 
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
-The text was revised.
+Parts of Figure~4 were separated to clarify in the revised manuscript.
+Overall, it is a standard box plot with added mean values.
+
+Figure~5 has been divided into several parts, and a more detailed legend has been added. 
+Additionally, the figure caption has been revised.
+
+
+Figure~6 remains mostly unchanged; however, a more detailed caption has been added.
+
+
+We sincerely hope that these modifications have made the figures more understandable.
 
 \vspace{1cm}
 \noindent
@@ -71,10 +80,34 @@ How it is useful and novel compared with one diode model.}
 
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
-Details about equivalent circuit model were added.
-Additionally, the study included a comparison between elements of
-the opposed two--diode model and the single-diode model.
-The relevant information can be found on page 3, paragraphs 2 and 3 from the top.
+Our study focused on the opposed two--diode model, proposed by De Castro \cite{Castro2010}.
+This model represents a significant advancement
+as it successfully reproduces the S-shaped kink in the power-producing fourth quadrant
+of the illuminated \emph{IV} characteristics.
+However, it encounters difficulties in accurately describing the \emph{IV} curve beyond the open-circuit point in the first quadrant.
+Despite this drawback, the model is gaining attention for deriving analytical solutions
+of equivalent circuits \cite{Yu2019a}
+and is widely used to describe experimental IV curves of SCs with different structures
+\cite{CastroUseBook,Pillai2017,Arredondo2018,delPozo2012,BrenesBadilla2018,Tada2015Organic,Makha2018,CastroUsePerovskitIonikLiquid,CastroUsePerovskitFullerene}.
+In particular, these include polymer \cite{Tada2015Organic}
+and polymer/fullerene \cite{delPozo2012} bulk heterojunction photocells,
+ternary organic solar cells \cite{Makha2018},
+and other types of organic structures \cite{Pillai2017,Arredondo2018},
+perovskite solar cells with fullerene transport layer and carbon nanotube electrode \cite{CastroUsePerovskitFullerene},
+and perovskite solar cells with ionic liquid gating \cite{CastroUsePerovskitIonikLiquid}.
+The popularity of the De Castro model is also because, in experiments,
+\emph{IV} curves are typically measured only in the fourth quadrant from short-circuit current to open-circuit voltage.
+Therefore, our selection of the two-diode model is based on its universality and widespread applicability.
+
+It can be seen from the model structure, as shown in Fig.~1 (page 3), that some elements are identical to SDM.
+It is a current source accompanied by a diode D1, a shunt resistor $R_\mathrm{p1}$ to represent the leakage current,
+and a series resistor $R_\mathrm{s}$ to account for the losses associated with the load current.
+However, SDM fails to describe the S-shaped kink, which requires additional elements.
+As a result, a second diode  (D2) and a second parallel resistor ($R_\mathrm{p2}$) are used.
+D2 is placed opposite D1 and represents the effect of traps at the active layer/cathode interface \cite{Castro2010}.
+
+
+The relevant information can be found on page 3, paragraphs 1-2.
 
 
 \vspace{1cm}
@@ -85,7 +118,14 @@ Figures should be placed in a uniform location with a uniform font, size, figure
 
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
-The text was revised.
+The same font is consistently utilized across all figures in the revised manuscript. 
+We endeavored to ensure that all figures are positioned uniformly, 
+albeit our capacity is somewhat constrained 
+by the LaTeX template utilized for manuscript preparation
+(the latest Elsevier article class). 
+Likewise, we lack control over the font used in figure captions. 
+The dimensions of most figures are configured to occupy half the width of a text column.
+
 
 \vspace{1cm}
 \noindent
@@ -94,7 +134,14 @@ The text was revised.
 
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
-The text was revised.
+The manuscript was prepared in LaTeX using the latest Elsevier article class.
+No additional commands, especially for resizing, were used in preparing Table~3. 
+In our opinion, the difference in text between the tables and the main text is due to the article class's characteristics.
+
+%
+%You are recommended to use the latest Elsevier article class to prepare your manuscript and BibTeX to generate your bibliography.
+%Our Guidelines has full details.
+
 
 \vspace{1cm}
 \noindent
@@ -193,7 +240,7 @@ The adaptive mutational strategy determines the probability of
 employing Lagrange interpolation in each generation based on the best fitness function value.
 These incorporations aim to enhance exploitation capability and speed up the convergence.
 
-The information was added to the revised manuscript (page~6, paragraph~2).
+This answer is incorporated in the text on page~6, paragraph~4.
 
 In STLBO, the teacher phase is redefined and simplified, while the learner phase remains unchanged \cite{STLBO}.
 In the redefined teacher phase, the mutation of potential solutions is possible,
@@ -208,13 +255,14 @@ A chaotic sequence is a deterministic, random-like process found in nonlinear dy
 which is non-periodic, non-converging, and bounded \cite{May1976}.
 Additionally, the elite strategy replaces the worst solutions in the current population with new solutions based on objective function values.
 
-The information was added to the revised manuscript (page~7, paragraph~3).
+This answer is incorporated in the text on page~7, paragraph~2.
 
 Unfortunately, providing a detailed description of each algorithm requires too much space.
 However, the paper includes references that allow obtaining additional information.
 
 Furthermore, some speculation about possible modification of meta--heuristic algorithms
-to successful solving the parameter estimation problem for S-shaped \emph{IV} curves was added (page 17, 2--nd paragraph from the bottom)
+to successful solving the parameter estimation problem for S-shaped \emph{IV} curves was added 
+(page 22, last paragraph)
 
 We would also like to express our gratitude to the Reviewer for providing exceptionally insightful references.
 We hope the Reviewer will not object to their inclusion in the revised manuscript (references 1, 2, 3, 91, 92).
@@ -236,7 +284,9 @@ and how these synthetic models compare to actual solar cell data would greatly e
 In the first part of the study, the performance of meta--heuristic algorithms for parameter estimation was evaluated using a single \emph{IV} curve.
 This curve represents the experimental data of bulk heterojunction photocells prepared
 using a composite of $p$--DTS(FBTTh$_2$)$_2$ and neat C$_{70}$ \cite{Tada2015Organic}.
-The information was added to the revised manuscript (page~4, paragraph~1).
+
+This answer is incorporated in the text on page~3, last paragraph~1, line~1,
+and page~4, first paragraph~1, line~1.
 
 In the second part, we simulated a set of \emph{IV} characteristics.
 These curves correspond to the temperature range from 260~K to 350~K.
@@ -249,9 +299,17 @@ Furthermore, an S--shaped \emph{IV} curve is observed in various types of solar 
 and diverse charge transport mechanisms significantly complicate the selection of a single possible temperature dependence for each of the eight model parameters.
 The specific temperature dependencies and parameter values utilized are detailed in Subsection~2.2.2.
 
+This answer is incorporated in the text on page~4, paragraph~1, line~3-5;
+page~4, last paragraph, line~2-5;
+and page~5, paragraph~1, line~1-3.
+
+
 The \emph{IV} curves ware simulated using Eqs.~(1)--(2) over a voltage range of 0-0.8~V (in ‘‘Single--\emph{IV} case’’) or
 0-1.0~V (in ‘‘\emph{IV}--set case’’) with a 10~mV step.
-The information was added to the revised manuscript (last paragraphs of Subsection~2.2.1 and Subsection~2.2.2).
+
+This answer is incorporated in the text on page~4, paragraph~4, line~1-2,
+ and page~5, paragraph~6, line~3-4 
+(last paragraphs of Subsection~2.2.1 and Subsection~2.2.2).
 
 
 \vspace{1cm}
@@ -263,8 +321,8 @@ Even basic insights could provide significant value in understanding the robustn
 
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
-The results of some preliminary simulations on how noise influences the effectiveness of 
-the meta-heuristic algorithm are presented in the Appendix~B of revised manuscript.
+The results of some preliminary simulations on how noise influences the effectiveness of
+the meta-heuristic algorithm are presented in the Appendix~A (page 24) of revised manuscript.
 
 
 \vspace{1cm}
@@ -304,7 +362,7 @@ has enabled us to detect slight differences in the accuracy of model parameter e
 
 In most cases, the study used the widely accepted significance level of 0.05.
 
-The information was added to the revised manuscript (page~8, last 4 paragraphs).
+This answer is incorporated in the text on page~8, paragraph~8-11 (last 4 paragraphs on the page).
 
 
 
@@ -319,10 +377,12 @@ This would also help in visually comparing the efficiency and accuracy of the al
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
 
 The convergence graphs for  algorithms were added (see Fig.S1 in the supplementary materials).
-Information about the existence of convergence graphs has been added to the revised manuscript (first paragraph in Subsection 3.1).
+Information about the existence of convergence graphs has been added to the revised manuscript 
+(page~9, paragraph~1, line~7-8).
 
 Besides the scatter plots for parameter determination results are represented in Figs.~S15-S22 (supplementary materials).
-Information about the existence of scatter plots has been added to the revised manuscript (page~16, first paragraph in Subsection 3.3.2).
+Information about the existence of scatter plots has been added to the revised manuscript 
+(page~18, paragraph~2, line~8-9).
 
 Simultaneously, the interquartile range (IQR) for estimated parameter values deals with error distributions.
 IQR data is represented in Figs.~4, 9, and S6--S14.
@@ -376,19 +436,12 @@ There is no need for personnel training, as understanding the intricacies of the
 Additionally, constant maintenance, updates, and bug fixes are not required.
 The only requirements for implementation involve developing software interfaces to integrate the new algorithms with existing control and monitoring systems and ensuring the market's readiness to adapt established processes to these changes.
 
-The information was added to the revised manuscript (page~17 and 18, last two  paragraph before Conclusion).
+The information was added to the revised manuscript (page~23, paragraphs 1 and 2).
 
-Unfortunately, we cannot offer insights into expected improvements in parameter estimation accuracy 
-because, to our knowledge, 
+Unfortunately, we cannot offer insights into expected improvements in parameter estimation accuracy
+because, to our knowledge,
 the studies dedicated to examining the accuracy of parameter determination from S-shaped current-voltage curves are currently absent.
 
-
-
-The text was revised.
-the text was revised (page~5, column~1, paragraph~2).
-
-The ``relative deformation'' was meant.
-The term ``strain'' is used in the revised version.
 
 \bibliographystyle{model1-num-names}
 \bibliography{olikh_Methods}
@@ -396,3 +449,5 @@ The term ``strain'' is used in the revised version.
 
 \end{document}
 
+%Будь-ласка, покращ англійську в наступних реченнях, які я буду пропонувати. Зокрема, треба буде виправити граматичні та стилістичні помилки
+%якщо можна, окрім виправленого речення, наводь інформацію про зміни, які зроблені

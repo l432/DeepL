@@ -56,16 +56,13 @@
 
 \begin{abstract}
 Identifying parameters of photovoltaic (PV) models based on measured current-voltage (\emph{IV}) characteristic curves is critical for simulating, evaluating, and controlling PV systems.
-\emph{IV} characteristics of the latest-generation solar cells (SCs) often display an S-shaped deformation.
-In this paper, we explore the potential of meta--heuristic algorithms to address the parameter estimation problems
-associated with PV cells that exhibit S-shaped IV characteristics.
-This estimation is performed within the framework of the opposed two-diode model.
-We implemented a total of 14 algorithms from various classes to extract the SC parameters
-from synthetic \emph{IV} curves, which were generated using a range of parameter values.
-The results were compared by using nonparametric statistical methods.
-These methods include the Wilcoxon signed-rank test for pairwise comparisons, and the Friedman, Friedman Aligned, and Quade tests for multiple comparisons.
-Comprehensive results and analyses show that the STLBO (Simplified teaching-learning based optimization algorithm) and ADELI (Adaptive differential evolution with the Lagrange interpolation argument) algorithms demonstrate highly competitive performance in terms of accuracy and reliability.
-This paper underscores the efficacy of advanced meta--heuristic algorithms in solving complex non-linear optimization problems in the domain of photovoltaic research, particularly concerning the unique challenges posed by S-shaped \emph{IV} characteristics of new-generation solar cells.
+IV characteristics of the new-generation solar cells (SCs) often display an S-shaped deformation.
+In this paper, we explore the potential of meta--heuristic algorithms to address the parameter extraction problems associated with PV cells that exhibit S-shaped \emph{IV} characteristics.
+This extraction is performed within the framework of the opposed two-diode model.
+We implemented a total of 14 algorithms from various classes to extract the SC parameters from synthetic IV curves, which were generated using a range of parameter values.
+The results were compared by using nonparametric statistical methods (the Wilcoxon signed-rank test for pairwise comparisons, and the Friedman, Friedman Aligned, and Quade tests for multiple comparisons).
+Comprehensive results and analyses show that the STLBO and ADELI algorithms demonstrate highly competitive performance in terms of accuracy and reliability.
+%This paper underscores the efficacy of advanced meta--heuristic algorithms in solving complex non-linear optimization problems in the domain of photovoltaic research, particularly concerning the unique challenges posed by S-shaped \emph{IV} characteristics of new-generation solar cells.
 \end{abstract}
 
 
@@ -390,7 +387,6 @@ The simulation results are depicted in Fig.~\ref{figSetIV} using symbols.
 
 \begin{figure}[]
 	\centering
-%		\includegraphics[width=1.0\columnwidth]{IVset}
 		\includegraphics[width=0.5\columnwidth]{Fig3}
 	  \caption{
         The current-voltage characteristics are used in the \emph{IV}-set case (represented by symbols).
@@ -858,16 +854,16 @@ However, deliberately using a suboptimal parameter would have seemed inappropria
 		\includegraphics[width=0.49\columnwidth]{Fig5b}
 		\includegraphics[width=0.49\columnwidth]{Fig5c}
 		\includegraphics[width=0.4\columnwidth]{Fig5d}
-	  \caption{The results of pairwise comparisons using the Wilcoxon signed-rank test 
+	  \caption{The results of pairwise comparisons using the Wilcoxon signed-rank test
    for algorithms in the $I_{01}$, $n_1$, $R_\mathrm{p1}$ (a), $I_{02}$,
                    $n_2$, $R_\mathrm{p2}$, $R_\mathrm{s}$ (b), and $I_\mathrm{ph}$ (c)
                    extraction task, IV curve fitting (RMSPE value, c), the composite parameter Comp (c).
-                   A filled small rectangle (in panels a and b) or a triangle (in panel c) 
+                   A filled small rectangle (in panels a and b) or a triangle (in panel c)
                    indicates that the algorithm listed in the row outperforms the algorithm listed in the column in one task.
-                   The correspondence between the position (color) of the rectangles (triangles) 
+                   The correspondence between the position (color) of the rectangle (triangle)
                    and the tested task is shown in a figure legend.
                    A significance level of $\alpha = 0.05$ was employed.
-                   The single--\emph{IV} case.                  
+                   The single--\emph{IV} case.
                    }\label{figWilSingleIV}
 \end{figure}
 
@@ -875,9 +871,9 @@ However, deliberately using a suboptimal parameter would have seemed inappropria
 \begin{figure}[]
 	\centering
 		\includegraphics[width=0.5\columnwidth]{Fig6}
-	  \caption{The total count of wins (height of the bottom of the bars) 
-               and losses (height of the top of the bars) for each algorithm 
-               in pairwise comparisons conducted using the Wilcoxon signed-rank test 
+	  \caption{The total count of wins (height of the bottom of the bars)
+               and losses (height of the top of the bars) for each algorithm
+               in pairwise comparisons conducted using the Wilcoxon signed-rank test
                at a significance level of $\alpha = 0.05$ in the single--\emph{IV} case.
                }\label{figWilTotSingleIV}
 \end{figure}
@@ -981,15 +977,16 @@ if there is no difference between the two algorithms (null hypothesis), was less
 
 
 \begin{table*}[<options>]
-\caption{The total count of wins and losses for each algorithm in $1\times N$ multiple comparisons using the
-Friedman, Friedman Aligned, and Quade tests and Finner, Holm, Hochberg, and Holland post-hoc procedures
-in single--IV case.
-The criterion for victory was a adjusted $p$-value less than 0.1.
+\caption{The total count of wins and losses for each algorithm in $1\times N$ multiple
+        comparisons using the Friedman, Friedman Aligned, and Quade tests,
+        along with the Finner, Holm, Hochberg, and Holland post-hoc procedures in the single--\emph{IV} case.
+       The criterion for victory was an adjusted $p$--value of the null hypothesis less than 0.1.
+       The best results in each task are bolded.
 }\label{tbl1NWins}
 \begin{tabular*}{\tblwidth}{@{}LCCCCCCCCCCC@{}}
 \toprule
 \multirow{3}{*}{Algorithm}& \multicolumn{11}{C}{Wins / Loses} \\
-&  \multicolumn{10}{C}{task}  &\multirow{2}{*}{Total}\\
+&  \multicolumn{10}{C}{Task}  &Total\\
   & $I_{01}$& $n_1$ & $R_\mathrm{p1}$ &$I_{02}$& $n_2$& $R_\mathrm{p2}$&$R_\mathrm{s}$&$I_\mathrm{ph}$&RMSPE&Comp&\\ % Table header row
 \midrule
 DE & 24/43 & 56/34 & 48/35 &  4/73 & 48/43 & 49/34 & 49/40  & 45/35  & 49/48 & 16/27  & 388/412\\
@@ -1058,7 +1055,6 @@ a $p$-value of 1 was obtained after applying each of the procedures.
 The full version of the table, as well as the data obtained for other tasks,
 are given in the supplementary material (tables S144-S153).
 
-%\renewcommand{\arraystretch}{0.9}
 
 \begin{table*}[<options>]
 \renewcommand{\arraystretch}{0.95}
@@ -1067,12 +1063,9 @@ are given in the supplementary material (tables S144-S153).
          $N\times N$ multiple comparisons,
          single--\emph{IV} case.
           Only $p$--values less than 1.0 are shown.
-         %$p<1.0$ are only shown.
          }\label{tblNNpValueI01}
 \begin{tabular*}{\tblwidth}{@{}LCCC@{}}
 \toprule
-%\multirow{2}{*}{Comparison}& \multicolumn{3}{C}{post-hoc procedure} \\
-%  &Nemenyi & Holm & Shaffer\\ % Table header row
 Comparison& Nemenyi procedure& Holm procedure& Shaffer’s static procedure\\ % Table header row
 \midrule
 ADELI versus WW&<1E-13&<1E-13&<1E-13\\
@@ -1152,27 +1145,30 @@ obtained from comparing 13 algorithms in 3 post-hoc procedures.
 
 \begin{figure*}[!ht]
 	\centering
-		\includegraphics[width=.49\textwidth]{Rp1shot_NN}
-        \includegraphics[width=.49\textwidth]{I02shot_NN}
-	  \caption{The results of $N\times N$ multiple comparisons of $R_\mathrm{p1}$ (a) and $I_{02}$ (b) estimation
-               among all algorithms in the single--IV case.
-               The colored cylinder indicates that the adjusted $p$-value,
-               which tests the control algorithm outperforms the comparison algorithm,
-               is not greater than $p_{lim}=0.1$.
-               The correspondence between the color of the cylinder to a post-hoc procedure is shown in the figure's legend.
+		\includegraphics[width=.49\textwidth]{Fig8a}
+        \includegraphics[width=.49\textwidth]{Fig8b}
+	  \caption{
+The results of $N\times N$ multiple comparisons using Friedman test
+with Shaffer’s static, Nemenyi, and Holm procedures for algorithms in the
+$R_\mathrm{p1}$ (a) and $I_{02}$ (b) extraction task.
+The presence of colored cylinder indicates that the adjusted $p$-value of the null hypothesis
+for comparison ``control algorithm vs comparison algorithm'' less than $p_{cr}=0.1$.
+The correspondence between the color of the cylinder and the post-hoc procedure is shown in a figure legend.
+The single--\emph{IV} case.
                }\label{figNNRezSingleIV}
 \end{figure*}
 
+
 \begin{table*}[<options>]
-\caption{The total count of wins and losses for each algorithm in $N\times N$ multiple comparisons using the
-Friedman test and Shaffer's static, Nemenyi, and Holm post-hoc procedures
-in single--IV case.
-The criterion for victory was a adjusted $p$-value less than 0.1.
+\caption{The total count of wins and losses for each algorithm in $N\times N$ multiple comparisons 
+  using the Friedman test with Shaffer’s static, Nemenyi, and Holm procedures in single--\emph{IV} case.
+  The criterion for victory was an adjusted $p$--value of the null hypothesis less than 0.1.
+  The best results are bolded.
 }\label{tblNNWins}
 \begin{tabular*}{\tblwidth}{@{}LCCCCCCCCCCC@{}}
 \toprule
 \multirow{3}{*}{Algorithm}& \multicolumn{11}{C}{Wins / Loses} \\
-&  \multicolumn{10}{C}{task}  &\multirow{2}{*}{Total}\\
+&  \multicolumn{10}{C}{Task}  &Total\\
   & $I_{01}$& $n_1$ & $R_\mathrm{p1}$ &$I_{02}$& $n_2$& $R_\mathrm{p2}$&$R_\mathrm{s}$&$I_\mathrm{ph}$&RMSPE&Comp&\\ % Table header row
 \midrule
 DE & 0/12 & 17/12 & 17/12 &  0/12 & 12/12 & 14/12 & 5/12  & 17/12  & 15/15 & 0/0  & 97/111\\
@@ -1197,7 +1193,7 @@ In most instances, all post-hoc procedures considered lead to similar conclusion
 regarding the outperformance of one algorithm over another.
 For example, in the case of the $R_\mathrm{p1}$ estimation task,
 the Nemenyi procedure disagrees with the Holm and Shaffer methods in only 4 out of 57 cases.
-Particularly, this happens for the hypotheses "DE vs WW," "MABC vs ISCA," "MABC vs NNA," and "TLBO vs NDE" --- see Fig.~\ref{figNNRezSingleIV}(a).
+Particularly, this happens for the comparisons ``DE vs WW'', ``MABC vs ISCA'', ``MABC vs NNA'', and ``TLBO vs NDE'' --- see Fig.~\ref{figNNRezSingleIV}(a).
 On the other hand, as evident from Fig.~\ref{figNNRezSingleIV}(b),
 such situations are not observed at all for the $I_{02}$ evaluation task.
 In general, the results of the Holm procedure differ from those of the Shaffer procedure in only two comparisons:
@@ -1234,29 +1230,31 @@ which is dedicated to the analysis of \emph{IV} curves with different parameter 
 
 \begin{figure*}[]
 	\centering
-		\includegraphics[width=.25\textwidth]{AfigA}
-        \includegraphics[width=.25\textwidth]{AfigB}
-        \includegraphics[width=.25\textwidth]{AfigC}
-		\includegraphics[width=.25\textwidth]{AfigD}
-        \includegraphics[width=.25\textwidth]{AfigE}
-        \includegraphics[width=.25\textwidth]{AfigF}
-		\includegraphics[width=.25\textwidth]{AfigG}
-        \includegraphics[width=.25\textwidth]{AfigH}
-        \includegraphics[width=.25\textwidth]{AfigI}
-		\includegraphics[width=.25\textwidth]{AfigJ}
-        \includegraphics[width=.25\textwidth]{AfigK}
-        \includegraphics[width=.25\textwidth]{AfigL}
-		\includegraphics[width=.25\textwidth]{AfigM}
-        \includegraphics[width=.25\textwidth]{AfigN}
-        \includegraphics[width=.25\textwidth]{AfigO}
-	  \caption{Dependences of the $I_{01}$ (a, b), $n_1$ (c), $R_\mathrm{p1}$ (d), $I_{02}$ (e, f),
-               $n_2$ (g, h), $R_\mathrm{p2}$ (i, j), $R_\mathrm{s}$ (k), $I_\mathrm{ph}$ (l, m), and RMSPE (n, o)
-               estimation by different algorithm on the synthesis temperature.
-               The IV-set is used.
-               The circles represent the values, which have been used in IV curve simulations,
-               the filled marks represent the median values, and the empty marks represent the mean values.
-               The colored regions correspond to the IQR.
-               The lines only serve as guide to the eye.
+		\includegraphics[width=.25\textwidth]{Fig9a}
+        \includegraphics[width=.25\textwidth]{Fig9b}
+        \includegraphics[width=.25\textwidth]{Fig9c}
+		\includegraphics[width=.25\textwidth]{Fig9d}
+        \includegraphics[width=.25\textwidth]{Fig9e}
+        \includegraphics[width=.25\textwidth]{Fig9f}
+		\includegraphics[width=.25\textwidth]{Fig9g}
+        \includegraphics[width=.25\textwidth]{Fig9h}
+        \includegraphics[width=.25\textwidth]{Fig9i}
+		\includegraphics[width=.25\textwidth]{Fig9j}
+        \includegraphics[width=.25\textwidth]{Fig9k}
+        \includegraphics[width=.25\textwidth]{Fig9l}
+		\includegraphics[width=.25\textwidth]{Fig9m}
+        \includegraphics[width=.25\textwidth]{Fig9n}
+        \includegraphics[width=.25\textwidth]{Fig9o}
+	  \caption{
+The dependencies of the $I_{01}$ (a, b), $n_1$ (c), $R_\mathrm{p1}$ (d), $I_{02}$ (e, f),
+$n_2$ (g, h), $R_\mathrm{p2}$ (i, j), $R_\mathrm{s}$ (k), $I_\mathrm{ph}$ (l, m), and RMSPE (n, o)
+values on the temperature of \emph{IV} simulation in the \emph{IV}--set case are obtained using 
+TLBO (a, l), GOTLBO (a, h), EBLSHADE (b, j), WW (b, n, o), NNA (c, j, l), NDE (c, k), PSO (d, m), IJAVA (d, h),
+MABC (e, m), ISCA (e), DE (f, g), CWOA (f, i), STLBO (g, n, o), and ADELI (i, k) algorithms.
+Circles represent the values used in \emph{IV} curve simulations. 
+Filled marks indicate the median values, while empty marks indicate the mean values.
+The colored regions correspond to the IQR. 
+The lines serve only as a guide to the eye.
                }\label{figTDepIVset}
 \end{figure*}
 
@@ -1285,11 +1283,16 @@ for each algorithm were beyond the scope of the study.
 We aimed to determine the best algorithms only.
 
 
+
 \begin{table*}[<options>]
-\caption{The results of Wilcoxon signed-rank test with a level of significance $\alpha = 0.05$ in the IV-set case.
-         The ``+'' indicated that the null hypothesis was rejected, and the control algorithm (in the row) performed better
-         then the comparison algorithm (in the column).
-         The ``0'' indicates to rejection of the hypothesis about outperforming the control algorithm.
+\caption{Pairwise comparison results of algorithms using the Wilcoxon signed-rank test with a level of significance $\alpha = 0.05$ in the IV-set case.
+A ``+'' indicates that the null hypothesis was rejected,
+and the control algorithm (listed in the row) outperformed the comparison algorithm (listed in the column).
+The ``0'' indicates the rejection of the hypothesis about better performing the control algorithm.
+The last column contains the total number of wins (when the algorithm listed in the row was the control, 
+indicated by ``+''), 
+the total number of losses (when the algorithm was the comparison, indicated by ``-''), 
+and the number of comparisons where the hypothesis of equal algorithm effectiveness was not rejected (indicated by ``='').
          }\label{tblWilIVset}
 \begin{tabular*}{\tblwidth}{@{}LCCCCCCCCCCCCCCC@{}}
 \toprule
@@ -1316,11 +1319,9 @@ WW&0&0&0&0&0&0&0&0&0&0&0&+&0&$\blacksquare$&1/3/9\\
 
 \begin{figure}[]
 	\centering
-%		\includegraphics[width=1.0\columnwidth]{FigRankT}
-		\includegraphics[width=0.5\columnwidth]{FigRankT}
-	  \caption{Ranking of the algorithms according to Friedman, Friedman Aligned, and Quade tests in the IV-set case.}\label{figRankIVset}
+		\includegraphics[width=0.5\columnwidth]{Fig10}
+	  \caption{Algorithms' ranks according to the Friedman, Friedman Aligned, and Quade tests in the \emph{IV}--set case}\label{figRankIVset}
 \end{figure}
-
 
 
 The presented data display several features similarly found in the single--\emph{IV} case.
@@ -1396,36 +1397,36 @@ Furthermore, PSO was identified as the worst-performing algorithm by the tests' 
 
 \begin{figure}[]
 	\centering
-%		\includegraphics[width=1.0\columnwidth]{N1Tresult}
-		\includegraphics[width=0.5\columnwidth]{N1Tresult}
-	  \caption{The results of algorithm $1\times N$ comparisons by Friedman, Friedman Aligned, and Quade tests in the IV-set case.
-               The colored hexagon indicates that the adjusted $p$-value,
-               which tests the hypothesis that an algorithm in a row outperforms the algorithm in a column,
-               is not greater than $p_{cr}=0.1$.
-               The solid fill signifies that every post-hoc procedure resulted in $p<p_{cr}$;
-               the dashed fill indicates that the Finner post-hoc procedure was the only method that produced this result.
-               The correspondence between the color and position of the hexagon to a test
-               is shown in a legend at the bottom of the figure.
+		\includegraphics[width=0.5\columnwidth]{Fig11}
+	  \caption{
+The results of algorithms in  1n multiple comparisons using the Friedman, Friedman Aligned, 
+and Quade tests in the \emph{IV}--set case.
+A solid filled hexagon indicates that the $p$--value of the null hypothesis for the comparison 
+``algorithm in a row versus algorithm in a column'', obtained using one of the tests and all post-hoc procedures, 
+are less than $p_{cr}=0.1$.
+The shaded hexagon indicates that $p<p_{cr}$ in the case of the Finner post-hoc procedure only.
+The correspondence between the position (color) of the hexagon and the test is shown in a figure legend.
                }\label{figN1RezIVset}
 \end{figure}
 
 
 \begin{figure}[]
 	\centering
-%		\includegraphics[width=1.0\columnwidth]{NNresult}
-		\includegraphics[width=0.5\columnwidth]{NNresult}
-	  \caption{The results of multiple comparisons among all algorithms in the IV-set case.
-               The colored cylinder indicates that the adjusted p-value,
-               which tests the control algorithm outperforms the comparison algorithm,
-               is not greater than $p_{cr}=0.1$.
-               The correspondence between the color of the cylinder to a post-hoc procedure is shown in the figure's legend.
+		\includegraphics[width=0.5\columnwidth]{Fig12}
+	  \caption{
+The results of $N\times N$ multiple comparisons using Friedman test
+with Shaffer’s static, Nemenyi, and Holm post-hoc procedures for algorithms in the \emph{IV}--set case.
+The presence of colored cylinder indicates that the adjusted $p$-value of the null hypothesis
+for comparison ``control algorithm vs comparison algorithm'' less than $p_{cr}=0.1$.
+The correspondence between the color of the cylinder and the post-hoc procedure is shown in a figure legend.
                }\label{figNNRezIVset}
 \end{figure}
 
+
 \begin{table}[<options>]
-\caption{The total count of wins and losses for each algorithm in $1\times N$ and $N\times N$ multiple comparisons using the
-all tests and post-hoc procedures in the IV-set case.
-The criterion for victory was a adjusted $p$-value less than 0.1.
+\caption{The total count of wins and losses for each algorithm in $1\times N$ and $N\times N$ multiple 
+comparisons using all tests with all post--hoc procedures in the \emph{IV}--set case.
+The criterion for victory was an adjusted $p$--value of the null hypothesis less than 0.1.
 The best results are bolded.
 }\label{tblAllWins}
 \begin{tabular*}{\tblwidth}{@{}LCC@{}}
@@ -1643,8 +1644,8 @@ for all eight model parameters.
 
 \begin{figure}[]
 	\centering
-		\includegraphics[width=0.40\columnwidth]{I01}
-		\includegraphics[width=0.45\columnwidth]{FigA-I02}
+		\includegraphics[width=0.40\columnwidth]{Fig13a}
+		\includegraphics[width=0.45\columnwidth]{Fig13b}
 	  \caption{The accuracy of the $I_{01}$ (a) and $I_{02}$ (b) evaluations from noisy \emph{IV} curves versus voltage and current standard deviations.
                The STLBO algorithm was used for parameter extraction.
                The $\mathrm{APE}_\mathrm{MEDIAN}$ values were averaged over 100 \emph{IV} curves, all simulated with equal values of $\mathrm{SD}_V$ and $\mathrm{SD}_I$.
@@ -1667,14 +1668,12 @@ Overall, STLBO and ADELI demonstrate resilience to measurement errors.
 
 \section{Supplementary data}\label{SuplData}
 Supplementary data to this article can be found online at
-\url{http://surl.li/phuem}
+\url{http://surl.li/udqju}
 
 
 \bibliographystyle{model1-num-names}
 \bibliography{olikh_Methods}
 
-%Будь-ласка, покращ англійську в наступних реченнях, які я буду пропонувати. Зокрема, треба буде виправити граматичні та стилістичні помилки
-%якщо можна, окрім виправленого речення, наводь інформацію про зміни, які зроблені
 
 \end{document}
 
