@@ -1,0 +1,164 @@
+Dear Prof Olikh,
+
+Thank you for submitting your manuscript entitled "Influence of illumination spectrum on dissociation kinetic of iron-boron pairs in silicon" (Research Article, No. pssa.202400351) to Physica Status Solidi A: Applications and Materials Science. The reviewer report and comments are included at the end of this e-mail.
+
+On the basis of these reviewer comments, we are not able at this stage to accept your manuscript for publication. I invite you to address the reviewer comments and make the necessary changes and improvements in a major revision of your manuscript.
+
+
+
+To submit your revision, go to https://www.editorialmanager.com/pssa-journal/ and log in as an Author using your username (olikh) and password. Your submission can be found under the menu item "Submissions Needing Revision". The changes to your manuscript should be highlighted in a different color in the primary "Revised Manuscript" file.
+
+Please provide a point-by-point response letter addressed to the reviewers, including a list of changes made and a rebuttal to any comments with which you disagree. You may copy the letter into the "Respond to Reviewers" box (if it is plain text only) or upload it as a "Response Letter to Reviewers" item (if it contains figures, tables, or special formatting such as formulas or equations). If necessary, you may also upload a separate revision cover letter addressed to the editor with any other information not intended for reviewers as a "Cover Letter to Editor" item. You will also be asked to upload a .zip archive containing the production data that will be used if your manuscript is accepted. See below for more details.
+
+We should receive your revised manuscript by 21 Jun 2024. When we receive your revised manuscript, its suitability for publication in Physica Status Solidi A: Applications and Materials Science will be reassessed.
+
+Yours sincerely,
+
+Marc Zastrow
+
+P.S. Please help avoid delays by referring to the Manuscript Preparation Checklist (http://www.pss-a.com/authorguidelines) and use the appropriate article template when preparing your revised manuscript. Please also follow the instructions to prepare and upload your Production Data materials. These include: the full, non-highlighted text of your manuscript (with all figures with a resolution of at least 300 dpi, schemes, and tables) in editable format - Word DOC/X or LaTeX; a short summary (50-60 words) and an eye-catching color image for the Journal's Table of Contents; and, if applicable, Supporting Information*.
+
+*The Supporting Information document(s) will be published alongside your article and should be non-highlighted and ready for publication. Video formats may also be included.
+
+---------------------------------------
+EDITOR COMMENTS
+---------------------------------------
+Please pay attention to the following comments when revising your manuscript:
+
+Please ensure that the title of your manuscript is optimal and enhances visibility of the publication. Titles should be capitalized, and should be succinct, descriptive, and accurate, so that readers may easily find and cite your work by simply searching for relevant keywords.
+
+If the reviewers have suggested adding new references, please use your own judgment of their relevance to this manuscript when deciding whether to include them.
+
+Manuscripts generally benefit from careful re-reading before submitting the revised version. We also recommend running a spell check. You might consider using a professional language polishing service, such as Wiley English Language Editing Services.
+
+Please obtain copyright permission information in the figure caption for any images that have not been created originally for this manuscript. Please add the copyright statements to the caption of reprinted/adapted graphics, as per the requirements of the original publisher. The reuse license can often be obtained for free from the webpage of the original article, including your own non-open access publications.
+
+Reproduction or use of logos and trademark images in any form requires that copyright permission is first be obtained from the brand owner. Examples of trademarks frequently encountered which require permission include: characters and names from cartoons/TV/movies/comics/computer games, university/institution logos, symbols or icons associated with companies/brands.
+
+P.S.: To find out whether the cost of publishing your manuscript Open Access is covered by one of our national agreements, check our website: https://authorservices.wiley.com/author-resources/Journal-Authors/open-access/affiliation-policies-payments/index.html. The responsible corresponding author’s affiliation is to be used to determine eligibility for some open access funding. It is important to correctly select this affiliation to qualify for these funds.
+
+------------------------------
+REVIEWER REPORT:
+------------------------------
+
+Please note that reviewers may not be numbered consecutively. Where reviewers have provided additional files, these are available here:
+
+EVALUATION:
+
+Reviewer's Responses to Questions
+
+Please rate the importance compared to published work in this subject area.
+
+Reviewer #1: Moderate - Top 50% in the subject area             
+
+Reviewer #2: Moderate - Top 50% in the subject area             
+
+--------------------
+
+Please rate the novelty compared to published work in this subject area.
+
+Reviewer #1: Moderate - Top 50% in the subject area             
+
+Reviewer #2: Moderate - Top 50% in the subject area             
+
+--------------------
+
+Which aspects of scholarly presentation require improvement (if any)?
+
+Reviewer #1:
+*Language
+
+Reviewer #2:
+*Language
+*Manuscript structure
+*Display items
+
+--------------------
+
+Do the methods, data and analysis (including statistical analysis where applicable) adequately test the hypothesis and support the conclusions?
+
+Reviewer #1: Mostly
+
+Reviewer #2: Mostly
+
+--------------------
+
+Are the methods, data and analysis described in sufficient detail to be reproduced?
+
+Reviewer #1: Yes
+
+Reviewer #2: No
+
+--------------------
+
+Please rate the practical relevance of this work.
+
+Reviewer #1: Medium
+
+Reviewer #2: Medium
+
+--------------------
+
+What do you anticipate your overall rating (a mean of importance, novelty and scholarly presentation) would be if the requested revisions are adequately addressed?
+
+Reviewer #1: Moderate - Top 50% in the subject area             
+
+Reviewer #2: Moderate - Top 50% in the subject area             
+
+
+
+COMMENTS TO AUTHOR:
+
+Reviewer #1: This paper provides new information on one of the most typical and common contaminants in silicon, iron. To be more precise, the presented study focuses on investigating the effect of both the spectrum and the intensity of light source on the dissociation kinetics of iron-boron pairs. The results also shed some more light on the actual mechanisms involved in the dissociation process. The presented work is extensive and thorough. The experimental and characterization methods are mostly selected properly to back up the obtained results and conclusions made by the authors. There are only some minor deficiencies and places where the authors could be more precise (please see more detailed comments below). In my opinion the work is worth of publishing if the following minor shortcomings are adequately addressed.
+
+1.      The authors could consider mentioning where does the iron come to the samples? Is it in the wafers to begin with after the crystal growth or is some intentional iron contamination done prior to device processing? In my opinion this information would be worth mentioning in the manuscript.
+
+2.      What was the size of the samples and solar cells used in the experiments? Was the whole sample/cell surface illuminated during the experiments or just part of it locally?
+
+3.      Based on the reported sheet resistance values, the emitter and back surface field diffusions are quite heavy and could thus act as strong gettering sinks for iron during the device processing. Could the authors comment on this? This could lead to rather uneven distribution of iron in the samples and also the iron being in different forms in different locations. Does this affect the results and if yes, how? (Perhaps here the fact that the light used in the IV-measurements was monochromatic with a wavelength of 940 nm plays a role.)
+
+4.      Keeping in mind the cell structure including e.g. strong emitter and BSF diffusions, the reported value of tau_other (2.2 ms) seems quite high. Could the authors comment on this? Were there any uncontaminated reference cells included in the experiments? (These would perhaps be good references also elsewhere in the manuscript.) Was their lifetime characterized to back up this claim and the resulting validity of tau_other being much much higher than tau_feb?
+
+5.      Was the iron concentration in the samples/cells verified with some of the well-established methods for iron concentration determination such as surface photovoltage method (SPV)? That would provide also simultaneously a good reference value for the diffusion length value determined in the manuscript.
+
+Smaller comments:
+
+1.      The authors could consider moving the experimental from the end to the second section in the paper. There is a lot of crucial information in the experimental part that is needed to understand the results properly. Therefore, it could be very useful for the readers to read the experimental part first before going into the results section.
+2.      The paper would benefit from one round of language and typo checks. There were quite a lot of such problems all around the paper. Here are just some examples:
+Title: Should it be dissociation kinetics and not kinetic?
+Page 1, line 42: "and have a solid understanding of some defects". Something wrong in this sentence, should it be e.g. "and that there is a solid understanding of some defects."
+Page 4, lin49: "the lifetime associated with…(about 2.2 µm)" Unit wrong, should be ms?
+Page 6, line 29: "These behaviour…" Should be This behaviour?
+Figure 5 caption: "carrier generate rate"
+etc.
+
+
+
+Reviewer #2: In this work, authors investigated properties of Fe related defects in bulk Si. They measured optoelectric properties and time dependency of association and dissociation of FeB pairs. They found that the dissociation rate depends not only light intensity but also wavelength by the experiments using three light sources with different spectral shape. The experiments were carefully done but I have some comments and questions.
+After revision I recommend for publication.
+
+1
+Grammatical error in the last sentence of the abstract.
+
+2
+Figure1 and TOC, it looks nice, but it is difficult to understand. Authors need to add inputs and outputs. One of outputs will be K values. For example, add an arrow coming out from the box named "Discussion & Conclusion", and write K. Otherwise, readers will not understand what is this figure for.
+Page2, Line40, there is an explanation of "First step". I do not find "Second step".
+
+3
+A main result is that K values depends on the light source, namely spectral shape. These values were obtained by fitting equation(1) to the plot in Fig. 6(a). I have a doubt that K should not change by experimental condition. It is an intrinsic constant. For the fitting, N_FeB was assumed to be constant in the manuscript, but it may not.
+
+4
+A unit "cm^3" is in equation(5). It shold not be.
+
+5
+I did not find where Eq(3) and (4) are used. Exactly the same equations are in the cited articles. These equations and related sentences can be deleted so that readers can easily understand the content.
+
+Comment3 is critical. Explanations are required.
+
+
+
+
+--
+Dr. Marc Zastrow, Editor
+pss(a), physica status solidi (a) - applications and materials science
+E-mail: pssa@wiley-vch.de
