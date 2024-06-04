@@ -20,7 +20,7 @@ We like to express our appreciation to the reviewers for their comments.
 We are resubmitting the revised version of the paper number pssa.202400351.
 We have studied the comments of the reviewer carefully, and have changed the text according to the comments they
 have listed.
-The location of revisions is pointed by blue color in ``RevisedManuscript.pdf''.
+The location of revisions is pointed by blue in ``RevisedManuscript.pdf''.
 Below we refer to each of the reviewer’s comments.
 
 
@@ -28,21 +28,42 @@ Below we refer to each of the reviewer’s comments.
 
 \noindent
 \textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~1.}}
-\emph{The authors could consider mentioning where does the iron come to the samples? 
-Is it in the wafers to begin with after the crystal growth or is some intentional iron contamination done prior to device processing? 
+\emph{The authors could consider mentioning where does the iron come to the samples?
+Is it in the wafers to begin with after the crystal growth or is some intentional iron contamination done prior to device processing?
 In my opinion this information would be worth mentioning in the manuscript.}
 
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
 
-The aim of the research was added in the introduction part
-(page~2, paragraph~3 (last paragraph in the Introduction), line~1-2).
+The technological process of solar cells (SCs) manufacturing from Cz-p-Si wafers included the formation of separating and isotype barriers
+($n^+$-$p$ and $p$-$p^+$ junctions) by diffusion of phosphorus (POCl$_3$) and boron (BCl$_3$) from the gas phase, respectively;
+thermal oxidation;
+thermal annealing;
+photolithography;
+etching the dividing groove;
+chemical treatments;
+magnetron sputtering of aluminum contacts to the front and back sides.
+
+It has been found that some SC lots have significantly worse parameters compared to typical solar cells for this technological process.
+In particular, the photoconversion efficiency was almost halved.
+The analysis showed that the reason for such a deterioration in the SC parameters is a sharp drop in the diffusion length of minority charge carriers (electrons) $L_n$ in the SC base.
+Additional experiments with thermal annealing at temperatures of 200$^\circ$C and 90$^\circ$C
+(the procedure is described by Tayyib~\emph{et al.}\cite{TAYYIB201221})
+showed that the decrease in $L_n$ value is caused by iron impurities available in the SC base at concentrations up to $4\cdot10^{13}$~cm$^{-3}$.
+It has also been found that the source of iron impurity is insufficiently pure chemicals that were used for chemical treatments in the technological process, obtained from another supplier.
+These reagents were the source of contamination in the process of manufacturing experimental SC samples.
+
+
+
+At the same time, such detailed information about the samples has already been provided in a previous paper \cite{Olikh2021JAP}.
+Therefore, in this manuscript, we briefly describe the causes of contamination and provide links
+to a more comprehensive description --- see page~9, paragraphs~5.
 
 
 \vspace{1cm}
 \noindent
 \textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~2.}}
-\emph{What was the size of the samples and solar cells used in the experiments? 
+\emph{What was the size of the samples and solar cells used in the experiments?
 Was the whole sample/cell surface illuminated during the experiments or just part of it locally?}
 
 \noindent
@@ -104,41 +125,21 @@ Therefore, it could be very useful for the readers to read the experimental part
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
 
-Overall, we also support the opinion that the ability to read the experimental part first 
-before going into the results section is useful, customary, and fully justified. 
-However, in this case, we must adhere to the 
+Overall, we also support the opinion that the ability to read the experimental part first
+before going into the results section is useful, customary, and fully justified.
+However, in this case, we must adhere to the
 %‘‘Guide for Authors’’
 %(\url{https://onlinelibrary.wiley.com/page/journal/18626319/homepage/author-guidelines})
 \href{https://onlinelibrary.wiley.com/page/journal/18626319/homepage/author-guidelines}{‘‘Guide for Authors’’}
-and the 
+and the
 %\LaTeX template
-%(\url{https://onlinelibrary.wiley.com/pb-assets/assets/vch/msp/LaTeX-template-1593698612150.zip}), 
+%(\url{https://onlinelibrary.wiley.com/pb-assets/assets/vch/msp/LaTeX-template-1593698612150.zip}),
 \href{https://onlinelibrary.wiley.com/pb-assets/assets/vch/msp/LaTeX-template-1593698612150.zip}{\LaTeX~template}
 which state that the order of the sections must be as follows:
-‘‘Title -- Author(s) -- (Dedication) -- Affiliation(s), -- Keywords -- 
+‘‘Title -- Author(s) -- (Dedication) -- Affiliation(s), -- Keywords --
 Abstract -- Main text -- (Experimental/Methods Section) -- Acknowledgements -- References -- (Biographies) -- Table of Contents text
  [Sections in brackets are only present in certain article types]’’.
 
-
-
-%Загалом, ми також підтримуємо думку, що ability to read the experimental part first before going into the results section
-%is useful, звичним та цілком виправданим.
-%Проте в цьому випадку ми вимушені зважати на Guide for Authors та LaTeX template, які стверджують,
-%що the order of the sections має бути наступним
-
-%In general, the order of the sections in the file is:
-%
-%Title – Author(s) – (Dedication) – Affiliation(s), – Keywords – Abstract -– Main text [including Figures, Schemes and Tables] – (Experimental/Methods Section) – Acknowledgements – References – (Biographies) – Table of Contents text [Sections in brackets are only present in certain article types]
-
-%Guide for Authors
-
-%Title – Author(s) – (Dedication) – Affiliation(s), – Keywords – Abstract -– Main text [including Figures, Schemes and Tables] – (Experimental/Methods Section) – Acknowledgements – References – (Biographies) – Table of Contents text
-%
-%https://onlinelibrary.wiley.com/page/journal/18626319/homepage/author-guidelines
-%
-% LaTeX templates
-%
-% https://onlinelibrary.wiley.com/pb-assets/assets/vch/msp/LaTeX-template-1593698612150.zip
 
 \vspace{1cm}
 \noindent
@@ -166,14 +167,41 @@ Figure 5 caption: "carrier generate rate"}
 \emph{
 etc.}
 
+\noindent
+\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
 We apologize for any language errors.
 A bilingual speaker has revised the text, and we hope it shows improvement.
 
+The reviewer is completely correct and
+\begin{itemize}
+  \item title revised to ‘‘Influence of Illumination Spectrum on Dissociation Kinetics of Iron-boron Pairs in Silicon
+  \item sentence revised to ‘‘Nevertheless, it must be noted that considerable data have been amassed on silicon, resulting in a solid understanding of certain defects.’’
+  (page~1, paragraphs~2)
+  \item correct unit is $\mu$s (page~1, paragraphs~2)
+  \item the correct beginning of sentence is ‘‘This behavior...’’ (page~1, paragraphs~2)
+  \item ‘‘carrier generate rate’’ in Figure~5 caption is replaced by ‘‘carrier generation rate’’ (page~1, paragraphs~2).
+\end{itemize}
+
+Other numerous corrections are highlighted in blue in ``RevisedManuscript.pdf''.
+
+%Nevertheless, in our opinion, retaining the term ‘‘dissociation’’ in the title is appropriate.
+%The time characteristics of the FeB pair dissociation and association are known to be determined by different physical processes.
+%The association is linked to the diffusion of iron ions.
+%Consequently, the association rate is determined by the energy of Fe$_i$ migration $E_m$,
+%temperature, and boron concentration $p$:
+%\begin{equation}
+%\label{eqTass}
+%R_a^{-1}=5.7\times10^5\,\frac{\mathrm{s}}{\mathrm{K}\;\mathrm{cm}^3}\times\frac{T}{p}\exp\left(\frac{E_m}{kT}\right)\,.
+%\end{equation}
+%The literature reports findings on the association of FeB pairs under illumination \cite{}.
+%However, our study specifically focused on the processes of light-induced dissociation.
+%A potential title for this work could be ‘‘Influence of Illumination Spectrum on Dissociation Rate of Iron-Boron Pairs in Silicon.’’
+%Nonetheless, the term ‘‘dissociation kinetic’’ is also commonly used \cite{}.
+ 
 
 
 
-\noindent
-\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+
 
 
 \vspace{1cm}
@@ -187,11 +215,11 @@ A bilingual speaker has revised the text, and we hope it shows improvement.
 
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
-The revised last sentence in the abstract reads: 
+The revised last sentence in the abstract reads:
 
 ‘‘The cat came to work.’’
 
-The manuscript has been revised. 
+The manuscript has been revised.
 We sincerely hope to see a significant decrease in grammatical errors.
 
 
@@ -237,18 +265,28 @@ For the fitting, N\_FeB was assumed to be constant in the manuscript, but it may
 
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
-We respectfully disagree with the Reviewer. 
-On one hand, the factor of $5.7\times10^5$ 
-corresponds precisely to the case 
-when the acceptor-doping concentration is measured in cm$^{-3}$ \cite{FeBAssJAP2014,FeBKin2019,FeBAssSST2011}. 
-On the other hand, since the temperature is measured in K and $p$ in cm$^{-3}$, 
-the factor $\frac{1}{\mathrm{K}\;\mathrm{cm}^3}\times\frac{T}{p}$ 
-is dimensionless, and thus, the expression 
+We respectfully disagree with the Reviewer.
+On one hand, the factor of $5.7\times10^5$
+corresponds precisely to the case
+when the unit of acceptor--doping concentration is cm$^{-3}$ \cite{FeBAssJAP2014,FeBKin2019,FeBAssSST2011}. 
+On the other hand,
+since the temperature unit is Kelvin
+and the unit of $p$ is cm$^{-3}$,
+the factor $\left(\frac{1}{\mathrm{K}\;\mathrm{cm}^3}\cdot\frac{T}{p}\right)$ is dimensionless. 
+Thus, the expression
 \begin{equation}
 \label{eqTass}
 R_a^{-1}=5.7\times10^5\,\frac{\mathrm{s}}{\mathrm{K}\;\mathrm{cm}^3}\times\frac{T}{p}\exp\left(\frac{E_m}{kT}\right)\,
 \end{equation}
 has the dimension of time.
+
+
+
+%On the other hand,
+%since the dimensionality of temperature is Kelvin
+%and the dimensionality of $p$ is cm$^{-3}$,
+%the factor $\left(\frac{1}{\mathrm{K}\;\mathrm{cm}^3}\cdot\frac{T}{p}\right)$ is dimensionless.
+%Thus, Eq.~(\ref{eqTass}) has the dimension of time.
 
 
 
@@ -262,6 +300,12 @@ These equations and related sentences can be deleted so that readers can easily 
 
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+
+We fully understand that it is not good practice to disagree with the reviewer; 
+however, we kindly request permission to retain the equations.
+Eq.~(3) is needed to demonstrate a relationship between the fitting parameters of the experimental curve and defect characteristics.
+
+
 
 
 \vspace{3cm}

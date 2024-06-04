@@ -2,6 +2,16 @@
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\urlprefix}{URL }
 
+\bibitem{TAYYIB201221}
+M.~Tayyib, J.~Theobald, K.~Peter, J.~Odden, T.~Sætre,
+\newblock \emph{Energy Procedia} \textbf{2012}, \emph{27} 21 , proceedings of
+  the 2nd International Conference on Crystalline Silicon Photovoltaics
+  SiliconPV 2012.
+
+\bibitem{Olikh2021JAP}
+O.~Olikh, V.~Kostylyov, V.~Vlasiuk, R.~Korkishko, Y.~Olikh, R.~Chupryna,
+\newblock \emph{J. Appl. Phys.} \textbf{2021}, \emph{130}, 23 235703.
+
 \bibitem{FeBAssJAP2014}
 C.~M\"{o}ller, T.~Bartel, F.~Gibaja, K.~Lauer,
 \newblock \emph{J. Appl. Phys.} \textbf{2014}, \emph{116}, 2 024503.
