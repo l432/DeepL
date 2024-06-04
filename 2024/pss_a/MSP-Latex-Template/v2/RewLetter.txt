@@ -144,6 +144,10 @@ Grammatical error in the last sentence of the abstract.
 Figure1 and TOC, it looks nice, but it is difficult to understand. Authors need to add inputs and outputs. One of outputs will be K values. For example, add an arrow coming out from the box named "Discussion & Conclusion", and write K. Otherwise, readers will not understand what is this figure for.
 Page2, Line40, there is an explanation of "First step". I do not find "Second step".
 
+
+Малюнок 1 і зміст, виглядає гарно, але його важко зрозуміти. Авторам потрібно додати вхідні та вихідні дані. Одним із вихідних даних будуть значення K. Наприклад, додайте стрілку, що виходить із поля з назвою «Обговорення та висновок», і напишіть K. Інакше читачі не зрозуміють, для чого ця цифра.
+Сторінка 2, рядок 40, є пояснення «Першого кроку». Не знаходжу «Другий крок».
+
 3
 A main result is that K values depends on the light source, namely spectral shape. These values were obtained by fitting equation(1) to the plot in Fig. 6(a). I have a doubt that K should not change by experimental condition. It is an intrinsic constant. For the fitting, N_FeB was assumed to be constant in the manuscript, but it may not.
 

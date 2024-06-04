@@ -1,0 +1,18 @@
+\begin{thebibliography}{1}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+
+\bibitem{FeBAssJAP2014}
+C.~M\"{o}ller, T.~Bartel, F.~Gibaja, K.~Lauer,
+\newblock \emph{J. Appl. Phys.} \textbf{2014}, \emph{116}, 2 024503.
+
+\bibitem{FeBKin2019}
+N.~Khelifati, H.~S. Laine, V.~Vähänissi, H.~Savin, F.~Z. Bouamama,
+  D.~Bouhafs,
+\newblock \emph{Phys Status Solidi A} \textbf{2019}, \emph{216}, 17 1900253.
+
+\bibitem{FeBAssSST2011}
+J.~Tan, D.~Macdonald, F.~Rougieux, A.~Cuevas,
+\newblock \emph{Semicond Sci. Technol.} \textbf{2011}, \emph{26}, 5 055019.
+
+\end{thebibliography}
