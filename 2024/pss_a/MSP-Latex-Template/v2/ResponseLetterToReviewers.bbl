@@ -12,6 +12,19 @@ M.~Tayyib, J.~Theobald, K.~Peter, J.~Odden, T.~Sætre,
 O.~Olikh, V.~Kostylyov, V.~Vlasiuk, R.~Korkishko, Y.~Olikh, R.~Chupryna,
 \newblock \emph{J. Appl. Phys.} \textbf{2021}, \emph{130}, 23 235703.
 
+\bibitem{FeB_Zong}
+G.~Zoth, W.~Bergholz,
+\newblock \emph{J. Appl. Phys.} \textbf{1990}, \emph{67}, 11 6764.
+
+\bibitem{Olikh2022:JMatSci}
+O.~Olikh, V.~Kostylyov, V.~Vlasiuk, R.~Korkishko, R.~Chupryna,
+\newblock \emph{J. Mater. Sci.: Mater. Electron.} \textbf{2022}, \emph{33}, 16
+  13133.
+
+\bibitem{FeBLight2}
+L.~J. Geerligs, D.~Macdonald,
+\newblock \emph{Appl. Phys. Lett.} \textbf{2004}, \emph{85}, 22 5227.
+
 \bibitem{FeBAssJAP2014}
 C.~M\"{o}ller, T.~Bartel, F.~Gibaja, K.~Lauer,
 \newblock \emph{J. Appl. Phys.} \textbf{2014}, \emph{116}, 2 024503.
@@ -20,6 +33,10 @@ C.~M\"{o}ller, T.~Bartel, F.~Gibaja, K.~Lauer,
 N.~Khelifati, H.~S. Laine, V.~Vähänissi, H.~Savin, F.~Z. Bouamama,
   D.~Bouhafs,
 \newblock \emph{Phys Status Solidi A} \textbf{2019}, \emph{216}, 17 1900253.
+
+\bibitem{KIMERLINGFeB}
+L.~Kimerling, J.~Benton,
+\newblock \emph{Physica B+C} \textbf{1983}, \emph{116}, 1 297.
 
 \bibitem{FeBAssSST2011}
 J.~Tan, D.~Macdonald, F.~Rougieux, A.~Cuevas,
