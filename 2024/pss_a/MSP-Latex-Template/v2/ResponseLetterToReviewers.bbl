@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\urlprefix}{URL }
 
@@ -11,6 +11,21 @@ M.~Tayyib, J.~Theobald, K.~Peter, J.~Odden, T.~Sætre,
 \bibitem{Olikh2021JAP}
 O.~Olikh, V.~Kostylyov, V.~Vlasiuk, R.~Korkishko, Y.~Olikh, R.~Chupryna,
 \newblock \emph{J. Appl. Phys.} \textbf{2021}, \emph{130}, 23 235703.
+
+\bibitem{FeB:Vahanissi}
+V.~V\"{a}h\"{a}nissi, A.~Haarahiltunen, H.~Talvitie, M.~Yli-Koski, H.~Savin,
+\newblock \emph{Prog. Photovoltaics Res. Appl.} \textbf{2013}, \emph{21}, 5
+  1127.
+
+\bibitem{LaineIEEEPV2016}
+H.~S. Laine, V.~V\"{a}h\"{a}nissi, A.~E. Morishige, J.~Hofstetter,
+  A.~Haarahiltunen, B.~Lai, H.~Savin, D.~P. Fenning,
+\newblock \emph{IEEE Journal of Photovoltaics} \textbf{2016}, \emph{6}, 5 1094.
+
+\bibitem{FeBKin2019}
+N.~Khelifati, H.~S. Laine, V.~Vähänissi, H.~Savin, F.~Z. Bouamama,
+  D.~Bouhafs,
+\newblock \emph{Phys Status Solidi A} \textbf{2019}, \emph{216}, 17 1900253.
 
 \bibitem{FeB_Zong}
 G.~Zoth, W.~Bergholz,
@@ -28,11 +43,6 @@ L.~J. Geerligs, D.~Macdonald,
 \bibitem{FeBAssJAP2014}
 C.~M\"{o}ller, T.~Bartel, F.~Gibaja, K.~Lauer,
 \newblock \emph{J. Appl. Phys.} \textbf{2014}, \emph{116}, 2 024503.
-
-\bibitem{FeBKin2019}
-N.~Khelifati, H.~S. Laine, V.~Vähänissi, H.~Savin, F.~Z. Bouamama,
-  D.~Bouhafs,
-\newblock \emph{Phys Status Solidi A} \textbf{2019}, \emph{216}, 17 1900253.
 
 \bibitem{KIMERLINGFeB}
 L.~Kimerling, J.~Benton,

@@ -56,7 +56,7 @@ These reagents were the source of contamination in the process of manufacturing 
 
 
 At the same time, such detailed information about the samples has already been provided in a previous paper \cite{Olikh2021JAP}.
-Therefore, in this manuscript, we briefly describe the causes of contamination and provide links
+Therefore, in revised manuscript, we briefly describe the causes of contamination and provide links
 to a more comprehensive description --- see page~9, paragraphs~5.
 
 
@@ -83,6 +83,20 @@ Does this affect the results and if yes, how?
 
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+Really, phosphorus diffusion \cite{FeB:Vahanissi} and implantation \cite{LaineIEEEPV2016,FeBKin2019} gettering 
+are well--known methods to relocate iron from the bulk to the emitter, where it is less harmful.
+Therefore, due to creating barriers (see Reply to Comment~1), the concentration of iron near the surfaces of the solar cell could have increased. 
+However, gettered iron is not recombination-active like 
+Fe$_i$ or FeB, and even high amounts of gettered iron do not increase emitter recombination \cite{FeB:Vahanissi}.
+
+Thus, only the fraction of iron remaining in the bulk could respond to illumination in our experiments. 
+Considering that other high--temperature process operations (thermal oxidation, thermal annealing) were performed after the formation of barriers, 
+we believe that the bulk iron is evenly distributed. 
+Previous studies have not reported uneven distribution of iron due to phosphorus-induced gettering, 
+and the possibility of uneven distribution was not considered in the analysis of the light-induced kinetics of iron-boron pairs \cite{LaineIEEEPV2016,FeBKin2019}.
+
+Additionally, for light with a wavelength of 940~nm, the absorption depth is approximately 50~$\mu$m at 340~K.
+Therefore, using monochromatic light as a probe tool primarily allowed us to focus on processes deep within the solar cell base.
 
 
 \vspace{1cm}
@@ -97,9 +111,30 @@ Was their lifetime characterized to back up this claim and the resulting validit
 }
 
 
-
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+First and foremost, we would like to apologize for the inaccuracy. 
+The cited value of 2.2~$\mu$s corresponds to the lifetime associated with Shockley-Read–Hall recombination at Fe-related defects. 
+The information in the revised manuscript has been rephrased for clarity.
+
+During fitting the time dependencies of short-circuit current,
+the following expression was used to estimate the minority carrier lifetime in the base $\tau$:
+\begin{equation}
+\label{eqTau}
+\frac{1}{\tau(t)}=\frac{1}{\tau_i}+\frac{1}{\tau_{SRH}^{\mathrm{Fe_i}}(t)}
++\frac{1}{\tau_{SRH}^\mathrm{FeB}(t)}+\frac{1}{\tau_{other}}\,,
+\end{equation}
+where
+$\tau_i$ is the lifetime associated with intrinsic recombination,
+$\tau_{SRH}^{\mathrm{Fe_i}}$ and $\tau_{SRH}^\mathrm{FeB}$ are related to the recombinations at interstitial iron atoms Fe$_i$ and at FeB pairs, accordingly;
+$\tau_{other}$ describes further recombination channels
+(other impurities, lattice defects, surface recombination).
+
+It turned out that the final term in Eq.~(\ref{eqTau}) is significantly smaller than the preceding ones.
+This fact gave grounds to assert that $\tau_\mathrm{other}$ significantly exceeds $\tau_\mathrm{FeB}$.
+
+
+
 
 
 \vspace{1cm}
@@ -113,12 +148,12 @@ That would provide also simultaneously a good reference value for the diffusion 
 
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
-We must acknowledge that for the solar cell used in this work, additional verification of the iron concentration was not carried out.
-However, the approach to determining the iron concentration from the short-circuit current kinetics 
+We must acknowledge that additional verification of the iron concentration was not carried out for the solar cell used in this work.
+However, the approach to determining the iron concentration from the short-circuit current kinetics
 was initially validated by assessing the diffusion length \cite{FeB_Zong}.
 The results obtained by different methods were well-agreed, as described in previous papers \cite{Olikh2021JAP,Olikh2022:JMatSci}.
 
-It should be noted that even some inaccuracy in iron concentration evaluation could have affected only 
+It should be noted that even some inaccuracy in iron concentration evaluation could have affected only
 the absolute values of the coefficient $K$, which are reported \cite{FeBLight2,FeBAssJAP2014,FeBKin2019} with a big enough scatter.
 The primary study's conclusion (the dependence of the dissociation rate and $K$ on the illumination spectrum) remains unchanged.
 
@@ -267,22 +302,22 @@ For the fitting, N\_FeB was assumed to be constant in the manuscript, but it may
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
 
 
-For us, it was also somewhat surprising that $K$, 
-which was considered a material constant, depended on illumination parameters. 
+For us, it was also somewhat surprising that $K$,
+which was considered a material constant, depended on illumination parameters.
 However, from a physical point of view, such dependence is not entirely incomprehensible.
-Indeed, according to the recombination-enhanced defect reaction, 
-electron--phonon interactions during the dissociation of FeB pairs lead to the athermal diffusion of iron ions \cite{FeBKin2019,KIMERLINGFeB}. 
-The increase in the number of phonons due to the thermalization of photoelectrons, 
-which occurs when higher energy photons are absorbed, 
+Indeed, according to the recombination-enhanced defect reaction,
+electron--phonon interactions during the dissociation of FeB pairs lead to the athermal diffusion of iron ions \cite{FeBKin2019,KIMERLINGFeB}.
+The increase in the number of phonons due to the thermalization of photoelectrons,
+which occurs when higher energy photons are absorbed,
 should intensify the electron-phonon interaction process.
-Such a phenomenon is observed in the experiment and causes changes in the value of $K$, 
+Such a phenomenon is observed in the experiment and causes changes in the value of $K$,
 which integrally characterizes the dissociation process of the pairs.
 
-Regarding the fitting where the concentration of pairs was assumed to be constant, 
-the study presents results obtained under the illumination of a single solar cell at a constant temperature (340 K). 
+Regarding the fitting where the concentration of pairs was assumed to be constant,
+the study presents results obtained under the illumination of a single solar cell at a constant temperature (340 K).
 Before strong illumination, the sample was kept in the dark for an extended period.
 
-Therefore, there is no reason to expect that the total concentration of defects or the ratio between the amounts 
+Therefore, there is no reason to expect that the total concentration of defects or the ratio between the amounts
 of FeB and Fe$_i$ would change.
 Moreover, this was verified in the experiment (see Table~1, last column).
 
@@ -334,14 +369,14 @@ We fully understand that it is not good practice to disagree with the reviewer;
 however, we kindly request permission to retain the equations.
 Eq.~(3) is needed to demonstrate a relationship between the fitting parameters of the experimental curve
 (Figure~3) and defect characteristics --- see page~5, paragraph~2.
-Eq.~(4) allows for an easy and understandable entering of $t_\mathrm{dark}$ 
-(time after stopping strong illumination), 
-which is extensively used throughout the text and figures. 
-Additionally, the equation directly relates to the time dependence of the recovery of the short--circuit current (Fig. 2a) 
+Eq.~(4) allows for an easy and understandable entering of $t_\mathrm{dark}$
+(time after stopping strong illumination),
+which is extensively used throughout the text and figures.
+Additionally, the equation directly relates to the time dependence of the recovery of the short--circuit current (Fig. 2a)
 and is mentioned on page 3, last paragraph.
 
-While references to cited articles can be sufficient, 
-we believe that including Eq.(3) and (4) enables readers to clearly understand 
+While references to cited articles can be sufficient,
+we believe that including Eq.(3) and (4) enables readers to clearly understand
 the connection between the experiment and the FeB characteristics within the study framework.
 
 
