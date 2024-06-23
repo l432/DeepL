@@ -1160,7 +1160,7 @@ The single--\emph{IV} case.
 
 
 \begin{table*}[<options>]
-\caption{The total count of wins and losses for each algorithm in $N\times N$ multiple comparisons 
+\caption{The total count of wins and losses for each algorithm in $N\times N$ multiple comparisons
   using the Friedman test with Shaffer’s static, Nemenyi, and Holm procedures in single--\emph{IV} case.
   The criterion for victory was an adjusted $p$--value of the null hypothesis less than 0.1.
   The best results are bolded.
@@ -1248,12 +1248,12 @@ which is dedicated to the analysis of \emph{IV} curves with different parameter 
 	  \caption{
 The dependencies of the $I_{01}$ (a, b), $n_1$ (c), $R_\mathrm{p1}$ (d), $I_{02}$ (e, f),
 $n_2$ (g, h), $R_\mathrm{p2}$ (i, j), $R_\mathrm{s}$ (k), $I_\mathrm{ph}$ (l, m), and RMSPE (n, o)
-values on the temperature of \emph{IV} simulation in the \emph{IV}--set case are obtained using 
+values on the temperature of \emph{IV} simulation in the \emph{IV}--set case are obtained using
 TLBO (a, l), GOTLBO (a, h), EBLSHADE (b, j), WW (b, n, o), NNA (c, j, l), NDE (c, k), PSO (d, m), IJAVA (d, h),
 MABC (e, m), ISCA (e), DE (f, g), CWOA (f, i), STLBO (g, n, o), and ADELI (i, k) algorithms.
-Circles represent the values used in \emph{IV} curve simulations. 
+Circles represent the values used in \emph{IV} curve simulations.
 Filled marks indicate the median values, while empty marks indicate the mean values.
-The colored regions correspond to the IQR. 
+The colored regions correspond to the IQR.
 The lines serve only as a guide to the eye.
                }\label{figTDepIVset}
 \end{figure*}
@@ -1289,9 +1289,9 @@ We aimed to determine the best algorithms only.
 A ``+'' indicates that the null hypothesis was rejected,
 and the control algorithm (listed in the row) outperformed the comparison algorithm (listed in the column).
 The ``0'' indicates the rejection of the hypothesis about better performing the control algorithm.
-The last column contains the total number of wins (when the algorithm listed in the row was the control, 
-indicated by ``+''), 
-the total number of losses (when the algorithm was the comparison, indicated by ``-''), 
+The last column contains the total number of wins (when the algorithm listed in the row was the control,
+indicated by ``+''),
+the total number of losses (when the algorithm was the comparison, indicated by ``-''),
 and the number of comparisons where the hypothesis of equal algorithm effectiveness was not rejected (indicated by ``='').
          }\label{tblWilIVset}
 \begin{tabular*}{\tblwidth}{@{}LCCCCCCCCCCCCCCC@{}}
@@ -1399,10 +1399,10 @@ Furthermore, PSO was identified as the worst-performing algorithm by the tests' 
 	\centering
 		\includegraphics[width=0.5\columnwidth]{Fig11}
 	  \caption{
-The results of algorithms in  1n multiple comparisons using the Friedman, Friedman Aligned, 
+The results of algorithms in  1n multiple comparisons using the Friedman, Friedman Aligned,
 and Quade tests in the \emph{IV}--set case.
-A solid filled hexagon indicates that the $p$--value of the null hypothesis for the comparison 
-``algorithm in a row versus algorithm in a column'', obtained using one of the tests and all post-hoc procedures, 
+A solid filled hexagon indicates that the $p$--value of the null hypothesis for the comparison
+``algorithm in a row versus algorithm in a column'', obtained using one of the tests and all post-hoc procedures,
 are less than $p_{cr}=0.1$.
 The shaded hexagon indicates that $p<p_{cr}$ in the case of the Finner post-hoc procedure only.
 The correspondence between the position (color) of the hexagon and the test is shown in a figure legend.
@@ -1424,7 +1424,7 @@ The correspondence between the color of the cylinder and the post-hoc procedure 
 
 
 \begin{table}[<options>]
-\caption{The total count of wins and losses for each algorithm in $1\times N$ and $N\times N$ multiple 
+\caption{The total count of wins and losses for each algorithm in $1\times N$ and $N\times N$ multiple
 comparisons using all tests with all post--hoc procedures in the \emph{IV}--set case.
 The criterion for victory was an adjusted $p$--value of the null hypothesis less than 0.1.
 The best results are bolded.
@@ -1632,7 +1632,7 @@ the idealized characteristic was defined by $\mathrm{SD}_V=0$~V and $\mathrm{SD}
 When applying STLBO and ADELI to a single noisy IV curve, remarkably close parameter values were obtained.
 We used the absolute percentage error of the median value $\mathrm{APE}_\mathrm{MEDIAN}$
 (see Eq.~\ref{eqAPE}) to quantify the error in parameter evaluation.
-Fig.2 illustrates the increase in $I_{01}$ and $I_{02}$ extraction error by STLBO use
+Fig.~\ref{figNoisy} illustrates the increase in $I_{01}$ and $I_{02}$ extraction error by STLBO use
 with the rise in measurement error (standard deviation values increase).
 It should be noted that the presented error results are averaged for 100 \emph{IV} curves
 simulated with the same standard deviation values for voltage and current.
