@@ -35,7 +35,7 @@ object MainForm: TMainForm
   object LLightIntens: TLabel
     Left = 637
     Top = 417
-    Width = 114
+    Width = 112
     Height = 36
     Caption = 'Light intensity (W m-2)'
     Font.Charset = DEFAULT_CHARSET

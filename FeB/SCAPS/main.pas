@@ -1893,7 +1893,8 @@ end;
 
 procedure TMainForm.BFeB_xClick(Sender: TObject);
  var //Direc:string;
-     EB_File,FeGRDFile,FeBGRDFile,FeGRDFilePP,FeBGRDFilePP:TStringList;
+     EB_File,FeGRDFile,FeBGRDFile,
+     FeGRDFilePP,FeBGRDFilePP,NewSL:TStringList;
      Vec:TVector;
      Row:Int64;
      i,j:word;
@@ -1914,6 +1915,7 @@ begin
       FeBGRDFile:=TStringList.Create;
       FeGRDFilePP:=TStringList.Create;
       FeBGRDFilePP:=TStringList.Create;
+      NewSL:=TStringList.Create;
       EB_File.LoadFromFile(OpenDialog1.FileName);
       SetCurrentFolders;
 
@@ -1933,7 +1935,6 @@ begin
             Row:=Row+2;
             for I := 0 to 199 do
              begin
-//               Vec.Add(290+FloatDataFromRow(EB_File[ROW],2),-FloatDataFromRow(EB_File[ROW],7));
                if i>149 then
                Vec.Add(BaseThick.Data-10+FloatDataFromRow(EB_File[ROW],2),-FloatDataFromRow(EB_File[ROW],7))
                          else
@@ -1941,13 +1942,33 @@ begin
 
                Inc(ROW);
              end;
+
+
+//-----------------------------------------------------
+//            NewSL.Add('x Ef Eg');
+//            for I := 0 to 300 do
+//             begin
+//               if (FloatDataFromRow(EB_File[ROW],2)>=7.75)
+//                  and(FloatDataFromRow(EB_File[ROW],2)<=17.75) then
+//                  begin
+//                   NewSL.Add(floattostr(10-FloatDataFromRow(EB_File[ROW],2)+7.75)
+//                            +' '+floattostr(-FloatDataFromRow(EB_File[ROW],7))
+//                            +' '+floattostr(FloatDataFromRow(EB_File[ROW],4)-FloatDataFromRow(EB_File[ROW],7)));
+//                  end;
+//               Inc(ROW);
+//             end;
+//------------------------------------------------------
             Break;
           end;
          Inc(ROW);
        end;
-//      Vec.DeleteDuplicate;
       SetTemperatureFolders(T);
       Vec.WriteToFile('Ef_'+PartOfFileNameCreate(T)+'.dat',10);
+//--------------------------------------
+//      NewSL.Delete(1);
+//      NewSL.Delete(NewSL.Count-1);
+//      NewSL.SaveToFile('Ef_'+PartOfFileNameCreate(T)+'.dat');
+//----------------------------------------
       while not (SetCurrentDir(GetCurrentDir + '\grd')) do
         MkDir('grd');
 
@@ -2023,6 +2044,7 @@ begin
       until (Nfe>Log10(FeHi.Data*1.0001));
 
       Vec.Free;
+      NewSL.Free;
       EB_File.Free;
       FeGRDFile.Free;
       FeBGRDFile.Free;
