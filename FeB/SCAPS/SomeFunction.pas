@@ -46,10 +46,14 @@ procedure Create940spe(const Wph:integer;const DirToSave:string);
 {додає на початку кожного рядка SL Syffix;
 якщо SyffixHeader не порожній, то у першому рядку додають саме його, а не Syffix}
 
+function FileNameToTvalue(FileName:string):integer;
+
+
 implementation
 
 uses
-  StrUtils, SysUtils, OlegFunction, Math, OlegVectorManipulation, OlegType;
+  StrUtils, SysUtils, OlegFunction, Math, OlegVectorManipulation, OlegType,
+  Vcl.Dialogs;
 
 function EditString(str:string):string;
 begin
@@ -332,6 +336,10 @@ begin
  FreeAndNil(SL);
 end;
 
-
+function FileNameToTvalue(FileName:string):integer;
+begin
+  Result:=Pos('T',FileName);
+  showmessage(Copy(FileName,Result+1,3));
+end;
 
 end.
