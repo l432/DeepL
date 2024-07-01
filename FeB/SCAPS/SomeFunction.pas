@@ -48,12 +48,15 @@ procedure Create940spe(const Wph:integer;const DirToSave:string);
 
 function FileNameToTvalue(FileName:string):integer;
 
+function FileNameToNbvalue(FileName:string):double;
+
+Procedure EfCreate(FileName:string);
 
 implementation
 
 uses
   StrUtils, SysUtils, OlegFunction, Math, OlegVectorManipulation, OlegType,
-  Vcl.Dialogs;
+  Vcl.Dialogs, OlegVector;
 
 function EditString(str:string):string;
 begin
@@ -338,8 +341,108 @@ end;
 
 function FileNameToTvalue(FileName:string):integer;
 begin
-  Result:=Pos('T',FileName);
-  showmessage(Copy(FileName,Result+1,3));
+  Result:=strtoint(Copy(FileName,Pos('T',FileName)+1,3));
+end;
+
+function FileNameToNbvalue(FileName:string):double;
+begin
+ Result:=strtofloat(AnsiReplaceStr(Copy(FileName,Pos('B',FileName)+1,8),'p','.'));
+end;
+
+Procedure EfCreate(FileName:string);
+ var VecEf,VecEg, VecEf_fit{,VecEg_fit}:TVector;
+     SL:TStringList;
+     x,Nb:double;
+     T,i:integer;
+     NbStr,TStr,tempStr:string;
+begin
+ SL:=TStringList.Create;
+ VecEf:=TVector.Create;
+ VecEg:=TVector.Create;
+ VecEf_fit:=TVector.Create;
+// VecEg_fit:=TVector.Create;
+ VecEf.ReadFromFile(FileName,['x','Ef']);
+ VecEg.ReadFromFile(FileName,['x','Eg']);
+ VecEf.Sorting();
+ VecEg.Sorting();
+ x:=0;
+ repeat
+  VecEf_fit.Add(x,VecEf.Yvalue(x));
+//  VecEg_fit.Add(x,VecEg.Yvalue(x));
+  x:=x+1e-3;
+ until x>10;
+ Nb:=FileNameToNbvalue(FileName);
+ NbStr:=' '+FloatToStrF(Log10(Nb), ffExponent, 10, 2)+' ';
+ T:=FileNameToTvalue(FileName);
+ Tstr:=' '+IntToStr(T)+' ';
+ tempStr:=' '+FloatToStrF(VecEg.Y[0], ffExponent, 10, 2)
+           +' 0.394 0.10 '
+           +FloatToStrF(VecEg.Y[0]-0.26, ffExponent, 10, 2);
+
+ if T=290 then
+ begin
+  SL.Clear;
+  if not(FileExists('T290.dat'))
+   then SL.Add('x NB Ef Ec Fei FeBD FeBA')
+   else SL.LoadFromFile('T290.dat');
+  for i:=0 to VecEf_fit.HighNumber do
+    SL.Add(FloatToStrF(VecEf_fit.X[i], ffExponent, 6, 2)
+           +NbStr
+           +FloatToStrF(VecEf_fit.Y[i], ffExponent, 8, 2)
+           +tempStr);
+  SL.SaveToFile('T290.dat');
+ end;
+
+ if T=340 then
+ begin
+  SL.Clear;
+  if not(FileExists('T340.dat'))
+   then SL.Add('x NB Ef Ec Fei FeBD FeBA')
+   else SL.LoadFromFile('T340.dat');
+  for i:=0 to VecEf_fit.HighNumber do
+    SL.Add(FloatToStrF(VecEf_fit.X[i], ffExponent, 6, 2)
+           +NbStr
+           +FloatToStrF(VecEf_fit.Y[i], ffExponent, 8, 2)
+           +tempStr);
+  SL.SaveToFile('T340.dat');
+ end;
+
+ if Nb=1e15 then
+ begin
+  SL.Clear;
+  if not(FileExists('Nb15.dat'))
+   then SL.Add('x T Ef Ec Fei FeBD FeBA')
+   else SL.LoadFromFile('Nb15.dat');
+  for i:=0 to VecEf_fit.HighNumber do
+    SL.Add(FloatToStrF(VecEf_fit.X[i], ffExponent, 6, 2)
+           +TStr
+           +FloatToStrF(VecEf_fit.Y[i], ffExponent, 8, 2)
+           +tempStr);
+  SL.SaveToFile('Nb15.dat');
+ end;
+
+ if Nb=1e17 then
+ begin
+  SL.Clear;
+  if not(FileExists('Nb17.dat'))
+   then SL.Add('x T Ef Ec Fei FeBD FeBA')
+   else SL.LoadFromFile('Nb17.dat');
+  for i:=0 to VecEf_fit.HighNumber do
+    SL.Add(FloatToStrF(VecEf_fit.X[i], ffExponent, 6, 2)
+           +TStr
+           +FloatToStrF(VecEf_fit.Y[i], ffExponent, 8, 2)
+           +tempStr);
+  SL.SaveToFile('Nb17.dat');
+ end;
+
+
+
+
+ FreeAndNil(VecEf);
+ FreeAndNil(VecEg);
+ FreeAndNil(VecEf_fit);
+// FreeAndNil(VecEg_fit);
+ FreeAndNil(SL);
 end;
 
 end.

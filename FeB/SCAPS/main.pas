@@ -518,29 +518,11 @@ var
   i: Integer;
   FeValue:TArrSingle;
   FeStep:double;
-  temp:double;
+  temp,x:double;
   pw:integer;
 begin
 
-   OpenDialog1.InitialDir:='D:\DeepL\FeB\SimNew';
-   OpenDialog1.FileName:='';
-   OpenDialog1.Filter:='Dat File (*.dat)|*.dat';
-   if OpenDialog1.Execute()
-     then
-       begin
-//         showmessage(ExtractFileName(OpenDialog1.FileName));
-         showmessage(inttostr(FileNameToTvalue( ExtractFileName(OpenDialog1.FileName))));
-
-//       FileName:=ExtractFileName(OpenDialog1.FileName);
-//       FileName:=copy(FileName,1,length(FileName)-3);
-//       LFile.Caption:=FileName;
-//       if FileExists(OpenDialog1.FileName) then
-//         begin
-//         SCAPSFile.Clear;
-//         SCAPSFile.LoadFromFile(OpenDialog1.FileName);
-//         end;
-       end;
-
+ ForAllDatFilesAction(EfCreate,'','Ef_D18');
 
 
 //Create940spe(8, SCAPS_Folder);
