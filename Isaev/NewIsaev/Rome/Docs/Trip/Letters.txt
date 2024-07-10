@@ -66,3 +66,34 @@ I received reimbursement. Thank you very much.
 I am extremely pleased, and I look forward to further cooperation.
 Best regards,
 Oleg Oleh
+
+
+
+Dear Dr Aurelie Fere,
+
+Я радий знову отримати від Вас листа.
+На цей момент мій claim містить наступні документи, які підтверджують Travel expenses by plane.
+Це рахунок (файл "1.pdf") та два BOARDING PASS (файли "2.pdf" та "3.pdf").
+Рахунок містить інформацію про вартість (1293.00 PLN, нижня частина документу), моє ім`я (Oleh Olikh, поле НАЗВА ПОКУПЦЯ) та номер бронювання (QKEMPD, верхня частина справа). Boarding passes містять інформацію про 
+моє ім'я, номер бронювання, рейс та дату. Це всі документи, які я отримав від авіакомпанії. Водночас, вони
+містять дані, які дозволяють підтвердити ім'я пасажира, вартість квитків,  напрям польоту, дата та номер рейсу. Документи для підтвердження яких саме подробиць подорожі я повинен надати? Я вже надав всі документи.
+
+Водночас, я хотів би дізнатися чому під час розрахунку еhe daily allowance reimbursement 
+неправильно розраховується travel times. Моя подорож з Києва до Риму відповідно до квитків тривала з 11:30 21 Jan 2024 до 08:30 23 Jan 2024, тобто 45 годин. Подорож з Риму до Києва почалася 9:05 26 Jan 2024 і закінчилася 07:30 27 Jan 2024 - 22,5 години. Результати розрахунку не враховують 22/01/2024, 23/01/2024, 26/01/2024  незважаючи на те, що всі ці дні я був у дорозі.
+
+
+Dear Dr Aurelie Fere,
+
+I am pleased to receive your letter again.
+
+Currently, my claim includes the following documents verifying the travel expenses by plane. These documents are:
+
+    An Invoice (file "FlyWarsav_RomeFiumicino_RomeFiumicino_Warsav.pdf")
+    Two boarding passes (files "BoardingCard_342707771_WAW_FCO.pdf" and "BoardingCard_342707771_FCO_WAW.pdf")
+
+The Invoice contains information regarding the cost (1293.00 PLN, at the bottom of the document), my name (Oleh Olikh, in the НАЗВА ПОКУПЦЯ field), and the booking number (QKEMPD, НОМЕР БРОНЮВАННЯ field at the top right-hand corner). The boarding passes contain information about my name (Oleh Olikh), booking number (QKEMPD), Depurture/Destination (WAW-FCO or FCO-WAW), flight number (W6 1441 or W6 1442), and flight date (23 / Jan / 2024  or 26 / Jan / 2024). These are all the documents I received from the airline. They provide data to confirm the passenger's name, ticket cost, flight direction, date, and flight number. Are there any additional documents required to verify specific details of my journey? I have already submitted all the records I have. I can only add screenshots from the site - see attachment
+
+Additionally, I would like to understand why there is an error in calculating the travel times for the daily allowance reimbursement. According to the tickets, my journey from Kyiv to Rome lasted from 11:30 on January 21, 2024, to 08:30 on January 23, 2024, totaling 45 hours. The journey from Rome to Kyiv started at 09:05 on January 26, 2024, and ended at 07:30 on January 27, 2024, totaling 22.5 hours. The calculation results do not account for January 22, 2024, January 23, 2024, and January 26, 2024, although I was traveling on all these days.
+
+Best regards,
+Oleh Olikh
