@@ -1,4 +1,4 @@
-\begin{thebibliography}{20}
+\begin{thebibliography}{22}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\bibinfo}[2]{#2}
 \ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
@@ -11,6 +11,29 @@
 \newblock \bibinfo{journal}{IOP Conference Series: Materials Science and
   Engineering} \bibinfo{volume}{594} (\bibinfo{year}{2019})
   \bibinfo{pages}{012032}.
+%Type = Article
+\bibitem[{Basnet et~al.(2024)Basnet, Yan, Kang, Shehata, Phang, Truong,
+  Bullock, Shen, and Macdonald}]{Basnet2024}
+\bibinfo{author}{R.~Basnet}, \bibinfo{author}{D.~Yan},
+  \bibinfo{author}{D.~Kang}, \bibinfo{author}{M.~M. Shehata},
+  \bibinfo{author}{P.~Phang}, \bibinfo{author}{T.~Truong},
+  \bibinfo{author}{J.~Bullock}, \bibinfo{author}{H.~Shen},
+  \bibinfo{author}{D.~Macdonald},
+\newblock \bibinfo{title}{{Current status and challenges for hole-selective
+  poly-silicon based passivating contacts}},
+\newblock \bibinfo{journal}{Appl. Phys. Rev.} \bibinfo{volume}{11}
+  (\bibinfo{year}{2024}) \bibinfo{pages}{011311}.
+%Type = Article
+\bibitem[{Wang et~al.(2024)Wang, Liu, Li, Wei, Li, Fan, Liu, An, Liu, Li, Fu,
+  Liu, and He}]{Wang2024}
+\bibinfo{author}{L.~Wang}, \bibinfo{author}{J.~Liu}, \bibinfo{author}{Y.~Li},
+  \bibinfo{author}{G.~Wei}, \bibinfo{author}{Q.~Li}, \bibinfo{author}{Z.~Fan},
+  \bibinfo{author}{H.~Liu}, \bibinfo{author}{Y.~An}, \bibinfo{author}{C.~Liu},
+  \bibinfo{author}{J.~Li}, \bibinfo{author}{Y.~Fu}, \bibinfo{author}{Q.~Liu},
+  \bibinfo{author}{D.~He},
+\newblock \bibinfo{title}{Dislocations in crystalline silicon solar cells},
+\newblock \bibinfo{journal}{Advanced Energy and Sustainability Research}
+  \bibinfo{volume}{5} (\bibinfo{year}{2024}) \bibinfo{pages}{2300240}.
 %Type = Book
 \bibitem[{Claeys and Simoen(2018)}]{Claers2018}
 \bibinfo{author}{C.~Claeys}, \bibinfo{author}{E.~Simoen}, \bibinfo{title}{Metal
