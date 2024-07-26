@@ -1,0 +1,5 @@
+The thicknesses of the top
+pattern and two intermediate layers are restrained in the range of
+20–200 nm and are designed with the precision of 10 nm. The fill
+rate of the top pattern (the ratio of the side length to the period) is
+varied from 0.1 to 0.9, with a step size of 0.1

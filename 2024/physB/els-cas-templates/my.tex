@@ -202,7 +202,7 @@ Abstract Abstract Abstract Abstract Abstract Abstract Abstract
 % Keywords
 % Each keyword is seperated by \sep
 \begin{keywords}
- modeling\sep defect\sep solar cells
+ silicon\sep iron-boron pairs\sep solar cells \sep SCAPS \sep simulation \sep defect influence
 \end{keywords}
 
 \maketitle
@@ -210,26 +210,63 @@ Abstract Abstract Abstract Abstract Abstract Abstract Abstract
 % Main text
 \section{Introduction}%\label{}
 \par
-The necessity for renewable energy sources to meet the growing global demand for sustainable and environmentally friendly energy alternatives has become evident. 
-Among the wide range of renewable energy sources, sunlight is the cleanest, safest, 
+The necessity for renewable energy sources to meet the growing global demand for sustainable and environmentally friendly energy alternatives has become evident.
+Among the wide range of renewable energy sources, sunlight is the cleanest, safest,
 and most abundant source for use in sustainable energy to support economic growth \cite{PratapSingh2019}.
 The utilization of solar energy heavily depends on the use of photovoltaic cells, with silicon--based devices playing a critical role \cite{Basnet2024,Wang2024}.
 
 
-The issue of semiconductor purity has become increasingly significant since the advent of the transistor in 1947 \cite{Claers2018}. 
-The 1960 study by Shockley and Queisser \cite{Goetzberger1960} demonstrated that 
-the electrical properties of $n^{+}-p$ silicon diodes deteriorate when impurity atoms of metals such as Cu, Fe, Mn, Au, Zn, and Ni are present. 
-This study prompted investigations focused on preventing contaminating metals from entering semiconductors during manufacturing. 
-In particular, metallic impurities are known to reduce the efficiency of 
-silicon--based devices through direct shunting \cite{Rsh:Breitenstein}, increased leakage current \cite{Lee1980}, or bulk recombination \cite{Istratov2000}. 
-Despite extensive study of metallic impurities in silicon over the past fifty years \cite{Claers2018,Pearce1977}, 
-the problem continues to attract significant attention [?].
+The issue of semiconductor purity has become increasingly significant since the advent of the transistor in 1947 \cite{Claers2018}.
+The 1960 study by Shockley and Queisser \cite{Goetzberger1960} demonstrated that
+the electrical properties of $n^{+}-p$ silicon diodes deteriorate when impurity atoms of metals such as Cu, Fe, Mn, Au, Zn, and Ni are present.
+This study prompted investigations focused on preventing contaminating metals from entering semiconductors during manufacturing.
+In particular, metallic impurities are known to reduce the efficiency of
+silicon--based devices through direct shunting \cite{Rsh:Breitenstein},
+increased leakage current \cite{Lee1980},
+or bulk recombination \cite{Istratov2000}.
+Despite extensive study of metallic impurities in silicon over the past fifty years \cite{Claers2018,Pearce1977},
+the problem continues to attract significant attention \cite{Hajjiah2020,Le2024,Maoudj2021,OlikhPSSA,LaineIEEEPV2016}.
 
 
-Iron is prominent among metallic contaminants, with its atoms being among the most prevalent and detrimental impurities in silicon solar cells (SSCs) \cite{Buonassisi2006}. Even in small concentrations (\textasciitilde{}$\mathrm{10}^{10}$~$\mathrm{cm}^{-3}$), point defects related to Fe can significantly influence the performance of SSCs [\cite{Schubert2015}, \cite{Herguth2022}]. Therefore, it is of critical importance to assess the concentration of iron impurities. In response to this challenge, various methodologies have been put forward, often based on the property of iron atoms to form pairs with acceptors. In particular, iron atoms are predominantly located in interstitial positions in silicon, forming the Fe$_i$ defect. In p-type crystals, without external illumination, iron atoms carry positive charges and tend to bond with negatively charged doping atoms (boron, aluminum, gallium, or indium), forming Fe$_i$B$_s$ pairs \cite{Kimerling1983}. However, these pairs can destabilized by intense illumination, electron injection, or heating up to 200~°C [?]. The recombination properties of iron-related defects Fe$_i$ and Fe$_i$B$_s$ differ significantly, which profoundly affects the overall characteristics of the crystal. This fact formed the basis for the first method of assessing iron concentration \cite{Zoth1990}, which relied on measuring the diffusion length of minority carriers using the surface photovoltage method \cite{Tousek2008}. Many other methods involve measurements of carrier lifetime [?], Quasi-Steady-State Photoconductance [?], or photoluminescence signal distribution [?] before and after pair dissolution, or the study of kinetic dependencies of short-circuit current [?] or photoluminescence intensity during the reaction passage Fe$_i$B$_{Si}$ $\rightarrow$ Fe$_i$ + B$_{Si}$.
+Iron is prominent among metallic contaminants, with its atoms being among
+the most prevalent and detrimental impurities in silicon solar cells (SSCs) \cite{Buonassisi2006}.
+Even in small concentrations (about $10^{10}$~cm$^{-3}$), 
+point defects related to Fe can significantly influence the performance of SSCs \cite{Schubert2015,Herguth2022}. 
+Therefore, it is of critical importance to assess the concentration of iron impurities. 
+In response to this challenge, various methodologies have been put forward, 
+often based on the property of iron atoms to form pairs with acceptors. 
+In particular, iron atoms are predominantly located in interstitial positions in silicon, forming the Fe$_i$ defect. 
+In $p$--type crystals, without external illumination, iron atoms carry positive charges and tend to bond with negatively charged doping atoms 
+(boron, aluminum, gallium, or indium), forming Fe$_i$B$_\mathrm{Si}$ pairs \cite{Kimerling1983}. 
+However, these pairs can destabilized by intense illumination, electron injection, or heating up to 200~$^\circ$°C \cite{FeBAssJAP2014}. 
+The recombination properties of iron-related defects Fe$_i$ and Fe$_i$B$_s$ differ significantly, 
+which profoundly affects the overall characteristics of the crystal. 
+This fact formed the basis for the first method of assessing iron concentration \cite{Zoth1990}, 
+which relied on measuring the diffusion length of minority carriers using the surface photovoltage method \cite{Tousek2008}. 
+Many other methods involve measurements of carrier lifetime \cite{Rein2,Schmidt2005}, 
+Quasi-Steady-State Photoconductance \cite{Goodarzi2017}, 
+or the study of kinetic dependencies of short-circuit current \cite{Olikh2021JAP} 
+or photoluminescence intensity \cite{FeMethod2012} during the reaction Fe$_i$B$_\mathrm{Si}$ $\rightleftarrows$ Fe$_i$ + B$_\mathrm{Si}$.
 
 
-Notably, the presence of Fe-related defects affects the dynamics of electron and hole movement within the solar cell, which is reflected in changes to the appearance of the current-voltage (IV) characteristics of SSCs overall, as well as modifications to the main photoelectric parameters (short-circuit current density $J$$\mathrm{_{sc}}$, open-circuit voltage $V$$\mathrm{_{oc}}$, efficiency $\eta$, and fill factor $FF$) in particular. These findings create fundamental possibilities to advance methods for estimating iron concentration by measuring IV characteristics before and after pair dissolution. The advantages of such an approach are associated with the possibility of directly characterizing finished solar cells, as well as the absence of the need for additional equipment other than that required for IV measurements, which is extremely common. Efforts have been made initially in developing such methods. For instance, in \cite{Olikh2019}, the authors proposed an approach to estimate the concentration of iron in SSCs based on changes in the ideality factor. Likewise, in \cite{Herguth2022}, the concentration of iron in SSCs was determined using the open-circuit voltage. However, developing such approaches requires evaluating how a particular parameter changes when iron-containing pairs dissolve and determining whether it can estimate the iron concentration $N$$\mathrm{_{Fe}}$. For example, the most evident conditions for utilizing a specific parameter include its change due to the transformation  Fe$_i$B$_{Si}$ $\rightarrow$ Fe$_i$ + B$_{Si}$, even by 10~\%, along with a consistent dependence of these changes on $N$$\mathrm{_{Fe}}$.
+Notably, the presence of Fe--related defects affects the dynamics of electron and hole movement within the solar cell, 
+which is reflected in changes to the appearance of the current--voltage characteristics ($I$-$V$) of SSCs overall, 
+as well as modifications to the main photoelectric parameters 
+(short-circuit current  $I_\mathrm{SC}$, 
+open-circuit voltage $V_\mathrm{OC}$, 
+efficiency $\eta$, and fill factor $FF$) 
+in particular. 
+These findings create fundamental possibilities to advance methods for estimating iron concentration by $I$-$V$ measuring before and after pair dissolution. 
+The advantages of such an approach are associated with the possibility of directly characterizing finished solar cells, 
+as well as the absence of the need for additional equipment other than that required for $I$-$V$ measurements, which is extremely common. 
+Efforts have been made initially in developing such methods. 
+For instance, it was proposed to estimate the concentration of iron in SSCs based on changes in the ideality factor \cite{Olikh2019,Olikh2022PPV}
+or open-circuit voltage \cite{Herguth2022}. 
+However, developing such approaches requires evaluating how a particular parameter changes when iron--containing pairs dissolve 
+and determining whether it can estimate the iron concentration $N_\mathrm{Fe}$. 
+For example, the most evident conditions for utilizing a specific parameter include its change due to the transformation  
+Fe$_i$B$_\mathrm{Si}$ $\rightarrow$ Fe$_i$ +B$_\mathrm{Si}$,
+at least by 10~\%, along with a monotonic dependence of these changes on $N_\mathrm{Fe}$.
 
 
 This study intends to determine the variations of $J$$\mathrm{_{sc}}$, $V$$\mathrm{_{oc}}$, $\eta$, and $FF$ resulting from the decay of iron-containing pairs in boron-doped silicon solar cells. Previous similar calculations have been conducted [?], but the results presented in these works typically pertain to particular temperatures, illumination levels (often AM1.5), and solar cells with distinct structures. In this study, we performed calculations over a sufficiently wide temperature range (290-340~$\mathrm{K}$) and for solar cells with varying base thickness (180-380~\textnormal{\textmu}) and doping levels (boron concentration in the base ranging from $\mathrm{10}^{15}$~$\mathrm{cm}^{-3}$ to $\mathrm{10}^{17}$~$\mathrm{cm}^{-3}$). The results obtained allow us to assess the feasibility and potential of using the main photovoltaic parameters of specific solar cells to estimate the $N$$\mathrm{_{Fe}}$ value across a range of temperatures, including conditions similar to those encountered in typical SSC applications. Furthermore, investigations have explored changes in photoelectric performance under solar illumination (AM1.5G) and low-intensity monochromatic light (wavelength of 940~$\mathrm{nm}$, intensities of 5~W/$\mathrm{m}^{2}$ and 10~W/$\mathrm{m}^{2}$).

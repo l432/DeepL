@@ -1,4 +1,4 @@
-\begin{thebibliography}{22}
+\begin{thebibliography}{34}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\bibinfo}[2]{#2}
 \ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
@@ -78,6 +78,57 @@
 \newblock \bibinfo{journal}{J. Vac. Sci. Technol.} \bibinfo{volume}{14}
   (\bibinfo{year}{1977}) \bibinfo{pages}{40--43}.
 %Type = Article
+\bibitem[{Hajjiah et~al.(2020)Hajjiah, Soha, Gordon, Poortmans, and
+  John}]{Hajjiah2020}
+\bibinfo{author}{A.~Hajjiah}, \bibinfo{author}{M.~Soha},
+  \bibinfo{author}{I.~Gordon}, \bibinfo{author}{J.~Poortmans},
+  \bibinfo{author}{J.~John},
+\newblock \bibinfo{title}{The impact of interstitial fe contamination on n-type
+  cz-silicon for high efficiency solar cells},
+\newblock \bibinfo{journal}{Sol. Energ. Mat. Sol.} \bibinfo{volume}{211}
+  (\bibinfo{year}{2020}) \bibinfo{pages}{110550}.
+%Type = Article
+\bibitem[{Le et~al.(2024)Le, Zhou, Chen, Yang, Rougieux, Macdonald, and
+  Liu}]{Le2024}
+\bibinfo{author}{T.~T. Le}, \bibinfo{author}{Z.~Zhou},
+  \bibinfo{author}{A.~Chen}, \bibinfo{author}{Z.~Yang},
+  \bibinfo{author}{F.~Rougieux}, \bibinfo{author}{D.~Macdonald},
+  \bibinfo{author}{A.~Liu},
+\newblock \bibinfo{title}{{Reassessing iron–gallium recombination activity in
+  silicon}},
+\newblock \bibinfo{journal}{J. Appl. Phys.} \bibinfo{volume}{135}
+  (\bibinfo{year}{2024}) \bibinfo{pages}{133107}.
+%Type = Article
+\bibitem[{Maoudj et~al.(2021)Maoudj, Bouhafs, Bourouba, Hamida-Ferhat, and
+  El~Amrani}]{Maoudj2021}
+\bibinfo{author}{M.~Maoudj}, \bibinfo{author}{D.~Bouhafs},
+  \bibinfo{author}{N.~E. Bourouba}, \bibinfo{author}{A.~Hamida-Ferhat},
+  \bibinfo{author}{A.~El~Amrani},
+\newblock \bibinfo{title}{Study of the electrical properties
+  of{\thinspace}<{\thinspace}100{\thinspace}>{\thinspace}cz p-type solar-grade
+  silicon wafers against the high-temperature processes},
+\newblock \bibinfo{journal}{Appl. Phys. A} \bibinfo{volume}{127}
+  (\bibinfo{year}{2021}) \bibinfo{pages}{407}.
+%Type = Article
+\bibitem[{Olikh et~al.(2024)Olikh, Datsenko, and Kondratenko}]{OlikhPSSA}
+\bibinfo{author}{O.~Olikh}, \bibinfo{author}{O.~Datsenko},
+  \bibinfo{author}{S.~Kondratenko},
+\newblock \bibinfo{title}{Influence of illumination spectrum on dissociation
+  kinetics of iron–boron pairs in silicon},
+\newblock \bibinfo{journal}{Phys. Status Solidi A} \bibinfo{volume}{n/a}
+  (\bibinfo{year}{2024}) \bibinfo{pages}{2400351}.
+%Type = Article
+\bibitem[{Laine et~al.(2016)Laine, V\"{a}h\"{a}nissi, Morishige, Hofstetter,
+  Haarahiltunen, Lai, Savin, and Fenning}]{LaineIEEEPV2016}
+\bibinfo{author}{H.~S. Laine}, \bibinfo{author}{V.~V\"{a}h\"{a}nissi},
+  \bibinfo{author}{A.~E. Morishige}, \bibinfo{author}{J.~Hofstetter},
+  \bibinfo{author}{A.~Haarahiltunen}, \bibinfo{author}{B.~Lai},
+  \bibinfo{author}{H.~Savin}, \bibinfo{author}{D.~P. Fenning},
+\newblock \bibinfo{title}{Impact of iron precipitation on phosphorus-implanted
+  silicon solar cells},
+\newblock \bibinfo{journal}{IEEE Journal of Photovoltaics} \bibinfo{volume}{6}
+  (\bibinfo{year}{2016}) \bibinfo{pages}{1094--1102}.
+%Type = Article
 \bibitem[{Buonassisi et~al.(2006)Buonassisi, Istratov, Pickett, Heuer, Kalejs,
   Hahn, Marcus, Lai, Cai, and Heald}]{Buonassisi2006}
 \bibinfo{author}{T.~Buonassisi}, \bibinfo{author}{A.~A. Istratov},
@@ -116,6 +167,15 @@
 \newblock \bibinfo{journal}{Physica B+C} \bibinfo{volume}{116}
   (\bibinfo{year}{1983}) \bibinfo{pages}{297--300}.
 %Type = Article
+\bibitem[{M\"{o}ller et~al.(2014)M\"{o}ller, Bartel, Gibaja, and
+  Lauer}]{FeBAssJAP2014}
+\bibinfo{author}{C.~M\"{o}ller}, \bibinfo{author}{T.~Bartel},
+  \bibinfo{author}{F.~Gibaja}, \bibinfo{author}{K.~Lauer},
+\newblock \bibinfo{title}{Iron-boron pairing kinetics in illuminated p-type and
+  in boron/phosphorus co-doped n-type silicon},
+\newblock \bibinfo{journal}{J. Appl. Phys.} \bibinfo{volume}{116}
+  (\bibinfo{year}{2014}) \bibinfo{pages}{024503}.
+%Type = Article
 \bibitem[{Zoth and Bergholz(1990)}]{Zoth1990}
 \bibinfo{author}{G.~Zoth}, \bibinfo{author}{W.~Bergholz},
 \newblock \bibinfo{title}{{A fast, preparation‐free method to detect iron in
@@ -129,12 +189,65 @@
 \newblock \bibinfo{journal}{Sol. Energy Mater. Sol. Cells} \bibinfo{volume}{92}
   (\bibinfo{year}{2008}) \bibinfo{pages}{1020--1024}.
 %Type = Article
+\bibitem[{Rein and Glunz(2005)}]{Rein2}
+\bibinfo{author}{S.~Rein}, \bibinfo{author}{S.~W. Glunz},
+\newblock \bibinfo{title}{Electronic properties of interstitial iron and
+  iron-boron pairs determined by means of advanced lifetime spectroscopy},
+\newblock \bibinfo{journal}{J. Appl. Phys.} \bibinfo{volume}{98}
+  (\bibinfo{year}{2005}) \bibinfo{pages}{113711}.
+%Type = Article
+\bibitem[{Schmidt and Macdonald(2005)}]{Schmidt2005}
+\bibinfo{author}{J.~Schmidt}, \bibinfo{author}{D.~Macdonald},
+\newblock \bibinfo{title}{{Recombination activity of iron-gallium and
+  iron-indium pairs in silicon}},
+\newblock \bibinfo{journal}{J. Appl. Phys.} \bibinfo{volume}{97}
+  (\bibinfo{year}{2005}) \bibinfo{pages}{113712}.
+%Type = Article
+\bibitem[{Goodarzi et~al.(2017)Goodarzi, Sinton, Jin, Zheng, Chen, Wang, and
+  Macdonald}]{Goodarzi2017}
+\bibinfo{author}{M.~Goodarzi}, \bibinfo{author}{R.~A. Sinton},
+  \bibinfo{author}{H.~Jin}, \bibinfo{author}{P.~Zheng},
+  \bibinfo{author}{W.~Chen}, \bibinfo{author}{Q.~Wang},
+  \bibinfo{author}{D.~Macdonald},
+\newblock \bibinfo{title}{Accuracy of interstitial iron measurements on p-type
+  multicrystalline silicon blocks by quasi-steady-state photoconductance},
+\newblock \bibinfo{journal}{IEEE J. Photovolt.} \bibinfo{volume}{7}
+  (\bibinfo{year}{2017}) \bibinfo{pages}{1216--1223}.
+%Type = Article
+\bibitem[{Olikh et~al.(2021)Olikh, Kostylyov, Vlasiuk, Korkishko, Olikh, and
+  Chupryna}]{Olikh2021JAP}
+\bibinfo{author}{O.~Olikh}, \bibinfo{author}{V.~Kostylyov},
+  \bibinfo{author}{V.~Vlasiuk}, \bibinfo{author}{R.~Korkishko},
+  \bibinfo{author}{Y.~Olikh}, \bibinfo{author}{R.~Chupryna},
+\newblock \bibinfo{title}{{Features of FeB pair light-induced dissociation and
+  repair in silicon n+-p-p+ structures under ultrasound loading}},
+\newblock \bibinfo{journal}{J. Appl. Phys.} \bibinfo{volume}{130}
+  (\bibinfo{year}{2021}) \bibinfo{pages}{235703}.
+%Type = Article
+\bibitem[{Herlufsen et~al.(2012)Herlufsen, Macdonald, Bothe, and
+  Schmidt}]{FeMethod2012}
+\bibinfo{author}{S.~Herlufsen}, \bibinfo{author}{D.~Macdonald},
+  \bibinfo{author}{K.~Bothe}, \bibinfo{author}{J.~Schmidt},
+\newblock \bibinfo{title}{Imaging of the interstitial iron concentration in
+  crystalline silicon by measuring the dissociation rate of iron–boron
+  pairs},
+\newblock \bibinfo{journal}{physica status solidi (RRL) – Rapid Research
+  Letters} \bibinfo{volume}{6} (\bibinfo{year}{2012}) \bibinfo{pages}{1--3}.
+%Type = Article
 \bibitem[{Olikh(2019)}]{Olikh2019}
 \bibinfo{author}{O.~Olikh},
 \newblock \bibinfo{title}{Relationship between the ideality factor and the iron
   concentration in silicon solar cells},
 \newblock \bibinfo{journal}{Superlattices Microstruct.} \bibinfo{volume}{136}
   (\bibinfo{year}{2019}) \bibinfo{pages}{106309}.
+%Type = Article
+\bibitem[{Olikh et~al.(2022)Olikh, Lozitsky, and Zavhorodnii}]{Olikh2022PPV}
+\bibinfo{author}{O.~Olikh}, \bibinfo{author}{O.~Lozitsky},
+  \bibinfo{author}{O.~Zavhorodnii},
+\newblock \bibinfo{title}{Estimation for iron contamination in si solar cell by
+  ideality factor: Deep neural network approach},
+\newblock \bibinfo{journal}{Prog. Photovoltaics Res. Appl.}
+  \bibinfo{volume}{30} (\bibinfo{year}{2022}) \bibinfo{pages}{648--660}.
 %Type = Article
 \bibitem[{P\"assler(2002)}]{Passler2002}
 \bibinfo{author}{R.~P\"assler},
