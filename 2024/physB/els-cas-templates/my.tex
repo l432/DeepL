@@ -269,41 +269,41 @@ Fe$_i$B$_\mathrm{Si}$ $\rightarrow$ Fe$_i$ +B$_\mathrm{Si}$,
 at least by 10~\%, along with a monotonic dependence of these changes on $N_\mathrm{Fe}$.
 
 
-This paper intends to determine the variations of $I_\mathrm{SC}$, $V_\mathrm{OC}$, $\eta$, and $FF$ 
-resulting from the decay of iron-containing pairs in boron-doped silicon solar cells. 
-Previous similar calculations have been conducted \cite{FeB:Schmidt,IronSC,Hajjiah2020}, 
-but the results presented typically pertain only to certain temperatures, 
+This paper intends to determine the variations of $I_\mathrm{SC}$, $V_\mathrm{OC}$, $\eta$, and $FF$
+resulting from the decay of iron-containing pairs in boron-doped silicon solar cells.
+Previous similar calculations have been conducted \cite{FeB:Schmidt,IronSC,Hajjiah2020},
+but the results presented typically pertain only to certain temperatures,
 illumination levels (often AM1.5), and solar cells with specific parameters.
-In this study, we performed calculations over a sufficiently wide temperature range (290-340~K) 
-and for solar cells with varying base thickness (180-380~$\mu$m) and doping levels 
-(boron concentration in the base ranging from $10^{15}$ to $10^{17}$~cm$^{-3}$). 
-The results obtained allow us to assess the feasibility and potential of using the 
-main photovoltaic parameters of specific solar cells to estimate the $N_\mathrm{Fe}$ value across a range of temperatures, 
-including conditions similar to those encountered in typical SSC applications. 
+In this study, we performed calculations over a sufficiently wide temperature range (290-340~K)
+and for solar cells with varying base thickness (180-380~$\mu$m) and doping levels
+(boron concentration in the base ranging from $10^{15}$ to $10^{17}$~cm$^{-3}$).
+The results obtained allow us to assess the feasibility and potential of using the
+main photovoltaic parameters of specific solar cells to estimate the $N_\mathrm{Fe}$ value across a range of temperatures,
+including conditions similar to those encountered in typical SSC applications.
 Furthermore, investigations have explored changes in photoelectric performance under not only solar illumination (AM1.5G)
 but also low-intensity monochromatic light (wavelength of 940~nm, intensities of 5~W/m$^{2}$ and 10~W/m$^{2}$).
-In the first case, while it is customary to adhere to standard conditions, 
-it's essential to consider that illumination at 1000~W/m$^{2}$ can lead to the decay of Fe$_i$B$_s$ complexes \cite{Macdonald2004}. 
-Therefore, measurements for cases requiring the presence of undissociated pairs in silicon must meet specific constraints. 
-On the other hand, intentionally chosen monochromatic illumination penetrates the emitter with negligible losses and does not reach the rear side. 
-In this context, the photoelectric parameters show remarkable sensitivity 
+In the first case, while it is customary to adhere to standard conditions,
+it's essential to consider that illumination at 1000~W/m$^{2}$ can lead to the decay of Fe$_i$B$_s$ complexes \cite{Macdonald2004}.
+Therefore, measurements for cases requiring the presence of undissociated pairs in silicon must meet specific constraints.
+On the other hand, intentionally chosen monochromatic illumination penetrates the emitter with negligible losses and does not reach the rear side.
+In this context, the photoelectric parameters show remarkable sensitivity
 to recombination processes occurring within the solar cell base and to iron concentration in this region.
-Finally, in our calculations, we attempted to use the latest literature data 
+Finally, in our calculations, we attempted to use the latest literature data
 concerning the exact values of silicon parameters, including light absorption values \cite{Green2022}
 and coefficients characterizing intrinsic recombination \cite{Brad2022,AugerSi2022}.
 
 \section{Research Methodology}%\label{}
 
 \subsection{Simulation Details}
-The study involved simulation $I$-$V$ curves of SSCs with an $n^+-p-p^+$ structure, 
-as illustrated in Fig.~\ref{fig1}. 
-A back surface field ($p^+$-layer) is a notable feature observed in both Al-BSF cells (full area), 
-which are gradually losing relevance, 
+The study involved simulation $I$-$V$ curves of SSCs with an $n^+-p-p^+$ structure,
+as illustrated in Fig.~\ref{fig1}.
+A back surface field ($p^+$-layer) is a notable feature observed in both Al-BSF cells (full area),
+which are gradually losing relevance,
 and PERC cells (locally), which are the most widely used in mass production.
 The structures with a base uniformly doped with boron were under consideration.
-The doping concentration $N_\mathrm{B}$, and the base thickness $d_p$ were varied during the modeling process, as detailed in Table~\ref{table1}. 
+The doping concentration $N_\mathrm{B}$, and the base thickness $d_p$ were varied during the modeling process, as detailed in Table~\ref{table1}.
 The emitter and $p^+$-layer were considered to be unevenly doped.
-The concentration profiles of the dopants, their maximum values ($N_{p^+,\mathrm{max}}$ and $N_{n^+,\mathrm{max}}$), 
+The concentration profiles of the dopants, their maximum values ($N_{p^+,\mathrm{max}}$ and $N_{n^+,\mathrm{max}}$),
 and layer thicknesses (see Fig.~\ref{fig1}) were selected according to Fell et al. \cite{Fell2015}.
 
 
@@ -331,16 +331,16 @@ and layer thicknesses (see Fig.~\ref{fig1}) were selected according to Fell et a
 \end{table}
 
 
-The simulation was conducted using the SCAPS~3.3.11 code \cite{SCAPS1}. 
-SCAPS-1D software, developed by the University of Gent, is founded on theoretical computations that involve solving Poisson's equation, 
-continuity equations for holes and electrons, and drift-diffusion at each position within the solar cell, 
-considering the boundary conditions. 
-Despite its one-dimensional modeling approach, SCAPS is extensively used for modeling various types of solar cells \cite{Joshi2024,Ravidas2024,Liu2024,You2023} in general 
+The simulation was conducted using the SCAPS~3.3.11 code \cite{SCAPS1}.
+SCAPS-1D software, developed by the University of Gent, is founded on theoretical computations that involve solving Poisson's equation,
+continuity equations for holes and electrons, and drift-diffusion at each position within the solar cell,
+considering the boundary conditions.
+Despite its one-dimensional modeling approach, SCAPS is extensively used for modeling various types of solar cells \cite{Joshi2024,Ravidas2024,Liu2024,You2023} in general
 and for investigating the effects of defects on their performance \cite{AitAbdelkadir2023,Liang2024,SCAPSDefect3} in particular.
 
 
-As can be seen from Table~\ref{table1}, calculations spanned a broad range of temperatures and base doping levels. 
-Therefore, to improve the accuracy of the calculations when inputting the initial parameters into SCAPS, 
+As can be seen from Table~\ref{table1}, calculations spanned a broad range of temperatures and base doping levels.
+Therefore, to improve the accuracy of the calculations when inputting the initial parameters into SCAPS,
 temperature and concentration (where applicable) dependencies of the following silicon parameters were taken into account:
 
 \begin{itemize}
@@ -352,53 +352,53 @@ temperature and concentration (where applicable) dependencies of the following s
     \item carrier mobilities according to Klaassen's theory \cite{KLAASSEN953};
 \end{itemize}
 
-The values of surface recombination coefficients were considered equal to the thermal velocities of carriers \cite{Fell2015}. 
-The calculations addressed recombination processes within the structural volume, 
-incorporating both intrinsic recombination and Shockley-Read-Hall recombination at iron-related defects. 
-In the first case, processes of band-to-band radiation recombination were considered 
-(where the calculation of the corresponding coefficient included the fraction of radiatively emitted photons 
-reabsorbed via band-to-band processes according to Niewelt et al.\cite{Brad2022}) 
+The values of surface recombination coefficients were considered equal to the thermal velocities of carriers \cite{Fell2015}.
+The calculations addressed recombination processes within the structural volume,
+incorporating both intrinsic recombination and Shockley-Read-Hall recombination at iron-related defects.
+In the first case, processes of band-to-band radiation recombination were considered
+(where the calculation of the corresponding coefficient included the fraction of radiatively emitted photons
+reabsorbed via band-to-band processes according to Niewelt et al.\cite{Brad2022})
 and Auger recombination (where the coefficients considered the effect of Coulomb enhancement \cite{AugerSi2022} and temperature dependence \cite{Si_Auger}).
 
 
-When accounting for the influence of iron impurities, 
-we considered that Fe atoms were uniformly distributed within the base and $p^+$-layer 
-with a total concentration of $N_\mathrm{Fe}$ (see Table~\ref{table1}). 
+When accounting for the influence of iron impurities,
+we considered that Fe atoms were uniformly distributed within the base and $p^+$-layer
+with a total concentration of $N_\mathrm{Fe}$ (see Table~\ref{table1}).
 Two cases were under consideration:
 
-Case~1. 
-The concentration of interstitial iron defects $\left[\mathrm{Fe}_i\right]=N_\mathrm{Fe}$  at each position throughout the solar cell, 
-with no pairs present $\left[\mathrm{Fe}_i\mathrm{B}_s\right]=0$. 
+Case~1.
+The concentration of interstitial iron defects $\left[\mathrm{Fe}_i\right]=N_\mathrm{Fe}$  at each position throughout the solar cell,
+with no pairs present $\left[\mathrm{Fe}_i\mathrm{B}_s\right]=0$.
 This case corresponds to the state of the structure immediately after intense illumination, for example.
 
 Case~2.
-Iron atoms predominantly form pairs with acceptors, $\left[\mathrm{Fe}_i\mathrm{B}_s\right] \gg \left[\mathrm{Fe}_i\right]$, 
-but the exact concentration ratio depends on the position of the Fermi level and temperature \cite{FeB:kinetic,MurphyJAP2011} 
-and varies from point to point within the solar cell. 
-Further details about calculation of the concentration profiles of Fe$_i$B$_s$ and Fe$_i$ are provided in \cite{Olikh2022PPV,Olikh2019SM}. 
+Iron atoms predominantly form pairs with acceptors, $\left[\mathrm{Fe}_i\mathrm{B}_s\right] \gg \left[\mathrm{Fe}_i\right]$,
+but the exact concentration ratio depends on the position of the Fermi level and temperature \cite{FeB:kinetic,MurphyJAP2011}
+and varies from point to point within the solar cell.
+Further details about calculation of the concentration profiles of Fe$_i$B$_s$ and Fe$_i$ are provided in \cite{Olikh2022PPV,Olikh2019SM}.
 This case corresponds to prolonged storage of the structure in darkness or under conditions of low-intensity ($< 0.01$~J~cm$^{-2}$ \cite{Macdonald2004}) illumination.
 
 
-During the calculations, it was assumed that Fe$_i$ forms a single donor level, 
+During the calculations, it was assumed that Fe$_i$ forms a single donor level,
 while the Fe$_i$B$_s$ pair has a trigonal configuration and acts as an amphoteric defect.
 We obtained defect parameters (including level positions within the bandgap and electron and hole capture cross-sections) from relevant studies \cite{ROUGIEUX2018,Istratov1999}.
 
-As previously mentioned, the solar cell behavior was simulated under different illumination conditions, 
-including solar light (AM1.5G) and monochromatic light (wavelength 940~nm, intensity of $W_\mathrm{ill} = 5$~Wm$^{-2}$ or 10~W/$\mathrm{m}^{2}$) --– see Table~\ref{table1}. 
+As previously mentioned, the solar cell behavior was simulated under different illumination conditions,
+including solar light (AM1.5G) and monochromatic light (wavelength 940~nm, intensity of $W_\mathrm{ill} = 5$~Wm$^{-2}$ or 10~W/$\mathrm{m}^{2}$) --– see Table~\ref{table1}.
 The calculations incorporated the light absorption values in silicon based on Green's study \cite{Green2022}.
 
 
-The $I$-$V$ characteristics were simulated for both Case~1 and Case~2 (see Fig.~\ref{fig2}), 
-and from each curve, the short-circuit current, open-circuit voltage, efficiency, and fill factor were determined. 
+The $I$-$V$ characteristics were simulated for both Case~1 and Case~2 (see Fig.~\ref{fig2}),
+and from each curve, the short-circuit current, open-circuit voltage, efficiency, and fill factor were determined.
 Assessing the influence of iron defect variability relied on the relative changes in each photovoltaic conversion parameter:
 
 \begin{figure}
 	\centering
 		\includegraphics[width=0.5\linewidth]{Figure2.png}
-	  \caption{Typical IV characteristics, 
-   calculated for structure with $d_p = 180$~$\mu$m, $N_\mathrm{B}=10^{17}$~cm$^{-3}$, 
-   $N_\mathrm{Fe}=10^{14}$~cm$^{-3}$ at $T = 290$~K. 
-   Illumination: AM1.5 (curves 1, 2), 940~nm 10~Wcm$^{-2}$ (3, 4) and 940~nm 5~Wcm$^{-2}$ (5, 6). 
+	  \caption{Typical IV characteristics,
+   calculated for structure with $d_p = 180$~$\mu$m, $N_\mathrm{B}=10^{17}$~cm$^{-3}$,
+   $N_\mathrm{Fe}=10^{14}$~cm$^{-3}$ at $T = 290$~K.
+   Illumination: AM1.5 (curves 1, 2), 940~nm 10~Wcm$^{-2}$ (3, 4) and 940~nm 5~Wcm$^{-2}$ (5, 6).
    Solid and dotted lines correspond to Case~1 and Case~2, respectively.}\label{fig2}
 \end{figure}
 
@@ -408,24 +408,24 @@ Assessing the influence of iron defect variability relied on the relative change
 \end{equation}
 
 where $A$ represents one of the parameters ($I_\mathrm{SC}$, $V_\mathrm{OC}$, $\eta$, and $FF$),
-superscript ‘‘FeB’’ corresponds to the parameter value for coexistence of Fe$_i$ and Fe$_i$B$_s$ (Case~2), 
+superscript ‘‘FeB’’ corresponds to the parameter value for coexistence of Fe$_i$ and Fe$_i$B$_s$ (Case~2),
 superscript ‘‘Fe’’ is related to the decay of all pairs (Case~1).
 
 
-Impact of change of iron defects was investigated as a function of temperature from 290~K to 340~K, 
-base depth from 180~$\mu$m to 380~$\mu$m, 
-base doping level from $10^{15}$~cm$^{-3}$ to $10^{17}$~cm$^{-3}$, 
-and total impurity iron atom concentration from $10^{10}$~cm$^{-3}$ to $10^{14}$~cm$^{-3}$. 
-For each illumination scenario, calculations were carried out with 11 different temperature values and 5 base depth values, 
-evenly distributed within the specified ranges. 
-The concentration values were distributed equally on a logarithmic scale with 4 ($N_\mathrm{B}$ case) and 6 ($N_\mathrm{Fe}$ case) steps per decade. 
-As a result, for the AM1.5 illumination scenario, for instance, 24750 $I$-$V$ characteristics were simulated. 
-An exception occurred with monochromatic illumination at $W_\mathrm{ill} = 10$~Wm$^{-2}$, 
+Impact of change of iron defects was investigated as a function of temperature from 290~K to 340~K,
+base depth from 180~$\mu$m to 380~$\mu$m,
+base doping level from $10^{15}$~cm$^{-3}$ to $10^{17}$~cm$^{-3}$,
+and total impurity iron atom concentration from $10^{10}$~cm$^{-3}$ to $10^{14}$~cm$^{-3}$.
+For each illumination scenario, calculations were carried out with 11 different temperature values and 5 base depth values,
+evenly distributed within the specified ranges.
+The concentration values were distributed equally on a logarithmic scale with 4 ($N_\mathrm{B}$ case) and 6 ($N_\mathrm{Fe}$ case) steps per decade.
+As a result, for the AM1.5 illumination scenario, for instance, 24750 $I$-$V$ characteristics were simulated.
+An exception occurred with monochromatic illumination at $W_\mathrm{ill} = 10$~Wm$^{-2}$,
 where we used only two $d_p$ values.
 
 \subsection{Experimental Details}
 
-To evaluate the validity of the simulated results, 
+To evaluate the validity of the simulated results,
 we also conducted experimental studies on the effect of changing the state of iron-related defects on the photoelectric parameters of silicon solar cells.
 
 The $n^+$-$p$-$p^+$-Si samples were used in the experiment.
@@ -461,15 +461,70 @@ and maintained constant by a PID algorithm embedded in the software that serves 
      \includegraphics[width=0.49\linewidth]{Fig3b.png}
      \includegraphics[width=0.49\linewidth]{Fig3c.png}
      \includegraphics[width=0.49\linewidth]{Fig3d.png}
-	  \caption{Dependencies of relative changes of short-circuit current on iron concentration and 
+	  \caption{Dependencies of relative changes of short-circuit current on iron concentration and
        temperature (panels a and c) or doping level (b, d).
-       Illumination: AM1.5 (a, b), 940~nm 5~Wcm$^{-2}$ (c, d).
+       Illumination: AM1.5 (a, b), 940~nm 5~Wm$^{-2}$ (c, d).
        $T$, K: 290 (b), 340 (d).
        Different surfaces correspond to different doping levels (a, c) and base depths (b, d).
 }\label{fig3}
 \end{figure}
 
+
+\begin{figure}
+	\centering
+     \includegraphics[width=0.49\linewidth]{Fig4a.png}
+     \includegraphics[width=0.49\linewidth]{Fig4b.png}
+	  \caption{The location of the Fermi level in the base of the $n^+$-$p$-$p^+$ structure 
+       as a function of temperature for $N_\mathrm{B}=10^{15}$ and $10^{17}$~cm$^{-3}$ (a), 
+       and as a function of the doping level for $T=290$ and 340~K (b). 
+       The zero energy value corresponds to the top of the valence band. 
+       Also shown are the positions of the donor levels of the FeB pair (green surfaces) 
+       and the interstitial iron atom Fe$_i$ (olive surfaces).
+}\label{fig4}
+\end{figure}
+
+
+\begin{figure}
+	\centering
+     \includegraphics[width=0.4\linewidth]{Fig5a.png}
+     \includegraphics[width=0.4\linewidth]{Fig5b.png}
+	  \caption{Dependencies of relative changes of short-circuit current on iron concentration (a) and
+       temperature (b) for SSC with $d_p=380$~$\mu$m and $N_\mathrm{B}=1.36\times10^{15}$~cm$^{-3}$
+       in the case of monochromatic (940~nm) illumination.
+       The marks are the experimental results (divided by factor 1.4), the lines are the simulation results.
+       $W_\mathrm{ill}$, Wm$^{-2}$: 5 (marks and solid lines), 10 (dotted lines).
+       Different lines and marks correspond to different temperatures (a) or $N_\mathrm{Fe}$ values (b) --- see legends.
+}\label{fig5}
+\end{figure}
+
 \subsection{Open-circuit voltage}
+
+\begin{figure}
+	\centering
+     \includegraphics[width=0.49\linewidth]{Fig6a.png}
+     \includegraphics[width=0.49\linewidth]{Fig6b.png}
+     \includegraphics[width=0.49\linewidth]{Fig6c.png}
+     \includegraphics[width=0.49\linewidth]{Fig6d.png}
+	  \caption{Dependencies of relative changes of open-circuit voltage on iron concentration and
+       doping level (panels a and c) or base depth (b, d).
+       Illumination: AM1.5 (a, b), 940~nm 10~Wm$^{-2}$ (c),  940~nm 5~Wm$^{-2}$ (d).
+       $T$, K: 290 (b, d).
+       Different surfaces correspond to different temperatures (a, c) and doping level (b, d).
+}\label{fig6}
+\end{figure}
+
+\begin{figure}
+	\centering
+     \includegraphics[width=0.4\linewidth]{Fig7a.png}
+     \includegraphics[width=0.4\linewidth]{Fig7b.png}
+	  \caption{Dependencies of relative changes of open-circuit voltage on iron concentration (a) and
+       temperature (b) for SSC with $d_p=380$~$\mu$m and $N_\mathrm{B}=1.36\times10^{15}$~cm$^{-3}$
+       in the case of monochromatic (940~nm) illumination.
+       The marks are the experimental results, the lines are the simulation results.
+       $W_\mathrm{ill}$, Wm$^{-2}$: 5 (marks and solid lines), 10 (dotted lines).
+       Different lines and marks correspond to different temperatures (a) or $N_\mathrm{Fe}$ values (b) --- see legends.
+}\label{fig7}
+\end{figure}
 
 \subsection{Fill factor}
 
