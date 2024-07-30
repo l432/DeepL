@@ -1,4 +1,4 @@
-\begin{thebibliography}{54}
+\begin{thebibliography}{56}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\bibinfo}[2]{#2}
 \ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
@@ -472,5 +472,17 @@
   silicon solar cells under acoustic wave action},
 \newblock \bibinfo{journal}{J. Mater. Sci.: Mater. Electron.}
   \bibinfo{volume}{33} (\bibinfo{year}{2022}) \bibinfo{pages}{13133--13142}.
+%Type = Book
+\bibitem[{Yang(2019)}]{YangHandbookPVSi}
+\bibinfo{editor}{D.~Yang} (Ed.), \bibinfo{title}{Handbook of Photovoltaic
+  Silicon}, \bibinfo{publisher}{Springer Berlin},
+  \bibinfo{address}{Heidelberg}, \bibinfo{edition}{first} edition,
+  \bibinfo{year}{2019}.
+%Type = Book
+\bibitem[{Goetzberger et~al.(1998)Goetzberger, Knobloch, and
+  Voss}]{Goetzberger1998}
+\bibinfo{author}{A.~Goetzberger}, \bibinfo{author}{J.~Knobloch},
+  \bibinfo{author}{B.~Voss}, \bibinfo{title}{Crystalline Silicon Solar Cells},
+  \bibinfo{publisher}{Wiley}, \bibinfo{year}{1998}.
 
 \end{thebibliography}
