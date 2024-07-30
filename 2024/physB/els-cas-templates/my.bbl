@@ -1,4 +1,4 @@
-\begin{thebibliography}{56}
+\begin{thebibliography}{57}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\bibinfo}[2]{#2}
 \ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
@@ -462,6 +462,15 @@
 \newblock \bibinfo{title}{Iron and its complexes in silicon},
 \newblock \bibinfo{journal}{Applied Physics A: Materials Science \& Processing}
   \bibinfo{volume}{69} (\bibinfo{year}{1999}) \bibinfo{pages}{13--44}.
+%Type = Inproceedings
+\bibitem[{{Paudyal} et~al.(2009){Paudyal}, {McIntosh}, and
+  {Macdonald}}]{Paudyal}
+\bibinfo{author}{B.~B. {Paudyal}}, \bibinfo{author}{K.~R. {McIntosh}},
+  \bibinfo{author}{D.~H. {Macdonald}},
+\newblock \bibinfo{title}{Temperature dependent electron and hole capture cross
+  sections of iron-contaminated boron-doped silicon},
+\newblock in: \bibinfo{booktitle}{2009 34th IEEE Photovoltaic Specialists
+  Conference (PVSC)}, pp. \bibinfo{pages}{001588--001593}.
 %Type = Article
 \bibitem[{Olikh et~al.(2022)Olikh, Kostylyov, Vlasiuk, Korkishko, and
   Chupryna}]{Olikh2022:JMatSci}
