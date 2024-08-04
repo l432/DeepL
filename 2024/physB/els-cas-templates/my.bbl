@@ -1,4 +1,4 @@
-\begin{thebibliography}{57}
+\begin{thebibliography}{60}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\bibinfo}[2]{#2}
 \ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
@@ -493,5 +493,27 @@
 \bibinfo{author}{A.~Goetzberger}, \bibinfo{author}{J.~Knobloch},
   \bibinfo{author}{B.~Voss}, \bibinfo{title}{Crystalline Silicon Solar Cells},
   \bibinfo{publisher}{Wiley}, \bibinfo{year}{1998}.
+%Type = Article
+\bibitem[{Green(1981)}]{Green1981}
+\bibinfo{author}{M.~A. Green},
+\newblock \bibinfo{title}{Solar cell fill factors: General graph and empirical
+  expressions},
+\newblock \bibinfo{journal}{Solid-State Electron.} \bibinfo{volume}{24}
+  (\bibinfo{year}{1981}) \bibinfo{pages}{788--789}.
+%Type = Article
+\bibitem[{Green(1982)}]{Green1982}
+\bibinfo{author}{M.~A. Green},
+\newblock \bibinfo{title}{Accuracy of analytical expressions for solar cell
+  fill factors},
+\newblock \bibinfo{journal}{Sol. Cells} \bibinfo{volume}{7}
+  (\bibinfo{year}{1982}) \bibinfo{pages}{337--340}.
+%Type = Article
+\bibitem[{Bothe et~al.(2023)Bothe, Hinken, and Brendel}]{Bothe2023}
+\bibinfo{author}{K.~Bothe}, \bibinfo{author}{D.~Hinken},
+  \bibinfo{author}{R.~Brendel},
+\newblock \bibinfo{title}{Extended ff and voc parameterizations for silicon
+  solar cells},
+\newblock \bibinfo{journal}{IEEE J. Photovolt.} \bibinfo{volume}{13}
+  (\bibinfo{year}{2023}) \bibinfo{pages}{787--792}.
 
 \end{thebibliography}

@@ -482,7 +482,7 @@ and maintained constant by a PID algorithm embedded in the software that serves 
        and as a function of the doping level for $T=290$ and 340~K (b).
        The zero energy value corresponds to the top of the valence band.
        Also shown are the locations of the donor (0/+) levels for the FeB pair (green surfaces)
-       and the interstitial iron atom Fe$_i$ (olive surfaces) and acceptor (-/0) level for FeB pair (brown surfaces). 
+       and the interstitial iron atom Fe$_i$ (olive surfaces) and acceptor (-/0) level for FeB pair (brown surfaces).
 }\label{fig4}
 \end{figure}
 
@@ -515,7 +515,7 @@ and maintained constant by a PID algorithm embedded in the software that serves 
        doping level (panels a and c) or base depth (b, d).
        Illumination: AM1.5 (a, b), 940~nm 10~Wm$^{-2}$ (c),  940~nm 5~Wm$^{-2}$ (d).
        $T$, K: 290 (b, d).
-       Different surfaces correspond to different temperatures (a, c) and doping level (b, d).
+       Different surfaces correspond to different temperatures (a, c) and doping levels (b, d).
 }\label{fig6}
 \end{figure}
 
@@ -534,10 +534,106 @@ and maintained constant by a PID algorithm embedded in the software that serves 
 \end{figure}
 
 \subsection{Fill factor}
+The fill factor is another defining term in the overall behavior of a solar cell.
+$FF$ is the ratio of the maximum obtainable power to the product of short circuit current and open-circuit voltage.
+In general, $FF$ depends on both $I_\mathrm{SC}$ and $V_\mathrm{OC}$. 
+However, it can be shown that it is mainly determined by the $V_\mathrm{OC}$ value. 
+Indeed, it is shown \cite{YangHandbookPVSi} within the single-diode model
+\begin{equation}
+\label{eqFF1}
+    FF \approx \frac{\upsilon_\mathrm{OC}-\ln\left(1+\upsilon_\mathrm{OC}\right)}{\upsilon_\mathrm{OC}+1} \,,
+\end{equation}
+with $\upsilon_\mathrm{OC}$ being the normalized open-circuit voltage 
+$\upsilon_\mathrm{OC}=qV_\mathrm{OC}/nkT$.
+Another well--known empirical relation for the maximum achievable fill factor of a solar cell is proposed by Green \cite{Green1981,Green1982}:
+\begin{equation}
+\label{eqFF2}
+    FF \approx \frac{\upsilon_\mathrm{OC}-\ln\left(0.72+\upsilon_\mathrm{OC}\right)}{\upsilon_\mathrm{OC}+1} \,.
+\end{equation}
+Thus, all factors changing $V_\mathrm{OC}$ lead also to $FF$ change.
+However, $V_\mathrm{OC}$ is present in both the numerator and denominator of Eqs.~(\ref{eqFF1})-(\ref{eqFF2}), 
+and therefore, the expected changes in the fill factor compared to the open-circuit should be smaller.
+
+Recently, Bothe et~al. \cite{Bothe2023} suggested explicit expressions for the FF regarding other characteristic solar cell parameters.
+Specifically, for $p$--type SSCs and intrinsic limits, the parameterization can be written as follows:
+\begin{equation}
+\label{eqFF3}
+    FF = \frac{90.4924}{d_p^{0.00220}}\left[0.9478+\frac{0.0519}{1+\left(\frac{\log N_\mathrm{B}}{17.3739 d_p^{-0.0093}}\right)^{76.3}}\right] \,,
+\end{equation}
+where
+$d_p$ is expected to be in $\mu$m.
+Additional recombination (e.g., Shockley–Read–Hall) leads to a decrease in $FF$ value \cite{Bothe2023}.
+
+\begin{figure}
+	\centering
+     \includegraphics[width=0.49\linewidth]{Fig8a.png}
+     \includegraphics[width=0.49\linewidth]{Fig8b.png}
+     \includegraphics[width=0.49\linewidth]{Fig8c.png}
+     \includegraphics[width=0.49\linewidth]{Fig8d.png}
+	  \caption{Relative changes in fill factor caused by a complete
+       dissociation of Fe$_i$B$_s$ pairs as a function of
+       iron concentration and
+       doping level (panels a and c) or temperature (b, d).
+       Illumination: AM1.5 (a, b), 940~nm 5~Wm$^{-2}$ (c),  940~nm 10~Wm$^{-2}$ (d).
+       $T$, K: 290 (a), 340 (c).
+       $d_p$, $\mu$m: 180 (b), 380 (d).
+       Different surfaces correspond to different base depths (a, c) and doping levels (b, d).
+}\label{fig8}
+\end{figure}
+
+
+\begin{figure}
+	\centering
+     \includegraphics[width=0.4\linewidth]{Fig9a.png}
+     \includegraphics[width=0.4\linewidth]{Fig9b.png}
+	  \caption{Relative changes in fill factor caused by a complete
+       dissociation of Fe$_i$B$_s$ pairs as a function of iron concentration (a) and
+       temperature (b) for SSC with $d_p=380$~$\mu$m and $N_\mathrm{B}=1.36\times10^{15}$~cm$^{-3}$
+       in the case of monochromatic (940~nm) illumination.
+       The marks are the experimental results, the lines are the simulation results.
+       $W_\mathrm{ill}$, Wm$^{-2}$: 5 (marks and solid lines), 10 (dotted lines).
+       Different lines and marks correspond to different temperatures (a) or $N_\mathrm{Fe}$ values (b) --- see legends.
+}\label{fig9}
+\end{figure}
+
+(short-circuit current  $I_\mathrm{SC}$,
+open-circuit voltage $V_\mathrm{OC}$,
+efficiency $\eta$, and fill factor $FF$)
 
 \subsection{Solar Cell Efficiency}
 
 
+\begin{figure}
+	\centering
+     \includegraphics[width=0.49\linewidth]{Fig10a.png}
+     \includegraphics[width=0.49\linewidth]{Fig10b.png}
+     \includegraphics[width=0.49\linewidth]{Fig10c.png}
+     \includegraphics[width=0.49\linewidth]{Fig10d.png}
+	  \caption{Relative changes in SSC efficiency caused by a complete
+       dissociation of Fe$_i$B$_s$ pairs as a function of
+       iron concentration and
+       doping level (panels a and c) or base depth (b, d).
+       Illumination: AM1.5 (a, b), 940~nm 5~Wm$^{-2}$ (c),  940~nm 10~Wm$^{-2}$ (d).
+       $T$, K: 290 (d), 340 (b).
+       $d_p$, $\mu$m: 180 (a, c).
+       Different surfaces correspond to different temperatures (a, c) and doping levels (b, d).
+}\label{fig10}
+\end{figure}
+
+
+\begin{figure}
+	\centering
+     \includegraphics[width=0.4\linewidth]{Fig11a.png}
+     \includegraphics[width=0.4\linewidth]{Fig11b.png}
+	  \caption{Relative changes in SSC efficiency caused by a complete
+       dissociation of Fe$_i$B$_s$ pairs as a function of iron concentration (a) and
+       temperature (b) for SSC with $d_p=380$~$\mu$m and $N_\mathrm{B}=1.36\times10^{15}$~cm$^{-3}$
+       in the case of monochromatic (940~nm) illumination.
+       The marks are the experimental results (divided by factor $C_{cor}=1.4$), the lines are the simulation results.
+       $W_\mathrm{ill}$, Wm$^{-2}$: 5 (marks and solid lines), 10 (dotted lines).
+       Different lines and marks correspond to different temperatures (a) or $N_\mathrm{Fe}$ values (b) --- see legends.
+}\label{fig11}
+\end{figure}
 
 \section{Conclusion}
 %--------------------------------------------------------
