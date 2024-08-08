@@ -110,7 +110,7 @@
 \ead{olegolikh@knu.ua}
 
 % URL of the first author
-%\ead[url]{https://gen.phys.univ.kiev.ua/280-olikh/}
+%\ead[url]{https://gen.phys.knu.ua/280-olikh/}
 
 % Credit authorship
 % eg: \credit{Conceptualization of this study, Methodology, Software}
@@ -453,6 +453,36 @@ and maintained constant by a PID algorithm embedded in the software that serves 
 
 \subsection{Short--circuit current}
 
+Figure~\ref{fig3} illustrates the characteristic dependencies of short-circuit current variations resulting 
+from the reconfiguration of iron-containing defects, as obtained from the simulations. 
+We present a more comprehensive set of figures that depict the detailed dependencies of $\varepsilon I_\mathrm{SC}$ on 
+all parameters varied during the calculations in the Supplementary Material (Figs.~S1-S6). 
+It is important to note that the qualitative nature of the short-circuit current variations remains practically identical 
+under both solar and monochromatic illumination, with the quantitative parameters of $\varepsilon I_\mathrm{SC}$ differing: 
+at 940~nm, the absolute values of $\varepsilon I_\mathrm{SC}$ are approximately 3--4 times greater than those observed under AM1.5 conditions, 
+assuming other parameters are constant. 
+Among other features of $\varepsilon I_\mathrm{SC}$ changes, we can highlight the following:
+\begin{itemize}
+    \item The module $\varepsilon I_\mathrm{SC}$ increases monotonically with increasing iron concentration, 
+    but the sign of this value depends on the doping level. 
+    At low boron concentrations ($N_\mathrm{B}=10^{15}$~cm$^{-3}$) $\varepsilon I_\mathrm{SC} > 0$, 
+    whereas at high concentrations ($N_\mathrm{B}=10^{17}$~cm$^{-3}$) $\varepsilon I_\mathrm{SC} < 0$ - see Figs.~\ref{fig3}a,~\ref{fig3}c, S3--S6;
+    \item Increasing the acceptor concentration causes a monotonic decrease in $\varepsilon I_\mathrm{SC}$ (Figs.~\ref{fig3}b,~\ref{fig3}d); 
+    the $N_\mathrm{B}$ value at which the sign of $\varepsilon I_\mathrm{SC}$ changes depends on the temperature 
+    (decreases with decreasing in $T$ value) and the type of illumination (is generally higher in the case of monochromatic light) --- see Fig.~S2;
+    \item In the case where $\varepsilon I_\mathrm{SC} < 0$, an temperature increase causes a decrease in the absolute magnitude 
+    of the relative changes in short--circuit current, with the dependence being nearly linear and 
+    the slope increasing with higher doping levels and iron concentration (Figs.~\ref{fig3}a,~\ref{fig3}c, S4). 
+    In the case where $\varepsilon I_\mathrm{SC} > 0$,
+    a $T$ changing results in minor non-monotonic variations of the short-circuit current after the dissociation of Fe$_i$B$_s$  pairs (Fig.~S3); 
+    \item The influence of base thickness on $\varepsilon I_\mathrm{SC}$ increases with 
+    increasing $N_\mathrm{B}$ and decreasing $N_\mathrm{Fe}$ (Figs.~S5, S3), but it is minimal overall. 
+    As calculations have shown, increasing $d_p$ by more than twice causes changes in $\varepsilon I_\mathrm{SC}$ that do not exceed 0.5~\%;
+    \item Changing the intensity of the monochromatic illumination (from 5~W/m$^{2}$ to 10~W/m$^{2}$) does not practically change the value of $\varepsilon I_\mathrm{SC}$;
+    \item The absolute values of $\varepsilon I_\mathrm{SC}$ can reach relatively high values (more than 100~\% for 940~nm illumination); 
+    however, in cases where $N_\mathrm{Fe}<10^{11}$~cm$^{-3}$ and around $N_\mathrm{B}=10^{16}$~cm$^{-3}$, the changes in short-circuit current do not exceed a few percent;
+\end{itemize}
+
 
 \begin{figure}
 	\centering
@@ -469,6 +499,10 @@ and maintained constant by a PID algorithm embedded in the software that serves 
        Different surfaces correspond to different doping levels (a, c) and base depths (b, d).
 }\label{fig3}
 \end{figure}
+
+The identified features of the $\varepsilon I_\mathrm{SC}$ changes can be explained by considering 
+the main reasons for the influence of factors, which varied during simulation, on the photovoltaic conversion.
+It is known \cite{YangHandbookPVSi} that the main influence of metal impurities on solar cell performance is caused by their effect on the collection efficiency (CE, portion of excess carriers that reach the depletion region of $p$–$n$ junction). Neglecting the influence of series and shunt resistances, the short-circuit current coincides with the photocurrent $I_\mathrm{ph}$, which equals the CE multiplied by the number of light-induced excess carriers.  In turn, the CE efficiency can be calculated as a convolution of generation function, which is proportional to $\exp(-\alpha z)$ where $\alpha$ is the absorption coefficient and z is the coordinate along the axis directed perpendicular to the $p$-$n$ junction from the emitter; and the collection probability, which can be obtained as a solution of homogeneous diffusion equation.
 
 
 \cite{YangHandbookPVSi,Goetzberger1998}
@@ -536,14 +570,14 @@ and maintained constant by a PID algorithm embedded in the software that serves 
 \subsection{Fill factor}
 The fill factor is another defining term in the overall behavior of a solar cell.
 $FF$ is the ratio of the maximum obtainable power to the product of short circuit current and open-circuit voltage.
-In general, $FF$ depends on both $I_\mathrm{SC}$ and $V_\mathrm{OC}$. 
-However, it can be shown that it is mainly determined by the $V_\mathrm{OC}$ value. 
+In general, $FF$ depends on both $I_\mathrm{SC}$ and $V_\mathrm{OC}$.
+However, it can be shown that it is mainly determined by the $V_\mathrm{OC}$ value.
 Indeed, it is shown \cite{YangHandbookPVSi} within the single-diode model
 \begin{equation}
 \label{eqFF1}
     FF \approx \frac{\upsilon_\mathrm{OC}-\ln\left(1+\upsilon_\mathrm{OC}\right)}{\upsilon_\mathrm{OC}+1} \,,
 \end{equation}
-with $\upsilon_\mathrm{OC}$ being the normalized open-circuit voltage 
+with $\upsilon_\mathrm{OC}$ being the normalized open-circuit voltage
 $\upsilon_\mathrm{OC}=qV_\mathrm{OC}/nkT$.
 Another well--known empirical relation for the maximum achievable fill factor of a solar cell is proposed by Green \cite{Green1981,Green1982}:
 \begin{equation}
@@ -551,7 +585,7 @@ Another well--known empirical relation for the maximum achievable fill factor of
     FF \approx \frac{\upsilon_\mathrm{OC}-\ln\left(0.72+\upsilon_\mathrm{OC}\right)}{\upsilon_\mathrm{OC}+1} \,.
 \end{equation}
 Thus, all factors changing $V_\mathrm{OC}$ lead also to $FF$ change.
-However, $V_\mathrm{OC}$ is present in both the numerator and denominator of Eqs.~(\ref{eqFF1})-(\ref{eqFF2}), 
+However, $V_\mathrm{OC}$ is present in both the numerator and denominator of Eqs.~(\ref{eqFF1})-(\ref{eqFF2}),
 and therefore, the expected changes in the fill factor compared to the open-circuit should be smaller.
 
 Recently, Bothe et~al. \cite{Bothe2023} suggested explicit expressions for the FF regarding other characteristic solar cell parameters.
@@ -697,6 +731,22 @@ efficiency $\eta$, and fill factor $FF$)
 %% \appendix
 
 %\section{}\label{}
+
+\section*{Acknowledgments}
+The author (O.O.) would like to acknowledge the financial support by
+National Research Foundation of Ukraine (Project No. 2023.03/0252 
+‘‘Development of principles for the creation and machine-oriented
+characterization of porous silicon nanostructures with optimal
+heat transport properties’’)
+
+\section*{Supplementary data}\label{SuplData}
+Supplementary data to this article can be found online at
+\url{http://surl.li/udqju}
+
+
+\section*{Data availability}
+Data will be made available on request.
+
 
 % To print the credit authorship contribution details
 \printcredits
