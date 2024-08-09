@@ -1,4 +1,4 @@
-\begin{thebibliography}{60}
+\begin{thebibliography}{62}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\bibinfo}[2]{#2}
 \ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
@@ -488,11 +488,29 @@
   \bibinfo{address}{Heidelberg}, \bibinfo{edition}{first} edition,
   \bibinfo{year}{2019}.
 %Type = Book
+\bibitem[{McEvoy et~al.(2013)McEvoy, Markvart, and Castaner}]{Markvart}
+\bibinfo{editor}{A.~McEvoy}, \bibinfo{editor}{T.~Markvart},
+  \bibinfo{editor}{L.~Castaner} (Eds.), \bibinfo{title}{Solar Cells. Materials,
+  Manufacture and Operation}, \bibinfo{publisher}{Academic Press},
+  \bibinfo{address}{Oxford}, \bibinfo{edition}{second} edition,
+  \bibinfo{year}{2013}.
+%Type = Book
 \bibitem[{Goetzberger et~al.(1998)Goetzberger, Knobloch, and
   Voss}]{Goetzberger1998}
 \bibinfo{author}{A.~Goetzberger}, \bibinfo{author}{J.~Knobloch},
   \bibinfo{author}{B.~Voss}, \bibinfo{title}{Crystalline Silicon Solar Cells},
   \bibinfo{publisher}{Wiley}, \bibinfo{year}{1998}.
+%Type = Article
+\bibitem[{Klyui et~al.(2000)Klyui, Kostylyov, Rozhin, Gorbulik, Litovchenko,
+  Voronkin, and Zaika}]{KostRefl2000}
+\bibinfo{author}{N.~Klyui}, \bibinfo{author}{V.~Kostylyov},
+  \bibinfo{author}{A.~Rozhin}, \bibinfo{author}{V.~Gorbulik},
+  \bibinfo{author}{V.~Litovchenko}, \bibinfo{author}{M.~Voronkin},
+  \bibinfo{author}{N.~Zaika},
+\newblock \bibinfo{title}{Silicon solar cells with antireflecting and
+  protective coatings based on diamond-like carbon and silicon carbide films},
+\newblock \bibinfo{journal}{Opto-Electr. Rev.} \bibinfo{volume}{8}
+  (\bibinfo{year}{2000}) \bibinfo{pages}{402--405}.
 %Type = Article
 \bibitem[{Green(1981)}]{Green1981}
 \bibinfo{author}{M.~A. Green},
