@@ -254,7 +254,7 @@ which is reflected in changes to the appearance of the current--voltage ($I$-$V$
 as well as modifications to the main photoelectric parameters
 (short-circuit current  $I_\mathrm{SC}$,
 open-circuit voltage $V_\mathrm{OC}$,
-efficiency $\eta$, and fill factor $FF$)
+efficiency $\eta$, and fill factor $F\!F$)
 in particular.
 These findings create fundamental possibilities to advance methods for estimating iron concentration by $I$-$V$ curves measuring before and after pair dissolution.
 The advantages of such an approach are associated with the possibility of directly characterizing finished solar cells,
@@ -269,7 +269,7 @@ Fe$_i$B$_\mathrm{Si}$ $\rightarrow$ Fe$_i$ +B$_\mathrm{Si}$,
 at least by 10~\%, along with a monotonic dependence of these changes on $N_\mathrm{Fe}$.
 
 
-This paper intends to determine the variations of $I_\mathrm{SC}$, $V_\mathrm{OC}$, $\eta$, and $FF$
+This paper intends to determine the variations of $I_\mathrm{SC}$, $V_\mathrm{OC}$, $\eta$, and $F\!F$
 resulting from the decay of iron-containing pairs in boron-doped silicon solar cells.
 Previous similar calculations have been conducted \cite{FeB:Schmidt,IronSC,Hajjiah2020},
 but the results presented typically pertain only to certain temperatures,
@@ -407,7 +407,7 @@ Assessing the influence of iron defect variability relied on the relative change
 \label{eq1}
     \varepsilon A = \frac{A^\mathrm{FeB} - A^\mathrm{Fe}}{A^\mathrm{FeB}} \times 100 \%\,,
 \end{equation}
-where $A$ represents one of the parameters ($I_\mathrm{SC}$, $V_\mathrm{OC}$, $\eta$, and $FF$),
+where $A$ represents one of the parameters ($I_\mathrm{SC}$, $V_\mathrm{OC}$, $\eta$, and $F\!F$),
 superscript ‘‘FeB’’ corresponds to the parameter value for coexistence of Fe$_i$ and Fe$_i$B$_s$ (Case~2),
 superscript ‘‘Fe’’ is related to the decay of all pairs (Case~1).
 
@@ -775,37 +775,37 @@ Notably, these boron concentrations are most relevant to typical real SSCs.
 
 \subsection{Fill factor}
 The fill factor is another defining term in the overall behavior of a solar cell.
-$FF$ is the ratio of the maximum obtainable power to the product of short circuit current and open-circuit voltage.
-In general, $FF$ depends on both $I_\mathrm{SC}$ and $V_\mathrm{OC}$.
+$F\!F$ is the ratio of the maximum obtainable power to the product of short circuit current and open-circuit voltage.
+In general, $F\!F$ depends on both $I_\mathrm{SC}$ and $V_\mathrm{OC}$.
 However, it can be shown that it is mainly determined by the $V_\mathrm{OC}$ value.
 Indeed, it is shown \cite{YangHandbookPVSi} within the single-diode model
 \begin{equation}
 \label{eqFF1}
-    FF \approx \frac{\upsilon_\mathrm{OC}-\ln\left(1+\upsilon_\mathrm{OC}\right)}{\upsilon_\mathrm{OC}+1} \,,
+    F\!F \approx \frac{\upsilon_\mathrm{OC}-\ln\left(1+\upsilon_\mathrm{OC}\right)}{\upsilon_\mathrm{OC}+1} \,,
 \end{equation}
 with $\upsilon_\mathrm{OC}$ being the normalized open-circuit voltage
 $\upsilon_\mathrm{OC}=qV_\mathrm{OC}/nkT$.
 Another well--known empirical relation for the maximum achievable fill factor of a solar cell is proposed by Green \cite{Green1981,Green1982}:
 \begin{equation}
 \label{eqFF2}
-    FF \approx \frac{\upsilon_\mathrm{OC}-\ln\left(0.72+\upsilon_\mathrm{OC}\right)}{\upsilon_\mathrm{OC}+1} \,.
+    F\!F \approx \frac{\upsilon_\mathrm{OC}-\ln\left(0.72+\upsilon_\mathrm{OC}\right)}{\upsilon_\mathrm{OC}+1} \,.
 \end{equation}
-Thus, any factors that affect $V_\mathrm{OC}$ also impact the $FF$.
+Thus, any factors that affect $V_\mathrm{OC}$ also impact the $F\!F$.
 However, since $V_\mathrm{OC}$ appears in both the numerator and denominator of Eqs.~(\ref{eqFF1})-(\ref{eqFF2}),
 the resulting changes in the fill factor are expected to be smaller than those in the open-circuit voltage.
 
-Recently, Bothe et al. \cite{Bothe2023} proposed explicit expressions for the $FF$ in terms of other key solar cell parameters.
+Recently, Bothe et al. \cite{Bothe2023} proposed explicit expressions for the $F\!F$ in terms of other key solar cell parameters.
 Specifically, for $p$--type SSCs and intrinsic limits, the parameterization can be expressed as follows:
 \begin{equation}
 \label{eqFF3}
-    FF = \frac{90.4924}{d_p^{0.00220}}\left[0.9478+\frac{0.0519}{1+\left(\frac{\log N_\mathrm{B}}{17.3739 d_p^{-0.0093}}\right)^{76.3}}\right] \,,
+    F\!F = \frac{90.4924}{d_p^{0.00220}}\left[0.9478+\frac{0.0519}{1+\left(\frac{\log N_\mathrm{B}}{17.3739 d_p^{-0.0093}}\right)^{76.3}}\right] \,,
 \end{equation}
 where
 $d_p$ is expected to be in micrometers.
-Additional recombination (e.g., Shockley–Read–Hall) leads to a decrease in $FF$ value \cite{Bothe2023}.
+Additional recombination (e.g., Shockley–Read–Hall) leads to a decrease in $F\!F$ value \cite{Bothe2023}.
 
 Figs.~S13-S16 in the Supplementary Material, along with Fig.~\ref{fig8}, illustrate how the fill factor varies with iron defect variability.
-The following features of $\varepsilon FF$ can be identified from the presented data:
+The following features of $\varepsilon F\!F$ can be identified from the presented data:
 
 
 \begin{figure}
@@ -827,39 +827,39 @@ The following features of $\varepsilon FF$ can be identified from the presented 
 
 \noindent
 - The changes in the fill factor are the smallest among the parameters considered,
-with maximum $\varepsilon FF$ values not exceeding 10\%;
+with maximum $\varepsilon F\!F$ values not exceeding 10\%;
 
 \noindent
 - At low boron concentrations ($N_\mathrm{B}<10^{16}$~cm$^{-3}$),
-the dependence of $\varepsilon FF$ on $N_\mathrm{Fe}$ is notably non-linear.
-Within the used concentration range, two regions of decrease and two regions of increase in $\varepsilon FF$ are observed;
+the dependence of $\varepsilon F\!F$ on $N_\mathrm{Fe}$ is notably non-linear.
+Within the used concentration range, two regions of decrease and two regions of increase in $\varepsilon F\!F$ are observed;
 
 \noindent
 - At low boron concentrations, the change in fill factor value is positive and,
 in contrast to $\varepsilon V_\mathrm{OC}$ and $\varepsilon I_\mathrm{SC}$,
-AM1.5 illumination causes more significant changes in $\varepsilon FF$ than monochromatic illumination.
-At high boron concentrations, the $\varepsilon FF$ is negative and does not exceed 4\%;
+AM1.5 illumination causes more significant changes in $\varepsilon F\!F$ than monochromatic illumination.
+At high boron concentrations, the $\varepsilon F\!F$ is negative and does not exceed 4\%;
 
 
 \noindent
-- The absolute value of $\varepsilon FF$ increases, regardless of the value sign, with temperature increases;
+- The absolute value of $\varepsilon F\!F$ increases, regardless of the value sign, with temperature increases;
 
 
 \noindent
-- Increasing the base thickness leads to a decrease in $\varepsilon FF$ (a reduction in the fill factor with increasing $d_p$ is expected according to (\ref{eqFF3})). Additionally, this results in a shift of the $\varepsilon FF\left(N_\mathrm{Fe}\right)$ dependence towards lower iron concentrations.
+- Increasing the base thickness leads to a decrease in $\varepsilon F\!F$ (a reduction in the fill factor with increasing $d_p$ is expected according to (\ref{eqFF3})). Additionally, this results in a shift of the $\varepsilon F\!F\left(N_\mathrm{Fe}\right)$ dependence towards lower iron concentrations.
 The impact of $d_p$ is more pronounced at low boron concentrations and in the case of AM1.5 illumination;
 
 
 \noindent
 - In the case of monochromatic illumination, the light intensity significantly affects the relative changes in the fill factor
-($\varepsilon FF$ can vary by a factor of 2 when $W_\mathrm{ill}$ changes from 5 to 10~Wm$^{-2}$).
+($\varepsilon F\!F$ can vary by a factor of 2 when $W_\mathrm{ill}$ changes from 5 to 10~Wm$^{-2}$).
 This impact is influenced by both iron concentration (which can even change the sign of the effect) and temperature.
 
-Fig.~\ref{fig9} shows that the experimental dependencies of  $\varepsilon FF\left(N_\mathrm{Fe}\right)$
-and $\varepsilon FF\left(T\right)$ align well with the calculated values.
+Fig.~\ref{fig9} shows that the experimental dependencies of  $\varepsilon F\!F\left(N_\mathrm{Fe}\right)$
+and $\varepsilon F\!F\left(T\right)$ align well with the calculated values.
 
-Figure~\ref{fig9} shows that the experimental dependencies $\varepsilon FF$$\left(N_\mathrm{Fe}\right)$ and $\varepsilon FF$$\left(T\right)$ are in good agreement with the calculated values.
-In our opinion, the quantitative agreement is limited by the relatively low accuracy of $\varepsilon FF$ measurements
+Figure~\ref{fig9} shows that the experimental dependencies $\varepsilon F\!F$$\left(N_\mathrm{Fe}\right)$ and $\varepsilon F\!F$$\left(T\right)$ are in good agreement with the calculated values.
+In our opinion, the quantitative agreement is limited by the relatively low accuracy of $\varepsilon F\!F$ measurements
 and the dependence of fill factor on series and shunt resistances \cite{Green1981,Green1982},
 which were not considered in the simulation.
 
@@ -878,10 +878,10 @@ which were not considered in the simulation.
 }\label{fig9}
 \end{figure}
 
-The observed characteristics of $\varepsilon FF$ suggest that
+The observed characteristics of $\varepsilon F\!F$ suggest that
 the fill factor is considerably less suitable for estimating iron concentration in SSCs
 than the short-circuit current and open-circuit voltage.
-$\varepsilon FF$ can serve as an auxiliary parameter to refine $N_\mathrm{Fe}$;
+$\varepsilon F\!F$ can serve as an auxiliary parameter to refine $N_\mathrm{Fe}$;
 however, if monochromatic illumination is used, light intensity must be controlled with high precision.
 
 
@@ -891,7 +891,7 @@ however, if monochromatic illumination is used, light intensity must be controll
 Solar cell efficiency depends on all the photovoltaic conversion parameters previously discussed:
 \begin{equation}
 \label{eq11}
-    \eta = \frac{I_\mathrm{SC}V_\mathrm{OC}FF}{W_\mathrm{ill}A}\,,
+    \eta = \frac{I_\mathrm{SC}V_\mathrm{OC}F\!F}{W_\mathrm{ill}A}\,,
 \end{equation}
 where
 $A$ is the illuminated area of the solar cell.
@@ -900,7 +900,7 @@ Considering the differential of Eq.~(\ref{eq11}), a cumulative effect on the rel
 Considering the differential of formula (\ref{eq11}):
 \begin{equation}
 \label{eq12}
-    d\eta = \frac{dI_\mathrm{SC}}{I_\mathrm{SC}}+\frac{dV_\mathrm{OC}}{V_\mathrm{OC}}+\frac{dFF}{FF},
+    d\eta = \frac{dI_\mathrm{SC}}{I_\mathrm{SC}}+\frac{dV_\mathrm{OC}}{V_\mathrm{OC}}+\frac{dF\!F}{F\!F},
 \end{equation}
 a cumulative effect on the relative changes in efficiency can be anticipated.
 Fig.~\ref{fig10} illustrates the simulation results for the solar cell efficiency,
@@ -942,7 +942,7 @@ which does not prevent the use of $\varepsilon \eta$ for determining $N_\mathrm{
 Fig.~\ref{fig11} shows the experimental and simulated values of changes in the efficiency of the solar cell
 with a 380~$\mu$m base thickness and a doping concentration of $1.36\times10^{15}$~cm$^{-3}$.
 When presenting the experimental data, the same correction factor, $C_\mathrm{cor} = 1.4$, was applied as in the case of the short-circuit current.
-The data align closely, indicating that the inaccuracies typical for $V_\mathrm{OC}$ and $FF$ do not significantly contribute.
+The data align closely, indicating that the inaccuracies typical for $V_\mathrm{OC}$ and $F\!F$  do not significantly contribute.
 
 \begin{figure}
 	\centering
@@ -958,22 +958,48 @@ The data align closely, indicating that the inaccuracies typical for $V_\mathrm{
 }\label{fig11}
 \end{figure}
 
+Obviously, the $\varepsilon \eta$ value can be used simultaneously with $\varepsilon I_\mathrm{SC}$ for a more accurate determination of iron concentration.
+It is known that in machine learning, the input parameters typically consist of a set of variables (descriptors).
+In our case, such a set could be ($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$, $\varepsilon \eta$).
+At the same time, if we compare Fig.~\ref{fig3} and Fig.~\ref{fig10}, 
+we cannot expect that the values of $\varepsilon I_\mathrm{SC}$ and $\varepsilon \eta$ are independent.
+To assess the redundancy of information, we can use principal component analysis (PCA), 
+widely used in solving various problems, including identifying defects in solar cells \cite{Fadhel2019}.
+PCA uses a linear combination of the original variables to build the new variables (principal component, PC) while keeping maximum variance information.
+In the case of the particular principal component having a low information variance ratio, it can be discarded with little to no loss of useful information.
+
+PCs were built for different combinations of photovoltaic parameters and solar cell characteristics, and the results are listed in Table~\ref{tbl2}. 
+As evident, when only changes in short-circuit current are considered along with the solar cell's base parameters and temperature,
+there is no excessive information present.
+Adding $\varepsilon \eta$ to the set of descriptors practically does not change the number of independent variables.
+With the additional use of $\varepsilon V_\mathrm{OC}$ values obtained under AM1.5 illumination, it is advisable to consider five independent variables.
+For the same set of descriptors in a monochromatic illumination case, one can limit oneself to using only four independent components 
+(cumulative variance ratio for PC4 and PC5 does not exceed 1.3\%).
+When considering changes in all photoelectric parameters due to complete dissociation of Fe$_i$B$_s$ pairs, 
+the actual number of independent variables is six for AM1.5 illumination and five for 940 nm lighting.
+
+
 \begin{table}[<options>]
-\caption{AAAA}\label{tbl2}
+\caption{PSA results for sets of variables that serve to estimate the iron concentration in SSC.
+The numbers represent the ratio of information variance associated with each principal component when using AM1.5 illumination / 940 nm illumination.
+}
+\label{tbl2}
 \begin{tabular*}{\tblwidth}{@{}LCCCCCCC@{}}
 \toprule
-
-set of descriptors&\multicolumn{7}{C}{Explained Variance Ratio (\%)}\\% Table header row
+set of descriptors&\multicolumn{7}{C}{Explained Variance Ratio (\%)}\\
 &PC0&PC1&PC2&PC3&PC4&PC5&PC6\\% Table header row
 \midrule
-($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$)&43.23&25.00&25.00&6.70&---&---&---\\
-($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$, $\varepsilon \eta$) & 52.39 &20.00&20.00&7.48&0.13& ---&---\\
-($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$, $\varepsilon \eta$, $\varepsilon V_\mathrm{OC}$) & 44.40 &18.78&16.67&16.46&3.61& 0.08&---\\
-($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$, $\varepsilon \eta$, $\varepsilon V_\mathrm{OC}$, $\varepsilon FF$) & 43.29 &22.59&14.29&14.19&4.29& 1.35&0.002\\
+%($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$)&43.23&25.00&25.00&6.70&---&---&---\\
+%($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$, $\varepsilon \eta$) & 52.39 &20.00&20.00&7.48&0.13& ---&---\\
+%($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$, $\varepsilon \eta$, $\varepsilon V_\mathrm{OC}$) & 44.40 &18.78&16.67&16.46&3.61& 0.08&---\\
+%($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$, $\varepsilon \eta$, $\varepsilon V_\mathrm{OC}$, $\varepsilon FF$) & 43.29 &22.59&14.29&14.19&4.29& 1.35&0.002\\
+($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$)&43.23/42.80&25.00/25.00&25.00/25.00&6.70/7.20&---&---&---\\
+($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$, $\varepsilon \eta$) & 52.39/52.46 &20.00/20.00&20.00/20.00&7.48/7.51&0.13/0.03& ---&---\\
+($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$, $\varepsilon \eta$, $\varepsilon V_\mathrm{OC}$) & 44.40/59.02 &18.78/16.73&16.67/16.67&16.46/6.28&3.61/1.29& 0.08/0.01&---\\
+($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$, $\varepsilon \eta$, $\varepsilon V_\mathrm{OC}$, $\varepsilon F\!F$) & 43.29/63.24 &22.59/14.41&14.29/14.29&14.19/5.65&4.29/1.95& 1.35/0.46&0.002/0.01\\
 \bottomrule
 \end{tabular*}
 \end{table}
-
 
 
 
@@ -985,32 +1011,39 @@ with different base properties under various external conditions
 (temperature, intensity, and spectral composition of illumination).
 The simulation results have been compared with experimental data.
 
-The feasibility of using relative changes in short-circuit current, open-circuit voltage, 
-fill factor, and efficiency resulting from the dissociation of FeB pairs 
+The feasibility of using relative changes in short-circuit current, open-circuit voltage,
+fill factor, and efficiency resulting from the dissociation of FeB pairs
 to estimate the concentration of iron impurities in a solar cell has been analyzed.
 It is shown that changes in short-circuit current are the most suitable parameter.
-It is more expedient to determine the photovoltaic parameters under monochromatic illumination 
+It is more expedient to determine the photovoltaic parameters under monochromatic illumination
 with a wavelength matching the predominant absorption in the solar cell base rather than using AM1.5 illumination.
-Next in suitability are changes in efficiency and open-circuit voltage, 
+Next in suitability are changes in efficiency and open-circuit voltage,
 although their use becomes restricted at low doping levels of the base ($<10^{16}$~cm$^{-3}$).
 In our opinion, using the fill factor to estimate iron concentration is not practical.
 
-It has been shown that the potential accuracy of estimating iron concentration depends 
-on the doping level of the base: 
-at a boron concentration around $10^{16}$~cm$^{-3}$, it is minimal, 
+It has been shown that the potential accuracy of estimating iron concentration depends
+on the doping level of the base:
+at a boron concentration around $10^{16}$~cm$^{-3}$, it is minimal,
 while decreasing or increasing this value enhances the response of $I_\mathrm{SC}$ to the presence of iron.
-Furthermore, the accuracy of $N_\mathrm{Fe}$ determination is significantly influenced by the availability 
-of precise information on the doping level of the base, 
-as well as the accuracy of estimating the intensity of monochromatic illumination, 
+Furthermore, the accuracy of $N_\mathrm{Fe}$ determination is significantly influenced by the availability
+of precise information on the doping level of the base,
+as well as the accuracy of estimating the intensity of monochromatic illumination,
 especially when using $\varepsilon \eta$ and $\varepsilon V_\mathrm{OC}$.
 
-%At the same time, $\varepsilon \eta$ and $\varepsilon V_\mathrm{OC}$ can serve as additional refining parameters for determining iron concentration. It is known that in machine learning, the input parameters typically consist of a set of several descriptors. In our view, for the task of estimating iron concentration through changes in photovoltaic parameters during the conversion of iron-containing defects, it is advisable to use a set of ($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$, $\varepsilon \eta$) or ($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$, $\varepsilon \eta$,$\varepsilon V_\mathrm{OC}$).
+At the same time, $\varepsilon \eta$ and $\varepsilon V_\mathrm{OC}$ can serve as additional parameters 
+for refining the determination of iron concentration.
+In our opinion, for estimating iron concentration through changes 
+in photovoltaic parameters due to variability in iron-related defects, it is advisable to use a set of 
+($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$, $\varepsilon \eta$) or ($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$, $\varepsilon \eta$,$\varepsilon V_\mathrm{OC}$).
+In these cases, to expedite calculations, it is advisable to use principal component analysis to reduce 
+the number of variables while retaining the maximum variance information.
 
-\cite{Fadhel2019}
+
 
 %--------------------------------------------------------
 
-%В реченні "" заміни, будь-ласка, "" для підвищення
+%В реченні "" заміни, будь-ласка, "" для підвищення clarity
+%В реченні "" заміни, будь-ласка, "" для підвищення conciseness
 %conciseness
 %clarity
 
