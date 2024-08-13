@@ -4,6 +4,26 @@ olegolikh@knu.ua
 0000-0001-8080-7661
 nevermor464@gmail.com
 
+
+Dr. Hab.
+
+defects
+solar cell
+ultrasound
+metaheuristic algorithms
+semiconductor structures
+
+
+Taras Shevchenko National University of Kyiv, Kyiv, Ukraine
+64/13, Volodymyrska Street
+01601
+
+Modeling the Impact of Iron Defect Variability on Silicon Solar Cell Performance Across Different Scenarios
+
+Transitioning to renewable energy sources is paramount for humanity's sustainable development, and silicon solar cells are at the forefront of solar energy conversion. Iron in these structures is a primary one of the most detrimental metallic impurities. This study examines the impact of iron defect variability on silicon solar cell performance across various scenarios. We have simulated solar cells using SCAPS software across a range of temperatures (290-340) K, base thicknesses (180-380) $\mu$m, doping levels (10^15 - 10^17) cm^-3, with iron concentrations varying from 10^10 to 10^14 cm^-3 under AM1.5 and monochromatic (940 nm) illumination. Analyzed across all cases were the effects of iron-boron pair dissociation on short-circuit current, open-circuit voltage, fill factor, and efficiency. The experimental measurements validated the simulation results, demonstrating good agreement for all photovoltaic parameters. This study investigates the potential of using photovoltaic parameter changes induced by iron-related defect restructuring to estimate iron concentration. It is shown that changes in short-circuit current obtained under monochromatic illumination are the most reliable, while the fill factor is the least effective. Principal component analysis was used to estimate the number of independent variables when multiple photovoltaic parameters are used simultaneously.
+
+silicon; iron-boron pair; solar cells; SCAPS simulation; defect influence; estimation of iron contamination
+
 ------------------------------
 
 M.C. 
