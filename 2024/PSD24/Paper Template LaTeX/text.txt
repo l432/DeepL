@@ -4,16 +4,16 @@ Defects are well known to significantly impact semiconductor device properties.
 передбачає контрольовану модифiкацiю дефектно–домiшкової пiдсистеми з метою отримання нових властистовостей кристала, структури чи приладу.
 Одним з ефективних інструментів подібного активного є акустичнi коливання ультразвукового діапозону.
 Наприклад, ультразвукова обробка може стимулювати дифузiю рiзноманiтних дефектiв при температурах, близьких до кiмнатних, що зумовлено
-акустоіндукованим зменшенням енергiї активацiї чи надбар’єрним рухом /58,59?, 69/.
-Також ультразвук може бути причиною перебудови власних точкових дефектів [71, 76, 77] чи відпалу радіаційних /117,122, моєSSE, 16/.
+акустоіндукованим зменшенням енергiї активацiї чи надбар’єрним рухом /Ostapenko1999,Ostap:PhotoLum ?, BORKOVSKA2003/.
+Також ультразвук може бути причиною перебудови власних точкових дефектів [Bahar2003, RITTER2008, Wosinski] чи відпалу радіаційних /UST:OstrovCsI,UST:LED_SM, GORB2020, Gorb2010/.
 Нерідко УЗ використовується не як основний iнструменту модифiкацiї, а як додатковий фактор впливу пiд час звичних технологiчних
-операцiй, таких як іонна імплантація /123,130/ чи осадження плівок /134,135/.
+операцiй, таких як іонна імплантація /Litovchenko2015,ROMANJUK2005MatSci/ чи осадження плівок /Wang:JLum,US:ZnOfilm/.
 
 Окрім залишкових ефектів Уз впливу викликають значну зацікавленість акусто-динамічні ефекти. В цьому випадку зміна стану дефектів і відповідно модифікація властивостей напівпровідникових систем спостерігається лише за умов УЗ навантаження. Після припинення поширення акустичних хвиль дефектна підсистема повертається до початкового стану і властивості відновлюються. 
-Зокрема виявлено акустоіндуковані ефекти зміни конфігурації метастабільних дефектів (пара FeB та А-центр в Si /148,153/, EL2 в GaAs /79/, DX в AlGaAs /157/),
-перезарядки точкових дефектів (Te, дивакансія, V-O в кремнієвих структурах /155,1,7/, гетероструктурах GaAs/AlGaAs /158/), 
-перебудови хмари Котрела (SiGe/Si, CdTe:Cl, CdHgTe /160 (або лишити 153), 150,152/)
-утворення нерівноважних дислокаційних скупчень (GaP /161/).
+Зокрема виявлено акустоіндуковані ефекти зміни конфігурації метастабільних дефектів (пара FeB та А-центр в Si /YOlikhTPL2011,Ostrovskii2001/, EL2 в GaAs /buyanova1994/, DX в AlGaAs /belyaev1994/),
+перезарядки точкових дефектів (Te, дивакансія, V-O в кремнієвих структурах /Korotchenkov1995,Olikh2018JAP,Olikh:Ultras/, гетероструктурах GaAs/AlGaAs /Zaveryukhin2002/), 
+перебудови хмари Котрела (SiGe/Si, CdTe:Cl, CdHgTe /Kuryliuk2009 (або лишити Ostrovskii2001), YOlikh:SupMicr,Vlasenko2000/)
+утворення нерівноважних дислокаційних скупчень (GaP /Gontaruk1998/).
 Такі ефекти можуть бути використані для створення пристроїв функціональної електроніки,
 в яких управління інформаційним сигналом реалізовуватиметься внаслідок неоднорідностей середовища, що, в свою чергу, виникають бід дєю ультразвуку.
 
@@ -69,68 +69,82 @@ Coincidence Doppler broadening spectroscopy
 
 
 
-7. Olikh, Oleg. Reversible influence of ultrasound on γ−irradiated Mo/n-Si Schottky barrier structure / Oleg Olikh // Ultrasonics. — 2015. — Feb. — Vol. 56. —
-Pp. 545–550.
 
-
+Ostapenko1999
 58. Ostapenko, S. Defect passivation using ultrasound treatment: fundamentals and
 application / S. Ostapenko // Applied Physics A: Materials Science & Processing. — 1999. — Aug. — Vol. 69, no. 2. — Pp. 225–232.
 
+Ostap:PhotoLum
 59. Activation of luminescence in polycrystalline silicon thin films by ultrasound
 treatment / J. Koshka, S. Ostapenko, T. Ruf, J. M. Zhang // Appl. Phys. Lett. —
 1996. — Oct. — Vol. 69, no. 17. — Pp. 2537–2539.
 
+BORKOVSKA2003
 69. Redistribution of mobile point defects in CdS crystals under ultrasound treatment / L.V. Borkovska, M.P. Baran, N.O. Korsunska et al. // Physica B:
 Condensed Matter. — 2003. — Dec. — Vol. 340–342. — Pp. 258–262.
 
+Bahar2003
 71. Ultrasound treatment for porous silicon photoluminescence enhancement /
 A. El-Bahar, S. Stolyarova, A. Chack et al. // Phys. Status Solidi A. — 2003. —
 May. — Vol. 197, no. 2. — Pp. 340–344.
 
+RITTER2008
 76. Effect of ultrasound treatment on the optical properties of C60 fullerene films /
 U. Ritter, P. Scharff, V.V. Kozachenko et al. // Chem. Phys. Lett. — 2008. —
 Dec. — Vol. 467, no. 1–3. — Pp. 77–79.
 
+Wosinski
 77. Wosinski, T. Transformation of native defects in bulk GaAs under ultrasonic
 vibration / T. Wosinski, A. Makosa, Z. Witczak // Semicond. Sci. Technol. —
 1994. — Nov. — Vol. 9, no. 11. — Pp. 2047–2052.
 
+UST:OstrovCsI
 117. Radiation defects manipulation by ultrasound in ionic crystals / I. Ostrovskii,
 N. Ostrovskaya, O. Korotchenkov, J. Reidy // IEEE Trans. Nucl. Sci. — 2005.
 — Dec. — Vol. 52, no. 6. — Pp. 3068–3073.
 
+UST:LED_SM
 122. The influence of acoustic–dislocation interaction on intensity of the bound exciton recombination in initial and irradiated GaAsP LEDs structures /
 O.V. Konoreva, Ya. M. Olikh, M.B. Pinkovska et al. // Superlattices Microstruct.
 — 2017. — Feb. — Vol. 102. — Pp. 88–93.
 
+Gorb2010
 16. Ultrasonically Recovered Performance of γ−Irradiated Metal-Silicon Structures / A.M. Gorb, O.A. Korotchenkov, O.Ya Olikh, A.O. Podolian // IEEE
 Trans. Nucl. Sci. — 2010. — June. — Vol. 57, no. 3. — Pp. 1632–1639.
 
+Litovchenko2015
 123. Литовченко, В.Г. Формування нанорозмiрних фаз при акусто-стимульованому iонно–променевому синтезi / В.Г. Литовченко, В.П. Мельник,
 Б.М. Романюк // УФЖ. — 2015. — Т. 60, № 1. — С. 66–75.
 
+ROMANJUK2005MatSci
 130. Enhanced relaxation of SiGe layers by He implantation supported by in situ ultrasonic treatments / B. Romanjuk, V. Kladko, V. Melnik et al. // Materials Science in Semiconductor Processing. — 2005. — Feb. — Vol. 8, no. 1–3. —
 Pp. 171–175.
 
+Wang:JLum
 134. Improved electroluminescence performance of ZnS:Cu,Cl phosphors by ultrasonic treatment / Wendeng Wang, Fuqiang Huang, Yujuan Xia, Anbao Wang //
 J. Lumin. — 2008. — Feb. — Vol. 128, no. 2. — Pp. 199–204.
 
+US:ZnOfilm
 135. Ultrasonic–assisted mist chemical vapor deposition of II–oxide and related oxide
 compounds / Shizuo Fujita, Kentaro Kaneko, Takumi Ikenoue et al. // Phys.
 Status Solidi C. — 2014. — Jul. — Vol. 11, no. 7–8. — Pp. 1225–1228.
 
+YOlikhTPL2011
 148. Олих, Я.М. Прямое наблюдение релаксации проводимости в gamma–облученном кремнии n–типа под влиянием импульсов ультразвука / Я.М. Олих,
 Н.Д. Тимочко // Письма в журнал технической физики. — 2011. — Т. 37,
 № 1. — С. 78–84.
 
+Ostrovskii2001
 153. Acoustically driven optical phenomena in bulk and low-dimensional semiconductors / I.V. Ostrovskii, O.A. Korotchenkov, O.Ya Olikh et al. // J. Opt. A: Pure
 Appl. Opt. — 2001. — July. — Vol. 3, no. 4. — Pp. S82–S86.
 
+buyanova1994
 79. Influence of Ultrasound Vibrations on the Stable-Metastable Transitions of EL2
 Centers in GaAs / I.A. Buyanova, Sergei S. Ostapenko, A.U. Savchuk, Moissei K. Sheinkman // Defects in Semiconductors 17 / Ed. by Helmut Heinrich,
 Wolfgang Jantsch. — Vol. 143 of Materials Science Forum. — Trans Tech
 Publications, 1993. — 10. — Pp. 1063–1068.
 
+belyaev1994
 157. The Ultrasonics–Induced–Quenching of PPC Related to DX Centers in
 Al
 xGa1−xAs / A.E. Belyaev, Hans J¨urgen von Bardeleben, M.L. Fille et al. //
@@ -138,31 +152,39 @@ Defects in Semiconductors 17 / Ed. by Helmut Heinrich, Wolfgang Jantsch. —
 Vol. 143 of Materials Science Forum. — Trans Tech Publications, 1993. — 10.
 — Pp. 1057–1062.
 
+Korotchenkov1995
 155. Korotchenkov, O.A. Long-wavelength acoustic-mode-enhanced electron emission from Se and Te donors in silicon / O.A. Korotchenkov, H.G. Grimmliss //
 Phys. Rev. B. — 1995. — Nov. — Vol. 52, no. 20. — Pp. 14598–14606.
 
+Olikh2018JAP
 1. Acousto–defect interaction in irradiated and non–irradiated silicon n+–p structure / O. Ya. Olikh, A. M. Gorb, R. G. Chupryna, O. V. Pristay-Fenenkov // J.
 Appl. Phys. — 2018. — Apr. — Vol. 123, no. 16. — P. 161573.
 
+Olikh:Ultras
 7. Olikh, Oleg. Reversible influence of ultrasound on γ−irradiated Mo/n-Si Schottky barrier structure / Oleg Olikh // Ultrasonics. — 2015. — Feb. — Vol. 56. —
 Pp. 545–550.
 
+Zaveryukhin2002
 158. Процессы дрейфа неравновесных носителей тока в GaAs–фотоприемниках
 под действием переменной деформации / Б.Н. Заверюхин, Н.Н. Заверюхина, Р.А. Муминов, О.М. Турсункулов // Письма в журнал технической
 физики. — 2002. — Т. 28, № 5. — С. 75–83.
 
+Kuryliuk2009
 160. Kuryliuk, Vasyl. Acoustically driven charge separation in semiconductor heterostructures sensed by optical spectroscopy techniques / Vasyl Kuryliuk,
 Artem Podolian, Oleg Korotchenkov // Cent. Eur. J. Phys. — 2009. — Jun.
 — Vol. 8, no. 1. — Pp. 65–76.
 
+YOlikh:SupMicr
 150. Olikh, Ya. M. Reverse ultrasonic changes of electrical conductivity in CdTe:Cl
 crystals / Ya. M. Olikh, M. D. Tymochko // Superlattices Microstruct. — 2016. — Jul. — Vol. 95. — Pp. 78–82.
 
+Vlasenko2000
 152. Власенко, А.И. Подвижность носителей заряда в кристаллах n–CdxHg1−xTe
 в условиях динамического ультразвукового нагружения / А.И. Власенко,
 Я.М. Олих, Р.К. Савкина // Физика и техника полупроводников. — 2000. —
 Т. 34, № 6. — С. 670–676.
 
+Gontaruk1998
 161. Деградационно-релаксационные явления в светоизлучающих
 p–n–структурах на основе фосфида галлия, стимулированные ультразвуком / А.Н. Гонтарук, Д.В. Корбутяк, Е.В. Корбут и др. // Письма в
 журнал технической физики. — 1998. — Т. 24, № 64–68. — С. 22–27.
