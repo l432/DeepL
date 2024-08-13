@@ -1,0 +1,64 @@
+Defects are well known to significantly impact semiconductor device properties. 
+
+У зв'язку з цим надзвичайно важливою є iнженерiя дефектiв, яка
+передбачає контрольовану модифiкацiю дефектно–домiшкової пiдсистеми з метою отримання нових властистовостей кристала, структури чи приладу.
+Одним з ефективних інструментів подібного активного є акустичнi коливання ультразвукового діапозону.
+Наприклад, ультразвукова обробка може стимулювати дифузiю рiзноманiтних дефектiв при температурах, близьких до кiмнатних, що зумовлено
+акустоіндукованим зменшенням енергiї активацiї чи надбар’єрним рухом /58,59?, 69/.
+Також ультразвук може бути причиною перебудови власних точкових дефектів [71, 76, 77] чи відпалу радіаційних /117,122, моєSSE, 16/.
+Нерідко УЗ використовується не як основний iнструменту модифiкацiї, а як додатковий фактор впливу пiд час класичних технологiчних
+операцiй, таких як іонна імплантація /123,130/ чи осадження плівок /134,135/.
+
+
+
+
+
+
+
+
+58. Ostapenko, S. Defect passivation using ultrasound treatment: fundamentals and
+application / S. Ostapenko // Applied Physics A: Materials Science & Processing. — 1999. — Aug. — Vol. 69, no. 2. — Pp. 225–232.
+
+59. Activation of luminescence in polycrystalline silicon thin films by ultrasound
+treatment / J. Koshka, S. Ostapenko, T. Ruf, J. M. Zhang // Appl. Phys. Lett. —
+1996. — Oct. — Vol. 69, no. 17. — Pp. 2537–2539.
+
+69. Redistribution of mobile point defects in CdS crystals under ultrasound treatment / L.V. Borkovska, M.P. Baran, N.O. Korsunska et al. // Physica B:
+Condensed Matter. — 2003. — Dec. — Vol. 340–342. — Pp. 258–262.
+
+71. Ultrasound treatment for porous silicon photoluminescence enhancement /
+A. El-Bahar, S. Stolyarova, A. Chack et al. // Phys. Status Solidi A. — 2003. —
+May. — Vol. 197, no. 2. — Pp. 340–344.
+
+76. Effect of ultrasound treatment on the optical properties of C60 fullerene films /
+U. Ritter, P. Scharff, V.V. Kozachenko et al. // Chem. Phys. Lett. — 2008. —
+Dec. — Vol. 467, no. 1–3. — Pp. 77–79.
+
+77. Wosinski, T. Transformation of native defects in bulk GaAs under ultrasonic
+vibration / T. Wosinski, A. Makosa, Z. Witczak // Semicond. Sci. Technol. —
+1994. — Nov. — Vol. 9, no. 11. — Pp. 2047–2052.
+
+117. Radiation defects manipulation by ultrasound in ionic crystals / I. Ostrovskii,
+N. Ostrovskaya, O. Korotchenkov, J. Reidy // IEEE Trans. Nucl. Sci. — 2005.
+— Dec. — Vol. 52, no. 6. — Pp. 3068–3073.
+
+122. The influence of acoustic–dislocation interaction on intensity of the bound exciton recombination in initial and irradiated GaAsP LEDs structures /
+O.V. Konoreva, Ya. M. Olikh, M.B. Pinkovska et al. // Superlattices Microstruct.
+— 2017. — Feb. — Vol. 102. — Pp. 88–93.
+
+16. Ultrasonically Recovered Performance of γ−Irradiated Metal-Silicon Structures / A.M. Gorb, O.A. Korotchenkov, O.Ya Olikh, A.O. Podolian // IEEE
+Trans. Nucl. Sci. — 2010. — June. — Vol. 57, no. 3. — Pp. 1632–1639.
+
+123. Литовченко, В.Г. Формування нанорозмiрних фаз при акусто-стимульованому iонно–променевому синтезi / В.Г. Литовченко, В.П. Мельник,
+Б.М. Романюк // УФЖ. — 2015. — Т. 60, № 1. — С. 66–75.
+
+130. Enhanced relaxation of SiGe layers by He implantation supported by in situ ultrasonic treatments / B. Romanjuk, V. Kladko, V. Melnik et al. // Materials Science in Semiconductor Processing. — 2005. — Feb. — Vol. 8, no. 1–3. —
+Pp. 171–175.
+
+134. Improved electroluminescence performance of ZnS:Cu,Cl phosphors by ultrasonic treatment / Wendeng Wang, Fuqiang Huang, Yujuan Xia, Anbao Wang //
+J. Lumin. — 2008. — Feb. — Vol. 128, no. 2. — Pp. 199–204.
+
+135. Ultrasonic–assisted mist chemical vapor deposition of II–oxide and related oxide
+compounds / Shizuo Fujita, Kentaro Kaneko, Takumi Ikenoue et al. // Phys.
+Status Solidi C. — 2014. — Jul. — Vol. 11, no. 7–8. — Pp. 1225–1228.
+

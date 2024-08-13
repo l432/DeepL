@@ -1,0 +1,114 @@
+0000-0003-0633-5429 
+olegolikh@knu.ua
+
+0000-0001-8080-7661
+nevermor464@gmail.com
+
+------------------------------
+
+M.C. 
+Schubert
+Fraunhofer Institute for Solar Energy Systems, Freiburg, Germany
+martin.schubert@ise.fraunhofer.de
+His papers are devoted to iron-related defects in silicon 
+(Sol. Energy Mater. Sol. Cells 138 (2015) 96–101;
+Sol. Energy Mater. Sol. Cells 275 (2024) 112986)
+
+
+
+Ali 
+Hajjiah
+College of Engineering and Petroleum, Electrical Engineering Department,
+Kuwait University,  Safat, Kuwait
+dr.hajjiah@gmail.com
+He investigates the impact of Fe contamination on silicon for solar cells
+and models the current-voltage characteristics.
+(Sol. Energ. Mat. Sol. 211 (2020) 110550;
+Solar Energy Materials and Solar Cells, 2024, 270, 112828)
+
+
+
+Axel 
+Herguth
+Department of Physics,
+University of Konstanz, 78457 Konstanz, Germany
+axel.herguth@uni-konstanz.de
+An experienced researcher in the field of photovoltaics, with a 
+particular focus on methods for characterizing silicon solar cells.
+(IEEE Journal of Photovoltaics, 2022, 12(4), pp. 937-947,
+Energy Procedia, 2013, 36, pp. 722-729)
+
+Lachlan 
+E. Black
+Research School of Engineering
+Australian National University, ACT 2600, Canberra, Australia
+Lachlan.Black@anu.edu.au
+Lead researcher  in the field of crystalline silicon solar cells, 
+with special focus on recombination processes.
+(Solar Energy Materials and Solar Cells, 2022, 234, 111428,
+Solar Energy Materials and Solar Cells, 2022, 235, 111467,
+Energy Procedia, 2013, 38, pp. 66-71)
+
+
+John 
+Murphy
+School of Engineering
+University of Warwick, CV4 7AL Coventry, United Kingdom
+John.D.Murphy@warwick.ac.uk
+Specialist in defects in crystalline silicon 
+(Journal of Applied Physics, 2024, 136, 055707,
+IEEE Journal of Photovoltaics, 2021, 11(1), pp. 26-35,
+Journal of Applied Physics, 2014, 116(5), 053514)
+
+Abdelaziz 
+Ait Abdelkadir
+Polydisciplinary Faculty
+University of Ibn Zohr, 45000 Ouarzazate, Morocco
+abdelazizaitabdelkadir@gmail.com
+Specialist in solar cell simulation in SCAPS (або просто по чисельному моделюванню)
+(Materials Science and Engineering: B, 2023, 296, 116710,
+Energy Technology, 2023, 11(11),  2300384)
+
+Karsten 
+Bothe
+Institute for Solar Energy Research Hamelin (ISFH), 
+Am Ohrberg 1, 31860 Emmerthal, Germany
+k.bothe@isfh.de
+He is a leading expert in the field of the influence of defects on the properties of silicon solar cells
+(Semiconductor Science and Technology, 2019, 34(3), 035030,
+IEEE Journal of Photovoltaics, 2021, 11(4), pp. 890–896, 9435415,
+Solar RRL, 2023, 7(13), 2300240,
+Solar RRL, 2024, 8(3), 2300873)
+
+Ville
+Vahanissi
+Staff Scientist
+Aalto University, Espoo, Finland
+Department of Micro- and Nanosciences
+ville.vahanissi@aalto.fi
+He is skilled in the behavior of iron in silicon solar cells
+(IEEE Journal of Photovoltaics 6 (2016) 1094-1102;
+Progress in Photovoltaics: Research and Applications 21 (2013) 1127)
+
+????????????
+Jiri 
+Toušek
+Department of Macromolecular Physics
+Faculty of Mathematics and Physics
+Charles University Prague, 180 00 Prague, Czech Republic
+jiri.tousek@mff.cuni.cz
+Specialist in measuring solar cell parameters using photovoltage methods
+(Solar Energy Materials and Solar Cells, 2008, 92(9), pp. 1020-1024,
+Solar Energy Materials and Solar Cells, 2005, 88(3), pp. 331-337,
+Journal of Applied Physics, 2014, 116, 083708)
+
+
+?????????
+Deren 
+Yang
+State Key Laboratory of Silicon Materials and School of Materials Science and Engineering 
+Zhejiang University, Hangzhou 310027, China
+mseyang@zju.edu.cn
+Advanced in photovoltaic silicon
+(Journal of Physics D: Applied Physics, 2022, 55, 453002,
+Applied Physics Express, 2021, 14, 115502)
