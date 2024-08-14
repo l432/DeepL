@@ -1,5 +1,6 @@
-Defects are well known to significantly impact semiconductor device properties. 
+Introduction
 
+Defects are well known to significantly impact semiconductor device properties. 
 У зв'язку з цим надзвичайно важливою є iнженерiя дефектiв, яка
 передбачає контрольовану модифiкацiю дефектно–домiшкової пiдсистеми з метою отримання нових властистовостей кристала, структури чи приладу.
 Одним з ефективних інструментів подібного активного є акустичнi коливання ультразвукового діапозону.
@@ -44,14 +45,43 @@ In p-type Si, iron atoms are predominantly bound into Fei+Bs- pairs or are at th
 Передостанній розділ присвячено кількісним оцінкам positron annihilation on FeB complex.
 Finally, we conclude this article in last section.
 
-
+--------------------------------------------
 Особливості FeB Pair Association under Ultrasound Loading
+
+Experiment details
+
+The $n^+$-$p$-$p^+$-Si samples were used in the experiment.
+The structure was fabricated from a 380~$\mu$m thick single-crystal
+$p$-type Cz-Si:B [100] wafer 
+with the resistivity of about 10~$\Omega\cdot$cm.
+The $n^+$ emitter (sheet resistance of $20-30$~$\Omega/\Box$, 
+thickness of $0.7$~$\mu$m) and $p^+$ back surface field layer ($10-20$~$\Omega/\Box$, $0.6$~$\mu$m) were formed by diffusion from the gas phase.
+On the front surface, the antireflective and passivating SiO$_2$ (40~nm) and Si$_3$N$_4$ (30~nm) layers
+were formed.
+The solid and grid Al contacts were formed by magnetron sputtering on the back and front surfaces, respectively.
+The area of the samples used in the experiment was $1.52\times1.535$~cm$^2$.
+
+В роботі проводилося вимірювання characteristic time of the FeB pair association
+$\tau_\mathrm{ass}$ як в умовах ультразвукового навантаження зразків, так і без нього.
+$\tau_\mathrm{ass}$ визначалося шляхом вимірювання кінетики відновлення струму короткого замикання при монохроматичному освітленні після світло-індукованої дисоціації пар FeB - детальніше методика описана десь інде /Olikh2021JAP,Olikh2022:JMatSci/.
+
+In the case of USL, the AWs were applied to the samples in [100] direction by using LiNbO$_3$ piezoelectric transducer.
+Під час УЗН необхідно врахувати наступні параметри експерименту
+1)~exiceted wave types (transverse or longitudinal waves were used in experument);
+2)~acoustic wave frequency $f_\mathrm{US}$ (2-30 MHz);
+3)~ultrasound intensities $W_\mathrm{US}$  (up to 2.0~W/cm$^2$);
+4)~temperature of measurements (300–340~K)
+To avoid the effect of the piezoelectric field, the transducer was shielded.
+More detals about ultrasound exiting can be found in /Olikh2021JAP,Olikh2022:JMatSci/.
+
 
 
 
 /10/
 
-Finally, we conclude this article in Section 3
+Moreover,
+the type of frequency dependence is determined by
+the mechanism of acousto–defect interaction [23–25].
 
 
 грунтується 
@@ -221,6 +251,33 @@ T. M. Brennan // Semicond. Sci. Technol. — 1997. — Jan. — Vol. 12, no. 1.
 1d. Characterisation and Control of Defects in Semiconductors / Ed. by
 F. Tuomisto. — Institution of Engineering & Technology, 2019. —
 Vol. 45 of Materials, Circuits and Devices. — P. 596.
+
+@Article{Olikh2021JAP,
+  author  = {Olikh, O. and Kostylyov, V. and Vlasiuk, V. and Korkishko, R. and Olikh, Ya. and Chupryna, R.},
+  journal = {J. Appl. Phys.},
+  title   = {{Features of FeB pair light-induced dissociation and repair in silicon n+-p-p+ structures under ultrasound loading}},
+  year    = {2021},
+  month   = dec,
+  number  = {23},
+  pages   = {235703},
+  volume  = {130},
+  doi     = {10.1063/5.0073135},
+}
+
+@Article{Olikh2022:JMatSci,
+  author  = {Olikh, Oleg and Kostylyov, Vitaliy and Vlasiuk, Victor and Korkishko, Roman and Chupryna, Roman},
+  journal = {J. Mater. Sci.: Mater. Electron.},
+  title   = {Intensification of iron--boron complex association in silicon solar cells under acoustic wave action},
+  year    = {2022},
+  month   = {Jun},
+  number  = {16},
+  pages   = {13133-13142},
+  volume  = {33},
+  day     = {01},
+  doi     = {10.1007/s10854-022-08252-3},
+}
+
+
 
 [10] C. Möller, T. Bartel, F. Gibaja, K. Lauer, J. Appl. Phys. 2014, 116,
 024503
