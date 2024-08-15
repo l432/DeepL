@@ -1,3 +1,12 @@
+Abstract
+
+В роботі представлено короткий огляд можливостей ультразвуку щодо модифікації та характеризації дефектної системи напівпровідників.
+Наведено результати експериментального дослідження впливу акустичних хвиль різного типу на асоціацію пар FeB у монокристалічному кремнії.
+Зокрема виявлено, що збільшенням частоти повздовжніх хвиль ефективність ультразвукового впливу на темп асоціації зменшується, тоді як у випадку збудження поперечних хвиль спостерігається протилежна тенденція.
+Проведена оцінка можливості отримання позитронно-анігіляційного відгуку від комплексу FeB у кремнії та вказано перевага подібних вимірювань в умовах ультразвукового навантаження кристалу.
+
+
+
 Introduction
 
 Defects are well known to significantly impact semiconductor device properties. 
@@ -31,7 +40,7 @@ Defects are well known to significantly impact semiconductor device properties.
 Метою цієї роботи є обговорення можливих переваг acousto-positron perturbation technique, тобто методу, який передбачає проведення positron annihilation
 spectroscopy (PAS) в умовах ультразвукового навантаження.
 Згадані вище можливі акусто-індуковані зміни стану дефектів незаперечно свідчать про те, що ультразвук здатен modulate звичайний PAS сигнал, причому це стосується як 
-positron lifetime spectroscopy, так і Coincidence Doppler broadening (CDB) spectroscopy
+positron anigilation lifetime spectroscopy (PALS), так і Coincidence Doppler broadening (CDB) spectroscopy
 (both high-momentum component W and low–momentum component S).
 Як наслідок, подібні дослідження будуть більш інформативні та, більше того, можуть розширити можливості методу.
 Наприклад, відомо що PAS найбільш придатна для дослідження vacancy-type and acceptor-like defects /tuomisto2019/. 
@@ -60,7 +69,7 @@ On the front surface, the antireflective and passivating SiO$_2$ (40~nm) and Si$
 were formed.
 The solid and grid Al contacts were formed by magnetron sputtering on the back and front surfaces, respectively.
 The area of the samples used in the experiment was $1.52\times1.535$~cm$^2$.
-Донцентрація домішкового заліза [Fe] в базі сонячних елементтів складала величину (2е11-4е13)см-3.
+Концентрація домішкового заліза [Fe] в базі сонячних елементтів складала величину (2е11-4е13)см-3.
 
 В роботі проводилося вимірювання characteristic time of the FeB pair association
 $\tau_\mathrm{ass}$ як в умовах ультразвукового навантаження зразків, так і без нього.
@@ -136,8 +145,39 @@ Fig. 4b.
 ефективність зменшення енергії міграції іону заліза залежить як від температури, так і від інтенсивності ультразвука.
 В свою чергу, відповідні коефіцієнти також залежать і від частоти акустичних хвиль, причому для температурного коефіцієнта ці залежності близькі і для поперечних, і для повздовжніх коливань, тоді як для коефіцієнта інтенсивності вказані залежності протилежні.
 
+The most likely cause of AI increase in FeB association rate is shown \cite{Olikh2021JAP} to be transmiting energy to  diffused ions from thermal phonon ensemble, which is non-equilibrium due to AW propagation.
+This mechanism was disscussed in Refs.~\cite{Pavlovich,Krevchik}.
+On the one hand, according to Krevchik et al. \cite{Krevchik}, decrease in diffusion activation energy \Delta E_\mathrm{US} ~ Wus T and must to increase with rise in fus value.
+Such expected \Delta E_\mathrm{US} behaviour correlates with experimental results for transverse  waves.
+On the oher hand, impyrity ion diffusivity mush decrease due to AI change in ``polaron'' activation energy \cite{Pavlovich}.
+Можливо, для поперечних хвиль цей ефект відповідає від'ємне значення βus для  longitudial wave.
+Інша можлива причина полягає в необхідності розглядати безпосередні коливання домішкового центру в полі акустичної хвилі.
+В цьому випадку вплив матиме deformation field, яке оточує
+the FeB pair і створюється всією сукупністю атомів, що присутні в Cz-Si.
+
+--------------------------------------------------
+
+Conclusion
+
+The effect of longitudial as well as transverse acoustic wave on 
+the processes of FeB pair association in silicon as been investigated experimentally.
+Показано, що частотна залежність ефективності ультразвукового впливу суттєво залежить від типу хвиль.
+Виявлені особливості свідчать про контрольоване різноманіття впливу ультразвуку дефекти структури.
+Проаналізовано особливості рositron annihilation on FeB complex.
+На прикладі FeB pair показана доцільність проведення positron annihilation
+spectroscopy (PAS) в умовах ультразвукового навантаження.
+Thus, ultrasound can be an effective tool for controlling defect characteristics in semiconductors.
 
 
+
+
+This phenomenon leads to 
+
+This mechanism was disscussed in Refs.~\cite{Pavlovich,Krevchik}.
+In particular, according to Krevchik et al. \cite{Krevchik}, 
+
+
+thermal phonon ensemble transmits energy to diffused ions by collisions
 /Pavlovich,Krevchik/
 
 
