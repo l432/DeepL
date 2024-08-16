@@ -1,13 +1,26 @@
-The impact of FeB pair dissociation on the current-voltage characteristics of silicon solar cells was examined.
-Solar cells were simulated by using SCAPS software across a range of temperatures $(290-340)$~K,
-base thicknesses $(180-380)$~$\mu$m,
-doping levels ($10^{15} - 10^{17}$)~cm$^{-3}$,
-with iron concentrations varying from $10^{10}$ to $10^{14}$~cm$^{-3}$
-under AM1.5 and monochromatic (940~nm) illumination.
-The effects of iron-boron pair dissociation on short-circuit current, open-circuit voltage,
-fill factor, and efficiency were analyzed across all cases.
-The experimental measurements validated the simulation results,
-demonstrating a good agreement for all photovoltaic parameters.
-The ability to use photovoltaic parameter changes induced by iron-related defect restructuring to estimate iron concentration was analyzed.
-It is shown that changes in short-circuit current obtained under monochromatic illumination are the most reliable.
+Transitioning to renewable energy sources is paramount for humanity's sustainable development, and silicon solar cells are at the forefront of solar energy conversion.
+Iron in these structures is a primary one of the most detrimental metallic impurities.
+This study examines the impact of iron defect variability on silicon solar cell performance across various scenarios.
+%integrating simulation and experimental validation.
+We have simulated solar cells using SCAPS software across a range of temperatures $(290-340)$~K,
+base thicknesses $(180-380)$~$\mu$m, doping levels ($10^{15} - 10^{17}$)~cm$^{-3}$,
+with iron concentrations varying from $10^{10}$ to $10^{14}$~cm$^{-3}$ under AM1.5 and monochromatic (940~nm) illumination.
+Analyzed across all cases were the effects of iron-boron pair dissociation on short-circuit current, open-circuit voltage, fill factor, and efficiency.
+The experimental measurements validated the simulation results, demonstrating good agreement for all photovoltaic parameters.
+This study investigates the potential of using photovoltaic parameter changes induced by iron-related defect restructuring to estimate iron concentration.
+It is shown that changes in short-circuit current obtained under monochromatic illumination are the most reliable,
+while the fill factor is the least effective.
 Principal component analysis was used to estimate the number of independent variables when multiple photovoltaic parameters are used simultaneously.
+%The impact of FeB pair dissociation on the current-voltage characteristics of silicon solar cells was examined.
+%Solar cells were simulated by using SCAPS software across a range of temperatures $(290-340)$~K,
+%base thicknesses $(180-380)$~$\mu$m,
+%doping levels ($10^{15} - 10^{17}$)~cm$^{-3}$,
+%with iron concentrations varying from $10^{10}$ to $10^{14}$~cm$^{-3}$
+%under AM1.5 and monochromatic (940~nm) illumination.
+%The effects of iron-boron pair dissociation on short-circuit current, open-circuit voltage,
+%fill factor, and efficiency were analyzed across all cases.
+%The experimental measurements validated the simulation results,
+%demonstrating a good agreement for all photovoltaic parameters.
+%The ability to use photovoltaic parameter changes induced by iron-related defect restructuring to estimate iron concentration was analyzed.
+%It is shown that changes in short-circuit current obtained under monochromatic illumination are the most reliable.
+%Principal component analysis was used to estimate the number of independent variables when multiple photovoltaic parameters are used simultaneously.
