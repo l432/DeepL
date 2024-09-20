@@ -1003,6 +1003,25 @@ When considering changes in all photoelectric parameters due to complete dissoci
 the actual number of independent variables is six for AM1.5 illumination and five for 940 nm lighting.
 
 
+\begin{figure}
+	\centering
+     \includegraphics[width=0.8\linewidth]{Fig12.png}
+	  \caption{Correlation plot of photoelectric and solar cell parameters.
+      Data above and below the main diagonal correspond to AM1.5 and 940 nm (5~W/m$^2$) illumination, respectively.
+}\label{fig12}
+\end{figure}
+
+%photovoltaic energy conversion
+
+%To account for this challenge arising from κ spanning over
+%multiple orders of magnitude, the model performance for κ prediction is often evaluated on a log-scale where log-κ varies in the
+%range  1 to 3. {Srivastava2023}
+
+%Standardize features by removing the mean and scaling to unit variance.
+%StandardScaler, a popular preprocessing technique provided by scikit-learn, offers a simple yet effective method for standardizing feature values
+%StandardScaler operates on the principle of normalization, where it transforms the distribution of each feature to have a mean of zero and a standard deviation of one. This process ensures that all features are on the same scale, preventing any single feature from dominating the learning process due to its larger magnitude.
+%https://www.geeksforgeeks.org/what-is-standardscaler/
+
 \begin{table}[<options>]
 \caption{PSA results for sets of variables that serve to estimate the iron concentration in SSC.
 The numbers represent the ratio of information variance associated with each principal component when using AM1.5 illumination / 940 nm illumination.
