@@ -1,4 +1,4 @@
-\begin{thebibliography}{63}
+\begin{thebibliography}{64}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\bibinfo}[2]{#2}
 \ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
@@ -460,7 +460,7 @@
 \bibinfo{author}{A.~A. Istratov}, \bibinfo{author}{H.~Hieslmair},
   \bibinfo{author}{E.~Weber},
 \newblock \bibinfo{title}{Iron and its complexes in silicon},
-\newblock \bibinfo{journal}{Applied Physics A: Materials Science \& Processing}
+\newblock \bibinfo{journal}{Appl. Phys. A: Mater. Sci. Process.}
   \bibinfo{volume}{69} (\bibinfo{year}{1999}) \bibinfo{pages}{13--44}.
 %Type = Inproceedings
 \bibitem[{{Paudyal} et~al.(2009){Paudyal}, {McIntosh}, and
@@ -533,6 +533,13 @@
   solar cells},
 \newblock \bibinfo{journal}{IEEE J. Photovolt.} \bibinfo{volume}{13}
   (\bibinfo{year}{2023}) \bibinfo{pages}{787--792}.
+%Type = Article
+\bibitem[{Srivastava and Jain(2023)}]{Srivastava2023}
+\bibinfo{author}{Y.~Srivastava}, \bibinfo{author}{A.~Jain},
+\newblock \bibinfo{title}{{End-to-end material thermal conductivity prediction
+  through machine learning}},
+\newblock \bibinfo{journal}{J. Appl. Phys.} \bibinfo{volume}{134}
+  (\bibinfo{year}{2023}) \bibinfo{pages}{225101}.
 %Type = Article
 \bibitem[{Fadhel et~al.(2019)Fadhel, Delpha, Diallo, Bahri, Migan, Trabelsi,
   and Mimouni}]{Fadhel2019}

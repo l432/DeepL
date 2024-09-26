@@ -10,7 +10,11 @@ The experimental measurements validated the simulation results, demonstrating go
 This study investigates the potential of using photovoltaic parameter changes induced by iron-related defect restructuring to estimate iron concentration.
 It is shown that changes in short-circuit current obtained under monochromatic illumination are the most reliable,
 while the fill factor is the least effective.
-Principal component analysis was used to estimate the number of independent variables when multiple photovoltaic parameters are used simultaneously.
+The study examined the correlation between changes in photovoltaic parameters caused by pair dissociation while establishing the expedience of applying principal component analysis in impurity concentration evaluation with the help of multiple parameters.
+
+
+%Principal component analysis was used to estimate the number of independent variables when multiple photovoltaic parameters are used simultaneously.
+
 %The impact of FeB pair dissociation on the current-voltage characteristics of silicon solar cells was examined.
 %Solar cells were simulated by using SCAPS software across a range of temperatures $(290-340)$~K,
 %base thicknesses $(180-380)$~$\mu$m,
