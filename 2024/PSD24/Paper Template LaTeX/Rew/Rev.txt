@@ -1,0 +1,8 @@
+цікава робота, присвячена дослідженню фазового переходу в гомогенній системі Н2О. Її головною особливістю є використання positron annihilation як інструмента дослідження вказаного фізичного явища. 
+Проведено калібрування власних результатів щодо літературних даних.
+Отримані результати грунтуються на припущенні, що melting front thickness значно перевищує a molecular scale і складає декілька міліметрів.
+lifetime measurement  дозволили зробити висновок щодо температури, при якій інтенсивно відбувається фазовий перехід. На мій погляд, робота може бути опублікована.
+
+This intriguing study is dedicated to the investigation of the phase transition in a homogeneous system of H2O. Its main feature is the utilization of positron annihilation as a research tool for the aforementioned physical phenomenon. 
+The authors have performed calibration of their results against literature data. The obtained results are based on the assumption that the melting front thickness significantly exceeds the molecular scale and comprises several millimeters.
+Positron annihilation lifetime measurements enabled the conclusion to be drawn regarding the temperature at which the phase transition occurs intensely. In my opinion, the work is publishable.
