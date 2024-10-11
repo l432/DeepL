@@ -14,17 +14,26 @@ Optical Materials
 olikh
 em2662421O%
 
-
-Computational Condensed Matter   Q3
 Current Applied Physics
-(olikh
-cap2662421)
+olikh
+cap2662421
+
+---------------------------------------------
+Computational Condensed Matter   Q3
+
+Physics Letters A
 
 Materials Science and Engineering: B
 
 Materials Science in Semiconductor Processing
 
+Journal of Physics and Chemistry of Solids ?
+
+Solid State Sciences
+
 Journal of Electronic Materials    Springer
+
+Journal of Physics Communications - Q3, IOP, платне, але для Ukraine
 
 Dr. Hab.
 
