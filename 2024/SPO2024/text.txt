@@ -1,0 +1,8 @@
+Characterization of novel solar energy converters based on meta-heuristic algorithms
+
+Oleg Olikh
+Taras Shevchenko National University of Kyiv
+
+
+The current–voltage (IV) values of solar cells represent the heart
+of their characterization in industry and research. 
