@@ -46,13 +46,13 @@
 \def\textpagefraction{.001}
 
 % Short title
-\shorttitle{Impact of Iron Defect Variability on Silicon Solar Cell Performance}
+\shorttitle{Iron's impact on silicon solar cell execution}
 
 % Short author
 \shortauthors{O.Olikh, O.Zavhorodnii}
 
 % Main title of the paper
-\title [mode = title]{Modeling the Impact of Iron Defect Variability on Silicon Solar Cell Performance Across Different Scenarios}
+\title [mode = title]{Iron's impact on silicon solar cell execution: comprehensive modeling across diverse scenarios}
 
 % Title footnote mark
 % eg: \tnotemark[1]
@@ -649,12 +649,12 @@ To achieve quantitative agreement, a correction factor of $C_\mathrm{cor} = 1.4$
 the experimentally obtained value $\varepsilon I_\mathrm{SC,exp}$ should be replaced by $\varepsilon I_\mathrm{SC,exp} / C_\mathrm{cor}$ --- as illustrated in Fig.~\ref{fig5}.
 This methodology is frequently cited in the literature \cite{IronSC} and is associated with correcting specific systematic errors in simulations.
 
-As mentioned above, one of the primary objectives of this study is to assess the feasibility of utilizing 
-changes in photoelectric parameters resulting from the dissociation of FeB pairs to estimate iron concentration. 
-One of the most promising approaches in this regard is the application of machine learning algorithms. 
-In this context, $\varepsilon I_\mathrm{SC}$ is expected to serve as one of the features. 
-It is worth noting that a popular preprocessing technique involves standardizing feature values, 
-where the distribution of each feature is transformed to have a mean of zero and a standard deviation of one. 
+As mentioned above, one of the primary objectives of this study is to assess the feasibility of utilizing
+changes in photoelectric parameters resulting from the dissociation of FeB pairs to estimate iron concentration.
+One of the most promising approaches in this regard is the application of machine learning algorithms.
+In this context, $\varepsilon I_\mathrm{SC}$ is expected to serve as one of the features.
+It is worth noting that a popular preprocessing technique involves standardizing feature values,
+where the distribution of each feature is transformed to have a mean of zero and a standard deviation of one.
 This approach ensures that multiplying the entire array of $\varepsilon I_\mathrm{SC}$ values by a constant does not affect the resulting normalized values.
 
 In our case, simulation errors may arise because certain factors present in actual SSCs were not accounted for in the calculations, specifically:
@@ -672,7 +672,7 @@ In our case, simulation errors may arise because certain factors present in actu
 - the presence of defects unrelated to iron.
 
 
-Overall, the results indicate that relative changes in short-circuit current following the complete dissociation of FeB pairs 
+Overall, the results indicate that relative changes in short-circuit current following the complete dissociation of FeB pairs
 can be used to estimate iron concentration:
 $\varepsilon I_\mathrm{SC}$ depends monotonically on $N_\mathrm{Fe}$, and its values can be pretty significant.
 In this context, determining the amount of impurity atoms is more appropriately conducted
@@ -993,30 +993,30 @@ The data align closely, indicating that the inaccuracies typical for $V_\mathrm{
 }\label{fig11}
 \end{figure}
 
-The revealed characteristics of $\varepsilon \eta$ indicate that this photoelectric parameter 
+The revealed characteristics of $\varepsilon \eta$ indicate that this photoelectric parameter
 is entirely suitable for estimating iron concentration.
 
 
 \subsection{Photoelectric parameters correlation}
 
 
-The previous subsections demonstrated that by using the relative changes in photovoltaic energy conversion parameters following the dissociation of FeB pairs 
-(e.g., changes in short-circuit current), 
-along with considering solar cell parameters (such as base depth and doping level) 
+The previous subsections demonstrated that by using the relative changes in photovoltaic energy conversion parameters following the dissociation of FeB pairs
+(e.g., changes in short-circuit current),
+along with considering solar cell parameters (such as base depth and doping level)
 and measurement conditions (such as temperature and illumination type), it is possible to predict iron concentration.
 One approach to evaluating the value of $N_\mathrm{Fe}$ is to apply a machine learning algorithm (random forest, gradient booster, or artificial neural network etc.).
-If we assume that training process is conducted separately for each illumination variant, the input set of descriptors could be 
+If we assume that training process is conducted separately for each illumination variant, the input set of descriptors could be
 ($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$).
 Obviously, the $\varepsilon \eta$ value can be used simultaneously with $\varepsilon I_\mathrm{SC}$ for a more accurate determination of iron concentration.
 Indeed, expanding the set of descriptors allows the incorporation of additional information, thereby improving prediction precision.
-However, when comparing Fig.~\ref{fig3} and Fig.~\ref{fig10}, it is clear that  $\varepsilon I_\mathrm{SC}$ and $\varepsilon \eta$ are not entirely independent. 
-Therefore, with an input parameter set ($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$, $\varepsilon \eta$), 
+However, when comparing Fig.~\ref{fig3} and Fig.~\ref{fig10}, it is clear that  $\varepsilon I_\mathrm{SC}$ and $\varepsilon \eta$ are not entirely independent.
+Therefore, with an input parameter set ($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$, $\varepsilon \eta$),
 we may be processing redundant data that offer no new or additional information regarding iron concentration.
 
 Analyzing their correlations can help evaluate the independence of the parameters.
 Fig.~\ref{fig12} presents the Pearson correlation coefficients calculated for all parameter sets.
-Additionally, it shows the correlation between iron concentration and each input parameter. 
-It's worth noting that the $N_\mathrm{Fe}$ and $N_\mathrm{B}$ values in the logarithmic scale were used in calculations. 
+Additionally, it shows the correlation between iron concentration and each input parameter.
+It's worth noting that the $N_\mathrm{Fe}$ and $N_\mathrm{B}$ values in the logarithmic scale were used in calculations.
 It is a common approach for quantities that span several orders of magnitude \cite{Srivastava2023}.
 
 \begin{figure}
@@ -1027,14 +1027,14 @@ It is a common approach for quantities that span several orders of magnitude \ci
 }\label{fig12}
 \end{figure}
 
-Firstly, it is noteworthy that, as indicated by the obtained data, 
-the value of $N_\mathrm{Fe}$ exhibits a weak correlation with each descriptor. 
+Firstly, it is noteworthy that, as indicated by the obtained data,
+the value of $N_\mathrm{Fe}$ exhibits a weak correlation with each descriptor.
 Consequently, using any parameter in isolation from others is not feasible for precise iron concentration estimation.
-Regarding the descriptors associated with photovoltaic energy conversion, 
+Regarding the descriptors associated with photovoltaic energy conversion,
 all of these parameters correlate strongly with the base doping level, except for open-circuit voltage under AM1.5 illumination.
 In addition, these parameters are substantially correlated with each
 other, which is particularly noticeable when using monochromatic illumination.
-Thus,  augmenting the descriptor set by incorporating relative changes in additional 
+Thus,  augmenting the descriptor set by incorporating relative changes in additional
 photoelectric parameters introduces substantial redundancy in the input data.
 
 
@@ -1135,7 +1135,8 @@ heat transport properties’’)
 \section*{Supplementary data}\label{SuplData}
 Supplementary data to this article can be found online at
 %\url{http://surl.li/szpkwz}
-\url{http://surl.li/jooktq}
+\url{http://surl.li/qneich}
+%https://www.mediafire.com/file/y2zpqsb33skllnm/SupplementaryMaterial.pdf/file
 
 \section*{Data availability}
 Data will be made available on request.
