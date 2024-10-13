@@ -5,6 +5,7 @@ olegolikh@knu.ua
 nevermor464@gmail.com
 
 https://www.mediafire.com/
+https://www.elsevier.com/researcher/author/tools-and-resources/graphical-abstract
 
 Optics Communications
 olikh
@@ -27,12 +28,20 @@ pla2662421O%
 Computational Condensed Matter   Q3
 
 Materials Science and Engineering: B
+olikh - user name  
+e2662421O%
+
 
 Materials Science in Semiconductor Processing
 
 Journal of Physics and Chemistry of Solids ?
 
 Solid State Sciences
+olikh
+sss2662421O%
+потрібен графічний абстракт
+
+
 
 Journal of Electronic Materials    Springer
 
@@ -71,12 +80,17 @@ Statement of Novelty
 
 The impact of FeB pair dissociation on the photovoltaic parameters of silicon solar cells was examined.
 Unlike previous similar calculations, 
-1)~the paper presents the results of
+1)~the paper presents the results of 
 simulation of solar cell with varying base thickness and doping levels
 under various external conditions (temperature, intensity, and spectral composition of illumination);
 2)~in addition to analyzing the ability to use photovoltaic parameter changes induced by iron-related defect 
 restructuring to evaluate iron concentration, 
 principal component analysis was used to estimate the number of independent variables in the multiple photovoltaic parameter set.
+
+137 characters	
+
+The impact of FeB dissociation on Si solar cells was studied under highly varying conditions, using PCA to estimate independent variables
+
 ------------------------------
 
 Martin Christian
