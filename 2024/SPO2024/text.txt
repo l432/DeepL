@@ -6,3 +6,6 @@ Taras Shevchenko National University of Kyiv
 
 The current–voltage (IV) values of solar cells represent the heart
 of their characterization in industry and research. 
+
+
+The work was supported by NRFU (project 2023.03/0252)
