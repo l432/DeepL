@@ -3,9 +3,7 @@ Characterization of novel solar energy converters based on meta-heuristic algori
 Oleg Olikh
 Taras Shevchenko National University of Kyiv
 
+The development of photovoltaic technology addresses the challenges posed by the energy crisis. A current priority in this field is to reduce the cost of solar cell (SC) production while achieving properties not typically found in crystalline silicon photovoltaic converters. Consequently, significant attention has shifted toward thin-film, organic, perovskite, and quantum dot solar cells. However, an additional challenge is developing effective methods for characterizing these structures. The SC current-voltage (IV) values are central to their characterization in industry and research. Parameter determination typically involves approximating IV curves using specific models, with metaheuristic algorithms widely employed. Unfortunately, conventional models often cannot be applied to the IV characteristics of the structures above. These challenges necessitate using new models, such as the opposed two-diode model. Furthermore, according to the No Free Lunch theorem, the search for new algorithms capable of effectively solving these novel optimization tasks is crucial. This work compares the effectiveness of 14 metaheuristic algorithms from various classes (evolution-based, swarm intelligence based, bio-based, chemical & physical-based, human-society-based, and math-based) for approximating S-shaped IV curves according to the opposed two-diode model. The comparison employed non-parametric statistical methods, specifically the Friedman, Friedman Aligned, and Quade tests. The results demonstrated that the STLBO (Simplified Teaching-Learning Based Optimization) and ADELI (Adaptive Differential Evolution with Lagrange Interpolation Argument) algorithms showed highly competitive performance in accuracy and reliability.
+The work was supported by NRFU (project 2023.03/0252).
 
-The current–voltage (IV) values of solar cells represent the heart
-of their characterization in industry and research. 
 
-
-The work was supported by NRFU (project 2023.03/0252)
