@@ -1,0 +1,12 @@
+https://www.youtube.com/watch?v=nyzCCHdyuMY
+
+
+Step 2- press ctrl + f and type 'COM Compatibility' and press enter.
+
+Step 3- Now search for {8856F961-340A-11D0-A96B-00C04FD705A2} in  'COM Compatibility'
+
+Step 4- Once you find {8856F961-340A-11D0-A96B-00C04FD705A2},click on it and change the 
+        compatibility flags value to '0' and exit Regedit.
+        
+
+
