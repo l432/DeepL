@@ -1,66 +1,36 @@
 Farida.Selim@asu.edu
 
+support request
 
 Dear Dr. Farida Selim,
 Chair of IWSO 2025,
 
-My name is Oleg Olikh. I am the head of the General Physics Department at Taras Shevchenko National University of Kyiv, Ukraine.
+My name is Oleh Olikh. I am the head of the General Physics Department at Taras Shevchenko National University of Kyiv, Ukraine.
 I am the presenting author of the abstract "Ultrasound Action on Radiation Defects at the Silicon Dioxide/Silicon Interface of MOS Structure," submitted for participation in the 11th International Workshop on Semiconductor Oxides (IWSO-2025).
 Thank you for the Letter of Invitation. I hope this confirms that my presentation has been accepted into the conference program.
 
 
+With over 25 years of experience in semiconductor defect research (Scopus Author ID: 6506623724), my primary areas of interest include defect engineering — particularly by ultrasound — and methods for defect characterization, incorporating machine learning techniques recently. 
 
+Participating in conferences like IWSO 2025 is vital for me to stay abreast of our field's latest developments and share my findings with the international community. Traditionally, my research has been supported by state grants.
 
+However, due to the devastation of the war, Ukraine is now unable to fund scientific research that does not pertain directly to military needs. Consequently, I find myself in the position of needing to request financial assistance. I am completely aware that requests of this nature have been frequent in the past 2.5 years and may be burdensome. I also profoundly appreciate the immense support the USA has extended to Ukraine during these challenging times.
 
+Therefore, I kindly appeal to the Organizing Committee of IWSO-11 for a grant to cover the conference fee, travel expenses for my Kyiv (Ukraine) - Tempe (USA) -  Kyiv (Ukraine) journey, and accommodation during participation in the Conference. 
 
-
-Я займаюсь вивченням дефектів в напівпровідниках більше 25 років (https://www.scopus.com/authid/detail.uri?authorId=6506623724). Основними напрямами досліджень є інженерія дефектів (зокрема з використанням ультразвуку) та методи характеризації дефектів (від недавнього часу і з використанням методів машинного навчання також). 
-
-
-Загалом, надіслані на GADEST 20/24 доповіді віддзеркалюють коло наукових інтересів. Як і для інших науковців можливості дізнаватися про останні досягнення в галузі з перших рук, а також представляти свої результати широкому загалу є надзвичайно важливими. До недавнього часу ми у своїй роботі спиралися на державні гранти.
-
-Проте після початку жахливої війни все кардинально змінилося. На превеликий жаль Україна на сьогодні не здатні фінансувати наукові дослідження, не пов'язані безпосередньо з воєнною тематикою. У зв'язку з цим я вимушений просити про допомогу. Я чудово розумію, що за останні 2 роки подібні прохання звучать занадто часто і, напевно, вже викликають певне роздратування. Я також знаю, що Німеччина є тією країною, чия допомога нам є однією з найбільших. І я надзвичайно вдячний за цю допомогу, важливість якої важко переоцінити. Проте все ж таки звертаюсь з проханням до Організаційного комітету надати мені грант, який би включав conference fee та дорожні витрати з України до Німеччини та назад. 
-
-Незважаючи на всі обставини, я продовжую працювати в Україні. Проте сподіваюсь, що ваша допомога дозволить мені взяти участь у такій важливій події як GADEST і відчути вільний доступ до наукового світу.
-
-З найкращими побажаннями та надією на позитивне рішення,
-Оліх Олег,
-Professor at the general physics department, 
-Taras Shevchenko National University of Kyiv, Kyiv (Ukraine)
-
-
-gadest2024@tu-freiberg.de
-
-Dear Prof. Dr. Johannes Heitmann, 
-
-My name is Oleg Oleh, and I am a professor in the Faculty of Physics at Taras Shevchenko National University of Kyiv, Ukraine. I am the presenting author for three abstracts at the upcoming 20th Conference on Gettering and Defect Engineering in Semiconductor Technology:
-ID 107576: The Peculiarities of the Ultrasound Influence on the FeB Pair Association in Silicon Structures
-ID 105868: Influence of Illumination Spectrum on Dissociation Kinetic of Iron-Boron Pairs in Silicon
-ID 105808: Defect Content Characterization in Solar Cells with the Assistance of Machine Learning
-
-With over 25 years of experience in semiconductor defect research (Scopus Author ID: 6506623724), my primary areas of interest include defect engineering — particularly by ultrasound—and methods for defect characterization, incorporating machine learning techniques recently. The abstracts, which are submitted for GADEST 20/24, are reflective of my research interests and scientific pursuits.
-
-Participating in conferences like GADEST is vital for me to stay abreast of our field's latest developments and share my findings with the international community. Traditionally, my research has been supported by state grants.
-
-However, due to the devastating onset of the war, Ukraine is now unable to fund scientific research that does not pertain directly to military needs. Consequently, I find myself in the position of needing to request financial assistance. I am completely aware that requests of this nature have been frequent in recent years and may be burdensome. I also acknowledge and deeply appreciate the significant support Germany has extended to Ukraine during these challenging times.
-
-Therefore, I kindly appeal to the Organizing Committee for a grant to cover the conference fee and travel expenses for my Ukraine - Germany - Ukraine journey.
-
-Despite the difficulties, I continue my research activity in Ukraine. And I am hopeful that your support will enable my participation in the significant event that GADEST 20/24 is, and afford me the opportunity to fully engage with the global scientific community.
+Despite the challenges, I continue my research activities in Ukraine. I sincerely hope your support will facilitate my participation in the significant event that IWSO-11 is, allowing me to fully engage with the global scientific community and present the potential of ultrasound as an active tool for defect engineering in semiconductors.
 
 
 Thank you for considering my request. I look forward to your positive response.
 
-Best regards,
 
-Prof. Dr. Oleg Olikh, 
+Prof. Oleh Olikh, 
 Department of General Physics, 
 Physics Faculty,
 Taras Shevchenko National University of Kyiv, 
 Ukraine
 olegolikh@knu.ua
 tel.+380673169020
-
 
 
 
