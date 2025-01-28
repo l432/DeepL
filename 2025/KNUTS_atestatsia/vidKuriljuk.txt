@@ -7,5 +7,9 @@
 
     Lishchuk, P., Chepela, L., Kuryliuk, V., ... Lacroix, D., Isaiev, M. Investigation of Thermal Transport Properties of Multilayer Porous Silicon Based Hybrid Nanostructures by Photoacoustic Technique. Proceedings of the 2022 IEEE 12th International Conference "Nanomaterials: Applications and Properties", NAP 2022, 2022. 10.1109/NAP55339.2022.9934682
     Chepela, L., Lishchuk, P., Shevchenko, V., ... Matushko, I., Borovyi, M. Fabrication and Photoacoustic Characterization of Multilayered Structures Based on Porous Silicon. Proceedings - IEEE International Conference on Electronics and Nanotechnology, ELNANO, 2022, pp. 178–181. 10.1109/ELNANO54667.2022.9927023
+    
     Gorelov, B.M., Gorb, A.M., Czapla, Z., ... Polovina, O.I., Sigareva, N.V. Epoxy Molecular Structure Alteration in Graphene-Epoxy Nanocomposites: Loading Effects. Springer Proceedings in Physics, 2021, 246, pp. 459–483. 10.1007/978-3-030-51905-6_33
-    Tsaregradskaya, T.L., Kuryliuk, A.M., Saenko, G.V., ... Kuryliuk, V.V., Okonchuk, M.V. Effect of Thermomechanical and Ultrasonic Treatment on the Properties of Amorphous Alloys. Springer Proceedings in Physics, 2020, 240, pp. 219–225. 10.1007/978-981-15-1742-6_20
+    вніс
+    
+    Tsaregradskaya, T.L., Kuryliuk, A.M., Saenko, G.V., ... Kuryliuk, V.V., Okonchuk, M.V. Effect of Thermomechanical and Ultrasonic Treatment on the Properties of Amorphous Alloys. Springer Proceedings in Physics, 2020, 240, pp. 219–225. https://doi.org/10.1007/978-981-15-1742-6_20
+    вніс
