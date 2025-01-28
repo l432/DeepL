@@ -1,0 +1,214 @@
+Металофізика
+
+Plyushchay I. V., Gorkavenko T. V., Tsaregradskaya T. L., Plyushchay A. I., Kalenyk O. O. Ab initio Modelling of Electronic Structure Features of TiC-TiB2 Composite. - Metallophysics and Advanced Technologies. - 2021. - Volume 43. - Issue 9. - P.1257-1268 (in Ukrainian). https://doi.org/10.15407/mfint.43.09.1257 
+не включав
+
+Фізика для студентів-іноземців: навч. посіб. / Каленик О.О., Плющай І.В., Цареградська Т.Л. - К: ВПЦ "Київський університет", 2021. - 295 с. Рекомендовано до друку вченою радою фізичного факультету (протокол № 13 від 19 квітня 2021 року). Ухвалено науково-методичною радою Київського національного університету імені Тараса Шевченка (протокол № 5-21 від 26 травня 2021 року) 17 др.арк.
+
+
+Kalenyk O. O., Plyushchay I.V., Tsaregradska T. L.,  Lishchuk P.O. Physics. Part II: Electricity & Magnetism, Optics, Atomic & Nuclear
+Physics. Textbook for foreign students of the preparatory departments,  K.: Publishing and Polygraphic Centre "The University of
+Kyiv", 2022. 113 p.l
+7.12 д.а.
+
+
+ Effect of Ultrasonic Cavitation Treatment on Micromechanical Properties of Amorphous Alloys
+T. L. Tsaregradskaya$^{1}$, I. V. Plyushchay$^{1}$, V. V. Kozachenko$^{1}$, A. M. Kuryliuk$^{1}$, S. G. Rozouvan$^{1}$, A. I. Plyushchay$^{2}$
+$^{1}$Taras Shevchenko National University of Kyiv, 60 Volodymyrska Str., UA-01033 Kyiv, Ukraine
+$^{2}$G. V. Kurdyumov Institute for Metal Physics, NAS of Ukraine, 36 Academician Vernadsky Blvd., UA-03142 Kyiv, Ukraine
+https://doi.org/10.15407/mfint.43.03.0329
+вніс
+
+
+Molecular Crystals and Liquid Crystals 
+Effect of constant magnetic field on the properties of transition metals based amorphous alloys
+T. L. Tsaregradskaya
+, I. V. Ovsiienko
+, V. V. Kozachenko
+, A. M. Kurilyik
+, G. V. Saenko
+, O.O. Kalenyk
+& O. V. Turkov
+https://doi.org/10.1080/15421406.2022.2091269
+не наше
+
+
+Molecular Crystals and Liquid Crystals 
+Effect of Ar+ treatment on thermal stability and micromechanical properties of Fe75Mo5Si6B14 amorphous alloy
+T. L. Tsaregradskaya
+ORCID Icon, V. V. Kozachenko
+, I. V. Ovsiienko
+, G. V. Saenko
+, A. M. Kuryliuk
+, O. V. Turkov
+& B. O. Maidanyk
+https://doi.org/10.1080/15421406.2023.2241795
+вніс
+
+
+Journal of Physical Studies 28(2), Article 2604 [5 pages] (2024)
+ NANOCRYSTALLIZATION OF AMORPHOUS ALLOYS UNDER THE ACTION OF IRRADIATION WITH ARGON IONS
+T. L. Tsaregradskaya , I. V. Ovsiienko , V. V. Kozachenko , A. M. Kuryliuk , G. V. Saenko , O. V. Turkov 
+https://doi.org/10.30970/jps.28.2604
+вніс
+
+---------------------------------------
+
+Експериментальна фізика
+
+
+
+Optical Materials Volume 132, October 2022, 112884
+Angle and polarization dependent coupling of surface plasmon and gap modes in plasmonic gap metasurfaces
+Author links open overlay panelOleg A. Yeshchenko a
+, Anastasiya V. Tomchuk a, Viktor V. Kozachenko a, Randal J. Knize b, Michael Haftel c, Anatoliy O. Pinchuk c d
+https://doi.org/10.1016/j.optmat.2022.112884
+не наше
+
+---------------------------------------------------------------------
+хіміки-біологи
+жовті- можні і віддати
+
+Journal of Molecular Structure
+Volume 1222, 15 December 2020, 128932
+https://doi.org/10.1016/j.molstruc.2020.128932
+біофак
+
+
+Sukhodub, L.B., Sukhodub, L.F., Kumeda, M.O. et al. Single-walled carbon nanotubes loaded hydroxyapatite–alginate beads with enhanced mechanical properties and sustained drug release ability . Prog Biomater 9, 1–14 (2020). https://doi.org/10.1007/s40204-020-00127-2
+
+
+
+https://doi.org/10.15407/mfint.42.08.1055
+Біофак?
+
+
+Strutynska, N., Malyshenko, A., Tverdokhleb, N. et al. Design, characterization and mechanical properties of new Na+, CO32?-apatite/alginate/C60 fullerene hybrid biocomposites. J. Korean Ceram. Soc. 58, 422–429 (2021). https://doi.org/10.1007/s43207-020-00107-z
+хіміки, біологи
+
+Molecular Crystals and Liquid Crystals Volume 768, 2024 - Issue 18 
+https://doi.org/10.1080/15421406.2024.2379662
+хіміки
+
+-----------------------------------
+радіофізики хіміки
+зелені - не віддавати
+
+Олійник В.В. завідувач лабораторії квантової радіофізики
+Загородній В.В. доцент Кафедра квантової радіофізики - а може вже й ІВТ
+
+монографії
+
+- Яковенко О.С., Мацуй Л.Ю., Вовченко Л.Л., Олійник В.В., Загородній В.В. (2023) Полімерні композити з багатокомпонентним наповнювачем. Видання: ТОВ «ТВОРИ».  240с.  
+
+- Ludmila Vovchenko, Oleg Lozitsky, Ludmila Matzui, Volodymyr Zagorodnii, Viktor Oliynyk, Tetyana Len. 2022. Dielectric and microwave absorbing properties of epoxy composites with combined fillers nanocarbon/inorganic particles. In Advances in Nanotechnology, edited by Bartul Z. and Trenor J., Vol. 28, 1-84. New York: Nova Science Publishers, Inc. ISBN: 979-8-88697-440-9
+https://novapublishers.com/shop/advances-in-nanotechnology-volume-28/
+
+
+- Vovchenko, L.L., Zagorodnii, V.V., Matzui, L.Y., Len, T.A., Oliynyk, V.V. (2024). Multicomponent Composite Layers as Elements for Effective Multilayered Microwave Shields and Absorbers. In: Fesenko, O., Yatsenko, L. (eds) Nanooptics and Nanoelectronics, Nanobiotechnology, and Their Applications. NANO 2023. Springer Proceedings in Physics, vol 312. Springer, Cham. 
+https://doi.org/10.1007/978-3-031-67527-0_28
+
+
+статті
+
+https://doi.org/10.1016/j.compscitech.2020.108420
+Composites Science and Technology
+Volume 200, 10 November 2020, 108420
+РФФ
+
+https://doi.org/10.1007/s00339-020-03831-9
+Vovchenko, L.L., Lozitsky, O.V., Matzui, L.Y. et al. Impedance characterization and microwave permittivity of multi-walled carbon nanotubes/BaTiO3/epoxy composites. Appl. Phys. A 126, 801 (2020).
+РФФ, ІВТ, біофак
+
+
+Lozitsky, O.V., Vovchenko, L.L., Matzui, L.Y. et al. Microwave properties of epoxy composites with mixed filler carbon nanotubes/BaTiO3. Appl Nanosci 10, 2759–2767 (2020). 
+https://doi.org/10.1007/s13204-020-01402-1
+РФФ
+
+Vovchenko, L.L., Lozitsky, O.V., Oliynyk, V.V. et al. Dielectric and microwave shielding properties of three-phase composites graphite nanoplatelets/carbonyl iron/epoxy resin. Appl Nanosci 10, 4781–4790 (2020). https://doi.org/10.1007/s13204-020-01326-w
+РФФ, ІВТ
+
+Materials Chemistry and Physics
+Volume 240, 15 January 2020, 122234
+https://doi.org/10.1016/j.matchemphys.2019.122234
+РФФ
+
+
+Materials
+Volume 13
+Issue 5
+https://doi.org/10.3390/ma13051118
+РФФ, ІВТ
+
+
+Molecular Crystals and Liquid Crystals
+https://doi.org/10.1080/15421406.2020.1732548
+РФФ
+
+
+Lozitsky, O.V., Vovchenko, L.L., Matzui, L.Y. et al. Electrical properties of epoxy composites with carbon nanotubes, mixed with TiO2 or Fe particles. Appl Nanosci 11, 1827–1837 (2021). https://doi.org/10.1007/s13204-021-01838-z
+ІВТ
+
+
+Molecular Crystals and Liquid Crystals
+https://doi.org/10.1080/15421406.2020.1860537
+ІВТ
+
+
+Physica E: Low-dimensional Systems and Nanostructures
+Volume 144, October 2022, 115463
+https://doi.org/10.1016/j.physe.2022.115463
+РФФ
+
+
+J. Appl. Phys. 131, 035103 (2022)
+https://doi.org/10.1063/5.0070633
+РФФ, експеримент фізики
+
+
+J. Appl. Phys. 131, 055110 (2022)
+https://doi.org/10.1063/5.0071157
+хіміки, РФФ
+
+
+Vovchenko, L.L., Lozitsky, O.V., Matzui, L.Y. et al. Microwave shielding and absorbing properties of single- and multilayered structures based on two-phase filler/epoxy composites. Appl Nanosci 12, 1037–1049 (2022). https://doi.org/10.1007/s13204-021-01765-z
+РФФ
+
+
+Materials Science and Engineering: B
+Volume 283, September 2022, 115776
+https://doi.org/10.1016/j.mseb.2022.115776
+хіміки, РФФ
+
+Vovchenko, L.L., Lozitsky, O.V., Matzui, L.Y. et al. Optimization of multilayered electromagnetic shielding using mesh adaptive direct search. Appl Nanosci 13, 6761–6775 (2023). https://doi.org/10.1007/s13204-023-02777-7
+ІВТ
+
+
+Vovchenko, L.L., Len, T.A., Matzui, L.Y. et al. Electrical and Shielding Properties of Epoxy Composites with Combined Fillers (SiO2-Fe2O3)/CNT and (SiO2-Fe3O4)/CNT. Appl Compos Mater 30, 635–651 (2023). https://doi.org/10.1007/s10443-023-10107-x
+хіміки, РФФ
+
+
+
+J. Appl. Phys. 136, 185101 (2024)
+https://doi.org/10.1063/5.0230402
+РФФ
+
+Ceramics International
+Volume 50, Issue 24, Part A, 15 December 2024, Pages 52480-52489
+https://doi.org/10.1016/j.ceramint.2024.10.099
+РФФ
+
+
+ Materials
+Volume 17
+Issue 12
+https://doi.org/10.3390/ma17122808
+РФФ, експеримент фізики, хіміки
+не наше?
+
+Nanocarbon/Co3O4/Epoxy Composites for Microwave Shielding and Absorption
+Ludmila Vovchenko, Ludmila Matzui, Volodymyr Zagorodnii, Victor Oliynyk, Mykola Borovoy
+https://doi.org/10.1002/adem.202400224
+РФФ(ІВТ)
+
+
