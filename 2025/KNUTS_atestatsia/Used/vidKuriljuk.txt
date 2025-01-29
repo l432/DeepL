@@ -1,13 +1,30 @@
     Shmid, V., Podolian, A., Nadtochiy, A., Semen'ko, M., Korotchenkov, O. Photovoltaic Performance of Si and SiGe Surfaces Sonochemically Acti-vated in Dichloromethane. Current Materials Science, 2023, 16(1), pp. 52–61. 10.2174/2666145415666220511200551
-    Shpylka, D., Ovsiienko, I., Len, T., Matzui, L., Semen’ko, M. Transport properties of carbon nanotubes with different degrees of structural perfection. Molecular Crystals and Liquid Crystals, 2020, 701(1), pp. 1–15. 10.1080/15421406.2020.1732558
-    Shmid, V., Podolian, A., Nadtochiy, A., ... Semen'ko, M., Korotchenkov, O. Photovoltaic characterization of Si and SiGe surfaces sonochemically treated in dichloromethane. Journal of Nano- and Electronic Physics, 2020, (1), 01023. 10.21272/jnep.12(1).01023
-    Lishchuk, P., Melnyk, O., Shevchenko, V., Borovyi, M., Kuryliuk, V. The Effect of Gamma Irradiation on the Thermal Properties of Porous Silicon by Photoacoustic Technique. Journal of Nano- and Electronic Physics, 2023, 15(6), 06006. 10.21272/jnep.15(6).0600
-    Veleschuk, V.P., Gnatyuk, V.A., Aoki, T., ... Kuryliuk, V.V., Isaiev, M.V. Melting Threshold and Thermal Conductivity of CdTe Under Pulsed Laser Irradiation. Lecture Notes in Networks and Systems, 2020, 101, pp. 101–109. 10.1007/978-3-030-36841-8_10 
+вніс
 
+
+    Shpylka, D., Ovsiienko, I., Len, T., Matzui, L., Semen’ko, M. Transport properties of carbon nanotubes with different degrees of structural perfection. Molecular Crystals and Liquid Crystals, 2020, 701(1), pp. 1–15. 10.1080/15421406.2020.1732558
+вніс
+
+    Shmid, V., Podolian, A., Nadtochiy, A., ... Semen'ko, M., Korotchenkov, O. Photovoltaic characterization of Si and SiGe surfaces sonochemically treated in dichloromethane. Journal of Nano- and Electronic Physics, 2020, (1), 01023. 10.21272/jnep.12(1).01023
+вніс
+
+---------------------------------------------
+
+    Lishchuk, P., Melnyk, O., Shevchenko, V., Borovyi, M., Kuryliuk, V. The Effect of Gamma Irradiation on the Thermal Properties of Porous Silicon by Photoacoustic Technique. Journal of Nano- and Electronic Physics, 2023, 15(6), 06006. 10.21272/jnep.15(6).0600
+вніс
+
+
+    Veleschuk, V.P., Gnatyuk, V.A., Aoki, T., ... Kuryliuk, V.V., Isaiev, M.V. Melting Threshold and Thermal Conductivity of CdTe Under Pulsed Laser Irradiation. Lecture Notes in Networks and Systems, 2020, 101, pp. 101–109. 10.1007/978-3-030-36841-8_10 
+вніс
 
     Lishchuk, P., Chepela, L., Kuryliuk, V., ... Lacroix, D., Isaiev, M. Investigation of Thermal Transport Properties of Multilayer Porous Silicon Based Hybrid Nanostructures by Photoacoustic Technique. Proceedings of the 2022 IEEE 12th International Conference "Nanomaterials: Applications and Properties", NAP 2022, 2022. 10.1109/NAP55339.2022.9934682
+вніс
+
+
     Chepela, L., Lishchuk, P., Shevchenko, V., ... Matushko, I., Borovyi, M. Fabrication and Photoacoustic Characterization of Multilayered Structures Based on Porous Silicon. Proceedings - IEEE International Conference on Electronics and Nanotechnology, ELNANO, 2022, pp. 178–181. 10.1109/ELNANO54667.2022.9927023
+вніс
     
+----------------------------------------------------------------
     Gorelov, B.M., Gorb, A.M., Czapla, Z., ... Polovina, O.I., Sigareva, N.V. Epoxy Molecular Structure Alteration in Graphene-Epoxy Nanocomposites: Loading Effects. Springer Proceedings in Physics, 2021, 246, pp. 459–483. 10.1007/978-3-030-51905-6_33
     вніс
     

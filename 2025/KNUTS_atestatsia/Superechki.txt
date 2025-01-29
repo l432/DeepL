@@ -52,6 +52,31 @@ T. L. Tsaregradskaya , I. V. Ovsiienko , V. V. Kozachenko , A. M. Kuryliuk , G. 
 https://doi.org/10.30970/jps.28.2604
 вн≥с
 
+
+
+Ќќ¬≈
+
+The explosive crystallization process in binary amorphous alloys Ni-Zr system
+Tetiana Tsaregradskaya; Irina Ovsiienko; Galina Saenko; Inna Plyushchay; Olexander Kalenyk
+https://doi.org/10.1109/ELNANO50318.2020.9088872
+наше
+
+Influence of Constant Magnetic Field on Mechanical Properties and Thermal Stability of the Amorphous Alloys Based on Co, Fe and Ni
+T.L. Tsaregradskaya , A.M. Kuryliuk , I.V. Ovsiienko , G.V. Saenko , O.V. Turkov 
+https://doi.org/10.21272/jnep.12(3).03026
+не наше
+
+ Thermal conductivity of CsPbBr3 halide perovskite: Photoacoustic measurements and molecular dynamics analysis
+Andrii Kanak;
+Pavlo Lishchuk;
+Vasyl Kuryliuk;
+Andrey Kuzmich;
+David Lacroix;
+Yuriy Khalavka;
+Mykola Isaiev
+https://doi.org/10.1063/5.0033821
+не наше
+
 ---------------------------------------
 
 ≈кспериментальна ф≥зика
@@ -221,5 +246,50 @@ https://doi.org/10.1002/adem.202400224
 патент на корисну модель
 
 
+
+Some Types of Carbon-based Nanomaterials as Contrast Agents for Photoacoustic Tomography
+Kateryna Dubyk1,2, Lesia Chepela1, Sergei Alekseev1,2, Andrey Kuzmich1,2, Boris Zousman3, Olga Levinson3, Aleksey Rozhin4, Alain Geloen5, Mykola Isaiev6, Vladimir Lysenko7,8
+https://doi.org/10.21272/jnep.12(4).04033 
+
+
+Thermal Conductivity Evaluation of the Carbon-Based N anofluids with Photoacoustic Approach
+Kateryna Dubyk; Pavlo Lishchuk; Andrey Kuzmich; Sergei Alekseev; Boris Zousman; Olga Levinson
+https://doi.org/10.1109/NAP55339.2022.9934488 
+
+
+
+The impact of the silica gel structure and surface chemistry on the melting of aliphatic nanocrystals: Thermodynamic model and experiment
+Maxim M. Lazarenko a
+, Sergei A. Alekseev a, Kateryna I. Hnatiuk a, Roman V. Dinzhos b c, Maksym S. Nizameev d, Neli S. Koseva e, Filip Ublekov e, Andrey G. Kuzmich a, Evgeny G. Rudnikov a, Kateryna S. Yablochkova a, Alexander N. Alekseev a
+https://doi.org/10.1016/j.jpcs.2021.110426 
+
+
+Generation of a Photoacoustic Response of a Two-Layer Polymer/Gel Structure
+    D. A. Andrusenko, A. N. Alekseev, A. G. Kuzmich, M. M. Lazarenko, S. V. Vasilyuk & R. M. Burbelo 
+https://doi.org/10.1134/S1063784221020043
+
+
+
+
+
+A new photoacoustic method to study diffusion in soft matter
+A. L. Davydiuk
+, D. A. Andrusenko
+, M. M. Lazarenko
+, R. M. Burbelo
+, A. G. Kuzmich
+, K. S. Yablochkova
+, R. V. Dinzhos
+& O. M. Alekseev
+http://doi.org/10.1080/15421406.2024.2372126
+
+
+
+
+Angular Ellipsometry of Porous Silicon Surface Layers
+L.V. Poperenko , S.G. Rozouvan, I.V. Yurgelevych , P.O. Lishchuk 
+https://doi.org/10.21272/jnep.12(3).03024
+
+ќптика
 
 
