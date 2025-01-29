@@ -1,0 +1,34 @@
+TY  - JOUR
+AU  - Rahman, Md. Ferdous
+AU  - Shanto, Md. Abul Bashar
+AU  - Ali, Md. Ashraf
+AU  - Marasamy, Latha
+AU  - Benami, Abdellah
+AU  - Chaudhry, Aijaz Rasool
+AU  - Irfan, Ahmad
+PY  - 2024
+DA  - 2024/08/13
+TI  - A new exploration of the impact of different wide-bandgap S-chalcogenides Electron Transport Layers (ETL) on the performance of BaSi2-based solar cells
+JO  - Emergent Materials
+AB  - Harvesting green energy from the solar spectrum requires an alternative semiconductor material to replace the traditionally used n-type Cadmium Sulfide (CdS) buffer layer in BaSi2-based photovoltaics. This manuscript presents the study of BaSi2-based single-junction solar cells using three different wide-bandgap S-chalcogenide Electron Transport Layers (ETL): Zn(O,S), SnS2, and WS2. Initially, structural, electronic, and optical characteristics were investigated using density functional theory (DFT), revealing optimal electronic band gaps of 1.3 eV for the BaSi2 absorber and 2.14 eV for the WS2 buffer layer. The optical properties, including dielectric function (ε), refractive index (n), conductivity (σ), absorption (α), reflectivity (R), and loss function (L) of the BaSi2 absorber and WS2 buffer layers, were thoroughly analyzed. Furthermore, a systematic study using the SCAPS-1D Simulator examined the impact of various physical parameters, such as layer thickness, doping concentration, and bulk and interface defect densities, on photovoltaic (PV) performance. The highest photoconversion efficiency (PCE) of 22.2% was achieved with the WS2 buffer, with a VOC of 0.76 V, a JSC of 35.23 mA/cm2, and a FF of 82.40%. Although, the PCE were found of 17% and 17.1% due to Zn(O,S) and SnS2 buffer. This comprehensive study highlighted the strong potential of the WS2 buffer layer for designing BaSi2-based solar cells and outlined a pathway for fabricating green, high-efficiency, and economical BaSi2-based heterojunction thin-film solar cells. Additionally, it explored the potential use of quantum dots as intermediate layers to enhance light absorption and carrier extraction in BaSi2-based solar cells.
+SN  - 2522-574X
+UR  - https://doi.org/10.1007/s42247-024-00821-y
+DO  - 10.1007/s42247-024-00821-y
+ID  - Rahman2024
+ER  - 
+
+
+﻿@Article{Rahman2024,
+author={Rahman, Md. Ferdous
+and Shanto, Md. Abul Bashar
+and Ali, Md. Ashraf
+and Marasamy, Latha
+and Benami, Abdellah
+and Chaudhry, Aijaz Rasool
+and Irfan, Ahmad},
+title={A new exploration of the impact of different wide-bandgap S-chalcogenides Electron Transport Layers (ETL) on the performance of BaSi2-based solar cells},
+journal={Emergent Materials},
+year={2024},
+month={Aug},
+doi={10.1007/s42247-024-00821-y},
+}

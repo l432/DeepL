@@ -1,0 +1,7 @@
+https://doi.org/10.1007/s10904-024-03277-z
+
+Paul, M.J., Suresh, R., Gayathri, P. et al. CuO-La2O3 Composite-Enabled MIS Schottky Barrier Diodes: A Novel Approach to Optoelectronic Device Diversification. J Inorg Organomet Polym (2024).
+
+In this groundbreaking study, we successfully synthesized pristine La nanoparticles and Cu-La composites with varying concentrations (25, 50, and 75% Cu) via precipitation technique which yielded a dual-phase with significantly reduced crystallite size from 39.9 nm to 27.3 nm as evidenced by X-ray diffraction (XRD) analysis. Moreover, Field Emission Scanning Electron Microscope (FE-SEM) imaging revealed a striking transformation from rice-like nanoparticles in pure La to spherical nanoparticles with uniform distribution in Cu-La composites, and X-ray Photoelectron Spectroscopy (XPS) analysis confirmed the formation of La3+ and Cu2+ ions with spin-orbit splitting energy levels in CuO-La2O3 composites consistent with XRD and FT-IR results. Additionally, the band gap energy calculated from optical absorbance ranged from 3.447 to 2.276 eV indicating potential for optoelectronic applications and furthermore, the thermionic-emission (TE) model was employed to extract the ideality factor (n) and barrier height (ÔB) from I-V characteristics, yielding an optimal n and ÔB which corresponding to 1.70 and 0.89 eV under both light and dark conditions thereby making this material a promising candidate for optoelectronic devices.
+
+----------------------------------------------------------

@@ -1,0 +1,25 @@
+Reviewer #1: I would like to express my sincere appreciation for your insightful paper on the impact of iron on silicon solar cell performance. Your comprehensive modeling approach, utilizing SCAPS simulation across a diverse range of parameters, provides a significant contribution to the understanding of how iron-boron pair dissociation affects photovoltaic characteristics. The meticulous attention to detail in varying temperature, base thickness, and doping levels, alongside the exploration of both AM1.5 and monochromatic illumination, showcases a robust methodology that enhances the reliability of your findings. Furthermore, the validation of simulation results against experimental measurements demonstrates a commendable commitment to accuracy and relevance in the field. Your analysis of the correlation between changes in photovoltaic parameters and the application of principal component analysis for impurity evaluation is particularly noteworthy, offering valuable insights for future research. Overall, this paper is a significant advancement in the study of solar cell efficiency and defect influence, and it will undoubtedly inspire further exploration in this critical area of materials science. Before submitting to the journal for revision it can be considered for publication with minor mandatory revision as per the following commands.
+1. The author must explain the specific mechanisms you propose for the interaction between iron-related defects and other impurities in silicon solar cells? How might these interactions complicate the interpretation of photovoltaic performance metrics?
+2. The author should give the transient nature of defect dynamics, how do you assess the long-term stability of silicon solar cells in the presence of iron contamination? What experimental approaches would you recommend to study the aging effects of these defects over time?
+3. An Author should provide a theoretical framework for understanding how the temperature range you studied (290 K to 340 K) influences the activation energy of iron-related defects? How might this affect the performance of solar cells in varying environmental conditions?
+4. An Author mentioned the application of principal component analysis in evaluating impurity levels. Could you elaborate on how this technique was implemented in your study and its effectiveness in distinguishing between different types of impurities?
+5. Your paper discusses the influence of doping levels on the response of solar cells to iron contamination. Author should explain how varying the doping concentration affects the sensitivity of photovoltaic parameters to iron presence through the reference:
+Augmented photovoltaic performance of Cu/Ce-(Sn: Cd)/n-Si Schottky barrier diode utilizing dual-doped Ce-(Sn: Cd) thin films.
+6. In your findings, Author mentions that changes in short-circuit current under monochromatic illumination are the most reliable for estimating iron concentration. An author should provide more details on the methodology used to derive this conclusion and any potential limitations of this approach?
+7. An Author must improve the introduction section in the application part through the recent referencs
+CuO-La2O3 Composite-Enabled MIS Schottky Barrier Diodes: A Novel Approach to Optoelectronic Device Diversification; Enhancing photovoltaic applications through precipitating agents in ITO/CIS/CeO2/Al heterojunction solar cell; Manifestation on the choice of a suitable combination of MIS for proficient Schottky diodes for optoelectronics applications: A comprehensive review.
+
+
+
+Reviewer #2: Iron's impact on silicon solar cell execution: comprehensive modeling across diverse scenarios
+I have read the paper carefully; authors developed silicon solar cell with iron's impact. However, I recommend the publication of this work in this reputed journal with some major revision, as shown below:
+Comments for the Author:
+1. The abstract section should be more informative.
+2. The novelty of the work is missing in the introduction. Authors should explain what are the key advantages of iron's impact on silicon solar cell?
+3. Authors should improve the image quality of all figures.
+4. Author should explain how does the band alignment affect the overall performance of the solar cell?
+5. What are the primary sources of iron contamination in silicon used for solar cells?
+6. What role do recombination centers created by iron play in the modeling of solar cell performance?
+7. Author should discuss and cited recent Si based solar cell in the revised manuscript: DOI:10.1016/j.mseb.2024.117360, DOI:10.1016/j.mseb.2023.117141, DOI:10.1016/j.mseb.2024.117817, DOI:10.1007/s42247-024-00821-y, DOI:10.1016/j.inoche.2024.112785
+8. How does the modeling in this study contribute to the design of processes for impurity control in silicon?
+9. State the main findings in the conclusions.
