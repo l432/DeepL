@@ -270,8 +270,6 @@ https://doi.org/10.1134/S1063784221020043
 
 
 
-
-
 A new photoacoustic method to study diffusion in soft matter
 A. L. Davydiuk
 , D. A. Andrusenko
@@ -286,10 +284,47 @@ http://doi.org/10.1080/15421406.2024.2372126
 
 
 
+
+
+Оптика
+
 Angular Ellipsometry of Porous Silicon Surface Layers
 L.V. Poperenko , S.G. Rozouvan, I.V. Yurgelevych , P.O. Lishchuk 
 https://doi.org/10.21272/jnep.12(3).03024
+не наше
 
-Оптика
+
+
+Ellipsometric study of the porous silicon: The impact of decoration and oxidation on porosity depth profiling
+Volodymyr Odarych, Leonid Poperenko, Iryna Yurgelevych, Pavlo Lishchuk
+http://doi.org/10.1016/j.mseb.2023.116677
+
+
+
+Скришевський  O. M. Alekseev
+
+
+
+Bio-distribution of Carbon Nanoparticles Studied by Photoacoustic Measurements
+Kateryna Dubyk1,2, Tatiana Borisova2,3, Konstantin Paliienko3, Natalia Krisanova3, Mykola Isaiev4, Sergei Alekseev1,2, Valeriy Skryshevsky1,2, Vladimir Lysenko5 & Alain Geloen6    
+http://doi.org/10.1186/s11671-022-03768-3
+
+
+
+ Photo- and Radiofrequency-Induced Heating of Photoluminescent Colloidal Carbon Dots
+by Gauhar Mussabek
+1,2,* [ORCID] , Nazym Zhylkybayeva
+1,2, Ivan Lysenko
+3, Pavlo O. Lishchuk
+3,4, Saule Baktygerey
+1,2, Dana Yermukhamed
+1,2, Yerzhan Taurbayev
+1,2, Gani Sadykov
+1, Alexander N. Zaderko
+4,5, Valeriy A. Skryshevsky
+4,5 [ORCID] , Vladyslav V. Lisnyak
+1,6 [ORCID] and Vladimir Lysenko
+
+http://doi.org/10.3390/nano12142426
 
 
