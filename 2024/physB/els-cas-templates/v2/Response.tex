@@ -1,0 +1,310 @@
+
+
+%\documentclass[aip,reprint]{revtex4-1}
+%\documentclass[aip,jap,preprint]{revtex4-1}
+\documentclass[a4paper,fleqn]{cas-sc}
+
+\usepackage[numbers]{natbib}
+\usepackage{mdframed}
+
+
+\begin{document}
+\shorttitle{}
+
+
+%Dear Editor,
+%
+%We like to express our appreciation to the reviewers for their comments.
+%We are resubmitting the revised version of the paper number MSB-S-24-02710.
+%We have studied the comments of the reviewer carefully, and have changed the text according to the comments they
+%have listed.
+%%The location of revisions is pointed by blue color in ``MarkedManuscript.pdf''.
+%Below we refer to each of the reviewer’s comments.
+
+
+Dear Editor and Reviewers,
+
+We sincerely thank you for taking the time to review our manuscript 
+``Iron's impact on silicon solar cell execution: comprehensive modeling across diverse scenarios''
+(Ms. Ref. No.: MSB-S-24-02710). 
+Your insightful comments and constructive suggestions have greatly helped us improve
+the quality of our work. 
+We particularly appreciate your careful reading and thoughtful feedback, which have
+led to significant improvements in both the technical content and presentation clarity of our manuscript.
+We have carefully addressed all the comments and made corresponding revisions to the manuscript. 
+%All changes are marked in red in the revised version. 
+%The location of revisions is pointed by blue color in ``MarkedManuscript.pdf''.
+Below we provide our detailed point-by-point responses to
+each comment. 
+We hope the revised manuscript better meets your expectations and standards for publication in Materials Science and Engineering: B.
+
+
+\subsection*{Response to Reviewer \#1 }
+
+\noindent
+\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~1.}}
+\emph{The author must explain the specific mechanisms you propose for the interaction between iron-related defects and other impurities in silicon solar cells? How might these interactions complicate the interpretation of photovoltaic performance metrics?}
+
+\noindent
+\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+In our study, we primarily focus on the impact of iron-related defects, particularly $\mathrm{Fe}_i$ and $\mathrm{Fe}_i\mathrm{B}_s$ pairs, on the photovoltaic parameters of silicon solar cells. However, we acknowledge that the interaction of iron with other impurities (such as oxygen, carbon, or transition metals) can introduce additional complexities in interpreting photovoltaic performance.
+
+Mechanisms of Interaction:
+\begin{itemize}
+    \item \textbf{iron-oxygen complexes}: oxygen is a common impurity in Czochralski-grown silicon and can form stable complexes with interstitial iron ($\mathrm{Fe}_i$-O). These complexes alter the recombination activity of $\mathrm{Fe}_i$ and may reduce the effectiveness of $\mathrm{Fe}_i\mathrm{B}_s$ pair dissociation as a means to estimate iron concentration;
+    \item \textbf{iron-carbon interactions}: carbon-related defects, such as Fe-C pairs, may modify the charge state of $\mathrm{Fe}_i$, influencing its recombination properties and affecting the carrier lifetime. This interaction can lead to deviations in the expected trends of $I_\mathrm{SC}$ and $V_\mathrm{OC}$;
+    \item \textbf{transition metal contamination}: if other transition metals (Cu, Ni, etc.) are present, they can introduce additional deep-level traps, competing with iron-related recombination centers. This may lead to non-monotonic behavior in efficiency trends, complicating the interpretation of photovoltaic responses.
+\end{itemize}
+
+
+Impact on Photovoltaic Metrics:
+\begin{itemize}
+    \item the presence of multiple recombination centers can lead to overlapping effects in $V_\mathrm{OC}$ and $I_\mathrm{SC}$, making it difficult to isolate the influence of Fe-related defects;
+    \item some impurity interactions may cause non-monotonic trends in efficiency and fill factor changes, particularly under varying injection conditions;
+    \item the temperature dependence of defect interactions may further introduce variability in photovoltaic responses, as different impurities have different activation energies.
+\end{itemize}
+
+
+$\mathrm{Fe}_i\mathrm{B}_s$ pairs introduce deep-level recombination centers that strongly impact minority carrier lifetime, leading to reduced $I_\mathrm{SC}$ and $V_\mathrm{OC}$. When $\mathrm{Fe}_i\mathrm{B}_s$ pairs dissociate, the more mobile $\mathrm{Fe}_i$ leads to different recombination dynamics, which is particularly evident under monochromatic (940~nm) illumination. Our study demonstrates that changes in $I_\mathrm{SC}$ after $\mathrm{Fe}_i\mathrm{B}_s$ dissociation can serve as a reliable method to estimate Fe concentration.
+%The aim of the research was added in the introduction part
+%(page~2, paragraph~3 (last paragraph in the Introduction), line~1-2).
+
+\vspace{1cm}
+\noindent
+\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~2.}}
+\emph{ The author should give the transient nature of defect dynamics, how do you assess the long-term stability of silicon solar cells in the presence of iron contamination? What experimental approaches would you recommend to study the aging effects of these defects over time?}
+
+\noindent
+\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+
+The transient nature of defect dynamics, particularly the dissociation and recombination of $\mathrm{Fe}_i\mathrm{B}_s$ pairs, plays a significant role in the long-term stability of silicon solar cells.
+
+
+\textbf{Long-term stability of silicon solar cells in the presence of iron contamination}
+
+
+Under illumination or thermal excitation, $\mathrm{Fe}_i\mathrm{B}_s$ pairs dissociate into interstitial iron ($\mathrm{Fe}_i$) and substitutional boron ($\mathrm{B}_s$). In the absence of external excitation (e.g., during storage in the dark), $\mathrm{Fe}_i$ captures an electron and recombines with $\mathrm{B}_s$, restoring the $\mathrm{Fe}_i\mathrm{B}_s$ pair. This dynamic equilibrium between $\mathrm{Fe}_i\mathrm{B}_s$ and $\mathrm{Fe}_i$ results in time-dependent variations in carrier lifetime and photovoltaic parameters. Over extended periods, $\mathrm{Fe}_i$ can diffuse and form precipitates, particularly at dislocations and grain boundaries. These precipitates act as deep recombination centers and may partially dissolve under elevated temperatures modifying solar cell performance.
+
+
+\textbf{Recommended experimental approaches to study aging effects:}
+
+
+\begin{itemize}
+    \item \textbf{time-Resolved Minority Carrier Lifetime Measurements:} quasi-Steady-State Photoconductance (QSSPC) and microwave photoconductance decay ($\mu$-PCD) can track lifetime variations due to $\mathrm{Fe}_i\mathrm{B}_s$ recombination-dissociation cycles. Measuring at different injection levels provides insight into the injection-dependent recombination activity of $\mathrm{Fe}_i\mathrm{B}_s$ pairs;
+    \item \textbf{deep-level transient spectroscopy (DLTS):} DLTS can resolve the capture cross-sections and activation energies of Fe-related defects, distinguishing $\mathrm{Fe}_i$ from $\mathrm{Fe}_i\mathrm{B}_s$ states. This provides a quantitative approach to monitoring defect evolution over time;
+    \item \textbf{illumination-induced defect metastability studies:} electroluminescence (EL) and photoluminescence (PL) imaging can spatially track Fe-related degradation over time;
+\end{itemize}
+
+\textbf{Implications for silicon solar cell reliability:}
+
+\begin{itemize}
+    \item fluctuations in $\mathrm{Fe}_i\mathrm{B}_s$ Pair Concentration impact solar cell efficiency due to time-dependent variations in recombination rates;
+    \item iron precipitation vs. $\mathrm{Fe}_i\mathrm{B}_s$ recombination equilibrium  dictates whether degradation is reversible or permanent;
+    \item understanding $\mathrm{Fe}_i\mathrm{B}_s$ defect dynamics is critical for optimizing gettering strategies and passivation techniques to enhance long-term device performance;
+\end{itemize}
+
+
+\vspace{1cm}
+\noindent
+\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~3.}}
+\emph{An Author should provide a theoretical framework for understanding how the temperature range you studied (290 K to 340 K) influences the activation energy of iron-related defects? How might this affect the performance of solar cells in varying environmental conditions?}
+
+\noindent
+\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+
+The temperature range studied in our work (290 K to 340 K) was chosen to reflect realistic operating conditions of silicon solar cells, particularly those exposed to moderate climate variations. The behavior of iron-boron ($\mathrm{Fe}_i\mathrm{B}_s$) pairs and interstitial iron ($\mathrm{Fe}_i$) is strongly temperature-dependent due to thermal excitation and defect migration effects. The key theoretical considerations include:
+
+\begin{itemize}
+    \item Thermal dissociation of $\mathrm{Fe}_i\mathrm{B}_s$ pairs:
+    \begin{itemize}
+        \item the equilibrium between $\mathrm{Fe}_i\mathrm{B}_s$ pairs and free $\mathrm{Fe}_i$ follows an Arrhenius-type relation, governed by the dissociation rate:
+        \begin{equation}
+        \label{eq1}
+            k_\mathrm{d}  = k_\mathrm{0} \exp(-\frac{E_\mathrm{a}}{k_\mathrm{b}T}),
+        \end{equation}
+        where $k_\mathrm{d}$ is the dissociation rate, $E_\mathrm{a}$ is the activation energy of $\mathrm{Fe}_i\mathrm{B}_s$ dissociation, $k_\mathrm{b}$ is the Boltzmann constant, and $T$ is the absolute temperature;
+        \item prior studies estimate Ea $\approx$ 0.7 $-$ 0.8 eV for $\mathrm{Fe}_i\mathrm{B}_s$ dissociation in silicon;
+        \item as temperature increases, $\mathrm{Fe}_i\mathrm{B}_s$ pairs dissociate more readily, increasing $\mathrm{Fe}_i$ concentration, which enhances recombination activity and reduces carrier lifetimes.
+    \end{itemize}
+    \item Shockley-Read-Hall recombination dependence:
+    \begin{itemize}
+        \item the capture cross-section ($\sigma$) of $\mathrm{Fe}_i$ defects is temperature-dependent, influencing the recombination rate $U$ given by:
+        \begin{equation}
+        \label{eq2}
+            U  = \frac{\sigma v_\mathrm{th} N_\mathrm{d}}{1 + \exp(\frac{E_\mathrm{t} - E_\mathrm{F}}{k_\mathrm{b}T})},
+        \end{equation}
+        where $v_\mathrm{th}$ is the thermal velocity of carriers, $N_\mathrm{d}$ is defect concentration, and $E_\mathrm{t}$ is the defect energy level;
+        \item as temperature rises, carrier thermal velocity increases, altering the recombination dynamics and further impacting photovoltaic parameters.
+    \end{itemize}
+\end{itemize}
+
+The temperature-dependent behavior of iron-related defects has direct consequences on solar cell operation under different environmental conditions:
+\begin{itemize}
+    \item Reduction in open-circuit voltage ($V_\mathrm{OC}$):
+    \begin{itemize}
+        \item increased FeB dissociation at high temperatures raises $\mathrm{Fe}_i$ concentration, enhancing Shockley-Read-Hall recombination. Since $V_\mathrm{OC}$ is governed by the equation:
+        \begin{equation}
+        \label{eq3}
+             V_\mathrm{OC} = \frac{k_\mathrm{b}T}{q} log\left(\frac{I_\mathrm{SC}}{I_\mathrm{0}} + 1\right),
+        \end{equation}
+        where $I_\mathrm{0}$ is the saturation current, higher recombination rates increase $I_\mathrm{0}$, leading to a reduction in $V_\mathrm{OC}$;
+        \item the observed temperature coefficient of ($V_\mathrm{OC} \approx -2.3~\frac{mV}{K}$) aligns with known iron-related degradation effects.
+    \end{itemize}
+    \item Short-circuit current $I_\mathrm{SC}$ variability:
+    \begin{itemize}
+        \item as $\mathrm{Fe}_i$ concentration rises, the minority carrier lifetime decreases, reducing carrier collection efficiency and thus $I_\mathrm{SC}$. However, in certain temperature ranges, increased carrier mobility may partially compensate for these losses.
+     \end{itemize}
+     \item Thermal cycling and long-term degradation risks:
+     \begin{itemize}
+        \item field-deployed solar cells experience daily temperature fluctuations, which can lead to repeated FeB dissociation and recombination cycles, contributing to metastable defect states. Over time,$\mathrm{Fe}_i$ precipitation may lead to irreversible efficiency losses, especially in high-temperature climates.
+     \end{itemize}
+\end{itemize}
+
+\vspace{1cm}
+\noindent
+\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~4.}}
+\emph{An Author mentioned the application of principal component analysis in evaluating impurity levels. Could you elaborate on how this technique was implemented in your study and its effectiveness in distinguishing between different types of impurities?}
+
+\noindent
+\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+
+
+
+
+\vspace{1cm}
+\noindent
+\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~5.}}
+\emph{Your paper discusses the influence of doping levels on the response of solar cells to iron contamination. Author should explain how varying the doping concentration affects the sensitivity of photovoltaic parameters to iron presence through the reference:
+Augmented photovoltaic performance of Cu/Ce-(Sn: Cd)/n-Si Schottky barrier diode utilizing dual-doped Ce-(Sn: Cd) thin films.}
+
+\noindent
+\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+
+
+%У вашій статті обговорюється вплив рівня легування на реакцію сонячних елементів на забруднення залізом. Автору слід пояснити, як зміна концентрації легування впливає на чутливість фотоелектричних параметрів до присутності заліза через посилання:
+\begin{mdframed}
+Under illumination or thermal excitation, $\mathrm{Fe}_i\mathrm{B}_s$ pairs dissociate into interstitial iron ($\mathrm{Fe}_i$) and substitutional boron ($\mathrm{B}_s$). In the absence of external excitation (e.g., during storage in the dark), $\mathrm{Fe}_i$ captures an electron and recombines with $\mathrm{B}_s$, restoring the $\mathrm{Fe}_i\mathrm{B}_s$ pair. This dynamic equilibrium between $\mathrm{Fe}_i\mathrm{B}_s$ and $\mathrm{Fe}_i$ results in time-dependent variations in carrier lifetime and photovoltaic parameters. Over extended periods, $\mathrm{Fe}_i$ can diffuse and form precipitates, particularly at dislocations and grain boundaries. These precipitates act as deep recombination centers and may partially dissolve under elevated temperatures modifying solar cell performance.
+\end{mdframed}
+
+\vspace{1cm}
+\noindent
+\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~6.}}
+\emph{In your findings, Author mentions that changes in short-circuit current under monochromatic illumination are the most reliable for estimating iron concentration. An author should provide more details on the methodology used to derive this conclusion and any potential limitations of this approach?}
+
+\noindent
+\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+
+
+
+
+\vspace{1cm}
+\noindent
+\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~7.}}
+\emph{An Author must improve the introduction section in the application part through the recent referencs
+CuO-La2O3 Composite-Enabled MIS Schottky Barrier Diodes: A Novel Approach to Optoelectronic Device Diversification; Enhancing photovoltaic applications through precipitating agents in ITO/CIS/CeO2/Al heterojunction solar cell; Manifestation on the choice of a suitable combination of MIS for proficient Schottky diodes for optoelectronics applications: A comprehensive review.}
+
+\noindent
+\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+
+
+
+
+
+\subsection*{Response to Reviewer \#2 }
+
+\noindent
+\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~1.}}
+\emph{The abstract section should be more informative.}
+
+\noindent
+\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+
+
+
+
+\noindent
+\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~2.}}
+\emph{The novelty of the work is missing in the introduction. Authors should explain what are the key advantages of iron's impact on silicon solar cell?}
+
+\noindent
+\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+
+
+
+
+\noindent
+\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~3.}}
+\emph{Authors should improve the image quality of all figures.}
+
+\noindent
+\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+
+
+
+
+\noindent
+\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~4.}}
+\emph{Author should explain how does the band alignment affect the overall performance of the solar cell?}
+
+\noindent
+\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+
+
+
+
+\noindent
+\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~5.}}
+\emph{What are the primary sources of iron contamination in silicon used for solar cells?}
+
+\noindent
+\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+
+
+
+
+\noindent
+\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~6.}}
+\emph{What role do recombination centers created by iron play in the modeling of solar cell performance?}
+
+\noindent
+\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+
+
+
+
+\noindent
+\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~7.}}
+\emph{Author should discuss and cited recent Si based solar cell in the revised manuscript: $DOI:10.1016/j.mseb.2024.117360, DOI:10.1016/j.mseb.2023.117141, DOI:10.1016/j.mseb.2024.117817, DOI:10.1007/s42247-024-00821-y, DOI:10.1016/j.inoche.2024.112785$}
+
+\noindent
+\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+
+
+
+
+\noindent
+\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~8.}}
+\emph{How does the modeling in this study contribute to the design of processes for impurity control in silicon?}
+
+\noindent
+\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+
+
+
+
+\noindent
+\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~9.}}
+\emph{State the main findings in the conclusions.}
+
+\noindent
+\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+
+
+\bibliographystyle{model1-num-names}
+%\bibliography{olikh_Methods}
+
+
+\end{document}
+
+%Будь-ласка, покращ англійську в наступних реченнях, які я буду пропонувати. Зокрема, треба буде виправити граматичні та стилістичні помилки
+%якщо можна, окрім виправленого речення, наводь інформацію про зміни, які зроблені 
