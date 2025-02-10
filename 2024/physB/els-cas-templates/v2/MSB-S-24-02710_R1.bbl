@@ -1,4 +1,4 @@
-\begin{thebibliography}{64}
+\begin{thebibliography}{67}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\bibinfo}[2]{#2}
 \ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
@@ -500,6 +500,39 @@
 \bibinfo{author}{A.~Goetzberger}, \bibinfo{author}{J.~Knobloch},
   \bibinfo{author}{B.~Voss}, \bibinfo{title}{Crystalline Silicon Solar Cells},
   \bibinfo{publisher}{Wiley}, \bibinfo{year}{1998}.
+%Type = Article
+\bibitem[{Sultana et~al.(2024)Sultana, {Ferdous Rahman}, {Chandra Roy}, {Masum
+  Mia}, {Al Ijajul Islam}, Irfan, {Rasool Chaudhry}, and {Dulal
+  Haque}}]{Sultana2024}
+\bibinfo{author}{B.~Sultana}, \bibinfo{author}{M.~{Ferdous Rahman}},
+  \bibinfo{author}{A.~{Chandra Roy}}, \bibinfo{author}{M.~{Masum Mia}},
+  \bibinfo{author}{M.~{Al Ijajul Islam}}, \bibinfo{author}{A.~Irfan},
+  \bibinfo{author}{A.~{Rasool Chaudhry}}, \bibinfo{author}{M.~{Dulal Haque}},
+\newblock \bibinfo{title}{A novel design and optimization of si based high
+  performance double absorber heterojunction solar cell},
+\newblock \bibinfo{journal}{Materials Science and Engineering: B}
+  \bibinfo{volume}{304} (\bibinfo{year}{2024}) \bibinfo{pages}{117360}.
+%Type = Article
+\bibitem[{Akila et~al.(2024)Akila, Gayathri, {Alan Sibu}, Balasubramani,
+  Al-Lohedan, and Al-Dhayan}]{Akila2024}
+\bibinfo{author}{T.~Akila}, \bibinfo{author}{P.~Gayathri},
+  \bibinfo{author}{G.~{Alan Sibu}}, \bibinfo{author}{V.~Balasubramani},
+  \bibinfo{author}{H.~Al-Lohedan}, \bibinfo{author}{D.~M. Al-Dhayan},
+\newblock \bibinfo{title}{Augmented photovoltaic performance of
+  cu/ce-(sn:cd)/n-si schottky barrier diode utilizing dual-doped ce-(sn:cd)
+  thin films},
+\newblock \bibinfo{journal}{Opt. Mater.} \bibinfo{volume}{149}
+  (\bibinfo{year}{2024}) \bibinfo{pages}{115133}.
+%Type = Article
+\bibitem[{{Masum Mia} et~al.(2025){Masum Mia}, {Faruk Hossain}, Rahman, Badi,
+  Irfan, and {Ferdous Rahman}}]{MasumMia2025}
+\bibinfo{author}{M.~{Masum Mia}}, \bibinfo{author}{M.~{Faruk Hossain}},
+  \bibinfo{author}{M.~Rahman}, \bibinfo{author}{N.~Badi},
+  \bibinfo{author}{A.~Irfan}, \bibinfo{author}{M.~{Ferdous Rahman}},
+\newblock \bibinfo{title}{Unveiling the impact of se based htm on bazrse3
+  perovskites solar cell and improving the theoretical efficiency above 32\%},
+\newblock \bibinfo{journal}{Materials Science and Engineering: B}
+  \bibinfo{volume}{311} (\bibinfo{year}{2025}) \bibinfo{pages}{117817}.
 %Type = Article
 \bibitem[{Klyui et~al.(2000)Klyui, Kostylyov, Rozhin, Gorbulik, Litovchenko,
   Voronkin, and Zaika}]{KostRefl2000}

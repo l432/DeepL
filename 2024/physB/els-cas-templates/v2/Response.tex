@@ -6,6 +6,7 @@
 
 \usepackage[numbers]{natbib}
 \usepackage{mdframed}
+\usepackage{color}
 
 
 \begin{document}
@@ -24,18 +25,18 @@
 
 Dear Editor and Reviewers,
 
-We sincerely thank you for taking the time to review our manuscript 
+We sincerely thank you for taking the time to review our manuscript
 ``Iron's impact on silicon solar cell execution: comprehensive modeling across diverse scenarios''
-(Ms. Ref. No.: MSB-S-24-02710). 
+(Ms. Ref. No.: MSB-S-24-02710).
 Your insightful comments and constructive suggestions have greatly helped us improve
-the quality of our work. 
+the quality of our work.
 We particularly appreciate your careful reading and thoughtful feedback, which have
 led to significant improvements in both the technical content and presentation clarity of our manuscript.
-We have carefully addressed all the comments and made corresponding revisions to the manuscript. 
-%All changes are marked in red in the revised version. 
+We have carefully addressed all the comments and made corresponding revisions to the manuscript.
+%All changes are marked in red in the revised version.
 %The location of revisions is pointed by blue color in ``MarkedManuscript.pdf''.
 Below we provide our detailed point-by-point responses to
-each comment. 
+each comment.
 We hope the revised manuscript better meets your expectations and standards for publication in Materials Science and Engineering: B.
 
 
@@ -174,22 +175,84 @@ The temperature-dependent behavior of iron-related defects has direct consequenc
 \vspace{1cm}
 \noindent
 \textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~5.}}
-\emph{Your paper discusses the influence of doping levels on the response of solar cells to iron contamination. Author should explain how varying the doping concentration affects the sensitivity of photovoltaic parameters to iron presence through the reference:
+\emph{Your paper discusses the influence of doping levels on the response of solar cells to iron contamination. 
+Author should explain how varying the doping concentration affects the sensitivity of photovoltaic parameters to iron presence through the reference:
 Augmented photovoltaic performance of Cu/Ce-(Sn: Cd)/n-Si Schottky barrier diode utilizing dual-doped Ce-(Sn: Cd) thin films.}
 
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
 
 
-%У вашій статті обговорюється вплив рівня легування на реакцію сонячних елементів на забруднення залізом. Автору слід пояснити, як зміна концентрації легування впливає на чутливість фотоелектричних параметрів до присутності заліза через посилання:
+The primary reason doping concentration $N_\mathrm{B}$ influences the sensitivity of photovoltaic 
+parameters to iron presence is that the $N_\mathrm{B}$ determines the Fermi level $E_\mathrm{F}$ position. 
+In turn, the rate of Shockley-Read-Hall recombination --- 
+and consequently, variations in photovoltaic parameters due to iron impurities --- 
+depends on the relative positioning of $E_\mathrm{F}$ concerning the Fe$_i$B$_s$ and Fe$_i$ levels. 
+Additionally, the equilibrium ratio of Fe$_i$B$_s$ and Fe$_i$ concentrations is also determined by the Fermi level position \cite{FeB:kinetic,MurphyJAP2011}.
+Therefore, $N_\mathrm{B}$ affects the number of defects that change their state due to the complete dissociation of Fe$_i$B$_s$ pairs,
+leading to corresponding relative changes in photovoltaic parameters analyzed in this study.
+Furthermore, according to Klaassen’s model \cite{KLAASSEN953},
+the concentration of ionized impurities influences charge carrier mobility and, consequently, the diffusion coefficient $D_n$, diffusion length $L_n$,
+and photoelectric conversion efficiency (see Eqs.~(4), (5), and (7) in the manuscript).
+However, the effect of $N_\mathrm{B}$ via $D_n$ and $L_n$ is significantly weaker than its influence through $E_\mathrm{F}$ variations.
+A minor effect is expected due to changes in free carrier absorption with varying doping levels.
+The impact of doping level on photovoltaic parameters has been studied in heterojunction \cite{Sultana2024}, 
+thin-film \cite{Akila2024},
+and perovskite \cite{MasumMia2025} solar cells.
+Moreover, it has been shown \cite{Akila2024} that
+doping concentration variations affect other barrier structure parameters, such as saturation current and ideality factor.
+
+
+This answer is incorporated in the text on page 4, paragraph 4, line 1-2.
+Reference  is included in the revised manuscript (references 1)
+ 
+
+
+
+%У вашій статті обговорюється вплив рівня легування на реакцію сонячних елементів на забруднення залізом. 
+%Автору слід пояснити, як зміна концентрації легування впливає на чутливість фотоелектричних параметрів до присутності заліза через посилання:
+
+
+%We would also like to express our gratitude to the Reviewer for providing exceptionally insightful references. We
+%hope the Reviewer will not object to their inclusion in the revised manuscript (references 1, 2, 3, 91, 92).
+
 \begin{mdframed}
-Under illumination or thermal excitation, $\mathrm{Fe}_i\mathrm{B}_s$ pairs dissociate into interstitial iron ($\mathrm{Fe}_i$) and substitutional boron ($\mathrm{B}_s$). In the absence of external excitation (e.g., during storage in the dark), $\mathrm{Fe}_i$ captures an electron and recombines with $\mathrm{B}_s$, restoring the $\mathrm{Fe}_i\mathrm{B}_s$ pair. This dynamic equilibrium between $\mathrm{Fe}_i\mathrm{B}_s$ and $\mathrm{Fe}_i$ results in time-dependent variations in carrier lifetime and photovoltaic parameters. Over extended periods, $\mathrm{Fe}_i$ can diffuse and form precipitates, particularly at dislocations and grain boundaries. These precipitates act as deep recombination centers and may partially dissolve under elevated temperatures modifying solar cell performance.
+The recombination rate affects the value of $L_n$ and, according to the Shockley--Read--Hall model,
+depends on trap concentrations, capture cross-sections of electrons and holes, temperature, the Fermi level $E_\mathrm{F}$ location, and defect levels.
+Temperature also affects the values of $\alpha$ and $D_n$.
+In turn, the position of $E_\mathrm{F}$ within the band gap depends on temperature and doping level.
+\textcolor[rgb]{1.00,0.07,0.00}{
+The relationship between $N_\mathrm{B}$ and $E_\mathrm{F}$ is the key  factor
+in the influence of doping level on the sensitivity of photovoltaic parameters to iron presence.
+Specifically, the rate of Shockley-Read-Hall recombination ---
+and consequently, variations in photovoltaic parameters due to iron impurities ---
+depends on the relative positioning of $E_\mathrm{F}$ concerning the Fe$_i$B$_s$ and Fe$_i$ levels.
+Additionally, the equilibrium ratio of Fe$_i$B$_s$ and Fe$_i$ concentrations is also determined by the Fermi level position [50,51].
+Therefore, $N_\mathrm{B}$ affects the number of defects that change their state due to the complete dissociation of Fe$_i$B$_s$ pairs,
+leading to corresponding relative changes in photovoltaic parameters analyzed in this study.
+Furthermore, according to Klaassen’s model [48],
+the concentration of ionized impurities influences charge carrier mobility and, consequently, the diffusion coefficient $D_n$, diffusion length $L_n$,
+and photoelectric conversion efficiency (see Eq.~(4)).
+However, the effect of $N_\mathrm{B}$ via $D_n$ and $L_n$ is significantly weaker than its influence through $E_\mathrm{F}$ variations.
+A minor effect is expected due to changes in free carrier absorption with varying doping levels.
+The impact of doping level on photovoltaic parameters has been studied in heterojunction [59],
+thin-film [60],
+and perovskite [61] solar cells.
+Moreover, it has been shown [60] that
+doping concentration variations affect other barrier structure parameters, such as saturation current and ideality factor.}
 \end{mdframed}
 
 \vspace{1cm}
 \noindent
 \textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~6.}}
-\emph{In your findings, Author mentions that changes in short-circuit current under monochromatic illumination are the most reliable for estimating iron concentration. An author should provide more details on the methodology used to derive this conclusion and any potential limitations of this approach?}
+\emph{In your findings, Author mentions that changes in short-circuit current under monochromatic illumination are the most 
+reliable for estimating iron concentration. 
+An author should provide more details on the methodology used to derive this conclusion and any potential limitations of this approach?}
+
+%У своїх висновках автор зазначає, що зміни струму короткого замикання при монохроматичному освітленні є найбільш
+%надійними для оцінки концентрації заліза.
+%Автор повинен надати більш детальну інформацію про методологію, використану для отримання цього висновку, і будь-які потенційні обмеження цього підходу?
+
 
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
@@ -201,7 +264,11 @@ Under illumination or thermal excitation, $\mathrm{Fe}_i\mathrm{B}_s$ pairs diss
 \noindent
 \textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~7.}}
 \emph{An Author must improve the introduction section in the application part through the recent referencs
-CuO-La2O3 Composite-Enabled MIS Schottky Barrier Diodes: A Novel Approach to Optoelectronic Device Diversification; Enhancing photovoltaic applications through precipitating agents in ITO/CIS/CeO2/Al heterojunction solar cell; Manifestation on the choice of a suitable combination of MIS for proficient Schottky diodes for optoelectronics applications: A comprehensive review.}
+CuO-La2O3 Composite-Enabled MIS Schottky Barrier Diodes: A Novel Approach to Optoelectronic Device Diversification; 
+Enhancing photovoltaic applications through precipitating agents in ITO/CIS/CeO2/Al heterojunction solar cell; 
+Manifestation on the choice of a suitable combination of MIS for proficient Schottky diodes for optoelectronics applications: A comprehensive review.}
+
+
 
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
@@ -301,7 +368,7 @@ CuO-La2O3 Composite-Enabled MIS Schottky Barrier Diodes: A Novel Approach to Opt
 
 
 \bibliographystyle{model1-num-names}
-%\bibliography{olikh_Methods}
+\bibliography{olikh}
 
 
 \end{document}
