@@ -240,7 +240,18 @@ The study examined the correlation between changes in photovoltaic parameters ca
 The necessity for renewable energy sources to meet the growing global demand for sustainable and environmentally friendly energy alternatives has become evident.
 Among the wide range of renewable energy sources, sunlight is the cleanest, safest,
 and most abundant source for use in sustainable energy to support economic growth \cite{PratapSingh2019}.
-The utilization of solar energy heavily depends on the use of photovoltaic cells, with silicon--based devices playing a critical role \cite{Basnet2024,Wang2024}.
+The utilization of solar energy heavily depends on the use of photovoltaic cells.
+The development of next-generation solar cells is primarily driven by the search for novel materials suitable for their fabrication.
+Particular attention is given to exploring the potential use of composites and nanoparticles
+(e.g., Cu-La-based systems \cite{Paul2024}, cerium oxide, and copper indium sulfate \cite{Gayathri2024}),
+MAX phases \cite{Behera2024,AzzouzRached2024},
+and chalcogenides (such as GeSe, MoSe$_2$, Sb$_2$Se$_3$, and SnSe as hole transport materials \cite{MasumMia2025}
+or SnS$_2$ and WS$_2$ as electron transport materials \cite{Rahman2024}),
+as well as metal silicides (e.g., FeSi$_2$ as an absorber layer \cite{Sultana2024}).
+These studies cover a broad range of materials \cite{AlanSibu2024}, with the primary goal of developing highly efficient and cost-effective photovoltaic devices.
+Frequently, these novel materials are integrated with silicon in solar cells \cite{Sultana2024, Akila2024}.
+However, it is worth noting that traditional silicon-based devices
+continue to play a dominant role in the photovoltaic market \cite{Basnet2024,Wang2024}.
 
 
 The issue of semiconductor purity has become increasingly significant since the advent of the transistor in 1947 \cite{Claers2018}.
@@ -362,8 +373,9 @@ The simulation was conducted using the SCAPS~3.3.11 code \cite{SCAPS1}.
 SCAPS-1D software, developed by the University of Gent, is founded on theoretical computations that involve solving Poisson's equation,
 continuity equations for holes and electrons, and drift-diffusion at each position within the solar cell,
 considering the boundary conditions.
-Despite its one-dimensional modeling approach, SCAPS is extensively used for modeling various types of solar cells \cite{Joshi2024,Ravidas2024,Liu2024,You2023} in general
-and for investigating the effects of defects on their performance \cite{AitAbdelkadir2023,Liang2024,SCAPSDefect3} in particular.
+Despite its one-dimensional modeling approach, SCAPS is extensively used for modeling various types 
+of solar cells \cite{MasumMia2025,Rahman2024,Sultana2024,Joshi2024,Ravidas2024,Liu2024,You2023} in general
+and for investigating the effects of defects on their performance \cite{MasumMia2025,Sultana2024,AitAbdelkadir2023,Liang2024,SCAPSDefect3} in particular.
 
 
 As can be seen from Table~\ref{table1}, calculations spanned a broad range of temperatures and base doping levels.
@@ -381,7 +393,7 @@ temperature and concentration (where applicable) dependencies of the following s
 
 The values of surface recombination coefficients were considered equal to the thermal velocities of carriers \cite{Fell2015}.
 The calculations addressed recombination processes within the structural volume,
-incorporating both intrinsic recombination and Shockley-Read-Hall recombination at iron-related defects.
+incorporating both intrinsic recombination and Shockley-Read-Hall (SRH) recombination at iron-related defects.
 In the first case, processes of band-to-band radiation recombination were considered
 (where the calculation of the corresponding coefficient included the fraction of radiatively emitted photons
 reabsorbed via band-to-band processes according to Niewelt et al.\cite{Brad2022})
@@ -443,6 +455,7 @@ Impact of change of iron defects was investigated as a function of temperature f
 base depth from 180~$\mu$m to 380~$\mu$m,
 base doping level from $10^{15}$~cm$^{-3}$ to $10^{17}$~cm$^{-3}$,
 and total impurity iron atom concentration from $10^{10}$~cm$^{-3}$ to $10^{14}$~cm$^{-3}$.
+It is worth noting that investigating the effects of doping density, defect density, temperature, and active layer thickness on photovoltaic parameters is a well-established practice \cite{MasumMia2025,Rahman2024,Sultana2024}.
 For each illumination scenario, calculations were carried out with 11 different temperature values and 5 base depth values,
 evenly distributed within the specified ranges.
 The concentration values were distributed equally on a logarithmic scale with 4 ($N_\mathrm{B}$ case) and 6 ($N_\mathrm{Fe}$ case) steps per decade.
@@ -585,35 +598,40 @@ $d^*$ is the thickness of the quasi-neutral region base,
 since the space charge region (SCR) width for the modeled structures did not exceed 1~$\mu$m,
 it follows that $d^*\simeq d_p$.
 
-The recombination rate affects the value of $L_n$ and, according to the Shockley--Read--Hall model,
+The recombination rate affects the value of $L_n$ and, according to the SRH model,
 depends on trap concentrations, capture cross-sections of electrons and holes, temperature, the Fermi level $E_\mathrm{F}$ location, and defect levels.
 Temperature also affects the values of $\alpha$ and $D_n$.
 In turn, the position of $E_\mathrm{F}$ within the band gap depends on temperature and doping level.
-The relationship between $N_\mathrm{B}$ and $E_\mathrm{F}$ is the key  factor
-in the influence of doping level on the sensitivity of photovoltaic parameters to iron presence.
-Specifically, the rate of Shockley-Read-Hall recombination ---
-and consequently, variations in photovoltaic parameters due to iron impurities ---
-depends on the relative positioning of $E_\mathrm{F}$ concerning the Fe$_i$B$_s$ and Fe$_i$ levels.
-Additionally, the equilibrium ratio of Fe$_i$B$_s$ and Fe$_i$ concentrations is also determined by the Fermi level position \cite{FeB:kinetic,MurphyJAP2011}.
-Therefore, $N_\mathrm{B}$ affects the number of defects that change their state due to the complete dissociation of Fe$_i$B$_s$ pairs,
-leading to corresponding relative changes in photovoltaic parameters analyzed in this study.
-Furthermore, according to Klaassen’s model \cite{KLAASSEN953},
-the concentration of ionized impurities influences charge carrier mobility and, consequently, the diffusion coefficient $D_n$, diffusion length $L_n$,
-and photoelectric conversion efficiency (see Eq.~(\ref{eq4})).
-However, the effect of $N_\mathrm{B}$ via $D_n$ and $L_n$ is significantly weaker than its influence through $E_\mathrm{F}$ variations.
-A minor effect is expected due to changes in free carrier absorption with varying doping levels.
-The impact of doping level on photovoltaic parameters has been studied in heterojunction \cite{Sultana2024},
-thin-film \cite{Akila2024},
-and perovskite \cite{MasumMia2025} solar cells.
-Moreover, it has been shown \cite{Akila2024} that
-doping concentration variations affect other barrier structure parameters, such as saturation current and ideality factor.
-
 Fig.~\ref{fig4} shows the calculated by using SCAPS temperature and concentration dependence of the Fermi level in the base of the investigated structure.
 In addition, this figure shows the positions of the levels associated with interstitial iron and the FeB pair.
 It is worth noting that Fe$_i$ acts as a deep center;
 the donor state of the Fe$_i$B$_s$ pair shows only negligible recombination activity,
 while the presence of the acceptor state Fe$_i$B$_s$ causes the
 carrier lifetime to be doping-dependent under low injection conditions \cite{FeB:Schmidt}.
+
+
+The relationship between $N_\mathrm{B}$ and $E_\mathrm{F}$ is the key  factor
+in the influence of doping level on the sensitivity of photovoltaic parameters to iron presence.
+Specifically, the rate of SRH recombination ---
+and consequently, variations in photovoltaic parameters due to iron impurities ---
+depends on the relative positioning of $E_\mathrm{F}$ concerning the Fe$_i$B$_s$ and Fe$_i$ levels.
+Additionally, the equilibrium ratio of Fe$_i$B$_s$ and Fe$_i$ concentrations is also determined by the Fermi level position \cite{FeB:kinetic,MurphyJAP2011}.
+Therefore, $N_\mathrm{B}$ affects the number of defects that change their state due to the complete dissociation of Fe$_i$B$_s$ pairs,
+leading to corresponding relative changes in photovoltaic parameters analyzed in this study.
+Besides, the $N_\mathrm{B}$ concentration also affects the SCR depth (see Fig.~\ref{fig4}).
+The ratio of different charge states for both interstitial iron atoms and iron-boron pairs differs between the SCR and the bulk of the base, leading to distinct SRH recombination rates and variations in photovoltaic conversion efficiency for structures with different doping levels.
+Furthermore, according to Klaassen’s model \cite{KLAASSEN953},
+the concentration of ionized impurities influences charge carrier mobility and, consequently, the diffusion coefficient $D_n$, diffusion length $L_n$,
+and photoelectric conversion efficiency (see Eq.~(\ref{eq4})).
+However, the effect of $N_\mathrm{B}$ via $D_n$ and $L_n$ is significantly weaker than its influence through $E_\mathrm{F}$ and SCR depth variations.
+Minor effects are expected as well due to both bandgap narrowing and changes in light absorption by free carriers with varying doping levels.
+The impact of doping level on photovoltaic parameters has been studied in heterojunction \cite{Sultana2024},
+thin-film \cite{Akila2024},
+and perovskite \cite{MasumMia2025} solar cells.
+Moreover, it has been shown \cite{Akila2024} that
+doping concentration variations affect other barrier structure parameters, such as saturation current and ideality factor.
+
+
 
 \begin{figure}
 	\centering
@@ -625,7 +643,7 @@ carrier lifetime to be doping-dependent under low injection conditions \cite{FeB
        The zero energy value corresponds to the top of the valence band.
        Also shown are the locations of
        the donor (0/+) levels for the interstitial iron atom Fe$_i$ (5)
-       and the FeB pair (6) and 
+       and the FeB pair (6) and
        and the acceptor (-/0) level for the FeB pair (7, 8).
        $T$, K: 290 (1, 3, 8), 340 (2, 4, 7).
        $N_\mathrm{B}$, ~cm$^{-3}$: $10^{17}$ (1, 2), $10^{15}$ (3, 4, 7, 8).

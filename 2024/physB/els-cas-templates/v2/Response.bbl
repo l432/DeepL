@@ -1,4 +1,4 @@
-\begin{thebibliography}{6}
+\begin{thebibliography}{15}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\bibinfo}[2]{#2}
 \ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
@@ -59,5 +59,107 @@
   perovskites solar cell and improving the theoretical efficiency above 32\%},
 \newblock \bibinfo{journal}{Materials Science and Engineering: B}
   \bibinfo{volume}{311} (\bibinfo{year}{2025}) \bibinfo{pages}{117817}.
+%Type = Article
+\bibitem[{Paul et~al.(2024)Paul, Suresh, Gayathri, Balasubramani, Al-Anazi, and
+  Farah}]{Paul2024}
+\bibinfo{author}{M.~J. Paul}, \bibinfo{author}{R.~Suresh},
+  \bibinfo{author}{P.~Gayathri}, \bibinfo{author}{V.~Balasubramani},
+  \bibinfo{author}{K.~M. Al-Anazi}, \bibinfo{author}{M.~A. Farah},
+\newblock \bibinfo{title}{Cuo-la2o3 composite-enabled mis schottky barrier
+  diodes: A novel approach to optoelectronic device diversification},
+\newblock \bibinfo{journal}{J. Inorg. Organomet. Polym. Mater.}
+  (\bibinfo{year}{2024}).
+%Type = Article
+\bibitem[{Gayathri et~al.(2024)Gayathri, Akila, Sibu, Selvaraj, Assiri,
+  matheswaran, and Balasubramani}]{Gayathri2024}
+\bibinfo{author}{P.~Gayathri}, \bibinfo{author}{T.~Akila},
+  \bibinfo{author}{G.~A. Sibu}, \bibinfo{author}{M.~Selvaraj},
+  \bibinfo{author}{M.~A. Assiri}, \bibinfo{author}{P.~matheswaran},
+  \bibinfo{author}{V.~Balasubramani},
+\newblock \bibinfo{title}{Enhancing photovoltaic applications through
+  precipitating agents in ito/cis/ceo2/al heterojunction solar cell},
+\newblock \bibinfo{journal}{Inorg. Chem. Commun.} \bibinfo{volume}{168}
+  (\bibinfo{year}{2024}) \bibinfo{pages}{112866}.
+%Type = Article
+\bibitem[{{Alan Sibu} et~al.(2024){Alan Sibu}, Gayathri, Akila, Marnadu, and
+  Balasubramani}]{AlanSibu2024}
+\bibinfo{author}{G.~{Alan Sibu}}, \bibinfo{author}{P.~Gayathri},
+  \bibinfo{author}{T.~Akila}, \bibinfo{author}{R.~Marnadu},
+  \bibinfo{author}{V.~Balasubramani},
+\newblock \bibinfo{title}{Manifestation on the choice of a suitable combination
+  of mis for proficient schottky diodes for optoelectronic applications: A
+  comprehensive review},
+\newblock \bibinfo{journal}{Nano Energy} \bibinfo{volume}{125}
+  (\bibinfo{year}{2024}) \bibinfo{pages}{109534}.
+%Type = Article
+\bibitem[{Singh et~al.(2019)Singh, Goyal, and A.}]{PratapSingh2019}
+\bibinfo{author}{B.~P. Singh}, \bibinfo{author}{S.~K. Goyal},
+  \bibinfo{author}{S.~S. A.},
+\newblock \bibinfo{title}{Grid connected-photovoltaic system ({GC-PVS}): Issues
+  and challenges},
+\newblock \bibinfo{journal}{IOP Conference Series: Materials Science and
+  Engineering} \bibinfo{volume}{594} (\bibinfo{year}{2019})
+  \bibinfo{pages}{012032}.
+%Type = Article
+\bibitem[{Behera et~al.(2024)Behera, Dixit, Azzouz-Rached, Bentouaf, {Ferdous
+  Rahman}, Albalawi, Bouhenna, Yousef, and Sharma}]{Behera2024}
+\bibinfo{author}{D.~Behera}, \bibinfo{author}{A.~Dixit},
+  \bibinfo{author}{A.~Azzouz-Rached}, \bibinfo{author}{A.~Bentouaf},
+  \bibinfo{author}{M.~{Ferdous Rahman}}, \bibinfo{author}{H.~Albalawi},
+  \bibinfo{author}{A.~Bouhenna}, \bibinfo{author}{E.~S. Yousef},
+  \bibinfo{author}{R.~Sharma},
+\newblock \bibinfo{title}{Prediction of new max phase zr2msic2 (m = ti, v)
+  compounds as a promising candidate for future engineering: Dft calculations},
+\newblock \bibinfo{journal}{Materials Science and Engineering: B}
+  \bibinfo{volume}{301} (\bibinfo{year}{2024}) \bibinfo{pages}{117141}.
+%Type = Article
+\bibitem[{Azzouz-Rached et~al.(2024)Azzouz-Rached, Azzouz-Rached, Rahman,
+  Husain, Sfina, Tirth, Bentouaf, {Ferdous Rahman}, Algethami, Althobaiti,
+  Abualnaja, and Alosaimi}]{AzzouzRached2024}
+\bibinfo{author}{A.~Azzouz-Rached}, \bibinfo{author}{M.~Azzouz-Rached},
+  \bibinfo{author}{N.~Rahman}, \bibinfo{author}{M.~Husain},
+  \bibinfo{author}{N.~Sfina}, \bibinfo{author}{V.~Tirth},
+  \bibinfo{author}{A.~Bentouaf}, \bibinfo{author}{M.~{Ferdous Rahman}},
+  \bibinfo{author}{N.~Algethami}, \bibinfo{author}{H.~A. Althobaiti},
+  \bibinfo{author}{K.~M. Abualnaja}, \bibinfo{author}{G.~Alosaimi},
+\newblock \bibinfo{title}{Exploring highly energetic quaternary double
+  transition metal max phase m2scsic2 (m = ti, and v) compositions along with
+  ab-initio assessments},
+\newblock \bibinfo{journal}{Inorg. Chem. Commun.} \bibinfo{volume}{167}
+  (\bibinfo{year}{2024}) \bibinfo{pages}{112785}.
+%Type = Article
+\bibitem[{Rahman et~al.(2024)Rahman, Shanto, Ali, Marasamy, Benami, Chaudhry,
+  and Irfan}]{Rahman2024}
+\bibinfo{author}{M.~F. Rahman}, \bibinfo{author}{M.~A.~B. Shanto},
+  \bibinfo{author}{M.~A. Ali}, \bibinfo{author}{L.~Marasamy},
+  \bibinfo{author}{A.~Benami}, \bibinfo{author}{A.~R. Chaudhry},
+  \bibinfo{author}{A.~Irfan},
+\newblock \bibinfo{title}{A new exploration of the impact of different
+  wide-bandgap s-chalcogenides electron transport layers (etl) on the
+  performance of basi2-based solar cells},
+\newblock \bibinfo{journal}{Emergent Materials}  (\bibinfo{year}{2024}).
+%Type = Article
+\bibitem[{Basnet et~al.(2024)Basnet, Yan, Kang, Shehata, Phang, Truong,
+  Bullock, Shen, and Macdonald}]{Basnet2024}
+\bibinfo{author}{R.~Basnet}, \bibinfo{author}{D.~Yan},
+  \bibinfo{author}{D.~Kang}, \bibinfo{author}{M.~M. Shehata},
+  \bibinfo{author}{P.~Phang}, \bibinfo{author}{T.~Truong},
+  \bibinfo{author}{J.~Bullock}, \bibinfo{author}{H.~Shen},
+  \bibinfo{author}{D.~Macdonald},
+\newblock \bibinfo{title}{{Current status and challenges for hole-selective
+  poly-silicon based passivating contacts}},
+\newblock \bibinfo{journal}{Appl. Phys. Rev.} \bibinfo{volume}{11}
+  (\bibinfo{year}{2024}) \bibinfo{pages}{011311}.
+%Type = Article
+\bibitem[{Wang et~al.(2024)Wang, Liu, Li, Wei, Li, Fan, Liu, An, Liu, Li, Fu,
+  Liu, and He}]{Wang2024}
+\bibinfo{author}{L.~Wang}, \bibinfo{author}{J.~Liu}, \bibinfo{author}{Y.~Li},
+  \bibinfo{author}{G.~Wei}, \bibinfo{author}{Q.~Li}, \bibinfo{author}{Z.~Fan},
+  \bibinfo{author}{H.~Liu}, \bibinfo{author}{Y.~An}, \bibinfo{author}{C.~Liu},
+  \bibinfo{author}{J.~Li}, \bibinfo{author}{Y.~Fu}, \bibinfo{author}{Q.~Liu},
+  \bibinfo{author}{D.~He},
+\newblock \bibinfo{title}{Dislocations in crystalline silicon solar cells},
+\newblock \bibinfo{journal}{Advanced Energy and Sustainability Research}
+  \bibinfo{volume}{5} (\bibinfo{year}{2024}) \bibinfo{pages}{2300240}.
 
 \end{thebibliography}
