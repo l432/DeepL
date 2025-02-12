@@ -46,27 +46,64 @@ We hope the revised manuscript better meets your expectations and standards for 
 \textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~1.}}
 \emph{The author must explain the specific mechanisms you propose for the interaction between iron-related defects and other impurities in silicon solar cells? How might these interactions complicate the interpretation of photovoltaic performance metrics?}
 
+
+%Автор повинен пояснити конкретні механізми, які ви пропонуєте для взаємодії між дефектами, пов'язаними з залізом, та іншими домішками в кремнієвих сонячних елементах? Як ці взаємодії можуть ускладнити інтерпретацію показників фотоелектричної продуктивності?
+
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
-In our study, we primarily focus on the impact of iron-related defects, particularly $\mathrm{Fe}_i$ and $\mathrm{Fe}_i\mathrm{B}_s$ pairs, on the photovoltaic parameters of silicon solar cells. However, we acknowledge that the interaction of iron with other impurities (such as oxygen, carbon, or transition metals) can introduce additional complexities in interpreting photovoltaic performance.
-
-Mechanisms of Interaction:
-\begin{itemize}
-    \item \textbf{iron-oxygen complexes}: oxygen is a common impurity in Czochralski-grown silicon and can form stable complexes with interstitial iron ($\mathrm{Fe}_i$-O). These complexes alter the recombination activity of $\mathrm{Fe}_i$ and may reduce the effectiveness of $\mathrm{Fe}_i\mathrm{B}_s$ pair dissociation as a means to estimate iron concentration;
-    \item \textbf{iron-carbon interactions}: carbon-related defects, such as Fe-C pairs, may modify the charge state of $\mathrm{Fe}_i$, influencing its recombination properties and affecting the carrier lifetime. This interaction can lead to deviations in the expected trends of $I_\mathrm{SC}$ and $V_\mathrm{OC}$;
-    \item \textbf{transition metal contamination}: if other transition metals (Cu, Ni, etc.) are present, they can introduce additional deep-level traps, competing with iron-related recombination centers. This may lead to non-monotonic behavior in efficiency trends, complicating the interpretation of photovoltaic responses.
-\end{itemize}
 
 
-Impact on Photovoltaic Metrics:
-\begin{itemize}
-    \item the presence of multiple recombination centers can lead to overlapping effects in $V_\mathrm{OC}$ and $I_\mathrm{SC}$, making it difficult to isolate the influence of Fe-related defects;
-    \item some impurity interactions may cause non-monotonic trends in efficiency and fill factor changes, particularly under varying injection conditions;
-    \item the temperature dependence of defect interactions may further introduce variability in photovoltaic responses, as different impurities have different activation energies.
-\end{itemize}
+In general, interstitial iron is already mobile at room temperature and can interact with various impurities. 
+Over 30 iron-related complexes have been identified in silicon, 
+and nearly 25 energy levels associated with iron-related defects have been reported in the silicon bandgap across different studies \cite{Istratov1999,Gwozdz2022,JYOTHI2015}. 
+For example, iron forms complexes with carbon, oxygen, hydrogen, sulfur, and other metal impurities, as well as with native defects in silicon. 
+However, in terms of their impact on photovoltaic performance, two primary factors must be considered.
+First, the concentration of the relevant defects is crucial. 
+It is widely recognized that in $p$--type silicon under equilibrium conditions, most iron impurity atoms pair with acceptors 
+(e.g., boron in Si:B) \cite{Kimerling1983,Istratov1999}. 
+The concentration of other complexes is significantly lower, 
+and detailed investigation of these complexes requires specialized sample preparation, 
+such as additional doping with other expected complex components 
+or irradiation to increase the concentration of native defects \cite{Tang2013}. 
+Further supporting this, several methods used to evaluate the total iron concentration in $p$--Si rely on breaking the FeB pair \cite{Zoth1990,FeMethod2012,Olikh2021JAP}.
+Second, the recombination activity of these centers must be considered, 
+as it depends on the defect energy level relative to the Fermi level and the charge carrier capture cross-section.
+Interstitial iron and FeB pairs are among the most detrimental recombination-active impurities in $p$--Si \cite{Istratov1999,TeimurazJAP} in contrast to other iron-related defects.
+Notably, iron gettering by oxygen precipitates or structural defects increases carrier lifetime \cite{Schoen2011,FeB:Vahanissi}. 
+In $n$--Si, Fe$_i$ is not a recombination-active impurity due to the filling of its energy level. 
+Reducing the impact of iron through gettering during phosphorus diffusion \cite{Schoen2011,FeB:Vahanissi,Vaehaenissi2017} or the formation of a 
+passivating layer \cite{Teimuraz2014JAP} is well-established and used in the solar cell industry.
+
+Thus, our assumption that the primary influence of iron impurities in the $p$--regions of a solar cell on photoelectric parameters is due to 
+Fe$_i$B$_\mathrm{Si}$ pairs and Fe$_i$ is fully justified. 
+Furthermore, we emphasize that this paper focuses on the relative changes in parameters during 
+Fe$_i$B$_\mathrm{Si}$ $\rightleftarrows$ Fe$_i$ + B$_\mathrm{Si}$ transformation, which enables the isolation of these specific defects' contributions.
+
+This answer is incorporated in the revised text on page 5, two last paragraph in Section 2.1. Simulation Details.
 
 
-$\mathrm{Fe}_i\mathrm{B}_s$ pairs introduce deep-level recombination centers that strongly impact minority carrier lifetime, leading to reduced $I_\mathrm{SC}$ and $V_\mathrm{OC}$. When $\mathrm{Fe}_i\mathrm{B}_s$ pairs dissociate, the more mobile $\mathrm{Fe}_i$ leads to different recombination dynamics, which is particularly evident under monochromatic (940~nm) illumination. Our study demonstrates that changes in $I_\mathrm{SC}$ after $\mathrm{Fe}_i\mathrm{B}_s$ dissociation can serve as a reliable method to estimate Fe concentration.
+
+
+%In general, interstitial iron is already mobile at room temperature and it can interact with different impurities.
+%More than 30 Fe-related complexes were detected in Si and almost 25 energy levels of Fe-related defects were reported in
+%the bandgap of Si in different studies.
+%Наприклад, залізо утворює комплекси з атомами вуглецю, кисню, водню, сірки, власними дефектами кремнію, іншими металевими домішками.
+%Проте з точки зору впливу подібних комплексів на photovoltaic performance необхідно врахувати два основних фактора.
+%По-перше, концентрацію відповідних дефектів.
+%Загально прийнятою є думка, що в p-Si у рівноважному стані переважна кількість домішкових атомів заліза утворює пари з акцептором (наприклад з бором у Si:B).
+%Концентрація інших комплексів набагато менша і для їх детального дослідження необхідно проводити спеціальну підготовку зразків на кшталт додаткового легування іншими компонентами очікуваного комплексу чи радіаційне опромінення для збільшення концентрації власних дефектів.
+%Додатковим підтвердженням цього є те, що низка методів, спрямованих на оцінку загальної концентрації заліза у  p-Si спирається на процеси розбиття саме пар FeВ.
+%По-друге, треба взяти до уваги рекомбінаційну активність центрів, яка залежить від розташування енергетичного рівня дефекту стосовно рівня Фермі та поперечного перерізу захоплення носіїв заряду. 
+%Interstitial iron and FeB pair are the one of the most detrimental recombination active impurities in р-silicon на відміну від інших iron-related defects.
+%Так, iron gettering by oxygen precipitate or structural defects leads to збільшення часу життя носіїв заряду.
+%В n-Si Fei не є рекомбінаційно активною домішкою внаслідок заповнення енергетичного рівня.
+%Зменшення the impact of iron внаслідок gettering під час phosphorus diffusion чи створення просвітлюючого шару є добре відомими і використовуються у in solar cell industry.
+%
+%Таким чином, використане в роботі припущення про те, що основний вплив домішкового заліза в р-областях сонячного елементу на фотоелектричні параметри пов'язаний з FeB pair  and Fei є цілком виправданим. 
+%Крім того, підкреслимо, що в роботі акцентовано увагу саме на відносні зміни параметрів при перебудові Fe-FeB, що дозволяє додатково виокремити внесок саме цих дефектів.
+
+
+
 %The aim of the research was added in the introduction part
 %(page~2, paragraph~3 (last paragraph in the Introduction), line~1-2).
 
@@ -75,34 +112,38 @@ $\mathrm{Fe}_i\mathrm{B}_s$ pairs introduce deep-level recombination centers tha
 \textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~2.}}
 \emph{ The author should give the transient nature of defect dynamics, how do you assess the long-term stability of silicon solar cells in the presence of iron contamination? What experimental approaches would you recommend to study the aging effects of these defects over time?}
 
+%Автору слід навести перехідний характер динаміки дефектів, як ви оцінюєте довготривалу стабільність кремнієвих сонячних елементів за наявності забруднення залізом? Які експериментальні підходи ви б порекомендували для вивчення ефектів старіння цих дефектів з часом?
+
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
 
-The transient nature of defect dynamics, particularly the dissociation and recombination of $\mathrm{Fe}_i\mathrm{B}_s$ pairs, plays a significant role in the long-term stability of silicon solar cells.
+Interstitial iron atoms exhibit high mobility in silicon \cite{Istratov1999}. 
+For example, the characteristic time required for FeB pair formation, 
+which depends on the diffusion coefficient of Fe$_i$, is given by the following expression \cite{FeBAssJAP2014,FeBKin2019,FeBAssSST2011}:
+\begin{equation}
+\label{eqTass}
+\tau=5.7\times10^5\,\frac{\mathrm{s}}{\mathrm{K}\;\mathrm{cm}^3}\times\frac{T}{p}\exp\left(\frac{0.65}{kT}\right)\,.
+\end{equation}
+where
+$p$ is the doping level.
+
+That is, at room temperature, the formation of an equilibrium concentration of FeB pairs is completed within 24 hours, 
+while at $T=340$~K, the $\tau$ is approximately 10 minutes. 
+Therefore, iron contamination is not a determining factor in the long--term stability of silicon solar cells, unlike sodium atoms, which are considered one of the primary contributors to potential-induced degradation \cite{Yamaguchi2021}.
 
 
-\textbf{Long-term stability of silicon solar cells in the presence of iron contamination}
+The information on the characteristic time of FeB pair formation has been added to the revised manuscript (page 5, last paragraph in Section 2.2.).
+
+\begin{mdframed}
+The measurements were carried over the temperature range of 300-340~K.
+The sample temperature was driven by a thermoelectric cooler controlled by an STS-21 sensor
+and maintained constant by a PID algorithm embedded in the software that serves the experimental setup.
+\textcolor[rgb]{1.00,0.07,0.00}{Notably, the characteristic time for FeB pair recovery after the cessation of illumination is approximately 13,000 seconds at 300 K and only 600 seconds at 340 K \cite{FeBAssJAP2014,FeBKin2019}.
+These limitations affect the measurement duration at high temperatures, and the experiments accounted for them.}
+\end{mdframed}
 
 
-Under illumination or thermal excitation, $\mathrm{Fe}_i\mathrm{B}_s$ pairs dissociate into interstitial iron ($\mathrm{Fe}_i$) and substitutional boron ($\mathrm{B}_s$). In the absence of external excitation (e.g., during storage in the dark), $\mathrm{Fe}_i$ captures an electron and recombines with $\mathrm{B}_s$, restoring the $\mathrm{Fe}_i\mathrm{B}_s$ pair. This dynamic equilibrium between $\mathrm{Fe}_i\mathrm{B}_s$ and $\mathrm{Fe}_i$ results in time-dependent variations in carrier lifetime and photovoltaic parameters. Over extended periods, $\mathrm{Fe}_i$ can diffuse and form precipitates, particularly at dislocations and grain boundaries. These precipitates act as deep recombination centers and may partially dissolve under elevated temperatures modifying solar cell performance.
-
-
-\textbf{Recommended experimental approaches to study aging effects:}
-
-
-\begin{itemize}
-    \item \textbf{time-Resolved Minority Carrier Lifetime Measurements:} quasi-Steady-State Photoconductance (QSSPC) and microwave photoconductance decay ($\mu$-PCD) can track lifetime variations due to $\mathrm{Fe}_i\mathrm{B}_s$ recombination-dissociation cycles. Measuring at different injection levels provides insight into the injection-dependent recombination activity of $\mathrm{Fe}_i\mathrm{B}_s$ pairs;
-    \item \textbf{deep-level transient spectroscopy (DLTS):} DLTS can resolve the capture cross-sections and activation energies of Fe-related defects, distinguishing $\mathrm{Fe}_i$ from $\mathrm{Fe}_i\mathrm{B}_s$ states. This provides a quantitative approach to monitoring defect evolution over time;
-    \item \textbf{illumination-induced defect metastability studies:} electroluminescence (EL) and photoluminescence (PL) imaging can spatially track Fe-related degradation over time;
-\end{itemize}
-
-\textbf{Implications for silicon solar cell reliability:}
-
-\begin{itemize}
-    \item fluctuations in $\mathrm{Fe}_i\mathrm{B}_s$ Pair Concentration impact solar cell efficiency due to time-dependent variations in recombination rates;
-    \item iron precipitation vs. $\mathrm{Fe}_i\mathrm{B}_s$ recombination equilibrium  dictates whether degradation is reversible or permanent;
-    \item understanding $\mathrm{Fe}_i\mathrm{B}_s$ defect dynamics is critical for optimizing gettering strategies and passivation techniques to enhance long-term device performance;
-\end{itemize}
+%The relevant information can be found on page 3, paragraphs 1-2.
 
 
 \vspace{1cm}
@@ -110,8 +151,39 @@ Under illumination or thermal excitation, $\mathrm{Fe}_i\mathrm{B}_s$ pairs diss
 \textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~3.}}
 \emph{An Author should provide a theoretical framework for understanding how the temperature range you studied (290 K to 340 K) influences the activation energy of iron-related defects? How might this affect the performance of solar cells in varying environmental conditions?}
 
+%Автор повинен надати теоретичну основу для розуміння того, як досліджуваний вами діапазон температур (від 290 K до 340 K) впливає на енергію активації дефектів, пов'язаних із залізом? Як це може вплинути на продуктивність сонячних елементів в різних умовах навколишнього середовища?
+
+
+%\begin{mdframed}
+%
+%\end{mdframed}
+
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+
+Насамперед зауважимо, що вибраний температурний діапазон  reflect the realistic operating conditions of більшості silicon solar cells.
+Під час розрахунків ми враховували температурні залежності як характеристик кремнію (bandgap, effective density of band states, effective masses, thermal velocities and mobilities of carrier, coefficients of band-to-band and Auger recombination, light absorption values), так і параметрів дефектів (level positions within the
+bandgap and electron and hole capture cross-sections).
+Крім того була взята до уваги температурна залежність співвідношення рівноважних концентрації Fei та FeB.
+Зокрема, основний збільшення температури на iron-related defects полягає у зростанні відносної рівноважної кількості міжвузольних атомів заліза та зміні поперечного перерізу захоплення носіїв заряду кожним з дефектів.
+Врахування всіх вказаних факторів свдчить про те, що представлені в роботі результати фактично відображають вплив дефектів на performance of solar cells in varying environmental conditions (температура, тип та інтенсивність освітлення).
+
+З одного боку, ці процеси не є визначальними для температурних залежностей short-circuit current,
+open-circuit voltage, efficiency, and fill factor.
+З іншого, представлені в роботі результати фактично відображають вплив
+
+ 
+
+Від температури також залежить 
+
+Вплив температури на процеси рекомбінації Шоклі-Ріда-Хола насамперед
+
+
+
+%The relevant information can be found on page 3, paragraphs 1-2.
+
+The temperature range studied in our work (290 K to 340 K) was chosen to reflect the realistic operating conditions of silicon solar cells, particularly those exposed to moderate climate variations.
+
 
 The temperature range studied in our work (290 K to 340 K) was chosen to reflect realistic operating conditions of silicon solar cells, particularly those exposed to moderate climate variations. The behavior of iron-boron ($\mathrm{Fe}_i\mathrm{B}_s$) pairs and interstitial iron ($\mathrm{Fe}_i$) is strongly temperature-dependent due to thermal excitation and defect migration effects. The key theoretical considerations include:
 

@@ -1,7 +1,160 @@
-\begin{thebibliography}{12}
+\begin{thebibliography}{26}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\bibinfo}[2]{#2}
 \ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
+%Type = Article
+\bibitem[{Istratov et~al.(1999)Istratov, Hieslmair, and Weber}]{Istratov1999}
+\bibinfo{author}{A.~A. Istratov}, \bibinfo{author}{H.~Hieslmair},
+  \bibinfo{author}{E.~Weber},
+\newblock \bibinfo{title}{Iron and its complexes in silicon},
+\newblock \bibinfo{journal}{Appl. Phys. A: Mater. Sci. Process.}
+  \bibinfo{volume}{69} (\bibinfo{year}{1999}) \bibinfo{pages}{13--44}.
+%Type = Article
+\bibitem[{Gwozdz and Kolkovsky(2022)}]{Gwozdz2022}
+\bibinfo{author}{K.~Gwozdz}, \bibinfo{author}{V.~Kolkovsky},
+\newblock \bibinfo{title}{Fe-related defects in si: Laplace deep-level
+  transient spectroscopy studies},
+\newblock \bibinfo{journal}{Phys. Status Solidi A} \bibinfo{volume}{219}
+  (\bibinfo{year}{2022}) \bibinfo{pages}{2200139}.
+%Type = Article
+\bibitem[{Jyothi et~al.(2015)Jyothi, Janardhanam, Hong, and Choi}]{JYOTHI2015}
+\bibinfo{author}{I.~Jyothi}, \bibinfo{author}{V.~Janardhanam},
+  \bibinfo{author}{H.~Hong}, \bibinfo{author}{C.-J. Choi},
+\newblock \bibinfo{title}{Current--voltage and capacitance--voltage
+  characteristics of al schottky contacts to strained si-on-insulator in the
+  wide temperature range},
+\newblock \bibinfo{journal}{Mater. Sci. Semicond. Process.}
+  \bibinfo{volume}{39} (\bibinfo{year}{2015}) \bibinfo{pages}{390--399}.
+%Type = Article
+\bibitem[{Kimerling and Benton(1983)}]{Kimerling1983}
+\bibinfo{author}{L.~Kimerling}, \bibinfo{author}{J.~Benton},
+\newblock \bibinfo{title}{Electronically controlled reactions of interstitial
+  iron in silicon},
+\newblock \bibinfo{journal}{Physica B+C} \bibinfo{volume}{116}
+  (\bibinfo{year}{1983}) \bibinfo{pages}{297--300}.
+%Type = Article
+\bibitem[{Tang et~al.(2013)Tang, Vines, Markevich, Svensson, and
+  Monakhov}]{Tang2013}
+\bibinfo{author}{C.~K. Tang}, \bibinfo{author}{L.~Vines},
+  \bibinfo{author}{V.~P. Markevich}, \bibinfo{author}{B.~G. Svensson},
+  \bibinfo{author}{E.~V. Monakhov},
+\newblock \bibinfo{title}{Divacancy-iron complexes in silicon},
+\newblock \bibinfo{journal}{J. Appl. Phys.} \bibinfo{volume}{113}
+  (\bibinfo{year}{2013}) \bibinfo{pages}{044503}.
+%Type = Article
+\bibitem[{Zoth and Bergholz(1990)}]{Zoth1990}
+\bibinfo{author}{G.~Zoth}, \bibinfo{author}{W.~Bergholz},
+\newblock \bibinfo{title}{{A fast, preparation‐free method to detect iron in
+  silicon}},
+\newblock \bibinfo{journal}{J. Appl. Phys.} \bibinfo{volume}{67}
+  (\bibinfo{year}{1990}) \bibinfo{pages}{6764--6771}.
+%Type = Article
+\bibitem[{Herlufsen et~al.(2012)Herlufsen, Macdonald, Bothe, and
+  Schmidt}]{FeMethod2012}
+\bibinfo{author}{S.~Herlufsen}, \bibinfo{author}{D.~Macdonald},
+  \bibinfo{author}{K.~Bothe}, \bibinfo{author}{J.~Schmidt},
+\newblock \bibinfo{title}{Imaging of the interstitial iron concentration in
+  crystalline silicon by measuring the dissociation rate of iron–boron
+  pairs},
+\newblock \bibinfo{journal}{Phys. Status Solidi RRL} \bibinfo{volume}{6}
+  (\bibinfo{year}{2012}) \bibinfo{pages}{1--3}.
+%Type = Article
+\bibitem[{Olikh et~al.(2021)Olikh, Kostylyov, Vlasiuk, Korkishko, Olikh, and
+  Chupryna}]{Olikh2021JAP}
+\bibinfo{author}{O.~Olikh}, \bibinfo{author}{V.~Kostylyov},
+  \bibinfo{author}{V.~Vlasiuk}, \bibinfo{author}{R.~Korkishko},
+  \bibinfo{author}{Y.~Olikh}, \bibinfo{author}{R.~Chupryna},
+\newblock \bibinfo{title}{{Features of FeB pair light-induced dissociation and
+  repair in silicon n+-p-p+ structures under ultrasound loading}},
+\newblock \bibinfo{journal}{J. Appl. Phys.} \bibinfo{volume}{130}
+  (\bibinfo{year}{2021}) \bibinfo{pages}{235703}.
+%Type = Article
+\bibitem[{Mchedlidze et~al.(2013)Mchedlidze, Scheffler, Weber, Herms, Neusel,
+  Osinniy, Moller, and Lauer}]{TeimurazJAP}
+\bibinfo{author}{T.~Mchedlidze}, \bibinfo{author}{L.~Scheffler},
+  \bibinfo{author}{J.~Weber}, \bibinfo{author}{M.~Herms},
+  \bibinfo{author}{J.~Neusel}, \bibinfo{author}{V.~Osinniy},
+  \bibinfo{author}{C.~Moller}, \bibinfo{author}{K.~Lauer},
+\newblock \bibinfo{title}{Local detection of deep carrier traps in the
+  pn-junction of silicon solar cells},
+\newblock \bibinfo{journal}{Appl. Phys. Lett.} \bibinfo{volume}{103}
+  (\bibinfo{year}{2013}) \bibinfo{pages}{013901}.
+%Type = Article
+\bibitem[{Schön et~al.(2011)Schön, Habenicht, Schubert, and
+  Warta}]{Schoen2011}
+\bibinfo{author}{J.~Schön}, \bibinfo{author}{H.~Habenicht},
+  \bibinfo{author}{M.~C. Schubert}, \bibinfo{author}{W.~Warta},
+\newblock \bibinfo{title}{Understanding the distribution of iron in
+  multicrystalline silicon after emitter formation: Theoretical model and
+  experiments},
+\newblock \bibinfo{journal}{J. Appl. Phys.} \bibinfo{volume}{109}
+  (\bibinfo{year}{2011}) \bibinfo{pages}{063717}.
+%Type = Article
+\bibitem[{V\"{a}h\"{a}nissi et~al.(2013)V\"{a}h\"{a}nissi, Haarahiltunen,
+  Talvitie, Yli-Koski, and Savin}]{FeB:Vahanissi}
+\bibinfo{author}{V.~V\"{a}h\"{a}nissi}, \bibinfo{author}{A.~Haarahiltunen},
+  \bibinfo{author}{H.~Talvitie}, \bibinfo{author}{M.~Yli-Koski},
+  \bibinfo{author}{H.~Savin},
+\newblock \bibinfo{title}{Impact of phosphorus gettering parameters and initial
+  iron level on silicon solar cell properties},
+\newblock \bibinfo{journal}{Progress in Photovoltaics: Research and
+  Applications} \bibinfo{volume}{21} (\bibinfo{year}{2013})
+  \bibinfo{pages}{1127--1135}.
+%Type = Article
+\bibitem[{Vähänissi et~al.(2017)Vähänissi, Laine, Liu, Yli-Koski,
+  Haarahiltunen, and Savin}]{Vaehaenissi2017}
+\bibinfo{author}{V.~Vähänissi}, \bibinfo{author}{H.~S. Laine},
+  \bibinfo{author}{Z.~Liu}, \bibinfo{author}{M.~Yli-Koski},
+  \bibinfo{author}{A.~Haarahiltunen}, \bibinfo{author}{H.~Savin},
+\newblock \bibinfo{title}{Full recovery of red zone in p-type high-performance
+  multicrystalline silicon},
+\newblock \bibinfo{journal}{Sol. Energ. Mat. Sol.} \bibinfo{volume}{173}
+  (\bibinfo{year}{2017}) \bibinfo{pages}{120--127}.
+%Type = Article
+\bibitem[{Mchedlidze et~al.(2014)Mchedlidze, M\"{o}ller, Lauer, and
+  Weber}]{Teimuraz2014JAP}
+\bibinfo{author}{T.~Mchedlidze}, \bibinfo{author}{C.~M\"{o}ller},
+  \bibinfo{author}{K.~Lauer}, \bibinfo{author}{J.~Weber},
+\newblock \bibinfo{title}{Evolution of iron-containing defects during
+  processing of si solar cells},
+\newblock \bibinfo{journal}{J. Appl. Phys.} \bibinfo{volume}{116}
+  (\bibinfo{year}{2014}) \bibinfo{pages}{245701}.
+%Type = Article
+\bibitem[{M\"{o}ller et~al.(2014)M\"{o}ller, Bartel, Gibaja, and
+  Lauer}]{FeBAssJAP2014}
+\bibinfo{author}{C.~M\"{o}ller}, \bibinfo{author}{T.~Bartel},
+  \bibinfo{author}{F.~Gibaja}, \bibinfo{author}{K.~Lauer},
+\newblock \bibinfo{title}{Iron-boron pairing kinetics in illuminated p-type and
+  in boron/phosphorus co-doped n-type silicon},
+\newblock \bibinfo{journal}{J. Appl. Phys.} \bibinfo{volume}{116}
+  (\bibinfo{year}{2014}) \bibinfo{pages}{024503}.
+%Type = Article
+\bibitem[{Khelifati et~al.(2019)Khelifati, Laine, Vähänissi, Savin, Bouamama,
+  and Bouhafs}]{FeBKin2019}
+\bibinfo{author}{N.~Khelifati}, \bibinfo{author}{H.~S. Laine},
+  \bibinfo{author}{V.~Vähänissi}, \bibinfo{author}{H.~Savin},
+  \bibinfo{author}{F.~Z. Bouamama}, \bibinfo{author}{D.~Bouhafs},
+\newblock \bibinfo{title}{Dissociation and formation kinetics of iron–boron
+  pairs in silicon after phosphorus implantation gettering},
+\newblock \bibinfo{journal}{Phys Status Solidi A} \bibinfo{volume}{216}
+  (\bibinfo{year}{2019}) \bibinfo{pages}{1900253}.
+%Type = Article
+\bibitem[{Tan et~al.(2011)Tan, Macdonald, Rougieux, and Cuevas}]{FeBAssSST2011}
+\bibinfo{author}{J.~Tan}, \bibinfo{author}{D.~Macdonald},
+  \bibinfo{author}{F.~Rougieux}, \bibinfo{author}{A.~Cuevas},
+\newblock \bibinfo{title}{Accurate measurement of the formation rate of
+  iron--boron pairs in silicon},
+\newblock \bibinfo{journal}{Semicond Sci. Technol.} \bibinfo{volume}{26}
+  (\bibinfo{year}{2011}) \bibinfo{pages}{055019}.
+%Type = Article
+\bibitem[{Yamaguchi et~al.(2021)Yamaguchi, Van~Aken, Masuda, and
+  Ohdaira}]{Yamaguchi2021}
+\bibinfo{author}{S.~Yamaguchi}, \bibinfo{author}{B.~B. Van~Aken},
+  \bibinfo{author}{A.~Masuda}, \bibinfo{author}{K.~Ohdaira},
+\newblock \bibinfo{title}{Potential-induced degradation in high-efficiency
+  n-type crystalline-silicon photovoltaic modules: A literature review},
+\newblock \bibinfo{journal}{Sol. RRL} \bibinfo{volume}{5}
+  (\bibinfo{year}{2021}) \bibinfo{pages}{2100708}.
 %Type = Article
 \bibitem[{Wijaranakula(1993)}]{FeB:kinetic}
 \bibinfo{author}{W.~Wijaranakula},
@@ -91,44 +244,5 @@
   comprehensive review},
 \newblock \bibinfo{journal}{Nano Energy} \bibinfo{volume}{125}
   (\bibinfo{year}{2024}) \bibinfo{pages}{109534}.
-%Type = Article
-\bibitem[{Rahman et~al.(2024)Rahman, Shanto, Ali, Marasamy, Benami, Chaudhry,
-  and Irfan}]{Rahman2024}
-\bibinfo{author}{M.~F. Rahman}, \bibinfo{author}{M.~A.~B. Shanto},
-  \bibinfo{author}{M.~A. Ali}, \bibinfo{author}{L.~Marasamy},
-  \bibinfo{author}{A.~Benami}, \bibinfo{author}{A.~R. Chaudhry},
-  \bibinfo{author}{A.~Irfan},
-\newblock \bibinfo{title}{A new exploration of the impact of different
-  wide-bandgap s-chalcogenides electron transport layers (etl) on the
-  performance of basi2-based solar cells},
-\newblock \bibinfo{journal}{Emergent Materials}  (\bibinfo{year}{2024}).
-%Type = Article
-\bibitem[{Behera et~al.(2024)Behera, Dixit, Azzouz-Rached, Bentouaf, {Ferdous
-  Rahman}, Albalawi, Bouhenna, Yousef, and Sharma}]{Behera2024}
-\bibinfo{author}{D.~Behera}, \bibinfo{author}{A.~Dixit},
-  \bibinfo{author}{A.~Azzouz-Rached}, \bibinfo{author}{A.~Bentouaf},
-  \bibinfo{author}{M.~{Ferdous Rahman}}, \bibinfo{author}{H.~Albalawi},
-  \bibinfo{author}{A.~Bouhenna}, \bibinfo{author}{E.~S. Yousef},
-  \bibinfo{author}{R.~Sharma},
-\newblock \bibinfo{title}{Prediction of new max phase zr2msic2 (m = ti, v )
-  compounds as a promising candidate for future engineering: {DFT}
-  calculations},
-\newblock \bibinfo{journal}{Materials Science and Engineering: B}
-  \bibinfo{volume}{301} (\bibinfo{year}{2024}) \bibinfo{pages}{117141}.
-%Type = Article
-\bibitem[{Azzouz-Rached et~al.(2024)Azzouz-Rached, Azzouz-Rached, Rahman,
-  Husain, Sfina, Tirth, Bentouaf, {Ferdous Rahman}, Algethami, Althobaiti,
-  Abualnaja, and Alosaimi}]{AzzouzRached2024}
-\bibinfo{author}{A.~Azzouz-Rached}, \bibinfo{author}{M.~Azzouz-Rached},
-  \bibinfo{author}{N.~Rahman}, \bibinfo{author}{M.~Husain},
-  \bibinfo{author}{N.~Sfina}, \bibinfo{author}{V.~Tirth},
-  \bibinfo{author}{A.~Bentouaf}, \bibinfo{author}{M.~{Ferdous Rahman}},
-  \bibinfo{author}{N.~Algethami}, \bibinfo{author}{H.~A. Althobaiti},
-  \bibinfo{author}{K.~M. Abualnaja}, \bibinfo{author}{G.~Alosaimi},
-\newblock \bibinfo{title}{Exploring highly energetic quaternary double
-  transition metal max phase m2scsic2 (m = ti, and v) composition along with
-  ab-initio assessments},
-\newblock \bibinfo{journal}{Inorg. Chem. Commun.} \bibinfo{volume}{167}
-  (\bibinfo{year}{2024}) \bibinfo{pages}{112785}.
 
 \end{thebibliography}

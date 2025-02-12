@@ -1,4 +1,4 @@
-\begin{thebibliography}{73}
+\begin{thebibliography}{82}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\bibinfo}[2]{#2}
 \ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
@@ -576,6 +576,82 @@
 \newblock in: \bibinfo{booktitle}{2009 34th IEEE Photovoltaic Specialists
   Conference (PVSC)}, pp. \bibinfo{pages}{001588--001593}.
 %Type = Article
+\bibitem[{Gwozdz and Kolkovsky(2022)}]{Gwozdz2022}
+\bibinfo{author}{K.~Gwozdz}, \bibinfo{author}{V.~Kolkovsky},
+\newblock \bibinfo{title}{Fe-related defects in si: Laplace deep-level
+  transient spectroscopy studies},
+\newblock \bibinfo{journal}{Phys. Status Solidi A} \bibinfo{volume}{219}
+  (\bibinfo{year}{2022}) \bibinfo{pages}{2200139}.
+%Type = Article
+\bibitem[{Jyothi et~al.(2015)Jyothi, Janardhanam, Hong, and Choi}]{JYOTHI2015}
+\bibinfo{author}{I.~Jyothi}, \bibinfo{author}{V.~Janardhanam},
+  \bibinfo{author}{H.~Hong}, \bibinfo{author}{C.-J. Choi},
+\newblock \bibinfo{title}{Current--voltage and capacitance--voltage
+  characteristics of al schottky contacts to strained si-on-insulator in the
+  wide temperature range},
+\newblock \bibinfo{journal}{Mater. Sci. Semicond. Process.}
+  \bibinfo{volume}{39} (\bibinfo{year}{2015}) \bibinfo{pages}{390--399}.
+%Type = Article
+\bibitem[{Tang et~al.(2013)Tang, Vines, Markevich, Svensson, and
+  Monakhov}]{Tang2013}
+\bibinfo{author}{C.~K. Tang}, \bibinfo{author}{L.~Vines},
+  \bibinfo{author}{V.~P. Markevich}, \bibinfo{author}{B.~G. Svensson},
+  \bibinfo{author}{E.~V. Monakhov},
+\newblock \bibinfo{title}{Divacancy-iron complexes in silicon},
+\newblock \bibinfo{journal}{J. Appl. Phys.} \bibinfo{volume}{113}
+  (\bibinfo{year}{2013}) \bibinfo{pages}{044503}.
+%Type = Article
+\bibitem[{Mchedlidze et~al.(2013)Mchedlidze, Scheffler, Weber, Herms, Neusel,
+  Osinniy, Moller, and Lauer}]{TeimurazJAP}
+\bibinfo{author}{T.~Mchedlidze}, \bibinfo{author}{L.~Scheffler},
+  \bibinfo{author}{J.~Weber}, \bibinfo{author}{M.~Herms},
+  \bibinfo{author}{J.~Neusel}, \bibinfo{author}{V.~Osinniy},
+  \bibinfo{author}{C.~Moller}, \bibinfo{author}{K.~Lauer},
+\newblock \bibinfo{title}{Local detection of deep carrier traps in the
+  pn-junction of silicon solar cells},
+\newblock \bibinfo{journal}{Appl. Phys. Lett.} \bibinfo{volume}{103}
+  (\bibinfo{year}{2013}) \bibinfo{pages}{013901}.
+%Type = Article
+\bibitem[{Schön et~al.(2011)Schön, Habenicht, Schubert, and
+  Warta}]{Schoen2011}
+\bibinfo{author}{J.~Schön}, \bibinfo{author}{H.~Habenicht},
+  \bibinfo{author}{M.~C. Schubert}, \bibinfo{author}{W.~Warta},
+\newblock \bibinfo{title}{Understanding the distribution of iron in
+  multicrystalline silicon after emitter formation: Theoretical model and
+  experiments},
+\newblock \bibinfo{journal}{J. Appl. Phys.} \bibinfo{volume}{109}
+  (\bibinfo{year}{2011}) \bibinfo{pages}{063717}.
+%Type = Article
+\bibitem[{V\"{a}h\"{a}nissi et~al.(2013)V\"{a}h\"{a}nissi, Haarahiltunen,
+  Talvitie, Yli-Koski, and Savin}]{FeB:Vahanissi}
+\bibinfo{author}{V.~V\"{a}h\"{a}nissi}, \bibinfo{author}{A.~Haarahiltunen},
+  \bibinfo{author}{H.~Talvitie}, \bibinfo{author}{M.~Yli-Koski},
+  \bibinfo{author}{H.~Savin},
+\newblock \bibinfo{title}{Impact of phosphorus gettering parameters and initial
+  iron level on silicon solar cell properties},
+\newblock \bibinfo{journal}{Progress in Photovoltaics: Research and
+  Applications} \bibinfo{volume}{21} (\bibinfo{year}{2013})
+  \bibinfo{pages}{1127--1135}.
+%Type = Article
+\bibitem[{Vähänissi et~al.(2017)Vähänissi, Laine, Liu, Yli-Koski,
+  Haarahiltunen, and Savin}]{Vaehaenissi2017}
+\bibinfo{author}{V.~Vähänissi}, \bibinfo{author}{H.~S. Laine},
+  \bibinfo{author}{Z.~Liu}, \bibinfo{author}{M.~Yli-Koski},
+  \bibinfo{author}{A.~Haarahiltunen}, \bibinfo{author}{H.~Savin},
+\newblock \bibinfo{title}{Full recovery of red zone in p-type high-performance
+  multicrystalline silicon},
+\newblock \bibinfo{journal}{Sol. Energ. Mat. Sol.} \bibinfo{volume}{173}
+  (\bibinfo{year}{2017}) \bibinfo{pages}{120--127}.
+%Type = Article
+\bibitem[{Mchedlidze et~al.(2014)Mchedlidze, M\"{o}ller, Lauer, and
+  Weber}]{Teimuraz2014JAP}
+\bibinfo{author}{T.~Mchedlidze}, \bibinfo{author}{C.~M\"{o}ller},
+  \bibinfo{author}{K.~Lauer}, \bibinfo{author}{J.~Weber},
+\newblock \bibinfo{title}{Evolution of iron-containing defects during
+  processing of si solar cells},
+\newblock \bibinfo{journal}{J. Appl. Phys.} \bibinfo{volume}{116}
+  (\bibinfo{year}{2014}) \bibinfo{pages}{245701}.
+%Type = Article
 \bibitem[{Olikh et~al.(2022)Olikh, Kostylyov, Vlasiuk, Korkishko, and
   Chupryna}]{Olikh2022:JMatSci}
 \bibinfo{author}{O.~Olikh}, \bibinfo{author}{V.~Kostylyov},
@@ -585,6 +661,16 @@
   silicon solar cells under acoustic wave action},
 \newblock \bibinfo{journal}{J. Mater. Sci.: Mater. Electron.}
   \bibinfo{volume}{33} (\bibinfo{year}{2022}) \bibinfo{pages}{13133--13142}.
+%Type = Article
+\bibitem[{Khelifati et~al.(2019)Khelifati, Laine, Vähänissi, Savin, Bouamama,
+  and Bouhafs}]{FeBKin2019}
+\bibinfo{author}{N.~Khelifati}, \bibinfo{author}{H.~S. Laine},
+  \bibinfo{author}{V.~Vähänissi}, \bibinfo{author}{H.~Savin},
+  \bibinfo{author}{F.~Z. Bouamama}, \bibinfo{author}{D.~Bouhafs},
+\newblock \bibinfo{title}{Dissociation and formation kinetics of iron–boron
+  pairs in silicon after phosphorus implantation gettering},
+\newblock \bibinfo{journal}{Phys Status Solidi A} \bibinfo{volume}{216}
+  (\bibinfo{year}{2019}) \bibinfo{pages}{1900253}.
 %Type = Book
 \bibitem[{Yang(2019)}]{YangHandbookPVSi}
 \bibinfo{editor}{D.~Yang} (Ed.), \bibinfo{title}{Handbook of Photovoltaic

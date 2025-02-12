@@ -420,7 +420,7 @@ This case corresponds to prolonged storage of the structure in darkness or under
 
 During the calculations, it was assumed that Fe$_i$ forms a single donor level,
 while the Fe$_i$B$_s$ pair has a trigonal configuration and acts as an amphoteric defect.
-We obtained defect parameters (including level positions within the bandgap and electron and hole capture cross-sections) from relevant studies \cite{ROUGIEUX2018,Istratov1999,Paudyal}.
+We obtained defect parameters, including energy level positions within the bandgap, electron and hole capture cross-sections, and their temperature dependencies, based on data from relevant studies \cite{ROUGIEUX2018,Istratov1999,Paudyal}.
 
 As previously mentioned, the solar cell behavior was simulated under different illumination conditions,
 including solar light (AM1.5G) and monochromatic light (wavelength 940~nm, intensity of $W_\mathrm{ill} = 5$~W/m$^{2}$ or 10~W/m$^{2}$) --- see Table~\ref{table1}.
@@ -463,6 +463,32 @@ As a result, for the AM1.5 illumination scenario, for instance, 24750 $I$-$V$ ch
 An exception occurred with monochromatic illumination at $W_\mathrm{ill} = 10$~W/m$^{2}$,
 where we used only two $d_p$ values.
 
+In general, interstitial iron is already mobile at room temperature and can interact with various impurities.
+Over 30 iron-related complexes have been identified in silicon,
+and nearly 25 energy levels associated with iron-related defects have been reported in the silicon bandgap across different studies \cite{Istratov1999,Gwozdz2022,JYOTHI2015}.
+For example, iron forms complexes with carbon, oxygen, hydrogen, sulfur, and other metal impurities, as well as with native defects in silicon.
+However, in terms of their impact on photovoltaic performance, two primary factors must be considered.
+First, the concentration of the relevant defects is crucial.
+It is widely recognized that in $p$--type silicon under equilibrium conditions, most iron impurity atoms pair with acceptors
+(e.g., boron in Si:B) \cite{Kimerling1983,Istratov1999}.
+The concentration of other complexes is significantly lower,
+and detailed investigation of these complexes requires specialized sample preparation,
+such as additional doping with other expected complex components
+or irradiation to increase the concentration of native defects \cite{Tang2013}.
+Further supporting this, several methods used to evaluate the total iron concentration in $p$--Si rely on breaking the FeB pair \cite{Zoth1990,FeMethod2012,Olikh2021JAP}.
+Second, the recombination activity of these centers must be considered,
+as it depends on the defect energy level relative to the Fermi level and the charge carrier capture cross-section.
+Interstitial iron and FeB pairs are among the most detrimental recombination-active impurities in $p$--Si \cite{Istratov1999,TeimurazJAP} in contrast to other iron-related defects.
+Notably, iron gettering by oxygen precipitates or structural defects increases carrier lifetime \cite{Schoen2011,FeB:Vahanissi}.
+In $n$--Si, Fe$_i$ is not a recombination-active impurity due to the filling of its energy level.
+Reducing the impact of iron through gettering during phosphorus diffusion \cite{Schoen2011,FeB:Vahanissi,Vaehaenissi2017} or the formation of a
+passivating layer \cite{Teimuraz2014JAP} is well-established and used in the solar cell industry.
+
+Thus, our assumption that the primary influence of iron impurities in the $p$--regions of a solar cell on photoelectric parameters is due to
+Fe$_i$B$_\mathrm{Si}$ pairs and Fe$_i$ is fully justified.
+Furthermore, we emphasize that this paper focuses on the relative changes in parameters during
+Fe$_i$B$_\mathrm{Si}$ $\rightleftarrows$ Fe$_i$ + B$_\mathrm{Si}$ transformation, which enables the isolation of these specific defects' contributions.
+
 \subsection{Experimental Details}
 
 To evaluate the validity of the simulated results,
@@ -488,7 +514,8 @@ The decay of Fe$_i$B$_s$ pairs was realized using intensive (7000~W/$\mathrm{m}^
 The measurements were carried over the temperature range of 300-340~K.
 The sample temperature was driven by a thermoelectric cooler controlled by an STS-21 sensor
 and maintained constant by a PID algorithm embedded in the software that serves the experimental setup.
-
+Notably, the characteristic time for FeB pair recovery after the cessation of illumination is approximately 13,000 seconds at 300 K and only 600 seconds at 340 K \cite{FeBAssJAP2014,FeBKin2019}.
+These limitations affect the measurement duration at high temperatures, and the experiments accounted for them.
 
 \section{Results and Discussion}%\label{}
 
