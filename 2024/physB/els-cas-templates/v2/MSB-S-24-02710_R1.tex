@@ -25,6 +25,7 @@
 %\documentclass[a4paper,fleqn,longmktitle]{cas-sc}
 
 \usepackage[numbers]{natbib}
+\usepackage{enumitem}
 %\usepackage[authoryear]{natbib}
 %\usepackage[authoryear,longnamesfirst]{natbib}
 %%%Author macros
@@ -382,7 +383,7 @@ As can be seen from Table~\ref{table1}, calculations spanned a broad range of te
 Therefore, to improve the accuracy of the calculations when inputting the initial parameters into SCAPS,
 temperature and concentration (where applicable) dependencies of the following silicon parameters were taken into account:
 
-\begin{itemize}
+\begin{itemize}[itemsep=2pt, parsep=0pt, topsep=0pt]
     \item bandgap according to Passler \cite{Passler2002};
     \item doping induced bandgap narrowing according to Yan \& Cuevas \cite{EgNarrow};
     \item effective density of states at conduction and valence band and intrinsic carrier concentration according to Couderc et al. \cite{Si_ni_Couderc};
@@ -420,7 +421,8 @@ This case corresponds to prolonged storage of the structure in darkness or under
 
 During the calculations, it was assumed that Fe$_i$ forms a single donor level,
 while the Fe$_i$B$_s$ pair has a trigonal configuration and acts as an amphoteric defect.
-We obtained defect parameters, including energy level positions within the bandgap, electron and hole capture cross-sections, and their temperature dependencies, based on data from relevant studies \cite{ROUGIEUX2018,Istratov1999,Paudyal}.
+We obtained defect parameters, including energy level positions within the bandgap, electron and hole capture cross-sections, and their temperature dependencies,
+based on data from relevant studies \cite{ROUGIEUX2018,Istratov1999,Paudyal}.
 
 As previously mentioned, the solar cell behavior was simulated under different illumination conditions,
 including solar light (AM1.5G) and monochromatic light (wavelength 940~nm, intensity of $W_\mathrm{ill} = 5$~W/m$^{2}$ or 10~W/m$^{2}$) --- see Table~\ref{table1}.
