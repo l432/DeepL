@@ -316,7 +316,7 @@ illumination levels (often AM1.5), and solar cells with specific parameters.
 In this study, we performed calculations over a sufficiently wide temperature range (290-340~K)
 and for solar cells with varying base thickness (180-380~$\mu$m) and doping levels
 (boron concentration in the base ranging from $10^{15}$ to $10^{17}$~cm$^{-3}$).
-The obtained results enable us to evaluate the feasibility and potential of using the main photovoltaic 
+The obtained results enable us to evaluate the feasibility and potential of using the main photovoltaic
 parameters of silicon solar cells to estimate the $N_\mathrm{Fe}$  value across a temperature range close to operating conditions.
 Furthermore, investigations have explored changes in photoelectric performance under not only solar illumination (AM1.5G)
 but also low-intensity monochromatic light (wavelength of 940~nm, intensities of 5~W/m$^{2}$ and 10~W/m$^{2}$).
@@ -1081,7 +1081,7 @@ The previous subsections demonstrated that by using the relative changes in phot
 along with considering solar cell parameters (such as base depth and doping level)
 and measurement conditions (such as temperature and illumination type), it is possible to predict iron concentration.
 One approach to evaluating the value of $N_\mathrm{Fe}$ is to apply a machine learning algorithm (random forest, gradient booster, or artificial neural network etc.).
-If we assume that the training process is conducted separately for each illumination variant and want to 
+If we assume that the training process is conducted separately for each illumination variant and want to
 determine the magnitude of $N_\mathrm{Fe}$ based on changes in short-circuit current,
 the input set of descriptors could be
 ($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$).
@@ -1090,7 +1090,7 @@ set of descriptors ($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$, $\v
 increases the complexity of calculations due to the growing number of input parameters.
 However, this should enhance the accuracy of $N_\mathrm{Fe}$ predictions.
 At the same time, when comparing Fig.~\ref{fig3} and Fig.~\ref{fig10}, it is clear that  $\varepsilon I_\mathrm{SC}$ and $\varepsilon \eta$ are not entirely independent.
-This outcome is understandable from a physical standpoint as 
+This outcome is understandable from a physical standpoint as
 short-circuit current and efficiency characterize the same physical process --- the diffusion of photo-induced carriers.
 Thus, the set ($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$, $\varepsilon \eta$)
 contains useful and redundant information compared to ($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$).
@@ -1128,8 +1128,8 @@ In the case of some particular principal component having a low information vari
 
 PCs were built for different combinations of photovoltaic parameters and solar cell characteristics
 for the full set of simulated data, and the results are listed in Table~\ref{tbl2}.
-As evident, when only changes in short-circuit current are considered along with the solar cell's base parameters and temperature, 
-no excessive information is present (in the case of the descriptor set ($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$), 
+As evident, when only changes in short-circuit current are considered along with the solar cell's base parameters and temperature,
+no excessive information is present (in the case of the descriptor set ($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$),
 all four principal components exhibit a high ratio of information variance).
 And vice versa, when estimating $N_\mathrm{Fe}$ using a maximal set of
 seven descriptors ($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$, $\varepsilon \eta$, $\varepsilon V_\mathrm{OC}$, $\varepsilon F\!F$)
@@ -1138,7 +1138,7 @@ Therefore, applying PCA to transform the seven input variables and using only fi
 as it significantly simplifies calculations with minimal impact on estimation accuracy.
 For the same set of descriptors obtained under AM1.5 illumination,
 the number of really independent variables is six.
-In general, if the estimation of iron concentration is based on changes in multiple photovoltaic parameters, 
+In general, if the estimation of iron concentration is based on changes in multiple photovoltaic parameters,
 it is advisable to apply PCA to transform the original data.
 Thus, the simultaneous use of $\varepsilon \eta$ and $\varepsilon I_\mathrm{SC}$ practically does not alter
 the number of independent variables (four) compared to the initial set of descriptors.
@@ -1179,15 +1179,55 @@ with different base properties under various external conditions
 (temperature, intensity, and spectral composition of illumination).
 The simulation results have been compared with experimental data.
 
+
 The feasibility of using relative changes in short-circuit current, open-circuit voltage,
 fill factor, and efficiency resulting from the dissociation of FeB pairs
 to estimate the concentration of iron impurities in a solar cell has been analyzed.
-It is shown that changes in short-circuit current are the most suitable parameter.
-It is more expedient to determine the photovoltaic parameters under monochromatic illumination
-with a wavelength matching the predominant absorption in the solar cell base rather than using AM1.5 illumination.
-Next in suitability are changes in efficiency and open-circuit voltage,
-although their use becomes restricted at low doping levels of the base ($<10^{16}$~cm$^{-3}$).
-In our opinion, using the fill factor to estimate iron concentration is not practical.
+Two key metrics were used to identify the solar cell parameter whose changes,
+resulting from the Fe$_i$B$_\mathrm{Si}$ $\rightleftarrows$ Fe$_i$ + B$_\mathrm{Si}$ reconstruction,
+enable the most reliable determination of iron concentration.
+Specifically, these metrics are:
+(1) the monotonicity of the relative change in the parameter value as a function of impurity concentration,
+which is a necessary condition for the unambiguous estimation of $N_\mathrm{Fe}$;
+and (2) the absolute magnitude of the parameter change, which allows for more precise measurements and,
+consequently, a more accurate estimation of $N_\mathrm{Fe}$.
+The first criterion is not satisfied by $\varepsilon F\!F$, $\varepsilon V_\mathrm{OC}$, and $\varepsilon \eta$
+(the latter two under AM1.5 illumination).
+At the same iron concentration, $\varepsilon I_\mathrm{SC}$ values under monochromatic illumination exceed those under AM1.5 illumination.
+As mentioned earlier, this effect deals with differences in the generation locations
+of non-equilibrium carriers under different lighting conditions.
+Additionally, under identical conditions, the changes in open-circuit voltage are significantly weaker
+than those in short-circuit current or efficiency.
+Since $\varepsilon I_\mathrm{SC}$ and $\varepsilon \eta$ are of the same order,
+it is advisable to select the more reliable parameter using additional metrics.
+Notably, short-circuit current determination, unlike efficiency, does not require additional calculations
+and can be directly extracted from the raw measured $I$-$V$ curves.
+Furthermore, $\varepsilon I_\mathrm{SC}$ is virtually independent of illumination intensity
+(whereas $\varepsilon \eta$ exhibits a weak dependence), leading to two key advantages:
+(a)~iron concentration can be determined using an uncalibrated for-intensity monochromatic light source;
+(b)~the influence of shading caused by electrodes, along with the antireflective and passivating layers of the solar cell, is reduced.
+
+Thus, short-circuit current is the most suitable parameter for estimating the concentration of iron impurities, as its changes during the
+Fe$_i$B$_\mathrm{Si}$ $\rightleftarrows$ Fe$_i$ + B$_\mathrm{Si}$ transformation can be effectively utilized.
+Determining photovoltaic parameters under monochromatic illumination,
+with a wavelength corresponding to the predominant absorption in the solar cell base, is more effective than using AM1.5 illumination.
+The most viable alternatives are solar cell efficiency and open-circuit voltage;
+however, their applicability is limited at low base doping levels ($<10^{16}$~cm$^{-3}$)
+due to non-monotonic variations in response to increasing iron concentration.
+In our view, using the fill factor for iron concentration estimation is impractical.
+These conclusions are validated by experimental results, which show that short-circuit current provides the most accurate determination of iron concentration.
+
+%The limitations of the proposed method may arise from the presence of a significant
+%number of recombination-active defects unrelated to iron,
+%as well as high series resistance (which distorts the short-circuit current) and/or shunt resistance (which primarily affects the open-circuit voltage).
+
+
+%It is shown that changes in short-circuit current are the most suitable parameter.
+%It is more expedient to determine the photovoltaic parameters under monochromatic illumination
+%with a wavelength matching the predominant absorption in the solar cell base rather than using AM1.5 illumination.
+%Next in suitability are changes in efficiency and open-circuit voltage,
+%although their use becomes restricted at low doping levels of the base ($<10^{16}$~cm$^{-3}$).
+%In our opinion, using the fill factor to estimate iron concentration is not practical.
 
 It has been shown that the potential accuracy of estimating iron concentration depends
 on the doping level of the base:
@@ -1201,12 +1241,12 @@ especially when using $\varepsilon \eta$ and $\varepsilon V_\mathrm{OC}$.
 At the same time, $\varepsilon \eta$ and $\varepsilon V_\mathrm{OC}$ can serve as additional parameters
 for refining the determination of iron concentration.
 In our opinion, for estimating iron concentration through changes
-in photovoltaic parameters due to variability in iron-related defects, it is advisable to use a set of
+in photovoltaic parameters due to variability in iron--related defects, it is advisable to use a set of
 ($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$, $\varepsilon \eta$) or ($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$, $\varepsilon \eta$,$\varepsilon V_\mathrm{OC}$).
-Besides, to expedite calculations, it is recommended to use principal component analysis to reduce
-the number of variables while retaining the maximum variance information.
-
-
+Furthermore, it has been demonstrated that iron-induced changes in various photovoltaic parameters are correlated.
+Therefore, if iron concentration estimation is performed using changes 
+in multiple photovoltaic parameters, applying Principal Component Analysis is advisable. 
+This data transformation reduces the number of variables while preserving the maximum variance information and accelerating calculations.
 
 \section*{Acknowledgments}
 O.O. would like to acknowledge the financial support by

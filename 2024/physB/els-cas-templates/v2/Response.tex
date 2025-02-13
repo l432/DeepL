@@ -244,13 +244,13 @@ Could you elaborate on how this technique was implemented in your study and its 
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
 
-One of the objectives of this study was to evaluate the feasibility of using variations 
-in short-circuit current, open-circuit voltage, solar cell efficiency, or fill factor, 
+One of the objectives of this study was to evaluate the feasibility of using variations
+in short-circuit current, open-circuit voltage, solar cell efficiency, or fill factor,
 which results from the decay of iron-containing pairs, to estimate the concentration of iron impurities.
-Our simulations revealed that the relative changes in these parameters depend 
-not only on the iron concentration but also on temperature and 
+Our simulations revealed that the relative changes in these parameters depend
+not only on the iron concentration but also on temperature and
 other solar cell characteristics, such as doping level and base thickness.
-In other words, when determining the magnitude of $N_\mathrm{Fe}$ based on changes in short-circuit current, 
+In other words, when determining the magnitude of $N_\mathrm{Fe}$ based on changes in short-circuit current,
 a set of parameters (descriptors) must be used: ($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$).
 Evidently, incorporating additional information, such as changes in efficiency ($\varepsilon \eta$), along with an expanded
 set of descriptors ($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$, $\varepsilon \eta$),
@@ -307,7 +307,7 @@ and on page 15, two last paragraph
 
 
 \begin{mdframed}
-To assess the \textcolor[rgb]{1.00,0.07,0.00}{degree} of redundancy information 
+To assess the \textcolor[rgb]{1.00,0.07,0.00}{degree} of redundancy information
 \textcolor[rgb]{1.00,0.07,0.00}{in different descriptor sets, we employed} principal component analysis (PCA),
 widely used in solving various problems, including identifying defects in solar cells \cite{Fadhel2019}.
 PCA uses a linear combination of the original variables to \textcolor[rgb]{1.00,0.07,0.00}{construct} the new variables (principal component, PC) while keeping maximum variance information.
@@ -315,7 +315,7 @@ PCs are \textcolor[rgb]{1.00,0.07,0.00}{uncorrelated, and PCA allows one to eval
 In the case of some particular principal component having a low information variance ratio, it can be discarded with little to no loss of useful information.
 
 PCs were built for different combinations of photovoltaic parameters and solar cell characteristics
-for the full set of simulated data, and the results are listed in Table~\ref{tbl2}.
+for the full set of simulated data, and the results are listed in Table~2.
 As evident, when only changes in short-circuit current are considered along with the solar cell's base parameters and temperature,
 no excessive information is present \textcolor[rgb]{1.00,0.07,0.00}{(in the case of the descriptor set ($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$),
 all four principal components exhibit a high ratio of information variance)}.
@@ -427,57 +427,86 @@ An author should provide more details on the methodology used to derive this con
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
 
-Ми використовували дві Key metrics для визначення параметра сонячного елементи, зміни якого внаслідок перебудови FeB->Fei дають можливість найбільш надійно визначити концентрацію заліза. А саме: 1) монотонність залежності відносних змін параметру як функції концентрації домішки: це необхідна умова для можливості однозначної оцінки Nfe;
-2) абсолютні величини зміни параметру: зростання цієї величини дозволяє провести більш точні вимірювання, а отже і більш коректно оцінити Nfe.
-Першому критерію не задовольняють $\varepsilon F\!F$, $\varepsilon V_\mathrm{OC}$, $\varepsilon \eta$ (два останні при АМ1.5 освітленні).
-При однакових концентраціях заліза, величини $\varepsilon I_\mathrm{SC}$ при монрохроматичному освітленні переважають $\varepsilon I_\mathrm{SC}$ при АМ1.5.
-Також при тотожніх умовах значення змін напруги холостого ходу суттєво менші ніж для струму короткого замикання чи ефективності.
+We employed two key metrics to identify the solar cell parameter whose changes, 
+resulting from the Fe$_i$B$_\mathrm{Si}$ $\rightleftarrows$ Fe$_i$ + B$_\mathrm{Si}$ reconstruction, 
+enable the most reliable determination of iron concentration.
+Specifically, these metrics are: 
+(1) the monotonicity of the relative change in the parameter value as a function of impurity concentration, 
+which is a necessary condition for the unambiguous estimation of $N_\mathrm{Fe}$;
+and (2) the absolute magnitude of the parameter change, which allows for more precise measurements and, 
+consequently, a more accurate estimation of $N_\mathrm{Fe}$.
+The first criterion is not satisfied by $\varepsilon F\!F$, $\varepsilon V_\mathrm{OC}$, and $\varepsilon \eta$
+(the latter two under AM1.5 illumination).
+At the same iron concentration, $\varepsilon I_\mathrm{SC}$ values under monochromatic illumination exceed those under AM1.5 illumination. 
+As mentioned earlier, this effect deals with differences in the generation locations 
+of non-equilibrium carriers under different lighting conditions.
+Additionally, under identical conditions, the changes in open-circuit voltage are significantly weaker 
+than those in short-circuit current or efficiency.
+Since $\varepsilon I_\mathrm{SC}$ and $\varepsilon \eta$ are of the same order, 
+it is advisable to select the more reliable parameter using additional metrics.
+Notably, short-circuit current determination, unlike efficiency, does not require additional calculations 
+and can be directly extracted from the raw measured $I$-$V$ curves.
+Furthermore, $\varepsilon I_\mathrm{SC}$ is virtually independent of illumination intensity 
+(whereas $\varepsilon \eta$ exhibits a weak dependence), leading to two key advantages:
+(a)~iron concentration can be determined using an uncalibrated for-intensity monochromatic light source;
+(b)~the influence of shading caused by electrodes, along with the antireflective and passivating layers of the solar cell, is reduced.
 
- 
+Thus, short-circuit current is the most suitable parameter for estimating the concentration of iron impurities, as its changes during the 
+Fe$_i$B$_\mathrm{Si}$ $\rightleftarrows$ Fe$_i$ + B$_\mathrm{Si}$ transformation can be effectively utilized.
+Determining photovoltaic parameters under monochromatic illumination, 
+with a wavelength corresponding to the predominant absorption in the solar cell base, is more effective than using AM1.5 illumination.
+The most viable alternatives are solar cell efficiency and open-circuit voltage; 
+however, their applicability is limited at low base doping levels ($<10^{16}$~cm$^{-3}$) 
+due to non-monotonic variations in response to increasing iron concentration.
+In our view, using the fill factor for iron concentration estimation is impractical.
+These conclusions are validated by experimental results, which show that short-circuit current provides the most accurate determination of iron concentration.
 
-Величини $\varepsilon V_\mathrm{OC}$ для сонячних елементів з однакових концентраціях заліза 
+The limitations of the proposed method may arise from the presence of a significant 
+number of recombination-active defects unrelated to iron, 
+as well as high series resistance (which distorts the short-circuit current) and/or shunt resistance (which primarily affects the open-circuit voltage).
 
-
-In addition, when comparing monochromatic and solar illumination,
-the latter generates a significantly larger number of non-equilibrium carriers in the emitter due to shorter-wavelength
-photons.
-
-
-Проведені дослідження показали, що 
-
-($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$, $\varepsilon \eta$, $\varepsilon V_\mathrm{OC}$, $\varepsilon F\!F$)
-
-For example, the most evident conditions for utilizing a specific parameter
-include its change due to the transformation Fe𝑖BSi → Fe𝑖 +BSi, at least by 10 %, along with a monotonic dependence
-of these changes on 𝑁Fe.
-
-Key metrics for reliability:
-
-\begin{itemize}
-    \item \textbf{Monotonicity}: $\epsilon I_\mathrm{SC}$ under monochromatic light exhibited a linear, monotonic relationship with $N_\mathrm{Fe}$ across all $N_\mathrm{B}$ and $T$, unlike $V_\mathrm{OC}$ or $FF$, which showed non-monotonic trends;
-    \item \textbf{Sensitivity}: at $N_\mathrm{B}$ = $10^{17}$ cm$^{-3}$, $\epsilon I_\mathrm{SC}$ under 940~nm changed by >100~\% for $N_\mathrm{Fe}$ = $10^{14}$ cm$^{-3}$, vs. <30~\% under AM1.5;
-    \item \textbf{Correlation strength}: Pearson correlation coefficient ?
-\end{itemize}
-
-Validation:
-
-\begin{itemize}
-    \item \textbf{Experimental agreement}: measured $\epsilon I_\mathrm{SC}$ (940 nm) matched simulations after applying a correction factor $C_\mathrm{cor}$ = 1.4 to account for unmodeled effects (e.g. shunt resistance, surface passivation).
-\end{itemize}
-
-Limitations of the approach:
-
-1) Real solar cells operate under AM1.5, so monochromatic-based $N_\mathrm{Fe}$ estimates can not predict performance under standard conditions.
+The Conclusion has been revised according to the Reviewer's advice --- see page 17, 1st and 2nd paragraph
 
 
-2) Co-existing impurities (e.g. Cu, Ni) could introduce overlapping recombination signals, though this study focused exclusively on iron.
+\begin{mdframed}
+The feasibility of using relative changes in short-circuit current, open-circuit voltage,
+fill factor, and efficiency resulting from the dissociation of FeB pairs
+to estimate the concentration of iron impurities in a solar cell has been analyzed.
+\textcolor[rgb]{1.00,0.07,0.00}{Two key metrics were used to identify the solar cell parameter whose changes,
+resulting from the Fe$_i$B$_\mathrm{Si}$ $\rightleftarrows$ Fe$_i$ + B$_\mathrm{Si}$ reconstruction,
+enable the most reliable determination of iron concentration.
+Specifically, these metrics are:
+(1) the monotonicity of the relative change in the parameter value as a function of impurity concentration,
+which is a necessary condition for the unambiguous estimation of $N_\mathrm{Fe}$;
+and (2) the absolute magnitude of the parameter change, which allows for more precise measurements and,
+consequently, a more accurate estimation of $N_\mathrm{Fe}$.
+The first criterion is not satisfied by $\varepsilon F\!F$, $\varepsilon V_\mathrm{OC}$, and $\varepsilon \eta$
+(the latter two under AM1.5 illumination).
+At the same iron concentration, $\varepsilon I_\mathrm{SC}$ values under monochromatic illumination exceed those under AM1.5 illumination.
+As mentioned earlier, this effect deals with differences in the generation locations
+of non-equilibrium carriers under different lighting conditions.
+Additionally, under identical conditions, the changes in open-circuit voltage are significantly weaker
+than those in short-circuit current or efficiency.
+Since $\varepsilon I_\mathrm{SC}$ and $\varepsilon \eta$ are of the same order,
+it is advisable to select the more reliable parameter using additional metrics.
+Notably, short-circuit current determination, unlike efficiency, does not require additional calculations
+and can be directly extracted from the raw measured $I$-$V$ curves.
+Furthermore, $\varepsilon I_\mathrm{SC}$ is virtually independent of illumination intensity
+(whereas $\varepsilon \eta$ exhibits a weak dependence), leading to two key advantages:
+(a)~iron concentration can be determined using an uncalibrated for-intensity monochromatic light source;
+(b)~the influence of shading caused by electrodes, along with the antireflective and passivating layers of the solar cell, is reduced.}
 
-
-
-
-%\begin{mdframed}
-%
-%\end{mdframed}
+Thus, short-circuit current is the most suitable parameter for estimating the concentration of iron impurities, as its changes during the
+Fe$_i$B$_\mathrm{Si}$ $\rightleftarrows$ Fe$_i$ + B$_\mathrm{Si}$ transformation can be effectively utilized.
+Determining photovoltaic parameters under monochromatic illumination,
+with a wavelength corresponding to the predominant absorption in the solar cell base, is more effective than using AM1.5 illumination.
+The most viable alternatives are solar cell efficiency and open-circuit voltage;
+however, their applicability is limited at low base doping levels ($<10^{16}$~cm$^{-3}$)
+due to non-monotonic variations in response to increasing iron concentration.
+In our view, using the fill factor for iron concentration estimation is impractical.
+\textcolor[rgb]{1.00,0.07,0.00}{These conclusions are validated by experimental results, 
+which show that short-circuit current provides the most accurate determination of iron concentration.}
+\end{mdframed}
 
 \vspace{1cm}
 \noindent
@@ -487,7 +516,14 @@ CuO-La2O3 Composite-Enabled MIS Schottky Barrier Diodes: A Novel Approach to Opt
 Enhancing photovoltaic applications through precipitating agents in ITO/CIS/CeO2/Al heterojunction solar cell;
 Manifestation on the choice of a suitable combination of MIS for proficient Schottky diodes for optoelectronics applications: A comprehensive review.}
 
-\cite{Paul2024,Gayathri2024,AlanSibu2024}
+%\cite{Paul2024,Gayathri2024,AlanSibu2024}
+
+
+
+
+
+\noindent
+\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
 
 We sincerely thank the Reviewer for suggesting the inclusion of recent references (cited as References 2, 3, and 9 in the revised manuscript).
 Below, we present an improved version of the 1st paragraph of Introduction.
@@ -516,13 +552,6 @@ However, it is worth noting that traditional} silicon-based devices
 
 
 
-\noindent
-\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
-
-
-
-
-
 \subsection*{Response to Reviewer \#2 }
 
 \noindent
@@ -533,6 +562,9 @@ However, it is worth noting that traditional} silicon-based devices
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
 
 
+%\begin{mdframed}
+%
+%\end{mdframed}
 
 
 \noindent
