@@ -130,7 +130,7 @@ $N_\mathrm{B}$ is the doping level.
 
 That is, at room temperature, the formation of an equilibrium concentration of FeB pairs is completed within 24 hours,
 while at $T=340$~K, the $\tau$ is approximately 10 minutes.
-Therefore, iron contamination is not a determining factor in the long--term stability of silicon solar cells, unlike sodium atoms, which are considered one 
+Therefore, iron contamination is not a determining factor in the long--term stability of silicon solar cells, unlike sodium atoms, which are considered one
 of the primary contributors to potential-induced degradation \cite{Yamaguchi2021}.
 
 
@@ -140,7 +140,7 @@ The information on the characteristic time of FeB pair formation has been added 
 The measurements were carried over the temperature range of 300-340~K.
 The sample temperature was driven by a thermoelectric cooler controlled by an STS-21 sensor
 and maintained constant by a PID algorithm embedded in the software that serves the experimental setup.
-\textcolor[rgb]{1.00,0.07,0.00}{Notably, the characteristic time for FeB pair recovery after the cessation of illumination is approximately 13,000 seconds at 300 K 
+\textcolor[rgb]{1.00,0.07,0.00}{Notably, the characteristic time for FeB pair recovery after the cessation of illumination is approximately 13,000 seconds at 300 K
 and only 600 seconds at 340 K \cite{FeBAssJAP2014,FeBKin2019}.
 These limitations affect the measurement duration at high temperatures, and the experiments accounted for them.}
 \end{mdframed}
@@ -152,10 +152,10 @@ These limitations affect the measurement duration at high temperatures, and the 
 \vspace{1cm}
 \noindent
 \textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~3.}}
-\emph{An Author should provide a theoretical framework for understanding how the temperature range you studied (290 K to 340 K) influences the activation 
+\emph{An Author should provide a theoretical framework for understanding how the temperature range you studied (290 K to 340 K) influences the activation
 energy of iron-related defects? How might this affect the performance of solar cells in varying environmental conditions?}
 
-%Автор повинен надати теоретичну основу для розуміння того, як досліджуваний вами діапазон температур 
+%Автор повинен надати теоретичну основу для розуміння того, як досліджуваний вами діапазон температур
 %(від 290 K до 340 K) впливає на енергію активації дефектів, пов'язаних із залізом?
 %Як це може вплинути на продуктивність сонячних елементів в різних умовах навколишнього середовища?
 
@@ -165,23 +165,23 @@ energy of iron-related defects? How might this affect the performance of solar c
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
 
-Initially, we note that the selected temperature range reflects the 
-realistic operating conditions of most silicon solar cells. 
-In our calculations, we accounted for the temperature dependencies of both silicon properties --- 
+Initially, we note that the selected temperature range reflects the
+realistic operating conditions of most silicon solar cells.
+In our calculations, we accounted for the temperature dependencies of both silicon properties ---
 including bandgap, the effective density of states; effective masses, thermal velocities and mobilities of charge carriers;
-Auger and band-to-band recombination coefficients, and light absorption values --- 
+Auger and band-to-band recombination coefficients, and light absorption values ---
 and defect parameters, such as energy level positions within the bandgap and electron and hole capture cross-sections.
-Additionally, we considered the temperature dependence of the equilibrium concentration ratio of Fe$_i$ and FeB. 
-Specifically, the primary effect of increasing temperature on iron-related defects is the rise in the relative equilibrium 
-concentration of interstitial iron atoms 
-and the change in the charge carrier capture cross-section of each defect. 
+Additionally, we considered the temperature dependence of the equilibrium concentration ratio of Fe$_i$ and FeB.
+Specifically, the primary effect of increasing temperature on iron-related defects is the rise in the relative equilibrium
+concentration of interstitial iron atoms
+and the change in the charge carrier capture cross-section of each defect.
 
-Accounting for all the above factors in the modeling process suggests that 
-the results presented in this work accurately reflect the impact of both defects 
-and defect parameter variation on solar cell performance under varying environmental conditions, 
+Accounting for all the above factors in the modeling process suggests that
+the results presented in this work accurately reflect the impact of both defects
+and defect parameter variation on solar cell performance under varying environmental conditions,
 including temperature,  illumination type, and intensity.
 
-Details on how temperature dependencies were accounted for in the simulation can be found on page 3, last two paragraphs 
+Details on how temperature dependencies were accounted for in the simulation can be found on page 3, last two paragraphs
 
 
 \begin{mdframed}
@@ -204,7 +204,7 @@ incorporating both intrinsic recombination and Shockley-Read-Hall (SRH) recombin
 In the first case, processes of band-to-band radiation recombination were considered
 (where the calculation of the corresponding coefficient included the fraction of radiatively emitted photons
 reabsorbed via band-to-band processes according to Niewelt et al.\cite{Brad2022})
-and Auger recombination (where the coefficients considered the effect of Coulomb enhancement \cite{AugerSi2022} and 
+and Auger recombination (where the coefficients considered the effect of Coulomb enhancement \cite{AugerSi2022} and
 \textcolor[rgb]{1.00,0.07,0.00}{temperature dependence} \cite{Si_Auger}).
 \end{mdframed}
 
@@ -221,14 +221,12 @@ This case corresponds to prolonged storage of the structure in darkness or under
 
 During the calculations, it was assumed that Fe$_i$ forms a single donor level,
 while the Fe$_i$B$_s$ pair has a trigonal configuration and acts as an amphoteric defect.
-\textcolor[rgb]{1.00,0.07,0.00}{We obtained defect parameters, including energy level positions within the bandgap, 
+\textcolor[rgb]{1.00,0.07,0.00}{We obtained defect parameters, including energy level positions within the bandgap,
 electron and hole capture cross-sections, and their temperature dependencies, based on data from relevant studies} \cite{ROUGIEUX2018,Istratov1999,Paudyal}.
 \end{mdframed}
 
 
-%\begin{mdframed}
-%
-%\end{mdframed}
+
 
 
 %The relevant information can be found on page 3, paragraphs 1-2.
@@ -237,7 +235,7 @@ electron and hole capture cross-sections, and their temperature dependencies, ba
 \vspace{1cm}
 \noindent
 \textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~4.}}
-\emph{An Author mentioned the application of principal component analysis in evaluating impurity levels. 
+\emph{An Author mentioned the application of principal component analysis in evaluating impurity levels.
 Could you elaborate on how this technique was implemented in your study and its effectiveness in distinguishing between different types of impurities?}
 
 %Автор згадував про застосування аналізу головних компонент для оцінки рівнів домішок.
@@ -246,6 +244,96 @@ Could you elaborate on how this technique was implemented in your study and its 
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
 
+One of the objectives of this study was to evaluate the feasibility of using variations 
+in short-circuit current, open-circuit voltage, solar cell efficiency, or fill factor, 
+which results from the decay of iron-containing pairs, to estimate the concentration of iron impurities.
+Our simulations revealed that the relative changes in these parameters depend 
+not only on the iron concentration but also on temperature and 
+other solar cell characteristics, such as doping level and base thickness.
+In other words, when determining the magnitude of $N_\mathrm{Fe}$ based on changes in short-circuit current, 
+a set of parameters (descriptors) must be used: ($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$).
+Evidently, incorporating additional information, such as changes in efficiency ($\varepsilon \eta$), along with an expanded
+set of descriptors ($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$, $\varepsilon \eta$),
+increases the complexity of calculations due to the growing number of input parameters.
+However, this should enhance the accuracy of $N_\mathrm{Fe}$ predictions.
+Meanwhile, variations in short-circuit current and efficiency are not entirely independent,
+as both essentially characterize the same physical process --- the diffusion of photo-induced carriers.
+Confirmation of this has resulted from analyzing the correlations between parameters --- see Fig.~12 in the manuscript.
+Thus, the set ($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$, $\varepsilon \eta$)
+contains useful and redundant information compared to ($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$).
+To assess the degree of redundancy in different descriptor sets, we employed principal component analysis (PCA),
+which constructs a new dataset of uncorrelated principal components (PCs).
+PCA also enables the evaluation of each PC’s contribution to the total variance of the information.
+Our analysis showed that, for example, when estimating $N_\mathrm{Fe}$ using a set of
+seven descriptors ($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$, $\varepsilon \eta$, $\varepsilon V_\mathrm{OC}$, $\varepsilon F\!F$)
+obtained under 940~nm illumination, five PCs account for more than 99.5\% of the variance in the input data.
+Therefore, applying PCA to transform the seven input variables and using only five is fully justified,
+as it significantly simplifies calculations with minimal impact on estimation accuracy.
+
+In the manuscript, PCA was not used to evaluate impurity levels.
+The conclusions and abstract only mentioned its potential usefulness in estimating the concentration of iron impurities
+based on variations in several photovoltaic parameters.
+We apologize for any possible ambiguities in the wording.
+In the revised manuscript, we have aimed for the most precise formulations.
+Finally, we would like to thank the Reviewer for an idea about PCA use to distinguish the contributions of different defects in future research.
+
+
+The corrections were made in the manuscript on page 15, 1st paragraph in Section 3.5.
+
+
+\begin{mdframed}
+The previous subsections demonstrated that by using the relative changes in photovoltaic energy conversion parameters following the dissociation of FeB pairs
+(e.g., changes in short-circuit current),
+along with considering solar cell parameters (such as base depth and doping level)
+and measurement conditions (such as temperature and illumination type), it is possible to predict iron concentration.
+One approach to evaluating the value of $N_\mathrm{Fe}$ is to apply a machine learning algorithm (random forest, gradient booster, or artificial neural network etc.).
+If we assume that the training process is conducted separately for each illumination variant \textcolor[rgb]{1.00,0.07,0.00}{ and want to
+determine the magnitude of $N_\mathrm{Fe}$ based on changes in short-circuit current},
+the input set of descriptors could be
+($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$).
+\textcolor[rgb]{1.00,0.07,0.00}{Evidently, incorporating additional information, such as changes in efficiency ($\varepsilon \eta$), along with an expanded
+set of descriptors ($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$, $\varepsilon \eta$),
+increases the complexity of calculations due to the growing number of input parameters.
+However, this should enhance the accuracy of $N_\mathrm{Fe}$ predictions.
+At the same time, }when comparing Fig.~3 and Fig.~10, it is clear that  $\varepsilon I_\mathrm{SC}$ and $\varepsilon \eta$ are not entirely independent.
+\textcolor[rgb]{1.00,0.07,0.00}{This outcome is understandable from a physical standpoint as
+short-circuit current and efficiency characterize the same physical process --- the diffusion of photo-induced carriers.
+Thus, the set ($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$, $\varepsilon \eta$)
+contains useful and redundant information compared to ($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$).}
+\end{mdframed}
+
+
+and on page 15, two last paragraph
+
+
+\begin{mdframed}
+To assess the \textcolor[rgb]{1.00,0.07,0.00}{degree} of redundancy information 
+\textcolor[rgb]{1.00,0.07,0.00}{in different descriptor sets, we employed} principal component analysis (PCA),
+widely used in solving various problems, including identifying defects in solar cells \cite{Fadhel2019}.
+PCA uses a linear combination of the original variables to \textcolor[rgb]{1.00,0.07,0.00}{construct} the new variables (principal component, PC) while keeping maximum variance information.
+PCs are \textcolor[rgb]{1.00,0.07,0.00}{uncorrelated, and PCA allows one to evaluate each PC’s contribution to the total variance of the information.}
+In the case of some particular principal component having a low information variance ratio, it can be discarded with little to no loss of useful information.
+
+PCs were built for different combinations of photovoltaic parameters and solar cell characteristics
+for the full set of simulated data, and the results are listed in Table~\ref{tbl2}.
+As evident, when only changes in short-circuit current are considered along with the solar cell's base parameters and temperature,
+no excessive information is present \textcolor[rgb]{1.00,0.07,0.00}{(in the case of the descriptor set ($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$),
+all four principal components exhibit a high ratio of information variance)}.
+\textcolor[rgb]{1.00,0.07,0.00}{And vice versa, when estimating $N_\mathrm{Fe}$ using a maximal set of
+seven descriptors ($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$, $\varepsilon \eta$, $\varepsilon V_\mathrm{OC}$, $\varepsilon F\!F$)
+obtained under monochromatic illumination five PCs account for more than 99.5\% of the variance in the input data.
+Therefore, applying PCA to transform the seven input variables and using only five is fully justified,
+as it significantly simplifies calculations with minimal impact on estimation accuracy.
+For the same set of descriptors obtained under AM1.5 illumination,
+the number of really independent variables is six.
+In general, if the estimation of iron concentration is based on changes in multiple photovoltaic parameters,
+it is advisable to apply PCA to transform the original data.
+Thus, the simultaneous use of $\varepsilon \eta$ and $\varepsilon I_\mathrm{SC}$ practically does not alter
+the number of independent variables (four) compared to the initial set of descriptors.}
+With the additional use of $\varepsilon V_\mathrm{OC}$ values obtained under AM1.5 illumination, it is advisable to consider five independent variables.
+For the same set of descriptors in a monochromatic illumination case, one can limit oneself to using only four independent components
+(cumulative variance ratio for PC4 and PC5 does not exceed 1.3\%).
+\end{mdframed}
 
 
 
@@ -339,8 +427,57 @@ An author should provide more details on the methodology used to derive this con
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
 
+Ми використовували дві Key metrics для визначення параметра сонячного елементи, зміни якого внаслідок перебудови FeB->Fei дають можливість найбільш надійно визначити концентрацію заліза. А саме: 1) монотонність залежності відносних змін параметру як функції концентрації домішки: це необхідна умова для можливості однозначної оцінки Nfe;
+2) абсолютні величини зміни параметру: зростання цієї величини дозволяє провести більш точні вимірювання, а отже і більш коректно оцінити Nfe.
+Першому критерію не задовольняють $\varepsilon F\!F$, $\varepsilon V_\mathrm{OC}$, $\varepsilon \eta$ (два останні при АМ1.5 освітленні).
+При однакових концентраціях заліза, величини $\varepsilon I_\mathrm{SC}$ при монрохроматичному освітленні переважають $\varepsilon I_\mathrm{SC}$ при АМ1.5.
+Також при тотожніх умовах значення змін напруги холостого ходу суттєво менші ніж для струму короткого замикання чи ефективності.
+
+ 
+
+Величини $\varepsilon V_\mathrm{OC}$ для сонячних елементів з однакових концентраціях заліза 
 
 
+In addition, when comparing monochromatic and solar illumination,
+the latter generates a significantly larger number of non-equilibrium carriers in the emitter due to shorter-wavelength
+photons.
+
+
+Проведені дослідження показали, що 
+
+($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$, $\varepsilon \eta$, $\varepsilon V_\mathrm{OC}$, $\varepsilon F\!F$)
+
+For example, the most evident conditions for utilizing a specific parameter
+include its change due to the transformation Fe𝑖BSi → Fe𝑖 +BSi, at least by 10 %, along with a monotonic dependence
+of these changes on 𝑁Fe.
+
+Key metrics for reliability:
+
+\begin{itemize}
+    \item \textbf{Monotonicity}: $\epsilon I_\mathrm{SC}$ under monochromatic light exhibited a linear, monotonic relationship with $N_\mathrm{Fe}$ across all $N_\mathrm{B}$ and $T$, unlike $V_\mathrm{OC}$ or $FF$, which showed non-monotonic trends;
+    \item \textbf{Sensitivity}: at $N_\mathrm{B}$ = $10^{17}$ cm$^{-3}$, $\epsilon I_\mathrm{SC}$ under 940~nm changed by >100~\% for $N_\mathrm{Fe}$ = $10^{14}$ cm$^{-3}$, vs. <30~\% under AM1.5;
+    \item \textbf{Correlation strength}: Pearson correlation coefficient ?
+\end{itemize}
+
+Validation:
+
+\begin{itemize}
+    \item \textbf{Experimental agreement}: measured $\epsilon I_\mathrm{SC}$ (940 nm) matched simulations after applying a correction factor $C_\mathrm{cor}$ = 1.4 to account for unmodeled effects (e.g. shunt resistance, surface passivation).
+\end{itemize}
+
+Limitations of the approach:
+
+1) Real solar cells operate under AM1.5, so monochromatic-based $N_\mathrm{Fe}$ estimates can not predict performance under standard conditions.
+
+
+2) Co-existing impurities (e.g. Cu, Ni) could introduce overlapping recombination signals, though this study focused exclusively on iron.
+
+
+
+
+%\begin{mdframed}
+%
+%\end{mdframed}
 
 \vspace{1cm}
 \noindent

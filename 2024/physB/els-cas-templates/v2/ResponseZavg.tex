@@ -47,8 +47,8 @@ Impact on Photovoltaic Metrics:
 \end{itemize}
 
 
-$\mathrm{Fe}_i\mathrm{B}_s$ pairs introduce deep-level recombination centers that strongly impact minority carrier lifetime, leading to reduced $I_\mathrm{SC}$ and $V_\mathrm{OC}$. When $\mathrm{Fe}_i\mathrm{B}_s$ pairs dissociate, the more mobile $\mathrm{Fe}_i$ leads to different recombination dynamics, which is particularly evident under monochromatic (940~nm) illumination. Our study demonstrates that changes in $I_\mathrm{SC}$ after $\mathrm{Fe}_i\mathrm{B}_s$ dissociation can serve as a reliable method to estimate Fe concentration. 
-%The aim of the research was added in the introduction part 
+$\mathrm{Fe}_i\mathrm{B}_s$ pairs introduce deep-level recombination centers that strongly impact minority carrier lifetime, leading to reduced $I_\mathrm{SC}$ and $V_\mathrm{OC}$. When $\mathrm{Fe}_i\mathrm{B}_s$ pairs dissociate, the more mobile $\mathrm{Fe}_i$ leads to different recombination dynamics, which is particularly evident under monochromatic (940~nm) illumination. Our study demonstrates that changes in $I_\mathrm{SC}$ after $\mathrm{Fe}_i\mathrm{B}_s$ dissociation can serve as a reliable method to estimate Fe concentration.
+%The aim of the research was added in the introduction part
 %(page~2, paragraph~3 (last paragraph in the Introduction), line~1-2).
 
 \vspace{1cm}
@@ -146,8 +146,10 @@ PCA was applied to reduce redundancy in the dataset of photovoltaic parameters i
     \item \textbf{Input parameters}: the dataset included relative changes in four key photovoltaic parameters due to FeB pair dissociation: $\epsilon I_\mathrm{SC}$, $\epsilon V_\mathrm{OC}$, $\epsilon \eta$, $\epsilon FF$. Additional variables included solar cell properties: $T$, $N_\mathrm{B}$, $d_\mathrm{p}$;
     \item \textbf{Standardization}: all features were standardized to zero mean and unit variance to ensure equal weighting;
     \item \textbf{Covariance matrix and eigenanalysis}: PCA transformed the standardized data into orthogonal principal components (PCs) by computing eigenvalues/eigenvectors of the covariance matrix;
-    \item \textbf{Component selection}: Components were ranked by explained variance. For example, under monochromatic illumination, the first three PCs captured >95~\% of the variance (Table 2 in the manuscript);
-    \item \textbf{Interpretation}: 
+    \item \textbf{Component selection}: 
+    Components were ranked by explained variance. 
+    For example, under monochromatic illumination, the first three PCs captured >95~\% of the variance (Table 2 in the manuscript);
+    \item \textbf{Interpretation}:
     \begin{itemize}
     \item \textbf{PC1}: dominantly correlated with $\epsilon I_\mathrm{SC}$ and $\epsilon \eta$, reflecting iron-induced recombination;
     \item \textbf{PC2}: linked to $\epsilon V_\mathrm{OC}$ and temperature dependencies.
@@ -208,7 +210,7 @@ Key metrics for reliability:
     \item \textbf{Sensitivity}: at $N_\mathrm{B}$ = $10^{17}$ cm$^{-3}$, $\epsilon I_\mathrm{SC}$ under 940~nm changed by >100~\% for $N_\mathrm{Fe}$ = $10^{14}$ cm$^{-3}$, vs. <30~\% under AM1.5;
     \item \textbf{Correlation strength}: Pearson correlation coefficient ?
 \end{itemize}
- 
+
 Validation:
 
 \begin{itemize}
@@ -237,10 +239,10 @@ CuO-La2O3 Composite-Enabled MIS Schottky Barrier Diodes: A Novel Approach to Opt
 Recent developments in MIS and heterojunction technologies have opened new pathways for optoelectronic device diversification and enhanced photovoltaic performance. For example, a novel approach employing a CuO–La2O3 composite has been shown to enable MIS Schottky barrier diodes with improved rectification and tailored optoelectronic responses. In this work, Paul et al. demonstrated that the incorporation of La2O3 into CuO can optimize the interfacial properties and barrier heights, thereby enhancing device performance.
 % https://doi.org/10.1007/s10904-024-03277-z
 
-Moreover, precipitating agents have recently been applied in heterojunction solar cells to improve the interfacial quality and charge separation in ITO/CIS/CeO2/Al structures. Gayathri et al. reported that the use of specific precipitating agents not only refines the microstructure but also improves the overall photovoltaic efficiency by facilitating better charge transport.  
+Moreover, precipitating agents have recently been applied in heterojunction solar cells to improve the interfacial quality and charge separation in ITO/CIS/CeO2/Al structures. Gayathri et al. reported that the use of specific precipitating agents not only refines the microstructure but also improves the overall photovoltaic efficiency by facilitating better charge transport.
 % https://doi.org/10.1016/j.inoche.2024.112866
 
-In addition, a comprehensive review by Sibu et al. has recently detailed the critical role of selecting a suitable MIS combination for the fabrication of proficient Schottky diodes for optoelectronic applications. This review underscores how the careful engineering of the insulator and metal interfaces can lead to significant improvements in device stability and performance, providing a robust framework for future photovoltaic and sensor applications 
+In addition, a comprehensive review by Sibu et al. has recently detailed the critical role of selecting a suitable MIS combination for the fabrication of proficient Schottky diodes for optoelectronic applications. This review underscores how the careful engineering of the insulator and metal interfaces can lead to significant improvements in device stability and performance, providing a robust framework for future photovoltaic and sensor applications
 % https://doi.org/10.1016/j.nanoen.2024.109534
 
 
@@ -309,7 +311,7 @@ improvement options in the folder "Pictures"
 
 In our work—where we use high‑purity, boron‑doped Czochralski silicon (100), which is monocrystalline—the primary sources of iron contamination are predominantly extrinsic. Unlike multicrystalline silicon, where iron can be inherent in the feedstock and introduced via diamond wire sawing, monocrystalline silicon is grown in highly controlled environments. Nonetheless, trace iron can still be introduced during processing. The main sources include:
 
-1) Even in well‐controlled Czochralski processes, slight contamination can occur from the crucible, susceptor, or ambient atmosphere during growth. However, this is generally minimized in high‑purity monocrystalline ingots \cite{Goncalo2017}. 
+1) Even in well‐controlled Czochralski processes, slight contamination can occur from the crucible, susceptor, or ambient atmosphere during growth. However, this is generally minimized in high‑purity monocrystalline ingots \cite{Goncalo2017}.
 
 2) Iron may be introduced during subsequent wafer processing steps—such as cleaning, dopant diffusion, and high‑temperature annealing—via contaminated process chemicals, deposition chambers, or etching tools. For example, residual metal particles on equipment surfaces or impurities in the chemical baths can transfer trace amounts of iron onto the wafer surface \cite{abbott2014}.
 
@@ -383,4 +385,4 @@ already???
 \end{document}
 
 %Будь-ласка, покращ англійську в наступних реченнях, які я буду пропонувати. Зокрема, треба буде виправити граматичні та стилістичні помилки
-%якщо можна, окрім виправленого речення, наводь інформацію про зміни, які зроблені
+%якщо можна, окрім виправленого речення, наводь інформацію про зміни, які зроблені 

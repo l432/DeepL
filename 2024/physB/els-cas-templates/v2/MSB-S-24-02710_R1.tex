@@ -316,9 +316,8 @@ illumination levels (often AM1.5), and solar cells with specific parameters.
 In this study, we performed calculations over a sufficiently wide temperature range (290-340~K)
 and for solar cells with varying base thickness (180-380~$\mu$m) and doping levels
 (boron concentration in the base ranging from $10^{15}$ to $10^{17}$~cm$^{-3}$).
-The results obtained allow us to assess the feasibility and potential of using the
-main photovoltaic parameters of specific solar cells to estimate the $N_\mathrm{Fe}$ value across a range of temperatures,
-including conditions similar to those encountered in typical SSC applications.
+The obtained results enable us to evaluate the feasibility and potential of using the main photovoltaic 
+parameters of silicon solar cells to estimate the $N_\mathrm{Fe}$  value across a temperature range close to operating conditions.
 Furthermore, investigations have explored changes in photoelectric performance under not only solar illumination (AM1.5G)
 but also low-intensity monochromatic light (wavelength of 940~nm, intensities of 5~W/m$^{2}$ and 10~W/m$^{2}$).
 In the first case, while it is customary to adhere to standard conditions,
@@ -1082,13 +1081,19 @@ The previous subsections demonstrated that by using the relative changes in phot
 along with considering solar cell parameters (such as base depth and doping level)
 and measurement conditions (such as temperature and illumination type), it is possible to predict iron concentration.
 One approach to evaluating the value of $N_\mathrm{Fe}$ is to apply a machine learning algorithm (random forest, gradient booster, or artificial neural network etc.).
-If we assume that training process is conducted separately for each illumination variant, the input set of descriptors could be
+If we assume that the training process is conducted separately for each illumination variant and want to 
+determine the magnitude of $N_\mathrm{Fe}$ based on changes in short-circuit current,
+the input set of descriptors could be
 ($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$).
-Obviously, the $\varepsilon \eta$ value can be used simultaneously with $\varepsilon I_\mathrm{SC}$ for a more accurate determination of iron concentration.
-Indeed, expanding the set of descriptors allows the incorporation of additional information, thereby improving prediction precision.
-However, when comparing Fig.~\ref{fig3} and Fig.~\ref{fig10}, it is clear that  $\varepsilon I_\mathrm{SC}$ and $\varepsilon \eta$ are not entirely independent.
-Therefore, with an input parameter set ($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$, $\varepsilon \eta$),
-we may be processing redundant data that offer no new or additional information regarding iron concentration.
+Evidently, incorporating additional information, such as changes in efficiency ($\varepsilon \eta$), along with an expanded
+set of descriptors ($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$, $\varepsilon \eta$),
+increases the complexity of calculations due to the growing number of input parameters.
+However, this should enhance the accuracy of $N_\mathrm{Fe}$ predictions.
+At the same time, when comparing Fig.~\ref{fig3} and Fig.~\ref{fig10}, it is clear that  $\varepsilon I_\mathrm{SC}$ and $\varepsilon \eta$ are not entirely independent.
+This outcome is understandable from a physical standpoint as 
+short-circuit current and efficiency characterize the same physical process --- the diffusion of photo-induced carriers.
+Thus, the set ($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$, $\varepsilon \eta$)
+contains useful and redundant information compared to ($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$).
 
 Analyzing their correlations can help evaluate the independence of the parameters.
 Fig.~\ref{fig12} presents the Pearson correlation coefficients calculated for all parameter sets.
@@ -1115,30 +1120,31 @@ Thus,  augmenting the descriptor set by incorporating relative changes in additi
 photoelectric parameters introduces substantial redundancy in the input data.
 
 
-To assess the redundancy of information, we can use principal component analysis (PCA),
+To assess the degree of redundancy information in different descriptor sets, we employed principal component analysis (PCA),
 widely used in solving various problems, including identifying defects in solar cells \cite{Fadhel2019}.
-PCA uses a linear combination of the original variables to build the new variables (principal component, PC) while keeping maximum variance information.
-PCs are not correlating with each other and
-in the case of some particular principal component having a low information variance ratio, it can be discarded with little to no loss of useful information.
+PCA uses a linear combination of the original variables to construct the new variables (principal component, PC) while keeping maximum variance information.
+PCs are uncorrelated, and PCA allows one to evaluate each PC’s contribution to the total variance of the information.
+In the case of some particular principal component having a low information variance ratio, it can be discarded with little to no loss of useful information.
 
 PCs were built for different combinations of photovoltaic parameters and solar cell characteristics
 for the full set of simulated data, and the results are listed in Table~\ref{tbl2}.
-As evident, when only changes in short-circuit current are considered along with the solar cell's base parameters and temperature,
-there is no excessive information present.
-Adding $\varepsilon \eta$ to the set of descriptors practically does not change the number of independent variables.
+As evident, when only changes in short-circuit current are considered along with the solar cell's base parameters and temperature, 
+no excessive information is present (in the case of the descriptor set ($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$), 
+all four principal components exhibit a high ratio of information variance).
+And vice versa, when estimating $N_\mathrm{Fe}$ using a maximal set of
+seven descriptors ($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$, $\varepsilon \eta$, $\varepsilon V_\mathrm{OC}$, $\varepsilon F\!F$)
+obtained under monochromatic illumination five PCs account for more than 99.5\% of the variance in the input data.
+Therefore, applying PCA to transform the seven input variables and using only five is fully justified,
+as it significantly simplifies calculations with minimal impact on estimation accuracy.
+For the same set of descriptors obtained under AM1.5 illumination,
+the number of really independent variables is six.
+In general, if the estimation of iron concentration is based on changes in multiple photovoltaic parameters, 
+it is advisable to apply PCA to transform the original data.
+Thus, the simultaneous use of $\varepsilon \eta$ and $\varepsilon I_\mathrm{SC}$ practically does not alter
+the number of independent variables (four) compared to the initial set of descriptors.
 With the additional use of $\varepsilon V_\mathrm{OC}$ values obtained under AM1.5 illumination, it is advisable to consider five independent variables.
 For the same set of descriptors in a monochromatic illumination case, one can limit oneself to using only four independent components
 (cumulative variance ratio for PC4 and PC5 does not exceed 1.3\%).
-When considering changes in all photoelectric parameters due to complete dissociation of Fe$_i$B$_s$ pairs,
-the actual number of independent variables is six for AM1.5 illumination and five for 940 nm lighting.
-
-
-
-
-%photovoltaic energy conversion
-%To account for this challenge arising from κ spanning over
-%multiple orders of magnitude, the model performance for κ prediction is often evaluated on a log-scale where log-κ varies in the
-%range  1 to 3. {Srivastava2023}
 
 
 \begin{table}[<options>]
@@ -1197,7 +1203,7 @@ for refining the determination of iron concentration.
 In our opinion, for estimating iron concentration through changes
 in photovoltaic parameters due to variability in iron-related defects, it is advisable to use a set of
 ($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$, $\varepsilon \eta$) or ($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$, $\varepsilon \eta$,$\varepsilon V_\mathrm{OC}$).
-In these cases, to expedite calculations, it is advisable to use principal component analysis to reduce
+Besides, to expedite calculations, it is recommended to use principal component analysis to reduce
 the number of variables while retaining the maximum variance information.
 
 

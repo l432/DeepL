@@ -1,4 +1,4 @@
-\begin{thebibliography}{40}
+\begin{thebibliography}{41}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\bibinfo}[2]{#2}
 \ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
@@ -302,6 +302,18 @@
   sections of iron-contaminated boron-doped silicon},
 \newblock in: \bibinfo{booktitle}{2009 34th IEEE Photovoltaic Specialists
   Conference (PVSC)}, pp. \bibinfo{pages}{001588--001593}.
+%Type = Article
+\bibitem[{Fadhel et~al.(2019)Fadhel, Delpha, Diallo, Bahri, Migan, Trabelsi,
+  and Mimouni}]{Fadhel2019}
+\bibinfo{author}{S.~Fadhel}, \bibinfo{author}{C.~Delpha},
+  \bibinfo{author}{D.~Diallo}, \bibinfo{author}{I.~Bahri},
+  \bibinfo{author}{A.~Migan}, \bibinfo{author}{M.~Trabelsi},
+  \bibinfo{author}{M.~Mimouni},
+\newblock \bibinfo{title}{{PV} shading fault detection and classification based
+  on {I-V} curve using principal component analysis: {A}pplication to isolated
+  {PV} system},
+\newblock \bibinfo{journal}{Sol. Energy} \bibinfo{volume}{179}
+  (\bibinfo{year}{2019}) \bibinfo{pages}{1--10}.
 %Type = Article
 \bibitem[{Sultana et~al.(2024)Sultana, {Ferdous Rahman}, {Chandra Roy}, {Masum
   Mia}, {Al Ijajul Islam}, Irfan, {Rasool Chaudhry}, and {Dulal
