@@ -180,36 +180,15 @@
 
 % Here goes the abstract
 \begin{abstract}
-Transitioning to renewable energy sources is paramount for humanity's sustainable development, and silicon solar cells are at the forefront of solar energy conversion.
-Iron in these structures is a primary one of the most detrimental metallic impurities.
-This study examines the impact of iron defect variability on silicon solar cell performance across various scenarios.
-%integrating simulation and experimental validation.
-We have simulated solar cells using SCAPS software across a range of temperatures $(290-340)$~K,
-base thicknesses $(180-380)$~$\mu$m, doping levels ($10^{15} - 10^{17}$)~cm$^{-3}$,
-with iron concentrations varying from $10^{10}$ to $10^{14}$~cm$^{-3}$ under AM1.5 and monochromatic (940~nm) illumination.
-Analyzed across all cases were the effects of iron-boron pair dissociation on short-circuit current, open-circuit voltage, fill factor, and efficiency.
-The experimental measurements validated the simulation results, demonstrating good agreement for all photovoltaic parameters.
-This study investigates the potential of using photovoltaic parameter changes induced by iron-related defect restructuring to estimate iron concentration.
-It is shown that changes in short-circuit current obtained under monochromatic illumination are the most reliable,
-while the fill factor is the least effective.
-The study examined the correlation between changes in photovoltaic parameters caused by pair dissociation while establishing the expedience of applying principal component analysis in impurity concentration evaluation with the help of multiple parameters.
-
-
-%Principal component analysis was used to estimate the number of independent variables when multiple photovoltaic parameters are used simultaneously.
-
-%The impact of FeB pair dissociation on the current-voltage characteristics of silicon solar cells was examined.
-%Solar cells were simulated by using SCAPS software across a range of temperatures $(290-340)$~K,
-%base thicknesses $(180-380)$~$\mu$m,
-%doping levels ($10^{15} - 10^{17}$)~cm$^{-3}$,
-%with iron concentrations varying from $10^{10}$ to $10^{14}$~cm$^{-3}$
-%under AM1.5 and monochromatic (940~nm) illumination.
-%The effects of iron-boron pair dissociation on short-circuit current, open-circuit voltage,
-%fill factor, and efficiency were analyzed across all cases.
-%The experimental measurements validated the simulation results,
-%demonstrating a good agreement for all photovoltaic parameters.
-%The ability to use photovoltaic parameter changes induced by iron-related defect restructuring to estimate iron concentration was analyzed.
-%It is shown that changes in short-circuit current obtained under monochromatic illumination are the most reliable.
-%Principal component analysis was used to estimate the number of independent variables when multiple photovoltaic parameters are used simultaneously.
+Silicon solar cells are vital for renewable energy but often degrade from iron-induced carrier recombination.
+This study investigates the impact of iron-related defect variability on the photovoltaic performance of $n^+$-$p$-$p^+$ structure
+through comprehensive SCAPS simulations and experimental measurements.
+The effect of iron-boron pair dissociation on  silicon solar cell (SSC) short-circuit current, open-circuit voltage, fill factor, and efficiency was analyzed under diverse conditions.
+Simulations covered temperatures (290–340 K), iron concentrations ($10^{10}$--$10^{14}$~cm$^{-3}$), and SSC base thicknesses (180--380~$\mu$m) and 
+and boron doping ($10^{15}$--$10^{17}$~cm$^{-3}$) under AM1.5 and monochromatic (940~nm) illumination.
+Experimental results confirmed simulation predictions.
+The study assessed the ability to use photoelectric parameter variations for iron quantification, identifying short-circuit current under monochromatic light as a highly reliable metric.
+The study correlations between photoelectric characteristics suggested that Principal Component Analysis is advisable for dimensionality reduction when SSC multiple parameters are used in non-invasive iron detection.
 \end{abstract}
 
 
@@ -257,7 +236,7 @@ continue to play a dominant role in the photovoltaic market \cite{Basnet2024,Wan
 
 The issue of semiconductor purity has become increasingly significant since the advent of the transistor in 1947 \cite{Claers2018}.
 The 1960 study by Shockley and Queisser \cite{Goetzberger1960} demonstrated that
-the electrical properties of $n^{+}-p$ silicon diodes deteriorate when impurity atoms of metals such as Cu, Fe, Mn, Au, Zn, and Ni are present.
+the electrical properties of $n^{+}$-$p$ silicon diodes deteriorate when impurity atoms of metals such as Cu, Fe, Mn, Au, Zn, and Ni are present.
 This study prompted investigations focused on preventing contaminating metals from entering semiconductors during manufacturing.
 In particular, metallic impurities are known to reduce the efficiency of
 silicon--based devices through direct shunting \cite{Rsh:Breitenstein},
@@ -1120,7 +1099,7 @@ Thus,  augmenting the descriptor set by incorporating relative changes in additi
 photoelectric parameters introduces substantial redundancy in the input data.
 
 
-To assess the degree of redundancy information in different descriptor sets, we employed principal component analysis (PCA),
+To assess the degree of redundancy information in different descriptor sets, we employed Principal Component Analysis (PCA),
 widely used in solving various problems, including identifying defects in solar cells \cite{Fadhel2019}.
 PCA uses a linear combination of the original variables to construct the new variables (principal component, PC) while keeping maximum variance information.
 PCs are uncorrelated, and PCA allows one to evaluate each PC’s contribution to the total variance of the information.
@@ -1244,9 +1223,11 @@ In our opinion, for estimating iron concentration through changes
 in photovoltaic parameters due to variability in iron--related defects, it is advisable to use a set of
 ($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$, $\varepsilon \eta$) or ($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$, $\varepsilon \eta$,$\varepsilon V_\mathrm{OC}$).
 Furthermore, it has been demonstrated that iron-induced changes in various photovoltaic parameters are correlated.
-Therefore, if iron concentration estimation is performed using changes 
-in multiple photovoltaic parameters, applying Principal Component Analysis is advisable. 
+Therefore, if iron concentration estimation is performed using changes
+in multiple photovoltaic parameters, applying Principal Component Analysis is advisable.
 This data transformation reduces the number of variables while preserving the maximum variance information and accelerating calculations.
+
+The suggested and verified approach advances our understanding of impurity effects and paves the way for improved solar cell reliability.
 
 \section*{Acknowledgments}
 O.O. would like to acknowledge the financial support by
