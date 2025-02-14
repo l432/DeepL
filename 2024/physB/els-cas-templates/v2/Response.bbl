@@ -1,4 +1,4 @@
-\begin{thebibliography}{41}
+\begin{thebibliography}{39}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\bibinfo}[2]{#2}
 \ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
@@ -348,36 +348,11 @@
 \newblock \bibinfo{journal}{Materials Science and Engineering: B}
   \bibinfo{volume}{311} (\bibinfo{year}{2025}) \bibinfo{pages}{117817}.
 %Type = Article
-\bibitem[{Paul et~al.(2024)Paul, Suresh, Gayathri, Balasubramani, Al-Anazi, and
-  Farah}]{Paul2024}
-\bibinfo{author}{M.~J. Paul}, \bibinfo{author}{R.~Suresh},
-  \bibinfo{author}{P.~Gayathri}, \bibinfo{author}{V.~Balasubramani},
-  \bibinfo{author}{K.~M. Al-Anazi}, \bibinfo{author}{M.~A. Farah},
-\newblock \bibinfo{title}{Cuo-la2o3 composite-enabled mis schottky barrier
-  diodes: A novel approach to optoelectronic device diversification},
-\newblock \bibinfo{journal}{J. Inorg. Organomet. Polym. Mater.}
-  (\bibinfo{year}{2024}).
-%Type = Article
-\bibitem[{Gayathri et~al.(2024)Gayathri, Akila, Sibu, Selvaraj, Assiri,
-  matheswaran, and Balasubramani}]{Gayathri2024}
-\bibinfo{author}{P.~Gayathri}, \bibinfo{author}{T.~Akila},
-  \bibinfo{author}{G.~A. Sibu}, \bibinfo{author}{M.~Selvaraj},
-  \bibinfo{author}{M.~A. Assiri}, \bibinfo{author}{P.~matheswaran},
-  \bibinfo{author}{V.~Balasubramani},
-\newblock \bibinfo{title}{Enhancing photovoltaic applications through
-  precipitating agents in ito/cis/ceo2/al heterojunction solar cell},
-\newblock \bibinfo{journal}{Inorg. Chem. Commun.} \bibinfo{volume}{168}
-  (\bibinfo{year}{2024}) \bibinfo{pages}{112866}.
-%Type = Article
-\bibitem[{{Alan Sibu} et~al.(2024){Alan Sibu}, Gayathri, Akila, Marnadu, and
-  Balasubramani}]{AlanSibu2024}
-\bibinfo{author}{G.~{Alan Sibu}}, \bibinfo{author}{P.~Gayathri},
-  \bibinfo{author}{T.~Akila}, \bibinfo{author}{R.~Marnadu},
-  \bibinfo{author}{V.~Balasubramani},
-\newblock \bibinfo{title}{Manifestation on the choice of a suitable combination
-  of mis for proficient schottky diodes for optoelectronic applications: A
-  comprehensive review},
-\newblock \bibinfo{journal}{Nano Energy} \bibinfo{volume}{125}
-  (\bibinfo{year}{2024}) \bibinfo{pages}{109534}.
+\bibitem[{Green(2022)}]{Green2022}
+\bibinfo{author}{M.~A. Green},
+\newblock \bibinfo{title}{Improved silicon optical parameters at 25$^\circ${C},
+  295 {K} and 300 {K} including temperature coefficients},
+\newblock \bibinfo{journal}{Prog. Photovoltaics Res. Appl.}
+  \bibinfo{volume}{30} (\bibinfo{year}{2022}) \bibinfo{pages}{164--179}.
 
 \end{thebibliography}

@@ -184,7 +184,7 @@ Silicon solar cells are vital for renewable energy but often degrade from iron-i
 This study investigates the impact of iron-related defect variability on the photovoltaic performance of $n^+$-$p$-$p^+$ structure
 through comprehensive SCAPS simulations and experimental measurements.
 The effect of iron-boron pair dissociation on  silicon solar cell (SSC) short-circuit current, open-circuit voltage, fill factor, and efficiency was analyzed under diverse conditions.
-Simulations covered temperatures (290–340 K), iron concentrations ($10^{10}$--$10^{14}$~cm$^{-3}$), and SSC base thicknesses (180--380~$\mu$m) and 
+Simulations covered temperatures (290–340 K), iron concentrations ($10^{10}$--$10^{14}$~cm$^{-3}$), and SSC base thicknesses (180--380~$\mu$m) and
 and boron doping ($10^{15}$--$10^{17}$~cm$^{-3}$) under AM1.5 and monochromatic (940~nm) illumination.
 Experimental results confirmed simulation predictions.
 The study assessed the ability to use photoelectric parameter variations for iron quantification, identifying short-circuit current under monochromatic light as a highly reliable metric.
@@ -237,7 +237,7 @@ continue to play a dominant role in the photovoltaic market \cite{Basnet2024,Wan
 The issue of semiconductor purity has become increasingly significant since the advent of the transistor in 1947 \cite{Claers2018}.
 The 1960 study by Shockley and Queisser \cite{Goetzberger1960} demonstrated that
 the electrical properties of $n^{+}$-$p$ silicon diodes deteriorate when impurity atoms of metals such as Cu, Fe, Mn, Au, Zn, and Ni are present.
-This study prompted investigations focused on preventing contaminating metals from entering semiconductors during manufacturing.
+As a result, investigations were initiated to prevent metal contamination in semiconductors during manufacturing.
 In particular, metallic impurities are known to reduce the efficiency of
 silicon--based devices through direct shunting \cite{Rsh:Breitenstein},
 increased leakage current \cite{Lee1980},
@@ -309,12 +309,28 @@ Finally, in our calculations, we attempted to use the latest literature data
 concerning the exact values of silicon parameters, including light absorption values \cite{Green2022}
 and coefficients characterizing intrinsic recombination \cite{Brad2022,AugerSi2022}.
 
+The contributions of this work are as follows:
+\begin{itemize}[itemsep=2pt, parsep=0pt, topsep=0pt]
+    \item The impact of FeB pair dissociation on the short-circuit current, open-circuit voltage, fill factor,
+and efficiency of silicon solar cells was investigated through simulation.
+Calculations were performed over various temperatures, illumination conditions, and solar cell parameters,
+including base thickness, doping level, and impurity concentration.
+Particular attention was given to the silicon and defect parameters value under diverse conditions.
+    \item A series of experiments have been done to check the simulation predictions.
+    \item The feasibility of using variations in short-circuit current, open-circuit voltage, fill factor,
+and efficiency due to impurity pair dissociation for iron concentration estimation was analyzed,
+and the most reliable parameter --- short-circuit current under monochromatic illumination --- was identified.
+    \item The potential of simultaneous using multiple photovoltaic parameters for iron quantification, including machine learning techniques, was explored.
+It was shown that applying Principal Component Analysis as a preprocessing step is beneficial in this case.
+\end{itemize}
+
+
 \section{Research Methodology}%\label{}
 
 \subsection{Simulation Details}
-The study involved simulation $I$-$V$ curves of SSCs with an $n^+-p-p^+$ structure,
+The study involved simulation $I$-$V$ curves of SSCs with an $n^+$-$p$-$p^+$ structure,
 as illustrated in Fig.~\ref{fig1}.
-A back surface field ($p^+$-layer) is a notable feature observed in both Al-BSF cells (full area),
+A back surface field (BSF, $p^+$-layer) is a notable feature observed in both Al-BSF cells (full area),
 which are gradually losing relevance,
 and PERC cells (locally), which are the most widely used in mass production.
 The structures with a base uniformly doped with boron were under consideration.
