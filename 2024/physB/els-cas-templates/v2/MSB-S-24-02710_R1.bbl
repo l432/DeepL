@@ -1,4 +1,4 @@
-\begin{thebibliography}{82}
+\begin{thebibliography}{83}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\bibinfo}[2]{#2}
 \ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
@@ -244,6 +244,17 @@
   impurities in multicrystalline silicon materials},
 \newblock \bibinfo{journal}{Prog. Photovolt.: Res. Appl.} \bibinfo{volume}{14}
   (\bibinfo{year}{2006}) \bibinfo{pages}{513--531}.
+%Type = Inproceedings
+\bibitem[{Abbott et~al.(2014)Abbott, Poplavskyy, Scardera, Inns, Lemmi,
+  McIntosh, and Baker-Finch}]{Abbott2014}
+\bibinfo{author}{M.~D. Abbott}, \bibinfo{author}{D.~Poplavskyy},
+  \bibinfo{author}{G.~Scardera}, \bibinfo{author}{D.~Inns},
+  \bibinfo{author}{F.~Lemmi}, \bibinfo{author}{K.~R. McIntosh},
+  \bibinfo{author}{S.~C. Baker-Finch},
+\newblock \bibinfo{title}{Iron contamination in silicon solar cell production
+  environments},
+\newblock in: \bibinfo{booktitle}{2014 IEEE 40th Photovoltaic Specialist
+  Conference (PVSC)}, pp. \bibinfo{pages}{3479--3484}.
 %Type = Article
 \bibitem[{Schubert et~al.(2015)Schubert, Padilla, Michl, Mundt, Giesecke,
   Hohl-Ebinger, Benick, Warta, Tajima, and Ogura}]{IronSC}

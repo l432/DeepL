@@ -1,4 +1,4 @@
-\begin{thebibliography}{39}
+\begin{thebibliography}{44}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\bibinfo}[2]{#2}
 \ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
@@ -354,5 +354,54 @@
   295 {K} and 300 {K} including temperature coefficients},
 \newblock \bibinfo{journal}{Prog. Photovoltaics Res. Appl.}
   \bibinfo{volume}{30} (\bibinfo{year}{2022}) \bibinfo{pages}{164--179}.
+%Type = Article
+\bibitem[{Istratov et~al.(2000)Istratov, Hieslmair, and Weber}]{Istratov2000}
+\bibinfo{author}{A.~A. Istratov}, \bibinfo{author}{H.~Hieslmair},
+  \bibinfo{author}{E.~Weber},
+\newblock \bibinfo{title}{Iron contamination in silicon technology},
+\newblock \bibinfo{journal}{Appl. Phys. A} \bibinfo{volume}{70}
+  (\bibinfo{year}{2000}) \bibinfo{pages}{489–534}.
+%Type = Inproceedings
+\bibitem[{Abbott et~al.(2014)Abbott, Poplavskyy, Scardera, Inns, Lemmi,
+  McIntosh, and Baker-Finch}]{Abbott2014}
+\bibinfo{author}{M.~D. Abbott}, \bibinfo{author}{D.~Poplavskyy},
+  \bibinfo{author}{G.~Scardera}, \bibinfo{author}{D.~Inns},
+  \bibinfo{author}{F.~Lemmi}, \bibinfo{author}{K.~R. McIntosh},
+  \bibinfo{author}{S.~C. Baker-Finch},
+\newblock \bibinfo{title}{Iron contamination in silicon solar cell production
+  environments},
+\newblock in: \bibinfo{booktitle}{2014 IEEE 40th Photovoltaic Specialist
+  Conference (PVSC)}, pp. \bibinfo{pages}{3479--3484}.
+%Type = Article
+\bibitem[{Buonassisi et~al.(2006)Buonassisi, Istratov, Pickett, Heuer, Kalejs,
+  Hahn, Marcus, Lai, Cai, and Heald}]{Buonassisi2006}
+\bibinfo{author}{T.~Buonassisi}, \bibinfo{author}{A.~A. Istratov},
+  \bibinfo{author}{M.~D. Pickett}, \bibinfo{author}{M.~Heuer},
+  \bibinfo{author}{J.~P. Kalejs}, \bibinfo{author}{G.~Hahn},
+  \bibinfo{author}{M.~A. Marcus}, \bibinfo{author}{B.~Lai},
+  \bibinfo{author}{Z.~Cai}, \bibinfo{author}{S.~M. Heald},
+\newblock \bibinfo{title}{Chemical natures and distributions of metal
+  impurities in multicrystalline silicon materials},
+\newblock \bibinfo{journal}{Prog. Photovolt.: Res. Appl.} \bibinfo{volume}{14}
+  (\bibinfo{year}{2006}) \bibinfo{pages}{513--531}.
+%Type = Article
+\bibitem[{Schubert et~al.(2015)Schubert, Padilla, Michl, Mundt, Giesecke,
+  Hohl-Ebinger, Benick, Warta, Tajima, and Ogura}]{IronSC}
+\bibinfo{author}{M.~Schubert}, \bibinfo{author}{M.~Padilla},
+  \bibinfo{author}{B.~Michl}, \bibinfo{author}{L.~Mundt},
+  \bibinfo{author}{J.~Giesecke}, \bibinfo{author}{J.~Hohl-Ebinger},
+  \bibinfo{author}{J.~Benick}, \bibinfo{author}{W.~Warta},
+  \bibinfo{author}{M.~Tajima}, \bibinfo{author}{A.~Ogura},
+\newblock \bibinfo{title}{Iron related solar cell instability: Imaging analysis
+  and impact on cell performance},
+\newblock \bibinfo{journal}{Sol. Energy Mater. Sol. Cells}
+  \bibinfo{volume}{138} (\bibinfo{year}{2015}) \bibinfo{pages}{96--101}.
+%Type = Article
+\bibitem[{Herguth(2022)}]{Herguth2022}
+\bibinfo{author}{A.~Herguth},
+\newblock \bibinfo{title}{Quantification of iron in boron-doped silicon solar
+  cells from open circuit voltage measurements},
+\newblock \bibinfo{journal}{IEEE J. Photovolt.} \bibinfo{volume}{12}
+  (\bibinfo{year}{2022}) \bibinfo{pages}{937--947}.
 
 \end{thebibliography}
