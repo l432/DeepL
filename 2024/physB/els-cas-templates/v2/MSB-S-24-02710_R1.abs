@@ -6,4 +6,5 @@ Simulations covered temperatures (290–340 K), iron concentrations ($10^{10}$--
 and boron doping ($10^{15}$--$10^{17}$~cm$^{-3}$) under AM1.5 and monochromatic (940~nm) illumination.
 Experimental results confirmed simulation predictions.
 The study assessed the ability to use photoelectric parameter variations for iron quantification, identifying short-circuit current under monochromatic light as a highly reliable metric.
-The study correlations between photoelectric characteristics suggested that Principal Component Analysis is advisable for dimensionality reduction when SSC multiple parameters are used in non-invasive iron detection.
+The study correlations between photoelectric characteristics suggested that Principal Component Analysis is advisable for dimensionality reduction
+when SSC multiple parameters are used in non-invasive iron detection.
