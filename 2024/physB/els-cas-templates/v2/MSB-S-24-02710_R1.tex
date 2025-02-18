@@ -188,7 +188,7 @@ Simulations covered temperatures (290–340 K), iron concentrations ($10^{10}$--
 and boron doping ($10^{15}$--$10^{17}$~cm$^{-3}$) under AM1.5 and monochromatic (940~nm) illumination.
 Experimental results confirmed simulation predictions.
 The study assessed the ability to use photoelectric parameter variations for iron quantification, identifying short-circuit current under monochromatic light as a highly reliable metric.
-The study correlations between photoelectric characteristics suggested that Principal Component Analysis is advisable for dimensionality reduction 
+The study correlations between photoelectric characteristics suggested that Principal Component Analysis is advisable for dimensionality reduction
 when SSC multiple parameters are used in non-invasive iron detection.
 \end{abstract}
 
@@ -720,7 +720,10 @@ confirming that $\varepsilon I_\mathrm{SC}$ is independent of $W_\mathrm{ill}$.
        in the case of monochromatic (940~nm) illumination.
        The marks are the experimental results (divided by factor $C_{cor}=1.4$), the lines are the simulation results.
        $W_\mathrm{ill}$, W/m$^{2}$: 5 (marks and solid lines), 10 (dotted lines).
-       Different lines and marks correspond to different temperatures (a) or $N_\mathrm{Fe}$ values (b) --- see legends.
+       $T$, K (panel a): 300 (1, circles), 340 (2, squares).
+       $N_\mathrm{Fe}$, $10^{11}$~cm$^{-3}$ (panel b): 2.15 (curves 3), 2.6 (diamond marks), 4.64 (4),
+       21.5 (5), 46.4 (6), 49 (triangles), 215 (7), 280 (squares), 420 (circles), 464 (8). 
+       %Different lines and marks correspond to different temperatures (a) or $N_\mathrm{Fe}$ values (b) --- see legends.
 }\label{fig5}
 \end{figure}
 
@@ -866,7 +869,10 @@ By the way, Schubert et al. \cite{IronSC} also observed such dependence of the c
        in the case of monochromatic (940~nm) illumination.
        The marks are the experimental results, the lines are the simulation results.
        $W_\mathrm{ill}$, W/m$^{2}$: 5 (marks and solid lines), 10 (dotted lines).
-       Different lines and marks correspond to different temperatures (a) or $N_\mathrm{Fe}$ values (b) --- see legends.
+       $T$, K (panel a): 300 (1, circles), 340 (2, squares).
+       $N_\mathrm{Fe}$, $10^{11}$~cm$^{-3}$ (panel b): 2.15 (curves 3), 2.6 (diamond marks), 4.64 (4),
+       3.8 (triangles), 46.4 (5), 215 (6), 280 (squares), 420 (circles), 464 (7).       
+%       Different lines and marks correspond to different temperatures (a) or $N_\mathrm{Fe}$ values (b) --- see legends.
 }\label{fig7}
 \end{figure}
 
@@ -990,7 +996,7 @@ which were not considered in the simulation.
        temperature (b) for SSC with $d_p=380$~$\mu$m and $N_\mathrm{B}=1.36\times10^{15}$~cm$^{-3}$
        in the case of monochromatic (940~nm) illumination.
        The marks are the experimental results, the lines are the simulation results.
-       $W_\mathrm{ill}$, W/m$^{2}$: 5 (marks and solid lines), 10 (dotted lines).
+       $W_\mathrm{ill}$, W/m$^{2}$: 5 (marks and solid lines), 10 (dotted lines).       
        Different lines and marks correspond to different temperatures (a) or $N_\mathrm{Fe}$ values (b) --- see legends.
 }\label{fig9}
 \end{figure}
@@ -1071,13 +1077,39 @@ The data align closely, indicating that the inaccuracies typical for $V_\mathrm{
        in the case of monochromatic (940~nm) illumination.
        The marks are the experimental results (divided by factor $C_{cor}=1.4$), the lines are the simulation results.
        $W_\mathrm{ill}$, W/m$^{2}$: 5 (marks and solid lines), 10 (dotted lines).
-       Different lines and marks correspond to different temperatures (a) or $N_\mathrm{Fe}$ values (b) --- see legends.
+       $T$, K (panel a): 300 (1, circles), 340 (2, squares).
+       $N_\mathrm{Fe}$, $10^{11}$~cm$^{-3}$ (panel b): 2.15 (curves 3), 2.6 (diamond marks), 3.8 (open triangles), 4.64 (4), 
+       21.5 (5), 46.4 (6), 72 (filled triangles), 215 (7), 280 (squares), 420 (circles), 464 (8).       
+       %Different lines and marks correspond to different temperatures (a) or $N_\mathrm{Fe}$ values (b) --- see legends.
 }\label{fig11}
 \end{figure}
 
 The revealed characteristics of $\varepsilon \eta$ indicate that this photoelectric parameter
 is entirely suitable for estimating iron concentration.
 
+Two key metrics were used to identify the solar cell parameter whose changes,
+resulting from the Fe$_i$B$_\mathrm{Si}$ $\rightleftarrows$ Fe$_i$ + B$_\mathrm{Si}$ reconstruction,
+enable the most reliable determination of iron concentration.
+Specifically, these metrics are:
+(1) the monotonicity of the relative change in the parameter value as a function of impurity concentration,
+which is a necessary condition for the unambiguous estimation of $N_\mathrm{Fe}$;
+and (2) the absolute magnitude of the parameter change, which allows for more precise measurements and,
+consequently, a more accurate estimation of $N_\mathrm{Fe}$.
+The first criterion is not satisfied by $\varepsilon F\!F$, $\varepsilon V_\mathrm{OC}$, and $\varepsilon \eta$
+(the latter two under AM1.5 illumination).
+At the same iron concentration, $\varepsilon I_\mathrm{SC}$ values under monochromatic illumination exceed those under AM1.5 illumination.
+As mentioned earlier, this effect deals with differences in the generation locations
+of non-equilibrium carriers under different lighting conditions.
+Additionally, under identical conditions, the changes in open-circuit voltage are significantly weaker
+than those in short-circuit current or efficiency.
+Since $\varepsilon I_\mathrm{SC}$ and $\varepsilon \eta$ are of the same order,
+it is advisable to select the more reliable parameter using additional metrics.
+Notably, short-circuit current determination, unlike efficiency, does not require additional calculations
+and can be directly extracted from the raw measured $I$-$V$ curves.
+Furthermore, $\varepsilon I_\mathrm{SC}$ is virtually independent of illumination intensity
+(whereas $\varepsilon \eta$ exhibits a weak dependence), leading to two key advantages:
+(a)~iron concentration can be determined using an uncalibrated for-intensity monochromatic light source;
+(b)~the influence of shading caused by electrodes, along with the antireflective and passivating layers of the solar cell, is reduced.
 
 \subsection{Photoelectric parameters correlation}
 
@@ -1189,31 +1221,7 @@ The simulation results have been compared with experimental data.
 The feasibility of using relative changes in short-circuit current, open-circuit voltage,
 fill factor, and efficiency resulting from the dissociation of FeB pairs
 to estimate the concentration of iron impurities in a solar cell has been analyzed.
-Two key metrics were used to identify the solar cell parameter whose changes,
-resulting from the Fe$_i$B$_\mathrm{Si}$ $\rightleftarrows$ Fe$_i$ + B$_\mathrm{Si}$ reconstruction,
-enable the most reliable determination of iron concentration.
-Specifically, these metrics are:
-(1) the monotonicity of the relative change in the parameter value as a function of impurity concentration,
-which is a necessary condition for the unambiguous estimation of $N_\mathrm{Fe}$;
-and (2) the absolute magnitude of the parameter change, which allows for more precise measurements and,
-consequently, a more accurate estimation of $N_\mathrm{Fe}$.
-The first criterion is not satisfied by $\varepsilon F\!F$, $\varepsilon V_\mathrm{OC}$, and $\varepsilon \eta$
-(the latter two under AM1.5 illumination).
-At the same iron concentration, $\varepsilon I_\mathrm{SC}$ values under monochromatic illumination exceed those under AM1.5 illumination.
-As mentioned earlier, this effect deals with differences in the generation locations
-of non-equilibrium carriers under different lighting conditions.
-Additionally, under identical conditions, the changes in open-circuit voltage are significantly weaker
-than those in short-circuit current or efficiency.
-Since $\varepsilon I_\mathrm{SC}$ and $\varepsilon \eta$ are of the same order,
-it is advisable to select the more reliable parameter using additional metrics.
-Notably, short-circuit current determination, unlike efficiency, does not require additional calculations
-and can be directly extracted from the raw measured $I$-$V$ curves.
-Furthermore, $\varepsilon I_\mathrm{SC}$ is virtually independent of illumination intensity
-(whereas $\varepsilon \eta$ exhibits a weak dependence), leading to two key advantages:
-(a)~iron concentration can be determined using an uncalibrated for-intensity monochromatic light source;
-(b)~the influence of shading caused by electrodes, along with the antireflective and passivating layers of the solar cell, is reduced.
-
-Thus, short-circuit current is the most suitable parameter for estimating the concentration of iron impurities, as its changes during the
+It is shown that short-circuit current is the most suitable parameter for iron quantification, as variations in $I_\mathrm{SC}$ value during the
 Fe$_i$B$_\mathrm{Si}$ $\rightleftarrows$ Fe$_i$ + B$_\mathrm{Si}$ transformation can be effectively utilized.
 Determining photovoltaic parameters under monochromatic illumination,
 with a wavelength corresponding to the predominant absorption in the solar cell base, is more effective than using AM1.5 illumination.
@@ -1222,18 +1230,6 @@ however, their applicability is limited at low base doping levels ($<10^{16}$~cm
 due to non-monotonic variations in response to increasing iron concentration.
 In our view, using the fill factor for iron concentration estimation is impractical.
 These conclusions are validated by experimental results, which show that short-circuit current provides the most accurate determination of iron concentration.
-
-%The limitations of the proposed method may arise from the presence of a significant
-%number of recombination-active defects unrelated to iron,
-%as well as high series resistance (which distorts the short-circuit current) and/or shunt resistance (which primarily affects the open-circuit voltage).
-
-
-%It is shown that changes in short-circuit current are the most suitable parameter.
-%It is more expedient to determine the photovoltaic parameters under monochromatic illumination
-%with a wavelength matching the predominant absorption in the solar cell base rather than using AM1.5 illumination.
-%Next in suitability are changes in efficiency and open-circuit voltage,
-%although their use becomes restricted at low doping levels of the base ($<10^{16}$~cm$^{-3}$).
-%In our opinion, using the fill factor to estimate iron concentration is not practical.
 
 It has been shown that the potential accuracy of estimating iron concentration depends
 on the doping level of the base:
@@ -1254,7 +1250,13 @@ Therefore, if iron concentration estimation is performed using changes
 in multiple photovoltaic parameters, applying Principal Component Analysis is advisable.
 This data transformation reduces the number of variables while preserving the maximum variance information and accelerating calculations.
 
+Our study lays the groundwork for developing an efficient, express, cost-effective method for monitoring iron impurity concentrations in silicon solar cells.
+This approach relies on current-voltage measurements and can be easily incorporated into the standard characterization procedure for silicon photovoltaic devices.
+Through simulations and experiments, we have identified a key metric for quantifying iron impurities (short-circuit current) and determined which factors significantly (base doping level, temperature) and insignificantly (base thickness) influence the response of solar cells to iron-related defect rearrangements.
+These findings should be considered when implementing the method in practice.
+Our approach allows for the simultaneous determination of the concentration of iron impurities along with the standard solar cell parameters (such as short-circuit current, open-circuit voltage, and nominal power), all without needing additional equipment.
 The suggested and verified approach advances our understanding of impurity effects and paves the way for improved solar cell reliability.
+
 
 \section*{Acknowledgments}
 O.O. would like to acknowledge the financial support by
