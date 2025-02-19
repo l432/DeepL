@@ -26,20 +26,12 @@
 
 \usepackage[numbers]{natbib}
 \usepackage{enumitem}
-%\usepackage[authoryear]{natbib}
-%\usepackage[authoryear,longnamesfirst]{natbib}
-%%%Author macros
+
 \def\tsc#1{\csdef{#1}{\textsc{\lowercase{#1}}\xspace}}
 \tsc{WGM}
 \tsc{QE}
 %%%
 
-% Uncomment and use as if needed
-%\newtheorem{theorem}{Theorem}
-%\newtheorem{lemma}[theorem]{Lemma}
-%\newdefinition{rmk}{Remark}
-%\newproof{pf}{Proof}
-%\newproof{pot}{Proof of Theorem \ref{thm}}
 
 \begin{document}
 \let\WriteBookmarks\relax
@@ -55,57 +47,13 @@
 % Main title of the paper
 \title [mode = title]{Iron's impact on silicon solar cell execution: comprehensive modeling across diverse scenarios}
 
-% Title footnote mark
-% eg: \tnotemark[1]
-%\tnotemark[<tnote number>]
-
-% Title footnote 1.
-% eg: \tnotetext[1]{Title footnote text}
-%\tnotetext[<tnote number>]{<tnote text>}
-
-% First author
-%
-% Options: Use if required
-% eg: \author[1,3]{Author Name}[type=editor,
-%       style=chinese,
-%       auid=000,
-%       bioid=1,
-%       prefix=Sir,
-%       orcid=0000-0000-0000-0000,
-%       facebook=<facebook id>,
-%       twitter=<twitter id>,
-%       linkedin=<linkedin id>,
-%       gplus=<gplus id>]
-
-%\author[1,3]{Oleg Olikh}[type=Co-ordinator,
-%       style=chinese,
-%       auid=000,
-%       bioid=1,
-%       prefix=Dr.,
-%       orcid=0000-0003-0633-5429,
-%%       facebook=<facebook id>,
-%%       twitter=<twitter id>,
-%%       linkedin=<linkedin id>,
-%       gplus=<gplus id>]
 \author{Oleg Olikh}[
-%       type=Co-ordinator,
-%       style=chinese,
-%       auid=000,
-%       bioid=1,
-%       prefix=Dr.,
        orcid=0000-0003-0633-5429
-       % ,
-%       facebook=<facebook id>,
-%       twitter=<twitter id>,
-%       linkedin=<linkedin id>,
-%       gplus=<gplus id>
        ]
 
 % Corresponding author indication
 \cormark[1]
 
-% Footnote of the first author
-%\fnmark[1]
 
 % Email id of the first author
 \ead{olegolikh@knu.ua}
@@ -121,62 +69,19 @@
 \affiliation{organization={Taras Shevchenko National University of Kyiv},
             addressline={64/13, Volodymyrska Street},
             city={Kyiv},
-%          citysep={}, % Uncomment if no comma needed between city and postcode
             postcode={01601},
- %           state={},
             country={Ukraine}}
 
-%\affiliation[<aff no>]{organization={Taras Shevchenko National University of Kyiv, Faculty of Physics},
-%            addressline={ave Glushkov 2},
-%            city={Kyiv},
-%%          citysep={}, % Uncomment if no comma needed between city and postcode
-%            postcode={03022},
-%            state={},
-%            country={Ukraine}}
-
-%\author[1,3]{Zavhorodnii Oleksii}[type=editor,
-%       style=chinese,
-%       auid=000,
-%       bioid=1,
-%%       prefix=Mr,
-%       orcid=0000-0001-8080-7661,
-%%       facebook=<facebook id>,
-%%       twitter=<twitter id>,
-%%       linkedin=<linkedin id>,
-%       gplus=<gplus id>]
 
 \author{Oleksii Zavhorodnii}[
        orcid=0000-0001-8080-7661]
 
-% Footnote of the second author
-%\fnmark[2]
-
-% Email id of the second author
 \ead{nevermor464@gmail.com}
 
-% URL of the second author
-%\ead[url]{https://gen.phys.univ.kiev.ua/}
 
 % Credit authorship
 %\credit{}
 
-% Address/affiliation
-%\affiliation[<aff no>]{organization={Taras Shevchenko National University of Kyiv, Faculty of Physics},
-%            addressline={ave Glushkov 2},
-%            city={Kyiv},
-%%          citysep={}, % Uncomment if no comma needed between city and postcode
-%            postcode={03022},
-%            state={},
-%            country={Ukraine}}
-
-% Corresponding author text
-%\cortext[1]{Corresponding author}
-
-% Footnote text
-%\fntext[1]{}
-
-% For a title note without a number/mark
-%\nonumnote{}
 
 % Here goes the abstract
 \begin{abstract}
@@ -349,10 +254,10 @@ and layer thicknesses (see Fig.~\ref{fig1}) were selected according to Fell et a
 \begin{figure}
 	\centering
 		\includegraphics[width=0.65\linewidth]{Fig1.png}
-	  \caption{Schematic diagram of analyzed solar cells.
-      he right side of the figure illustrates the configurations of interstitial iron Fe$_i$ and iron-boron pairs Fe$_i$B$_s$.}\label{fig1}
+	  \caption{Schematic diagram of analysed solar cell.
+       The figure also presents the solar cell parameters and external conditions that varied during the simulation --- see the main text for details.
+      The right side of the figure illustrates the configurations of interstitial iron Fe$_i$ and iron-boron pairs Fe$_i$B$_s$.}\label{fig1}
 \end{figure}
-
 
 
 \begin{table}
@@ -722,7 +627,7 @@ confirming that $\varepsilon I_\mathrm{SC}$ is independent of $W_\mathrm{ill}$.
        $W_\mathrm{ill}$, W/m$^{2}$: 5 (marks and solid lines), 10 (dotted lines).
        $T$, K (panel a): 300 (1, circles), 340 (2, squares).
        $N_\mathrm{Fe}$, $10^{11}$~cm$^{-3}$ (panel b): 2.15 (curves 3), 2.6 (diamond marks), 4.64 (4),
-       21.5 (5), 46.4 (6), 49 (triangles), 215 (7), 280 (squares), 420 (circles), 464 (8). 
+       21.5 (5), 46.4 (6), 49 (triangles), 215 (7), 280 (squares), 420 (circles), 464 (8).
        %Different lines and marks correspond to different temperatures (a) or $N_\mathrm{Fe}$ values (b) --- see legends.
 }\label{fig5}
 \end{figure}
@@ -871,7 +776,7 @@ By the way, Schubert et al. \cite{IronSC} also observed such dependence of the c
        $W_\mathrm{ill}$, W/m$^{2}$: 5 (marks and solid lines), 10 (dotted lines).
        $T$, K (panel a): 300 (1, circles), 340 (2, squares).
        $N_\mathrm{Fe}$, $10^{11}$~cm$^{-3}$ (panel b): 2.15 (curves 3), 2.6 (diamond marks), 4.64 (4),
-       3.8 (triangles), 46.4 (5), 215 (6), 280 (squares), 420 (circles), 464 (7).       
+       3.8 (triangles), 46.4 (5), 215 (6), 280 (squares), 420 (circles), 464 (7).
 %       Different lines and marks correspond to different temperatures (a) or $N_\mathrm{Fe}$ values (b) --- see legends.
 }\label{fig7}
 \end{figure}
@@ -996,7 +901,7 @@ which were not considered in the simulation.
        temperature (b) for SSC with $d_p=380$~$\mu$m and $N_\mathrm{B}=1.36\times10^{15}$~cm$^{-3}$
        in the case of monochromatic (940~nm) illumination.
        The marks are the experimental results, the lines are the simulation results.
-       $W_\mathrm{ill}$, W/m$^{2}$: 5 (marks and solid lines), 10 (dotted lines).       
+       $W_\mathrm{ill}$, W/m$^{2}$: 5 (marks and solid lines), 10 (dotted lines).
        Different lines and marks correspond to different temperatures (a) or $N_\mathrm{Fe}$ values (b) --- see legends.
 }\label{fig9}
 \end{figure}
@@ -1078,8 +983,8 @@ The data align closely, indicating that the inaccuracies typical for $V_\mathrm{
        The marks are the experimental results (divided by factor $C_{cor}=1.4$), the lines are the simulation results.
        $W_\mathrm{ill}$, W/m$^{2}$: 5 (marks and solid lines), 10 (dotted lines).
        $T$, K (panel a): 300 (1, circles), 340 (2, squares).
-       $N_\mathrm{Fe}$, $10^{11}$~cm$^{-3}$ (panel b): 2.15 (curves 3), 2.6 (diamond marks), 3.8 (open triangles), 4.64 (4), 
-       21.5 (5), 46.4 (6), 72 (filled triangles), 215 (7), 280 (squares), 420 (circles), 464 (8).       
+       $N_\mathrm{Fe}$, $10^{11}$~cm$^{-3}$ (panel b): 2.15 (curves 3), 2.6 (diamond marks), 3.8 (open triangles), 4.64 (4),
+       21.5 (5), 46.4 (6), 72 (filled triangles), 215 (7), 280 (squares), 420 (circles), 464 (8).
        %Different lines and marks correspond to different temperatures (a) or $N_\mathrm{Fe}$ values (b) --- see legends.
 }\label{fig11}
 \end{figure}
@@ -1195,10 +1100,6 @@ The numbers represent the ratio of information variance associated with each pri
 set of descriptors&\multicolumn{7}{C}{Explained Variance Ratio (\%)}\\
 &PC0&PC1&PC2&PC3&PC4&PC5&PC6\\% Table header row
 \midrule
-%($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$)&43.23&25.00&25.00&6.70&---&---&---\\
-%($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$, $\varepsilon \eta$) & 52.39 &20.00&20.00&7.48&0.13& ---&---\\
-%($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$, $\varepsilon \eta$, $\varepsilon V_\mathrm{OC}$) & 44.40 &18.78&16.67&16.46&3.61& 0.08&---\\
-%($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$, $\varepsilon \eta$, $\varepsilon V_\mathrm{OC}$, $\varepsilon FF$) & 43.29 &22.59&14.29&14.19&4.29& 1.35&0.002\\
 ($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$)&43.23/42.80&25.00/25.00&25.00/25.00&6.70/7.20&---&---&---\\
 ($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$, $\varepsilon \eta$) & 52.39/52.46 &20.00/20.00&20.00/20.00&7.48/7.51&0.13/0.03& ---&---\\
 ($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$, $\varepsilon \eta$, $\varepsilon V_\mathrm{OC}$) & 44.40/59.02 &18.78/16.73&16.67/16.67&16.46/6.28&3.61/1.29& 0.08/0.01&---\\
@@ -1281,7 +1182,6 @@ Data will be made available on request.
 %% Loading bibliography style file
 \bibliographystyle{model1-num-names}
 
-%\bibliographystyle{cas-model2-names}
 
 % Loading bibliography database
 \bibliography{olikh}
@@ -1289,8 +1189,4 @@ Data will be made available on request.
 
 
 \end{document}
-
-%В реченні "" заміни, будь-ласка, "" для підвищення clarity
-%В реченні "" заміни, будь-ласка, "" для підвищення conciseness
-%В реченні "" заміни, будь-ласка, "" для підвищення  sensitivity
 
