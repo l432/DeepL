@@ -2,9 +2,8 @@ Silicon solar cells are vital for renewable energy but often degrade from iron-i
 This study investigates the impact of iron-related defect variability on the photovoltaic performance of $n^+$-$p$-$p^+$ structure
 through comprehensive SCAPS simulations and experimental measurements.
 The effect of iron-boron pair dissociation on  silicon solar cell (SSC) short-circuit current, open-circuit voltage, fill factor, and efficiency was analyzed under diverse conditions.
-Simulations covered temperatures (290–340 K), iron concentrations ($10^{10}$--$10^{14}$~cm$^{-3}$), and SSC base thicknesses (180--380~$\mu$m) and
-and boron doping ($10^{15}$--$10^{17}$~cm$^{-3}$) under AM1.5 and monochromatic (940~nm) illumination.
+Simulations covered temperatures (290–340 K), iron concentrations ($10^{10}$--$10^{14}$~cm$^{-3}$), and SSC base thicknesses (180--380~$\mu$m) and boron doping ($10^{15}$--$10^{17}$~cm$^{-3}$) under AM1.5 and monochromatic (940~nm) illumination.
 Experimental results confirmed simulation predictions.
-The study assessed the ability to use photoelectric parameter variations for iron quantification, identifying short-circuit current under monochromatic light as a highly reliable metric.
-The study correlations between photoelectric characteristics suggested that Principal Component Analysis is advisable for dimensionality reduction
+The study assessed the ability to use photovoltaic parameter variations for iron quantification, identifying short-circuit current under monochromatic light as a highly reliable metric.
+The study correlations between photovoltaic characteristics suggested that Principal Component Analysis is advisable for dimensionality reduction
 when SSC multiple parameters are used in non-invasive iron detection.
