@@ -1,0 +1,306 @@
+\begin{thebibliography}{34}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\providecommand{\bibinfo}[2]{#2}
+\ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
+%Type = Article
+\bibitem[{Karlilar~Pata and Balcilar(2024)}]{Pata2024}
+\bibinfo{author}{S.~Karlilar~Pata}, \bibinfo{author}{M.~Balcilar},
+\newblock \bibinfo{title}{Decarbonizing energy: Evaluating fossil fuel
+  displacement by renewables in oecd countries},
+\newblock \bibinfo{journal}{Environ. Sci. Pollut. Res.} \bibinfo{volume}{31}
+  (\bibinfo{year}{2024}) \bibinfo{pages}{31304--31313}.
+%Type = Article
+\bibitem[{Holechek et~al.(2022)Holechek, Geli, Sawalhah, and
+  Valdez}]{Holechek2022}
+\bibinfo{author}{J.~L. Holechek}, \bibinfo{author}{H.~M.~E. Geli},
+  \bibinfo{author}{M.~N. Sawalhah}, \bibinfo{author}{R.~Valdez},
+\newblock \bibinfo{title}{A global assessment: Can renewable energy replace
+  fossil fuels by 2050?},
+\newblock \bibinfo{journal}{Sustainability} \bibinfo{volume}{14}
+  (\bibinfo{year}{2022}) \bibinfo{pages}{4792}.
+%Type = Article
+\bibitem[{Park et~al.(2022)Park, Lee, Khan, Wahab, and Kim}]{Park2022}
+\bibinfo{author}{S.~Park}, \bibinfo{author}{J.~Lee}, \bibinfo{author}{S.~Khan},
+  \bibinfo{author}{A.~Wahab}, \bibinfo{author}{M.~Kim},
+\newblock \bibinfo{title}{Machine learning-based heavy metal ion detection
+  using surface-enhanced raman spectroscopy},
+\newblock \bibinfo{journal}{Sensors} \bibinfo{volume}{22}
+  (\bibinfo{year}{2022}) \bibinfo{pages}{596}.
+%Type = Article
+\bibitem[{Qi et~al.(2020)Qi, Ma, Dang, Su, and Liu}]{Qi2020}
+\bibinfo{author}{X.~Qi}, \bibinfo{author}{W.~Ma}, \bibinfo{author}{Y.~Dang},
+  \bibinfo{author}{W.~Su}, \bibinfo{author}{L.~Liu},
+\newblock \bibinfo{title}{Optimization of the melt/crystal interface shape and
+  oxygen concentration during the czochralski silicon crystal growth process
+  using an artificial neural network and a genetic algorithm},
+\newblock \bibinfo{journal}{J. Cryst. Growth} \bibinfo{volume}{548}
+  (\bibinfo{year}{2020}) \bibinfo{pages}{125828}.
+%Type = Article
+\bibitem[{Rachdi and Hofmann(2021)}]{Rachdi2021}
+\bibinfo{author}{L.~Rachdi}, \bibinfo{author}{M.~Hofmann},
+\newblock \bibinfo{title}{Use of optical emission spectroscopy to predict
+  silicon nitride layer properties},
+\newblock \bibinfo{journal}{Vacuum} \bibinfo{volume}{191}
+  (\bibinfo{year}{2021}) \bibinfo{pages}{110322}.
+%Type = Article
+\bibitem[{Buratti et~al.(2020)Buratti, Eijkens, and Hameiri}]{Buratti2020}
+\bibinfo{author}{Y.~Buratti}, \bibinfo{author}{C.~Eijkens},
+  \bibinfo{author}{Z.~Hameiri},
+\newblock \bibinfo{title}{Optimization of solar cell production lines using
+  neural networks and genetic algorithms},
+\newblock \bibinfo{journal}{ACS Appl. Energy Mater.} \bibinfo{volume}{3}
+  (\bibinfo{year}{2020}) \bibinfo{pages}{10317--10322}.
+%Type = Article
+\bibitem[{Zhang and He(2022)}]{Zhang2022}
+\bibinfo{author}{L.~Zhang}, \bibinfo{author}{M.~He},
+\newblock \bibinfo{title}{Unsupervised machine learning for solar cell
+  materials from the literature},
+\newblock \bibinfo{journal}{J. Appl. Phys.} \bibinfo{volume}{131}
+  (\bibinfo{year}{2022}) \bibinfo{pages}{064902}.
+%Type = Article
+\bibitem[{Liu et~al.(2023)Liu, Wang, Shi, Wu, Zhu, Wang, Zhou, and
+  Choy}]{Liu2023}
+\bibinfo{author}{T.~Liu}, \bibinfo{author}{S.~Wang}, \bibinfo{author}{Y.~Shi},
+  \bibinfo{author}{L.~Wu}, \bibinfo{author}{R.~Zhu}, \bibinfo{author}{Y.~Wang},
+  \bibinfo{author}{J.~Zhou}, \bibinfo{author}{W.~C.~H. Choy},
+\newblock \bibinfo{title}{Machine-learning accelerating the development of
+  perovskite photovoltaics},
+\newblock \bibinfo{journal}{Sol. RRL} \bibinfo{volume}{7}
+  (\bibinfo{year}{2023}) \bibinfo{pages}{2300650}.
+%Type = Article
+\bibitem[{Asghar et~al.(2023)Asghar, Hafeez, Sabir, Ijaz, Bukhari, and
+  Ro}]{Asghar2023}
+\bibinfo{author}{Z.~Asghar}, \bibinfo{author}{K.~Hafeez},
+  \bibinfo{author}{D.~Sabir}, \bibinfo{author}{B.~Ijaz},
+  \bibinfo{author}{S.~S.~H. Bukhari}, \bibinfo{author}{J.~Ro},
+\newblock \bibinfo{title}{Reclaim: Renewable energy based demand-side
+  management using machine learning models},
+\newblock \bibinfo{journal}{IEEE Access} \bibinfo{volume}{11}
+  (\bibinfo{year}{2023}) \bibinfo{pages}{3846--3857}.
+%Type = Article
+\bibitem[{Abdullah-Vetter et~al.(2025)Abdullah-Vetter, Wright, Wu, Shakiba, and
+  Hameiri}]{AbdullahVetter2025}
+\bibinfo{author}{Z.~Abdullah-Vetter}, \bibinfo{author}{B.~Wright},
+  \bibinfo{author}{T.-C. Wu}, \bibinfo{author}{A.~Shakiba},
+  \bibinfo{author}{Z.~Hameiri},
+\newblock \bibinfo{title}{Automatic quantitative analysis of internal quantum
+  efficiency measurements of gaas solar cells using deep learning},
+\newblock \bibinfo{journal}{Adv. Sci.} \bibinfo{volume}{12}
+  (\bibinfo{year}{2025}) \bibinfo{pages}{2407048}.
+%Type = Article
+\bibitem[{Di~Sabatino et~al.(2024)Di~Sabatino, Hendawi, and
+  Garcia}]{DiSabatino2024}
+\bibinfo{author}{M.~Di~Sabatino}, \bibinfo{author}{R.~Hendawi},
+  \bibinfo{author}{A.~S. Garcia},
+\newblock \bibinfo{title}{Silicon solar cells: Trends, manufacturing
+  challenges, and ai perspectives},
+\newblock \bibinfo{journal}{Crystals} \bibinfo{volume}{14}
+  (\bibinfo{year}{2024}) \bibinfo{pages}{167}.
+%Type = Article
+\bibitem[{Datta et~al.(2023)Datta, Baul, Sarker, Sadhu, and Hodges}]{Datta2023}
+\bibinfo{author}{S.~Datta}, \bibinfo{author}{A.~Baul}, \bibinfo{author}{G.~C.
+  Sarker}, \bibinfo{author}{P.~K. Sadhu}, \bibinfo{author}{D.~R. Hodges},
+\newblock \bibinfo{title}{A comprehensive review of the application of machine
+  learning in fabrication and implementation of photovoltaic systems},
+\newblock \bibinfo{journal}{IEEE Access} \bibinfo{volume}{11}
+  (\bibinfo{year}{2023}) \bibinfo{pages}{77750--77778}.
+%Type = Article
+\bibitem[{Jaiswal et~al.(2023)Jaiswal, Martínez-Ramón, and
+  Busani}]{Jaiswal2023}
+\bibinfo{author}{R.~Jaiswal}, \bibinfo{author}{M.~Martínez-Ramón},
+  \bibinfo{author}{T.~Busani},
+\newblock \bibinfo{title}{Recent advances in silicon solar cell research using
+  data science-based learning},
+\newblock \bibinfo{journal}{IEEE J. Photovolt.} \bibinfo{volume}{13}
+  (\bibinfo{year}{2023}) \bibinfo{pages}{2--15}.
+%Type = Article
+\bibitem[{Buratti et~al.(2024)Buratti, Javier, Abdullah-Vetter, Dwivedi, and
+  Hameiri}]{Buratti2024}
+\bibinfo{author}{Y.~Buratti}, \bibinfo{author}{G.~M. Javier},
+  \bibinfo{author}{Z.~Abdullah-Vetter}, \bibinfo{author}{P.~Dwivedi},
+  \bibinfo{author}{Z.~Hameiri},
+\newblock \bibinfo{title}{Machine learning for advanced characterisation of
+  silicon photovoltaics: A comprehensive review of techniques and
+  applications},
+\newblock \bibinfo{journal}{Renewable Sustainable Energy Rev.}
+  \bibinfo{volume}{202} (\bibinfo{year}{2024}) \bibinfo{pages}{114617}.
+%Type = Article
+\bibitem[{Bhatti et~al.(2023)Bhatti, Manzoor, Michel, Bonilla, Abrams, Zoha,
+  Hussain, and Ghannam}]{Bhatti2023}
+\bibinfo{author}{S.~Bhatti}, \bibinfo{author}{H.~U. Manzoor},
+  \bibinfo{author}{B.~Michel}, \bibinfo{author}{R.~S. Bonilla},
+  \bibinfo{author}{R.~Abrams}, \bibinfo{author}{A.~Zoha},
+  \bibinfo{author}{S.~Hussain}, \bibinfo{author}{R.~Ghannam},
+\newblock \bibinfo{title}{Revolutionizing low-cost solar cells with machine
+  learning: A systematic review of optimization techniques},
+\newblock \bibinfo{journal}{Advanced Energy and Sustainability Research}
+  \bibinfo{volume}{4} (\bibinfo{year}{2023}) \bibinfo{pages}{2300004}.
+%Type = Article
+\bibitem[{{Munawer Al-Otum}(2024)}]{AlOtum2024}
+\bibinfo{author}{H.~{Munawer Al-Otum}},
+\newblock \bibinfo{title}{Classification of anomalies in electroluminescence
+  images of solar pv modules using cnn-based deep learning},
+\newblock \bibinfo{journal}{Sol. Energy} \bibinfo{volume}{278}
+  (\bibinfo{year}{2024}) \bibinfo{pages}{112803}.
+%Type = Article
+\bibitem[{Pratt et~al.(2021)Pratt, Govender, and Klein}]{Pratt2021}
+\bibinfo{author}{L.~Pratt}, \bibinfo{author}{D.~Govender},
+  \bibinfo{author}{R.~Klein},
+\newblock \bibinfo{title}{Defect detection and quantification in
+  electroluminescence images of solar pv modules using u-net semantic
+  segmentation},
+\newblock \bibinfo{journal}{Renew. Energ.} \bibinfo{volume}{178}
+  (\bibinfo{year}{2021}) \bibinfo{pages}{1211--1222}.
+%Type = Article
+\bibitem[{Li et~al.(2024)Li, Zhang, Qu, Zhang, and Sun}]{Li2024a}
+\bibinfo{author}{Z.~Li}, \bibinfo{author}{S.~Zhang}, \bibinfo{author}{C.~Qu},
+  \bibinfo{author}{Z.~Zhang}, \bibinfo{author}{F.~Sun},
+\newblock \bibinfo{title}{Research on multi-defects classification detection
+  method for solar cells based on deep learning},
+\newblock \bibinfo{journal}{PLOS ONE} \bibinfo{volume}{19}
+  (\bibinfo{year}{2024}) \bibinfo{pages}{1--16}.
+%Type = Article
+\bibitem[{Lin et~al.(2021)Lin, Dandage, Lin, Lin, and Chen}]{Lin2021}
+\bibinfo{author}{H.-H. Lin}, \bibinfo{author}{H.~K. Dandage},
+  \bibinfo{author}{K.-M. Lin}, \bibinfo{author}{Y.-T. Lin},
+  \bibinfo{author}{Y.-J. Chen},
+\newblock \bibinfo{title}{Efficient cell segmentation from electroluminescent
+  images of single-crystalline silicon photovoltaic modules and cell-based
+  defect identification using deep learning with pseudo-colorization},
+\newblock \bibinfo{journal}{Sensors} \bibinfo{volume}{21}
+  (\bibinfo{year}{2021}) \bibinfo{pages}{4292}.
+%Type = Article
+\bibitem[{Tang et~al.(2020)Tang, Yang, Xiong, and Yan}]{Tang2020}
+\bibinfo{author}{W.~Tang}, \bibinfo{author}{Q.~Yang},
+  \bibinfo{author}{K.~Xiong}, \bibinfo{author}{W.~Yan},
+\newblock \bibinfo{title}{Deep learning based automatic defect identification
+  of photovoltaic module using electroluminescence images},
+\newblock \bibinfo{journal}{Sol. Energy} \bibinfo{volume}{201}
+  (\bibinfo{year}{2020}) \bibinfo{pages}{453--460}.
+%Type = Article
+\bibitem[{Bu et~al.(2022)Bu, Liu, Li, Shen, Zhao, and Tang}]{Bu2022}
+\bibinfo{author}{C.~Bu}, \bibinfo{author}{T.~Liu}, \bibinfo{author}{R.~Li},
+  \bibinfo{author}{R.~Shen}, \bibinfo{author}{B.~Zhao},
+  \bibinfo{author}{Q.~Tang},
+\newblock \bibinfo{title}{Electrical pulsed infrared thermography and
+  supervised learning for pv cells defects detection},
+\newblock \bibinfo{journal}{Sol. Energ. Mat. Sol.} \bibinfo{volume}{237}
+  (\bibinfo{year}{2022}) \bibinfo{pages}{111561}.
+%Type = Article
+\bibitem[{Turek and Meusel(2023)}]{Turek2023}
+\bibinfo{author}{M.~Turek}, \bibinfo{author}{M.~Meusel},
+\newblock \bibinfo{title}{Automated classification of electroluminescence
+  images using artificial neural networks in correlation to solar cell
+  performance parameters},
+\newblock \bibinfo{journal}{Sol. Energ. Mat. Sol.} \bibinfo{volume}{260}
+  (\bibinfo{year}{2023}) \bibinfo{pages}{112483}.
+%Type = Article
+\bibitem[{Huang et~al.(2022)Huang, Zhang, and Wang}]{Huang2022}
+\bibinfo{author}{C.~Huang}, \bibinfo{author}{Z.~Zhang},
+  \bibinfo{author}{L.~Wang},
+\newblock \bibinfo{title}{Psopruner: Pso-based deep convolutional neural
+  network pruning method for pv module defects classification},
+\newblock \bibinfo{journal}{IEEE J. Photovolt.} \bibinfo{volume}{12}
+  (\bibinfo{year}{2022}) \bibinfo{pages}{1550--1558}.
+%Type = Article
+\bibitem[{Chen et~al.(2019)Chen, Chen, Wu, Cheng, and Lin}]{Chen2019}
+\bibinfo{author}{Z.~Chen}, \bibinfo{author}{Y.~Chen}, \bibinfo{author}{L.~Wu},
+  \bibinfo{author}{S.~Cheng}, \bibinfo{author}{P.~Lin},
+\newblock \bibinfo{title}{Deep residual network based fault detection and
+  diagnosis of photovoltaic arrays using current-voltage curves and ambient
+  conditions},
+\newblock \bibinfo{journal}{Energy Convers. Manage.} \bibinfo{volume}{198}
+  (\bibinfo{year}{2019}) \bibinfo{pages}{111793}.
+%Type = Article
+\bibitem[{Hopwood et~al.(2020)Hopwood, Gunda, Seigneur, and
+  Walters}]{Hopwood2020}
+\bibinfo{author}{M.~W. Hopwood}, \bibinfo{author}{T.~Gunda},
+  \bibinfo{author}{H.~Seigneur}, \bibinfo{author}{J.~Walters},
+\newblock \bibinfo{title}{Neural network-based classification of string-level
+  iv curves from physically-induced failures of photovoltaic modules},
+\newblock \bibinfo{journal}{IEEE Access} \bibinfo{volume}{8}
+  (\bibinfo{year}{2020}) \bibinfo{pages}{161480--161487}.
+%Type = Article
+\bibitem[{Mellit and Kalogirou(2021)}]{Mellit2021}
+\bibinfo{author}{A.~Mellit}, \bibinfo{author}{S.~Kalogirou},
+\newblock \bibinfo{title}{Artificial intelligence and internet of things to
+  improve efficacy of diagnosis and remote sensing of solar photovoltaic
+  systems: Challenges, recommendations and future directions},
+\newblock \bibinfo{journal}{Renewable Sustainable Energy Rev.}
+  \bibinfo{volume}{143} (\bibinfo{year}{2021}) \bibinfo{pages}{110889}.
+%Type = Article
+\bibitem[{Ma et~al.(2025)Ma, Yu, Zhong, Chen, Gong, and Xiang}]{Ma2025}
+\bibinfo{author}{Y.~Ma}, \bibinfo{author}{H.~Yu}, \bibinfo{author}{Y.~Zhong},
+  \bibinfo{author}{S.~Chen}, \bibinfo{author}{X.~Gong},
+  \bibinfo{author}{H.~Xiang},
+\newblock \bibinfo{title}{Transferable machine learning approach for predicting
+  electronic structures of charged defects},
+\newblock \bibinfo{journal}{Appl. Phys. Lett.} \bibinfo{volume}{126}
+  (\bibinfo{year}{2025}) \bibinfo{pages}{044103}.
+%Type = Article
+\bibitem[{Choudhary and Sumpter(2023)}]{Choudhary2023}
+\bibinfo{author}{K.~Choudhary}, \bibinfo{author}{B.~G. Sumpter},
+\newblock \bibinfo{title}{Can a deep-learning model make fast predictions of
+  vacancy formation in diverse materials?},
+\newblock \bibinfo{journal}{AIP Adv.} \bibinfo{volume}{13}
+  (\bibinfo{year}{2023}) \bibinfo{pages}{095109}.
+%Type = Article
+\bibitem[{Chia et~al.(2024)Chia, Thamrongsiripak, Thongphanit, and
+  Nuntawong}]{Chia2024}
+\bibinfo{author}{J.~Y. Chia}, \bibinfo{author}{N.~Thamrongsiripak},
+  \bibinfo{author}{S.~Thongphanit}, \bibinfo{author}{N.~Nuntawong},
+\newblock \bibinfo{title}{Machine learning-enhanced detection of minor
+  radiation-induced defects in semiconductor materials using raman
+  spectroscopy},
+\newblock \bibinfo{journal}{J. Appl. Phys.} \bibinfo{volume}{135}
+  (\bibinfo{year}{2024}) \bibinfo{pages}{025701}.
+%Type = Article
+\bibitem[{Wang et~al.(2024)Wang, Wright, Zhu, Buratti, and Hameiri}]{Wang2024a}
+\bibinfo{author}{S.~Wang}, \bibinfo{author}{B.~Wright},
+  \bibinfo{author}{Y.~Zhu}, \bibinfo{author}{Y.~Buratti},
+  \bibinfo{author}{Z.~Hameiri},
+\newblock \bibinfo{title}{Extracting the parameters of two-energy-level defects
+  in silicon wafers using machine learning models},
+\newblock \bibinfo{journal}{Sol. Energ. Mat. Sol.} \bibinfo{volume}{277}
+  (\bibinfo{year}{2024}) \bibinfo{pages}{113123}.
+%Type = Article
+\bibitem[{Buratti et~al.(2022)Buratti, Dick, Le~Gia, and Hameiri}]{Buratti2022}
+\bibinfo{author}{Y.~Buratti}, \bibinfo{author}{J.~Dick},
+  \bibinfo{author}{Q.~Le~Gia}, \bibinfo{author}{Z.~Hameiri},
+\newblock \bibinfo{title}{Deep learning extraction of the temperature-dependent
+  parameters of bulk defects},
+\newblock \bibinfo{journal}{ACS Appl. Mater. Interfaces} \bibinfo{volume}{14}
+  (\bibinfo{year}{2022}) \bibinfo{pages}{48647--48657}.
+%Type = Article
+\bibitem[{Buratti et~al.(2020)Buratti, Le~Gia, Dick, Zhu, and
+  Hameiri}]{Buratti2020a}
+\bibinfo{author}{Y.~Buratti}, \bibinfo{author}{Q.~T. Le~Gia},
+  \bibinfo{author}{J.~Dick}, \bibinfo{author}{Y.~Zhu},
+  \bibinfo{author}{Z.~Hameiri},
+\newblock \bibinfo{title}{Extracting bulk defect parameters in silicon wafers
+  using machine learning models},
+\newblock \bibinfo{journal}{npj Computational Materials} \bibinfo{volume}{6}
+  (\bibinfo{year}{2020}) \bibinfo{pages}{142}.
+%Type = Article
+\bibitem[{Le et~al.(2024)Le, Zhou, Chen, Yang, Rougieux, Macdonald, and
+  Liu}]{Le2024}
+\bibinfo{author}{T.~T. Le}, \bibinfo{author}{Z.~Zhou},
+  \bibinfo{author}{A.~Chen}, \bibinfo{author}{Z.~Yang},
+  \bibinfo{author}{F.~Rougieux}, \bibinfo{author}{D.~Macdonald},
+  \bibinfo{author}{A.~Liu},
+\newblock \bibinfo{title}{{Reassessing iron–gallium recombination activity in
+  silicon}},
+\newblock \bibinfo{journal}{J. Appl. Phys.} \bibinfo{volume}{135}
+  (\bibinfo{year}{2024}) \bibinfo{pages}{133107}.
+%Type = Article
+\bibitem[{Yamaguchi et~al.(2018)Yamaguchi, Lee, Araki, Kojima, and
+  Ohshita}]{Yamaguchi2018}
+\bibinfo{author}{M.~Yamaguchi}, \bibinfo{author}{K.-H. Lee},
+  \bibinfo{author}{K.~Araki}, \bibinfo{author}{N.~Kojima},
+  \bibinfo{author}{Y.~Ohshita},
+\newblock \bibinfo{title}{Analysis for efficiency potential of crystalline si
+  solar cells},
+\newblock \bibinfo{journal}{J. Mater. Res.} \bibinfo{volume}{33}
+  (\bibinfo{year}{2018}) \bibinfo{pages}{2621--2626}.
+
+\end{thebibliography}
