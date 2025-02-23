@@ -1,4 +1,4 @@
-\begin{thebibliography}{34}
+\begin{thebibliography}{39}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\bibinfo}[2]{#2}
 \ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
@@ -302,5 +302,48 @@
   solar cells},
 \newblock \bibinfo{journal}{J. Mater. Res.} \bibinfo{volume}{33}
   (\bibinfo{year}{2018}) \bibinfo{pages}{2621--2626}.
+%Type = Article
+\bibitem[{Bošnjaković(2024)}]{Bosnjakovic2024}
+\bibinfo{author}{M.~Bošnjaković},
+\newblock \bibinfo{title}{Advance of sustainable energy materials: Technology
+  trends for silicon-based photovoltaic cells},
+\newblock \bibinfo{journal}{Sustainability} \bibinfo{volume}{16}
+  (\bibinfo{year}{2024}) \bibinfo{pages}{7962}.
+%Type = Article
+\bibitem[{Zhang(2021)}]{Zhang2021}
+\bibinfo{author}{J.~Zhang},
+\newblock \bibinfo{title}{Solar pv market research and industry competition
+  report},
+\newblock \bibinfo{journal}{IOP Conf. Ser.: Earth Environ. Sci.}
+  \bibinfo{volume}{632} (\bibinfo{year}{2021}) \bibinfo{pages}{032047}.
+%Type = Article
+\bibitem[{{Di Sabatino}(2014)}]{DiSabatino2014}
+\bibinfo{author}{M.~{Di Sabatino}},
+\newblock \bibinfo{title}{Detection limits for glow discharge mass spectrometry
+  (gdms) analyses of impurities in solar cell silicon},
+\newblock \bibinfo{journal}{Measurement} \bibinfo{volume}{50}
+  (\bibinfo{year}{2014}) \bibinfo{pages}{135--140}.
+%Type = Article
+\bibitem[{Kunze et~al.(2023)Kunze, Greulich, Tummalieh, Wirtz, Hoeffler,
+  Woehrle, Glunz, Rein, and Demant}]{Kunze2023}
+\bibinfo{author}{P.~Kunze}, \bibinfo{author}{J.~M. Greulich},
+  \bibinfo{author}{A.~Tummalieh}, \bibinfo{author}{W.~Wirtz},
+  \bibinfo{author}{H.~Hoeffler}, \bibinfo{author}{N.~Woehrle},
+  \bibinfo{author}{S.~Glunz}, \bibinfo{author}{S.~Rein},
+  \bibinfo{author}{M.~Demant},
+\newblock \bibinfo{title}{Contactless inline iv measurement of solar cells
+  using an empirical model},
+\newblock \bibinfo{journal}{Sol. RRL} \bibinfo{volume}{7}
+  (\bibinfo{year}{2023}) \bibinfo{pages}{2200599}.
+%Type = Article
+\bibitem[{Battaglia et~al.(2023)Battaglia, Comi, Stadelmann, Hiestand,
+  Ruhstaller, and Knapp}]{Battaglia2023}
+\bibinfo{author}{M.~Battaglia}, \bibinfo{author}{E.~Comi},
+  \bibinfo{author}{T.~Stadelmann}, \bibinfo{author}{R.~Hiestand},
+  \bibinfo{author}{B.~Ruhstaller}, \bibinfo{author}{E.~Knapp},
+\newblock \bibinfo{title}{Deep ensemble inverse model for image-based
+  estimation of solar cell parameters},
+\newblock \bibinfo{journal}{APL Machine Learning} \bibinfo{volume}{1}
+  (\bibinfo{year}{2023}) \bibinfo{pages}{036108}.
 
 \end{thebibliography}
