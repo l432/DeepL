@@ -1,4 +1,4 @@
-\begin{thebibliography}{39}
+\begin{thebibliography}{40}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\bibinfo}[2]{#2}
 \ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
@@ -345,5 +345,14 @@
   estimation of solar cell parameters},
 \newblock \bibinfo{journal}{APL Machine Learning} \bibinfo{volume}{1}
   (\bibinfo{year}{2023}) \bibinfo{pages}{036108}.
+%Type = Article
+\bibitem[{Minagawa et~al.(2024)Minagawa, Tezuka, and Tsuchida}]{Minagawa2024}
+\bibinfo{author}{H.~Minagawa}, \bibinfo{author}{T.~Tezuka},
+  \bibinfo{author}{H.~Tsuchida},
+\newblock \bibinfo{title}{Effective combinations of features in predicting the
+  range of incident ions using machine learning},
+\newblock \bibinfo{journal}{Nucl. Instrum. Methods Phys. Res. Sect. B Beam
+  Interact. Mater. At.} \bibinfo{volume}{553} (\bibinfo{year}{2024})
+  \bibinfo{pages}{165383}.
 
 \end{thebibliography}
