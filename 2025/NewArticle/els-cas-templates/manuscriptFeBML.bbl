@@ -1,4 +1,4 @@
-\begin{thebibliography}{40}
+\begin{thebibliography}{45}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\bibinfo}[2]{#2}
 \ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
@@ -354,5 +354,46 @@
 \newblock \bibinfo{journal}{Nucl. Instrum. Methods Phys. Res. Sect. B Beam
   Interact. Mater. At.} \bibinfo{volume}{553} (\bibinfo{year}{2024})
   \bibinfo{pages}{165383}.
+%Type = Article
+\bibitem[{Breiman(2001)}]{Breiman2001}
+\bibinfo{author}{L.~Breiman},
+\newblock \bibinfo{title}{Random forests},
+\newblock \bibinfo{journal}{Mach. Learn.} \bibinfo{volume}{45}
+  (\bibinfo{year}{2001}) \bibinfo{pages}{5--32}.
+%Type = Article
+\bibitem[{Natekin and Knoll(2013)}]{Natekin2013}
+\bibinfo{author}{A.~Natekin}, \bibinfo{author}{A.~Knoll},
+\newblock \bibinfo{title}{Gradient boosting machines, a tutorial},
+\newblock \bibinfo{journal}{Front. Neurorob.} \bibinfo{volume}{7}
+  (\bibinfo{year}{2013}).
+%Type = Article
+\bibitem[{Akinpelu et~al.(2024)Akinpelu, Abolade, Okafor, Obada, Ukpong, {Kumar
+  R.}, Healy, and Akande}]{Akinpelu2024}
+\bibinfo{author}{S.~Akinpelu}, \bibinfo{author}{S.~Abolade},
+  \bibinfo{author}{E.~Okafor}, \bibinfo{author}{D.~Obada},
+  \bibinfo{author}{A.~Ukpong}, \bibinfo{author}{S.~{Kumar R.}},
+  \bibinfo{author}{J.~Healy}, \bibinfo{author}{A.~Akande},
+\newblock \bibinfo{title}{Interpretable machine learning methods to predict the
+  mechanical properties of abx3 perovskites},
+\newblock \bibinfo{journal}{Results Phys.} \bibinfo{volume}{65}
+  (\bibinfo{year}{2024}) \bibinfo{pages}{107978}.
+%Type = Article
+\bibitem[{Cao et~al.(2020)Cao, Liu, and Ni}]{Cao2020}
+\bibinfo{author}{W.~Cao}, \bibinfo{author}{X.~Liu}, \bibinfo{author}{J.~Ni},
+\newblock \bibinfo{title}{Parameter optimization of support vector regression
+  using henry gas solubility optimization algorithm},
+\newblock \bibinfo{journal}{IEEE Access} \bibinfo{volume}{8}
+  (\bibinfo{year}{2020}) \bibinfo{pages}{88633--88642}.
+%Type = Article
+\bibitem[{Hanif et~al.(2024)Hanif, Siddique, Si, Naveed, Liu, and
+  Mi}]{Hanif2024}
+\bibinfo{author}{M.~F. Hanif}, \bibinfo{author}{M.~U. Siddique},
+  \bibinfo{author}{J.~Si}, \bibinfo{author}{M.~S. Naveed},
+  \bibinfo{author}{X.~Liu}, \bibinfo{author}{J.~Mi},
+\newblock \bibinfo{title}{Enhancing solar forecasting accuracy with sequential
+  deep artificial neural network and hybrid random forest and gradient boosting
+  models across varied terrains},
+\newblock \bibinfo{journal}{Advanced Theory and Simulations}
+  \bibinfo{volume}{7} (\bibinfo{year}{2024}) \bibinfo{pages}{2301289}.
 
 \end{thebibliography}
