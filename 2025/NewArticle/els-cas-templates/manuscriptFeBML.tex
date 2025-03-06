@@ -224,6 +224,95 @@ The study examined the correlation between changes in photovoltaic parameters ca
 % Main text
 \section{Introduction}%\label{}
 \par
+The urgent challenges of global warming and fossil fuel depletion have spurred the search
+for renewable energy sources, accelerating the rapid advancement of photovoltaic (PV) energy and the widespread deployment of solar panels \cite{Pata2024, Holechek2022}.
+However, PV energy faces several significant challenges:
+the need to optimize solar cell manufacturing processes,
+improve the efficiency and stability of PV devices
+(either by discovering new materials or by enhancing existing structures),
+develop energy management systems designed to regulate the energy flow in real-time and
+establish methods for monitoring the condition of photoelectric converters, specifically through defect characterization.
+Simultaneously, the application of machine learning (ML) methods,
+which can identify patterns and correlations that are not readily apparent through traditional analysis \cite{Park2022},
+opens new avenues for addressing the issues above in photovoltaics.
+For instance, ML methods optimize individual production stages ---
+such as crystal growth \cite{Qi2020} and plasma-enhanced vapor deposition \cite{Rachdi2021} ---
+and streamline entire solar cell production lines, which may involve up to ten processing steps and forty-seven process parameter inputs \cite{Buratti2020}.
+Moreover, ML techniques enhance PV devices by identifying key photovoltaic materials,
+analyzing references to various structural configurations in the literature \cite{Zhang2022} or
+optimizing perovskite solar cells \cite{Liu2023},
+designing renewable energy-based demand-side management systems \cite{Asghar2023},
+and extracting additional information from internal quantum efficiency measurements \cite{AbdullahVetter2025}.
+Numerous reviews provide further insights into ML applications in PV systems \cite{DiSabatino2024, Datta2023, Jaiswal2023, Buratti2024, Bhatti2023}.
+
+We will now explore the application of artificial intelligence in greater depth for defect analysis.
+Most relevant studies focus on image analysis of solar cells, including electroluminescence, photoluminescence,
+and infrared thermography \cite{AlOtum2024, Pratt2021, Li2024a, Lin2021, Tang2020, Bu2022, Turek2023, Huang2022}.
+These methods facilitate detecting and classifying defects such as cracks, finger failures, hot spots, scratches,
+and horizontal dislocations and are predominantly implemented using convolutional neural networks.
+Another widely adopted approach involves applying ML models to current-voltage ($I$-$V$) curves,
+enabling the identification of permanent and temporal faults in PV arrays \cite{Liu2021, Chen2019, Hopwood2020, Mellit2021}.
+A key advantage of this defect characterization method is its reliance on $I$–$V$ measurements,
+a standard procedure for PV device assessment.
+Additionally, ML techniques specifically designed for analyzing point defects warrant particular attention.
+For instance, researchers have developed methods for determining
+the electronic structure of intrinsic defects \cite{Ma2025, Choudhary2023},
+detecting radiation-induced defects via Raman spectroscopy \cite{Chia2024, Park2022},
+and extracting recombination-active center parameters from temperature- and injection-dependent
+lifetime measurements \cite{Wang2024a, Buratti2022, Buratti2020a}.
+Although such defects represent one of the main limitations of PV devices \cite{Le2024, Yamaguchi2018}, studies in this area remain scarce.
+Moreover, existing research primarily focuses on characterizing defects in PV materials rather than solar cells and relies on data obtained through specialized equipment.
+
+This study proposes an ML-based approach to extract impurity concentrations from $I$–$V$ curves.
+Specifically, we focus on quantifying iron in boron-doped crystalline silicon solar cells.
+This constraint is not overly restrictive, given that
+(i)~Si-based solar cells dominate the current PV market \cite{Bosnjakovic2024, Zhang2021},
+with most being manufactured from boron-doped crystalline silicon (c-Si:B);
+and (ii)~iron is one of the most prevalent, ubiquitous, and efficiency-limiting metallic impurities \cite{Buonassisi2006, IronSC}.
+It is well established that in $p$-type material,
+iron tends to bind with dopant atoms such as boron, forming iron–boron pairs under equilibrium conditions
+or existing as interstitial species only in the presence of sufficiently high free electron densities \cite{Kimerling1983, FeBAssJAP2014}.
+The deliberate transition between these states can be readily induced
+through intense illumination, electron injection, or heating up to 200~$^\circ$C and
+is commonly employed in various methods for assessing iron concentration
+\cite{Zoth1990, Rein2, Schmidt2005, Goodarzi2017, Olikh2021JAP, FeMethod2012, Herguth2022, Macdonald2004}.
+The approach proposed in this study leverages changes in photovoltaic parameters (PVPs)
+(short-circuit current, open-circuit voltage, efficiency, and fill factor) resulting from FeB dissociation as input features for ML algorithms.
+The specified PVPs can be easily extracted from $I$-$V$ characteristics, making this method advantageous compared to existing approaches:
+
+\noindent
+(1)~Unlike glow discharge mass spectrometry or secondary ion mass spectrometry \cite{DiSabatino2014}, it is non-destructive.
+\noindent
+(2)~It does not require specialized equipment or specially prepared samples, in contrast
+to Fourier-transform infrared spectroscopy, electron paramagnetic resonance, deep-level transient spectroscopy (DLTS),
+Laplace DLTS, carrier lifetime measurements, photoluminescence, or photoconductance
+\cite{Schroder2006, HowMuchPhysics, LaplDLTS, Rein2, Schmidt2005, FeMethod2012, Goodarzi2017}.
+\noindent
+(3)~It is relatively simple and fast compared to other methods that also rely on measuring PV parameters,
+such as the kinetics of short-circuit current \cite{Olikh2021JAP} and open-circuit voltage \cite{Herguth2022},
+but require lengthy experimental procedures or multiple illumination levels.
+
+In our previous work \cite{Olikh2022PPV},
+we employed a deep learning approach to estimate iron concentration based on the ideality factor,
+which was also derived from $I$-$V$ characteristics.
+However, the method proposed in this study imposes fewer constraints on the accuracy of $I$–$V$ measurements across the entire voltage range
+and the model used to describe the $I$-$V$ characteristics of actual structures.
+Thus, our approach allows for the simultaneous determination of iron impurity concentration along with key electrical parameters.
+These inline characterization techniques are crucial for ensuring efficient production lines and optimizing processes to produce reliable solar cells.
+Notably, luminescence imaging is increasingly used for solar cell characterization.
+However, ML methods have been proposed to extract $I$-$V$ characteristic data from such images \cite{Kunze2023, Battaglia2023}.
+Integrating these methods with our approach into a unified pipeline would enable the extraction of iron concentration data from luminescence measurements.
+
+\section{Methodology}
+
+\subsection{Data Collection}
+
+\subsection{Data Pre-Processing}
+
+\subsection{Machine Learning Algorithms}
+
+\subsection{Model evaluation}
+
 %The necessity for renewable energy sources to meet the growing global demand for sustainable and environmentally friendly energy alternatives has become evident.
 %Among the wide range of renewable energy sources, sunlight is the cleanest, safest,
 %and most abundant source for use in sustainable energy to support economic growth \cite{PratapSingh2019}.
