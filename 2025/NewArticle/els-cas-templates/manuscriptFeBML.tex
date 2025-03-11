@@ -324,6 +324,62 @@ Pratt2021,Li2024a,Lin2021,Tang2020,Bu2022,Turek2023,Huang2022,Chen2019,Hopwood20
 Zhang2021,DiSabatino2014,Kunze2023,Battaglia2023,Minagawa2024,Breiman2001,Natekin2013,Akinpelu2024,Cao2020,Hanif2024}
 
 
+\begin{table}[<options>]
+\caption{PSA results for sets of variables that serve to estimate the iron concentration in SSC.
+The numbers represent the ratio of information variance associated with each principal component when using AM1.5 illumination / 940 nm illumination.
+}
+\label{tbl2}
+\begin{tabular*}{\tblwidth}{@{}LCCCCCCLCCCCCC@{}}
+\toprule
+%set of descriptors&\multicolumn{7}{C}{Explained Variance Ratio (\%)}\\
+%&PC0&PC1&PC2&PC3&PC4&PC5&PC6\\% Table header row
+Model&MSE, 10$^{-3}$&R$^2$&MAPE, \%&MdAPE, \%&$p01$,\%&$p10$,\%&Model&MSE,10$^{-3}$&R$^2$&MAPE,\%&MdAPE,\%&$p01$,\%&$p10$,\%\\
+\midrule
+$\mathrm{RF}^{940}_{4}$&1.93&0.982&8.30&6.47&10.1&68.0&$\mathrm{RF}^\mathrm{AM}_{4}$&42.1&0.938&137&8.29&7.54&57.0\\
+$\mathrm{RF}^{940}_{4:\mathrm{PC}}$&1.80&0.986&8.12&6.38&9.50&70.2&$\mathrm{RF}^\mathrm{AM}_{4:\mathrm{PC}}$&40.5&0.906&54.7&8.00&8.12&57.9\\
+$\mathrm{RF}^{940}_{5}$&2.64&0.976&9.84&7.67&7.06&60.5&$\mathrm{RF}^\mathrm{AM}_{5}$&10.8&0.963&16.9&6.96&10.1&64.22\\
+$\mathrm{RF}^{940}_{5:\mathrm{PC}}$&2.26&0.989&8.04&6.00&8.51&72.2&$\mathrm{RF}^\mathrm{AM}_{5:\mathrm{PC}}$&59.9&0.884&74.4&9.46&6.96&52.1\\
+$\mathrm{RF}^{940}_{6}$&2.92&0.971&10.9&8.01&6.58&59.5&$\mathrm{RF}^\mathrm{AM}_{6}$&5.81&0.970&9.56&5.46&11.0&72.4\\
+$\mathrm{RF}^{940}_{6:\mathrm{PC}}$&2.90&0.969&10.9&7.34&7.74&60.4&$\mathrm{RF}^\mathrm{AM}_{6:\mathrm{PC}}$&9.87&0.983&17.4&5.66&10.9&72.9\\
+$\mathrm{RF}^{940}_{7}$&3.99&0.955&12.2&8.89&5.71&54.2&$\mathrm{RF}^\mathrm{AM}_{7}$&5.21&0.975&10.5&6.27&10.4&68.8\\
+$\mathrm{RF}^{940}_{7:\mathrm{PC}}$&7.07&0.975&10.9&8.74&5.42&56.4&$\mathrm{RF}^\mathrm{AM}_{7:\mathrm{PC}}$&2.47&0.988&8.00&4.62&13.3&82.2\\
+$\mathrm{GB}^{940}_{4}$&1.55&0.978&7.04&4.63&13.6&76.5&$\mathrm{GB}^\mathrm{AM}_{4}$&39.1&0.943&68.0&6.95&9.87&62.4\\
+$\mathrm{GB}^{940}_{4:\mathrm{PC}}$&1.55&0.987&6.39&4.35&14.1&80.3&$\mathrm{GB}^\mathrm{AM}_{4:\mathrm{PC}}$&33.0&0.934&55.3&6.27&9.38&67.2\\
+$\mathrm{GB}^{940}_{5}$&2.04&0.973&7.79&4.96&13.6&72.7&$\mathrm{GB}^\mathrm{AM}_{5}$&11.4&0.966&17.7&6.55&11.2&66.6\\
+$\mathrm{GB}^{940}_{5:\mathrm{PC}}$&1.17&0.988&6.27&4.63&12.5&82.4&$\mathrm{GB}^\mathrm{AM}_{5:\mathrm{PC}}$&41.2&0.921&51.6&8.05&7.25&57.4\\
+$\mathrm{GB}^{940}_{6}$&1.87&0.977&8.99&6.78&8.03&65.5&$\mathrm{GB}^\mathrm{AM}_{6}$&4.47&0.974&8.75&5.31&11.9&74.4\\
+$\mathrm{GB}^{940}_{6:\mathrm{PC}}$&3.07&0.965&10.2&6.73&9.09&64.0&$\mathrm{GB}^\mathrm{AM}_{6:\mathrm{PC}}$&8.88&0.971&14.9&4.41&15.4&79.1\\
+$\mathrm{GB}^{940}_{7}$&3.23&0.963&10.5&7.87&7.16&60.7&$\mathrm{GB}^\mathrm{AM}_{7}$&3.88&0.976&8.51&4.97&12.2&75.3\\
+$\mathrm{GB}^{940}_{7:\mathrm{PC}}$&6.50&0.974&10.0&7.41&7.64&61.8&$\mathrm{GB}^\mathrm{AM}_{7:\mathrm{PC}}$&2.18&0.974&7.05&3.73&17.4&84.3\\
+$\mathrm{XGB}^{940}_{4}$&2.35&0.962&8.18&4.82&11.0&75.6&$\mathrm{XGB}^\mathrm{AM}_{4}$&35.5&0.925&51.4&6.43&10.1&62.7\\
+$\mathrm{XGB}^{940}_{4:\mathrm{PC}}$&4.76&0.970&11.5&6.91&9.77&63.5&$\mathrm{XGB}^\mathrm{AM}_{4:\mathrm{PC}}$&40.4&0.890&60.4&7.75&8.32&60.2\\
+$\mathrm{XGB}^{940}_{5}$&1.44&0.976&6.91&4.46&11.7&78.6&$\mathrm{XGB}^\mathrm{AM}_{5}$&9.03&0.980&12.1&4.26&13.8&74.7\\
+$\mathrm{XGB}^{940}_{5:\mathrm{PC}}$&5.15&0.975&10.9&6.02&10.2&68.6&$\mathrm{XGB}^\mathrm{AM}_{5:\mathrm{PC}}$&68.4&0.847&98.3&9.03&6.58&52.3\\
+$\mathrm{XGB}^{940}_{6}$&1.45&0.978&8.31&6.49&9.87&68.7&$\mathrm{XGB}^\mathrm{AM}_{6}$&2.83&0.984&7.31&4.13&14.8&83.2\\
+$\mathrm{XGB}^{940}_{6:\mathrm{PC}}$&4.72&0.973&12.9&7.57&8.51&59.9&$\mathrm{XGB}^\mathrm{AM}_{6:\mathrm{PC}}$&13.0&0.907&27.5&4.79&11.8&77.2\\
+$\mathrm{XGB}^{940}_{7}$&2.02&0.971&9.12&6.16&8.80&66.0&$\mathrm{XGB}^\mathrm{AM}_{7}$&2.46&0.974&7.19&3.71&15.2&83.3\\
+$\mathrm{XGB}^{940}_{7:\mathrm{PC}}$&11.8&0.969&12.1&7.96&7.54&60.9&$\mathrm{XGB}^\mathrm{AM}_{7:\mathrm{PC}}$&1.93&0.980&6.97&3.94&15.6&83.0\\
+$\mathrm{SVR}^{940}_{4}$&286&0.494&231&31.1&1.45&14.9&$\mathrm{SVR}^\mathrm{AM}_{4}$&292&0.463&216&41.2&1.06&11.4\\
+$\mathrm{SVR}^{940}_{4:\mathrm{PC}}$&284&0.498&227&26.7&1.35&18.2&$\mathrm{SVR}^\mathrm{AM}_{4:\mathrm{PC}}$&292&0.467&215&40.5&0.77&11.8\\
+$\mathrm{SVR}^{940}_{5}$&279&0.502&205&36.3&1.64&14.4&$\mathrm{SVR}^\mathrm{AM}_{5}$&263&0.514&183&39.7&1.74&10.9\\
+$\mathrm{SVR}^{940}_{5:\mathrm{PC}}$&285&0.474&206&42.7&0.87&10.8&$\mathrm{SVR}^\mathrm{AM}_{5:\mathrm{PC}}$&301&0.473&201&51.9&1.35&9.77\\
+$\mathrm{SVR}^{940}_{6}$&247&0.500&139&37.0&1.16&13.4&$\mathrm{SVR}^\mathrm{AM}_{6}$&257&0.496&69.4&37.3&1.64&14.4\\
+$\mathrm{SVR}^{940}_{6:\mathrm{PC}}$&277&0.505&164&44.8&0.48&8.99&$\mathrm{SVR}^\mathrm{AM}_{6:\mathrm{PC}}$&291&0.442&96.0&44.2&0.77&10.1\\
+$\mathrm{SVR}^{940}_{7}$&216&0.511&133&39.1&1.16&9.48&$\mathrm{SVR}^\mathrm{AM}_{7}$&209&0.496&61.7&36.5&0.68&13.4\\
+$\mathrm{SVR}^{940}_{7:\mathrm{PC}}$&262&0.523&143&38.1&1.06&13.7&$\mathrm{SVR}^\mathrm{AM}_{7:\mathrm{PC}}$&212&0.522&57.1&32.5&1.26&15.2\\
+$\mathrm{DNN}^{940}_{4}$&2.35&0.962&8.18&4.82&11.0&75.6&$\mathrm{DNN}^\mathrm{AM}_{4}$&35.5&0.925&51.4&6.43&10.1&62.7\\
+$\mathrm{DNN}^{940}_{4:\mathrm{PC}}$&4.76&0.970&11.5&6.91&9.77&63.5&$\mathrm{DNN}^\mathrm{AM}_{4:\mathrm{PC}}$&40.4&0.890&60.4&7.75&8.32&60.2\\
+$\mathrm{DNN}^{940}_{5}$&1.44&0.976&6.91&4.46&11.7&78.6&$\mathrm{DNN}^\mathrm{AM}_{5}$&9.03&0.980&12.1&4.26&13.8&74.7\\
+$\mathrm{DNN}^{940}_{5:\mathrm{PC}}$&5.15&0.975&10.9&6.02&10.2&68.6&$\mathrm{DNN}^\mathrm{AM}_{5:\mathrm{PC}}$&68.4&0.847&98.3&9.03&6.58&52.3\\
+$\mathrm{DNN}^{940}_{6}$&1.45&0.978&8.31&6.49&9.87&68.7&$\mathrm{DNN}^\mathrm{AM}_{6}$&2.83&0.984&7.31&4.13&14.8&83.2\\
+$\mathrm{DNN}^{940}_{6:\mathrm{PC}}$&4.72&0.973&12.9&7.57&8.51&59.9&$\mathrm{DNN}^\mathrm{AM}_{6:\mathrm{PC}}$&13.0&0.907&27.5&4.79&11.8&77.2\\
+$\mathrm{DNN}^{940}_{7}$&2.02&0.971&9.12&6.16&8.80&66.0&$\mathrm{DNN}^\mathrm{AM}_{7}$&2.46&0.974&7.19&3.71&15.2&83.3\\
+$\mathrm{DNN}^{940}_{7:\mathrm{PC}}$&11.8&0.969&12.1&7.96&7.54&60.9&$\mathrm{DNN}^\mathrm{AM}_{7:\mathrm{PC}}$&1.93&0.980&6.97&3.94&15.6&83.0\\
+\bottomrule
+\end{tabular*}
+\end{table}
+
+
 %The issue of semiconductor purity has become increasingly significant since the advent of the transistor in 1947 \cite{Claers2018}.
 %The 1960 study by Shockley and Queisser \cite{Goetzberger1960} demonstrated that
 %the electrical properties of $n^{+}-p$ silicon diodes deteriorate when impurity atoms of metals such as Cu, Fe, Mn, Au, Zn, and Ni are present.
