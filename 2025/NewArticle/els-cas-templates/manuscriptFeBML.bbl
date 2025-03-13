@@ -1,4 +1,4 @@
-\begin{thebibliography}{62}
+\begin{thebibliography}{74}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\bibinfo}[2]{#2}
 \ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
@@ -496,6 +496,108 @@
   estimation of solar cell parameters},
 \newblock \bibinfo{journal}{APL Machine Learning} \bibinfo{volume}{1}
   (\bibinfo{year}{2023}) \bibinfo{pages}{036108}.
+%Type = Article
+\bibitem[{Schmidt(2005)}]{FeB:Schmidt}
+\bibinfo{author}{J.~Schmidt},
+\newblock \bibinfo{title}{Effect of dissociation of iron--boron pairs in
+  crystalline silicon on solar cell properties},
+\newblock \bibinfo{journal}{Progress in Photovoltaics: Research and
+  Applications} \bibinfo{volume}{13} (\bibinfo{year}{2005})
+  \bibinfo{pages}{325--331}.
+%Type = Article
+\bibitem[{Olikh and Zavhorodnii(2025)}]{Olikh2025MSEB}
+\bibinfo{author}{O.~Olikh}, \bibinfo{author}{O.~Zavhorodnii},
+\newblock \bibinfo{title}{Iron’s impact on silicon solar cell execution:
+  Comprehensive modeling across diverse scenarios},
+\newblock \bibinfo{journal}{Materials Science and Engineering: B}
+  \bibinfo{volume}{317} (\bibinfo{year}{2025}) \bibinfo{pages}{118192}.
+%Type = Article
+\bibitem[{Burgelman et~al.(2000)Burgelman, Nollet, and Degrave}]{SCAPS1}
+\bibinfo{author}{M.~Burgelman}, \bibinfo{author}{P.~Nollet},
+  \bibinfo{author}{S.~Degrave},
+\newblock \bibinfo{title}{Modelling polycrystalline semiconductor solar cells},
+\newblock \bibinfo{journal}{Thin Solid Films} \bibinfo{volume}{361--362}
+  (\bibinfo{year}{2000}) \bibinfo{pages}{527--532}.
+%Type = Article
+\bibitem[{{Masum Mia} et~al.(2025){Masum Mia}, {Faruk Hossain}, Rahman, Badi,
+  Irfan, and {Ferdous Rahman}}]{MasumMia2025}
+\bibinfo{author}{M.~{Masum Mia}}, \bibinfo{author}{M.~{Faruk Hossain}},
+  \bibinfo{author}{M.~Rahman}, \bibinfo{author}{N.~Badi},
+  \bibinfo{author}{A.~Irfan}, \bibinfo{author}{M.~{Ferdous Rahman}},
+\newblock \bibinfo{title}{Unveiling the impact of {S}e based {HTM} on {BaZrSe3}
+  perovskites solar cell and improving the theoretical efficiency above 32\%},
+\newblock \bibinfo{journal}{Materials Science and Engineering: B}
+  \bibinfo{volume}{311} (\bibinfo{year}{2025}) \bibinfo{pages}{117817}.
+%Type = Article
+\bibitem[{Joshi et~al.(2024)Joshi, Sharma, Sharma, and Verma}]{Joshi2024}
+\bibinfo{author}{T.~K. Joshi}, \bibinfo{author}{G.~Sharma},
+  \bibinfo{author}{Y.~R. Sharma}, \bibinfo{author}{A.~S. Verma},
+\newblock \bibinfo{title}{Spectroscopic screening and performance parameters of
+  hybrid perovskite ({CH3CH2PH3PbI3}) using {WIEN2k} and {SCAPS-1d}},
+\newblock \bibinfo{journal}{Phys. B Condens. Matter} \bibinfo{volume}{682}
+  (\bibinfo{year}{2024}) \bibinfo{pages}{415793}.
+%Type = Article
+\bibitem[{Ravidas et~al.(2024)Ravidas, Das, Agnihotri, Pandey, Madan, Hossain,
+  Roy, and Samajdar}]{Ravidas2024}
+\bibinfo{author}{B.~K. Ravidas}, \bibinfo{author}{A.~Das},
+  \bibinfo{author}{S.~K. Agnihotri}, \bibinfo{author}{R.~Pandey},
+  \bibinfo{author}{J.~Madan}, \bibinfo{author}{M.~K. Hossain},
+  \bibinfo{author}{M.~K. Roy}, \bibinfo{author}{D.~Samajdar},
+\newblock \bibinfo{title}{Design principles of crystalline silicon/{CsGeI3}
+  perovskite tandem solar cells using a combination of density functional
+  theory and {SCAPS-1D} frameworks},
+\newblock \bibinfo{journal}{Sol. Energ. Mat. Sol.} \bibinfo{volume}{267}
+  (\bibinfo{year}{2024}) \bibinfo{pages}{112688}.
+%Type = Article
+\bibitem[{Liu et~al.(2024)Liu, Xiang, Liu, Gao, Zhang, Li, and Gao}]{Liu2024}
+\bibinfo{author}{H.~Liu}, \bibinfo{author}{L.~Xiang}, \bibinfo{author}{Q.~Liu},
+  \bibinfo{author}{P.~Gao}, \bibinfo{author}{Y.~Zhang},
+  \bibinfo{author}{S.~Li}, \bibinfo{author}{F.~Gao},
+\newblock \bibinfo{title}{Toward high-performance {HTL}-free all-perovskite
+  tandem solar cells: {SCAPS} simulation},
+\newblock \bibinfo{journal}{IEEE J. Photovolt.} \bibinfo{volume}{14}
+  (\bibinfo{year}{2024}) \bibinfo{pages}{59--64}.
+%Type = Article
+\bibitem[{You et~al.(2023)You, Zhang, Ma, Zhu, and Wu}]{You2023}
+\bibinfo{author}{L.~You}, \bibinfo{author}{X.~Zhang}, \bibinfo{author}{Q.~Ma},
+  \bibinfo{author}{W.~Zhu}, \bibinfo{author}{J.~Wu},
+\newblock \bibinfo{title}{Optimization of electron transport layer-free
+  {Cs2TiBr6/MASnBr3} laminated structure perovskite solar cells by {SCAPS-1D}
+  simulation},
+\newblock \bibinfo{journal}{Phys. Status Solidi A} \bibinfo{volume}{220}
+  (\bibinfo{year}{2023}) \bibinfo{pages}{2300071}.
+%Type = Article
+\bibitem[{Abdulmalik and Danladi(2023)}]{SCAPSDefect3}
+\bibinfo{author}{M.~Abdulmalik}, \bibinfo{author}{E.~Danladi},
+\newblock \bibinfo{title}{Influence of perovskite thickness on the performance
+  of silver-doped {NaZnBr3} perovskite solar cells using {SCAPS} software},
+\newblock \bibinfo{journal}{Semiconductor Physics, Quantum Electronics \&
+  Optoelectronics} \bibinfo{volume}{26} (\bibinfo{year}{2023})
+  \bibinfo{pages}{321--331}.
+%Type = Article
+\bibitem[{Olikh(2019)}]{Olikh2019SM}
+\bibinfo{author}{O.~Olikh},
+\newblock \bibinfo{title}{Relationship between the ideality factor and the iron
+  concentration in silicon solar cells},
+\newblock \bibinfo{journal}{Superlattices Microstruct.} \bibinfo{volume}{136}
+  (\bibinfo{year}{2019}) \bibinfo{pages}{106309}.
+%Type = Article
+\bibitem[{Olikh et~al.(2022)Olikh, Kostylyov, Vlasiuk, Korkishko, and
+  Chupryna}]{Olikh2022:JMatSci}
+\bibinfo{author}{O.~Olikh}, \bibinfo{author}{V.~Kostylyov},
+  \bibinfo{author}{V.~Vlasiuk}, \bibinfo{author}{R.~Korkishko},
+  \bibinfo{author}{R.~Chupryna},
+\newblock \bibinfo{title}{Intensification of iron--boron complex association in
+  silicon solar cells under acoustic wave action},
+\newblock \bibinfo{journal}{J. Mater. Sci.: Mater. Electron.}
+  \bibinfo{volume}{33} (\bibinfo{year}{2022}) \bibinfo{pages}{13133--13142}.
+%Type = Article
+\bibitem[{Srivastava and Jain(2023)}]{Srivastava2023}
+\bibinfo{author}{Y.~Srivastava}, \bibinfo{author}{A.~Jain},
+\newblock \bibinfo{title}{{End-to-end material thermal conductivity prediction
+  through machine learning}},
+\newblock \bibinfo{journal}{J. Appl. Phys.} \bibinfo{volume}{134}
+  (\bibinfo{year}{2023}) \bibinfo{pages}{225101}.
 %Type = Article
 \bibitem[{Minagawa et~al.(2024)Minagawa, Tezuka, and Tsuchida}]{Minagawa2024}
 \bibinfo{author}{H.~Minagawa}, \bibinfo{author}{T.~Tezuka},
