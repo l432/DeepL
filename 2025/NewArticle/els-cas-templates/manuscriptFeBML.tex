@@ -554,7 +554,7 @@ using 5-fold cross-validation on the train dataset with the selected hyperparame
 The MSE and MAPE are highly sensitive to even a few low-accuracy predictions.
 To better assess the models and account for the impact of individual outliers, we also used the median absolute percentage error (MdAPE),
 which indicates the error value below which 50\% of the predictions in the dataset fall.
-Furthermore, we evaluated the metric $p$, representing the percentage of samples (feature vectors) in a dataset with an error below a specified threshold.
+Furthermore, we evaluated the metric $p$, representing the percentage of samples (feature vectors) in a dataset with an absolute error below a specified threshold.
 Specifically, we computed the values of $p01$ and $p10$,
 which represent the proportion of predictions in the dataset with an accuracy of 1\%
 or better and 10\% or better, respectively.
