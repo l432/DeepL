@@ -311,8 +311,8 @@ The workflow of the ML pipeline for extracting iron contamination from IV data i
 	\centering
 		\includegraphics[width=0.9\linewidth]{Fig1.png}
 	  \caption{The workflow of the ML pipeline.}\label{fig1}
-\end{figure} 
- 
+\end{figure}
+
 
 \subsection{Data Collection}
 
@@ -320,8 +320,8 @@ Our research aimed to develop ML models for estimating iron concentration in sil
 Selecting relevant descriptors is a critical first step in building robust and effective predictive models.
 It is well established that the presence of iron induces the formation of recombination centers, which, in turn, affect the photoelectric conversion process and key PV parameters, including short-circuit current ($I_\mathrm{SC}$), open-circuit voltage ($V_\mathrm{OC}$), efficiency ($\eta$), and fill factor ($F!F$).
 Both theoretical and experimental studies \cite{FeB:Schmidt,IronSC,Olikh2025MSEB} have demonstrated that the restructuring of iron-related defects (the dissociation of FeB pairs) leads to variations in PVPs that depend on iron concentration ($N_\mathrm{Fe}$).
-As a result, this investigation focused on using iron presence as a descriptor of the relative changes in PVPs caused by the 
-Fe$_i$B$_\mathrm{Si}$ $\rightleftarrows$ Fe$_i$ + B$_\mathrm{Si}$ reconstruction. 
+As a result, this investigation focused on using iron presence as a descriptor of the relative changes in PVPs caused by the
+Fe$_i$B$_\mathrm{Si}$ $\rightleftarrows$ Fe$_i$ + B$_\mathrm{Si}$ reconstruction.
 Specifically, the relative changes in short-circuit current, $\varepsilon I_\mathrm{SC}$, were calculated as
 \begin{equation}
 \label{eq1}
@@ -329,59 +329,59 @@ Specifically, the relative changes in short-circuit current, $\varepsilon I_\mat
 \end{equation}
 where $I_\mathrm{SC}^\mathrm{FeB}$ and $I_\mathrm{SC}^\mathrm{Fe}$ represent the short--circuit current values before and after pair dissociation, respectively.
 The relative changes in the other parameters ($\varepsilon V_\mathrm{OC}$, $\varepsilon \eta$ and $\varepsilon F\!F$) were determined similarly.
-Using relative rather than absolute changes helped, to some extent, 
-isolate iron-related defect contributions from those of other recombination centers 
+Using relative rather than absolute changes helped, to some extent,
+isolate iron-related defect contributions from those of other recombination centers
 and mitigate potential fluctuations in external conditions, such as illumination intensity.
 
-At the same time, changes in PVPs are shown \cite{FeB:Schmidt,Olikh2025MSEB} to be influenced not only by iron concentration 
-but also by specific characteristics of the solar cell structure, such as doping level and base thickness, 
+At the same time, changes in PVPs are shown \cite{FeB:Schmidt,Olikh2025MSEB} to be influenced not only by iron concentration
+but also by specific characteristics of the solar cell structure, such as doping level and base thickness,
 as well as external factors, including temperature and illumination spectrum.
 Therefore, these effects must be considered when selecting an appropriate set of descriptors.
-In our study, we incorporated features such as boron concentration in the base ($N_\mathrm{B}$), base thickness ($d_p$), and temperature ($T$) 
+In our study, we incorporated features such as boron concentration in the base ($N_\mathrm{B}$), base thickness ($d_p$), and temperature ($T$)
 and developed separate models for different illumination conditions.
 
 For this research, datasets were obtained from both simulations and experiments.
 Specifically, $I$-$V$ curve simulations were performed for a silicon $n^+$-$p$-$p^+$ structure using SCAPS~3.3.11.
 The SCAPS-1D software \cite{SCAPS1} is a widely used tool
-\cite{MasumMia2025, Joshi2024, Ravidas2024, Liu2024, You2023, SCAPSDefect3} 
+\cite{MasumMia2025, Joshi2024, Ravidas2024, Liu2024, You2023, SCAPSDefect3}
 that enables modeling of barrier structure $I$-$V$ characteristics while accounting for defect states.
-PVPs were extracted from pairs of $I$-$V$ curves simulated for a solar cell with a known structure 
+PVPs were extracted from pairs of $I$-$V$ curves simulated for a solar cell with a known structure
 and a specified iron concentration under defined external conditions, both before and after FeB pair dissociation.
 This approach allowed us to determine the values of $\varepsilon I_\mathrm{SC}$, $\varepsilon V_\mathrm{OC}$, $\varepsilon \eta$, and $\varepsilon F!F$.
-A detailed description of the modeling approach, including the used temperature dependencies of silicon and defect parameters, 
+A detailed description of the modeling approach, including the used temperature dependencies of silicon and defect parameters,
 is provided elsewhere \cite{Olikh2019SM, Olikh2025MSEB}.
 
 
 To generate the training dataset, we performed simulations over a temperature range of $(290-340)$~K
-for solar cells with a base thickness of $(180-380)$~$\mu$m, 
+for solar cells with a base thickness of $(180-380)$~$\mu$m,
 a boron concentration of $(10^{15} - 10^{17})$~cm$^{-3}$, and an iron concentration of $(10^{10}-10^{14})$~cm$^{-3}$.
 The simulations covered all parameter combinations within a four-dimensional grid, consisting of 11 values along the $T$ axis,
 5 along the $d_p$ axis,
 9 along the $N_\mathrm{B}$ axis, and 25 along the $N_\mathrm{Fe}$ axis.
 The values were evenly distributed within the specified ranges, with $N_\mathrm{B}$ and $N_\mathrm{Fe}$ spaced logarithmically.
 
-We also generated four test datasets through simulation, 
+We also generated four test datasets through simulation,
 each representing different scenarios that may arise in the practical application of ML models.
-In one test dataset, the iron concentration values used in the simulation were absent from the training set, 
-while the other parameters ($T$, $d_p$, $N_\mathrm{B}$) matched the grid node values from the training simulations. 
+In one test dataset, the iron concentration values used in the simulation were absent from the training set,
+while the other parameters ($T$, $d_p$, $N_\mathrm{B}$) matched the grid node values from the training simulations.
 This dataset was labeled ``\textit{$N_\mathrm{Fe}$--altered}''.
 Similarly, we created the ``\textit{$N_\mathrm{B}$--altered}'' and ``\textit{$T$--altered}'' test datasets using boron concentration and temperature values that were not present in the training dataset.
 In the ``\textit{All-altered}'' dataset, all four simulation parameters differed from those used in the training dataset.
 
 
-The specified simulations for both the training and test datasets were performed under two lighting scenarios: 
-AM1.5, which corresponds to standard characterization conditions for PV devices, 
-and monochromatic light with a wavelength of 940~nm and an intensity of 5~W/m$^{2}$, 
+The specified simulations for both the training and test datasets were performed under two lighting scenarios:
+AM1.5, which corresponds to standard characterization conditions for PV devices,
+and monochromatic light with a wavelength of 940~nm and an intensity of 5~W/m$^{2}$,
 reflecting the remarkable sensitivity of PVPs to iron \cite{Olikh2025MSEB}.
 
 For experimental validation of the proposed models, we used data obtained from measurements of real solar cells.
 We used a set of $n^+$-$p$-$p^+$-Si samples in the experiment.
-The structure was fabricated from a 380~$\mu$m thick $p$-type boron-doped Czochralski silicon (100) wafer 
+The structure was fabricated from a 380~$\mu$m thick $p$-type boron-doped Czochralski silicon (100) wafer
 with a doping level of $N_\mathrm{B}=1.36\times10^{15}$~cm$^{-3}$.
 Iron concentration, determined using the methodology described in \cite{Olikh2022:JMatSci, Olikh2021JAP},
 ranged from $2\times10^{11}$ to $4\times10^{13}$~cm$^{-3}$ across different samples.
-To create the experimental test dataset, 
-we measured the $I$-$V$ characteristics under monochromatic illumination from a light-emitting diode (SN–HPIR940nm–1W) 
+To create the experimental test dataset,
+we measured the $I$-$V$ characteristics under monochromatic illumination from a light-emitting diode (SN–HPIR940nm–1W)
 with a wavelength of 940~nm and an intensity of approximately 5~W/m$^{2}$, within a temperature range of $(305-340)$~K.
 The decay of FeB pairs was induced using intensive halogen lamp illumination (7000~W/m$^{2}$).
 
@@ -394,16 +394,16 @@ Selecting the appropriate number of features requires balancing two competing fa
 On one hand, fewer features simplify data collection and reduce computational costs.
 On the other hand, incorporating more features may enhance prediction accuracy by providing additional information.
 In this study, various feature combinations were explored.
-As shown in \cite{Olikh2025MSEB}, $\varepsilon I_\mathrm{SC}$ is a key metric for quantifying iron impurities 
-due to its monotonic dependence on iron concentration and relatively large absolute values during the 
+As shown in \cite{Olikh2025MSEB}, $\varepsilon I_\mathrm{SC}$ is a key metric for quantifying iron impurities
+due to its monotonic dependence on iron concentration and relatively large absolute values during the
 Fe$_i$B$_\mathrm{Si}$ $\rightleftarrows$ Fe$_i$ + B$_\mathrm{Si}$
 transformation.
-The following most suitable parameters for estimating $N_\mathrm{Fe}$ are 
+The following most suitable parameters for estimating $N_\mathrm{Fe}$ are
 $\varepsilon \eta$, $\varepsilon V_\mathrm{OC}$, and $\varepsilon F\!F$ \cite{Olikh2025MSEB}.
 
-Moreover, $N_\mathrm{B}$ (one of the selected descriptors) and 
+Moreover, $N_\mathrm{B}$ (one of the selected descriptors) and
 $N_\mathrm{Fe}$ (target output) span several orders of magnitude.
-To achieve high prediction accuracy, we transformed the doping level and iron concentration into 
+To achieve high prediction accuracy, we transformed the doping level and iron concentration into
 $\log N_\mathrm{B}$ and $\log N_\mathrm{Fe}$.
 This approach is standard for quantities that vary over a wide range \cite{Srivastava2023, Minagawa2024}.
 
@@ -411,7 +411,7 @@ Thus, we used the following sets to predict $y = \log N_\mathrm{Fe}$:
 ($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$);
 ($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$, $\varepsilon \eta$);
 ($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$, $\varepsilon \eta$, $\varepsilon V_\mathrm{OC}$);
-($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$, $\varepsilon \eta$, $\varepsilon V_\mathrm{OC}$, $\varepsilon F\!F$). 
+($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$, $\varepsilon \eta$, $\varepsilon V_\mathrm{OC}$, $\varepsilon F\!F$).
 For simplicity, we will refer to the number of features as ``dimension'' from here on.
 That is, features with dimensions 4, 5, 6, and 7 were used in various models.
 
@@ -420,22 +420,22 @@ To standardize our features, we normalized them to have a mean of zero and a sta
 
 Increasing the number of features does not always enhance informativeness if the descriptors are not independent.
 This study used the Pearson correlation coefficient to assess the relationships between input features.
-We found that changes in PV parameters are not entirely independent, particularly under monochromatic illumination 
+We found that changes in PV parameters are not entirely independent, particularly under monochromatic illumination
 (see Fig.~S1 in the Supplementary Material).
 This is not surprising, since each of the PV parameters is linked to the diffusion and recombination of photo-induced charge carriers.
 Besides,
 $\varepsilon I_\mathrm{SC}$, $\varepsilon V_\mathrm{OC}$, $\varepsilon \eta$, and $\varepsilon F\!F$
 exhibit a strong correlation with boron concentration.
-$N_\mathrm{B}$ determines the position of the Fermi level, which, in turn, significantly influences 
+$N_\mathrm{B}$ determines the position of the Fermi level, which, in turn, significantly influences
 the intensity of recombination processes within the Shockley–Read–Hall approximation.
 This provides the physical basis for the observed correlation.
 
-To ensure that ML algorithms are trained on independent input features while reducing data redundancy and memory usage, 
+To ensure that ML algorithms are trained on independent input features while reducing data redundancy and memory usage,
 we applied Principal Component Analysis (PCA).
 PCA constructs new, uncorrelated features (principal components, PCs) and allows us to evaluate each PC's contribution to the total variance.
 Fig.\ref{fig2} shows that increasing the feature dimension does not always enhance overall information variance.
-To assess the impact of redundant data, we trained ML models using features selected as follows: 
-we computed PCs for the original dataset and then reduced the total dimension 
+To assess the impact of redundant data, we trained ML models using features selected as follows:
+we computed PCs for the original dataset and then reduced the total dimension
 by discarding PCs whose contribution to the total variance was below 1.5\%.
 The final dimensions of the different feature sets are provided in Table~\ref{tbl1}.
 
@@ -445,7 +445,7 @@ The final dimensions of the different feature sets are provided in Table~\ref{tb
      \includegraphics[width=0.24\linewidth]{Fig2b.png}
      \includegraphics[width=0.24\linewidth]{Fig2c.png}
      \includegraphics[width=0.24\linewidth]{Fig2d.png}
-	  \caption{Cumulative explained variance versus number of PC components. 
+	  \caption{Cumulative explained variance versus number of PC components.
 Feature dimension: 4 (a), 5 (b), 6 (c), 7 (d).
 }\label{fig2}
 \end{figure}
@@ -455,7 +455,7 @@ Feature dimension: 4 (a), 5 (b), 6 (c), 7 (d).
 \label{tbl1}
 \begin{tabular*}{\tblwidth}{@{}LCC@{}}
 \toprule
-\multirow{2}{*}{Initial dimension} 
+\multirow{2}{*}{Initial dimension}
 &\multicolumn{2}{C}{Final dimension}\\
 &AM1.5 illumination&940~nm illumination\\% Table header row
 \midrule
@@ -472,7 +472,7 @@ Feature dimension: 4 (a), 5 (b), 6 (c), 7 (d).
 We used five ML algorithms to develop regression models for predicting iron concentration.
 
 \emph{Random Forest} (RF) improves predictive accuracy by training multiple decision trees on different subsets of the dataset.
-RF aggregates predictions from all trees using majority voting for classification or averaging for regression, 
+RF aggregates predictions from all trees using majority voting for classification or averaging for regression,
 reducing overfitting and increasing robustness to noise \cite{Breiman2001}.
 
 \emph{Gradient Boosting} (GB) combines multiple weak learners, typically decision trees, to improve predictive performance.
@@ -480,35 +480,35 @@ It sequentially adds predictors, with each new model correcting the errors of it
 The final prediction is obtained by aggregating forecasts, usually through a weighted sum \cite{Natekin2013}.
 
 \emph{eXtreme Gradient Boosting} (XGB) is an advanced ensemble method for gradient boosting machines \cite{Akinpelu2024}.
-Unlike standard GB, XGB utilizes the Newton–Raphson method with second-order derivatives of the loss function, 
+Unlike standard GB, XGB utilizes the Newton–Raphson method with second-order derivatives of the loss function,
 improving accuracy, computational speed, and efficiency for large datasets.
 
 \emph{Support Vector Regression }(SVR) finds a hyperplane that maximizes the margin while minimizing errors within a specified tolerance.
 It maps input data into a high-dimensional feature space using kernel functions, effectively capturing nonlinear relationships \cite{Cao2020}.
 
-\emph{Deep Neural Network} (DNN) comprises multiple layers of interconnected neurons that process input data 
+\emph{Deep Neural Network} (DNN) comprises multiple layers of interconnected neurons that process input data
 through successive nonlinear transformations \cite{Liu2023}.
 
-It is worth noting that all the algorithms used have demonstrated effectiveness in previous 
+It is worth noting that all the algorithms used have demonstrated effectiveness in previous
 defect studies \cite{Buratti2020a, Buratti2022, Olikh2022PPV, Buratti2024}.
 
-Considering different machine learning algorithms, data collected under various lighting conditions, 
-features with varying dimensions, and the inclusion or exclusion of PCA, we evaluated 80 distinct models. 
+Considering different machine learning algorithms, data collected under various lighting conditions,
+features with varying dimensions, and the inclusion or exclusion of PCA, we evaluated 80 distinct models.
 From this point forward, the models will be referred to as
 \begin{equation*}
-    \mathrm{MLA}^\mathrm{illum}_\mathrm{feat},
+    \mathrm{A}^\mathrm{illum}_\mathrm{feat},
 \end{equation*}
-where ``MLA'' represents the algorithm used, 
+where ``A'' represents the ML algorithm used,
 and it can take one of the following values: (RF, GB, XGB, SVR, DNN);
 ``illum'' indicates the solar cell illumination type: illum $\in$ (AM1.5, 940);
-``feat'' represents the feature dimension and the application of PCA, 
+``feat'' represents the feature dimension and the application of PCA,
 where $\mathrm{feat} \in (4, 5, 6, 7, 4\text{:PC}, 5\text{:PC}, 6\text{:PC}, 7\text{:PC})$.
 
 The models are implemented using Python toolkits: Keras for DNN, Scikit-learn for RF, GB, and SVR, and XGBoost for XGB.
 Hyperparameter tuning is known \cite{Hanif2024} to be essential for optimizing model performance.
 We used the Optuna toolkit to optimize model parameters, employing the TPE sampler and Hyperband pruner for efficient hyperparameter selection.
 Tables~S1--S5 (Supplementary Material) provide the tuned hyperparameters and their search ranges.
-It is worth noting that 5-fold cross-validation was employed during the model tuning process, 
+It is worth noting that 5-fold cross-validation was employed during the model tuning process,
 with 20\% of the train data used as the validation set to evaluate models trained on the remaining 80\%.
 The chosen hyperparameter combinations are presented in Tables~S6--S10.
 
@@ -517,15 +517,15 @@ The chosen hyperparameter combinations are presented in Tables~S6--S10.
 
 To build a regression model, it is crucial to evaluate its performance using various metrics.
 These metrics assess how well the model has learned and predicted outcomes.
-The evaluation metrics for iron quantification were the mean squared error (MSE), 
-mean absolute percentage error (MAPE), 
+The evaluation metrics for iron quantification were the mean squared error (MSE),
+mean absolute percentage error (MAPE),
 and coefficient of determination (R$^2$), as defined in Eqs.~(\ref{eq3})–(\ref{eq5}).
 \begin{equation}
 \label{eq3}
     \mathrm{MSE} = \frac{1}{N}\displaystyle\sum_{i=1}^{N} (\hat{y_i}-y_i)^2\,,
 \end{equation}
-where $\hat{y_i}$ represents the predicted value for the $i$--th data point, 
-$y_i$ is the known value for the $i$--th data point, 
+where $\hat{y_i}$ represents the predicted value for the $i$--th data point,
+$y_i$ is the known value for the $i$--th data point,
 and $N$ is the number of samples in the dataset.
 MSE is one of the most commonly used metrics for evaluating model accuracy.
 However, since the computation of $\hat{y_i}$ involves the normalization and logarithm transformation of $N_\mathrm{Fe}$,
@@ -535,10 +535,10 @@ Therefore, we used MAPE, which determines the mean relative error:
 \label{eq4}
     \mathrm{MAPE} = \frac{1}{N}\displaystyle\sum_{i=1}^{N} \frac{|N_{\mathrm{Fe,PRED},i}-N_{\mathrm{Fe,TRUE},i}|}{N_{\mathrm{Fe,TRUE},i}}\times 100 \%\,,
 \end{equation}
-where $N_{\mathrm{Fe,PRED},i}$ is the predicted value of iron concentration, 
+where $N_{\mathrm{Fe,PRED},i}$ is the predicted value of iron concentration,
 $N_{\mathrm{Fe,TRUE},i}$ is the known value (used in simulation or obtained from experimental iron determination).
 
-The $R^2$ score is often interpreted as the percentage of explained variance 
+The $R^2$ score is often interpreted as the percentage of explained variance
 and measures how well the predicted and true values align; a value of unity indicates a perfect prediction:
 \begin{equation}
 \label{eq5}
@@ -547,16 +547,16 @@ and measures how well the predicted and true values align; a value of unity indi
 \end{equation}
 where $\overline{N_\mathrm{Fe,TRUE}}$ is the mean of the true values.
 
-In particular, Table~S11 (Supplementary Materials) presents the performance metrics obtained 
+In particular, Table~S11 (Supplementary Materials) presents the performance metrics obtained
 using 5-fold cross-validation on the train dataset with the selected hyperparameter combinations.
 
 
 The MSE and MAPE are highly sensitive to even a few low-accuracy predictions.
-To better assess the models and account for the impact of individual outliers, we also used the median absolute percentage error (MdAPE), 
+To better assess the models and account for the impact of individual outliers, we also used the median absolute percentage error (MdAPE),
 which indicates the error value below which 50\% of the predictions in the dataset fall.
 Furthermore, we evaluated the metric $p$, representing the percentage of samples (feature vectors) in a dataset with an error below a specified threshold.
-Specifically, we computed the values of $p01$ and $p10$, 
-which represent the proportion of predictions in the dataset with an accuracy of 1\% 
+Specifically, we computed the values of $p01$ and $p10$,
+which represent the proportion of predictions in the dataset with an accuracy of 1\%
 or better and 10\% or better, respectively.
 
 
