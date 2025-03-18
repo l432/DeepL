@@ -25,6 +25,7 @@
 %\documentclass[a4paper,fleqn,longmktitle]{cas-sc}
 
 \usepackage[numbers]{natbib}
+\usepackage{makecell}
 %\usepackage[authoryear]{natbib}
 %\usepackage[authoryear,longnamesfirst]{natbib}
 %%%Author macros
@@ -561,7 +562,7 @@ Furthermore, we evaluated the metric $p$, representing the percentage of samples
 Specifically, we computed the values of $p01$ and $p10$,
 which represent the proportion of predictions in the dataset with an accuracy of 1\%
 or better and 10\% or better, respectively.
-The decrease in MdAPE and the increase in $p01$ and $p10$ indicate improved model performance 
+The decrease in MdAPE and the increase in $p01$ and $p10$ indicate improved model performance
 due to a higher proportion of accurate predictions.
 
 
@@ -600,910 +601,309 @@ Applying PCA generally reduces prediction accuracy on the training set.
      \includegraphics[width=0.24\linewidth]{Fig3r.png}
      \includegraphics[width=0.24\linewidth]{Fig3s.png}
      \includegraphics[width=0.24\linewidth]{Fig3t.png}
-	  \caption{Scatter plots compare reference iron concentrations with ML--predicted values during the training phase. The ML algorithms include RF (a--d), GB (e--h), XGB (i--l), SVR (m--p), and DNN (q--t). The data come from simulation under monochromatic (a, b, e, f, i, j, m, n, q, r) and AM1.5 illumination (c, d, g, h, k, l, o, p, s, t). Panels b, d, f, h, j, l, n, p, r, and t include PCA. The input feature dimensions are 4 (a, e, i, m, q), 5 (b, f, j, n, r), 6 (c, g, k, o, s), and 7 (d, h, l, p, t). The black lines are the identified lines serving as the references.
+	  \caption{Scatter plots compare reference iron concentrations with ML--predicted values during the training phase. 
+The ML algorithms include RF (a--d), GB (e--h), XGB (i--l), SVR (m--p), and DNN (q--t). 
+The data come from simulation under monochromatic (a, b, e, f, i, j, m, n, q, r) and AM1.5 illumination (c, d, g, h, k, l, o, p, s, t).
+ Panels b, d, f, h, j, l, n, p, r, and t include PCA. The input feature dimensions are 4 (a, e, i, m, q), 5 (b, f, j, n, r), 6 (c, g, k, o, s), and 7 (d, h, l, p, t). 
+ The black lines are the identified lines serving as the references.
 }\label{fig3}
 \end{figure}
 
-\subsection{$N_\mathrm{Fe}$--altered dataset}
+
+As expected, increasing the number of descriptors enhances model performance (Fig.~\ref{fig4} and Fig.S7).
+The only exception occurs under AM1.5 illumination with PCA, where adding a fifth descriptor may degrade predictions rather than improve them.
+Overall, models trained on AM1.5 data exhibit significantly lower accuracy than those using monochromatic illumination, with errors approximately an order of magnitude higher.
+Notably, models with four descriptors (or five with PCA) under AM1.5 appear unpromising, even for RF and GB.
+Meanwhile, increasing the number of descriptors from six to seven offers little to no additional benefit in high--accuracy models 
+such as RF, GB, XGB, and, to some extent, DNN.
+
+
+\begin{figure}
+	\centering
+     \includegraphics[width=0.4\linewidth]{Fig4a.png}
+     \includegraphics[width=0.4\linewidth]{Fig4b.png}
+	  \caption{MSE dependence on input feature dimension for training data obtained under monochromatic (a) and AM1.5 illumination (b). 
+ML algorithms: RF (circles), GB (rectangles), XGB (triangles), and DNN (stars). 
+Closed markers indicate results with PCA, while open markers represent results without PCA.
+}\label{fig4}
+\end{figure}
+
+Fig.~\ref{fig5} illustrates typical dependencies of the proportion of predictions with 
+a given accuracy on $T$, $d_p$, $N_\mathrm{B}$, and $N_\mathrm{Fe}$), 
+enabling an assessment of the models' predictive capabilities based on measurement conditions, solar cell structure, and iron concentration.
+The data indicate that the most challenging cases for prediction involve $N_\mathrm{Fe}<10^{11}$~cm$^{-3}$ 
+and solar cells with a base doping level around $10^{16}$~cm$^{-3}$.
+The last difficulty arises because, as shown by simulation \cite{Olikh2025MSEB}, 
+variations in PV parameters during FeB pair dissociation remain minimal.
+Meanwhile, measurement temperature and base thickness (when feature dimensionality exceeds 4) have virtually no impact on prediction accuracy.
+
+\begin{figure}
+  \centering
+     \includegraphics[width=0.4\linewidth]{Fig5a.png}
+     \includegraphics[width=0.4\linewidth]{Fig5b.png}
+     \includegraphics[width=0.4\linewidth]{Fig5c.png}
+     \includegraphics[width=0.4\linewidth]{Fig5d.png}
+    \caption{Typical dependencies of the proportion of predictions with an accuracy of at least 10\% 
+    (a, b, c) or 1\% (d) on iron concentration, alloying level, substrate thickness, and temperature.
+}\label{fig5}
+\end{figure}
+
+\subsection{$N_\mathrm{Fe}$--altered test dataset}
+
+The $N_\mathrm{Fe}$--altered test dataset simulates a practical scenario in which 
+the goal is to predict iron concentration based on PVP variations measured under standardized conditions for predefined structures, 
+using the same temperature and solar cell parameters as in model training.
+
+Fig.~\ref{fig6} and Figgs.S8--S11 present the prediction results, 
+while Fig.~\ref{fig7} and Table\ref{table2} summarize the performance metrics.
+SVR consistently performs poorly, a trend observed across all test datasets.
+Since this pattern remains unchanged in subsequent analyses, we do not discuss it further.
+For the remaining models, it is crucial to differentiate between results obtained under monochromatic and solar illumination.
+Under 940~nm illumination without PCA, nearly all algorithms achieve reasonably accurate predictions, with a MAPE of approximately 10%.
+DNN models yield slightly worse results, whereas XGB demonstrates marginally better performance.
+Interestingly, increasing feature dimensionality does not improve prediction accuracy but instead reduces it.
+Notably, incorporating the relative changes in the fill factor into the descriptor set significantly degrades DNN predictions.
+As shown in Table~\ref{table2}, RF, GB, and XGB, which are the most accurate models, exhibit a noticeable increase 
+in MdAPE and a rise in p01 and p10 as the number of descriptors grows.
+These trends indicate that expanding feature dimensionality leads to a higher proportion of predictions with significant errors, 
+as illustrated in Fig.~\ref{fig8},a for GB.
+Fig.~\ref{fig8},a and Table~\ref{table2} also show that PCA-based model simplification increases the proportion of high--error predictions 
+in XGB while reducing it in RF and GB.
+In summary, $\mathrm{GB}^{940}_\mathrm{4:PC}$, $\mathrm{GB}^{940}_\mathrm{5:PC}$, 
+and $\mathrm{XGB}^{940}_5$ yield the most precise results for this test dataset under monochromatic illumination, 
+with the proportion of predictions achieving at least 10\% accuracy reaching 80.3\%, 82.4\%, and 78.6\%, respectively.
+
+
+\begin{figure}
+	\centering
+     \includegraphics[width=0.24\linewidth]{Fig6a.png}
+     \includegraphics[width=0.24\linewidth]{Fig6b.png}
+     \includegraphics[width=0.24\linewidth]{Fig6c.png}
+     \includegraphics[width=0.24\linewidth]{Fig6d.png}
+     \includegraphics[width=0.24\linewidth]{Fig6e.png}
+     \includegraphics[width=0.24\linewidth]{Fig6f.png}
+     \includegraphics[width=0.24\linewidth]{Fig6g.png}
+     \includegraphics[width=0.24\linewidth]{Fig6h.png}
+     \includegraphics[width=0.24\linewidth]{Fig6i.png}
+     \includegraphics[width=0.24\linewidth]{Fig6j.png}
+     \includegraphics[width=0.24\linewidth]{Fig6k.png}
+     \includegraphics[width=0.24\linewidth]{Fig6l.png}
+     \includegraphics[width=0.24\linewidth]{Fig6m.png}
+     \includegraphics[width=0.24\linewidth]{Fig6n.png}
+     \includegraphics[width=0.24\linewidth]{Fig6o.png}
+     \includegraphics[width=0.24\linewidth]{Fig6p.png}
+     \includegraphics[width=0.24\linewidth]{Fig6q.png}
+     \includegraphics[width=0.24\linewidth]{Fig6r.png}
+     \includegraphics[width=0.24\linewidth]{Fig6s.png}
+     \includegraphics[width=0.24\linewidth]{Fig6t.png}
+	  \caption{Scatter plots compare reference iron concentrations with ML-predicted values during the $N_\mathrm{Fe}$--altered test phase. 
+The ML algorithms include RF (a-d), GB (e-h), XGB (i-l), SVR (m-p), and DNN (q-t).
+The data come from simulation under monochromatic (a, b, e, f, i, j, m, n, q, r) and AM1.5 illumination (c, d, g, h, k, l, o, p, s, t).
+Panels b, d, f, h, j, l, n, p, r, and t include PCA. The input feature dimensions are 7 (a, e, i, m, q), 6 (b, f, j, n, r), 5 (c, g, k, o, s), and 4 (d, h, l, p, t).
+The black lines are the identified lines serving as the references.
+}\label{fig6}
+\end{figure}
+
+\begin{figure}
+	\centering
+     \includegraphics[width=0.2\linewidth]{Fig7a.png}
+     \includegraphics[width=0.2\linewidth]{Fig7b.png}
+     \includegraphics[width=0.2\linewidth]{Fig7c.png}
+     \includegraphics[width=0.2\linewidth]{Fig7d.png}
+     \includegraphics[width=0.2\linewidth]{Fig7e.png}
+     \includegraphics[width=0.2\linewidth]{Fig7f.png}
+     \includegraphics[width=0.2\linewidth]{Fig7g.png}
+     \includegraphics[width=0.2\linewidth]{Fig7h.png}
+     \includegraphics[width=0.2\linewidth]{Fig7i.png}
+     \includegraphics[width=0.2\linewidth]{Fig7j.png}
+     \includegraphics[width=0.2\linewidth]{Fig7k.png}
+     \includegraphics[width=0.2\linewidth]{Fig7l.png}
+     \includegraphics[width=0.2\linewidth]{Fig7m.png}
+     \includegraphics[width=0.2\linewidth]{Fig7n.png}
+     \includegraphics[width=0.2\linewidth]{Fig7o.png}
+     \includegraphics[width=0.2\linewidth]{Fig7p.png}
+     \includegraphics[width=0.25\linewidth]{Fig7q.png}
+     \includegraphics[width=0.25\linewidth]{Fig7r.png}
+	  \caption{MSE (a--h), MAPE (i--p), and R$^{2}$ (q, r) scores for various models, 
+feature combinations, and illumination conditions on the $N_\mathrm{Fe}$--altered test dataset. 
+Illumination: 940~nm (a--d, i--l, q), AM1.5 (e--h, m--p, r). 
+Feature dimensions: 4 (a, e, i, m), 5 (b, f, j, n), 6 (c, g, k, o), and 7 (d, h, l, p). 
+Results with PCA are shown as circles (a--h) and shaded areas (i--r), 
+while results without PCA are represented by squares (a--h) and filled regions (i--r). 
+The numbers in panels (a--h) represent MSE values multiplied by 1000, 
+while the numbers in panels (i--p) indicate MAPE values in percentage.
+}\label{fig7}
+\end{figure}
+
 
 \begin{table}[<options>]
-\caption{PSA results for sets of variables that serve to estimate the iron concentration in SSC.
-The numbers represent the ratio of information variance associated with each principal component when using AM1.5 illumination / 940 nm illumination.
-}
-\label{tbl2}
-\begin{tabular*}{\tblwidth}{@{}LCCCCCCLCCCCCC@{}}
+\caption{Performance metrics of the ML models for $N_\mathrm{Fe}$--altered dataset}
+\label{table2}
+\begin{tabular*}{\tblwidth}{@{}CCCCCCCCCCCCCC@{}}
 \toprule
-%set of descriptors&\multicolumn{7}{C}{Explained Variance Ratio (\%)}\\
-%&PC0&PC1&PC2&PC3&PC4&PC5&PC6\\% Table header row
-Model&MSE, 10$^{-3}$&R$^2$&MAPE, \%&MdAPE, \%&$p01$,\%&$p10$,\%&Model&MSE,10$^{-3}$&R$^2$&MAPE,\%&MdAPE,\%&$p01$,\%&$p10$,\%\\
+\multirow{3}{*}{Algorithm}&\multirow{3}{*}{\makecell{Feature \\ dimension}}&\multicolumn{4}{C}{MdAPE (\%)}&\multicolumn{4}{C}{$p01$ (\%)}&\multicolumn{4}{C}{$p10$ (\%)}\\
+&&\multicolumn{2}{C}{940 nm}&\multicolumn{2}{C}{AM1.5}&\multicolumn{2}{C}{940 nm}&\multicolumn{2}{C}{AM1.5}&\multicolumn{2}{C}{940 nm}&\multicolumn{2}{C}{AM1.5}\\
+&&Init&PCA&Init&PCA&Init&PCA&Init&PCA&Init&PCA&Init&PCA\\
 \midrule
-$\mathrm{RF}^{940}_{4}$&1.93&0.982&8.30&6.47&10.1&68.0&$\mathrm{RF}^\mathrm{AM}_{4}$&42.1&0.938&137&8.29&7.54&57.0\\
-$\mathrm{RF}^{940}_{4:\mathrm{PC}}$&1.80&0.986&8.12&6.38&9.50&70.2&$\mathrm{RF}^\mathrm{AM}_{4:\mathrm{PC}}$&40.5&0.906&54.7&8.00&8.12&57.9\\
-$\mathrm{RF}^{940}_{5}$&2.64&0.976&9.84&7.67&7.06&60.5&$\mathrm{RF}^\mathrm{AM}_{5}$&10.8&0.963&16.9&6.96&10.1&64.22\\
-$\mathrm{RF}^{940}_{5:\mathrm{PC}}$&2.26&0.989&8.04&6.00&8.51&72.2&$\mathrm{RF}^\mathrm{AM}_{5:\mathrm{PC}}$&59.9&0.884&74.4&9.46&6.96&52.1\\
-$\mathrm{RF}^{940}_{6}$&2.92&0.971&10.9&8.01&6.58&59.5&$\mathrm{RF}^\mathrm{AM}_{6}$&5.81&0.970&9.56&5.46&11.0&72.4\\
-$\mathrm{RF}^{940}_{6:\mathrm{PC}}$&2.90&0.969&10.9&7.34&7.74&60.4&$\mathrm{RF}^\mathrm{AM}_{6:\mathrm{PC}}$&9.87&0.983&17.4&5.66&10.9&72.9\\
-$\mathrm{RF}^{940}_{7}$&3.99&0.955&12.2&8.89&5.71&54.2&$\mathrm{RF}^\mathrm{AM}_{7}$&5.21&0.975&10.5&6.27&10.4&68.8\\
-$\mathrm{RF}^{940}_{7:\mathrm{PC}}$&7.07&0.975&10.9&8.74&5.42&56.4&$\mathrm{RF}^\mathrm{AM}_{7:\mathrm{PC}}$&2.47&0.988&8.00&4.62&13.3&82.2\\
-$\mathrm{GB}^{940}_{4}$&1.55&0.978&7.04&4.63&13.6&76.5&$\mathrm{GB}^\mathrm{AM}_{4}$&39.1&0.943&68.0&6.95&9.87&62.4\\
-$\mathrm{GB}^{940}_{4:\mathrm{PC}}$&1.55&0.987&6.39&4.35&14.1&80.3&$\mathrm{GB}^\mathrm{AM}_{4:\mathrm{PC}}$&33.0&0.934&55.3&6.27&9.38&67.2\\
-$\mathrm{GB}^{940}_{5}$&2.04&0.973&7.79&4.96&13.6&72.7&$\mathrm{GB}^\mathrm{AM}_{5}$&11.4&0.966&17.7&6.55&11.2&66.6\\
-$\mathrm{GB}^{940}_{5:\mathrm{PC}}$&1.17&0.988&6.27&4.63&12.5&82.4&$\mathrm{GB}^\mathrm{AM}_{5:\mathrm{PC}}$&41.2&0.921&51.6&8.05&7.25&57.4\\
-$\mathrm{GB}^{940}_{6}$&1.87&0.977&8.99&6.78&8.03&65.5&$\mathrm{GB}^\mathrm{AM}_{6}$&4.47&0.974&8.75&5.31&11.9&74.4\\
-$\mathrm{GB}^{940}_{6:\mathrm{PC}}$&3.07&0.965&10.2&6.73&9.09&64.0&$\mathrm{GB}^\mathrm{AM}_{6:\mathrm{PC}}$&8.88&0.971&14.9&4.41&15.4&79.1\\
-$\mathrm{GB}^{940}_{7}$&3.23&0.963&10.5&7.87&7.16&60.7&$\mathrm{GB}^\mathrm{AM}_{7}$&3.88&0.976&8.51&4.97&12.2&75.3\\
-$\mathrm{GB}^{940}_{7:\mathrm{PC}}$&6.50&0.974&10.0&7.41&7.64&61.8&$\mathrm{GB}^\mathrm{AM}_{7:\mathrm{PC}}$&2.18&0.974&7.05&3.73&17.4&84.3\\
-$\mathrm{XGB}^{940}_{4}$&2.35&0.962&8.18&4.82&11.0&75.6&$\mathrm{XGB}^\mathrm{AM}_{4}$&35.5&0.925&51.4&6.43&10.1&62.7\\
-$\mathrm{XGB}^{940}_{4:\mathrm{PC}}$&4.76&0.970&11.5&6.91&9.77&63.5&$\mathrm{XGB}^\mathrm{AM}_{4:\mathrm{PC}}$&40.4&0.890&60.4&7.75&8.32&60.2\\
-$\mathrm{XGB}^{940}_{5}$&1.44&0.976&6.91&4.46&11.7&78.6&$\mathrm{XGB}^\mathrm{AM}_{5}$&9.03&0.980&12.1&4.26&13.8&74.7\\
-$\mathrm{XGB}^{940}_{5:\mathrm{PC}}$&5.15&0.975&10.9&6.02&10.2&68.6&$\mathrm{XGB}^\mathrm{AM}_{5:\mathrm{PC}}$&68.4&0.847&98.3&9.03&6.58&52.3\\
-$\mathrm{XGB}^{940}_{6}$&1.45&0.978&8.31&6.49&9.87&68.7&$\mathrm{XGB}^\mathrm{AM}_{6}$&2.83&0.984&7.31&4.13&14.8&83.2\\
-$\mathrm{XGB}^{940}_{6:\mathrm{PC}}$&4.72&0.973&12.9&7.57&8.51&59.9&$\mathrm{XGB}^\mathrm{AM}_{6:\mathrm{PC}}$&13.0&0.907&27.5&4.79&11.8&77.2\\
-$\mathrm{XGB}^{940}_{7}$&2.02&0.971&9.12&6.16&8.80&66.0&$\mathrm{XGB}^\mathrm{AM}_{7}$&2.46&0.974&7.19&3.71&15.2&83.3\\
-$\mathrm{XGB}^{940}_{7:\mathrm{PC}}$&11.8&0.969&12.1&7.96&7.54&60.9&$\mathrm{XGB}^\mathrm{AM}_{7:\mathrm{PC}}$&1.93&0.980&6.97&3.94&15.6&83.0\\
-$\mathrm{SVR}^{940}_{4}$&286&0.494&231&31.1&1.45&14.9&$\mathrm{SVR}^\mathrm{AM}_{4}$&292&0.463&216&41.2&1.06&11.4\\
-$\mathrm{SVR}^{940}_{4:\mathrm{PC}}$&284&0.498&227&26.7&1.35&18.2&$\mathrm{SVR}^\mathrm{AM}_{4:\mathrm{PC}}$&292&0.467&215&40.5&0.77&11.8\\
-$\mathrm{SVR}^{940}_{5}$&279&0.502&205&36.3&1.64&14.4&$\mathrm{SVR}^\mathrm{AM}_{5}$&263&0.514&183&39.7&1.74&10.9\\
-$\mathrm{SVR}^{940}_{5:\mathrm{PC}}$&285&0.474&206&42.7&0.87&10.8&$\mathrm{SVR}^\mathrm{AM}_{5:\mathrm{PC}}$&301&0.473&201&51.9&1.35&9.77\\
-$\mathrm{SVR}^{940}_{6}$&247&0.500&139&37.0&1.16&13.4&$\mathrm{SVR}^\mathrm{AM}_{6}$&257&0.496&69.4&37.3&1.64&14.4\\
-$\mathrm{SVR}^{940}_{6:\mathrm{PC}}$&277&0.505&164&44.8&0.48&8.99&$\mathrm{SVR}^\mathrm{AM}_{6:\mathrm{PC}}$&291&0.442&96.0&44.2&0.77&10.1\\
-$\mathrm{SVR}^{940}_{7}$&216&0.511&133&39.1&1.16&9.48&$\mathrm{SVR}^\mathrm{AM}_{7}$&209&0.496&61.7&36.5&0.68&13.4\\
-$\mathrm{SVR}^{940}_{7:\mathrm{PC}}$&262&0.523&143&38.1&1.06&13.7&$\mathrm{SVR}^\mathrm{AM}_{7:\mathrm{PC}}$&212&0.522&57.1&32.5&1.26&15.2\\
-$\mathrm{DNN}^{940}_{4}$&2.35&0.962&8.18&4.82&11.0&75.6&$\mathrm{DNN}^\mathrm{AM}_{4}$&35.5&0.925&51.4&6.43&10.1&62.7\\
-$\mathrm{DNN}^{940}_{4:\mathrm{PC}}$&4.76&0.970&11.5&6.91&9.77&63.5&$\mathrm{DNN}^\mathrm{AM}_{4:\mathrm{PC}}$&40.4&0.890&60.4&7.75&8.32&60.2\\
-$\mathrm{DNN}^{940}_{5}$&1.44&0.976&6.91&4.46&11.7&78.6&$\mathrm{DNN}^\mathrm{AM}_{5}$&9.03&0.980&12.1&4.26&13.8&74.7\\
-$\mathrm{DNN}^{940}_{5:\mathrm{PC}}$&5.15&0.975&10.9&6.02&10.2&68.6&$\mathrm{DNN}^\mathrm{AM}_{5:\mathrm{PC}}$&68.4&0.847&98.3&9.03&6.58&52.3\\
-$\mathrm{DNN}^{940}_{6}$&1.45&0.978&8.31&6.49&9.87&68.7&$\mathrm{DNN}^\mathrm{AM}_{6}$&2.83&0.984&7.31&4.13&14.8&83.2\\
-$\mathrm{DNN}^{940}_{6:\mathrm{PC}}$&4.72&0.973&12.9&7.57&8.51&59.9&$\mathrm{DNN}^\mathrm{AM}_{6:\mathrm{PC}}$&13.0&0.907&27.5&4.79&11.8&77.2\\
-$\mathrm{DNN}^{940}_{7}$&2.02&0.971&9.12&6.16&8.80&66.0&$\mathrm{DNN}^\mathrm{AM}_{7}$&2.46&0.974&7.19&3.71&15.2&83.3\\
-$\mathrm{DNN}^{940}_{7:\mathrm{PC}}$&11.8&0.969&12.1&7.96&7.54&60.9&$\mathrm{DNN}^\mathrm{AM}_{7:\mathrm{PC}}$&1.93&0.980&6.97&3.94&15.6&83.0\\
+RF& 4 & 6.47 & 6.38 & 8.29 & 8.00 & 10.1& 9.48& 7.54& 8.12& 68.0& 70.2& 57.0 & 57.9\\
+& 5& 7.67& \textbf{6.00}& 6.96& 9.46& 7.06& 8.51& 10.1& 6.96& 60.5& 72.2& 64.2& 52.1\\
+& 6& 8.01 & 7.34 & 5.46& 5.66& 6.58 & 7.74& 11.0& 10.9& 59.5& 60.4& 72.4& 72.9\\
+& 7& 8.89& 8.74& 6.27& 4.62& 5.71& 5.42& 10.4& 13.3& 54.2& 56.4& 68.8& 82.2\\
+GB&4&4.63&4.35&6.95&6.27&\textbf{13.6}&\textbf{14.1}&9.87&9.38&76.5&80.3&62.4&67.2\\
+&5&4.96&4.63&6.55&8.05&\textbf{13.6}&12.5&11.2&7.25&72.7&\textbf{82.4}&66.6&57.4\\
+&6&6.78&6.73&5.31&4.41&8.03&9.09&11.9&15.4&65.5&64.0&74.4&79.1\\
+&7&7.87&7.41&4.97&3.73&7.16&7.64&12.2&17.4&60.7&61.8&75.3&84.3\\
+XGB&4&4.82&6.91&6.43&7.75&11.0&9.77&10.1&8.32&75.6&63.5&62.7&60.2\\
+&5&\textbf{4.46}&6.20&4.26&9.04&11.7&10.2&13.8&6.58&\textbf{78.6}&68.6&74.7&52.3\\
+&6&6.49&7.57&4.13&4.79&9.87&8.51&14.8&11.8&68.7&59.9&83.2&77.2\\
+&7&6.16&7.96&3.71&3.94&8.80&7.54&15.2&15.6&66.0&60.9&83.3&83.0\\
+SVR&4&31.1&26.7&41.2&40.5&1.45&1.35&1.06&0.77&14.9&18.2&11.4&11.8\\
+&5&36.3&42.7&39.7&51.9&1.64&0.87&1.74&1.35&14.4&10.8&10.9&9.77\\
+&6&37.0&44.8&37.3&44.2&1.16&0.48&1.64&0.77&13.4&8.99&14.4&10.1\\
+&7&39.1&38.1&36.5&32.5&1.16&1.06&0.68&1.26&9.48&13.7&13.4&15.2\\
+DNN&4&8.06&7.48&11.4&13.0&7.74&7.64&3.97&4.35&58.8&60.5&44.8&41.6\\
+&5&7.42&9.02&5.97&6.84&6.48&6.67&10.1&6.77&66.0&54.7&72.3&61.4\\
+&6&6.98&8.15&6.30&3.18&7.06&5.80&8.80&17.8&64.8&59.3&69.9&90.2\\
+&7&17.3&6.93&\textbf{1.63}&\textbf{2.40}&4.06&8.90&\textbf{32.6}&\textbf{23.5}&33.1&64.7&\textbf{98.7}&\textbf{96.7}\\
 \bottomrule
 \end{tabular*}
 \end{table}
 
+When estimating iron concentration based on PVP variations obtained under AM1.5 illumination, 
+using only four descriptors does not yield sufficiently accurate predictions with any model.
+However, adding efficiency variations (increasing the feature dimension from 4 to 5) 
+enables DNN and XGB to predict $N\mathrm{Fe}$ with MAPE slightly above 10\%, 
+though the results remain inferior to those under monochromatic illumination.
+The use of PCA significantly worsens the results (see Fig.~\ref{fig7},f, Fig.~\ref{fig7},n, Table~\ref{table2}).
+A further increase in feature dimensionality improves prediction accuracy and reduces the performance gap between models with and without PCA.
+The best results are observed when using seven descriptors.
+For RF and GB, applying PCA decreases both the mean errors (Fig.~\ref{fig7},p) 
+and the proportion of predictions with large deviations from the true values (Table~\ref{table2}).
+For XGB and DNN --- the most efficient models across the entire $N_\mathrm{Fe}$--altered test dataset, 
+including data under 940nm illumination --- PCA provides no benefit (Fig.~\ref{fig7},p, Fig.~\ref{fig8},b).
+Notably, in these cases, the proportion of predictions with accuracy below 10\% does not exceed 1.3\%.
 
-%The issue of semiconductor purity has become increasingly significant since the advent of the transistor in 1947 \cite{Claers2018}.
-%The 1960 study by Shockley and Queisser \cite{Goetzberger1960} demonstrated that
-%the electrical properties of $n^{+}-p$ silicon diodes deteriorate when impurity atoms of metals such as Cu, Fe, Mn, Au, Zn, and Ni are present.
-%This study prompted investigations focused on preventing contaminating metals from entering semiconductors during manufacturing.
-%In particular, metallic impurities are known to reduce the efficiency of
-%silicon--based devices through direct shunting \cite{Rsh:Breitenstein},
-%increased leakage current \cite{Lee1980},
-%or bulk recombination \cite{Istratov2000}.
-%Despite extensive study of metallic impurities in silicon over the past fifty years \cite{Claers2018,Pearce1977},
-%the problem continues to attract significant attention \cite{Hajjiah2020,Le2024,Maoudj2021,OlikhPSSA,LaineIEEEPV2016}.
-%
-%
-%Iron is prominent among metallic contaminants, with its atoms being among
-%the most prevalent and detrimental impurities in silicon solar cells (SSCs) \cite{Buonassisi2006}.
-%Even in small concentrations (about $10^{10}$~cm$^{-3}$),
-%point defects related to Fe can significantly influence the performance of SSCs \cite{IronSC,Herguth2022}.
-%Therefore, it is of critical importance to assess the concentration of iron impurities.
-%In response to this challenge, various methodologies have been put forward,
-%often based on the property of iron atoms to form pairs with acceptors.
-%In particular, iron atoms are predominantly located in interstitial positions in silicon, forming the Fe$_i$ defect.
-%In $p$--type crystals, without external illumination, iron atoms carry positive charges and tend to bond with negatively charged doping atoms
-%(boron, aluminum, gallium, or indium), forming Fe$_i$B$_\mathrm{Si}$ pairs \cite{Kimerling1983}.
-%However, these pairs can destabilized by intense illumination, electron injection, or heating up to 200~$^\circ$C \cite{FeBAssJAP2014}.
-%The recombination properties of iron-related defects Fe$_i$ and Fe$_i$B$_s$ differ significantly,
-%which profoundly affects the overall characteristics of the crystal.
-%This fact formed the basis for the first method of assessing iron concentration \cite{Zoth1990},
-%which relied on measuring the diffusion length of minority carriers using the surface photovoltage method \cite{Tousek2008}.
-%Many other methods involve measurements of carrier lifetime \cite{Rein2,Schmidt2005},
-%Quasi-Steady-State Photoconductance \cite{Goodarzi2017},
-%or the study of kinetic dependencies of short-circuit current \cite{Olikh2021JAP}
-%or photoluminescence intensity \cite{FeMethod2012} during the reaction Fe$_i$B$_\mathrm{Si}$ $\rightleftarrows$ Fe$_i$ + B$_\mathrm{Si}$.
-%
-%
-%Notably, the presence of Fe--related defects affects the dynamics of electron and hole movement within the solar cell,
-%which is reflected in changes to the appearance of the current--voltage ($I$-$V$) characteristics of SSCs overall,
-%as well as modifications to the main photoelectric parameters
-%(short-circuit current  $I_\mathrm{SC}$,
-%open-circuit voltage $V_\mathrm{OC}$,
-%efficiency $\eta$, and fill factor $F\!F$)
-%in particular.
-%These findings create fundamental possibilities to advance methods for estimating iron concentration by $I$-$V$ curves measuring before and after pair dissolution.
-%The advantages of such an approach are associated with the possibility of directly characterizing finished solar cells,
-%as well as the absence of the need for additional equipment other than that required for $I$-$V$ measurements, which is extremely common.
-%Efforts have been made initially in developing such methods.
-%For instance, it was proposed to estimate the concentration of iron in SSCs based on changes in the ideality factor \cite{Olikh2019SM,Olikh2022PPV}
-%or open-circuit voltage \cite{Herguth2022}.
-%However, developing such approaches requires evaluating how a particular parameter changes when iron--containing pairs dissolve
-%and determining whether it can estimate the iron concentration $N_\mathrm{Fe}$.
-%For example, the most evident conditions for utilizing a specific parameter include its change due to the transformation
-%Fe$_i$B$_\mathrm{Si}$ $\rightarrow$ Fe$_i$ +B$_\mathrm{Si}$,
-%at least by 10~\%, along with a monotonic dependence of these changes on $N_\mathrm{Fe}$.
-%
-%
-%This paper intends to determine the variations of $I_\mathrm{SC}$, $V_\mathrm{OC}$, $\eta$, and $F\!F$
-%resulting from the decay of iron-containing pairs in boron-doped silicon solar cells.
-%Previous similar calculations have been conducted \cite{FeB:Schmidt,IronSC,Hajjiah2020},
-%but the results presented typically pertain only to certain temperatures,
-%illumination levels (often AM1.5), and solar cells with specific parameters.
-%In this study, we performed calculations over a sufficiently wide temperature range (290-340~K)
-%and for solar cells with varying base thickness (180-380~$\mu$m) and doping levels
-%(boron concentration in the base ranging from $10^{15}$ to $10^{17}$~cm$^{-3}$).
-%The results obtained allow us to assess the feasibility and potential of using the
-%main photovoltaic parameters of specific solar cells to estimate the $N_\mathrm{Fe}$ value across a range of temperatures,
-%including conditions similar to those encountered in typical SSC applications.
-%Furthermore, investigations have explored changes in photoelectric performance under not only solar illumination (AM1.5G)
-%but also low-intensity monochromatic light (wavelength of 940~nm, intensities of 5~W/m$^{2}$ and 10~W/m$^{2}$).
-%In the first case, while it is customary to adhere to standard conditions,
-%it's essential to consider that illumination at 1000~W/m$^{2}$ can lead to the decay of Fe$_i$B$_s$ complexes \cite{Macdonald2004}.
-%Therefore, measurements for cases requiring the presence of undissociated pairs in silicon must meet specific constraints.
-%On the other hand, intentionally chosen monochromatic illumination penetrates the emitter with negligible losses and does not reach the rear side.
-%In this context, the photoelectric parameters show remarkable sensitivity
-%to recombination processes occurring within the solar cell base and to iron concentration in this region.
-%Finally, in our calculations, we attempted to use the latest literature data
-%concerning the exact values of silicon parameters, including light absorption values \cite{Green2022}
-%and coefficients characterizing intrinsic recombination \cite{Brad2022,AugerSi2022}.
+\begin{figure}
+  \centering
+     \includegraphics[width=0.4\linewidth]{Fig8a.png}
+     \includegraphics[width=0.4\linewidth]{Fig8b.png}
+    \caption{The proportion of samples in the $N_\mathrm{Fe}$--altered dataset with an absolute error below a given threshold, plotted as a function of the threshold value.
+}\label{fig8}
+\end{figure}
 
-%\section{Research Methodology}%\label{}
-%
-%\subsection{Simulation Details}
-%The study involved simulation $I$-$V$ curves of SSCs with an $n^+-p-p^+$ structure,
-%as illustrated in Fig.~\ref{fig1}.
-%A back surface field ($p^+$-layer) is a notable feature observed in both Al-BSF cells (full area),
-%which are gradually losing relevance,
-%and PERC cells (locally), which are the most widely used in mass production.
-%The structures with a base uniformly doped with boron were under consideration.
-%The doping concentration $N_\mathrm{B}$, and the base thickness $d_p$ were varied during the modeling process, as detailed in Table~\ref{table1}.
-%The emitter and $p^+$-layer were considered to be unevenly doped.
-%The concentration profiles of the dopants, their maximum values ($N_{p^+,\mathrm{max}}$ and $N_{n^+,\mathrm{max}}$),
-%and layer thicknesses (see Fig.~\ref{fig1}) were selected according to Fell et al. \cite{Fell2015}.
-%
-%
-%\begin{figure}
-%	\centering
-%		\includegraphics[width=0.5\linewidth]{Figure1.png}
-%	  \caption{Schematic diagram of analyzed solar cells.}\label{fig1}
-%\end{figure}
-%
-%
-%\begin{table}
-%\caption{Parameters varied during the simulation}\label{table1}
-%\begin{tabular*}{\tblwidth}{@{}LL@{}}
-%\toprule
-%  Parameter & Range of values \\ % Table header row
-%\midrule
-% $d_p$($\mu$m)   & $180-380$\\
-% $N_\mathrm{B}$ (cm$^{-3}$)    & $10^{15} - 10^{17}$\\
-% $N_\mathrm{Fe}$ (cm$^{-3}$) & $10^{10} - 10^{14}$\\
-% $T$ (K)                        & $290 - 340$\\
-% Illumination                 & AM1.5G, 1000~W/$\mathrm{m}^{2}$; \\
-% & 940~$\mathrm{nm}$, 5~W/$\mathrm{m}^{2}$; 940~$\mathrm{nm}$, 10~W/$\mathrm{m}^{2}$\\
-%\bottomrule
-%\end{tabular*}
-%\end{table}
-%
-%
-%The simulation was conducted using the SCAPS~3.3.11 code \cite{SCAPS1}.
-%SCAPS-1D software, developed by the University of Gent, is founded on theoretical computations that involve solving Poisson's equation,
-%continuity equations for holes and electrons, and drift-diffusion at each position within the solar cell,
-%considering the boundary conditions.
-%Despite its one-dimensional modeling approach, SCAPS is extensively used for modeling various types of solar cells \cite{Joshi2024,Ravidas2024,Liu2024,You2023} in general
-%and for investigating the effects of defects on their performance \cite{AitAbdelkadir2023,Liang2024,SCAPSDefect3} in particular.
-%
-%
-%As can be seen from Table~\ref{table1}, calculations spanned a broad range of temperatures and base doping levels.
-%Therefore, to improve the accuracy of the calculations when inputting the initial parameters into SCAPS,
-%temperature and concentration (where applicable) dependencies of the following silicon parameters were taken into account:
-%
-%\begin{itemize}
-%    \item bandgap according to Passler \cite{Passler2002};
-%    \item doping induced bandgap narrowing according to Yan \& Cuevas \cite{EgNarrow};
-%    \item effective density of states at conduction and valence band and intrinsic carrier concentration according to Couderc et al. \cite{Si_ni_Couderc};
-%    \item thermal carrier velocities according to Green \cite{Nc:Green};
-%    \item free carrier effective masses according to O’Mara et al. \cite{OMara};
-%    \item carrier mobilities according to Klaassen's theory \cite{KLAASSEN953};
-%\end{itemize}
-%
-%The values of surface recombination coefficients were considered equal to the thermal velocities of carriers \cite{Fell2015}.
-%The calculations addressed recombination processes within the structural volume,
-%incorporating both intrinsic recombination and Shockley-Read-Hall recombination at iron-related defects.
-%In the first case, processes of band-to-band radiation recombination were considered
-%(where the calculation of the corresponding coefficient included the fraction of radiatively emitted photons
-%reabsorbed via band-to-band processes according to Niewelt et al.\cite{Brad2022})
-%and Auger recombination (where the coefficients considered the effect of Coulomb enhancement \cite{AugerSi2022} and temperature dependence \cite{Si_Auger}).
-%
-%
-%When accounting for the influence of iron impurities,
-%we considered that Fe atoms were uniformly distributed within the base and $p^+$-layer
-%with a total concentration of $N_\mathrm{Fe}$ (see Table~\ref{table1}).
-%Two cases were under consideration:
-%
-%Case~1.
-%The concentration of interstitial iron defects $\left[\mathrm{Fe}_i\right]=N_\mathrm{Fe}$  at each position throughout the solar cell,
-%with no pairs present $\left[\mathrm{Fe}_i\mathrm{B}_s\right]=0$.
-%This case corresponds to the state of the structure immediately after intense illumination, for example.
-%
-%Case~2.
-%Iron atoms predominantly form pairs with acceptors, $\left[\mathrm{Fe}_i\mathrm{B}_s\right] \gg \left[\mathrm{Fe}_i\right]$,
-%but the exact concentration ratio depends on the position of the Fermi level and temperature \cite{FeB:kinetic,MurphyJAP2011}
-%and varies from point to point within the solar cell.
-%Further details about calculation of the concentration profiles of Fe$_i$B$_s$ and Fe$_i$ are provided in \cite{Olikh2022PPV,Olikh2019SM}.
-%This case corresponds to prolonged storage of the structure in darkness or under conditions of low-intensity ($< 0.01$~J~cm$^{-2}$ \cite{Macdonald2004}) illumination.
-%
-%
-%During the calculations, it was assumed that Fe$_i$ forms a single donor level,
-%while the Fe$_i$B$_s$ pair has a trigonal configuration and acts as an amphoteric defect.
-%We obtained defect parameters (including level positions within the bandgap and electron and hole capture cross-sections) from relevant studies \cite{ROUGIEUX2018,Istratov1999,Paudyal}.
-%
-%As previously mentioned, the solar cell behavior was simulated under different illumination conditions,
-%including solar light (AM1.5G) and monochromatic light (wavelength 940~nm, intensity of $W_\mathrm{ill} = 5$~W/m$^{2}$ or 10~W/m$^{2}$) --- see Table~\ref{table1}.
-%The calculations incorporated the light absorption values in silicon based on Green's study \cite{Green2022}.
-%
-%
-%The $I$-$V$ characteristics were simulated for both Case~1 and Case~2 (see Fig.~\ref{fig2}),
-%and from each curve, the short-circuit current, open-circuit voltage, efficiency, and fill factor were determined.
-%Assessing the influence of iron defect variability relied on the relative changes in each photovoltaic conversion parameter:
-%
-%\begin{figure}
-%	\centering
-%		\includegraphics[width=0.5\linewidth]{Figure2.png}
-%	  \caption{Typical IV characteristics,
-%   calculated for structure with $d_p = 180$~$\mu$m, $N_\mathrm{B}=10^{17}$~cm$^{-3}$,
-%   $N_\mathrm{Fe}=10^{14}$~cm$^{-3}$ at $T = 290$~K.
-%   Illumination: AM1.5 (curves 1, 2), 940~nm 10~W/m$^{2}$ (3, 4) and 940~nm 5~W/m$^{2}$ (5, 6).
-%   Solid and dotted lines correspond to Case~1 and Case~2, respectively.}\label{fig2}
-%\end{figure}
-%
-%
-%\begin{equation}
-%\label{eq1}
-%    \varepsilon A = \frac{A^\mathrm{FeB} - A^\mathrm{Fe}}{A^\mathrm{FeB}} \times 100 \%\,,
-%\end{equation}
-%where $A$ represents one of the parameters ($I_\mathrm{SC}$, $V_\mathrm{OC}$, $\eta$, and $F\!F$),
-%superscript ‘‘FeB’’ corresponds to the parameter value for coexistence of Fe$_i$ and Fe$_i$B$_s$ (Case~2),
-%superscript ‘‘Fe’’ is related to the decay of all pairs (Case~1).
-%
-%
-%Impact of change of iron defects was investigated as a function of temperature from 290~K to 340~K,
-%base depth from 180~$\mu$m to 380~$\mu$m,
-%base doping level from $10^{15}$~cm$^{-3}$ to $10^{17}$~cm$^{-3}$,
-%and total impurity iron atom concentration from $10^{10}$~cm$^{-3}$ to $10^{14}$~cm$^{-3}$.
-%For each illumination scenario, calculations were carried out with 11 different temperature values and 5 base depth values,
-%evenly distributed within the specified ranges.
-%The concentration values were distributed equally on a logarithmic scale with 4 ($N_\mathrm{B}$ case) and 6 ($N_\mathrm{Fe}$ case) steps per decade.
-%As a result, for the AM1.5 illumination scenario, for instance, 24750 $I$-$V$ characteristics were simulated.
-%An exception occurred with monochromatic illumination at $W_\mathrm{ill} = 10$~W/m$^{2}$,
-%where we used only two $d_p$ values.
-%
-%\subsection{Experimental Details}
-%
-%To evaluate the validity of the simulated results,
-%we also conducted experimental studies on the effect of changing the state of iron-related defects on the photoelectric parameters of silicon solar cells.
-%
-%The $n^+$-$p$-$p^+$-Si samples were used in the experiment.
-%The structure was fabricated from a 380~$\mu$m thick $p$-type boron-doped
-%Czochralski silicon (100) wafer with doping level $N_\mathrm{B}=1.36\times10^{15}$~cm$^{-3}$.
-%The $n^+$ emitter with a sheet resistance of about $20-30$~$\Omega/\Box$
-%and  thickness of $0.7$~$\mu$m was formed by phosphorus diffusion.
-%The anti-recombination isotype barrier was created by using a $p^+$
-%layer ($10-20$~$\Omega/\Box$) formed by boron diffusion.
-%On the front surface, SiO$_2$ (40~nm) and Si$_3$N$_4$ (30~nm) films were formed as antireflective and passivating layers, respectively.
-%The solid and grid Al contacts were formed by magnetron sputtering on the back and front surfaces, respectively.
-%
-%The $I$-$V$ characteristics were measured using a Keithley 2450 source meter and
-%low--intensity monochromatic light source (light--emitting diode SN--HPIR940nm--1W with light wavelength 940~nm and intensity of about  $W_\mathrm{ill} = 5$~W/m$^{2}$).
-%
-%For different samples, the iron concentration ranged from $2\times10^{11}$ to $4\times10^{13}$~cm$^{-3}$.
-%The values of $N_\mathrm{Fe}$ were determined using a methodology \cite{Olikh2022:JMatSci,Olikh2021JAP}, based on fitting the kinetics of short-circuit current.
-%The decay of Fe$_i$B$_s$ pairs was realized using intensive (7000~W/$\mathrm{m}^{2}$) halogen lamp illumination.
-%
-%The measurements were carried over the temperature range of 300-340~K.
-%The sample temperature was driven by a thermoelectric cooler controlled by an STS-21 sensor
-%and maintained constant by a PID algorithm embedded in the software that serves the experimental setup.
+These results underscore the importance of selecting an optimal model and applying appropriate data preprocessing 
+to achieve accurate iron concentration predictions in silicon solar cells.
 
 
-%\label{}
+\subsection{$T$--altered test dataset}
 
-%\subsection{Short--circuit current}
-%
-%Figure~\ref{fig3} illustrates the characteristic dependencies of short-circuit current variations resulting
-%from the reconfiguration of iron-containing defects, as obtained from the simulations.
-%We present a more comprehensive set of figures that depict the detailed dependencies of $\varepsilon I_\mathrm{SC}$ on
-%all parameters varied during the calculations in the Supplementary Material (Figs.~S1-S6).
-%It is important to note that the qualitative nature of the short-circuit current variations remains practically identical
-%under both solar and monochromatic illumination, with the quantitative parameters of $\varepsilon I_\mathrm{SC}$ differing:
-%at 940~nm, the absolute values of $\varepsilon I_\mathrm{SC}$ are approximately 3--4 times greater than those observed under AM1.5 conditions,
-%assuming other parameters are constant.
-%Among other features of $\varepsilon I_\mathrm{SC}$ changes, we can highlight the following:
-%
-%
-%\begin{figure}
-%	\centering
-%     \includegraphics[width=0.49\linewidth]{Fig3a.png}
-%     \includegraphics[width=0.49\linewidth]{Fig3b.png}
-%     \includegraphics[width=0.49\linewidth]{Fig3c.png}
-%     \includegraphics[width=0.49\linewidth]{Fig3d.png}
-%	  \caption{Relative changes in short-circuit current caused by a complete
-%       dissociation of Fe$_i$B$_s$ pairs as a function of
-%       iron concentration and
-%       temperature (panels a and c) or doping level (b, d).
-%       Illumination: AM1.5 (a, b), 940~nm 5~W/m$^{2}$ (c, d).
-%       $T$, K: 290 (b), 340 (d).
-%       Different surfaces correspond to different doping levels (a, c) and base depths (b, d).
-%}\label{fig3}
-%\end{figure}
-%
-%\noindent
-%- The module $\varepsilon I_\mathrm{SC}$ increases monotonically with increasing iron concentration,
-%    but the sign of this value depends on the doping level.
-%    At low boron concentrations ($N_\mathrm{B}=10^{15}$~cm$^{-3}$) $\varepsilon I_\mathrm{SC} > 0$,
-%    whereas at high concentrations ($N_\mathrm{B}=10^{17}$~cm$^{-3}$) $\varepsilon I_\mathrm{SC} < 0$ --- see Figs.~\ref{fig3}a,~\ref{fig3}c, S3--S6;
-%
-%\noindent
-%- Increasing the acceptor concentration causes a monotonic decrease in $\varepsilon I_\mathrm{SC}$ (Figs.~\ref{fig3}b,~\ref{fig3}d);
-%    the $N_\mathrm{B}$ value at which the sign of $\varepsilon I_\mathrm{SC}$ changes depends on the temperature
-%    (decreases with decreasing in $T$ value) and the type of illumination (is generally higher in the case of monochromatic light) --- see Fig.~S2;
-%
-%\noindent
-% - In the case where $\varepsilon I_\mathrm{SC} < 0$, an temperature increase causes a decrease in the absolute magnitude
-%    of the relative changes in short--circuit current, with the dependence being nearly linear and
-%    the slope increasing with higher doping levels and iron concentration (Figs.~\ref{fig3}a,~\ref{fig3}c, S4).
-%    In the case where $\varepsilon I_\mathrm{SC} > 0$,
-%    a $T$ changing results in minor non-monotonic variations of the short-circuit current after the dissociation of Fe$_i$B$_s$  pairs (Fig.~S3);
-%
-%\noindent
-%- The influence of base thickness on $\varepsilon I_\mathrm{SC}$ increases with
-%    increasing $N_\mathrm{B}$ and decreasing $N_\mathrm{Fe}$ (Figs.~S5, S3), but it is minimal overall.
-%    As calculations have shown, increasing $d_p$ by more than twice causes changes in $\varepsilon I_\mathrm{SC}$ that do not exceed 0.5~\%;
-%
-%\noindent
-%- Changing the intensity of the monochromatic illumination (from 5~W/m$^{2}$ to 10~W/m$^{2}$) does not practically change the value of $\varepsilon I_\mathrm{SC}$;
-%
-%
-%\noindent
-%- The absolute values of $\varepsilon I_\mathrm{SC}$ can reach relatively high values (more than 100~\% for 940~nm illumination);
-%    however, in cases where $N_\mathrm{Fe}<10^{11}$~cm$^{-3}$ and around $N_\mathrm{B}=10^{16}$~cm$^{-3}$, the changes in short-circuit current do not exceed a few percent.
-%
-%
-%
-%The identified features of the $\varepsilon I_\mathrm{SC}$ changes can be explained by considering
-%the main reasons for the influence of factors, which varied during simulation, on the photovoltaic conversion.
-%It is known \cite{YangHandbookPVSi} that the main influence of metal impurities on solar cell performance is caused
-%by their effect on the collection efficiency (CE, portion of excess carriers that reach the depletion region of $p$–$n$ junction).
-%Neglecting the influence of series and shunt resistances, the short-circuit current coincides with the photocurrent $I_\mathrm{ph}$,
-%which equals the CE multiplied by the number of light-induced excess carriers.
-%In turn, the CE can be calculated as a convolution of generation function, which is proportional to $\exp(-\alpha z)$
-%(where $\alpha$ is the absorption coefficient and $z$ is the coordinate along the axis directed
-%perpendicular to the $p$-$n$ junction from the emitter)
-%and the collection probability, which can be obtained as a solution of homogeneous diffusion equation.
-%
-%The photogenerated current for the cell can be obtained by adding the relevant quantities
-%for the base $I_\mathrm{ph,b}$ and the emitter $I_\mathrm{ph,e}$ \cite{Markvart}:
-%\begin{equation}
-%\label{eq2}
-%     I_\mathrm{SC} \approx I_\mathrm{ph} = I_\mathrm{ph,e} + I_\mathrm{ph,b}\,.
-%\end{equation}
-%
-%
-%However, considering the location of the impurity iron,
-%it can be assumed that during the Fe$_i$B$_\mathrm{Si}$ $\rightleftharpoons$ Fe$_i$ + B$_\mathrm{Si}$ reconfiguration,
-%the first term on the right-hand side of Eq.~(\ref{eq2})
-%remains unchanged ($I_\mathrm{ph,e}^\mathrm{FeB}$ = $I_\mathrm{ph,e}^\mathrm{Fe}$ = $I_\mathrm{ph,e}$),
-%and therefore, considering Eq.~(\ref{eq1}):
-%\begin{equation}
-%\label{eq3}
-%     \varepsilon I_\mathrm{SC} = \frac{I_\mathrm{ph,b}^\mathrm{FeB}-I_\mathrm{ph,b}^\mathrm{Fe}}{I_\mathrm{ph,e}+I_\mathrm{ph,b}^\mathrm{FeB}}\times 100 \%\,.
-%\end{equation}
-%
-%In turn, the base photocurrent the under monochromatic illumination can be expressed  as follows \cite{Goetzberger1998}:
-%\begin{equation}
-%\label{eq4}
-%     I_\mathrm{ph,b}=\frac{qF(1-R)\alpha L_n}{{\alpha}^2 L_n^2 - 1}\left( \alpha L_n - \frac{\frac{SL_n}{D_n}\left[ {\cosh\left( \frac{d^*}{L_n} \right)} - \exp(-\alpha d^*) \right] + \sinh\left( \frac{d^*}{L_n} \right) + \alpha L_n \exp(-\alpha d^*)}{\frac{SL_n}{D_n}\sinh\left( \frac{d^*}{L_n} \right) + \cosh\left( \frac{d^*}{L_n} \right)} \right)\,,
-%\end{equation}
-%where
-%$F$ is the photon flux,
-%$R$ is the reflection coefficient,
-%$S$ is the surface recombination velocity,
-%$L_n$ is the minority carrier (electron) diffusion length,
-%$D_n$ is the electron diffusion coefficient,
-%$d^*$ is the thickness of the quasi-neutral region base,
-%since the space charge region (SCR) width for the modeled structures did not exceed 1~$\mu$m,
-%it follows that $d^*\simeq d_p$.
-%
-%The recombination rate affects the value of $L_n$ and, according to the Shockley--Read--Hall model,
-%depends on trap concentrations, capture cross-sections of electrons and holes, temperature, the Fermi level $E_\mathrm{F}$ location, and defect levels.
-%Temperature also affects the values of $\alpha$ and $D_n$.
-%In turn, the position of $E_\mathrm{F}$ within the band gap depends on temperature and doping level.
-%Fig.~\ref{fig4} shows the calculated by using SCAPS temperature and concentration dependence of the Fermi level in the base of the investigated structure.
-%In addition, this figure shows the positions of the levels associated with interstitial iron and the FeB pair.
-%It is worth noting that Fe$_i$ acts as a deep center;
-%the donor state of the Fe$_i$B$_s$ pair shows only negligible recombination activity,
-%while the presence of the acceptor state Fe$_i$B$_s$ causes the
-%carrier lifetime to be doping-dependent under low injection conditions \cite{FeB:Schmidt}.
-%
-%\begin{figure}
-%	\centering
-%     \includegraphics[width=0.49\linewidth]{Fig4a.png}
-%     \includegraphics[width=0.49\linewidth]{Fig4b.png}
-%	  \caption{The location of the Fermi level in the base of the $n^+$-$p$-$p^+$ structure
-%       as a function of temperature for $N_\mathrm{B}=10^{15}$ and $10^{17}$~cm$^{-3}$ (a),
-%       and as a function of the doping level for $T=290$ and 340~K (b).
-%       The zero energy value corresponds to the top of the valence band.
-%       Also shown are the locations of the donor (0/+) levels for the FeB pair (green surfaces)
-%       and the interstitial iron atom Fe$_i$ (olive surfaces) and acceptor (-/0) level for FeB pair (brown surfaces).
-%}\label{fig4}
-%\end{figure}
-%
-%In our opinion, the change in sign and the monotonic decrease of $\varepsilon I_\mathrm{SC}$
-%with increase in doping level value
-%reflect the change in recombination activity caused by the Fermi level shift.
-%It should be noted that
-%at low boron concentrations, $E_\mathrm{F}$ in all points of the base is located below the donor level of Fe$_i$,
-%while at $N_\mathrm{B}>10^{16}$~cm$^{-3}$,
-%they intersect in the vicinity of the $p$–$n$ junction --- see Fig.~\ref{fig4}.
-%The weak dependence on base thickness indicates that the second term in parentheses in Eq.~(\ref{eq4}) is significantly smaller than the first.
-%In addition, when comparing monochromatic and solar illumination,
-%the latter generates a significantly larger number of non-equilibrium carriers in the emitter
-%due to shorter-wavelength photons.
-%As a result, the emitter current under AM1.5 illumination increases,
-%which, as shown in Eq.~(\ref{eq3}), leads to a decrease in $\varepsilon I_\mathrm{SC}$ value.
-%
-%Fig.~\ref{fig5} illustrates the alterations in the short-circuit current,
-%both observed in experimental studies and calculated for structures with identical base parameters.
-%It should be noted that the figure shows simulation results obtained at various levels of illumination,
-%confirming that $\varepsilon I_\mathrm{SC}$ is independent of $W_\mathrm{ill}$.
-%
-%
-%\begin{figure}
-%	\centering
-%     \includegraphics[width=0.4\linewidth]{Fig5a.png}
-%     \includegraphics[width=0.4\linewidth]{Fig5b.png}
-%	  \caption{Relative changes in short-circuit current caused by a complete
-%       dissociation of Fe$_i$B$_s$ pairs as a function of iron concentration (a) and
-%       temperature (b) for SSC with $d_p=380$~$\mu$m and $N_\mathrm{B}=1.36\times10^{15}$~cm$^{-3}$
-%       in the case of monochromatic (940~nm) illumination.
-%       The marks are the experimental results (divided by factor $C_{cor}=1.4$), the lines are the simulation results.
-%       $W_\mathrm{ill}$, W/m$^{2}$: 5 (marks and solid lines), 10 (dotted lines).
-%       Different lines and marks correspond to different temperatures (a) or $N_\mathrm{Fe}$ values (b) --- see legends.
-%}\label{fig5}
-%\end{figure}
-%
-%One can see that the theoretical dependencies of $\varepsilon I_\mathrm{SC}$
-%on iron concentration and temperature qualitatively agree with the experimental results.
-%To achieve quantitative agreement, a correction factor of $C_\mathrm{cor} = 1.4$ must be applied:
-%the experimentally obtained value $\varepsilon I_\mathrm{SC,exp}$ should be replaced by $\varepsilon I_\mathrm{SC,exp} / C_\mathrm{cor}$ --- as illustrated in Fig.~\ref{fig5}.
-%This methodology is frequently cited in the literature \cite{IronSC} and is associated with correcting specific systematic errors in simulations.
-%
-%As mentioned above, one of the primary objectives of this study is to assess the feasibility of utilizing
-%changes in photoelectric parameters resulting from the dissociation of FeB pairs to estimate iron concentration.
-%One of the most promising approaches in this regard is the application of machine learning algorithms.
-%In this context, $\varepsilon I_\mathrm{SC}$ is expected to serve as one of the features.
-%It is worth noting that a popular preprocessing technique involves standardizing feature values,
-%where the distribution of each feature is transformed to have a mean of zero and a standard deviation of one.
-%This approach ensures that multiplying the entire array of $\varepsilon I_\mathrm{SC}$ values by a constant does not affect the resulting normalized values.
-%
-%In our case, simulation errors may arise because certain factors present in actual SSCs were not accounted for in the calculations, specifically:
-%
-%\noindent
-%- the possible influence of series and shunt resistances;
-%
-%\noindent
-%- the antireflective SiO$_2$ and passivating Si$_3$N$_4$ layers on the front surface induce a spectral dependence in reflectance, corresponding calculations necessitating the consideration of multiple reflections \cite{KostRefl2000};
-%
-%\noindent
-%- the shading caused by electrodes;
-%
-%\noindent
-%- the presence of defects unrelated to iron.
-%
-%
-%Overall, the results indicate that relative changes in short-circuit current following the complete dissociation of FeB pairs
-%can be used to estimate iron concentration:
-%$\varepsilon I_\mathrm{SC}$ depends monotonically on $N_\mathrm{Fe}$, and its values can be pretty significant.
-%In this context, determining the amount of impurity atoms is more appropriately conducted
-%using photovoltaic parameters obtained under monochromatic illumination,
-%as this method offers greater sensitivity (response amplitude of $\varepsilon I_\mathrm{SC}$).
-%However, it should be noted that for low iron concentrations ($N_\mathrm{Fe}<10^{11}$~cm$^{-3}$)
-%and solar cells with boron concentrations in the base around $10^{16}$~cm$^{-3}$,
-%this approach appears to be unproductive.
-%At these levels, there are blind spots in determining impurity metal concentrations.
-%
-%
-%\subsection{Open-circuit voltage}
-%
-%Figure~\ref{fig7} presents the characteristic simulation results of open-circuit voltage changes due to the dissociation of FeB pairs.
-%Figures~S7--S12 in the Supplementary Material show additional $\varepsilon V_\mathrm{OC}$ dependencies.
-%Notably, the changes in $V_\mathrm{OC}$ value are almost an order of magnitude smaller than the values observed for $I_\mathrm{SC}$.
-%Moreover, differences in the behavior of open-circuit voltage changes as a function of iron concentration
-%at low ($N_\mathrm{B}<2\times10^{16}$~cm$^{-3}$) base doping levels
-%in the cases of monochromatic and AM1.5 illumination are noteworthy.
-%Under solar illumination, $\varepsilon V_\mathrm{OC}$ values are negative,
-%and the $\varepsilon V_\mathrm{OC} \left(N_\mathrm{Fe}\right)$ dependency is non-monotonic --- see figs.~\ref{fig6}a,~\ref{fig6}b.
-%Additionally, the base thickness significantly impacts the iron concentration,
-%which correlates with the minimum $\varepsilon V_\mathrm{OC}$ value (Fig.~\ref{fig6}a).
-%When illuminated by photons with a wavelength of 940~nm, $\varepsilon V_\mathrm{OC}$ values are positive and increase monotonically with iron concentration.
-%As boron concentration increases, the behavior of $\varepsilon V_\mathrm{OC}\left(N_\mathrm{Fe}\right)$ becomes similar, regardless of the type of illumination:
-%the relative changes in open-circuit voltage during the rebuilding of iron-containing defects
-%are negative and increase monotonically in absolute value with increasing both $N_\mathrm{Fe}$ and $N_\mathrm{B}$.
-%Furthermore, changes in $V_\mathrm{OC}$ are more significant under monochromatic illumination, similar to the case of the short-circuit current.
-%
-%
-%\begin{figure}
-%	\centering
-%     \includegraphics[width=0.49\linewidth]{Fig6a.png}
-%     \includegraphics[width=0.49\linewidth]{Fig6b.png}
-%     \includegraphics[width=0.49\linewidth]{Fig6c.png}
-%     \includegraphics[width=0.49\linewidth]{Fig6d.png}
-%	  \caption{Relative changes in open-circuit voltage caused by a complete
-%       dissociation of Fe$_i$B$_s$ pairs as a function of
-%       iron concentration and
-%       doping level (panels a and c) or base depth (b, d).
-%       Illumination: AM1.5 (a, b), 940~nm 10~W/m$^{2}$ (c),  940~nm 5~W/m$^{2}$ (d).
-%       $T$, K: 290 (b, d).
-%       Different surfaces correspond to different temperatures (a, c) and doping levels (b, d).
-%}\label{fig6}
-%\end{figure}
-%
-%The effect of temperature on $\varepsilon V_\mathrm{OC}$ also depends on the base doping level:
-%as $N_\mathrm{B}$ increases, the temperature coefficient of $\varepsilon V_\mathrm{OC}$ gradually shifts from positive to negative.
-%This trend is observed for both AM1.5 and 940nm illumination, as shown in Figs.~S9,~\ref{fig6}a, and \ref{fig6}b.
-%The impact of $d_p$ on changes in open-circuit voltage is more significant than the effect observed for $\varepsilon I_\mathrm{SC}$.
-%However, base thickness is not a determining factor for $\varepsilon V_\mathrm{OC}$;
-%it mainly affects low doping levels and temperatures, as shown in Figs.~S9, S11, and S12.
-%Another difference between the behavior of $\varepsilon V_\mathrm{OC}$ and $\varepsilon I_\mathrm{SC}$
-%is the former dependence on monochromatic illumination intensity.
-%At $W_\mathrm{ill} = 10$~W/m$^{2}$, changes in open-circuit voltage are less significant,
-%with differences increasing as iron concentration decreases and showing weak temperature dependence.
-%
-%Understanding the features of $\varepsilon V_\mathrm{OC}$ requires recalling
-%that the open-circuit voltage depends not only on the photocurrent
-%but also on the saturation current $I_0$ and the ideality factor,
-%which in turn are determined by the state of the defect subsystem and other parameters
-%that varied in simulation \cite{Olikh2019SM,YangHandbookPVSi}.
-%In the case of simplified single-diode model \cite{YangHandbookPVSi}:
-%\begin{equation}
-%\label{eq5}
-%     V_\mathrm{OC} = nkT\left[ {\ln\left( {\frac{I_\mathrm{ph}}{I_0}} \right)+1} \right]\,.
-%\end{equation}
-%
-%Similar to the photocurrent, we can express $I_\mathrm{0}$ as the sum of the currents from the base and the emitter \cite{Markvart}:
-%\begin{equation}
-%\label{eq6}
-%     I_0 = I_\mathrm{0,e}+I_\mathrm{0,b}\,,
-%\end{equation}
-%and the second term can be expressed as follows \cite{Goetzberger1998}:
-%\begin{equation}
-%\label{eq7}
-%     I_\mathrm{0,b}=\frac{qn_i D_n}{N_\mathrm{B}L_n}\cdot\frac{\frac{D_n}{SL_n}\sinh\left( \frac{d_p}{L_n} \right)+\cosh\left( \frac{d_p}{L_n} \right)}{\sinh\left( \frac{d_p}{L_n} \right)+\frac{D_n}{SL_n}\cosh\left( \frac{d_p}{L_n} \right)}\,,
-%\end{equation}
-%where
-%$n_i$ is the intrinsic carrier concentration.
-%The last equation explains the observed dependence of $\varepsilon V_\mathrm{OC}$ on the base thickness.
-%
-%It was shown \cite{Olikh2022PPV,Olikh2019SM} previously
-%that changes in the ideality factor during restructuring Fe$_i$B$_\mathrm{Si}$ $\rightleftharpoons$ Fe$_i$ + B$_\mathrm{Si}$ do not exceed a few percent.
-%This $n$ slight variation, combined with the logarithmic dependence of $V_\mathrm{OC}$ on $I_\mathrm{ph}$ as shown in Eq. (\ref{eq5}),
-%explains the small absolute values of $\varepsilon V_\mathrm{OC}$.
-%
-%Schmidt \cite{FeB:Schmidt} attributes the non-monotonic dependence of $\varepsilon V_\mathrm{OC}\left(N_\mathrm{Fe}\right)$
-%(Fig.~\ref{fig6}b) to the significantly higher injection level in the cell base under open-circuit conditions
-%compared to short-circuit conditions.
-%Overall, the results support this hypothesis.
-%In fact,
-%for monochromatic illumination with significantly lower intensity,
-%the injection level remains below the crossover point \cite{FeB:Schmidt} throughout the $I$--$V$ curve,
-%which results in the absence of a minimum in the $\varepsilon V_\mathrm{OC}\left(N_\mathrm{Fe}\right)$ dependence.
-%
-%The data presented in Fig.~\ref{fig7} compare the experimental and simulation results.
-%Overall, the results in both cases is qualitatively consistent.
-%However, to ensure that the absolute values are consistent, a correction factor dependent on iron concentration must be used.
-%According to the data, $C_\mathrm{cor}$ is less than 1 for low values of $N_\mathrm{Fe}$ and greater than 1 for high values.
-%By the way, Schubert et al. \cite{IronSC} also observed such dependence of the correction factor.
-%
-%\begin{figure}
-%	\centering
-%     \includegraphics[width=0.4\linewidth]{Fig7a.png}
-%     \includegraphics[width=0.4\linewidth]{Fig7b.png}
-%	  \caption{Relative changes in open-circuit voltage caused by a complete
-%       dissociation of Fe$_i$B$_s$ pairs as a function of iron concentration (a) and
-%       temperature (b) for SSC with $d_p=380$~$\mu$m and $N_\mathrm{B}=1.36\times10^{15}$~cm$^{-3}$
-%       in the case of monochromatic (940~nm) illumination.
-%       The marks are the experimental results, the lines are the simulation results.
-%       $W_\mathrm{ill}$, W/m$^{2}$: 5 (marks and solid lines), 10 (dotted lines).
-%       Different lines and marks correspond to different temperatures (a) or $N_\mathrm{Fe}$ values (b) --- see legends.
-%}\label{fig7}
-%\end{figure}
-%
-%It is believed \cite{YangHandbookPVSi} that the main effect of metals on the $V_\mathrm{OC}$ values can be determined by shunt formation.
-%However, SCAPS does not account for the effect of shunt resistance,
-%which we believe is the primary reason for the discrepancies between experimental and simulated values.
-%
-%In summary, using relative changes in open-circuit voltage due to FeB pair dissociation is less convenient
-%for estimating iron concentration compared to $\varepsilon I_\mathrm{SC}$.
-%It is because of the smaller absolute values of $\varepsilon V_\mathrm{OC}$,
-%the non-monotonic dependence of $\varepsilon V_\mathrm{OC}$ on $N_\mathrm{Fe}$ under certain conditions,
-%and the need for precise control over the intensity of monochromatic illumination.
-%However, using $\varepsilon V_\mathrm{OC}$ as an additional parameter alongside $\varepsilon I_\mathrm{SC}$
-%can significantly enhance the accuracy of iron concentration measurements for $N_\mathrm{Fe}<10^{11}$~cm$^{-3}$
-%and $N_\mathrm{B}=(1-5)\times10^{15}$cm$^{-3}$ under AM1.5 illumination.
-%In this case, the dependence of $\varepsilon V_\mathrm{OC}$ on $N_\mathrm{Fe}$ is sufficiently sharp (Fig.~\ref{fig6}b),
-%and ambiguity in associating specific $\varepsilon V_\mathrm{OC}$ values with iron concentration can be resolved
-%by the monotonic behavior of $\varepsilon V_\mathrm{OC}$ in this range.
-%Notably, these boron concentrations are most relevant to typical real SSCs.
-%
-%
-%
-%\subsection{Fill factor}
-%The fill factor is another defining term in the overall behavior of a solar cell.
-%$F\!F$ is the ratio of the maximum obtainable power to the product of short circuit current and open-circuit voltage.
-%In general, $F\!F$ depends on both $I_\mathrm{SC}$ and $V_\mathrm{OC}$.
-%However, it can be shown that it is mainly determined by the $V_\mathrm{OC}$ value.
-%Indeed, it is shown \cite{YangHandbookPVSi} within the single-diode model
-%\begin{equation}
-%\label{eqFF1}
-%    F\!F \approx \frac{\upsilon_\mathrm{OC}-\ln\left(1+\upsilon_\mathrm{OC}\right)}{\upsilon_\mathrm{OC}+1} \,,
-%\end{equation}
-%with $\upsilon_\mathrm{OC}$ being the normalized open-circuit voltage
-%$\upsilon_\mathrm{OC}=qV_\mathrm{OC}/nkT$.
-%Another well--known empirical relation for the maximum achievable fill factor of a solar cell is proposed by Green \cite{Green1981,Green1982}:
-%\begin{equation}
-%\label{eqFF2}
-%    F\!F \approx \frac{\upsilon_\mathrm{OC}-\ln\left(0.72+\upsilon_\mathrm{OC}\right)}{\upsilon_\mathrm{OC}+1} \,.
-%\end{equation}
-%Thus, any factors that affect $V_\mathrm{OC}$ also impact the $F\!F$.
-%However, since $V_\mathrm{OC}$ appears in both the numerator and denominator of Eqs.~(\ref{eqFF1})-(\ref{eqFF2}),
-%the resulting changes in the fill factor are expected to be smaller than those in the open-circuit voltage.
-%
-%Recently, Bothe et al. \cite{Bothe2023} proposed explicit expressions for the $F\!F$ in terms of other key solar cell parameters.
-%Specifically, for $p$--type SSCs and intrinsic limits, the parameterization can be expressed as follows:
-%\begin{equation}
-%\label{eqFF3}
-%    F\!F = \frac{90.4924}{d_p^{0.00220}}\left[0.9478+\frac{0.0519}{1+\left(\frac{\log N_\mathrm{B}}{17.3739 d_p^{-0.0093}}\right)^{76.3}}\right] \,,
-%\end{equation}
-%where
-%$d_p$ is expected to be in micrometers.
-%Additional recombination (e.g., Shockley–Read–Hall) leads to a decrease in $F\!F$ value \cite{Bothe2023}.
-%
-%Figs.~S13-S16 in the Supplementary Material, along with Fig.~\ref{fig8}, illustrate how the fill factor varies with iron defect variability.
-%The following features of $\varepsilon F\!F$ can be identified from the presented data:
-%
-%
-%\begin{figure}
-%	\centering
-%     \includegraphics[width=0.49\linewidth]{Fig8a.png}
-%     \includegraphics[width=0.49\linewidth]{Fig8b.png}
-%     \includegraphics[width=0.49\linewidth]{Fig8c.png}
-%     \includegraphics[width=0.49\linewidth]{Fig8d.png}
-%	  \caption{Relative changes in fill factor caused by a complete
-%       dissociation of Fe$_i$B$_s$ pairs as a function of
-%       iron concentration and
-%       doping level (panels a and c) or temperature (b, d).
-%       Illumination: AM1.5 (a, b), 940~nm 5~W/m$^{2}$ (c),  940~nm 10~W/m$^{2}$ (d).
-%       $T$, K: 290 (a), 340 (c).
-%       $d_p$, $\mu$m: 180 (b), 380 (d).
-%       Different surfaces correspond to different base depths (a, c) and doping levels (b, d).
-%}\label{fig8}
-%\end{figure}
-%
-%\noindent
-%- The changes in the fill factor are the smallest among the parameters considered,
-%with maximum $\varepsilon F\!F$ values not exceeding 10\%;
-%
-%\noindent
-%- At low boron concentrations ($N_\mathrm{B}<10^{16}$~cm$^{-3}$),
-%the dependence of $\varepsilon F\!F$ on $N_\mathrm{Fe}$ is notably non-linear.
-%Within the used concentration range, two regions of decrease and two regions of increase in $\varepsilon F\!F$ are observed;
-%
-%\noindent
-%- At low boron concentrations, the change in fill factor value is positive and,
-%in contrast to $\varepsilon V_\mathrm{OC}$ and $\varepsilon I_\mathrm{SC}$,
-%AM1.5 illumination causes more significant changes in $\varepsilon F\!F$ than monochromatic illumination.
-%At high boron concentrations, the $\varepsilon F\!F$ is negative and does not exceed 4\%;
-%
-%
-%\noindent
-%- The absolute value of $\varepsilon F\!F$ increases, regardless of the value sign, with temperature increases;
-%
-%
-%\noindent
-%- Increasing the base thickness leads to a decrease in $\varepsilon F\!F$ (a reduction in the fill factor with increasing $d_p$ is expected according to (\ref{eqFF3})). Additionally, this results in a shift of the $\varepsilon F\!F\left(N_\mathrm{Fe}\right)$ dependence towards lower iron concentrations.
-%The impact of $d_p$ is more pronounced at low boron concentrations and in the case of AM1.5 illumination;
-%
-%
-%\noindent
-%- In the case of monochromatic illumination, the light intensity significantly affects the relative changes in the fill factor
-%($\varepsilon F\!F$ can vary by a factor of 2 when $W_\mathrm{ill}$ changes from 5 to 10~W/m$^{2}$).
-%This impact is influenced by both iron concentration (which can even change the sign of the effect) and temperature.
-%
-%Fig.~\ref{fig9} shows that the experimental dependencies of  $\varepsilon F\!F\left(N_\mathrm{Fe}\right)$
-%and $\varepsilon F\!F\left(T\right)$ align well with the calculated values.
-%
-%Figure~\ref{fig9} shows that the experimental dependencies $\varepsilon F\!F$$\left(N_\mathrm{Fe}\right)$ and $\varepsilon F\!F$$\left(T\right)$ are in good agreement with the calculated values.
-%In our opinion, the quantitative agreement is limited by the relatively low accuracy of $\varepsilon F\!F$ measurements
-%and the dependence of fill factor on series and shunt resistances \cite{Green1981,Green1982},
-%which were not considered in the simulation.
-%
-%
-%\begin{figure}
-%	\centering
-%     \includegraphics[width=0.4\linewidth]{Fig9a.png}
-%     \includegraphics[width=0.4\linewidth]{Fig9b.png}
-%	  \caption{Relative changes in fill factor caused by a complete
-%       dissociation of Fe$_i$B$_s$ pairs as a function of iron concentration (a) and
-%       temperature (b) for SSC with $d_p=380$~$\mu$m and $N_\mathrm{B}=1.36\times10^{15}$~cm$^{-3}$
-%       in the case of monochromatic (940~nm) illumination.
-%       The marks are the experimental results, the lines are the simulation results.
-%       $W_\mathrm{ill}$, W/m$^{2}$: 5 (marks and solid lines), 10 (dotted lines).
-%       Different lines and marks correspond to different temperatures (a) or $N_\mathrm{Fe}$ values (b) --- see legends.
-%}\label{fig9}
-%\end{figure}
-%
-%The observed characteristics of $\varepsilon F\!F$ suggest that
-%the fill factor is considerably less suitable for estimating iron concentration in SSCs
-%than the short-circuit current and open-circuit voltage.
-%$\varepsilon F\!F$ can serve as an auxiliary parameter to refine $N_\mathrm{Fe}$;
-%however, if monochromatic illumination is used, light intensity must be controlled with high precision.
-%
-%
-%
-%\subsection{Solar cell efficiency}
-%
-%Solar cell efficiency depends on all the photovoltaic conversion parameters previously discussed:
-%\begin{equation}
-%\label{eq11}
-%    \eta = \frac{I_\mathrm{SC}V_\mathrm{OC}F\!F}{W_\mathrm{ill}A}\,,
-%\end{equation}
-%where
-%$A$ is the illuminated area of the solar cell.
-%Considering the differential of Eq.~(\ref{eq11}), a cumulative effect on the relative changes in efficiency can be anticipated.
-%
-%Considering the differential of formula (\ref{eq11}):
-%\begin{equation}
-%\label{eq12}
-%    d\eta = \frac{dI_\mathrm{SC}}{I_\mathrm{SC}}+\frac{dV_\mathrm{OC}}{V_\mathrm{OC}}+\frac{dF\!F}{F\!F},
-%\end{equation}
-%a cumulative effect on the relative changes in efficiency can be anticipated.
-%Fig.~\ref{fig10} illustrates the simulation results for the solar cell efficiency,
-%while Figs.~S17–S20 offer additional details in the Supplementary Material.
-%
-%
-%\begin{figure}
-%	\centering
-%     \includegraphics[width=0.49\linewidth]{Fig10a.png}
-%     \includegraphics[width=0.49\linewidth]{Fig10b.png}
-%     \includegraphics[width=0.49\linewidth]{Fig10c.png}
-%     \includegraphics[width=0.49\linewidth]{Fig10d.png}
-%	  \caption{Relative changes in SSC efficiency caused by a complete
-%       dissociation of Fe$_i$B$_s$ pairs as a function of
-%       iron concentration and
-%       doping level (panels a and c) or base depth (b, d).
-%       Illumination: AM1.5 (a, b), 940~nm 5~W/m$^{2}$ (c),  940~nm 10~W/m$^{2}$ (d).
-%       $T$, K: 290 (d), 340 (b).
-%       $d_p$, $\mu$m: 180 (a, c).
-%       Different surfaces correspond to different temperatures (a, c) and doping levels (b, d).
-%}\label{fig10}
-%\end{figure}
-%
-%The data indicate that the primary features of the $\varepsilon \eta$ dependencies
-%on solar cell parameters and temperature align with those observed for $\varepsilon I_\mathrm{SC}$.
-%However, a few differences are evident:
-%1)~the amplitude of  $\varepsilon \eta$ is enhanced,
-%reaching up to 50\% for AM1.5 and 200\% for 940~nm;
-%these results align with the expectations from Eq.~(\ref{eq12})
-%and make SC efficiency more convenient for iron concentration estimating;
-%2)~for AM1.5, in the region $N_\mathrm{B}<5\times10^{15}$~cm$^{-3}$,
-%a non-monotonic dependence of $\varepsilon \eta$$\left(N_\mathrm{Fe}\right)$ is observed,
-%rendering it impossible to use relative changes in efficiency as the sole parameter for iron concentration estimating under specified conditions;
-%3)~the existing dependence of $\varepsilon \eta$ on the intensity of the monochromatic illumination is weak,
-%which does not prevent the use of $\varepsilon \eta$ for determining $N_\mathrm{Fe}$, even with not very precise $W_\mathrm{ill}$ measurements;
-%4)~the temperature dependence of $\varepsilon \eta$ is weaker than that of $\varepsilon I_\mathrm{SC}$.
-%
-%
-%Fig.~\ref{fig11} shows the experimental and simulated values of changes in the efficiency of the solar cell
-%with a 380~$\mu$m base thickness and a doping concentration of $1.36\times10^{15}$~cm$^{-3}$.
-%When presenting the experimental data, the same correction factor, $C_\mathrm{cor} = 1.4$, was applied as in the case of the short-circuit current.
-%The data align closely, indicating that the inaccuracies typical for $V_\mathrm{OC}$ and $F\!F$  do not significantly contribute.
-%
-%\begin{figure}
-%	\centering
-%     \includegraphics[width=0.4\linewidth]{Fig11a.png}
-%     \includegraphics[width=0.4\linewidth]{Fig11b.png}
-%	  \caption{Relative changes in SSC efficiency caused by a complete
-%       dissociation of Fe$_i$B$_s$ pairs as a function of iron concentration (a) and
-%       temperature (b) for SSC with $d_p=380$~$\mu$m and $N_\mathrm{B}=1.36\times10^{15}$~cm$^{-3}$
-%       in the case of monochromatic (940~nm) illumination.
-%       The marks are the experimental results (divided by factor $C_{cor}=1.4$), the lines are the simulation results.
-%       $W_\mathrm{ill}$, W/m$^{2}$: 5 (marks and solid lines), 10 (dotted lines).
-%       Different lines and marks correspond to different temperatures (a) or $N_\mathrm{Fe}$ values (b) --- see legends.
-%}\label{fig11}
-%\end{figure}
-%
-%The revealed characteristics of $\varepsilon \eta$ indicate that this photoelectric parameter
-%is entirely suitable for estimating iron concentration.
-%
-%
-%\subsection{Photoelectric parameters correlation}
-%
-%
-%The previous subsections demonstrated that by using the relative changes in photovoltaic energy conversion parameters following the dissociation of FeB pairs
-%(e.g., changes in short-circuit current),
-%along with considering solar cell parameters (such as base depth and doping level)
-%and measurement conditions (such as temperature and illumination type), it is possible to predict iron concentration.
-%One approach to evaluating the value of $N_\mathrm{Fe}$ is to apply a machine learning algorithm (random forest, gradient booster, or artificial neural network etc.).
-%If we assume that training process is conducted separately for each illumination variant, the input set of descriptors could be
-%($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$).
-%Obviously, the $\varepsilon \eta$ value can be used simultaneously with $\varepsilon I_\mathrm{SC}$ for a more accurate determination of iron concentration.
-%Indeed, expanding the set of descriptors allows the incorporation of additional information, thereby improving prediction precision.
-%However, when comparing Fig.~\ref{fig3} and Fig.~\ref{fig10}, it is clear that  $\varepsilon I_\mathrm{SC}$ and $\varepsilon \eta$ are not entirely independent.
-%Therefore, with an input parameter set ($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$, $\varepsilon \eta$),
-%we may be processing redundant data that offer no new or additional information regarding iron concentration.
-%
-%Analyzing their correlations can help evaluate the independence of the parameters.
-%Fig.~\ref{fig12} presents the Pearson correlation coefficients calculated for all parameter sets.
-%Additionally, it shows the correlation between iron concentration and each input parameter.
-%It's worth noting that the $N_\mathrm{Fe}$ and $N_\mathrm{B}$ values in the logarithmic scale were used in calculations.
-%It is a common approach for quantities that span several orders of magnitude \cite{Srivastava2023}.
-%
-%\begin{figure}
-%	\centering
-%     \includegraphics[width=0.6\linewidth]{Fig12.png}
-%	  \caption{Correlation plot of photoelectric conversion parameters and solar cell characteristics.
-%      Data above and below the main diagonal correspond to AM1.5 and 940 nm (5~W/m$^2$) illumination, respectively.
-%}\label{fig12}
-%\end{figure}
-%
-%Firstly, it is noteworthy that, as indicated by the obtained data,
-%the value of $N_\mathrm{Fe}$ exhibits a weak correlation with each descriptor.
-%Consequently, using any parameter in isolation from others is not feasible for precise iron concentration estimation.
-%Regarding the descriptors associated with photovoltaic energy conversion,
-%all of these parameters correlate strongly with the base doping level, except for open-circuit voltage under AM1.5 illumination.
-%In addition, these parameters are substantially correlated with each
-%other, which is particularly noticeable when using monochromatic illumination.
-%Thus,  augmenting the descriptor set by incorporating relative changes in additional
-%photoelectric parameters introduces substantial redundancy in the input data.
-%
-%
-%To assess the redundancy of information, we can use principal component analysis (PCA),
-%widely used in solving various problems, including identifying defects in solar cells \cite{Fadhel2019}.
-%PCA uses a linear combination of the original variables to build the new variables (principal component, PC) while keeping maximum variance information.
-%PCs are not correlating with each other and
-%in the case of some particular principal component having a low information variance ratio, it can be discarded with little to no loss of useful information.
-%
-%PCs were built for different combinations of photovoltaic parameters and solar cell characteristics
-%for the full set of simulated data, and the results are listed in Table~\ref{tbl2}.
-%As evident, when only changes in short-circuit current are considered along with the solar cell's base parameters and temperature,
-%there is no excessive information present.
-%Adding $\varepsilon \eta$ to the set of descriptors practically does not change the number of independent variables.
-%With the additional use of $\varepsilon V_\mathrm{OC}$ values obtained under AM1.5 illumination, it is advisable to consider five independent variables.
-%For the same set of descriptors in a monochromatic illumination case, one can limit oneself to using only four independent components
-%(cumulative variance ratio for PC4 and PC5 does not exceed 1.3\%).
-%When considering changes in all photoelectric parameters due to complete dissociation of Fe$_i$B$_s$ pairs,
-%the actual number of independent variables is six for AM1.5 illumination and five for 940 nm lighting.
-%
-%
-%
-%
-%%photovoltaic energy conversion
-%%To account for this challenge arising from κ spanning over
-%%multiple orders of magnitude, the model performance for κ prediction is often evaluated on a log-scale where log-κ varies in the
-%%range  1 to 3. {Srivastava2023}
-%
-%
-%\begin{table}[<options>]
-%\caption{PSA results for sets of variables that serve to estimate the iron concentration in SSC.
-%The numbers represent the ratio of information variance associated with each principal component when using AM1.5 illumination / 940 nm illumination.
-%}
-%\label{tbl2}
-%\begin{tabular*}{\tblwidth}{@{}LCCCCCCC@{}}
-%\toprule
-%set of descriptors&\multicolumn{7}{C}{Explained Variance Ratio (\%)}\\
-%&PC0&PC1&PC2&PC3&PC4&PC5&PC6\\% Table header row
-%\midrule
-%%($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$)&43.23&25.00&25.00&6.70&---&---&---\\
-%%($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$, $\varepsilon \eta$) & 52.39 &20.00&20.00&7.48&0.13& ---&---\\
-%%($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$, $\varepsilon \eta$, $\varepsilon V_\mathrm{OC}$) & 44.40 &18.78&16.67&16.46&3.61& 0.08&---\\
-%%($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$, $\varepsilon \eta$, $\varepsilon V_\mathrm{OC}$, $\varepsilon FF$) & 43.29 &22.59&14.29&14.19&4.29& 1.35&0.002\\
-%($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$)&43.23/42.80&25.00/25.00&25.00/25.00&6.70/7.20&---&---&---\\
-%($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$, $\varepsilon \eta$) & 52.39/52.46 &20.00/20.00&20.00/20.00&7.48/7.51&0.13/0.03& ---&---\\
-%($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$, $\varepsilon \eta$, $\varepsilon V_\mathrm{OC}$) & 44.40/59.02 &18.78/16.73&16.67/16.67&16.46/6.28&3.61/1.29& 0.08/0.01&---\\
-%($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$, $\varepsilon \eta$, $\varepsilon V_\mathrm{OC}$, $\varepsilon F\!F$) & 43.29/63.24 &22.59/14.41&14.29/14.29&14.19/5.65&4.29/1.95& 1.35/0.46&0.002/0.01\\
-%\bottomrule
-%\end{tabular*}
-%\end{table}
+The $T$-altered test dataset simulates a scenario in which impurity concentration estimates 
+are based on measurements taken under conditions different from those used for model training.
+Additionally, this dataset includes temperature values (287~K, 341~K, and 342~K) 
+that extend beyond the training range $(290-340)$~K, enabling an assessment of the models' extrapolation capability.
+
+Figs.~S12-–S15 present the prediction results, while Fig.~\ref{fig9} and Table~\ref{table3} summarize the performance metrics.
+The data show that the average metrics for all models worsen slightly compared 
+to the $N_\mathrm{Fe}$--altered dataset (Fig.~\ref{fig7}, Fig.~\ref{fig9}).
+In most cases, PCA reduces model performance, except for AM1.5 at a feature dimensionality of 7.
+For the 940~nm case, using six descriptors proves more effective than using four, as observed in the previous test dataset.
+
+\begin{figure}
+	\centering
+     \includegraphics[width=0.2\linewidth]{Fig9a.png}
+     \includegraphics[width=0.2\linewidth]{Fig9b.png}
+     \includegraphics[width=0.2\linewidth]{Fig9c.png}
+     \includegraphics[width=0.2\linewidth]{Fig9d.png}
+     \includegraphics[width=0.2\linewidth]{Fig9e.png}
+     \includegraphics[width=0.2\linewidth]{Fig9f.png}
+     \includegraphics[width=0.2\linewidth]{Fig9g.png}
+     \includegraphics[width=0.2\linewidth]{Fig9h.png}
+     \includegraphics[width=0.2\linewidth]{Fig9i.png}
+     \includegraphics[width=0.2\linewidth]{Fig9j.png}
+     \includegraphics[width=0.2\linewidth]{Fig9k.png}
+     \includegraphics[width=0.2\linewidth]{Fig9l.png}
+     \includegraphics[width=0.2\linewidth]{Fig9m.png}
+     \includegraphics[width=0.2\linewidth]{Fig9n.png}
+     \includegraphics[width=0.2\linewidth]{Fig9o.png}
+     \includegraphics[width=0.2\linewidth]{Fig9p.png}
+     \includegraphics[width=0.25\linewidth]{Fig9q.png}
+     \includegraphics[width=0.25\linewidth]{Fig9r.png}
+	  \caption{MSE (a--h), MAPE (i--p), and R$^{2}$ (q, r) scores for various models, feature combinations, 
+and illumination conditions on the $T$--altered test dataset. 
+Illumination: 940~nm (a--d, i--l, q), AM1.5 (e--h, m--p, r). 
+Feature dimensions: 4 (a, e, i, m), 5 (b, f, j, n), 6 (c, g, k, o), and 7 (d, h, l, p). 
+Results with PCA are shown as circles (a--h) and shaded areas (i--r), 
+while results without PCA are represented by squares (a--h) and filled regions (i--r).
+ The numbers in panels (a--h) represent MSE values multiplied by 1000, while the numbers in panels (i--p) indicate MAPE values in percentage.
+}\label{fig9}
+\end{figure}
+
+
+
+\begin{table}[<options>]
+\caption{Performance metrics of the ML models for $T$--altered dataset}
+\label{table3}
+\begin{tabular*}{\tblwidth}{@{}CCCCCCCCCCCCCC@{}}
+\toprule
+\multirow{3}{*}{Algorithm}&\multirow{3}{*}{\makecell{Feature \\ dimension}}&\multicolumn{4}{C}{MdAPE (\%)}&\multicolumn{4}{C}{$p01$ (\%)}&\multicolumn{4}{C}{$p10$ (\%)}\\
+&&\multicolumn{2}{C}{940 nm}&\multicolumn{2}{C}{AM1.5}&\multicolumn{2}{C}{940 nm}&\multicolumn{2}{C}{AM1.5}&\multicolumn{2}{C}{940 nm}&\multicolumn{2}{C}{AM1.5}\\
+&&Init&PCA&Init&PCA&Init&PCA&Init&PCA&Init&PCA&Init&PCA\\
+\midrule
+RF&4&6.50&13.1&\textbf{1.88}&11.6&18.2&8.92&\textbf{28.1}&11.8&60.4&40.8&\textbf{95.6}&45.2\\
+&5&5.59&13.2&9.58&5.90&22.4&6.75&12.1&16.6&62.9&40.7&51.3&62.7\\
+&6&4.61&13.3&14.2&2.13&20.8&8.58&9.50&35.3&68.8&43.5&42.1&77.3\\
+&7&5.07&9.82&5.05&\textbf{1.94}&21.5&12&17.7&38.7&67.4&50.4&68.3&79.8\\
+GB&4&5.29&12.5&3.47&10.1&20.7&6.67&21.5&5.08&62.0&42.9&80.6&49.8\\
+&5&4.91&12.6&9.34&4.89&19.1&7.00&6.58&22.5&66.2&44.7&51.8&65.0\\
+&6&3.41&9.12&12.8&1.81&22.3&11.2&4.67&\textbf{40.9}&73.1&52.4&43.2&78.3\\
+&7&5.03&9.72&5.14&2.44&15.6&10.2&13.9&31.3&68.3&51.0&70.7&79.3\\
+XGB&4&5.03&10.9&3.40&8.72&22.8&8.92&20.8&8.42&64.6&46.9&80.8&53.8\\
+&5&3.64&9.01&9.88&5.14&28.4&8.75&7.00&23.7&67.3&53.0&50.3&66.3\\
+&6&\textbf{2.47}&10.4&10.5&2.08&\textbf{33.6}&6.75&6.58&34.4&\textbf{73.7}&49.2&48.6&78.0\\
+&7&9.93&\textbf{5.37}&5.78&3.38&9.92&\textbf{14.9}&12.3&19.3&50.3&\textbf{67.9}&69.2&78.3\\
+SVR&4&30.9&27.8&5.11&36.4&1.50&1.58&13.6&0.67&15.3&18.3&72.9&12.8\\
+&5&33.7&38.0&35.7&37.5&1.75&1.00&1.17&0.92&15.3&12.9&13.5&12.8\\
+&6&38.3&40.9&47.6&37.1&1.50&1.50&0.67&1.25&14.3&15.0&9.83&12.8\\
+&7&18.6&6.85&46.2&36.3&3.83&7.50&0.75&1.83&29.8&66.3&9.58&15.4\\
+DNN&4&6.92&7.54&10.5&14.2&7.83&8.33&4.58&4.67&65.3&59.0&47.3&37.2\\
+&5&6.53&8.90&5.46&7.44&9.17&5.50&10.9&7.42&68.8&53.8&71.6&58.4\\
+&6&7.09&7.18&4.92&2.99&7.50&9.25&10.7&18.3&66.8&61.1&79.2&90.9\\
+&7&39.3&35.9&32.2&2.53&1.25&1.50&1.00&23.2&10.7&13.3&14.7&\textbf{92.5}\\
+\bottomrule
+\end{tabular*}
+\end{table}
+
+A comparison of Table~\ref{table2} and Table~\ref{table3} reveals that, 
+unlike the mean characteristics, MdAPE, $p01$, and $p10$ are often better than those in the $N_\mathrm{Fe}$--altered dataset.
+For example, for $\mathrm{XGB}^{940}_{6}$, MdAPE and $p01$ reach 2.47\% and 33.6\%, 
+whereas in the previous case, the best values were 4.46\% and 13.6\%.
+These differences in the behavior of MSE, MAPE, and R$^2$, compared to other performance metrics, 
+suggest a higher proportion of accurate predictions while increasing error values in less successful forecasts.
+In other words, prediction disparity increases --- 
+the rich get richer, and the poor get poorer.
+
+Fig.~\ref{fig10} illustrates the dependence of the proportion of predictions with an error below 10\% on temperature for the two training datasets.
+Within the $(290-340)$~K range, where the networks were trained, both datasets exhibit similar $p10$ values and overall trends, 
+despite the temperature values in the $T$-altered test dataset differing from those used during training.
+Specifically, $p10$ remains nearly independent of temperature, consistent with the trend observed in Fig.~\ref{fig5}d.
+However, a slight deviation of just a few kelvins from the training range significantly reduces prediction accuracy.
+This behavior highlights the models' limited extrapolation capability compared to their interpolation performance.
+The degradation of the average metrics (MSE, MAPE, R$^2$) primarily results from lower prediction accuracy at temperatures beyond the training range.
+
+\begin{figure}
+  \centering
+     \includegraphics[width=0.5\linewidth]{Fig10.png}
+    \caption{Typical dependencies of the fraction of predictions with an accuracy within 10\% 
+    as a function of temperature for the $T$--altered and $N_\mathrm{Fe}$--altered datasets.
+}\label{fig10}
+\end{figure}
+
+
+\subsection{$N_\mathrm{B}$--altered and All-altered test datasets}
+
+
+\subsection{Experimental validation}
+
 
 
 
@@ -1576,7 +976,59 @@ Data will be made available on request.
 
 \end{document}
 
-%В реченні "" заміни, будь-ласка, "" для підвищення clarity
-%В реченні "" заміни, будь-ласка, "" для підвищення conciseness
-%В реченні "" заміни, будь-ласка, "" для підвищення  sensitivity
+%\begin{table}[<options>]
+%\caption{PSA results for sets of variables that serve to estimate the iron concentration in SSC.
+%The numbers represent the ratio of information variance associated with each principal component when using AM1.5 illumination / 940 nm illumination.
+%}
+%\label{tbl2}
+%\begin{tabular*}{\tblwidth}{@{}LCCCCCCLCCCCCC@{}}
+%\toprule
+%%set of descriptors&\multicolumn{7}{C}{Explained Variance Ratio (\%)}\\
+%%&PC0&PC1&PC2&PC3&PC4&PC5&PC6\\% Table header row
+%Model&MSE, 10$^{-3}$&R$^2$&MAPE, \%&MdAPE, \%&$p01$,\%&$p10$,\%&Model&MSE,10$^{-3}$&R$^2$&MAPE,\%&MdAPE,\%&$p01$,\%&$p10$,\%\\
+%\midrule
+%$\mathrm{RF}^{940}_{4}$&1.93&0.982&8.30&6.47&10.1&68.0&$\mathrm{RF}^\mathrm{AM}_{4}$&42.1&0.938&137&8.29&7.54&57.0\\
+%$\mathrm{RF}^{940}_{4:\mathrm{PC}}$&1.80&0.986&8.12&6.38&9.50&70.2&$\mathrm{RF}^\mathrm{AM}_{4:\mathrm{PC}}$&40.5&0.906&54.7&8.00&8.12&57.9\\
+%$\mathrm{RF}^{940}_{5}$&2.64&0.976&9.84&7.67&7.06&60.5&$\mathrm{RF}^\mathrm{AM}_{5}$&10.8&0.963&16.9&6.96&10.1&64.22\\
+%$\mathrm{RF}^{940}_{5:\mathrm{PC}}$&2.26&0.989&8.04&6.00&8.51&72.2&$\mathrm{RF}^\mathrm{AM}_{5:\mathrm{PC}}$&59.9&0.884&74.4&9.46&6.96&52.1\\
+%$\mathrm{RF}^{940}_{6}$&2.92&0.971&10.9&8.01&6.58&59.5&$\mathrm{RF}^\mathrm{AM}_{6}$&5.81&0.970&9.56&5.46&11.0&72.4\\
+%$\mathrm{RF}^{940}_{6:\mathrm{PC}}$&2.90&0.969&10.9&7.34&7.74&60.4&$\mathrm{RF}^\mathrm{AM}_{6:\mathrm{PC}}$&9.87&0.983&17.4&5.66&10.9&72.9\\
+%$\mathrm{RF}^{940}_{7}$&3.99&0.955&12.2&8.89&5.71&54.2&$\mathrm{RF}^\mathrm{AM}_{7}$&5.21&0.975&10.5&6.27&10.4&68.8\\
+%$\mathrm{RF}^{940}_{7:\mathrm{PC}}$&7.07&0.975&10.9&8.74&5.42&56.4&$\mathrm{RF}^\mathrm{AM}_{7:\mathrm{PC}}$&2.47&0.988&8.00&4.62&13.3&82.2\\
+%$\mathrm{GB}^{940}_{4}$&1.55&0.978&7.04&4.63&13.6&76.5&$\mathrm{GB}^\mathrm{AM}_{4}$&39.1&0.943&68.0&6.95&9.87&62.4\\
+%$\mathrm{GB}^{940}_{4:\mathrm{PC}}$&1.55&0.987&6.39&4.35&14.1&80.3&$\mathrm{GB}^\mathrm{AM}_{4:\mathrm{PC}}$&33.0&0.934&55.3&6.27&9.38&67.2\\
+%$\mathrm{GB}^{940}_{5}$&2.04&0.973&7.79&4.96&13.6&72.7&$\mathrm{GB}^\mathrm{AM}_{5}$&11.4&0.966&17.7&6.55&11.2&66.6\\
+%$\mathrm{GB}^{940}_{5:\mathrm{PC}}$&1.17&0.988&6.27&4.63&12.5&82.4&$\mathrm{GB}^\mathrm{AM}_{5:\mathrm{PC}}$&41.2&0.921&51.6&8.05&7.25&57.4\\
+%$\mathrm{GB}^{940}_{6}$&1.87&0.977&8.99&6.78&8.03&65.5&$\mathrm{GB}^\mathrm{AM}_{6}$&4.47&0.974&8.75&5.31&11.9&74.4\\
+%$\mathrm{GB}^{940}_{6:\mathrm{PC}}$&3.07&0.965&10.2&6.73&9.09&64.0&$\mathrm{GB}^\mathrm{AM}_{6:\mathrm{PC}}$&8.88&0.971&14.9&4.41&15.4&79.1\\
+%$\mathrm{GB}^{940}_{7}$&3.23&0.963&10.5&7.87&7.16&60.7&$\mathrm{GB}^\mathrm{AM}_{7}$&3.88&0.976&8.51&4.97&12.2&75.3\\
+%$\mathrm{GB}^{940}_{7:\mathrm{PC}}$&6.50&0.974&10.0&7.41&7.64&61.8&$\mathrm{GB}^\mathrm{AM}_{7:\mathrm{PC}}$&2.18&0.974&7.05&3.73&17.4&84.3\\
+%$\mathrm{XGB}^{940}_{4}$&2.35&0.962&8.18&4.82&11.0&75.6&$\mathrm{XGB}^\mathrm{AM}_{4}$&35.5&0.925&51.4&6.43&10.1&62.7\\
+%$\mathrm{XGB}^{940}_{4:\mathrm{PC}}$&4.76&0.970&11.5&6.91&9.77&63.5&$\mathrm{XGB}^\mathrm{AM}_{4:\mathrm{PC}}$&40.4&0.890&60.4&7.75&8.32&60.2\\
+%$\mathrm{XGB}^{940}_{5}$&1.44&0.976&6.91&4.46&11.7&78.6&$\mathrm{XGB}^\mathrm{AM}_{5}$&9.03&0.980&12.1&4.26&13.8&74.7\\
+%$\mathrm{XGB}^{940}_{5:\mathrm{PC}}$&5.15&0.975&10.9&6.02&10.2&68.6&$\mathrm{XGB}^\mathrm{AM}_{5:\mathrm{PC}}$&68.4&0.847&98.3&9.03&6.58&52.3\\
+%$\mathrm{XGB}^{940}_{6}$&1.45&0.978&8.31&6.49&9.87&68.7&$\mathrm{XGB}^\mathrm{AM}_{6}$&2.83&0.984&7.31&4.13&14.8&83.2\\
+%$\mathrm{XGB}^{940}_{6:\mathrm{PC}}$&4.72&0.973&12.9&7.57&8.51&59.9&$\mathrm{XGB}^\mathrm{AM}_{6:\mathrm{PC}}$&13.0&0.907&27.5&4.79&11.8&77.2\\
+%$\mathrm{XGB}^{940}_{7}$&2.02&0.971&9.12&6.16&8.80&66.0&$\mathrm{XGB}^\mathrm{AM}_{7}$&2.46&0.974&7.19&3.71&15.2&83.3\\
+%$\mathrm{XGB}^{940}_{7:\mathrm{PC}}$&11.8&0.969&12.1&7.96&7.54&60.9&$\mathrm{XGB}^\mathrm{AM}_{7:\mathrm{PC}}$&1.93&0.980&6.97&3.94&15.6&83.0\\
+%$\mathrm{SVR}^{940}_{4}$&286&0.494&231&31.1&1.45&14.9&$\mathrm{SVR}^\mathrm{AM}_{4}$&292&0.463&216&41.2&1.06&11.4\\
+%$\mathrm{SVR}^{940}_{4:\mathrm{PC}}$&284&0.498&227&26.7&1.35&18.2&$\mathrm{SVR}^\mathrm{AM}_{4:\mathrm{PC}}$&292&0.467&215&40.5&0.77&11.8\\
+%$\mathrm{SVR}^{940}_{5}$&279&0.502&205&36.3&1.64&14.4&$\mathrm{SVR}^\mathrm{AM}_{5}$&263&0.514&183&39.7&1.74&10.9\\
+%$\mathrm{SVR}^{940}_{5:\mathrm{PC}}$&285&0.474&206&42.7&0.87&10.8&$\mathrm{SVR}^\mathrm{AM}_{5:\mathrm{PC}}$&301&0.473&201&51.9&1.35&9.77\\
+%$\mathrm{SVR}^{940}_{6}$&247&0.500&139&37.0&1.16&13.4&$\mathrm{SVR}^\mathrm{AM}_{6}$&257&0.496&69.4&37.3&1.64&14.4\\
+%$\mathrm{SVR}^{940}_{6:\mathrm{PC}}$&277&0.505&164&44.8&0.48&8.99&$\mathrm{SVR}^\mathrm{AM}_{6:\mathrm{PC}}$&291&0.442&96.0&44.2&0.77&10.1\\
+%$\mathrm{SVR}^{940}_{7}$&216&0.511&133&39.1&1.16&9.48&$\mathrm{SVR}^\mathrm{AM}_{7}$&209&0.496&61.7&36.5&0.68&13.4\\
+%$\mathrm{SVR}^{940}_{7:\mathrm{PC}}$&262&0.523&143&38.1&1.06&13.7&$\mathrm{SVR}^\mathrm{AM}_{7:\mathrm{PC}}$&212&0.522&57.1&32.5&1.26&15.2\\
+%$\mathrm{DNN}^{940}_{4}$&2.35&0.962&8.18&4.82&11.0&75.6&$\mathrm{DNN}^\mathrm{AM}_{4}$&35.5&0.925&51.4&6.43&10.1&62.7\\
+%$\mathrm{DNN}^{940}_{4:\mathrm{PC}}$&4.76&0.970&11.5&6.91&9.77&63.5&$\mathrm{DNN}^\mathrm{AM}_{4:\mathrm{PC}}$&40.4&0.890&60.4&7.75&8.32&60.2\\
+%$\mathrm{DNN}^{940}_{5}$&1.44&0.976&6.91&4.46&11.7&78.6&$\mathrm{DNN}^\mathrm{AM}_{5}$&9.03&0.980&12.1&4.26&13.8&74.7\\
+%$\mathrm{DNN}^{940}_{5:\mathrm{PC}}$&5.15&0.975&10.9&6.02&10.2&68.6&$\mathrm{DNN}^\mathrm{AM}_{5:\mathrm{PC}}$&68.4&0.847&98.3&9.03&6.58&52.3\\
+%$\mathrm{DNN}^{940}_{6}$&1.45&0.978&8.31&6.49&9.87&68.7&$\mathrm{DNN}^\mathrm{AM}_{6}$&2.83&0.984&7.31&4.13&14.8&83.2\\
+%$\mathrm{DNN}^{940}_{6:\mathrm{PC}}$&4.72&0.973&12.9&7.57&8.51&59.9&$\mathrm{DNN}^\mathrm{AM}_{6:\mathrm{PC}}$&13.0&0.907&27.5&4.79&11.8&77.2\\
+%$\mathrm{DNN}^{940}_{7}$&2.02&0.971&9.12&6.16&8.80&66.0&$\mathrm{DNN}^\mathrm{AM}_{7}$&2.46&0.974&7.19&3.71&15.2&83.3\\
+%$\mathrm{DNN}^{940}_{7:\mathrm{PC}}$&11.8&0.969&12.1&7.96&7.54&60.9&$\mathrm{DNN}^\mathrm{AM}_{7:\mathrm{PC}}$&1.93&0.980&6.97&3.94&15.6&83.0\\
+%\bottomrule
+%\end{tabular*}
+%\end{table}
+
 
