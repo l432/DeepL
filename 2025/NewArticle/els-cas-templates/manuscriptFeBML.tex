@@ -359,20 +359,23 @@ The simulations covered all parameter combinations within a four-dimensional gri
 5 along the $d_p$ axis,
 9 along the $N_\mathrm{B}$ axis, and 25 along the $N_\mathrm{Fe}$ axis.
 The values were evenly distributed within the specified ranges, with $N_\mathrm{B}$ and $N_\mathrm{Fe}$ spaced logarithmically.
+Each train dataset consisted of 12,375 samples obtained from simulations of 24,750 $I$-$V$ characteristics.
 
 We also generated four test datasets through simulation,
 each representing different scenarios that may arise in the practical application of ML models.
 In one test dataset, the iron concentration values used in the simulation were absent from the training set,
 while the other parameters ($T$, $d_p$, $N_\mathrm{B}$) matched the grid node values from the training simulations.
-This dataset was labeled ``\textit{$N_\mathrm{Fe}$--altered}''.
-Similarly, we created the ``\textit{$N_\mathrm{B}$--altered}'' and ``\textit{$T$--altered}'' test datasets using boron concentration and temperature values that were not present in the training dataset.
-In the ``\textit{All-altered}'' dataset, all four simulation parameters differed from those used in the training dataset.
+This dataset was designated as ``\textit{$N_\mathrm{Fe}$--altered}'' and contained 1,034 samples.
+Similarly, we created the ``\textit{$N_\mathrm{B}$--altered}'' (1,100 samples) and ``\textit{$T$--altered}'' (1,200 samples)
+test datasets using boron concentration and temperature values that were not present in the training dataset.
+In the ``\textit{All-altered}'' dataset (1,190 samples), all four simulation parameters differed from those used in the training dataset.
 
 
 The specified simulations for both the training and test datasets were performed under two lighting scenarios:
 AM1.5, which corresponds to standard characterization conditions for PV devices,
 and monochromatic light with a wavelength of 940~nm and an intensity of 5~W/m$^{2}$,
 reflecting the remarkable sensitivity of PVPs to iron \cite{Olikh2025MSEB}.
+A total of 67,596 $I$-$V$ curves were simulated.
 
 For experimental validation of the proposed models, we used data obtained from measurements of real solar cells.
 We used a set of $n^+$-$p$-$p^+$-Si samples in the experiment.
@@ -384,7 +387,7 @@ To create the experimental test dataset,
 we measured the $I$-$V$ characteristics under monochromatic illumination from a light-emitting diode (SN–HPIR940nm–1W)
 with a wavelength of 940~nm and an intensity of approximately 5~W/m$^{2}$, within a temperature range of $(305-340)$~K.
 The decay of FeB pairs was induced using intensive halogen lamp illumination (7000~W/m$^{2}$).
-
+The number of samples in experimental dataset varied from 34 to 12, depending on the feature dimensionality.
 
 
 \subsection{Data Pre-Processing}
@@ -558,6 +561,8 @@ Furthermore, we evaluated the metric $p$, representing the percentage of samples
 Specifically, we computed the values of $p01$ and $p10$,
 which represent the proportion of predictions in the dataset with an accuracy of 1\%
 or better and 10\% or better, respectively.
+The decrease in MdAPE and the increase in $p01$ and $p10$ indicate improved model performance 
+due to a higher proportion of accurate predictions.
 
 
 %\cite{Pata2024, Holechek2022,Park2022,Qi2020,Rachdi2021,Buratti2020,Zhang2022,Liu2023,Asghar2023,AbdullahVetter2025,DiSabatino2024,Datta2023,Jaiswal2023,Buratti2024,Bhatti2023,AlOtum2024,
@@ -567,6 +572,37 @@ or better and 10\% or better, respectively.
 \section{Results and Discussion}
 
 \subsection{Train dataset}
+
+Fig.~\ref{fig3} presents the models’ prediction results on the training set.
+The Supplementary Materials (Figs.S4--S7) provide more detailed results, while TablesS12 and S13 list the performance metrics.
+The RF and GB models yield the most accurate predictions, whereas SVR performs the worst.
+Applying PCA generally reduces prediction accuracy on the training set.
+
+\begin{figure}
+	\centering
+     \includegraphics[width=0.24\linewidth]{Fig3a.png}
+     \includegraphics[width=0.24\linewidth]{Fig3b.png}
+     \includegraphics[width=0.24\linewidth]{Fig3c.png}
+     \includegraphics[width=0.24\linewidth]{Fig3d.png}
+     \includegraphics[width=0.24\linewidth]{Fig3e.png}
+     \includegraphics[width=0.24\linewidth]{Fig3f.png}
+     \includegraphics[width=0.24\linewidth]{Fig3g.png}
+     \includegraphics[width=0.24\linewidth]{Fig3h.png}
+     \includegraphics[width=0.24\linewidth]{Fig3i.png}
+     \includegraphics[width=0.24\linewidth]{Fig3j.png}
+     \includegraphics[width=0.24\linewidth]{Fig3k.png}
+     \includegraphics[width=0.24\linewidth]{Fig3l.png}
+     \includegraphics[width=0.24\linewidth]{Fig3m.png}
+     \includegraphics[width=0.24\linewidth]{Fig3n.png}
+     \includegraphics[width=0.24\linewidth]{Fig3o.png}
+     \includegraphics[width=0.24\linewidth]{Fig3p.png}
+     \includegraphics[width=0.24\linewidth]{Fig3q.png}
+     \includegraphics[width=0.24\linewidth]{Fig3r.png}
+     \includegraphics[width=0.24\linewidth]{Fig3s.png}
+     \includegraphics[width=0.24\linewidth]{Fig3t.png}
+	  \caption{Scatter plots compare reference iron concentrations with ML--predicted values during the training phase. The ML algorithms include RF (a--d), GB (e--h), XGB (i--l), SVR (m--p), and DNN (q--t). The data come from simulation under monochromatic (a, b, e, f, i, j, m, n, q, r) and AM1.5 illumination (c, d, g, h, k, l, o, p, s, t). Panels b, d, f, h, j, l, n, p, r, and t include PCA. The input feature dimensions are 4 (a, e, i, m, q), 5 (b, f, j, n, r), 6 (c, g, k, o, s), and 7 (d, h, l, p, t). The black lines are the identified lines serving as the references.
+}\label{fig3}
+\end{figure}
 
 \subsection{$N_\mathrm{Fe}$--altered dataset}
 
