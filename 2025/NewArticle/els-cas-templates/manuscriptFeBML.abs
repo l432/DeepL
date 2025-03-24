@@ -1,14 +1,9 @@
-Transitioning to renewable energy sources is paramount for humanity's sustainable development, and silicon solar cells are at the forefront of solar energy conversion.
-Iron in these structures is a primary one of the most detrimental metallic impurities.
-This study examines the impact of iron defect variability on silicon solar cell performance across various scenarios.
-%integrating simulation and experimental validation.
-We have simulated solar cells using SCAPS software across a range of temperatures $(290-340)$~K,
-base thicknesses $(180-380)$~$\mu$m, doping levels ($10^{15} - 10^{17}$)~cm$^{-3}$,
-with iron concentrations varying from $10^{10}$ to $10^{14}$~cm$^{-3}$ under AM1.5 and monochromatic (940~nm) illumination.
-Analyzed across all cases were the effects of iron-boron pair dissociation on short-circuit current, open-circuit voltage, fill factor, and efficiency.
-The experimental measurements validated the simulation results, demonstrating good agreement for all photovoltaic parameters.
-This study investigates the potential of using photovoltaic parameter changes induced by iron-related defect restructuring to estimate iron concentration.
-It is shown that changes in short-circuit current obtained under monochromatic illumination are the most reliable,
-while the fill factor is the least effective.
-The study examined the correlation between changes in photovoltaic parameters caused by pair dissociation while establishing the expedience of applying principal component analysis in impurity concentration evaluation with the help of multiple parameters.
-
+This study introduces a pioneering machine learning (ML)--based methodology for quantifying iron impurities in silicon solar cells.
+A comprehensive analysis was done on 80 models, utilizing algorithms such as Random Forest (RF), Gradient Boosting (GB),
+eXtreme Gradient Boosting (XGB), Support Vector Regression (SVR), and Deep Neural Networks (DNN)
+to predict iron concentration based on variations in photovoltaic parameters caused by FeB pair dissociation.
+The conditions the training dataset must meet to minimize forecasting errors were identified,
+along with the feature combinations that yield the most accurate predictions.
+Furthermore, the effectiveness of using Principal Component Analysis for data pre-processing was assessed.
+The results demonstrate that XGB and DNN outperform other models, achieving MSE, MAPE, and R$^2$ values
+of up to 0.003, 3\%, and 0.997 for synthetic data and 0.004, 9\%, and 0.987 for experimental data.

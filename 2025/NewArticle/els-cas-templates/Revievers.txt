@@ -1,0 +1,208 @@
+0000-0003-0633-5429 
+olegolikh@knu.ua
+
+0000-0001-8080-7661
+nevermor464@gmail.com
+
+---------------------------------------------
+https://www.mediafire.com/
+l432432@gmail.com
+m2662421
+
+https://tinyurl.com/
+https://www.elsevier.com/researcher/author/tools-and-resources/graphical-abstract
+------------------------------------------------------------
+
+
+Optics Communications
+olikh
+e2662421O%
+
+Optical Materials
+olikh
+em2662421O%
+
+Current Applied Physics
+olikh
+cap2662421
+
+Physics Letters A
+olikh
+pla2662421O%
+не надсилав навіть, бо не знайшов підходящого типу публікації
+
+---------------------------------------------
+Computational Condensed Matter   Q3
+
+Materials Science and Engineering: B
+olikh - user name  
+e2662421O%
+
+
+Materials Science in Semiconductor Processing
+
+Journal of Physics and Chemistry of Solids ?
+
+Solid State Sciences
+olikh
+sss2662421O%
+потрібен графічний абстракт
+
+
+
+Journal of Electronic Materials    Springer
+
+Journal of Physics Communications - Q3, IOP, платне, але для Ukraine
+
+Dr. Hab.
+--------------------------------------------------------------
+defects
+solar cell
+ultrasound
+metaheuristic algorithms
+semiconductor structures
+
+-------------------------------------------------------------------------------------
+Taras Shevchenko National University of Kyiv, Kyiv, Ukraine
+64/13, Volodymyrska Street
+01601
+
+Extracting the iron concentration in silicon solar cells using photovoltaic parameters and machine learning
+
+
+
+This study introduces a pioneering machine learning (ML)-based methodology for quantifying iron impurities in silicon solar cells. A comprehensive analysis was done on 80 models, utilizing algorithms such as Random Forest (RF), Gradient Boosting (GB), eXtreme Gradient Boosting (XGB), Support Vector Regression (SVR), and Deep Neural Networks (DNN) to predict iron concentration based on variations in photovoltaic parameters caused by FeB pair dissociation.The conditions the training dataset must meet to minimize forecasting errors were identified,
+along with the feature combinations that yield the most accurate predictions. Furthermore, the effectiveness of using Principal Component Analysis for data pre-processing was assessed. The results demonstrate that XGB and DNN outperform other models, achieving MSE, MAPE, and R2 values of up to 0.003, 3%, and 0.997 for synthetic data and 0.004, 9%, and 0.987 for experimental data.
+
+
+
+Abstract 150 word
+
+photovoltaic defect quantification; silicon; solar cells; iron contamination; machine learning; current-voltage curves; feature selection
+
+
+
+
+Statement of Novelty
+80-100 word
+
+The impact of FeB pair dissociation on the photovoltaic parameters of silicon solar cells was examined.
+Unlike previous similar calculations, 
+1)~the paper presents the results of 
+simulation of solar cell with varying base thickness and doping levels
+under various external conditions (temperature, intensity, and spectral composition of illumination);
+2)~in addition to analyzing the ability to use photovoltaic parameter changes induced by iron-related defect 
+restructuring to evaluate iron concentration, 
+principal component analysis was used to estimate the number of independent variables in the multiple photovoltaic parameter set.
+
+137 characters	
+
+
+------------------------------
+
+Yoann 
+Buratti
+The University of New South Wales
+Sydney, NSW 2052, Australia
+yoann.buratti@student.unsw.edu.au
+He is a specialist in the application of machine learning to the characterization of defect in solar cells
+(Renewable and Sustainable Energy Reviews, 2024, 202, 114617;
+Progress in Photovoltaics: Research and Applications, 2022, 30(3), pp. 276–287)
+
+
+
+Kamal 
+Choudhary
+National Institute of Standards and Technology
+Materials Science and Engineering Division
+Gaithersburg, Maryland 20899, USA
+kamal.choudhary@nist.gov
+His research papers focus on utilizing machine learning to predict various material properties, including those related to defects.
+(Current Opinion in Solid State and Materials Science, 2025, 35, 101214;
+Physical Review Materials, 2024, 8(11), 114002;
+AIP Advances, 2023, 13(9), 095109)
+
+
+Hongjun 
+Xiang
+Fudan University 
+Shanghai 200433, China
+hxiang@fudan.edu.cn
+An experienced researcher in the field of material informatics, with a 
+particular focus on ML methods for defect characterizing
+(Applied Physics Letters, 2025, 126(4), 044103;
+Nature Computational Science, 2024, 4(8), pp. 615–625;
+Journal of Physical Chemistry C, 2024, 128(30), pp. 12677–12685)
+
+
+Noppadon 
+Nuntawong
+Thailand National Electronics and Computer Technology Center,
+National Electronics and Computer Technology, National Science and Technology Development Agency, 
+Pathum Thani 12120, Thailand
+noppadon.nuntawong@nectec.or.th
+Expert in integrating experimental data with machine learning techniques
+(Journal of Applied Physics, 2024, 135(2), 025701;
+Biosensors and Bioelectronics, 2024, 250, 116063)
+
+
+
+Ali 
+Hajjiah
+College of Engineering and Petroleum, Electrical Engineering Department,
+Kuwait University,  Safat, Kuwait
+dr.hajjiah@gmail.com
+He investigates the impact of Fe contamination on silicon for solar cells
+and models the current-voltage characteristics.
+(Sol. Energ. Mat. Sol. 211 (2020) 110550;
+Solar Energy Materials and Solar Cells, 2024, 270, 112828;
+)
+
+
+
+John 
+Murphy
+School of Engineering
+University of Warwick, CV4 7AL Coventry, United Kingdom
+John.D.Murphy@warwick.ac.uk
+Specialist in defects in crystalline silicon 
+(Journal of Applied Physics, 2024, 136, 055707,
+IEEE Journal of Photovoltaics, 2021, 11(1), pp. 26-35,
+Journal of Applied Physics, 2014, 116(5), 053514)
+
+
+Karsten 
+Bothe
+Institute for Solar Energy Research Hamelin (ISFH), 
+Am Ohrberg 1, 31860 Emmerthal, Germany
+k.bothe@isfh.de
+He is a leading expert in the field of the influence of defects on the properties of silicon solar cells
+(Semiconductor Science and Technology, 2019, 34(3), 035030,
+IEEE Journal of Photovoltaics, 2021, 11(4), pp. 890–896, 9435415,
+Solar RRL, 2023, 7(13), 2300240,
+Solar RRL, 2024, 8(3), 2300873)
+
+------------------------------------------------
+olegolikh@knu.ua
+e2662421O - Energy
+e2662421O% - Heliyon
+
+olegolikh@knu.ua
+e2662421O% - Energy Report, Renewable Energy, Applied Energy,
+             Expert Systems with Applications 
+             
+Materials Science & Engineering B
+olikh - user name  
+e2662421O%
+
+Solar Energy Materials and Solar Cells
+olikh - user name
+e2662421O
+
+Advances In Applied Energy:
+OOlikh-447
+e2662421O%
+
+Solar Energy
+olikh
+e2662421O%

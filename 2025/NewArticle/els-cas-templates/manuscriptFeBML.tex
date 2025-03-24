@@ -183,20 +183,15 @@ using photovoltaic parameters and machine learning}
 
 % Here goes the abstract
 \begin{abstract}
-Transitioning to renewable energy sources is paramount for humanity's sustainable development, and silicon solar cells are at the forefront of solar energy conversion.
-Iron in these structures is a primary one of the most detrimental metallic impurities.
-This study examines the impact of iron defect variability on silicon solar cell performance across various scenarios.
-%integrating simulation and experimental validation.
-We have simulated solar cells using SCAPS software across a range of temperatures $(290-340)$~K,
-base thicknesses $(180-380)$~$\mu$m, doping levels ($10^{15} - 10^{17}$)~cm$^{-3}$,
-with iron concentrations varying from $10^{10}$ to $10^{14}$~cm$^{-3}$ under AM1.5 and monochromatic (940~nm) illumination.
-Analyzed across all cases were the effects of iron-boron pair dissociation on short-circuit current, open-circuit voltage, fill factor, and efficiency.
-The experimental measurements validated the simulation results, demonstrating good agreement for all photovoltaic parameters.
-This study investigates the potential of using photovoltaic parameter changes induced by iron-related defect restructuring to estimate iron concentration.
-It is shown that changes in short-circuit current obtained under monochromatic illumination are the most reliable,
-while the fill factor is the least effective.
-The study examined the correlation between changes in photovoltaic parameters caused by pair dissociation while establishing the expedience of applying principal component analysis in impurity concentration evaluation with the help of multiple parameters.
-
+This study introduces a pioneering machine learning (ML)--based methodology for quantifying iron impurities in silicon solar cells. 
+A comprehensive analysis was done on 80 models, utilizing algorithms such as Random Forest (RF), Gradient Boosting (GB), 
+eXtreme Gradient Boosting (XGB), Support Vector Regression (SVR), and Deep Neural Networks (DNN) 
+to predict iron concentration based on variations in photovoltaic parameters caused by FeB pair dissociation.
+The conditions the training dataset must meet to minimize forecasting errors were identified,
+along with the feature combinations that yield the most accurate predictions. 
+Furthermore, the effectiveness of using Principal Component Analysis for data pre-processing was assessed.
+The results demonstrate that XGB and DNN outperform other models, achieving MSE, MAPE, and R$^2$ values 
+of up to 0.003, 3\%, and 0.997 for synthetic data and 0.004, 9\%, and 0.987 for experimental data.
 \end{abstract}
 
 
@@ -210,13 +205,15 @@ The study examined the correlation between changes in photovoltaic parameters ca
 \item 80 ML models for iron quantification in silicon solar were tested
 \item XGB and DNN  models outperform RF, GB, and SVR models
 \item MSE, MAPE, and R$^2$ reach up to 0.003, 3\%, and 0.997 for synthetic data and 0.004, 9\%, and 0.987 for experimental data
+\item Photovoltaic parameter variations due to FeB dissociation used as ML model inputs.
 \end{highlights}
+
 
 
 % Keywords
 % Each keyword is seperated by \sep
 \begin{keywords}
-photovoltaic defect quantification\sep silicon \sep solar cells \sep iron contamination \sep machine learning \sep current-voltage curves \sep feature selection 
+photovoltaic defect quantification\sep silicon \sep solar cells \sep iron contamination \sep machine learning \sep current-voltage curves \sep feature selection
 \end{keywords}
 
 
@@ -652,9 +649,11 @@ Meanwhile, measurement temperature and base thickness (when feature dimensionali
 
 \subsection{$N_\mathrm{Fe}$--altered test dataset}
 
-The $N_\mathrm{Fe}$--altered test dataset simulates a practical scenario in which
-the goal is to predict iron concentration based on PVP variations measured under standardized conditions for predefined structures,
+The $N_\mathrm{Fe}$--altered test dataset is the most realistic, 
+as it mimics real-world conditions where the goal is to predict iron concentration based 
+on PVP variations measured under standardized conditions for predefined structures, 
 using the same temperature and solar cell parameters as in model training.
+
 
 Fig.~\ref{fig6} and Figgs.S8--S11 present the prediction results,
 while Fig.~\ref{fig7} and Table\ref{table2} summarize the performance metrics.
@@ -900,49 +899,287 @@ The degradation of the average metrics (MSE, MAPE, R$^2$) primarily results from
 }\label{fig10}
 \end{figure}
 
+Thus, applying the models to measurement data obtained at temperatures 
+that slightly deviate from the training conditions but remain within the training range is justified.
+
 
 \subsection{$N_\mathrm{B}$--altered and All-altered test datasets}
+
+The $N_\mathrm{B}$--altered dataset represents a case where a model trained on a specific type of solar cell is used to evaluate iron impurity concentration in photovoltaic converters with slightly different parameters. The boron concentration in the base is one of the parameters that can vary during the production process of PV devices. Therefore, the model's ability to adapt to these variations enhances its applicability to real-world manufacturing conditions.
+
+The optimal performance of 16 models utilizing RF, GB, XGB, and DNN algorithms is shown in Figs.~\ref{fig11}a--\ref{fig11}d, respectively.
+The remaining panels of Fig.~\ref{fig11} illustrate the MAPE values.
+The Supplementary Materials (Figs.~S16--S20, Table~S14) provide more detailed prediction results.
+
+\begin{figure}
+	\centering
+     \includegraphics[width=0.2\linewidth]{Fig11a.png}
+     \includegraphics[width=0.2\linewidth]{Fig11b.png}
+     \includegraphics[width=0.2\linewidth]{Fig11c.png}
+     \includegraphics[width=0.2\linewidth]{Fig11d.png}
+     \includegraphics[width=0.2\linewidth]{Fig11e.png}
+     \includegraphics[width=0.2\linewidth]{Fig11f.png}
+     \includegraphics[width=0.2\linewidth]{Fig11g.png}
+     \includegraphics[width=0.2\linewidth]{Fig11h.png}
+     \includegraphics[width=0.2\linewidth]{Fig11i.png}
+     \includegraphics[width=0.2\linewidth]{Fig11j.png}
+     \includegraphics[width=0.2\linewidth]{Fig11k.png}
+     \includegraphics[width=0.2\linewidth]{Fig11l.png}
+	  \caption{(a)--(d) Scatter plots comparing reference iron concentrations with ML--predicted values for the $N_\mathrm{B}$--altered dataset for the best models based on RF (a), GB (b), XGB (c), and DNN (d). 
+(e)--(l) MAPE scores for various models, feature combinations, and illumination conditions. 
+Illumination: 940~nm (e--h), AM1.5 (i--l). 
+Feature dimension: 4 (e, i), 5 (f, j), 6 (g, k), and 7 (h, l). 
+The numbers represent error values as percentages.
+}\label{fig11}
+\end{figure}
+
+The most striking aspect is the subpar performance of the RF, GB, and XGB models, which had previously demonstrated stable and satisfactory accuracy, at least for certain combinations of descriptor sets and illumination conditions.
+Notably, even SVR models do not always produce the worst results. 
+The application of PCA slightly improves prediction accuracy, 
+except under monochromatic illumination with seven descriptors. 
+However, the overall error metrics remain excessively bad. 
+Another important finding is that the best predictive performance is achieved with six features, 
+even though incorporating the ideality factor does not enhance model accuracy.
+
+
+DNN models exhibit the highest performance for the $N_\mathrm{B}$--altered dataset, 
+achieving results comparable to the best outcomes obtained for the $N_\mathrm{Fe}$--altered and $T$--ltered datasets. 
+Specifically, the most accurate predictions occur under 940~nm illumination with four or five descriptors 
+and under AM1.5 illumination with six or seven descriptors. 
+The application of PCA improves results only when the feature dimension is six or seven.
+
+
+
+At the same time, it is important to note that in DNN model predictions, approximately 10\% of forecasts 
+exhibit significant errors (greater than 50\%), as shown in Fig.\ref{fig11}d. 
+Fig.\ref{fig12}a illustrates the distribution of prediction errors for the $N_\mathrm{Fe}$--altered, $N_\mathrm{B}$--altered, and $T$--altered datasets. 
+While the dependencies remain similar for APE less than 10\%, for higher errors, 
+the dependence $p$ for the $N_\mathrm{Fe}$--altered dataset increases more slowly, 
+indicating a higher proportion of less accurate predictions in this case. 
+Fig.\ref{fig12}b presents the dependence of $p10$ on boron concentration across different test datasets. 
+The observed dependencies are similar to those in the training set (Fig.~\ref{fig5}b) 
+and highlight the most significant challenges for the developed models in predicting solar cells 
+with a base doping level around $10^{16}$~cm$^{-3}$. 
+However, for the $N_\mathrm{Fe}$--altered set, prediction accuracy in this problematic range is significantly lower, 
+resulting in a higher occurrence of poor-quality forecasts. 
+In contrast, for $N_\mathrm{B}<3\times10^{15}$~cm$^{-3}$, DNN models demonstrate adaptability to previously unknown doping levels.
+
+\begin{figure}
+  \centering
+     \includegraphics[width=0.35\linewidth]{Fig12a.png}
+     \includegraphics[width=0.35\linewidth]{Fig12b.png}
+    \caption{The proportion of samples in the test dataset with an absolute error below a given threshold as a function of the threshold value (a) 
+    and the dependencies of the fraction of predictions with an accuracy not exceeding 10\% on the doping level for various test datasets (b). 
+    The vertical lines in panel (b) indicate the boron concentration values used in the training dataset.
+}\label{fig12}
+\end{figure}
+
+The results of this section highlight the importance of training models with$N_\mathrm{B}$ values expected 
+in solar cells requiring iron quantification, particularly within the range $N_\mathrm{B}=(5\times10^{15}-3\times10^{16})$~cm$^{-3}$.
+If it is necessary to use models trained on boron concentrations in the base that differ from those in the analyzed sample,
+the DNN algorithm should be preferred.
+
+
+Given the results obtained for the $N_\mathrm{B}$---altered dataset, 
+testing the All-altered dataset presented a notable challenge for the developed models, 
+as it aimed to assess their interpolation capabilities. 
+Notably, this dataset does not test extrapolation capabilities: all four features (including temperature), 
+which are unrelated to PVP modifications, have different magnitudes from those in the train dataset b
+ut still fall within the corresponding range. 
+The All-altered dataset encapsulates most of the challenges that may arise under practical conditions when characterizing solar cells.
+
+As in the previous case, Figs.~\ref{fig13}a--~\ref{fig13}d presents the best results from the four algorithmic families, 
+while Figs.~\ref{fig13}e--~\ref{fig13}l displays the MSE values.
+Figs.~S21--S25 and Table~S15 provide additional statistical details.
+
+\begin{figure}
+	\centering
+     \includegraphics[width=0.2\linewidth]{Fig13a.png}
+     \includegraphics[width=0.2\linewidth]{Fig13b.png}
+     \includegraphics[width=0.2\linewidth]{Fig13c.png}
+     \includegraphics[width=0.2\linewidth]{Fig13d.png}
+     \includegraphics[width=0.2\linewidth]{Fig13e.png}
+     \includegraphics[width=0.2\linewidth]{Fig13f.png}
+     \includegraphics[width=0.2\linewidth]{Fig13g.png}
+     \includegraphics[width=0.2\linewidth]{Fig13h.png}
+     \includegraphics[width=0.2\linewidth]{Fig13i.png}
+     \includegraphics[width=0.2\linewidth]{Fig13j.png}
+     \includegraphics[width=0.2\linewidth]{Fig13k.png}
+     \includegraphics[width=0.2\linewidth]{Fig13l.png}
+	  \caption{(a)--(d) Scatter plots comparing reference iron concentrations with ML--predicted values for the All--altered test dataset for the best models based on  RF (a), GB (b), XGB (c), and DNN (d). 
+(e)--(l) MSE scores for various models, feature combinations, and illumination conditions. 
+Illumination: 940~nm (e--h), AM1.5 (i--l). 
+Feature dimension: 4 (e, i), 5 (f, j), 6 (g, k), and 7 (h, l). 
+The numbers represent MSE values multiplied by 1000.
+}\label{fig13}
+\end{figure}
+
+
+The presented data reveal several similarities between the results for the All--altered and $N_\mathrm{B}$--altered datasets:
+i)~RF, GB, XGB, and SVR models exhibit low prediction accuracy; although PCA enhances accuracy, the improvement remains insufficient;
+ii)~DNN models demonstrate relatively high average predictive performance, particularlywith four and five features under 940~nm illumination 
+and six features under AM1.5 illumination;
+iii)~PCA reduces DNN model error when applied to datasets with six and seven features;
+iv)~approximately 5\% of DNN predictions have APE~>~50\%.
+These similarities suggest that the primary source of increased errors in the All--altered dataset 
+is the deviation of boron concentration values from those used in train phase.
 
 
 \subsection{Experimental validation}
 
 
+To demonstrate the effectiveness of the proposed method, real solar cells were used. 
+The base thickness (380~$\mu$m) and the measurement temperatures (300, 305, 310, 320, 330, and 340~K) match those used in $I$-$V$ curve modeling for the train dataset.
+However, the base doping level, $N_\mathrm{B}=1.36\times10^{15}$~cm$^{-3}$, was not among the $N_\mathrm{B}$ values used for training.
+Therefore, the experimental test dataset is, to some extent, analogous to the $N_\mathrm{B}$--altered test dataset or even the $All$--altered dataset, considering the spread of iron concentration values.
+
+That is, even before testing began, some difficulties with prediction based on measurement data could be foreseen (not only ML models can make predictions).
+Meanwhile, the $N_\mathrm{B}$--altered test dataset included some data simulated for $N_\mathrm{B}=1.36\times10^{15}$~cm$^{-3}$.
+Therefore, we tested the experimental data using following models:
+i)~models trained on the training dataset for 940~nm illumination; these models had been previously validated on artificial test datasets;
+ii)~models trained on all simulated data in monochromatic illumination case (full dataset), incorporating train, $N_\mathrm{Fe}$--altered, 
+$T$--altered, $N_\mathrm{B}$--altered, and All--altered test datasets.
+In the latter case, we will use the following notation
+\begin{equation*}
+    \mathrm{A}^\mathrm{full}_\mathrm{feat},
+\end{equation*}
+where the upper index specifies the completeness of the data for training 
+and accounts for the fact that applying models trained for the AM1.5 case 
+to the experimental dataset is unjustified due to differing measurement conditions.
+
+Fig.~\ref{fig14} and Figs.~S26--S29 present the prediction results of different models. 
+The experimental test datasets contained between 8 and 30 samples, with the exact number depending on the number of features. 
+The referenced figures display predictions for these datasets. 
+To ensure a more precise quantitative comparison, we analyzed a case where all models used an input dataset of the same size, 
+derived from $I$-$V$ measurements of the same solar cells. 
+The resulting performance metrics are shown in Fig.~\ref{fig15}. 
+The Supplementary Materials (Fig.~S30) also include averaged quantitative characteristics of model performance 
+across datasets of different sample sizes, which align with the trends observed in Fig.~\ref{fig15}.
+
+\begin{figure}
+	\centering
+     \includegraphics[width=0.24\linewidth]{Fig14a.png}
+     \includegraphics[width=0.24\linewidth]{Fig14b.png}
+     \includegraphics[width=0.24\linewidth]{Fig14c.png}
+     \includegraphics[width=0.24\linewidth]{Fig14d.png}
+     \includegraphics[width=0.24\linewidth]{Fig14e.png}
+     \includegraphics[width=0.24\linewidth]{Fig14f.png}
+     \includegraphics[width=0.24\linewidth]{Fig14g.png}
+     \includegraphics[width=0.24\linewidth]{Fig14h.png}
+     \includegraphics[width=0.24\linewidth]{Fig14i.png}
+     \includegraphics[width=0.24\linewidth]{Fig14j.png}
+     \includegraphics[width=0.24\linewidth]{Fig14k.png}
+     \includegraphics[width=0.24\linewidth]{Fig14l.png}
+     \includegraphics[width=0.24\linewidth]{Fig14m.png}
+     \includegraphics[width=0.24\linewidth]{Fig14n.png}
+     \includegraphics[width=0.24\linewidth]{Fig14o.png}
+     \includegraphics[width=0.24\linewidth]{Fig14p.png}
+     \includegraphics[width=0.24\linewidth]{Fig14q.png}
+     \includegraphics[width=0.24\linewidth]{Fig14r.png}
+     \includegraphics[width=0.24\linewidth]{Fig14s.png}
+     \includegraphics[width=0.24\linewidth]{Fig14t.png}
+	  \caption{Scatter plots compare reference iron concentrations with ML--predicted values during the experimental test phase. 
+The ML algorithms include RF (a--d), GB (e--h), XGB (i--l), SVR (m--p), and DNN (q--t). 
+Panels (b, d, f, h, j, l, n, p, r, t) incorporate PCA pre-processing. 
+The input feature dimensions are 4 (a, b, i, j, q, r), 5 (e, f, m, n), 6 (c, d, k, l), and 7 (g, h, o, p, s, t). 
+The black lines are the identified lines serving as the references. 
+Marks with a black point inside correspond to models trained on the complete set of synthetic data.
+}\label{fig14}
+\end{figure}
+
+
+\begin{figure}
+	\centering
+     \includegraphics[width=0.2\linewidth]{Fig15a.png}
+     \includegraphics[width=0.2\linewidth]{Fig15b.png}
+     \includegraphics[width=0.2\linewidth]{Fig15c.png}
+     \includegraphics[width=0.2\linewidth]{Fig15d.png}
+     \includegraphics[width=0.2\linewidth]{Fig15e.png}
+     \includegraphics[width=0.2\linewidth]{Fig15f.png}
+     \includegraphics[width=0.2\linewidth]{Fig15g.png}
+     \includegraphics[width=0.2\linewidth]{Fig15h.png}
+     \includegraphics[width=0.2\linewidth]{Fig15i.png}
+     \includegraphics[width=0.2\linewidth]{Fig15j.png}
+     \includegraphics[width=0.2\linewidth]{Fig15k.png}
+     \includegraphics[width=0.2\linewidth]{Fig15l.png}
+     \includegraphics[width=0.2\linewidth]{Fig15m.png}
+     \includegraphics[width=0.2\linewidth]{Fig15n.png}
+     \includegraphics[width=0.2\linewidth]{Fig15o.png}
+     \includegraphics[width=0.2\linewidth]{Fig15p.png}
+     \includegraphics[width=0.25\linewidth]{Fig15q.png}
+     \includegraphics[width=0.25\linewidth]{Fig15r.png}
+	  \caption{MSE (a--h), MAPE (i--p), and R$^{2}$ (q, r) scores for various models and feature sets on the experimental test set. 
+The models used the training dataset (a--d, i--l, q) or the full synthetic dataset (e--h, m--p, r) for training. 
+The feature dimensions are as follows: 4 (a, e, i, m), 5 (b, f, j, n), 6 (c, g, k, o), and 7 (d, h, l, p). 
+Results with PCA are shown as circles (a--h) and shaded areas (i--r), 
+while results without PCA appear as squares (a--h) and filled regions (i--r). 
+Numbers in (a--h) represent MSE values multiplied by 1000, while (i--p) show MAPE as percentages. 
+The samples in the experimental test set were kept identical for all models.
+}\label{fig15}
+\end{figure}
+
+Notably, the results for the experimental test dataset closely resemble those observed for synthetic test datasets 
+simulated under the assumption of monochromatic illumination. 
+Specifically, adding descriptors to the ($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$) set 
+does not enhance prediction accuracy, at least. 
+Likewise, reducing dimensionality and simplifying the model using PCA proves ineffective: 
+error reduction occurs only in a few cases (all SVR models, $\mathrm{GB}^940_6$) 
+and only when the initial (non-PCA) error is already substantial. 
+However, even in such cases, PCA does not reduce the error to acceptable levels.
+Similar to the results in Fig.~\ref{fig7}, the XGB algorithm consistently delivers the best performance. 
+When training excluded $N_\mathrm{B}$ values corresponding to real solar cells, 
+the highest prediction accuracy was achieved by $\mathrm{DNN}^940_4$, aligning with the findings from the $N_\mathrm{B}$--altered test dataset.
+
+Including samples in the training dataset that correspond to the base doping level of the real solar cell 
+improves the performance of RF, GB, and XGB models, 
+similar to the transition from the $N_\mathrm{B}$--altered to the $N_\mathrm{Fe}$--altered test dataset.
+It is also noteworthy to highlight the high quantitative prediction metrics: 
+for a feature dimension of 4, the MSE is approximately  $3\times10^{-3}$, and the MAPE falls within the 10--13\% range. 
+These values are comparable to the best results obtained on simulated test datasets, 
+despite the latter representing idealized cases that do not account for real--world factors affecting PVP values, 
+such as series and shunt resistances. 
+A key distinction in predictions on the experimental dataset is a narrower error range: 
+while predictions with accuracy better than 1\% are nearly absent, 
+the proportion of predictions with an APE exceeding 50\% is also lower compared to synthetic data.
 
 
 \section{Conclusion}
 
-%We have provided the results of modeling the impact of variations in the
-%state of iron impurities on the photovoltaic parameters of silicon solar cells
-%with different base properties under various external conditions
-%(temperature, intensity, and spectral composition of illumination).
-%The simulation results have been compared with experimental data.
-%
-%The feasibility of using relative changes in short-circuit current, open-circuit voltage,
-%fill factor, and efficiency resulting from the dissociation of FeB pairs
-%to estimate the concentration of iron impurities in a solar cell has been analyzed.
-%It is shown that changes in short-circuit current are the most suitable parameter.
-%It is more expedient to determine the photovoltaic parameters under monochromatic illumination
-%with a wavelength matching the predominant absorption in the solar cell base rather than using AM1.5 illumination.
-%Next in suitability are changes in efficiency and open-circuit voltage,
-%although their use becomes restricted at low doping levels of the base ($<10^{16}$~cm$^{-3}$).
-%In our opinion, using the fill factor to estimate iron concentration is not practical.
-%
-%It has been shown that the potential accuracy of estimating iron concentration depends
-%on the doping level of the base:
-%at a boron concentration around $10^{16}$~cm$^{-3}$, it is minimal,
-%while decreasing or increasing this value enhances the response of $I_\mathrm{SC}$ to the presence of iron.
-%Furthermore, the accuracy of $N_\mathrm{Fe}$ determination is significantly influenced by the availability
-%of precise information on the doping level of the base,
-%as well as the accuracy of estimating the intensity of monochromatic illumination,
-%especially when using $\varepsilon \eta$ and $\varepsilon V_\mathrm{OC}$.
-%
-%At the same time, $\varepsilon \eta$ and $\varepsilon V_\mathrm{OC}$ can serve as additional parameters
-%for refining the determination of iron concentration.
-%In our opinion, for estimating iron concentration through changes
-%in photovoltaic parameters due to variability in iron-related defects, it is advisable to use a set of
-%($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$, $\varepsilon \eta$) or ($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$, $\varepsilon \eta$,$\varepsilon V_\mathrm{OC}$).
-%In these cases, to expedite calculations, it is advisable to use principal component analysis to reduce
-%the number of variables while retaining the maximum variance information.
+This study presents a novel ML--based approach for addressing the challenging problem of 
+iron quantification in silicon solar cells. 
+The proposed models predict iron concentration based on variations in photovoltaic parameters caused by FeB pair dissociation, 
+solar cell characteristics, and measurement conditions. 
+The datasets were obtained under AM1.5 illumination and monochromatic illumination at 940 nm, 
+where photon absorption primarily occurs in the base of the photovoltaic converter. 
+A total of 80 models were tested using data from both simulated and experimentally measured $I$-$V$ characteristics.
+
+The results emphasize the critical role of feature selection in achieving accurate predictions. 
+Under 940~nm illumination, simple features such as relative changes in short-circuit current, 
+base doping level, base thickness, and temperature yielded the most precise predictions. 
+For AM1.5 illumination, incorporating changes in open-circuit voltage, conversion efficiency, and fill factor further improved accuracy. 
+It was found that pre-processing the input data using Principal Component Analysis, despite simplifying the models with minimal loss of overall variance, 
+led to a decrease in prediction accuracy.
+
+
+This study establishes key criteria for datasets used in training ML models for iron quantification. 
+Due to the models' limited extrapolation ability, the training data range must be carefully selected 
+to encompass temperature and solar cell parameter values relevant to the model’s intended application. 
+The constraints on base doping levels are even more stringent: 
+training the model with boron concentration values that align with real-world conditions is preferable, particularly for $N_\mathrm{B}$ values 
+around $10^{16}$~cm$^{-3}$.
+
+
+The results indicate that eXtreme Gradient Boosting and Deep Neural Network models outperform other approaches, 
+achieving MSE, MAPE, and R$^2$ values of up to 0.003, 3\%, and 0.997 for synthetic data, 
+and 0.004, 9\%, and 0.987 for experimental data. 
+When doping levels in the test data deviate from those in the training set, 
+the DNN model remains the most reliable choice. 
+In contrast, Support Vector Regression proves ineffective in all cases.
+
+The obtained results lay the foundation for improving the standard method of silicon solar cell characterization, 
+which relies on measuring $I$-$V$ curves, 
+by enabling the determination of iron impurity concentration.
+
 
 
 
@@ -955,9 +1192,9 @@ heat transport properties’’)
 
 \section*{Supplementary data}\label{SuplData}
 Supplementary data to this article can be found online at
-%\url{http://surl.li/szpkwz}
-\url{http://surl.li/qneich}
-%https://www.mediafire.com/file/y2zpqsb33skllnm/SupplementaryMaterial.pdf/file
+\url{https://tinyurl.com/yzn9xkdm}
+%https://www.mediafire.com/file/gip0q7t1vkljptu/SupplementaryMaterial.pdf/file
+
 
 \section*{Data availability}
 Data will be made available on request.
