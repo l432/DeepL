@@ -1,0 +1,66 @@
+0000-0003-0633-5429 
+olegolikh@knu.ua
+
+0000-0001-8080-7661
+nevermor464@gmail.com
+
+------------------------------
+
+Kamal 
+Choudhary
+National Institute of Standards and Technology, 20899 Gaithersburg, USA
+kamal.choudhary@nist.gov
+​An experienced researcher in computational materials science, 
+specializing in machine learning applications for materials property prediction. 
+(Chemistry of Materials, 2019, vol.31, is. 15, pp. 5900-5908,
+APL Machine Learning, 2024, vol. 2, no. 1, pp. 016122)
+(DOI: 10.1021/acs.chemmater.9b02166,
+DOI: 10.1063/5.0176333)
+
+Yoann
+Buratti
+University of New South Wales, 2052 Sydney, Australia
+yoann.buratti@unsw.edu.au
+​An experienced researcher specializing in machine learning applications for 
+the advanced characterization of silicon solar cells.
+(Renewable and Sustainable Energy Reviews, 2024, vol. 202, pp. 11461,
+ACS Applied Energy Materials, 2020, vol. 3, is. 11, pp. 10317-10322,
+ACS Applied Materials & Interfaces, 2022, vol. 14, is. 43, pp. 48647-48657)
+(DOI: 10.1016/j.rser.2024.114617,
+DOI: 10.1021/acsaem.0c01207,
+DOI: 10.1021/acsami.2c12162)
+
+Hongyu 
+Yu
+Fudan University, 200433 Shanghai, China
+20110190060@fudan.edu.cn
+Applying machine learning techniques to predict electronic structures 
+and magnetic properties of materials.
+(Applied Physics Letters, 2025, vol. 126, no. 4, pp. 044103,
+Physical Review B, 2024, vol. 110, is. 10, pp. 104427)
+(DOI: 10.1063/5.0242683
+DOI: 10.1103/PhysRevB.110.104427)
+
+Babban Kumar
+Ravidas
+Pandit Dwarka Prasad Mishra Indian Institute of Information Technology, 482005 Jabalpur, India
+1PNPO01@iiitdmj.ac.in
+Research scholar focusing on the numerical simulation and design of 
+perovskite solar cells using SCAPS-1D simulations.
+(Solar Energy Materials and Solar Cells, 2024, vol. 267, pp. 112688,
+Journal of Physics and Chemistry of Solids, 2024, vol. 195, pp. 112260)
+(DOI: 10.1016/j.solmat.2023.112688,
+DOI: 10.1016/j.jpcs.2024.112260)
+
+Marisa 
+Di Sabatino
+Norges Teknisk-Naturvitenskapelige Universitet, 8900 Trondheim, Norway
+marisa.di.sabatino@ntnu.no
+Has extensively researched defect generation, advanced crystallization, 
+and characterization methods to enhance the quality of silicon for solar cells.
+(Crystals, 2024, vol. 14, no. 2, article no. 167,
+Crystal Growth & Design, 2024, vol. 24, is. 17, pp. 7132-7140)
+(DOI: 10.3390/cryst14020167,
+DOI: 10.1021/acs.cgd.4c00760)
+
+
