@@ -88,4 +88,19 @@ Please accept my sincerest apologies.
 
 Kind regards,
 Oleh Olikh
+-----------------------------------------------------------------------------------
+
+Dear Prof. Galanakis,
+
+I apologize for the delay in information.
+
+a) Utilizing ultrasound for defect engineering; current-voltage, capacitance, and impedance measurements of semiconductor structures; applying machine learning for defect characterization;
+b) Intrastructure for experimental investigations of semiconductor structures (current-voltage measurement, capacitance-voltage measurements, impedance and capacitance spectroscopies, photoluminescence, photoconductivity and photovoltage spectroscopies, Raman spectroscopy, AFM and Kelvin Probe Force Microscopy, photoacoustic and photothermal techniques), setup for ultrasound treatment (100 kHz – 30 MHz, transverse and longitudinal waves) of materials;
+c) No, my lab is not a Legacy Lab or MAP;
+
+Kind regards,
+Oleh Olikh, Dr. Hab, Prof.,
+Head of the Department of General Physics
+Taras Shevchenko National University of Kyiv
+olegolikh@knu.ua
 
