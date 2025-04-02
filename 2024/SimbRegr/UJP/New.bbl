@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 \def\selectlanguageifdefined#1{
 \expandafter\ifx\csname date#1\endcsname\relax
 \else\language\csname l@#1\endcsname\fi}
@@ -82,5 +82,14 @@
   Meeting. ---
 \newblock 1985. ---
 \newblock Pp.~290--293.
+
+\bibitem{KLAASSEN953}
+\selectlanguageifdefined{english}
+\BibEmph{Klaassen,~D.B.M.} A unified mobility model for device simulation ---
+  {I}. Model equations and concentration dependence~/ D.B.M.~Klaassen~//
+  \BibEmph{Solid-State Electron.} ---
+\newblock 1992. --- Jul. ---
+\newblock Vol.~35, no.~7. ---
+\newblock Pp.~953-- 959.
 
 \end{thebibliography}

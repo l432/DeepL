@@ -178,14 +178,14 @@ $n_c$ --- концентрація носіїв заряду.
 \end{aligned}
 \end{equation}
 
-Для іншого механізму, розсіяння носій-носій застосовується підхід, розвинутий Fletcher \cite{Fletcher1957}:
+Для іншого механізму, розсіяння носій-носій, застосовується підхід, розвинутий Fletcher \cite{Fletcher1957}:
 \begin{equation}\label{eqFl}
   \mu_{cc}=\frac{\left(\frac{T}{T_{ref}^{Fl}}\right)^{3/2} F_1}{\left(np\right)^{1/2}\ln\left[1+\left(\frac{T}{T_{ref}^{Fl}}\right)^2\left(np\right)^{-1/3}F_2\right]}\,,
 \end{equation}
 де
 $n$ та $p$ --- концентрації електронів та дірок, відповідно;
 $T_{ref}^{Fl}$, $F_1$ та $F_2$ --- певні константи, які залежать від матеріалу.
-Як показано в роботах \cite{Choo1972,Dorkel1981}, для кремнію доцільно застосовувати 
+Як показано в роботах \cite{Choo1972,Dorkel1981}, для кремнію доцільно застосовувати
 $T_{ref}^{Fl}=300$~K,
 $F_1=1,04\cdot10^{21}$~см$^{-1}$В$^{-1}$с$^{-1}$,
 $F_2=7,45\cdot10^{12}$~см$^2$ і тоді вираз (\ref{eqFl}) перетворюється на наступний
@@ -197,14 +197,14 @@ $F_2=7,45\cdot10^{12}$~см$^2$ і тоді вираз (\ref{eqFl}) перетв
 Як наслідок, більше поширення отримав підхід оцінки величини $\mu$ з використанням апроксимаційної функції, яка часто базується на результатах експериментальних вимірювань.
 Як правило, для кожного матеріалу вигляд функції або наявні в ній коефіцієнти відрізняються.
 
-Розглянемо декілька подібних підходів до опису рухливості носіїв заряду у монокристалічному кремнії, обмежуючись випадками об'ємного напівпровідника 
+Розглянемо декілька подібних підходів до опису рухливості носіїв заряду у монокристалічному кремнії, обмежуючись випадками об'ємного напівпровідника
 (без врахування впливу поверхні) та слабких полів.
 Одним з перших подібних наближень був вираз, запропонований   Caughey \& Thomas \cite{Caughey1967}:
 \begin{equation}\label{eqCT}
   \mu=\mu_\mathrm{min}+\frac{\mu_\mathrm{max}-\mu_\mathrm{min}}{1+(N/N_{ref})^\alpha}\,,
 \end{equation}
-де 
-$N$ --- концентрація легантів, 
+де
+$N$ --- концентрація легантів,
 а значення констант для випадків, коли розглядаються рухливості електронів та дірок, наведені у Табл.~\ref{tblCT}.
 Вираз насамперед призначений для оцінки залежності рухливості основних носіїв від концентрації легуючої домішки поблизу 300~K.
 З іншого боку, формула (\ref{eqCT}) не дозволяє оцінити рухливості неосновних носіїв та не враховує температурну залежність $\mu$.
@@ -226,17 +226,18 @@ $N$ --- концентрація легантів,
 \end{tabular}
 \end{table}
 
-
-
-\cite{Masetti1983}
-
+Модифікований варіант такого підходу був запропонований Masetti \cite{Masetti1983}:
 \begin{equation}\label{eqMas}
 \begin{aligned}
     \mu_n &=\mu_0+\frac{\mu_\mathrm{max}-\mu_0}{1+\left(\frac{n}{C_r}\right)^a}-\frac{\mu_1}{1+\left(\frac{C_s}{n}\right)^b}\,, \\
    \mu_p &=\mu_0\exp\left(-\frac{p_c}{p}\right)+\frac{\mu_\mathrm{max}}{1+\left(\frac{p}{C_r}\right)^a}-\frac{\mu_1}{1+\left(\frac{C_s}{p}\right)^b}\,.
 \end{aligned}
 \end{equation}
-
+Як видно з виразу (\ref{eqMas}), в такому випадку передбачено застосування різних виразів для опису рухливості електронів та дірок.
+Більше того, коефіцієнти мають залежати від того, які атоми були використання для легування --- у Табл.~\ref{tblMas} приведені 
+їхні значення для бору та фосфору, які є найбільш типовими домішками для отримання кремнію з дірковою та електронною провідностями, відповідно.
+Теорія Masetti краще описує експериментальні дані, ніж підхід  Caughey--Thomas, проте так само не дозволяє отримати інформацію для неосновних носіїв та
+температур, відмінних від кімнатної.
 
 \begin{table}
 \caption{Коефіцієнти для розрахунку рухливості відповідно до моделі Masetti (\ref{eqMas})}
@@ -267,12 +268,14 @@ $p_c$, см$^{-3}$&---&$9,23\cdot10^{16}$\\
 \end{tabular}
 \end{table}
 
-
-\cite{Arora1982}
+Спроба взяти до уваги температурні залежності була зроблена N.~Arora зі співавторами \cite{Arora1982}.
+При цьому розглядалися розсіяння на фононах та  іонізованих домішках і було запропоновано використання узагальненого виразу Caughey--Thomas
 \begin{equation}\label{eqArora}
-  \mu=\mu_\mathrm{min}+\frac{\mu_0}{1+\left(\frac{N}{N_0}\right)^\alpha}
+  \mu=\mu_\mathrm{min}+\frac{\mu_0}{1+\left(\frac{N}{N_0}\right)^\alpha}\,,
 \end{equation}
-
+де $N=N_a^-+N_d^+$ --- загальна концентрація іонізованих легантів
+($N_a^-$ та $N_d^+$ кількості іонізованих акцепторів та донорів у одиниці об'єму, відповідно),
+а решта коефіцієнтів у виразі (\ref{eqArora}) залежать від температури схожим чином:
 \begin{equation}\label{eqArora2}
 \begin{aligned}
     \mu_\mathrm{min} &=\mu_\mathrm{min}^{ref}\left(\frac{T}{T_{ref}}\right)^{\beta_1}\,, \\
@@ -281,10 +284,197 @@ $p_c$, см$^{-3}$&---&$9,23\cdot10^{16}$\\
    \alpha &=\alpha^{ref}\left(\frac{T}{T_{ref}}\right)^{\beta_4}\,.\
 \end{aligned}
 \end{equation}
+Тобто, відбулося повернення до ситуації, коли вираз для опису рухливості не залежить від типу носіїв, проте
+різними є константи, що мають бути використані під час розрахунків.
+Зауважимо, що у оригінальній роботі \cite{Arora1982} вирази отримані (та визначені значення констант)
+на основі аналізу експериментальних даних щодо рухливості основних носіїв при різних значеннях температури та ступеню легування.
+Проте нерідко вирази (\ref{eqArora})-(\ref{eqArora2}) поширюють і для неосновних носіїв, використовуючи значення констант,
+отримані в роботах \cite{Swirhun1986} (для неосновних електронів) та \cite{Alamo1985} (для неосновних дірок).
+Проте у вказаних роботах приведені дані лише для однієї температури і тому поширення виразів на широкий температурний діапазон дещо самовпевнено.
+Значення констант для всіх випадків наведено у Табл.~\ref{tblArora}.
 
 
-неосновні електрони \cite{Swirhun1986}
-неосновні дірки \cite{Alamo1985}
+\begin{table}
+\caption{Коефіцієнти для розрахунку рухливості відповідно до моделі Arora (\ref{eqArora})-(\ref{eqArora2})}
+\label{tblArora}
+\centering
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+\multirow{3}{*}{Параметр} & \multicolumn{4}{c|}{Тип носіїв}\\
+\cline{2-5}
+&\multicolumn{2}{c|}{електрони}&\multicolumn{2}{c|}{дірки}\\
+\cline{2-5}
+& основні \cite{Arora1982}& неосновні \cite{Swirhun1986}& основні \cite{Arora1982}& неосновні \cite{Alamo1985}\\
+\hline
+$T_{ref}$, K&300&295&300&292\\
+\hline
+$\mu_\mathrm{min}^{ref}$, $\text{см}^2/(\text{B}\cdot\text{с})$&88&232&54.3&130\\
+\hline
+$\mu_0^{ref}$, $\text{см}^2/(\text{B}\cdot\text{с})$&1252&1180&407&370\\
+\hline
+$N_0^{ref}$, cm$^{-3}$&$1,26\cdot10^{17}$&$8\cdot10^{16}$&$2,35\cdot10^{17}$&$8\cdot10^{17}$\\
+\hline
+$\alpha^{ref}$&0,88&0,9&0,88&1,25\\
+\hline
+$\beta_1$&\multicolumn{4}{c|}{-0,57}\\
+\hline
+$\beta_2$&\multicolumn{2}{c|}{-2,33}&\multicolumn{2}{c|}{-2,23}\\
+\hline
+$\beta_3$&\multicolumn{4}{c|}{2,4}\\
+\hline
+$\beta_4$&\multicolumn{4}{c|}{-0,146}\\
+\hline
+\end{tabular}
+\end{table}
+
+Проте найбільш точним з точки зору збіжності з експериментальними даними вважається підхід до оцінки рухливості, розвинутий   Klaassen \cite{KLAASSEN953}
+(на який в  літературі також посилаються як на модель Philips).
+В цьому випадку вважається, що визначальними для рухливості є процеси розсіяння на коливаннях ґратки, іонізованих домішках та інших носіях, а температурну та
+концентраційні залежності $\mu$ як для основних, так і неосновних носіїв заряду можна описати наступними виразами:
+\begin{equation}\label{eqK1}
+  \mu=\frac{\mu_L\,\mu_{DA}}{\mu_L+\mu_{DA}}\,,
+\end{equation}
+де
+\begin{eqnarray}
+% \nonumber to remove numbering (before each equation)
+  \label{eqK2}
+  \mu_L &=&  \mu_\mathrm{max} \left(\frac{300}{T}\right)^{2,25}\, \\ \label{eqK3}
+ \nonumber  \mu_{DA}  &=& \frac{\mu_\mathrm{max}^2}{\mu_\mathrm{max} - \mu_\mathrm{min}} \cdot 
+    \frac{N_{sc}}{N_\mathrm{eff}} \cdot \left(\frac{N_{ref}}{N_{sc}}\right)^{\alpha} \cdot \left(\frac{T}{300}\right)^{3\alpha - 1,5}\\
+    &&+ \frac{\mu_\mathrm{max} \, \mu_\mathrm{min}}{\mu_\mathrm{max} - \mu_\mathrm{min}} \cdot \frac{n + p}{N_\mathrm{eff}} \cdot \left(\frac{300}{T}\right)^{0,5}\,
+\end{eqnarray}
+а константи, що входять до рівнянь (\ref{eqK2})-(\ref{eqK3}) наведені у Табл.~\ref{tblK1}.
+Величини $N_{sc}$ та $N_\mathrm{eff}$ є функціями, вигляд яких залежить від типу носіїв:
+
+\begin{table}
+\caption{Коефіцієнти для розрахунку рухливості відповідно до моделі Klaassen, формули (\ref{eqK2})-(\ref{eqK3})}
+\label{tblK1}
+\centering
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+\multirow{2}{*}{Тип носіїв} & \multicolumn{4}{c|}{Параметр} \\
+\cline{2-5}
+&$\mu_\mathrm{max}$, $\text{см}^2/(\text{B}\cdot\text{с})$&$\mu_\mathrm{min}$, $\text{см}^2/(\text{B}\cdot\text{с})$&$\alpha$&$N_{ref}$, см$^{-3}$ \rule{0pt}{13pt}\\
+\hline
+Електрони&1414&68,5&0,711&$9,2\cdot10^{16}$\\
+Дірки&495&44,9&0,719&$2,23\cdot10^{17}$\\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{subequations} \label{eqK4}
+    \begin{align}
+       \text{електрони:} \quad& N_{sc} =N_d^+ + N_a^-+ p\,, \label{eqK4a} \\
+        \text{дірки:} \quad& N_{sc}= N_a^-+N_d^++n\,, \label{eqK4b}
+    \end{align}
+\end{subequations}
+\begin{subequations} \label{eqK5}
+    \begin{align}
+       \text{електрони:} \quad& N_\mathrm{eff} =N_d^+ + N_a^- \cdot G_n(P_n,T) +\frac{p}{F_n(P_n,T)}\,, \label{eqK5a} \\
+        \text{дірки:} \quad& N_\mathrm{eff}= N_a^- + N_d^+ \cdot G_p(P_p,T) +\frac{n}{F_p(P_p,T)}\,. \label{eqK5b}
+    \end{align}
+\end{subequations}
+В свою чергу, для функцій $G_{n(p)}$, $F_{n(p)}$  та $P_{n(p)}$ справедливі наступні вирази:
+\begin{subequations} \label{eqK6}
+    \begin{align}
+       G_n& = 1 - \frac{S_1}{\left[S_2 + \left( \frac{m_0}{m_e} \frac{T}{300} \right)^{S_4} P_n\right]^{S_3}}
+       + \frac{S_5}{\left[ \left(\frac{m_e}{m_0} \frac{300}{T}\right)^{S_7} P_n\right]^{S_6}}\,, \label{eqK6a} \\
+       G_p& = 1 - \frac{S_1}{\left[S_2 + \left( \frac{m_0}{m_h} \frac{T}{300} \right)^{S_4} P_p\right]^{S_3}}
+       + \frac{S_5}{\left[ \left(\frac{m_h}{m_0} \frac{300}{T}\right)^{S_7} P_p\right]^{S_6}}\,, \label{eqK6b}
+    \end{align}
+\end{subequations}
+\begin{equation}\label{eqK7}
+ F_n = \frac{r_1  P_n^{r_6} + r_2 + r_3  \frac{m_e}{m_h}}{P_n^{r_6} + r_4 + r_5 \frac{m_e}{m_h}}; \quad
+ F_p = \frac{r_1  P_p^{r_6} + r_2 + r_3  \frac{m_h}{m_e}}{P_n^{r_6} + r_4 + r_5 \frac{m_h}{m_e}}\,,
+\end{equation}
+\begin{equation}\label{eqK8}
+  P_n = \left(P_{bn}+P_{cn}\right)^{-1}; \quad
+  P_p = \left(P_{bp}+P_{cp}\right)^{-1}\,,
+\end{equation}
+%\begin{subequations} \label{eqK7}
+%    \begin{align}
+%       F_n& = \frac{r_1  P_n^{r_6} + r_2 + r_3  \frac{m_e}{m_h}}{P_n^{r_6} + r_4 + r_5 \frac{m_e}{m_h}}\,, \label{eqK7a} \\
+%      F_p& = \frac{r_1  P_p^{r_6} + r_2 + r_3  \frac{m_h}{m_e}}{P_n^{r_6} + r_4 + r_5 \frac{m_h}{m_e}}\,, \label{eqK7b}
+%    \end{align}
+%\end{subequations}
+%\begin{subequations} \label{eqK8}
+%    \begin{align}
+%       P_n& = \left(P_{bn}+P_{cn}\right)^{-1}\,, \label{eqK8a} \\
+%      P_p& = \left(P_{bp}+P_{cp}\right)^{-1}\,, \label{eqK8b}
+%    \end{align}
+%\end{subequations}
+де 
+$m_e$ та $m_h$ --- ефективні маси електрона та дірки, відповідно, а константи, що входять до виразів (\ref{eqK6}) та (\ref{eqK7}),
+наведені в Табл.~\ref{tblK2}.
+У випадку, коли мова йде про неосновні носії, то $P_{cn}=0$ ($P_{cp}=0$).
+При розрахунках для основних носіїв
+
+\begin{table}
+\setlength{\tabcolsep}{3pt}
+\caption{Коефіцієнти для розрахунку рухливості відповідно до моделі Klaassen, формули (\ref{eqK6}) та (\ref{eqK7})}
+\label{tblK2}
+\centering
+\begin{tabular}{|l|c|c|c|c|c|c|c|}
+\hline
+Параметр&$S_1$&$S_2$&$S_3$&$S_4$&$S_5$&$S_6$&$S_7$\\
+\hline
+Значення&0,89233&0,41372&0,19778&0,28227&0,005978&1,80618&0,72169\\
+\hline
+Параметр&$r_1$&$r_2$&$r_3$&$r_4$&$r_5$&\multicolumn{2}{c|}{$r_6$}\\
+\hline
+Значення&0,7643&2,2999&6,5502&2,3670&-0,01552&\multicolumn{2}{c|}{0,6478}\\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{subequations} \label{eqK9}
+    \begin{align}
+      &P_{cn} = \frac{2,46}{3,97 \cdot 10^{19} \left[\left( \frac{T}{300\,Z_n} \right)^3  \frac{1}{N_d^+}\right]^{2/3}}; \quad
+ P_{cp} = \frac{2,46}{3,97 \cdot 10^{19} \left[\left( \frac{T}{300\,Z_p} \right)^3  \frac{1}{N_a^-}\right]^{2/3}}\,, \label{eqK9a} \\
+      &Z_n = 1 + \frac{1}{0,21 + \left( \frac{4 \cdot 10^{20}}{N_d^+} \right)^2}; \quad
+ Z_p = 1 + \frac{1}{0,5 + \left( \frac{7,2 \cdot 10^{20}}{N_a^-} \right)^2}\,, \label{eqK9b}\\
+ &P_{bn} =\frac{3.83}{\frac{1,36 \cdot 10^{26}}{N_d^+ + p} \left( \frac{T}{300} \right)^2  \frac{m_e}{m_0}}; \quad
+ P_{bn} =\frac{3.83}{\frac{1,36 \cdot 10^{26}}{N_a^- + n} \left( \frac{T}{300} \right)^2  \frac{m_h}{m_0}}\,. \label{eqK9c}
+    \end{align}
+\end{subequations}
+%
+%\begin{subequations} \label{eqK9}
+%    \begin{align}
+%      P_{cn}& = \frac{2,46}{3,97 \cdot 10^{19} \left[\left( \frac{T}{300\,Z_n} \right)^3  \frac{1}{N_d^+}\right]^{2/3}}\,, \label{eqK9a} \\
+%      P_{cp}& = \frac{2,46}{3,97 \cdot 10^{19} \left[\left( \frac{T}{300\,Z_p} \right)^3  \frac{1}{N_a^-}\right]^{2/3}}\,, \label{eqK9b}
+%    \end{align}
+%\end{subequations}
+%
+%\begin{equation}\label{eq}
+% P_{cn} = \frac{2,46}{3,97 \cdot 10^{19} \left[\left( \frac{T}{300\,Z_n} \right)^3  \frac{1}{N_d^+}\right]^{2/3}}; \quad
+% P_{cp} = \frac{2,46}{3,97 \cdot 10^{19} \left[\left( \frac{T}{300\,Z_p} \right)^3  \frac{1}{N_a^-}\right]^{2/3}}\,,
+%\end{equation}
+%
+%
+%\begin{equation}\label{eq}
+% Z_n = 1 + \frac{1}{0,21 + \left( \frac{4 \cdot 10^{20}}{N_d^+} \right)^2}; \quad
+% Z_p = 1 + \frac{1}{0,5 + \left( \frac{7,2 \cdot 10^{20}}{N_a^-} \right)^2}\,,
+%\end{equation}
+%
+%\begin{equation}\label{eq}
+% P_{bn} =\frac{3.83}{\frac{1,36 \cdot 10^{26}}{N_d^+ + p} \left( \frac{T}{300} \right)^2  \frac{m_e}{m_0}}; \quad
+% P_{bn} =\frac{3.83}{\frac{1,36 \cdot 10^{26}}{N_a^- + n} \left( \frac{T}{300} \right)^2  \frac{m_h}{m_0}}\,,
+%\end{equation}
+%
+%\begin{subequations} \label{eqK10}
+%    \begin{align}
+%      Z_n& = 1 + \frac{1}{0,21 + \left( \frac{4 \cdot 10^{20}}{N_d^+} \right)^2}\,, \label{eqK10a} \\
+%      Z_p& = 1 + \frac{1}{0,5 + \left( \frac{7,2 \cdot 10^{20}}{N_a^-} \right)^2}\,, \label{eqK10b}
+%    \end{align}
+%\end{subequations}
+%\begin{subequations} \label{eqK11}
+%    \begin{align}
+%      P_{bn} =\frac{3.83}{\frac{1,36 \cdot 10^{26}}{N_d^+ + p} \left( \frac{T}{300} \right)^2  \frac{m_e}{m_0}}\,, \label{eqK11a} \\
+%      P_{bn} =\frac{3.83}{\frac{1,36 \cdot 10^{26}}{N_a^- + n} \left( \frac{T}{300} \right)^2  \frac{m_h}{m_0}}\,. \label{eqK11b}
+%    \end{align}
+%\end{subequations}
+
+
 
 
 
