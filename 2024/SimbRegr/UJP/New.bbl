@@ -92,4 +92,90 @@
 \newblock Vol.~35, no.~7. ---
 \newblock Pp.~953-- 959.
 
+\bibitem{Cummings2010}
+\selectlanguageifdefined{english}
+Mobility Modeling Considerations for Radiation Effects Simulations in Silicon~/
+  Daniel~J.~Cummings, Arthur~F.~Witulski, Hyunwoo~Park et~al.~// \BibEmph{IEEE
+  Trans. Nucl. Sci.} ---
+\newblock 2010. ---
+\newblock Vol.~57, no.~4. ---
+\newblock Pp.~2318--2326.
+
+\bibitem{NoorMohammad1993}
+\selectlanguageifdefined{english}
+Temperature, electric field, and doping dependent mobilities of electrons and
+  holes in semiconductors~/ S.~{Noor Mohammad}, Andrew~V.~Bemis,
+  Ronald~L.~Carter, Robert~B.~Renbeck~// \BibEmph{Solid-State Electron.} ---
+\newblock 1993. ---
+\newblock Vol.~36, no.~12. ---
+\newblock Pp.~1677--1683.
+
+\bibitem{Si_ni_Couderc}
+\selectlanguageifdefined{english}
+\BibEmph{Couderc,~Romain}. Reassessment of the intrinsic carrier density
+  temperature dependence in crystalline silicon~/ Romain~Couderc,
+  Mohamed~Amara, Mustapha~Lemiti~// \BibEmph{J. Appl. Phys.} ---
+\newblock 2014. --- Mar. ---
+\newblock Vol. 115, no.~9. ---
+\newblock P.~093705.
+
+\bibitem{Passler2002}
+\selectlanguageifdefined{english}
+\BibEmph{P\"assler,~Roland}. Dispersion-related description of temperature
+  dependencies of band gaps in semiconductors~/ Roland~P\"assler~//
+  \BibEmph{Phys. Rev. B}. ---
+\newblock 2002. --- Aug. ---
+\newblock Vol.~66. ---
+\newblock P.~085201.
+
+\bibitem{Bednarczyk1978}
+\selectlanguageifdefined{english}
+\BibEmph{Bednarczyk,~D.} The approximation of the Fermi-Dirac integral F12~/
+  D.~Bednarczyk, J.~Bednarczyk~// \BibEmph{Phys. Lett. A}. ---
+\newblock 1978. ---
+\newblock Vol.~64, no.~4. ---
+\newblock Pp.~409--410.
+
+\bibitem{Angelis2023}
+\selectlanguageifdefined{english}
+\BibEmph{Angelis,~Dimitrios}. Artificial Intelligence in Physical Sciences:
+  Symbolic Regression Trends and Perspectives~/ Dimitrios~Angelis,
+  Filippos~Sofos, Theodoros~E.~Karakasidis~// \BibEmph{Arch. Comput. Methods
+  Eng.} ---
+\newblock 2023. --- Jul. ---
+\newblock Vol.~30, no.~6. ---
+\newblock Pp.~3845--3865.
+
+\bibitem{Breiman2001}
+\selectlanguageifdefined{english}
+\BibEmph{Breiman,~Leo}. Random Forests~/ Leo~Breiman~// \BibEmph{Mach. Learn.}
+  ---
+\newblock 2001. --- Oct. ---
+\newblock Vol.~45, no.~1. ---
+\newblock Pp.~5--32.
+
+\bibitem{Natekin2013}
+\selectlanguageifdefined{english}
+\BibEmph{Natekin,~Alexey}. Gradient boosting machines, a tutorial~/
+  Alexey~Natekin, Alois~Knoll~// \BibEmph{Front. Neurorob.} ---
+\newblock 2013. ---
+\newblock Vol.~7.
+
+\bibitem{Cao2020}
+\selectlanguageifdefined{english}
+\BibEmph{Cao,~Weidong}. Parameter Optimization of Support Vector Regression
+  Using Henry Gas Solubility Optimization Algorithm~/ Weidong~Cao, Xin~Liu,
+  Jianjun~Ni~// \BibEmph{IEEE Access}. ---
+\newblock 2020. ---
+\newblock Vol.~8. ---
+\newblock Pp.~88633--88642.
+
+\bibitem{Liu2023}
+\selectlanguageifdefined{english}
+Machine-Learning Accelerating the Development of Perovskite Photovoltaics~/
+  Tiantian~Liu, Sen~Wang, Yinguang~Shi et~al.~// \BibEmph{Sol. RRL}. ---
+\newblock 2023. ---
+\newblock Vol.~7, no.~23. ---
+\newblock P.~2300650.
+
 \end{thebibliography}
