@@ -780,6 +780,43 @@ weight initializer &	\makecell{Xavier Normal, Xavier Uniform, \\He Normal, He Un
 
 \section{Символьна регресія}
 
+\begin{subequations} \label{eqNN}
+    \begin{align}
+      \mu_{n,n}& =\frac{N_{Dn}+1413,2}{T_n^{2,2508}+\frac{a_{n,n}\cdot b_{n,n}}{a_{n,n}+b_{n,n}}}\,, \label{eqNNa} \\
+      a_{n,n} &=\left(\frac{N_{Dn}}{0,873T_n+0,0727}\right)^{0,7212}\,, \label{eqNNb} \\
+      b_{n,n}& =0,215N_{Dn}^{0,58}+10,5T_n-1,342\,, \label{eqNNc} 
+    \end{align}
+\end{subequations}
+
+\begin{subequations} \label{eqNP}
+    \begin{align}
+      \mu_{n,p}& =26,3\cdot\left(\frac{N_{Dn}}{N_{Dn}+192}\right)^{0,62}+\frac{1412,3}{T_n^{2,25}+\frac{a_{n,p}\cdot b_{n,p}}{a_{n,p}+b_{n,p}}}\,, \label{eqNPa} \\
+      a_{n,p} &=1,92\cdot\left(\frac{N_{Dn}}{T_n+0,071}\right)^{0,717}\,, \label{eqNPb} \\
+      b_{n,p}& =5,7N_{Dn}^{0,103}\cdot T_n\,, \label{eqNPc}
+    \end{align}
+\end{subequations}
+
+
+\begin{subequations} \label{eqPP}
+    \begin{align}
+      \mu_{p,p}& =N_{Dn}^{0,448}+\frac{470}{T_n^{2,2505}+\frac{a_{p,p}\cdot b_{p,p}}{a_{p,p}+b_{p,p}}}\,, \label{eqPPa} \\
+      a_{p,p} &=2,652 N_{Dn}^{0,1669}\cdot T_n\,, \label{eqPPb} \\
+      b_{p,p}& =0,578 N_{Dn}^{0,7587}\cdot T_n^{-0,755}\,, \label{eqPPc}
+    \end{align}
+\end{subequations}
+
+
+\begin{subequations} \label{eqPN}
+    \begin{align}
+      \mu_{p,n}& =\frac{0,0226N_{Dn}\cdot\ln T_n}{\ln T_n+0,63}
+      +\frac{113,56}{\left[0,15617T_n^{2,94}+\left(\frac{a_{p,n}\cdot b_{p,n}}{1,151a_{p,n}+ 4,21 b_{p,n}}\right)^{1,177}\right]^{0,76547}}\,, \label{eqPNa} \\
+      a_{p,n} &=N_{Dn}^{0,6085}\,, \label{eqPNb} \\
+      b_{p,n}& =T_n^{1,143}\,. \label{eqPNc}
+    \end{align}
+\end{subequations}
+
+
+
 \section{Класичні регресійні моделі}
 
 в Таблицях~\ref{tblRFrez}-\ref{tblDNNrez}.
@@ -907,19 +944,20 @@ weight initializer &\makecell{Xavier \\Normal}&\multicolumn{2}{c|}{He Normal}&\m
 
 \begin{landscape}
 
-\vspace{30mm}
+\vspace{15mm}
 
 \begin{table}[htbp]
-\setlength{\tabcolsep}{3pt}
-\renewcommand{\arraystretch}{1.5} 
+\setlength{\tabcolsep}{1.5pt}
+\renewcommand{\arraystretch}{1.5}
 \centering
-\caption{Метрики відхилень розрахованих значень рухливості у кремнії від теорії Klaassen}
+\caption{Метрики відхилень розрахованих значень рухливості у кремнії від теорії Klaassen.
+Жирним виділено найкращі результати для кожної метрики при передбаченнях рухливості електронів та дірок, коли вони є основними та неосновними носіями заряду}
 \begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
 \hline
 \multirow{2}{*}{Модель}&\multicolumn{4}{c|}{MAPE, \%}&\multicolumn{4}{c|}{$\mathrm{APE}_\mathrm{MAX}$, \%}
    &\multicolumn{4}{c|}{$\mathrm{APE}_\mathrm{MED}$, \%}&\multicolumn{4}{c|}{MAE,$\text{см}^2/(\text{B}\cdot\text{с})$}\\
 \cline{2-17}
-&$\mu_{n,n}$&$\mu_{n,p}$&$\mu_{p,p}$&$\mu_{p,n}$&$\mu_{n,n}$&$\mu_{n,p}$&$\mu_{p,p}$&$\mu_{p,n}$ 
+&$\mu_{n,n}$&$\mu_{n,p}$&$\mu_{p,p}$&$\mu_{p,n}$&$\mu_{n,n}$&$\mu_{n,p}$&$\mu_{p,p}$&$\mu_{p,n}$
 &$\mu_{n,n}$&$\mu_{n,p}$&$\mu_{p,p}$&$\mu_{p,n}$&$\mu_{n,n}$&$\mu_{n,p}$&$\mu_{p,p}$&$\mu_{p,n}$\\
 \hline
 Arora \cite{Arora1982}&5,35&20,3&5,62&37,8&38,2&70,7&17,6&111&3,67&16,3&5,01&32,6&45,7&103&16,0&82,6\\
@@ -930,7 +968,7 @@ RF\_S&1,42&1,77&1,46&1,41&12,3&14,4&14,5&12,6&0,852&1,04&0,744&0,872&11,6&14,1&4
 \hline
 SVR\_N&46,5&51,5&32,6&33,4&1630&1750&2070&1510&14,9&17,4&13,1&12,9&220&244&68,8&73,6\\
 \hline
-SVR\_S&0,108&0,087&0,098&0,082&1,71&2,16&2,26&3,56&0,088&0,064&0,069&0,050&1,20&1,03&0,394&0,410\\
+SVR\_S&0,108&\textbf{0,087}&\textbf{0,098}&0,082&1,71&2,16&2,26&3,56&0,088&\textbf{0,064}&\textbf{0,069}&0,050&1,20&1,03&0,394&0,410\\
 \hline
 GB\_N&2,20&1,46&1,60&1,55&58,2&10,8&17,3&11,0&1,46&0,939&0,905&1,15&15,43&10,85&4,75&5,24\\
 \hline
@@ -940,7 +978,8 @@ DNN\_N&0,925&0,942&2,01&0,529&9,39&20,0&8,07&6,02&0,621&0,702&1,893&0,383&5,23&5
 \hline
 DNN\_S&0,374&0,623&0,655&0,671&2,23&3,75&5,96&2,97&0,323&0,392&0,556&0,631&3,58&3,49&2,88&1,97\\
 \hline
-SR&0,094&0,141&0,140&0,049&1,19&1,05&1,48&0,61&0,045&0,083&0,079&0,028&0,475&0,764&0,313&0,119\\
+SR&\textbf{0,094}&0,137&0,140&\textbf{0,050}&\textbf{1,19}&\textbf{0,992}&\textbf{1,48}&\textbf{0,596}&\textbf{0,044}&0,077&0,079&\textbf{0,026}&\textbf{0,475}
+   &\textbf{0,708}&\textbf{0,314}&\textbf{0,115}\\
 \hline
 \end{tabular}
 \end{table}
