@@ -34,6 +34,9 @@
 \usepackage{tabu}
 \usepackage{makecell}
 
+\usepackage{pdflscape}
+\usepackage{booktabs}
+
 \usepackage{longtable}
 \usepackage{colortbl}
 \definecolor{MyGray}{gray}{0.9}
@@ -568,7 +571,7 @@ $F_{1/2}$ --- інтеграл Фермі--Дірака ступеня 1/2, дл
 залежності між вхідними та вихідними параметрами та дозволяє отримати аналітичний зв'язок між ними у вигляді математичної формули \cite{Angelis2023}.
 При побудові функціональної залежності та пошуку числових параметрів використовуються еволюційні алгоритми.
 SR є одним із методів, які об'єднують дані, моделі машинного навчання та наукові теорії, дозволяючи отримати аналітичні вирази,
-які можуть бути інтерпретовані, дозволяють отримати передбачення дешевши з точки зору обчислень порівняно з класичними моделями МН 
+які можуть бути інтерпретовані, дозволяють отримати передбачення дешевши з точки зору обчислень порівняно з класичними моделями МН
 та легше інтегруються у вирішення різноманітних фізичних проблем.
 
 При реалізації цього алгоритму використовувався open source пакет PySR, орієнтований на використання мови Python.
@@ -587,7 +590,7 @@ SR може призвести до складних виразів, які ва
 та $\ln$ і $x^y$ в $\exp$.
 Також було заборонено комплексність (складність) показника експоненти вище 3 та показника функції $x^y$ вище 5.
 
-Попередня обробка даних полягала у їхній нормалізації, тобто на вхід SR моделі надходили величини $T_n$ $N_{Dn}$, 
+Попередня обробка даних полягала у їхній нормалізації, тобто на вхід SR моделі надходили величини $T_n$ $N_{Dn}$,
 пов'язані з реальними температурою та концентрацією легуючої домішки наступним чином:
 \begin{subequations} \label{eqNorm}
     \begin{align}
@@ -598,11 +601,11 @@ SR може призвести до складних виразів, які ва
 
 \section{Класичні регресійні моделі}
 
-Окрім символьної регресії, в роботі для оцінки рухливості також були реалізовані декілька моделей, які базуються на використанні 
+Окрім символьної регресії, в роботі для оцінки рухливості також були реалізовані декілька моделей, які базуються на використанні
 більш класичних алгоритмів МН. А саме, були використані:
 
 \noindent
-1)~\emph{Random Forest} (RF)  --- алгоритм, який досягає покращення точності прогнозування 
+1)~\emph{Random Forest} (RF)  --- алгоритм, який досягає покращення точності прогнозування
 завдяки навчанню декількох дерев рішень на різних підмножинах тренувального набору даних;
 RF агрегує прогнози всіх дерев, використовуючи голосування під час класифікації або усереднення у випадку вирішення регресійних завдань (як в нашому випадку),
 що дозволяє зменшити перенавчання та підвищуючи стійкість до шуму \cite{Breiman2001};
@@ -634,10 +637,10 @@ RF агрегує прогнози всіх дерев, використовую
 (визначені відповідно до (\ref{eqNorm})), а прогнози були орієнтовані на отримання величини $\mu$.
 Відповідні моделі надалі позначатимуться шляхом додавання до абревіатури використаного алгоритму суфіксу ``\_N'' (RF\_N, DNN\_N тощо)
 Проте ознаки достатньо сильно відрізняються за величиною між собою, а $N_D$ ще й змінюється у межах шести порядків,
-що може бути перепоною для точних прогнозів. 
+що може бути перепоною для точних прогнозів.
 Тому для другого типу моделей проводилася попередня обробка вхідних ознак, яка передбачала нормалізацію (Z-стандартизацію, вже вибачте за усталений термін)
 як значень температури $T$,
-так і логарифмів ступеню легування $\lg N_D$ 
+так і логарифмів ступеню легування $\lg N_D$
 (здійснювалися лінійні перетворення, в результаті яких тренувальні набори кожної з ознак характеризувалися нульовим середнім і одиничним стандартним відхиленням).
 Моделі були орієнтовані на передбачення нормалізованих значень $\lg \mu$.
 Процес нормалізації був реалізований за допомогою функції StandartScaler з пакету Scikit-learn і позначення відповідних моделей міститиме суфікс ``\_S''.
@@ -665,7 +668,7 @@ min samples split	&2, 3, 4, 5\\
 \hline
 bootstrap	& True, False \\
 \hline
-max features &	0.5, 1\\
+max features &	0,5, 0,8, 1\\
 \hline
 \end{tabular}
 \end{table}
@@ -679,7 +682,7 @@ max features &	0.5, 1\\
 \hline
 Гіперпараметр&Можливі значення (діапазон пошуку)\\
 \hline
-\# estimators&	$200\div800$\\
+\# estimators&	$200\div900$\\
 \hline
 max depth&	$2\div40$\\
 \hline
@@ -689,7 +692,7 @@ min samples split	&2, 3, 4, 5, 6, 7\\
 \hline
 learning rate	& $10^{-3}\div1$ \\
 \hline
-max features &	0.5, 1\\
+max features &	0,5, 0,6, 0,7, 0,8, 0,9, 1\\
 \hline
 \end{tabular}
 \end{table}
@@ -749,7 +752,7 @@ weight initializer &	\makecell{Xavier Normal, Xavier Uniform, \\He Normal, He Un
 
 \begin{figure}
 	\centering
-     \includegraphics[width=0.6\linewidth]{Fig22.png}
+     \includegraphics[width=0.5\linewidth]{Fig22.png}
 	  \caption{Конфігурація схованих шарів для використаних DNN моделей.
 }\label{figDNN}
 \end{figure}
@@ -779,106 +782,118 @@ weight initializer &	\makecell{Xavier Normal, Xavier Uniform, \\He Normal, He Un
 
 \section{Класичні регресійні моделі}
 
+в Таблицях~\ref{tblRFrez}-\ref{tblDNNrez}.
 
 \begin{table}
-%\setlength{\tabcolsep}{3pt}
+\setlength{\tabcolsep}{3pt}
 \caption{Використані значення гіперпараметрів для RF моделей}
 \label{tblRFrez}
 \centering
-\begin{tabular}{|l|c|c|}
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|}
 \hline
-\multirow{2}{*}{Гіперпараметр} & \multicolumn{2}{c|}{Модель} \\
-\cline{2-3}
-&RF\_N&RF\_S \rule{0pt}{11pt}\\
+Модель& \multicolumn{4}{c|}{RF\_N}& \multicolumn{4}{c|}{RF\_S} \rule{0pt}{11pt}\\
 \hline
-\# estimators&	\\
+Цільова величина&$\mu_{n,n}$&$\mu_{n,p}$&$\mu_{p,p}$&$\mu_{p,n}$&$\mu_{n,n}$&$\mu_{n,p}$&$\mu_{p,p}$&$\mu_{p,n}$\\
 \hline
-%max depth&	$10\div70$\\
-%\hline
-%min samples leaf &	1, 2, 3, 4, 5\\
-%\hline
-%min samples split	&2, 3, 4, 5\\
-%\hline
-%bootstrap	& True, False \\
-%\hline
-%max features &	0.5, 1\\
+Гіперпараметр&\multicolumn{8}{c|}{Значення}\\
+\hline
+\# estimators&468&500&658&510&278&564&304&204\\
+\hline
+max depth&19&58&37&19&30&15&55&55\\
+\hline
+min samples leaf &1&1&1&1&1&1&1&1\\
+\hline
+min samples split	&2&2&2&2&2&2&2&2\\
+\hline
+bootstrap	&True&True&True&True&True&True&True&True\\
+\hline
+max features &1,0&1,0&1,0&1,0&1,0&1,0&1,0&1,0\\
 \hline
 \end{tabular}
 \end{table}
 
 
 \begin{table}[!ht]
+\setlength{\tabcolsep}{3pt}
 \caption{Використані значення гіперпараметрів для GB моделей}
 \label{tblGBrez}
-\centering
-\begin{tabular}{|l|c|c|}
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|}
 \hline
-\multirow{2}{*}{Гіперпараметр} & \multicolumn{2}{c|}{Модель} \\
-\cline{2-3}
-&GB\_N&GB\_S \rule{0pt}{11pt}\\
+Модель& \multicolumn{4}{c|}{GB\_N}& \multicolumn{4}{c|}{GB\_S} \rule{0pt}{11pt}\\
 \hline
-%\# estimators&	$200\div800$\\
-%\hline
-%max depth&	$2\div40$\\
-%\hline
-%min samples leaf &	1, 2, 3, 4, 5, 6, 7\\
-%\hline
-%min samples split	&2, 3, 4, 5, 6, 7\\
-%\hline
-%learning rate	& $10^{-3}\div1$ \\
-%\hline
-%max features &	0.5, 1\\
+Цільова величина&$\mu_{n,n}$&$\mu_{n,p}$&$\mu_{p,p}$&$\mu_{p,n}$&$\mu_{n,n}$&$\mu_{n,p}$&$\mu_{p,p}$&$\mu_{p,n}$\\
+\hline
+Гіперпараметр&\multicolumn{8}{c|}{Значення}\\
+\hline
+\# estimators&700&800&800&570&840&770&810&850\\
+\hline
+max depth&4&4&4&4&4&4&2&4\\
+\hline
+min samples leaf &6&2&5&4&5&3&5&4\\
+\hline
+min samples split	&2&2&3&3&5&5&5&6\\
+\hline
+learning rate, $10^{-2}$	&6,44&9,78&7,69&4,68&9,49&4,63&9,67&5,29\\
+\hline
+max features &0,8&1,0&1,0&0,6&1,0&0,7&1,0&0,8\\
 \hline
 \end{tabular}
 \end{table}
 
 \begin{table}[!ht]
+\setlength{\tabcolsep}{3pt}
 \caption{Використані значення гіперпараметрів для SVR моделей}
 \label{tblSVRrez}
 \centering
-\begin{tabular}{|l|c|c|}
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|}
 \hline
-\multirow{2}{*}{Гіперпараметр} & \multicolumn{2}{c|}{Модель} \\
-\cline{2-3}
-&SVR\_N&SVR\_S \rule{0pt}{11pt}\\
+Модель& \multicolumn{4}{c|}{SVR\_N}& \multicolumn{4}{c|}{SVP\_S} \rule{0pt}{11pt}\\
 \hline
-%kernel &	linear, poly, rbf, sigmoid\\
-%\hline
-%degree$^*$&	2, 3, 4, 5, 6\\
-%\hline
-%$C_0$ &	$0-8$\\
-%\hline
-%Tolerance	&$10^{-5}\div10^{-2}$\\
-%\hline
-%$C$	& $10^{-2}\div15$ \\
-%\hline
-%$\varepsilon$ &	$10^{-4}\div15$\\
+Цільова величина&$\mu_{n,n}$&$\mu_{n,p}$&$\mu_{p,p}$&$\mu_{p,n}$&$\mu_{n,n}$&$\mu_{n,p}$&$\mu_{p,p}$&$\mu_{p,n}$\\
 \hline
-\multicolumn{2}{l}{$^*$ лише для kernel=poly}\\
+Гіперпараметр&\multicolumn{8}{c|}{Значення}\\
+\hline
+kernel &poly&poly&poly&poly&rbf&rbf&rbf&rbf\\
+\hline
+degree&6&6&6&6&--&--&--&--\\
+\hline
+$C_0$ &7,52&7,54&7,08&7,02&4,92&2,73&3,88&6,78\\
+\hline
+Tolerance, $10^{-3}$&5,64&2,22&0,60&0,015&0,75&0,32&0,083&0,068\\
+\hline
+$C$	&9,79&7,04&3,00&4,19&15&15&15&15\\
+\hline
+$\varepsilon$, $10^{-3}$ &33,2&11,6&10,4&0,91&0,55&0,50&2,44&0,84\\
+\hline
 \end{tabular}
 \end{table}
 
 \begin{table}[!ht]
+\setlength{\tabcolsep}{1pt}
 \caption{Використані значення гіперпараметрів для DNN моделей}
 \label{tblDNNrez}
 \centering
-\begin{tabular}{|l|c|c|}
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|}
 \hline
-\multirow{2}{*}{Гіперпараметр} & \multicolumn{2}{c|}{Модель} \\
-\cline{2-3}
-&DNN\_N&DNN\_S \rule{0pt}{11pt}\\
+Модель& \multicolumn{4}{c|}{DNN\_N}& \multicolumn{4}{c|}{DNN\_S} \rule{0pt}{11pt}\\
 \hline
-%\# nodes for first hidden layer &$5\div150$\\
-%\hline
-%batch size&	1, 4, 16\\
-%\hline
-%activation function &	ReLu, sigmoid, tanh, SELU, ELU\\
-%\hline
-%optimizer	&\makecell{SGD, RMSprop, Adam, Adadelta, \\Adagrad, Adamax, Nadam, Ftrl}\\
-%\hline
-%learning rate	& $10^{-4}\div10^{-2}$ \\
-%\hline
-%weight initializer &	\makecell{Xavier Normal, Xavier Uniform, \\He Normal, He Uniform, \\Random Normal, Random Uniform}\\
+Цільова величина&$\mu_{n,n}$&$\mu_{n,p}$&$\mu_{p,p}$&$\mu_{p,n}$&$\mu_{n,n}$&$\mu_{n,p}$&$\mu_{p,p}$&$\mu_{p,n}$\\
+\hline
+Гіперпараметр&\multicolumn{8}{c|}{Значення}\\
+\hline
+\makecell{\# nodes for first \\hidden layer} &25&100&25&75&25&75&100&25\\
+\hline
+batch size&\multicolumn{8}{c|}{16}\\
+\hline
+activation function &\multicolumn{2}{c|}{SELU}&ReLu&SELU&sigmoid&ReLu&\multicolumn{2}{c|}{sigmoid}\\
+\hline
+optimizer	&Nadam&\multicolumn{4}{c|}{Adamax}&Nadam&\multicolumn{2}{c|}{Adamax}\\
+\hline
+learning rate, $10^{-3}$	&0,58&1,25&8,05&5,17&13,0&4,89&12,8&2,84\\
+\hline
+weight initializer &\makecell{Xavier \\Normal}&\multicolumn{2}{c|}{He Normal}&\makecell{Xavier \\Normal}&\multicolumn{3}{c|}{He Normal}&\makecell{Xavier \\Normal}\\
+\hline
+\# epoch &\multicolumn{8}{c|}{1000}\\
 \hline
 \end{tabular}
 \end{table}
@@ -886,6 +901,55 @@ weight initializer &	\makecell{Xavier Normal, Xavier Uniform, \\He Normal, He Un
 
 
 \section{Порівняння точності різних алгоритмів машинного навчання}
+
+
+Текст перед таблицею...
+
+\begin{landscape}
+
+\vspace{30mm}
+
+\begin{table}[htbp]
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.5} 
+\centering
+\caption{Метрики відхилень розрахованих значень рухливості у кремнії від теорії Klaassen}
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+\multirow{2}{*}{Модель}&\multicolumn{4}{c|}{MAPE, \%}&\multicolumn{4}{c|}{$\mathrm{APE}_\mathrm{MAX}$, \%}
+   &\multicolumn{4}{c|}{$\mathrm{APE}_\mathrm{MED}$, \%}&\multicolumn{4}{c|}{MAE,$\text{см}^2/(\text{B}\cdot\text{с})$}\\
+\cline{2-17}
+&$\mu_{n,n}$&$\mu_{n,p}$&$\mu_{p,p}$&$\mu_{p,n}$&$\mu_{n,n}$&$\mu_{n,p}$&$\mu_{p,p}$&$\mu_{p,n}$ 
+&$\mu_{n,n}$&$\mu_{n,p}$&$\mu_{p,p}$&$\mu_{p,n}$&$\mu_{n,n}$&$\mu_{n,p}$&$\mu_{p,p}$&$\mu_{p,n}$\\
+\hline
+Arora \cite{Arora1982}&5,35&20,3&5,62&37,8&38,2&70,7&17,6&111&3,67&16,3&5,01&32,6&45,7&103&16,0&82,6\\
+\hline
+RF\_N &1,29&1,69&1,52&1,47&9,33&14,5&4,60&10,9&0,805&0,994&0,264&0,913&11,0&13,5&4,50&4,76\\
+\hline
+RF\_S&1,42&1,77&1,46&1,41&12,3&14,4&14,5&12,6&0,852&1,04&0,744&0,872&11,6&14,1&4,40&4,76\\
+\hline
+SVR\_N&46,5&51,5&32,6&33,4&1630&1750&2070&1510&14,9&17,4&13,1&12,9&220&244&68,8&73,6\\
+\hline
+SVR\_S&0,108&0,087&0,098&0,082&1,71&2,16&2,26&3,56&0,088&0,064&0,069&0,050&1,20&1,03&0,394&0,410\\
+\hline
+GB\_N&2,20&1,46&1,60&1,55&58,2&10,8&17,3&11,0&1,46&0,939&0,905&1,15&15,43&10,85&4,75&5,24\\
+\hline
+GB\_S&1,32&1,60&1,82&1,23&1,42&11,7&15,0&8,48&0,841&1,104&1,19&0,874&11,3&13,4&5,92&4,19\\
+\hline
+DNN\_N&0,925&0,942&2,01&0,529&9,39&20,0&8,07&6,02&0,621&0,702&1,893&0,383&5,23&5,37&4,22&1,39\\
+\hline
+DNN\_S&0,374&0,623&0,655&0,671&2,23&3,75&5,96&2,97&0,323&0,392&0,556&0,631&3,58&3,49&2,88&1,97\\
+\hline
+SR&0,094&0,141&0,140&0,049&1,19&1,05&1,48&0,61&0,045&0,083&0,079&0,028&0,475&0,764&0,313&0,119\\
+\hline
+\end{tabular}
+\end{table}
+\end{landscape}
+
+Текст після таблиці...
+
+
+
 
 \chapter*{Висновки}
 
