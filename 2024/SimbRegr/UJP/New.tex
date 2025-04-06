@@ -1,4 +1,4 @@
-\documentclass[10pt,a5paper,titlepage,oneside]{book}
+\documentclass[12pt,a4paper,titlepage,oneside]{book}
 %\documentclass{article} % Specifies the document class
 %\usepackage[cp1251]{inputenc}
 
@@ -17,6 +17,7 @@
 \usepackage{enumerate,graphicx,dcolumn,amsthm}
 \usepackage[english,ukrainian]{babel}
 \usepackage{indentfirst}
+%\usepackage{subcaption}
 \usepackage{caption}[2013/01/20]
 %\captionsetup{labelsep=period,font=sf, labelfont=bf, format=plain, justification=centerlast, tablename=Таблиця}
 \captionsetup{labelsep=period,font=sf, labelfont=bf, format=plain, justification=justified, tablename=Таблиця, tablewithin=none}
@@ -275,10 +276,10 @@ $p_c$, см$^{-3}$&---&$9,23\cdot10^{16}$\\
 Спроба взяти до уваги температурні залежності була зроблена N.~Arora зі співавторами \cite{Arora1982}.
 При цьому розглядалися розсіяння на фононах та  іонізованих домішках і було запропоновано використання узагальненого виразу Caughey--Thomas
 \begin{equation}\label{eqArora}
-  \mu=\mu_\mathrm{min}+\frac{\mu_0}{1+\left(\frac{N}{N_0}\right)^\alpha}\,,
+  \mu=\mu_\mathrm{min}+\frac{\mu_0}{1+\left(\frac{N_I}{N_0}\right)^\alpha}\,,
 \end{equation}
-де $N=N_a^-+N_d^+$ --- загальна концентрація іонізованих легантів
-($N_a^-$ та $N_d^+$ кількості іонізованих акцепторів та донорів у одиниці об'єму, відповідно),
+де $N_I=N_a^-+N_d^+$ --- загальна концентрація іонізованих легантів
+($N_a^-$ та $N_d^+$ --- кількості іонізованих акцепторів та донорів у одиниці об'єму, відповідно),
 а решта коефіцієнтів у виразі (\ref{eqArora}) залежать від температури схожим чином:
 \begin{equation}\label{eqArora2}
 \begin{aligned}
@@ -339,13 +340,21 @@ $\beta_4$&\multicolumn{4}{c|}{-0,146}\\
   \mu=\frac{\mu_L\,\mu_{DA}}{\mu_L+\mu_{DA}}\,,
 \end{equation}
 де
+%\begin{eqnarray}
+%% \nonumber to remove numbering (before each equation)
+%  \label{eqK2}
+%  \mu_L &=&  \mu_\mathrm{max} \left(\frac{300}{T}\right)^{2,25}\, \\ \label{eqK3}
+% \nonumber  \mu_{DA}  &=& \frac{\mu_\mathrm{max}^2}{\mu_\mathrm{max} - \mu_\mathrm{min}} \cdot
+%    \frac{N_{sc}}{N_\mathrm{eff}} \cdot \left(\frac{N_{ref}}{N_{sc}}\right)^{\alpha} \cdot \left(\frac{T}{300}\right)^{3\alpha - 1,5}\\
+%    &&+ \frac{\mu_\mathrm{max} \, \mu_\mathrm{min}}{\mu_\mathrm{max} - \mu_\mathrm{min}} \cdot \frac{n + p}{N_\mathrm{eff}} \cdot \left(\frac{300}{T}\right)^{0,5}\,
+%\end{eqnarray}
 \begin{eqnarray}
 % \nonumber to remove numbering (before each equation)
   \label{eqK2}
   \mu_L &=&  \mu_\mathrm{max} \left(\frac{300}{T}\right)^{2,25}\, \\ \label{eqK3}
- \nonumber  \mu_{DA}  &=& \frac{\mu_\mathrm{max}^2}{\mu_\mathrm{max} - \mu_\mathrm{min}} \cdot
-    \frac{N_{sc}}{N_\mathrm{eff}} \cdot \left(\frac{N_{ref}}{N_{sc}}\right)^{\alpha} \cdot \left(\frac{T}{300}\right)^{3\alpha - 1,5}\\
-    &&+ \frac{\mu_\mathrm{max} \, \mu_\mathrm{min}}{\mu_\mathrm{max} - \mu_\mathrm{min}} \cdot \frac{n + p}{N_\mathrm{eff}} \cdot \left(\frac{300}{T}\right)^{0,5}\,
+  \mu_{DA}  &=& \frac{\mu_\mathrm{max}^2}{\mu_\mathrm{max} - \mu_\mathrm{min}} \cdot
+    \frac{N_{sc}}{N_\mathrm{eff}} \cdot \left(\frac{N_{ref}}{N_{sc}}\right)^{\alpha} \cdot \left(\frac{T}{300}\right)^{3\alpha - 1,5}
+    + \frac{\mu_\mathrm{max} \, \mu_\mathrm{min}}{\mu_\mathrm{max} - \mu_\mathrm{min}} \cdot \frac{n + p}{N_\mathrm{eff}} \cdot \left(\frac{300}{T}\right)^{0,5}\,
 \end{eqnarray}
 а константи, що входять до рівнянь (\ref{eqK2})-(\ref{eqK3}) наведені у Табл.~\ref{tblK1}.
 Величини $N_{sc}$ та $N_\mathrm{eff}$ є функціями, вигляд яких залежить від типу носіїв:
@@ -715,7 +724,7 @@ Tolerance	&$10^{-5}\div10^{-2}$\\
 \hline
 $C$	& $10^{-2}\div15$ \\
 \hline
-$\varepsilon$ &	$10^{-4}\div15$\\
+$\varepsilon$ &	$10^{-4}\div0,5$\\
 \hline
 \multicolumn{2}{l}{$^*$ лише для kernel=poly}\\
 \end{tabular}
@@ -735,17 +744,19 @@ batch size&	1, 4, 16\\
 \hline
 activation function &	ReLu, sigmoid, tanh, SELU, ELU\\
 \hline
-optimizer	&\makecell{SGD, RMSprop, Adam, Adadelta, \\Adagrad, Adamax, Nadam, Ftrl}\\
+%optimizer	&\makecell{SGD, RMSprop, Adam, Adadelta, \\Adagrad, Adamax, Nadam, Ftrl}\\
+optimizer	&SGD, RMSprop, Adam, Adadelta, Adagrad, Adamax, Nadam, Ftrl\\
 \hline
 learning rate	& $10^{-4}\div10^{-2}$ \\
 \hline
-weight initializer &	\makecell{Xavier Normal, Xavier Uniform, \\He Normal, He Uniform, \\Random Normal, Random Uniform}\\
+%weight initializer &	\makecell{Xavier Normal, Xavier Uniform, \\He Normal, He Uniform, \\Random Normal, Random Uniform}\\
+weight initializer &	\makecell{Xavier Normal, Xavier Uniform, He Normal, He Uniform, \\Random Normal, Random Uniform}\\
 \hline
 \end{tabular}
 \end{table}
 
 Зазначимо, що у випадку DNN вхідний шар складався з двох вузлів, вихідний містив один вузол,
-а структура схованих повнозв'язних шарів наведена на Рис.~\ref{figDNN}.
+а структура схованих повнозв'язних шарів наведена на Рис.~\ref{figDNNc}.
 Як видно з рисунку, використовувалося шість схованих шарів, кількість вузлів у яких поступово зменшувалося:
 від шару до шару на 10\% від кількості вузлів у першому схованому $N_{n1l}$), яка була одним із гіперпараметрів, що налаштовувалися.
 
@@ -754,7 +765,7 @@ weight initializer &	\makecell{Xavier Normal, Xavier Uniform, \\He Normal, He Un
 	\centering
      \includegraphics[width=0.5\linewidth]{Fig22.png}
 	  \caption{Конфігурація схованих шарів для використаних DNN моделей.
-}\label{figDNN}
+}\label{figDNNc}
 \end{figure}
 
 Налаштування моделей здійснювалося за допомогою пакету Optuna \cite{Akiba2019} з використанням TPE самплера та Hyperband прюнера
@@ -765,6 +776,24 @@ weight initializer &	\makecell{Xavier Normal, Xavier Uniform, \\He Normal, He Un
 
 
 
+\section{Метрики оцінювання}
+
+To build a regression model, it is crucial to evaluate its performance using various metrics.
+These metrics assess how well the model has learned and predicted outcomes.
+The evaluation metrics for iron quantification were the mean squared error (MSE),
+
+and coefficient of determination (R$^2$), 
+
+\begin{equation}
+\label{eqMSE}
+    \mathrm{MSE} = \frac{1}{N}\displaystyle\sum_{i=1}^{N} (\hat{y_i}-y_i)^2\,,
+\end{equation}
+where $\hat{y_i}$ represents the predicted value for the $i$--th data point,
+$y_i$ is the known value for the $i$--th data point,
+and $N$ is the number of samples in the dataset.
+MSE is one of the most commonly used metrics for evaluating model accuracy.
+However, since the computation of $\hat{y_i}$ involves the normalization and logarithm transformation of $N_\mathrm{Fe}$,
+
 %Weights=1/Ytest
 %
 %X1 = np.expand_dims(np.log10(DT.XInverseNormalize(Xtest)[:, 1]), axis=1)
@@ -772,9 +801,23 @@ weight initializer &	\makecell{Xavier Normal, Xavier Uniform, \\He Normal, He Un
 %
 %Weights1 = Weights * (X1 **1)
 
+Therefore, we used MAPE, which determines the mean relative error:
+\begin{equation}
+\label{eqMAPE}
+    \mathrm{MAPE} = \frac{1}{N}\displaystyle\sum_{i=1}^{N} \frac{|\mu^\mathrm{PRED}_i-\mu^\mathrm{TRUE}_i|}{\mu^\mathrm{TRUE}_i}\times 100 \%\,,
+\end{equation}
+where $\mu^\mathrm{PRED}_i$ is the predicted value of iron concentration,
+$\mu^\mathrm{TRUE}_i$ is the known value (used in simulation or obtained from experimental iron determination).
+mean absolute percentage error (MAPE),
 
+$\mathrm{APE}_\mathrm{MAX}$, 
+$\mathrm{APE}_\mathrm{MED}$, 
 
-\section{Метрики оцінювання}
+\begin{equation}
+\label{eqMAE}
+    \mathrm{MAE} = \frac{1}{N}\displaystyle\sum_{i=1}^{N} |\mu^\mathrm{PRED}_i-\mu^\mathrm{TRUE}_i|\,,
+\end{equation}
+
 
 \chapter{Отримані результати}
 
@@ -784,7 +827,7 @@ weight initializer &	\makecell{Xavier Normal, Xavier Uniform, \\He Normal, He Un
     \begin{align}
       \mu_{n,n}& =\frac{N_{Dn}+1413,2}{T_n^{2,2508}+\frac{a_{n,n}\cdot b_{n,n}}{a_{n,n}+b_{n,n}}}\,, \label{eqNNa} \\
       a_{n,n} &=\left(\frac{N_{Dn}}{0,873T_n+0,0727}\right)^{0,7212}\,, \label{eqNNb} \\
-      b_{n,n}& =0,215N_{Dn}^{0,58}+10,5T_n-1,342\,, \label{eqNNc} 
+      b_{n,n}& =0,215N_{Dn}^{0,58}+10,5T_n-1,342\,, \label{eqNNc}
     \end{align}
 \end{subequations}
 
@@ -816,6 +859,49 @@ weight initializer &	\makecell{Xavier Normal, Xavier Uniform, \\He Normal, He Un
 \end{subequations}
 
 
+\begin{figure}
+	\centering
+     \includegraphics[width=0.49\linewidth]{Fig31a.png}
+     \includegraphics[width=0.49\linewidth]{Fig31b.png}
+     \includegraphics[width=0.49\linewidth]{Fig31c.png}
+     \includegraphics[width=0.49\linewidth]{Fig31d.png}
+	  \caption{Залежності величини відносної похибки при оцінці рухливості носіїв заряду 
+у кремнії за допомогою виразів (\ref{eqNN}) -- (\ref{eqPN}),
+отриманих за допомогою символьної регресії, від температури та рівня легування.
+Представлені випадки оцінки рухливості електронів (а, б) та дірок (в, г), коли вони є
+основними (а, в) та неосновними (б, г) носіями заряду.
+}\label{figSR}
+\end{figure}
+
+Умова повної іонізації донорної домішки відповідає положенню рівня Фермі на декілька $kT$
+нижче рівня домішки
+Температура при якій $E_F=E_d$
+
+температура виснаження
+\begin{equation}\label{eqTs}
+  n-\text{тип}:\;T_s=\frac{E_d}{k\ln(N_C/N_d)};\quad p-\text{тип}:\;T_s=\frac{E_d}{k\ln(N_V/N_a)}\,.
+\end{equation}
+
+%\begin{subequations} \label{eqK5}
+%    \begin{align}
+%       \text{електрони:} \quad& N_\mathrm{eff} =N_d^+ + N_a^- \cdot G_n(P_n,T) +\frac{p}{F_n(P_n,T)}\,, \label{eqK5a} \\
+%        \text{дірки:} \quad& N_\mathrm{eff}= N_a^- + N_d^+ \cdot G_p(P_p,T) +\frac{n}{F_p(P_p,T)}\,. \label{eqK5b}
+%    \end{align}
+%\end{subequations}
+
+температура початку власної провідності:
+\begin{equation}\label{eqTi}
+  T_i=\frac{E_G}{k \ln\left(\frac{N_C N_V}{N_D^2}\right)}
+\end{equation}
+
+\begin{figure}
+	\centering
+     \includegraphics[width=0.49\linewidth]{FigTs.png}
+     \includegraphics[width=0.49\linewidth]{FigTi.png}
+	  \caption{Залежності виснаження (а) та температури початку власної провідності (б)
+від концентрації легуючих домішок. У частині а наведено результати розрахунків для декількох типів легуючих домішок.
+}\label{figTsTi}
+\end{figure}
 
 \section{Класичні регресійні моделі}
 
@@ -854,6 +940,7 @@ max features &1,0&1,0&1,0&1,0&1,0&1,0&1,0&1,0\\
 \setlength{\tabcolsep}{3pt}
 \caption{Використані значення гіперпараметрів для GB моделей}
 \label{tblGBrez}
+\centering
 \begin{tabular}{|l|c|c|c|c|c|c|c|c|}
 \hline
 Модель& \multicolumn{4}{c|}{GB\_N}& \multicolumn{4}{c|}{GB\_S} \rule{0pt}{11pt}\\
@@ -928,12 +1015,88 @@ optimizer	&Nadam&\multicolumn{4}{c|}{Adamax}&Nadam&\multicolumn{2}{c|}{Adamax}\\
 \hline
 learning rate, $10^{-3}$	&0,58&1,25&8,05&5,17&13,0&4,89&12,8&2,84\\
 \hline
-weight initializer &\makecell{Xavier \\Normal}&\multicolumn{2}{c|}{He Normal}&\makecell{Xavier \\Normal}&\multicolumn{3}{c|}{He Normal}&\makecell{Xavier \\Normal}\\
+%weight initializer &\makecell{Xavier \\Normal}&\multicolumn{2}{c|}{He Normal}&\makecell{Xavier \\Normal}&\multicolumn{3}{c|}{He Normal}&\makecell{Xavier \\Normal}\\
+weight initializer &Xavier Normal&\multicolumn{2}{c|}{He Normal}&Xavier Normal&\multicolumn{3}{c|}{He Normal}&Xavier Normal\\
 \hline
 \# epoch &\multicolumn{8}{c|}{1000}\\
 \hline
 \end{tabular}
 \end{table}
+
+\begin{figure}
+	\centering
+     \includegraphics[width=0.35\linewidth]{RFNnn.png}\kern 20pt
+     \includegraphics[width=0.35\linewidth]{RFSnn.png}
+     \includegraphics[width=0.35\linewidth]{RFNnp.png}\kern 20pt
+     \includegraphics[width=0.35\linewidth]{RFSnp.png}
+     \includegraphics[width=0.35\linewidth]{RFNpp.png}\kern 20pt
+     \includegraphics[width=0.35\linewidth]{RFSpp.png}
+     \includegraphics[width=0.35\linewidth]{RFNpn.png}\kern 20pt
+     \includegraphics[width=0.35\linewidth]{RFSpn.png}
+	  \caption{Діаграми розсіювання, що порівнюють еталонні значення рухливості із значеннями, передбаченими RF моделями
+       на тестовому наборі даних.
+       Представлені випадки оцінки рухливості електронів (а--г) та дірок (д--ж), коли вони є
+       основними (а, б, д, е) та неосновними (в, г, є, ж) носіями заряду.
+       Попередня підготовка даних передбачала нормування (а, в, д, є) або нормалізацію (б, г, е, ж).
+}\label{figRF}
+\end{figure}
+
+\begin{figure}
+	\centering
+     \includegraphics[width=0.35\linewidth]{GBNnn.png}\kern 20pt
+     \includegraphics[width=0.35\linewidth]{GBSnn.png}
+     \includegraphics[width=0.35\linewidth]{GBNnp.png}\kern 20pt
+     \includegraphics[width=0.35\linewidth]{GBSnp.png}
+     \includegraphics[width=0.35\linewidth]{GBNpp.png}\kern 20pt
+     \includegraphics[width=0.35\linewidth]{GBSpp.png}
+     \includegraphics[width=0.35\linewidth]{GBNpn.png}\kern 20pt
+     \includegraphics[width=0.35\linewidth]{GBSpn.png}
+	  \caption{Діаграми розсіювання, що порівнюють еталонні значення рухливості із значеннями, передбаченими GB моделями
+       на тестовому наборі даних.
+       Представлені випадки оцінки рухливості електронів (а--г) та дірок (д--ж), коли вони є
+       основними (а, б, д, е) та неосновними (в, г, є, ж) носіями заряду.
+       Попередня підготовка даних передбачала нормування (а, в, д, є) або нормалізацію (б, г, е, ж).
+}\label{figGB}
+\end{figure}
+
+
+\begin{figure}
+	\centering
+     \includegraphics[width=0.35\linewidth]{SVRNnn.png}\kern 20pt
+     \includegraphics[width=0.35\linewidth]{SVRSnn.png}
+     \includegraphics[width=0.35\linewidth]{SVRNnp.png}\kern 20pt
+     \includegraphics[width=0.35\linewidth]{SVRSnp.png}
+     \includegraphics[width=0.35\linewidth]{SVRNpp.png}\kern 20pt
+     \includegraphics[width=0.35\linewidth]{SVRSpp.png}
+     \includegraphics[width=0.35\linewidth]{SVRNpn.png}\kern 20pt
+     \includegraphics[width=0.35\linewidth]{SVRSpn.png}
+	  \caption{Діаграми розсіювання, що порівнюють еталонні значення рухливості із значеннями, передбаченими SVR моделями
+       на тестовому наборі даних.
+       Представлені випадки оцінки рухливості електронів (а--г) та дірок (д--ж), коли вони є
+       основними (а, б, д, е) та неосновними (в, г, є, ж) носіями заряду.
+       Попередня підготовка даних передбачала нормування (а, в, д, є) або нормалізацію (б, г, е, ж).
+}\label{figSVR}
+\end{figure}
+
+
+
+\begin{figure}
+	\centering
+     \includegraphics[width=0.35\linewidth]{DNNNnn.png}\kern 20pt
+     \includegraphics[width=0.35\linewidth]{DNNSnn.png}
+     \includegraphics[width=0.35\linewidth]{DNNNnp.png}\kern 20pt
+     \includegraphics[width=0.35\linewidth]{DNNSnp.png}
+     \includegraphics[width=0.35\linewidth]{DNNNpp.png}\kern 20pt
+     \includegraphics[width=0.35\linewidth]{DNNSpp.png}
+     \includegraphics[width=0.35\linewidth]{DNNNpn.png}\kern 20pt
+     \includegraphics[width=0.35\linewidth]{DNNSpn.png}
+	  \caption{Діаграми розсіювання, що порівнюють еталонні значення рухливості із значеннями, передбаченими DNN моделями 
+       на тестовому наборі даних.
+       Представлені випадки оцінки рухливості електронів (а--г) та дірок (д--ж), коли вони є
+       основними (а, б, д, е) та неосновними (в, г, є, ж) носіями заряду.
+       Попередня підготовка даних передбачала нормування (а, в, д, є) або нормалізацію (б, г, е, ж).
+}\label{figDNN}
+\end{figure}
 
 
 
@@ -944,10 +1107,10 @@ weight initializer &\makecell{Xavier \\Normal}&\multicolumn{2}{c|}{He Normal}&\m
 
 \begin{landscape}
 
-\vspace{15mm}
+\vspace{30mm}
 
 \begin{table}[htbp]
-\setlength{\tabcolsep}{1.5pt}
+%\setlength{\tabcolsep}{3pt}
 \renewcommand{\arraystretch}{1.5}
 \centering
 \caption{Метрики відхилень розрахованих значень рухливості у кремнії від теорії Klaassen.

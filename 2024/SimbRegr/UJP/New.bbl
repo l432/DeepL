@@ -1,0 +1,200 @@
+\begin{thebibliography}{10}
+\def\selectlanguageifdefined#1{
+\expandafter\ifx\csname date#1\endcsname\relax
+\else\language\csname l@#1\endcsname\fi}
+\ifx\undefined\url\def\url#1{{\small #1}}\else\fi
+\ifx\undefined\BibUrl\def\BibUrl#1{\url{#1}}\else\fi
+\ifx\undefined\BibAnnote\long\def\BibAnnote#1{}\else\fi
+\ifx\undefined\BibEmph\def\BibEmph#1{\emph{#1}}\else\fi
+
+\bibitem{Seeger2004}
+\selectlanguageifdefined{english}
+\BibEmph{Seeger,~Karlheinz}. Semiconductor Physics. An Introduction~/
+  Karlheinz~Seeger. Advanced Texts in Physics. ---
+\newblock 9 edition. ---
+\newblock Springer Berlin, Heidelberg, 2004. --- Jun.
+
+\bibitem{Fletcher1957}
+\selectlanguageifdefined{english}
+\BibEmph{Fletcher,~Neville~H.} The High Current Limit for Semiconductor
+  Junction Devices~/ Neville~H.~Fletcher~// \BibEmph{Proc. IRE}. ---
+\newblock 1957. ---
+\newblock Vol.~45, no.~6. ---
+\newblock Pp.~862--872.
+
+\bibitem{Choo1972}
+\selectlanguageifdefined{english}
+\BibEmph{Choo,~Seok~Cheow}. Theory of a forward-biased diffused-junction P-L-N
+  rectifier—Part I: Exact numerical solutions~/ Seok~Cheow~Choo~//
+  \BibEmph{IEEE Trans. Electron Devices}. ---
+\newblock 1972. ---
+\newblock Vol.~19, no.~8. ---
+\newblock Pp.~954--966.
+
+\bibitem{Dorkel1981}
+\selectlanguageifdefined{english}
+\BibEmph{Dorkel,~J.M.} Carrier mobilities in silicon semi-empirically related
+  to temperature, doping and injection level~/ J.M.~Dorkel, Ph.~Leturcq~//
+  \BibEmph{Solid-State Electron.} ---
+\newblock 1981. ---
+\newblock Vol.~24, no.~9. ---
+\newblock Pp.~821--825.
+
+\bibitem{Caughey1967}
+\selectlanguageifdefined{english}
+\BibEmph{Caughey,~D.M.} Carrier mobilities in silicon empirically related to
+  doping and field~/ D.M.~Caughey, R.E.~Thomas~// \BibEmph{Proc. IEEE}. ---
+\newblock 1967. ---
+\newblock Vol.~55, no.~12. ---
+\newblock Pp.~2192--2193.
+
+\bibitem{Masetti1983}
+\selectlanguageifdefined{english}
+\BibEmph{Masetti,~G.} Modeling of carrier mobility against carrier
+  concentration in arsenic-, phosphorus-, and boron-doped silicon~/ G.~Masetti,
+  M.~Severi, S.~Solmi~// \BibEmph{IEEE Trans. Electron Devices}. ---
+\newblock 1983. ---
+\newblock Vol.~30, no.~7. ---
+\newblock Pp.~764--769.
+
+\bibitem{Arora1982}
+\selectlanguageifdefined{english}
+\BibEmph{Arora,~N.D.} Electron and hole mobilities in silicon as a function of
+  concentration and temperature~/ N.D.~Arora, J.R.~Hauser, D.J.~Roulston~//
+  \BibEmph{IEEE Trans. Electron Devices}. ---
+\newblock 1982. ---
+\newblock Vol.~29, no.~2. ---
+\newblock Pp.~292--295.
+
+\bibitem{Swirhun1986}
+\selectlanguageifdefined{english}
+\BibEmph{Swirhun,~S.E.} Measurement of electron lifetime, electron mobility and
+  band-gap narrowing in heavily doped p-type silicon~/ S.E.~Swirhun,
+  Y.-H.~Kwark, R.M.~Swanson~// 1986 International Electron Devices Meeting. ---
+\newblock 1986. ---
+\newblock Pp.~24--27.
+
+\bibitem{Alamo1985}
+\selectlanguageifdefined{english}
+\BibEmph{del Alamo,~J.} Simultaneous measurement of hole lifetime, hole
+  mobility and bandgap narrowing in heavily doped n-type silicon~/
+  J.~del~Alamo, S.~Swirhun, R.M.~Swanson~// 1985 International Electron Devices
+  Meeting. ---
+\newblock 1985. ---
+\newblock Pp.~290--293.
+
+\bibitem{KLAASSEN953}
+\selectlanguageifdefined{english}
+\BibEmph{Klaassen,~D.B.M.} A unified mobility model for device simulation ---
+  {I}. Model equations and concentration dependence~/ D.B.M.~Klaassen~//
+  \BibEmph{Solid-State Electron.} ---
+\newblock 1992. --- Jul. ---
+\newblock Vol.~35, no.~7. ---
+\newblock Pp.~953-- 959.
+
+\bibitem{Cummings2010}
+\selectlanguageifdefined{english}
+Mobility Modeling Considerations for Radiation Effects Simulations in Silicon~/
+  Daniel~J.~Cummings, Arthur~F.~Witulski, Hyunwoo~Park et~al.~// \BibEmph{IEEE
+  Trans. Nucl. Sci.} ---
+\newblock 2010. ---
+\newblock Vol.~57, no.~4. ---
+\newblock Pp.~2318--2326.
+
+\bibitem{NoorMohammad1993}
+\selectlanguageifdefined{english}
+Temperature, electric field, and doping dependent mobilities of electrons and
+  holes in semiconductors~/ S.~{Noor Mohammad}, Andrew~V.~Bemis,
+  Ronald~L.~Carter, Robert~B.~Renbeck~// \BibEmph{Solid-State Electron.} ---
+\newblock 1993. ---
+\newblock Vol.~36, no.~12. ---
+\newblock Pp.~1677--1683.
+
+\bibitem{Si_ni_Couderc}
+\selectlanguageifdefined{english}
+\BibEmph{Couderc,~Romain}. Reassessment of the intrinsic carrier density
+  temperature dependence in crystalline silicon~/ Romain~Couderc,
+  Mohamed~Amara, Mustapha~Lemiti~// \BibEmph{J. Appl. Phys.} ---
+\newblock 2014. --- Mar. ---
+\newblock Vol. 115, no.~9. ---
+\newblock P.~093705.
+
+\bibitem{Passler2002}
+\selectlanguageifdefined{english}
+\BibEmph{P\"assler,~Roland}. Dispersion-related description of temperature
+  dependencies of band gaps in semiconductors~/ Roland~P\"assler~//
+  \BibEmph{Phys. Rev. B}. ---
+\newblock 2002. --- Aug. ---
+\newblock Vol.~66. ---
+\newblock P.~085201.
+
+\bibitem{Bednarczyk1978}
+\selectlanguageifdefined{english}
+\BibEmph{Bednarczyk,~D.} The approximation of the Fermi-Dirac integral F12~/
+  D.~Bednarczyk, J.~Bednarczyk~// \BibEmph{Phys. Lett. A}. ---
+\newblock 1978. ---
+\newblock Vol.~64, no.~4. ---
+\newblock Pp.~409--410.
+
+\bibitem{Angelis2023}
+\selectlanguageifdefined{english}
+\BibEmph{Angelis,~Dimitrios}. Artificial Intelligence in Physical Sciences:
+  Symbolic Regression Trends and Perspectives~/ Dimitrios~Angelis,
+  Filippos~Sofos, Theodoros~E.~Karakasidis~// \BibEmph{Arch. Comput. Methods
+  Eng.} ---
+\newblock 2023. --- Jul. ---
+\newblock Vol.~30, no.~6. ---
+\newblock Pp.~3845--3865.
+
+\bibitem{Breiman2001}
+\selectlanguageifdefined{english}
+\BibEmph{Breiman,~Leo}. Random Forests~/ Leo~Breiman~// \BibEmph{Mach. Learn.}
+  ---
+\newblock 2001. --- Oct. ---
+\newblock Vol.~45, no.~1. ---
+\newblock Pp.~5--32.
+
+\bibitem{Natekin2013}
+\selectlanguageifdefined{english}
+\BibEmph{Natekin,~Alexey}. Gradient boosting machines, a tutorial~/
+  Alexey~Natekin, Alois~Knoll~// \BibEmph{Front. Neurorob.} ---
+\newblock 2013. ---
+\newblock Vol.~7.
+
+\bibitem{Cao2020}
+\selectlanguageifdefined{english}
+\BibEmph{Cao,~Weidong}. Parameter Optimization of Support Vector Regression
+  Using Henry Gas Solubility Optimization Algorithm~/ Weidong~Cao, Xin~Liu,
+  Jianjun~Ni~// \BibEmph{IEEE Access}. ---
+\newblock 2020. ---
+\newblock Vol.~8. ---
+\newblock Pp.~88633--88642.
+
+\bibitem{Liu2023}
+\selectlanguageifdefined{english}
+Machine-Learning Accelerating the Development of Perovskite Photovoltaics~/
+  Tiantian~Liu, Sen~Wang, Yinguang~Shi et~al.~// \BibEmph{Sol. RRL}. ---
+\newblock 2023. ---
+\newblock Vol.~7, no.~23. ---
+\newblock P.~2300650.
+
+\bibitem{Hanif2024}
+\selectlanguageifdefined{english}
+Enhancing Solar Forecasting Accuracy with Sequential Deep Artificial Neural
+  Network and Hybrid Random Forest and Gradient Boosting Models across Varied
+  Terrains~/ Muhammad~Farhan~Hanif, Muhammad~Umar~Siddique, Jicang~Si et~al.~//
+  \BibEmph{Advanced Theory and Simulations}. ---
+\newblock 2024. ---
+\newblock Vol.~7, no.~7. ---
+\newblock P.~2301289.
+
+\bibitem{Akiba2019}
+\selectlanguageifdefined{english}
+Optuna: A Next-generation Hyperparameter Optimization Framework~/ Takuya~Akiba,
+  Shotaro~Sano, Toshihiko~Yanase et~al.~// Proceedings of the 25th ACM SIGKDD
+  International Conference on Knowledge Discovery \& Data Mining. ---
+\newblock KDD '19. ---
+\newblock New York, NY, USA: Association for Computing Machinery, 2019. ---
+\newblock P.~2623–2631.
+
+\end{thebibliography}
