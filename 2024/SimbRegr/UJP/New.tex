@@ -206,7 +206,7 @@ $F_2=7,45\cdot10^{12}$~см$^2$ і тоді вираз (\ref{eqFl}) перетв
 (без врахування впливу поверхні) та слабких полів.
 Одним з перших подібних наближень був вираз, запропонований   Caughey \& Thomas \cite{Caughey1967}:
 \begin{equation}\label{eqCT}
-  \mu=\mu_\mathrm{min}+\frac{\mu_\mathrm{max}-\mu_\mathrm{min}}{1+(N/N_{ref})^\alpha}\,,
+  \mu^\mathrm{CT}=\mu_\mathrm{min}+\frac{\mu_\mathrm{max}-\mu_\mathrm{min}}{1+(N/N_{ref})^\alpha}\,,
 \end{equation}
 де
 $N$ --- концентрація легантів,
@@ -226,6 +226,7 @@ $N$ --- концентрація легантів,
 &$\mu_\mathrm{max}$, $\text{см}^2/(\text{B}\cdot\text{с})$&$\mu_\mathrm{min}$, $\text{см}^2/(\text{B}\cdot\text{с})$&$\alpha$&$N_{ref}$, см$^{-3}$ \rule{0pt}{13pt}\\
 \hline
 Електрони&1330&65&0,72&$8,5\cdot10^{16}$\\
+\hline
 Дірки&495&47,7&0,76&$6,3\cdot10^{16}$\\
 \hline
 \end{tabular}
@@ -234,8 +235,8 @@ $N$ --- концентрація легантів,
 Модифікований варіант такого підходу був запропонований Masetti \cite{Masetti1983}:
 \begin{equation}\label{eqMas}
 \begin{aligned}
-    \mu_n &=\mu_0+\frac{\mu_\mathrm{max}-\mu_0}{1+\left(\frac{n}{C_r}\right)^a}-\frac{\mu_1}{1+\left(\frac{C_s}{n}\right)^b}\,, \\
-   \mu_p &=\mu_0\exp\left(-\frac{p_c}{p}\right)+\frac{\mu_\mathrm{max}}{1+\left(\frac{p}{C_r}\right)^a}-\frac{\mu_1}{1+\left(\frac{C_s}{p}\right)^b}\,.
+    \mu_n^\mathrm{M} &=\mu_0+\frac{\mu_\mathrm{max}-\mu_0}{1+\left(\frac{n}{C_r}\right)^a}-\frac{\mu_1}{1+\left(\frac{C_s}{n}\right)^b}\,, \\
+   \mu_p^\mathrm{M} &=\mu_0\exp\left(-\frac{p_c}{p}\right)+\frac{\mu_\mathrm{max}}{1+\left(\frac{p}{C_r}\right)^a}-\frac{\mu_1}{1+\left(\frac{C_s}{p}\right)^b}\,.
 \end{aligned}
 \end{equation}
 Як видно з виразу (\ref{eqMas}), в такому випадку передбачено застосування різних виразів для опису рухливості електронів та дірок.
@@ -276,7 +277,7 @@ $p_c$, см$^{-3}$&---&$9,23\cdot10^{16}$\\
 Спроба взяти до уваги температурні залежності була зроблена N.~Arora зі співавторами \cite{Arora1982}.
 При цьому розглядалися розсіяння на фононах та  іонізованих домішках і було запропоновано використання узагальненого виразу Caughey--Thomas
 \begin{equation}\label{eqArora}
-  \mu=\mu_\mathrm{min}+\frac{\mu_0}{1+\left(\frac{N_I}{N_0}\right)^\alpha}\,,
+  \mu^\mathrm{A}=\mu_\mathrm{min}+\frac{\mu_0}{1+\left(\frac{N_I}{N_0}\right)^\alpha}\,,
 \end{equation}
 де $N_I=N_a^-+N_d^+$ --- загальна концентрація іонізованих легантів
 ($N_a^-$ та $N_d^+$ --- кількості іонізованих акцепторів та донорів у одиниці об'єму, відповідно),
@@ -337,7 +338,7 @@ $\beta_4$&\multicolumn{4}{c|}{-0,146}\\
 В цьому випадку вважається, що визначальними для рухливості є процеси розсіяння на коливаннях ґратки, іонізованих домішках та інших носіях, а температурну та
 концентраційні залежності $\mu$ як для основних, так і неосновних носіїв заряду можна описати наступними виразами:
 \begin{equation}\label{eqK1}
-  \mu=\frac{\mu_L\,\mu_{DA}}{\mu_L+\mu_{DA}}\,,
+  \mu^\mathrm{K}=\frac{\mu_L\,\mu_{DA}}{\mu_L+\mu_{DA}}\,,
 \end{equation}
 де
 %\begin{eqnarray}
@@ -370,6 +371,7 @@ $\beta_4$&\multicolumn{4}{c|}{-0,146}\\
 &$\mu_\mathrm{max}$, $\text{см}^2/(\text{B}\cdot\text{с})$&$\mu_\mathrm{min}$, $\text{см}^2/(\text{B}\cdot\text{с})$&$\alpha$&$N_{ref}$, см$^{-3}$ \rule{0pt}{13pt}\\
 \hline
 Електрони&1414&68,5&0,711&$9,2\cdot10^{16}$\\
+\hline
 Дірки&495&44,9&0,719&$2,23\cdot10^{17}$\\
 \hline
 \end{tabular}
@@ -608,7 +610,7 @@ SR може призвести до складних виразів, які ва
     \end{align}
 \end{subequations}
 
-\section{Класичні регресійні моделі}
+\section{Класичні регресійні моделі}\label{secDNN}
 
 Окрім символьної регресії, в роботі для оцінки рухливості також були реалізовані декілька моделей, які базуються на використанні
 більш класичних алгоритмів МН. А саме, були використані:
@@ -778,44 +780,52 @@ weight initializer &	\makecell{Xavier Normal, Xavier Uniform, He Normal, He Unif
 
 \section{Метрики оцінювання}
 
-To build a regression model, it is crucial to evaluate its performance using various metrics.
-These metrics assess how well the model has learned and predicted outcomes.
-The evaluation metrics for iron quantification were the mean squared error (MSE),
-
-and coefficient of determination (R$^2$), 
-
+При побудові регресійних моделей надзвичайно важливо використовувати різні метрики,
+що дозволяють оцінити якість навчання та точність прогнозів.
+В роботі були використані декілька кількісних показників для оцінювання створених моделей.
+Одним з них була середня квадратична похибка (the mean squared error, MSE):
 \begin{equation}
 \label{eqMSE}
     \mathrm{MSE} = \frac{1}{N}\displaystyle\sum_{i=1}^{N} (\hat{y_i}-y_i)^2\,,
 \end{equation}
-where $\hat{y_i}$ represents the predicted value for the $i$--th data point,
-$y_i$ is the known value for the $i$--th data point,
-and $N$ is the number of samples in the dataset.
-MSE is one of the most commonly used metrics for evaluating model accuracy.
-However, since the computation of $\hat{y_i}$ involves the normalization and logarithm transformation of $N_\mathrm{Fe}$,
+де
+$\hat{y_i}$ --- прогнозоване моделлю значення для $i$--го зразка (набору вхідних параметрів),
+$y_i$ --- відоме цільове значення для $i$--го зразка,
+$N$ --- кількість зразків у наборі даних.
+У нашому випадку для символьної регресії та $*$\_N моделей $y_i$ збігалося зі величиною рухливості,
+для $*$\_S моделей при обчисленні $y_i$ проводилися логарифмування та стандартизація (див. розділ \ref{secDNN}).
+MSE є однією з найбільш популярних метрик і в нашому випадку переважно використовувалося для оцінки якості
+навчання моделей, зокрема під час налаштовування гіперпараметрів та в процесі безпосереднього навчання (середня квадратична похибка розглядалася як
+цільова функція для мінімізації під час навчання).
+Певним виключення був лише випадок SR, коли під час навчання мінімізувалося середнє значення зваженої суми, причому вагові коефіцієнти мали вигляд
+\begin{equation}
+\label{eqWi}
+    \omega_i = \frac{\log N_{D,i}}{\mu_i}\,.
+\end{equation}
+Використання $\omega_i$ дозволяло врахувати, що рухливість у вибраних діапазонах температури та ступеня легування
+змінюються у достатньо широких межах, і перешкоджало тому, щоб остаточний аналітичний вираз орієнтувався переважно
+на відтворення великих значень рухливості.
 
-%Weights=1/Ytest
-%
-%X1 = np.expand_dims(np.log10(DT.XInverseNormalize(Xtest)[:, 1]), axis=1)
-%
-%
-%Weights1 = Weights * (X1 **1)
-
+Для оцінки якості прогнозів використовувалися декілька показників.
+Один з них --- середня відносна похибка (mean absolute percentage error, MAPE):
 Therefore, we used MAPE, which determines the mean relative error:
 \begin{equation}
 \label{eqMAPE}
     \mathrm{MAPE} = \frac{1}{N}\displaystyle\sum_{i=1}^{N} \frac{|\mu^\mathrm{PRED}_i-\mu^\mathrm{TRUE}_i|}{\mu^\mathrm{TRUE}_i}\times 100 \%\,,
 \end{equation}
-where $\mu^\mathrm{PRED}_i$ is the predicted value of iron concentration,
-$\mu^\mathrm{TRUE}_i$ is the known value (used in simulation or obtained from experimental iron determination).
-mean absolute percentage error (MAPE),
+де
+$\mu^\mathrm{PRED}_i$ --- передбачене значення рухливості (після застосування операцій, обернених до нормування та нормалізації),
+$\mu^\mathrm{TRUE}_i$ --- істинне значення рухливості (отримане в результаті розрахунків відповідно до теорії Klaassen).
+У випадку, коли частина прогнозів за своєю точністю суттєво відрізняються від інших, MAPE  не дозволяє отримати повну картину щодо акуратності передбачень.
+Тому ми також використовували медіанне значення відносної похибки $\mathrm{APE}_\mathrm{MED}$,
+яке відображає величину помилки не більше якої мають 50\% передбачень у наборі даних.
+Водночас для характеризації максимального відхилення від істини ми використовували максимальне значення  відносної похибки
+$\mathrm{APE}_\mathrm{MAX}$,
 
-$\mathrm{APE}_\mathrm{MAX}$, 
-$\mathrm{APE}_\mathrm{MED}$, 
-
+Нарешті, ми розглядали середнє значення абсолютної похибки:
 \begin{equation}
 \label{eqMAE}
-    \mathrm{MAE} = \frac{1}{N}\displaystyle\sum_{i=1}^{N} |\mu^\mathrm{PRED}_i-\mu^\mathrm{TRUE}_i|\,,
+    \mathrm{MAE} = \frac{1}{N}\displaystyle\sum_{i=1}^{N} |\mu^\mathrm{PRED}_i-\mu^\mathrm{TRUE}_i|\,.
 \end{equation}
 
 
@@ -823,13 +833,47 @@ $\mathrm{APE}_\mathrm{MED}$,
 
 \section{Символьна регресія}
 
+У випадку опису рухливості електронів, коли вони є основними носіями у монокристалічному кремнії в результаті застосування SR був отриманий
+наступний вираз: 
 \begin{subequations} \label{eqNN}
     \begin{align}
       \mu_{n,n}& =\frac{N_{Dn}+1413,2}{T_n^{2,2508}+\frac{a_{n,n}\cdot b_{n,n}}{a_{n,n}+b_{n,n}}}\,, \label{eqNNa} \\
       a_{n,n} &=\left(\frac{N_{Dn}}{0,873T_n+0,0727}\right)^{0,7212}\,, \label{eqNNb} \\
-      b_{n,n}& =0,215N_{Dn}^{0,58}+10,5T_n-1,342\,, \label{eqNNc}
+      b_{n,n}& =0,215N_{Dn}^{0,58}+10,5T_n-1,342\,. \label{eqNNc}
     \end{align}
 \end{subequations}
+Нагадаємо, що нормовані величини температури та концентрації донорів описуються співвідношеннями (\ref{eqNorm}).
+Звертає на себе увагу наявність складової, яка містить $T_n^{2,2508}$, що надзвичайно близько до 
+температурної залежності рухливості, пов'язаної з розсіянням на фононах.
+Загалом, вираз містить всього 9 параметрів і є набагато простішим ніж той, який пропонується в теорії Klaasen.
+Розроділ похибки формули (\ref{eqNN}) порівняно з теорією  Klaasen залежно від температури та ступеню легування предсталениі на Рис.~\ref{figSR},a.
+Як видно з представлених даних, найбільші відхилення спостерігаються при $T~200$~K та $N_d$ в околі $10^{18}$~см$^{-3}$.
+Проте навіть в цьому випадку похибка не перевищує 1.2~\%.
+Для більшості ж значень аргументів у тих діапазонах, що розглядалися абсолютна відносна похибка не перевищує 0,15~\%.
+
+\begin{figure}
+	\centering
+     \includegraphics[width=0.49\linewidth]{Fig31a.png}
+     \includegraphics[width=0.49\linewidth]{Fig31b.png}
+     \includegraphics[width=0.49\linewidth]{Fig31c.png}
+     \includegraphics[width=0.49\linewidth]{Fig31d.png}
+	  \caption{Залежності величини відносної похибки при оцінці рухливості носіїв заряду
+у кремнії за допомогою виразів (\ref{eqNN}) -- (\ref{eqPN}),
+отриманих за допомогою символьної регресії, від температури та рівня легування.
+Представлені випадки оцінки рухливості електронів (а, б) та дірок (в, г), коли вони є
+основними (а, в) та неосновними (б, г) носіями заряду.
+}\label{figSR}
+\end{figure}
+
+Наступна формула~(\ref{eqNP}) ілюструє отриманий аналітичний вираз для опису рухливості неосновних електронів у
+монокристалічному кремніїї.
+Розподіл АРЕ як функції температури та концентрації акцепторів представлені на Рис.~\ref{figSR},б.
+В цьому випадку максимальні розбіжності між (\ref{eqNP}) та теорією (\ref{eqK1})-(\ref{eqK9}) спостерігаються при 
+концентрації легуючої домішки $10^{19}$~см$^{-3}$ та температурі близько 500~K.
+Інші ``проблемні'' області це $T=230-270$~K і $N_a=(3-6)\cdot 10^{17}$~см$^{-3}$ і 
+$T\simeq200$~K і $N_a=10^{19}$~см$^{-3}$.
+Проте загалом помилки при оцінці рухливості електронів, коли вони є неосновними носіями заряду, дещо нижчі
+ніж коли вони є основними.
 
 \begin{subequations} \label{eqNP}
     \begin{align}
@@ -839,6 +883,9 @@ $\mathrm{APE}_\mathrm{MED}$,
     \end{align}
 \end{subequations}
 
+Вираз для опису рухливості дірок у p-Si (формула (\ref{eqPP})) містить найменшу кількість параметрів з усіх отриманих виразів.
+Проте і максимальні похибки в цьому випадку найбільші, хоча вони спостерігаються у достатньо вузькому діапазоні 
+параметрів --- див. Рис.~\ref{figSR},в.
 
 \begin{subequations} \label{eqPP}
     \begin{align}
@@ -859,19 +906,7 @@ $\mathrm{APE}_\mathrm{MED}$,
 \end{subequations}
 
 
-\begin{figure}
-	\centering
-     \includegraphics[width=0.49\linewidth]{Fig31a.png}
-     \includegraphics[width=0.49\linewidth]{Fig31b.png}
-     \includegraphics[width=0.49\linewidth]{Fig31c.png}
-     \includegraphics[width=0.49\linewidth]{Fig31d.png}
-	  \caption{Залежності величини відносної похибки при оцінці рухливості носіїв заряду 
-у кремнії за допомогою виразів (\ref{eqNN}) -- (\ref{eqPN}),
-отриманих за допомогою символьної регресії, від температури та рівня легування.
-Представлені випадки оцінки рухливості електронів (а, б) та дірок (в, г), коли вони є
-основними (а, в) та неосновними (б, г) носіями заряду.
-}\label{figSR}
-\end{figure}
+
 
 Умова повної іонізації донорної домішки відповідає положенню рівня Фермі на декілька $kT$
 нижче рівня домішки
@@ -1090,7 +1125,7 @@ weight initializer &Xavier Normal&\multicolumn{2}{c|}{He Normal}&Xavier Normal&\
      \includegraphics[width=0.35\linewidth]{DNNSpp.png}
      \includegraphics[width=0.35\linewidth]{DNNNpn.png}\kern 20pt
      \includegraphics[width=0.35\linewidth]{DNNSpn.png}
-	  \caption{Діаграми розсіювання, що порівнюють еталонні значення рухливості із значеннями, передбаченими DNN моделями 
+	  \caption{Діаграми розсіювання, що порівнюють еталонні значення рухливості із значеннями, передбаченими DNN моделями
        на тестовому наборі даних.
        Представлені випадки оцінки рухливості електронів (а--г) та дірок (д--ж), коли вони є
        основними (а, б, д, е) та неосновними (в, г, є, ж) носіями заряду.
