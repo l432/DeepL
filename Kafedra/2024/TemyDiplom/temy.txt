@@ -1,6 +1,8 @@
 О.Плахута
 "Взаємодія електронів з електромагнітном випромінюванням в
-балістичних/квазібалістичних напівпровідникових приладах"
+балістичних/квазібалістичних напівпровідникових структурах"
+"Interaction of Electrons with Electromagnetic Radiation in Ballistic/Quasi-Ballistic Semiconductor Structures"
 
 І.Кущ
 "Параметризація рухливості носіїв заряду в кремнії з використанням машинного навчання"
+"Machine Learning-Based Parameterization of Charge Carrier Mobility in Silicon"
