@@ -1,0 +1,28 @@
+Reviewer #1: The introduction lacks the role of iron valency (ferrous or ferric) in silicon solar cells.
+
+
+
+The work didn't deal with the redox reaction of iron in silicon solar cells.
+
+
+
+In the title, "Extracting the iron concentration" should be changed to "Determination of iron concentration.
+
+
+Reviewer #2: The present article discussed machine learning methods to quantify iron impurities in silicon solar cells. targeted research is good and definitely requires this kind of work to further enhance the depth of characterizing iron impurities in silicon cells. However, I, in particular, feel that there are a few things that need to be addressed. Some of them are 1) Why temperature range (290-340K)? what was the dissociation efficiency of FeB pairs at this temperature? How much is translated to cell degradation? Since at this temperature range, other factors also go side on that impact device characteristic.
+2) Complete details about the dissociation of FeB pairs using halogen lamp illumination? What was the time duration? How much was the decay efficiency.
+3) most of the models significantly fail for the AM1.5 illumination? What could be the reason for that?
+4) authors are suggested to provide more explanation behind failure of the particular model, infact, for the results obtained.
+5) what can be done to further increase the accuracy of these models?
+5) there are some typing mistakes as well. for e.g. Page 14, line 44, t-ltered…
+
+
+
+Reviewer #4: Authors have used AI ML algorithms to predict Iron concentration in solar cells based on PV parameters like ISc, Voc, FF and Efficiency. This is a great way to estimate Iron concentrations and can help in improving characterization and process yield. However, the manuscript can be improved with the following changes:
+1. Clearly describe the main objectives as to why and how using this ML approach can be better than traditional ways in the Introduction section.
+2. Explain the Fe concentration measurement procedure and methods followed here for the experimental validation. In section 2.1, further clarification of experimental validation with details of number of cells per data samples, data collection methods and tools used will be helpful.
+3. Table 1 and PCA does not add much value.
+4. In section 3.1" As expected, increasing the number of descriptors enhances model performance (Fig. 4 and Fig.S7). The only exception occurs under AM1.5 illumination with PCA, where adding a fifth descriptor may degrade predictions rather than improve them." And similar discussions about the impact of changing number of features and dimensions is included with respect to different algorithms. It will be good to have some insight into the reasons for this. Also, the physical significance or meaning of it.
+5. Include reasons for improvement in prediction with certain combinations of features in the discussion section.
+6. Would this prediction be applicable beyond the range of Nb, dp, T that was chosen in the study? why or why not?
+7. Discuss clearly the advantages and limitations of this model in conclusion. Eg practical significance, is it only for B doped cells only this thickness etc.
