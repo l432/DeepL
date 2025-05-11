@@ -1,0 +1,941 @@
+
+%The link to join is https://cost-eu.zoom.us/j/86284551351.
+%\documentclass[aip,reprint]{revtex4-1}
+%\documentclass[aip,jap,preprint]{revtex4-1}
+\documentclass[a4paper,fleqn]{cas-sc}
+
+\usepackage[numbers]{natbib}
+\usepackage{mdframed}
+\usepackage{color}
+\usepackage{enumitem}
+
+
+\begin{document}
+\shorttitle{}
+
+
+%Dear Editor,
+%
+%We like to express our appreciation to the reviewers for their comments.
+%We are resubmitting the revised version of the paper number MSB-S-24-02710.
+%We have studied the comments of the reviewer carefully, and have changed the text according to the comments they
+%have listed.
+%%The location of revisions is pointed by blue color in ``MarkedManuscript.pdf''.
+%Below we refer to each of the reviewer’s comments.
+
+
+Dear Editor and Reviewers,
+
+We sincerely thank you for taking the time to review our manuscript
+``Iron's impact on silicon solar cell execution: comprehensive modeling across diverse scenarios''
+(Ms. Ref. No.: MSB-S-24-02710).
+Your insightful comments and constructive suggestions have greatly helped us improve
+the quality of our work.
+We particularly appreciate your careful reading and thoughtful feedback, which have
+led to significant improvements in both the technical content and presentation clarity of our manuscript.
+We have carefully addressed all the comments and made corresponding revisions to the manuscript.
+%All changes are marked in red in the revised version.
+%The location of revisions is pointed by blue color in ``MarkedManuscript.pdf''.
+Below we provide our detailed point-by-point responses to
+each comment.
+We hope the revised manuscript better meets your expectations and standards for publication in Materials Science and Engineering: B.
+
+
+\subsection*{Response to Reviewer \#1 }
+
+\noindent
+\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~1.}}
+\emph{The author must explain the specific mechanisms you propose for the interaction between iron-related defects and other impurities in silicon solar cells? How might these interactions complicate the interpretation of photovoltaic performance metrics?}
+
+
+%Автор повинен пояснити конкретні механізми, які ви пропонуєте для взаємодії між дефектами, пов'язаними з залізом, та іншими домішками в кремнієвих сонячних елементах? Як ці взаємодії можуть ускладнити інтерпретацію показників фотоелектричної продуктивності?
+
+\noindent
+\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+
+
+In general, interstitial iron is already mobile at room temperature and can interact with various impurities.
+Over 30 iron-related complexes have been identified in silicon,
+and nearly 25 energy levels associated with iron-related defects have been reported in the silicon bandgap across different studies \cite{Istratov1999,Gwozdz2022,JYOTHI2015}.
+For example, iron forms complexes with carbon, oxygen, hydrogen, sulfur, and other metal impurities, as well as with native defects in silicon.
+However, in terms of their impact on photovoltaic performance, two primary factors must be considered.
+First, the concentration of the relevant defects is crucial.
+It is widely recognized that in $p$--type silicon under equilibrium conditions, most iron impurity atoms pair with acceptors
+(e.g., boron in Si:B) \cite{Kimerling1983,Istratov1999}.
+The concentration of other complexes is significantly lower,
+and detailed investigation of these complexes requires specialized sample preparation,
+such as additional doping with other expected complex components
+or irradiation to increase the concentration of native defects \cite{Tang2013}.
+Further supporting this, several methods used to evaluate the total iron concentration in $p$--Si rely on breaking the FeB pair \cite{Zoth1990,FeMethod2012,Olikh2021JAP}.
+Second, the recombination activity of these centers must be considered,
+as it depends on the defect energy level relative to the Fermi level and the charge carrier capture cross-section.
+Interstitial iron and FeB pairs are among the most detrimental recombination-active impurities in $p$--Si \cite{Istratov1999,TeimurazJAP} in contrast to other iron-related defects.
+Notably, iron gettering by oxygen precipitates or structural defects increases carrier lifetime \cite{Schoen2011,FeB:Vahanissi}.
+In $n$--Si, Fe$_i$ is not a recombination-active impurity due to the filling of its energy level.
+Reducing the impact of iron through gettering during phosphorus diffusion \cite{Schoen2011,FeB:Vahanissi,Vaehaenissi2017} or the formation of a
+passivating layer \cite{Teimuraz2014JAP} is well-established and used in the solar cell industry.
+
+Thus, our assumption that the primary influence of iron impurities in the $p$--regions of a solar cell on photovoltaic parameters (PVPs) is due to
+Fe$_i$B$_\mathrm{Si}$ pairs and Fe$_i$ is fully justified.
+Furthermore, we emphasize that this paper focuses on the relative changes in parameters during
+Fe$_i$B$_\mathrm{Si}$ $\rightleftarrows$ Fe$_i$ + B$_\mathrm{Si}$ transformation, which enables the isolation of these specific defects' contributions.
+
+This answer is incorporated in the revised text on page 5, two last paragraph in Section 2.1. Simulation Details.
+
+
+
+
+%In general, interstitial iron is already mobile at room temperature and it can interact with different impurities.
+%More than 30 Fe-related complexes were detected in Si and almost 25 energy levels of Fe-related defects were reported in
+%the bandgap of Si in different studies.
+%Наприклад, залізо утворює комплекси з атомами вуглецю, кисню, водню, сірки, власними дефектами кремнію, іншими металевими домішками.
+%Проте з точки зору впливу подібних комплексів на photovoltaic performance необхідно врахувати два основних фактора.
+%По-перше, концентрацію відповідних дефектів.
+%Загально прийнятою є думка, що в p-Si у рівноважному стані переважна кількість домішкових атомів заліза утворює пари з акцептором (наприклад з бором у Si:B).
+%Концентрація інших комплексів набагато менша і для їх детального дослідження необхідно проводити спеціальну підготовку зразків на кшталт додаткового легування іншими компонентами очікуваного комплексу чи радіаційне опромінення для збільшення концентрації власних дефектів.
+%Додатковим підтвердженням цього є те, що низка методів, спрямованих на оцінку загальної концентрації заліза у  p-Si спирається на процеси розбиття саме пар FeВ.
+%По-друге, треба взяти до уваги рекомбінаційну активність центрів, яка залежить від розташування енергетичного рівня дефекту стосовно рівня Фермі та поперечного перерізу захоплення носіїв заряду.
+%Interstitial iron and FeB pair are the one of the most detrimental recombination active impurities in р-silicon на відміну від інших iron-related defects.
+%Так, iron gettering by oxygen precipitate or structural defects leads to збільшення часу життя носіїв заряду.
+%В n-Si Fei не є рекомбінаційно активною домішкою внаслідок заповнення енергетичного рівня.
+%Зменшення the impact of iron внаслідок gettering під час phosphorus diffusion чи створення просвітлюючого шару є добре відомими і використовуються у in solar cell industry.
+%
+%Таким чином, використане в роботі припущення про те, що основний вплив домішкового заліза в р-областях сонячного елементу на фотоелектричні параметри пов'язаний з FeB pair  and Fei є цілком виправданим.
+%Крім того, підкреслимо, що в роботі акцентовано увагу саме на відносні зміни параметрів при перебудові Fe-FeB, що дозволяє додатково виокремити внесок саме цих дефектів.
+
+
+
+%The aim of the research was added in the introduction part
+%(page~2, paragraph~3 (last paragraph in the Introduction), line~1-2).
+
+\vspace{1cm}
+\noindent
+\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~2.}}
+\emph{ The author should give the transient nature of defect dynamics, how do you assess the long-term stability of silicon solar cells in the presence of iron contamination? What experimental approaches would you recommend to study the aging effects of these defects over time?}
+
+%Автору слід навести перехідний характер динаміки дефектів, як ви оцінюєте довготривалу стабільність кремнієвих сонячних елементів за наявності забруднення залізом? Які експериментальні підходи ви б порекомендували для вивчення ефектів старіння цих дефектів з часом?
+
+\noindent
+\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+
+Interstitial iron atoms exhibit high mobility in silicon \cite{Istratov1999}.
+For example, the characteristic time required for FeB pair formation,
+which depends on the diffusion coefficient of Fe$_i$, is given by the following expression \cite{FeBAssJAP2014,FeBKin2019,FeBAssSST2011}:
+\begin{equation}
+\label{eqTass}
+\tau=5.7\times10^5\,\frac{\mathrm{s}}{\mathrm{K}\;\mathrm{cm}^3}\times\frac{T}{N_\mathrm{B}}\exp\left(\frac{0.65}{kT}\right)\,.
+\end{equation}
+where
+$N_\mathrm{B}$ is the doping level.
+
+That is, at room temperature, the formation of an equilibrium concentration of FeB pairs is completed within 24 hours,
+while at $T=340$~K, the $\tau$ is approximately 10 minutes.
+Therefore, iron contamination is not a determining factor in the long--term stability of silicon solar cells, unlike sodium atoms, which are considered one
+of the primary contributors to potential-induced degradation \cite{Yamaguchi2021}.
+
+
+The information on the characteristic time of FeB pair formation has been added to the revised manuscript (page 6, last paragraph in Section 2.2.).
+
+\begin{mdframed}
+The measurements were carried over the temperature range of 300-340~K.
+The sample temperature was driven by a thermoelectric cooler controlled by an STS-21 sensor
+and maintained constant by a PID algorithm embedded in the software that serves the experimental setup.
+\textcolor[rgb]{1.00,0.07,0.00}{Notably, the characteristic time for FeB pair recovery after the cessation of illumination is approximately 13,000 seconds at 300 K
+and only 600 seconds at 340 K [29,74].
+These limitations affect the measurement duration at high temperatures, and the experiments accounted for them.}
+\end{mdframed}
+
+
+%The relevant information can be found on page 3, paragraphs 1-2.
+
+
+\vspace{1cm}
+\noindent
+\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~3.}}
+\emph{An Author should provide a theoretical framework for understanding how the temperature range you studied (290 K to 340 K) influences the activation
+energy of iron-related defects? How might this affect the performance of solar cells in varying environmental conditions?}
+
+%Автор повинен надати теоретичну основу для розуміння того, як досліджуваний вами діапазон температур
+%(від 290 K до 340 K) впливає на енергію активації дефектів, пов'язаних із залізом?
+%Як це може вплинути на продуктивність сонячних елементів в різних умовах навколишнього середовища?
+
+
+
+
+\noindent
+\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+
+Initially, we note that the selected temperature range reflects the
+realistic operating conditions of most silicon solar cells.
+In our calculations, we accounted for the temperature dependencies of both silicon properties ---
+including bandgap, the effective density of states; effective masses, thermal velocities and mobilities of charge carriers;
+Auger and band-to-band recombination coefficients, and light absorption values ---
+and defect parameters, such as energy level positions within the bandgap and electron and hole capture cross-sections.
+Additionally, we considered the temperature dependence of the equilibrium concentration ratio of Fe$_i$ and FeB.
+Specifically, the primary effect of increasing temperature on iron-related defects is the rise in the relative equilibrium
+concentration of interstitial iron atoms
+and the change in the charge carrier capture cross-section of each defect.
+
+Accounting for all the above factors in the modeling process suggests that
+the results presented in this work accurately reflect the impact of both defects
+and defect parameter variation on solar cell performance under varying environmental conditions,
+including temperature,  illumination type, and intensity.
+
+Details on how temperature dependencies were accounted for in the simulation can be found on page 3 (last paragraph),
+page 4 (1st and 2nd paragraphs)
+
+
+\begin{mdframed}
+As can be seen from Table~1, calculations spanned a broad range of temperatures and base doping levels.
+Therefore, to improve the accuracy of the calculations when inputting the initial parameters into SCAPS,
+\textcolor[rgb]{1.00,0.07,0.00}{temperature and concentration (where applicable) dependencies of the following silicon parameters were taken into account}:
+
+\begin{itemize}[itemsep=2pt, parsep=0pt, topsep=0pt]
+    \item bandgap according to Passler [53];
+    \item doping induced bandgap narrowing according to Yan \& Cuevas [54];
+    \item effective density of states at conduction and valence band and intrinsic carrier concentration according to Couderc et al. [55];
+    \item thermal carrier velocities according to Green [56];
+    \item free carrier effective masses according to O’Mara et al. [57];
+    \item carrier mobilities according to Klaassen's theory [58];
+\end{itemize}
+
+The values of surface recombination coefficients were considered equal to the thermal velocities of carriers [44].
+The calculations addressed recombination processes within the structural volume,
+incorporating both intrinsic recombination and Shockley-Read-Hall (SRH) recombination at iron-related defects.
+In the first case, processes of band-to-band radiation recombination were considered
+(where the calculation of the corresponding coefficient included the fraction of radiatively emitted photons
+reabsorbed via band-to-band processes according to Niewelt et al.[42])
+and Auger recombination (where the coefficients considered the effect of Coulomb enhancement [43] and
+\textcolor[rgb]{1.00,0.07,0.00}{temperature dependence} [59]).
+\end{mdframed}
+
+
+and page~4, 3rd  and 4th paragraph from the bottom
+
+\begin{mdframed}
+Case~2.
+Iron atoms predominantly form pairs with acceptors, $\left[\mathrm{Fe}_i\mathrm{B}_s\right] \gg \left[\mathrm{Fe}_i\right]$,
+\textcolor[rgb]{1.00,0.07,0.00}{but the exact concentration ratio depends on the position of the Fermi level and temperature} [60,61]
+and varies from point to point within the solar cell.
+Further details about calculation of the concentration profiles of Fe$_i$B$_s$ and Fe$_i$ are provided in [38,37].
+This case corresponds to prolonged storage of the structure in darkness or under conditions of low-intensity ($< 0.01$~J~cm$^{-2}$ [40]) illumination.
+
+During the calculations, it was assumed that Fe$_i$ forms a single donor level,
+while the Fe$_i$B$_s$ pair has a trigonal configuration and acts as an amphoteric defect.
+\textcolor[rgb]{1.00,0.07,0.00}{We obtained defect parameters, including energy level positions within the bandgap,
+electron and hole capture cross-sections, and their temperature dependencies, based on data from relevant studies} [62,63,64].
+\end{mdframed}
+
+
+
+
+
+%The relevant information can be found on page 3, paragraphs 1-2.
+
+
+\vspace{1cm}
+\noindent
+\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~4.}}
+\emph{An Author mentioned the application of principal component analysis in evaluating impurity levels.
+Could you elaborate on how this technique was implemented in your study and its effectiveness in distinguishing between different types of impurities?}
+
+%Автор згадував про застосування аналізу головних компонент для оцінки рівнів домішок.
+%Чи не могли б ви докладніше розповісти про те, як ця методика була застосована у вашому дослідженні та її ефективність у розрізненні різних типів домішок?
+
+\noindent
+\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+
+One of the objectives of this study was to evaluate the feasibility of using variations
+in short-circuit current, open-circuit voltage, solar cell efficiency, or fill factor,
+which results from the decay of iron-containing pairs, to estimate the concentration of iron impurities.
+Our simulations revealed that the relative changes in these parameters depend
+not only on the iron concentration but also on temperature and
+other solar cell characteristics, such as doping level and base thickness.
+In other words, when determining the magnitude of $N_\mathrm{Fe}$ based on changes in short-circuit current,
+a set of parameters (descriptors) must be used: ($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$).
+Evidently, incorporating additional information, such as changes in efficiency ($\varepsilon \eta$), along with an expanded
+set of descriptors ($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$, $\varepsilon \eta$),
+increases the complexity of calculations due to the growing number of input parameters.
+However, this should enhance the accuracy of $N_\mathrm{Fe}$ predictions.
+Meanwhile, variations in short-circuit current and efficiency are not entirely independent,
+as both essentially characterize the same physical process --- the diffusion of photo-induced carriers.
+Confirmation of this has resulted from analyzing the correlations between parameters --- see Fig.~12 in the manuscript.
+Thus, the set ($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$, $\varepsilon \eta$)
+contains useful and redundant information compared to ($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$).
+To assess the degree of redundancy in different descriptor sets, we employed principal component analysis (PCA),
+which constructs a new dataset of uncorrelated principal components (PCs).
+PCA also enables the evaluation of each PC’s contribution to the total variance of the information.
+Our analysis showed that, for example, when estimating $N_\mathrm{Fe}$ using a set of
+seven descriptors ($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$, $\varepsilon \eta$, $\varepsilon V_\mathrm{OC}$, $\varepsilon F\!F$)
+obtained under 940~nm illumination, five PCs account for more than 99.5\% of the variance in the input data.
+Therefore, applying PCA to transform the seven input variables and using only five is fully justified,
+as it significantly simplifies calculations with minimal impact on estimation accuracy.
+
+In the manuscript, PCA was not used to evaluate impurity levels.
+The conclusions and abstract only mentioned its potential usefulness in estimating the concentration of iron impurities
+based on variations in several PVPs.
+We apologize for any possible ambiguities in the wording.
+In the revised manuscript, we have aimed for the most precise formulations.
+Finally, we would like to thank the Reviewer for an idea about PCA use to distinguish the contributions of different defects in future research.
+
+
+The corrections were made in the manuscript on page 14, 1st paragraph in Section 3.5.
+
+
+\begin{mdframed}
+The previous subsections demonstrated that by using the relative changes in photovoltaic energy conversion parameters following the dissociation of FeB pairs
+(e.g., changes in short-circuit current),
+along with considering solar cell parameters (such as base depth and doping level)
+and measurement conditions (such as temperature and illumination type), it is possible to predict iron concentration.
+One approach to evaluating the value of $N_\mathrm{Fe}$ is to apply a machine learning algorithm (random forest, gradient booster, or artificial neural network etc.).
+If we assume that the training process is conducted separately for each illumination variant \textcolor[rgb]{1.00,0.07,0.00}{ and want to
+determine the magnitude of $N_\mathrm{Fe}$ based on changes in short-circuit current},
+the input set of descriptors could be
+($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$).
+\textcolor[rgb]{1.00,0.07,0.00}{Evidently, incorporating additional information, such as changes in efficiency ($\varepsilon \eta$), along with an expanded
+set of descriptors ($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$, $\varepsilon \eta$),
+increases the complexity of calculations due to the growing number of input parameters.
+However, this should enhance the accuracy of $N_\mathrm{Fe}$ predictions.
+At the same time, }when comparing Fig.~3 and Fig.~10, it is clear that  $\varepsilon I_\mathrm{SC}$ and $\varepsilon \eta$ are not entirely independent.
+\textcolor[rgb]{1.00,0.07,0.00}{This outcome is understandable from a physical standpoint as
+short-circuit current and efficiency characterize the same physical process --- the diffusion of photo-induced carriers.
+Thus, the set ($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$, $\varepsilon \eta$)
+contains useful and redundant information compared to ($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$).}
+\end{mdframed}
+
+
+and on page 16, two last paragraph
+
+
+\begin{mdframed}
+To assess the \textcolor[rgb]{1.00,0.07,0.00}{degree} of redundancy information
+\textcolor[rgb]{1.00,0.07,0.00}{in different descriptor sets, we employed} principal component analysis (PCA),
+widely used in solving various problems, including identifying defects in solar cells [83].
+PCA uses a linear combination of the original variables to \textcolor[rgb]{1.00,0.07,0.00}{construct} the new variables (principal component, PC) while keeping maximum variance information.
+PCs are \textcolor[rgb]{1.00,0.07,0.00}{uncorrelated, and PCA allows one to evaluate each PC’s contribution to the total variance of the information.}
+In the case of some particular principal component having a low information variance ratio, it can be discarded with little to no loss of useful information.
+
+PCs were built for different combinations of PVPs and solar cell characteristics
+for the full set of simulated data, and the results are listed in Table~2.
+As evident, when only changes in short-circuit current are considered along with the solar cell's base parameters and temperature,
+no excessive information is present \textcolor[rgb]{1.00,0.07,0.00}{(in the case of the descriptor set ($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$),
+all four principal components exhibit a high ratio of information variance)}.
+\textcolor[rgb]{1.00,0.07,0.00}{And vice versa, when estimating $N_\mathrm{Fe}$ using a maximal set of
+seven descriptors ($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$, $\varepsilon \eta$, $\varepsilon V_\mathrm{OC}$, $\varepsilon F\!F$)
+obtained under monochromatic illumination five PCs account for more than 99.5\% of the variance in the input data.
+Therefore, applying PCA to transform the seven input variables and using only five is fully justified,
+as it significantly simplifies calculations with minimal impact on estimation accuracy.
+For the same set of descriptors obtained under AM1.5 illumination,
+the number of really independent variables is six.
+In general, if the estimation of iron concentration is based on changes in multiple PVPs,
+it is advisable to apply PCA to transform the original data.
+Thus, the simultaneous use of $\varepsilon \eta$ and $\varepsilon I_\mathrm{SC}$ practically does not alter
+the number of independent variables (four) compared to the initial set of descriptors.}
+With the additional use of $\varepsilon V_\mathrm{OC}$ values obtained under AM1.5 illumination, it is advisable to consider five independent variables.
+For the same set of descriptors in a monochromatic illumination case, one can limit oneself to using only four independent components
+(cumulative variance ratio for PC4 and PC5 does not exceed 1.3\%).
+\end{mdframed}
+
+
+
+\vspace{1cm}
+\noindent
+\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~5.}}
+\emph{Your paper discusses the influence of doping levels on the response of solar cells to iron contamination.
+Author should explain how varying the doping concentration affects the sensitivity of photovoltaic parameters to iron presence through the reference:
+Augmented photovoltaic performance of Cu/Ce-(Sn: Cd)/n-Si Schottky barrier diode utilizing dual-doped Ce-(Sn: Cd) thin films.}
+
+\noindent
+\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+
+
+The primary reason doping concentration $N_\mathrm{B}$ influences the sensitivity of photovoltaic
+parameters to iron presence is that the $N_\mathrm{B}$ determines the Fermi level $E_\mathrm{F}$ position.
+In turn, the rate of Shockley-Read-Hall recombination ---
+and consequently, variations in PVP values due to iron impurities ---
+depends on the relative positioning of $E_\mathrm{F}$ concerning the Fe$_i$B$_s$ and Fe$_i$ levels.
+Additionally, the equilibrium ratio of Fe$_i$B$_s$ and Fe$_i$ concentrations is also determined by the Fermi level position \cite{FeB:kinetic,MurphyJAP2011}.
+Therefore, $N_\mathrm{B}$ affects the number of defects that change their state due to the complete dissociation of Fe$_i$B$_s$ pairs,
+leading to corresponding relative changes in PVPs analyzed in this study.
+Besides, the $N_\mathrm{B}$ concentration also affects the SCR depth (see Fig.~4 in manuscript).
+The ratio of different charge states for both interstitial iron atoms and iron-boron pairs differs between the SCR and the bulk of the base, leading to distinct SRH recombination rates and variations in photovoltaic conversion efficiency for structures with different doping levels.
+Furthermore, according to Klaassen’s model \cite{KLAASSEN953},
+the concentration of ionized impurities influences charge carrier mobility and, consequently, the diffusion coefficient $D_n$, diffusion length $L_n$,
+and photovoltaic  conversion efficiency (see Eqs.~(4), (5), and (7) in the manuscript).
+However, the effect of $N_\mathrm{B}$ via $D_n$ and $L_n$ is significantly weaker than its influence through $E_\mathrm{F}$ and SCR depth variations.
+Minor effects are expected as well due to both bandgap narrowing and changes in light absorption by free carriers with varying doping levels.
+The impact of doping level on PVPs has been studied in heterojunction \cite{Sultana2024},
+thin-film \cite{Akila2024},
+and perovskite \cite{MasumMia2025} solar cells.
+Moreover, it has been shown \cite{Akila2024} that
+doping concentration variations affect other barrier structure parameters, such as saturation current and ideality factor.
+
+
+This answer is incorporated in the text on page 8, paragraph 1.
+Reference  is included in the revised manuscript (references 10)
+
+
+
+
+%У вашій статті обговорюється вплив рівня легування на реакцію сонячних елементів на забруднення залізом.
+%Автору слід пояснити, як зміна концентрації легування впливає на чутливість фотоелектричних параметрів до присутності заліза через посилання:
+
+
+%We would also like to express our gratitude to the Reviewer for providing exceptionally insightful references. We
+%hope the Reviewer will not object to their inclusion in the revised manuscript (references 1, 2, 3, 91, 92).
+
+\begin{mdframed}
+...while the presence of the acceptor state Fe$_i$B$_s$ causes the
+carrier lifetime to be doping-dependent under low injection conditions [39].
+
+\textcolor[rgb]{1.00,0.07,0.00}{
+The relationship between $N_\mathrm{B}$ and $E_\mathrm{F}$ is the key  factor
+in the influence of doping level on the sensitivity of PVPs to iron presence.
+Specifically, the rate of SRH recombination ---
+and consequently, variations in PVPs due to iron impurities ---
+depends on the relative positioning of $E_\mathrm{F}$ concerning the Fe$_i$B$_s$ and Fe$_i$ levels.
+Additionally, the equilibrium ratio of Fe$_i$B$_s$ and Fe$_i$ concentrations is also determined by the Fermi level position [60,61].
+Therefore, $N_\mathrm{B}$ affects the number of defects that change their state due to the complete dissociation of Fe$_i$B$_s$ pairs,
+leading to corresponding relative changes in PVPs analyzed in this study.
+Besides, the $N_\mathrm{B}$ concentration also affects the SCR depth (see Fig.~4).
+The ratio of different charge states for both interstitial iron atoms and iron-boron pairs differs between the SCR and the bulk of the base, leading to distinct SRH recombination rates and variations in photovoltaic conversion efficiency for structures with different doping levels.
+Furthermore, according to Klaassen’s model [58],
+the concentration of ionized impurities influences charge carrier mobility and, consequently, the diffusion coefficient $D_n$, diffusion length $L_n$,
+and photovoltaic conversion efficiency (see Eq.~(4)).
+However, the effect of $N_\mathrm{B}$ via $D_n$ and $L_n$ is significantly weaker than its influence through $E_\mathrm{F}$ and SCR depth variations.
+Minor effects are expected as well due to both bandgap narrowing and changes in light absorption by free carriers with varying doping levels.
+The impact of doping level on PVPs has been studied in heterojunction [8],
+thin-film [10],
+and perovskite [6] solar cells.
+Moreover, it has been shown [10] that
+doping concentration variations affect other barrier structure parameters, such as saturation current and ideality factor.
+}
+\end{mdframed}
+
+
+\vspace{1cm}
+\noindent
+\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~6.}}
+\emph{In your findings, Author mentions that changes in short-circuit current under monochromatic illumination are the most
+reliable for estimating iron concentration.
+An author should provide more details on the methodology used to derive this conclusion and any potential limitations of this approach?}
+
+%У своїх висновках автор зазначає, що зміни струму короткого замикання при монохроматичному освітленні є найбільш
+%надійними для оцінки концентрації заліза.
+%Автор повинен надати більш детальну інформацію про методологію, використану для отримання цього висновку, і будь-які потенційні обмеження цього підходу?
+
+
+\noindent
+\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+
+We employed two key metrics to identify the solar cell parameter whose changes,
+resulting from the Fe$_i$B$_\mathrm{Si}$ $\rightleftarrows$ Fe$_i$ + B$_\mathrm{Si}$ reconstruction,
+enable the most reliable determination of iron concentration.
+Specifically, these metrics are:
+(1) the monotonicity of the relative change in the parameter value as a function of impurity concentration,
+which is a necessary condition for the unambiguous estimation of $N_\mathrm{Fe}$;
+and (2) the absolute magnitude of the parameter change, which allows for more precise measurements and,
+consequently, a more accurate estimation of $N_\mathrm{Fe}$.
+The first criterion is not satisfied by $\varepsilon F\!F$, $\varepsilon V_\mathrm{OC}$, and $\varepsilon \eta$
+(the latter two under AM1.5 illumination).
+At the same iron concentration, $\varepsilon I_\mathrm{SC}$ values under monochromatic illumination exceed those under AM1.5 illumination.
+As mentioned earlier, this effect deals with differences in the generation locations
+of non-equilibrium carriers under different lighting conditions.
+Additionally, under identical conditions, the changes in open-circuit voltage are significantly weaker
+than those in short-circuit current or efficiency.
+Since $\varepsilon I_\mathrm{SC}$ and $\varepsilon \eta$ are of the same order,
+it is advisable to select the more reliable parameter using additional metrics.
+Notably, short-circuit current determination, unlike efficiency, does not require additional calculations
+and can be directly extracted from the raw measured $I$-$V$ curves.
+Furthermore, $\varepsilon I_\mathrm{SC}$ is virtually independent of illumination intensity
+(whereas $\varepsilon \eta$ exhibits a weak dependence), leading to two key advantages:
+(a)~iron concentration can be determined using an uncalibrated for-intensity monochromatic light source;
+(b)~the influence of shading caused by electrodes, along with the antireflective and passivating layers of the solar cell, is reduced.
+
+Thus, short-circuit current is the most suitable parameter for estimating the concentration of iron impurities, as its changes during the
+Fe$_i$B$_\mathrm{Si}$ $\rightleftarrows$ Fe$_i$ + B$_\mathrm{Si}$ transformation can be effectively utilized.
+Determining PVPs under monochromatic illumination,
+with a wavelength corresponding to the predominant absorption in the solar cell base, is more effective than using AM1.5 illumination.
+The most viable alternatives are solar cell efficiency and open-circuit voltage;
+however, their applicability is limited at low base doping levels ($<10^{16}$~cm$^{-3}$)
+due to non-monotonic variations in response to increasing iron concentration.
+In our view, using the fill factor for iron concentration estimation is impractical.
+These conclusions are validated by experimental results, which show that short-circuit current provides the most accurate determination of iron concentration.
+
+The limitations of the proposed method may arise from the presence of a significant
+number of recombination-active defects unrelated to iron,
+as well as high series resistance (which distorts the short-circuit current) and/or shunt resistance (which primarily affects the open-circuit voltage).
+
+The text has been revised according to the Reviewer's advice --- see page 14, 2nd paragraph from the bottom
+
+
+\begin{mdframed}
+The revealed characteristics of $\varepsilon \eta$ indicate that this PVP
+is entirely suitable for estimating iron concentration.
+
+\textcolor[rgb]{1.00,0.07,0.00}{Two key metrics were used to identify the solar cell parameter whose changes,
+resulting from the Fe$_i$B$_\mathrm{Si}$ $\rightleftarrows$ Fe$_i$ + B$_\mathrm{Si}$ reconstruction,
+enable the most reliable determination of iron concentration.
+Specifically, these metrics are:
+(1) the monotonicity of the relative change in the parameter value as a function of impurity concentration,
+which is a necessary condition for the unambiguous estimation of $N_\mathrm{Fe}$;
+and (2) the absolute magnitude of the parameter change, which allows for more precise measurements and,
+consequently, a more accurate estimation of $N_\mathrm{Fe}$.
+The first criterion is not satisfied by $\varepsilon F\!F$, $\varepsilon V_\mathrm{OC}$, and $\varepsilon \eta$
+(the latter two under AM1.5 illumination).
+At the same iron concentration, $\varepsilon I_\mathrm{SC}$ values under monochromatic illumination exceed those under AM1.5 illumination.
+As mentioned earlier, this effect deals with differences in the generation locations
+of non-equilibrium carriers under different lighting conditions.
+Additionally, under identical conditions, the changes in open-circuit voltage are significantly weaker
+than those in short-circuit current or efficiency.
+Since $\varepsilon I_\mathrm{SC}$ and $\varepsilon \eta$ are of the same order,
+it is advisable to select the more reliable parameter using additional metrics.
+Notably, short-circuit current determination, unlike efficiency, does not require additional calculations
+and can be directly extracted from the raw measured $I$-$V$ curves.
+Furthermore, $\varepsilon I_\mathrm{SC}$ is virtually independent of illumination intensity
+(whereas $\varepsilon \eta$ exhibits a weak dependence), leading to two key advantages:
+(a)~iron concentration can be determined using an uncalibrated for-intensity monochromatic light source;
+(b)~the influence of shading caused by electrodes, along with the antireflective and passivating layers of the solar cell, is reduced.}
+
+\end{mdframed}
+
+\vspace{1cm}
+\noindent
+\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~7.}}
+\emph{An Author must improve the introduction section in the application part through the recent referencs
+CuO-La2O3 Composite-Enabled MIS Schottky Barrier Diodes: A Novel Approach to Optoelectronic Device Diversification;
+Enhancing photovoltaic applications through precipitating agents in ITO/CIS/CeO2/Al heterojunction solar cell;
+Manifestation on the choice of a suitable combination of MIS for proficient Schottky diodes for optoelectronics applications: A comprehensive review.}
+
+%\cite{Paul2024,Gayathri2024,AlanSibu2024}
+
+
+
+
+
+\noindent
+\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+
+We sincerely thank the Reviewer for suggesting the inclusion of recent references (cited as References 2, 3, and 9 in the revised manuscript).
+Below, we present an improved version of the 1st paragraph of Introduction.
+
+
+\begin{mdframed}
+The necessity for renewable energy sources to meet the growing global demand for sustainable and environmentally friendly energy alternatives has become evident.
+Among the wide range of renewable energy sources, sunlight is the cleanest, safest,
+and most abundant source for use in sustainable energy to support economic growth [1].
+The utilization of solar energy heavily depends on the use of photovoltaic cells.
+\textcolor[rgb]{1.00,0.07,0.00}{
+The development of next-generation solar cells is primarily driven by the search for novel materials suitable for their fabrication.
+Particular attention is given to exploring the potential use of composites and nanoparticles
+(e.g., Cu-La-based systems [2], cerium oxide, and copper indium sulfate [3]),
+MAX phases [4,5],
+and chalcogenides (such as GeSe, MoSe$_2$, Sb$_2$Se$_3$, and SnSe as hole transport materials [6]
+or SnS$_2$ and WS$_2$ as electron transport materials [7]),
+as well as metal silicides (e.g., FeSi$_2$ as an absorber layer [8]).
+These studies cover a broad range of materials [9], with the primary goal of developing highly efficient and cost-effective photovoltaic devices.
+Frequently, these novel materials are integrated with silicon in solar cells [8,10].
+However, it is worth noting that traditional} silicon-based devices
+\textcolor[rgb]{1.00,0.07,0.00}{continue} to play
+\textcolor[rgb]{1.00,0.07,0.00}{a dominant role in the photovoltaic market} [11,12].
+\end{mdframed}
+
+
+
+\vspace{1cm}
+\subsection*{Response to Reviewer \#2 }
+
+\noindent
+\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~1.}}
+\emph{The abstract section should be more informative.}
+
+\noindent
+\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+
+We revised the abstract to maximize its informativeness while adhering to the 150-word limit imposed by Materials Science and Engineering: B.
+
+
+\vspace{1cm}
+\noindent
+\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~2.}}
+\emph{The novelty of the work is missing in the introduction. Authors should explain what are the key advantages of iron's impact on silicon solar cell?}
+
+%У вступі відсутня новизна роботи. Авторам варто було б пояснити, в чому полягають ключові переваги впливу заліза на кремнієвий сонячний елемент?
+
+\noindent
+\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+
+Iron atoms have no beneficial effects on silicon solar cells;
+instead, they act as detrimental impurities that significantly reduce carrier lifetime.
+Despite their harmful impact, iron atoms are among the most common impurities in silicon solar cells.
+Therefore, our study, which examines their effects on solar cell performance under various conditions and lays the foundation for a rapid, non-destructive detection method, holds significant practical value.
+
+The reviewer correctly noted the lack of a clear novelty statement in the Introduction.
+In the revised manuscript, we have included the relevant information to address this issue --- see page 2, last five paragraph.
+
+
+\begin{mdframed}
+Finally, in our calculations, we attempted to use the latest literature data
+concerning the exact values of silicon parameters, including light absorption values [41]
+and coefficients characterizing intrinsic recombination [42,43].
+
+\textcolor[rgb]{1.00,0.07,0.00}{
+The contributions of this work are as follows:
+\begin{itemize}[itemsep=2pt, parsep=0pt, topsep=0pt]
+    \item The impact of FeB pair dissociation on the short-circuit current, open-circuit voltage, fill factor,
+and efficiency of silicon solar cells was investigated through simulation.
+Calculations were performed over various temperatures, illumination conditions, and solar cell parameters,
+including base thickness, doping level, and impurity concentration.
+Particular attention was given to the silicon and defect parameters value under diverse conditions.
+    \item A series of experiments have been done to check the simulation predictions.
+    \item The feasibility of using variations in short-circuit current, open-circuit voltage, fill factor,
+and efficiency due to impurity pair dissociation for iron concentration estimation was analyzed,
+and the most reliable parameter --- short-circuit current under monochromatic illumination --- was identified.
+    \item The potential of simultaneous using multiple PVPs for iron quantification, including machine learning techniques, was explored.
+It was shown that applying Principal Component Analysis as a preprocessing step is beneficial in this case.
+\end{itemize}
+}
+\end{mdframed}
+
+
+%In summary, the contributions of this paper are as follows:
+%
+%The contributions of this work are as
+%follows:
+%
+%• A novel metaheuristic method, named GNDO, is presented, which is
+%inspired by the classical normal distribution theory.
+%• A generalized normal distribution model based on the location information of population is built, which is used to update the position
+%of the individual.
+%• A series of experiments have been done to check the performance of
+%GNDO for extracting the unknown parameters of PV models.
+%
+%The main contribution of the paper lies in:
+%1. A new framework for swarm based evolutionary optimization
+%algorithm is proposed, it is simple, powerful, accurate and outperforms state-of-the-art PSO variants and DE variants not only
+%on unimodal functions but also on multimodal functions, not
+%only on low dimensional optimization problems but also on
+%high dimension optimization problems.
+%2. The proposed algorithm has lower time complexity than many
+%of the contrasted algorithms, and the code of the algorithm is
+%concise but powerful, so it’s convenient to be used in kinds of
+%applications.
+%3. The relation between the proposed QUATRE algorithm and
+%other swarm based algorithms is discussed, and this, to some
+%extent, shows why QUATRE algorithm has better performance.
+%4. The proposed QUATRE algorithm has a more cooperative property, and better performance can be achieved by reducing number of generations required for a target optimum by increasing
+%particle population size with the total number of function evaluations unchanged
+
+
+\vspace{1cm}
+\noindent
+\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~3.}}
+\emph{Authors should improve the image quality of all figures.}
+
+%Автори повинні покращити якість зображення всіх рисунків.
+
+\noindent
+\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+
+We have modified Figs. 1, 2, 4, 5, 7, 9, 11, and 12 to improve clarity and readability.
+The captions of Figs. 1, 2, 4, 5, 7, and 11 have been revised to enhance interpretability.
+To improve quality, all figures have been recreated in higher resolution.
+
+\vspace{1cm}
+\noindent
+\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~4.}}
+\emph{Author should explain how does the band alignment affect the overall performance of the solar cell?}
+
+%Автор повинен пояснити, як вирівнювання смуг впливає на загальну продуктивність сонячного елемента?
+
+\noindent
+\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+
+Band alignment plays a crucial role in determining the efficiency and overall performance of a solar cell.
+It affects charge carrier separation, transport, and recombination, which directly impact power conversion efficiency.
+The relative positions of the conduction and valence bands across the junction establish the built-in potential.
+An optimal band alignment ensures that the built-in field is sufficiently strong to separate photogenerated electron–hole pairs effectively.
+The conduction band offset and valence band offset determine the energy barriers for minority and majority carrier injection.
+A too-large offset may impede carrier transport (lowering short-circuit current) or increase the dark current,
+adversely affecting the open-circuit voltage and fill factor.
+Proper band alignment between silicon and contact materials (such as metal electrodes or passivation layers) ensures efficient extraction of electrons and holes.
+Poor alignment can lead to high surface recombination, limit open-circuit voltage and overall efficiency.
+If the conduction or valence bands are too sharply misaligned, tunneling effects or interface defects may occur,
+leading to undesirable leakage currents.
+
+Simultaneously, it is essential to emphasize that defect reconstruction Fe$_i$B$_\mathrm{Si}$ $\rightleftarrows$ Fe$_i$ + B$_\mathrm{Si}$,
+which was the central focus of our work,
+does not affect band alignment.
+Although the doping level of the solar cell's base and band alignment are interrelated,
+and thus, band alignment influences changes in photovoltaic conversion parameters resulting from the reconstruction of iron-related defects
+However, our study did not aim to explore these effects.
+Instead, we examined the correlations between parameter changes and defect concentration, doping level, base thickness, and temperature.
+
+
+
+\vspace{1cm}
+\noindent
+\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~5.}}
+\emph{What are the primary sources of iron contamination in silicon used for solar cells?}
+
+%Які основні джерела забруднення залізом кремнію, що використовується для сонячних елементів?
+
+\noindent
+\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+
+
+Contaminants can be classified as either grown-in (resulting from impurities in polysilicon
+feedstock or contamination during crystal growth) or introduced from various sources,
+such as chemicals (e.g., gases, wet chemistry, photoresist, water),
+processing equipment (e.g., furnaces, ion implanters, reactive ion etching and rapid thermal annealing systems,
+polishing machines, electrical measurement tools, wafer handlers, and tools for numbering or marking),
+and handling between processing steps (e.g., wafer carriers or even ambient air) \cite{Istratov2000}.
+
+Our study focused on monocrystalline silicon solar cells.
+Notably, iron concentration in crystals grown using either the Czochralski or float-zone method is generally low,
+with the primary sources of iron contamination being external.
+However, iron is one of the most abundant elements in nature and is difficult to eliminate in a production environment.
+Stainless steel, widely used in fabrication facilities, is considered one of the major sources of iron contamination.
+During manufacturing, numerous opportunities exist for iron to transfer from the production line onto the surface of silicon wafers,
+from where it can diffuse into the bulk during subsequent thermal processes \cite{Istratov2000, Abbott2014}.
+
+The main sources of iron contamination include \cite{Istratov2000, Abbott2014}:
+\begin{itemize}[itemsep=2pt, parsep=0pt, topsep=0pt]
+    \item Cleaning processes (due to residual impurities in chemicals);
+    \item Annealing and oxidation (from furnaces in general and heating coils in particular);
+    \item Equipment utilizing plasma and ions (e.g., ion implantation, dry etching, resist ashing, sputtering, plasma CVD equipment);
+    \item Wafer handling and transportation, despite the widespread use of plastic rather than metal components.
+\end{itemize}
+
+For example, in the samples used in our experimental tests to verify the simulation results,
+iron contamination primarily originates from chemicals that are not sufficiently pure.
+
+
+The information about the primary sources of iron contamination in silicon used for solar cells has been added to the revised manuscript
+--- see page 1, 1st paragraph from the bottom
+
+\begin{mdframed}
+Iron is prominent among metallic contaminants, with its atoms being among
+the most prevalent and detrimental impurities in silicon solar cells (SSCs) [24].
+\textcolor[rgb]{1.00,0.07,0.00}{The main sources of iron contamination in monocrystalline SSCs include [17,25]
+cleaning processes (due to residual impurities in chemicals),
+annealing and oxidation (from furnaces in general and heating coils in particular),
+equipment utilizing plasma and ions (e.g., ion implantation, dry etching, resist ashing, sputtering),
+wafer handling and transportation(despite the widespread use of plastic rather than metal components).}
+Even in small concentrations (about $10^{10}$~cm$^{-3}$),
+point defects related to Fe can significantly influence the performance of SSCs [26,27].
+Therefore, it is of critical importance to assess the concentration of iron impurities.
+In response to this challenge, various methodologies have been put forward,
+often based on the property of iron atoms to form pairs with acceptors.
+\end{mdframed}
+
+
+
+
+\vspace{1cm}
+\noindent
+\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~6.}}
+\emph{What role do recombination centers created by iron play in the modeling of solar cell performance?}
+
+%Яку роль відіграють центри рекомбінації, створені залізом, у моделюванні роботи сонячних елементів?
+
+\noindent
+\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+
+Iron-related defects are a primary cause of charge carrier recombination.
+In our simulations using the SCAPS-1D software,
+we accounted for these defects by incorporating specific parameters,
+including defect energy levels, electron and hole capture cross-sections, and defect concentrations.
+The recombination processes were modeled using the Shockley-Read-Hall formalism.
+A detailed description of the simulation process is provided in Section 2.1.
+Overall, the presence of recombination centers associated with iron leads to decreases in minority carrier lifetime,
+short-circuit current, open-circuit voltage, solar cell efficiency, and fill factor.
+
+
+
+\vspace{1cm}
+\noindent
+\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~7.}}
+\emph{Author should discuss and cited recent Si based solar cell in the revised manuscript:
+$DOI:10.1016/j.mseb.2024.117360,
+DOI:10.1016/j.mseb.2023.117141,
+DOI:10.1016/j.mseb.2024.117817,
+DOI:10.1007/s42247-024-00821-y,
+DOI:10.1016/j.inoche.2024.112785$}
+
+\noindent
+\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+
+
+We sincerely appreciate the reviewer’s valuable suggestion.
+Most of the recommended works are highly relevant, and we have cited them in multiple sections of the manuscript.
+Advised articles are referenced as References 8, 4, 6, 7, and 5 in the revised version.
+
+So, we discuss and cited suggested papers in the Introduction, first paragraph
+
+\begin{mdframed}
+The necessity for renewable energy sources to meet the growing global demand for sustainable and environmentally friendly energy alternatives has become evident.
+Among the wide range of renewable energy sources, sunlight is the cleanest, safest,
+and most abundant source for use in sustainable energy to support economic growth [1].
+The utilization of solar energy heavily depends on the use of photovoltaic cells.
+\textcolor[rgb]{1.00,0.07,0.00}{
+The development of next-generation solar cells is primarily driven by the search for novel materials suitable for their fabrication.
+Particular attention is given to exploring the potential use of composites and nanoparticles
+(e.g., Cu-La-based systems [2], cerium oxide, and copper indium sulfate [3]),
+MAX phases [4,5],
+and chalcogenides (such as GeSe, MoSe$_2$, Sb$_2$Se$_3$, and SnSe as hole transport materials [6]
+or SnS$_2$ and WS$_2$ as electron transport materials [7]),
+as well as metal silicides (e.g., FeSi$_2$ as an absorber layer [8])}
+\end{mdframed}
+
+on page 3, second paragraph in Section 2.1
+
+
+\begin{mdframed}
+Despite its one-dimensional modeling approach, SCAPS is extensively used for modeling various types
+of solar cells [\textcolor[rgb]{1.00,0.07,0.00}{6,7,8},46,47,48,49] in general
+and for investigating the effects of defects on their performance [\textcolor[rgb]{1.00,0.07,0.00}{6,8,}50,51,52] in particular.
+\end{mdframed}
+
+
+on page 5, 2nd paragraph
+
+\begin{mdframed}
+Impact of change of iron defects was investigated as a function of temperature from 290~K to 340~K,
+base depth from 180~$\mu$m to 380~$\mu$m,
+base doping level from $10^{15}$~cm$^{-3}$ to $10^{17}$~cm$^{-3}$,
+and total impurity iron atom concentration from $10^{10}$~cm$^{-3}$ to $10^{14}$~cm$^{-3}$.
+\textcolor[rgb]{1.00,0.07,0.00}{It is worth noting that investigating the effects of doping density, defect density, temperature, and active layer thickness on PVPs is a well-established practice [6,7,8].}
+For each illumination scenario, calculations were carried out with 11 different temperature values and 5 base depth values,
+evenly distributed within the specified ranges.
+\end{mdframed}
+
+on page 8, 1st paragraph from the bottom
+
+\begin{mdframed}
+However, the effect of $N_\mathrm{B}$ via $D_n$ and $L_n$ is significantly weaker than its influence through $E_\mathrm{F}$ and SCR depth variations.
+Minor effects are expected as well due to both bandgap narrowing and changes in light absorption by free carriers with varying doping levels.
+\textcolor[rgb]{1.00,0.07,0.00}{The impact of doping level on PVPs has been studied in heterojunction [8],
+thin-film [10],
+and perovskite [6] solar cells.}
+Moreover, it has been shown [10] that
+doping concentration variations affect other barrier structure parameters, such as saturation current and ideality factor.
+\end{mdframed}
+
+on page 12, 5th paragraph from the top
+
+\begin{mdframed}
+- At low boron concentrations ($N_\mathrm{B}<10^{16}$~cm$^{-3}$),
+the dependence of $\varepsilon F\!F$ on $N_\mathrm{Fe}$ is notably non-linear.
+Within the used concentration range, two regions of decrease and two regions of increase in $\varepsilon F\!F$ are observed.
+\textcolor[rgb]{1.00,0.07,0.00}{A similar relationship between the fill factor and defect concentration was observed in BaZrSe$_3$--based perovskite solar cells [6]};
+\end{mdframed}
+
+
+
+
+%\cite{Sultana2024,MasumMia2025,Rahman2024}
+%
+%
+%\cite{Sultana2024,Behera2024,MasumMia2025,Rahman2024,AzzouzRached2024}
+%         8           4             6          7            5
+\vspace{1cm}
+\noindent
+\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~8.}}
+\emph{How does the modeling in this study contribute to the design of processes for impurity control in silicon?}
+
+%Як моделювання в цьому дослідженні сприяє розробці процесів контролю домішок у кремнії?
+
+\noindent
+\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+
+
+Our study lays the groundwork for developing an efficient, express, cost-effective method for monitoring iron impurity concentrations in silicon solar cells.
+This approach relies on current-voltage measurements and can be easily incorporated into the standard characterization procedure for silicon photovoltaic devices.
+Through simulations and experiments, we have identified a key metric for quantifying iron impurities (short-circuit current) and determined which factors significantly (base doping level, temperature) and insignificantly (base thickness) influence the response of solar cells to iron-related defect rearrangements.
+These findings should be considered when implementing the method in practice.
+Our approach allows for the simultaneous determination of the concentration of iron impurities along with the standard solar cell parameters (such as short-circuit current, open-circuit voltage, and nominal power), all without needing additional equipment.
+
+Thanks to the Reviewer's comment, we refined one of our study's conclusions, which has been incorporated into the Conclusion section (see last paragraph).
+
+
+
+%\begin{mdframed}
+%
+%\end{mdframed}
+
+\vspace{1cm}
+\noindent
+\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~9.}}
+\emph{State the main findings in the conclusions.}
+
+%У висновках викладіть основні результати.
+
+\noindent
+\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+
+
+In response to the Reviewer's comments, we have expanded the Conclusion section and clearly formulated all main findings.
+Below is the revised version of the Conclusions, with the changes highlighted in red in the updated manuscript.
+
+
+\begin{mdframed}
+We have provided the results of modeling the impact of variations in the
+state of iron impurities on the PVPs of silicon solar cells
+with different base properties under various external conditions
+(temperature, intensity, and spectral composition of illumination).
+The simulation results have been compared with experimental data.
+
+
+The feasibility of using relative changes in short-circuit current, open-circuit voltage,
+fill factor, and efficiency resulting from the dissociation of FeB pairs
+to estimate the concentration of iron impurities in a solar cell has been analyzed.
+It is shown that short-circuit current is the most suitable parameter \textcolor[rgb]{1.00,0.07,0.00}{for iron quantification, as variations in $I_\mathrm{SC}$ value during the
+Fe$_i$B$_\mathrm{Si}$ $\rightleftarrows$ Fe$_i$ + B$_\mathrm{Si}$ transformation can be effectively utilized.
+Determining} PVPs under monochromatic illumination,
+with a wavelength corresponding to the predominant absorption in the solar cell base, is more effective than using AM1.5 illumination.
+\textcolor[rgb]{1.00,0.07,0.00}{The most viable alternatives are solar cell }efficiency and open-circuit voltage;
+however, their applicability is limited at low base doping levels ($<10^{16}$~cm$^{-3}$)
+due to non-monotonic variations in response to increasing iron concentration.
+In our view, using the fill factor for iron concentration estimation is impractical.
+\textcolor[rgb]{1.00,0.07,0.00}{These conclusions are validated by experimental results, which show that short-circuit current provides the most accurate determination of iron concentration.}
+
+
+It has been shown that the potential accuracy of estimating iron concentration depends
+on the doping level of the base:
+at a boron concentration around $10^{16}$~cm$^{-3}$, it is minimal,
+while decreasing or increasing this value enhances the response of $I_\mathrm{SC}$ to the presence of iron.
+Furthermore, the accuracy of $N_\mathrm{Fe}$ determination is significantly influenced by the availability
+of precise information on the doping level of the base,
+as well as the accuracy of estimating the intensity of monochromatic illumination,
+especially when using $\varepsilon \eta$ and $\varepsilon V_\mathrm{OC}$.
+
+
+
+At the same time, $\varepsilon \eta$ and $\varepsilon V_\mathrm{OC}$ can serve as additional parameters
+for refining the determination of iron concentration.
+In our opinion, for estimating iron concentration through changes
+in PVP values due to variability in iron--related defects, it is advisable to use a set of
+($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$, $\varepsilon \eta$) or ($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$, $\varepsilon \eta$,$\varepsilon V_\mathrm{OC}$).
+\textcolor[rgb]{1.00,0.07,0.00}{Furthermore, it has been demonstrated that iron-induced changes in various PVPs are correlated.
+Therefore, if iron concentration estimation is performed using changes
+in multiple PVPs, applying Principal Component Analysis is advisable.
+This data transformation reduces the number of variables while preserving the maximum variance information and accelerating calculations.}
+
+\textcolor[rgb]{1.00,0.07,0.00}{Our study lays the groundwork for developing an efficient, express, cost-effective method for monitoring iron impurity concentrations in silicon solar cells.
+This approach relies on current-voltage measurements and can be easily incorporated into the standard characterization procedure for silicon photovoltaic devices.
+Through simulations and experiments, we have identified a key metric for quantifying iron impurities (short-circuit current) and determined which factors significantly (base doping level, temperature) and insignificantly (base thickness) influence the response of solar cells to iron-related defect rearrangements.
+These findings should be considered when implementing the method in practice.
+Our approach allows for the simultaneous determination of the concentration of iron impurities along with the standard solar cell parameters (such as short-circuit current, open-circuit voltage, and nominal power), all without needing additional equipment.
+The suggested and verified approach advances our understanding of impurity effects and paves the way for improved solar cell reliability.}
+\end{mdframed}
+
+
+\bibliographystyle{model1-num-names}
+\bibliography{olikh}
+
+
+\end{document}
+
+%Будь-ласка, покращ англійську в наступних реченнях, які я буду пропонувати. Зокрема, треба буде виправити граматичні та стилістичні помилки
+%якщо можна, окрім виправленого речення, наводь інформацію про зміни, які зроблені 
