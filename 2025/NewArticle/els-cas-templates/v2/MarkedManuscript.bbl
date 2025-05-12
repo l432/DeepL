@@ -1,4 +1,4 @@
-\begin{thebibliography}{74}
+\begin{thebibliography}{77}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\bibinfo}[2]{#2}
 \ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
@@ -352,6 +352,46 @@
 \newblock \bibinfo{journal}{Sol. Energy Mater. Sol. Cells}
   \bibinfo{volume}{138} (\bibinfo{year}{2015}) \bibinfo{pages}{96--101}.
 %Type = Article
+\bibitem[{Macdonald et~al.(2004)Macdonald, Geerligs, and
+  Azzizi}]{Macdonald2004}
+\bibinfo{author}{D.~H. Macdonald}, \bibinfo{author}{L.~J. Geerligs},
+  \bibinfo{author}{A.~Azzizi},
+\newblock \bibinfo{title}{{Iron detection in crystalline silicon by carrier
+  lifetime measurements for arbitrary injection and doping}},
+\newblock \bibinfo{journal}{J. Appl. Phys.} \bibinfo{volume}{95}
+  (\bibinfo{year}{2004}) \bibinfo{pages}{1021--1028}.
+%Type = Article
+\bibitem[{Istratov et~al.(1999)Istratov, Hieslmair, and Weber}]{Istratov1999}
+\bibinfo{author}{A.~A. Istratov}, \bibinfo{author}{H.~Hieslmair},
+  \bibinfo{author}{E.~Weber},
+\newblock \bibinfo{title}{Iron and its complexes in silicon},
+\newblock \bibinfo{journal}{Appl. Phys. A: Mater. Sci. Process.}
+  \bibinfo{volume}{69} (\bibinfo{year}{1999}) \bibinfo{pages}{13--44}.
+%Type = Article
+\bibitem[{Wright et~al.(2016)Wright, Coutinho, \"{O}berg, and
+  Torres}]{Wright2016}
+\bibinfo{author}{E.~Wright}, \bibinfo{author}{J.~Coutinho},
+  \bibinfo{author}{S.~\"{O}berg}, \bibinfo{author}{V.~J.~B. Torres},
+\newblock \bibinfo{title}{M\"{o}ssbauer parameters of fe-related defects in
+  group-iv semiconductors: First principles calculations},
+\newblock \bibinfo{journal}{J. Appl. Phys.} \bibinfo{volume}{119}
+  (\bibinfo{year}{2016}) \bibinfo{pages}{181509}.
+%Type = Article
+\bibitem[{Poindexter et~al.(2017)Poindexter, Hoye, Nienhaus, Kurchin,
+  Morishige, Looney, Osherov, Correa-Baena, Lai, Bulovi{\'{c}},
+  Stevanovi{\'{c}}, Bawendi, and Buonassisi}]{Poindexter2017}
+\bibinfo{author}{J.~R. Poindexter}, \bibinfo{author}{R.~L.~Z. Hoye},
+  \bibinfo{author}{L.~Nienhaus}, \bibinfo{author}{R.~C. Kurchin},
+  \bibinfo{author}{A.~E. Morishige}, \bibinfo{author}{E.~E. Looney},
+  \bibinfo{author}{A.~Osherov}, \bibinfo{author}{J.-P. Correa-Baena},
+  \bibinfo{author}{B.~Lai}, \bibinfo{author}{V.~Bulovi{\'{c}}},
+  \bibinfo{author}{V.~Stevanovi{\'{c}}}, \bibinfo{author}{M.~G. Bawendi},
+  \bibinfo{author}{T.~Buonassisi},
+\newblock \bibinfo{title}{High tolerance to iron contamination in lead halide
+  perovskite solar cells},
+\newblock \bibinfo{journal}{ACS Nano} \bibinfo{volume}{11}
+  (\bibinfo{year}{2017}) \bibinfo{pages}{7101--7109}.
+%Type = Article
 \bibitem[{Kimerling and Benton(1983)}]{Kimerling1983}
 \bibinfo{author}{L.~Kimerling}, \bibinfo{author}{J.~Benton},
 \newblock \bibinfo{title}{Electronically controlled reactions of interstitial
@@ -426,15 +466,6 @@
   cells from open circuit voltage measurements},
 \newblock \bibinfo{journal}{IEEE J. Photovolt.} \bibinfo{volume}{12}
   (\bibinfo{year}{2022}) \bibinfo{pages}{937--947}.
-%Type = Article
-\bibitem[{Macdonald et~al.(2004)Macdonald, Geerligs, and
-  Azzizi}]{Macdonald2004}
-\bibinfo{author}{D.~H. Macdonald}, \bibinfo{author}{L.~J. Geerligs},
-  \bibinfo{author}{A.~Azzizi},
-\newblock \bibinfo{title}{{Iron detection in crystalline silicon by carrier
-  lifetime measurements for arbitrary injection and doping}},
-\newblock \bibinfo{journal}{J. Appl. Phys.} \bibinfo{volume}{95}
-  (\bibinfo{year}{2004}) \bibinfo{pages}{1021--1028}.
 %Type = Article
 \bibitem[{{Di Sabatino}(2014)}]{DiSabatino2014}
 \bibinfo{author}{M.~{Di Sabatino}},

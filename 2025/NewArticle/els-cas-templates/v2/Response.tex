@@ -4,25 +4,36 @@
 %\documentclass[aip,jap,preprint]{revtex4-1}
 \documentclass[a4paper,fleqn]{cas-sc}
 
+%\usepackage{mdframed}
+%\usepackage{color}
+%\usepackage{enumitem}
+
+\usepackage[numbers]{natbib}
 \usepackage{mdframed}
 \usepackage{color}
 \usepackage{enumitem}
+\usepackage[most]{tcolorbox}
 
 \begin{document}
 \shorttitle{}
 
+\tcbset{highlight style/.style={
+  colback=yellow, colframe=yellow, boxrule=0pt, sharp corners, enhanced,
+  left=0mm, right=0mm, top=0mm, bottom=0mm
+}}
+
 Dear Editor and Reviewers,
 
-We sincerely thank you for taking the time to review our manuscript 
-``Extracting the iron concentration in silicon solar cells using photovoltaic parameters and machine learning'' 
+We sincerely thank you for taking the time to review our manuscript
+``Extracting the iron concentration in silicon solar cells using photovoltaic parameters and machine learning''
 (Ms. Ref. No.: SEJ-D-25-01089).
-Your insightful comments and constructive suggestions have greatly helped us improve 
-the quality of our work. 
-We particularly appreciate your careful reading and thoughtful feedback, 
-which have led to significant improvements in both the technical content and presentation clarity of our manuscript. 
+Your insightful comments and constructive suggestions have greatly helped us improve
+the quality of our work.
+We particularly appreciate your careful reading and thoughtful feedback,
+which have led to significant improvements in both the technical content and presentation clarity of our manuscript.
 We have carefully addressed all the comments and made corresponding revisions to the manuscript.
 The location of revisions is pointed by red color and highlighted in yellow in ``MarkedManuscript.pdf''.
-Below we provide our detailed point-by-point responses to each comment. 
+Below we provide our detailed point-by-point responses to each comment.
 We hope the revised manuscript better meets your expectations and standards for publication in Solar Energy.
 %The location of revisions is pointed by blue color in ``MarkedManuscript.pdf''.
 
@@ -35,17 +46,55 @@ We hope the revised manuscript better meets your expectations and standards for 
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
 
-We appreciate this insightful comment and have clarified the role of iron’s valency in silicon within the manuscript.
-In crystalline silicon, iron does not exist in the traditional ferrous (Fe$^{2+}$) or ferric (Fe$^{3+}$) states as it does in oxides or glasses.
-Instead, iron forms point defects-primarily interstitial iron (Fe$_i$) and iron-boron pairs (Fe$_i$B$_s$)-whose charge states are determined by the Fermi level and local electronic environment.
-Fe$_i$ can exist in neutral (Fe$_i^0$) or positively charged (Fe$_i^+$) states, but these are not equivalent to Fe$^{2+}$ or Fe$^{3+}$ in ionic compounds [\cite{macdonald2004}, \cite{istratov1999}].
-The recombination activity of these defects, which is critical for solar cell performance, is governed by their electronic properties rather than conventional chemical valency.
-We have revised the introduction to clarify this point and included relevant references [\cite{macdonald2004}, \cite{istratov1999}].
+Reviewer is correct that ferrous (Fe$^{2+}$) and ferric (Fe$^{3+}$) states deserve consideration, 
+as they are the most common and stable charge states of iron. 
+These ionic forms typically occur in compounds where iron forms chemical bonds (either ionic or covalent) with other elements, 
+as well as in cases where iron is present as an impurity in solid materials.
+In silicon, iron can also exist in a trivalent (ferric) state when it substitutes for a silicon atom at a lattice site. 
+However, under normal conditions, the concentration of substitutional iron is extremely low, less than 1\% of the total iron impurity atoms \cite{Wright2016}. 
+Increasing the concentration of substitutional iron requires special sample processing, such as high-temperature annealing or irradiation.
+Moreover, substitutional iron acts as a weak recombination center, 
+so its influence on the properties of silicon solar cells can be neglected. 
+The ferrous form is virtually absent in silicon.
+The majority of iron impurity atoms in silicon occupy positions, 
+where they can exist in either a neutral (Fe$_i^0$) or positively charged (Fe$_i^+$) state, 
+depending on the position of the Fermi level \cite{Istratov1999}. 
+In $n$-type silicon,Fe$_i$ is more likely to exist in a neutral state, 
+whereas in $p$-type silicon, it is more likely to be positively charged. 
+Even when interstitial iron forms complex point defects, such as iron–boron pairs (Fe$_i$B$_s$), no valence bonds are formed.
+In interstitial configuration, iron acts as an active recombination center.
+
+Consequently, in silicon solar cells, the role of iron valence is negligible, 
+in contrast to other types of solar cells, such as perovskite solar cells \cite{Poindexter2017}. 
+Specifically, in MAPbI$_3$-based devices, both Fe$^{3+}$ and Fe$^{2+}$  point defects are observed, 
+with Fe$^{3+}$ being electronically inactive in terms of recombination.
+
+We have added the relevant information to the Introduction (page 2, third paragraph from the top)
 
 
-%Ferrous = Fe²⁺ (залізо(II))
-%
-%Ferric = Fe³⁺ (залізо(III))
+\begin{mdframed}
+(ii)~iron is one of the most prevalent, ubiquitous, and efficiency-limiting metallic impurities \cite{Buonassisi2006, IronSC}.
+
+%\colorbox{yellow}{
+\begin{tcolorbox}[highlight style]
+\textcolor[rgb]{1.00,0.07,0.00}{
+It is well known that ferrous (Fe$^{2+}$) and ferric (Fe$^{3+}$) are the most common and stable charge states of iron in most materials.
+But the majority of iron impurity atoms in silicon occupy interstitial positions,
+where they can exist in either a neutral (Fe$_i^0$) or positively charged (Fe$_i^+$) state,
+depending on the position of the Fermi level \cite{Macdonald2004,Istratov1999}.
+In $n$-type silicon,Fe$_i$ is more likely to exist in a neutral state,
+whereas in $p$-type silicon, it is more likely to be positively charged.
+Even when interstitial iron forms complex point defects no valence bonds are formed.
+In silicon, iron can also exist in a trivalent (ferric) state when it substitutes for a silicon atom at a lattice site.
+However, under normal conditions, the concentration of substitutional iron is extremely low, less than 1\% of the total iron impurity atoms \cite{Wright2016}.
+The ferrous form is virtually absent in silicon.
+Consequently, in silicon solar cells, the role of iron valence is negligible,
+in contrast to other photovoltaic technologies, such as perovskite-based devices \cite{Poindexter2017}.}%}
+\end{tcolorbox}
+
+It is well established that in $p$-type material,
+iron tends to bind with dopant atoms such as boron,
+\end{mdframed}
 
 \vspace{1cm}
 \noindent
@@ -73,277 +122,275 @@ The dominant factor affecting solar cell performance is the recombination activi
 The kinetics of Fe$_i$ and Fe$_i$B$_s$ formation, dissociation, and charge-state transitions are well understood in terms of defect energetics and do not involve classical redox chemistry.
 
 
-\vspace{1cm}
-\noindent
-\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~3.}}
-\emph{In the title, "Extracting the iron concentration" should be changed to "Determination of iron concentration.}
-
-\noindent
-\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
-
-We concur that the phrase ``Determination of iron concentration'' better emphasizes the quantitative aspect 
-of the work and aligns well with the standard terminology used in similar studies.
-Accordingly, we have revised the manuscript title to:
-``Determination of iron concentration in silicon solar cells using photovoltaic parameters and machine learning.''
-
-
-\vspace{1cm}
-\subsection*{Response to Reviewer \#2 }
-
-\noindent
-\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~1.}}
-\emph{Why temperature range (290-340)~K? what was the dissociation efficiency of FeB pairs at this temperature? How much is translated to cell degradation? Since at this temperature range, other factors also go side on that impact device characteristic.}
-
-
-\noindent
-\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
-
-The selected temperature range (290–340)~K was chosen for several reasons:
-\begin{itemize}
-    \item \textbf{practical relevance}: the selected temperature range reflects the realistic operating conditions of most silicon solar cells;
-    \item \textbf{FeB pair dynamics}: within this temperature range, FeB pairs in boron-doped silicon exhibit significant thermal dissociation kinetics, enabling the study of their reversible transformation into interstitial iron (Fe$_i$) and substitutional boron (B$_s$).
-\end{itemize}
-
-The dissociation of FeB pairs is a thermally activated process. At the lower end of this range (290~K), FeB pairs are relatively stable, while at higher temperatures (above 320~K), a significant fraction of pairs dissociate, releasing Fe$_i$.
-\cite{istratov1999}
-
-In the range of 290-340 K, especially under strong illumination, as in our experiments, the dissociation efficiency approaches 100\%, and most FeB pairs decay \cite{istratov1999}. The dissociation of FeB pairs releases Fe$_i$, which is a highly recombination-active center. This leads to a pronounced decrease in minority carrier lifetime and, consequently, measurable degradation of photovoltaic parameters such as short-circuit current ($I_\mathrm{SC}$), open-circuit voltage ($V_\mathrm{OC}$), fill factor (FF), and efficiency ($\eta$).
-
-Our methodology does not induce any irreversible physical or chemical changes in the solar cell structure.
-The temperature range used (290–340)~K is well below the threshold for processes that could cause permanent defect formation, dopant diffusion, or degradation.
-The intense illumination used to dissociate FeB pairs is also within the limits commonly applied in standard characterization procedures and does not lead to light-induced degradationor other irreversible effects under our experimental protocol.
-
-
-Relative changes in PV parameters ($\varepsilon I_\mathrm{SC}$, $\varepsilon V_\mathrm{OC}$, $\varepsilon \eta$, $\varepsilon FF$) are used as model inputs, which helps isolate iron-related effects from other temperature-induced variations.
-
-\vspace{1cm}
-\noindent
-\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~2.}}
-\emph{Complete details about the dissociation of FeB pairs using halogen lamp illumination? What was the time duration? How much was the decay efficiency.}
-
-\noindent
-\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
-
-As described in Section 2.1 of our manuscript, the decay (dissociation) of FeB pairs in the experimental samples was induced by intensive illumination from a halogen lamp with an intensity of 7000~W/$m^2$.
-The process was performed in the temperature range of (305–340)~K.
-This approach is consistent with established protocols for FeB dissociation in silicon solar cells.
-
-
-The illumination time was 5 minutes? for each dissociation cycle.
-This duration was chosen based on literature evidence and our own preliminary tests, which confirm that at the applied intensity and temperature, this period is sufficient for near-complete dissociation of FeB pairs.
-
-
-At the specified temperature and illumination conditions, the dissociation efficiency of FeB pairs exceeds 90\%, as supported by both our experimental results and previous studies \cite{geerligs2004}.
-After halogen lamp exposure, the majority of FeB pairs are converted to interstitial iron (Fe$_i$), which is confirmed by the observed changes in photovoltaic parameters.
-
-
-
-\vspace{1cm}
-\noindent
-\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~3.}}
-\emph{Most of the models significantly fail for the AM1.5 illumination? What could be the reason for that?}
-
-\noindent
-\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
-
-The reduced accuracy of most models under AM1.5 illumination likely results from the increased complexity of the broadband solar spectrum compared to monochromatic light.
-Under AM1.5, the photovoltaic parameter changes are influenced by a wider range of physical effects and interactions, making the relationship between input features and iron concentration more complex and less direct.
-This complexity makes it more challenging for many models-especially simpler ones-to generalize well, even when trained on simulated data.
-In contrast, monochromatic illumination provides a more straightforward correlation between iron-related recombination and PV parameter changes, resulting in higher model accuracy.
-
-
-\vspace{1cm}
-\noindent
-\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~4.}}
-\emph{Authors are suggested to provide more explanation behind failure of the particular model, infact, for the results obtained.}
-
-\noindent
-\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
-
-The notably poor performance of the SVR model in our results is likely due to its limited ability to capture the complex, highly non-linear relationships between the input features (such as relative changes in PV parameters, temperature, doping, and thickness) and the target iron concentration, especially when compared to more flexible models like XGB or DNN.
-SVR with standard kernels can struggle when the data distribution is multi-dimensional and the dependencies are not well approximated by simple kernel functions.
-Additionally, SVR is sensitive to feature scaling and hyperparameter selection, which may further limit its effectiveness in this application.
-This explains why SVR underperforms relative to ensemble and deep learning models in our study.
-
-\vspace{1cm}
-\noindent
-\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~5.}}
-\emph{What can be done to further increase the accuracy of these models?}
-
-\noindent
-\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
-
-The accuracy of the models could be further improved by:
-\begin{itemize}
-    \item \textbf{expanding the training data set}: simulating a broader and denser range of device parameters (e.g., more values for doping, thickness, temperature, and iron concentration) would provide the models with more comprehensive training examples and improve generalization;
-    \item \textbf{model optimization}: further tuning of model hyperparameters, or employing more sophisticated ensemble or deep learning architectures, could enhance predictive performance;
-    \item \textbf{enhancing the physical realism of simulations}: incorporating even more detailed or advanced physical models in SCAPS, such as additional defect types, surface effects, or more accurate material parameters.
-\end{itemize}
-
-
-\vspace{1cm}
-\noindent
-\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~6.}}
-\emph{There are some typing mistakes as well. for e.g. Page 14, line 44, t-ltered…}
-
-\noindent
-\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
-
-We thank the Reviewer for noting the typographical error (“t-ltered” instead of “t-altered”) and any others present in the manuscript.
-We carefully reviewed the entire text and corrected this and other typographical mistakes to improve the clarity and professionalism of the manuscript.
-
-\vspace{1cm}
-\subsection*{Response to Reviewer \#4 }
-
-\noindent
-\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~1.}}
-\emph{Clearly describe the main objectives as to why and how using this ML approach can be better than traditional ways in the Introduction section.}
-
-\noindent
-\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
-
-
-In response, we have revised the Introduction to clearly state the main objectives and the advantages of the proposed machine learning approach over traditional methods for iron quantification in silicon solar cells.
-
-
-Objective:
-The main objective of our study is to develop a non-destructive, efficient, and accurate method for quantifying iron concentration in silicon solar cells using machine learning models trained on photovoltaic parameter changes induced by FeB pair dissociation.
-
-
-Why ML is advantageous:
-\begin{itemize}
-    \item \textbf{non-destructive and equipment-free}: unlike traditional techniques (e.g., mass spectrometry, DLTS, photoluminescence), our approach does not require specialized equipment or destructive sample preparation;
-    \item \textbf{based on standard measurements}: it relies solely on $I$–$V$ curve measurements, which are routine and accessible in PV characterization;
-    \item \textbf{faster and simpler}: the ML method enables rapid estimation of iron content without lengthy kinetic measurements or multiple illumination steps;
-    \item \textbf{captures complex dependencies}: machine learning can model the subtle and non-linear relationships between iron concentration and PV parameter changes, which are difficult to describe analytically or with traditional regression methods;
-    \item \textbf{inline process monitoring}: the approach is well-suited for inline quality control and process optimization in industrial solar cell manufacturing.
-\end{itemize}
-
-\vspace{1cm}
-\noindent
-\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~2.}}
-\emph{Explain the Fe concentration measurement procedure and methods followed here for the experimental validation. In section 2.1, further clarification of experimental validation with details of number of cells per data samples, data collection methods and tools used will be helpful.}
-
-\noindent
-\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
-
-
-\vspace{1cm}
-\noindent
-\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~3.}}
-\emph{Table 1 and PCA does not add much value.}
-
-\noindent
-\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
-
-
-The inclusion of Table 1 and the PCA analysis was intended to transparently report our exploration of dimensionality reduction as a data pre-processing step.
-While our results show that PCA did not significantly improve model performance-and, in some cases, slightly reduced accuracy-we believe it is valuable to document that this common technique was systematically evaluated and found less effective than using the original features for this application.
-
-
-We also note that, as the dataset size and feature space increase in future studies (for example, when modeling a wider range of device structures, operating conditions, or additional physical parameters), applying PCA or other dimensionality reduction methods could become more beneficial.
-In such cases, PCA can help reduce model training time and computational resources, as well as mitigate potential issues with feature redundancy and overfitting.
-
-\vspace{1cm}
-\noindent
-\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~4.}}
-\emph{In section 3.1" As expected, increasing the number of descriptors enhances model performance (Fig. 4 and Fig.S7). The only exception occurs under AM1.5 illumination with PCA, where adding a fifth descriptor may degrade predictions rather than improve them." And similar discussions about the impact of changing number of features and dimensions is included with respect to different algorithms.  It will be good to have some insight into the reasons for this. Also, the physical significance or meaning of it.}
-
-\noindent
-\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
-
-\textbf{Why increasing the number of features generally improves performance}:
-adding more physically meaningful descriptors-such as relative changes in $I_\mathrm{SC}$, $V_\mathrm{OC}$, $\eta$, and $FF$, along with structural parameters like temperature, doping, and base thickness-provides the model with more information about the underlying device physics.
-Each additional feature captures a different aspect of how iron-related recombination affects photovoltaic performance, helping the model to distinguish iron effects from other influences.
-This typically leads to improved prediction accuracy, as the model can learn more nuanced relationships.
-
-
-\textbf{Why adding features can sometimes degrade performance (especially with PCA or under AM1.5)}:
-adding more features does not always guarantee better results.
-In some cases-such as under AM1.5 illumination with PCA-adding additional descriptors can introduce redundancy or noise, especially if the new feature is highly correlated with existing ones or does not provide independent information about iron concentration.
-PCA, in particular, transforms the original features into linear combinations (principal components) that may not always preserve the most physically relevant information for the specific prediction task.
-This can occasionally lead to a decrease in model accuracy, as seen in our results.
-
-
-\textbf{Physical significance}: the physical meaning of these observations is that the most informative features for iron quantification are those most directly and sensitively affected by FeB dissociation (such as $\varepsilon I_\mathrm{SC}$ and $\varepsilon \eta$).
-Including additional PV parameters or structural descriptors is beneficial up to the point where they add unique information.
-Beyond that, extra features may simply add noise or complexity, especially if the model or preprocessing (like PCA) cannot effectively filter out irrelevant components.
-
-
-\vspace{1cm}
-\noindent
-\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~5.}}
-\emph{Include reasons for improvement in prediction with certain combinations of features in the discussion section.}
-
-\noindent
-\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
-
-The improvement in prediction accuracy with certain combinations of features arises from both the physical relevance of the chosen descriptors and the ability of the models to leverage complementary information.
-
-
-Each photovoltaic parameter-such as the relative changes in $\varepsilon I_\mathrm{SC}$, $\varepsilon V_\mathrm{OC}$, $\varepsilon \eta$, and $\varepsilon FF$-reflects a different aspect of how iron-related recombination affects device performance after FeB pair dissociation. For example:
-\begin{itemize}
-    \item $\varepsilon I_\mathrm{SC}$ is highly sensitive to changes in minority carrier lifetime, which is directly impacted by iron contamination;
-    \item $\varepsilon \eta$ and $\varepsilon FF$ capture broader effects on overall device performance, including losses due to recombination and resistive effects;
-    \item $\varepsilon V_\mathrm{OC}$ is influenced by both recombination and the quality of the p-n junction.
-\end{itemize}
-
-Structural parameters such as temperature (T), base thickness ($d_p$), and boron doping ($N_\mathrm{B}$) further modulate how iron impacts the device, since the recombination dynamics and the extent of FeB dissociation depend on these factors.
-
-
-Combining multiple PV parameters and structural descriptors provides the model with a more complete picture of the device’s physical state. This allows the machine learning algorithm to distinguish between changes caused specifically by iron and those due to other factors (e.g., temperature or doping).
-
-
-Some features (like $\varepsilon I_\mathrm{SC}$) may show similar changes for different iron concentrations under certain conditions, but when combined with additional parameters (like $\varepsilon \eta$ or $\varepsilon V_\mathrm{OC}$), the model can resolve these ambiguities and make more accurate predictions.
-
-
-The impact of iron on PV parameters is not strictly linear, especially when considering interactions with temperature and doping.
-Including a carefully chosen set of features enables the model to capture these complex relationships.
-
-
-However, as discussed, adding features that are highly correlated or not physically informative can introduce noise or redundancy, sometimes reducing accuracy-especially after dimensionality reduction (PCA) or with less flexible models.
-
-\vspace{1cm}
-\noindent
-\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~6.}}
-\emph{Would this prediction be applicable beyond the range of $N_\mathrm{B}$, $d_p$, $T$ that was chosen in the study? why or why not?}
-
-\noindent
-\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
-
-
-The predictive models developed in our study were trained exclusively on simulated data within specific ranges of boron concentration ($N_\mathrm{B}$), base thickness ($d_p$), and temperature ($T$), as detailed in Section 2.1.
-As with most machine learning models, their accuracy and reliability are highest within the parameter space covered by the training data.
-
-
-The predictions of our models are not guaranteed to be accurate outside the ranges of $N_\mathrm{B}$, $d_p$, and $T$ used for training.
-This is because the models have not seen data from those regions and may not capture physical behaviors or interactions that occur at more "extreme" values.
-
-
-Extrapolating to unseen parameter values can lead to unreliable or non-physical predictions, as the underlying device physics may change in ways not represented in the training data.
-
-
-For example, at much higher or lower doping levels, base thicknesses, or temperatures, the impact of iron on photovoltaic parameters may differ due to changes in recombination mechanisms, carrier mobilities, or defect formation, which are not captured by the current model.
-
-
-\vspace{1cm}
-\noindent
-\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~7.}}
-\emph{Discuss clearly the advantages and limitations of this model in conclusion. Eg practical significance, is it only for B doped cells only this thickness etc.}
-
-\noindent
-\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
-
-The proposed ML-based approach provides a non-destructive, rapid, and accurate method for quantifying iron concentration in boron-doped silicon solar cells using standard photovoltaic measurements.
-It`s main advantages include ease of implementation, suitability for inline process monitoring, and the ability to capture complex, physically meaningful dependencies.
-However, the method is currently limited to the parameter ranges and device types represented in the training data, and its applicability is primarily for boron-doped c-Si cells with known structural parameters.
-Future work will focus on expanding the model’s range and adapting the approach to other cell types and impurity systems.
+%\vspace{1cm}
+%\noindent
+%\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~3.}}
+%\emph{In the title, "Extracting the iron concentration" should be changed to "Determination of iron concentration.}
+%
+%\noindent
+%\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+%
+%We concur that the phrase ``Determination of iron concentration'' better emphasizes the quantitative aspect
+%of the work and aligns well with the standard terminology used in similar studies.
+%Accordingly, we have revised the manuscript title to:
+%``Determination of iron concentration in silicon solar cells using photovoltaic parameters and machine learning.''
+%
+%
+%\vspace{1cm}
+%\subsection*{Response to Reviewer \#2 }
+%
+%\noindent
+%\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~1.}}
+%\emph{Why temperature range (290-340)~K? what was the dissociation efficiency of FeB pairs at this temperature? How much is translated to cell degradation? Since at this temperature range, other factors also go side on that impact device characteristic.}
+%
+%
+%\noindent
+%\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+%
+%The selected temperature range (290–340)~K was chosen for several reasons:
+%\begin{itemize}
+%    \item \textbf{practical relevance}: the selected temperature range reflects the realistic operating conditions of most silicon solar cells;
+%    \item \textbf{FeB pair dynamics}: within this temperature range, FeB pairs in boron-doped silicon exhibit significant thermal dissociation kinetics, enabling the study of their reversible transformation into interstitial iron (Fe$_i$) and substitutional boron (B$_s$).
+%\end{itemize}
+%
+%The dissociation of FeB pairs is a thermally activated process. At the lower end of this range (290~K), FeB pairs are relatively stable, while at higher temperatures (above 320~K), a significant fraction of pairs dissociate, releasing Fe$_i$.
+%\cite{istratov1999}
+%
+%In the range of 290-340 K, especially under strong illumination, as in our experiments, the dissociation efficiency approaches 100\%, and most FeB pairs decay \cite{istratov1999}. The dissociation of FeB pairs releases Fe$_i$, which is a highly recombination-active center. This leads to a pronounced decrease in minority carrier lifetime and, consequently, measurable degradation of photovoltaic parameters such as short-circuit current ($I_\mathrm{SC}$), open-circuit voltage ($V_\mathrm{OC}$), fill factor (FF), and efficiency ($\eta$).
+%
+%Our methodology does not induce any irreversible physical or chemical changes in the solar cell structure.
+%The temperature range used (290–340)~K is well below the threshold for processes that could cause permanent defect formation, dopant diffusion, or degradation.
+%The intense illumination used to dissociate FeB pairs is also within the limits commonly applied in standard characterization procedures and does not lead to light-induced degradationor other irreversible effects under our experimental protocol.
+%
+%
+%Relative changes in PV parameters ($\varepsilon I_\mathrm{SC}$, $\varepsilon V_\mathrm{OC}$, $\varepsilon \eta$, $\varepsilon FF$) are used as model inputs, which helps isolate iron-related effects from other temperature-induced variations.
+%
+%\vspace{1cm}
+%\noindent
+%\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~2.}}
+%\emph{Complete details about the dissociation of FeB pairs using halogen lamp illumination? What was the time duration? How much was the decay efficiency.}
+%
+%\noindent
+%\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+%
+%As described in Section 2.1 of our manuscript, the decay (dissociation) of FeB pairs in the experimental samples was induced by intensive illumination from a halogen lamp with an intensity of 7000~W/$m^2$.
+%The process was performed in the temperature range of (305–340)~K.
+%This approach is consistent with established protocols for FeB dissociation in silicon solar cells.
+%
+%
+%The illumination time was 5 minutes? for each dissociation cycle.
+%This duration was chosen based on literature evidence and our own preliminary tests, which confirm that at the applied intensity and temperature, this period is sufficient for near-complete dissociation of FeB pairs.
+%
+%
+%At the specified temperature and illumination conditions, the dissociation efficiency of FeB pairs exceeds 90\%, as supported by both our experimental results and previous studies \cite{geerligs2004}.
+%After halogen lamp exposure, the majority of FeB pairs are converted to interstitial iron (Fe$_i$), which is confirmed by the observed changes in photovoltaic parameters.
+%
+%
+%
+%\vspace{1cm}
+%\noindent
+%\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~3.}}
+%\emph{Most of the models significantly fail for the AM1.5 illumination? What could be the reason for that?}
+%
+%\noindent
+%\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+%
+%The reduced accuracy of most models under AM1.5 illumination likely results from the increased complexity of the broadband solar spectrum compared to monochromatic light.
+%Under AM1.5, the photovoltaic parameter changes are influenced by a wider range of physical effects and interactions, making the relationship between input features and iron concentration more complex and less direct.
+%This complexity makes it more challenging for many models-especially simpler ones-to generalize well, even when trained on simulated data.
+%In contrast, monochromatic illumination provides a more straightforward correlation between iron-related recombination and PV parameter changes, resulting in higher model accuracy.
+%
+%
+%\vspace{1cm}
+%\noindent
+%\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~4.}}
+%\emph{Authors are suggested to provide more explanation behind failure of the particular model, infact, for the results obtained.}
+%
+%\noindent
+%\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+%
+%The notably poor performance of the SVR model in our results is likely due to its limited ability to capture the complex, highly non-linear relationships between the input features (such as relative changes in PV parameters, temperature, doping, and thickness) and the target iron concentration, especially when compared to more flexible models like XGB or DNN.
+%SVR with standard kernels can struggle when the data distribution is multi-dimensional and the dependencies are not well approximated by simple kernel functions.
+%Additionally, SVR is sensitive to feature scaling and hyperparameter selection, which may further limit its effectiveness in this application.
+%This explains why SVR underperforms relative to ensemble and deep learning models in our study.
+%
+%\vspace{1cm}
+%\noindent
+%\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~5.}}
+%\emph{What can be done to further increase the accuracy of these models?}
+%
+%\noindent
+%\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+%
+%The accuracy of the models could be further improved by:
+%\begin{itemize}
+%    \item \textbf{expanding the training data set}: simulating a broader and denser range of device parameters (e.g., more values for doping, thickness, temperature, and iron concentration) would provide the models with more comprehensive training examples and improve generalization;
+%    \item \textbf{model optimization}: further tuning of model hyperparameters, or employing more sophisticated ensemble or deep learning architectures, could enhance predictive performance;
+%    \item \textbf{enhancing the physical realism of simulations}: incorporating even more detailed or advanced physical models in SCAPS, such as additional defect types, surface effects, or more accurate material parameters.
+%\end{itemize}
+%
+%
+%\vspace{1cm}
+%\noindent
+%\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~6.}}
+%\emph{There are some typing mistakes as well. for e.g. Page 14, line 44, t-ltered…}
+%
+%\noindent
+%\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+%
+%We thank the Reviewer for noting the typographical error (“t-ltered” instead of “t-altered”) and any others present in the manuscript.
+%We carefully reviewed the entire text and corrected this and other typographical mistakes to improve the clarity and professionalism of the manuscript.
+%
+%\vspace{1cm}
+%\subsection*{Response to Reviewer \#4 }
+%
+%\noindent
+%\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~1.}}
+%\emph{Clearly describe the main objectives as to why and how using this ML approach can be better than traditional ways in the Introduction section.}
+%
+%\noindent
+%\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+%
+%
+%In response, we have revised the Introduction to clearly state the main objectives and the advantages of the proposed machine learning approach over traditional methods for iron quantification in silicon solar cells.
+%
+%
+%Objective:
+%The main objective of our study is to develop a non-destructive, efficient, and accurate method for quantifying iron concentration in silicon solar cells using machine learning models trained on photovoltaic parameter changes induced by FeB pair dissociation.
+%
+%
+%Why ML is advantageous:
+%\begin{itemize}
+%    \item \textbf{non-destructive and equipment-free}: unlike traditional techniques (e.g., mass spectrometry, DLTS, photoluminescence), our approach does not require specialized equipment or destructive sample preparation;
+%    \item \textbf{based on standard measurements}: it relies solely on $I$–$V$ curve measurements, which are routine and accessible in PV characterization;
+%    \item \textbf{faster and simpler}: the ML method enables rapid estimation of iron content without lengthy kinetic measurements or multiple illumination steps;
+%    \item \textbf{captures complex dependencies}: machine learning can model the subtle and non-linear relationships between iron concentration and PV parameter changes, which are difficult to describe analytically or with traditional regression methods;
+%    \item \textbf{inline process monitoring}: the approach is well-suited for inline quality control and process optimization in industrial solar cell manufacturing.
+%\end{itemize}
+%
+%\vspace{1cm}
+%\noindent
+%\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~2.}}
+%\emph{Explain the Fe concentration measurement procedure and methods followed here for the experimental validation. In section 2.1, further clarification of experimental validation with details of number of cells per data samples, data collection methods and tools used will be helpful.}
+%
+%\noindent
+%\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+%
+%
+%\vspace{1cm}
+%\noindent
+%\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~3.}}
+%\emph{Table 1 and PCA does not add much value.}
+%
+%\noindent
+%\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+%
+%
+%The inclusion of Table 1 and the PCA analysis was intended to transparently report our exploration of dimensionality reduction as a data pre-processing step.
+%While our results show that PCA did not significantly improve model performance-and, in some cases, slightly reduced accuracy-we believe it is valuable to document that this common technique was systematically evaluated and found less effective than using the original features for this application.
+%
+%
+%We also note that, as the dataset size and feature space increase in future studies (for example, when modeling a wider range of device structures, operating conditions, or additional physical parameters), applying PCA or other dimensionality reduction methods could become more beneficial.
+%In such cases, PCA can help reduce model training time and computational resources, as well as mitigate potential issues with feature redundancy and overfitting.
+%
+%\vspace{1cm}
+%\noindent
+%\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~4.}}
+%\emph{In section 3.1" As expected, increasing the number of descriptors enhances model performance (Fig. 4 and Fig.S7). The only exception occurs under AM1.5 illumination with PCA, where adding a fifth descriptor may degrade predictions rather than improve them." And similar discussions about the impact of changing number of features and dimensions is included with respect to different algorithms.  It will be good to have some insight into the reasons for this. Also, the physical significance or meaning of it.}
+%
+%\noindent
+%\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+%
+%\textbf{Why increasing the number of features generally improves performance}:
+%adding more physically meaningful descriptors-such as relative changes in $I_\mathrm{SC}$, $V_\mathrm{OC}$, $\eta$, and $FF$, along with structural parameters like temperature, doping, and base thickness-provides the model with more information about the underlying device physics.
+%Each additional feature captures a different aspect of how iron-related recombination affects photovoltaic performance, helping the model to distinguish iron effects from other influences.
+%This typically leads to improved prediction accuracy, as the model can learn more nuanced relationships.
+%
+%
+%\textbf{Why adding features can sometimes degrade performance (especially with PCA or under AM1.5)}:
+%adding more features does not always guarantee better results.
+%In some cases-such as under AM1.5 illumination with PCA-adding additional descriptors can introduce redundancy or noise, especially if the new feature is highly correlated with existing ones or does not provide independent information about iron concentration.
+%PCA, in particular, transforms the original features into linear combinations (principal components) that may not always preserve the most physically relevant information for the specific prediction task.
+%This can occasionally lead to a decrease in model accuracy, as seen in our results.
+%
+%
+%\textbf{Physical significance}: the physical meaning of these observations is that the most informative features for iron quantification are those most directly and sensitively affected by FeB dissociation (such as $\varepsilon I_\mathrm{SC}$ and $\varepsilon \eta$).
+%Including additional PV parameters or structural descriptors is beneficial up to the point where they add unique information.
+%Beyond that, extra features may simply add noise or complexity, especially if the model or preprocessing (like PCA) cannot effectively filter out irrelevant components.
+%
+%
+%\vspace{1cm}
+%\noindent
+%\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~5.}}
+%\emph{Include reasons for improvement in prediction with certain combinations of features in the discussion section.}
+%
+%\noindent
+%\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+%
+%The improvement in prediction accuracy with certain combinations of features arises from both the physical relevance of the chosen descriptors and the ability of the models to leverage complementary information.
+%
+%
+%Each photovoltaic parameter-such as the relative changes in $\varepsilon I_\mathrm{SC}$, $\varepsilon V_\mathrm{OC}$, $\varepsilon \eta$, and $\varepsilon FF$-reflects a different aspect of how iron-related recombination affects device performance after FeB pair dissociation. For example:
+%\begin{itemize}
+%    \item $\varepsilon I_\mathrm{SC}$ is highly sensitive to changes in minority carrier lifetime, which is directly impacted by iron contamination;
+%    \item $\varepsilon \eta$ and $\varepsilon FF$ capture broader effects on overall device performance, including losses due to recombination and resistive effects;
+%    \item $\varepsilon V_\mathrm{OC}$ is influenced by both recombination and the quality of the p-n junction.
+%\end{itemize}
+%
+%Structural parameters such as temperature (T), base thickness ($d_p$), and boron doping ($N_\mathrm{B}$) further modulate how iron impacts the device, since the recombination dynamics and the extent of FeB dissociation depend on these factors.
+%
+%
+%Combining multiple PV parameters and structural descriptors provides the model with a more complete picture of the device’s physical state. This allows the machine learning algorithm to distinguish between changes caused specifically by iron and those due to other factors (e.g., temperature or doping).
+%
+%
+%Some features (like $\varepsilon I_\mathrm{SC}$) may show similar changes for different iron concentrations under certain conditions, but when combined with additional parameters (like $\varepsilon \eta$ or $\varepsilon V_\mathrm{OC}$), the model can resolve these ambiguities and make more accurate predictions.
+%
+%
+%The impact of iron on PV parameters is not strictly linear, especially when considering interactions with temperature and doping.
+%Including a carefully chosen set of features enables the model to capture these complex relationships.
+%
+%
+%However, as discussed, adding features that are highly correlated or not physically informative can introduce noise or redundancy, sometimes reducing accuracy-especially after dimensionality reduction (PCA) or with less flexible models.
+%
+%\vspace{1cm}
+%\noindent
+%\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~6.}}
+%\emph{Would this prediction be applicable beyond the range of $N_\mathrm{B}$, $d_p$, $T$ that was chosen in the study? why or why not?}
+%
+%\noindent
+%\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+%
+%
+%The predictive models developed in our study were trained exclusively on simulated data within specific ranges of boron concentration ($N_\mathrm{B}$), base thickness ($d_p$), and temperature ($T$), as detailed in Section 2.1.
+%As with most machine learning models, their accuracy and reliability are highest within the parameter space covered by the training data.
+%
+%
+%The predictions of our models are not guaranteed to be accurate outside the ranges of $N_\mathrm{B}$, $d_p$, and $T$ used for training.
+%This is because the models have not seen data from those regions and may not capture physical behaviors or interactions that occur at more "extreme" values.
+%
+%
+%Extrapolating to unseen parameter values can lead to unreliable or non-physical predictions, as the underlying device physics may change in ways not represented in the training data.
+%
+%
+%For example, at much higher or lower doping levels, base thicknesses, or temperatures, the impact of iron on photovoltaic parameters may differ due to changes in recombination mechanisms, carrier mobilities, or defect formation, which are not captured by the current model.
+%
+%
+%\vspace{1cm}
+%\noindent
+%\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~7.}}
+%\emph{Discuss clearly the advantages and limitations of this model in conclusion. Eg practical significance, is it only for B doped cells only this thickness etc.}
+%
+%\noindent
+%\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+%
+%The proposed ML-based approach provides a non-destructive, rapid, and accurate method for quantifying iron concentration in boron-doped silicon solar cells using standard photovoltaic measurements.
+%It`s main advantages include ease of implementation, suitability for inline process monitoring, and the ability to capture complex, physically meaningful dependencies.
+%However, the method is currently limited to the parameter ranges and device types represented in the training data, and its applicability is primarily for boron-doped c-Si cells with known structural parameters.
+%Future work will focus on expanding the model’s range and adapting the approach to other cell types and impurity systems.
 
 \bibliographystyle{model1-num-names}
-\bibliography{olikh_Methods}
+\bibliography{olikh}
 
 
 \end{document}
 
-%Будь-ласка, покращ англійську в наступних реченнях, які я буду пропонувати. Зокрема, треба буде виправити граматичні та стилістичні помилки
-%якщо можна, окрім виправленого речення, наводь інформацію про зміни, які зроблені
