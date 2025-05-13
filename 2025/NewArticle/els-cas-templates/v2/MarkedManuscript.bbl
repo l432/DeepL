@@ -1,4 +1,4 @@
-\begin{thebibliography}{77}
+\begin{thebibliography}{82}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\bibinfo}[2]{#2}
 \ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
@@ -622,6 +622,55 @@
   silicon solar cells under acoustic wave action},
 \newblock \bibinfo{journal}{J. Mater. Sci.: Mater. Electron.}
   \bibinfo{volume}{33} (\bibinfo{year}{2022}) \bibinfo{pages}{13133--13142}.
+%Type = Article
+\bibitem[{Geerligs and Macdonald(2004)}]{FeBLight2}
+\bibinfo{author}{L.~J. Geerligs}, \bibinfo{author}{D.~Macdonald},
+\newblock \bibinfo{title}{Dynamics of light-induced feb pair dissociation in
+  crystalline silicon},
+\newblock \bibinfo{journal}{Appl. Phys. Lett.} \bibinfo{volume}{85}
+  (\bibinfo{year}{2004}) \bibinfo{pages}{5227--5229}.
+%Type = Article
+\bibitem[{Khelifati et~al.(2019)Khelifati, Laine, Vähänissi, Savin, Bouamama,
+  and Bouhafs}]{FeBKin2019}
+\bibinfo{author}{N.~Khelifati}, \bibinfo{author}{H.~S. Laine},
+  \bibinfo{author}{V.~Vähänissi}, \bibinfo{author}{H.~Savin},
+  \bibinfo{author}{F.~Z. Bouamama}, \bibinfo{author}{D.~Bouhafs},
+\newblock \bibinfo{title}{Dissociation and formation kinetics of iron–boron
+  pairs in silicon after phosphorus implantation gettering},
+\newblock \bibinfo{journal}{Phys Status Solidi A} \bibinfo{volume}{216}
+  (\bibinfo{year}{2019}) \bibinfo{pages}{1900253}.
+%Type = Article
+\bibitem[{Lagowski et~al.(1993)Lagowski, Edelman, Kontkiewicz, Milic, Henley,
+  Dexter, Jastrzebski, and Hoff}]{Lagowskii1993}
+\bibinfo{author}{J.~Lagowski}, \bibinfo{author}{P.~Edelman},
+  \bibinfo{author}{A.~M. Kontkiewicz}, \bibinfo{author}{O.~Milic},
+  \bibinfo{author}{W.~Henley}, \bibinfo{author}{M.~Dexter},
+  \bibinfo{author}{L.~Jastrzebski}, \bibinfo{author}{A.~M. Hoff},
+\newblock \bibinfo{title}{Iron detection in the part per quadrillion range in
+  silicon using surface photovoltage and photodissociation of iron-boron
+  pairs},
+\newblock \bibinfo{journal}{Appl. Phys. Lett.} \bibinfo{volume}{63}
+  (\bibinfo{year}{1993}) \bibinfo{pages}{3043--3045}.
+%Type = Inproceedings
+\bibitem[{Lauer et~al.(2016)Lauer, M{\"{o}}ller, Debbih, Auge, and
+  Schulze}]{lauer2016}
+\bibinfo{author}{K.~Lauer}, \bibinfo{author}{C.~M{\"{o}}ller},
+  \bibinfo{author}{D.~Debbih}, \bibinfo{author}{M.~Auge},
+  \bibinfo{author}{D.~Schulze},
+\newblock \bibinfo{title}{Determination of activation energy of the iron
+  acceptor pair association and dissociation reaction},
+\newblock in: \bibinfo{booktitle}{Gettering and Defect Engineering in
+  Semiconductor Technology XVI}, volume \bibinfo{volume}{242} of
+  \textit{\bibinfo{series}{Solid State Phenomena}}, \bibinfo{publisher}{Trans
+  Tech Publications Ltd}, \bibinfo{year}{2016}, pp. \bibinfo{pages}{230--235}.
+%Type = Article
+\bibitem[{Olikh et~al.(2024)Olikh, Datsenko, and Kondratenko}]{OlikhPSSA}
+\bibinfo{author}{O.~Olikh}, \bibinfo{author}{O.~Datsenko},
+  \bibinfo{author}{S.~Kondratenko},
+\newblock \bibinfo{title}{Influence of illumination spectrum on dissociation
+  kinetics of iron–boron pairs in silicon},
+\newblock \bibinfo{journal}{Phys. Status Solidi A} \bibinfo{volume}{221}
+  (\bibinfo{year}{2024}) \bibinfo{pages}{2400351}.
 %Type = Article
 \bibitem[{Srivastava and Jain(2023)}]{Srivastava2023}
 \bibinfo{author}{Y.~Srivastava}, \bibinfo{author}{A.~Jain},

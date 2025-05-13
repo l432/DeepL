@@ -29,6 +29,7 @@
 \usepackage{color}
 \usepackage{xcolor}
 \usepackage[most]{tcolorbox}
+\usepackage{soul}
 %\usepackage[authoryear]{natbib}
 %\usepackage[authoryear,longnamesfirst]{natbib}
 %%%Author macros
@@ -53,6 +54,8 @@
   colback=yellow, colframe=yellow, boxrule=0pt, sharp corners, enhanced,
   left=0mm, right=0mm, top=0mm, bottom=0mm
 }}
+
+\sethlcolor{yellow}
 
 % Short title
 \shorttitle{Iron quantification in silicon solar cell by machine learning}
@@ -300,6 +303,14 @@ The deliberate transition between these states can be readily induced
 through intense illumination, electron injection, or heating up to 200~$^\circ$C and
 is commonly employed in various methods for assessing iron concentration
 \cite{Zoth1990, Rein2, Schmidt2005, Goodarzi2017, Olikh2021JAP, FeMethod2012, Herguth2022, Macdonald2004}.
+\textcolor[rgb]{1.00,0.07,0.00}{
+\hl{
+It is worth noting that the charge-state transitions of iron-related defects --- 
+whether during recombination activity or FeB pair dissociation --- formally resemble redox reactions. 
+However, these processes involve the exchange of charge carriers between defect levels and the conduction or valence band, 
+are governed by Shockley–Read–Hall theory, and are not described by classical redox chemistry. 
+}}
+
 The approach proposed in this study leverages changes in photovoltaic parameters (PVPs)
 (short-circuit current, open-circuit voltage, efficiency, and fill factor) resulting from FeB dissociation as input features for ML algorithms.
 The specified PVPs can be easily extracted from $I$-$V$ characteristics, making this method advantageous compared to existing approaches:
@@ -344,9 +355,10 @@ The workflow of the ML pipeline for extracting iron contamination from IV data i
 
 Our research aimed to develop ML models for estimating iron concentration in silicon solar cells.
 Selecting relevant descriptors is a critical first step in building robust and effective predictive models.
-It is well established that the presence of iron induces the formation of recombination centers, which, in turn, affect the photoelectric conversion process and key PV parameters, 
-including short-circuit current ($I_\mathrm{SC}$), open-circuit voltage ($V_\mathrm{OC}$), efficiency ($\eta$), and fill factor ($F!F$).
-Both theoretical and experimental studies \cite{FeB:Schmidt,IronSC,Olikh2025MSEB} have demonstrated that the restructuring of iron-related defects (the dissociation of FeB pairs) 
+It is well established that the presence of iron induces the formation of recombination centers, which, in turn, affect the photoelectric conversion process and key PV parameters,
+including short-circuit current ($I_\mathrm{SC}$), open-circuit voltage ($V_\mathrm{OC}$), efficiency ($\eta$), and fill factor 
+(\textcolor[rgb]{1.00,0.07,0.00}{\hl{$F\!F$}}).
+Both theoretical and experimental studies \cite{FeB:Schmidt,IronSC,Olikh2025MSEB} have demonstrated that the restructuring of iron-related defects (the dissociation of FeB pairs)
 leads to variations in PVPs that depend on iron concentration ($N_\mathrm{Fe}$).
 As a result, this investigation focused on using iron presence as a descriptor of the relative changes in PVPs caused by the
 Fe$_i$B$_\mathrm{Si}$ $\rightleftarrows$ Fe$_i$ + B$_\mathrm{Si}$ reconstruction.
@@ -375,7 +387,8 @@ The SCAPS-1D software \cite{SCAPS1} is a widely used tool
 that enables modeling of barrier structure $I$-$V$ characteristics while accounting for defect states.
 PVPs were extracted from pairs of $I$-$V$ curves simulated for a solar cell with a known structure
 and a specified iron concentration under defined external conditions, both before and after FeB pair dissociation.
-This approach allowed us to determine the values of $\varepsilon I_\mathrm{SC}$, $\varepsilon V_\mathrm{OC}$, $\varepsilon \eta$, and $\varepsilon F!F$.
+This approach allowed us to determine the values of $\varepsilon I_\mathrm{SC}$, $\varepsilon V_\mathrm{OC}$, $\varepsilon \eta$, and 
+\textcolor[rgb]{1.00,0.07,0.00}{\hl{$\varepsilon F\!F$}}.
 A detailed description of the modeling approach, including the used temperature dependencies of silicon and defect parameters,
 is provided elsewhere \cite{Olikh2019SM, Olikh2025MSEB}.
 
@@ -388,6 +401,13 @@ The simulations covered all parameter combinations within a four-dimensional gri
 9 along the $N_\mathrm{B}$ axis, and 25 along the $N_\mathrm{Fe}$ axis.
 The values were evenly distributed within the specified ranges, with $N_\mathrm{B}$ and $N_\mathrm{Fe}$ spaced logarithmically.
 Each train dataset consisted of 12,375 samples obtained from simulations of 24,750 $I$-$V$ characteristics.
+\textcolor[rgb]{1.00,0.07,0.00}{
+\hl{
+We emphasize that the parameter values used in our study closely reflect those of real solar cells 
+and their operating (testing) conditions. 
+For instance, the selected temperature range corresponds both to the typical operating conditions of most silicon solar cells 
+and to the (15--75)~$^\circ$C range recommended by the IEC~61215-2:2021 standard for determining the temperature coefficients of PPVs.
+}}
 
 We also generated four test datasets through simulation,
 each representing different scenarios that may arise in the practical application of ML models.
@@ -415,6 +435,18 @@ To create the experimental test dataset,
 we measured the $I$-$V$ characteristics under monochromatic illumination from a light-emitting diode (SN–HPIR940nm–1W)
 with a wavelength of 940~nm and an intensity of approximately 5~W/m$^{2}$, within a temperature range of $(305-340)$~K.
 The decay of FeB pairs was induced using intensive halogen lamp illumination (7000~W/m$^{2}$).
+\textcolor[rgb]{1.00,0.07,0.00}{
+\hl{
+In general, the dissociation rate of FeB pairs depends on the illumination intensity, $N_\mathrm{Fe}$ }
+\cite{FeBLight2,FeBAssJAP2014,FeMethod2012}, 
+temperature \cite{lauer2016},
+the spectral composition of illumination \cite{OlikhPSSA},
+and the presence of recombination channels other than those associated with iron-related defects \cite{FeBLight2,FeBAssJAP2014}.
+The selected illumination duration required to achieve near-complete dissociation depended on the iron concentration
+and reached up to 400~s for the solar cells with the highest $N_\mathrm{Fe}$ values.
+The illumination intervals were determined based on the results of a previous study \cite{OlikhPSSA}, 
+\hl{which showed that under similar conditions, complete dissociation at $N_\mathrm{Fe}=9\times10^{12}$~cm$^{-3}$ occurred within 20~s.
+}}
 The number of samples in experimental dataset varied from 34 to 12, depending on the feature dimensionality.
 
 
@@ -971,7 +1003,9 @@ even though incorporating the ideality factor does not enhance model accuracy.
 
 
 DNN models exhibit the highest performance for the $N_\mathrm{B}$--altered dataset,
-achieving results comparable to the best outcomes obtained for the $N_\mathrm{Fe}$--altered and $T$--ltered datasets.
+achieving results comparable to the best outcomes obtained for the $N_\mathrm{Fe}$--altered and 
+\textcolor[rgb]{1.00,0.07,0.00}{
+\hl{$T$--altered}} datasets.
 Specifically, the most accurate predictions occur under 940~nm illumination with four or five descriptors
 and under AM1.5 illumination with six or seven descriptors.
 The application of PCA improves results only when the feature dimension is six or seven.

@@ -13,6 +13,7 @@
 \usepackage{color}
 \usepackage{enumitem}
 \usepackage[most]{tcolorbox}
+\usepackage{soul}
 
 \begin{document}
 \shorttitle{}
@@ -21,6 +22,8 @@
   colback=yellow, colframe=yellow, boxrule=0pt, sharp corners, enhanced,
   left=0mm, right=0mm, top=0mm, bottom=0mm
 }}
+
+\sethlcolor{yellow}
 
 Dear Editor and Reviewers,
 
@@ -69,32 +72,32 @@ in contrast to other types of solar cells, such as perovskite solar cells \cite{
 Specifically, in MAPbI$_3$-based devices, both Fe$^{3+}$ and Fe$^{2+}$  point defects are observed,
 with Fe$^{3+}$ being electronically inactive in terms of recombination.
 
-We have added the relevant information to the Introduction (page 2, third paragraph from the top)
+We have added the relevant information to the Introduction (page 2, third paragraph from the top).
 
 
-\begin{mdframed}
-(ii)~iron is one of the most prevalent, ubiquitous, and efficiency-limiting metallic impurities \cite{Buonassisi2006, IronSC}.
-
-%\colorbox{yellow}{
-\begin{tcolorbox}[highlight style]
-\textcolor[rgb]{1.00,0.07,0.00}{
-It is well known that ferrous (Fe$^{2+}$) and ferric (Fe$^{3+}$) are the most common and stable charge states of iron in most materials.
-But the majority of iron impurity atoms in silicon occupy interstitial positions,
-where they can exist in either a neutral (Fe$_i^0$) or positively charged (Fe$_i^+$) state,
-depending on the position of the Fermi level \cite{Macdonald2004,Istratov1999}.
-In $n$-type silicon,Fe$_i$ is more likely to exist in a neutral state,
-whereas in $p$-type silicon, it is more likely to be positively charged.
-Even when interstitial iron forms complex point defects no valence bonds are formed.
-In silicon, iron can also exist in a trivalent (ferric) state when it substitutes for a silicon atom at a lattice site.
-However, under normal conditions, the concentration of substitutional iron is extremely low, less than 1\% of the total iron impurity atoms \cite{Wright2016}.
-The ferrous form is virtually absent in silicon.
-Consequently, in silicon solar cells, the role of iron valence is negligible,
-in contrast to other photovoltaic technologies, such as perovskite-based devices \cite{Poindexter2017}.}%}
-\end{tcolorbox}
-
-It is well established that in $p$-type material,
-iron tends to bind with dopant atoms such as boron,
-\end{mdframed}
+%\begin{mdframed}
+%(ii)~iron is one of the most prevalent, ubiquitous, and efficiency-limiting metallic impurities \cite{Buonassisi2006, IronSC}.
+%
+%%\colorbox{yellow}{
+%\begin{tcolorbox}[highlight style]
+%\textcolor[rgb]{1.00,0.07,0.00}{
+%It is well known that ferrous (Fe$^{2+}$) and ferric (Fe$^{3+}$) are the most common and stable charge states of iron in most materials.
+%But the majority of iron impurity atoms in silicon occupy interstitial positions,
+%where they can exist in either a neutral (Fe$_i^0$) or positively charged (Fe$_i^+$) state,
+%depending on the position of the Fermi level \cite{Macdonald2004,Istratov1999}.
+%In $n$-type silicon,Fe$_i$ is more likely to exist in a neutral state,
+%whereas in $p$-type silicon, it is more likely to be positively charged.
+%Even when interstitial iron forms complex point defects no valence bonds are formed.
+%In silicon, iron can also exist in a trivalent (ferric) state when it substitutes for a silicon atom at a lattice site.
+%However, under normal conditions, the concentration of substitutional iron is extremely low, less than 1\% of the total iron impurity atoms \cite{Wright2016}.
+%The ferrous form is virtually absent in silicon.
+%Consequently, in silicon solar cells, the role of iron valence is negligible,
+%in contrast to other photovoltaic technologies, such as perovskite-based devices \cite{Poindexter2017}.}%}
+%\end{tcolorbox}
+%
+%It is well established that in $p$-type material,
+%iron tends to bind with dopant atoms such as boron,
+%\end{mdframed}
 
 \vspace{1cm}
 \noindent
@@ -104,80 +107,110 @@ iron tends to bind with dopant atoms such as boron,
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
 
+Initially, it is important to note that 
+redox reactions do not play a central role in silicon solar cells, 
+unlike dye-sensitized solar cells or photoelectrochemical cells. 
+However, changes in the charge states of individual atoms --- whether intrinsic or impurity-related --- 
+occur during the photoelectric conversion process. 
+For example, during the recombination of charge carriers at iron-related defects 
+(such as interstitial iron atoms or iron-boron pairs), 
+electron capture occurs in the initial stage:
+\begin{eqnarray*}
+  \mathrm{Fe}_i^++e^-&\rightarrow& \mathrm{Fe}_i^0\,, \\
+  (\mathrm{Fe_iB_s})^0+e^-&\rightarrow& (\mathrm{Fe_iB_s})^-\,, 
+\end{eqnarray*}
+which typically corresponds to a reduction reaction. 
+In the subsequent stage, hole capture alters the defect's charge state again
+\begin{eqnarray*}
+  \mathrm{Fe}_i^0+h^+&\rightarrow& \mathrm{Fe}_i^+\,, \\
+  (\mathrm{Fe_iB_s})^-+h^+&\rightarrow& (\mathrm{Fe_iB_s})^0\,,
+\end{eqnarray*}
+formally representing an oxidation reaction. 
+When FeB pairs dissociate due to intense illumination, electron injection, or heating up to 200~$^\circ$C, 
+the iron atom becomes neutral by capturing an electron (reduction) during the first step of this two-stage process. 
+After dissociation and the cessation of the external stimulus, 
+the interstitial iron atom loses an electron (oxidation), 
+becoming singly positively charged, which allows it to re-form a pair with a negatively charged dopant (boron).
+However, transitions between different charge states of iron-related defects in silicon 
+are governed by electron and hole capture and emission processes, 
+involving the exchange of carriers between the defect levels and the conduction or valence band. 
+These processes are described within Shockley–Read–Hall theory 
+and do not constitute redox reactions in the classical chemical sense.
 
-Насамперед зауважимо, що для silicon solar cells redox reaction не відіграють центральної ролі як це має місце для Dye-Sensitized Solar Cell або photoelectrochemical cells.
-Хоча, звичайно, зміни зарядового стану окремих атомів (власних чи домішкових) під час фотоелектричного перетворення відбуваються.
-Наприклад, під час рекомбінації носіїв заряду на iron-related defects (міжвузольних атомах заліза чи парах залізо-бор) на початкових стадіях відбувається захоплення електрону,
-що загалом відповідає реакції відновлення.
-На другому етапі, під час захоплення дірки, зарядовий стан дефекту знову змінюється,
-що схоже на реакцію окиснення.
-Під час розпаду пар FeB внаслідок  intense illumination, electron injection, or heating up to 200~$^\circ$C на першому етапі цього двостадійного процесу
-атом заліза стає нейтральним, захоплюючи електрон (reduction).
-Після розпаду пари 
+Consequently, the original manuscript did not emphasize redox reactions of iron in silicon solar cells, 
+and the Reviewer’s observation is valid. 
+In the revised manuscript, we have included a note on the distinct nature of charge-state transitions in iron-related defects, 
+highlighting how they differ from classical redox reactions (page 2, fourth paragraph from the top).
+
+%\begin{mdframed}
+%It is well established that in $p$-type material,
+%iron tends to bind with dopant atoms such as boron, forming iron–boron pairs under equilibrium conditions
+%or existing as interstitial species only in the presence of sufficiently high free electron densities \cite{Kimerling1983, FeBAssJAP2014}.
+%The deliberate transition between these states can be readily induced
+%through intense illumination, electron injection, or heating up to 200~$^\circ$C and
+%is commonly employed in various methods for assessing iron concentration
+%\cite{Zoth1990, Rein2, Schmidt2005, Goodarzi2017, Olikh2021JAP, FeMethod2012, Herguth2022, Macdonald2004}.
+%\textcolor[rgb]{1.00,0.07,0.00}{
+%\hl{
+%It is worth noting that the charge-state transitions of iron-related defects ---
+%whether during recombination activity or FeB pair dissociation --- formally resemble redox reactions.
+%However, these processes involve the exchange of charge carriers between defect levels and the conduction or valence band,
+%are governed by Shockley–Read–Hall theory, and are not described by classical redox chemistry.
+%}}
+%\end{mdframed}
+
+\vspace{1cm}
+\noindent
+\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~3.}}
+\emph{In the title, "Extracting the iron concentration" should be changed to "Determination of iron concentration.}
+
+\noindent
+\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+
+We concur that the phrase ``Determination of iron concentration'' better emphasizes the quantitative aspect
+of the work and aligns well with the standard terminology used in similar studies.
+Accordingly, we have revised the manuscript title to:
+``Determination of iron concentration in silicon solar cells using photovoltaic parameters and machine learning.''
 
 
-The transitions between different charge states of iron-related defects in silicon are governed by electronic capture and emission processes 
-(i.e., the exchange of electrons or holes with the conduction or valence band), rather than by redox reactions in the chemical sense.
+\vspace{1cm}
+\subsection*{Response to Reviewer \#2 }
+
+\noindent
+\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~1.}}
+\emph{Why temperature range (290-340)~K? 
+what was the dissociation efficiency of FeB pairs at this temperature? 
+How much is translated to cell degradation? 
+Since at this temperature range, other factors also go side on that impact device characteristic.}
 
 
-These processes are described within the framework of semiconductor defect physics, specifically through Shockley-Read-Hall recombination theory, and are crucial to understanding the recombination activity of Fe$_i$ and Fe$_i$B$_s$ in silicon.
+\noindent
+\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
 
-Red — reduction (відновлення): атом або йон отримує електрони.
+We hope that the proposed approach will be applied to evaluate the concentration of iron in already installed solar modules 
+and during the certification of photovoltaic converters. 
+On the one hand, the selected temperature range of 290–340~K reflects the typical operating conditions of most silicon solar cells. 
+On the other hand, the IEC 61215-2:2021 \cite{IEC61215} standard requires that temperature coefficients of 
+short-circuit current, open-circuit voltage, and maximum power be determined based on current–voltage measurements conducted 
+within a temperature range of approximately +15~$^\circ$C to +75~$^\circ$C (288–348~K). 
+In other words, the standard solar cell testing results can serve as input data for machine learning models trained within selected temperature range.
 
-Ox — oxidation (окиснення): атом або йон втрачає електрони.
-
-
-In the context of crystalline silicon, iron does not participate in classical redox (reduction-oxidation) reactions as it does in aqueous solutions or oxide matrices.
-In such environments, iron can exist in distinct chemical valence states (e.g., Fe$^{2+}$/Fe$^{3+}$), and redox reactions involve the transfer of electrons between these states.
-
-
-In silicon, however, iron atoms are incorporated as isolated point defects (Fe$_i$) or as complexes with boron (Fe$_i$B$_s$).
-Their charge states (e.g., Fe$_i^0$, Fe$_i^+$) are determined by the position of the Fermi level and the local electronic environment within the silicon lattice-not by chemical oxidation or reduction processes \cite{weber1983}.
-
-
-The transitions between different charge states of iron-related defects in silicon are governed by electronic capture and emission processes (i.e., the exchange of electrons or holes with the conduction or valence band), rather than by redox reactions in the chemical sense.
+Additional information justifying the choice of temperature range has been added in the revised manuscript (page 4, first paragraph).
 
 
-These processes are described within the framework of semiconductor defect physics, specifically through Shockley-Read-Hall recombination theory, and are crucial to understanding the recombination activity of Fe$_i$ and Fe$_i$B$_s$ in silicon.
+Complete dissociation of the FeB pairs was achieved during experiments conducted within the specified temperature range 
+(further clarified below in response to the following Reviewer comment).
 
 
-The dominant factor affecting solar cell performance is the recombination activity of iron-related point defects, which act as deep-level traps for charge carriers.
-The kinetics of Fe$_i$ and Fe$_i$B$_s$ formation, dissociation, and charge-state transitions are well understood in terms of defect energetics and do not involve classical redox chemistry.
 
 
-%\vspace{1cm}
-%\noindent
-%\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~3.}}
-%\emph{In the title, "Extracting the iron concentration" should be changed to "Determination of iron concentration.}
-%
-%\noindent
-%\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
-%
-%We concur that the phrase ``Determination of iron concentration'' better emphasizes the quantitative aspect
-%of the work and aligns well with the standard terminology used in similar studies.
-%Accordingly, we have revised the manuscript title to:
-%``Determination of iron concentration in silicon solar cells using photovoltaic parameters and machine learning.''
-%
-%
-%\vspace{1cm}
-%\subsection*{Response to Reviewer \#2 }
-%
-%\noindent
-%\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~1.}}
-%\emph{Why temperature range (290-340)~K? what was the dissociation efficiency of FeB pairs at this temperature? How much is translated to cell degradation? Since at this temperature range, other factors also go side on that impact device characteristic.}
-%
-%
-%\noindent
-%\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
-%
 %The selected temperature range (290–340)~K was chosen for several reasons:
 %\begin{itemize}
 %    \item \textbf{practical relevance}: the selected temperature range reflects the realistic operating conditions of most silicon solar cells;
-%    \item \textbf{FeB pair dynamics}: within this temperature range, FeB pairs in boron-doped silicon exhibit significant thermal dissociation kinetics, enabling the study of their reversible transformation into interstitial iron (Fe$_i$) and substitutional boron (B$_s$).
+%    \item \textbf{FeB pair dynamics}: within this temperature range, FeB pairs in boron-doped silicon exhibit significant thermal dissociation kinetics,
+%     enabling the study of their reversible transformation into interstitial iron (Fe$_i$) and substitutional boron (B$_s$).
 %\end{itemize}
 %
-%The dissociation of FeB pairs is a thermally activated process. At the lower end of this range (290~K), FeB pairs are relatively stable, while at higher temperatures (above 320~K), a significant fraction of pairs dissociate, releasing Fe$_i$.
-%\cite{istratov1999}
 %
 %In the range of 290-340 K, especially under strong illumination, as in our experiments, the dissociation efficiency approaches 100\%, and most FeB pairs decay \cite{istratov1999}. The dissociation of FeB pairs releases Fe$_i$, which is a highly recombination-active center. This leads to a pronounced decrease in minority carrier lifetime and, consequently, measurable degradation of photovoltaic parameters such as short-circuit current ($I_\mathrm{SC}$), open-circuit voltage ($V_\mathrm{OC}$), fill factor (FF), and efficiency ($\eta$).
 %
@@ -187,29 +220,43 @@ The kinetics of Fe$_i$ and Fe$_i$B$_s$ formation, dissociation, and charge-state
 %
 %
 %Relative changes in PV parameters ($\varepsilon I_\mathrm{SC}$, $\varepsilon V_\mathrm{OC}$, $\varepsilon \eta$, $\varepsilon FF$) are used as model inputs, which helps isolate iron-related effects from other temperature-induced variations.
-%
-%\vspace{1cm}
-%\noindent
-%\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~2.}}
-%\emph{Complete details about the dissociation of FeB pairs using halogen lamp illumination? What was the time duration? How much was the decay efficiency.}
-%
-%\noindent
-%\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
-%
-%As described in Section 2.1 of our manuscript, the decay (dissociation) of FeB pairs in the experimental samples was induced by intensive illumination from a halogen lamp with an intensity of 7000~W/$m^2$.
-%The process was performed in the temperature range of (305–340)~K.
-%This approach is consistent with established protocols for FeB dissociation in silicon solar cells.
-%
-%
-%The illumination time was 5 minutes? for each dissociation cycle.
-%This duration was chosen based on literature evidence and our own preliminary tests, which confirm that at the applied intensity and temperature, this period is sufficient for near-complete dissociation of FeB pairs.
-%
-%
-%At the specified temperature and illumination conditions, the dissociation efficiency of FeB pairs exceeds 90\%, as supported by both our experimental results and previous studies \cite{geerligs2004}.
-%After halogen lamp exposure, the majority of FeB pairs are converted to interstitial iron (Fe$_i$), which is confirmed by the observed changes in photovoltaic parameters.
-%
-%
-%
+
+\vspace{1cm}
+\noindent
+\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~2.}}
+\emph{Complete details about the dissociation of FeB pairs using halogen lamp illumination? What was the time duration? How much was the decay efficiency.}
+
+\noindent
+\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+
+It is known \cite{Macdonald2004} that strong optical illumination ($>$100~W/m$^{2}$)
+results in almost complete (>99\%) dissociation of the FeB pairs.
+The dissociation rate $R_d$ is influenced by the pair concentration $N_\mathrm{FeB}$ and overall carrier generation rate $G$, which is proportional to the illumination intensity
+\cite{FeBLight2,FeBAssJAP2014,FeBKin2019,FeMethod2012}:
+\begin{equation}
+\label{eqRd}
+R_d=K\left(\frac{G}{N_\mathrm{FeB}}\right)^2\,,
+\end{equation}
+where
+$K$ is the constant of the material.
+Additionally, it is well established that $R_d$ depends on temperature \cite{Lagowskii1993,lauer2016}, 
+the spectral composition of illumination \cite{OlikhPSSA}, 
+and the presence of recombination channels other than those associated with iron-related defects \cite{FeBLight2,FeBAssJAP2014}.
+
+For experimental validation of the proposed models, samples with an iron concentration of $2\times10^{11}$ to $4\times10^{13}$~cm$^{-3}$ were used. 
+Dissociation of FeB pairs was induced by intense illumination from a halogen lamp (7000~W/m$^{2}$). 
+The illumination duration required to achieve near-complete dissociation depended on the iron concentration 
+and reached up to 400~s for the solar cell with the highest $N_\mathrm{FeB}$ values. 
+When selecting the illumination intervals, we considered the results of a previous study \cite{OlikhPSSA}, 
+which showed that in samples with a similar defect composition and exposed to a comparable light source, 
+complete dissociation at $N_\mathrm{Fe}=9\times10^{12}$~cm$^{-3}$ occurred within 20~s.
+
+Details regarding the selection of the illumination duration can be found on page 3 (last paragraph).
+
+
+\textcolor[rgb]{1.00,0.07,0.00}{
+\hl{}}
+
 %\vspace{1cm}
 %\noindent
 %\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~3.}}
@@ -253,17 +300,18 @@ The kinetics of Fe$_i$ and Fe$_i$B$_s$ formation, dissociation, and charge-state
 %\end{itemize}
 %
 %
-%\vspace{1cm}
-%\noindent
-%\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~6.}}
-%\emph{There are some typing mistakes as well. for e.g. Page 14, line 44, t-ltered…}
-%
-%\noindent
-%\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
-%
-%We thank the Reviewer for noting the typographical error (“t-ltered” instead of “t-altered”) and any others present in the manuscript.
-%We carefully reviewed the entire text and corrected this and other typographical mistakes to improve the clarity and professionalism of the manuscript.
-%
+\vspace{1cm}
+\noindent
+\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~6.}}
+\emph{There are some typing mistakes as well. for e.g. Page 14, line 44, t-ltered…}
+
+\noindent
+\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+
+We thank the Reviewer for pointing out the typographical errors and apologize for their presence. 
+We have carefully reviewed the entire manuscript and corrected typographical issues to improve its clarity and  professionalism.
+
+
 %\vspace{1cm}
 %\subsection*{Response to Reviewer \#4 }
 %
@@ -294,7 +342,8 @@ The kinetics of Fe$_i$ and Fe$_i$B$_s$ formation, dissociation, and charge-state
 %\vspace{1cm}
 %\noindent
 %\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~2.}}
-%\emph{Explain the Fe concentration measurement procedure and methods followed here for the experimental validation. In section 2.1, further clarification of experimental validation with details of number of cells per data samples, data collection methods and tools used will be helpful.}
+%\emph{Explain the Fe concentration measurement procedure and methods followed here for the experimental validation. 
+%In section 2.1, further clarification of experimental validation with details of number of cells per data samples, data collection methods and tools used will be helpful.}
 %
 %\noindent
 %\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
