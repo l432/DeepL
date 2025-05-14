@@ -107,39 +107,39 @@ We have added the relevant information to the Introduction (page 2, third paragr
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
 
-Initially, it is important to note that 
-redox reactions do not play a central role in silicon solar cells, 
-unlike dye-sensitized solar cells or photoelectrochemical cells. 
-However, changes in the charge states of individual atoms --- whether intrinsic or impurity-related --- 
-occur during the photoelectric conversion process. 
-For example, during the recombination of charge carriers at iron-related defects 
-(such as interstitial iron atoms or iron-boron pairs), 
+Initially, it is important to note that
+redox reactions do not play a central role in silicon solar cells,
+unlike dye-sensitized solar cells or photoelectrochemical cells.
+However, changes in the charge states of individual atoms --- whether intrinsic or impurity-related ---
+occur during the photoelectric conversion process.
+For example, during the recombination of charge carriers at iron-related defects
+(such as interstitial iron atoms or iron-boron pairs),
 electron capture occurs in the initial stage:
 \begin{eqnarray*}
   \mathrm{Fe}_i^++e^-&\rightarrow& \mathrm{Fe}_i^0\,, \\
-  (\mathrm{Fe_iB_s})^0+e^-&\rightarrow& (\mathrm{Fe_iB_s})^-\,, 
+  (\mathrm{Fe_iB_s})^0+e^-&\rightarrow& (\mathrm{Fe_iB_s})^-\,,
 \end{eqnarray*}
-which typically corresponds to a reduction reaction. 
+which typically corresponds to a reduction reaction.
 In the subsequent stage, hole capture alters the defect's charge state again
 \begin{eqnarray*}
   \mathrm{Fe}_i^0+h^+&\rightarrow& \mathrm{Fe}_i^+\,, \\
   (\mathrm{Fe_iB_s})^-+h^+&\rightarrow& (\mathrm{Fe_iB_s})^0\,,
 \end{eqnarray*}
-formally representing an oxidation reaction. 
-When FeB pairs dissociate due to intense illumination, electron injection, or heating up to 200~$^\circ$C, 
-the iron atom becomes neutral by capturing an electron (reduction) during the first step of this two-stage process. 
-After dissociation and the cessation of the external stimulus, 
-the interstitial iron atom loses an electron (oxidation), 
+formally representing an oxidation reaction.
+When FeB pairs dissociate due to intense illumination, electron injection, or heating up to 200~$^\circ$C,
+the iron atom becomes neutral by capturing an electron (reduction) during the first step of this two-stage process.
+After dissociation and the cessation of the external stimulus,
+the interstitial iron atom loses an electron (oxidation),
 becoming singly positively charged, which allows it to re-form a pair with a negatively charged dopant (boron).
-However, transitions between different charge states of iron-related defects in silicon 
-are governed by electron and hole capture and emission processes, 
-involving the exchange of carriers between the defect levels and the conduction or valence band. 
-These processes are described within Shockley–Read–Hall theory 
+However, transitions between different charge states of iron-related defects in silicon
+are governed by electron and hole capture and emission processes,
+involving the exchange of carriers between the defect levels and the conduction or valence band.
+These processes are described within Shockley–Read–Hall theory
 and do not constitute redox reactions in the classical chemical sense.
 
-Consequently, the original manuscript did not emphasize redox reactions of iron in silicon solar cells, 
-and the Reviewer’s observation is valid. 
-In the revised manuscript, we have included a note on the distinct nature of charge-state transitions in iron-related defects, 
+Consequently, the original manuscript did not emphasize redox reactions of iron in silicon solar cells,
+and the Reviewer’s observation is valid.
+In the revised manuscript, we have included a note on the distinct nature of charge-state transitions in iron-related defects,
 highlighting how they differ from classical redox reactions (page 2, fourth paragraph from the top).
 
 %\begin{mdframed}
@@ -178,48 +178,69 @@ Accordingly, we have revised the manuscript title to:
 
 \noindent
 \textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~1.}}
-\emph{Why temperature range (290-340)~K? 
-what was the dissociation efficiency of FeB pairs at this temperature? 
-How much is translated to cell degradation? 
+\emph{Why temperature range (290-340)~K?
+what was the dissociation efficiency of FeB pairs at this temperature?
+How much is translated to cell degradation?
 Since at this temperature range, other factors also go side on that impact device characteristic.}
 
 
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
 
-We hope that the proposed approach will be applied to evaluate the concentration of iron in already installed solar modules 
-and during the certification of photovoltaic converters. 
-On the one hand, the selected temperature range of 290–340~K reflects the typical operating conditions of most silicon solar cells. 
-On the other hand, the IEC 61215-2:2021 \cite{IEC61215} standard requires that temperature coefficients of 
-short-circuit current, open-circuit voltage, and maximum power be determined based on current–voltage measurements conducted 
-within a temperature range of approximately +15~$^\circ$C to +75~$^\circ$C (288–348~K). 
+We hope that the proposed approach will be applied to evaluate the concentration of iron in already installed solar modules
+and during the certification of photovoltaic converters.
+On the one hand, the selected temperature range of 290–340~K reflects the typical operating conditions of most silicon solar cells.
+On the other hand, the IEC 61215-2:2021 \cite{IEC61215} standard requires that temperature coefficients of
+short-circuit current, open-circuit voltage, and maximum power be determined based on current–voltage measurements conducted
+within a temperature range of approximately +15~$^\circ$C to +75~$^\circ$C (288–348~K).
 In other words, the standard solar cell testing results can serve as input data for machine learning models trained within selected temperature range.
 
 Additional information justifying the choice of temperature range has been added in the revised manuscript (page 4, first paragraph).
 
 
-Complete dissociation of the FeB pairs was achieved during experiments conducted within the specified temperature range 
-(further clarified below in response to the following Reviewer comment).
+Complete dissociation of the FeB pairs was achieved during experiments conducted within the specified temperature range
+(further clarified below in response to the following Reviewer's comment).
 
 
+The changes in photovoltaic parameter values resulting from FeB pair dissociation depend on 
+both the concentration of iron impurities and the solar cell parameters 
+(such as base thickness and dopant concentration), 
+as well as the measurement conditions (illumination intensity and spectral composition, temperature). 
+This issue is discussed in more detail in \cite{Olikh2025MSEB}, 
+which presents the results of silicon solar cell modeling used to create the training dataset.
+For instance, under AM1.5 illumination, the relative changes in short-circuit current range 
+from $-40.88$\% 
+(for $N_\mathrm{B}=10^{17}$~cm$^{-3}$, $T=290$~K, $d_p=380$~$\mu$m) 
+to 6.11\% 
+(for $N_\mathrm{B}=10^{15}$~cm$^{-3}$, $T=315$~K, $d_p=380$~$\mu$m). 
+Similarly, the relative changes in open-circuit voltage vary from 
+$-12.95$\%
+(for $N_\mathrm{B}=10^{15}$~cm$^{-3}$, $T=340$~K, $d_p=180$~$\mu$m) 
+to 1.92\% 
+(for $N_\mathrm{B}=1.778\times10^{15}$~cm$^{-3}$, $T=340$~K, $d_p=230$~$\mu$m).
+Notably, the most pronounced changes in solar cell characteristics do not necessarily occur at the highest iron concentrations. 
+For example, the maximum negative change in open-circuit voltage ($-12.95$\%) 
+is observed at an iron concentration of $3.162\times10^{12}$~cm$^{-3}$, 
+rather than at the highest tested level.
+
+This suggests that FeB pair dissociation, depending on the specific parameters, 
+can not only degrade solar cell performance but also improve certain characteristics \cite{Olikh2025MSEB,FeB:Schmidt}.
+However, it is important to emphasize that light-induced dissociation of FeB pairs does not lead to irreversible changes in photovoltaic parameters. 
+Once the illumination ceases, the FeB pairs re-form, and the solar cell characteristics return to their original values \cite{FeBLight2,FeBAssJAP2014,FeBKin2019,FeMethod2012,FeBLight2,FeBAssJAP2014}.
 
 
-%The selected temperature range (290–340)~K was chosen for several reasons:
-%\begin{itemize}
-%    \item \textbf{practical relevance}: the selected temperature range reflects the realistic operating conditions of most silicon solar cells;
-%    \item \textbf{FeB pair dynamics}: within this temperature range, FeB pairs in boron-doped silicon exhibit significant thermal dissociation kinetics,
-%     enabling the study of their reversible transformation into interstitial iron (Fe$_i$) and substitutional boron (B$_s$).
-%\end{itemize}
-%
-%
-%In the range of 290-340 K, especially under strong illumination, as in our experiments, the dissociation efficiency approaches 100\%, and most FeB pairs decay \cite{istratov1999}. The dissociation of FeB pairs releases Fe$_i$, which is a highly recombination-active center. This leads to a pronounced decrease in minority carrier lifetime and, consequently, measurable degradation of photovoltaic parameters such as short-circuit current ($I_\mathrm{SC}$), open-circuit voltage ($V_\mathrm{OC}$), fill factor (FF), and efficiency ($\eta$).
-%
-%Our methodology does not induce any irreversible physical or chemical changes in the solar cell structure.
-%The temperature range used (290–340)~K is well below the threshold for processes that could cause permanent defect formation, dopant diffusion, or degradation.
-%The intense illumination used to dissociate FeB pairs is also within the limits commonly applied in standard characterization procedures and does not lead to light-induced degradationor other irreversible effects under our experimental protocol.
-%
-%
-%Relative changes in PV parameters ($\varepsilon I_\mathrm{SC}$, $\varepsilon V_\mathrm{OC}$, $\varepsilon \eta$, $\varepsilon FF$) are used as model inputs, which helps isolate iron-related effects from other temperature-induced variations.
+Information regarding the ranges of changes in photovoltaic parameters and their reversibility has been added to the revised manuscript
+(page 4, third paragraph from the top; page 3, first paragraph in Section~2.1).
+
+We fully agree with the Reviewer that, within the chosen temperature range, 
+factors beyond iron concentration and the selected descriptors may also influence solar cell characteristics. 
+This is especially relevant for real solar cells, which, in addition to iron, 
+may contain other recombination-active impurities. 
+To better isolate iron-related effects from the influence of other factors, 
+we used relative changes in PV parameters as model inputs. 
+Since models trained in this way provided sufficiently accurate predictions of iron concentration from 
+both simulated and experimentally measured current–voltage characteristics, we consider this approach well justified.
+
 
 \vspace{1cm}
 \noindent
@@ -239,16 +260,16 @@ R_d=K\left(\frac{G}{N_\mathrm{FeB}}\right)^2\,,
 \end{equation}
 where
 $K$ is the constant of the material.
-Additionally, it is well established that $R_d$ depends on temperature \cite{Lagowskii1993,lauer2016}, 
-the spectral composition of illumination \cite{OlikhPSSA}, 
+Additionally, it is well established that $R_d$ depends on temperature \cite{Lagowskii1993,lauer2016},
+the spectral composition of illumination \cite{OlikhPSSA},
 and the presence of recombination channels other than those associated with iron-related defects \cite{FeBLight2,FeBAssJAP2014}.
 
-For experimental validation of the proposed models, samples with an iron concentration of $2\times10^{11}$ to $4\times10^{13}$~cm$^{-3}$ were used. 
-Dissociation of FeB pairs was induced by intense illumination from a halogen lamp (7000~W/m$^{2}$). 
-The illumination duration required to achieve near-complete dissociation depended on the iron concentration 
-and reached up to 400~s for the solar cell with the highest $N_\mathrm{FeB}$ values. 
-When selecting the illumination intervals, we considered the results of a previous study \cite{OlikhPSSA}, 
-which showed that in samples with a similar defect composition and exposed to a comparable light source, 
+For experimental validation of the proposed models, samples with an iron concentration of $2\times10^{11}$ to $4\times10^{13}$~cm$^{-3}$ were used.
+Dissociation of FeB pairs was induced by intense illumination from a halogen lamp (7000~W/m$^{2}$).
+The illumination duration required to achieve near-complete dissociation depended on the iron concentration
+and reached up to 400~s for the solar cell with the highest $N_\mathrm{FeB}$ values.
+When selecting the illumination intervals, we considered the results of a previous study \cite{OlikhPSSA},
+which showed that in samples with a similar defect composition and exposed to a comparable light source,
 complete dissociation at $N_\mathrm{Fe}=9\times10^{12}$~cm$^{-3}$ occurred within 20~s.
 
 Details regarding the selection of the illumination duration can be found on page 3 (last paragraph).
@@ -257,20 +278,57 @@ Details regarding the selection of the illumination duration can be found on pag
 \textcolor[rgb]{1.00,0.07,0.00}{
 \hl{}}
 
-%\vspace{1cm}
-%\noindent
-%\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~3.}}
-%\emph{Most of the models significantly fail for the AM1.5 illumination? What could be the reason for that?}
-%
-%\noindent
-%\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
-%
-%The reduced accuracy of most models under AM1.5 illumination likely results from the increased complexity of the broadband solar spectrum compared to monochromatic light.
-%Under AM1.5, the photovoltaic parameter changes are influenced by a wider range of physical effects and interactions, making the relationship between input features and iron concentration more complex and less direct.
-%This complexity makes it more challenging for many models-especially simpler ones-to generalize well, even when trained on simulated data.
-%In contrast, monochromatic illumination provides a more straightforward correlation between iron-related recombination and PV parameter changes, resulting in higher model accuracy.
-%
-%
+\vspace{1cm}
+\noindent
+\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~3.}}
+\emph{Most of the models significantly fail for the AM1.5 illumination? What could be the reason for that?}
+
+\noindent
+\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+
+
+Two key metrics were used to identify the solar cell parameter whose changes,
+resulting from the Fe$_i$B$_\mathrm{Si}$ $\rightleftarrows$ Fe$_i$ + B$_\mathrm{Si}$ reconstruction,
+enable the most reliable determination of iron concentration.
+Specifically, these metrics are:
+(1) the monotonicity of the relative change in the parameter value as a function of impurity concentration,
+which is a necessary condition for the unambiguous estimation of $N_\mathrm{Fe}$;
+and (2) the absolute magnitude of the parameter change, which allows for more precise measurements and,
+consequently, a more accurate estimation of $N_\mathrm{Fe}$.
+The first criterion is not satisfied by $\varepsilon F\!F$, $\varepsilon V_\mathrm{OC}$, and $\varepsilon \eta$
+(the latter two under AM1.5 illumination).
+At the same iron concentration, $\varepsilon I_\mathrm{SC}$ values under monochromatic illumination exceed those under AM1.5 illumination.
+As mentioned earlier, this effect deals with differences in the generation locations
+of non-equilibrium carriers under different lighting conditions.
+Additionally, under identical conditions, the changes in open-circuit voltage are significantly weaker
+than those in short-circuit current or efficiency.
+Since $\varepsilon I_\mathrm{SC}$ and $\varepsilon \eta$ are of the same order,
+it is advisable to select the more reliable parameter using additional metrics.
+
+
+\begin{figure}
+	\centering
+     \includegraphics[width=0.34\linewidth]{Ris11.png}
+     \includegraphics[width=0.34\linewidth]{Ris12.png}
+     \includegraphics[width=0.34\linewidth]{Ris13.png}
+     \includegraphics[width=0.34\linewidth]{Ris14.png}
+     \includegraphics[width=0.34\linewidth]{Ris15.png}
+     \includegraphics[width=0.34\linewidth]{Ris16.png}
+	  \caption{Relative changes in solar cell efficiency (first row), open-circuit voltage (second row), fill factor (third row) 
+ caused by a complete dissociation of Fe$_i$B$_s$. 
+ The dependencies are shown for two cases: 
+ AM1.5 illumination (left column) and 940 nm monochromatic light (right column).
+ The figures are taken from reference \cite{Olikh2025MSEB}.
+}\label{fig2}
+\end{figure}
+
+
+The reduced accuracy of most models under AM1.5 illumination likely results from the increased complexity of the broadband solar spectrum compared to monochromatic light.
+Under AM1.5, the photovoltaic parameter changes are influenced by a wider range of physical effects and interactions, making the relationship between input features and iron concentration more complex and less direct.
+This complexity makes it more challenging for many models-especially simpler ones-to generalize well, even when trained on simulated data.
+In contrast, monochromatic illumination provides a more straightforward correlation between iron-related recombination and PV parameter changes, resulting in higher model accuracy.
+
+
 %\vspace{1cm}
 %\noindent
 %\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~4.}}
@@ -308,7 +366,7 @@ Details regarding the selection of the illumination duration can be found on pag
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
 
-We thank the Reviewer for pointing out the typographical errors and apologize for their presence. 
+We thank the Reviewer for pointing out the typographical errors and apologize for their presence.
 We have carefully reviewed the entire manuscript and corrected typographical issues to improve its clarity and  professionalism.
 
 
@@ -342,7 +400,7 @@ We have carefully reviewed the entire manuscript and corrected typographical iss
 %\vspace{1cm}
 %\noindent
 %\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~2.}}
-%\emph{Explain the Fe concentration measurement procedure and methods followed here for the experimental validation. 
+%\emph{Explain the Fe concentration measurement procedure and methods followed here for the experimental validation.
 %In section 2.1, further clarification of experimental validation with details of number of cells per data samples, data collection methods and tools used will be helpful.}
 %
 %\noindent

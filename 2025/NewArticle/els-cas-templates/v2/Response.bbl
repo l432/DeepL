@@ -1,4 +1,4 @@
-\begin{thebibliography}{12}
+\begin{thebibliography}{14}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\bibinfo}[2]{#2}
 \ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
@@ -40,6 +40,21 @@
   \bibinfo{type}{International Standard} \bibinfo{number}{IEC 61215-2:2021},
   \bibinfo{address}{Geneva, Switzerland}, \bibinfo{year}{2021}.
   \bibinfo{note}{\url{https://webstore.iec.ch/publication/61174}}.
+%Type = Article
+\bibitem[{Olikh and Zavhorodnii(2025)}]{Olikh2025MSEB}
+\bibinfo{author}{O.~Olikh}, \bibinfo{author}{O.~Zavhorodnii},
+\newblock \bibinfo{title}{Iron’s impact on silicon solar cell execution:
+  Comprehensive modeling across diverse scenarios},
+\newblock \bibinfo{journal}{Materials Science and Engineering: B}
+  \bibinfo{volume}{317} (\bibinfo{year}{2025}) \bibinfo{pages}{118192}.
+%Type = Article
+\bibitem[{Schmidt(2005)}]{FeB:Schmidt}
+\bibinfo{author}{J.~Schmidt},
+\newblock \bibinfo{title}{Effect of dissociation of iron--boron pairs in
+  crystalline silicon on solar cell properties},
+\newblock \bibinfo{journal}{Progress in Photovoltaics: Research and
+  Applications} \bibinfo{volume}{13} (\bibinfo{year}{2005})
+  \bibinfo{pages}{325--331}.
 %Type = Article
 \bibitem[{Macdonald et~al.(2004)Macdonald, Geerligs, and
   Azzizi}]{Macdonald2004}
