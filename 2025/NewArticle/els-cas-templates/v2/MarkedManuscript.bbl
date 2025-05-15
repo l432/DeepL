@@ -1,4 +1,4 @@
-\begin{thebibliography}{80}
+\begin{thebibliography}{84}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\bibinfo}[2]{#2}
 \ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
@@ -665,6 +665,45 @@
 \newblock \bibinfo{journal}{Nucl. Instrum. Methods Phys. Res. Sect. B Beam
   Interact. Mater. At.} \bibinfo{volume}{553} (\bibinfo{year}{2024})
   \bibinfo{pages}{165383}.
+%Type = Article
+\bibitem[{Fadhel et~al.(2019)Fadhel, Delpha, Diallo, Bahri, Migan, Trabelsi,
+  and Mimouni}]{Fadhel2019}
+\bibinfo{author}{S.~Fadhel}, \bibinfo{author}{C.~Delpha},
+  \bibinfo{author}{D.~Diallo}, \bibinfo{author}{I.~Bahri},
+  \bibinfo{author}{A.~Migan}, \bibinfo{author}{M.~Trabelsi},
+  \bibinfo{author}{M.~Mimouni},
+\newblock \bibinfo{title}{{PV} shading fault detection and classification based
+  on {I-V} curve using principal component analysis: {A}pplication to isolated
+  {PV} system},
+\newblock \bibinfo{journal}{Sol. Energy} \bibinfo{volume}{179}
+  (\bibinfo{year}{2019}) \bibinfo{pages}{1--10}.
+%Type = Article
+\bibitem[{Gao and Wai(2020)}]{Gao2020}
+\bibinfo{author}{W.~Gao}, \bibinfo{author}{R.-J. Wai},
+\newblock \bibinfo{title}{A novel fault identification method for photovoltaic
+  array via convolutional neural network and residual gated recurrent unit},
+\newblock \bibinfo{journal}{IEEE Access} \bibinfo{volume}{8}
+  (\bibinfo{year}{2020}) \bibinfo{pages}{159493--159510}.
+%Type = Article
+\bibitem[{David et~al.(2021)David, Soares, Bristow, Bagnis, and
+  Kettle}]{David2021}
+\bibinfo{author}{T.~W. David}, \bibinfo{author}{G.~A. Soares},
+  \bibinfo{author}{N.~Bristow}, \bibinfo{author}{D.~Bagnis},
+  \bibinfo{author}{J.~Kettle},
+\newblock \bibinfo{title}{Predicting diurnal outdoor performance and
+  degradation of organic photovoltaics via machine learning; relating
+  degradation to outdoor stress conditions},
+\newblock \bibinfo{journal}{Prog. Photovoltaics Res. Appl.}
+  \bibinfo{volume}{29} (\bibinfo{year}{2021}) \bibinfo{pages}{1274--1284}.
+%Type = Article
+\bibitem[{Liu et~al.(2022)Liu, Yan, Han, Zhu, Tu, Guan, and Tan}]{Liu2022}
+\bibinfo{author}{Y.~Liu}, \bibinfo{author}{W.~Yan}, \bibinfo{author}{S.~Han},
+  \bibinfo{author}{H.~Zhu}, \bibinfo{author}{Y.~Tu}, \bibinfo{author}{L.~Guan},
+  \bibinfo{author}{X.~Tan},
+\newblock \bibinfo{title}{How machine learning predicts and explains the
+  performance of perovskite solar cells},
+\newblock \bibinfo{journal}{Sol. RRL} \bibinfo{volume}{6}
+  (\bibinfo{year}{2022}) \bibinfo{pages}{2101100}.
 %Type = Article
 \bibitem[{Breiman(2001)}]{Breiman2001}
 \bibinfo{author}{L.~Breiman},

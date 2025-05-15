@@ -202,43 +202,43 @@ Complete dissociation of the FeB pairs was achieved during experiments conducted
 (further clarified below in response to the following Reviewer's comment).
 
 
-The changes in photovoltaic parameter values resulting from FeB pair dissociation depend on 
-both the concentration of iron impurities and the solar cell parameters 
-(such as base thickness and dopant concentration), 
-as well as the measurement conditions (illumination intensity and spectral composition, temperature). 
-This issue is discussed in more detail in \cite{Olikh2025MSEB}, 
+The changes in photovoltaic parameter values resulting from FeB pair dissociation depend on
+both the concentration of iron impurities and the solar cell parameters
+(such as base thickness and dopant concentration),
+as well as the measurement conditions (illumination intensity and spectral composition, temperature).
+This issue is discussed in more detail in \cite{Olikh2025MSEB},
 which presents the results of silicon solar cell modeling used to create the training dataset.
-For instance, under AM1.5 illumination, the relative changes in short-circuit current range 
-from $-40.88$\% 
-(for $N_\mathrm{B}=10^{17}$~cm$^{-3}$, $T=290$~K, $d_p=380$~$\mu$m) 
-to 6.11\% 
-(for $N_\mathrm{B}=10^{15}$~cm$^{-3}$, $T=315$~K, $d_p=380$~$\mu$m). 
-Similarly, the relative changes in open-circuit voltage vary from 
+For instance, under AM1.5 illumination, the relative changes in short-circuit current range
+from $-40.88$\%
+(for $N_\mathrm{B}=10^{17}$~cm$^{-3}$, $T=290$~K, $d_p=380$~$\mu$m)
+to 6.11\%
+(for $N_\mathrm{B}=10^{15}$~cm$^{-3}$, $T=315$~K, $d_p=380$~$\mu$m).
+Similarly, the relative changes in open-circuit voltage vary from
 $-12.95$\%
-(for $N_\mathrm{B}=10^{15}$~cm$^{-3}$, $T=340$~K, $d_p=180$~$\mu$m) 
-to 1.92\% 
+(for $N_\mathrm{B}=10^{15}$~cm$^{-3}$, $T=340$~K, $d_p=180$~$\mu$m)
+to 1.92\%
 (for $N_\mathrm{B}=1.778\times10^{15}$~cm$^{-3}$, $T=340$~K, $d_p=230$~$\mu$m).
-Notably, the most pronounced changes in solar cell characteristics do not necessarily occur at the highest iron concentrations. 
-For example, the maximum negative change in open-circuit voltage ($-12.95$\%) 
-is observed at an iron concentration of $3.162\times10^{12}$~cm$^{-3}$, 
+Notably, the most pronounced changes in solar cell characteristics do not necessarily occur at the highest iron concentrations.
+For example, the maximum negative change in open-circuit voltage ($-12.95$\%)
+is observed at an iron concentration of $3.162\times10^{12}$~cm$^{-3}$,
 rather than at the highest tested level.
 
-This suggests that FeB pair dissociation, depending on the specific parameters, 
+This suggests that FeB pair dissociation, depending on the specific parameters,
 can not only degrade solar cell performance but also improve certain characteristics \cite{Olikh2025MSEB,FeB:Schmidt}.
-However, it is important to emphasize that light-induced dissociation of FeB pairs does not lead to irreversible changes in photovoltaic parameters. 
+However, it is important to emphasize that light-induced dissociation of FeB pairs does not lead to irreversible changes in photovoltaic parameters.
 Once the illumination ceases, the FeB pairs re-form, and the solar cell characteristics return to their original values \cite{FeBLight2,FeBAssJAP2014,FeBKin2019,FeMethod2012,FeBLight2,FeBAssJAP2014}.
 
 
 Information regarding the ranges of changes in photovoltaic parameters and their reversibility has been added to the revised manuscript
 (page 4, third paragraph from the top; page 3, first paragraph in Section~2.1).
 
-We fully agree with the Reviewer that, within the chosen temperature range, 
-factors beyond iron concentration and the selected descriptors may also influence solar cell characteristics. 
-This is especially relevant for real solar cells, which, in addition to iron, 
-may contain other recombination-active impurities. 
-To better isolate iron-related effects from the influence of other factors, 
-we used relative changes in PV parameters as model inputs. 
-Since models trained in this way provided sufficiently accurate predictions of iron concentration from 
+We fully agree with the Reviewer that, within the chosen temperature range,
+factors beyond iron concentration and the selected descriptors may also influence solar cell characteristics.
+This is especially relevant for real solar cells, which, in addition to iron,
+may contain other recombination-active impurities.
+To better isolate iron-related effects from the influence of other factors,
+we used relative changes in PV parameters as model inputs.
+Since models trained in this way provided sufficiently accurate predictions of iron concentration from
 both simulated and experimentally measured current–voltage characteristics, we consider this approach well justified.
 
 
@@ -275,8 +275,7 @@ complete dissociation at $N_\mathrm{Fe}=9\times10^{12}$~cm$^{-3}$ occurred withi
 Details regarding the selection of the illumination duration can be found on page 3 (last paragraph).
 
 
-\textcolor[rgb]{1.00,0.07,0.00}{
-\hl{}}
+
 
 \vspace{1cm}
 \noindent
@@ -286,24 +285,27 @@ Details regarding the selection of the illumination duration can be found on pag
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
 
+Indeed, models trained on data obtained under AM1.5 illumination perform worse in almost all cases. 
+We believe this can be attributed to the following reasons.
+It is well known that a regression model may  achieve high accuracy 
+by having the target variable be an unambiguous function of the descriptor.
+Moreover, the absolute value of the function’s derivative should be as significant as possible.
+As shown earlier  \cite{Olikh2025MSEB}, the condition of uniqueness in the relationship between $N_\mathrm{Fe}$ and 
+the changes in photovoltaic parameters under AM1.5 illumination is often not fulfilled in contrast to the case of monochromatic illumination.
+In addition, the ranges of changes in $\varepsilon I_\mathrm{SC}$, $\varepsilon V_\mathrm{OC}$, and $\varepsilon \eta$ 
+under monochromatic illumination exceed those observed under AM1.5 illumination.
+For illustration, Fig.~\ref{fig1} shows some examples from  \cite{Olikh2025MSEB}.
+The physical origin of the differences in the relationship between iron concentration and 
+parameter changes under AM1.5 and monochromatic illumination lies in the fact that, 
+in the former case, the generation of non-equilibrium charge carriers occurs throughout the 
+entire volume of the solar cell, rather than being limited to the base region. 
+As a result, the processes involved in photovoltaic conversion are more complex. 
+In our view, these differences explain why the performance of ML models trained on AM1.5 illumination data is generally poorer. 
+One way to address the ambiguity in the relationship between features and the target variable 
+is to incorporate additional features into the model. 
+As shown in the study (e.g., see Fig.~7 in manuscript), 
+for AM1.5 illumination, increasing the number of descriptors often improves prediction accuracy, supporting our hypothesis.
 
-Two key metrics were used to identify the solar cell parameter whose changes,
-resulting from the Fe$_i$B$_\mathrm{Si}$ $\rightleftarrows$ Fe$_i$ + B$_\mathrm{Si}$ reconstruction,
-enable the most reliable determination of iron concentration.
-Specifically, these metrics are:
-(1) the monotonicity of the relative change in the parameter value as a function of impurity concentration,
-which is a necessary condition for the unambiguous estimation of $N_\mathrm{Fe}$;
-and (2) the absolute magnitude of the parameter change, which allows for more precise measurements and,
-consequently, a more accurate estimation of $N_\mathrm{Fe}$.
-The first criterion is not satisfied by $\varepsilon F\!F$, $\varepsilon V_\mathrm{OC}$, and $\varepsilon \eta$
-(the latter two under AM1.5 illumination).
-At the same iron concentration, $\varepsilon I_\mathrm{SC}$ values under monochromatic illumination exceed those under AM1.5 illumination.
-As mentioned earlier, this effect deals with differences in the generation locations
-of non-equilibrium carriers under different lighting conditions.
-Additionally, under identical conditions, the changes in open-circuit voltage are significantly weaker
-than those in short-circuit current or efficiency.
-Since $\varepsilon I_\mathrm{SC}$ and $\varepsilon \eta$ are of the same order,
-it is advisable to select the more reliable parameter using additional metrics.
 
 
 \begin{figure}
@@ -314,34 +316,41 @@ it is advisable to select the more reliable parameter using additional metrics.
      \includegraphics[width=0.34\linewidth]{Ris14.png}
      \includegraphics[width=0.34\linewidth]{Ris15.png}
      \includegraphics[width=0.34\linewidth]{Ris16.png}
-	  \caption{Relative changes in solar cell efficiency (first row), open-circuit voltage (second row), fill factor (third row) 
- caused by a complete dissociation of Fe$_i$B$_s$. 
- The dependencies are shown for two cases: 
+	  \caption{Relative changes in solar cell efficiency (first row), open-circuit voltage (second row), fill factor (third row)
+ caused by a complete dissociation of Fe$_i$B$_s$.
+ The dependencies are shown for two cases:
  AM1.5 illumination (left column) and 940 nm monochromatic light (right column).
  The figures are taken from reference \cite{Olikh2025MSEB}.
-}\label{fig2}
+}\label{fig1}
 \end{figure}
 
 
-The reduced accuracy of most models under AM1.5 illumination likely results from the increased complexity of the broadband solar spectrum compared to monochromatic light.
-Under AM1.5, the photovoltaic parameter changes are influenced by a wider range of physical effects and interactions, making the relationship between input features and iron concentration more complex and less direct.
-This complexity makes it more challenging for many models-especially simpler ones-to generalize well, even when trained on simulated data.
-In contrast, monochromatic illumination provides a more straightforward correlation between iron-related recombination and PV parameter changes, resulting in higher model accuracy.
+This answer is incorporated in the text on page 16, last paragraph and page~17, first paragraph.
 
 
-%\vspace{1cm}
-%\noindent
-%\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~4.}}
-%\emph{Authors are suggested to provide more explanation behind failure of the particular model, infact, for the results obtained.}
-%
-%\noindent
-%\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
-%
-%The notably poor performance of the SVR model in our results is likely due to its limited ability to capture the complex, highly non-linear relationships between the input features (such as relative changes in PV parameters, temperature, doping, and thickness) and the target iron concentration, especially when compared to more flexible models like XGB or DNN.
-%SVR with standard kernels can struggle when the data distribution is multi-dimensional and the dependencies are not well approximated by simple kernel functions.
-%Additionally, SVR is sensitive to feature scaling and hyperparameter selection, which may further limit its effectiveness in this application.
-%This explains why SVR underperforms relative to ensemble and deep learning models in our study.
-%
+\textcolor[rgb]{1.00,0.07,0.00}{
+\hl{}}
+
+
+\vspace{1cm}
+\noindent
+\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~4.}}
+\emph{Authors are suggested to provide more explanation behind failure of the particular model, infact, for the results obtained.}
+
+\noindent
+\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+
+Thank the reviewer for your valuable comments.
+
+
+
+The notably poor performance of the SVR model in our results is likely due to its limited ability to capture the complex, 
+highly non-linear relationships between the input features (such as relative changes in PV parameters, temperature, doping, and thickness) and the target iron concentration, 
+especially when compared to more flexible models like XGB or DNN.
+SVR with standard kernels can struggle when the data distribution is multi-dimensional and the dependencies are not well approximated by simple kernel functions.
+Additionally, SVR is sensitive to feature scaling and hyperparameter selection, which may further limit its effectiveness in this application.
+This explains why SVR underperforms relative to ensemble and deep learning models in our study.
+
 %\vspace{1cm}
 %\noindent
 %\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~5.}}
@@ -407,22 +416,39 @@ We have carefully reviewed the entire manuscript and corrected typographical iss
 %\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
 %
 %
-%\vspace{1cm}
-%\noindent
-%\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~3.}}
-%\emph{Table 1 and PCA does not add much value.}
-%
-%\noindent
-%\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
-%
-%
-%The inclusion of Table 1 and the PCA analysis was intended to transparently report our exploration of dimensionality reduction as a data pre-processing step.
-%While our results show that PCA did not significantly improve model performance-and, in some cases, slightly reduced accuracy-we believe it is valuable to document that this common technique was systematically evaluated and found less effective than using the original features for this application.
-%
-%
-%We also note that, as the dataset size and feature space increase in future studies (for example, when modeling a wider range of device structures, operating conditions, or additional physical parameters), applying PCA or other dimensionality reduction methods could become more beneficial.
-%In such cases, PCA can help reduce model training time and computational resources, as well as mitigate potential issues with feature redundancy and overfitting.
-%
+\vspace{1cm}
+\noindent
+\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~3.}}
+\emph{Table 1 and PCA does not add much value.}
+
+\noindent
+\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+
+In general, principal component analysis (PCA) is a widely used and effective tool in machine learning, 
+particularly for addressing problems in photovoltaics. 
+For example, it has been successfully applied to fault detection and classification based on I–V curves \cite{Fadhel2019, Gao2020}, 
+performance prediction of organic \cite{David2021} and perovskite \cite{Liu2022} solar cells, 
+as well as measurement of the internal quantum efficiency in GaAs solar cells \cite{AbdullahVetter2025}.
+
+Despite previous successes in applying principal component analysis to various photovoltaics-related machine learning tasks ---
+and the presence of favorable conditions for its use in our case, 
+such as the high correlation between changes in photoelectric parameters caused by FeB pair dissociation --- 
+applying PCA as a data pre-processing step for evaluating iron impurity concentration did not improve the maximum prediction accuracy.
+
+
+
+
+
+
+
+The inclusion of Table 1 and the PCA analysis was intended to transparently report our exploration of dimensionality reduction as a data pre-processing step.
+While our results show that PCA did not significantly improve model performance-and, in some cases, slightly reduced accuracy-we believe it is valuable to document that this common technique was systematically evaluated and found less effective than using the original features for this application.
+
+
+We also note that, as the dataset size and feature space increase in future studies (for example, when modeling a wider range of device structures, operating conditions, or additional physical parameters), applying PCA or other dimensionality reduction methods could become more beneficial.
+In such cases, PCA can help reduce model training time and computational resources, as well as mitigate potential issues with feature redundancy and overfitting.
+
+
 %\vspace{1cm}
 %\noindent
 %\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~4.}}

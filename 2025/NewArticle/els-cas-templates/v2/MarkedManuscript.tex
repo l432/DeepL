@@ -351,7 +351,7 @@ The workflow of the ML pipeline for extracting iron contamination from IV data i
 \end{figure}
 
 
-\subsection{Data Collection}
+\subsection{Data Collection}\label{SecDataCol}
 
 Our research aimed to develop ML models for estimating iron concentration in silicon solar cells.
 Selecting relevant descriptors is a critical first step in building robust and effective predictive models.
@@ -359,7 +359,7 @@ It is well established that the presence of iron induces the formation of recomb
 including short-circuit current ($I_\mathrm{SC}$), open-circuit voltage ($V_\mathrm{OC}$), efficiency ($\eta$), and fill factor
 (\textcolor[rgb]{1.00,0.07,0.00}{\hl{$F\!F$}}).
 Both theoretical and experimental studies \cite{FeB:Schmidt,IronSC,Olikh2025MSEB} have demonstrated that the restructuring of iron-related defects (the dissociation of FeB pairs)
-leads to 
+leads to
 \textcolor[rgb]{1.00,0.07,0.00}{
 \hl{
 reversible
@@ -430,14 +430,14 @@ and monochromatic light with a wavelength of 940~nm and an intensity of 5~W/m$^{
 reflecting the remarkable sensitivity of PVPs to iron \cite{Olikh2025MSEB}.
 \textcolor[rgb]{1.00,0.07,0.00}{
 \hl{
-The obtained parameter limits are as follows: 
-$\varepsilon I_\mathrm{SC}$ ranges from $-40.88$\% to 6.11\% under AM1.5 illumination and 
-from $-170.58$\% to 24.66\% under monochromatic light; 
-$\varepsilon \eta$ ranges from $-50.37$\% to 9.90\% (AM1.5) 
-and from $-210.32$\% to 31.53\% (monochromatic); 
-$\varepsilon V_\mathrm{OC}$ ranges from $-12.95$\% to 1.92\%  (AM1.5) and 
-from $-16.33$\% to 8.15\% (monochromatic); 
-and $\varepsilon F\!F$ ranges from $-1.42$\% to 11.88\% (AM1.5) and 
+The obtained parameter limits are as follows:
+$\varepsilon I_\mathrm{SC}$ ranges from $-40.88$\% to 6.11\% under AM1.5 illumination and
+from $-170.58$\% to 24.66\% under monochromatic light;
+$\varepsilon \eta$ ranges from $-50.37$\% to 9.90\% (AM1.5)
+and from $-210.32$\% to 31.53\% (monochromatic);
+$\varepsilon V_\mathrm{OC}$ ranges from $-12.95$\% to 1.92\%  (AM1.5) and
+from $-16.33$\% to 8.15\% (monochromatic);
+and $\varepsilon F\!F$ ranges from $-1.42$\% to 11.88\% (AM1.5) and
 from $-4.39$\% to 2.98\% (monochromatic).
 }}
 A total of 67,596 $I$-$V$ curves were simulated.
@@ -518,6 +518,14 @@ To assess the impact of redundant data, we trained ML models using features sele
 we computed PCs for the original dataset and then reduced the total dimension
 by discarding PCs whose contribution to the total variance was below 1.5\%.
 The final dimensions of the different feature sets are provided in Table~\ref{tbl1}.
+\textcolor[rgb]{1.00,0.07,0.00}{
+\hl{
+In general, PCA is a widely used and effective tool in machine learning,
+particularly for addressing problems in photovoltaics.
+For example, it has been successfully applied to fault detection and classification based on $I$-$V$ curves} \cite{Fadhel2019, Gao2020},
+performance prediction of organic \cite{David2021} and perovskite \cite{Liu2022} solar cells,
+as well as measurement of the internal quantum efficiency in GaAs solar cells \cite{AbdullahVetter2025}.
+}
 
 \begin{figure}
 	\centering
@@ -651,7 +659,7 @@ due to a higher proportion of accurate predictions.
 \subsection{Train dataset}
 
 Fig.~\ref{fig3} presents the models’ prediction results on the training set.
-The Supplementary Materials (Figs.S4--S7) provide more detailed results, while TablesS12 and S13 list the performance metrics.
+The Supplementary Materials (Figs.~S4--S7) provide more detailed results, while Tables~S12 and S13 list the performance metrics.
 The RF and GB models yield the most accurate predictions, whereas SVR performs the worst.
 Applying PCA generally reduces prediction accuracy on the training set.
 
@@ -732,20 +740,22 @@ on PVP variations measured under standardized conditions for predefined structur
 using the same temperature and solar cell parameters as in model training.
 
 
-Fig.~\ref{fig6} and Figgs.S8--S11 present the prediction results,
-while Fig.~\ref{fig7} and Table\ref{table2} summarize the performance metrics.
+Fig.~\ref{fig6} and \textcolor[rgb]{1.00,0.07,0.00}{
+\hl{Figs.}}~S8--S11 in Supplementary Materials present the prediction results,
+while Fig.~\ref{fig7} and Table~\ref{table2} summarize the performance metrics.
 SVR consistently performs poorly, a trend observed across all test datasets.
 Since this pattern remains unchanged in subsequent analyses, we do not discuss it further.
 For the remaining models, it is crucial to differentiate between results obtained under monochromatic and solar illumination.
-Under 940~nm illumination without PCA, nearly all algorithms achieve reasonably accurate predictions, with a MAPE of approximately 10%.
+Under 940~nm illumination without PCA, nearly all algorithms achieve reasonably accurate predictions, with a MAPE of approximately 10\textcolor[rgb]{1.00,0.07,0.00}{
+\hl{\%.}}
 DNN models yield slightly worse results, whereas XGB demonstrates marginally better performance.
 Interestingly, increasing feature dimensionality does not improve prediction accuracy but instead reduces it.
 Notably, incorporating the relative changes in the fill factor into the descriptor set significantly degrades DNN predictions.
 As shown in Table~\ref{table2}, RF, GB, and XGB, which are the most accurate models, exhibit a noticeable increase
-in MdAPE and a rise in p01 and p10 as the number of descriptors grows.
+in MdAPE and a rise in $p01$ and $p10$ as the number of descriptors grows.
 These trends indicate that expanding feature dimensionality leads to a higher proportion of predictions with significant errors,
-as illustrated in Fig.~\ref{fig8},a for GB.
-Fig.~\ref{fig8},a and Table~\ref{table2} also show that PCA-based model simplification increases the proportion of high--error predictions
+as illustrated in Fig.~\ref{fig8}a for GB.
+Fig.~\ref{fig8}a and Table~\ref{table2} also show that PCA-based model simplification increases the proportion of high--error predictions
 in XGB while reducing it in RF and GB.
 In summary, $\mathrm{GB}^{940}_\mathrm{4:PC}$, $\mathrm{GB}^{940}_\mathrm{5:PC}$,
 and $\mathrm{XGB}^{940}_5$ yield the most precise results for this test dataset under monochromatic illumination,
@@ -850,15 +860,15 @@ DNN&4&8.06&7.48&11.4&13.0&7.74&7.64&3.97&4.35&58.8&60.5&44.8&41.6\\
 When estimating iron concentration based on PVP variations obtained under AM1.5 illumination,
 using only four descriptors does not yield sufficiently accurate predictions with any model.
 However, adding efficiency variations (increasing the feature dimension from 4 to 5)
-enables DNN and XGB to predict $N\mathrm{Fe}$ with MAPE slightly above 10\%,
+enables DNN and XGB to predict $N_\mathrm{Fe}$ with MAPE slightly above 10\%,
 though the results remain inferior to those under monochromatic illumination.
-The use of PCA significantly worsens the results (see Fig.~\ref{fig7},f, Fig.~\ref{fig7},n, Table~\ref{table2}).
+The use of PCA significantly worsens the results (see Fig.~\ref{fig7}f, Fig.~\ref{fig7}n, Table~\ref{table2}).
 A further increase in feature dimensionality improves prediction accuracy and reduces the performance gap between models with and without PCA.
 The best results are observed when using seven descriptors.
-For RF and GB, applying PCA decreases both the mean errors (Fig.~\ref{fig7},p)
+For RF and GB, applying PCA decreases both the mean errors (Fig.~\ref{fig7}p)
 and the proportion of predictions with large deviations from the true values (Table~\ref{table2}).
 For XGB and DNN --- the most efficient models across the entire $N_\mathrm{Fe}$--altered test dataset,
-including data under 940nm illumination --- PCA provides no benefit (Fig.~\ref{fig7},p, Fig.~\ref{fig8},b).
+including data under 940~nm illumination --- PCA provides no benefit (Fig.~\ref{fig7}p, Fig.~\ref{fig8}b).
 Notably, in these cases, the proportion of predictions with accuracy below 10\% does not exceed 1.3\%.
 
 \begin{figure}
@@ -880,7 +890,7 @@ are based on measurements taken under conditions different from those used for m
 Additionally, this dataset includes temperature values (287~K, 341~K, and 342~K)
 that extend beyond the training range $(290-340)$~K, enabling an assessment of the models' extrapolation capability.
 
-Figs.~S12-–S15 present the prediction results, while Fig.~\ref{fig9} and Table~\ref{table3} summarize the performance metrics.
+Figs.~S12-S15 present the prediction results, while Fig.~\ref{fig9} and Table~\ref{table3} summarize the performance metrics.
 The data show that the average metrics for all models worsen slightly compared
 to the $N_\mathrm{Fe}$--altered dataset (Fig.~\ref{fig7}, Fig.~\ref{fig9}).
 In most cases, PCA reduces model performance, except for AM1.5 at a feature dimensionality of 7.
@@ -980,7 +990,7 @@ Thus, applying the models to measurement data obtained at temperatures
 that slightly deviate from the training conditions but remain within the training range is justified.
 
 
-\subsection{$N_\mathrm{B}$--altered and All-altered test datasets}
+\subsection{$N_\mathrm{B}$--altered and All-altered test datasets}\label{NBaltered}
 
 The $N_\mathrm{B}$--altered dataset represents a case where a model trained on a specific type of solar cell is used to evaluate iron impurity concentration in photovoltaic converters with slightly different parameters. The boron concentration in the base is one of the parameters that can vary during the production process of PV devices. Therefore, the model's ability to adapt to these variations enhances its applicability to real-world manufacturing conditions.
 
@@ -1010,7 +1020,8 @@ The numbers represent error values as percentages.
 }\label{fig11}
 \end{figure}
 
-The most striking aspect is the subpar performance of the RF, GB, and XGB models, which had previously demonstrated stable and satisfactory accuracy, at least for certain combinations of descriptor sets and illumination conditions.
+The most striking aspect is the subpar performance of the RF, GB, and XGB models, which had previously demonstrated stable and satisfactory accuracy, 
+at least for certain combinations of descriptors and illumination conditions.
 Notably, even SVR models do not always produce the worst results.
 The application of PCA slightly improves prediction accuracy,
 except under monochromatic illumination with seven descriptors.
@@ -1053,13 +1064,13 @@ In contrast, for $N_\mathrm{B}<3\times10^{15}$~cm$^{-3}$, DNN models demonstrate
 }\label{fig12}
 \end{figure}
 
-The results of this section highlight the importance of training models with$N_\mathrm{B}$ values expected
+The results of this section highlight the importance of training models with $N_\mathrm{B}$ values expected
 in solar cells requiring iron quantification, particularly within the range $N_\mathrm{B}=(5\times10^{15}-3\times10^{16})$~cm$^{-3}$.
 If it is necessary to use models trained on boron concentrations in the base that differ from those in the analyzed sample,
 the DNN algorithm should be preferred.
 
 
-Given the results obtained for the $N_\mathrm{B}$---altered dataset,
+Given the results obtained for the $N_\mathrm{B}$--altered dataset,
 testing the All-altered dataset presented a notable challenge for the developed models,
 as it aimed to assess their interpolation capabilities.
 Notably, this dataset does not test extrapolation capabilities: all four features (including temperature),
@@ -1102,6 +1113,117 @@ iii)~PCA reduces DNN model error when applied to datasets with six and seven fea
 iv)~approximately 5\% of DNN predictions have APE~>~50\%.
 These similarities suggest that the primary source of increased errors in the All--altered dataset
 is the deviation of boron concentration values from those used in train phase.
+
+\begin{tcolorbox}[highlight style]
+\textcolor[rgb]{1.00,0.07,0.00}{
+\subsection{Comparative Analysis}
+}\end{tcolorbox}
+
+\textcolor[rgb]{1.00,0.07,0.00}{
+\hl{
+Before presenting the results based on experimental data, a few summarizing remarks are in order.
+One can see that models trained on data obtained under AM1.5 illumination perform worse in almost all cases.
+We believe this can be attributed to the following reasons.
+It is well known that a regression model may  achieve high accuracy
+by having the target variable be an unambiguous function of the descriptor.
+Moreover, the absolute value of the function’s derivative should be as significant as possible.
+As shown earlier}  \cite{Olikh2025MSEB}, the condition of uniqueness in the relationship between $N_\mathrm{Fe}$ and
+the changes in PVPs under AM1.5 illumination is often not fulfilled in contrast to the case of monochromatic illumination.
+In addition, the ranges of changes in $\varepsilon I_\mathrm{SC}$, $\varepsilon V_\mathrm{OC}$, and $\varepsilon \eta$
+under monochromatic illumination exceed those observed under AM1.5 illumination (see Subsection~\ref{SecDataCol}).
+The physical origin of the differences in the relationship between iron concentration and
+parameter changes under AM1.5 and monochromatic illumination lies in the fact that,
+in the former case, the generation of non-equilibrium charge carriers occurs throughout the
+entire volume of the solar cell, rather than being limited to the base region.
+As a result, the processes involved in photovoltaic conversion are more complex.
+In our view, these differences explain why the performance of ML models trained on AM1.5 illumination data is generally poorer.
+One way to address the ambiguity in the relationship between features and the target variable
+is to incorporate additional features into the model.
+As it is shown, for AM1.5 illumination, increasing the number of descriptors often improves prediction accuracy, supporting our hypothesis.
+}
+
+\textcolor[rgb]{1.00,0.07,0.00}{
+\hl{
+Increasing the number of descriptors while keeping the sample size constant leads 
+to higher sparsity in the data space due to increased dimensionality, 
+which in turn makes it more difficult for the model to generalize. 
+In such cases, the model may also learn spurious correlations that do not generalize to test data --- 
+a risk that is particularly pronounced in deep neural networks and  deep tree-based ensemble methods. 
+Moreover, a larger number of features results in more model parameters, increasing the risk of overfitting. 
+These factors can collectively lead to a reduction in prediction accuracy.
+In our opinion, for A$^\mathrm{AM1.5}$ models the positive effect of reducing ambiguity between the target variable 
+and the input features by increasing the number of descriptors was dominant. 
+However, for A$^\mathrm{940}$ models where this ambiguity was already low, 
+the negative effects described above outweighed the benefits, 
+which explains why prediction accuracy did not improve when using an expanded feature set.
+}}
+
+
+
+
+\textcolor[rgb]{1.00,0.07,0.00}{
+\hl{
+Another effect that may arise when increasing the number of features is multicollinearity.
+It occurs when new features are highly correlated with existing ones and can lead to instability in model estimates.
+However, in our case, it is unlikely that multicollinearity among the photovoltaic parameters
+(incidentally, their correlation is significantly higher in the 940 nm case than in the AM1.5 case — see Fig.~S1)
+affects prediction accuracy.
+First, all algorithms used are sufficiently robust to multicollinearity.
+Second, a standard method for mitigating multicollinearity is PCA.
+Despite previous successes in applying principal component analysis to various 
+photovoltaics-related machine learning tasks} \cite{Gao2020,Fadhel2019,David2021,Liu2022,AbdullahVetter2025} ---
+\hl{and the presence of favorable conditions for its use in our case,
+such as the high correlation between changes in photoelectric parameters caused by FeB pair dissociation ---
+applying PCA as a data pre-processing step for evaluating iron impurity concentration did not improve the maximum prediction accuracy in most cases.
+One likely reason is that PCA preserves the overall variance in the data 
+but does not account for the specific relationships between individual features and the target variable.
+For instance, some photovoltaic parameters may be more informative for predicting low iron concentrations, 
+while others may be more relevant for high concentrations.
+For instance, $\varepsilon F\!F$) are shown} \cite{Olikh2025MSEB} to be most pronounced at low iron concentrations, unlike other PVPs.
+When these components are merged through PCA transformation, such distinctions may be lost, leading to reduced accuracy.
+Another possible reason is that principal components --- 
+being linear combinations of original features --- do not support localized decision splits 
+(i.e., those based on individual feature thresholds), which are particularly effective in tree-based models.
+}
+
+\textcolor[rgb]{1.00,0.07,0.00}{
+\hl{
+Rare cases where PCA pre-processing leads to improved prediction accuracy typically 
+occur when the original model (without PCA) performs poorly. 
+In this context, one might consider using PCA as a diagnostic indicator of model quality 
+when evaluating iron concentration in silicon solar cells: 
+if PCA improves prediction accuracy, it suggests that the baseline model is weak; 
+if not, the model is likely to be strong. 
+However, this approach relies on access to the true $N_\mathrm{Fe}$ values, 
+significantly restricting its practical applicability.
+}}
+
+\textcolor[rgb]{1.00,0.07,0.00}{
+\hl{
+When comparing the effectiveness of different algorithms, several points are worth noting.
+The poorest performance observed with SVR is likely due to its limited ability 
+to model complex nonlinear relationships --- 
+such as those that apparently exist between iron concentration and variations in photoelectric parameters.
+In contrast, the superior performance of the XGB and DNN models is attributable to 
+their ability to effectively capture nonlinear patterns, which in our case become more prominent with increasing descriptor dimensionality.
+Specifically, XGB performs best in relatively simpler scenarios, such as those involving 940 nm illumination 
+(see Figs.}~\ref{fig7}i-\ref{fig7}l, \ref{fig9}i-\ref{fig9}l).
+This is because XGB requires less training data than DNN 
+(12,000 examples are sufficient, though this is not a particularly large amount for a neural network), 
+handles high-quality structured data well (simulated data are noise-free), 
+and is more resilient to the influence of correlated features.
+At the same time, DNNs are more powerful tools for nonlinear modeling, 
+capable of uncovering hidden structures in the data.
+This enables them to achieve better results on more complex tasks --- 
+such as the transition to A$^\mathrm{AM1.5}$-models with high-dimensional features 
+(see Figs.~\ref{fig7}m-\ref{fig7}p, \ref{fig9}m-\ref{fig9}p).
+As shown by the results in Subsection~\ref{NBaltered}, successful prediction within the 
+$N_\mathrm{B}$--altered also requires accounting for higher-order relationships, 
+which explains why DNN models achieved the best performance (Figs.~\ref{fig11}e-\ref{fig11}l).
+Regarding the RF and GB algorithms, as indicated in Tables~\ref{table2} and \ref{table2}, 
+they tend to perform best only on less complex data 
+(i.e., small sets of descriptors), where more powerful models are at higher risk of overfitting.
+}
 
 
 \subsection{Experimental validation}
@@ -1202,12 +1324,16 @@ simulated under the assumption of monochromatic illumination.
 Specifically, adding descriptors to the ($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$) set
 does not enhance prediction accuracy, at least.
 Likewise, reducing dimensionality and simplifying the model using PCA proves ineffective:
-error reduction occurs only in a few cases (all SVR models, $\mathrm{GB}^940_6$)
+error reduction occurs only in a few cases (all SVR models, 
+\textcolor[rgb]{1.00,0.07,0.00}{
+\hl{$\mathrm{GB}^{940}_6$}})
 and only when the initial (non-PCA) error is already substantial.
 However, even in such cases, PCA does not reduce the error to acceptable levels.
 Similar to the results in Fig.~\ref{fig7}, the XGB algorithm consistently delivers the best performance.
 When training excluded $N_\mathrm{B}$ values corresponding to real solar cells,
-the highest prediction accuracy was achieved by $\mathrm{DNN}^940_4$, aligning with the findings from the $N_\mathrm{B}$--altered test dataset.
+the highest prediction accuracy was achieved by 
+\textcolor[rgb]{1.00,0.07,0.00}{
+\hl{$\mathrm{DNN}^{940}_4$}}, aligning with the findings from the $N_\mathrm{B}$--altered test dataset.
 
 Including samples in the training dataset that correspond to the base doping level of the real solar cell
 improves the performance of RF, GB, and XGB models,
