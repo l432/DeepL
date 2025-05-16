@@ -494,6 +494,16 @@ Thus, we used the following sets to predict $y = \log N_\mathrm{Fe}$:
 ($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$, $\varepsilon \eta$, $\varepsilon V_\mathrm{OC}$, $\varepsilon F\!F$).
 For simplicity, we will refer to the number of features as ``dimension'' from here on.
 That is, features with dimensions 4, 5, 6, and 7 were used in various models.
+\textcolor[rgb]{1.00,0.07,0.00}{
+\hl{
+When selecting sets of descriptors, we were guided by the degree of correlation between variations in individual PVPs and iron concentration 
+(see Fig.~S1 in the Supplementary Material).
+Specifically, the 4-dimensional feature set included the measurement conditions ($T$), 
+solar cell characteristics ($d_p$ and $N_\mathrm{B}$), and the PVP most strongly correlated with $\log N_\mathrm{Fe}$, $\varepsilon I_\mathrm{SC}$.
+In extending the set to five dimensions, we added the parameter most strongly correlated with $N_\mathrm{Fe}$ 
+among the remaining unused ones --- namely,  $\varepsilon \eta$  --- to the existing features.
+Subsequent steps followed a similar procedure.
+}}
 
 Data normalization transforms a dataset's values to a standard scale, which can improve model accuracy.
 To standardize our features, we normalized them to have a mean of zero and a standard deviation of one.
@@ -501,7 +511,7 @@ To standardize our features, we normalized them to have a mean of zero and a sta
 Increasing the number of features does not always enhance informativeness if the descriptors are not independent.
 This study used the Pearson correlation coefficient to assess the relationships between input features.
 We found that changes in PV parameters are not entirely independent, particularly under monochromatic illumination
-(see Fig.~S1 in the Supplementary Material).
+(see Fig.~S1).
 This is not surprising, since each of the PV parameters is linked to the diffusion and recombination of photo-induced charge carriers.
 Besides,
 $\varepsilon I_\mathrm{SC}$, $\varepsilon V_\mathrm{OC}$, $\varepsilon \eta$, and $\varepsilon F\!F$
@@ -1151,7 +1161,7 @@ In such cases, the model may also learn spurious correlations that do not genera
 a risk that is particularly pronounced in deep neural networks and  deep tree-based ensemble methods.
 Moreover, a larger number of features results in more model parameters, increasing the risk of overfitting.
 These factors can collectively lead to a reduction in prediction accuracy.
-In our opinion, for A$^\mathrm{AM1.5}$ models, both the positive effects achieved by increasing the number of descriptors 
+In our opinion, for A$^\mathrm{AM1.5}$ models, both the positive effects achieved by increasing the number of descriptors
 (enhancing overall information variance and reducing ambiguity between the target variable and the input features) were dominant.
 However, for A$^\mathrm{940}$ models where this ambiguity was already low,
 the negative effects described above outweighed the benefits,
