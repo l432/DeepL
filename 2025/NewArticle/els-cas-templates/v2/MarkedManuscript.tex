@@ -1020,7 +1020,7 @@ The numbers represent error values as percentages.
 }\label{fig11}
 \end{figure}
 
-The most striking aspect is the subpar performance of the RF, GB, and XGB models, which had previously demonstrated stable and satisfactory accuracy, 
+The most striking aspect is the subpar performance of the RF, GB, and XGB models, which had previously demonstrated stable and satisfactory accuracy,
 at least for certain combinations of descriptors and illumination conditions.
 Notably, even SVR models do not always produce the worst results.
 The application of PCA slightly improves prediction accuracy,
@@ -1144,17 +1144,17 @@ As it is shown, for AM1.5 illumination, increasing the number of descriptors oft
 
 \textcolor[rgb]{1.00,0.07,0.00}{
 \hl{
-Increasing the number of descriptors while keeping the sample size constant leads 
-to higher sparsity in the data space due to increased dimensionality, 
-which in turn makes it more difficult for the model to generalize. 
-In such cases, the model may also learn spurious correlations that do not generalize to test data --- 
-a risk that is particularly pronounced in deep neural networks and  deep tree-based ensemble methods. 
-Moreover, a larger number of features results in more model parameters, increasing the risk of overfitting. 
+Increasing the number of descriptors while keeping the sample size constant leads
+to higher sparsity in the data space due to increased dimensionality,
+which in turn makes it more difficult for the model to generalize.
+In such cases, the model may also learn spurious correlations that do not generalize to test data ---
+a risk that is particularly pronounced in deep neural networks and  deep tree-based ensemble methods.
+Moreover, a larger number of features results in more model parameters, increasing the risk of overfitting.
 These factors can collectively lead to a reduction in prediction accuracy.
-In our opinion, for A$^\mathrm{AM1.5}$ models the positive effect of reducing ambiguity between the target variable 
-and the input features by increasing the number of descriptors was dominant. 
-However, for A$^\mathrm{940}$ models where this ambiguity was already low, 
-the negative effects described above outweighed the benefits, 
+In our opinion, for A$^\mathrm{AM1.5}$ models, both the positive effects achieved by increasing the number of descriptors 
+(enhancing overall information variance and reducing ambiguity between the target variable and the input features) were dominant.
+However, for A$^\mathrm{940}$ models where this ambiguity was already low,
+the negative effects described above outweighed the benefits,
 which explains why prediction accuracy did not improve when using an expanded feature set.
 }}
 
@@ -1170,58 +1170,58 @@ However, in our case, it is unlikely that multicollinearity among the photovolta
 affects prediction accuracy.
 First, all algorithms used are sufficiently robust to multicollinearity.
 Second, a standard method for mitigating multicollinearity is PCA.
-Despite previous successes in applying principal component analysis to various 
+Despite previous successes in applying principal component analysis to various
 photovoltaics-related machine learning tasks} \cite{Gao2020,Fadhel2019,David2021,Liu2022,AbdullahVetter2025} ---
 \hl{and the presence of favorable conditions for its use in our case,
 such as the high correlation between changes in photoelectric parameters caused by FeB pair dissociation ---
 applying PCA as a data pre-processing step for evaluating iron impurity concentration did not improve the maximum prediction accuracy in most cases.
-One likely reason is that PCA preserves the overall variance in the data 
+One likely reason is that PCA preserves the overall variance in the data
 but does not account for the specific relationships between individual features and the target variable.
-For instance, some photovoltaic parameters may be more informative for predicting low iron concentrations, 
+For instance, some photovoltaic parameters may be more informative for predicting low iron concentrations,
 while others may be more relevant for high concentrations.
 For instance, $\varepsilon F\!F$) are shown} \cite{Olikh2025MSEB} to be most pronounced at low iron concentrations, unlike other PVPs.
 When these components are merged through PCA transformation, such distinctions may be lost, leading to reduced accuracy.
-Another possible reason is that principal components --- 
-being linear combinations of original features --- do not support localized decision splits 
+Another possible reason is that principal components ---
+being linear combinations of original features --- do not support localized decision splits
 (i.e., those based on individual feature thresholds), which are particularly effective in tree-based models.
 }
 
 \textcolor[rgb]{1.00,0.07,0.00}{
 \hl{
-Rare cases where PCA pre-processing leads to improved prediction accuracy typically 
-occur when the original model (without PCA) performs poorly. 
-In this context, one might consider using PCA as a diagnostic indicator of model quality 
-when evaluating iron concentration in silicon solar cells: 
-if PCA improves prediction accuracy, it suggests that the baseline model is weak; 
-if not, the model is likely to be strong. 
-However, this approach relies on access to the true $N_\mathrm{Fe}$ values, 
+Rare cases where PCA pre-processing leads to improved prediction accuracy typically
+occur when the original model (without PCA) performs poorly.
+In this context, one might consider using PCA as a diagnostic indicator of model quality
+when evaluating iron concentration in silicon solar cells:
+if PCA improves prediction accuracy, it suggests that the baseline model is weak;
+if not, the model is likely to be strong.
+However, this approach relies on access to the true $N_\mathrm{Fe}$ values,
 significantly restricting its practical applicability.
 }}
 
 \textcolor[rgb]{1.00,0.07,0.00}{
 \hl{
 When comparing the effectiveness of different algorithms, several points are worth noting.
-The poorest performance observed with SVR is likely due to its limited ability 
-to model complex nonlinear relationships --- 
+The poorest performance observed with SVR is likely due to its limited ability
+to model complex nonlinear relationships ---
 such as those that apparently exist between iron concentration and variations in photoelectric parameters.
-In contrast, the superior performance of the XGB and DNN models is attributable to 
+In contrast, the superior performance of the XGB and DNN models is attributable to
 their ability to effectively capture nonlinear patterns, which in our case become more prominent with increasing descriptor dimensionality.
-Specifically, XGB performs best in relatively simpler scenarios, such as those involving 940 nm illumination 
+Specifically, XGB performs best in relatively simpler scenarios, such as those involving 940 nm illumination
 (see Figs.}~\ref{fig7}i-\ref{fig7}l, \ref{fig9}i-\ref{fig9}l).
-This is because XGB requires less training data than DNN 
-(12,000 examples are sufficient, though this is not a particularly large amount for a neural network), 
-handles high-quality structured data well (simulated data are noise-free), 
+This is because XGB requires less training data than DNN
+(12,000 examples are sufficient, though this is not a particularly large amount for a neural network),
+handles high-quality structured data well (simulated data are noise-free),
 and is more resilient to the influence of correlated features.
-At the same time, DNNs are more powerful tools for nonlinear modeling, 
+At the same time, DNNs are more powerful tools for nonlinear modeling,
 capable of uncovering hidden structures in the data.
-This enables them to achieve better results on more complex tasks --- 
-such as the transition to A$^\mathrm{AM1.5}$-models with high-dimensional features 
+This enables them to achieve better results on more complex tasks ---
+such as the transition to A$^\mathrm{AM1.5}$-models with high-dimensional features
 (see Figs.~\ref{fig7}m-\ref{fig7}p, \ref{fig9}m-\ref{fig9}p).
-As shown by the results in Subsection~\ref{NBaltered}, successful prediction within the 
-$N_\mathrm{B}$--altered also requires accounting for higher-order relationships, 
+As shown by the results in Subsection~\ref{NBaltered}, successful prediction within the
+$N_\mathrm{B}$--altered also requires accounting for higher-order relationships,
 which explains why DNN models achieved the best performance (Figs.~\ref{fig11}e-\ref{fig11}l).
-Regarding the RF and GB algorithms, as indicated in Tables~\ref{table2} and \ref{table2}, 
-they tend to perform best only on less complex data 
+Regarding the RF and GB algorithms, as indicated in Tables~\ref{table2} and \ref{table2},
+they tend to perform best only on less complex data
 (i.e., small sets of descriptors), where more powerful models are at higher risk of overfitting.
 }
 
@@ -1324,14 +1324,14 @@ simulated under the assumption of monochromatic illumination.
 Specifically, adding descriptors to the ($T$, $d_p$, $N_\mathrm{B}$, $\varepsilon I_\mathrm{SC}$) set
 does not enhance prediction accuracy, at least.
 Likewise, reducing dimensionality and simplifying the model using PCA proves ineffective:
-error reduction occurs only in a few cases (all SVR models, 
+error reduction occurs only in a few cases (all SVR models,
 \textcolor[rgb]{1.00,0.07,0.00}{
 \hl{$\mathrm{GB}^{940}_6$}})
 and only when the initial (non-PCA) error is already substantial.
 However, even in such cases, PCA does not reduce the error to acceptable levels.
 Similar to the results in Fig.~\ref{fig7}, the XGB algorithm consistently delivers the best performance.
 When training excluded $N_\mathrm{B}$ values corresponding to real solar cells,
-the highest prediction accuracy was achieved by 
+the highest prediction accuracy was achieved by
 \textcolor[rgb]{1.00,0.07,0.00}{
 \hl{$\mathrm{DNN}^{940}_4$}}, aligning with the findings from the $N_\mathrm{B}$--altered test dataset.
 
