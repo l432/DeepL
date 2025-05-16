@@ -7,7 +7,8 @@ uses
 
 type TArguments=(aFe,aB,aT,aD);
      TExtractedDataDark=(edn2);
-     TExtractedDataLight=(edVoc,edIsc,edFF,edEta);
+//     TExtractedDataLight=(edVoc,edIsc,edFF,edEta);
+     TExtractedDataLight=(edVoc,edIsc,edFF,edEta,edVmp,edImp);
 
 const
       DirectoryNames:array[TArguments]of string=
@@ -26,11 +27,15 @@ const
 
       ExtractedDataDarkNames:array[TExtractedDataDark]of string=
       ('n');
+//      ExtractedDataLightNames:array[TExtractedDataLight]of string=
+//      ('Jsc', 'Eta','Voc','FF');
       ExtractedDataLightNames:array[TExtractedDataLight]of string=
-      ('Jsc', 'Eta','Voc','FF');
+      ('Jsc', 'Eta','Voc','FF','Vmp', 'Jmp');
       ExtractedDataDarkPsevdo:array[TExtractedDataDark]of string=('n2');
+//      ExtractedDataLightPsevdo:array[TExtractedDataLight]of string=
+//      ('Jsc','eta','Voc','FF');
       ExtractedDataLightPsevdo:array[TExtractedDataLight]of string=
-      ('Jsc','eta','Voc','FF');
+      ('Jsc','eta','Voc','FF','Vmpp', 'Jmpp');
 
 type
 
@@ -758,10 +763,18 @@ Procedure delIllumParamCalculate(var str:string);
  var P_FeB,P_Fe:double;
      i:word;
 begin
- for I := 5 to 8 do
+// for I := 5 to 8 do
+//   begin
+//    P_Fe:=FloatDataFromRow(str,i);
+//    P_FeB:=FloatDataFromRow(str,i+4);
+//    if (P_FeB<>0)and(P_Fe<>0)
+//      then str:=str+' '+FloatToStrF((P_FeB-P_Fe)/P_FeB*100,ffExponent,8,2)
+//      else str:=str+' 0';
+//   end;
+ for I := 5 to 10 do
    begin
     P_Fe:=FloatDataFromRow(str,i);
-    P_FeB:=FloatDataFromRow(str,i+4);
+    P_FeB:=FloatDataFromRow(str,i+6);
     if (P_FeB<>0)and(P_Fe<>0)
       then str:=str+' '+FloatToStrF((P_FeB-P_Fe)/P_FeB*100,ffExponent,8,2)
       else str:=str+' 0';

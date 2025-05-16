@@ -1440,8 +1440,10 @@ begin
             FeBdataInFile:=AnsiPos('Jsc_FeB',ResultFile[0])>0;
             FedataInFile:=AnsiPos('Jsc_Fe ',ResultFile[0])>0;
             FillString:=' 0 0 0 0 ';
-            ExtractedDataNumbers:=[5,6,7,8];
-            ExtractedDataNumbersFeB:=[9,10,11,12];
+//            ExtractedDataNumbers:=[5,6,7,8];
+//            ExtractedDataNumbersFeB:=[9,10,11,12];
+            ExtractedDataNumbers:=[5,6,7,8,9,10];
+            ExtractedDataNumbersFeB:=[11,12,13,14,15,16];
             AllResultTitle:=NewStringFromStringArray(ParametersNames)
                             +' '+NewStringFromStringArray(ExtractedDataLightNames,'_Fe')
                             +' '+NewStringFromStringArray(ExtractedDataLightNames,'_FeB')

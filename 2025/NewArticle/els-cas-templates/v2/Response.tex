@@ -414,46 +414,46 @@ Reply has been incorporated into revised manuscript as Subsection~3.5.
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
 
-When exploring potential strategies for improving model accuracy, 
+When exploring potential strategies for improving model accuracy,
 it is essential to consider the efforts already undertaken towards this goal.
-Specifically, data normalization was applied, 
-multiple descriptor sets were tested, and the impact of reducing feature correlation using PCA was evaluated. 
-In addition, the main model parameters were optimized (see Tables S1–S5 and Figure S2) 
+Specifically, data normalization was applied,
+multiple descriptor sets were tested, and the impact of reducing feature correlation using PCA was evaluated.
+In addition, the main model parameters were optimized (see Tables S1–S5 and Figure S2)
 through bayesian optimization using the Optuna package, and cross-validation was employed.
 
 Among the remaining justified options, the following approaches can be highlighted:
 
 \noindent
-i)~Expanding the training dataset, primarily by incorporating a greater number of boron concentration values into the database. 
+i)~Expanding the training dataset, primarily by incorporating a greater number of boron concentration values into the database.
 This strategy aligns with a fundamental principle of machine learning—the need for as much data as possible.
 
 \noindent
-ii)~Deriving new descriptors from existing ones that are more directly and simply related to iron concentration. 
+ii)~Deriving new descriptors from existing ones that are more directly and simply related to iron concentration.
 These descriptors should not be limited to linear combinations, such as those used in PCA; instead, t
-heir development should be guided by underlying physical processes. 
-Alternatively, generative models, such as variational autoencoders, 
-can be employed to discover latent variables. 
+heir development should be guided by underlying physical processes.
+Alternatively, generative models, such as variational autoencoders,
+can be employed to discover latent variables.
 Notably, this approach may also facilitate easier dataset expansion.
 
 \noindent
-iii)~Incorporating additional features, especially those obtainable without extra measurements, 
-is desirable because the requirements of additional experiments would substantially reduce 
-the practicality of the proposed method. 
-For example, the minority carrier diffusion length could serve as a valuable descriptor; 
+iii)~Incorporating additional features, especially those obtainable without extra measurements,
+is desirable because the requirements of additional experiments would substantially reduce
+the practicality of the proposed method.
+For example, the minority carrier diffusion length could serve as a valuable descriptor;
 however, to our knowledge, no methods exist for its determination based solely
-on single or dual $I$-$V$ characteristic measurements. 
-A more straightforward alternative involves using the voltage ($V_\mathrm{MP}$) and current ($I_\mathrm{MP}$) 
-corresponding to the maximum output power as supplementary features, 
-although these quantities correlate with existing descriptors, such as $\varepsilon F\!F$, $I_\mathrm{SC}$, 
+on single or dual $I$-$V$ characteristic measurements.
+A more straightforward alternative involves using the voltage ($V_\mathrm{MP}$) and current ($I_\mathrm{MP}$)
+corresponding to the maximum output power as supplementary features,
+although these quantities correlate with existing descriptors, such as $\varepsilon F\!F$, $I_\mathrm{SC}$,
 and $\varepsilon V_\mathrm{OC}$.
 
-Separately, a strategy for improving the quality of the training dataset, 
-which involves increasing the realism of the simulation model, can be distinguished. 
-For example, instead of employing SCAPS, three-dimensional simulators such as Synopsys Sentaurus TCAD, 
-Silvaco ATLAS TCAD, or Solcore can be used to generate labeled datasets 
-that account for the presence of additional impurities commonly found in Cz-Si, 
-such as oxygen and carbon. 
-Furthermore, incorporating experimental uncertainty into the training data by introducing noise 
+Separately, a strategy for improving the quality of the training dataset,
+which involves increasing the realism of the simulation model, can be distinguished.
+For example, instead of employing SCAPS, three-dimensional simulators such as Synopsys Sentaurus TCAD,
+Silvaco ATLAS TCAD, or Solcore can be used to generate labeled datasets
+that account for the presence of additional impurities commonly found in Cz-Si,
+such as oxygen and carbon.
+Furthermore, incorporating experimental uncertainty into the training data by introducing noise
 can enhance the model’s robustness and predictive accuracy.
 
 
@@ -491,30 +491,6 @@ can enhance the model’s robustness and predictive accuracy.
 \textcolor[rgb]{1.00,0.07,0.00}{
 \hl{}}
 
-The accuracy of the models could be further improved by:
-\begin{itemize}
-    \item \textbf{expanding the training data set}: simulating a broader and denser range of device parameters
-    (e.g., more values for doping, thickness, temperature, and iron concentration) would provide
-    the models with more comprehensive training examples and improve generalization;
-    \item \textbf{model optimization}: further tuning of model hyperparameters, or employing more sophisticated ensemble or deep learning architectures,
-    could enhance predictive performance;
-    \item \textbf{enhancing the physical realism of simulations}: incorporating even more detailed or advanced physical models in SCAPS,
-    such as additional defect types, surface effects, or more accurate material parameters.
-\end{itemize}
-
-
-%Прогнозувати не конкретне значення, а розподіл:
-%
-%    Використовують байєсівські моделі, мішані моделі, або нейронні мережі з варіаційним виведенням.
-%
-%Прогнозувати середнє або медіану:
-%
-%    Це те, що робить, наприклад, регресія — дає очікуване значення E[y∣x]E[y∣x], навіть якщо реальність складніша.
-%
-%Моделювання з шумом або латентними змінними:
-%
-%    Залучають приховані фактори або генеративні моделі (напр., VAE, GAN), щоб пояснити розсіяння.
-
 
 \vspace{1cm}
 \noindent
@@ -528,32 +504,32 @@ We thank the Reviewer for pointing out the typographical errors and apologize fo
 We have carefully reviewed the entire manuscript and corrected typographical issues to improve its clarity and  professionalism.
 
 
-%\vspace{1cm}
-%\subsection*{Response to Reviewer \#4 }
-%
-%\noindent
-%\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~1.}}
-%\emph{Clearly describe the main objectives as to why and how using this ML approach can be better than traditional ways in the Introduction section.}
-%
-%\noindent
-%\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
-%
-%
-%In response, we have revised the Introduction to clearly state the main objectives and the advantages of the proposed machine learning approach over traditional methods for iron quantification in silicon solar cells.
-%
-%
-%Objective:
-%The main objective of our study is to develop a non-destructive, efficient, and accurate method for quantifying iron concentration in silicon solar cells using machine learning models trained on photovoltaic parameter changes induced by FeB pair dissociation.
-%
-%
-%Why ML is advantageous:
-%\begin{itemize}
-%    \item \textbf{non-destructive and equipment-free}: unlike traditional techniques (e.g., mass spectrometry, DLTS, photoluminescence), our approach does not require specialized equipment or destructive sample preparation;
-%    \item \textbf{based on standard measurements}: it relies solely on $I$–$V$ curve measurements, which are routine and accessible in PV characterization;
-%    \item \textbf{faster and simpler}: the ML method enables rapid estimation of iron content without lengthy kinetic measurements or multiple illumination steps;
-%    \item \textbf{captures complex dependencies}: machine learning can model the subtle and non-linear relationships between iron concentration and PV parameter changes, which are difficult to describe analytically or with traditional regression methods;
-%    \item \textbf{inline process monitoring}: the approach is well-suited for inline quality control and process optimization in industrial solar cell manufacturing.
-%\end{itemize}
+\vspace{1cm}
+\subsection*{Response to Reviewer \#4 }
+
+\noindent
+\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~1.}}
+\emph{Clearly describe the main objectives as to why and how using this ML approach can be better than traditional ways in the Introduction section.}
+
+\noindent
+\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+
+
+In response, we have revised the Introduction to clearly state the main objectives and the advantages of the proposed machine learning approach over traditional methods for iron quantification in silicon solar cells.
+
+
+Objective:
+The main objective of our study is to develop a non-destructive, efficient, and accurate method for quantifying iron concentration in silicon solar cells using machine learning models trained on photovoltaic parameter changes induced by FeB pair dissociation.
+
+
+Why ML is advantageous:
+\begin{itemize}
+    \item \textbf{non-destructive and equipment-free}: unlike traditional techniques (e.g., mass spectrometry, DLTS, photoluminescence), our approach does not require specialized equipment or destructive sample preparation;
+    \item \textbf{based on standard measurements}: it relies solely on $I$–$V$ curve measurements, which are routine and accessible in PV characterization;
+    \item \textbf{faster and simpler}: the ML method enables rapid estimation of iron content without lengthy kinetic measurements or multiple illumination steps;
+    \item \textbf{captures complex dependencies}: machine learning can model the subtle and non-linear relationships between iron concentration and PV parameter changes, which are difficult to describe analytically or with traditional regression methods;
+    \item \textbf{inline process monitoring}: the approach is well-suited for inline quality control and process optimization in industrial solar cell manufacturing.
+\end{itemize}
 %
 %\vspace{1cm}
 %\noindent
