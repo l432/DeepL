@@ -414,29 +414,77 @@ Reply has been incorporated into revised manuscript as Subsection~3.5.
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
 
-При розгляді можливих шляхів збільшення accuracy of models насамперед потрібно врахувати що саме вже було зроблено в цьому напрямі.
-А саме, були проведені нормалізація даних, використані різні набори дескрипторів, 
-розглянуто доцільність зменшення кореляції ознак завдяки PCA, 
-проведено налаштування основних параметрів моделей  (див. Table S1-S5, Fig. S2) з використанням Bayesian Optimization (пакет Optuna),
-використано крос-валідацію.
+When exploring potential strategies for improving model accuracy, 
+it is essential to consider the efforts already undertaken towards this goal.
+Specifically, data normalization was applied, 
+multiple descriptor sets were tested, and the impact of reducing feature correlation using PCA was evaluated. 
+In addition, the main model parameters were optimized (see Tables S1–S5 and Figure S2) 
+through bayesian optimization using the Optuna package, and cross-validation was employed.
 
-Серед того, що лишилося і виглядає виправданим можемо виділити наступне:
-1) збільшення тренувального набору, насамперед за рахунок використання більшого числа значень концентрації бору в базі:
-найбільш очевидний шлях, що відображає головну особливість машинного навчання, а саме потребу у щонайбільшому об'ємі даних;
-2) викостати існуючі дескриптори для створення нових, які будуть більш однозначно та просто пов'язані з концентрацією заліза;
-зрозуміло, що це не можуть бути лінійні комбінації, що застосовуються під час РСА, і для їх створення необхідно орієнтуватися насамперед на фізичні процеси;
-3) долучити нові ознаки; при цьому бажано, щоб для їхнього отримання не були потрібні додаткові вимірювання, так як подібні ускладнення суттєво знижують привабливість
-запропонованого методу; наприклад, довжина дифузії неосновних носіїв могла б бути чудовим дескриптором, проте нам невідомі методи, які дозволяють її визначити на основі вимірювання однієї (двох)
-вольт-амперних характеристик; найбільш очевидним цьому напрямі було б використання у ролі додаткових ознак напруги Vmp та струму Imp, які відповідають максимальній вихідній потужності, 
-хоча, звичайно, їх не можна назвати незалежними від АА, Шв, ИМ.
+Among the remaining justified options, the following approaches can be highlighted:
 
-Окремо можна виділити шляхи підвищення якості тренувального набору завдяки наближення моделі, яка використовуються під час моделювання до реальності.
-Наприклад, замість SCAPS використати для створення labeled datasets 3D-simulators (e.g., Synopsys Sentaurus TCAD, Silvaco ATLAS TCAD чи Solcore) та врахувати
-наявність інших домішок, наприклад найбільш типових для Cz-Si кисню та вуглецю.
+\noindent
+i)~Expanding the training dataset, primarily by incorporating a greater number of boron concentration values into the database. 
+This strategy aligns with a fundamental principle of machine learning—the need for as much data as possible.
 
-Інший шлях досягнення збільшення точності прогнозів полягає у зміні стратегії створення моделі.
-Наприклад, можна відмовитися від підготовки універсальної точки зору застосовності до різних сонячних елементів модель і зосередитися на сонячних елементах з конкретною будовою
-(певні значення Вз та Т). 
+\noindent
+ii)~Deriving new descriptors from existing ones that are more directly and simply related to iron concentration. 
+These descriptors should not be limited to linear combinations, such as those used in PCA; instead, t
+heir development should be guided by underlying physical processes. 
+Alternatively, generative models, such as variational autoencoders, 
+can be employed to discover latent variables. 
+Notably, this approach may also facilitate easier dataset expansion.
+
+\noindent
+iii)~Incorporating additional features, especially those obtainable without extra measurements, 
+is desirable because the requirements of additional experiments would substantially reduce 
+the practicality of the proposed method. 
+For example, the minority carrier diffusion length could serve as a valuable descriptor; 
+however, to our knowledge, no methods exist for its determination based solely
+on single or dual $I$-$V$ characteristic measurements. 
+A more straightforward alternative involves using the voltage ($V_\mathrm{MP}$) and current ($I_\mathrm{MP}$) 
+corresponding to the maximum output power as supplementary features, 
+although these quantities correlate with existing descriptors, such as $\varepsilon F\!F$, $I_\mathrm{SC}$, 
+and $\varepsilon V_\mathrm{OC}$.
+
+Separately, a strategy for improving the quality of the training dataset, 
+which involves increasing the realism of the simulation model, can be distinguished. 
+For example, instead of employing SCAPS, three-dimensional simulators such as Synopsys Sentaurus TCAD, 
+Silvaco ATLAS TCAD, or Solcore can be used to generate labeled datasets 
+that account for the presence of additional impurities commonly found in Cz-Si, 
+such as oxygen and carbon. 
+Furthermore, incorporating experimental uncertainty into the training data by introducing noise 
+can enhance the model’s robustness and predictive accuracy.
+
+
+%При розгляді можливих шляхів збільшення accuracy of models насамперед потрібно врахувати що саме вже було зроблено в цьому напрямі.
+%А саме, були проведені нормалізація даних, використані різні набори дескрипторів,
+%розглянуто доцільність зменшення кореляції ознак завдяки PCA,
+%проведено налаштування основних параметрів моделей  (див. Table S1-S5, Fig. S2) з використанням Bayesian Optimization (пакет Optuna),
+%використано крос-валідацію.
+%
+%Серед того, що лишилося і виглядає виправданим можемо виділити наступне:
+%1) збільшити тренувального набору, насамперед за рахунок використання більшого числа значень концентрації бору в базі:
+%найбільш очевидний шлях, що відображає головну особливість машинного навчання, а саме потребу у щонайбільшому об'ємі даних;
+%2) використати існуючі дескриптори для створення нових, які будуть більш однозначно та просто пов'язані з концентрацією заліза;
+%зрозуміло, що це не можуть бути лінійні комбінації, що застосовуються під час РСА; для їх створення необхідно орієнтуватися насамперед на фізичні процеси;
+%альтернативним варіантом пошуку латентних змінних є використання генеративних моделей на кшталт Variational Autoencoder; до речі останній варіант може допомогли простіше розширити датасет;
+%
+%
+%
+%3) долучити нові ознаки; при цьому бажано, щоб для їхнього отримання не були потрібні додаткові вимірювання, так як подібні ускладнення суттєво знижують привабливість
+%запропонованого методу; наприклад, довжина дифузії неосновних носіїв могла б бути чудовим дескриптором, проте нам невідомі методи, які дозволяють її визначити на основі вимірювання однієї (двох)
+%вольт-амперних характеристик; найбільш очевидним цьому напрямі було б використання у ролі додаткових ознак напруги Vmp та струму Imp, які відповідають максимальній вихідній потужності,
+%хоча, звичайно, їх не можна назвати незалежними від АА, Шв, ИМ.
+%
+%Окремо можна виділити шляхи підвищення якості тренувального набору завдяки наближення моделі, яка використовуються під час моделювання до реальності.
+%Наприклад, замість SCAPS використати для створення labeled datasets 3D-simulators (e.g., Synopsys Sentaurus TCAD, Silvaco ATLAS TCAD чи Solcore) та врахувати
+%наявність інших домішок, наприклад найбільш типових для Cz-Si кисню та вуглецю.
+%Взяти до уваги похибки експерименту може допомогти додавання шуму у тренувальні дані.
+
+%Інший шлях досягнення збільшення точності прогнозів полягає у зміні стратегії створення моделі.
+%Наприклад, можна відмовитися від підготовки універсальної точки зору застосовності до різних сонячних елементів модель і зосередитися на сонячних елементах з конкретною будовою
+%(певні значення Вз та Т).
 
 
 
@@ -445,12 +493,12 @@ Reply has been incorporated into revised manuscript as Subsection~3.5.
 
 The accuracy of the models could be further improved by:
 \begin{itemize}
-    \item \textbf{expanding the training data set}: simulating a broader and denser range of device parameters 
-    (e.g., more values for doping, thickness, temperature, and iron concentration) would provide 
+    \item \textbf{expanding the training data set}: simulating a broader and denser range of device parameters
+    (e.g., more values for doping, thickness, temperature, and iron concentration) would provide
     the models with more comprehensive training examples and improve generalization;
-    \item \textbf{model optimization}: further tuning of model hyperparameters, or employing more sophisticated ensemble or deep learning architectures, 
+    \item \textbf{model optimization}: further tuning of model hyperparameters, or employing more sophisticated ensemble or deep learning architectures,
     could enhance predictive performance;
-    \item \textbf{enhancing the physical realism of simulations}: incorporating even more detailed or advanced physical models in SCAPS, 
+    \item \textbf{enhancing the physical realism of simulations}: incorporating even more detailed or advanced physical models in SCAPS,
     such as additional defect types, surface effects, or more accurate material parameters.
 \end{itemize}
 
