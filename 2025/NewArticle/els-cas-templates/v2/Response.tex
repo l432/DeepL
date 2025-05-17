@@ -424,11 +424,11 @@ through bayesian optimization using the Optuna package, and cross-validation was
 Among the remaining justified options, the following approaches can be highlighted:
 
 \noindent
-i)~Expanding the training dataset, primarily by incorporating a greater number of boron concentration values into the database.
+1.~Expanding the training dataset, primarily by incorporating a greater number of boron concentration values into the database.
 This strategy aligns with a fundamental principle of machine learning—the need for as much data as possible.
 
 \noindent
-ii)~Deriving new descriptors from existing ones that are more directly and simply related to iron concentration.
+2.~Deriving new descriptors from existing ones that are more directly and simply related to iron concentration.
 These descriptors should not be limited to linear combinations, such as those used in PCA; instead, t
 heir development should be guided by underlying physical processes.
 Alternatively, generative models, such as variational autoencoders,
@@ -436,16 +436,24 @@ can be employed to discover latent variables.
 Notably, this approach may also facilitate easier dataset expansion.
 
 \noindent
-iii)~Incorporating additional features, especially those obtainable without extra measurements,
+3.~Incorporating additional features, especially those obtainable without extra measurements,
 is desirable because the requirements of additional experiments would substantially reduce
 the practicality of the proposed method.
 For example, the minority carrier diffusion length could serve as a valuable descriptor;
 however, to our knowledge, no methods exist for its determination based solely
 on single or dual $I$-$V$ characteristic measurements.
-A more straightforward alternative involves using the voltage ($V_\mathrm{MP}$) and current ($I_\mathrm{MP}$)
-corresponding to the maximum output power as supplementary features,
-although these quantities correlate with existing descriptors, such as $\varepsilon F\!F$, $I_\mathrm{SC}$,
-and $\varepsilon V_\mathrm{OC}$.
+The most apparent step in this direction involves the use 
+of relative changes in voltage ($\varepsilon V_\mathrm{MP}$) and current ($\varepsilon I_\mathrm{MP}$), 
+corresponding to the maximum power point, as supplementary features. 
+However, it should be noted that these quantities exhibit correlation with other photovoltaic parameters (see Fig.~\ref{fig2}).
+
+\begin{figure}
+	\centering
+     \includegraphics[width=0.8\linewidth]{Ris2.png}
+	  \caption{Correlation plot of features in hypothetical expanded training set. 
+Data above and below the main diagonal correspond to AM1.5 and 940 nm illumination, respectively.
+}\label{fig2}
+\end{figure}
 
 Separately, a strategy for improving the quality of the training dataset,
 which involves increasing the realism of the simulation model, can be distinguished.
@@ -456,6 +464,9 @@ such as oxygen and carbon.
 Furthermore, incorporating experimental uncertainty into the training data by introducing noise
 can enhance the model’s robustness and predictive accuracy.
 
+This answer is incorporated in the revised text as Subsection~3.7.
+
+%Можливі подальші шляхи підвищення точності
 
 %При розгляді можливих шляхів збільшення accuracy of models насамперед потрібно врахувати що саме вже було зроблено в цьому напрямі.
 %А саме, були проведені нормалізація даних, використані різні набори дескрипторів,
@@ -474,8 +485,9 @@ can enhance the model’s robustness and predictive accuracy.
 %
 %3) долучити нові ознаки; при цьому бажано, щоб для їхнього отримання не були потрібні додаткові вимірювання, так як подібні ускладнення суттєво знижують привабливість
 %запропонованого методу; наприклад, довжина дифузії неосновних носіїв могла б бути чудовим дескриптором, проте нам невідомі методи, які дозволяють її визначити на основі вимірювання однієї (двох)
-%вольт-амперних характеристик; найбільш очевидним цьому напрямі було б використання у ролі додаткових ознак напруги Vmp та струму Imp, які відповідають максимальній вихідній потужності,
-%хоча, звичайно, їх не можна назвати незалежними від АА, Шв, ИМ.
+%вольт-амперних характеристик; 
+%найбільш очевидним кроком цьому напрямі є використання у ролі додаткових ознак відносні зміни напруги еVmp та струму еImp, які відповідають максимальній вихідній потужності,
+%хоча, звичайно, вони корелюють з іншими фотовольтаїчними парамтрами.
 %
 %Окремо можна виділити шляхи підвищення якості тренувального набору завдяки наближення моделі, яка використовуються під час моделювання до реальності.
 %Наприклад, замість SCAPS використати для створення labeled datasets 3D-simulators (e.g., Synopsys Sentaurus TCAD, Silvaco ATLAS TCAD чи Solcore) та врахувати
@@ -487,9 +499,6 @@ can enhance the model’s robustness and predictive accuracy.
 %(певні значення Вз та Т).
 
 
-
-\textcolor[rgb]{1.00,0.07,0.00}{
-\hl{}}
 
 
 \vspace{1cm}
@@ -514,33 +523,54 @@ We have carefully reviewed the entire manuscript and corrected typographical iss
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
 
-
-In response, we have revised the Introduction to clearly state the main objectives and the advantages of the proposed machine learning approach over traditional methods for iron quantification in silicon solar cells.
-
-
-Objective:
-The main objective of our study is to develop a non-destructive, efficient, and accurate method for quantifying iron concentration in silicon solar cells using machine learning models trained on photovoltaic parameter changes induced by FeB pair dissociation.
+The authors fully agree with the reviewer's assessment concerning the importance and, 
+indeed, the necessity of including a synthesis in the Introduction 
+that outlines the primary objective of this work and highlights the advantages of the proposed approach.
 
 
-Why ML is advantageous:
-\begin{itemize}
-    \item \textbf{non-destructive and equipment-free}: unlike traditional techniques (e.g., mass spectrometry, DLTS, photoluminescence), our approach does not require specialized equipment or destructive sample preparation;
-    \item \textbf{based on standard measurements}: it relies solely on $I$–$V$ curve measurements, which are routine and accessible in PV characterization;
-    \item \textbf{faster and simpler}: the ML method enables rapid estimation of iron content without lengthy kinetic measurements or multiple illumination steps;
-    \item \textbf{captures complex dependencies}: machine learning can model the subtle and non-linear relationships between iron concentration and PV parameter changes, which are difficult to describe analytically or with traditional regression methods;
-    \item \textbf{inline process monitoring}: the approach is well-suited for inline quality control and process optimization in industrial solar cell manufacturing.
-\end{itemize}
-%
-%\vspace{1cm}
-%\noindent
-%\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~2.}}
-%\emph{Explain the Fe concentration measurement procedure and methods followed here for the experimental validation.
-%In section 2.1, further clarification of experimental validation with details of number of cells per data samples, data collection methods and tools used will be helpful.}
-%
-%\noindent
-%\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
-%
-%
+The primary objective of this study is to introduce a novel methodology for quantifying iron impurities 
+in silicon solar cells and to examine the specific aspects of its implementation. 
+The proposed approach utilizes variations in photovoltaic parameters resulting 
+from FeB pair dissociation as input features for machine learning models. 
+Due to the ability of machine learning algorithms to capture latent correlations and the simplicity of applying trained models, 
+the method is characterized by notable ease of use. 
+The required measurements for generating input data, 
+specifically the acquisition of two current–voltage characteristics or potentially 
+only two short-circuit current values, are fast, non-destructive, do not require prior sample preparation, 
+and can be performed on fully fabricated solar cells without specialized equipment.
+These features clearly distinguish the proposed method from traditional techniques. 
+An additional advantage is that the necessary equipment is also used for solar cell characterization, 
+which enables straightforward integration of the proposed approach into routine procedures 
+employed in the quality control or certification of photovoltaic devices.
+
+The text has been revised according to the Reviewer's advice --- see page 2-3, last paragraph in Section~1.
+
+%The main objective of our study is to develop new method for impurity iron quantification in silicon solar cells та дослідити особливості його реалізації.
+%Метод передбачає використання змін photovoltaic parameter induced by FeB pair dissociation як вхідних параметрів machine learning моделей.
+%Завдяки здатності ML алгоритмів до виявлення прихованих зв'язків та простоті застосування натренованих моделей, метод є надзвичайно простим у використанні.
+%Вимірювання, необхідні для отримання вхідних даних, полягають у вимірюванні двох вольт-амперних характеристик (або й навіть визначенні лише двох значень
+%струму короткого замикання), є швидкими, неруйнівними, не вимагають попередньої підготовки зразків і можуть бути проведені на готових сонячних елементах,
+%не потребують specialized equipment. Всі ці особливості вигідно відрізняють запропонований метод від існуючих.
+%Ще однією перевагою є те, що так як необхідне обладнання є типовим для характеризації сонячних елементів, запронований approach легко
+%інкапсулюється до стандартних процедур, що виконуються during the контролю якості чи certification of photovoltaic converters.
+
+
+
+
+\vspace{1cm}
+\noindent
+\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~2.}}
+\emph{Explain the Fe concentration measurement procedure and methods followed here for the experimental validation.
+In section 2.1, further clarification of experimental validation with details of number of cells per data samples, data collection methods and tools used will be helpful.}
+
+\noindent
+\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+
+\textcolor[rgb]{1.00,0.07,0.00}{
+\hl{}}
+
+
+
 \vspace{1cm}
 \noindent
 \textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~3.}}

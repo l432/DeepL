@@ -340,6 +340,25 @@ Notably, luminescence imaging is increasingly used for solar cell characterizati
 However, ML methods have been proposed to extract $I$-$V$ characteristic data from such images \cite{Kunze2023, Battaglia2023}.
 Integrating these methods with our approach into a unified pipeline would enable the extraction of iron concentration data from luminescence measurements.
 
+\textcolor[rgb]{1.00,0.07,0.00}{
+\hl{
+Thus, the primary objective of this study is to introduce a novel methodology for quantifying iron impurities
+in silicon solar cells and to examine the specific aspects of its implementation.
+The proposed approach utilizes variations in photovoltaic parameters resulting
+from FeB pair dissociation as input features for machine learning models.
+Due to the ability of machine learning algorithms to capture latent correlations and the simplicity of applying trained models,
+the method is characterized by notable ease of use.
+The required measurements for generating input data,
+specifically the acquisition of two current–voltage characteristics or potentially
+only two short-circuit current values, are fast, non-destructive, do not require prior sample preparation,
+and can be performed on fully fabricated solar cells without specialized equipment.
+These features clearly distinguish the proposed method from traditional techniques.
+An additional advantage is that the necessary equipment is also used for solar cell characterization,
+which enables straightforward integration of the proposed approach into routine procedures
+employed in the quality control or certification of photovoltaic devices.
+}}
+
+
 \section{Methodology}
 The workflow of the ML pipeline for extracting iron contamination from IV data is shown in Fig.~\ref{fig1}.
  A more detailed description follows.
@@ -1358,39 +1377,65 @@ while predictions with accuracy better than 1\% are nearly absent,
 the proportion of predictions with an APE exceeding 50\% is also lower compared to synthetic data.
 
 
+\begin{tcolorbox}[highlight style]
+\textcolor[rgb]{1.00,0.07,0.00}{
+\subsection{Potential directions for enhancing predictive accuracy}
+}\end{tcolorbox}
+
+
+\textcolor[rgb]{1.00,0.07,0.00}{
+\hl{
 When exploring potential strategies for improving model accuracy,
 it is essential to consider the efforts already undertaken towards this goal.
 Specifically, data normalization was applied,
 multiple descriptor sets were tested, and the impact of reducing feature correlation using PCA was evaluated.
 In addition, the main model parameters were optimized (see Tables S1–S5 and Figure S2)
 through bayesian optimization using the Optuna package, and cross-validation was employed.
+}}
 
+\textcolor[rgb]{1.00,0.07,0.00}{
+\hl{
 Among the remaining justified options, the following approaches can be highlighted:
+}}
+
 
 \noindent
-i)~Expanding the training dataset, primarily by incorporating a greater number of boron concentration values into the database.
+\textcolor[rgb]{1.00,0.07,0.00}{
+\hl{
+1.~Expanding the training dataset, primarily by incorporating a greater number of boron concentration values into the database.
 This strategy aligns with a fundamental principle of machine learning—the need for as much data as possible.
+}}
+
+
 
 \noindent
-ii)~Deriving new descriptors from existing ones that are more directly and simply related to iron concentration.
+\textcolor[rgb]{1.00,0.07,0.00}{
+\hl{
+2.~Deriving new descriptors from existing ones that are more directly and simply related to iron concentration.
 These descriptors should not be limited to linear combinations, such as those used in PCA; instead, t
 heir development should be guided by underlying physical processes.
 Alternatively, generative models, such as variational autoencoders,
 can be employed to discover latent variables.
 Notably, this approach may also facilitate easier dataset expansion.
+}}
 
 \noindent
-iii)~Incorporating additional features, especially those obtainable without extra measurements,
+\textcolor[rgb]{1.00,0.07,0.00}{
+\hl{
+3.~Incorporating additional features, especially those obtainable without extra measurements,
 is desirable because the requirements of additional experiments would substantially reduce
 the practicality of the proposed method.
 For example, the minority carrier diffusion length could serve as a valuable descriptor;
 however, to our knowledge, no methods exist for its determination based solely
 on single or dual $I$-$V$ characteristic measurements.
-A more straightforward alternative involves using the voltage ($V_\mathrm{MP}$) and current ($I_\mathrm{MP}$)
-corresponding to the maximum output power as supplementary features,
-although these quantities correlate with existing descriptors, such as $\varepsilon F\!F$, $I_\mathrm{SC}$,
-and $\varepsilon V_\mathrm{OC}$.
+The most apparent step in this direction involves the use
+of relative changes in voltage ($\varepsilon V_\mathrm{MP}$) and current ($\varepsilon I_\mathrm{MP}$),
+corresponding to the maximum power point, as supplementary features.
+However, it should be noted that these quantities exhibit correlation with other PVPs (see Fig.~S31).
+}}
 
+\textcolor[rgb]{1.00,0.07,0.00}{
+\hl{
 Separately, a strategy for improving the quality of the training dataset,
 which involves increasing the realism of the simulation model, can be distinguished.
 For example, instead of employing SCAPS, three-dimensional simulators such as Synopsys Sentaurus TCAD,
@@ -1399,7 +1444,7 @@ that account for the presence of additional impurities commonly found in Cz-Si,
 such as oxygen and carbon.
 Furthermore, incorporating experimental uncertainty into the training data by introducing noise
 can enhance the model’s robustness and predictive accuracy.
-
+}}
 
 
 \section{Conclusion}
@@ -1434,6 +1479,9 @@ and 0.004, 9\%, and 0.987 for experimental data.
 When doping levels in the test data deviate from those in the training set,
 the DNN model remains the most reliable choice.
 In contrast, Support Vector Regression proves ineffective in all cases.
+\textcolor[rgb]{1.00,0.07,0.00}{
+\hl{The factors contributing to differences in the predictive accuracy of various models are analyzed, and potential measures for its further improvement are proposed.
+}}
 
 The obtained results lay the foundation for improving the standard method of silicon solar cell characterization,
 which relies on measuring $I$-$V$ curves,
