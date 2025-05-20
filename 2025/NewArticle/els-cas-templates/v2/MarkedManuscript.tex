@@ -558,10 +558,11 @@ For simplicity, we will refer to the number of features as ``dimension'' from he
 That is, features with dimensions 4, 5, 6, and 7 were used in various models.
 \textcolor[rgb]{1.00,0.07,0.00}{
 \hl{
-When selecting sets of descriptors, we were guided by the degree of correlation between variations in individual PVPs and iron concentration
+The selection of feature combinations was guided
+by the degree of correlation between variations in individual PVPs and the iron concentration (see Fig.~S1 in the Supplementary Material).
 (see Fig.~S1 in the Supplementary Material).
 Specifically, the 4-dimensional feature set included the measurement conditions ($T$),
-solar cell characteristics ($d_p$ and $N_\mathrm{B}$), and the PVP most strongly correlated with $\log N_\mathrm{Fe}$, $\varepsilon I_\mathrm{SC}$.
+solar cell characteristics ($d_p$ and $N_\mathrm{B}$), and the PVP most strongly correlated with $\log N_\mathrm{Fe}$, i.e. $\varepsilon I_\mathrm{SC}$.
 In extending the set to five dimensions, we added the parameter most strongly correlated with $N_\mathrm{Fe}$
 among the remaining unused ones --- namely,  $\varepsilon \eta$  --- to the existing features.
 Subsequent steps followed a similar procedure.
@@ -586,18 +587,18 @@ To ensure that ML algorithms are trained on independent input features while red
 we applied Principal Component Analysis (PCA).
 PCA constructs new, uncorrelated features (principal components, PCs) and allows us to evaluate each PC's contribution to the total variance.
 Fig.\ref{fig2} shows that increasing the feature dimension does not always enhance overall information variance.
-To assess the impact of redundant data, we 
+To assess the impact of redundant data, we
 \textcolor[rgb]{1.00,0.07,0.00}{
 \hl{
 also
-}} 
-trained ML models using features selected via the following procedure: 
-PCs were computed for the original dataset, and the dimensionality was then reduced by discarding 
+}}
+trained ML models using features selected via the following procedure:
+PCs were computed for the original dataset, and the dimensionality was then reduced by discarding
 PCs whose contribution to the total variance was below 1.5\%.
 \textcolor[rgb]{1.00,0.07,0.00}{
 \hl{
-As a result, after applying PCA, 
-the feature dimensionality for the different models was reduced from the original sizes of 4, 5, 6, and 7 
+As a result, after applying PCA,
+the feature dimensionality for the different models was reduced from the original sizes of 4, 5, 6, and 7
 to 4, 4, 5, and 6 in the AM1.5 case, and to 4, 4, 4, and 5 in the 940~nm case.
 In general, PCA is a widely used and effective tool in machine learning,
 particularly for addressing problems in photovoltaics.
@@ -1201,6 +1202,41 @@ is the deviation of boron concentration values from those used in train phase.
 \textcolor[rgb]{1.00,0.07,0.00}{
 \hl{
 Before presenting the results based on experimental data, a few summarizing remarks are in order.
+}}
+
+\textcolor[rgb]{1.00,0.07,0.00}{
+\hl{
+The presence of iron impurities in silicon increases the recombination rate of charge carriers.
+However, each photovoltaic parameter captures a different aspect of how iron-related recombination influences solar cell performance.
+Specifically, the short-circuit current reflects the photogenerated current ($I_\mathrm{ph}$),
+which primarily depends on the diffusion length and recombination in the quasi-neutral region.
+In contrast, the open-circuit voltage is influenced not only by $I_\mathrm{ph}$ but also by the saturation current ($I_0$)
+and the ideality factor ($n$), both of which are determined by recombination processes in the space-charge region} \cite{YangHandbookPVSi}:
+$ V_\mathrm{OC} = nkT\left[ {\ln\left( {I_\mathrm{ph}/{I_0}} \right)+1} \right]$.
+The fill factor, in turn, is less sensitive to variations in $n$ \cite{Green1982}:
+}
+
+\begin{tcolorbox}[highlight style]
+\textcolor[rgb]{1.00,0.07,0.00}{
+\begin{equation}
+\label{eqFF2}
+    F\!F \approx \frac{\upsilon_\mathrm{OC}-\ln\left(0.72+\upsilon_\mathrm{OC}\right)}{\upsilon_\mathrm{OC}+1} \,,
+\end{equation}
+}
+\end{tcolorbox}
+\textcolor[rgb]{1.00,0.07,0.00}{
+\hl{
+where
+$\upsilon_\mathrm{OC}$ being the normalized open-circuit voltage
+$\upsilon_\mathrm{OC}=qV_\mathrm{OC}/nkT$.
+Ultimately, the efficiency integrates all of these effects: $\eta \propto I_\mathrm{SC}\cdot V_\mathrm{OC}\cdot F\!F$.
+Incorporating multiple descriptors associated with variations in photovoltaic parameters provides
+a more comprehensive representation of the effects of iron impurities.
+This expanded descriptor set increases the informational diversity available for model training, which can enhance predictive accuracy. 
+}}
+
+\textcolor[rgb]{1.00,0.07,0.00}{
+\hl{
 One can see that models trained on data obtained under AM1.5 illumination perform worse in almost all cases.
 We believe this can be attributed to the following reasons.
 It is well known that a regression model may  achieve high accuracy
@@ -1235,6 +1271,8 @@ In our opinion, for A$^\mathrm{AM1.5}$ models, both the positive effects achieve
 However, for A$^\mathrm{940}$ models where this ambiguity was already low,
 the negative effects described above outweighed the benefits,
 which explains why prediction accuracy did not improve when using an expanded feature set.
+Therefore, simply increasing the number of features does not guarantee improved performance.
+Instead, optimal predictive accuracy is typically achieved with specific, well-chosen combinations of descriptors.
 }}
 
 
@@ -1258,7 +1296,7 @@ One likely reason is that PCA preserves the overall variance in the data
 but does not account for the specific relationships between individual features and the target variable.
 For instance, some photovoltaic parameters may be more informative for predicting low iron concentrations,
 while others may be more relevant for high concentrations.
-For instance, $\varepsilon F\!F$) are shown} \cite{Olikh2025MSEB} to be most pronounced at low iron concentrations, unlike other PVPs.
+So $\varepsilon F\!F$ are shown} \cite{Olikh2025MSEB} to be most pronounced at low iron concentrations, unlike other PVPs.
 When these components are merged through PCA transformation, such distinctions may be lost, leading to reduced accuracy.
 Another possible reason is that principal components ---
 being linear combinations of original features --- do not support localized decision splits

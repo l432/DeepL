@@ -1,4 +1,4 @@
-\begin{thebibliography}{86}
+\begin{thebibliography}{88}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\bibinfo}[2]{#2}
 \ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
@@ -766,5 +766,18 @@
   models across varied terrains},
 \newblock \bibinfo{journal}{Advanced Theory and Simulations}
   \bibinfo{volume}{7} (\bibinfo{year}{2024}) \bibinfo{pages}{2301289}.
+%Type = Book
+\bibitem[{Yang(2019)}]{YangHandbookPVSi}
+\bibinfo{editor}{D.~Yang} (Ed.), \bibinfo{title}{Handbook of Photovoltaic
+  Silicon}, \bibinfo{publisher}{Springer Berlin},
+  \bibinfo{address}{Heidelberg}, \bibinfo{edition}{first} edition,
+  \bibinfo{year}{2019}.
+%Type = Article
+\bibitem[{Green(1982)}]{Green1982}
+\bibinfo{author}{M.~A. Green},
+\newblock \bibinfo{title}{Accuracy of analytical expressions for solar cell
+  fill factors},
+\newblock \bibinfo{journal}{Sol. Cells} \bibinfo{volume}{7}
+  (\bibinfo{year}{1982}) \bibinfo{pages}{337--340}.
 
 \end{thebibliography}
