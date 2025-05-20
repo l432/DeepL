@@ -465,11 +465,44 @@ For experimental validation of the proposed models, we used data obtained from m
 We used a set of $n^+$-$p$-$p^+$-Si samples in the experiment.
 The structure was fabricated from a 380~$\mu$m thick $p$-type boron-doped Czochralski silicon (100) wafer
 with a doping level of $N_\mathrm{B}=1.36\times10^{15}$~cm$^{-3}$.
-Iron concentration, determined using the methodology described in \cite{Olikh2022:JMatSci, Olikh2021JAP},
-ranged from $2\times10^{11}$ to $4\times10^{13}$~cm$^{-3}$ across different samples.
-To create the experimental test dataset,
-we measured the $I$-$V$ characteristics under monochromatic illumination from a light-emitting diode (SN–HPIR940nm–1W)
-with a wavelength of 940~nm and an intensity of approximately 5~W/m$^{2}$, within a temperature range of $(305-340)$~K.
+\textcolor[rgb]{1.00,0.07,0.00}{
+\hl{
+The $n^+$--layer, with a sheet resistance of $20-30$~$\Omega/\Box$ and a thickness of $0.7$~$\mu$m,
+and the $p^+$--layer, with a sheet resistance of $10-20$~$\Omega/\Box$ and a thickness of $0.6$~$\mu$m,
+were formed by phosphorus and boron diffusion, respectively.
+A more detailed description of the sample preparation procedure is available elsewhere} \cite{Olikh2021JAP}.
+}
+
+The iron concentration was determined using a methodology described in \cite{Olikh2022:JMatSci,Olikh2021JAP},
+\textcolor[rgb]{1.00,0.07,0.00}{
+\hl{
+which is based on fitting the kinetics of the short-circuit current following FeB pairs dissociation,
+measured under low-intensity monochromatic illumination.
+The kinetics of $I_\mathrm{SC}$ were measured at 340~K, which allowed tracking the complete recovery of FeB pairs within 1 hour only
+(the characteristic recovery time being approximately 600~s at 340~K, compared to 13,000~s at 300~K} \cite{FeBAssJAP2014,FeBKin2019}).}
+The determined iron concentration ranged from $2\times10^{11}$ to $4\times10^{13}$~cm$^{-3}$ across the various solar cells.
+
+To create the experimental test dataset, we measured the $I$-$V$ characteristics under monochromatic illumination,
+\textcolor[rgb]{1.00,0.07,0.00}{
+\hl{
+both before and immediately after FeB pair dissociation.
+Photovoltaic parameters were extracted from the $I$-$V$ curves using a standard procedure} \cite{SCparam2017},
+followed by calculations of their relative changes.
+For each solar cell, measurements were performed at 1-3 temperatures within the range of 305-340~K.
+}
+
+\textcolor[rgb]{1.00,0.07,0.00}{
+\hl{
+The similar experimental setup was used both for $N_\mathrm{Fe}$ determination and experimental test dataset creation.
+The current-voltage characteristics and Isc kinetics were measured using a Keithley 2450 source meter.
+}}
+The light--emitting diode SN--HPIR940nm--1W with light wavelength 940~nm and intensity of about 5~W/m$^{2}$ was used as low--intensity monochromatic light source.
+\textcolor[rgb]{1.00,0.07,0.00}{
+\hl{
+The LED radiation intensity was stabilized by a W1209 thermostat and a power supply regulated by a circuit incorporating positive feedback and digital control.
+The solar cell temperature was driven by a thermoelectric cooler controlled by an STS-21 sensor
+and maintained constant by a PID algorithm embedded in the software that serves the experimental setup.
+}}
 The decay of FeB pairs was induced using intensive halogen lamp illumination (7000~W/m$^{2}$).
 \textcolor[rgb]{1.00,0.07,0.00}{
 \hl{
@@ -483,10 +516,20 @@ and reached up to 400~s for the solar cells with the highest $N_\mathrm{Fe}$ val
 The illumination intervals were determined based on the results of a previous study \cite{OlikhPSSA},
 \hl{which showed that under similar conditions, complete dissociation at $N_\mathrm{Fe}=9\times10^{12}$~cm$^{-3}$ occurred within 20~s.
 }}
-The number of samples in experimental dataset varied from 34 to 12, depending on the feature dimensionality.
 
 
-\subsection{Data Pre-Processing}
+\textcolor[rgb]{1.00,0.07,0.00}{
+\hl{
+A total of 20 solar cells were used for experimental validation, and 30 $I$-$V$ curves were analyzed.
+However, at low temperatures and low iron concentrations,
+the expected relative changes in the fill factor were below 0.5\%,
+making it difficult to determine the $\varepsilon F\!F$ with sufficient accuracy.
+As a result, $\varepsilon F\!F$ could be reliably determined in only 8 cases (corresponding to 5 samples).
+Consequently, the number of samples in the experimental datasets used to test models trained on different descriptor sets
+(described in detail in Subsection}~\ref{SecDPP}) ranged from 30 to 8.
+}
+
+\subsection{Data Pre-Processing}\label{SecDPP}
 
 Feature selection is a crucial pre-processing step in developing a forecasting model.
 Selecting the appropriate number of features requires balancing two competing factors.
@@ -543,12 +586,19 @@ To ensure that ML algorithms are trained on independent input features while red
 we applied Principal Component Analysis (PCA).
 PCA constructs new, uncorrelated features (principal components, PCs) and allows us to evaluate each PC's contribution to the total variance.
 Fig.\ref{fig2} shows that increasing the feature dimension does not always enhance overall information variance.
-To assess the impact of redundant data, we trained ML models using features selected as follows:
-we computed PCs for the original dataset and then reduced the total dimension
-by discarding PCs whose contribution to the total variance was below 1.5\%.
-The final dimensions of the different feature sets are provided in Table~\ref{tbl1}.
+To assess the impact of redundant data, we 
 \textcolor[rgb]{1.00,0.07,0.00}{
 \hl{
+also
+}} 
+trained ML models using features selected via the following procedure: 
+PCs were computed for the original dataset, and the dimensionality was then reduced by discarding 
+PCs whose contribution to the total variance was below 1.5\%.
+\textcolor[rgb]{1.00,0.07,0.00}{
+\hl{
+As a result, after applying PCA, 
+the feature dimensionality for the different models was reduced from the original sizes of 4, 5, 6, and 7 
+to 4, 4, 5, and 6 in the AM1.5 case, and to 4, 4, 4, and 5 in the 940~nm case.
 In general, PCA is a widely used and effective tool in machine learning,
 particularly for addressing problems in photovoltaics.
 For example, it has been successfully applied to fault detection and classification based on $I$-$V$ curves} \cite{Fadhel2019, Gao2020},
@@ -567,22 +617,22 @@ Feature dimension: 4 (a), 5 (b), 6 (c), 7 (d).
 }\label{fig2}
 \end{figure}
 
-\begin{table}[<options>]
-\caption{Feature dimension after PCA applying}
-\label{tbl1}
-\begin{tabular*}{\tblwidth}{@{}LCC@{}}
-\toprule
-\multirow{2}{*}{Initial dimension}
-&\multicolumn{2}{C}{Final dimension}\\
-&AM1.5 illumination&940~nm illumination\\% Table header row
-\midrule
-4&4&4\\
-5&4&4\\
-6&5&4\\
-7&6&5\\
-\bottomrule
-\end{tabular*}
-\end{table}
+%\begin{table}[<options>]
+%\caption{Feature dimension after PCA applying}
+%\label{tbl1}
+%\begin{tabular*}{\tblwidth}{@{}LCC@{}}
+%\toprule
+%\multirow{2}{*}{Initial dimension}
+%&\multicolumn{2}{C}{Final dimension}\\
+%&AM1.5 illumination&940~nm illumination\\% Table header row
+%\midrule
+%4&4&4\\
+%5&4&4\\
+%6&5&4\\
+%7&6&5\\
+%\bottomrule
+%\end{tabular*}
+%\end{table}
 
 \subsection{Machine Learning Algorithms}
 

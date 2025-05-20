@@ -1,4 +1,4 @@
-\begin{thebibliography}{19}
+\begin{thebibliography}{22}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\bibinfo}[2]{#2}
 \ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
@@ -181,5 +181,36 @@
   efficiency measurements of gaas solar cells using deep learning},
 \newblock \bibinfo{journal}{Adv. Sci.} \bibinfo{volume}{12}
   (\bibinfo{year}{2025}) \bibinfo{pages}{2407048}.
+%Type = Article
+\bibitem[{Olikh et~al.(2021)Olikh, Kostylyov, Vlasiuk, Korkishko, Olikh, and
+  Chupryna}]{Olikh2021JAP}
+\bibinfo{author}{O.~Olikh}, \bibinfo{author}{V.~Kostylyov},
+  \bibinfo{author}{V.~Vlasiuk}, \bibinfo{author}{R.~Korkishko},
+  \bibinfo{author}{Y.~Olikh}, \bibinfo{author}{R.~Chupryna},
+\newblock \bibinfo{title}{{Features of FeB pair light-induced dissociation and
+  repair in silicon n+-p-p+ structures under ultrasound loading}},
+\newblock \bibinfo{journal}{J. Appl. Phys.} \bibinfo{volume}{130}
+  (\bibinfo{year}{2021}) \bibinfo{pages}{235703}.
+%Type = Article
+\bibitem[{Olikh et~al.(2022)Olikh, Kostylyov, Vlasiuk, Korkishko, and
+  Chupryna}]{Olikh2022:JMatSci}
+\bibinfo{author}{O.~Olikh}, \bibinfo{author}{V.~Kostylyov},
+  \bibinfo{author}{V.~Vlasiuk}, \bibinfo{author}{R.~Korkishko},
+  \bibinfo{author}{R.~Chupryna},
+\newblock \bibinfo{title}{Intensification of iron--boron complex association in
+  silicon solar cells under acoustic wave action},
+\newblock \bibinfo{journal}{J. Mater. Sci.: Mater. Electron.}
+  \bibinfo{volume}{33} (\bibinfo{year}{2022}) \bibinfo{pages}{13133--13142}.
+%Type = Article
+\bibitem[{Paviet-Salomon et~al.(2017)Paviet-Salomon, Levrat, Fakhfouri, Pelet,
+  Rebeaud, Despeisse, and Ballif}]{SCparam2017}
+\bibinfo{author}{B.~Paviet-Salomon}, \bibinfo{author}{J.~Levrat},
+  \bibinfo{author}{V.~Fakhfouri}, \bibinfo{author}{Y.~Pelet},
+  \bibinfo{author}{N.~Rebeaud}, \bibinfo{author}{M.~Despeisse},
+  \bibinfo{author}{C.~Ballif},
+\newblock \bibinfo{title}{New guidelines for a more accurate extraction of
+  solar cells and modules key data from their current–voltage curves},
+\newblock \bibinfo{journal}{Prog. Photovoltaics Res. Appl.}
+  \bibinfo{volume}{25} (\bibinfo{year}{2017}) \bibinfo{pages}{623--635}.
 
 \end{thebibliography}

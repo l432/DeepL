@@ -1,4 +1,4 @@
-\begin{thebibliography}{84}
+\begin{thebibliography}{86}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\bibinfo}[2]{#2}
 \ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
@@ -622,6 +622,27 @@
   silicon solar cells under acoustic wave action},
 \newblock \bibinfo{journal}{J. Mater. Sci.: Mater. Electron.}
   \bibinfo{volume}{33} (\bibinfo{year}{2022}) \bibinfo{pages}{13133--13142}.
+%Type = Article
+\bibitem[{Khelifati et~al.(2019)Khelifati, Laine, Vähänissi, Savin, Bouamama,
+  and Bouhafs}]{FeBKin2019}
+\bibinfo{author}{N.~Khelifati}, \bibinfo{author}{H.~S. Laine},
+  \bibinfo{author}{V.~Vähänissi}, \bibinfo{author}{H.~Savin},
+  \bibinfo{author}{F.~Z. Bouamama}, \bibinfo{author}{D.~Bouhafs},
+\newblock \bibinfo{title}{Dissociation and formation kinetics of iron–boron
+  pairs in silicon after phosphorus implantation gettering},
+\newblock \bibinfo{journal}{Phys Status Solidi A} \bibinfo{volume}{216}
+  (\bibinfo{year}{2019}) \bibinfo{pages}{1900253}.
+%Type = Article
+\bibitem[{Paviet-Salomon et~al.(2017)Paviet-Salomon, Levrat, Fakhfouri, Pelet,
+  Rebeaud, Despeisse, and Ballif}]{SCparam2017}
+\bibinfo{author}{B.~Paviet-Salomon}, \bibinfo{author}{J.~Levrat},
+  \bibinfo{author}{V.~Fakhfouri}, \bibinfo{author}{Y.~Pelet},
+  \bibinfo{author}{N.~Rebeaud}, \bibinfo{author}{M.~Despeisse},
+  \bibinfo{author}{C.~Ballif},
+\newblock \bibinfo{title}{New guidelines for a more accurate extraction of
+  solar cells and modules key data from their current–voltage curves},
+\newblock \bibinfo{journal}{Prog. Photovoltaics Res. Appl.}
+  \bibinfo{volume}{25} (\bibinfo{year}{2017}) \bibinfo{pages}{623--635}.
 %Type = Article
 \bibitem[{Geerligs and Macdonald(2004)}]{FeBLight2}
 \bibinfo{author}{L.~J. Geerligs}, \bibinfo{author}{D.~Macdonald},
