@@ -17,7 +17,8 @@
 %% Template article for cas-sc documentclass for
 %% single column output.
 
-\documentclass[a4paper,fleqn,draft]{cas-sc}
+%\documentclass[a4paper,fleqn,draft]{cas-sc}
+\documentclass[a4paper,fleqn]{cas-sc}
 
 % If the frontmatter runs over more than one page
 % use the longmktitle option.
@@ -266,7 +267,7 @@ a standard procedure for PV device assessment.
 Additionally, ML techniques specifically designed for analyzing point defects warrant particular attention.
 For instance, researchers have developed methods for determining
 the electronic structure of intrinsic defects \cite{Ma2025, Choudhary2023},
-detecting radiation-induced defects via Raman spectroscopy \cite{Chia2024, Park2022},
+detecting radiation-induced defects via Raman spectroscopy \cite{Park2022,Chia2024},
 and extracting recombination-active center parameters from temperature- and injection-dependent
 lifetime measurements \cite{Wang2024a, Buratti2022, Buratti2020a}.
 Although such defects represent one of the main limitations of PV devices \cite{Le2024, Yamaguchi2018}, studies in this area remain scarce.
@@ -302,7 +303,7 @@ or existing as interstitial species only in the presence of sufficiently high fr
 The deliberate transition between these states can be readily induced
 through intense illumination, electron injection, or heating up to 200~$^\circ$C and
 is commonly employed in various methods for assessing iron concentration
-\cite{Zoth1990, Rein2, Schmidt2005, Goodarzi2017, Olikh2021JAP, FeMethod2012, Herguth2022, Macdonald2004}.
+\cite{Macdonald2004,Zoth1990, Rein2, Schmidt2005, Goodarzi2017, Olikh2021JAP, FeMethod2012, Herguth2022}.
 \textcolor[rgb]{1.00,0.07,0.00}{
 \hl{
 It is worth noting that the charge-state transitions of iron-related defects ---
@@ -377,7 +378,7 @@ Selecting relevant descriptors is a critical first step in building robust and e
 It is well established that the presence of iron induces the formation of recombination centers, which, in turn, affect the photoelectric conversion process and key PV parameters,
 including short-circuit current ($I_\mathrm{SC}$), open-circuit voltage ($V_\mathrm{OC}$), efficiency ($\eta$), and fill factor
 (\textcolor[rgb]{1.00,0.07,0.00}{\hl{$F\!F$}}).
-Both theoretical and experimental studies \cite{FeB:Schmidt,IronSC,Olikh2025MSEB} have demonstrated that the restructuring of iron-related defects (the dissociation of FeB pairs)
+Both theoretical and experimental studies \cite{IronSC,FeB:Schmidt,Olikh2025MSEB} have demonstrated that the restructuring of iron-related defects (the dissociation of FeB pairs)
 leads to
 \textcolor[rgb]{1.00,0.07,0.00}{
 \hl{
@@ -414,7 +415,7 @@ and a specified iron concentration under defined external conditions, both befor
 This approach allowed us to determine the values of $\varepsilon I_\mathrm{SC}$, $\varepsilon V_\mathrm{OC}$, $\varepsilon \eta$, and
 \textcolor[rgb]{1.00,0.07,0.00}{\hl{$\varepsilon F\!F$}}.
 A detailed description of the modeling approach, including the used temperature dependencies of silicon and defect parameters,
-is provided elsewhere \cite{Olikh2019SM, Olikh2025MSEB}.
+is provided elsewhere \cite{Olikh2025MSEB, Olikh2019SM}.
 
 
 To generate the training dataset, we performed simulations over a temperature range of $(290-340)$~K
@@ -470,7 +471,7 @@ with a doping level of $N_\mathrm{B}=1.36\times10^{15}$~cm$^{-3}$.
 The $n^+$--layer, with a sheet resistance of $20-30$~$\Omega/\Box$ and a thickness of $0.7$~$\mu$m,
 and the $p^+$--layer, with a sheet resistance of $10-20$~$\Omega/\Box$ and a thickness of $0.6$~$\mu$m,
 were formed by phosphorus and boron diffusion, respectively.
-A more detailed description of the sample preparation procedure is available elsewhere} \cite{Olikh2021JAP}.
+A more detailed description of the sample preparation procedure is available elsewhere [50].}
 }
 
 The iron concentration was determined using a methodology described in \cite{Olikh2022:JMatSci,Olikh2021JAP},
@@ -479,17 +480,18 @@ The iron concentration was determined using a methodology described in \cite{Oli
 which is based on fitting the kinetics of the short-circuit current following FeB pairs dissociation,
 measured under low-intensity monochromatic illumination.
 The kinetics of $I_\mathrm{SC}$ were measured at 340~K, which allowed tracking the complete recovery of FeB pairs within 1 hour only
-(the characteristic recovery time being approximately 600~s at 340~K, compared to 13,000~s at 300~K} \cite{FeBAssJAP2014,FeBKin2019}).}
+(the characteristic recovery time being approximately 600~s at 340~K, compared to 13,000~s at 300~K}
+\colorbox{yellow}{ \cite{FeBAssJAP2014,FeBKin2019}).}}
 The determined iron concentration ranged from $2\times10^{11}$ to $4\times10^{13}$~cm$^{-3}$ across the various solar cells.
 
 To create the experimental test dataset, we measured the $I$-$V$ characteristics under monochromatic illumination,
 \textcolor[rgb]{1.00,0.07,0.00}{
 \hl{
 both before and immediately after FeB pair dissociation.
-Photovoltaic parameters were extracted from the $I$-$V$ curves using a standard procedure} \cite{SCparam2017},
-followed by calculations of their relative changes.
+Photovoltaic parameters were extracted from the $I$-$V$ curves using a standard procedure} \colorbox{yellow}{\cite{SCparam2017},}
+\hl{followed by calculations of their relative changes.
 For each solar cell, measurements were performed at 1-3 temperatures within the range of 305-340~K.
-}
+}}
 
 \textcolor[rgb]{1.00,0.07,0.00}{
 \hl{
@@ -507,13 +509,13 @@ The decay of FeB pairs was induced using intensive halogen lamp illumination (70
 \textcolor[rgb]{1.00,0.07,0.00}{
 \hl{
 In general, the dissociation rate of FeB pairs depends on the illumination intensity, $N_\mathrm{Fe}$ }
-\cite{FeBLight2,FeBAssJAP2014,FeMethod2012},
-temperature \cite{lauer2016},
-the spectral composition of illumination \cite{OlikhPSSA},
-and the presence of recombination channels other than those associated with iron-related defects \cite{FeBLight2,FeBAssJAP2014}.
-The selected illumination duration required to achieve near-complete dissociation depended on the iron concentration
+\colorbox{yellow}{\cite{FeBAssJAP2014,FeMethod2012, FeBLight2},
+temperature \cite{lauer2016},}
+\hl{the spectral composition of illumination }\colorbox{yellow}{\cite{OlikhPSSA},}
+\hl{and the presence of recombination channels other than those associated with iron-related defects }\colorbox{yellow}{\cite{FeBAssJAP2014,FeBLight2}.}
+\hl{The selected illumination duration required to achieve near-complete dissociation depended on the iron concentration
 and reached up to 400~s for the solar cells with the highest $N_\mathrm{Fe}$ values.
-The illumination intervals were determined based on the results of a previous study \cite{OlikhPSSA},
+The illumination intervals were determined based on the results of a previous study }\colorbox{yellow}{\cite{OlikhPSSA},}
 \hl{which showed that under similar conditions, complete dissociation at $N_\mathrm{Fe}=9\times10^{12}$~cm$^{-3}$ occurred within 20~s.
 }}
 
@@ -526,7 +528,7 @@ the expected relative changes in the fill factor were below 0.5\%,
 making it difficult to determine the $\varepsilon F\!F$ with sufficient accuracy.
 As a result, $\varepsilon F\!F$ could be reliably determined in only 8 cases (corresponding to 5 samples).
 Consequently, the number of samples in the experimental datasets used to test models trained on different descriptor sets
-(described in detail in Subsection}~\ref{SecDPP}) ranged from 30 to 8.
+(described in detail in Subsection}\colorbox{yellow}{~\ref{SecDPP}) ranged from 30 to 8.}
 }
 
 \subsection{Data Pre-Processing}\label{SecDPP}
@@ -602,9 +604,9 @@ the feature dimensionality for the different models was reduced from the origina
 to 4, 4, 5, and 6 in the AM1.5 case, and to 4, 4, 4, and 5 in the 940~nm case.
 In general, PCA is a widely used and effective tool in machine learning,
 particularly for addressing problems in photovoltaics.
-For example, it has been successfully applied to fault detection and classification based on $I$-$V$ curves} \cite{Fadhel2019, Gao2020},
-performance prediction of organic \cite{David2021} and perovskite \cite{Liu2022} solar cells,
-as well as measurement of the internal quantum efficiency in GaAs solar cells \cite{AbdullahVetter2025}.
+For example, it has been successfully applied to fault detection and classification based on $I$-$V$ curves }\colorbox{yellow}{\cite{Fadhel2019, Gao2020},}
+\hl{performance prediction of organic }\colorbox{yellow}{\cite{David2021} and perovskite \cite{Liu2022} }\hl{solar cells,
+as well as measurement of the internal quantum efficiency in GaAs solar cells }\colorbox{yellow}{\cite{AbdullahVetter2025}.}
 }
 
 \begin{figure}
@@ -1221,9 +1223,9 @@ However, each photovoltaic parameter captures a different aspect of how iron-rel
 Specifically, the short-circuit current reflects the photogenerated current ($I_\mathrm{ph}$),
 which primarily depends on the diffusion length and recombination in the quasi-neutral region.
 In contrast, the open-circuit voltage is influenced not only by $I_\mathrm{ph}$ but also by the saturation current ($I_0$)
-and the ideality factor ($n$), both of which are determined by recombination processes in the space-charge region} \cite{YangHandbookPVSi}:
-$ V_\mathrm{OC} = nkT\left[ {\ln\left( {I_\mathrm{ph}/{I_0}} \right)+1} \right]$.
-The fill factor, in turn, is less sensitive to variations in $n$ \cite{Green1982}:
+and the ideality factor ($n$), both of which are determined by recombination processes in the space-charge region }\colorbox{yellow}{\cite{YangHandbookPVSi}:}
+\hl{$ V_\mathrm{OC} = nkT\left[ {\ln\left( {I_\mathrm{ph}/{I_0}} \right)+1} \right]$.
+The fill factor, in turn, is less sensitive to variations in $n$ }\colorbox{yellow}{\cite{Green1982}:}
 }
 
 \begin{tcolorbox}[highlight style]
@@ -1234,9 +1236,10 @@ The fill factor, in turn, is less sensitive to variations in $n$ \cite{Green1982
 \end{equation}
 }
 \end{tcolorbox}
+\noindent
 \textcolor[rgb]{1.00,0.07,0.00}{
 \hl{
-where
+ where
 $\upsilon_\mathrm{OC}$ being the normalized open-circuit voltage
 $\upsilon_\mathrm{OC}=qV_\mathrm{OC}/nkT$.
 Ultimately, the efficiency integrates all of these effects: $\eta \propto I_\mathrm{SC}\cdot V_\mathrm{OC}\cdot F\!F$.
@@ -1252,11 +1255,11 @@ We believe this can be attributed to the following reasons.
 It is well known that a regression model may  achieve high accuracy
 by having the target variable be an unambiguous function of the descriptor.
 Moreover, the absolute value of the function’s derivative should be as significant as possible.
-As shown earlier}  \cite{Olikh2025MSEB}, the condition of uniqueness in the relationship between $N_\mathrm{Fe}$ and
+As shown earlier }\colorbox{yellow}{\cite{Olikh2025MSEB}, }\hl{the condition of uniqueness in the relationship between $N_\mathrm{Fe}$ and
 the changes in PVPs under AM1.5 illumination is often not fulfilled in contrast to the case of monochromatic illumination.
 In addition, the ranges of changes in $\varepsilon I_\mathrm{SC}$, $\varepsilon V_\mathrm{OC}$, and $\varepsilon \eta$
-under monochromatic illumination exceed those observed under AM1.5 illumination (see Subsection~\ref{SecDataCol}).
-The physical origin of the differences in the relationship between iron concentration and
+under monochromatic illumination exceed those observed under AM1.5 illumination (see Subsection~}\colorbox{yellow}{\ref{SecDataCol}).}
+\hl{The physical origin of the differences in the relationship between iron concentration and
 parameter changes under AM1.5 and monochromatic illumination lies in the fact that,
 in the former case, the generation of non-equilibrium charge carriers occurs throughout the
 entire volume of the solar cell, rather than being limited to the base region.
@@ -1264,7 +1267,7 @@ As a result, the processes involved in photovoltaic conversion are more complex.
 In our view, these differences explain why the performance of ML models trained on AM1.5 illumination data is generally poorer.
 One way to address the ambiguity in the relationship between features and the target variable
 is to incorporate additional features into the model.
-As it is shown, for AM1.5 illumination, increasing the number of descriptors often improves prediction accuracy, supporting our hypothesis.
+As it is shown, for AM1.5 illumination, increasing the number of descriptors often improves prediction accuracy, supporting our hypothesis.}
 }
 
 \textcolor[rgb]{1.00,0.07,0.00}{
@@ -1298,7 +1301,7 @@ affects prediction accuracy.
 First, all algorithms used are sufficiently robust to multicollinearity.
 Second, a standard method for mitigating multicollinearity is PCA.
 Despite previous successes in applying principal component analysis to various
-photovoltaics-related machine learning tasks} \cite{Gao2020,Fadhel2019,David2021,Liu2022,AbdullahVetter2025} ---
+photovoltaics-related machine learning tasks }\colorbox{yellow}{\cite{AbdullahVetter2025, Fadhel2019, Gao2020,David2021,Liu2022} ---}
 \hl{and the presence of favorable conditions for its use in our case,
 such as the high correlation between changes in photoelectric parameters caused by FeB pair dissociation ---
 applying PCA as a data pre-processing step for evaluating iron impurity concentration did not improve the maximum prediction accuracy in most cases.
@@ -1306,11 +1309,11 @@ One likely reason is that PCA preserves the overall variance in the data
 but does not account for the specific relationships between individual features and the target variable.
 For instance, some photovoltaic parameters may be more informative for predicting low iron concentrations,
 while others may be more relevant for high concentrations.
-So $\varepsilon F\!F$ are shown} \cite{Olikh2025MSEB} to be most pronounced at low iron concentrations, unlike other PVPs.
+So $\varepsilon F\!F$ are shown }\colorbox{yellow}{\cite{Olikh2025MSEB} }\hl{to be most pronounced at low iron concentrations, unlike other PVPs.
 When these components are merged through PCA transformation, such distinctions may be lost, leading to reduced accuracy.
 Another possible reason is that principal components ---
 being linear combinations of original features --- do not support localized decision splits
-(i.e., those based on individual feature thresholds), which are particularly effective in tree-based models.
+(i.e., those based on individual feature thresholds), which are particularly effective in tree-based models.}
 }
 
 \textcolor[rgb]{1.00,0.07,0.00}{
@@ -1334,8 +1337,8 @@ such as those that apparently exist between iron concentration and variations in
 In contrast, the superior performance of the XGB and DNN models is attributable to
 their ability to effectively capture nonlinear patterns, which in our case become more prominent with increasing descriptor dimensionality.
 Specifically, XGB performs best in relatively simpler scenarios, such as those involving 940 nm illumination
-(see Figs.}~\ref{fig7}i-\ref{fig7}l, \ref{fig9}i-\ref{fig9}l).
-This is because XGB requires less training data than DNN
+(see Figs.}\colorbox{yellow}{~\ref{fig7}i-\ref{fig7}l, \ref{fig9}i-\ref{fig9}l).}
+\hl{This is because XGB requires less training data than DNN
 (12,000 examples are sufficient, though this is not a particularly large amount for a neural network),
 handles high-quality structured data well (simulated data are noise-free),
 and is more resilient to the influence of correlated features.
@@ -1343,13 +1346,13 @@ At the same time, DNNs are more powerful tools for nonlinear modeling,
 capable of uncovering hidden structures in the data.
 This enables them to achieve better results on more complex tasks ---
 such as the transition to A$^\mathrm{AM1.5}$-models with high-dimensional features
-(see Figs.~\ref{fig7}m-\ref{fig7}p, \ref{fig9}m-\ref{fig9}p).
-As shown by the results in Subsection~\ref{NBaltered}, successful prediction within the
+(see Figs.~}\colorbox{yellow}{\ref{fig7}m-\ref{fig7}p, \ref{fig9}m-\ref{fig9}p).}
+\hl{As shown by the results in Subsection~}\colorbox{yellow}{\ref{NBaltered}, }\hl{successful prediction within the
 $N_\mathrm{B}$--altered also requires accounting for higher-order relationships,
-which explains why DNN models achieved the best performance (Figs.~\ref{fig11}e-\ref{fig11}l).
-Regarding the RF and GB algorithms, as indicated in Tables~\ref{table2} and \ref{table3},
-they tend to perform best only on less complex data
-(i.e., small sets of descriptors), where more powerful models are at higher risk of overfitting.
+which explains why DNN models achieved the best performance (Figs.~}\colorbox{yellow}{\ref{fig11}e-\ref{fig11}l).}
+\hl{Regarding the RF and GB algorithms, as indicated in Tables~}\colorbox{yellow}{\ref{table2} and \ref{table3},}
+\hl{they tend to perform best only on less complex data
+(i.e., small sets of descriptors), where more powerful models are at higher risk of overfitting.}
 }
 
 
@@ -1550,7 +1553,7 @@ To some extent, the issue of accuracy is related to the applicability of the dev
 To tackle this problem, it is first necessary to consider each parameter separately.
 The ability of the models to make predictions beyond the range of the training dataset
 depends on the relationship between the target variable and the descriptors.
-As previously shown} \cite{Olikh2025MSEB}, the relationship between the relative changes in the photoelectric parameters
+As previously shown }\colorbox{yellow}{\cite{Olikh2025MSEB}, }\hl{the relationship between the relative changes in the photoelectric parameters
 and iron concentration can vary significantly depending on the temperature and the concentration of the doping impurity in the base material.
 This is because a number of parameters, including those of silicon such as bandgap, carrier mobilities,
 intrinsic recombination coefficients, and Fermi level position,
@@ -1560,28 +1563,28 @@ particularly with respect to $N_\mathrm{B}$, as demonstrated by the results obta
 As previously mentioned, even the task of interpolation within the range of $N_\mathrm{B}$ used during training
 was only satisfactorily addressed by the DNN models due to their high ability to identify hidden patterns.
 Predicting beyond the training range of $N_\mathrm{B}$ is even more challenging.
-Therefore, in our view, the capabilities of the developed models are quite limited.
+Therefore, in our view, the capabilities of the developed models are quite limited.}
 }
 
 \textcolor[rgb]{1.00,0.07,0.00}{
 \hl{
 The temperature-related relationships are simpler, as demonstrated by the reasonably good results
-obtained using tree-based models for the $T$--altered dataset (see Fig.}~\ref{fig9}, Table~\ref{table3}).
-However, for the training set that included $T$ values beyond the original range,
-the performance of these models degraded significantly (see Fig.~\ref{fig10}).
-Once again, the best average results were achieved by the deep neural network models (see Fig.~\ref{fig9}),
-and only with their use can relatively accurate predictions beyond the training range of temperature be expected.
+obtained using tree-based models for the $T$--altered dataset (see Fig.~}\colorbox{yellow}{\ref{fig9}, Table~\ref{table3}).}
+\hl{However, for the training set that included $T$ values beyond the original range,
+the performance of these models degraded significantly (see Fig.~}\colorbox{yellow}{\ref{fig10}).}
+\hl{Once again, the best average results were achieved by the deep neural network models (see Fig.~}\colorbox{yellow}{\ref{fig9}),}
+\hl{and only with their use can relatively accurate predictions beyond the training range of temperature be expected.}
 }
 
 \textcolor[rgb]{1.00,0.07,0.00}{
 \hl{
 The situation is more straightforward concerning the base width,
-as its influence on the dependence of $N_\mathrm{Fe}$ on variations in PVPs value is much weaker and often approximately linear} \cite{Olikh2025MSEB}.
-Therefore, in our opinion, the developed models can be expected to remain applicable
+as its influence on the dependence of $N_\mathrm{Fe}$ on variations in PVPs value is much weaker and often approximately linear }\colorbox{yellow}{\cite{Olikh2025MSEB}.}
+\hl{Therefore, in our opinion, the developed models can be expected to remain applicable
 for predictions beyond the range selected in this study.
 Naturally, the extension of the base thickness range is only possible within certain limits,
 until the ratio between $d_p$ and the diffusion length of minority carriers changes significantly.
-}
+}}
 
 \textcolor[rgb]{1.00,0.07,0.00}{
 \hl{
@@ -1632,11 +1635,21 @@ In contrast, Support Vector Regression proves ineffective in all cases.
 \hl{The factors contributing to differences in the predictive accuracy of various models are analyzed, and potential measures for its further improvement are proposed.
 }}
 
+\textcolor[rgb]{1.00,0.07,0.00}{
+\hl{
+From a practical standpoint, the developed models are applicable for iron quantification
+in monocrystalline silicon solar cells with an $n^+$-$p$-$p^+$ structure,
+featuring a boron-doped base and a wide range of base thicknesses ($180-380$~$\mu$m)
+and doping concentrations ($10^{15}-10^{17}$~cm$^{-3}$).
+The proposed ML-based approach provides a non-destructive, fast, and simple method
+for determining iron concentrations that does not require specialized equipment.
+The methodology used to develop models can be adapted for other types of solar cells
+and/or for quantifying other impurities.
+}}
+
 The obtained results lay the foundation for improving the standard method of silicon solar cell characterization,
 which relies on measuring $I$-$V$ curves,
 by enabling the determination of iron impurity concentration.
-
-
 
 
 \section*{Acknowledgments}
@@ -1650,7 +1663,6 @@ heat transport properties’’)
 Supplementary data to this article can be found online at
 \url{https://tinyurl.com/yzn9xkdm}
 %https://www.mediafire.com/file/gip0q7t1vkljptu/SupplementaryMaterial.pdf/file
-
 
 \section*{Data availability}
 Data will be made available on request.

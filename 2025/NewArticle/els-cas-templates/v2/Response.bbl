@@ -1,0 +1,229 @@
+\begin{thebibliography}{24}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\providecommand{\bibinfo}[2]{#2}
+\ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
+%Type = Article
+\bibitem[{Wright et~al.(2016)Wright, Coutinho, \"{O}berg, and
+  Torres}]{Wright2016}
+\bibinfo{author}{E.~Wright}, \bibinfo{author}{J.~Coutinho},
+  \bibinfo{author}{S.~\"{O}berg}, \bibinfo{author}{V.~J.~B. Torres},
+\newblock \bibinfo{title}{M\"{o}ssbauer parameters of fe-related defects in
+  group-iv semiconductors: First principles calculations},
+\newblock \bibinfo{journal}{J. Appl. Phys.} \bibinfo{volume}{119}
+  (\bibinfo{year}{2016}) \bibinfo{pages}{181509}.
+%Type = Article
+\bibitem[{Istratov et~al.(1999)Istratov, Hieslmair, and Weber}]{Istratov1999}
+\bibinfo{author}{A.~A. Istratov}, \bibinfo{author}{H.~Hieslmair},
+  \bibinfo{author}{E.~Weber},
+\newblock \bibinfo{title}{Iron and its complexes in silicon},
+\newblock \bibinfo{journal}{Appl. Phys. A: Mater. Sci. Process.}
+  \bibinfo{volume}{69} (\bibinfo{year}{1999}) \bibinfo{pages}{13--44}.
+%Type = Article
+\bibitem[{Poindexter et~al.(2017)Poindexter, Hoye, Nienhaus, Kurchin,
+  Morishige, Looney, Osherov, Correa-Baena, Lai, Bulovi{\'{c}},
+  Stevanovi{\'{c}}, Bawendi, and Buonassisi}]{Poindexter2017}
+\bibinfo{author}{J.~R. Poindexter}, \bibinfo{author}{R.~L.~Z. Hoye},
+  \bibinfo{author}{L.~Nienhaus}, \bibinfo{author}{R.~C. Kurchin},
+  \bibinfo{author}{A.~E. Morishige}, \bibinfo{author}{E.~E. Looney},
+  \bibinfo{author}{A.~Osherov}, \bibinfo{author}{J.-P. Correa-Baena},
+  \bibinfo{author}{B.~Lai}, \bibinfo{author}{V.~Bulovi{\'{c}}},
+  \bibinfo{author}{V.~Stevanovi{\'{c}}}, \bibinfo{author}{M.~G. Bawendi},
+  \bibinfo{author}{T.~Buonassisi},
+\newblock \bibinfo{title}{High tolerance to iron contamination in lead halide
+  perovskite solar cells},
+\newblock \bibinfo{journal}{ACS Nano} \bibinfo{volume}{11}
+  (\bibinfo{year}{2017}) \bibinfo{pages}{7101--7109}.
+%Type = Techreport
+\bibitem[{IEC(2021)}]{IEC61215}
+\bibinfo{title}{{IEC 61215-2:2021 - Terrestrial photovoltaic (PV) modules –
+  Design qualification and type approval – Part 2: Test procedures}},
+  \bibinfo{type}{International Standard} \bibinfo{number}{IEC 61215-2:2021},
+  \bibinfo{address}{Geneva, Switzerland}, \bibinfo{year}{2021}.
+  \bibinfo{note}{\url{https://webstore.iec.ch/publication/61174}}.
+%Type = Article
+\bibitem[{Olikh and Zavhorodnii(2025)}]{Olikh2025MSEB}
+\bibinfo{author}{O.~Olikh}, \bibinfo{author}{O.~Zavhorodnii},
+\newblock \bibinfo{title}{Iron’s impact on silicon solar cell execution:
+  Comprehensive modeling across diverse scenarios},
+\newblock \bibinfo{journal}{Materials Science and Engineering: B}
+  \bibinfo{volume}{317} (\bibinfo{year}{2025}) \bibinfo{pages}{118192}.
+%Type = Article
+\bibitem[{Schmidt(2005)}]{FeB:Schmidt}
+\bibinfo{author}{J.~Schmidt},
+\newblock \bibinfo{title}{Effect of dissociation of iron--boron pairs in
+  crystalline silicon on solar cell properties},
+\newblock \bibinfo{journal}{Progress in Photovoltaics: Research and
+  Applications} \bibinfo{volume}{13} (\bibinfo{year}{2005})
+  \bibinfo{pages}{325--331}.
+%Type = Article
+\bibitem[{Geerligs and Macdonald(2004)}]{FeBLight2}
+\bibinfo{author}{L.~J. Geerligs}, \bibinfo{author}{D.~Macdonald},
+\newblock \bibinfo{title}{Dynamics of light-induced feb pair dissociation in
+  crystalline silicon},
+\newblock \bibinfo{journal}{Appl. Phys. Lett.} \bibinfo{volume}{85}
+  (\bibinfo{year}{2004}) \bibinfo{pages}{5227--5229}.
+%Type = Article
+\bibitem[{M\"{o}ller et~al.(2014)M\"{o}ller, Bartel, Gibaja, and
+  Lauer}]{FeBAssJAP2014}
+\bibinfo{author}{C.~M\"{o}ller}, \bibinfo{author}{T.~Bartel},
+  \bibinfo{author}{F.~Gibaja}, \bibinfo{author}{K.~Lauer},
+\newblock \bibinfo{title}{Iron-boron pairing kinetics in illuminated p-type and
+  in boron/phosphorus co-doped n-type silicon},
+\newblock \bibinfo{journal}{J. Appl. Phys.} \bibinfo{volume}{116}
+  (\bibinfo{year}{2014}) \bibinfo{pages}{024503}.
+%Type = Article
+\bibitem[{Khelifati et~al.(2019)Khelifati, Laine, Vähänissi, Savin, Bouamama,
+  and Bouhafs}]{FeBKin2019}
+\bibinfo{author}{N.~Khelifati}, \bibinfo{author}{H.~S. Laine},
+  \bibinfo{author}{V.~Vähänissi}, \bibinfo{author}{H.~Savin},
+  \bibinfo{author}{F.~Z. Bouamama}, \bibinfo{author}{D.~Bouhafs},
+\newblock \bibinfo{title}{Dissociation and formation kinetics of iron–boron
+  pairs in silicon after phosphorus implantation gettering},
+\newblock \bibinfo{journal}{Phys Status Solidi A} \bibinfo{volume}{216}
+  (\bibinfo{year}{2019}) \bibinfo{pages}{1900253}.
+%Type = Article
+\bibitem[{Herlufsen et~al.(2012)Herlufsen, Macdonald, Bothe, and
+  Schmidt}]{FeMethod2012}
+\bibinfo{author}{S.~Herlufsen}, \bibinfo{author}{D.~Macdonald},
+  \bibinfo{author}{K.~Bothe}, \bibinfo{author}{J.~Schmidt},
+\newblock \bibinfo{title}{Imaging of the interstitial iron concentration in
+  crystalline silicon by measuring the dissociation rate of iron–boron
+  pairs},
+\newblock \bibinfo{journal}{Phys. Status Solidi RRL} \bibinfo{volume}{6}
+  (\bibinfo{year}{2012}) \bibinfo{pages}{1--3}.
+%Type = Article
+\bibitem[{Macdonald et~al.(2004)Macdonald, Geerligs, and
+  Azzizi}]{Macdonald2004}
+\bibinfo{author}{D.~H. Macdonald}, \bibinfo{author}{L.~J. Geerligs},
+  \bibinfo{author}{A.~Azzizi},
+\newblock \bibinfo{title}{{Iron detection in crystalline silicon by carrier
+  lifetime measurements for arbitrary injection and doping}},
+\newblock \bibinfo{journal}{J. Appl. Phys.} \bibinfo{volume}{95}
+  (\bibinfo{year}{2004}) \bibinfo{pages}{1021--1028}.
+%Type = Article
+\bibitem[{Lagowski et~al.(1993)Lagowski, Edelman, Kontkiewicz, Milic, Henley,
+  Dexter, Jastrzebski, and Hoff}]{Lagowskii1993}
+\bibinfo{author}{J.~Lagowski}, \bibinfo{author}{P.~Edelman},
+  \bibinfo{author}{A.~M. Kontkiewicz}, \bibinfo{author}{O.~Milic},
+  \bibinfo{author}{W.~Henley}, \bibinfo{author}{M.~Dexter},
+  \bibinfo{author}{L.~Jastrzebski}, \bibinfo{author}{A.~M. Hoff},
+\newblock \bibinfo{title}{Iron detection in the part per quadrillion range in
+  silicon using surface photovoltage and photodissociation of iron-boron
+  pairs},
+\newblock \bibinfo{journal}{Appl. Phys. Lett.} \bibinfo{volume}{63}
+  (\bibinfo{year}{1993}) \bibinfo{pages}{3043--3045}.
+%Type = Inproceedings
+\bibitem[{Lauer et~al.(2016)Lauer, M{\"{o}}ller, Debbih, Auge, and
+  Schulze}]{lauer2016}
+\bibinfo{author}{K.~Lauer}, \bibinfo{author}{C.~M{\"{o}}ller},
+  \bibinfo{author}{D.~Debbih}, \bibinfo{author}{M.~Auge},
+  \bibinfo{author}{D.~Schulze},
+\newblock \bibinfo{title}{Determination of activation energy of the iron
+  acceptor pair association and dissociation reaction},
+\newblock in: \bibinfo{booktitle}{Gettering and Defect Engineering in
+  Semiconductor Technology XVI}, volume \bibinfo{volume}{242} of
+  \textit{\bibinfo{series}{Solid State Phenomena}}, \bibinfo{publisher}{Trans
+  Tech Publications Ltd}, \bibinfo{year}{2016}, pp. \bibinfo{pages}{230--235}.
+%Type = Article
+\bibitem[{Olikh et~al.(2024)Olikh, Datsenko, and Kondratenko}]{OlikhPSSA}
+\bibinfo{author}{O.~Olikh}, \bibinfo{author}{O.~Datsenko},
+  \bibinfo{author}{S.~Kondratenko},
+\newblock \bibinfo{title}{Influence of illumination spectrum on dissociation
+  kinetics of iron–boron pairs in silicon},
+\newblock \bibinfo{journal}{Phys. Status Solidi A} \bibinfo{volume}{221}
+  (\bibinfo{year}{2024}) \bibinfo{pages}{2400351}.
+%Type = Article
+\bibitem[{Gao and Wai(2020)}]{Gao2020}
+\bibinfo{author}{W.~Gao}, \bibinfo{author}{R.-J. Wai},
+\newblock \bibinfo{title}{A novel fault identification method for photovoltaic
+  array via convolutional neural network and residual gated recurrent unit},
+\newblock \bibinfo{journal}{IEEE Access} \bibinfo{volume}{8}
+  (\bibinfo{year}{2020}) \bibinfo{pages}{159493--159510}.
+%Type = Article
+\bibitem[{Fadhel et~al.(2019)Fadhel, Delpha, Diallo, Bahri, Migan, Trabelsi,
+  and Mimouni}]{Fadhel2019}
+\bibinfo{author}{S.~Fadhel}, \bibinfo{author}{C.~Delpha},
+  \bibinfo{author}{D.~Diallo}, \bibinfo{author}{I.~Bahri},
+  \bibinfo{author}{A.~Migan}, \bibinfo{author}{M.~Trabelsi},
+  \bibinfo{author}{M.~Mimouni},
+\newblock \bibinfo{title}{{PV} shading fault detection and classification based
+  on {I-V} curve using principal component analysis: {A}pplication to isolated
+  {PV} system},
+\newblock \bibinfo{journal}{Sol. Energy} \bibinfo{volume}{179}
+  (\bibinfo{year}{2019}) \bibinfo{pages}{1--10}.
+%Type = Article
+\bibitem[{David et~al.(2021)David, Soares, Bristow, Bagnis, and
+  Kettle}]{David2021}
+\bibinfo{author}{T.~W. David}, \bibinfo{author}{G.~A. Soares},
+  \bibinfo{author}{N.~Bristow}, \bibinfo{author}{D.~Bagnis},
+  \bibinfo{author}{J.~Kettle},
+\newblock \bibinfo{title}{Predicting diurnal outdoor performance and
+  degradation of organic photovoltaics via machine learning; relating
+  degradation to outdoor stress conditions},
+\newblock \bibinfo{journal}{Prog. Photovoltaics Res. Appl.}
+  \bibinfo{volume}{29} (\bibinfo{year}{2021}) \bibinfo{pages}{1274--1284}.
+%Type = Article
+\bibitem[{Liu et~al.(2022)Liu, Yan, Han, Zhu, Tu, Guan, and Tan}]{Liu2022}
+\bibinfo{author}{Y.~Liu}, \bibinfo{author}{W.~Yan}, \bibinfo{author}{S.~Han},
+  \bibinfo{author}{H.~Zhu}, \bibinfo{author}{Y.~Tu}, \bibinfo{author}{L.~Guan},
+  \bibinfo{author}{X.~Tan},
+\newblock \bibinfo{title}{How machine learning predicts and explains the
+  performance of perovskite solar cells},
+\newblock \bibinfo{journal}{Sol. RRL} \bibinfo{volume}{6}
+  (\bibinfo{year}{2022}) \bibinfo{pages}{2101100}.
+%Type = Article
+\bibitem[{Abdullah-Vetter et~al.(2025)Abdullah-Vetter, Wright, Wu, Shakiba, and
+  Hameiri}]{AbdullahVetter2025}
+\bibinfo{author}{Z.~Abdullah-Vetter}, \bibinfo{author}{B.~Wright},
+  \bibinfo{author}{T.-C. Wu}, \bibinfo{author}{A.~Shakiba},
+  \bibinfo{author}{Z.~Hameiri},
+\newblock \bibinfo{title}{Automatic quantitative analysis of internal quantum
+  efficiency measurements of gaas solar cells using deep learning},
+\newblock \bibinfo{journal}{Adv. Sci.} \bibinfo{volume}{12}
+  (\bibinfo{year}{2025}) \bibinfo{pages}{2407048}.
+%Type = Article
+\bibitem[{Olikh et~al.(2022)Olikh, Kostylyov, Vlasiuk, Korkishko, and
+  Chupryna}]{Olikh2022:JMatSci}
+\bibinfo{author}{O.~Olikh}, \bibinfo{author}{V.~Kostylyov},
+  \bibinfo{author}{V.~Vlasiuk}, \bibinfo{author}{R.~Korkishko},
+  \bibinfo{author}{R.~Chupryna},
+\newblock \bibinfo{title}{Intensification of iron--boron complex association in
+  silicon solar cells under acoustic wave action},
+\newblock \bibinfo{journal}{J. Mater. Sci.: Mater. Electron.}
+  \bibinfo{volume}{33} (\bibinfo{year}{2022}) \bibinfo{pages}{13133--13142}.
+%Type = Article
+\bibitem[{Olikh et~al.(2021)Olikh, Kostylyov, Vlasiuk, Korkishko, Olikh, and
+  Chupryna}]{Olikh2021JAP}
+\bibinfo{author}{O.~Olikh}, \bibinfo{author}{V.~Kostylyov},
+  \bibinfo{author}{V.~Vlasiuk}, \bibinfo{author}{R.~Korkishko},
+  \bibinfo{author}{Y.~Olikh}, \bibinfo{author}{R.~Chupryna},
+\newblock \bibinfo{title}{{Features of FeB pair light-induced dissociation and
+  repair in silicon n+-p-p+ structures under ultrasound loading}},
+\newblock \bibinfo{journal}{J. Appl. Phys.} \bibinfo{volume}{130}
+  (\bibinfo{year}{2021}) \bibinfo{pages}{235703}.
+%Type = Article
+\bibitem[{Paviet-Salomon et~al.(2017)Paviet-Salomon, Levrat, Fakhfouri, Pelet,
+  Rebeaud, Despeisse, and Ballif}]{SCparam2017}
+\bibinfo{author}{B.~Paviet-Salomon}, \bibinfo{author}{J.~Levrat},
+  \bibinfo{author}{V.~Fakhfouri}, \bibinfo{author}{Y.~Pelet},
+  \bibinfo{author}{N.~Rebeaud}, \bibinfo{author}{M.~Despeisse},
+  \bibinfo{author}{C.~Ballif},
+\newblock \bibinfo{title}{New guidelines for a more accurate extraction of
+  solar cells and modules key data from their current–voltage curves},
+\newblock \bibinfo{journal}{Prog. Photovoltaics Res. Appl.}
+  \bibinfo{volume}{25} (\bibinfo{year}{2017}) \bibinfo{pages}{623--635}.
+%Type = Book
+\bibitem[{Yang(2019)}]{YangHandbookPVSi}
+\bibinfo{editor}{D.~Yang} (Ed.), \bibinfo{title}{Handbook of Photovoltaic
+  Silicon}, \bibinfo{publisher}{Springer Berlin},
+  \bibinfo{address}{Heidelberg}, \bibinfo{edition}{first} edition,
+  \bibinfo{year}{2019}.
+%Type = Article
+\bibitem[{Green(1982)}]{Green1982}
+\bibinfo{author}{M.~A. Green},
+\newblock \bibinfo{title}{Accuracy of analytical expressions for solar cell
+  fill factors},
+\newblock \bibinfo{journal}{Sol. Cells} \bibinfo{volume}{7}
+  (\bibinfo{year}{1982}) \bibinfo{pages}{337--340}.
+
+\end{thebibliography}
