@@ -973,7 +973,7 @@ that extend beyond the training range $(290-340)$~K, enabling an assessment of t
 Figs.~S12-S15 present the prediction results, while Fig.~\ref{fig9} and Table~\ref{table3} summarize the performance metrics.
 The data show that the average metrics for all models worsen slightly compared
 to the $N_\mathrm{Fe}$--altered dataset (Fig.~\ref{fig7}, Fig.~\ref{fig9}).
-In most cases, PCA reduces model performance, except for AM1.5 at a feature dimensionality of 7.
+In most cases, PCA reduces model performance.
 For the 940~nm case, using six descriptors proves more effective than using four, as observed in the previous test dataset.
 
 \begin{figure}
@@ -1017,29 +1017,36 @@ while results without PCA are represented by squares (a--h) and filled regions (
 &&\multicolumn{2}{C}{940 nm}&\multicolumn{2}{C}{AM1.5}&\multicolumn{2}{C}{940 nm}&\multicolumn{2}{C}{AM1.5}&\multicolumn{2}{C}{940 nm}&\multicolumn{2}{C}{AM1.5}\\
 &&Init&PCA&Init&PCA&Init&PCA&Init&PCA&Init&PCA&Init&PCA\\
 \midrule
-RF&4&6.50&13.1&\textbf{1.88}&11.6&18.2&8.92&\textbf{28.1}&11.8&60.4&40.8&\textbf{95.6}&45.2\\
-&5&5.59&13.2&9.58&5.90&22.4&6.75&12.1&16.6&62.9&40.7&51.3&62.7\\
-&6&4.61&13.3&14.2&2.13&20.8&8.58&9.50&35.3&68.8&43.5&42.1&77.3\\
-&7&5.07&9.82&5.05&\textbf{1.94}&21.5&12&17.7&38.7&67.4&50.4&68.3&79.8\\
-GB&4&5.29&12.5&3.47&10.1&20.7&6.67&21.5&5.08&62.0&42.9&80.6&49.8\\
-&5&4.91&12.6&9.34&4.89&19.1&7.00&6.58&22.5&66.2&44.7&51.8&65.0\\
-&6&3.41&9.12&12.8&1.81&22.3&11.2&4.67&\textbf{40.9}&73.1&52.4&43.2&78.3\\
-&7&5.03&9.72&5.14&2.44&15.6&10.2&13.9&31.3&68.3&51.0&70.7&79.3\\
-XGB&4&5.03&10.9&3.40&8.72&22.8&8.92&20.8&8.42&64.6&46.9&80.8&53.8\\
-&5&3.64&9.01&9.88&5.14&28.4&8.75&7.00&23.7&67.3&53.0&50.3&66.3\\
-&6&\textbf{2.47}&10.4&10.5&2.08&\textbf{33.6}&6.75&6.58&34.4&\textbf{73.7}&49.2&48.6&78.0\\
-&7&9.93&\textbf{5.37}&5.78&3.38&9.92&\textbf{14.9}&12.3&19.3&50.3&\textbf{67.9}&69.2&78.3\\
-SVR&4&30.9&27.8&5.11&36.4&1.50&1.58&13.6&0.67&15.3&18.3&72.9&12.8\\
-&5&33.7&38.0&35.7&37.5&1.75&1.00&1.17&0.92&15.3&12.9&13.5&12.8\\
-&6&38.3&40.9&47.6&37.1&1.50&1.50&0.67&1.25&14.3&15.0&9.83&12.8\\
-&7&18.6&6.85&46.2&36.3&3.83&7.50&0.75&1.83&29.8&66.3&9.58&15.4\\
+RF&4&6.50&13.1&11.6&9.58&18.2&8.92&11.8&12.1&60.4&40.8&45.2&51.3\\
+&5&5.59&13.2&5.90&14.2&22.4&6.75&16.6&9.5&62.9&40.7&62.7&42.1\\
+&6&4.61&13.3&2.13&5.05&20.8&8.58&35.3&17.7&68.8&43.5&77.3&68.3\\
+&7&5.07&9.82&1.94&3.47&21.5&\textbf{12.0}&38.7&21.5&67.4&50.4&79.8&80.6\\
+GB&4&5.29&12.5&10.07&9.34&20.7&6.67&5.08&6.58&62.0&42.9&49.8&51.8\\
+&5&4.91&12.6&4.89&12.7&19.1&7.00&22.2&4.67&66.2&44.7&65.0&70.7\\
+&6&3.41&9.12&\textbf{1.81}&5.14&22.3&11.2&\textbf{40.6}&13.92&73.1&52.4&78.3&70.7\\
+&7&5.03&9.93&2.44&3.40&15.6&9.92&31.3&20.8&68.3&50.3&79.3&80.8\\
+XGB&4&5.03&10.9&8.72&9.88&22.8&8.92&8.42&7.00&64.6&46.9&53.8&50.3\\
+&5&3.65&9.00&5.14&10.5&28.4&8.75&23.7&6.58&67.3&53.0&66.3&48.6\\
+&6&\textbf{2.47}&10.4&2.08&5.78&\textbf{33.6}&6.75&34.4&12.3&\textbf{73.7}&49.2&78.0&69.2\\
+&7&5.37&9.72&3.38&5.11&14.9&10.2&19.3&13.6&67.9&51.0&78.3&72.9\\
+SVR&4&30.9&27.8&36.4&35.7&1.50&1.58&0.67&1.17&15.3&18.3&12.8&13.5\\
+&5&33.7&38.0&37.5&47.6&1.75&1.00&0.92&0.67&15.3&12.9&12.8&9.8\\
+&6&38.3&40.9&37.1&46.2&1.50&1.50&1.25&0.75&14.3&15.0&12.8&9.58\\
+&7&39.3&35.91&36.3&32.2&1.25&1.50&1.83&1.00&10.7&13.3&15.4&14.7\\
 DNN&4&6.92&7.54&10.5&14.2&7.83&8.33&4.58&4.67&65.3&59.0&47.3&37.2\\
 &5&6.53&8.90&5.46&7.44&9.17&5.50&10.9&7.42&68.8&53.8&71.6&58.4\\
 &6&7.09&7.18&4.92&2.99&7.50&9.25&10.7&18.3&66.8&61.1&79.2&90.9\\
-&7&39.3&35.9&32.2&2.53&1.25&1.50&1.00&23.2&10.7&13.3&14.7&\textbf{92.5}\\
+&7&18.6&\textbf{6.85}&1.88&\textbf{2.53}&3.83&7.5&28.1&\textbf{23.2}&29.8&\textbf{66.3}&\textbf{95.58}&\textbf{92.5}\\
 \bottomrule
 \end{tabular*}
 \end{table}
+
+
+
+
+
+
+
 
 A comparison of Table~\ref{table2} and Table~\ref{table3} reveals that,
 unlike the mean characteristics, MdAPE, $p01$, and $p10$ are often better than those in the $N_\mathrm{Fe}$--altered dataset.
@@ -1063,6 +1070,9 @@ The degradation of the average metrics (MSE, MAPE, R$^2$) primarily results from
      \includegraphics[width=0.5\linewidth]{Fig10.png}
     \caption{Typical dependencies of the fraction of predictions with an accuracy within 10\%
     as a function of temperature for the $T$--altered and $N_\mathrm{Fe}$--altered datasets.
+    \textcolor[rgb]{1.00,0.07,0.00}{
+\hl{
+    The vertical lines indicate the temperature values used in the training dataset.}}
 }\label{fig10}
 \end{figure}
 
@@ -1232,7 +1242,7 @@ $\upsilon_\mathrm{OC}=qV_\mathrm{OC}/nkT$.
 Ultimately, the efficiency integrates all of these effects: $\eta \propto I_\mathrm{SC}\cdot V_\mathrm{OC}\cdot F\!F$.
 Incorporating multiple descriptors associated with variations in photovoltaic parameters provides
 a more comprehensive representation of the effects of iron impurities.
-This expanded descriptor set increases the informational diversity available for model training, which can enhance predictive accuracy. 
+This expanded descriptor set increases the informational diversity available for model training, which can enhance predictive accuracy.
 }}
 
 \textcolor[rgb]{1.00,0.07,0.00}{
@@ -1337,7 +1347,7 @@ such as the transition to A$^\mathrm{AM1.5}$-models with high-dimensional featur
 As shown by the results in Subsection~\ref{NBaltered}, successful prediction within the
 $N_\mathrm{B}$--altered also requires accounting for higher-order relationships,
 which explains why DNN models achieved the best performance (Figs.~\ref{fig11}e-\ref{fig11}l).
-Regarding the RF and GB algorithms, as indicated in Tables~\ref{table2} and \ref{table2},
+Regarding the RF and GB algorithms, as indicated in Tables~\ref{table2} and \ref{table3},
 they tend to perform best only on less complex data
 (i.e., small sets of descriptors), where more powerful models are at higher risk of overfitting.
 }
@@ -1532,6 +1542,57 @@ that account for the presence of additional impurities commonly found in Cz-Si,
 such as oxygen and carbon.
 Furthermore, incorporating experimental uncertainty into the training data by introducing noise
 can enhance the model’s robustness and predictive accuracy.
+}}
+
+\textcolor[rgb]{1.00,0.07,0.00}{
+\hl{
+To some extent, the issue of accuracy is related to the applicability of the developed models beyond the selected range of  $N_\mathrm{B}$, $d_p$, and $T$.
+To tackle this problem, it is first necessary to consider each parameter separately.
+The ability of the models to make predictions beyond the range of the training dataset
+depends on the relationship between the target variable and the descriptors.
+As previously shown} \cite{Olikh2025MSEB}, the relationship between the relative changes in the photoelectric parameters
+and iron concentration can vary significantly depending on the temperature and the concentration of the doping impurity in the base material.
+This is because a number of parameters, including those of silicon such as bandgap, carrier mobilities,
+intrinsic recombination coefficients, and Fermi level position,
+as well as iron-related defects such as carrier capture cross-sections, depend on temperature and carrier concentration.
+These relationships, which were taken into account when creating the training set, are sufficiently complex,
+particularly with respect to $N_\mathrm{B}$, as demonstrated by the results obtained for the $N_\mathrm{B}$--altered dataset.
+As previously mentioned, even the task of interpolation within the range of $N_\mathrm{B}$ used during training
+was only satisfactorily addressed by the DNN models due to their high ability to identify hidden patterns.
+Predicting beyond the training range of $N_\mathrm{B}$ is even more challenging.
+Therefore, in our view, the capabilities of the developed models are quite limited.
+}
+
+\textcolor[rgb]{1.00,0.07,0.00}{
+\hl{
+The temperature-related relationships are simpler, as demonstrated by the reasonably good results
+obtained using tree-based models for the $T$--altered dataset (see Fig.}~\ref{fig9}, Table~\ref{table3}).
+However, for the training set that included $T$ values beyond the original range,
+the performance of these models degraded significantly (see Fig.~\ref{fig10}).
+Once again, the best average results were achieved by the deep neural network models (see Fig.~\ref{fig9}),
+and only with their use can relatively accurate predictions beyond the training range of temperature be expected.
+}
+
+\textcolor[rgb]{1.00,0.07,0.00}{
+\hl{
+The situation is more straightforward concerning the base width,
+as its influence on the dependence of $N_\mathrm{Fe}$ on variations in PVPs value is much weaker and often approximately linear} \cite{Olikh2025MSEB}.
+Therefore, in our opinion, the developed models can be expected to remain applicable
+for predictions beyond the range selected in this study.
+Naturally, the extension of the base thickness range is only possible within certain limits,
+until the ratio between $d_p$ and the diffusion length of minority carriers changes significantly.
+}
+
+\textcolor[rgb]{1.00,0.07,0.00}{
+\hl{
+In summary, we note that if predictions are required for cases outside the range of parameter values used during training,
+it is advisable to rely exclusively on DNN models.
+Among the considered parameters, base thickness allows for the largest permissible deviations,
+whereas for temperature, deviations are unlikely to exceed 10~K.
+The use of the developed models with doping impurity concentrations different
+from those in the training set is not recommended.
+This requirement effectively serves as an additional condition that the training set must satisfy
+to ensure satisfactory prediction accuracy.
 }}
 
 
