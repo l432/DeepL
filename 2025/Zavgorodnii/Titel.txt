@@ -1,0 +1,18 @@
+Recent developments in analytical and theoretical methods for defect studies in semiconductors
+
+Defects in silicon-based and novel solar cell materials
+
+Застосування моделей комп’ютерного зору до оцінки концентрації заліза у кремнієвих сонячних елементах
+
+
+Method for iron-related defect studies in silicon solar cells based on models for image classification.
+
+
+Method for Studying Iron-Related Defects in Silicon Solar Cells Using Models for Visual Classification
+
+Computer Vision Models
+
+Method for Quantification Iron-Related Defects in Silicon Solar Cells Using Computer Vision Models
+---------------------------------------------------
+Computer Vision–Based Method for Quantifying Iron-Related Defects in Silicon Solar Cells
+-----------------------------
