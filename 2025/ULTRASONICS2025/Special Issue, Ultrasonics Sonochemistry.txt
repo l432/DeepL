@@ -37,7 +37,7 @@ P.S. Фотографії надзвичайні! Дуже шкодую, що не мав можливості опинитися на них.
 
 -------------------------------------------------------------------------
 
-Dear Prof. Capelo,
+
 
 First of all, thank you so much for your support of Ukraine. It is truly heartening to hear about your efforts — every contribution matters, and your help is greatly appreciated.
 
@@ -48,6 +48,16 @@ Nevertheless, given that our study contributes to understanding and developing u
 Thank you once again for your support and your valuable feedback.
 
 Heroyam Slava!
+
+Best regards,
+Oleh Olikh
+
+-----------------------------------------------
+
+Dear Prof. Capelo,
+
+Our primary areas of scientific expertise include experimental studies of semiconductor structures, such as current-voltage, capacitance, and impedance measurements, as well as photoluminescence and  photoconductivity spectroscopies, photoacoustic, and photothermal techniques. We also conduct spectral and integral characterization of light sources, including LEDs. In addition, our research focuses on utilizing ultrasound for defect engineering, particularly on dynamic effects induced by ultrasonic loading of semiconductor systems. Machine learning is also applied for defect characterization.
+
 
 Best regards,
 Oleh Olikh
