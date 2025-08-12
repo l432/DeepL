@@ -5,7 +5,7 @@ Dear Prof. Alexander Dolbin,
 Guest Editor of "Low Temperature Physics"
 
 
-Enclosed with this letter you will find the electronic submission of manuscript
+Enclosed with this letter, you will find the electronic submission of manuscript,
 entitled “Thermal Conductivity of Nanoporous Silicon: Molecular Dynamics Simulations and Machine Learning Prediction” by V.V. Kuryliuk and O.Ya. Olikh.
 
 The report was presented at the V International Conference “Condensed Matter & Low-Temperature Physics” (CM&LTP-2025). We would very much appreciate if you would consider the manuscript for
