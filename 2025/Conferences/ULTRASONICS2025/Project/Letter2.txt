@@ -58,3 +58,105 @@ Thank you very much for your time and insights.
 
 Sincerely,
 Oleg Olikh
+
+------------------------------------------------------------------------------------------
+Dear Oleg,
+
+
+Thank you very much for your message and for your interest in contributing to the SMART project.
+
+
+STAB VIDA’s Doctor Vida Education device is already at the prototype stage. It has been designed to perform absorbance, fluorescence, and chemiluminescence measurements in an affordable and accessible way, using basic optics and sensors. Within this project, our goal is to bring it closer to the market and broaden its educational applications.
+
+
+Given your group’s expertise in physics and photonics, I believe you could make a valuable contribution by helping us validate and further improve the device’s optical and sensing performance - both at the hardware level and through software and algorithmic approaches. In particular, this could include applying physics formulas or models to enhance signal quality, reduce noise, correct for background or drift, and improve quantitative accuracy of the measurements, and this could then even be explained to students.
+
+
+Additionally, you may also contribute to the design of a simple quality control and calibration kit or protocol, suitable both for manufacturing use and for students, to ensure reliable spectroscopy measurements. Such kits, possibly based on off-the-shelf standard materials, could be very useful for physics and instrumentation students, just as biology or biochemistry students would use the device for molecular biology or biochemical applications.
+
+
+Finally, given your experience in characterizing semiconductors, another potential educational application could be to use our device to actually characterize LEDs and other semiconductor components (if this makes sense to you). I believe the “chemiluminescence” mode would be particularly suitable for this, since in that mode only the device’s spectral sensor is active and can measure any incoming light within the sensor spectrum range. This approach could even be extended to IR LEDs, as our sensor is also capable of detecting IR radiation.
+
+
+I hope these ideas are useful. I do see strong potential for your contribution along these lines, though please do confirm this with Prof. Capelo, as he is the current proposal coordinator.
+
+Best regards,
+
+Gonçalo
+
+------------------------------------------------------------------------------------------
+Dear Gonçalo,
+
+
+Я надзвичайно вдячний вам за настільки детальну відповідь. Завдяки цьому ми отримали набагато більш повне уявлення про Dr Vida device та можливі шляхи його удосконалення та використання. Також мені дуже подобаються ваші ідеї та варіанти використання нашої наукової групи.
+
+Ще раз дякую за ваш час та увагу до мого прохання.
+Я обов'язково напишу Prof. Capelo.
+
+Best regards,
+Oleg
+---------------------------------------------------
+goncalo.doria@stabvida.com
+
+Dear Gonçalo,
+
+Many thanks for your kind and detailed reply. It really helped us better understand the Dr. Vida device and its potential improvements and applications. I also truly appreciate your suggestions on how our research group could be involved.
+
+Once again, thank you for your time and attention to my request. I will follow up with Prof. Capelo. Today :)
+
+Best regards,
+Oleg
+
+------------------------------------------------
+TSNUK contribution
+
+jlcm@bioscopegroup.org
+
+Dear Prof. Capelo,
+
+Визначаючи можливі шляхи найкращого використання потенціалу нашої наукової групи у я дозволив собі проконсультуватися з Gonçalo Doria, так як він набагато краще розуміє особливості та потреби Dr Vida device. Узагальнюючи його ідеї та наші можливості, ми можемо запропонувати наступне.
+
+1. Використовуючи наш досвід фізиків-експериментаторів та навички вимірювання оптичних властивостей, ми можемо спрямувати зусилля на improve the device’s optical and sensing performance.
+
+2. We may contribute to the design of a quality control and calibration Dr Vida Device.
+
+3. Ми зможемо долучити до роботи з приладом студентів-медиків відповідних спеціальностей (тестові лабораторні роботи тощо)
+
+4. Знаючи більш детально характеристики приладу, ми зможемо запропонувати (та протестувати) способи його використання під час навчання студентів-фізиків.
+
+5. Ми можемо долучитися до розробки підходів, які базуються на машинному навчанні, і дозволяють збільшити швидкість отримання корисної інформації з результатів вимірювань, отриманих за допомогою Dr Vida Device.
+
+
+Виберіть те, що Ви вважаєте найбільш корисним для SMART project.
+
+Best regards,
+Oleh Olikh
+
+---------------------------------
+TSNUK contribution
+
+jlcm@bioscopegroup.org
+
+
+Dear Prof. Capelo,
+
+To determine the most effective way to apply the potential of our research group, I consulted with Gonçalo Doria, who has a much deeper understanding of the specifics and requirements of the Dr. Vida device. Based on his insights and our expertise, we can propose the following contributions:
+
+Drawing on our experience as experimental physicists and our skills in optical measurements, we can focus on enhancing the device’s optical and sensing performance.
+
+We can contribute to the design of a quality control and calibration system for the Dr. Vida device.
+
+We are ready to involve medical students from relevant specialties in practical work with the device (e.g., laboratory exercises).
+
+With a more detailed understanding of the device’s characteristics, we can suggest and test ways of integrating it into physics students education.
+
+We can participate in developing machine learning–based approaches to accelerate the extraction of useful information from the measurement data obtained with the Dr. Vida device.
+
+Please choose the options that you consider most valuable for the SMART project.
+
+Best regards,
+Oleh Olikh
+ 
+
+
+
