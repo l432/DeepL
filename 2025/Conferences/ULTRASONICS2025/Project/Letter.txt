@@ -110,5 +110,17 @@ I apologize for the delay in sending the SMART document. Please find it attached
 Best regards,
 Oleh Olikh 
  
+> We can contribute to the design of a quality control and calibration system for the Dr. Vida device.
+
+can you please elaborate on this a ettx for the project?
 
 
+Ми можемо розробити процедуру, яка б передбачала використання простих та доступних матеріалів/джерел світла та давала можливість перевірити відгук Dr. Vida в умовах реального використання. Або, якщо конструкція приладу це передбачає, дозволяла студентам налаштувати його.
+Можливо, ви маєте на увазі необхідність внести додаткову інформацію у текст заявки?
+
+Dear Prof. Capelo,
+
+We could design a procedure using simple and accessible materials or light sources, enabling Dr. Vida’s feedback to be tested under real-world conditions. If the device design permits, students could also adjust its parameters. Perhaps you meant that this point should be included as additional information in the application text?
+
+Best regards,
+Oleh Olikh
