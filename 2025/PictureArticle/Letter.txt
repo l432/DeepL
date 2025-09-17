@@ -1,0 +1,14 @@
+Dear Prof. Eddy Simoen,
+
+Thank you for the information regarding the Focus Collection on Defects in Semiconductors. This appears to be a particularly compelling issue.
+
+We want to propose for consideration the manuscript titled "Computer Vision–Based Method for Quantifying Iron-Related Defects in Silicon Solar Cells" by Oleg Olikh and Oleksii Zavhorodnii, as a potential contribution to this collection.
+
+The study explores the application of pretrained computer vision models to the analysis of images obtained via wavelet transformation of short-circuit current transients in silicon solar cells, following the dissociation of iron–boron pairs. The approach is essentially based on transfer learning and aims to estimate the concentration of iron-related defects.
+
+We hope that this work will be of interest to the readership of Semiconductor Science and Technology.
+
+Sincerely,
+Oleg Olikh
+Head of the General Physics Department
+Taras Shevchenko National University of Kyiv, Ukraine
