@@ -1,0 +1,101 @@
+A1
+
+@report{IEA2024Renewables,
+  title        = {Renewables 2024},
+  author       = {{International Energy Agency}},
+  year         = {2024},
+  institution  = {IEA},
+  address      = {Paris},
+  url          = {https://www.iea.org/reports/renewables-2024},
+  note         = {Licence: CC BY 4.0}
+}
+
+A2
+@article{OSAMA2025,
+title = {Effect of electrical operating conditions on thermal behavior of PV modules: Numerical and experimental analysis},
+journal = {Solar Energy Materials and Solar Cells},
+volume = {287},
+pages = {113625},
+year = {2025},
+doi = {10.1016/j.solmat.2025.113625},
+}
+
+A3
+@online{Prometheus2025,
+  title     = {Solar generation grew by 30\% in 2024, says IEA},
+  author    = {{Prometheus Institute}},
+  year      = {2025},
+  month     = feb,
+  day       = {23},
+  url       = {https://prometheus.org/2025/02/23/solar-generation-grew-by-30-in-2024-says-iea/},
+  note      = {Accessed: 2025-09-30}
+}
+
+A4
+
+@report{Fischer2025ITRPV,
+  author       = {M. Fischer and M. Woodhouse and T. Brammer and B. Puzant},
+  title        = {International Technology Roadmap for Photovoltaic (ITRPV)},
+  edition      = {Sixteenth edition},
+  year         = {2025},
+  institution  = {VDMA e. V.},
+  address      = {Frankfurt am Main, Germany}
+}
+
+A5
+@article{THOME2025,
+title = {Light and elevated temperature induced degradation in gallium-doped silicon: A complete parametric description},
+journal = {Solar Energy Materials and Solar Cells},
+volume = {293},
+pages = {113854},
+year = {2025},
+author = {Fabian T. Thome and Elvin Garashli and Wolfram Kwapil and Florian Schindler and Martin C. Schubert},
+doi = {10.1016/j.solmat.2025.113854},
+}
+
+SciRep_14_15170
+@Article{Jia2024,
+author={Jia, Yanfei
+and Chen, Guangda
+and Zhao, Liquan},
+title={Defect detection of photovoltaic modules based on improved VarifocalNet},
+journal={Scientific Reports},
+year={2024},
+month={Jul},
+volume={14},
+number={1},
+pages={15170},
+doi={10.1038/s41598-024-66234-3},
+}
+
+@article{MAHDAVIPOUR,
+title = {Defect inspection of photovoltaic solar modules using aerial electroluminescence (EL): A review},
+journal = {Solar Energy Materials and Solar Cells},
+volume = {278},
+pages = {113210},
+year = {2024},
+doi = {10.1016/j.solmat.2024.113210},
+author = {Mahdavipour, Zeinab},
+}
+
+@article{LI2021,
+title = {Application of Artificial Neural Networks to photovoltaic fault detection and diagnosis: A review},
+journal = {Renewable and Sustainable Energy Reviews},
+volume = {138},
+pages = {110512},
+year = {2021},
+issn = {1364-0321},
+doi = {10.1016/j.rser.2020.110512},
+author = {B. Li and C. Delpha and D. Diallo and A. Migan-Dubois},
+}
+
+@article{OLIKH2025SE,
+title = {Determination the iron concentration in silicon solar cells using photovoltaic parameters and machine learning},
+journal = {Solar Energy},
+volume = {300},
+pages = {113754},
+year = {2025},
+doi = {10.1016/j.solener.2025.113754},
+author = {Oleg Olikh and Oleksii Zavhorodnii},
+}
+
