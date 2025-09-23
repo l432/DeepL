@@ -89,7 +89,7 @@ doi = {10.1016/j.rser.2020.110512},
 author = {B. Li and C. Delpha and D. Diallo and A. Migan-Dubois},
 }
 
-@article{OLIKH2025SE,
+@article{Olikh2025SE,
 title = {Determination the iron concentration in silicon solar cells using photovoltaic parameters and machine learning},
 journal = {Solar Energy},
 volume = {300},
@@ -98,4 +98,18 @@ year = {2025},
 doi = {10.1016/j.solener.2025.113754},
 author = {Oleg Olikh and Oleksii Zavhorodnii},
 }
+
+@Article{Kaya2019,
+author={Kaya, Mine
+and Hajimirza, Shima},
+title={Using a Novel Transfer Learning Method for Designing Thin Film Solar Cells with Enhanced Quantum Efficiencies},
+journal={Scientific Reports},
+year={2019},
+month={Mar},
+volume={9},
+number={1},
+pages={5034},
+doi={10.1038/s41598-019-41316-9},
+}
+
 

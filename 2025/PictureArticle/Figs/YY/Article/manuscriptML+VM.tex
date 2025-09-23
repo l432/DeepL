@@ -1,0 +1,303 @@
+%%
+%% Copyright 2019-2021 Elsevier Ltd
+%%
+%% This file is part of the 'CAS Bundle'.
+%% --------------------------------------
+%%
+%% It may be distributed under the conditions of the LaTeX Project Public
+%% License, either version 1.2 of this license or (at your option) any
+%% later version.  The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.2 or later is part of all distributions of LaTeX
+%% version 1999/12/01 or later.
+%%
+%% The list of all files belonging to the 'CAS Bundle' is
+%% given in the file `manifest.txt'.
+%%
+%% Template article for cas-sc documentclass for
+%% single column output.
+
+\documentclass[a4paper,fleqn]{cas-sc}
+
+% If the frontmatter runs over more than one page
+% use the longmktitle option.
+
+%\documentclass[a4paper,fleqn,longmktitle]{cas-sc}
+
+\usepackage[numbers]{natbib}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{caption}
+\usepackage{geometry}
+
+%\usepackage[authoryear]{natbib}
+%\usepackage[authoryear,longnamesfirst]{natbib}
+%%%Author macros
+\def\tsc#1{\csdef{#1}{\textsc{\lowercase{#1}}\xspace}}
+\tsc{WGM}
+\tsc{QE}
+%%%
+
+% Uncomment and use as if needed
+%\newtheorem{theorem}{Theorem}
+%\newtheorem{lemma}[theorem]{Lemma}
+%\newdefinition{rmk}{Remark}
+%\newproof{pf}{Proof}
+%\newproof{pot}{Proof of Theorem \ref{thm}}
+\newcolumntype{Z}[1]{>{\centering\arraybackslash}m{#1}}
+
+\begin{document}
+\let\WriteBookmarks\relax
+\def\floatpagepagefraction{1}
+\def\textpagefraction{.001}
+
+% Short title
+\shorttitle{Iron quantification in silicon solar cell by machine learning and visual models}
+
+% Short author
+\shortauthors{O.Olikh, O.Zavhorodnii}
+
+% Main title of the paper
+\title [mode = title]{Recent developments in analytical and theoretical methods for defect studies in semiconductors}
+
+% Title footnote mark
+% eg: \tnotemark[1]
+%\tnotemark[<tnote number>]
+
+% Title footnote 1.
+% eg: \tnotetext[1]{Title footnote text}
+%\tnotetext[<tnote number>]{<tnote text>}
+
+% First author
+%
+% Options: Use if required
+% eg: \author[1,3]{Author Name}[type=editor,
+%       style=chinese,
+%       auid=000,
+%       bioid=1,
+%       prefix=Sir,
+%       orcid=0000-0000-0000-0000,
+%       facebook=<facebook id>,
+%       twitter=<twitter id>,
+%       linkedin=<linkedin id>,
+%       gplus=<gplus id>]
+
+%\author[1,3]{Oleg Olikh}[type=Co-ordinator,
+%       style=chinese,
+%       auid=000,
+%       bioid=1,
+%       prefix=Dr.,
+%       orcid=0000-0003-0633-5429,
+%%       facebook=<facebook id>,
+%%       twitter=<twitter id>,
+%%       linkedin=<linkedin id>,
+%       gplus=<gplus id>]
+\author{Oleg Olikh}[
+%       type=Co-ordinator,
+%       style=chinese,
+%       auid=000,
+%       bioid=1,
+%       prefix=Dr.,
+       orcid=0000-0003-0633-5429
+       % ,
+%       facebook=<facebook id>,
+%       twitter=<twitter id>,
+%       linkedin=<linkedin id>,
+%       gplus=<gplus id>
+       ]
+
+% Corresponding author indication
+\cormark[1]
+
+% Footnote of the first author
+%\fnmark[1]
+
+% Email id of the first author
+\ead{olegolikh@knu.ua}
+
+% URL of the first author
+%\ead[url]{https://gen.phys.knu.ua/280-olikh/}
+
+% Credit authorship
+% eg: \credit{Conceptualization of this study, Methodology, Software}
+%\credit{<Credit authorship details>}
+
+% Address/affiliation
+\affiliation{organization={Taras Shevchenko National University of Kyiv},
+            addressline={64/13, Volodymyrska Street},
+            city={Kyiv},
+%          citysep={}, % Uncomment if no comma needed between city and postcode
+            postcode={01601},
+ %           state={},
+            country={Ukraine}}
+
+%\affiliation[<aff no>]{organization={Taras Shevchenko National University of Kyiv, Faculty of Physics},
+%            addressline={ave Glushkov 2},
+%            city={Kyiv},
+%%          citysep={}, % Uncomment if no comma needed between city and postcode
+%            postcode={03022},
+%            state={},
+%            country={Ukraine}}
+
+%\author[1,3]{Zavhorodnii Oleksii}[type=editor,
+%       style=chinese,
+%       auid=000,
+%       bioid=1,
+%%       prefix=Mr,
+%       orcid=0000-0001-8080-7661,
+%%       facebook=<facebook id>,
+%%       twitter=<twitter id>,
+%%       linkedin=<linkedin id>,
+%       gplus=<gplus id>]
+
+\author{Oleksii Zavhorodnii}[
+       orcid=0000-0001-8080-7661]
+
+% Footnote of the second author
+%\fnmark[2]
+
+% Email id of the second author
+\ead{nevermor464@gmail.com}
+
+% URL of the second author
+%\ead[url]{https://gen.phys.univ.kiev.ua/}
+
+% Credit authorship
+%\credit{}
+
+% Address/affiliation
+%\affiliation[<aff no>]{organization={Taras Shevchenko National University of Kyiv, Faculty of Physics},
+%            addressline={ave Glushkov 2},
+%            city={Kyiv},
+%%          citysep={}, % Uncomment if no comma needed between city and postcode
+%            postcode={03022},
+%            state={},
+%            country={Ukraine}}
+
+% Corresponding author text
+%\cortext[1]{Corresponding author}
+
+% Footnote text
+%\fntext[1]{}
+
+% For a title note without a number/mark
+%\nonumnote{}
+
+% Here goes the abstract
+\begin{abstract}
+abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract 
+\end{abstract}
+
+
+% Use if graphical abstract is present
+%\begin{graphicalabstract}
+%\includegraphics{}
+%\end{graphicalabstract}
+
+% Research highlights
+\begin{highlights}
+\item 1. highlights.
+\item 2. highlights.
+\item 3. highlights.
+\item 4. highlights.
+\end{highlights}
+
+
+% Keywords
+% Each keyword is seperated by \sep
+\begin{keywords}
+key key key key key key key key 
+\end{keywords}
+
+\maketitle
+
+% Main text
+\section{Introduction}%\label{}
+\par
+Introduction Introduction Introduction Introduction Introduction Introduction Introduction Introduction Introduction Introduction Introduction Introduction Introduction Introduction Introduction Introduction Introduction Introduction Introduction Introduction Introduction Introduction Introduction Introduction Introduction Introduction Introduction Introduction Introduction Introduction Introduction Introduction Introduction Introduction Introduction 
+\section{Methodology}
+\par
+
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+\begin{table}[]
+\caption{Summary of used pretrained CNN models and feature extraction variants}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+Base model                      & Model type                         & Feature processing & Output dimension & Model Label \\ \hline
+\multirow{3}{*}{EfficientNetB7} & Classifier                         & None               & 1000             & ENB7:CL     \\ \cline{2-5} 
+                                & \multirow{2}{*}{Feature extractor} & None               & 2560             & ENB7:FE     \\ \cline{3-5} 
+                                &                                    & PCA                & 39               & ENB7:FE:P   \\ \hline
+\multirow{3}{*}{MobileNetV2}    & Classifier                         & None               & 1000             & MNV2:CL     \\ \cline{2-5} 
+                                & \multirow{2}{*}{Feature extractor} & None               & 1280             & MNV2:FE     \\ \cline{3-5} 
+                                &                                    & PCA                & 124              & MNV2:FE:P   \\ \hline
+\multirow{3}{*}{NASNetLarge}    & \multirow{2}{*}{Classifier}        & None               & 1000             & NAS:CL      \\ \cline{3-5} 
+                                &                                    & PCA                & 30               & NAS:CL:P    \\ \cline{2-5} 
+                                & Feature extractor                  & None               & 4032             & NAS:FE      \\ \hline
+\multirow{2}{*}{ResNet152V2}    & Classifier                         & None               & 1000             & R152:CL     \\ \cline{2-5} 
+                                & Feature extractor                  & None               & 2048             & R152:FE     \\ \hline
+\multirow{2}{*}{Xception}       & Classifier                         & None               & 1000             & XCP:CL      \\ \cline{2-5} 
+                                & Feature extractor                  & None               & 2048             & XCP:FE      \\ \hline
+\multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}YOLOv4 \\ (CSPDarknet53)\end{tabular}} &
+  \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Feature extractor \\ (raw, top layer)\end{tabular}} &
+  None &
+  86528 &
+  YL:FE1 \\ \cline{3-5} 
+                                &                                    & PCA                & 137              & YL:FE1:P    \\ \hline
+\multirow{4}{*}{\begin{tabular}[c]{@{}c@{}}CSPDarknet53 \\ (YOLO backbone)\end{tabular}} &
+  \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Feature extractor \\ (raw, top \& penultimate layers)\end{tabular}} &
+  None &
+  433640 &
+  YL:FE2 \\ \cline{3-5} 
+                                &                                    & PCA                & 142              & YL:FE2:P    \\ \cline{2-5} 
+ &
+  \begin{tabular}[c]{@{}c@{}}Feature extractor \\ (pooled, top layer)\end{tabular} &
+  None &
+  512 &
+  YL:FP1 \\ \cline{2-5} 
+ &
+  \begin{tabular}[c]{@{}c@{}}Feature extractor \\ (pooled, top \& penultimate layers)\end{tabular} &
+  None &
+  1024 &
+  YL:FP2 \\ \hline
+\end{tabular}
+\end{table}
+
+
+\section{Conclusion}
+\par
+Conclusion Conclusion Conclusion Conclusion Conclusion Conclusion Conclusion Conclusion Conclusion Conclusion Conclusion Conclusion Conclusion Conclusion Conclusion Conclusion Conclusion Conclusion Conclusion Conclusion Conclusion Conclusion Conclusion Conclusion Conclusion Conclusion Conclusion Conclusion Conclusion Conclusion Conclusion Conclusion Conclusion Conclusion Conclusion Conclusion Conclusion Conclusion Conclusion Conclusion Conclusion Conclusion Conclusion Conclusion Conclusion Conclusion Conclusion Conclusion Conclusion Conclusion Conclusion Conclusion Conclusion Conclusion Conclusion Conclusion Conclusion Conclusion Conclusion 
+\section*{Acknowledgments}
+Acknowledgments Acknowledgments Acknowledgments Acknowledgments Acknowledgments Acknowledgments Acknowledgments Acknowledgments Acknowledgments Acknowledgments Acknowledgments Acknowledgments Acknowledgments Acknowledgments Acknowledgments Acknowledgments Acknowledgments Acknowledgments Acknowledgments Acknowledgments Acknowledgments Acknowledgments Acknowledgments Acknowledgments Acknowledgments Acknowledgments Acknowledgments Acknowledgments Acknowledgments Acknowledgments Acknowledgments Acknowledgments Acknowledgments Acknowledgments Acknowledgments Acknowledgments Acknowledgments Acknowledgments Acknowledgments Acknowledgments 
+\section*{Supplementary data}\label{SuplData}
+Supplementary data to this article can be found online at
+%\url{http://surl.li/szpkwz}
+\url{http://surl.li/qneich}
+%https://www.mediafire.com/file/y2zpqsb33skllnm/SupplementaryMaterial.pdf/file
+
+\section*{Data availability}
+Data will be made available on request.
+
+
+% To print the credit authorship contribution details
+%\printcredits
+
+%% Loading bibliography style file
+\bibliographystyle{model1-num-names}
+
+%\bibliographystyle{cas-model2-names}
+
+% Loading bibliography database
+\bibliography{olikh}
+
+
+
+\end{document}
+
+%В реченні "" заміни, будь-ласка, "" для підвищення clarity
+%В реченні "" заміни, будь-ласка, "" для підвищення conciseness
+%В реченні "" заміни, будь-ласка, "" для підвищення  sensitivity
+
