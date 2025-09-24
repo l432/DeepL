@@ -112,4 +112,18 @@ pages={5034},
 doi={10.1038/s41598-019-41316-9},
 }
 
+@Article{Jia2024,
+author={Jia, Yanfei
+and Chen, Guangda
+and Zhao, Liquan},
+title={Defect detection of photovoltaic modules based on improved VarifocalNet},
+journal={Scientific Reports},
+year={2024},
+month={Jul},
+volume={14},
+number={1},
+pages={15170},
+doi={10.1038/s41598-024-66234-3},
+}
+
 
