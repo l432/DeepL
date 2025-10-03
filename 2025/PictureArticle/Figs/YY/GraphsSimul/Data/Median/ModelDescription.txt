@@ -1,0 +1,352 @@
+Rf1p360e15EfC
+Model type = RF
+#Trees = 750
+Max Depth = 35
+Min Samples Split = 3
+Min Samples Leaf = 2
+Max Features = 0.20
+Bootstrap = False
+
+Gb1p360e15EfC
+Model type = GB
+#Trees = 750
+Max Depth = 20
+Min Samples Split = 7
+Min Samples Leaf = 11
+Max Features = 0.10
+Loss function = squared_error
+Learning Rate = 3.3516e-02
+
+Rf1p360e15EfP
+Model type = RF
+#Trees = 900
+Max Depth = 40
+Min Samples Split = 4
+Min Samples Leaf = 2
+Max Features = 0.20
+Bootstrap = False
+
+Gb1p360e15EfP
+Model type = GB
+#Trees = 750
+Max Depth = 50
+Min Samples Split = 6
+Min Samples Leaf = 9
+Max Features = 0.30
+Loss function = squared_error
+Learning Rate = 4.1588e-02
+
+Rf1p360e15MbC
+Model type = RF
+#Trees = 450
+Max Depth = 20
+Min Samples Split = 4
+Min Samples Leaf = 1
+Max Features = 0.10
+Bootstrap = False
+
+Gb1p360e15MbC
+Model type = GB
+#Trees = 1100
+Max Depth = 40
+Min Samples Split = 10
+Min Samples Leaf = 3
+Max Features = sqrt
+Loss function = squared_error
+Learning Rate = 1.0158e-02
+
+Rf1p360e15MbP
+Model type = RF
+#Trees = 460
+Max Depth = 50
+Min Samples Split = 3
+Min Samples Leaf = 1
+Max Features = 0.05
+Bootstrap = False
+
+Gb1p360e15MbP
+Model type = GB
+#Trees = 890
+Max Depth = 50
+Min Samples Split = 12
+Min Samples Leaf = 2
+Max Features = sqrt
+Loss function = squared_error
+Learning Rate = 1.4190e-02
+
+Rf1p360e15NNC
+Model type = RF
+#Trees = 395
+Max Depth = 59
+Min Samples Split = 2
+Min Samples Leaf = 1
+Max Features = 0.20
+Bootstrap = False
+
+Gb1p360e15NNC
+Model type = GB
+#Trees = 850
+Max Depth = 70
+Min Samples Split = 13
+Min Samples Leaf = 15
+Max Features = 0.30
+Loss function = squared_error
+Learning Rate = 4.8281e-02
+
+Rf1p360e15NNP
+Model type = RF
+#Trees = 750
+Max Depth = 10
+Min Samples Split = 2
+Min Samples Leaf = 1
+Max Features = 0.10
+Bootstrap = False
+
+Gb1p360e15NNP
+Model type = GB
+#Trees = 650
+Max Depth = 67
+Min Samples Split = 5
+Min Samples Leaf = 3
+Max Features = 0.10
+Loss function = squared_error
+Learning Rate = 1.2615e-02
+
+Rf1p360e15RsC
+Model type = RF
+#Trees = 640
+Max Depth = 40
+Min Samples Split = 4
+Min Samples Leaf = 2
+Max Features = 0.40
+Bootstrap = False
+
+Gb1p360e15RsC
+Model type = GB
+#Trees = 700
+Max Depth = 55
+Min Samples Split = 8
+Min Samples Leaf = 1
+Max Features = 0.40
+Loss function = squared_error
+Learning Rate = 1.0770e-01
+
+Rf1p360e15RsP
+Model type = RF
+#Trees = 367
+Max Depth = 38
+Min Samples Split = 2
+Min Samples Leaf = 1
+Max Features = sqrt
+Bootstrap = False
+
+Gb1p360e15RsP
+Model type = GB
+#Trees = 640
+Max Depth = 85
+Min Samples Split = 3
+Min Samples Leaf = 7
+Max Features = sqrt
+Loss function = squared_error
+Learning Rate = 2.2589e-02
+
+Rf1p360e15XcC
+Model type = RF
+#Trees = 640
+Max Depth = 90
+Min Samples Split = 2
+Min Samples Leaf = 1
+Max Features = 0.20
+Bootstrap = False
+
+Gb1p360e15XcC
+Model type = GB
+#Trees = 470
+Max Depth = 25
+Min Samples Split = 2
+Min Samples Leaf = 6
+Max Features = sqrt
+Loss function = squared_error
+Learning Rate = 5.2412e-02
+
+Rf1p360e15XcP
+Model type = RF
+#Trees = 820
+Max Depth = 48
+Min Samples Split = 4
+Min Samples Leaf = 1
+Max Features = 0.10
+Bootstrap = False
+
+Gb1p360e15XcP
+Model type = GB
+#Trees = 760
+Max Depth = 75
+Min Samples Split = 10
+Min Samples Leaf = 4
+Max Features = 0.10
+Loss function = squared_error
+Learning Rate = 2.9339e-02
+
+Rf1p360e15YOL
+Model type = RF
+#Trees = 960
+Max Depth = 75
+Min Samples Split = 4
+Min Samples Leaf = 1
+Max Features = 0.40
+Bootstrap = False
+
+Gb1p360e15YOL
+Model type = GB
+#Trees = 1160
+Max Depth = 75
+Min Samples Split = 2
+Min Samples Leaf = 8
+Max Features = 0.10
+Loss function = squared_error
+Learning Rate = 3.9209e-02
+
+Rf1p360e15YOL2
+Model type = RF
+#Trees = 650
+Max Depth = 70
+Min Samples Split = 2
+Min Samples Leaf = 1
+Max Features = 0.20
+Bootstrap = False
+
+Gb1p360e15YOL2
+Model type = GB
+#Trees = 900
+Max Depth = 54
+Min Samples Split = 3
+Min Samples Leaf = 6
+Max Features = 0.20
+Loss function = squared_error
+Learning Rate = 2.3085e-02
+
+Gb1p360e15YOL
+Model type = GB
+#Trees = 1160
+Max Depth = 75
+Min Samples Split = 2
+Min Samples Leaf = 8
+Max Features = 0.10
+Loss function = squared_error
+Learning Rate = 3.9209e-02
+
+Rf1p360e15EfPp
+Model type = RF
+#Trees = 460
+Max Depth = 54
+Min Samples Split = 4
+Min Samples Leaf = 1
+Max Features = 1.00
+Bootstrap = True
+
+Gb1p360e15EfPp
+Model type = GB
+#Trees = 680
+Max Depth = 25
+Min Samples Split = 4
+Min Samples Leaf = 15
+Max Features = 1.00
+Loss function = squared_error
+Learning Rate = 3.9557e-02
+
+Rf1p360e15YOfl2p
+Model type = RF
+#Trees = 475
+Max Depth = 45
+Min Samples Split = 3
+Min Samples Leaf = 1
+Max Features = 0.50
+Bootstrap = False
+
+Gb1p360e15YOfl2p
+Model type = GB
+#Trees = 750
+Max Depth = 55
+Min Samples Split = 4
+Min Samples Leaf = 7
+Max Features = 0.40
+Loss function = squared_error
+Learning Rate = 1.9249e-02
+
+Rf1p360e15YOflp
+Model type = RF
+#Trees = 425
+Max Depth = 45
+Min Samples Split = 10
+Min Samples Leaf = 1
+Max Features = 0.50
+Bootstrap = False
+
+Gb1p360e15YOflp
+Model type = GB
+#Trees = 850
+Max Depth = 55
+Min Samples Split = 2
+Min Samples Leaf = 10
+Max Features = 0.70
+Loss function = squared_error
+Learning Rate = 1.2111e-02
+
+Rf1p360e15MbPp
+Model type = RF
+#Trees = 500
+Max Depth = 85
+Min Samples Split = 5
+Min Samples Leaf = 3
+Max Features = 0.50
+Bootstrap = False
+
+Gb1p360e15MbPp
+Model type = GB
+#Trees = 575
+Max Depth = 60
+Min Samples Split = 4
+Min Samples Leaf = 12
+Max Features = 0.60
+Loss function = squared_error
+Learning Rate = 2.8288e-02
+
+Rf1p360e15NNCp
+Model type = RF
+#Trees = 1175
+Max Depth = 70
+Min Samples Split = 2
+Min Samples Leaf = 1
+Max Features = 0.40
+Bootstrap = False
+
+Gb1p360e15NNCp
+Model type = GB
+#Trees = 675
+Max Depth = 80
+Min Samples Split = 11
+Min Samples Leaf = 13
+Max Features = 0.40
+Loss function = squared_error
+Learning Rate = 3.8264e-02
+
+Rf1p360e15YOflp
+Model type = RF
+#Trees = 425
+Max Depth = 45
+Min Samples Split = 10
+Min Samples Leaf = 1
+Max Features = 0.50
+Bootstrap = False
+
+Gb1p360e15YOflp
+Model type = GB
+#Trees = 850
+Max Depth = 55
+Min Samples Split = 2
+Min Samples Leaf = 10
+Max Features = 0.70
+Loss function = squared_error
+Learning Rate = 1.2111e-02
+
