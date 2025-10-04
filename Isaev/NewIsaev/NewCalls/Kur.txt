@@ -1,0 +1,11 @@
+Based on our expertise, we are particularly interested in the following topics:
+- Novel approaches towards next-generation battery concepts, leveraging the enabling role of innovative advanced materials (BATT4EU and IAM4EU Partnerships)
+- New advanced materials and production processes Ц reducing dependencies on Critical and Strategic Raw Materials (IA) (Innovative Advanced Materials for the EU, Processes4Planet partnerships)
+- Accelerating the discovery of chemicals and advanced materials through artificial intelligence and digitalisation (IA) (IAM4EU partnership)
+
+Our group specializes in molecular dynamics simulations to investigate the mechanical and thermal properties of nanostructures and phase-change composites. This expertise can significantly contribute to the proposed calls in the following ways:
+- Next-generation battery materials: We can provide atomic-scale insight into the thermal and mechanical stability and structural integrity of novel electrode materials. MD modelling helps identify degradation pathways and design strategies for improved performance and lifetime.
+- Critical Raw Materials replacement: We can model the thermomechanical and transport behavior of advanced composites or nanostructured substitutes for critical raw materials, thus supporting efforts to reduce EU dependencies.
+- Digitalisation & AI-driven discovery: Our MD simulation data can serve as a training basis for machine learning workflows, accelerating the discovery of new functional materials with tailored mechanical and thermal performance.
+
+÷ього поки достатньо, чи треба б≥льше букв?
