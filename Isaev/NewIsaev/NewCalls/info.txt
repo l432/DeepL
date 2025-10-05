@@ -1,15 +1,35 @@
 Назви колів (12 шт) 
 
 -Novel approaches towards next-generation battery concepts, leveraging the enabling role of innovative advanced materials (BATT4EU and IAM4EU Partnerships)
+
+We have expertise in applying molecular dynamics methods and we can provide atomic-scale insight into the thermal and mechanical stability and structural integrity of novel electrode materials. MD modelling helps identify degradation pathways and design strategies for improved performance and lifetime.
+---------------------
 -Targeting key value chain components for increasing the competitiveness of renewable energy technologies in Europe
+-----------------------------
 - Next generation of renewable energy technologies
+
+We can contribute to this call by employing advanced electrical, optical, and thermal characterisation techniques to assess the performance and durability of emerging semiconductor materials for renewable energy devices. Our expertise in ultrasound-assisted defect engineering offers novel routes to enhance material quality and operational stability. In parallel, we combine molecular-dynamics simulations with machine-learning–based analysis of experimental and field data to support data-driven optimisation and accelerate the development of next-generation renewable energy technologies.
+--------------------------
 -Producing battery-grade materials for electrodes through sustainable processing and refining of raw materials or developing bio-based materials (BATT4EU Partnership)
 -Development of direct recycling processes (BATT4EU Partnership)
 -Delivery of industrial CCUS clusters â€“ Societal Readiness pilot
+-------------------
 -New advanced materials and production processes â€“ reducing dependencies on Critical and Strategic Raw Materials(IA) (Innovative Advanced Materials for the EU, Processes4Planet partnerships)
+
+Our expertise lies in the application of molecular dynamics methods and we can model the thermomechanical and transport behavior of advanced composites or nanostructured substitutes for critical raw materials, thus supporting efforts to reduce EU dependencies.
+--------------------------------------------
+
 -New advanced materials and chemicals â€“ reducing dependencies substances of concern (IA) (and Processes4Planet partnerships)
+------------------------------------------
 -Accelerating the discovery of chemicals and advanced materials through artificial intelligence and digitalisation (IA) (IAM4EU partnership)
+
+We can support this call by providing high-quality experimental datasets on semiconductor structures obtained via advanced electrical, optical, and thermal characterisation methods. Our team applies molecular-dynamics simulations to explore structure–property relationships and integrates these results with machine-learning models to accelerate the identification and optimisation of new functional materials with tailored mechanical and thermal performance.
+
+------------------------------------------
 -Extending the lifetime of crystalline silicon PV modules (EUPI-PV Partnership)
+
+We can contribute to the project by applying advanced electrical and optical diagnostics (I–V, C–V, impedance, photoluminescence, and photoconductivity spectroscopy) to identify and monitor degradation mechanisms in crystalline silicon solar cells and modules. Our experience with ultrasound-assisted defect engineering may help explore new approaches for mitigating defect-related aging processes. In addition, we employ machine-learning models to analyze large experimental datasets and to support the prediction of module lifetime under different operating conditions.
+-----------------------
 -Improving availability of secondary raw materials through recycling (IA)
 - Innovative tools and services to manage and empower energy communities
 
@@ -22,25 +42,59 @@
 
 Sato, Вітаю!
 
-Щиро вдячний Вам за можливість бути залученим до такої цікавої програми, як   .
+Щиро вдячний Вам за можливість бути залученим до такої цікавої програми, як   EU-MACE.
 
 Я розумію що я приймаю не дуже активну участь у її роботі і прошу вибачення за це.
 Головною причиною є те, що провідний напрям програми все-таки трохи далеко від мене: я вчений-дослідник, викладач.
 Проте поставленні завдання на кшталт заповнити інформацію для сайту я цілком виконую.
 
-Ідея про підготовку проєету для програми Горизонт виглядає, як на мене, дуже слушною. Тим більше, що я краще розумі, що саме можна
-роботи в рамках наукового проєкту.
-Я поділився іншорцією про pre-selected calls з низкою колег і тепер надсилаю інтегровану інформацію.
+Ідея про підготовку проєкту для програми Horizon Europe виглядає, як на мене, дуже слушною. Тим більше, що я краще розумію, що саме можна
+робити в рамках наукового проєкту.
+Я поділився інформацією про pre-selected calls з низкою колег і тепер надсилаю інтегровану інформацію.
 Так як колеги представляють декілька напрямів досліджень, то ми здатні зробити внесок у декількох напрямках і тому список вибраних нами calls
 теж не дуже малий. 
 
-Ми маємодосвід у декількох напрямках: застосування методів иолекулярної динаміки, використання моделей машинного навчання для аналізу експериментальних результатів і не тільки,
+Ми маємо досвід у декількох напрямках: застосування методів иолекулярної динаміки, використання моделей машинного навчання для аналізу експериментальних результатів і не тільки,
 методи експериментального дослідження найрізноманітніших електричних та оптичних властивостей напівпровідникових матеріалів та структур 
 (зокрема сонячних елементів), застосування.
 Всі ті expertise  ми намагалися розділити по різним напрямкам, які узагальнені у attached файлі.
 
+---------------------------------
+Dear Sato,
+
+Please accept my warmest greetings.
+
+I am genuinely grateful for the opportunity to be involved in a program as interesting as EU-MACE.
+
+I understand that my participation in the program's activities has not been as active as it could be, and I sincerely apologize for this. The main reason is that the program's core focus is somewhat distant from my primary professional role: I am a researcher and lecturer. However, I am fully committed to completing assigned tasks, such as providing information for the website.
+
+I believe the idea of preparing a project proposal for the Horizon Europe program is highly opportune. Moreover, this aligns much closer with my expertise, as I have a better understanding of what can be accomplished within the framework of a scientific project.
+
+I have shared the information regarding the pre-selected calls with several colleagues and am now sending you the integrated information. Since my colleagues represent multiple research areas, we are capable of contributing to several directions. Consequently, the list of calls we have selected is quite substantial.
+
+Our collective experience covers several key areas:
+
+    Application of molecular dynamics methods.
+
+    Use of machine learning models for the analysis of experimental results and other data.
+
+    Methods for experimental investigation of various electrical and optical properties of semiconductor materials and structures (including solar cells).
 
 
+We have attempted to allocate this expertise across different areas, which are summarized in the attached file.
+
+Thank you for your time and consideration.
+
+Sincerely,
+Oleh Olikh
+
+
+Our primary areas of scientific expertise include experimental studies of semiconductor structures, such as current-voltage, capacitance, and impedance measurements, as well as photoluminescence and  photoconductivity spectroscopies, photoacoustic, and photothermal techniques. In addition, our research focuses on utilizing ultrasound for defect engineering, particularly on dynamic effects induced by ultrasonic loading of semiconductor systems. Application of molecular dynamics methods. Use of machine learning models for the analysis of experimental results and other data. 
+
+Machine learning is also applied for defect characterization.
   
+-------------------------------
 
-На мою думку, причина цього наступна. Мені важко зрозуміти головну ідею
+Extending the lifetime of crystalline silicon PV modules
+
+
