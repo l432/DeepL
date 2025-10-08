@@ -1,0 +1,20 @@
+Base model	Model type	Feature processing	Output dimension	Model Label
+EfficientNetB7	Classifier	None	1000	ENB7:CL
+EfficientNetB7	Feature extractor	None	2560	ENB7:FE
+EfficientNetB7		PCA	39	ENB7:FE:P
+MobileNetV2	Classifier	None	1000	MNV2:CL
+MobileNetV2	Feature extractor	None	1280	MNV2:FE
+MobileNetV2		PCA	124	MNV2:FE:P
+NASNetLarge	Classifier	None	1000	NAS:CL
+NASNetLarge		PCA	30	NAS:CL:P
+NASNetLarge	Feature extractor	None	4032	NAS:FE
+ResNet152V2	Classifier	None	1000	R152:CL
+ResNet152V2	Feature extractor	None	2048	R152:FE
+Xception	Classifier	None	1000	XCP:CL
+Xception	Feature extractor	None	2048	XCP:FE
+YOLOv4 (CSPDarknet53)	Feature extractor (raw, top layer)	None	86528	YL:FE1
+YOLOv4		PCA	137	YL:FE1:P
+YOLOv4	Feature extractor (raw, top & penultimate layers)	None	433640	YL:FE2
+YOLOv4		PCA	142	YL:FE2:P
+YOLOv4	Feature extractor (pooled, top layer)	None	512	YL:FP1
+YOLOv4	Feature extractor (pooled, top & penultimate layers)	None	1024	YL:FP2
