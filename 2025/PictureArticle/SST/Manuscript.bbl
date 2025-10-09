@@ -162,7 +162,7 @@ Li W~C and Tsai D~M 2012 {\em Pattern Recogn.\/} {\bf 45} 742--756
 
 \bibitem{Rosa2024}
 dela Rosa M~E~C, Mateo-Romero H~F, Alonso-Gómez V, Ngungu V~N, Nava R,
-  Aragonés J~I~M, Plaza A~R, Ángel González-Rebollo M, Isaza J~R~F and
+  Aragonés J~I~M, Plaza A~R, González-Rebollo M~A, Isaza J~R~F and
   Cardeñoso-Payo V 2024 {\em Renewable Energies\/} {\bf 2} 27533735241304090
 
 \bibitem{Vinit2020}
@@ -181,5 +181,77 @@ Torrence C and Compo G~P 1998 {\em Bull. Am. Meteorol. Soc.\/} {\bf 79} 61--78
 \bibitem{Ahmad2020}
 Ahmad A, Jin Y, Zhu C, Javed I, Maqsood A and Akram M~W 2020 {\em IET Renew.
   Power Gener.\/} {\bf 14} 2693--2702
+
+\bibitem{SCAPS1}
+Burgelman M, Nollet P and Degrave S 2000 {\em Thin Solid Films\/} {\bf
+  361--362} 527--532 ISSN 0040-6090
+
+\bibitem{MasumMia2025}
+{Masum Mia} M, {Faruk Hossain} M, Rahman M, Badi N, Irfan A and {Ferdous
+  Rahman} M 2025 {\em Materials Science and Engineering: B\/} {\bf 311} 117817
+
+\bibitem{Joshi2024}
+Joshi T~K, Sharma G, Sharma Y~R and Verma A~S 2024 {\em Phys. B Condens.
+  Matter\/} {\bf 682} 415793
+
+\bibitem{Ravidas2024}
+Ravidas B~K, Das A, Agnihotri S~K, Pandey R, Madan J, Hossain M~K, Roy M~K and
+  Samajdar D 2024 {\em Sol. Energ. Mat. Sol.\/} {\bf 267} 112688 ISSN 0927-0248
+
+\bibitem{Liu2024}
+Liu H, Xiang L, Liu Q, Gao P, Zhang Y, Li S and Gao F 2024 {\em IEEE J.
+  Photovolt.\/} {\bf 14} 59--64
+
+\bibitem{You2023}
+You L, Zhang X, Ma Q, Zhu W and Wu J 2023 {\em Phys. Status Solidi A\/} {\bf
+  220} 2300071
+
+\bibitem{SCAPSDefect3}
+Abdulmalik M and Danladi E 2023 {\em Semiconductor Physics, Quantum Electronics
+  \& Optoelectronics\/} {\bf 26} 321--331
+
+\bibitem{SCparam2017}
+Paviet-Salomon B, Levrat J, Fakhfouri V, Pelet Y, Rebeaud N, Despeisse M and
+  Ballif C 2017 {\em Prog. Photovoltaics Res. Appl.\/} {\bf 25} 623--635
+
+\bibitem{MurphyJAP2011}
+Murphy J~D, Bothe K, Olmo M, Voronkov V~V and Falster R~J 2011 {\em J. Appl.
+  Phys.\/} {\bf 110} 053713
+
+\bibitem{Wijaranakula}
+Wijaranakula W 1993 {\em J. Etectrochem. Soc.\/} {\bf 140} 275--281
+
+\bibitem{FeBKin2019}
+Khelifati N, Laine H~S, Vähänissi V, Savin H, Bouamama F~Z and Bouhafs D 2019
+  {\em Phys Status Solidi A\/} {\bf 216} 1900253
+
+\bibitem{FeBAssSST2011}
+Tan J, Macdonald D, Rougieux F and Cuevas A 2011 {\em Semicond Sci. Technol.\/}
+  {\bf 26} 055019
+
+\bibitem{Olikh2019SM}
+Olikh O 2019 {\em Superlattices Microstruct.\/} {\bf 136} 106309
+
+\bibitem{OlikhPSSA}
+Olikh O, Datsenko O and Kondratenko S 2024 {\em Phys. Status Solidi A\/} {\bf
+  221} 2400351
+
+\bibitem{Olikh2022:JMatSci}
+Olikh O, Kostylyov V, Vlasiuk V, Korkishko R and Chupryna R 2022 {\em J. Mater.
+  Sci.: Mater. Electron.\/} {\bf 33} 13133--13142
+
+\bibitem{Fadhel2019}
+Fadhel S, Delpha C, Diallo D, Bahri I, Migan A, Trabelsi M and Mimouni M 2019
+  {\em Sol. Energy\/} {\bf 179} 1--10
+
+\bibitem{Gao2020}
+Gao W and Wai R~J 2020 {\em IEEE Access\/} {\bf 8} 159493--159510
+
+\bibitem{Srivastava2023}
+Srivastava Y and Jain A 2023 {\em J. Appl. Phys.\/} {\bf 134} 225101
+
+\bibitem{Minagawa2024}
+Minagawa H, Tezuka T and Tsuchida H 2024 {\em Nucl. Instrum. Methods Phys. Res.
+  Sect. B Beam Interact. Mater. At.\/} {\bf 553} 165383
 
 \end{thebibliography}
