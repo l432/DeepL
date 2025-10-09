@@ -1,0 +1,185 @@
+\providecommand{\newblock}{}
+\begin{thebibliography}{10}
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{{\tt #1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\providecommand{\eprint}[2][]{\url{#2}}
+% Bibliography created with iopart-num v2.1
+% /biblio/bibtex/contrib/iopart-num
+
+\bibitem{IEA2024Renewables}
+{International Energy Agency} 2024 Renewables 2024 Tech. rep. IEA Paris
+  licence: CC BY 4.0
+  \urlprefix\url{https://www.iea.org/reports/renewables-2024}
+
+\bibitem{OSAMA2025}
+Osama A, Tina G~M, Gagliano A, Jimenez-Castillo G and Munoz-Rodríguez F~J 2025
+  {\em Sol. Energ. Mat. Sol.\/} {\bf 287} 113625
+
+\bibitem{Prometheus2025}
+Institute P 2025 Solar generation grew by 30\% in 2024, says {IEA}
+  \url{https://prometheus.org/2025/02/23/solar-generation-grew-by-30-in-2024-says-iea/}
+  accessed: 2025-10-10
+
+\bibitem{Fischer2025ITRPV}
+Fischer M, Woodhouse M, Brammer T and Puzant B 2025 International technology
+  roadmap for photovoltaic (itrpv) Tech. rep. VDMA e. V. Frankfurt am Main,
+  Germany
+
+\bibitem{THOME2025}
+Thome F~T, Garashli E, Kwapil W, Schindler F and Schubert M~C 2025 {\em Sol.
+  Energ. Mat. Sol.\/} {\bf 293} 113854
+
+\bibitem{Jia2024}
+Jia Y, Chen G and Zhao L 2024 {\em Sci. Rep.\/} {\bf 14} 15170
+
+\bibitem{Hijjawi2023}
+Hijjawi U, Lakshminarayana S, Xu T, {Piero Malfense Fierro} G and Rahman M 2023
+  {\em Sol. Energy\/} {\bf 266} 112186 ISSN 0038-092X
+
+\bibitem{Liu2024a}
+Liu Y, Wu Y, Yuan Y and Zhao L 2024 {\em Opt. Express\/} {\bf 32} 17295--17317
+
+\bibitem{Doll2021}
+Doll B, Hepp J, Hoffmann M, Schüler R, Buerhop-Lutz C, Peters I~M, Hauch J~A,
+  Maier A and Brabec C~J 2021 {\em IEEE J. Photovolt.\/} {\bf 11} 1419--1429
+
+\bibitem{Datta2023}
+Datta S, Baul A, Sarker G~C, Sadhu P~K and Hodges D~R 2023 {\em IEEE Access\/}
+  {\bf 11} 77750--77778
+
+\bibitem{Jaiswal2023}
+Jaiswal R, Martínez-Ramón M and Busani T 2023 {\em IEEE J. Photovolt.\/} {\bf
+  13} 2--15
+
+\bibitem{Buratti2024}
+Buratti Y, Javier G~M, Abdullah-Vetter Z, Dwivedi P and Hameiri Z 2024 {\em
+  Renewable Sustainable Energy Rev.\/} {\bf 202} 114617 ISSN 1364-0321
+
+\bibitem{MAHDAVIPOUR}
+Mahdavipour Z 2024 {\em Sol. Energ. Mat. Sol.\/} {\bf 278} 113210
+
+\bibitem{Hopwood2020}
+Hopwood M~W, Gunda T, Seigneur H and Walters J 2020 {\em IEEE Access\/} {\bf 8}
+  161480--161487
+
+\bibitem{Li2021}
+Li B, Delpha C, Diallo D and Migan-Dubois A 2021 {\em Renewable Sustainable
+  Energy Rev.\/} {\bf 138} 110512 ISSN 1364-0321
+
+\bibitem{Liu2021}
+Liu Y, Ding K, Zhang J, Li Y, Yang Z, Zheng W and Chen X 2021 {\em Energy
+  Convers. Manage.\/} {\bf 245} 114603
+
+\bibitem{Wang2024a}
+Wang S, Wright B, Zhu Y, Buratti Y and Hameiri Z 2024 {\em Sol. Energ. Mat.
+  Sol.\/} {\bf 277} 113123
+
+\bibitem{Buratti2022}
+Buratti Y, Dick J, Le~Gia Q and Hameiri Z 2022 {\em ACS Appl. Mater.
+  Interfaces\/} {\bf 14} 48647--48657
+
+\bibitem{Buratti2020a}
+Buratti Y, Le~Gia Q~T, Dick J, Zhu Y and Hameiri Z 2020 {\em npj Computational
+  Materials\/} {\bf 6} 142
+
+\bibitem{Park2022}
+Park S, Lee J, Khan S, Wahab A and Kim M 2022 {\em Sensors\/} {\bf 22} 596
+
+\bibitem{Chia2024}
+Chia J~Y, Thamrongsiripak N, Thongphanit S and Nuntawong N 2024 {\em J. Appl.
+  Phys.\/} {\bf 135} 025701
+
+\bibitem{Olikh2022PPV}
+Olikh O, Lozitsky O and Zavhorodnii O 2022 {\em Prog. Photovoltaics Res.
+  Appl.\/} {\bf 30} 648--660
+
+\bibitem{Olikh2025SE}
+Olikh O and Zavhorodnii O 2025 {\em Sol. Energy\/} {\bf 300} 113754
+
+\bibitem{Olikh2025MSEB}
+Olikh O and Zavhorodnii O 2025 {\em Materials Science and Engineering: B\/}
+  {\bf 317} 118192
+
+\bibitem{Wang2024b}
+Wang S, Sankaran S and Perdikaris P 2024 {\em Comput. Methods Appl. Mech.
+  Eng.\/} {\bf 421} 116813
+
+\bibitem{Li2025}
+Li W~K and Zhang Y~T 2025 {\em J. Appl. Phys.\/} {\bf 137} 203304
+
+\bibitem{Kaya2019}
+Kaya M and Hajimirza S 2019 {\em Sci. Rep.\/} {\bf 9} 5034
+
+\bibitem{Kim2023}
+Kim Q, Lee S, Ma A, Kim J, Noh H~K, Chang K~B, Cheon W, Yi S, Jeong J, Kim B,
+  Kim Y~S and Kim D~S 2023 {\em Solid-State Electron.\/} {\bf 201} 108568
+
+\bibitem{Buonassisi2006}
+Buonassisi T, Istratov A~A, Pickett M~D, Heuer M, Kalejs J~P, Hahn G, Marcus
+  M~A, Lai B, Cai Z and Heald S~M 2006 {\em Prog. Photovolt.: Res. Appl.\/}
+  {\bf 14} 513--531 ISSN 1062-7995
+
+\bibitem{IronSC}
+Schubert M, Padilla M, Michl B, Mundt L, Giesecke J, Hohl-Ebinger J, Benick J,
+  Warta W, Tajima M and Ogura A 2015 {\em Sol. Energy Mater. Sol. Cells\/} {\bf
+  138} 96--101
+
+\bibitem{Kimerling1983}
+Kimerling L and Benton J 1983 {\em Physica B+C\/} {\bf 116} 297--300
+
+\bibitem{FeBAssJAP2014}
+M\"{o}ller C, Bartel T, Gibaja F and Lauer K 2014 {\em J. Appl. Phys.\/} {\bf
+  116} 024503
+
+\bibitem{Olikh2021JAP}
+Olikh O, Kostylyov V, Vlasiuk V, Korkishko R, Olikh Y and Chupryna R 2021 {\em
+  J. Appl. Phys.\/} {\bf 130} 235703
+
+\bibitem{Li2024a}
+Li Z, Zhang S, Qu C, Zhang Z and Sun F 2024 {\em PLOS ONE\/} {\bf 19} 1--16
+
+\bibitem{Otamendi2021}
+Otamendi U, Martinez I, Quartulli M, Olaizola I~G, Viles E and Cambarau W 2021
+  {\em Sol. Energy\/} {\bf 220} 914--926
+
+\bibitem{Chen2022}
+Chen X, Karin T and Jain A 2022 {\em Sol. Energy\/} {\bf 242} 20--29
+
+\bibitem{AlOtum2024}
+{Munawer Al-Otum} H 2024 {\em Sol. Energy\/} {\bf 278} 112803
+
+\bibitem{Abdelsattar2025}
+Abdelsattar M, Abdelmoety A, Ismeil M~A and Emad-Eldeen A 2025 {\em IEEE
+  Access\/} {\bf 13} 4136--4157
+
+\bibitem{tella2025}
+Tella H, Hussein A, Rehman S, Liu B, Balghonaim A and Mohandes M 2025 {\em Case
+  Studies in Thermal Engineering\/} {\bf 66} 105749
+
+\bibitem{Li2012}
+Li W~C and Tsai D~M 2012 {\em Pattern Recogn.\/} {\bf 45} 742--756
+
+\bibitem{Rosa2024}
+dela Rosa M~E~C, Mateo-Romero H~F, Alonso-Gómez V, Ngungu V~N, Nava R,
+  Aragonés J~I~M, Plaza A~R, Ángel González-Rebollo M, Isaza J~R~F and
+  Cardeñoso-Payo V 2024 {\em Renewable Energies\/} {\bf 2} 27533735241304090
+
+\bibitem{Vinit2020}
+Khanna M, Srinath N~K and Mendiratta J~K 2020 {\em Application of Neural
+  Networks and Lifting Wavelet Transform for Long Term Solar Radiation Power
+  Prediction\/} (Singapore: Springer Singapore) pp 95--105 ISBN
+  978-981-15-3125-5
+
+\bibitem{Krishnan2013}
+Krishnan S~R and Seelamantula C~S 2013 {\em IEEE Trans. Signal Process.\/} {\bf
+  61} 380--391
+
+\bibitem{Torrence1998}
+Torrence C and Compo G~P 1998 {\em Bull. Am. Meteorol. Soc.\/} {\bf 79} 61--78
+
+\bibitem{Ahmad2020}
+Ahmad A, Jin Y, Zhu C, Javed I, Maqsood A and Akram M~W 2020 {\em IET Renew.
+  Power Gener.\/} {\bf 14} 2693--2702
+
+\end{thebibliography}
