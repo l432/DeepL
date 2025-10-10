@@ -202,16 +202,16 @@ Model performance was evaluated using the metrics described in Subsection~\ref{s
 
 To obtain the $I_\mathtt{SC}(t)$ dependencies, $I$-$V$ curve simulations were performed for a silicon $n^+$-$p$-$p^+$ structure
 under monochromatic illumination using SCAPS-1D version 3.3.11.
-The SCAPS-1D software \cite{SCAPS1} is a widely used tool for modeling solar cells 
+The SCAPS-1D software \cite{SCAPS1} is a widely used tool for modeling solar cells
 while accounting for defect states \cite{MasumMia2025, Joshi2024, Ravidas2024, Liu2024, You2023, SCAPSDefect3}.
 $I_\mathtt{SC}$ values were extracted from the simulated $I$-$V$ curves using a standard procedure \cite{SCparam2017}.
 
-During the simulations, the base thickness of the structure was set to 380~$\mu$m, 
+During the simulations, the base thickness of the structure was set to 380~$\mu$m,
 and boron was used as the doping element with a concentration of $N_\mathrm{B} = 1.36 \times 10^{15}$ cm$^{-3}$.
-The temperature was maintained at 340~K, and monochromatic illumination with a wavelength of  940~nm and an intensity of 5~W/m$^{2}$ 
+The temperature was maintained at 340~K, and monochromatic illumination with a wavelength of  940~nm and an intensity of 5~W/m$^{2}$
 was applied, corresponding to the experimental conditions (see Subsection~\ref{subsec:ExpDet}).
 One of the modeling parameters was the total concentration of iron impurity atoms, $N_\mathtt{Fe}$.
-It was assumed that Fe atoms were uniformly distributed throughout the base and $p^+$ layer of the solar cell 
+It was assumed that Fe atoms were uniformly distributed throughout the base and $p^+$ layer of the solar cell
 and could exist either in interstitial positions, with a concentration $N_\mathtt{Fe_i}$, or as FeB pairs, with a concentration $N_\mathtt{FeB}$.
 The time dependence of $N_\mathtt{Fe_i}$ after pair dissociation follows the well-known expression \cite{MurphyJAP2011, Wijaranakula}:
 \begin{equation}
@@ -220,9 +220,9 @@ N_\mathrm{Fe_i}(t)=(N_\mathrm{Fe_i,0}-N_\mathrm{Fe_i,eq})\times
 \exp(-t/\tau_\mathrm{ass})+N_\mathrm{Fe_i,eq}\,,
 \end{equation}
 where
-where $N_\mathrm{Fe_i,0}$ is the concentration of interstitial iron atoms formed due to FeB pair dissosiation, 
+where $N_\mathrm{Fe_i,0}$ is the concentration of interstitial iron atoms formed due to FeB pair dissosiation,
 $N_\mathtt{Fe_i,0} = N_\mathtt{Fe_i}(t=0) = N_\mathtt{Fe}$;
-$N_\mathtt{Fe_i,eq}$ is the portion of interstitial iron atoms that remain unpaired in the equilibrium state 
+$N_\mathtt{Fe_i,eq}$ is the portion of interstitial iron atoms that remain unpaired in the equilibrium state
 $N_\mathtt{Fe_i,eq}=N_\mathtt{Fe_i}(t \rightarrow \infty)$,
 according to \cite{MurphyJAP2011, Wijaranakula}
 \begin{equation}\label{eqFeieq}
@@ -257,19 +257,19 @@ The simulated test dataset consisted of 10 dependencies calculated for 10 $N_\ma
 
 \subsection{Experiment details}\label{subsec:ExpDet}
 
-The proposed method was validated using measurements of $n^+$-$p$-$p^+$ silicon solar cells fabricated on 
+The proposed method was validated using measurements of $n^+$-$p$-$p^+$ silicon solar cells fabricated on
 380~$\mu$m thick $p$-type boron-doped Cz wafers ($N_\mathrm{B}=1.36\times10^{15}$~cm$^{-3}$).
 The $n^+$ (0.7~$\mu$m, 20–30 $\Omega$/$\Box$) and $p^+$ (0.6~$\mu$m, 10–20 $\Omega$/$\Box$)
 layers were formed by phosphorus and boron diffusion, respectively.
 Details of the fabrication procedure are provided elsewhere \cite{Olikh2021JAP}.
 
-Current–voltage curves and $I_\mathtt{SC}$ kinetics were measured with a Keithley 2450 source meter. 
-A 940~nm SN-HPIR940nm-1W LED (intensity 5 W/m$^{2}$) served as a monochromatic light source, 
+Current–voltage curves and $I_\mathtt{SC}$ kinetics were measured with a Keithley 2450 source meter.
+A 940~nm SN-HPIR940nm-1W LED (intensity 5 W/m$^{2}$) served as a monochromatic light source,
 with its output stabilized by a W1209 thermostat and a feedback-controlled power supply.
 The cell temperature was regulated by a thermoelectric cooler with an STS-21 sensor and maintained constant by a PID algorithm in the control software.
 FeB-pair dissociation was induced by intense (about 7000~W/m$^{2}$) halogen-lamp illumination.
 The illumination intervals were selected according to a previous study \cite{OlikhPSSA}.
-The kinetics of the short-circuit current were measured in the dark at 340~K for 3000~s. 
+The kinetics of the short-circuit current were measured in the dark at 340~K for 3000~s.
 According to Eq.~\eref{eqTass}, this interval is sufficient for the complete restoration of the iron–boron pairs to their equilibrium concentration.
 
 
@@ -277,7 +277,7 @@ According to Eq.~\eref{eqTass}, this interval is sufficient for the complete res
 The signal contains some noise because, despite using a thermostat, the LED temperature fluctuated by approximately 0.4~K.
 A Savitzky–Golay filter was applied for smoothing, with the window lengths and filter order selected adaptively ccording to Krishnan and Seelamantula \cite{Krishnan2013}.
 Only current values corresponding to the time points used in the simulations were retained for the wavelet transformation.
-The smoothed curve is shown in \Fref{Fig3}a, 
+The smoothed curve is shown in \Fref{Fig3}a,
 while the remaining panels of the figure display the spectrograms obtained from the raw experimental curve and the processed dependence.
 
 \begin{figure}
@@ -289,47 +289,47 @@ Panels (b) and (c) show the wavelet spectrograms corresponding to the curves wit
 }%
 \end{figure}
 
-The iron concentration $N_\mathtt{Fe}$ was determined using a methodology described in \cite{Olikh2022:JMatSci,Olikh2021JAP}, 
+The iron concentration $N_\mathtt{Fe}$ was determined using a methodology described in \cite{Olikh2022:JMatSci,Olikh2021JAP},
 which is based on fitting the kinetics of the short circuit current following FeB pairs dissociation.
 A total of 28 samples with iron concentrations ranging from $10^{11}$~cm$^{-3}$ to $2\times10^{13}$~cm$^{-3}$ were examined.
 To evaluate models trained on simulated data, the entire experimental dataset was used as the test set.
-In cases where the models were trained using experimental data, 20 randomly selected samples were included in the training set, 
+In cases where the models were trained using experimental data, 20 randomly selected samples were included in the training set,
 while the remaining eight samples were used for testing.
 
 
 
 \subsection{Computer vision models}\label{subsec:CompVisMod}
 
-To extract graphical features from the wavelet spectrograms, several computer vision models available in Keras were employed, 
+To extract graphical features from the wavelet spectrograms, several computer vision models available in Keras were employed,
 namely EfficientNetB7, ResNet152V2, MobileNetV2, Xception, and NASNetLarge.
-Although these models have different architectures, they all belong to the CNN class, are designed for object classification, 
+Although these models have different architectures, they all belong to the CNN class, are designed for object classification,
 and have previously been applied successfully to processing EL images of solar cells \cite{Jia2024, Otamendi2021, Chen2022, Abdelsattar2025, tella2025}.
-Two feature extraction strategies were evaluated for all models: 
-in the first, the class-specific probability distributions (soft labels) were passed to the subsequent stage of the pipeline, 
+Two feature extraction strategies were evaluated for all models:
+in the first, the class-specific probability distributions (soft labels) were passed to the subsequent stage of the pipeline,
 while in the second, the raw feature vectors directly extracted by the computer vision model were utilized.
 
-Furthermore, the CSPDarknet53 model was employed, 
-which serves as the CNN backbone for YOLOv4. 
-Models of this family feature a more sophisticated CNN architecture optimized not for single-object classification 
-but for multi-object detection in images. 
-They are widely used in imaging-based techniques \cite{Liu2024a, Li2024a, Chen2022}. 
+Furthermore, the CSPDarknet53 model was employed,
+which serves as the CNN backbone for YOLOv4.
+Models of this family feature a more sophisticated CNN architecture optimized not for single-object classification
+but for multi-object detection in images.
+They are widely used in imaging-based techniques \cite{Liu2024a, Li2024a, Chen2022}.
 The employed model produces three feature maps, and for subsequent processing, either only the highest-level layer or the two deepest layers were selected.
 
-It is well known that increasing the feature dimensionality does not necessarily enhance the total information variance. 
-To mitigate the impact of redundant data, Principal Component Analysis (PCA) was applied, which constructs new, uncorrelated features (principal components). 
-PCA is a widely used and effective technique in machine learning, particularly for improving performance in Electrical Testing Techniques \cite{Fadhel2019, Gao2020}. 
-In this study, PCA was applied to the training datasets with an explained variance threshold of 99.9\%. 
-In other words, the principal components explaining no less than 99.9\% of the total variance in the original features were selected, 
-thus achieving a substantial reduction in feature dimensionality. 
-This pre-processing procedure was selectively applied to a subset of the computer vision models --- 
+It is well known that increasing the feature dimensionality does not necessarily enhance the total information variance.
+To mitigate the impact of redundant data, Principal Component Analysis (PCA) was applied, which constructs new, uncorrelated features (principal components).
+PCA is a widely used and effective technique in machine learning, particularly for improving performance in Electrical Testing Techniques \cite{Fadhel2019, Gao2020}.
+In this study, PCA was applied to the training datasets with an explained variance threshold of 99.9\%.
+In other words, the principal components explaining no less than 99.9\% of the total variance in the original features were selected,
+thus achieving a substantial reduction in feature dimensionality.
+This pre-processing procedure was selectively applied to a subset of the computer vision models ---
 specifically, those demonstrating good performance on the test sets without PCA --- with the aim of assessing the feasibility and effectiveness of this approach.
 
-Given the remarkably high dimensionality of the features produced by YOLOv4, 
-the feasibility of applying an alternative dimensionality reduction technique was examined. 
-Specifically, global average pooling was applied to each convolutional feature map, 
+Given the remarkably high dimensionality of the features produced by YOLOv4,
+the feasibility of applying an alternative dimensionality reduction technique was examined.
+Specifically, global average pooling was applied to each convolutional feature map,
 replacing the spatial map with its mean value and thereby yielding a single scalar value per channel.
 
-The configurations of the computer vision models used in this study are summarized in \tref{tabUsedMod}. 
+The configurations of the computer vision models used in this study are summarized in \tref{tabUsedMod}.
 The table also lists the notations that are subsequently used to refer to these configurations.
 
 
@@ -340,24 +340,24 @@ The table also lists the notations that are subsequently used to refer to these 
 \item[]
 \begin{tabular}{p{2.5cm}p{4.5cm}ccc}
 \br
-Base model &   Model type &   Feature processing &   Output dimension &   Model Label \\ 
+Base model &   Model type &   Feature processing &   Output dimension &   Model Label \\
 \mr
-EfficientNetB7 & Classifier        & None & 1000 & ENB7:CL   \\ 
-               & Feature extractor & None & 2560 & ENB7:FE   \\ 
-               &                   & PCA  & 39   & ENB7:FE:P \\ 
-MobileNetV2    & Classifier        & None & 1000 & MNV2:CL   \\ 
-               & Feature extractor & None & 1280 & MNV2:FE   \\ 
-               &                   & PCA  & 124  & MNV2:FE:P \\ 
-NASNetLarge    & Classifier        & None & 1000 & NAS:CL    \\ 
-               &                   & PCA  & 30   & NAS:CL:P  \\ 
-               & Feature extractor & None & 4032 & NAS:FE    \\ 
+EfficientNetB7 & Classifier        & None & 1000 & ENB7:CL   \\
+               & Feature extractor & None & 2560 & ENB7:FE   \\
+               &                   & PCA  & 39   & ENB7:FE:P \\
+MobileNetV2    & Classifier        & None & 1000 & MNV2:CL   \\
+               & Feature extractor & None & 1280 & MNV2:FE   \\
+               &                   & PCA  & 124  & MNV2:FE:P \\
+NASNetLarge    & Classifier        & None & 1000 & NAS:CL    \\
+               &                   & PCA  & 30   & NAS:CL:P  \\
+               & Feature extractor & None & 4032 & NAS:FE    \\
 ResNet152V2    & Classifier        & None & 1000 & R152:CL   \\
                & Feature extractor & None & 2048 & R152:FE   \\
-Xception       & Classifier        & None & 1000 & XCP:CL    \\ 
-               & Feature extractor & None & 2048 & XCP:FE    \\ 
-YOLOv4 \newline (CSPDarknet53)&  Feature extractor  \newline (raw, top layer)& None &86528 &  YL:FE1 \\ 
-&&PCA  & 137  & YL:FE1:P  \\ 
-&Feature extractor  \newline (raw, top \& penultimate layers)&None &  433640 &  YL:FE2 \\         
+Xception       & Classifier        & None & 1000 & XCP:CL    \\
+               & Feature extractor & None & 2048 & XCP:FE    \\
+YOLOv4 \newline (CSPDarknet53)&  Feature extractor  \newline (raw, top layer)& None &86528 &  YL:FE1 \\
+&&PCA  & 137  & YL:FE1:P  \\
+&Feature extractor  \newline (raw, top \& penultimate layers)&None &  433640 &  YL:FE2 \\
 &&PCA  & 142  & YL:FE2:P  \\
 &Feature extractor \newline (pooled, top layer)&None &  512 &  YL:FP1 \\
 &Feature extractor \newline (pooled, top \& penultimate layers)& None &  1024 &  YL:FP2 \\
@@ -368,66 +368,192 @@ YOLOv4 \newline (CSPDarknet53)&  Feature extractor  \newline (raw, top layer)& N
 
 \subsection{Regression algorithms}\label{subsec:RegAlg}
 
-Five ML algorithms were employed to develop regression models for predicting iron concentration: 
-Random Forest (RF), Gradient Boosting (GB), eXtreme Gradient Boosting (XGB), Support Vector Regression (SVR), and Deep Neural Network (DNN). 
+Five ML algorithms were employed to develop regression models for predicting iron concentration:
+Random Forest (RF), Gradient Boosting (GB), eXtreme Gradient Boosting (XGB), Support Vector Regression (SVR), and Deep Neural Network (DNN).
 The models were implemented using Python libraries: Keras for DNN, Scikit-learn for RF, GB, and SVR, and XGBoost for XGB.
 
-Each regression model was trained using features obtained from all configurations listed in \tref{tabUsedMod} and subsequently used to make predictions. 
-The only exception involved the uncompressed features extracted by YOLOv4, for which the available computational resources 
+Each regression model was trained using features obtained from all configurations listed in \tref{tabUsedMod} and subsequently used to make predictions.
+The only exception involved the uncompressed features extracted by YOLOv4, for which the available computational resources
 (2.9 GHz AMD Ryzen 7 4800H CPU, 8 GB RAM, GeForce GTX 1650 4 GB) permitted the use of SVR only.
-The target variable of all models was $\log N_\mathtt{Fe}$. 
-Such logarithmic transformation is a standard approach for achieving higher prediction accuracy 
-when the target quantity spans several orders of magnitude \cite{Srivastava2023, Minagawa2024}. 
+The target variable of all models was $\log N_\mathtt{Fe}$.
+Such logarithmic transformation is a standard approach for achieving higher prediction accuracy
+when the target quantity spans several orders of magnitude \cite{Srivastava2023, Minagawa2024}.
 Both input features and target values were normalized to have zero mean and unit standard deviation within the training set.
 
-For each scenario, regression models were optimized to enhance predictive performance. 
-Hyperparameter tuning was performed using the Optuna toolkit, 
-employing the TPE sampler and the Hyperband pruner to ensure efficient selection. 
-The complete list of tuned hyperparameters and their respective search ranges is provided in Tables~S1–S5 (Supplementary Material). 
-Five-fold cross-validation was implemented during model tuning, with 20\% of the training data used as a validation set 
-to evaluate models trained on the remaining 80\%. 
+For each scenario, regression models were optimized to enhance predictive performance.
+Hyperparameter tuning was performed using the Optuna toolkit,
+employing the TPE sampler and the Hyperband pruner to ensure efficient selection.
+The complete list of tuned hyperparameters and their respective search ranges is provided in Tables~S1–S5 (Supplementary Material).
+Five-fold cross-validation was implemented during model tuning, with 20\% of the training data used as a validation set
+to evaluate models trained on the remaining 80\%.
 The resulting optimal hyperparameter combinations are presented in Tables~S6–S10.
 
-Consequently, 87 distinct combinations of computer vision and regression models were investigated. 
-Each combination was subsequently trained and evaluated using both simulated and experimental data. 
-To identify the results for each case, a composite label was employed, derived from the last column of \tref{tabUsedMod} 
+Consequently, 87 distinct combinations of computer vision and regression models were investigated.
+Each combination was subsequently trained and evaluated using both simulated and experimental data.
+To identify the results for each case, a composite label was employed, derived from the last column of \tref{tabUsedMod}
 and the abbreviated name of the regression algorithm.
 
 
 \subsection{Model evaluation}\label{subsec:ModEva}
 
-%We conducted a rigorous assessment of model performance using multiple evaluation metrics to construct a robust regression model.
-%For iron quantification, we used the mean squared error (MSE), mean absolute percentage error (MAPE), median absolute percentage error (MedAPE), and the coefficient of determination (R$^2$), as defined in Eqs.~\eref{eqMSE}-~\eref{eqR2}
-%
-%\begin{equation}\label{eqMSE}
-%  MSE = \frac{1}{N}\displaystyle\sum_{i=1}^{N} (\hat{y_i}-y_i)^2,
-%\end{equation}
-%
-%\begin{equation}\label{eqMAPE}
-%  MAPE = \frac{1}{N}\displaystyle\sum_{i=1}^{N} \frac{|N_\mathrm{Fe,PRED,i}-N_\mathrm{Fe,TRUE,i}|}{N_\mathrm{Fe,TRUE,i}}\times 100 \%\,
-%\end{equation}
-%
-%\begin{equation}\label{eqMedAPE}
-%  MedAPE = median\displaystyle\sum_{i=1}^{N} \frac{|N_\mathrm{Fe,PRED,i}-N_\mathrm{Fe,TRUE,i}|}{N_\mathrm{Fe,TRUE,i}}\times 100 \%\,
-%\end{equation}
-%
-%\begin{equation}\label{eqR2}
-%  R^2 = 1-\frac{\displaystyle\sum_{i=1}^{N} (N_\mathrm{Fe,TRUE,i}-N_\mathrm{Fe,PRED,i})^2}{\displaystyle\sum_{i=1}^{N} (N_\mathrm{Fe,TRUE,i}-\overline{{N_\mathrm{Fe,TRUE,i}}})^2},
-%\end{equation}
-%
-%where $\hat{y_i}$ represents the predicted value for the $i$-th data point, $y_i$ is the known value for the $i$-th data point, and $N$ is the number of samples in the dataset ($N$ = 25 for the simulated training set, 20 for the experimental training set, 10 for the simulated test set, and 28 and 8 for the experimental datasets used to test models trained on the simulated and experimental sets, respectively);
-%$N_\mathrm{Fe,PRED,i}$ is the predicted iron concentration, $N_\mathrm{Fe,TRUE,i}$ is the known value (either the parameter used in the simulation or obtained from experimental iron determination); $N_\mathrm{Fe,TRUE}$ is the mean of the true values in the dataset.
-%
-%
-%We selected MSE as a primary metric for assessing model accuracy and trained the models specifically to minimise it.
-%However, because computing $y_i$ involves normalisation and logarithmic transformation of $N_\mathtt{Fe}$, MSE does not fully reflect the accuracy of iron-contamination estimation.
-%To complement it, we used MAPE, which measures the mean relative error.
-%We also considered MedAPE, which indicates the error threshold below which 50\% of the predictions fall.
-%MedAPE is more robust to individual outliers, which can strongly influence the mean error in small datasets.
-%Finally, we employed $R^2$ to quantify the fraction of variance in the target variable captured by the model, indicating how well the predicted values reproduce the observed data; a value of 1 corresponds to perfect agreement.
+A rigorous assessment of model performance across diverse metrics is essential for constructing a robust regression model. 
+The evaluation metrics for iron quantification were the mean squared error (MSE), 
+mean absolute percentage error (MAPE), 
+median absolute percentage error (MedAPE) and 
+coefficient of determination (R$^2$), as defined in Eqs.~\eref{eqMSE}-\eref{eqR2}.
+\begin{equation}\label{eqMSE}
+  \mathtt{MSE} = \frac{1}{N}\sum_{i=1}^{N} (\hat{y_i}-y_i)^2\,,
+\end{equation}
+\begin{equation}\label{eqMAPE}
+  \mathtt{MAPE} = \frac{1}{N}\sum_{i=1}^{N} \mathtt{MAPE}_i\,,
+\end{equation}
+\begin{equation}\label{eqMAPEi}
+  \mathtt{MAPE}_i = \frac{|N_{\mathrm{Fe,PRED},i}-N_{\mathrm{Fe,TRUE},i}|}{N_{\mathrm{Fe,TRUE},i}}\times 100 \%\,,
+\end{equation}
+\begin{equation}\label{eqMedAPE}
+  \mathtt{MedAPE} = \frac{1}{2} \left[\mathtt{MAPE}_{\lceil\frac{N}{2}\rceil}+\mathtt{MAPE}_{\lfloor\frac{N}{2}+1\rfloor}\right]\,,
+\end{equation}
+\begin{equation}\label{eqR2}
+  R^2 = 1-\frac{\displaystyle\sum_{i=1}^{N} (N_{\mathrm{Fe,TRUE},i}-N_{\mathrm{Fe,PRED},i})^2}{\displaystyle\sum_{i=1}^{N} (N_{\mathrm{Fe,TRUE},i}-\overline{{N_\mathrm{Fe,TRUE}}})^2},
+\end{equation}
+where 
+where $\hat{y_i}$ is the predicted value of the target variable for the $i$-th data point, 
+$y_i$ is the corresponding known value (obtained by logarithmic transformation and normalization of the iron concentration);
+$N$ denotes the number of samples in the dataset 
+($N = 25$ for the simulated training set, 20 for the experimental training set, 
+10 for the simulated test set, 
+and 28 and 8 for the experimental datasets used to test models trained on the simulated and experimental sets, respectively);
+$\mathtt{MAPE}_i$ is the  absolute percentage error for $i$-th data point;
+$N_{\mathrm{Fe,PRED},i}$ is the predicted iron concentration, 
+$N_{\mathrm{Fe,TRUE},i}$ is the known value 
+(either the parameter used in the simulation or obtained from experimental iron determination); 
+$\overline{N_\mathrm{Fe,TRUE}}$ is the mean of the true values in the dataset.
+
+MSE is one of the most widely used metrics for evaluating model accuracy, 
+and the training objective was specifically defined to minimize this quantity. 
+However, since the computation of $y_i$ involves both normalization and a logarithmic transformation of $N_\mathtt{Fe}$,
+the MSE metric alone does not fully reflect the accuracy of the iron concentration estimation. 
+Therefore, the MAPE, which quantifies the mean relative deviation, was also employed. 
+In addition, the MedAPE, representing the error value below which 50\% of the predictions fall, 
+provides a more robust measure against the influence of individual outliers, 
+which can have a particularly large effect on mean-based metrics in smaller datasets. 
+Finally, the $R^2$ was used to quantify the fraction of the variance in the 
+target variable explained by the model, 
+thereby indicating how well the predicted values reproduce the observed data; 
+a value of 1 corresponds to perfect agreement.
+
 
 \section{Results and discussion}\label{sec:Rez}
 \subsection{Simulated data}
+
+\Fref{Fig4} illustrates representative prediction results obtained from models trained on the simulated training dataset. 
+The complete set of results, covering all 87 investigated configurations, is provided in Figure~S1 of the Supplementary Material.
+
+%\begin{figure*}
+%\includegraphics[width=0.24\textwidth]{Fig4a}
+%\includegraphics[width=0.24\textwidth]{Fig4b}
+%\includegraphics[width=0.24\textwidth]{Fig4c}
+%\includegraphics[width=0.24\textwidth]{Fig4d}
+%\includegraphics[width=0.24\textwidth]{Fig4e}
+%\includegraphics[width=0.24\textwidth]{Fig4f}
+%\caption{
+%The workflow of the ML pipeline
+%}\label{Fig4}
+%\end{figure*}
+
+\begin{figure*}
+\includegraphics[width=0.33\textwidth]{Fig4a}
+\includegraphics[width=0.33\textwidth]{Fig4b}
+\includegraphics[width=0.33\textwidth]{Fig4c}
+\includegraphics[width=0.33\textwidth]{Fig4d}
+\includegraphics[width=0.33\textwidth]{Fig4e}
+\includegraphics[width=0.33\textwidth]{Fig4f}
+\caption{
+Scatter plots compare the reference iron $N_\mathrm{Fe,TRUE}$ with ML-predicted values $N_\mathrm{Fe,PRED}$ 
+obtained using feature vectors extracted from various CV models combined with different regression algorithms
+(specific models are indicated in the figures). 
+The ML models were trained on a simulated dataset. 
+The open circles correspond to the training phase, 
+while the filled circles and open squares correspond to the test phase, representing the simulated and experimental datasets, respectively. 
+The black lines are the identified lines serving as the references.
+}\label{Fig4}
+\end{figure*}
+
+\Fref{Fig5} presents the MAPE and $R^2$ scores obtained when applying the models to the training dataset. 
+Although these metrics are sufficiently representative, the corresponding MedAPE and MSE values are provided in Figure~S2 (Supplementary Material). 
+The most notable observation from \Fref{Fig4} and \Fref{Fig5} is that, 
+despite the very limited size of the training dataset (25 samples), 
+most models demonstrate high training performance: 
+in many cases, the mean relative error is approximately 1\% or lower, 
+and it rarely exceeds 10\%. At the same time, the $R^2$ score drops below 0.980 in only 8 out of 87 cases. 
+It is also worth noting that the MedAPE values generally do not exceed the MAPE and are, in fact, 
+smaller in most instances (see Figure~S2). 
+These consistently high performance metrics indicate that 
+i)~the wavelet transformation produced highly informative images that effectively encoded information about the Fe concentration, 
+and ii)~the CV models successfully extracted features correlated with the concentration.
+
+\begin{figure*}
+\centering
+\includegraphics[width=0.4\textwidth]{Fig5a}
+\includegraphics[width=0.4\textwidth]{Fig5b}
+\caption{
+Mean absolute percentage error (left panel) and coefficient of determination (right panel) for different combinations of CV models (vertical axis) 
+and regression models (horizontal axis) during the training phase. The models were trained on a simulated dataset.
+}\label{Fig5}
+\end{figure*}
+
+Among the regression models, GB and SVR exhibited the best performance, 
+whereas the DNN produced the least favorable results. 
+This outcome is entirely consistent with expectations, 
+since both Gradient Boosting and Support Vector Regression are well known to perform effectively 
+when the number of samples is limited and the feature space exhibits a low noise level, as is characteristic of synthetic datasets. 
+In contrast, neural networks contain a large number of parameters and therefore do not tend to exhibit perfect generalization under such conditions.
+
+Among the CV models, EfficientNetB7 and NASNetLarge demonstrated the best performance, 
+whereas ResNet152V2 and YOLOv4 showed the weakest results. 
+This discrepancy can be attributed to the fact that the former two are relatively modern architectures 
+specifically designed to extract generalizable features and are therefore well suited to wavelet spectrograms, 
+which are characterized by a multi-scale structure. 
+In contrast, ResNet152V2 is primarily optimized for object classification, whereas YOLO is less effective for regression 
+tasks involving global image patterns, as it focuses on localized object detection.
+
+It is also evident that using class probabilities as descriptors degrades prediction quality 
+compared with the cases where image features are employed directly. 
+This indicates that the internal feature maps of CNN models provide a more informative representation of visual patterns, 
+enabling the regressor to establish a stronger relationship with concentration. 
+Moreover, the application of PCA, even though it retains 99.9\% of the variance, results in reduced predictive accuracy.
+This observation suggests that the image patterns associated with variations in iron concentration may constitute 
+only a minor portion of the overall data variance.
+
+The ability of models to achieve high accuracy on the training set is a necessary prerequisite for effective performance on unseen data; 
+however, it does not guarantee reliable prediction outcomes. 
+Consequently, evaluation on an independent test set is essential. 
+This step becomes particularly critical when the training set is small, as the test results provide the primary evidence of model generalizability.
+\Fref{Fig4} and \Fref{Fig6} present the prediction results obtained for the test set generated from synthetic data 
+(more detailed versions are available in Figures~S1 and S3 of the Supplementary Material). 
+As expected, prediction performance declined; however, the reduction in accuracy varied across the regression algorithms. 
+Specifically, this degradation was least pronounced for the DNN, which achieved the best overall performance. 
+The poorest metrics were obtained for RF and GB, whereas SVR and XGB performed slightly worse than the DNN but with a relatively small margin.
+This behavior can be attributed to the DNN’s ability to approximate continuous dependencies smoothly. 
+In contrast to GB and RF, which rely on the formation of local decision rules, 
+neural networks construct a continuous surface in the feature space. 
+This property enhances interpolation for iron concentration values not represented in the training data. 
+From this perspective, XGB and SVR occupy an intermediate position, explaining their slightly lower performance relative to the DNN.
+
+\begin{figure*}
+\centering
+\includegraphics[width=0.4\textwidth]{Fig6a}
+\includegraphics[width=0.4\textwidth]{Fig6b}
+\includegraphics[width=0.4\textwidth]{Fig6c}
+\includegraphics[width=0.4\textwidth]{Fig6d}
+\caption{
+Mean squared error, coefficient of determination, mean absolute percentage error, and median absolute percentage error 
+for different combinations of CV models (vertical axis) and regression models (horizontal axis) 
+during the test phase with simulated dataset. 
+The models were trained on a simulated training dataset.
+}\label{Fig6}
+\end{figure*}
+
 
 \subsection{Experimental data}
 
