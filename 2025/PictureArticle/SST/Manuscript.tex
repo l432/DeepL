@@ -63,7 +63,22 @@
 %\end{indented}
 
 \begin{abstract}
-abstract abstract abstract abstract abstract abstract
+This study demonstrates the feasibility of employing transfer learning from pre-trained computer vision (CV) models 
+to predict iron concentration in silicon solar cells, even when the available training datasets are extremely limited. 
+The predictions are based on the kinetic dependencies of the short-circuit current following FeB pair dissociation, 
+which were converted into images using a wavelet transformation.
+The performance of various combinations of CV models and regression algorithms was systematically analyzed. 
+Specifically, several state-of-the-art CV architectures, 
+including EfficientNetB7, MobileNetV2, NASNetLarge, ResNet152V2, Xception, and YOLOv4, 
+were utilized either as classifiers or as feature extractors. 
+Regression models, namely Random Forest, Gradient Boosting, eXtreme Gradient Boosting, Support Vector Regression (SVR), 
+and Deep Neural Networks (DNNs), were trained to predict iron concentration from the extracted features.
+Training and testing were performed using both simulated and experimental datasets. 
+In both cases, EfficientNetB7 and NASNetLarge provided the most informative features for subsequent regression. 
+Among the regression algorithms, SVR and DNNs were identified as the most effective. 
+These models achieved MSE, MAPE, MedAPE, and $R^2$ values of up 
+to 0.001, 6\%, 4\%, and 0.999, respectively, for the simulated data, 
+and 0.008, 10\%, 5\%, and 0.996 for the experimental data.
 \end{abstract}
 
 %
@@ -789,22 +804,46 @@ The models were trained on an experimental dataset.
 }\label{Fig10}
 \end{figure*}
 
-In summary, three approaches for predicting iron concentrations from experimental data were evaluated: 
-(i)~models trained on simulated data, 
-(ii)~models trained on simulated data with post-hoc correction, 
-and (iii)~models trained directly on experimental data. 
-Training on simulated data alone yielded moderate agreement with experimental measurements, 
-but systematic biases were observed due to differences between the synthetic and real systems. 
-Post-hoc correction effectively reduced these biases, lowering the mean and median errors, 
-yet the correlation with the actual variation remained limited. 
-Direct training on experimental data provided the most balanced outcome, 
-achieving both low prediction errors and high correlation coefficients, 
+In summary, three approaches for predicting iron concentrations from experimental data were evaluated:
+(i)~models trained on simulated data,
+(ii)~models trained on simulated data with post-hoc correction,
+and (iii)~models trained directly on experimental data.
+Training on simulated data alone yielded moderate agreement with experimental measurements,
+but systematic biases were observed due to differences between the synthetic and real systems.
+Post-hoc correction effectively reduced these biases, lowering the mean and median errors,
+yet the correlation with the actual variation remained limited.
+Direct training on experimental data provided the most balanced outcome,
+achieving both low prediction errors and high correlation coefficients,
 thereby demonstrating the importance of incorporating real measurements during model development.
 Thus, training directly on experimental data improves prediction accuracy and eliminates the systematic biases observed in models transferred from synthetic data.
-At the same time, achieving optimal performance requires both the careful selection of the CV model–regressor combination and the inclusion of real experimental data. 
- 
+At the same time, achieving optimal performance requires both the careful selection of the CV model–regressor combination and the inclusion of real experimental data.
+
 
 \section{Conclusion}
+
+This study demonstrates that Transfer Learning from pretrained Computer Vision (CV) models enables accurate regression modeling 
+even with the extremely small training datasets typical of experimental materials research. 
+The proposed workflow involves measuring a characteristic kinetic dependency, 
+transforming it into an image via wavelet analysis, 
+extracting features using a pretrained CV model, 
+and training a regression model on these features to predict material properties. 
+The feasibility of this approach is illustrated by predicting the iron impurity concentration in silicon solar cell 
+from short-circuit current kinetics following FeB pair dissociation using a training dataset of only 20–25 samples.
+
+The performance of models trained on both synthetic and experimental datasets was evaluated. 
+In both cases, EfficientNetB7 and NASNetLarge provided the most informative features, 
+while Deep Neural Networks  and  Support Vector Regression yielded the highest prediction accuracy. 
+The best-performing models achieved MSE, MAPE, MedAPE, and $R^2$ values of 0.001, 6\%, 4\%, and 0.999 for synthetic data, 
+and 0.008, 10\%, 5\%, and 0.996 for experimental data.
+
+When training models on synthetic data, image feature vectors serve as the most suitable descriptors for the regression model. 
+In contrast, when experimental data are used, prediction accuracy can be improved and the influence of noise reduced 
+by utilizing class probability distributions or applying Principal Component Analysis.
+
+The combination of Transfer Learning from CNNs with an appropriate choice of descriptor type 
+and regression algorithm represents a promising strategy for materials research in general 
+and for defect characterization in particular, 
+especially when the acquisition of large datasets is difficult or impractical.
 
 \section*{References}
 
