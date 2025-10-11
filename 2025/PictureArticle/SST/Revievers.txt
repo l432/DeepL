@@ -1,0 +1,194 @@
+0000-0003-0633-5429 
+olegolikh@knu.ua
+
+0000-0001-8080-7661
+nevermor464@gmail.com
+
+
+Yulia Perets
+0000-0003-0567-770X
+yuliia.perets@knu.ua
+
+---------------------------------------------
+https://www.mediafire.com/
+l432432@gmail.com
+m2662421
+
+
+
+
+
+
+
+https://tinyurl.com/
+https://www.elsevier.com/researcher/author/tools-and-resources/graphical-abstract
+------------------------------------------------------------
+
+
+Optics Communications
+olikh
+e2662421O%
+
+Optical Materials
+olikh
+em2662421O%
+
+Current Applied Physics
+olikh
+cap2662421
+
+Physics Letters A
+olikh
+pla2662421O%
+не надсилав навіть, бо не знайшов підходящого типу публікації
+
+---------------------------------------------
+Computational Condensed Matter   Q3
+
+Materials Science and Engineering: B
+olikh - user name  
+e2662421O%
+
+
+Materials Science in Semiconductor Processing
+
+Journal of Physics and Chemistry of Solids ?
+
+Solid State Sciences
+olikh
+sss2662421O%
+потрібен графічний абстракт
+
+
+
+Journal of Electronic Materials    Springer
+
+Journal of Physics Communications - Q3, IOP, платне, але для Ukraine
+
+Dr. Hab.
+--------------------------------------------------------------
+defect 
+Si solar cell
+iron contamination
+machine learning
+computer vision
+-------------------------------------------------------------------------------------
+Taras Shevchenko National University of Kyiv, Kyiv, Ukraine
+64/13, Volodymyrska Street
+01601
+
+Computer vision-based method for quantifying iron-related defects in silicon solar cell
+
+
+
+This study demonstrates the feasibility of employing transfer learning from pre-trained computer vision (CV) models to predict iron concentration in silicon solar cells, even when the available training datasets are extremely limited. The predictions are based on the kinetic dependencies of the short-circuit current following FeB pair dissociation, which were converted into images using a wavelet transformation. The performance of various combinations of CV models and regression algorithms was systematically analyzed. Specifically, several state-of-the-art CV architectures, including EfficientNetB7, MobileNetV2, NASNetLarge, ResNet152V2, Xception, and YOLOv4, were utilized either as classifiers or as feature extractors. Regression models, namely Random Forest, Gradient Boosting, eXtreme Gradient Boosting, Support Vector Regression (SVR), and Deep Neural Networks (DNNs), were trained to predict iron concentration from the extracted features. Training and testing were performed using both simulated and experimental datasets. In both cases, EfficientNetB7 and NASNetLarge provided the most informative features for subsequent regression. Among the regression algorithms, SVR and DNNs were identified as the most effective. These models achieved MSE, MAPE, MedAPE, and R2 values of up
+to 0.001, 6%, 4%, and 0.999, respectively, for the simulated data, and 0.008, 10%, 5%, and 0.996 for the experimental data.
+
+
+
+Abstract 150 word
+
+defect; Si solar cell; iron contamination; machine learning; computer vision
+
+
+
+Statement of Novelty
+80-100 word
+
+
+
+
+------------------------------
+
+Yoann 
+Buratti
+The University of New South Wales
+Sydney, NSW 2052, Australia
+yoann.buratti@student.unsw.edu.au
+He is a specialist in the application of machine learning to the characterization of defect in solar cells
+(Renewable and Sustainable Energy Reviews, 2024, 202, 114617;
+Progress in Photovoltaics: Research and Applications, 2022, 30(3), pp. 276–287
+Solar Energy Materials & Solar Cells 2024, 277, 113123)
+
+
+Hongjun 
+Xiang
+Fudan University 
+Shanghai 200433, China
+hxiang@fudan.edu.cn
+An experienced researcher in the field of material informatics, with a 
+particular focus on ML methods for defect characterizing
+(Applied Physics Letters, 2025, 126(4), 044103;
+Nature Computational Science, 2024, 4(8), pp. 615–625;
+Journal of Physical Chemistry C, 2024, 128(30), pp. 12677–12685)
+
+Srabanti
+Datta
+Department of Electrical and Computer Engineering, 
+Florida International University, Miami, USA
+sdatt006@fiu.edu
+dhodges@fiu.edu
+He has experience in using machine learning to characterize solar cells and modeling with the SCAPS package.
+(IEEE Access, 2023, 11, pp. 77750–77778;
+Conference Record of the IEEE Photovoltaic Specialists Conference, 2025, pp. 1539–1544)
+
+
+Noppadon 
+Nuntawong
+Thailand National Electronics and Computer Technology Center,
+National Electronics and Computer Technology, National Science and Technology Development Agency, 
+Pathum Thani 12120, Thailand
+noppadon.nuntawong@nectec.or.th
+Expert in integrating experimental data with machine learning techniques
+(Journal of Applied Physics, 2024, 135(2), 025701;
+Biosensors and Bioelectronics, 2024, 250, 116063)
+
+
+Montaser 
+Abdelsattar
+South Valley University, Qena 83523, Egypt
+Department of Electrical Engineering, Faculty of Engineering, 
+Montaser.A.Elsattar@eng.svu.edu.eg
+He has extensive experience in using convolutional neural networks to characterize defects in solar cells
+(IEEE Access, 2025, 13, pp.4136–4157;
+Scientific Reports, 2025, 15(1), 24356;
+Neural Computing and Applications, 2025, 37(15), pp. 8825–8844)
+
+
+John 
+Murphy
+School of Engineering
+University of Warwick, CV4 7AL Coventry, United Kingdom
+John.D.Murphy@warwick.ac.uk
+Specialist in defects in crystalline silicon 
+(Journal of Applied Physics, 2024, 136, 055707,
+IEEE Journal of Photovoltaics, 2021, 11(1), pp. 26-35,
+Journal of Applied Physics, 2014, 116(5), 053514)
+
+
+
+
+------------------------------------------------
+olegolikh@knu.ua
+e2662421O - Energy
+e2662421O% - Heliyon
+
+olegolikh@knu.ua
+e2662421O% - Energy Report, Renewable Energy, Applied Energy,
+             Expert Systems with Applications 
+             
+Materials Science & Engineering B
+olikh - user name  
+e2662421O%
+
+Solar Energy Materials and Solar Cells
+olikh - user name
+e2662421O
+
+Advances In Applied Energy:
+OOlikh-447
+e2662421O%
+
+Solar Energy
+olikh
+se2662421O%
