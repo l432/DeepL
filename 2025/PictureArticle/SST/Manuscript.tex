@@ -50,7 +50,7 @@
 \usepackage{url}
 \begin{document}
 
-\title[Computer vision for quantifying Fe-related defects in Si solar cell]{Computer vision-based method for quantifying iron-related defects in silicon solar cell}
+\title[Computer vision for quantifying Fe-related defects in Si solar cells]{Computer vision-based method for quantifying iron-related defects in silicon solar cells}
 
 \author{Oleg Olikh\footnote{Author to whom any correspondence should be addressed.}, Oleksii Zavhorodnii, Yulia Perets}
 
@@ -100,13 +100,13 @@ and 0.008, 10\%, 5\%, and 0.996 for the experimental data.
 \section{Introduction}\label{sec:Int}
 
 Owing to the urgent need to address environmental challenges and growing global demand for renewable energy, the deployment of photovoltaic (PV) systems has been rapidly increasing worldwide.
-In particular, solar PV generation exceeds 1,600 TWh in 2023 \cite{IEA2024Renewables, OSAMA2025}, rising by approximately 30\% in 2024 \cite{Prometheus2025}, and forecasts indicate that the 
+In particular, solar PV generation exceeds 1,600 TWh in 2023 \cite{IEA2024Renewables, OSAMA2025}, rising by approximately 30\% in 2024 \cite{Prometheus2025}, and forecasts indicate that the
 total installed capacity will surpass 6 TW by 2030 \cite{IEA2024Renewables}.
 Meanwhile, crystalline silicon photovoltaics, which have benefited from decades of scientific advancement and continuous cost reductions, continued to dominate the market in 2024, accounting for approximately 98\% of the global share \cite{Fischer2025ITRPV, THOME2025}.
 
 As in other semiconductor devices, defects play a decisive role in determining the operating parameters of the solar cells.
 Therefore, diagnosing defects, particularly determining their concentrations, is critical for maintaining stable performance of PV systems.
-In recent years, researchers have increasingly complemented established defect characterization methods with machine learning (ML) approaches that improve the accuracy, speed, 
+In recent years, researchers have increasingly complemented established defect characterization methods with machine learning (ML) approaches that improve the accuracy, speed,
 and cost efficiency of these analyses.
 The use of ML methods for analysing macroscopic defects (such as cracks, finger failures, hotspots, and scratches) and point defects, however, differs significantly.
 Researchers typically detect macroscopic defects in PV systems using two main approaches \cite{Jia2024, Hijjawi2023}.
@@ -154,7 +154,7 @@ macrodefects \cite{Li2012, Rosa2024}, but they can also be employed to convert o
 
 By applying computer vision models to wavelet spectrograms represented as images, we generated high-dimensional feature vectors and used them as inputs for traditional regression models.
 The $I_\mathtt{SC}$(t) dependencies for training the regression models were obtained via simulations and experimental measurements.
-In both cases, the hybrid Transfer Learning approach produced predictions with sufficiently high accuracy (within a few percent) even when training models 
+In both cases, the hybrid Transfer Learning approach produced predictions with sufficiently high accuracy (within a few percent) even when training models
 on small datasets containing fewer than 30 samples.
 Importantly, the proposed approach is highly versatile and can be extended to a wide range of tasks related to defect characterization and other applications.
 
@@ -493,9 +493,9 @@ The complete set of results covering all the 87 investigated configurations is p
 Scatter plots compare the reference iron $N_\mathrm{Fe,TRUE}$ with ML-predicted values $N_\mathrm{Fe,PRED}$,
 obtained using feature vectors extracted from various CV models combined with different regression algorithms
 (specific models are indicated in the figures).
-The ML models were trained on a simulated dataset.
+ML models were trained using a simulated dataset.
 The open circles correspond to the training phase,
-while the filled circles and open squares correspond to the test phase, representing the simulated and experimental datasets, respectively.
+whereas the filled circles and open squares correspond to the test phase representing the simulated and experimental datasets, respectively.
 The black lines are the identified lines serving as the references.
 }\label{Fig4}
 \end{figure*}
@@ -519,43 +519,44 @@ and (ii)~the CV models successfully extracted features correlated with the conce
 \includegraphics[width=0.35\textwidth]{Fig5b}
 \caption{
 Mean absolute percentage error (left panel) and coefficient of determination (right panel) for different combinations of CV models (vertical axis)
-and regression models (horizontal axis) during the training phase. The models were trained on a simulated dataset.
+and regression models (horizontal axis) during the training phase. 
+The models were trained using the simulated dataset.
 }\label{Fig5}
 \end{figure*}
 
 Among the regression models, GB and SVR exhibited the best performance,
 whereas DNN produced the least favorable results.
-This outcome is entirely consistent with expectations,
+This outcome is entirely consistent with expectations
 because both Gradient Boosting and Support Vector Regression are well known to perform effectively
 when the number of samples is limited and the feature space exhibits a low noise level, as is characteristic of synthetic datasets.
 In contrast, neural networks contain a large number of parameters and therefore do not tend to exhibit perfect generalization under such conditions.
 
 Among the CV models, EfficientNetB7 and NASNetLarge demonstrated the best performance,
-whereas ResNet152V2 and YOLOv4 showed the weakest results.
+whereas ResNet152V2 and YOLOv4 exhibited the weakest results.
 This discrepancy can be attributed to the fact that the former two are relatively modern architectures
-specifically designed to extract generalizable features and are therefore well suited to wavelet spectrograms,
+specifically designed to extract generalizable features, and are therefore well suited to wavelet spectrograms,
 which are characterized by a multi-scale structure.
 In contrast, ResNet152V2 is primarily optimized for object classification, whereas YOLO is less effective for regression
 tasks involving global image patterns, as it focuses on localized object detection.
 
 It is also evident that using class probabilities as descriptors degrades the prediction quality
-compared to the cases in which image features are employed directly.
+compared with the cases in which image features are employed directly.
 This indicates that the internal feature maps of the CNN models provide a more informative representation of visual patterns,
 enabling the regressor to establish a stronger relationship with concentration.
 Moreover, the application of PCA, even though it retains 99.9\% of the variance, results in reduced predictive accuracy.
 This observation suggests that the image patterns associated with variations in iron concentration may constitute
 only a minor portion of the overall data variance.
 
-The ability of models to achieve high accuracy on the training set is a necessary prerequisite for effective performance on unseen data;
-however, it does not guarantee reliable prediction outcomes.
-Consequently, evaluation on an independent test set is essential.
-This step becomes particularly critical when the training set is small, as the test results provide the primary evidence of model generalizability.
+The ability of models to achieve high accuracy on the training set is a prerequisite for effective performance on unseen data;
+however, this does not guarantee reliable prediction outcomes.
+Consequently, the evaluation of an independent test set is essential.
+This step becomes particularly critical when the training set is small  because the test results provide primary evidence for model generalizability.
 \Fref{Fig4} and \Fref{Fig6} present the prediction results obtained for the test set generated from synthetic data
 (detailed versions are available in Figures~S1 and S3 of the Supplementary Material).
 As expected, prediction performance declined; however, the reduction in accuracy varied across the regression algorithms.
 Specifically, this degradation was least pronounced for the DNN, which achieved the best overall performance.
-The poorest metrics were obtained for RF and GB, whereas SVR and XGB performed slightly worse than the DNN but with a relatively small margin.
-This behavior can be attributed to the DNN’s ability to approximate continuous dependencies smoothly.
+The poorest metrics were obtained for RF and GB, whereas SVR and XGB performed slightly worse than DNN but with a relatively small margin.
+This behavior can be attributed to the ability of the DNN to smoothly approximate the continuous dependencies.
 In contrast to GB and RF, which rely on the formation of local decision rules,
 neural networks construct a continuous surface in the feature space.
 This property enhances interpolation for iron concentration values not represented in the training data.
@@ -570,17 +571,17 @@ From this perspective, XGB and SVR occupy an intermediate position, explaining t
 \caption{
 Mean squared error, coefficient of determination, mean absolute percentage error, and median absolute percentage error
 for different combinations of CV models (vertical axis) and regression models (horizontal axis)
-during the test phase with simulated dataset.
-The models were trained on a simulated training dataset.
+during the test phase with the simulated dataset.
+The models were trained using a simulated training dataset.
 }\label{Fig6}
 \end{figure*}
 
 
-As shown, the relative performance of the computer vision models on the simulated test dataset remained consistent,
+The relative performance of the computer vision models on the simulated test dataset remained consistent,
 with no change in the top- and bottom-performing architectures.
 Specifically, EfficientNetB7 and NASNetLarge yielded the most favorable results,
-confirming their effectiveness in extracting wavelet image features relevant for concentration prediction.
-In contrast, ResNet152V2 and YOLOv4 produced the least satisfactory outcomes.
+confirming their effectiveness in extracting wavelet image features relevant to concentration prediction.
+By contrast, ResNet152V2 and YOLOv4 produced the least satisfactory outcomes.
 A notable exception arises in configurations where YOLOv4 features from two layers are combined with either a DNN or SVR.
 In these cases, performance metrics were considerably improved.
 This enhancement suggests that the use of a larger number of features enabled the capture of more diverse patterns,
@@ -618,11 +619,11 @@ providing clear evidence that the models effectively capture
 the underlying relationship between the wavelet-based images and the iron concentration.
 
 Having established the effectiveness of the models on the simulated test dataset,
-we next evaluated their performance on experimental measurements.
-This step is critical for assessing the generalizability of the models to real-world data,
+we evaluated their performances using experimental measurements.
+This step is critical for assessing the generalizability of the models to real-world data
 where additional sources of noise and variability may be present.
-By comparing the results obtained from experimental data with those from the simulated dataset,
-it becomes possible to identify potential limitations of the models
+By comparing the results obtained from the experimental data with those from the simulated dataset,
+it is possible to identify the potential limitations of the models
 and to confirm whether the features extracted from wavelet spectrograms remain informative under practical conditions.
 \Fref{Fig7}a and \Fref{Fig7}b show the performance metrics of models trained on synthetic data when applied to experimental measurements.
 The relationship between predicted and actual concentrations is illustrated in \Fref{Fig4}, with additional results provided in Figures S1 and S4.
@@ -646,16 +647,16 @@ implying that the models are capable of capturing relative differences in concen
 \includegraphics[width=0.35\textwidth]{Fig7d}
 \caption{
 Mean absolute percentage error (a,c) and coefficient of determination (b, d) for different combinations of CV models (vertical axis)
-and regression models (horizontal axis) during the test phase with experimental dataset without (a, b) and with (c, d)
-post-hoc calibration according to Eq.~\eref{eqPostHoc}.
-The models were trained on a simulated dataset.
+and regression models (horizontal axis) during the test phase with the experimental dataset without (a, b) and with (c, d)
+post hoc calibration according to Eq.~\eref{eqPostHoc}.
+The models were trained using a simulated dataset.
 }\label{Fig7}
 \end{figure*}
 
-While the presence of residual noise patterns in the experimental curves ---
-insufficiently suppressed by filtering --- could contribute to the observed discrepancies,
-a more plausible explanation lies in the incomplete correspondence between the physical model used for data synthesis and the actual behavior of solar cells.
-This mismatch is likely associated with the numerical parameters employed in the model’s fundamental equations (Eqs.~\eref{eqNFet}-\eref{eqTass}).
+Although the presence of residual noise patterns in the experimental curves, which were
+insufficiently suppressed by filtering, could contribute to the observed discrepancies,
+a more plausible explanation lies in the incomplete correspondence between the physical model used for data synthesis and the actual behavior of the solar cells.
+This mismatch is likely associated with the numerical parameters employed in the  fundamental equations of the model (Eqs.~\eref{eqNFet}-\eref{eqTass}).
 For instance, the calculation of the characteristic FeB association time (Eq.~\eref{eqTass}) adopted values of
 $A=5.7\times10^5\,\frac{\mathrm{s}}{\mathrm{K}\;\mathrm{cm}^3}$ and $E_m=0.66$~eV, which are among the most frequently reported in the literature.
 However, a considerable scatter exists in these parameters.
@@ -667,7 +668,7 @@ Similarly, the pre-exponential factor $A$ has been cited as $4.3\times10^5$ \cit
 Moreover, the calculations assumed a spatially invariant $E_m$ across the device.
 In practice, the reported diffusion barriers are typically derived for bulk $p$-Si,
 whereas the energy value can vary in regions with different Fermi level positions \cite{Murphy2014}, such as the space-charge region in the present structures.
-Similar variability exists for other key parameters.
+A similar variability exists for the other key parameters.
 The FeB pair binding energy has been reported to range from 0.45 to 0.67~eV \cite{KimerlingFeB, Zhu2015, Wijaranakula, Hayamizu1991},
 the Fe$_i$ donor level position varies between 0.38 and 0.394~eV above the valence band maximum \cite{FeBAssJAP2014, Macdonald2004, FeB:Schmidt, Narland},
 and the pre-exponential factor in denominator of Eq.~\eref{eqFeieq} $A_z$ has been cited as either
@@ -677,46 +678,46 @@ Furthermore, earlier studies have demonstrated that both the non-uniform distrib
 and the variation in the base thickness itself can significantly affect iron concentration estimation \cite{KimerlingFeB}.
 Neither of these effects was incorporated into the present modeling framework.
 
-A common strategy to improve prediction accuracy involves post-hoc calibration,
-where a corrective function is applied to model outputs using parameters derived from a limited subset of experimental data.
-In the present case, the analysis indicated that a quadratic correction of the target variable provides
+A common strategy for improving prediction accuracy involves post-hoc calibration,
+in which a corrective function is applied to model outputs using parameters derived from a limited subset of experimental data.
+In the present case, the analysis indicated that quadratic correction of the target variable provided
 the most suitable adjustment, expressed as follows:
 \begin{equation}\label{eqPostHoc}
   \log N_\mathtt{Fe,PRED}=9.51-1.71\cdot \log N_\mathtt{Fe,PRED}^{*} + 0.079 \cdot (\log N_\mathtt{Fe,PRED}^{*})^2\,,
 \end{equation}
 where $N_\mathtt{Fe,PRED}^{*}$ denotes the direct model prediction.
-The performance metrics after post-hoc calibration are presented in \Fref{Fig7}c and \Fref{Fig7}d.
+The performance metrics after post hoc calibration are presented in \Fref{Fig7}c and \Fref{Fig7}d.
 As shown by the data, applying this correction substantially reduced the prediction errors.
-Specifically, the mean relative error across the 28-sample experimental dataset now lies within the (13–17)\% range
+Specifically, the mean relative error across the 28-sample experimental dataset now lies within the (13–17)\% 
 for the best-performing models (approximately 20 out of 87 configurations) and remains below 25\% for most of the others.
 The median error is even lower, reaching (7–10)\% in the most favorable cases.
-In line with the results obtained for the simulated test dataset, the most accurate configurations involve EfficientNetB7, NASNetLarge, DNN, SVR, and XGB.
-Interestingly, MobileNetV2 also appeared among the top-performing combinations, yielding the lowest MedAPE value (7.64\%) for the MNV2:CL configuration.
-This outcome may suggest that the features extracted by MobileNetV2, though less informative for the training and simulated test datasets,
+In line with the results obtained for the simulated test dataset, the most accurate configurations are EfficientNetB7, NASNetLarge, DNN, SVR, and XGB.
+Interestingly, MobileNetV2 was also among the top performing combinations, yielding the lowest MedAPE value (7.64\%) for the MNV2:CL configuration.
+This outcome may suggest that the features extracted by MobileNetV2, although less informative for the training and simulated test datasets,
 capture specific image patterns more relevant to the experimental measurements and applied correction could have further enhanced the effectiveness of these features.
 
 It is worth noting that applying the correction increased the gap between the mean and median absolute percentage errors.
 This observation suggests that, although the correction improved the overall agreement between the predicted and true values,
-a few samples still exhibit relatively large residual errors.
+a few samples still exhibited relatively large residual errors.
 
-The correction also led to a decrease in the $R^2$ value.
-This outcome is expected, as post-processing can weaken the linear correspondence between the initial predictions and the experimental values,
+This correction also led to a decrease in the $R^2$ value.
+This outcome is expected because post-processing can weaken the linear correspondence between the initial predictions and experimental values,
 even when the overall prediction errors are simultaneously reduced.
-Therefore, the reduction in $R^2$ should be regarded as a side effect of enhancing
-the model’s accuracy rather than as evidence of its degradation.
+Therefore, the reduction in $R^2$ should be regarded as a side effect of enhancing the accuracy of the model,
+rather than as evidence of its degradation.
 
-Although the quadratic correction proved effective, it does not represent a universal solution
+Although quadratic correction proved effective, it does not represent a universal solution
 for transferring models from synthetic to experimental data.
- A more robust approach involves integrating experimental data into the training process, as implemented in this study below.
+A more robust approach involves integrating the experimental data into the training process, as implemented in this study below.
 
 
 
 \subsection{Experimental data}
 
-\Fref{Fig8} shows the correlation between the iron concentrations predicted by models trained on experimental data
-and reference values derived according to \cite{Olikh2022:JMatSci,Olikh2021JAP}.
+\Fref{Fig8} shows the correlation between the iron concentrations predicted by the models trained on the experimental data
+and the reference values derived according to \cite{Olikh2022:JMatSci,Olikh2021JAP}.
 Representative outcomes for selected CV–regression model combinations are shown for both training and testing,
-with extended data provided in Figure~S6 of the Supplementary Material.
+with the extended data provided in Figure~S6 of the Supplementary Material.
 
 
 \begin{figure*}
@@ -730,8 +731,8 @@ with extended data provided in Figure~S6 of the Supplementary Material.
 Scatter plots compare the reference iron concentrations $N_\mathrm{Fe,TRUE}$ with ML-predicted values $N_\mathrm{Fe,PRED}$,
 obtained using feature vectors extracted from various CV models combined with different regression algorithms
 (specific models are indicated in the figures).
-The ML models were trained on a dataset derived from experimental measurements.
-The open and filled squares correspond to the training and test phases, respectively.
+ML models were trained using a dataset derived from experimental measurements.
+The open and filled squares correspond to the training and testing phases, respectively.
 The black lines are the identified lines serving as the references.
 }\label{Fig8}
 \end{figure*}
@@ -740,7 +741,7 @@ It should be noted that, compared to training on synthetic data, this case emplo
 However, these samples covered a narrower range of iron concentrations ($10^{11}$-$2\times10^{13}$~cm$^{-3}$ versus $10^{10}$-$10^{14}$~cm$^{-3}$).
 \Fref{Fig9} presents a subset of the performance metrics obtained during the training phase
 (a more comprehensive overview is provided in Figure~S7).
-Overall, the results are similar to those shown in \Fref{Fig5}.
+Overall, the results were similar to those shown in \Fref{Fig5}.
 In many cases, extremely low errors (below 0.5\%) and high coefficients of determination (approaching unity) were observed.
 This behavior is particularly characteristic of GB, RF, and SVR.
 As in the previous case, the DNN exhibited weaker performance relative to the other algorithms,
@@ -755,26 +756,26 @@ However, the performance gap relative to other CV models has become less pronoun
 \includegraphics[width=0.35\textwidth]{Fig9a}
 \includegraphics[width=0.35\textwidth]{Fig9b}
 \caption{
-Mean squared error (left panel) and median absolute percentage error (right model) for different combinations of CV models (vertical axis)
+Mean squared error (left panel) and median absolute percentage error (right panel) for different combinations of CV models (vertical axis)
 and regression models (horizontal axis) during the training phase.
-The models were trained on an experimental dataset.
+The models were trained using an experimental dataset.
 }\label{Fig9}
 \end{figure*}
 
 Interestingly, the application of PCA often enhances the performance of the DNN.
-For example, the MAPE values for ENB7:FE and ENB7:FE:P are 7.3\% and 0.97\%, respectively.
-This observation suggests that PCA effectively mitigates the adverse effects of high feature dimensionality
-when the sample size is limited.
-In contrast, a similar improvement is not observed for other regression algorithms.
+For example, the MAPE values for ENB7:FE and ENB7:FE:P were 7.3\% and 0.97\%, respectively.
+This observation suggests that PCA effectively mitigated the adverse effects of high feature dimensionality
+when the sample size was limited.
+In contrast, no similar improvements were observed for other regression algorithms.
 Moreover, for the experimental training dataset,
 the difference between MAPE and MedAPE becomes smaller.
 This reduction implies a more symmetric error distribution and a decreased occurrence of extreme deviations.
 
-\Fref{Fig10} and Figure~S8 show the heatmaps of prediction metrics for the test experimental dataset
+\Fref{Fig10} and Figure~S8 show heatmaps of the prediction metrics for the test experimental dataset
 using models trained on a separate subset of experimental data.
-Compared to models trained on simulated data, the predictive performance for experimental test dataset improved substantially.
-In particular, for several of tthe best-performing CV–regressor combinations, MAPE and MedAPE values fall within 7–17\%,
-markedly better than the 20–30\% observed previously.
+Compared with the models trained on simulated data, the predictive performance of the experimental test dataset improved substantially.
+In particular, for several of the best-performing CV–regressor combinations, the MAPE and MedAPE values fall within (7–15)\%,
+which is markedly better than the 20–30\% observed previously.
 Moreover, the $R^2$ values predominantly exceed 0.97, indicating a strong agreement with the actual dependencies.
 The accuracy achieved through direct training on experimental data is comparable to that obtained with post-hoc correction;
 however, the higher correlation coefficients suggest a more faithful representation of both the scale and the variations of the underlying dependency.
@@ -803,16 +804,16 @@ This suggests that reducing the dimensionality of highly noisy features contribu
 Mean squared error, coefficient of determination, mean absolute percentage error, and median absolute percentage error
 for different combinations of CV models (vertical axis) and regression models (horizontal axis)
 during the test phase.
-The models were trained on an experimental dataset.
+The models were trained using an experimental dataset.
 }\label{Fig10}
 \end{figure*}
 
 In summary, three approaches for predicting iron concentrations from experimental data were evaluated:
 (i)~models trained on simulated data,
-(ii)~models trained on simulated data with post-hoc correction,
+(ii)~models trained on simulated data with post hoc correction,
 and (iii)~models trained directly on experimental data.
-Training on simulated data alone yielded moderate agreement with experimental measurements,
-but systematic biases were observed due to differences between the synthetic and real systems.
+Training on simulated data alone yielded moderate agreement with experimental measurements;
+however, systematic biases were observed owing to differences between the synthetic and real systems.
 Post-hoc correction effectively reduced these biases, lowering the mean and median errors,
 yet the correlation with the actual variation remained limited.
 Direct training on experimental data provided the most balanced outcome,
@@ -824,8 +825,8 @@ At the same time, achieving optimal performance requires both the careful select
 
 \section{Conclusion}
 
-This study demonstrates that Transfer Learning from pretrained Computer Vision (CV) models enables accurate regression modeling
-even with the extremely small training datasets typical of experimental materials research.
+This study demonstrates that Transfer Learning from pretrained Computer Vision (CV) models enables accurate regression modeling,
+even with extremely small training datasets typical of experimental materials research.
 The proposed workflow involves measuring a characteristic kinetic dependency,
 transforming it into an image via wavelet analysis,
 extracting features using a pretrained CV model,
@@ -833,11 +834,11 @@ and training a regression model on these features to predict material properties
 The feasibility of this approach is illustrated by predicting the iron impurity concentration in silicon solar cell
 from short-circuit current kinetics following FeB pair dissociation using a training dataset of only 20–25 samples.
 
-The performance of models trained on both synthetic and experimental datasets was evaluated.
+The performances of models trained on both synthetic and experimental datasets were evaluated.
 In both cases, EfficientNetB7 and NASNetLarge provided the most informative features,
-while Deep Neural Networks  and  Support Vector Regression yielded the highest prediction accuracy.
-The best-performing models achieved MSE, MAPE, MedAPE, and $R^2$ values of 0.001, 6\%, 4\%, and 0.999 for synthetic data,
-and 0.008, 10\%, 5\%, and 0.996 for experimental data.
+whereas Deep Neural Networks  and  Support Vector Regression yielded the highest prediction accuracy.
+The best-performing models achieved MSE, MAPE, MedAPE, and $R^2$ values of 0.001, 6\%, 4\%, and 0.999, respectively, for synthetic data,
+and 0.008, 10\%, 5\%, and 0.996, for experimental data.
 
 When training models on synthetic data, image feature vectors serve as the most suitable descriptors for the regression model.
 In contrast, when experimental data are used, prediction accuracy can be improved and the influence of noise reduced
@@ -848,6 +849,11 @@ and regression algorithm represents a promising strategy for materials research 
 and for defect characterization in particular,
 especially when the acquisition of large datasets is difficult or impractical.
 
+\section*{Supplementary data}\label{SuplData}
+Supplementary data to this article can be found online at
+\url{https://surl.li/czsgvx}
+%https://www.mediafire.com/file/mzxu10ca1rswqgk/SupplementaryMaterial.pdf/file
+
 \section*{Data availability statement}
 The data that support the findings of this study are available upon reasonable request from the authors.
 
@@ -856,7 +862,7 @@ The authors declare that there are no conflicts of interest related to this work
 
 \section*{Ethics statement}
 This study does not involve human participants, animals, or
-any procedures requiring ethical approval
+ procedures requiring ethical approval.
 
 
 \section*{References}
