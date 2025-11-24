@@ -1,0 +1,75 @@
+Semiconductor Science and Technology <onbehalfof@manuscriptcentral.com>
+	
+Вкладені файли11:59 (10 годин тому)
+	
+	
+кому мені, nevermor464, yuliia.perets
+Схоже, мова цього повідомлення – англійська
+ 
+Dear Professor Olikh,
+
+Re: "Computer vision-based method for quantifying iron-related defects in silicon solar cells"
+
+Manuscript reference: SST-111269
+
+The reviewer and editor report(s) for your Paper are now complete. However, they recommend substantial changes before Semiconductor Science and Technology can consider your work further.
+
+You can find the report(s) below and/or attached to this message. Reports can also be accessed from your Author Centre: https://mc04.manuscriptcentral.com/sst-iop
+
+Next steps
+
+Consider the reviewer’s comments and amend your manuscript according to their recommendations.
+
+You will need to upload the required files listed in the attached revision checklist document.
+
+    Please make sure that all author names, affiliations and email addresses are complete and accurate on the submission form. These details will appear on the Accepted Manuscript (if you have opted into this service), so should match those on the manuscript itself. If an author has more than one affiliation, ensure that their primary affiliation is listed. 
+
+For further information, read our guidance on how to prepare your revised article.
+
+Data availability policy
+
+We encourage authors to share their research data via a data repository that has been widely adopted within their research community. If one is not available, you may use a general data repository. Information on our data policy, including data repositories and data citations is available at: https://publishingsupport.iopscience.iop.org/iop-publishing-data-availability-policy/..
+
+Important deadline information
+
+Your final version and source files should be uploaded to the Author Centre by 22-Dec-2025. If we do not receive your manuscript by this date, it may be treated as a new submission. Please let us know if you need more time.
+
+Please note that if the reviewer(s) and Editorial Board are not satisfied with the changes to your manuscript, it may still be rejected.
+
+We look forward to hearing from you soon.
+
+Yours sincerely,
+
+Lauren Matthews
+
+
+On behalf of:
+
+Semiconductor Science and Technology
+Editor-in-Chief: Prof. Baoping Zhang
+
+
+
+EDITOR REPORT
+
+To ensure that each new submission is an original piece of research, we check all manuscripts with the text comparison service iThenticate. We have found that your manuscript contains text which appears to have been replicated from the following published articles:  
+
+www.sciencedirect.com/science/article/abs/pii/S0038092X25005171?via%3Dihub
+ 
+Please reduce the level of overlap in your revised manuscript by rewriting the appropriate sections. 
+ 
+All manuscripts submitted to IOP journals should never contain any text directly copied from previously published work, even if that work is your own or is included for the benefit of the reader. If you would like more information about our ethical policy it is available at https://publishingsupport.iopscience.iop.org/ethical-policy-journals/
+
+
+
+Referee: 2
+
+COMMENTS TO THE AUTHOR(S)
+The authors provide here  a Computer vision-based method for quantifying
+iron-related defects in silicon solar cells The work is interesting; however, it lacks of some fundamental features:
+1-It is additionally essential to examine temperatures between 270 to 350 kelvin.
+2-You should compare and review your manuscript with other new articles such as “Novel Design of Multi-Layer Cubic Nanoparticles for Achieving Efficient Thin-Film Perovskite Solar Cells"
+3-Put the solar cell parameters in a table with references.
+4-Actually, all solar cells have Rs and Rsh values. By investigating parasitic losses on cell performance, the article could be made more interesting.
+
+

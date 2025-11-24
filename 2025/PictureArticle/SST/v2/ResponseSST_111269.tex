@@ -1,0 +1,323 @@
+
+
+%\documentclass[aip,reprint]{revtex4-1}
+%\documentclass[sn-mathphys]{sn-jnl}
+\documentclass[10pt]{iopart}
+%\documentclass[aip,jap,preprint]{revtex4-1}
+\usepackage{graphicx}% Include figure files
+\usepackage{dcolumn}
+\usepackage{color}
+\usepackage{color,soul}
+%\draft % marks overfull lines with a black rule on the right
+
+\begin{document}
+
+Dear Editor and Reviewers,
+
+We sincerely thank you for taking the time to review our manuscript
+``Computer vision-based method for quantifying iron-related defects in silicon solar cells''
+(Ref. No.: SST--111269).
+Your insightful comments and constructive suggestions have greatly helped us improve
+the quality of our work.
+We particularly appreciate your careful reading and thoughtful feedback,
+which have led to significant improvements in both the technical content and presentation clarity of our manuscript.
+We have carefully addressed all the comments and made corresponding revisions to the manuscript.
+The location of revisions is pointed by red color and highlighted in yellow in ``CompleteDocumentForReview.pdf''.
+Below we provide our detailed point-by-point responses to each comment.
+We hope the revised manuscript better meets your expectations and standards for publication in Solar Energy.
+
+
+
+\subsection*{Response to Reviewer \#1 }
+
+\noindent
+\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Major Comment~1.}}
+\emph{Novelty and Contribution: 
+The idea of applying pre-trained CV models to wavelet-transformed kinetic data is interesting and potentially generalizable. 
+However, similar signal-to-image ML transformations exist in other domains. 
+The manuscript should emphasize what new physical or methodological insight this work provides beyond prior
+Fourier/wavelet-based ML approaches..}
+
+\noindent
+\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+
+The additional information was added to the revised manuscript
+(from page~7, left column, paragraphs 2 to page~8, left column, paragraphs 2;
+page 8, right column, paragraph~2).
+
+
+\vspace{1cm}
+\noindent
+\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Major Comment~2.}}
+\emph{Dataset Size and Overfitting Risk: 
+The study relies on extremely small datasets (25 simulated and 28 experimental samples). 
+Although data augmentation is performed, flipping or rotating spectrograms likely introduces redundant samples rather
+than independent data points. 
+The near-perfect $R^2$ values (0.996–0.999) strongly suggest overfitting. 
+A robust cross-validation (e.g., k-fold or leave-one-out) with uncertainty quantification is needed.}
+
+\noindent
+\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+
+The minimal level shift, which was used as evidence of defect transformation, was 40~meV.
+
+
+
+
+
+\vspace{1cm}
+\noindent
+\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Major Comment~3.}}
+\emph{Simulation–Experiment Gap: 
+A major discrepancy is observed between simulated
+and experimental predictions, requiring a post-hoc quadratic correction. 
+This implies that the CNN–regressor models primarily learn the synthetic data distribution rather
+than physical correlations. 
+The authors should explore physics-based domain adaptation or partial fine-tuning using experimental data instead of empirical correction.}
+
+\noindent
+\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+
+
+The description of observation technique was modified
+(page~3, left column, paragraph~3)
+
+
+
+\vspace{1cm}
+\noindent
+\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Major Comment~4.}}
+\emph{Physical Model Validation: 
+The SCAPS-1D simulations use fixed FeB parameters
+(binding energy, migration energy, and pre-exponential factors). 
+Yet, these parameters vary widely in literature (0.55–0.69 eV for migration energy). 
+Without sensitivity analysis or error quantification, 
+the generated synthetic dataset may not reflect realistic kinetics. 
+Validation against first-principles or experimental benchmarks would strengthen the study.}
+
+
+\noindent
+\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+
+
+Allow us to say a few words  in favor of GaAs and 6H-SiC.
+
+
+\vspace{1cm}
+\noindent
+\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Major Comment~5.}}
+\emph{Regression and Feature Interpretation: 
+Although multiple regressors (SVR, XGB, DNN, RF, GB) are compared, 
+no insight is given into the learned features or their physical correlation with iron concentration. 
+Incorporating explainable AI techniques (e.g., SHAP, PCA loading analysis) 
+would add interpretability to what the CNN features represent.}
+
+\noindent
+\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+
+
+Allow us to say a few words  in favor of GaAs and 6H-SiC.
+
+
+\vspace{1cm}
+\noindent
+\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Major Comment~6.}}
+\emph{Post-Hoc Correction: 
+The quadratic correction (Eq. 10) is an empirical adjustment
+that artificially improves metrics but lacks theoretical justification. 
+The authors should either 
+(i) replace it with a physics-informed calibration (e.g., temperature or diffusion based scaling) 
+or (ii) clearly acknowledge its heuristic nature and limitations.}
+
+
+\noindent
+\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+
+
+Allow us to say a few words  in favor of GaAs and 6H-SiC.
+
+
+\vspace{1cm}
+\noindent
+\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Major Comment~7.}}
+\emph{Statistical Reporting: 
+The reported MSE, MAPE, and R$^2$ values are given without variance or confidence intervals. 
+Given the small datasets, reporting mean ± standard deviation across multiple random splits 
+would be essential to establish statistical robustness.}
+
+\noindent
+\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+
+
+Allow us to say a few words  in favor of GaAs and 6H-SiC.
+
+\vspace{1cm}
+\noindent
+\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Minor Comment~1.}}
+\emph{The introduction is overly broad;
+it should focus more on ML for microscopic defects
+rather than general PV or macro-defect analysis.}
+
+\noindent
+\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+
+
+Allow us to say a few words  in favor of GaAs and 6H-SiC.
+
+
+\vspace{1cm}
+\noindent
+\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Minor Comment~2.}}
+\emph{Some typographical errors exist (e.g., ``where where'' in Eq. 1).
+Please proofread carefully.}
+
+
+\noindent
+\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+
+
+Allow us to say a few words  in favor of GaAs and 6H-SiC.
+
+
+\vspace{1cm}
+\noindent
+\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Minor Comment~3.}}
+\emph{Figures should include axis units, consistent color scales, and indicate whether values
+are in linear or logarithmic scale.}
+
+\noindent
+\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+
+
+Allow us to say a few words  in favor of GaAs and 6H-SiC.
+
+
+\vspace{1cm}
+\noindent
+\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Minor Comment~4.}}
+\emph{The Supplementary Figures (S1–S10) are repeatedly referenced
+but insufficiently summarized in the main text.
+A concise overview table would be helpful.}
+
+\noindent
+\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+
+
+Allow us to say a few words  in favor of GaAs and 6H-SiC.
+
+
+\vspace{1cm}
+\noindent
+\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Minor Comment~5.}}
+\emph{The data availability statement (``upon reasonable request'')
+should be replaced with
+a public repository link for transparency.}
+
+\noindent
+\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+
+
+Allow us to say a few words  in favor of GaAs and 6H-SiC.
+
+
+\vspace{1cm}
+\noindent
+\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Minor Comment~6.}}
+\emph{A comparison with simpler ML baselines
+(e.g., direct regression on ISC(t) data without wavelet transformation) would
+contextualize the improvement due to CV-based transfer learning.}
+
+\noindent
+\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+
+
+Allow us to say a few words  in favor of GaAs and 6H-SiC.
+
+
+\vspace{1cm}
+\noindent
+\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Minor Comment~7.}}
+\emph{References [6], [35], [38] should be verified for year and page accuracy.
+Some reference formatting inconsistencies (journal abbreviations, italics) should be corrected.}
+
+\noindent
+\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+
+
+Allow us to say a few words  in favor of GaAs and 6H-SiC.
+
+
+\subsection*{Response to Reviewer \#2 }
+\noindent
+\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~1.}}
+\emph{It is additionally essential to examine temperatures between 270 to 350 kelvin.}
+
+\noindent
+\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+
+
+To our shame, the reviewer is correct about some fog in Results and discussion.
+We hopefully rephrased the section to add sunlight.
+
+
+
+\vspace{1cm}
+\noindent
+\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~2.}}
+\emph{You should compare and review your manuscript with
+other new articles such as ``Novel Design of Multi-Layer Cubic Nanoparticles for Achieving Efficient Thin-Film Perovskite Solar Cells''}
+
+\noindent
+\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+
+The investigation did not show
+the essential dependence of the influence of MW treatment on doping levels as well.
+
+
+\vspace{1cm}
+\noindent
+\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~3.}}
+\emph{Put the solar cell parameters in a table with references.}
+
+\noindent
+\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+
+The similarity of mechanisms was noted in the revised text
+(page~8, left column, paragraph~2).
+
+
+\vspace{1cm}
+\noindent
+\textcolor[rgb]{0.00,0.50,1.00}{\textbf{Comment~4.}}
+\emph{Actually, all solar cells have Rs and Rsh values.
+By investigating parasitic losses on cell performance, the article could be made more interesting.}
+
+\noindent
+\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+The text was revised.
+
+
+\subsection*{Response to EDITOR REPORT}
+\noindent
+\textcolor[rgb]{0.00,0.50,1.00}{\textbf{REPORT.}}
+\emph{We have found that your manuscript contains text which appears to have been replicated from the following published articles:}
+
+\emph{www.sciencedirect.com/science/article/abs/pii/S0038092X25005171?via\%3Dihub}
+
+\emph{Please reduce the level of overlap in your revised manuscript by rewriting the appropriate sections.}
+
+\noindent
+\textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+
+
+Some advantages of the variety of using structures are in reply on Comment~1 of Reviewer~2 as well.
+
+
+
+\section*{References}
+
+\bibliographystyle{iopart-num}
+\bibliography{olikh}
+
+\end{document}
+
