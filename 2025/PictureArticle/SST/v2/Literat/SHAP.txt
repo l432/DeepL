@@ -1,0 +1,65 @@
+import shap 
+
+shap_test = shap.TreeExplainer(best_model).shap_values(df)
+
+shap.summary_plot(shap_test, df, max_display=25, auto_size_plot=True)
+
+--------------------------------------------------
+import shap
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+
+# Загрузка и подготовка данных
+data = pd.read_csv('your_dataset.csv')  # замените на путь к любому вашему набору данных
+X = data.drop('target', axis=1)
+y = data['target']
+
+# Разделение данных и обучение модели
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+model = LinearRegression().fit(X_train, y_train)
+
+# Использование SHAP
+explainer = shap.Explainer(model, X_train)
+shap_values = explainer(X_test)
+
+shap.summary_plot(shap_values, X_test)
+
+-----------------------------------------------------------
+
+from sklearn.ensemble import RandomForestRegressor
+
+# Обучение случайного леса
+rf_model = RandomForestRegressor(n_estimators=100, random_state=42).fit(X_train, y_train)
+
+# Использование SHAP для случайного леса
+rf_explainer = shap.Explainer(rf_model, X_train)
+rf_shap_values = rf_explainer(X_test)
+
+shap.summary_plot(rf_shap_values, X_test)
+-------------------------------------------------------
+
+pip install shap
+
+import shap
+explainer = shap.Explainer(model)
+shap_values = explainer(X_test)
+
+# визуализация SHAP-значений для первого образца
+shap.plots.waterfall(shap_values[0])
+
+Диаграмма shap.plots.force
+shap.plots.force(shap_values[0])
+
+Диаграмма shap.plots.bar, отражающая результаты усреднения SHAP-значений
+shap.plots.bar(shap_values)
+
+
+Диаграмма shap.plots.beeswarm — это полезный инструмент, позволяющий визуализировать все SHAP‑значения для каждого признака. По оси x этой диаграммы SHAP‑значения сгруппированы по признакам. А цвет точек указывает на соответствующее значение признака. Обычно точки, цвет которых ближе к красному, указывают на более высокие значения признаков.
+Диаграмма shap.plots.beeswarm может помочь в выявлении важных взаимоотношений между признаками и прогнозами модели. На нашей диаграмме признаки упорядочены по их средним SHAP‑значениям.
+
+shap.plots.beeswarm(shap_values)
+
+
+Для того чтобы лучше понять взаимоотношения между отдельными значениями признаков и их SHAP‑значениями, можно создать диаграмму зависимости (shap.plots.scatter). Это — диаграмма, которая раскрывает взаимоотношения между SHAP‑значениями и значениями признаков для отдельных признаков.
+shap.plots.scatter(shap_values[:,"MedInc"])
