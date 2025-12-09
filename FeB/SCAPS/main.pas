@@ -682,6 +682,8 @@ begin
 
  T:=TempStart.Data;
 
+    showmessage(LowerCase(floattostrF(Silicon.Brad(340,Boron.Data*1e6,False,
+     (BSFThick.Data+BaseThick.Data+EmiterThick.Data)*1e-6,False),ffExponent,7,2)));
 // для SCAPS 3.10 номери рядочків після 92 збільшили на 2
 
  repeat

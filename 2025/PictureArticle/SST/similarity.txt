@@ -1,0 +1,160 @@
+“The black lines are the identified lines serving as the scaling characteristics.”
+
+
+1. Ідентичні посилання на методику визначення концентрації заліза
+
+Фрагмент, що описує використану методику, є ідентичним, за винятком додаткових слів у першому файлі:
+
+    Майже ідентичний фрагмент:
+
+        Файл 1: The iron concentration was determined using a methodology described in \cite{Olikh2022:JMatSci,Olikh2021JAP}, which is based on fitting the kinetics of the short-circuit current following Fe... 
+
+Файл 2: The iron concentration was determined using a methodology described in \cite{Olikh2022:JMatSci,Olikh2021JAP}.
+
+        (Обидва файли використовують однакове посилання на ті самі роботи).
+
+2. Ідентична ключова фраза про забруднення залізом
+
+Ідентична фраза, що описує залізо як домішку:
+
+    Фраза: Iron is one of the most prevalent, ubiquitous, and efficiency-limiting metallic impurities
+
+        Файл 1: ...and (ii)~iron is one of the most prevalent, ubiquitous, and efficiency-limiting metallic impurities \cite{Buonassisi2006, IronSC}. 
+
+Файл 2: Iron is one of the most prevalent, ubiquitous, and efficiency-limiting metallic impurities in such structures \cite{Buonassisi2006, IronSC}, which, as noted earlier, forms the foundation of the photovoltaic market.
+
+        (Основна частина речення в обох випадках співпадає повністю).
+
+3. Ідентичний перелік алгоритмів машинного навчання
+
+Повний список алгоритмів, використаних у дослідженнях, є однаковим:
+
+    Перелік алгоритмів: Random Forest, Gradient Boosting, eXtreme Gradient Boosting, Support Vector Regression (SVR), and Deep Neural Networks (DNNs)
+
+        Файл 1: A comprehensive analysis was done on 80 models, utilizing algorithms such as Random Forest (RF), Gradient Boosting (GB), eXtreme Gradient Boosting (XGB), Support Vector Regression (SVR), and Deep Neural Networks (DNN) to predict iron concentration... 
+
+Файл 2: Regression models, namely Random Forest, Gradient Boosting, eXtreme Gradient Boosting, Support Vector Regression (SVR), and Deep Neural Networks (DNNs), were trained to predict iron concentration...
+
+        (Назви та послідовність алгоритмів (Random Forest, Gradient Boosting, eXtreme Gradient Boosting, SVR, DNN) ідентичні).
+
+4. Ідентична концепція формування пар FeB
+
+Фраза, що описує формування залізо-борових пар у кремнії, має незначні відмінності, але передає ту саму наукову інформацію з тими самими посиланнями:
+
+    Схоже речення:
+
+        Файл 1: It is well established that in $p$-type material, iron tends to bind with dopant atoms such as boron, forming iron–boron pairs under equilibrium conditions or existing as interstitial species only in the presence of sufficiently high free electron densities \cite{Kimerling1983, FeBAssJAP2014}. 
+
+Файл 2: In Si:B, iron tends to form iron–boron pairs under equilibrium conditions, which intense illumination can dissociate \cite{Kimerling1983, FeBAssJAP2014}.
+
+        (Обидва речення містять ключову фразу iron tends to form iron–boron pairs under equilibrium conditions та посилаються на ті самі джерела).
+
+
+
+
+--------------------------------------------------------
+1. Ідентичний опис експериментальних даних (Найбільша проблема)
+
+1. Опис даних, використаних для навчання моделей (високий ступінь збігу)
+
+Опис набору експериментальних даних, використаних у дослідженні, є майже ідентичним, оскільки йдеться про один і той самий фізичний зразок (135 сонячних елементів). Збігається вся технічна частина фрази:
+
+    Фрагмент збігу (технічна частина): 135 silicon solar cells (SCs) with a boron-doped base and a wide range of base thicknesses ($180-380$~$\mu$m) and doping concentrations ($10^{15}-10^{17}$~cm$^{-3}$).
+
+    У Файлі 1 це виглядає як: The models were trained and tested on data obtained from 135 silicon solar cells (SCs) with a boron-doped base and a wide range of base thicknesses ($180-380$~$\mu$m) and doping concentrations ($10^{15}-10^{17}$~cm$^{-3}$).
+
+    У Файлі 2 це виглядає як: The experimental dataset consists of 135 silicon solar cells (SCs) with a boron-doped base and a wide range of base thicknesses ($180-380$~$\mu$m) and doping concentrations ($10^{15}-10^{17}$~cm$^{-3}$).
+
+2. Опис сутності домішки заліза (ключова фраза)
+
+Ключова фраза, що описує залізо як найбільш поширену та обмежувальну домішку, є ідентичною в обох текстах:
+
+    Ідентична фраза: Iron is one of the most prevalent, ubiquitous, and efficiency-limiting metallic impurities
+
+    У Файлі 1 це частина речення: ...and (ii)~iron is one of the most prevalent, ubiquitous, and efficiency-limiting metallic impurities \cite{Buonassisi2006, IronSC}.
+
+    У Файлі 2 це початок речення: Iron is one of the most prevalent, ubiquitous, and efficiency-limiting metallic impurities in such structures \cite{Buonassisi2006, IronSC}, which, as noted earlier, forms the foundation of the photovoltaic market.
+
+3. Перелік алгоритмів машинного навчання
+
+Повний список використаних алгоритмів регресії (без урахування абревіатур у дужках) є ідентичним в обох анотаціях/текстах:
+
+    Ідентичний список: Random Forest, Gradient Boosting, eXtreme Gradient Boosting, Support Vector Regression (SVR), and Deep Neural Networks (DNNs)
+
+4. Ідентична початкова фраза про методику (Methodology)
+
+Фрагмент, що посилається на наукові роботи, які описують методику визначення концентрації заліза, є ідентичним до моменту завершення цитування:
+
+    Ідентичний фрагмент: The iron concentration was determined using a methodology described in \cite{Olikh2022:JMatSci,Olikh2021JAP}
+
+5. Ідентична Boilerplate-секція про додаткові дані
+
+Заголовки та вступні речення розділу, що описує наявність додаткових матеріалів, повністю збігаються (за винятком URL-адреси):
+
+    Ідентичні рядки (заголовок та вступ): \section*{Supplementary data}\label{SuplData}\nSupplementary data to this article can be found online at
+
+    Ключові висновки (переваги методу):
+
+        Файл 1 (Conclusion): The proposed ML-based approach provides a **non-destructive, fast, and simple method** for determining iron concentrations that **does not require specialized equipment**.
+
+        Файл 2 (Abstract/Conclusion): Хоча висновок у Файлі 2 більш сфокусований на CNN, у ньому також підкреслюється, що метод є promising strategy for materials research in general and for defect characterization in particular.
+
+Рекомендації
+
+Щоб зменшити відсоток подібності, необхідно:
+
+    Перефразувати опис даних: Це найважливіше. Опишіть набір даних у кожному файлі, використовуючи різні синтаксичні конструкції та словник, навіть якщо йдеться про ті самі 135 елементів.
+
+        Наприклад: замість "...solar cells (SCs) with a boron-doped base and a wide range of base thicknesses..." можна написати "...silicon SCs, which possess $p$-type boron doping, encompassing a thickness range from $180$ to $380$~$\mu$m and concentrations between $10^{15}$ and $10^{17}$~cm$^{-3}$."
+
+    Змінити вступні речення: Перебудуйте перші абзаци, щоб уникнути однакових фраз на кшталт "continuous growth of the photovoltaic market...".
+
+    Перефразувати стандартні розділи: Змініть формулювання в розділах Supplementary data та Data availability (наприклад, "Додаткові матеріали доступні..." замість "Додаткові дані можна знайти...").
+
+Якщо обидва документи є вашими, і ви подаєте їх до різних видань, зміна цих фрагментів значно знизить ризик відхилення через самоплагіат.
+
+
+
+
+
+
+
+-------------------------------------------------------
+Звісно. Я проаналізував текст файлу "2.tex" (LaTeX-файл наукової статті) і виявив кілька явних помилок, стилістичних неточностей та потенційних джерел плутанини, які слід виправити.
+
+Ось перелік знайдених проблем:
+Явні помилки та огріхи оформлення
+
+    Лексична помилка (слово «last»):
+
+        Фрагмент: Standard approaches to solving such problems involve the use of Fourier or wavelet transforms, and **last** were applied in this study.
+
+        Коментар: Слово "last" (останній у часі) тут є неправильним. Слід використати "latter" (останній із двох згаданих), оскільки перелічуються лише перетворення Фур'є та вейвлет-перетворення.
+
+        Виправлення: ...and **the latter** were applied in this study.
+
+    Надмірність у визначенні формул (Подвійне "where"):
+
+        Фрагмент: (Перед Equation \eref{eqNFet})
+
+        where
+        where $N_\mathrm{Fe_i,0}$ is the concentration of interstitial iron atoms formed due to FeB pair dissociation,...
+
+        Коментар: Слово where (де) повторюється двічі на початку блоку визначень параметрів формули.
+
+        Виправлення: Видалити одне where.
+
+    Граматична неточність (відсутність артикля/уточнення):
+
+        Фрагмент: (Перед Equation \eref{eqTass}) $A$ is the **constant** (taken as $5.7\times10^5\,\frac{\mathrm{s}}{\mathrm{K}\;\mathrm{cm}^3}$ \cite{FeBAssSST2011}).
+
+        Коментар: Фраза "A is the constant" граматично неповна. Потрібно або додати артикль (A is **a** constant), або уточнити, що це за константа (наприклад, A is the **pre-exponential** constant).
+
+Потенційні джерела плутанини та технічні неточності
+
+    Некоректне визначення метрики MedAPE:
+
+        Фрагмент: (Equation \eref{eqMedAPE}) $$\mathtt{MedAPE} = \frac{1}{2} \left[\mathtt{MAPE}_{\lceil\frac{N}{2}\rceil}+\mathtt{MAPE}_{\lfloor\frac{N}{2}+1\rfloor}\right]\,,$$
+
+        Коментар: Ця формула для Медіанної Абсолютної Відсоткової Помилки (MedAPE) є коректною лише для вибірок з парною кількістю елементів N. Однак у тексті вказано, що тренувальний набір симуляційних даних має N=25 зразків (непарне число). Для непарного N медіана є просто середнім елементом, а не середнім двох.
+------------------------------
