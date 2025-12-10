@@ -176,7 +176,12 @@ as YOLO, MobileNetV2, EfficientNet, ResNet, Xception, GoogleNet, and other convo
 measurements \cite{Liu2024a, Li2024a, Jia2024, Otamendi2021, Chen2022, AlOtum2024, Abdelsattar2025, tella2025}.
 However, in this case, the measurement result is an image, makes the approach relatively straightforward.
 In our case, it was necessary to transform the time dependence into an image representation.
-Standard approaches to solving such problems involve the use of Fourier or wavelet transforms, and last were applied in this study.
+Standard approaches to solving such problems involve the use of Fourier or wavelet transforms, and 
+\textcolor[rgb]{1.00,0.07,0.00}{
+\hl{
+the latter
+}}
+ were applied in this study.
 In photovoltaics, wavelet transforms are typically used for processing solar cell images to enhance the detection of
 macrodefects \cite{Li2012, Rosa2024}, but they can also be employed to convert one-dimensional non-stationary signals into two-dimensional spectrograms and thereby enable the effective extraction of subtle features \cite{Vinit2020}.
 
@@ -197,7 +202,9 @@ The first stage involves either simulating or experimentally measuring the time 
 of the short-circuit current in a solar cell after the induced decay of the FeB pairs.
 These procedures are described in detail in Subsections~\ref{subsec:SimDet} and \ref{subsec:ExpDet}.
 For the experimental curves, the data were smoothed using a Savitzky–Golay filter \cite{Krishnan2013}.
-Subsequently, a continuous wavelet transform \cite{Torrence1998} was applied to convert the one-dimensional time dependencies
+Subsequently, a continuous wavelet transform \textcolor[rgb]{1.00,0.07,0.00}{
+\hl{(CWT)}} 
+\cite{Torrence1998} was applied to convert the one-dimensional time dependencies
 into two-dimensional spectrograms represented as images,
 where each point corresponds to the amplitude of the wavelet coefficient at a specific time and frequency.
 The Morlet wavelet was employed, and the procedure was implemented using the Python package PyWavelets.
@@ -246,10 +253,17 @@ Model performance was evaluated using the metrics described in Subsection~\ref{s
 
 \subsection{Simulation details}\label{subsec:SimDet}
 
-To obtain the $I_\mathtt{SC}(t)$ dependencies, $I$-$V$ curve simulations were performed for a silicon $n^+$-$p$-$p^+$ structure
-under monochromatic illumination using SCAPS-1D version 3.3.11.
-The SCAPS-1D software \cite{SCAPS1} is a widely used tool for modeling solar cells
-while accounting for defect states \cite{MasumMia2025, Joshi2024, Ravidas2024, Liu2024, You2023, SCAPSDefect3}.
+\textcolor[rgb]{1.00,0.07,0.00}{
+\hl{
+The time-dependent short-circuit current, $I_\mathtt{SC}(t)$, 
+was determined by simulating the $I$-$V$ characteristics of a silicon $n^+$-$p\,$-$p^+$ structure 
+under monochromatic illumination using SCAPS-1D.3.3.11.
+SCAPS-1D} 
+\colorbox{yellow}{\cite{SCAPS1}} 
+\hl{is a widely adopted software for solar cell modeling 
+that incorporates the effects of defect states} 
+\colorbox{yellow}{\cite{MasumMia2025, Joshi2024, Ravidas2024, Liu2024, You2023, SCAPSDefect3}.}
+}
 $I_\mathtt{SC}$ values were extracted from the simulated $I$-$V$ curves using a standard procedure \cite{SCparam2017}.
 
 During the simulations, the base thickness of the structure was set to 380~$\mu$m,
@@ -265,8 +279,11 @@ The time dependence of $N_\mathtt{Fe_i}$ after pair dissociation follows the wel
 N_\mathrm{Fe_i}(t)=(N_\mathrm{Fe_i,0}-N_\mathrm{Fe_i,eq})\times
 \exp(-t/\tau_\mathrm{ass})+N_\mathrm{Fe_i,eq}\,,
 \end{equation}
+\textcolor[rgb]{1.00,0.07,0.00}{
+\hl{
 where
-where $N_\mathrm{Fe_i,0}$ is the concentration of interstitial iron atoms formed due to FeB pair dissociation,
+}}
+$N_\mathrm{Fe_i,0}$ is the concentration of interstitial iron atoms formed due to FeB pair dissociation,
 $N_\mathtt{Fe_i,0} = N_\mathtt{Fe_i}(t=0) = N_\mathtt{Fe}$;
 $N_\mathtt{Fe_i,eq}$ is the portion of interstitial iron atoms that remain unpaired in the equilibrium state
 $N_\mathtt{Fe_i,eq}=N_\mathtt{Fe_i}(t \rightarrow \infty)$,
@@ -288,7 +305,12 @@ according to \cite{FeBKin2019,FeBAssJAP2014,FeBAssSST2011}
 \tau_\mathrm{ass}=A\times\frac{T}{N_A}\exp\left(\frac{E_m}{kT}\right)\,,
 \end{equation}
 $E_m$ is the energy of Fe$_\mathtt{i}^+$ migration (taken as 0.66~eV \cite{FeBAssJAP2014,FeBKin2019,FeBAssSST2011}),
-$A$ is the constant (taken as $5.7\times10^5\,\frac{\mathrm{s}}{\mathrm{K}\;\mathrm{cm}^3}$ \cite{FeBAssSST2011}).
+$A$ is the 
+\textcolor[rgb]{1.00,0.07,0.00}{
+\hl{
+pre-exponential 
+}}
+constant (taken as $5.7\times10^5\,\frac{\mathrm{s}}{\mathrm{K}\;\mathrm{cm}^3}$ \cite{FeBAssSST2011}).
 The iron-boron pair concentration $N_\mathtt{FeB}$ was estimated as follows:
 \begin{equation}\label{eqNFeB}
   N_\mathtt{FeB}(t)+N_\mathtt{Fe_i}(t)=N_\mathtt{Fe}\,.
@@ -299,15 +321,17 @@ also on their spatial position within the structure, reflecting the non-uniformi
 \textcolor[rgb]{1.00,0.07,0.00}{
 \hl{
 The parameters used in the simulations are summarized in} \colorbox{yellow}{ \tref{tabParameters}}.
-\hl{Additional details on the procedure for modeling the $I$-$V$ curves of silicon solar cells containing iron impurities can be found in} 
+\hl{Additional details on the procedure for modeling the $I$-$V$ curves of silicon solar cells containing iron impurities can be found in}
 \colorbox{yellow}{\cite{Olikh2025MSEB, Olikh2019SM}.}}
 
 \begin{table*}
 \centering
+%{\color[rgb]{1.00,0.07,0.00}
 \caption
-{\colorbox{yellow}{Input parameters used in the simulation of short-circuit current kinetics} \label{tabParameters}}
+{\color[rgb]{1.00,0.07,0.00}{\colorbox{yellow}{Input parameters used in the simulation of short-circuit current kinetics}} \label{tabParameters}}
 \begin{indented}
 \item[]
+{\color[rgb]{1.00,0.07,0.00}
 \colorbox{yellow}{
 \begin{tabular}{p{5.8cm}ccc}
 \br
@@ -319,8 +343,9 @@ Doping concentration profile&non-uniform&uniform&non-uniform\\
 Doping [maximum] concentration (cm$^{-3}$)&$4.8\cdot10^{18}$&$1.36\cdot10^{15}$&$3\cdot10^{20}$\\
 \br
 \end{tabular}
-}
+}}
 \item[]
+{\color[rgb]{1.00,0.07,0.00}
 \colorbox{yellow}{
 \begin{tabular}{p{7cm}ccc}
 %\br
@@ -344,9 +369,9 @@ $^*$\emph{ listed values correspond to the} $p\,$-\emph{layer};
 }\\
 \br
 \end{tabular}
-}
+}}
 \item[]
-\colorbox{yellow}{
+{\color[rgb]{1.00,0.07,0.00}\colorbox{yellow}{
 \begin{tabular}{p{4.8cm}cccc}
 %\br
 Defect characteristic & Fe$_i$  &Fe$_i$B$_s$  &  &\\
@@ -359,7 +384,7 @@ Migration energy (eV)&0.66&&&\cite{FeBAssJAP2014,FeBKin2019,FeBAssSST2011}\\
 Binding energy (eV)&&\multicolumn{2}{c}{0.582}&\cite{Wijaranakula}\\
 \br
 \end{tabular}
-}
+}}
 \end{indented}
 \end{table*}
 
@@ -377,11 +402,14 @@ The $n^+$ (0.7~$\mu$m, 20–30 $\Omega$/$\Box$) and $p^+$ (0.6~$\mu$m, 10–20 $
 layers were formed by phosphorus and boron diffusion, respectively.
 The details of the fabrication procedure are provided elsewhere \cite{Olikh2021JAP}.
 
-Current–voltage curves and $I_\mathtt{SC}$ kinetics were measured using a Keithley 2450 source meter.
-A 940~nm SN-HPIR940nm-1W LED (intensity 5 W/m$^{2}$) was used as a monochromatic light source,
-and its output was stabilized by a W1209 thermostat and a feedback-controlled power supply.
-The cell temperature was regulated by a thermoelectric cooler with an STS-21 sensor and maintained constant using a PID algorithm in the control software.
-FeB pair dissociation was induced by intense (approximately 7000~W/m$^{2}$) halogen lamp illumination.
+\textcolor[rgb]{1.00,0.07,0.00}{
+\hl{
+$I$-$V$ characteristics and the $I_\mathtt{SC}$ dependencies were recorded using a Keithley 2450 source meter.
+Monochromatic illumination was provided by a 940~nm LED with an intensity of 5 W/m$^{2}$, 
+stabilized via a W1209 thermostat in combination with a feedback-controlled power supply.
+The cell temperature was controlled with a thermoelectric cooler equipped with an STS-21 sensor and a PID algorithm implemented in the control software.
+Dissociation of FeB pairs was achieved through exposure to intense halogen lamp illumination, approximately 700~mW/cm$^{2}$.
+}}
 The illumination intervals were selected according to a previous study \cite{OlikhPSSA}.
 The kinetics of the short-circuit current were measured in the dark at 340~K for 3000~s.
 According to Eq.~\eref{eqTass}, this interval is sufficient for the complete restoration of the iron–boron pairs to their equilibrium concentration.
@@ -399,12 +427,22 @@ while the remaining panels of the figure display the spectrograms obtained from 
 \caption{\label{Fig3}
 (a) Experimentally measured time dependence of the short-circuit current for a sample with
 $N_\mathtt{Fe}=2.8\cdot10^{13}$~cm$^{-3}$ (a, open  squares) and the same dependence after applying the Savitzky–Golay filter (filled circles).
-Panels (b) and (c) show the wavelet spectrograms corresponding to the curves with filled squares and open circles, respectively.
+Panels (b) and (c) show the wavelet spectrograms corresponding to the curves with 
+\textcolor[rgb]{1.00,0.07,0.00}{
+\hl{
+open
+}}
+squares and 
+\textcolor[rgb]{1.00,0.07,0.00}{
+\hl{
+filled
+}}  
+circles, respectively.
 }%
 \end{figure}
 
-The iron concentration $N_\mathtt{Fe}$ was determined using the methodology described in \cite{Olikh2022:JMatSci,Olikh2021JAP},
-which is based on fitting the kinetics of the short-circuit current following FeB pair dissociation.
+
+To determine the iron concentration $N_\mathtt{Fe}$, the method described in \cite{Olikh2022:JMatSci,Olikh2021JAP} was employed.
 A total of 28 samples with iron concentrations ranging from $10^{11}$~cm$^{-3}$ to $2\times10^{13}$~cm$^{-3}$ were examined.
 The entire experimental dataset was used as the test set to evaluate the models trained using the simulated data.
 In cases where the models were trained using experimental data, 20 randomly selected samples were included in the training set,
@@ -483,8 +521,11 @@ YOLOv4 \newline (CSPDarknet53)&  Feature extractor  \newline (raw, top layer)& N
 \subsection{Regression algorithms}\label{subsec:RegAlg}
 
 Five ML algorithms were employed to develop regression models for predicting iron concentrations:
-Random Forest (RF), Gradient Boosting (GB), eXtreme Gradient Boosting (XGB), Support Vector Regression (SVR), and Deep Neural Network (DNN).
-The models were implemented using Python libraries: Keras for DNN; Scikit-learn for RF, GB, and SVR; and XGBoost for XGB.
+eXtreme Gradient Boosting (XGB), Random Forest (RF), Support Vector Regression (SVR), Gradient Boosting (GB), and Deep Neural Network (DNN).
+\textcolor[rgb]{1.00,0.07,0.00}{
+\hl{
+The models were implemented in Python using the Keras, Scikit-learn, and XGBoost libraries.
+}}
 
 Each regression model was trained using features obtained from all configurations listed in \tref{tabUsedMod} and subsequently used to make predictions.
 The only exception involved the uncompressed features extracted by YOLOv4, for which the available computational resources
@@ -494,13 +535,13 @@ Such logarithmic transformation is a standard approach for achieving higher pred
 when the target quantity spans several orders of magnitude \cite{Srivastava2023, Minagawa2024}.
 Both input features and target values were normalized to have zero mean and unit standard deviation within the training set.
 
+\textcolor[rgb]{1.00,0.07,0.00}{
+\hl{
 For each scenario, regression models were optimized to enhance the predictive performance.
-Hyperparameter tuning was performed using the Optuna toolkit,
-employing a TPE sampler and Hyperband pruner to ensure efficient selection.
+Hyperparameter tuning was performed using the five-fold cross-validation and the Optuna toolkit.
 The complete list of tuned hyperparameters and their respective search ranges is provided in Tables~S1–S5 (Supplementary Material).
-Five-fold cross-validation was implemented during model tuning, with 20\% of the training data used as a validation set
-to evaluate models trained on the remaining 80\%.
-The resulting optimal hyperparameter combinations are presented in Tables~S6–S10.
+Tables S6–S10 summarize the optimal hyperparameter combinations that were chosen.
+}}
 
 Consequently, 87 distinct combinations of computer vision and regression models were investigated.
 Each combination was subsequently trained and evaluated using both simulated and experimental data.
@@ -541,6 +582,11 @@ $\mathtt{MAPE}_i$ is the  absolute percentage error for $i$-th data point;
 $N_{\mathrm{Fe,PRED},i}$ is the predicted iron concentration,
 $N_{\mathrm{Fe,TRUE},i}$ is the known value
 (either the parameter used in the simulation or obtained from experimental iron determination);
+Eq.~\eref{eqMedAPE} 
+\textcolor[rgb]{1.00,0.07,0.00}{
+\hl{
+implies that $\mathtt{MAPE}_i$ must be arranged in order of magnitude;
+}}
 $\overline{N_\mathrm{Fe,TRUE}}$ is the mean of the true values in the dataset.
 
 MSE is one of the most widely used metrics for evaluating model accuracy,
@@ -548,7 +594,7 @@ and the training objective was specifically defined to minimize this quantity.
 However, because the computation of $y_i$ involves both normalization and logarithmic transformation of $N_\mathtt{Fe}$,
 the MSE metric alone does not fully reflect the accuracy of the iron concentration estimation.
 Therefore, MAPE, which quantifies the mean relative deviation, was also employed.
-In addition, MedAPE, representing the error value below which 50\% of the predictions fall,
+In addition, MedAPE, representing the error value below which half of the predictions lie,
 provides a more robust measure against the influence of individual outliers,
 which can have a particularly large effect on mean-based metrics in smaller datasets.
 Finally, the $R^2$ was used to quantify the fraction of the variance in the
@@ -589,7 +635,10 @@ obtained using feature vectors extracted from various CV models combined with di
 ML models were trained using a simulated dataset.
 The open circles correspond to the training phase,
 whereas the filled circles and open squares correspond to the test phase representing the simulated and experimental datasets, respectively.
-The black lines are the identified lines serving as the references.
+\textcolor[rgb]{1.00,0.07,0.00}{
+\hl{
+The black lines indicate the identity line between predicted and true values.
+}}
 }\label{Fig4}
 \end{figure*}
 
@@ -826,7 +875,10 @@ obtained using feature vectors extracted from various CV models combined with di
 (specific models are indicated in the figures).
 ML models were trained using a dataset derived from experimental measurements.
 The open and filled squares correspond to the training and testing phases, respectively.
-The black lines are the identified lines serving as the references.
+\textcolor[rgb]{1.00,0.07,0.00}{
+\hl{
+The black lines indicate the identity line between predicted and true values.
+}}
 }\label{Fig8}
 \end{figure*}
 
@@ -943,7 +995,10 @@ and for defect characterization in particular,
 especially when the acquisition of large datasets is difficult or impractical.
 
 \section*{Supplementary data}\label{SuplData}
-Supplementary data to this article can be found online at
+\textcolor[rgb]{1.00,0.07,0.00}{
+\hl{
+The supplementary information related to this article is provided online at
+}}
 \url{https://surl.li/czsgvx}
 %https://www.mediafire.com/file/mzxu10ca1rswqgk/SupplementaryMaterial.pdf/file
 

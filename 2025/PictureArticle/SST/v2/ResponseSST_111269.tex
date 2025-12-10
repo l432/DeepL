@@ -32,9 +32,9 @@ We hope the revised manuscript better meets your expectations and standards for 
 
 \noindent
 \textcolor[rgb]{0.00,0.50,1.00}{\textbf{Major Comment~1.}}
-\emph{Novelty and Contribution: 
-The idea of applying pre-trained CV models to wavelet-transformed kinetic data is interesting and potentially generalizable. 
-However, similar signal-to-image ML transformations exist in other domains. 
+\emph{Novelty and Contribution:
+The idea of applying pre-trained CV models to wavelet-transformed kinetic data is interesting and potentially generalizable.
+However, similar signal-to-image ML transformations exist in other domains.
 The manuscript should emphasize what new physical or methodological insight this work provides beyond prior
 Fourier/wavelet-based ML approaches..}
 
@@ -49,11 +49,11 @@ page 8, right column, paragraph~2).
 \vspace{1cm}
 \noindent
 \textcolor[rgb]{0.00,0.50,1.00}{\textbf{Major Comment~2.}}
-\emph{Dataset Size and Overfitting Risk: 
-The study relies on extremely small datasets (25 simulated and 28 experimental samples). 
+\emph{Dataset Size and Overfitting Risk:
+The study relies on extremely small datasets (25 simulated and 28 experimental samples).
 Although data augmentation is performed, flipping or rotating spectrograms likely introduces redundant samples rather
-than independent data points. 
-The near-perfect $R^2$ values (0.996–0.999) strongly suggest overfitting. 
+than independent data points.
+The near-perfect $R^2$ values (0.996–0.999) strongly suggest overfitting.
 A robust cross-validation (e.g., k-fold or leave-one-out) with uncertainty quantification is needed.}
 
 \noindent
@@ -68,11 +68,11 @@ The minimal level shift, which was used as evidence of defect transformation, wa
 \vspace{1cm}
 \noindent
 \textcolor[rgb]{0.00,0.50,1.00}{\textbf{Major Comment~3.}}
-\emph{Simulation–Experiment Gap: 
+\emph{Simulation–Experiment Gap:
 A major discrepancy is observed between simulated
-and experimental predictions, requiring a post-hoc quadratic correction. 
+and experimental predictions, requiring a post-hoc quadratic correction.
 This implies that the CNN–regressor models primarily learn the synthetic data distribution rather
-than physical correlations. 
+than physical correlations.
 The authors should explore physics-based domain adaptation or partial fine-tuning using experimental data instead of empirical correction.}
 
 \noindent
@@ -87,12 +87,12 @@ The description of observation technique was modified
 \vspace{1cm}
 \noindent
 \textcolor[rgb]{0.00,0.50,1.00}{\textbf{Major Comment~4.}}
-\emph{Physical Model Validation: 
+\emph{Physical Model Validation:
 The SCAPS-1D simulations use fixed FeB parameters
-(binding energy, migration energy, and pre-exponential factors). 
-Yet, these parameters vary widely in literature (0.55–0.69 eV for migration energy). 
-Without sensitivity analysis or error quantification, 
-the generated synthetic dataset may not reflect realistic kinetics. 
+(binding energy, migration energy, and pre-exponential factors).
+Yet, these parameters vary widely in literature (0.55–0.69 eV for migration energy).
+Without sensitivity analysis or error quantification,
+the generated synthetic dataset may not reflect realistic kinetics.
 Validation against first-principles or experimental benchmarks would strengthen the study.}
 
 
@@ -106,10 +106,10 @@ Allow us to say a few words  in favor of GaAs and 6H-SiC.
 \vspace{1cm}
 \noindent
 \textcolor[rgb]{0.00,0.50,1.00}{\textbf{Major Comment~5.}}
-\emph{Regression and Feature Interpretation: 
-Although multiple regressors (SVR, XGB, DNN, RF, GB) are compared, 
-no insight is given into the learned features or their physical correlation with iron concentration. 
-Incorporating explainable AI techniques (e.g., SHAP, PCA loading analysis) 
+\emph{Regression and Feature Interpretation:
+Although multiple regressors (SVR, XGB, DNN, RF, GB) are compared,
+no insight is given into the learned features or their physical correlation with iron concentration.
+Incorporating explainable AI techniques (e.g., SHAP, PCA loading analysis)
 would add interpretability to what the CNN features represent.}
 
 \noindent
@@ -122,11 +122,11 @@ Allow us to say a few words  in favor of GaAs and 6H-SiC.
 \vspace{1cm}
 \noindent
 \textcolor[rgb]{0.00,0.50,1.00}{\textbf{Major Comment~6.}}
-\emph{Post-Hoc Correction: 
+\emph{Post-Hoc Correction:
 The quadratic correction (Eq. 10) is an empirical adjustment
-that artificially improves metrics but lacks theoretical justification. 
-The authors should either 
-(i) replace it with a physics-informed calibration (e.g., temperature or diffusion based scaling) 
+that artificially improves metrics but lacks theoretical justification.
+The authors should either
+(i) replace it with a physics-informed calibration (e.g., temperature or diffusion based scaling)
 or (ii) clearly acknowledge its heuristic nature and limitations.}
 
 
@@ -140,9 +140,9 @@ Allow us to say a few words  in favor of GaAs and 6H-SiC.
 \vspace{1cm}
 \noindent
 \textcolor[rgb]{0.00,0.50,1.00}{\textbf{Major Comment~7.}}
-\emph{Statistical Reporting: 
-The reported MSE, MAPE, and R$^2$ values are given without variance or confidence intervals. 
-Given the small datasets, reporting mean ± standard deviation across multiple random splits 
+\emph{Statistical Reporting:
+The reported MSE, MAPE, and R$^2$ values are given without variance or confidence intervals.
+Given the small datasets, reporting mean ± standard deviation across multiple random splits
 would be essential to establish statistical robustness.}
 
 \noindent
@@ -174,9 +174,39 @@ Please proofread carefully.}
 
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+We carefully reviewed the manuscript and corrected multiple typographical errors. 
+Namely:
+
+\noindent
+- 
+changed phrase ``Standard approaches to solving such problems involve the use of Fourier or wavelet transforms, and last were applied in this study''
+to  ``Standard approaches to solving such problems involve the use of Fourier or wavelet transforms, and \textcolor[rgb]{1.00,0.07,0.00}{the latter}
+were applied in this study'' on page~2;
+
+\noindent
+- changed ``where where'' to ``where'' after Eq.~(1);
+
+\noindent
+- changed ``A is the constant'' to ``A is the pre-exponential constant'' after Eq.~(3);
+
+\noindent
+- changed phase ``Panels (b) and (c) show the wavelet spectrograms corresponding to the curves with filled squares and open circles, respectively'' 
+to ``Panels (b) and (c) show the wavelet spectrograms corresponding to the curves with \textcolor[rgb]{1.00,0.07,0.00}{open}  squares 
+and \textcolor[rgb]{1.00,0.07,0.00}{filled} circles, respectively'' 
+in the caption of Fig~3;
+
+\noindent
+- a sentence was added to clarify the applicability of the formula for the median absolute percentage error
+``Eq.~(8) implies that  $\mathtt{MAPE}_i$ must be arranged in order of magnitude; '' after Eq.~(8)
 
 
-Allow us to say a few words  in favor of GaAs and 6H-SiC.
+\noindent
+etc. 
+
+\noindent
+We hope that these revisions have resolved the issue as thoroughly as possible.
+
+
 
 
 \vspace{1cm}
@@ -281,9 +311,8 @@ the essential dependence of the influence of MW treatment on doping levels as we
 
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
-
-The similarity of mechanisms was noted in the revised text
-(page~8, left column, paragraph~2).
+We added Table~1 to the revised manuscript (page~5). 
+This table summarizes the parameters of the solar cell, silicon, and defect states at the temperature used in the main calculations.
 
 
 \vspace{1cm}
@@ -310,8 +339,19 @@ The text was revised.
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
 
 
-Some advantages of the variety of using structures are in reply on Comment~1 of Reviewer~2 as well.
+First, we apologize for the observed similarities. 
+The cited article is our own and also addresses the determination of iron concentration in silicon solar cells. 
+However, the approaches used in the cited work and in the present study are fundamentally different. 
+In the former, regression models are employed that utilize changes in photoelectric parameters during the decay of FeB pairs, 
+whereas in the present manuscript, the primary approach involves converting the kinetic dependencies of the short-circuit current 
+into images and extracting features using computer vision models. 
+Nevertheless, both studies use similar solar cell models, apply standard regression algorithms and metrics, 
+and perform testing on experimental samples from the same batch. This explains certain similarities in wording.
 
+We have revised the relevant sections and reduced the extent of overlap.
+
+
+\cite{Wijaranakula}
 
 
 \section*{References}
