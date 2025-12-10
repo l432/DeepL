@@ -174,11 +174,11 @@ Please proofread carefully.}
 
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
-We carefully reviewed the manuscript and corrected multiple typographical errors. 
+We carefully reviewed the manuscript and corrected multiple typographical errors.
 Namely:
 
 \noindent
-- 
+-
 changed phrase ``Standard approaches to solving such problems involve the use of Fourier or wavelet transforms, and last were applied in this study''
 to  ``Standard approaches to solving such problems involve the use of Fourier or wavelet transforms, and \textcolor[rgb]{1.00,0.07,0.00}{the latter}
 were applied in this study'' on page~2;
@@ -190,9 +190,9 @@ were applied in this study'' on page~2;
 - changed ``A is the constant'' to ``A is the pre-exponential constant'' after Eq.~(3);
 
 \noindent
-- changed phase ``Panels (b) and (c) show the wavelet spectrograms corresponding to the curves with filled squares and open circles, respectively'' 
-to ``Panels (b) and (c) show the wavelet spectrograms corresponding to the curves with \textcolor[rgb]{1.00,0.07,0.00}{open}  squares 
-and \textcolor[rgb]{1.00,0.07,0.00}{filled} circles, respectively'' 
+- changed phase ``Panels (b) and (c) show the wavelet spectrograms corresponding to the curves with filled squares and open circles, respectively''
+to ``Panels (b) and (c) show the wavelet spectrograms corresponding to the curves with \textcolor[rgb]{1.00,0.07,0.00}{open}  squares
+and \textcolor[rgb]{1.00,0.07,0.00}{filled} circles, respectively''
 in the caption of Fig~3;
 
 \noindent
@@ -201,7 +201,7 @@ in the caption of Fig~3;
 
 
 \noindent
-etc. 
+etc.
 
 \noindent
 We hope that these revisions have resolved the issue as thoroughly as possible.
@@ -311,7 +311,7 @@ the essential dependence of the influence of MW treatment on doping levels as we
 
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
-We added Table~1 to the revised manuscript (page~5). 
+We added Table~1 to the revised manuscript (page~5).
 This table summarizes the parameters of the solar cell, silicon, and defect states at the temperature used in the main calculations.
 
 
@@ -323,7 +323,18 @@ By investigating parasitic losses on cell performance, the article could be made
 
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
-The text was revised.
+We fully agree with the Reviewer that, for real solar cells, it is essential to consider the influence of series and shunt resistances on the efficiency of photovoltaic conversion. 
+In particular, the presence of these resistances reduces the short-circuit current. 
+In an ideal case, the short-circuit current $I_\mathtt{SC}$ is equal to the photogenerated current $I_\mathtt{ph}$:
+\begin{equation*}
+  I_\mathtt{SC} = I_\mathtt{ph}\,.
+\end{equation*}
+In the presence of resistances, within the single-diode model approximation
+\begin{equation*}
+  I_\mathtt{SC} \approx I_\mathtt{ph}\frac{R_\mathtt{sh}}{R_\mathtt{sh}+R_\mathtt{s}}\,.
+\end{equation*}
+У ви
+
 
 
 \subsection*{Response to EDITOR REPORT}
@@ -339,13 +350,13 @@ The text was revised.
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
 
 
-First, we apologize for the observed similarities. 
-The cited article is our own and also addresses the determination of iron concentration in silicon solar cells. 
-However, the approaches used in the cited work and in the present study are fundamentally different. 
-In the former, regression models are employed that utilize changes in photoelectric parameters during the decay of FeB pairs, 
-whereas in the present manuscript, the primary approach involves converting the kinetic dependencies of the short-circuit current 
-into images and extracting features using computer vision models. 
-Nevertheless, both studies use similar solar cell models, apply standard regression algorithms and metrics, 
+First, we apologize for the observed similarities.
+The cited article is our own and also addresses the determination of iron concentration in silicon solar cells.
+However, the approaches used in the cited work and in the present study are fundamentally different.
+In the former, regression models are employed that utilize changes in photoelectric parameters during the decay of FeB pairs,
+whereas in the present manuscript, the primary approach involves converting the kinetic dependencies of the short-circuit current
+into images and extracting features using computer vision models.
+Nevertheless, both studies use similar solar cell models, apply standard regression algorithms and metrics,
 and perform testing on experimental samples from the same batch. This explains certain similarities in wording.
 
 We have revised the relevant sections and reduced the extent of overlap.

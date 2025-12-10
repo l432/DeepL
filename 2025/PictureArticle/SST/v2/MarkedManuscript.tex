@@ -165,18 +165,21 @@ For example, EfficientNetB7 was trained on approximately 1.2 million images from
 This study primarily aimed to apply standard pre-trained CV models to analyze the electrophysical measurement results related to point defects.
 In particular, we focus on quantifying iron in boron-doped crystalline silicon solar cells by examining short-circuit current
 ($I_\mathtt{SC}$) relaxation following intense illumination.
-Iron is one of the most prevalent, ubiquitous, and efficiency-limiting metallic impurities in such structures \cite{Buonassisi2006, IronSC},
-which, as noted earlier, forms the foundation of the photovoltaic market.
-In Si:B, iron tends to form iron–boron pairs under equilibrium conditions, which intense illumination can dissociate \cite{Kimerling1983, FeBAssJAP2014}.
+\textcolor[rgb]{1.00,0.07,0.00}{
+\hl{
+Iron is among the dominant metallic contaminants that degrade the efficiency of these structures, 
+which, as discussed earlier, constitute the core of the photovoltaic market.
+In Si:B, iron readily associates with boron to form FeB pairs, and these complexes can be dissociated by strong illumination
+}}
+\cite{Kimerling1983, FeBAssJAP2014}.
 In fact, the aforementioned $I_\mathtt{SC}$ variations directly reflect the recovery process of iron–boron pairs \cite{Olikh2021JAP}.
-
 
 It should be noted that the use of well-established computer vision benchmark architectures such
 as YOLO, MobileNetV2, EfficientNet, ResNet, Xception, GoogleNet, and other convolutional neural networks (CNNs) is a common approach for identifying macrodefects from EL
 measurements \cite{Liu2024a, Li2024a, Jia2024, Otamendi2021, Chen2022, AlOtum2024, Abdelsattar2025, tella2025}.
 However, in this case, the measurement result is an image, makes the approach relatively straightforward.
 In our case, it was necessary to transform the time dependence into an image representation.
-Standard approaches to solving such problems involve the use of Fourier or wavelet transforms, and 
+Standard approaches to solving such problems involve the use of Fourier or wavelet transforms, and
 \textcolor[rgb]{1.00,0.07,0.00}{
 \hl{
 the latter
@@ -203,7 +206,7 @@ of the short-circuit current in a solar cell after the induced decay of the FeB 
 These procedures are described in detail in Subsections~\ref{subsec:SimDet} and \ref{subsec:ExpDet}.
 For the experimental curves, the data were smoothed using a Savitzky–Golay filter \cite{Krishnan2013}.
 Subsequently, a continuous wavelet transform \textcolor[rgb]{1.00,0.07,0.00}{
-\hl{(CWT)}} 
+\hl{(CWT)}}
 \cite{Torrence1998} was applied to convert the one-dimensional time dependencies
 into two-dimensional spectrograms represented as images,
 where each point corresponds to the amplitude of the wavelet coefficient at a specific time and frequency.
@@ -255,13 +258,13 @@ Model performance was evaluated using the metrics described in Subsection~\ref{s
 
 \textcolor[rgb]{1.00,0.07,0.00}{
 \hl{
-The time-dependent short-circuit current, $I_\mathtt{SC}(t)$, 
-was determined by simulating the $I$-$V$ characteristics of a silicon $n^+$-$p\,$-$p^+$ structure 
+The time-dependent short-circuit current, $I_\mathtt{SC}(t)$,
+was determined by simulating the $I$-$V$ characteristics of a silicon $n^+$-$p\,$-$p^+$ structure
 under monochromatic illumination using SCAPS-1D.3.3.11.
-SCAPS-1D} 
-\colorbox{yellow}{\cite{SCAPS1}} 
-\hl{is a widely adopted software for solar cell modeling 
-that incorporates the effects of defect states} 
+SCAPS-1D}
+\colorbox{yellow}{\cite{SCAPS1}}
+\hl{is a widely adopted software for solar cell modeling
+that incorporates the effects of defect states}
 \colorbox{yellow}{\cite{MasumMia2025, Joshi2024, Ravidas2024, Liu2024, You2023, SCAPSDefect3}.}
 }
 $I_\mathtt{SC}$ values were extracted from the simulated $I$-$V$ curves using a standard procedure \cite{SCparam2017}.
@@ -305,10 +308,10 @@ according to \cite{FeBKin2019,FeBAssJAP2014,FeBAssSST2011}
 \tau_\mathrm{ass}=A\times\frac{T}{N_A}\exp\left(\frac{E_m}{kT}\right)\,,
 \end{equation}
 $E_m$ is the energy of Fe$_\mathtt{i}^+$ migration (taken as 0.66~eV \cite{FeBAssJAP2014,FeBKin2019,FeBAssSST2011}),
-$A$ is the 
+$A$ is the
 \textcolor[rgb]{1.00,0.07,0.00}{
 \hl{
-pre-exponential 
+pre-exponential
 }}
 constant (taken as $5.7\times10^5\,\frac{\mathrm{s}}{\mathrm{K}\;\mathrm{cm}^3}$ \cite{FeBAssSST2011}).
 The iron-boron pair concentration $N_\mathtt{FeB}$ was estimated as follows:
@@ -396,16 +399,18 @@ The simulated test dataset consisted of 10 dependencies calculated for 10 $N_\ma
 
 \subsection{Experiment details}\label{subsec:ExpDet}
 
-The proposed method was validated using measurements of $n^+$-$p$-$p^+$ silicon solar cells fabricated on
-380~$\mu$m thick $p$-type boron-doped Cz wafers ($N_\mathrm{B}=1.36\times10^{15}$~cm$^{-3}$).
-The $n^+$ (0.7~$\mu$m, 20–30 $\Omega$/$\Box$) and $p^+$ (0.6~$\mu$m, 10–20 $\Omega$/$\Box$)
-layers were formed by phosphorus and boron diffusion, respectively.
-The details of the fabrication procedure are provided elsewhere \cite{Olikh2021JAP}.
+\textcolor[rgb]{1.00,0.07,0.00}{
+\hl{
+The proposed method was verified using real silicon solar cells manufactured on Cz-Si:B wafers. 
+The wafer thickness was 380~$\mu$m, and the acceptor concentration was $N_\mathrm{B}=1.36\times10^{15}$~cm$^{-3}$.
+The boron diffusion was used to shape $p^+$-layer (0.6~$\mu$m, 10–20 $\Omega$/$\Box$),
+and the $n^+$-layer  (0.7~$\mu$m, 20–30 $\Omega$/$\Box$) was produced by phosphorus gas-phase mass transfer.
+}}
 
 \textcolor[rgb]{1.00,0.07,0.00}{
 \hl{
 $I$-$V$ characteristics and the $I_\mathtt{SC}$ dependencies were recorded using a Keithley 2450 source meter.
-Monochromatic illumination was provided by a 940~nm LED with an intensity of 5 W/m$^{2}$, 
+Monochromatic illumination was provided by a 940~nm LED with an intensity of 5 W/m$^{2}$,
 stabilized via a W1209 thermostat in combination with a feedback-controlled power supply.
 The cell temperature was controlled with a thermoelectric cooler equipped with an STS-21 sensor and a PID algorithm implemented in the control software.
 Dissociation of FeB pairs was achieved through exposure to intense halogen lamp illumination, approximately 700~mW/cm$^{2}$.
@@ -427,16 +432,16 @@ while the remaining panels of the figure display the spectrograms obtained from 
 \caption{\label{Fig3}
 (a) Experimentally measured time dependence of the short-circuit current for a sample with
 $N_\mathtt{Fe}=2.8\cdot10^{13}$~cm$^{-3}$ (a, open  squares) and the same dependence after applying the Savitzky–Golay filter (filled circles).
-Panels (b) and (c) show the wavelet spectrograms corresponding to the curves with 
+Panels (b) and (c) show the wavelet spectrograms corresponding to the curves with
 \textcolor[rgb]{1.00,0.07,0.00}{
 \hl{
 open
 }}
-squares and 
+squares and
 \textcolor[rgb]{1.00,0.07,0.00}{
 \hl{
 filled
-}}  
+}}
 circles, respectively.
 }%
 \end{figure}
@@ -582,7 +587,7 @@ $\mathtt{MAPE}_i$ is the  absolute percentage error for $i$-th data point;
 $N_{\mathrm{Fe,PRED},i}$ is the predicted iron concentration,
 $N_{\mathrm{Fe,TRUE},i}$ is the known value
 (either the parameter used in the simulation or obtained from experimental iron determination);
-Eq.~\eref{eqMedAPE} 
+Eq.~\eref{eqMedAPE}
 \textcolor[rgb]{1.00,0.07,0.00}{
 \hl{
 implies that $\mathtt{MAPE}_i$ must be arranged in order of magnitude;
