@@ -1,11 +1,71 @@
 \providecommand{\newblock}{}
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 \expandafter\ifx\csname url\endcsname\relax
   \def\url#1{{\tt #1}}\fi
 \expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
 \providecommand{\eprint}[2][]{\url{#2}}
 % Bibliography created with iopart-num v2.1
 % /biblio/bibtex/contrib/iopart-num
+
+\bibitem{Buratti2020a}
+Buratti Y, Le~Gia Q~T, Dick J, Zhu Y and Hameiri Z 2020 {\em npj Computational
+  Materials\/} {\bf 6} 142
+
+\bibitem{Buratti2022}
+Buratti Y, Dick J, Le~Gia Q and Hameiri Z 2022 {\em ACS Appl. Mater.
+  Interfaces\/} {\bf 14} 48647--48657
+
+\bibitem{Wang2024a}
+Wang S, Wright B, Zhu Y, Buratti Y and Hameiri Z 2024 {\em Sol. Energ. Mat.
+  Sol.\/} {\bf 277} 113123
+
+\bibitem{Chia2024}
+Chia J~Y, Thamrongsiripak N, Thongphanit S and Nuntawong N 2024 {\em J. Appl.
+  Phys.\/} {\bf 135} 025701
+
+\bibitem{Olikh2022PPV}
+Olikh O, Lozitsky O and Zavhorodnii O 2022 {\em Prog. Photovoltaics Res.
+  Appl.\/} {\bf 30} 648--660
+
+\bibitem{Olikh2025SE}
+Olikh O and Zavhorodnii O 2025 {\em Sol. Energy\/} {\bf 300} 113754
+
+\bibitem{Haidari2025}
+Haidari G 2025 {\em Appl. Phys. A\/} {\bf 131} 850
+
+\bibitem{Kim2023a}
+Kim S, Jeong Y, Han D~W and Mo C~B 2023 {\em J. Electron. Mater.\/} {\bf 52}
+  5861--5871
+
+\bibitem{Choudhary2023}
+Choudhary K and Sumpter B~G 2023 {\em AIP Adv.\/} {\bf 13} 095109
+
+\bibitem{Kumagai2025}
+Kumagai Y 2025 {\em Materia Japan\/} {\bf 64} 518--523
+
+\bibitem{Ma2025}
+Ma Y, Yu H, Zhong Y, Chen S, Gong X and Xiang H 2025 {\em Appl. Phys. Lett.\/}
+  {\bf 126} 044103
+
+\bibitem{Reimer2025}
+Reimer C, Saidi P, Casert C, Beeler C, Tetsassi~Feugmo C~G, Whitelam S,
+  Mansouri E, Martinez A, Beland L and Tamblyn I 2025 {\em J. Appl. Phys.\/}
+  {\bf 138} 074306
+
+\bibitem{Tyagi2025}
+Tyagi V, Pols M, Brocks G and Tao S 2025 {\em The Journal of Physical Chemistry
+  Letters\/} {\bf 16} 5153--5159 pMID: 40371867 (\textit{Preprint}
+  \eprint{https://doi.org/10.1021/acs.jpclett.5c01139})
+  \urlprefix\url{https://doi.org/10.1021/acs.jpclett.5c01139}
+
+\bibitem{MannodiKanakkithodi2022}
+Mannodi-Kanakkithodi A, Xiang X, Jacoby L, Biegaj R, Dunham S~T, Gamelin D~R
+  and Chan M~K 2022 {\em Patterns\/} {\bf 3} 100450 ISSN 2666-3899
+  \urlprefix\url{https://www.sciencedirect.com/science/article/pii/S266638992200023X}
+
+\bibitem{MosqueraLois2024}
+Mosquera-Lois I, Kavanagh S~R, Ganose A~M and Walsh A 2024 {\em npj Comput.
+  Mater.\/} {\bf 10} 121
 
 \bibitem{Wijaranakula}
 Wijaranakula W 1993 {\em J. Etectrochem. Soc.\/} {\bf 140} 275--281

@@ -436,7 +436,7 @@ begin
             'FeB', 'Fe',[rfIgnoreCase]);
 //  showmessage(IVparameter.fSCAPSFileName);
 
-  Tdir:=DirFromFileName(IVparameter.fSCAPSFileName,'C',5);
+  Tdir:=DirFromFileName(IVparameter.fSCAPSFileName,'C',8);
 //  showmessage('Tdir='+Tdir);
   Ddir:=DirFromFileName(IVparameter.fSCAPSFileName,'D',3);
 //  showmessage('Ddir='+Ddir);
@@ -2136,21 +2136,24 @@ end;
 function TMainForm.TimeToString(tm: integer): string;
 begin
  Result:=inttostr(tm);
- if tm<10 then
-    begin
-    Result:='000'+Result;
-    Exit;
-    end;
- if tm<100 then
-    begin
-    Result:='00'+Result;
-    Exit;
-    end;
- if tm<1000 then
-    begin
+ while length(Result)<7 do
     Result:='0'+Result;
-    Exit;
-    end;
+//
+// if tm<10 then
+//    begin
+//    Result:='000'+Result;
+//    Exit;
+//    end;
+// if tm<100 then
+//    begin
+//    Result:='00'+Result;
+//    Exit;
+//    end;
+// if tm<1000 then
+//    begin
+//    Result:='0'+Result;
+//    Exit;
+//    end;
 
 end;
 

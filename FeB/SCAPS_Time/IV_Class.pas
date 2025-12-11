@@ -206,7 +206,7 @@ begin
     Delete(DataString, 1, AnsiPos ('def\', DataString)+3);
      try
        fSCAPSFileName:=Copy(DataString, 1, AnsiPos ('.', DataString)-1);
-       fTimeAfter:=StrToInt(Copy(fSCAPSFileName,AnsiPos('C',fSCAPSFileName)+1,4));
+       fTimeAfter:=StrToInt(Copy(fSCAPSFileName,AnsiPos('C',fSCAPSFileName)+1,7));
 //       showmessage(inttostr(fTimeAfter));
      except
 

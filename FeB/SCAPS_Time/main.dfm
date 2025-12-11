@@ -145,7 +145,7 @@ object MainForm: TMainForm
     end
   end
   object GBBoron: TGroupBox
-    Left = 333
+    Left = 370
     Top = 88
     Width = 250
     Height = 120
@@ -319,7 +319,7 @@ object MainForm: TMainForm
     end
   end
   object GBBSF: TGroupBox
-    Left = 589
+    Left = 630
     Top = 88
     Width = 202
     Height = 120
@@ -383,7 +383,7 @@ object MainForm: TMainForm
     end
   end
   object GBEmiter: TGroupBox
-    Left = 117
+    Left = 150
     Top = 86
     Width = 210
     Height = 120
@@ -597,7 +597,7 @@ object MainForm: TMainForm
   object GBTime: TGroupBox
     Left = 14
     Top = 86
-    Width = 97
+    Width = 130
     Height = 105
     Caption = 'Time'
     TabOrder = 14
