@@ -40,11 +40,28 @@ Fourier/wavelet-based ML approaches..}
 
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+We thank the Reviewer for this insightful comment.
 
-The additional information was added to the revised manuscript
-(from page~7, left column, paragraphs 2 to page~8, left column, paragraphs 2;
-page 8, right column, paragraph~2).
+To summarize the novelty and contribution of our work, as well as
+its distinction from previous studies on semiconductor defects, we note the following.
+The use of CNNs for analysing defect-related electrophysical dependencies has been explored previously \cite{Buratti2022}.
+In that study, however, image construction required a set of curves measured under different conditions,
+specifically at various temperatures, and the model was trained from scratch, which demanded a very large training dataset.
+In contrast, our approach relies on a single kinetic dependency and leverages the capabilities of pre-trained computer vision (CV) models.
+Standard CV models for defect detection in solar cells have also been reported \cite{Liu2024a, Li2024a, Jia2024, Otamendi2021, Chen2022, AlOtum2024, Abdelsattar2025, tella2025},
+although prior work focused on macro-defects and processed naturally acquired images from conventional cameras.
+In our case, the emphasis is on point-defect characteristics, and the images used as input are generated from electrophysical measurements.
+In the analysis of solar cells, wavelet transforms have been applied to one-dimensional dependencies \cite{Vinit2020}
+in addition to their use in improving defect detection in photographic images \cite{Li2012}.
+In those studies, however, the resulting wavelet coefficients were used as features in regression algorithms
+rather than for constructing images, which is the approach adopted in the present work.
+More broadly, to the best of our knowledge, one-dimensional signal-to-image conversion for CNN input preparation has typically been achieved
+either by employing a set of curves \cite{Buratti2022} or by digitizing standard graphs produced in software such as Origin \cite{Held2024}.
+The use of the wavelet transform as a preprocessing step for CNNs is therefore novel.
+Finally, our methodology is designed to function effectively with extremely small datasets,
+which facilitates the practical application of the proposed approach.
 
+This information has been added to the revised manuscript in the final paragraph of the Introduction.
 
 \vspace{1cm}
 \noindent
@@ -161,8 +178,8 @@ rather than general PV or macro-defect analysis.}
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
 
-The body of work specifically focused on applying ML to microscopic defect analysis remains relatively limited. 
-However, we conducted a detailed review of the publications cited in the initial manuscript draft and 
+The body of work specifically focused on applying ML to microscopic defect analysis remains relatively limited.
+However, we conducted a detailed review of the publications cited in the initial manuscript draft and
 carried out an extensive supplementary literature search.
  As a result, it has been established that
 existing applications of ML in microscopic defect characterization can be broadly categorized into several distinct approaches.
@@ -307,6 +324,7 @@ Allow us to say a few words  in favor of GaAs and 6H-SiC.
 should be replaced with
 a public repository link for transparency.}
 
+
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
 
@@ -336,9 +354,26 @@ Some reference formatting inconsistencies (journal abbreviations, italics) shoul
 
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+We have thoroughly verified all references, with particular attention given
+to the citations specifically requested by the Reviewer.
+Several images containing the references included in the manuscript,
+as well as screenshots of the corresponding publisher pages, are attached --- see \Fref{FigR1c7}.
 
+In general, the reference list is generated using .bib files downloaded directly from the publishers’ websites.
+The final formatting of the references is applied automatically according to the IOPscience style guidelines for manuscript preparation.
+Journal abbreviations follow the options provided by JabRef 5.9.
+We therefore trust that the final list of literature sources is formatted correctly.
 
-Allow us to say a few words  in favor of GaAs and 6H-SiC.
+\begin{figure*}
+\includegraphics[width=0.55\textwidth]{R2Cm7FigA}
+\includegraphics[width=0.45\textwidth]{R2Cm7FigB}
+\includegraphics[width=0.9\textwidth]{R2Cm7FigC}
+\caption{\label{FigR1c7}
+Three images are provided to illustrate the correctness of the references. 
+The upper part of each image contains an excerpt from the bibliography, 
+and the lower part shows a screenshot of the corresponding publisher page.
+}
+\end{figure*}
 
 
 \subsection*{Response to Reviewer \#2 }
@@ -363,7 +398,7 @@ other new articles such as ``Novel Design of Multi-Layer Cubic Nanoparticles for
 
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
-We have expanded the Introduction section, as detailed in our responses to Minor Comment~1 and Major Comment~1 from Reviewer 1. 
+We have expanded the Introduction section, as detailed in our responses to Minor Comment~1 and Major Comment~1 from Reviewer 1.
 In particular, the article mentioned in Reviewer 2's comment is now cited as Reference [38] in the revised manuscript.
 
 
@@ -409,8 +444,8 @@ and computer vision models extract the same features regardless of normalization
 (and, consequently, regardless of the presence of parasitic resistance).
 
 \begin{figure*}
-\includegraphics[width=0.4\textwidth]{rFig4a}
-\includegraphics[width=0.4\textwidth]{rFig4b}
+\includegraphics[width=0.4\textwidth]{R2C4FigA}
+\includegraphics[width=0.4\textwidth]{R2C4FigB}
 \caption{\label{Fig4}
 Wavelet spectrograms corresponding to the simulated short-circuit curves for a solar cell with
 $N_\mathtt{Fe}=10^{13}$~cm$^{-3}$, obtained before (left) and after (right) normalization.
