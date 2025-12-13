@@ -39,8 +39,8 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-%\documentclass[10pt,draft]{iopart}
-\documentclass[10pt]{iopart}
+\documentclass[10pt,draft]{iopart}
+%\documentclass[10pt]{iopart}
 %\newcommand{\gguide}{{\it Preparing graphics for IOP Publishing journals}}
 %Uncomment next line if AMS fonts required
 %\usepackage{iopams}
@@ -437,7 +437,7 @@ The parameters used in the simulations are summarized in} \colorbox{yellow}{ \tr
 \centering
 %{\color[rgb]{1.00,0.07,0.00}
 \caption
-{\color[rgb]{1.00,0.07,0.00}{\colorbox{yellow}{Input parameters used in the simulation of short-circuit current kinetics}} \label{tabParameters}}
+{\color[rgb]{1.00,0.07,0.00}{\colorbox{yellow}{Input parameters used in the simulation of short-circuit current kinetics. $T=340$~K}} \label{tabParameters}}
 \begin{indented}
 \item[]
 {\color[rgb]{1.00,0.07,0.00}
@@ -1124,7 +1124,15 @@ The supplementary information related to this article is provided online at
 %https://www.mediafire.com/file/mzxu10ca1rswqgk/SupplementaryMaterial.pdf/file
 
 \section*{Data availability statement}
-The data that support the findings of this study are available upon reasonable request from the authors.
+\textcolor[rgb]{1.00,0.07,0.00}{
+\hl{
+The trained models and data 
+(simulated and experimentally measured short-circuit current kinetic dependencies 
+as well as wavelet spectrogram images) that support the findings of this study 
+are openly available to download from} \colorbox{yellow}{\url{https://github.com/olegolikh/CV_Fe_SiSC.git}} 
+\hl{upon publication.
+}}
+
 
 \section*{Conflict of interest}
 The authors declare that there are no conflicts of interest related to this work.
