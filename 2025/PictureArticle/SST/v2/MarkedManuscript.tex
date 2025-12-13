@@ -50,7 +50,7 @@
 \usepackage{url}
 
 \usepackage[numbers]{natbib}
-%\usepackage{makecell}
+\usepackage{makecell}
 \usepackage{color}
 \usepackage{xcolor}
 %\usepackage[most]{tcolorbox}
@@ -470,7 +470,7 @@ Band-to-band recombination coefficient$^*$ (cm$^{3}/$s) & \multicolumn{2}{c}{$1.
 Auger recombination coefficient$^*$ (cm$^{6}/$s)&$1.29\cdot10^{-30}$&$3.88\cdot10^{-31}$&\cite{AugerSi2022,Si_Auger}\\
 Thermal velocities (cm/s)&$2.16\cdot10^5$& $1.79\cdot10^5$&\cite{Nc:Green}\\
 Carrier mobility$^*$  (cm$^2$/Vs)&1008& 349&\cite{KLAASSEN953}\\
-Effective mass  (cm$^2$/Vs)&0.36&0.82&\cite{OMara}\\
+Effective mass&0.36&0.82&\cite{OMara}\\
 \mr
 \multicolumn{4}{p{12cm}}{
 $^*$\emph{ listed values correspond to the} $p\,$-\emph{layer};
@@ -871,6 +871,31 @@ These results correspond to exceptionally high absolute performance metrics,
 providing clear evidence that the models effectively capture
 the underlying relationship between the wavelet-based images and the iron concentration.
 
+
+\begin{table*}
+\centering
+\caption{Summary of 1D-CNN model performance metrics \label{tab1DCNN}}
+\begin{indented}
+\item[]
+\begin{tabular}{ccccccc}
+\br
+\makecell{Training Data\\Type}  &   \makecell{Evaluation\\ Dataset} &   MSE ($10^{-3}$) &   $R^2$ &   MAPE (\%)&   MedAPE (\%) &\makecell{ Reference \\(CV-based Models)$^*$}\\
+\mr
+Simulated & Train       & $31\pm5$ & $0.89\pm0.02$ & $35\pm5$ & $32\pm2$ & \Fref{Fig5}, S2  \\
+ & Test       & $30\pm5$ & $0.90\pm0.04$ & $35\pm5$ & $32\pm3$ & \Fref{Fig6}, S3  \\
+ & \makecell{Experimental, without \\post-hoc calibration}       & $530\pm70$ & $<0.1$ & $480\pm60$ & $400\pm20$ & \Fref{Fig7}(a,b), S4  \\
+& \makecell{Experimental, with \\post-hoc calibration}       & $250\pm50$ & $0.6\pm0.1$ & $50\pm10$ & $44\pm8$ & \Fref{Fig7}(c,d), S5  \\
+Experimental & Train       & $27\pm7$ & $0.2\pm0.1$ & $33\pm6$ & $26\pm8$ & \Fref{Fig9}, S7  \\
+ & Test       & $30\pm10$ & $<0.1$ & $40\pm10$ & $30\pm15$ & \Fref{Fig10}, S8  \\
+\mr
+\multicolumn{7}{p{\dimexpr\linewidth-2\tabcolsep\relax}}{
+$^*$\emph{ The column indicates the figures in which performance metrics obtained for CV-based models under comparable conditions are reported.}
+}\\
+\br
+\end{tabular}
+\end{indented}
+\end{table*}
+
 Having established the effectiveness of the models on the simulated test dataset,
 we evaluated their performances using experimental measurements.
 This step is critical for assessing the generalizability of the models to real-world data
@@ -1126,10 +1151,10 @@ The supplementary information related to this article is provided online at
 \section*{Data availability statement}
 \textcolor[rgb]{1.00,0.07,0.00}{
 \hl{
-The trained models and data 
-(simulated and experimentally measured short-circuit current kinetic dependencies 
-as well as wavelet spectrogram images) that support the findings of this study 
-are openly available to download from} \colorbox{yellow}{\url{https://github.com/olegolikh/CV_Fe_SiSC.git}} 
+The trained models and data
+(simulated and experimentally measured short-circuit current kinetic dependencies
+as well as wavelet spectrogram images) that support the findings of this study
+are openly available to download from} \colorbox{yellow}{\url{https://github.com/olegolikh/CV_Fe_SiSC.git}}
 \hl{upon publication.
 }}
 
