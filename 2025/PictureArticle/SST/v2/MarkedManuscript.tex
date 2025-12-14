@@ -435,7 +435,6 @@ The parameters used in the simulations are summarized in} \colorbox{yellow}{ \tr
 
 \begin{table*}
 \centering
-%{\color[rgb]{1.00,0.07,0.00}
 \caption
 {\color[rgb]{1.00,0.07,0.00}{\colorbox{yellow}{Input parameters used in the simulation of short-circuit current kinetics. $T=340$~K}} \label{tabParameters}}
 \begin{indented}
@@ -648,10 +647,19 @@ Both input features and target values were normalized to have zero mean and unit
 
 \textcolor[rgb]{1.00,0.07,0.00}{
 \hl{
-For each scenario, regression models were optimized to enhance the predictive performance.
-Hyperparameter tuning was performed using the five-fold cross-validation and the Optuna toolkit.
-The complete list of tuned hyperparameters and their respective search ranges is provided in Tables~S1–S5 (Supplementary Material).
-Tables S6–S10 summarize the optimal hyperparameter combinations that were chosen.
+Hyperparameter optimization of regression models was performed using 5-fold cross-validation within the Optuna framework.
+The complete list of tuned hyperparameters and their respective
+search ranges is provided in Tables S1–S5 (Supplementary Material).
+For each trial, the model was trained and evaluated across multiple folds,
+and the objective function was defined as the mean performance metric over all folds.
+In most cases, the standard deviation of the $R^2$ metric across cross-validation folds did not exceed 0.02,
+while for other metrics, the variability remained within 15\% of the mean value.
+Collectively, these results indicate a low risk of overfitting.
+After hyperparameter tuning, each model was retrained on the entire training dataset using the selected hyperparameters,
+listed in Tables S6–S10, and subsequently evaluated on a fully independent hold-out test dataset
+that was not involved in either tuning or calibration.
+Importantly, augmented versions of a given sample never appeared simultaneously in training and validation/test folds.
+This strategy was applied consistently to all models considered in the study.
 }}
 
 Consequently, 87 distinct combinations of computer vision and regression models were investigated.
@@ -806,7 +814,15 @@ Consequently, the evaluation of an independent test set is essential.
 This step becomes particularly critical when the training set is small  because the test results provide primary evidence for model generalizability.
 \Fref{Fig4} and \Fref{Fig6} present the prediction results obtained for the test set generated from synthetic data
 (detailed versions are available in Figures~S1 and S3 of the Supplementary Material).
-As expected, prediction performance declined; however, the reduction in accuracy varied across the regression algorithms.
+As expected, prediction performance declined.
+\textcolor[rgb]{1.00,0.07,0.00}{
+\hl{
+Nevertheless, we emphasize the high $R^2$ values and the small gap between the training and test $R^2$ values (less than 0.05). 
+These results clearly indicate that the models did not rely on memorization 
+but instead successfully captured meaningful underlying patterns in the data.
+}}
+
+The reduction in accuracy varied across the regression algorithms.
 Specifically, this degradation was least pronounced for the DNN, which achieved the best overall performance.
 The poorest metrics were obtained for RF and GB, whereas SVR and XGB performed slightly worse than DNN but with a relatively small margin.
 This behavior can be attributed to the ability of the DNN to smoothly approximate the continuous dependencies.
@@ -848,56 +864,57 @@ were less pronounced than observed for the training dataset.
 Nevertheless, uncompressed feature representations consistently maintained a performance advantage.
 
 The top-performing model combinations were identified as follows:
-ENB7:FE+DNN (MAPE~=~5.90\%,
-MedAPE~=~4.83\%,
-$R^2= 0.996$),
+ENB7:FE+DNN (MAPE and 
+MedAPE 6\%,
+$R^2= 0.99$),
 ENB7:FE:P+DNN
-(MAPE~=~5.96\%,
-MedAPE~=~3.68\%,
-$R^2 = 0.997$),
+(MAPE~=~6\%,
+MedAPE~=~7\%,
+$R^2 = 0.99$),
 NAS:FE+SVR
-(MAPE~=~5.82\%,
-MedAPE~=~5.42\%,
-$R^2 = 0.987$),
+(MAPE~=~6\%,
+MedAPE~=~5\%,
+$R^2 = 0.99$),
 NAS:FE+XGB
-(MAPE~=~6.19\%,
-MedAPE~=~5.12\%,
-$R^2 = 0.987$),
+(MAPE~=~6\%,
+MedAPE~=~5\%,
+$R^2 = 0.99$),
 and NAS:CL:P+SVR
-(MAPE~=~10.3\%,
-MedAPE~=~4.52\%,
-$R^2 = 0.999$).
+(MAPE~=~11\%,
+MedAPE~=~5\%,
+$R^2 = 0.99$).
 These results correspond to exceptionally high absolute performance metrics,
 providing clear evidence that the models effectively capture
 the underlying relationship between the wavelet-based images and the iron concentration.
 
-To verify the feasibility of using CV-based models, 
-CNN architectures were also designed to directly process the kinetic dependencies 
-of the short-circuit current, without wavelet transformation, in order to predict iron concentration 
+\textcolor[rgb]{1.00,0.07,0.00}{
+\hl{
+To verify the feasibility of using CV-based models,
+CNN architectures were also designed to directly process the kinetic dependencies
+of the short-circuit current, without wavelet transformation, in order to predict iron concentration
 (hereinafter referred to as the 1D-CNN).
-The structure of the model was identical to that previously used to successfully analyse one-dimensional signal associated with defects \cite{Wang2024a}.
-Specifically, the 1D-CNN model used in this study comprises two one-dimensional convolutional layers
-followed by global average pooling and three fully connected layers.
-The first convolutional layer has a kernel size of three,
-a padding of one, and eight output channels.
-The second convolutional layer also uses a kernel size of three and a padding of one,
-but with sixteen output channels.
-The resulting feature maps are aggregated using a global average pooling layer.
-The aggregated feature vector is then passed through a fully connected layer with 64 neurons,
-followed by a second fully connected layer with 32 neurons.
-The network output is generated by a final fully connected layer with a single neuron.
-During network tuning, the configuration of batch normalization and regularization in the convolutional layers,
-dropout between fully connected layers, activation functions, and weight initialization was performed.
+The structure of the model was identical to that previously used to successfully analyse one-dimensional signal associated with defects} \colorbox{yellow}{\cite{Wang2024a}.}
+\hl{Specifically, the 1D-CNN model consists of two one-dimensional convolutional layers, 
+followed by global average pooling and three fully connected layers. 
+The convolutional layers use a kernel size of three and padding of one, 
+with eight and sixteen output channels, respectively. 
+The pooled features are processed by fully connected layers with 64 and 32 neurons, 
+and the final prediction is produced by a single-neuron output layer. 
+During model tuning, batch normalization and regularization in the convolutional layers, 
+dropout between fully connected layers, activation functions, and weight initialization were optimized.
 The models were trained and tested on the same dataset,
 comprising both artificial and experimental data, from which the wavelet spectrograms were generated.
-The resulting performance metrics are presented in the \tref{tab1DCNN}.
-
+The resulting performance metrics are presented in} \colorbox{yellow}{\tref{tab1DCNN},} 
+\hl{where the first two rows correspond to the cases discussed above for models that include both regression and CV components.
+}}
 
 \begin{table*}
 \centering
-\caption{Summary of 1D-CNN model performance metrics \label{tab1DCNN}}
+\caption{\color[rgb]{1.00,0.07,0.00}{\colorbox{yellow}{Summary of 1D-CNN model performance metrics}} \label{tab1DCNN}}
 \begin{indented}
 \item[]
+{\color[rgb]{1.00,0.07,0.00}
+\colorbox{yellow}{
 \begin{tabular}{ccccccc}
 \br
 \makecell{Training Data\\Type}  &   \makecell{Evaluation\\ Dataset} &   MSE ($10^{-3}$) &   $R^2$ &   MAPE (\%)&   MedAPE (\%) &\makecell{ Reference \\(CV-based Models)$^*$}\\
@@ -914,8 +931,23 @@ $^*$\emph{ The column indicates the figures in which performance metrics obtaine
 }\\
 \br
 \end{tabular}
+}}
 \end{indented}
 \end{table*}
+
+\textcolor[rgb]{1.00,0.07,0.00}{
+\hl{
+First, a small difference between the metrics obtained for the training and test sets is observed.
+This behaviour suggests an appropriate model complexity of the 1D-CNN, similar distributions of the training and test data,
+and a correct train–test split.
+At the same time, the absolute values of the metrics are low, indicating underfitting, 
+which is expected given the extremely small size of the training dataset.
+Moreover, these values are substantially lower than those achieved by the best computer vision based models.
+This result suggests, on the one hand, that CV based transfer learning is highly effective and,
+on the other hand, that not every CV model is suitable for identifying features relevant
+to the restructuring of iron-containing defects.
+}}
+
 
 Having established the effectiveness of the models on the simulated test dataset,
 we evaluated their performances using experimental measurements.
@@ -989,9 +1021,9 @@ The performance metrics after post hoc calibration are presented in \Fref{Fig7}c
 As shown by the data, applying this correction substantially reduced the prediction errors.
 Specifically, the mean relative error across the 28-sample experimental dataset now lies within the (13–17)\%
 for the best-performing models (approximately 20 out of 87 configurations) and remains below 25\% for most of the others.
-The median error is even lower, reaching (7–10)\% in the most favorable cases.
+The median error is even lower, reaching (8–10)\% in the most favorable cases (Fig.~S5).
 In line with the results obtained for the simulated test dataset, the most accurate configurations are EfficientNetB7, NASNetLarge, DNN, SVR, and XGB.
-Interestingly, MobileNetV2 was also among the top performing combinations, yielding the lowest MedAPE value (7.64\%) for the MNV2:CL configuration.
+Interestingly, MobileNetV2 was also among the top performing combinations.
 This outcome may suggest that the features extracted by MobileNetV2, although less informative for the training and simulated test datasets,
 capture specific image patterns more relevant to the experimental measurements and applied correction could have further enhanced the effectiveness of these features.
 
@@ -1004,6 +1036,30 @@ This outcome is expected because post-processing can weaken the linear correspon
 even when the overall prediction errors are simultaneously reduced.
 Therefore, the reduction in $R^2$ should be regarded as a side effect of enhancing the accuracy of the model,
 rather than as evidence of its degradation.
+
+\textcolor[rgb]{1.00,0.07,0.00}{
+\hl{
+The third and fourth rows of} \colorbox{yellow}{\tref{tab1DCNN}} 
+\hl{
+present the performance metrics obtained by the 1D-CNN 
+when a model trained on synthetic data was applied to experimental data.
+The initial results obtained without post-hoc calibration are notably poor, 
+which clearly demonstrates the need to incorporate transfer learning techniques. 
+Notably, the post-hoc calibration, specifically the function defined by} \colorbox{yellow}{Eq.~\eref{eqPostHoc}} 
+\hl{
+and derived from the CV based model results, leads to a substantial improvement in the predictive performance of the 1D-CNN.
+This observation points to two key conclusions. 
+First, it reveals the presence of a systematic bias between the raw model outputs and the true values, 
+which appears to be independent of the specific model architecture. 
+Second, it indicates that the dominant source of error does not originate from the internal structure of the models, 
+which are capable of learning meaningful patterns and reproducing structural dependencies, 
+but rather from the properties of the training data, in particular the mismatch between synthetic and experimental datasets.
+This finding provides a dual perspective. 
+On the one hand, it opens a pathway for refining defect parameters by adjusting the values used in simulations 
+until post-hoc calibration is no longer required. 
+On the other hand, it strongly suggests that the commonly accepted parameter values 
+for iron-containing defects employed in the simulations may be intrinsically inaccurate.
+}}
 
 Although quadratic correction proved effective, it does not represent a universal solution
 for transferring models from synthetic to experimental data.
@@ -1040,7 +1096,7 @@ The black lines indicate the identity line between predicted and true values.
 \end{figure*}
 
 It should be noted that, compared to training on synthetic data, this case employed an even smaller sample set (20 samples versus 25).
-However, these samples covered a narrower range of iron concentrations ($10^{11}$-$2\times10^{13}$~cm$^{-3}$ versus $10^{10}$-$10^{14}$~cm$^{-3}$).
+However, these samples covered a narrower range of iron concentrations ($10^{11}-2\cdot10^{13}$~cm$^{-3}$ versus $10^{10}$-$10^{14}$~cm$^{-3}$).
 \Fref{Fig9} presents a subset of the performance metrics obtained during the training phase
 (a more comprehensive overview is provided in Figure~S7).
 Overall, the results were similar to those shown in \Fref{Fig5}.
@@ -1065,7 +1121,7 @@ The models were trained using an experimental dataset.
 \end{figure*}
 
 Interestingly, the application of PCA often enhances the performance of the DNN.
-For example, the MAPE values for ENB7:FE and ENB7:FE:P were 7.3\% and 0.97\%, respectively.
+For example, the MAPE values for ENB7:FE and ENB7:FE:P were 7\% and 1\%, respectively.
 This observation suggests that PCA effectively mitigated the adverse effects of high feature dimensionality
 when the sample size was limited.
 In contrast, no similar improvements were observed for other regression algorithms.
@@ -1076,7 +1132,7 @@ This reduction implies a more symmetric error distribution and a decreased occur
 \Fref{Fig10} and Figure~S8 show heatmaps of the prediction metrics for the test experimental dataset
 using models trained on a separate subset of experimental data.
 Compared with the models trained on simulated data, the predictive performance of the experimental test dataset improved substantially.
-In particular, for several of the best-performing CV–regressor combinations, the MAPE and MedAPE values fall within (7–15)\%,
+In particular, for several of the best-performing CV–regressor combinations, the MAPE and MedAPE values fall within (6–15)\%,
 which is markedly better than the 20–30\% observed previously.
 Moreover, the $R^2$ values predominantly exceed 0.97, indicating a strong agreement with the actual dependencies.
 The accuracy achieved through direct training on experimental data is comparable to that obtained with post-hoc correction;
@@ -1109,6 +1165,19 @@ during the test phase.
 The models were trained using an experimental dataset.
 }\label{Fig10}
 \end{figure*}
+
+
+
+\textcolor[rgb]{1.00,0.07,0.00}{
+\hl{
+The performance metrics of the 1D-CNN trained exclusively on experimental data 
+are presented in the last two rows of } \colorbox{yellow}{\tref{tab1DCNN}.}
+\hl{ 
+These metrics are clearly inferior to those obtained by most models that incorporate pre-trained computer vision components. 
+This observation further underscores the effectiveness of the proposed transfers learning methodology 
+for applications involving limited datasets.
+}}
+
 
 In summary, three approaches for predicting iron concentrations from experimental data were evaluated:
 (i)~models trained on simulated data,

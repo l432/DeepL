@@ -78,9 +78,42 @@ A robust cross-validation (e.g., k-fold or leave-one-out) with uncertainty quant
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
 
-The minimal level shift, which was used as evidence of defect transformation, was 40~meV.
+We thank the reviewer for this important comment and fully agree that, 
+when working with small datasets, careful validation is essential to avoid overfitting. 
+We apologize for the insufficient detail in the description of the network configuration procedure
+and would like to clarify that robust cross-validation was an integral part of the training and model selection process. 
+Specifically, 5-fold cross-validation was employed during hyperparameter optimization using the Optuna framework. 
+For each trial, the model was trained and evaluated across multiple folds, 
+and the objective function was defined as the mean performance metric over all folds rather 
+than being based on a single train–validation split. 
+In most cases, the standard deviation of the $R^2$ metric across cross-validation folds did not exceed 0.02, 
+while for other metrics, the variability remained within 15\% of the mean value. 
+Collectively, these results indicate a low risk of overfitting.
+This strategy was applied consistently to all models considered in the study.
+
+After hyperparameter tuning, each model was retrained on the entire training dataset 
+using the selected hyperparameters and evaluated exclusively on a fully independent hold-out test set, 
+which was not involved in either tuning or calibration. 
+This separation ensures an unbiased assessment of generalization performance and corresponds to a practical form of nested cross-validation.
+
+Regarding data augmentation, we acknowledge that geometric transformations of spectrograms 
+(e.g., flipping and rotation) do not create fully independent samples. 
+In this work, augmentation was used solely as a regularization technique to improve model robustness,
+not as a means to increase the effective dataset size for validation or testing. 
+Importantly, cross-validation and final testing were always performed at the level of the original samples, 
+ensuring that augmented versions of a given sample never appeared simultaneously in training and validation/test folds.
 
 
+Concerning the near-perfect $R^2$ values (0.996–0.999), we emphasize that a high $R^2$ alone does not indicate overfitting when it is:
+(i)~obtained on an independent test set (for both synthetic and experimental data);
+(ii)~accompanied by low and stable values of other error metrics;
+(iii)~consistent across cross-validation folds (standard deviation approximately 0.02); and
+(iv)~associated with a small gap between training and test performance (<0.05).
+Together, these observations indicate that the models did not rely on memorization but instead captured meaningful patterns in the data.
+
+We have updated the manuscript to provide a more precise description of the models tuning procedure, 
+to include information on the standard deviation of the metrics during cross-validation (page 8, the second-to-last paragraph of Section 2.5), 
+and to highlight the small difference in $R^2$ values between the training and test datasets (page 10, left column).
 
 
 
@@ -346,8 +379,8 @@ contextualize the improvement due to CV-based transfer learning.}
 
 Following the Reviewer’s suggestion, CNN models were designed
 that directly process the kinetic dependencies of the short-circuit current
-to predict iron concentration. 
-The structure of the model was identical to that previously used to successfully analyse one-dimensional signal associated with defects \cite{Wang2024a}. 
+to predict iron concentration.
+The structure of the model was identical to that previously used to successfully analyse one-dimensional signal associated with defects \cite{Wang2024a}.
 Specifically, the 1D-CNN model used in this study comprises two one-dimensional convolutional layers
 followed by global average pooling and three fully connected layers.
 The first convolutional layer has a kernel size of three,
@@ -388,14 +421,14 @@ $^*$\emph{ The column indicates the figures in which performance metrics obtaine
 }
 \end{table*}
 
-First, a small difference between the metrics obtained for the training and test sets is observed, 
-as indicated by the pairwise comparison of rows 1 and 2 and rows 3 and 4. 
-This behaviour suggests an appropriate model complexity of the 1D-CNN, similar distributions of the training and test data, 
-and a correct train–test split. 
+First, a small difference between the metrics obtained for the training and test sets is observed,
+as indicated by the pairwise comparison of rows 1 and 2 and rows 3 and 4.
+This behaviour suggests an appropriate model complexity of the 1D-CNN, similar distributions of the training and test data,
+and a correct train–test split.
 At the same time, the absolute values of the metrics are low, indicating underfitting, which is expected given the extremely small size of the training dataset.
-Moreover, these values are substantially lower than those achieved by the best computer vision based models. 
-This result suggests, on the one hand, that computer vision based transfer learning is highly effective and, 
-on the other hand, that not every computer vision model is suitable for identifying features relevant 
+Moreover, these values are substantially lower than those achieved by the best computer vision based models.
+This result suggests, on the one hand, that computer vision based transfer learning is highly effective and,
+on the other hand, that not every computer vision model is suitable for identifying features relevant
 to the restructuring of iron-containing defects.
 
 The corresponding information has been added to the revised manuscript.
@@ -420,8 +453,9 @@ Journal abbreviations follow the options provided by JabRef 5.9.
 We therefore trust that the final list of literature sources is formatted correctly.
 
 \begin{figure*}
-\includegraphics[width=0.55\textwidth]{R2Cm7FigA}
+\includegraphics[width=0.55\textwidth]{R2Cm7FigA}\hfill
 \includegraphics[width=0.45\textwidth]{R2Cm7FigB}
+\vspace{10mm}
 \includegraphics[width=0.9\textwidth]{R2Cm7FigC}
 \caption{\label{FigR1c7}
 Three images are provided to illustrate the correctness of the references.
@@ -499,7 +533,7 @@ and computer vision models extract the same features regardless of normalization
 (and, consequently, regardless of the presence of parasitic resistance).
 
 \begin{figure*}
-\includegraphics[width=0.4\textwidth]{R2C4FigA}
+\includegraphics[width=0.4\textwidth]{R2C4FigA}\hspace{15mm}
 \includegraphics[width=0.4\textwidth]{R2C4FigB}
 \caption{\label{Fig4}
 Wavelet spectrograms corresponding to the simulated short-circuit curves for a solar cell with
