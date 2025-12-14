@@ -346,8 +346,9 @@ contextualize the improvement due to CV-based transfer learning.}
 
 Following the Reviewer’s suggestion, CNN models were designed
 that directly process the kinetic dependencies of the short-circuit current
-to predict iron concentration.
-The 1D-CNN model used in this study comprises two one-dimensional convolutional layers
+to predict iron concentration. 
+The structure of the model was identical to that previously used to successfully analyse one-dimensional signal associated with defects \cite{Wang2024a}. 
+Specifically, the 1D-CNN model used in this study comprises two one-dimensional convolutional layers
 followed by global average pooling and three fully connected layers.
 The first convolutional layer has a kernel size of three,
 a padding of one, and eight output channels.
@@ -375,7 +376,7 @@ The resulting performance metrics are presented in the \tref{tab1DCNN}.
 Simulated & Train       & $31\pm5$ & $0.89\pm0.02$ & $35\pm5$ & $32\pm2$ & Fig.5, Fig.S2  \\
  & Test       & $30\pm5$ & $0.90\pm0.04$ & $35\pm5$ & $32\pm3$ & Fig.6, Fig.S3  \\
  & \makecell{Experimental, without \\post-hoc calibration}       & $530\pm70$ & $<0.1$ & $480\pm60$ & $400\pm20$ & Fig.7(a,b), Fig.S4  \\
-& \makecell{Experimental, with \\post-hoc calibration}       & $250\pm50$ & $0.6\pm0.1$ & $50\pm10$ & $44\pm8$ & Fig.7(c,d), Fig.S5  \\
+& \makecell{Experimental, with \\post-hoc calibration}       & $130\pm30$ & $0.6\pm0.1$ & $50\pm10$ & $44\pm8$ & Fig.7(c,d), Fig.S5  \\
 Experimental & Train       & $27\pm7$ & $0.2\pm0.1$ & $33\pm6$ & $26\pm8$ & Fig.9, Fig.S7  \\
  & Test       & $30\pm10$ & $<0.1$ & $40\pm10$ & $30\pm15$ & Fig.10, Fig.S8  \\
 \mr
@@ -387,6 +388,17 @@ $^*$\emph{ The column indicates the figures in which performance metrics obtaine
 }
 \end{table*}
 
+First, a small difference between the metrics obtained for the training and test sets is observed, 
+as indicated by the pairwise comparison of rows 1 and 2 and rows 3 and 4. 
+This behaviour suggests an appropriate model complexity of the 1D-CNN, similar distributions of the training and test data, 
+and a correct train–test split. 
+At the same time, the absolute values of the metrics are low, indicating underfitting, which is expected given the extremely small size of the training dataset.
+Moreover, these values are substantially lower than those achieved by the best computer vision based models. 
+This result suggests, on the one hand, that computer vision based transfer learning is highly effective and, 
+on the other hand, that not every computer vision model is suitable for identifying features relevant 
+to the restructuring of iron-containing defects.
+
+The corresponding information has been added to the revised manuscript.
 
 
 \vspace{1cm}
@@ -525,9 +537,6 @@ Nevertheless, both studies use similar solar cell models, apply standard regress
 and perform testing on experimental samples from the same batch. This explains certain similarities in wording.
 
 We have revised the relevant sections and reduced the extent of overlap.
-
-
-\cite{Wijaranakula}
 
 
 \section*{References}
