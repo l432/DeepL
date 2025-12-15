@@ -131,20 +131,43 @@ The authors should explore physics-based domain adaptation or partial fine-tunin
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
 
 We thank the reviewer for this insightful comment. 
-Ми погоджуємося, що CNN–regressor models, які навчаються на симульованих даних, learn only the synthetic data distribution.
-Проте хочемо підкреслити, що синтетичні дані відображають реальні фізичні закономірності:
-вони були отримані на підставі абсолютно прозорих фізичних законів, які описані у розділі 2.2,
-під час розрахунків були використані реальні параметри, що згадуються в літературі (див табл.1 з revised manuscript).
-Про тісний взаємозв'язок синтетичних та реальних даних свідчать, зокрема достатньо високі величини R2 (0.95-0.98), отримані при застосуванні моделей, 
-навчених на симульованих даних до результатів експериментальних вимірювань без корекції та не катастрофічні величини похибок (MedAPE дорівнює 16-23% в кращих випадках) - див. рис. S4.
+We agree that CNN regressor models trained on simulated data primarily learn the synthetic data distribution. 
+However, it is important to emphasize that the synthetic data faithfully reflect real physical principles. 
+These data were generated on the basis of explicit and transparent physical laws, 
+as described in Section 2.2, 
+and the calculations employed realistic parameter values reported in the literature, 
+as summarized in Table~1 of the revised manuscript. 
+The close correspondence between the synthetic and experimental domains is demonstrated by the high 
+$R^2$ values (0.95–0.98) and non-catastrophic error magnitudes, 
+for example a MedAPE of 16–23\% in the best-case scenarios, 
+observed when models trained exclusively on simulated data were applied directly to 
+experimental measurements without any post-hoc correction, as shown in Figure~S4.
+We therefore maintain that the observed simulation–experiment gap represents a systematic domain shift 
+rather than a lack of learned physical correlations. 
+This shift may arise from limitations of the simulation framework, such as deviations from the assumed uniform distribution 
+of iron atoms across the solar cell thickness, or from minor imprecisions in the parameter values, 
+as further discussed in our response to Minor Comment~6. 
+Accordingly, the post-hoc quadratic correction was introduced as a transparent 
+and controlled means of compensating for this systematic domain shift.
 
+Importantly, as an alternative to the partial fine-tuning suggested by the reviewer, 
+the second part of our study explicitly examines models trained exclusively on experimental data. 
+This strategy completely avoids reliance on synthetic distributions, 
+employs no correction procedure, and directly evaluates model performance under purely experimental conditions.
 
-We respectfully note that we do not fully agree with the interpretation that the CNN–regressor models learn only the synthetic data distribution.
+An alternative approach involves training models on a combined dataset comprising both synthetic and experimental data. 
+We performed the corresponding calculations, and Fig. 4 presents the performance metrics of 
+these models evaluated on the experimental test dataset. 
+For ease of comparison, the results obtained using models trained exclusively on experimental data are shown alongside.
 
+However, this hybrid strategy departs from the primary objective of the present work, 
+which is to demonstrate the feasibility of learning from extremely small training datasets. 
+Accordingly, the revised manuscript includes only a brief discussion of this approach, 
+while the detailed performance metrics are provided in the Supplementary Materials.
 
-The description of observation technique was modified
-(page~3, left column, paragraph~3)
-
+Furthermore, the revised manuscript incorporates additional evidence 
+supporting the conclusion that the discrepancy observed for models trained exclusively 
+on simulated data arises from a systematic prediction bias, rather than from a fundamental loss of correlation with real-world physical phenomena.
 
 
 \vspace{1cm}
@@ -161,6 +184,12 @@ Validation against first-principles or experimental benchmarks would strengthen 
 
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+
+
+We thank the reviewer for raising this important point regarding the physical assumptions underlying the SCAPS-1D simulations. 
+We acknowledge that FeB-related parameters such as binding energy, migration energy, 
+and pre-exponential factors exhibit a range of reported values in the literature.
+
 
 
 Allow us to say a few words  in favor of GaAs and 6H-SiC.

@@ -817,8 +817,8 @@ This step becomes particularly critical when the training set is small  because 
 As expected, prediction performance declined.
 \textcolor[rgb]{1.00,0.07,0.00}{
 \hl{
-Nevertheless, we emphasize the high $R^2$ values and the small gap between the training and test $R^2$ values (less than 0.05). 
-These results clearly indicate that the models did not rely on memorization 
+Nevertheless, we emphasize the high $R^2$ values and the small gap between the training and test $R^2$ values (less than 0.05).
+These results clearly indicate that the models did not rely on memorization
 but instead successfully captured meaningful underlying patterns in the data.
 }}
 
@@ -864,7 +864,7 @@ were less pronounced than observed for the training dataset.
 Nevertheless, uncompressed feature representations consistently maintained a performance advantage.
 
 The top-performing model combinations were identified as follows:
-ENB7:FE+DNN (MAPE and 
+ENB7:FE+DNN (MAPE and
 MedAPE 6\%,
 $R^2= 0.99$),
 ENB7:FE:P+DNN
@@ -894,17 +894,17 @@ CNN architectures were also designed to directly process the kinetic dependencie
 of the short-circuit current, without wavelet transformation, in order to predict iron concentration
 (hereinafter referred to as the 1D-CNN).
 The structure of the model was identical to that previously used to successfully analyse one-dimensional signal associated with defects} \colorbox{yellow}{\cite{Wang2024a}.}
-\hl{Specifically, the 1D-CNN model consists of two one-dimensional convolutional layers, 
-followed by global average pooling and three fully connected layers. 
-The convolutional layers use a kernel size of three and padding of one, 
-with eight and sixteen output channels, respectively. 
-The pooled features are processed by fully connected layers with 64 and 32 neurons, 
-and the final prediction is produced by a single-neuron output layer. 
-During model tuning, batch normalization and regularization in the convolutional layers, 
+\hl{Specifically, the 1D-CNN model consists of two one-dimensional convolutional layers,
+followed by global average pooling and three fully connected layers.
+The convolutional layers use a kernel size of three and padding of one,
+with eight and sixteen output channels, respectively.
+The pooled features are processed by fully connected layers with 64 and 32 neurons,
+and the final prediction is produced by a single-neuron output layer.
+During model tuning, batch normalization and regularization in the convolutional layers,
 dropout between fully connected layers, activation functions, and weight initialization were optimized.
 The models were trained and tested on the same dataset,
 comprising both artificial and experimental data, from which the wavelet spectrograms were generated.
-The resulting performance metrics are presented in} \colorbox{yellow}{\tref{tab1DCNN},} 
+The resulting performance metrics are presented in} \colorbox{yellow}{\tref{tab1DCNN},}
 \hl{where the first two rows correspond to the cases discussed above for models that include both regression and CV components.
 }}
 
@@ -940,7 +940,7 @@ $^*$\emph{ The column indicates the figures in which performance metrics obtaine
 First, a small difference between the metrics obtained for the training and test sets is observed.
 This behaviour suggests an appropriate model complexity of the 1D-CNN, similar distributions of the training and test data,
 and a correct train–test split.
-At the same time, the absolute values of the metrics are low, indicating underfitting, 
+At the same time, the absolute values of the metrics are low, indicating underfitting,
 which is expected given the extremely small size of the training dataset.
 Moreover, these values are substantially lower than those achieved by the best computer vision based models.
 This result suggests, on the one hand, that CV based transfer learning is highly effective and,
@@ -966,7 +966,15 @@ At the same time, the $R^2$ metric remains acceptably high.
 Further analysis (\Fref{Fig4}) indicates that the prediction error depends on the iron concentration level:
 the relationship between $N_\mathrm{Fe,PRED}$ and $N_\mathrm{Fe,TRUE}$ is linear on a logarithmic scale,
 but its slope deviates from the line of unity.
-This observation suggests a systematic prediction bias rather than a complete loss of correlation,
+\textcolor[rgb]{1.00,0.07,0.00}{
+\hl{
+It is essential to emphasize that the synthetic data were generated 
+using explicit and transparent physical laws, 
+and that the calculations employed realistic parameter values reported in the literature. 
+Taken together, 
+}}
+these considerations indicate that the observed discrepancy represents a systematic prediction bias rather 
+than a loss of correlation or a failure to capture the underlying physical relationships,
 implying that the models are capable of capturing relative differences in concentration but do not accurately predict absolute values.
 
 
@@ -1039,25 +1047,25 @@ rather than as evidence of its degradation.
 
 \textcolor[rgb]{1.00,0.07,0.00}{
 \hl{
-The third and fourth rows of} \colorbox{yellow}{\tref{tab1DCNN}} 
+The third and fourth rows of} \colorbox{yellow}{\tref{tab1DCNN}}
 \hl{
-present the performance metrics obtained by the 1D-CNN 
+present the performance metrics obtained by the 1D-CNN
 when a model trained on synthetic data was applied to experimental data.
-The initial results obtained without post-hoc calibration are notably poor, 
-which clearly demonstrates the need to incorporate transfer learning techniques. 
-Notably, the post-hoc calibration, specifically the function defined by} \colorbox{yellow}{Eq.~\eref{eqPostHoc}} 
+The initial results obtained without post-hoc calibration are notably poor,
+which clearly demonstrates the need to incorporate transfer learning techniques.
+Notably, the post-hoc calibration, specifically the function defined by} \colorbox{yellow}{Eq.~\eref{eqPostHoc}}
 \hl{
 and derived from the CV based model results, leads to a substantial improvement in the predictive performance of the 1D-CNN.
-This observation points to two key conclusions. 
-First, it reveals the presence of a systematic bias between the raw model outputs and the true values, 
-which appears to be independent of the specific model architecture. 
-Second, it indicates that the dominant source of error does not originate from the internal structure of the models, 
-which are capable of learning meaningful patterns and reproducing structural dependencies, 
+This observation points to two key conclusions.
+First, it reveals the presence of a systematic bias between the raw model outputs and the true values,
+which appears to be independent of the specific model architecture.
+Second, it indicates that the dominant source of error does not originate from the internal structure of the models,
+which are capable of learning meaningful patterns and reproducing structural dependencies,
 but rather from the properties of the training data, in particular the mismatch between synthetic and experimental datasets.
-This finding provides a dual perspective. 
-On the one hand, it opens a pathway for refining defect parameters by adjusting the values used in simulations 
-until post-hoc calibration is no longer required. 
-On the other hand, it strongly suggests that the commonly accepted parameter values 
+This finding provides a dual perspective.
+On the one hand, it opens a pathway for refining defect parameters by adjusting the values used in simulations
+until post-hoc calibration is no longer required.
+On the other hand, it strongly suggests that the commonly accepted parameter values
 for iron-containing defects employed in the simulations may be intrinsically inaccurate.
 }}
 
@@ -1170,11 +1178,11 @@ The models were trained using an experimental dataset.
 
 \textcolor[rgb]{1.00,0.07,0.00}{
 \hl{
-The performance metrics of the 1D-CNN trained exclusively on experimental data 
+The performance metrics of the 1D-CNN trained exclusively on experimental data
 are presented in the last two rows of } \colorbox{yellow}{\tref{tab1DCNN}.}
-\hl{ 
-These metrics are clearly inferior to those obtained by most models that incorporate pre-trained computer vision components. 
-This observation further underscores the effectiveness of the proposed transfers learning methodology 
+\hl{
+These metrics are clearly inferior to those obtained by most models that incorporate pre-trained computer vision components.
+This observation further underscores the effectiveness of the proposed transfers learning methodology
 for applications involving limited datasets.
 }}
 
