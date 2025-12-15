@@ -39,8 +39,8 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-\documentclass[10pt,draft]{iopart}
-%\documentclass[10pt]{iopart}
+%\documentclass[10pt,draft]{iopart}
+\documentclass[10pt]{iopart}
 %\newcommand{\gguide}{{\it Preparing graphics for IOP Publishing journals}}
 %Uncomment next line if AMS fonts required
 %\usepackage{iopams}
@@ -948,6 +948,16 @@ on the other hand, that not every CV model is suitable for identifying features 
 to the restructuring of iron-containing defects.
 }}
 
+\begin{figure*}
+\centering
+\includegraphics[width=0.99\textwidth]{FigN2}
+\caption{
+Mean absolute percentage error (a,c) and coefficient of determination (b, d) for different combinations of CV models (vertical axis)
+and regression models (horizontal axis) during the test phase with the experimental dataset without (a, b) and with (c, d)
+post hoc calibration according to Eq.~\eref{eqPostHoc}.
+The models were trained using a simulated dataset.
+}\label{FigN}
+\end{figure*}
 
 Having established the effectiveness of the models on the simulated test dataset,
 we evaluated their performances using experimental measurements.
@@ -968,12 +978,12 @@ the relationship between $N_\mathrm{Fe,PRED}$ and $N_\mathrm{Fe,TRUE}$ is linear
 but its slope deviates from the line of unity.
 \textcolor[rgb]{1.00,0.07,0.00}{
 \hl{
-It is essential to emphasize that the synthetic data were generated 
-using explicit and transparent physical laws, 
-and that the calculations employed realistic parameter values reported in the literature. 
-Taken together, 
+It is essential to emphasize that the synthetic data were generated
+using explicit and transparent physical laws,
+and that the calculations employed realistic parameter values reported in the literature.
+Taken together,
 }}
-these considerations indicate that the observed discrepancy represents a systematic prediction bias rather 
+these considerations indicate that the observed discrepancy represents a systematic prediction bias rather
 than a loss of correlation or a failure to capture the underlying physical relationships,
 implying that the models are capable of capturing relative differences in concentration but do not accurately predict absolute values.
 
@@ -1069,10 +1079,23 @@ On the other hand, it strongly suggests that the commonly accepted parameter val
 for iron-containing defects employed in the simulations may be intrinsically inaccurate.
 }}
 
-Although quadratic correction proved effective, it does not represent a universal solution
-for transferring models from synthetic to experimental data.
-A more robust approach involves integrating the experimental data into the training process, as implemented in this study below.
-
+\textcolor[rgb]{1.00,0.07,0.00}{
+\hl{
+In section summary, SCAPS-1D simulations may not reproduce all quantitative details of the
+short-circuit current kinetics due to deviations from precise experimental conditions.
+The primary objective of using the artificial dataset was to demonstrate that CV models can extract physically
+meaningful features from wavelet-transformed representations,
+enabling the estimation of uncontrolled metallic impurity concentrations.
+This goal was successfully achieved using several representative CV models, including EfficientNetB7 and NASNetLarge.
+The post-hoc calibration procedure} \colorbox{yellow}{\eref{eqPostHoc}}
+\hl{
+is purely heuristic,
+improving predictive accuracy primarily within the training range
+but providing no physical insight into the underlying system.
+Its applicability beyond the calibrated domain is therefore limited, and it does not correct structural model errors.
+A more robust approach, implemented later in this study, integrates experimental data
+directly into the training process, enhancing model transferability to real measurements.
+}}
 
 
 \subsection{Experimental data}

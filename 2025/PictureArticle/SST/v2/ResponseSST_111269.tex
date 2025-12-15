@@ -130,43 +130,43 @@ The authors should explore physics-based domain adaptation or partial fine-tunin
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
 
-We thank the reviewer for this insightful comment. 
-We agree that CNN regressor models trained on simulated data primarily learn the synthetic data distribution. 
-However, it is important to emphasize that the synthetic data faithfully reflect real physical principles. 
-These data were generated on the basis of explicit and transparent physical laws, 
-as described in Section 2.2, 
-and the calculations employed realistic parameter values reported in the literature, 
-as summarized in Table~1 of the revised manuscript. 
-The close correspondence between the synthetic and experimental domains is demonstrated by the high 
-$R^2$ values (0.95–0.98) and non-catastrophic error magnitudes, 
-for example a MedAPE of 16–23\% in the best-case scenarios, 
-observed when models trained exclusively on simulated data were applied directly to 
+We thank the reviewer for this insightful comment.
+We agree that CNN regressor models trained on simulated data primarily learn the synthetic data distribution.
+However, it is important to emphasize that the synthetic data faithfully reflect real physical principles.
+These data were generated on the basis of explicit and transparent physical laws,
+as described in Section 2.2,
+and the calculations employed realistic parameter values reported in the literature,
+as summarized in Table~1 of the revised manuscript.
+The close correspondence between the synthetic and experimental domains is demonstrated by the high
+$R^2$ values (0.95–0.98) and non-catastrophic error magnitudes,
+for example a MedAPE of 16–23\% in the best-case scenarios,
+observed when models trained exclusively on simulated data were applied directly to
 experimental measurements without any post-hoc correction, as shown in Figure~S4.
-We therefore maintain that the observed simulation–experiment gap represents a systematic domain shift 
-rather than a lack of learned physical correlations. 
-This shift may arise from limitations of the simulation framework, such as deviations from the assumed uniform distribution 
-of iron atoms across the solar cell thickness, or from minor imprecisions in the parameter values, 
-as further discussed in our response to Minor Comment~6. 
-Accordingly, the post-hoc quadratic correction was introduced as a transparent 
+We therefore maintain that the observed simulation–experiment gap represents a systematic domain shift
+rather than a lack of learned physical correlations.
+This shift may arise from limitations of the simulation framework, such as deviations from the assumed uniform distribution
+of iron atoms across the solar cell thickness, or from minor imprecisions in the parameter values,
+as further discussed in our response to Minor Comment~6.
+Accordingly, the post-hoc quadratic correction was introduced as a transparent
 and controlled means of compensating for this systematic domain shift.
 
-Importantly, as an alternative to the partial fine-tuning suggested by the reviewer, 
-the second part of our study explicitly examines models trained exclusively on experimental data. 
-This strategy completely avoids reliance on synthetic distributions, 
+Importantly, as an alternative to the partial fine-tuning suggested by the reviewer,
+the second part of our study explicitly examines models trained exclusively on experimental data.
+This strategy completely avoids reliance on synthetic distributions,
 employs no correction procedure, and directly evaluates model performance under purely experimental conditions.
 
-An alternative approach involves training models on a combined dataset comprising both synthetic and experimental data. 
-We performed the corresponding calculations, and Fig. 4 presents the performance metrics of 
-these models evaluated on the experimental test dataset. 
+An alternative approach involves training models on a combined dataset comprising both synthetic and experimental data.
+We performed the corresponding calculations, and Fig. 4 presents the performance metrics of
+these models evaluated on the experimental test dataset.
 For ease of comparison, the results obtained using models trained exclusively on experimental data are shown alongside.
 
-However, this hybrid strategy departs from the primary objective of the present work, 
-which is to demonstrate the feasibility of learning from extremely small training datasets. 
-Accordingly, the revised manuscript includes only a brief discussion of this approach, 
+However, this hybrid strategy departs from the primary objective of the present work,
+which is to demonstrate the feasibility of learning from extremely small training datasets.
+Accordingly, the revised manuscript includes only a brief discussion of this approach,
 while the detailed performance metrics are provided in the Supplementary Materials.
 
-Furthermore, the revised manuscript incorporates additional evidence 
-supporting the conclusion that the discrepancy observed for models trained exclusively 
+Furthermore, the revised manuscript incorporates additional evidence
+supporting the conclusion that the discrepancy observed for models trained exclusively
 on simulated data arises from a systematic prediction bias, rather than from a fundamental loss of correlation with real-world physical phenomena.
 
 
@@ -186,14 +186,29 @@ Validation against first-principles or experimental benchmarks would strengthen 
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
 
 
-We thank the reviewer for raising this important point regarding the physical assumptions underlying the SCAPS-1D simulations. 
-We acknowledge that FeB-related parameters such as binding energy, migration energy, 
-and pre-exponential factors exhibit a range of reported values in the literature.
+We thank the reviewer for highlighting this important point 
+regarding the physical assumptions underlying the SCAPS-1D simulations. 
+We acknowledge that FeB-related parameters, including binding energy, migration energy, and pre-exponential factors, 
+show a range of reported values in the literature. 
+The manuscript also provides a concise literature review of the values adopted for these and several other parameters 
+used in the calculations (page 13, second paragraph of the left column). 
+In this study, these parameters were fixed to representative values corresponding to the most commonly cited 
+data in the defect-physics literature and have been consistently employed in numerous previous investigations of FeB kinetics in silicon.
+We recognize that these parameter values may deviate from the exact experimental conditions, 
+which is reflected in the systematic shift observed between the predicted and experimental results. 
+Consequently, the generated synthetic dataset may not reproduce the short-circuit current kinetics in every quantitative detail. 
+However, the simulated data reliably capture the fundamental trends of the $I_\mathtt{SC}(t)$ dependence as a function of iron concentration. 
+The primary purpose of using the artificial dataset was to demonstrate the feasibility of employing CV models to extract 
+physically meaningful features from wavelet-transformed representations, 
+thereby enabling the estimation of uncontrolled metallic impurity concentrations. 
+This objective was successfully achieved using the simulated data. 
+Importantly, the key conclusions derived from these synthetic datasets 
+were subsequently validated through experiments using measured data later in the study.
 
+The revised manuscript now includes a discussion of the limitations of the SCAPS-1D simulation results 
+while emphasizing the main outcomes derived from the synthetic data (page 13, last paragraph in Section 3.1).
 
-
-Allow us to say a few words  in favor of GaAs and 6H-SiC.
-
+ 
 
 \vspace{1cm}
 \noindent
