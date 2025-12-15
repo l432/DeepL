@@ -78,29 +78,29 @@ A robust cross-validation (e.g., k-fold or leave-one-out) with uncertainty quant
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
 
-We thank the reviewer for this important comment and fully agree that, 
-when working with small datasets, careful validation is essential to avoid overfitting. 
+We thank the reviewer for this important comment and fully agree that,
+when working with small datasets, careful validation is essential to avoid overfitting.
 We apologize for the insufficient detail in the description of the network configuration procedure
-and would like to clarify that robust cross-validation was an integral part of the training and model selection process. 
-Specifically, 5-fold cross-validation was employed during hyperparameter optimization using the Optuna framework. 
-For each trial, the model was trained and evaluated across multiple folds, 
-and the objective function was defined as the mean performance metric over all folds rather 
-than being based on a single train–validation split. 
-In most cases, the standard deviation of the $R^2$ metric across cross-validation folds did not exceed 0.02, 
-while for other metrics, the variability remained within 15\% of the mean value. 
+and would like to clarify that robust cross-validation was an integral part of the training and model selection process.
+Specifically, 5-fold cross-validation was employed during hyperparameter optimization using the Optuna framework.
+For each trial, the model was trained and evaluated across multiple folds,
+and the objective function was defined as the mean performance metric over all folds rather
+than being based on a single train–validation split.
+In most cases, the standard deviation of the $R^2$ metric across cross-validation folds did not exceed 0.02,
+while for other metrics, the variability remained within 15\% of the mean value.
 Collectively, these results indicate a low risk of overfitting.
 This strategy was applied consistently to all models considered in the study.
 
-After hyperparameter tuning, each model was retrained on the entire training dataset 
-using the selected hyperparameters and evaluated exclusively on a fully independent hold-out test set, 
-which was not involved in either tuning or calibration. 
+After hyperparameter tuning, each model was retrained on the entire training dataset
+using the selected hyperparameters and evaluated exclusively on a fully independent hold-out test set,
+which was not involved in either tuning or calibration.
 This separation ensures an unbiased assessment of generalization performance and corresponds to a practical form of nested cross-validation.
 
-Regarding data augmentation, we acknowledge that geometric transformations of spectrograms 
-(e.g., flipping and rotation) do not create fully independent samples. 
+Regarding data augmentation, we acknowledge that geometric transformations of spectrograms
+(e.g., flipping and rotation) do not create fully independent samples.
 In this work, augmentation was used solely as a regularization technique to improve model robustness,
-not as a means to increase the effective dataset size for validation or testing. 
-Importantly, cross-validation and final testing were always performed at the level of the original samples, 
+not as a means to increase the effective dataset size for validation or testing.
+Importantly, cross-validation and final testing were always performed at the level of the original samples,
 ensuring that augmented versions of a given sample never appeared simultaneously in training and validation/test folds.
 
 
@@ -111,8 +111,8 @@ Concerning the near-perfect $R^2$ values (0.996–0.999), we emphasize that a hi
 (iv)~associated with a small gap between training and test performance (<0.05).
 Together, these observations indicate that the models did not rely on memorization but instead captured meaningful patterns in the data.
 
-We have updated the manuscript to provide a more precise description of the models tuning procedure, 
-to include information on the standard deviation of the metrics during cross-validation (page 8, the second-to-last paragraph of Section 2.5), 
+We have updated the manuscript to provide a more precise description of the models tuning procedure,
+to include information on the standard deviation of the metrics during cross-validation (page 8, the second-to-last paragraph of Section 2.5),
 and to highlight the small difference in $R^2$ values between the training and test datasets (page 10, left column).
 
 
@@ -129,6 +129,17 @@ The authors should explore physics-based domain adaptation or partial fine-tunin
 
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+
+We thank the reviewer for this insightful comment. 
+Ми погоджуємося, що CNN–regressor models, які навчаються на симульованих даних, learn only the synthetic data distribution.
+Проте хочемо підкреслити, що синтетичні дані відображають реальні фізичні закономірності:
+вони були отримані на підставі абсолютно прозорих фізичних законів, які описані у розділі 2.2,
+під час розрахунків були використані реальні параметри, що згадуються в літературі (див табл.1 з revised manuscript).
+Про тісний взаємозв'язок синтетичних та реальних даних свідчать, зокрема достатньо високі величини R2 (0.95-0.98), отримані при застосуванні моделей, 
+навчених на симульованих даних до результатів експериментальних вимірювань без корекції та не катастрофічні величини похибок (MedAPE дорівнює 16-23% в кращих випадках) - див. рис. S4.
+
+
+We respectfully note that we do not fully agree with the interpretation that the CNN–regressor models learn only the synthetic data distribution.
 
 
 The description of observation technique was modified
