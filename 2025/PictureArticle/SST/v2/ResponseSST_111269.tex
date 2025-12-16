@@ -141,7 +141,7 @@ The close correspondence between the synthetic and experimental domains is demon
 $R^2$ values (0.95–0.98) and non-catastrophic error magnitudes,
 for example a MedAPE of 16–23\% in the best-case scenarios,
 observed when models trained exclusively on simulated data were applied directly to
-experimental measurements without any post-hoc correction, as shown in Figure~S4.
+experimental measurements without any post-hoc correction, as shown in Figure~S6.
 We therefore maintain that the observed simulation–experiment gap represents a systematic domain shift
 rather than a lack of learned physical correlations.
 This shift may arise from limitations of the simulation framework, such as deviations from the assumed uniform distribution
@@ -155,17 +155,22 @@ the second part of our study explicitly examines models trained exclusively on e
 This strategy completely avoids reliance on synthetic distributions,
 employs no correction procedure, and directly evaluates model performance under purely experimental conditions.
 
-An alternative approach involves training models on a combined dataset comprising both synthetic and experimental data.
-We performed the corresponding calculations, and Fig. 4 presents the performance metrics of
-these models evaluated on the experimental test dataset.
-For ease of comparison, the results obtained using models trained exclusively on experimental data are shown alongside.
 
-However, this hybrid strategy departs from the primary objective of the present work,
+An alternative approach involves training models on a combined dataset
+comprising both synthetic and experimental data.
+The corresponding calculations were performed using this hybrid strategy,
+in which CNN+regression models were trained on the combined synthetic and experimental datasets
+and evaluated on an experimental test set.
+However, the resulting predictive accuracy were low.
+For example, the best performance was achieved for the YL:FE2:P+GB combination, yielding a MAPE of $34\pm15$~\%,
+whereas five other model combinations exhibited median absolute errors of approximately 40\% accompanied by substantial dispersion.
+These results indicate that the effective integration of simulated and measured data presents additional challenges
+and requires further investigation.
+Moreover, this hybrid strategy deviates from the primary objective of the present work,
 which is to demonstrate the feasibility of learning from extremely small training datasets.
-Accordingly, the revised manuscript includes only a brief discussion of this approach,
-while the detailed performance metrics are provided in the Supplementary Materials.
+Consequently, these results were not included in the revised manuscript.
 
-Furthermore, the revised manuscript incorporates additional evidence
+The revised manuscript incorporates additional evidence
 supporting the conclusion that the discrepancy observed for models trained exclusively
 on simulated data arises from a systematic prediction bias, rather than from a fundamental loss of correlation with real-world physical phenomena.
 
@@ -186,29 +191,29 @@ Validation against first-principles or experimental benchmarks would strengthen 
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
 
 
-We thank the reviewer for highlighting this important point 
-regarding the physical assumptions underlying the SCAPS-1D simulations. 
-We acknowledge that FeB-related parameters, including binding energy, migration energy, and pre-exponential factors, 
-show a range of reported values in the literature. 
-The manuscript also provides a concise literature review of the values adopted for these and several other parameters 
-used in the calculations (page 13, second paragraph of the left column). 
-In this study, these parameters were fixed to representative values corresponding to the most commonly cited 
+We thank the reviewer for highlighting this important point
+regarding the physical assumptions underlying the SCAPS-1D simulations.
+We acknowledge that FeB-related parameters, including binding energy, migration energy, and pre-exponential factors,
+show a range of reported values in the literature.
+The manuscript also provides a concise literature review of the values adopted for these and several other parameters
+used in the calculations (page 13, second paragraph of the left column).
+In this study, these parameters were fixed to representative values corresponding to the most commonly cited
 data in the defect-physics literature and have been consistently employed in numerous previous investigations of FeB kinetics in silicon.
-We recognize that these parameter values may deviate from the exact experimental conditions, 
-which is reflected in the systematic shift observed between the predicted and experimental results. 
-Consequently, the generated synthetic dataset may not reproduce the short-circuit current kinetics in every quantitative detail. 
-However, the simulated data reliably capture the fundamental trends of the $I_\mathtt{SC}(t)$ dependence as a function of iron concentration. 
-The primary purpose of using the artificial dataset was to demonstrate the feasibility of employing CV models to extract 
-physically meaningful features from wavelet-transformed representations, 
-thereby enabling the estimation of uncontrolled metallic impurity concentrations. 
-This objective was successfully achieved using the simulated data. 
-Importantly, the key conclusions derived from these synthetic datasets 
+We recognize that these parameter values may deviate from the exact experimental conditions,
+which is reflected in the systematic shift observed between the predicted and experimental results.
+Consequently, the generated synthetic dataset may not reproduce the short-circuit current kinetics in every quantitative detail.
+However, the simulated data reliably capture the fundamental trends of the $I_\mathtt{SC}(t)$ dependence as a function of iron concentration.
+The primary purpose of using the artificial dataset was to demonstrate the feasibility of employing CV models to extract
+physically meaningful features from wavelet-transformed representations,
+thereby enabling the estimation of uncontrolled metallic impurity concentrations.
+This objective was successfully achieved using the simulated data.
+Importantly, the key conclusions derived from these synthetic datasets
 were subsequently validated through experiments using measured data later in the study.
 
-The revised manuscript now includes a discussion of the limitations of the SCAPS-1D simulation results 
+The revised manuscript now includes a discussion of the limitations of the SCAPS-1D simulation results
 while emphasizing the main outcomes derived from the synthetic data (page 13, last paragraph in Section 3.1).
 
- 
+
 
 \vspace{1cm}
 \noindent
@@ -389,7 +394,7 @@ are in linear or logarithmic scale.}
 We thank the Reviewer for identifying the shortcomings in the figures.
 Axes, units of measurement, and color scales have been added to Figures~2b, 2c, 3b, and 3c.
 The units of measurement (\%) corresponding to the MAPE and MedAPE values have also been included next to the color scale labels,
-as shown in Figures 5, 6, 7, 9, and 10.
+as shown in Figures 5, 6, 7,8, 10, and 11.
 The mutual arrangement of the ticks and tick labels in all figures enables unambiguous identification of the scale type.
 
 
@@ -463,10 +468,10 @@ The resulting performance metrics are presented in the \tref{tab1DCNN}.
 \mr
 Simulated & Train       & $31\pm5$ & $0.89\pm0.02$ & $35\pm5$ & $32\pm2$ & Fig.5, Fig.S2  \\
  & Test       & $30\pm5$ & $0.90\pm0.04$ & $35\pm5$ & $32\pm3$ & Fig.6, Fig.S3  \\
- & \makecell{Experimental, without \\post-hoc calibration}       & $530\pm70$ & $<0.1$ & $480\pm60$ & $400\pm20$ & Fig.7(a,b), Fig.S4  \\
-& \makecell{Experimental, with \\post-hoc calibration}       & $130\pm30$ & $0.6\pm0.1$ & $50\pm10$ & $44\pm8$ & Fig.7(c,d), Fig.S5  \\
-Experimental & Train       & $27\pm7$ & $0.2\pm0.1$ & $33\pm6$ & $26\pm8$ & Fig.9, Fig.S7  \\
- & Test       & $30\pm10$ & $<0.1$ & $40\pm10$ & $30\pm15$ & Fig.10, Fig.S8  \\
+ & \makecell{Experimental, without \\post-hoc calibration}       & $530\pm70$ & $<0.1$ & $480\pm60$ & $400\pm20$ & Fig.8(a,b), Fig.S6  \\
+& \makecell{Experimental, with \\post-hoc calibration}       & $130\pm30$ & $0.6\pm0.1$ & $50\pm10$ & $44\pm8$ & Fig.8(c,d), Fig.S7  \\
+Experimental & Train       & $27\pm7$ & $0.2\pm0.1$ & $33\pm6$ & $26\pm8$ & Fig.10, Fig.S9  \\
+ & Test       & $30\pm10$ & $<0.1$ & $40\pm10$ & $30\pm15$ & Fig.11, Fig.S10  \\
 \mr
 \multicolumn{7}{p{\dimexpr\linewidth-2\tabcolsep\relax}}{
 $^*$\emph{ The column indicates the figures in which performance metrics obtained for CV-based models under comparable conditions are reported.}
@@ -528,10 +533,74 @@ and the lower part shows a screenshot of the corresponding publisher page.
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
 
+We concur with the reviewer that solar cells typically operate over a broad temperature range, 
+which necessitates the evaluation of various temperature-dependent effects. 
+In the present case, temperature governs the thermodynamic equilibrium between Fe$_i$ and FeB defect concentrations, 
+the carrier capture cross-sections of these defects, which together determine the recombination activity of iron-related centers, 
+as well as the silicon parameters that control the photogeneration and transport of excess carriers. 
+In addition, the characteristic time of FeB complex association is temperature-dependent and, 
+in the present system, is described by the relation given below \cite{FeBKin2019,FeBAssJAP2014,FeBAssSST2011}:
+\begin{equation}
+\label{eqTass}
+\tau_\mathrm{ass}=4.2\times10^{-10}\,\frac{\mathrm{s}}{\mathrm{K}}\times T \exp\left(\frac{0.66\,\mathrm{eV}}{kT}\right)\,.
+\end{equation}
+Collectively, these factors influence the kinetics of the short-circuit current and its dependence on the iron impurity concentration.
 
-To our shame, the reviewer is correct about some fog in Results and discussion.
-We hopefully rephrased the section to add sunlight.
+Calculations were performed for both the $I_\mathtt{SC}(t)$ dependencies and the corresponding wavelet spectrograms at 270~K. 
+Representative results are presented in \Fref{FigT2701}. 
+For comparison, the corresponding dependencies obtained at 340 K are shown alongside. 
+As can be seen, at the lower temperature, variations in iron concentration exert a more pronounced effect on the
+$I_\mathtt{SC}$ kinetics and, consequently, on the appearance of the spectrograms. 
+Accordingly, model predictions are expected to be more accurate under these conditions.
 
+\begin{figure*}
+\includegraphics[width=0.45\textwidth]{RT270Fig1a}\hfill
+\includegraphics[width=0.45\textwidth]{RT270Fig1b}
+\caption{\label{FigT2701}
+Simulated time dependencies of the short-circuit current (upper curves) 
+and corresponding wavelet spectrograms (lower plots) for iron concentrations of 
+$10^{10}$ and $10^{14}$~cm$^{-3}$. 
+The left panel corresponds to a temperature of 340~K, and the right panel corresponds to 270~K.
+}
+\end{figure*}
+
+\Fref{FigT2702} presents the performance metrics obtained from testing models 
+trained on data simulated at different temperatures. 
+As shown, the model performance is, on average, superior for the 270~K case.
+
+
+\begin{figure*}
+\includegraphics[width=0.49\textwidth]{RT270Fig2a}\hfill
+\includegraphics[width=0.49\textwidth]{RT270Fig2e}
+\includegraphics[width=0.49\textwidth]{RT270Fig2b}\hfill
+\includegraphics[width=0.49\textwidth]{RT270Fig2f}
+\includegraphics[width=0.49\textwidth]{RT270Fig2c}\hfill
+\includegraphics[width=0.49\textwidth]{RT270Fig2g}
+\includegraphics[width=0.49\textwidth]{RT270Fig2d}\hfill
+\includegraphics[width=0.49\textwidth]{RT270Fig2h}
+\caption{\label{FigT2702}
+Metrics for different combinations of CV models (vertical axis)
+and regression models (horizontal axis) during test phase with the simulated dataset.
+The models were trained using the simulated dataset.
+The left column corresponds to calculations performed at 340 K, 
+and the right column corresponds to 270 K.
+}
+\end{figure*}
+
+However, it should be emphasized that the proposed methodology for iron concentration 
+assessment is primarily intended for practical application. 
+Calculations based on Eq.~\eref{eqTass} indicate that $\tau_\mathrm{ass}$ is approximately 850~s at 340 K, 
+whereas it increases to about 230,000~s at 270 K. 
+The simulated $I_\mathtt{SC}(t)$ dependencies at 340~K were computed assuming a measurement interval of 100~s, 
+while at 270~K the interval increases to 21,600 s, corresponding to six measurements per day and requiring nearly one working week to acquire a complete curve. 
+Experimental validation at 270~K is therefore impractical and lacks clear practical relevance 
+due to the infeasibility of such measurement protocols. 
+Accordingly, we consider it appropriate to focus this study on the upper limit of the temperature range suggested by the Reviewer.
+
+
+A brief discussion of the advantages and limitations of analyzing the $I_\mathtt{SC}(t)$ kinetic at 270~K, has been added to the revised manuscript 
+(Figure~7, last two paragraphs on page 11, first two paragraphs on page 13). 
+In addition, the performance metrics for models trained on data obtained at 270~K have been included in the Supplementary Materials for both the training and testing sets.
 
 
 \vspace{1cm}

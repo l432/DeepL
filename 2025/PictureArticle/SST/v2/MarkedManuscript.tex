@@ -39,8 +39,8 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-%\documentclass[10pt,draft]{iopart}
-\documentclass[10pt]{iopart}
+\documentclass[10pt,draft]{iopart}
+%\documentclass[10pt]{iopart}
 %\newcommand{\gguide}{{\it Preparing graphics for IOP Publishing journals}}
 %Uncomment next line if AMS fonts required
 %\usepackage{iopams}
@@ -728,17 +728,6 @@ a value of 1 corresponds to perfect agreement.
 \Fref{Fig4} illustrates the representative prediction results obtained from the models trained using  the simulated training dataset.
 The complete set of results covering all the 87 investigated configurations is provided in Figure~S1 of the Supplementary Material.
 
-%\begin{figure*}
-%\includegraphics[width=0.24\textwidth]{Fig4a}
-%\includegraphics[width=0.24\textwidth]{Fig4b}
-%\includegraphics[width=0.24\textwidth]{Fig4c}
-%\includegraphics[width=0.24\textwidth]{Fig4d}
-%\includegraphics[width=0.24\textwidth]{Fig4e}
-%\includegraphics[width=0.24\textwidth]{Fig4f}
-%\caption{
-%The workflow of the ML pipeline
-%}\label{Fig4}
-%\end{figure*}
 
 \begin{figure*}
 \includegraphics[width=0.33\textwidth]{Fig4a}
@@ -948,16 +937,66 @@ on the other hand, that not every CV model is suitable for identifying features 
 to the restructuring of iron-containing defects.
 }}
 
+\textcolor[rgb]{1.00,0.07,0.00}{
+\hl{
+It should be noted that solar cells typically operate over a broad temperature range. 
+Temperature influences the characteristic time of FeB complex association (see}  \colorbox{yellow}{Eq.~\eref{eqTass}),} 
+\hl{
+the thermodynamic equilibrium between Fe$_i$ and FeB defect concentrations, 
+the carrier capture cross-sections of these defects, which together determine the recombination 
+activity of iron-related centers, as well as the silicon parameters that 
+govern the photogeneration and transport of excess carriers. 
+Collectively, these factors affect the kinetics of the short-circuit current and its dependence on the iron impurity concentration. 
+This raises the question of whether temperature may also impact the performance of machine learning models.
+}}
+ 
+\textcolor[rgb]{1.00,0.07,0.00}{
+\hl{
+Simulations were performed for 270 K. 
+As an example,}  \colorbox{yellow}{\Fref{FigN}a and \Fref{FigN}b }
+\hl{
+show the wavelet spectrograms for two distinct iron concentrations. 
+Comparison with}  \colorbox{yellow}{\Fref{Fig2}b and \Fref{Fig2}c} 
+\hl{
+indicates that, at lower temperatures, 
+changes in iron concentration produce more pronounced differences in the spectrograms, 
+suggesting a corresponding increase in model prediction accuracy.} 
+ \colorbox{yellow}{\Fref{FigN}c }
+\hl{presents the MAPE for models trained and tested on synthetic datasets prepared in the same manner as those used previously, 
+but under 270 K conditions. 
+More detailed metrics are provided in Figures S4 and S5 of the Supplementary Materials. 
+Comparison with}  \colorbox{yellow}{\Fref{Fig6}} 
+\hl{
+(lower right panel) confirms that a notable improvement in model performance is observed.
+}} 
+ 
 \begin{figure*}
 \centering
-\includegraphics[width=0.99\textwidth]{FigN2}
+\includegraphics[width=0.8\textwidth]{Fig7}
 \caption{
-Mean absolute percentage error (a,c) and coefficient of determination (b, d) for different combinations of CV models (vertical axis)
-and regression models (horizontal axis) during the test phase with the experimental dataset without (a, b) and with (c, d)
-post hoc calibration according to Eq.~\eref{eqPostHoc}.
-The models were trained using a simulated dataset.
+Wavelet spectrograms of simulated short-circuit current time dependencies at 270 K 
+for iron concentrations of $10^{10}$~cm$^{-3}$ (a) and $10^{14}$~cm$^{-3}$ (b).
+Mean absolute percentage error (c) for different combinations of CV models (vertical axis)
+and regression models (horizontal axis) evaluated during the test phase using the dataset simulated at 270 K.
 }\label{FigN}
 \end{figure*}
+
+\textcolor[rgb]{1.00,0.07,0.00}{
+\hl{
+However, it should be emphasized that the proposed methodology for iron concentration
+assessment is primarily intended for practical application.
+Calculations based on }\colorbox{yellow}{Eq.~\eref{eqTass}} 
+\hl{
+indicate that $\tau_\mathrm{ass}$ is approximately 850~s at 340 K,
+whereas it increases to about 230,000~s at 270 K.
+The simulated $I_\mathtt{SC}(t)$ dependencies at 340 K assume that the entire curve can be measured within 50 min. 
+At 270 K, however, the interval between consecutive points extends to 21,600 s, 
+corresponding to six measurements per day and requiring nearly one working week to acquire a complete curve. 
+Even at 300 K, the characteristic time of 15,000 s remains prohibitively long. 
+Consequently, although lower measurement temperatures could enhance prediction accuracy, 
+experimental validation under such conditions is impractical. 
+Therefore, hereafter this study focuses exclusively on results obtained at 340 K, both computationally and experimentally.
+}}
 
 Having established the effectiveness of the models on the simulated test dataset,
 we evaluated their performances using experimental measurements.
@@ -967,7 +1006,7 @@ By comparing the results obtained from the experimental data with those from the
 it is possible to identify the potential limitations of the models
 and to confirm whether the features extracted from wavelet spectrograms remain informative under practical conditions.
 \Fref{Fig7}a and \Fref{Fig7}b show the performance metrics of models trained on synthetic data when applied to experimental measurements.
-The relationship between predicted and actual concentrations is illustrated in \Fref{Fig4}, with additional results provided in Figures S1 and S4.
+The relationship between predicted and actual concentrations is illustrated in \Fref{Fig4}, with additional results provided in Figures S1 and S6.
 As observed, the mean and median prediction errors fall within the (15–25)\% range for only a limited number of configurations,
 specifically certain combinations of EfficientNetB7 or NASNetLarge with DNN or SVR.
 Although this outcome is not catastrophic, considering the approximately 10\% inherent experimental error in $N_\mathrm{Fe}$ determination,
@@ -990,10 +1029,10 @@ implying that the models are capable of capturing relative differences in concen
 
 \begin{figure*}
 \centering
-\includegraphics[width=0.49\textwidth]{Fig7a}
-\includegraphics[width=0.49\textwidth]{Fig7b}
-\includegraphics[width=0.49\textwidth]{Fig7c}
-\includegraphics[width=0.49\textwidth]{Fig7d}
+\includegraphics[width=0.49\textwidth]{Fig8a}
+\includegraphics[width=0.49\textwidth]{Fig8b}
+\includegraphics[width=0.49\textwidth]{Fig8c}
+\includegraphics[width=0.49\textwidth]{Fig8d}
 \caption{
 Mean absolute percentage error (a,c) and coefficient of determination (b, d) for different combinations of CV models (vertical axis)
 and regression models (horizontal axis) during the test phase with the experimental dataset without (a, b) and with (c, d)
@@ -1039,7 +1078,7 @@ The performance metrics after post hoc calibration are presented in \Fref{Fig7}c
 As shown by the data, applying this correction substantially reduced the prediction errors.
 Specifically, the mean relative error across the 28-sample experimental dataset now lies within the (13–17)\%
 for the best-performing models (approximately 20 out of 87 configurations) and remains below 25\% for most of the others.
-The median error is even lower, reaching (8–10)\% in the most favorable cases (Fig.~S5).
+The median error is even lower, reaching (8–10)\% in the most favorable cases (Fig.~S7).
 In line with the results obtained for the simulated test dataset, the most accurate configurations are EfficientNetB7, NASNetLarge, DNN, SVR, and XGB.
 Interestingly, MobileNetV2 was also among the top performing combinations.
 This outcome may suggest that the features extracted by MobileNetV2, although less informative for the training and simulated test datasets,
@@ -1103,16 +1142,16 @@ directly into the training process, enhancing model transferability to real meas
 \Fref{Fig8} shows the correlation between the iron concentrations predicted by the models trained on the experimental data
 and the reference values derived according to \cite{Olikh2022:JMatSci,Olikh2021JAP}.
 Representative outcomes for selected CV–regression model combinations are shown for both training and testing,
-with the extended data provided in Figure~S6 of the Supplementary Material.
+with the extended data provided in Figure~S8 of the Supplementary Material.
 
 
 \begin{figure*}
-\includegraphics[width=0.33\textwidth]{Fig8a}
-\includegraphics[width=0.33\textwidth]{Fig8b}
-\includegraphics[width=0.33\textwidth]{Fig8c}
-\includegraphics[width=0.33\textwidth]{Fig8d}
-\includegraphics[width=0.33\textwidth]{Fig8e}
-\includegraphics[width=0.33\textwidth]{Fig8f}
+\includegraphics[width=0.33\textwidth]{Fig9a}
+\includegraphics[width=0.33\textwidth]{Fig9b}
+\includegraphics[width=0.33\textwidth]{Fig9c}
+\includegraphics[width=0.33\textwidth]{Fig9d}
+\includegraphics[width=0.33\textwidth]{Fig9e}
+\includegraphics[width=0.33\textwidth]{Fig9f}
 \caption{
 Scatter plots compare the reference iron concentrations $N_\mathrm{Fe,TRUE}$ with ML-predicted values $N_\mathrm{Fe,PRED}$,
 obtained using feature vectors extracted from various CV models combined with different regression algorithms
@@ -1129,7 +1168,7 @@ The black lines indicate the identity line between predicted and true values.
 It should be noted that, compared to training on synthetic data, this case employed an even smaller sample set (20 samples versus 25).
 However, these samples covered a narrower range of iron concentrations ($10^{11}-2\cdot10^{13}$~cm$^{-3}$ versus $10^{10}$-$10^{14}$~cm$^{-3}$).
 \Fref{Fig9} presents a subset of the performance metrics obtained during the training phase
-(a more comprehensive overview is provided in Figure~S7).
+(a more comprehensive overview is provided in Figure~S9).
 Overall, the results were similar to those shown in \Fref{Fig5}.
 In many cases, extremely low errors (below 0.5\%) and high coefficients of determination (approaching unity) were observed.
 This behavior is particularly characteristic of GB, RF, and SVR.
@@ -1142,8 +1181,8 @@ However, the performance gap relative to other CV models has become less pronoun
 
 \begin{figure*}
 \centering
-\includegraphics[width=0.49\textwidth]{Fig9a}
-\includegraphics[width=0.49\textwidth]{Fig9b}
+\includegraphics[width=0.49\textwidth]{Fig10a}
+\includegraphics[width=0.49\textwidth]{Fig10b}
 \caption{
 Mean squared error (left panel) and median absolute percentage error (right panel) for different combinations of CV models (vertical axis)
 and regression models (horizontal axis) during the training phase.
@@ -1160,7 +1199,7 @@ Moreover, for the experimental training dataset,
 the difference between MAPE and MedAPE becomes smaller.
 This reduction implies a more symmetric error distribution and a decreased occurrence of extreme deviations.
 
-\Fref{Fig10} and Figure~S8 show heatmaps of the prediction metrics for the test experimental dataset
+\Fref{Fig10} and Figure~S10 show heatmaps of the prediction metrics for the test experimental dataset
 using models trained on a separate subset of experimental data.
 Compared with the models trained on simulated data, the predictive performance of the experimental test dataset improved substantially.
 In particular, for several of the best-performing CV–regressor combinations, the MAPE and MedAPE values fall within (6–15)\%,
@@ -1185,10 +1224,10 @@ This suggests that reducing the dimensionality of highly noisy features contribu
 
 \begin{figure*}
 \centering
-\includegraphics[width=0.49\textwidth]{Fig10a}
-\includegraphics[width=0.49\textwidth]{Fig10b}
-\includegraphics[width=0.49\textwidth]{Fig10c}
-\includegraphics[width=0.49\textwidth]{Fig10d}
+\includegraphics[width=0.49\textwidth]{Fig11a}
+\includegraphics[width=0.49\textwidth]{Fig11b}
+\includegraphics[width=0.49\textwidth]{Fig11c}
+\includegraphics[width=0.49\textwidth]{Fig11d}
 \caption{
 Mean squared error, coefficient of determination, mean absolute percentage error, and median absolute percentage error
 for different combinations of CV models (vertical axis) and regression models (horizontal axis)
