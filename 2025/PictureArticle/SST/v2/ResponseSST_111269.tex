@@ -241,9 +241,18 @@ The authors should either
 (i) replace it with a physics-informed calibration (e.g., temperature or diffusion based scaling)
 or (ii) clearly acknowledge its heuristic nature and limitations.}
 
-
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
+
+We fully acknowledge that the post-hoc calibration procedure employed is purely heuristic. 
+As a result, it can improve predictive accuracy primarily within the training range 
+while providing no physical insight into the underlying system. 
+Its applicability beyond the calibrated domain is therefore limited, and it does not correct structural model errors.
+
+A clear acknowledgment of the heuristic nature of this correction and 
+its associated limitations has been added to the revised manuscript 
+(page 15, last paragraph of Section 3.1).
+
 
 
 Allow us to say a few words  in favor of GaAs and 6H-SiC.
@@ -533,12 +542,12 @@ and the lower part shows a screenshot of the corresponding publisher page.
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
 
-We concur with the reviewer that solar cells typically operate over a broad temperature range, 
-which necessitates the evaluation of various temperature-dependent effects. 
-In the present case, temperature governs the thermodynamic equilibrium between Fe$_i$ and FeB defect concentrations, 
-the carrier capture cross-sections of these defects, which together determine the recombination activity of iron-related centers, 
-as well as the silicon parameters that control the photogeneration and transport of excess carriers. 
-In addition, the characteristic time of FeB complex association is temperature-dependent and, 
+We concur with the reviewer that solar cells typically operate over a broad temperature range,
+which necessitates the evaluation of various temperature-dependent effects.
+In the present case, temperature governs the thermodynamic equilibrium between Fe$_i$ and FeB defect concentrations,
+the carrier capture cross-sections of these defects, which together determine the recombination activity of iron-related centers,
+as well as the silicon parameters that control the photogeneration and transport of excess carriers.
+In addition, the characteristic time of FeB complex association is temperature-dependent and,
 in the present system, is described by the relation given below \cite{FeBKin2019,FeBAssJAP2014,FeBAssSST2011}:
 \begin{equation}
 \label{eqTass}
@@ -546,26 +555,26 @@ in the present system, is described by the relation given below \cite{FeBKin2019
 \end{equation}
 Collectively, these factors influence the kinetics of the short-circuit current and its dependence on the iron impurity concentration.
 
-Calculations were performed for both the $I_\mathtt{SC}(t)$ dependencies and the corresponding wavelet spectrograms at 270~K. 
-Representative results are presented in \Fref{FigT2701}. 
-For comparison, the corresponding dependencies obtained at 340 K are shown alongside. 
+Calculations were performed for both the $I_\mathtt{SC}(t)$ dependencies and the corresponding wavelet spectrograms at 270~K.
+Representative results are presented in \Fref{FigT2701}.
+For comparison, the corresponding dependencies obtained at 340 K are shown alongside.
 As can be seen, at the lower temperature, variations in iron concentration exert a more pronounced effect on the
-$I_\mathtt{SC}$ kinetics and, consequently, on the appearance of the spectrograms. 
+$I_\mathtt{SC}$ kinetics and, consequently, on the appearance of the spectrograms.
 Accordingly, model predictions are expected to be more accurate under these conditions.
 
 \begin{figure*}
 \includegraphics[width=0.45\textwidth]{RT270Fig1a}\hfill
 \includegraphics[width=0.45\textwidth]{RT270Fig1b}
 \caption{\label{FigT2701}
-Simulated time dependencies of the short-circuit current (upper curves) 
-and corresponding wavelet spectrograms (lower plots) for iron concentrations of 
-$10^{10}$ and $10^{14}$~cm$^{-3}$. 
+Simulated time dependencies of the short-circuit current (upper curves)
+and corresponding wavelet spectrograms (lower plots) for iron concentrations of
+$10^{10}$ and $10^{14}$~cm$^{-3}$.
 The left panel corresponds to a temperature of 340~K, and the right panel corresponds to 270~K.
 }
 \end{figure*}
 
-\Fref{FigT2702} presents the performance metrics obtained from testing models 
-trained on data simulated at different temperatures. 
+\Fref{FigT2702} presents the performance metrics obtained from testing models
+trained on data simulated at different temperatures.
 As shown, the model performance is, on average, superior for the 270~K case.
 
 
@@ -582,24 +591,24 @@ As shown, the model performance is, on average, superior for the 270~K case.
 Metrics for different combinations of CV models (vertical axis)
 and regression models (horizontal axis) during test phase with the simulated dataset.
 The models were trained using the simulated dataset.
-The left column corresponds to calculations performed at 340 K, 
+The left column corresponds to calculations performed at 340 K,
 and the right column corresponds to 270 K.
 }
 \end{figure*}
 
-However, it should be emphasized that the proposed methodology for iron concentration 
-assessment is primarily intended for practical application. 
-Calculations based on Eq.~\eref{eqTass} indicate that $\tau_\mathrm{ass}$ is approximately 850~s at 340 K, 
-whereas it increases to about 230,000~s at 270 K. 
-The simulated $I_\mathtt{SC}(t)$ dependencies at 340~K were computed assuming a measurement interval of 100~s, 
-while at 270~K the interval increases to 21,600 s, corresponding to six measurements per day and requiring nearly one working week to acquire a complete curve. 
-Experimental validation at 270~K is therefore impractical and lacks clear practical relevance 
-due to the infeasibility of such measurement protocols. 
+However, it should be emphasized that the proposed methodology for iron concentration
+assessment is primarily intended for practical application.
+Calculations based on Eq.~\eref{eqTass} indicate that $\tau_\mathrm{ass}$ is approximately 850~s at 340 K,
+whereas it increases to about 230,000~s at 270 K.
+The simulated $I_\mathtt{SC}(t)$ dependencies at 340~K were computed assuming a measurement interval of 100~s,
+while at 270~K the interval increases to 21,600 s, corresponding to six measurements per day and requiring nearly one working week to acquire a complete curve.
+Experimental validation at 270~K is therefore impractical and lacks clear practical relevance
+due to the infeasibility of such measurement protocols.
 Accordingly, we consider it appropriate to focus this study on the upper limit of the temperature range suggested by the Reviewer.
 
 
-A brief discussion of the advantages and limitations of analyzing the $I_\mathtt{SC}(t)$ kinetic at 270~K, has been added to the revised manuscript 
-(Figure~7, last two paragraphs on page 11, first two paragraphs on page 13). 
+A brief discussion of the advantages and limitations of analyzing the $I_\mathtt{SC}(t)$ kinetic at 270~K, has been added to the revised manuscript
+(Figure~7, last two paragraphs on page 11, first two paragraphs on page 13).
 In addition, the performance metrics for models trained on data obtained at 270~K have been included in the Supplementary Materials for both the training and testing sets.
 
 
