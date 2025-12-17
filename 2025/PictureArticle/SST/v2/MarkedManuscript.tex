@@ -721,6 +721,18 @@ target variable explained by the model,
 thereby indicating how well the predicted values reproduce the observed data;
 a value of 1 corresponds to perfect agreement.
 
+\textcolor[rgb]{1.00,0.07,0.00}{
+\hl{
+Confidence intervals were estimated using a hierarchical resampling procedure.
+Regression models were trained in five independent runs with different random
+initializations and stochastic optimization trajectories while maintaining a fixed set of
+hyperparameters determined during the tuning phase.
+For each trained model, performance was evaluated on 100 bootstrap resamples
+of the test dataset generated with replacement.
+Confidence intervals were then derived from the empirical distribution of the resulting performance metrics.
+The absence of reported confidence intervals for certain model variants indicates that their magnitudes 
+fall below the reporting precision of the displayed results.
+}}
 
 \section{Results and discussion}\label{sec:Rez}
 \subsection{Simulated data}
@@ -939,42 +951,42 @@ to the restructuring of iron-containing defects.
 
 \textcolor[rgb]{1.00,0.07,0.00}{
 \hl{
-It should be noted that solar cells typically operate over a broad temperature range. 
-Temperature influences the characteristic time of FeB complex association (see}  \colorbox{yellow}{Eq.~\eref{eqTass}),} 
+It should be noted that solar cells typically operate over a broad temperature range.
+Temperature influences the characteristic time of FeB complex association (see}  \colorbox{yellow}{Eq.~\eref{eqTass}),}
 \hl{
-the thermodynamic equilibrium between Fe$_i$ and FeB defect concentrations, 
-the carrier capture cross-sections of these defects, which together determine the recombination 
-activity of iron-related centers, as well as the silicon parameters that 
-govern the photogeneration and transport of excess carriers. 
-Collectively, these factors affect the kinetics of the short-circuit current and its dependence on the iron impurity concentration. 
+the thermodynamic equilibrium between Fe$_i$ and FeB defect concentrations,
+the carrier capture cross-sections of these defects, which together determine the recombination
+activity of iron-related centers, as well as the silicon parameters that
+govern the photogeneration and transport of excess carriers.
+Collectively, these factors affect the kinetics of the short-circuit current and its dependence on the iron impurity concentration.
 This raises the question of whether temperature may also impact the performance of machine learning models.
 }}
- 
+
 \textcolor[rgb]{1.00,0.07,0.00}{
 \hl{
-Simulations were performed for 270 K. 
+Simulations were performed for 270 K.
 As an example,}  \colorbox{yellow}{\Fref{FigN}a and \Fref{FigN}b }
 \hl{
-show the wavelet spectrograms for two distinct iron concentrations. 
-Comparison with}  \colorbox{yellow}{\Fref{Fig2}b and \Fref{Fig2}c} 
+show the wavelet spectrograms for two distinct iron concentrations.
+Comparison with}  \colorbox{yellow}{\Fref{Fig2}b and \Fref{Fig2}c}
 \hl{
-indicates that, at lower temperatures, 
-changes in iron concentration produce more pronounced differences in the spectrograms, 
-suggesting a corresponding increase in model prediction accuracy.} 
+indicates that, at lower temperatures,
+changes in iron concentration produce more pronounced differences in the spectrograms,
+suggesting a corresponding increase in model prediction accuracy.}
  \colorbox{yellow}{\Fref{FigN}c }
-\hl{presents the MAPE for models trained and tested on synthetic datasets prepared in the same manner as those used previously, 
-but under 270 K conditions. 
-More detailed metrics are provided in Figures S4 and S5 of the Supplementary Materials. 
-Comparison with}  \colorbox{yellow}{\Fref{Fig6}} 
+\hl{presents the MAPE for models trained and tested on synthetic datasets prepared in the same manner as those used previously,
+but under 270 K conditions.
+More detailed metrics are provided in Figures S4 and S5 of the Supplementary Materials.
+Comparison with}  \colorbox{yellow}{\Fref{Fig6}}
 \hl{
 (lower right panel) confirms that a notable improvement in model performance is observed.
-}} 
- 
+}}
+
 \begin{figure*}
 \centering
 \includegraphics[width=0.8\textwidth]{Fig7}
 \caption{
-Wavelet spectrograms of simulated short-circuit current time dependencies at 270 K 
+Wavelet spectrograms of simulated short-circuit current time dependencies at 270 K
 for iron concentrations of $10^{10}$~cm$^{-3}$ (a) and $10^{14}$~cm$^{-3}$ (b).
 Mean absolute percentage error (c) for different combinations of CV models (vertical axis)
 and regression models (horizontal axis) evaluated during the test phase using the dataset simulated at 270 K.
@@ -985,16 +997,16 @@ and regression models (horizontal axis) evaluated during the test phase using th
 \hl{
 However, it should be emphasized that the proposed methodology for iron concentration
 assessment is primarily intended for practical application.
-Calculations based on }\colorbox{yellow}{Eq.~\eref{eqTass}} 
+Calculations based on }\colorbox{yellow}{Eq.~\eref{eqTass}}
 \hl{
 indicate that $\tau_\mathrm{ass}$ is approximately 850~s at 340 K,
 whereas it increases to about 230,000~s at 270 K.
-The simulated $I_\mathtt{SC}(t)$ dependencies at 340 K assume that the entire curve can be measured within 50 min. 
-At 270 K, however, the interval between consecutive points extends to 21,600 s, 
-corresponding to six measurements per day and requiring nearly one working week to acquire a complete curve. 
-Even at 300 K, the characteristic time of 15,000 s remains prohibitively long. 
-Consequently, although lower measurement temperatures could enhance prediction accuracy, 
-experimental validation under such conditions is impractical. 
+The simulated $I_\mathtt{SC}(t)$ dependencies at 340 K assume that the entire curve can be measured within 50 min.
+At 270 K, however, the interval between consecutive points extends to 21,600 s,
+corresponding to six measurements per day and requiring nearly one working week to acquire a complete curve.
+Even at 300 K, the characteristic time of 15,000 s remains prohibitively long.
+Consequently, although lower measurement temperatures could enhance prediction accuracy,
+experimental validation under such conditions is impractical.
 Therefore, hereafter this study focuses exclusively on results obtained at 340 K, both computationally and experimentally.
 }}
 

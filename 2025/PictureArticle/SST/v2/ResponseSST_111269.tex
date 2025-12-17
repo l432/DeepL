@@ -228,8 +228,41 @@ would add interpretability to what the CNN features represent.}
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
 
 
-Allow us to say a few words  in favor of GaAs and 6H-SiC.
+Explainability of the supervised learning model prediction of the bulk modulus while revealing the feature importance influencing the model prediction.
+CatBoost: (a); XGBoost (b); Random Forest (c).
 
+
+Figure 5. SHAP importance of the selected feature parameters.
+(компліт)
+
+he GB model for Voc prediction: a) training, b) validation, c) testing, and d) SHAP plot for the model
+
+ Optimal selected subset of (a) the importance rankings (там де горизонтальні стовпдики з +цифрами) and (b) the SHAP value distribution
+
+
+Feature importance ranking for all the 39 descriptors obtained from the
+representative RF model.
+
+SHAP feature importance
+ranking provided in the representative
+descriptor-selected RF model.
+
+SHAP summary plot analysis for the
+training dataset showing the impact of
+descriptors on the representative
+descriptor-redefined RF model.
+
+Figure 4. An overview of the SHAP values, showing the 20 most important features for the proposed model for predicting the dominant recombination
+loss in PSCs
+
+The
+feature importance of the voting model
+based on SHAP values.
+
+FIG. 4. (a) Feature importance under the SHAP model, where the x-axis represents the absolute average SHAP values of the features. 
+(b)(для саммери) Global contributions of all samples
+according to SHAP, with purple and blue colors indicating the magnitude of feature values. 
+(c) (для того, чого не беру) SHAP analysis of the local contributions of features for the sample TiNiO3.
 
 \vspace{1cm}
 \noindent
@@ -244,18 +277,14 @@ or (ii) clearly acknowledge its heuristic nature and limitations.}
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
 
-We fully acknowledge that the post-hoc calibration procedure employed is purely heuristic. 
-As a result, it can improve predictive accuracy primarily within the training range 
-while providing no physical insight into the underlying system. 
+We fully acknowledge that the post-hoc calibration procedure employed is purely heuristic.
+As a result, it can improve predictive accuracy primarily within the training range
+while providing no physical insight into the underlying system.
 Its applicability beyond the calibrated domain is therefore limited, and it does not correct structural model errors.
 
-A clear acknowledgment of the heuristic nature of this correction and 
-its associated limitations has been added to the revised manuscript 
+A clear acknowledgment of the heuristic nature of this correction and
+its associated limitations has been added to the revised manuscript
 (page 15, last paragraph of Section 3.1).
-
-
-
-Allow us to say a few words  in favor of GaAs and 6H-SiC.
 
 
 \vspace{1cm}
@@ -269,8 +298,26 @@ would be essential to establish statistical robustness.}
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
 
+In the revised manuscript, 
+confidence intervals were estimated using a hierarchical resampling procedure. 
+Regression models were trained in five independent runs with different random 
+initializations and stochastic optimization trajectories while maintaining a fixed set of 
+hyperparameters determined during the tuning phase. 
+For each trained model, performance was evaluated on 100 bootstrap resamples 
+of the test dataset generated with replacement. 
+Confidence intervals were then derived from the empirical distribution of the resulting performance metrics.
 
-Allow us to say a few words  in favor of GaAs and 6H-SiC.
+The selected numbers of stochastic training runs (5) and bootstrap resamples (100) 
+represent a balance between statistical robustness and computational cost 
+and are sufficient to capture the dominant sources of variability in the reported metrics.
+
+
+The revised manuscript now includes a detailed description of the confidence interval estimation procedure 
+(page 9, last paragraph in Section~2.6). 
+In addition, confidence intervals have been incorporated into all heatmaps presenting performance metrics in both the main text and the Supplementary Materials.
+
+
+
 
 \vspace{1cm}
 \noindent
