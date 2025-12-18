@@ -26,7 +26,7 @@ which have led to significant improvements in both the technical content and pre
 We have carefully addressed all the comments and made corresponding revisions to the manuscript.
 The location of revisions is pointed by red color and highlighted in yellow in ``CompleteDocumentForReview.pdf''.
 Below we provide our detailed point-by-point responses to each comment.
-We hope the revised manuscript better meets your expectations and standards for publication in Solar Energy.
+We hope the revised manuscript better meets your expectations and standards for publication in Semiconductor Science and Technology.
 
 
 
@@ -112,8 +112,8 @@ Concerning the near-perfect $R^2$ values (0.996–0.999), we emphasize that a hi
 Together, these observations indicate that the models did not rely on memorization but instead captured meaningful patterns in the data.
 
 We have updated the manuscript to provide a more precise description of the models tuning procedure,
-to include information on the standard deviation of the metrics during cross-validation (page 8, the second-to-last paragraph of Section 2.5),
-and to highlight the small difference in $R^2$ values between the training and test datasets (page 10, left column).
+to include information on the standard deviation of the metrics during cross-validation (page 8, the second paragraph in left column),
+and to highlight the small difference in $R^2$ values between the training and test datasets (page 11, fist paragraph in left column).
 
 
 
@@ -211,7 +211,7 @@ Importantly, the key conclusions derived from these synthetic datasets
 were subsequently validated through experiments using measured data later in the study.
 
 The revised manuscript now includes a discussion of the limitations of the SCAPS-1D simulation results
-while emphasizing the main outcomes derived from the synthetic data (page 13, last paragraph in Section 3.1).
+while emphasizing the main outcomes derived from the synthetic data (pages 15-16, last paragraph in Section 3.1).
 
 
 
@@ -226,15 +226,15 @@ would add interpretability to what the CNN features represent.}
 
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
-We thank the Reviewer for the comment on model interpretability. 
-In this study, CV models were employed solely as feature extractors. 
-The extracted features correspond either to class probability outputs or 
-to high-level latent embeddings from the penultimate layer, representing abstract, 
+We thank the Reviewer for the comment on model interpretability.
+In this study, CV models were employed solely as feature extractors.
+The extracted features correspond either to class probability outputs or
+to high-level latent embeddings from the penultimate layer, representing abstract,
 non-linear image descriptors rather than directly physically interpretable variables.
 
-Examples of feature attributions using SHAP are shown in \Fref{RSHAP1} and \Fref{RSHAP2}. 
-However, owing to the abstract and highly non-linear nature of CV-derived features, 
-such as wavelet spectrogram embeddings, 
+Examples of feature attributions using SHAP are shown in \Fref{RSHAP1} and \Fref{RSHAP2}.
+However, owing to the abstract and highly non-linear nature of CV-derived features,
+such as wavelet spectrogram embeddings,
 these attributions do not correspond to directly interpretable physical quantities.
 
 
@@ -244,7 +244,7 @@ these attributions do not correspond to directly interpretable physical quantiti
 \includegraphics[width=0.45\textwidth]{RSHAP1a}\hfill
 \includegraphics[width=0.45\textwidth]{RSHAP1b}
 \caption{\label{RSHAP1}
-Global SHAP importance of the top ten deep features used by the XGBoost model for iron concentration prediction. 
+Global SHAP importance of the top ten deep features used by the XGBoost model for iron concentration prediction.
 The features were extracted using EfficientNetB7 from simulated data (left panel) and NASNetLarge from experimental data (right panel).
 }
 \end{figure*}
@@ -253,16 +253,16 @@ The features were extracted using EfficientNetB7 from simulated data (left panel
 \includegraphics[width=0.45\textwidth]{RSHAP2a}\hfill
 \includegraphics[width=0.45\textwidth]{RSHAP2b}
 \caption{\label{RSHAP2}
-Bar plots of mean absolute SHAP values showing the ten most influential deep features 
-in the XGBoost-based prediction of iron concentration. 
-Features were extracted using EfficientNetB7 from simulated data (left panel) 
+Bar plots of mean absolute SHAP values showing the ten most influential deep features
+in the XGBoost-based prediction of iron concentration.
+Features were extracted using EfficientNetB7 from simulated data (left panel)
 and NASNetLarge from experimental data (right panel).
 }
 \end{figure*}
 
-Consequently, applying SHAP or similar explainable AI techniques to these CNN-derived features primarily 
-reflects sensitivities in an abstract latent space and does not provide direct physical insight into iron concentration. 
-As the CNN features lack a clear physical correspondence, their interpretability is inherently limited, 
+Consequently, applying SHAP or similar explainable AI techniques to these CNN-derived features primarily
+reflects sensitivities in an abstract latent space and does not provide direct physical insight into iron concentration.
+As the CNN features lack a clear physical correspondence, their interpretability is inherently limited,
 and therefore, explainability analysis was not included.
 
 This clarification has been added to the revised manuscript (page 8, last paragraph in Section 2.5).
@@ -322,7 +322,7 @@ Its applicability beyond the calibrated domain is therefore limited, and it does
 
 A clear acknowledgment of the heuristic nature of this correction and
 its associated limitations has been added to the revised manuscript
-(page 15, last paragraph of Section 3.1).
+(page 16, last paragraph of Section 3.1).
 
 
 \vspace{1cm}
@@ -429,7 +429,7 @@ and ionization energies of impurity defects \cite{MannodiKanakkithodi2022} and
 to determine the equilibrium configurations of defects in emerging materials \cite{MosqueraLois2024}.
 
 
-The relevant information has been incorporated into the Introduction section (pages 1–2, paragraphs three through six).
+The relevant information has been incorporated into the Introduction section (pages 2-–3, paragraphs three through six).
 
 
 \vspace{1cm}
@@ -502,8 +502,8 @@ A concise overview table would be helpful.}
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
 
-We agree with the Reviewer and have improved the presentation of the Supplementary Figures. 
-A brief summary of Supplementary Figures S1–S10 has been added to the main text at their first reference (page 9, second paragraph in Section 3.1), 
+We agree with the Reviewer and have improved the presentation of the Supplementary Figures.
+A brief summary of Supplementary Figures S1–S10 has been added to the main text at their first reference (page 9, second paragraph in Section 3.1),
 clarifying their scope and role in supporting the reported results.
 In addition, the Supplementary Materials were updated with a short introductory paragraph describing their overall content.
 Besides, we have added a concise overview table summarizing the content and main conclusions of the Supplementary Figures.
@@ -720,7 +720,7 @@ In particular, the article mentioned in Reviewer 2's comment is now cited as Ref
 
 \noindent
 \textcolor[rgb]{0.51,0.00,0.00}{\textbf{Reply:}}
-We added Table~1 to the revised manuscript (page~5).
+We added Table~1 to the revised manuscript (page~7).
 This table summarizes the parameters of the solar cell, silicon, and defect states at the temperature used in the main calculations.
 
 

@@ -39,8 +39,8 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
+%\documentclass[10pt,draft]{iopart}
 \documentclass[10pt]{iopart}
-%\documentclass[12pt]{iopart}
 %\newcommand{\gguide}{{\it Preparing graphics for IOP Publishing journals}}
 %Uncomment next line if AMS fonts required
 %\usepackage{iopams}
@@ -48,7 +48,28 @@
 \usepackage{multirow}
 \usepackage{amssymb}
 \usepackage{url}
+
+\usepackage[numbers]{natbib}
+\usepackage{makecell}
+\usepackage{color}
+\usepackage{xcolor}
+%\usepackage[most]{tcolorbox}
+\usepackage{tcolorbox}
+\usepackage{soul}
+
+\tcbuselibrary{skins, breakable}
+
+\tcbset{highlight style/.style={
+  colback=yellow, colframe=yellow, boxrule=0pt, sharp corners, enhanced,
+  left=0mm, right=0mm, top=0mm, bottom=0mm
+}}
+
 \begin{document}
+
+
+
+
+\sethlcolor{yellow}
 
 \title[Computer vision for quantifying Fe-related defects in Si solar cells]{Computer vision-based method for quantifying iron-related defects in silicon solar cells}
 
@@ -110,18 +131,69 @@ In recent years, researchers have increasingly complemented established defect c
 and cost efficiency of these analyses.
 The use of ML methods for analysing macroscopic defects (such as cracks, finger failures, hotspots, and scratches) and point defects, however, differs significantly.
 Researchers typically detect macroscopic defects in PV systems using two main approaches \cite{Jia2024, Hijjawi2023}.
-The first approach, Electrical Testing Techniques, involves analysing characteristic electrical curves of parameters such as current, voltage, and power.
+The first one, Electrical Testing Techniques, involves analysing characteristic electrical curves of parameters such as current, voltage, and power.
 The second approach, Imaging-Based Techniques, involves analysing electroluminescence (EL) \cite{Liu2024a} or photoluminescence \cite{Doll2021} images of solar cells.
 Numerous review studies demonstrate extensive use of ML in both approaches \cite{Datta2023, Jaiswal2023, Buratti2024, MAHDAVIPOUR, Hopwood2020, Li2021, Liu2021}.
 
-Although point defects represent one of the primary limitations of PV devices, researchers have developed considerably fewer ML techniques - specifically for their analysis.
-Existing ML-based approaches include extracting recombination active center parameters from lifetime measurements \cite{Wang2024a, Buratti2022, Buratti2020a},
-detecting radiation-induced defects using Raman spectroscopy \cite{Park2022, Chia2024},
-estimating the concentration of contaminant impurities from the ideality factor of the current–voltage characteristics \cite{Olikh2022PPV},
-and analysing variations in photovoltaic conversion parameters \cite{Olikh2025SE}.
-Nevertheless, a relatively limited number of such methods are offered.
+Point defects represent a significant limiting factor in the performance of photovoltaic devices;
+however, the development of ML methodologies specifically tailored for their analysis remains comparatively limited.
+Existing applications of ML in microscopic defect characterization can be broadly categorized into several distinct approaches.
+One such approach focuses on enhancing conventional defect-analysis techniques through the integration of
+Artificial Intelligence methods for processing and interpreting the resulting experimental signals.
 
 
+For example, Buratti \emph{et al.} \cite{Buratti2020a} employed regression algorithms, including Random Forest (RF), Gradient Boosting (GB), and Deep Neural Networks (DNN),
+to analyze dependencies derived from temperature- and injection-dependent lifetime spectroscopy (TIDLS).
+They trained the models on more than one million simulated curves, which enabled
+accurate estimation of
+silicon defect energy levels and carrier capture cross-sections.
+In addition, unlike the conventional fitting of signals with the Shockley–Read–Hall equation,
+their approach can also predict the energy level position at half of the bandgap.
+An extension of this approach was presented in \cite{Buratti2022}, where the methodology incorporated a
+Convolutional Neural Network (CNN) to analyse images derived from a family of lifetime curves measured at different temperatures,
+in addition to applying a RF model to the standard TIDLS signal.
+In that study, the CNN was used both to perform the classification of the half-bandgap position of the energy level
+and to extract features, which were subsequently used by the RF.
+As in the earlier work, the models were trained on a dataset consisting of several hundred thousand synthetic samples.
+An alternative TIDLS signal processing strategy was also investigated by Wang \emph{et al.} \cite{Wang2024a},
+who used CNNs to analyse one-dimensional signals and thereby extract parameters associated with two-energy-level defects in silicon.
+Machine-learning methods are also employed for the analysis of Raman spectra \cite{Chia2024}.
+In this study, the spectra of electron-irradiated GaAs were examined using linear discriminant analysis models.
+These models were trained on 6,000 experimentally acquired spectra, enabling the identification of radiation-induced defects.
+
+An alternative approach is based on determining defect parameters by analysing the characteristics of devices, primarily solar cells,
+that are directly affected by such defects.
+For silicon solar cells, for example, a methodology has been proposed to estimate the concentration of contaminant impurities
+from the magnitude of the ideality factor obtained from current–voltage ($I$–$V$) characteristics \cite{Olikh2022PPV}
+or from variations in photovoltaic conversion parameters \cite{Olikh2025SE}.
+In both studies, classical regression algorithms (DNN, RF, Support Vector Regression (SVR), and GB) were employed.
+The numerical values of parameters extracted from the $I$–$V$ characteristics served as input features,
+and the models were trained on tens of thousands of current–voltage curves simulated under different defect parameters.
+A closely related approach was presented by Haidari \emph{et al.} \cite{Haidari2025},
+who used thirteen parameters extracted from the $I$–$V$ curves of CIGS solar cells as inputs to a DNN to predict the spatial distribution and concentration of six bulk and surface defects.
+The inverse problem, namely the determination of photovoltaic conversion parameters based on predefined defect concentrations,
+was examined by \emph{Kim et al.} \cite{Kim2023a} for perovskite solar cells.
+In that study, RF, XGBoost,
+Linear Regression, and Multilayer Perceptron algorithms were evaluated,
+and the RF model delivered the highest performance.
+In all four studies mentioned above, the SCAPS-1D simulation tool was consistently used
+to generate the synthetic $I$–$V$ characteristics that formed the training datasets.
+
+
+Beyond the detection and characterization of defects in actual devices,
+a distinct research direction focuses on accelerating and improving density functional theory (DFT)
+and molecular dynamics (MD) calculations of defect parameters.
+For example, several studies have demonstrated the use of Graph Neural Networks, trained on DFT-calculated data,
+to estimate vacancy formation energies \cite{Choudhary2023, Kumagai2025}
+and to evaluate the electronic structure of charged defects in GaAs \cite{Ma2025}.
+Graph Convolutional Networks have also been applied to MD-generated datasets for predicting
+vacancy diffusion paths in high-entropy alloys \cite{Reimer2025} and intrinsic defects in perovskites \cite{Tyagi2025}.
+In addition, DFT datasets have been integrated with ML methods to identify formation enthalpies
+and ionization energies of impurity defects \cite{MannodiKanakkithodi2022} and
+to determine the equilibrium configurations of defects in emerging materials \cite{MosqueraLois2024}.
+
+Nevertheless, relatively few machine-learning methodologies are currently available for the characterization of point defects,
+ especially regarding the experimental determination of their parameters.
 One of the main challenges in applying ML methods effectively is that training the models requires a large amount of labelled data \cite{Buratti2024}.
 In practice, researchers often cannot obtain such large volumes of experimental data;
 therefore, they commonly employ approaches such as simulations,
@@ -137,18 +209,23 @@ For example, EfficientNetB7 was trained on approximately 1.2 million images from
 This study primarily aimed to apply standard pre-trained CV models to analyze the electrophysical measurement results related to point defects.
 In particular, we focus on quantifying iron in boron-doped crystalline silicon solar cells by examining short-circuit current
 ($I_\mathtt{SC}$) relaxation following intense illumination.
-Iron is one of the most prevalent, ubiquitous, and efficiency-limiting metallic impurities in such structures \cite{Buonassisi2006, IronSC},
-which, as noted earlier, forms the foundation of the photovoltaic market.
-In Si:B, iron tends to form iron–boron pairs under equilibrium conditions, which intense illumination can dissociate \cite{Kimerling1983, FeBAssJAP2014}.
+Iron is among the dominant metallic contaminants that degrade the efficiency of these structures.
+Although current research has increasingly focused on next-generation solar cells,
+particularly perovskite-based devices, silicon structures
+\cite{Li2024,Haghighat2025},
+as previously discussed, constitute the core of the photovoltaic market,
+highlighting the continued relevance of the present work.
+In Si:B, iron readily associates with boron to form FeB pairs, and these complexes can be dissociated by strong illumination
+\cite{Kimerling1983, FeBAssJAP2014}.
 In fact, the aforementioned $I_\mathtt{SC}$ variations directly reflect the recovery process of iron–boron pairs \cite{Olikh2021JAP}.
 
-
 It should be noted that the use of well-established computer vision benchmark architectures such
-as YOLO, MobileNetV2, EfficientNet, ResNet, Xception, GoogleNet, and other convolutional neural networks (CNNs) is a common approach for identifying macrodefects from EL
+as YOLO, MobileNetV2, EfficientNet, ResNet, Xception, GoogleNet, and other CNNs is a common approach for identifying macrodefects from EL
 measurements \cite{Liu2024a, Li2024a, Jia2024, Otamendi2021, Chen2022, AlOtum2024, Abdelsattar2025, tella2025}.
 However, in this case, the measurement result is an image, makes the approach relatively straightforward.
 In our case, it was necessary to transform the time dependence into an image representation.
-Standard approaches to solving such problems involve the use of Fourier or wavelet transforms, and last were applied in this study.
+Standard approaches to solving such problems involve the use of Fourier or wavelet transforms, and
+the latter  were applied in this study.
 In photovoltaics, wavelet transforms are typically used for processing solar cell images to enhance the detection of
 macrodefects \cite{Li2012, Rosa2024}, but they can also be employed to convert one-dimensional non-stationary signals into two-dimensional spectrograms and thereby enable the effective extraction of subtle features \cite{Vinit2020}.
 
@@ -158,6 +235,25 @@ In both cases, the hybrid Transfer Learning approach produced predictions with s
 on small datasets containing fewer than 30 samples.
 Importantly, the proposed approach is highly versatile and can be extended to a wide range of tasks related to defect characterization and other applications.
 
+To summarize the novelty and contribution of our work, as well as
+its distinction from previous studies on semiconductor defects, we note the following.
+The use of CNNs for analysing defect-related electrophysical dependencies has been explored previously \cite{Buratti2022}.
+In that study, however, image construction required a set of curves measured under different conditions,
+specifically at various temperatures, and the model was trained from scratch, which demanded a very large training dataset.
+In contrast, our approach relies on a single kinetic dependency and leverages the capabilities of pre-trained computer vision (CV) models.
+Standard CV models for defect detection in solar cells have also been reported \cite{Liu2024a, Jia2024,AlOtum2024, Abdelsattar2025, tella2025},
+although prior work focused on macro-defects and processed naturally acquired images from conventional cameras.
+In our case, the emphasis is on point-defect characteristics, and the images used as input are generated from electrophysical measurements.
+In the analysis of solar cells, wavelet transforms have been applied to one-dimensional dependencies \cite{Vinit2020}
+in addition to their use in improving defect detection in photographic images \cite{Li2012}.
+In those studies, however, the resulting wavelet coefficients were used as features in regression algorithms
+rather than for constructing images, which is the approach adopted in the present work.
+More broadly, to the best of our knowledge, one-dimensional signal-to-image conversion for CNN input preparation has typically been achieved
+either by employing a set of curves \cite{Buratti2022}
+or by digitizing standard graphs produced in software such as Origin \cite{Held2024}.
+The use of the wavelet transform as a preprocessing step for CNNs is therefore novel.
+Finally, our methodology is designed to function effectively with extremely small datasets,
+which facilitates the practical application of the proposed approach.
 
 \section{Methodology}\label{sec:Exp}
 
@@ -169,7 +265,7 @@ The first stage involves either simulating or experimentally measuring the time 
 of the short-circuit current in a solar cell after the induced decay of the FeB pairs.
 These procedures are described in detail in Subsections~\ref{subsec:SimDet} and \ref{subsec:ExpDet}.
 For the experimental curves, the data were smoothed using a Savitzky–Golay filter \cite{Krishnan2013}.
-Subsequently, a continuous wavelet transform \cite{Torrence1998} was applied to convert the one-dimensional time dependencies
+Subsequently, a continuous wavelet transform (CWT)\cite{Torrence1998} was applied to convert the one-dimensional time dependencies
 into two-dimensional spectrograms represented as images,
 where each point corresponds to the amplitude of the wavelet coefficient at a specific time and frequency.
 The Morlet wavelet was employed, and the procedure was implemented using the Python package PyWavelets.
@@ -218,11 +314,13 @@ Model performance was evaluated using the metrics described in Subsection~\ref{s
 
 \subsection{Simulation details}\label{subsec:SimDet}
 
-To obtain the $I_\mathtt{SC}(t)$ dependencies, $I$-$V$ curve simulations were performed for a silicon $n^+$-$p$-$p^+$ structure
-under monochromatic illumination using SCAPS-1D version 3.3.11.
-The SCAPS-1D software \cite{SCAPS1} is a widely used tool for modeling solar cells
-while accounting for defect states \cite{MasumMia2025, Joshi2024, Ravidas2024, Liu2024, You2023, SCAPSDefect3}.
-$I_\mathtt{SC}$ values were extracted from the simulated $I$-$V$ curves using a standard procedure \cite{SCparam2017}.
+The time-dependent short-circuit current, $I_\mathtt{SC}(t)$,
+was determined by simulating the $I$-$V$ characteristics of a silicon $n^+$-$p\,$-$p^+$ structure
+under monochromatic illumination using SCAPS-1D.3.3.11.
+SCAPS-1D \cite{SCAPS1}
+is a widely adopted software for solar cell modeling
+that incorporates the effects of defect states
+\cite{MasumMia2025, Joshi2024, Ravidas2024, Liu2024, You2023, SCAPSDefect3}.
 
 During the simulations, the base thickness of the structure was set to 380~$\mu$m,
 and boron was used as the doping element with a concentration of $N_\mathrm{B} = 1.36 \times 10^{15}$ cm$^{-3}$.
@@ -238,7 +336,7 @@ N_\mathrm{Fe_i}(t)=(N_\mathrm{Fe_i,0}-N_\mathrm{Fe_i,eq})\times
 \exp(-t/\tau_\mathrm{ass})+N_\mathrm{Fe_i,eq}\,,
 \end{equation}
 where
-where $N_\mathrm{Fe_i,0}$ is the concentration of interstitial iron atoms formed due to FeB pair dissociation,
+$N_\mathrm{Fe_i,0}$ is the concentration of interstitial iron atoms formed due to FeB pair dissociation,
 $N_\mathtt{Fe_i,0} = N_\mathtt{Fe_i}(t=0) = N_\mathtt{Fe}$;
 $N_\mathtt{Fe_i,eq}$ is the portion of interstitial iron atoms that remain unpaired in the equilibrium state
 $N_\mathtt{Fe_i,eq}=N_\mathtt{Fe_i}(t \rightarrow \infty)$,
@@ -260,7 +358,8 @@ according to \cite{FeBKin2019,FeBAssJAP2014,FeBAssSST2011}
 \tau_\mathrm{ass}=A\times\frac{T}{N_A}\exp\left(\frac{E_m}{kT}\right)\,,
 \end{equation}
 $E_m$ is the energy of Fe$_\mathtt{i}^+$ migration (taken as 0.66~eV \cite{FeBAssJAP2014,FeBKin2019,FeBAssSST2011}),
-$A$ is the constant (taken as $5.7\times10^5\,\frac{\mathrm{s}}{\mathrm{K}\;\mathrm{cm}^3}$ \cite{FeBAssSST2011}).
+$A$ is the pre-exponential
+constant (taken as $5.7\times10^5\,\frac{\mathrm{s}}{\mathrm{K}\;\mathrm{cm}^3}$ \cite{FeBAssSST2011}).
 The iron-boron pair concentration $N_\mathtt{FeB}$ was estimated as follows:
 \begin{equation}\label{eqNFeB}
   N_\mathtt{FeB}(t)+N_\mathtt{Fe_i}(t)=N_\mathtt{Fe}\,.
@@ -268,27 +367,81 @@ The iron-boron pair concentration $N_\mathtt{FeB}$ was estimated as follows:
 Overall, the concentrations of iron-related defects depended not only on time but
 also on their spatial position within the structure, reflecting the non-uniformity of the $(E_F-E_\mathtt{Fe_i})$ difference.
 
-A detailed description of the modeling approach, including the values of silicon and defect parameters employed, is provided elsewhere \cite{Olikh2025MSEB, Olikh2019SM}.
+The parameters used in the simulations are summarized in \tref{tabParameters}.
+Additional details on the procedure for modeling the $I$-$V$ curves of silicon solar cells containing iron impurities can be found in
+\cite{Olikh2025MSEB, Olikh2019SM}.
+
+\begin{table*}
+\centering
+\caption
+{Input parameters used in the simulation of short-circuit current kinetics. $T=340$~K} \label{tabParameters}
+\begin{indented}
+\item[]
+\begin{tabular}{p{5.8cm}ccc}
+\br
+Solar cell parameters &   $p^+$-layer &   $p\,$-layer &  $n^+$-layer \\
+&   \cite{Fell2015} &   real sample &  \cite{Fell2015} \\
+\mr
+Thickness ($\mu$m) & 7.75  & 380 & 0.39   \\
+Doping concentration profile&non-uniform&uniform&non-uniform\\
+Doping [maximum] concentration (cm$^{-3}$)&$4.8\cdot10^{18}$&$1.36\cdot10^{15}$&$3\cdot10^{20}$\\
+\br
+\end{tabular}
+\item[]
+\begin{tabular}{p{7cm}ccc}
+Silicon properties &   &  &  \\
+\mr
+Bandgap (eV) & \multicolumn{2}{c}{1.1136} & \cite{Passler2002}  \\
+Bandgap narrowing$^*$ (meV) & \multicolumn{2}{c}{0.84} & \cite{EgNarrow}  \\
+Light absorption coefficient (cm$^{-1}$) & \multicolumn{2}{c}{227} & \cite{Green2022}  \\
+Density of states at conduction band (cm$^{-3}$) & \multicolumn{2}{c}{2.885} & \cite{Si_ni_Couderc} \\
+Density of states at valence band (cm$^{-3}$) & \multicolumn{2}{c}{2.629} & \cite{Si_ni_Couderc} \\
+Band-to-band recombination coefficient$^*$ (cm$^{3}/$s) & \multicolumn{2}{c}{$1.256\cdot10^{-15}$} & \cite{Brad2022} \\
+ & electron & hole&  \\
+Auger recombination coefficient$^*$ (cm$^{6}/$s)&$1.29\cdot10^{-30}$&$3.88\cdot10^{-31}$&\cite{AugerSi2022,Si_Auger}\\
+Thermal velocities (cm/s)&$2.16\cdot10^5$& $1.79\cdot10^5$&\cite{Nc:Green}\\
+Carrier mobility$^*$  (cm$^2$/Vs)&1008& 349&\cite{KLAASSEN953}\\
+Effective mass&0.36&0.82&\cite{OMara}\\
+\mr
+\multicolumn{4}{p{12cm}}{
+$^*$\emph{ listed values correspond to the} $p\,$-\emph{layer};
+\emph{for} $p^+$ \emph{and} $n^+$-\emph{layers,  it was assumed that these values depend on location and are determined by the local concentration of ionized dopands}
+}\\
+\br
+\end{tabular}
+\item[]
+\begin{tabular}{p{4.8cm}cccc}
+%\br
+Defect characteristic & Fe$_i$  &Fe$_i$B$_s$  &  &\\
+\mr
+Level type & donor&donor& acceptor&\\
+Level energy (eV)&$E_V+0.394$&$E_V+0.10$&$E_C-0.262$&\cite{ROUGIEUX2018,Istratov1999,Paudyal}\\
+Capture cross section electrons (cm$^2$)&$6.2\cdot10^{-15}$&$4\cdot10^{-13}$&$2.4\cdot10^{-15}$&\cite{ROUGIEUX2018,Istratov1999,Paudyal}\\
+Capture cross section holes (cm$^2$)&$8.3\cdot10^{-17}$&$2\cdot10^{-14}$&$4.4\cdot10^{-14}$&\cite{ROUGIEUX2018,Istratov1999,Paudyal}\\
+Migration energy (eV)&0.66&&&\cite{FeBAssJAP2014,FeBKin2019,FeBAssSST2011}\\
+Binding energy (eV)&&\multicolumn{2}{c}{0.582}&\cite{Wijaranakula}\\
+\br
+\end{tabular}
+\end{indented}
+\end{table*}
 
 To create the training dataset, 25 $N_\mathtt{Fe}$ values were selected and evenly distributed on a logarithmic scale from $10^{10}$~cm$^{-3}$ to $10^{14}$~cm$^{-3}$.
 Examples of the resulting dependencies are shown in \Fref{Fig2}, along with the corresponding wavelet spectrograms.
 The simulated test dataset consisted of 10 dependencies calculated for 10 $N_\mathtt{Fe}$ values that were not included in the training dataset.
 
 
-
 \subsection{Experiment details}\label{subsec:ExpDet}
 
-The proposed method was validated using measurements of $n^+$-$p$-$p^+$ silicon solar cells fabricated on
-380~$\mu$m thick $p$-type boron-doped Cz wafers ($N_\mathrm{B}=1.36\times10^{15}$~cm$^{-3}$).
-The $n^+$ (0.7~$\mu$m, 20–30 $\Omega$/$\Box$) and $p^+$ (0.6~$\mu$m, 10–20 $\Omega$/$\Box$)
-layers were formed by phosphorus and boron diffusion, respectively.
-The details of the fabrication procedure are provided elsewhere \cite{Olikh2021JAP}.
+The proposed method was verified using real silicon solar cells manufactured on Cz-Si:B wafers.
+The wafer thickness was 380~$\mu$m, and the acceptor concentration was $N_\mathrm{B}=1.36\times10^{15}$~cm$^{-3}$.
+The boron diffusion was used to shape $p^+$-layer (0.6~$\mu$m, 10–20 $\Omega$/$\Box$),
+and the $n^+$-layer  (0.7~$\mu$m, 20–30 $\Omega$/$\Box$) was produced by phosphorus gas-phase mass transfer.
 
-Current–voltage curves and $I_\mathtt{SC}$ kinetics were measured using a Keithley 2450 source meter.
-A 940~nm SN-HPIR940nm-1W LED (intensity 5 W/m$^{2}$) was used as a monochromatic light source,
-and its output was stabilized by a W1209 thermostat and a feedback-controlled power supply.
-The cell temperature was regulated by a thermoelectric cooler with an STS-21 sensor and maintained constant using a PID algorithm in the control software.
-FeB pair dissociation was induced by intense (approximately 7000~W/m$^{2}$) halogen lamp illumination.
+$I$-$V$ characteristics and the $I_\mathtt{SC}$ dependencies were recorded using a Keithley 2450 source meter.
+Monochromatic illumination was provided by a 940~nm LED with an intensity of 5 W/m$^{2}$,
+stabilized via a W1209 thermostat in combination with a feedback-controlled power supply.
+The cell temperature was controlled with a thermoelectric cooler equipped with an STS-21 sensor and a PID algorithm implemented in the control software.
+Dissociation of FeB pairs was achieved through exposure to intense halogen lamp illumination, approximately 700~mW/cm$^{2}$.
 The illumination intervals were selected according to a previous study \cite{OlikhPSSA}.
 The kinetics of the short-circuit current were measured in the dark at 340~K for 3000~s.
 According to Eq.~\eref{eqTass}, this interval is sufficient for the complete restoration of the iron–boron pairs to their equilibrium concentration.
@@ -306,12 +459,13 @@ while the remaining panels of the figure display the spectrograms obtained from 
 \caption{\label{Fig3}
 (a) Experimentally measured time dependence of the short-circuit current for a sample with
 $N_\mathtt{Fe}=2.8\cdot10^{13}$~cm$^{-3}$ (a, open  squares) and the same dependence after applying the Savitzky–Golay filter (filled circles).
-Panels (b) and (c) show the wavelet spectrograms corresponding to the curves with filled squares and open circles, respectively.
+Panels (b) and (c) show the wavelet spectrograms corresponding to the curves with
+open squares and filled circles, respectively.
 }%
 \end{figure}
 
-The iron concentration $N_\mathtt{Fe}$ was determined using the methodology described in \cite{Olikh2022:JMatSci,Olikh2021JAP},
-which is based on fitting the kinetics of the short-circuit current following FeB pair dissociation.
+
+To determine the iron concentration $N_\mathtt{Fe}$, the method described in \cite{Olikh2022:JMatSci,Olikh2021JAP} was employed.
 A total of 28 samples with iron concentrations ranging from $10^{11}$~cm$^{-3}$ to $2\times10^{13}$~cm$^{-3}$ were examined.
 The entire experimental dataset was used as the test set to evaluate the models trained using the simulated data.
 In cases where the models were trained using experimental data, 20 randomly selected samples were included in the training set,
@@ -390,8 +544,8 @@ YOLOv4 \newline (CSPDarknet53)&  Feature extractor  \newline (raw, top layer)& N
 \subsection{Regression algorithms}\label{subsec:RegAlg}
 
 Five ML algorithms were employed to develop regression models for predicting iron concentrations:
-Random Forest (RF), Gradient Boosting (GB), eXtreme Gradient Boosting (XGB), Support Vector Regression (SVR), and Deep Neural Network (DNN).
-The models were implemented using Python libraries: Keras for DNN; Scikit-learn for RF, GB, and SVR; and XGBoost for XGB.
+eXtreme Gradient Boosting (XGB), Random Forest, Support Vector Regression, Gradient Boosting, and Deep Neural Network.
+The models were implemented in Python using the Keras, Scikit-learn, and XGBoost libraries.
 
 Each regression model was trained using features obtained from all configurations listed in \tref{tabUsedMod} and subsequently used to make predictions.
 The only exception involved the uncompressed features extracted by YOLOv4, for which the available computational resources
@@ -401,19 +555,29 @@ Such logarithmic transformation is a standard approach for achieving higher pred
 when the target quantity spans several orders of magnitude \cite{Srivastava2023, Minagawa2024}.
 Both input features and target values were normalized to have zero mean and unit standard deviation within the training set.
 
-For each scenario, regression models were optimized to enhance the predictive performance.
-Hyperparameter tuning was performed using the Optuna toolkit,
-employing a TPE sampler and Hyperband pruner to ensure efficient selection.
-The complete list of tuned hyperparameters and their respective search ranges is provided in Tables~S1–S5 (Supplementary Material).
-Five-fold cross-validation was implemented during model tuning, with 20\% of the training data used as a validation set
-to evaluate models trained on the remaining 80\%.
-The resulting optimal hyperparameter combinations are presented in Tables~S6–S10.
+Hyperparameter optimization of regression models was performed using 5-fold cross-validation within the Optuna framework.
+The complete list of tuned hyperparameters and their respective
+search ranges is provided in Tables S1–S5 (Supplementary Material).
+For each trial, the model was trained and evaluated across multiple folds,
+and the objective function was defined as the mean performance metric over all folds.
+In most cases, the standard deviation of the $R^2$ metric across cross-validation folds did not exceed 0.02,
+while for other metrics, the variability remained within 15\% of the mean value.
+Collectively, these results indicate a low risk of overfitting.
+After hyperparameter tuning, each model was retrained on the entire training dataset using the selected hyperparameters,
+listed in Tables S6–S10, and subsequently evaluated on a fully independent hold-out test dataset
+that was not involved in either tuning or calibration.
+Importantly, augmented versions of a given sample never appeared simultaneously in training and validation/test folds.
+This strategy was applied consistently to all models considered in the study.
 
 Consequently, 87 distinct combinations of computer vision and regression models were investigated.
 Each combination was subsequently trained and evaluated using both simulated and experimental data.
 To identify the results for each case, a composite label was employed, derived from the last column of \tref{tabUsedMod}
 and the abbreviated name of the regression algorithm.
 
+It should be noted that, due to the abstract nature of the CNN-derived feature space,
+the application of explainable AI techniques such as SHAP would primarily yield sensitivity measures with respect
+to latent dimensions rather than physically meaningful interpretations.
+Therefore, explainability analysis was not included in this study.
 
 \subsection{Model evaluation}\label{subsec:ModEva}
 
@@ -448,6 +612,7 @@ $\mathtt{MAPE}_i$ is the  absolute percentage error for $i$-th data point;
 $N_{\mathrm{Fe,PRED},i}$ is the predicted iron concentration,
 $N_{\mathrm{Fe,TRUE},i}$ is the known value
 (either the parameter used in the simulation or obtained from experimental iron determination);
+Eq.~\eref{eqMedAPE} implies that $\mathtt{MAPE}_i$ must be arranged in order of magnitude;
 $\overline{N_\mathrm{Fe,TRUE}}$ is the mean of the true values in the dataset.
 
 MSE is one of the most widely used metrics for evaluating model accuracy,
@@ -455,13 +620,23 @@ and the training objective was specifically defined to minimize this quantity.
 However, because the computation of $y_i$ involves both normalization and logarithmic transformation of $N_\mathtt{Fe}$,
 the MSE metric alone does not fully reflect the accuracy of the iron concentration estimation.
 Therefore, MAPE, which quantifies the mean relative deviation, was also employed.
-In addition, MedAPE, representing the error value below which 50\% of the predictions fall,
+In addition, MedAPE, representing the error value below which half of the predictions lie,
 provides a more robust measure against the influence of individual outliers,
 which can have a particularly large effect on mean-based metrics in smaller datasets.
 Finally, the $R^2$ was used to quantify the fraction of the variance in the
 target variable explained by the model,
 thereby indicating how well the predicted values reproduce the observed data;
 a value of 1 corresponds to perfect agreement.
+
+Confidence intervals were estimated using a hierarchical resampling procedure.
+Regression models were trained in five independent runs with different random
+initializations and stochastic optimization trajectories while maintaining a fixed set of
+hyperparameters determined during the tuning phase.
+For each trained model, performance was evaluated on 100 bootstrap resamples
+of the test dataset generated with replacement.
+Confidence intervals were then derived from the empirical distribution of the resulting performance metrics.
+The absence of reported confidence intervals for certain model variants indicates that their magnitudes
+fall below the reporting precision of the displayed results.
 
 
 \section{Results and discussion}\label{sec:Rez}
@@ -470,17 +645,10 @@ a value of 1 corresponds to perfect agreement.
 \Fref{Fig4} illustrates the representative prediction results obtained from the models trained using  the simulated training dataset.
 The complete set of results covering all the 87 investigated configurations is provided in Figure~S1 of the Supplementary Material.
 
-%\begin{figure*}
-%\includegraphics[width=0.24\textwidth]{Fig4a}
-%\includegraphics[width=0.24\textwidth]{Fig4b}
-%\includegraphics[width=0.24\textwidth]{Fig4c}
-%\includegraphics[width=0.24\textwidth]{Fig4d}
-%\includegraphics[width=0.24\textwidth]{Fig4e}
-%\includegraphics[width=0.24\textwidth]{Fig4f}
-%\caption{
-%The workflow of the ML pipeline
-%}\label{Fig4}
-%\end{figure*}
+Supplementary Figures S1–S10 present a comprehensive set of performance metrics
+and predicted-versus-true dependencies for all 87 considered combinations of CV feature extractors and regression models.
+While the main text shows representative examples, the Supplementary Materials confirm
+that the observed trends and relative model rankings remain consistent across all evaluated scenarios.
 
 \begin{figure*}
 \includegraphics[width=0.33\textwidth]{Fig4a}
@@ -496,7 +664,7 @@ obtained using feature vectors extracted from various CV models combined with di
 ML models were trained using a simulated dataset.
 The open circles correspond to the training phase,
 whereas the filled circles and open squares correspond to the test phase representing the simulated and experimental datasets, respectively.
-The black lines are the identified lines serving as the references.
+The black lines indicate the identity line between predicted and true values.
 }\label{Fig4}
 \end{figure*}
 
@@ -515,11 +683,11 @@ and (ii)~the CV models successfully extracted features correlated with the conce
 
 \begin{figure*}
 \centering
-\includegraphics[width=0.35\textwidth]{Fig5a}
-\includegraphics[width=0.35\textwidth]{Fig5b}
+\includegraphics[width=0.49\textwidth]{Fig5a}
+\includegraphics[width=0.49\textwidth]{Fig5b}
 \caption{
 Mean absolute percentage error (left panel) and coefficient of determination (right panel) for different combinations of CV models (vertical axis)
-and regression models (horizontal axis) during the training phase. 
+and regression models (horizontal axis) during the training phase.
 The models were trained using the simulated dataset.
 }\label{Fig5}
 \end{figure*}
@@ -553,7 +721,13 @@ Consequently, the evaluation of an independent test set is essential.
 This step becomes particularly critical when the training set is small  because the test results provide primary evidence for model generalizability.
 \Fref{Fig4} and \Fref{Fig6} present the prediction results obtained for the test set generated from synthetic data
 (detailed versions are available in Figures~S1 and S3 of the Supplementary Material).
-As expected, prediction performance declined; however, the reduction in accuracy varied across the regression algorithms.
+As expected, prediction performance declined.
+Nevertheless, we emphasize the high $R^2$ values and the small gap between the training and test $R^2$ values (less than 0.05).
+These results clearly indicate that the models did not rely on memorization
+but instead successfully captured meaningful underlying patterns in the data.
+
+
+The reduction in accuracy varied across the regression algorithms.
 Specifically, this degradation was least pronounced for the DNN, which achieved the best overall performance.
 The poorest metrics were obtained for RF and GB, whereas SVR and XGB performed slightly worse than DNN but with a relatively small margin.
 This behavior can be attributed to the ability of the DNN to smoothly approximate the continuous dependencies.
@@ -564,10 +738,10 @@ From this perspective, XGB and SVR occupy an intermediate position, explaining t
 
 \begin{figure*}
 \centering
-\includegraphics[width=0.35\textwidth]{Fig6a}
-\includegraphics[width=0.35\textwidth]{Fig6b}
-\includegraphics[width=0.35\textwidth]{Fig6c}
-\includegraphics[width=0.35\textwidth]{Fig6d}
+\includegraphics[width=0.49\textwidth]{Fig6a}
+\includegraphics[width=0.49\textwidth]{Fig6b}
+\includegraphics[width=0.49\textwidth]{Fig6c}
+\includegraphics[width=0.49\textwidth]{Fig6d}
 \caption{
 Mean squared error, coefficient of determination, mean absolute percentage error, and median absolute percentage error
 for different combinations of CV models (vertical axis) and regression models (horizontal axis)
@@ -595,28 +769,129 @@ were less pronounced than observed for the training dataset.
 Nevertheless, uncompressed feature representations consistently maintained a performance advantage.
 
 The top-performing model combinations were identified as follows:
-ENB7:FE+DNN (MAPE~=~5.90\%,
-MedAPE~=~4.83\%,
-$R^2= 0.996$),
+ENB7:FE+DNN (MAPE and
+MedAPE 6\%,
+$R^2= 0.99$),
 ENB7:FE:P+DNN
-(MAPE~=~5.96\%,
-MedAPE~=~3.68\%,
-$R^2 = 0.997$),
+(MAPE~=~6\%,
+MedAPE~=~7\%,
+$R^2 = 0.99$),
 NAS:FE+SVR
-(MAPE~=~5.82\%,
-MedAPE~=~5.42\%,
-$R^2 = 0.987$),
+(MAPE~=~6\%,
+MedAPE~=~5\%,
+$R^2 = 0.99$),
 NAS:FE+XGB
-(MAPE~=~6.19\%,
-MedAPE~=~5.12\%,
-$R^2 = 0.987$),
+(MAPE~=~6\%,
+MedAPE~=~5\%,
+$R^2 = 0.99$),
 and NAS:CL:P+SVR
-(MAPE~=~10.3\%,
-MedAPE~=~4.52\%,
-$R^2 = 0.999$).
+(MAPE~=~11\%,
+MedAPE~=~5\%,
+$R^2 = 0.99$).
 These results correspond to exceptionally high absolute performance metrics,
 providing clear evidence that the models effectively capture
 the underlying relationship between the wavelet-based images and the iron concentration.
+
+To verify the feasibility of using CV-based models,
+CNN architectures were also designed to directly process the kinetic dependencies
+of the short-circuit current, without wavelet transformation, in order to predict iron concentration
+(hereinafter referred to as the 1D-CNN).
+The structure of the model was identical to that previously used to successfully analyse one-dimensional signal associated with defects \cite{Wang2024a}.
+Specifically, the 1D-CNN model consists of two one-dimensional convolutional layers,
+followed by global average pooling and three fully connected layers.
+The convolutional layers use a kernel size of three and padding of one,
+with eight and sixteen output channels, respectively.
+The pooled features are processed by fully connected layers with 64 and 32 neurons,
+and the final prediction is produced by a single-neuron output layer.
+During model tuning, batch normalization and regularization in the convolutional layers,
+dropout between fully connected layers, activation functions, and weight initialization were optimized.
+The models were trained and tested on the same dataset,
+comprising both artificial and experimental data, from which the wavelet spectrograms were generated.
+The resulting performance metrics are presented in \tref{tab1DCNN},
+where the first two rows correspond to the cases discussed above for models that include both regression and CV components.
+
+
+\begin{table*}
+\centering
+\caption{Summary of 1D-CNN model performance metrics} \label{tab1DCNN}
+\begin{indented}
+\item[]
+\begin{tabular}{ccccccc}
+\br
+\makecell{Training Data\\Type}  &   \makecell{Evaluation\\ Dataset} &   MSE ($10^{-3}$) &   $R^2$ &   MAPE (\%)&   MedAPE (\%) &\makecell{ Reference \\(CV-based Models)$^*$}\\
+\mr
+Simulated & Train       & $31\pm5$ & $0.89\pm0.02$ & $35\pm5$ & $32\pm2$ & \Fref{Fig5}, S2  \\
+ & Test       & $30\pm5$ & $0.90\pm0.04$ & $35\pm5$ & $32\pm3$ & \Fref{Fig6}, S3  \\
+ & \makecell{Experimental, without \\post-hoc calibration}       & $530\pm70$ & $<0.1$ & $480\pm60$ & $400\pm20$ & \Fref{Fig7}(a,b), S4  \\
+& \makecell{Experimental, with \\post-hoc calibration}       & $130\pm30$ & $0.6\pm0.1$ & $50\pm10$ & $44\pm8$ & \Fref{Fig7}(c,d), S5  \\
+Experimental & Train       & $27\pm7$ & $0.2\pm0.1$ & $33\pm6$ & $26\pm8$ & \Fref{Fig9}, S7  \\
+ & Test       & $30\pm10$ & $<0.1$ & $40\pm10$ & $30\pm15$ & \Fref{Fig10}, S8  \\
+\mr
+\multicolumn{7}{p{\dimexpr\linewidth-2\tabcolsep\relax}}{
+$^*$\emph{ The column indicates the figures in which performance metrics obtained for CV-based models under comparable conditions are reported.}
+}\\
+\br
+\end{tabular}
+\end{indented}
+\end{table*}
+
+First, a small difference between the metrics obtained for the training and test sets is observed.
+This behaviour suggests an appropriate model complexity of the 1D-CNN, similar distributions of the training and test data,
+and a correct train–test split.
+At the same time, the absolute values of the metrics are low, indicating underfitting,
+which is expected given the extremely small size of the training dataset.
+Moreover, these values are substantially lower than those achieved by the best computer vision based models.
+This result suggests, on the one hand, that CV based transfer learning is highly effective and,
+on the other hand, that not every CV model is suitable for identifying features relevant
+to the restructuring of iron-containing defects.
+
+It should be noted that solar cells typically operate over a broad temperature range.
+Temperature influences the characteristic time of FeB complex association (see Eq.~\eref{eqTass}),
+the thermodynamic equilibrium between Fe$_i$ and FeB defect concentrations,
+the carrier capture cross-sections of these defects, which together determine the recombination
+activity of iron-related centers, as well as the silicon parameters that
+govern the photogeneration and transport of excess carriers.
+Collectively, these factors affect the kinetics of the short-circuit current and its dependence on the iron impurity concentration.
+This raises the question of whether temperature may also impact the performance of machine learning models.
+
+
+Simulations were performed for 270 K.
+As an example, \Fref{FigN}a and \Fref{FigN}b 
+show the wavelet spectrograms for two distinct iron concentrations.
+Comparison with  \Fref{Fig2}b and \Fref{Fig2}c
+indicates that, at lower temperatures,
+changes in iron concentration produce more pronounced differences in the spectrograms,
+suggesting a corresponding increase in model prediction accuracy.
+\Fref{FigN}c presents the MAPE for models trained and tested on synthetic datasets prepared in the same manner as those used previously,
+but under 270 K conditions.
+More detailed metrics are provided in Figures S4 and S5 of the Supplementary Materials.
+Comparison with  \Fref{Fig6} (lower right panel) confirms that a notable improvement in model performance is observed.
+
+
+\begin{figure*}
+\centering
+\includegraphics[width=0.8\textwidth]{Fig7}
+\caption{
+Wavelet spectrograms of simulated short-circuit current time dependencies at 270 K
+for iron concentrations of $10^{10}$~cm$^{-3}$ (a) and $10^{14}$~cm$^{-3}$ (b).
+Mean absolute percentage error (c) for different combinations of CV models (vertical axis)
+and regression models (horizontal axis) evaluated during the test phase using the dataset simulated at 270 K.
+}\label{FigN}
+\end{figure*}
+
+However, it should be emphasized that the proposed methodology for iron concentration
+assessment is primarily intended for practical application.
+Calculations based on Eq.~\eref{eqTass}
+indicate that $\tau_\mathrm{ass}$ is approximately 850~s at 340 K,
+whereas it increases to about 230,000~s at 270 K.
+The simulated $I_\mathtt{SC}(t)$ dependencies at 340 K assume that the entire curve can be measured within 50 min.
+At 270 K, however, the interval between consecutive points extends to 21,600 s,
+corresponding to six measurements per day and requiring nearly one working week to acquire a complete curve.
+Even at 300 K, the characteristic time of 15,000 s remains prohibitively long.
+Consequently, although lower measurement temperatures could enhance prediction accuracy,
+experimental validation under such conditions is impractical.
+Therefore, hereafter this study focuses exclusively on results obtained at 340 K, both computationally and experimentally.
+
 
 Having established the effectiveness of the models on the simulated test dataset,
 we evaluated their performances using experimental measurements.
@@ -626,7 +901,7 @@ By comparing the results obtained from the experimental data with those from the
 it is possible to identify the potential limitations of the models
 and to confirm whether the features extracted from wavelet spectrograms remain informative under practical conditions.
 \Fref{Fig7}a and \Fref{Fig7}b show the performance metrics of models trained on synthetic data when applied to experimental measurements.
-The relationship between predicted and actual concentrations is illustrated in \Fref{Fig4}, with additional results provided in Figures S1 and S4.
+The relationship between predicted and actual concentrations is illustrated in \Fref{Fig4}, with additional results provided in Figures S1 and S6.
 As observed, the mean and median prediction errors fall within the (15–25)\% range for only a limited number of configurations,
 specifically certain combinations of EfficientNetB7 or NASNetLarge with DNN or SVR.
 Although this outcome is not catastrophic, considering the approximately 10\% inherent experimental error in $N_\mathrm{Fe}$ determination,
@@ -635,16 +910,21 @@ At the same time, the $R^2$ metric remains acceptably high.
 Further analysis (\Fref{Fig4}) indicates that the prediction error depends on the iron concentration level:
 the relationship between $N_\mathrm{Fe,PRED}$ and $N_\mathrm{Fe,TRUE}$ is linear on a logarithmic scale,
 but its slope deviates from the line of unity.
-This observation suggests a systematic prediction bias rather than a complete loss of correlation,
+It is essential to emphasize that the synthetic data were generated
+using explicit and transparent physical laws,
+and that the calculations employed realistic parameter values reported in the literature.
+Taken together,
+these considerations indicate that the observed discrepancy represents a systematic prediction bias rather
+than a loss of correlation or a failure to capture the underlying physical relationships,
 implying that the models are capable of capturing relative differences in concentration but do not accurately predict absolute values.
 
 
 \begin{figure*}
 \centering
-\includegraphics[width=0.35\textwidth]{Fig7a}
-\includegraphics[width=0.35\textwidth]{Fig7b}
-\includegraphics[width=0.35\textwidth]{Fig7c}
-\includegraphics[width=0.35\textwidth]{Fig7d}
+\includegraphics[width=0.49\textwidth]{Fig8a}
+\includegraphics[width=0.49\textwidth]{Fig8b}
+\includegraphics[width=0.49\textwidth]{Fig8c}
+\includegraphics[width=0.49\textwidth]{Fig8d}
 \caption{
 Mean absolute percentage error (a,c) and coefficient of determination (b, d) for different combinations of CV models (vertical axis)
 and regression models (horizontal axis) during the test phase with the experimental dataset without (a, b) and with (c, d)
@@ -688,11 +968,11 @@ the most suitable adjustment, expressed as follows:
 where $N_\mathtt{Fe,PRED}^{*}$ denotes the direct model prediction.
 The performance metrics after post hoc calibration are presented in \Fref{Fig7}c and \Fref{Fig7}d.
 As shown by the data, applying this correction substantially reduced the prediction errors.
-Specifically, the mean relative error across the 28-sample experimental dataset now lies within the (13–17)\% 
+Specifically, the mean relative error across the 28-sample experimental dataset now lies within the (13–17)\%
 for the best-performing models (approximately 20 out of 87 configurations) and remains below 25\% for most of the others.
-The median error is even lower, reaching (7–10)\% in the most favorable cases.
+The median error is even lower, reaching (8–10)\% in the most favorable cases (Fig.~S7).
 In line with the results obtained for the simulated test dataset, the most accurate configurations are EfficientNetB7, NASNetLarge, DNN, SVR, and XGB.
-Interestingly, MobileNetV2 was also among the top performing combinations, yielding the lowest MedAPE value (7.64\%) for the MNV2:CL configuration.
+Interestingly, MobileNetV2 was also among the top performing combinations.
 This outcome may suggest that the features extracted by MobileNetV2, although less informative for the training and simulated test datasets,
 capture specific image patterns more relevant to the experimental measurements and applied correction could have further enhanced the effectiveness of these features.
 
@@ -706,10 +986,38 @@ even when the overall prediction errors are simultaneously reduced.
 Therefore, the reduction in $R^2$ should be regarded as a side effect of enhancing the accuracy of the model,
 rather than as evidence of its degradation.
 
-Although quadratic correction proved effective, it does not represent a universal solution
-for transferring models from synthetic to experimental data.
-A more robust approach involves integrating the experimental data into the training process, as implemented in this study below.
+The third and fourth rows of \tref{tab1DCNN}
+present the performance metrics obtained by the 1D-CNN
+when a model trained on synthetic data was applied to experimental data.
+The initial results obtained without post-hoc calibration are notably poor,
+which clearly demonstrates the need to incorporate transfer learning techniques.
+Notably, the post-hoc calibration, specifically the function defined by Eq.~\eref{eqPostHoc}
+and derived from the CV based model results, leads to a substantial improvement in the predictive performance of the 1D-CNN.
+This observation points to two key conclusions.
+First, it reveals the presence of a systematic bias between the raw model outputs and the true values,
+which appears to be independent of the specific model architecture.
+Second, it indicates that the dominant source of error does not originate from the internal structure of the models,
+which are capable of learning meaningful patterns and reproducing structural dependencies,
+but rather from the properties of the training data, in particular the mismatch between synthetic and experimental datasets.
+This finding provides a dual perspective.
+On the one hand, it opens a pathway for refining defect parameters by adjusting the values used in simulations
+until post-hoc calibration is no longer required.
+On the other hand, it strongly suggests that the commonly accepted parameter values
+for iron-containing defects employed in the simulations may be intrinsically inaccurate.
 
+In section summary, SCAPS-1D simulations may not reproduce all quantitative details of the
+short-circuit current kinetics due to deviations from precise experimental conditions.
+The primary objective of using the artificial dataset was to demonstrate that CV models can extract physically
+meaningful features from wavelet-transformed representations,
+enabling the estimation of uncontrolled metallic impurity concentrations.
+This goal was successfully achieved using several representative CV models, including EfficientNetB7 and NASNetLarge.
+The post-hoc calibration procedure \eref{eqPostHoc}
+is purely heuristic,
+improving predictive accuracy primarily within the training range
+but providing no physical insight into the underlying system.
+Its applicability beyond the calibrated domain is therefore limited, and it does not correct structural model errors.
+A more robust approach, implemented later in this study, integrates experimental data
+directly into the training process, enhancing model transferability to real measurements.
 
 
 \subsection{Experimental data}
@@ -717,30 +1025,30 @@ A more robust approach involves integrating the experimental data into the train
 \Fref{Fig8} shows the correlation between the iron concentrations predicted by the models trained on the experimental data
 and the reference values derived according to \cite{Olikh2022:JMatSci,Olikh2021JAP}.
 Representative outcomes for selected CV–regression model combinations are shown for both training and testing,
-with the extended data provided in Figure~S6 of the Supplementary Material.
+with the extended data provided in Figure~S8 of the Supplementary Material.
 
 
 \begin{figure*}
-\includegraphics[width=0.33\textwidth]{Fig8a}
-\includegraphics[width=0.33\textwidth]{Fig8b}
-\includegraphics[width=0.33\textwidth]{Fig8c}
-\includegraphics[width=0.33\textwidth]{Fig8d}
-\includegraphics[width=0.33\textwidth]{Fig8e}
-\includegraphics[width=0.33\textwidth]{Fig8f}
+\includegraphics[width=0.33\textwidth]{Fig9a}
+\includegraphics[width=0.33\textwidth]{Fig9b}
+\includegraphics[width=0.33\textwidth]{Fig9c}
+\includegraphics[width=0.33\textwidth]{Fig9d}
+\includegraphics[width=0.33\textwidth]{Fig9e}
+\includegraphics[width=0.33\textwidth]{Fig9f}
 \caption{
 Scatter plots compare the reference iron concentrations $N_\mathrm{Fe,TRUE}$ with ML-predicted values $N_\mathrm{Fe,PRED}$,
 obtained using feature vectors extracted from various CV models combined with different regression algorithms
 (specific models are indicated in the figures).
 ML models were trained using a dataset derived from experimental measurements.
 The open and filled squares correspond to the training and testing phases, respectively.
-The black lines are the identified lines serving as the references.
+The black lines indicate the identity line between predicted and true values.
 }\label{Fig8}
 \end{figure*}
 
 It should be noted that, compared to training on synthetic data, this case employed an even smaller sample set (20 samples versus 25).
-However, these samples covered a narrower range of iron concentrations ($10^{11}$-$2\times10^{13}$~cm$^{-3}$ versus $10^{10}$-$10^{14}$~cm$^{-3}$).
+However, these samples covered a narrower range of iron concentrations ($10^{11}-2\cdot10^{13}$~cm$^{-3}$ versus $10^{10}$-$10^{14}$~cm$^{-3}$).
 \Fref{Fig9} presents a subset of the performance metrics obtained during the training phase
-(a more comprehensive overview is provided in Figure~S7).
+(a more comprehensive overview is provided in Figure~S9).
 Overall, the results were similar to those shown in \Fref{Fig5}.
 In many cases, extremely low errors (below 0.5\%) and high coefficients of determination (approaching unity) were observed.
 This behavior is particularly characteristic of GB, RF, and SVR.
@@ -753,8 +1061,8 @@ However, the performance gap relative to other CV models has become less pronoun
 
 \begin{figure*}
 \centering
-\includegraphics[width=0.35\textwidth]{Fig9a}
-\includegraphics[width=0.35\textwidth]{Fig9b}
+\includegraphics[width=0.49\textwidth]{Fig10a}
+\includegraphics[width=0.49\textwidth]{Fig10b}
 \caption{
 Mean squared error (left panel) and median absolute percentage error (right panel) for different combinations of CV models (vertical axis)
 and regression models (horizontal axis) during the training phase.
@@ -763,7 +1071,7 @@ The models were trained using an experimental dataset.
 \end{figure*}
 
 Interestingly, the application of PCA often enhances the performance of the DNN.
-For example, the MAPE values for ENB7:FE and ENB7:FE:P were 7.3\% and 0.97\%, respectively.
+For example, the MAPE values for ENB7:FE and ENB7:FE:P were 7\% and 1\%, respectively.
 This observation suggests that PCA effectively mitigated the adverse effects of high feature dimensionality
 when the sample size was limited.
 In contrast, no similar improvements were observed for other regression algorithms.
@@ -771,10 +1079,10 @@ Moreover, for the experimental training dataset,
 the difference between MAPE and MedAPE becomes smaller.
 This reduction implies a more symmetric error distribution and a decreased occurrence of extreme deviations.
 
-\Fref{Fig10} and Figure~S8 show heatmaps of the prediction metrics for the test experimental dataset
+\Fref{Fig10} and Figure~S10 show heatmaps of the prediction metrics for the test experimental dataset
 using models trained on a separate subset of experimental data.
 Compared with the models trained on simulated data, the predictive performance of the experimental test dataset improved substantially.
-In particular, for several of the best-performing CV–regressor combinations, the MAPE and MedAPE values fall within (7–15)\%,
+In particular, for several of the best-performing CV–regressor combinations, the MAPE and MedAPE values fall within (6–15)\%,
 which is markedly better than the 20–30\% observed previously.
 Moreover, the $R^2$ values predominantly exceed 0.97, indicating a strong agreement with the actual dependencies.
 The accuracy achieved through direct training on experimental data is comparable to that obtained with post-hoc correction;
@@ -796,10 +1104,10 @@ This suggests that reducing the dimensionality of highly noisy features contribu
 
 \begin{figure*}
 \centering
-\includegraphics[width=0.35\textwidth]{Fig10a}
-\includegraphics[width=0.35\textwidth]{Fig10b}
-\includegraphics[width=0.35\textwidth]{Fig10c}
-\includegraphics[width=0.35\textwidth]{Fig10d}
+\includegraphics[width=0.49\textwidth]{Fig11a}
+\includegraphics[width=0.49\textwidth]{Fig11b}
+\includegraphics[width=0.49\textwidth]{Fig11c}
+\includegraphics[width=0.49\textwidth]{Fig11d}
 \caption{
 Mean squared error, coefficient of determination, mean absolute percentage error, and median absolute percentage error
 for different combinations of CV models (vertical axis) and regression models (horizontal axis)
@@ -807,6 +1115,14 @@ during the test phase.
 The models were trained using an experimental dataset.
 }\label{Fig10}
 \end{figure*}
+
+
+
+The performance metrics of the 1D-CNN trained exclusively on experimental data
+are presented in the last two rows of \tref{tab1DCNN}.
+These metrics are clearly inferior to those obtained by most models that incorporate pre-trained computer vision components.
+This observation further underscores the effectiveness of the proposed transfers learning methodology
+for applications involving limited datasets.
 
 In summary, three approaches for predicting iron concentrations from experimental data were evaluated:
 (i)~models trained on simulated data,
@@ -821,6 +1137,14 @@ achieving both low prediction errors and high correlation coefficients,
 thereby demonstrating the importance of incorporating real measurements during model development.
 Thus, training directly on experimental data improves prediction accuracy and eliminates the systematic biases observed in models transferred from synthetic data.
 At the same time, achieving optimal performance requires both the careful selection of the CV model–regressor combination and the inclusion of real experimental data.
+
+However, it should be noted that scaling the short-circuit current at every point of the kinetic curve by a constant factor
+does not affect the graphical representation of the resulting wavelet spectrogram;
+only the amplitude of the continuous wavelet transform is modified, but this change is proportional across all frequency and time values.
+Consequently, such transformation does not influence the features extracted by the CV model.
+In practice, such a transformation may result from the use of a linear signal amplifier
+or from the presence of shunt and/or series resistances.
+Therefore, the proposed approach is inherently resistant to parasitic resistances, which represents an additional advantage.
 
 
 \section{Conclusion}
@@ -850,12 +1174,69 @@ and for defect characterization in particular,
 especially when the acquisition of large datasets is difficult or impractical.
 
 \section*{Supplementary data}\label{SuplData}
-Supplementary data to this article can be found online at
-\url{https://surl.li/czsgvx}
-%https://www.mediafire.com/file/mzxu10ca1rswqgk/SupplementaryMaterial.pdf/file
+The Supplementary Materials provide a comprehensive and systematic description of the machine learning experiments presented in this study.
+In addition to Supplementary Figures S1–-S10, which summarize model performance across all considered training and testing scenarios
+(see \tref{tabSuplFigs}), 
+the Supplementary Materials include tables reporting the hyperparameter search ranges and the selected optimal hyperparameter values for all model configurations.
+The supplementary information related to this article is provided online at \url{https://surl.li/wsvwms}.
+
+\begin{table*}
+\centering
+\caption{Overview of Supplementary Figures S1--S10$^*$.} \label{tabSuplFigs}
+\begin{indented}
+\item[]
+\begin{tabular}{p{1cm} p{2.4cm} p{3.4cm} p{3.8cm} p{4.4cm}}
+\br
+Figures &
+Training Dataset &
+Evaluation Dataset / \newline Condition &
+Content &
+Key message \\
+\mr
+S1, S8 &
+Simulated (S1), Experimental (S8) &
+Simulated (S1), Experimental (S1, S8) / Training \& Test&
+Correlation between $N_{\mathrm{Fe,TRUE}}$ and $N_{\mathrm{Fe,PRED}}$ (scatter plots)&
+Identification of systematic biases and prediction linearity \\
+
+S2--S3 &
+Simulated &
+Simulated / Training (S2), Test (S3)&
+Heatmaps of MSE, $R^2$, MAPE, and MedAPE &
+Baseline comparison and ranking of all models \\
+
+S4--S5 &
+Simulated \newline ($T = 270$~K) &
+Simulated ($T = 270$~K) / Training (S4), Test (S5) &
+Heatmaps of performance metrics&
+Impact of specific temperature conditions (270~K) on model accuracy\\
+
+S6--S7 &
+Simulated &
+Experimental / Test without (S6) or with (S7) post-hoc calibration &
+Performance heatmaps&
+Effect of post-hoc calibration on experimental predictions \\
+
+S9--S10 &
+Experimental & Experimental / Training (S9), Test (S10) &
+Accuracy heatmaps&
+Validation of the purely empirical training pipeline\\
+\mr
+\multicolumn{5}{p{\dimexpr\linewidth-2\tabcolsep\relax}}{
+$^*$\emph{ All figures report results for all 87 combinations of CV feature extractors and regression models.}
+}\\
+\br
+\end{tabular}
+\end{indented}
+\end{table*}
 
 \section*{Data availability statement}
-The data that support the findings of this study are available upon reasonable request from the authors.
+The trained models and data
+(simulated and experimentally measured short-circuit current kinetic dependencies
+as well as wavelet spectrogram images) that support the findings of this study
+are openly available to download from \url{https://github.com/olegolikh/CV_Fe_SiSC.git}
+upon publication.
+
 
 \section*{Conflict of interest}
 The authors declare that there are no conflicts of interest related to this work.

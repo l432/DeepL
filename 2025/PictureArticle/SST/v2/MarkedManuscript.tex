@@ -39,8 +39,8 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-\documentclass[10pt,draft]{iopart}
-%\documentclass[10pt]{iopart}
+%\documentclass[10pt,draft]{iopart}
+\documentclass[10pt]{iopart}
 %\newcommand{\gguide}{{\it Preparing graphics for IOP Publishing journals}}
 %Uncomment next line if AMS fonts required
 %\usepackage{iopams}
@@ -373,7 +373,7 @@ SCAPS-1D}
 that incorporates the effects of defect states}
 \colorbox{yellow}{\cite{MasumMia2025, Joshi2024, Ravidas2024, Liu2024, You2023, SCAPSDefect3}.}
 }
-$I_\mathtt{SC}$ values were extracted from the simulated $I$-$V$ curves using a standard procedure \cite{SCparam2017}.
+%$I_\mathtt{SC}$ values were extracted from the simulated $I$-$V$ curves using a standard procedure \cite{SCparam2017}.
 
 During the simulations, the base thickness of the structure was set to 380~$\mu$m,
 and boron was used as the doping element with a concentration of $N_\mathrm{B} = 1.36 \times 10^{15}$ cm$^{-3}$.
@@ -749,7 +749,7 @@ The complete set of results covering all the 87 investigated configurations is p
 
 \textcolor[rgb]{1.00,0.07,0.00}{
 \hl{
-Generally Supplementary Figures S1–S10 present a comprehensive set of performance metrics
+Supplementary Figures S1–S10 present a comprehensive set of performance metrics
 and predicted-versus-true dependencies for all 87 considered combinations of CV feature extractors and regression models.
 While the main text shows representative examples, the Supplementary Materials confirm
 that the observed trends and relative model rankings remain consistent across all evaluated scenarios.
@@ -1327,114 +1327,108 @@ and for defect characterization in particular,
 especially when the acquisition of large datasets is difficult or impractical.
 
 \section*{Supplementary data}\label{SuplData}
-
-The Supplementary Materials provide a comprehensive and systematic description of the machine learning experiments presented in this study.
-In addition to Supplementary Figures S1–S10, which summarize model performance across all considered training and testing scenarios (see \tref{tabSuplFigs}),
-the Supplementary Materials include tables reporting the hyperparameter search ranges and the selected optimal hyperparameter values for all model configurations.
-The supplementary information related to this article is provided online at \url{https://surl.li/czsgvx}.
-
-
 \textcolor[rgb]{1.00,0.07,0.00}{
 \hl{
-The supplementary information related to this article is provided online at
-}}
-\url{https://surl.li/czsgvx}
+The Supplementary Materials provide a comprehensive and systematic description of the machine learning experiments presented in this study.
+In addition to Supplementary Figures S1–-S10, which summarize model performance across all considered training and testing scenarios 
+(see} \colorbox{yellow}{\tref{tabSuplFigs}),}
+\hl{
+the Supplementary Materials include tables reporting the hyperparameter search ranges and the selected optimal hyperparameter values for all model configurations.
+The supplementary information related to this article is provided online at} \url{https://surl.li/wsvwms}.}
 
-%
-%\begin{table*}
-%\centering
-%\caption{\color[rgb]{1.00,0.07,0.00}{\colorbox{yellow}{Summary of 1D-CNN model performance metrics}} \label{tab1DCNN}}
-%\begin{indented}
-%\item[]
-%{\color[rgb]{1.00,0.07,0.00}
-%\colorbox{yellow}{
-%\begin{tabular}{ccccccc}
-%\br
-%\makecell{Training Data\\Type}  &   \makecell{Evaluation\\ Dataset} &   MSE ($10^{-3}$) &   $R^2$ &   MAPE (\%)&   MedAPE (\%) &\makecell{ Reference \\(CV-based Models)$^*$}\\
-%\mr
+%https://www.mediafire.com/file/qplaq2uy77td9ko/SupplementaryMaterial.pdf/file
 
 \begin{table*}
 \centering
-\caption{Overview of Supplementary Figures S1--S10.} \label{tabSuplFigs}
+\caption{\color[rgb]{1.00,0.07,0.00}{\colorbox{yellow}{Overview of Supplementary Figures S1--S10$^*$.}}} \label{tabSuplFigs}
 \begin{indented}
 \item[]
-
-
-\begin{tabular}{p{2.0cm} p{3.0cm} p{3.6cm} p{4.2cm} p{4.2cm}}
-\hline
-Figure(s) &
-Training data &
-Evaluation setup &
-Content &
-Purpose / key message \\
-\hline
-S1, S8 &
-Simulated (S1); experimental (S8) &
-Training and test phases &
-Scatter plots of $N_{\mathrm{Fe,PRED}}$ versus $N_{\mathrm{Fe,TRUE}}$ &
-Visual assessment of prediction accuracy and systematic deviations \\
-
-S2--S3 &
-Simulated &
-Training and test (simulated data) &
-Heatmaps of MSE, $R^2$, MAPE, and MdAPE &
-Baseline comparison and ranking of all 87 model variants \\
-
-S4--S5 &
-Simulated ($T = 270$~K) &
-Training and test (simulated data) &
-Heatmaps of performance metrics at fixed temperature &
-Robustness of model performance under temperature-specific conditions \\
-
-S6--S7 &
-Simulated &
-Test on experimental data (without / with post-hoc calibration) &
-Heatmaps of performance metrics &
-Impact of post-hoc calibration on experimental predictions \\
-
-S9--S10 &
-Experimental &
-Training and test (experimental data) &
-Heatmaps of performance metrics &
-Consistency of model performance when trained on experimental data \\
-
-
-
-\begin{tabular}{p{2.2cm} p{4.0cm} p{4.6cm} p{4.6cm}}
-%\begin{tabular}{cccc}
+{\color[rgb]{1.00,0.07,0.00}
+\colorbox{yellow}{
+\begin{tabular}{p{1cm} p{2.4cm} p{3.4cm} p{3.8cm} p{4.4cm}}
 \br
-Figures & Data source and setup & Content & Purpose / key message \\
+Figures &
+Training Dataset &
+Evaluation Dataset / \newline Condition &
+Content &
+Key message \\
 \mr
 S1, S8 &
-Training on simulated (S1) and experimental (S8) datasets &
-Scatter plots of $N_{\mathrm{Fe,PRED}}$ versus $N_{\mathrm{Fe,TRUE}}$ for all 87 model variants for training and test phases &
-Visual assessment of prediction accuracy and systematic deviations \\
+Simulated (S1), Experimental (S8) &
+Simulated (S1), Experimental (S1, S8) / Training \& Test&
+Correlation between $N_{\mathrm{Fe,TRUE}}$ and $N_{\mathrm{Fe,PRED}}$ (scatter plots)&
+Identification of systematic biases and prediction linearity \\
 
 S2--S3 &
-Training on simulated dataset &
-Heatmaps of MSE, $R^2$, MAPE, and MdAPE for all CV--regressor combinations (training and test) &
-Baseline comparison and ranking of all 87 model variants \\
+Simulated &
+Simulated / Training (S2), Test (S3)&
+Heatmaps of MSE, $R^2$, MAPE, and MedAPE &
+Baseline comparison and ranking of all models \\
 
 S4--S5 &
-Training on simulated dataset ($T = 270$~K) &
-Heatmaps of performance metrics under temperature-specific simulation conditions &
-Evaluation of model robustness at low temperature \\
+Simulated \newline ($T = 270$~K) &
+Simulated ($T = 270$~K) / Training (S4), Test (S5) &
+Heatmaps of performance metrics&
+Impact of specific temperature conditions (270~K) on model accuracy\\
 
 S6--S7 &
-Test on experimental dataset (without / with post-hoc calibration) &
-Heatmaps of performance metrics &
-Impact of post-hoc calibration on experimental predictions \\
+Simulated &
+Experimental / Test without (S6) or with (S7) post-hoc calibration &
+Performance heatmaps&
+Effect of post-hoc calibration on experimental predictions \\
 
 S9--S10 &
-Training on experimental dataset &
-Heatmaps of performance metrics (training and test) &
-Consistency of model performance when trained on experimental data \\
+Experimental & Experimental / Training (S9), Test (S10) &
+Accuracy heatmaps&
+Validation of the purely empirical training pipeline\\
+\mr
+\multicolumn{5}{p{\dimexpr\linewidth-2\tabcolsep\relax}}{
+$^*$\emph{ All figures report results for all 87 combinations of CV feature extractors and regression models.}
+}\\
 \br
 \end{tabular}
+}}
 \end{indented}
 \end{table*}
 
 
+%\begin{table*}
+%\centering
+%\caption{Overview of Supplementary Figures S1--S10.} \label{tabSuplFigs2}
+%\begin{indented}
+%\item[]
+%\begin{tabular}{p{2.2cm} p{4.0cm} p{4.6cm} p{4.6cm}}
+%\br
+%Figures & Data source and setup & Content & Purpose / key message \\
+%\mr
+%S1, S8 &
+%Training on simulated (S1) and experimental (S8) datasets &
+%Scatter plots of $N_{\mathrm{Fe,PRED}}$ versus $N_{\mathrm{Fe,TRUE}}$ for all 87 model variants for training and test phases &
+%Visual assessment of prediction accuracy and systematic deviations \\
+%
+%S2--S3 &
+%Training on simulated dataset &
+%Heatmaps of MSE, $R^2$, MAPE, and MdAPE for all CV--regressor combinations (training and test) &
+%Baseline comparison and ranking of all 87 model variants \\
+%
+%S4--S5 &
+%Training on simulated dataset ($T = 270$~K) &
+%Heatmaps of performance metrics under temperature-specific simulation conditions &
+%Evaluation of model robustness at low temperature \\
+%
+%S6--S7 &
+%Test on experimental dataset (without / with post-hoc calibration) &
+%Heatmaps of performance metrics &
+%Impact of post-hoc calibration on experimental predictions \\
+%
+%S9--S10 &
+%Training on experimental dataset &
+%Heatmaps of performance metrics (training and test) &
+%Consistency of model performance when trained on experimental data \\
+%\br
+%\end{tabular}
+%\end{indented}
+%\end{table*}
 
 \section*{Data availability statement}
 \textcolor[rgb]{1.00,0.07,0.00}{
