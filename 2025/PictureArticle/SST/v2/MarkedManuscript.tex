@@ -667,6 +667,13 @@ Each combination was subsequently trained and evaluated using both simulated and
 To identify the results for each case, a composite label was employed, derived from the last column of \tref{tabUsedMod}
 and the abbreviated name of the regression algorithm.
 
+\textcolor[rgb]{1.00,0.07,0.00}{
+\hl{
+It should be noted that, due to the abstract nature of the CNN-derived feature space,
+the application of explainable AI techniques such as SHAP would primarily yield sensitivity measures with respect
+to latent dimensions rather than physically meaningful interpretations.
+Therefore, explainability analysis was not included in this study.
+}}
 
 \subsection{Model evaluation}\label{subsec:ModEva}
 
@@ -730,7 +737,7 @@ hyperparameters determined during the tuning phase.
 For each trained model, performance was evaluated on 100 bootstrap resamples
 of the test dataset generated with replacement.
 Confidence intervals were then derived from the empirical distribution of the resulting performance metrics.
-The absence of reported confidence intervals for certain model variants indicates that their magnitudes 
+The absence of reported confidence intervals for certain model variants indicates that their magnitudes
 fall below the reporting precision of the displayed results.
 }}
 
@@ -740,6 +747,13 @@ fall below the reporting precision of the displayed results.
 \Fref{Fig4} illustrates the representative prediction results obtained from the models trained using  the simulated training dataset.
 The complete set of results covering all the 87 investigated configurations is provided in Figure~S1 of the Supplementary Material.
 
+\textcolor[rgb]{1.00,0.07,0.00}{
+\hl{
+Generally Supplementary Figures S1–S10 present a comprehensive set of performance metrics
+and predicted-versus-true dependencies for all 87 considered combinations of CV feature extractors and regression models.
+While the main text shows representative examples, the Supplementary Materials confirm
+that the observed trends and relative model rankings remain consistent across all evaluated scenarios.
+}}
 
 \begin{figure*}
 \includegraphics[width=0.33\textwidth]{Fig4a}
@@ -1313,12 +1327,114 @@ and for defect characterization in particular,
 especially when the acquisition of large datasets is difficult or impractical.
 
 \section*{Supplementary data}\label{SuplData}
+
+The Supplementary Materials provide a comprehensive and systematic description of the machine learning experiments presented in this study.
+In addition to Supplementary Figures S1–S10, which summarize model performance across all considered training and testing scenarios (see \tref{tabSuplFigs}),
+the Supplementary Materials include tables reporting the hyperparameter search ranges and the selected optimal hyperparameter values for all model configurations.
+The supplementary information related to this article is provided online at \url{https://surl.li/czsgvx}.
+
+
 \textcolor[rgb]{1.00,0.07,0.00}{
 \hl{
 The supplementary information related to this article is provided online at
 }}
 \url{https://surl.li/czsgvx}
-%https://www.mediafire.com/file/mzxu10ca1rswqgk/SupplementaryMaterial.pdf/file
+
+%
+%\begin{table*}
+%\centering
+%\caption{\color[rgb]{1.00,0.07,0.00}{\colorbox{yellow}{Summary of 1D-CNN model performance metrics}} \label{tab1DCNN}}
+%\begin{indented}
+%\item[]
+%{\color[rgb]{1.00,0.07,0.00}
+%\colorbox{yellow}{
+%\begin{tabular}{ccccccc}
+%\br
+%\makecell{Training Data\\Type}  &   \makecell{Evaluation\\ Dataset} &   MSE ($10^{-3}$) &   $R^2$ &   MAPE (\%)&   MedAPE (\%) &\makecell{ Reference \\(CV-based Models)$^*$}\\
+%\mr
+
+\begin{table*}
+\centering
+\caption{Overview of Supplementary Figures S1--S10.} \label{tabSuplFigs}
+\begin{indented}
+\item[]
+
+
+\begin{tabular}{p{2.0cm} p{3.0cm} p{3.6cm} p{4.2cm} p{4.2cm}}
+\hline
+Figure(s) &
+Training data &
+Evaluation setup &
+Content &
+Purpose / key message \\
+\hline
+S1, S8 &
+Simulated (S1); experimental (S8) &
+Training and test phases &
+Scatter plots of $N_{\mathrm{Fe,PRED}}$ versus $N_{\mathrm{Fe,TRUE}}$ &
+Visual assessment of prediction accuracy and systematic deviations \\
+
+S2--S3 &
+Simulated &
+Training and test (simulated data) &
+Heatmaps of MSE, $R^2$, MAPE, and MdAPE &
+Baseline comparison and ranking of all 87 model variants \\
+
+S4--S5 &
+Simulated ($T = 270$~K) &
+Training and test (simulated data) &
+Heatmaps of performance metrics at fixed temperature &
+Robustness of model performance under temperature-specific conditions \\
+
+S6--S7 &
+Simulated &
+Test on experimental data (without / with post-hoc calibration) &
+Heatmaps of performance metrics &
+Impact of post-hoc calibration on experimental predictions \\
+
+S9--S10 &
+Experimental &
+Training and test (experimental data) &
+Heatmaps of performance metrics &
+Consistency of model performance when trained on experimental data \\
+
+
+
+\begin{tabular}{p{2.2cm} p{4.0cm} p{4.6cm} p{4.6cm}}
+%\begin{tabular}{cccc}
+\br
+Figures & Data source and setup & Content & Purpose / key message \\
+\mr
+S1, S8 &
+Training on simulated (S1) and experimental (S8) datasets &
+Scatter plots of $N_{\mathrm{Fe,PRED}}$ versus $N_{\mathrm{Fe,TRUE}}$ for all 87 model variants for training and test phases &
+Visual assessment of prediction accuracy and systematic deviations \\
+
+S2--S3 &
+Training on simulated dataset &
+Heatmaps of MSE, $R^2$, MAPE, and MdAPE for all CV--regressor combinations (training and test) &
+Baseline comparison and ranking of all 87 model variants \\
+
+S4--S5 &
+Training on simulated dataset ($T = 270$~K) &
+Heatmaps of performance metrics under temperature-specific simulation conditions &
+Evaluation of model robustness at low temperature \\
+
+S6--S7 &
+Test on experimental dataset (without / with post-hoc calibration) &
+Heatmaps of performance metrics &
+Impact of post-hoc calibration on experimental predictions \\
+
+S9--S10 &
+Training on experimental dataset &
+Heatmaps of performance metrics (training and test) &
+Consistency of model performance when trained on experimental data \\
+\br
+\end{tabular}
+\end{indented}
+\end{table*}
+
+
 
 \section*{Data availability statement}
 \textcolor[rgb]{1.00,0.07,0.00}{
