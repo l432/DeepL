@@ -1,0 +1,56 @@
+Kondratenko, Serhiy V.
+
+
+Deep level transient spectroscopy and theoretical modelling of defect states in few-layer MoS2
+
+MoS2, Lattice defects, DLTS; Transition metal dichalcogenide, 2D material
+
+
+Influence of Illumination Spectrum on Dissociation Kinetics of Iron–Boron Pairs in Silicon
+
+dissociation rates; iron–boron pairs; light-induced dissociations; silicon; wavelength impacts
+
+
+Microprismatic plane-focusing Fresnel lenses for light concentration in solar photovoltaic modules
+
+microprismatic structure; modeling of plane-focusing optics; sunlight-to-electricity conversion
+
+------------------------------------------------------------------
+Nazarov, O. M.
+
+Investigation of Recombination Mechanisms in Electronic Devices Using Bias-dependent Admittance Spectroscopy Applied to CIGS Solar Cells
+
+admittance spectroscopy; capacitance measurements; CIGS solar cells; CVf loss map; defect characterization; interface recombination; thin-film photovoltaics
+
+
+Effect of PEDOT:PSS Layer Deposition on Electrical and Photoelectrical Properties of n +-ZnO/n-Si Heterostructure
+
+impedance spectroscopy; interface traps; organic–inorganic heterojunctions; solar cells; ZnO thin films
+-------------------------------------------------------------------
+Datsenko, Oleksandr I.
+
+Deep level transient spectroscopy and theoretical modelling of defect states in few-layer MoS2
+
+MoS2, Lattice defects, DLTS; Transition metal dichalcogenide, 2D material
+
+
+Electron levels of defects in In(Ga)As/(In)GaAs nanostructures: A review
+
+deep level spectroscopy; defect; electron state; InAs/GaAs; nanoheterostructures
+
+
+Free exciton and bound excitons on Pb and I vacancies and O and I substituting defects in PbI2: Photoluminescence and DFT calculations
+
+2D material; Defects; Exciton; PbI2; Photoluminescence; Raman spectroscopy
+
+--------------------------------------------------------------------------------------
+Podolian, Artem O.
+
+
+nfluence of Hf- and multi-rare earth introduction on the photo-transport properties of ZnO thin films deposited on Si by magnetron sputtering and post-annealed
+
+Annealing; Carrier mobility; Chemical bonds; Degrees of freedom (mechanics); Hafnium; Hafnium compounds; Ion implantation; Ionization; Metal ions; Metallic films; Optical films; Oxygen; Oxygen vacancies; Photoluminescence; Rare earth elements; Silicon; Thin films; Transparency; Zinc oxide
+
+Photovoltaic Performance of Si and SiGe Surfaces Sonochemically Acti-vated in Dichloromethane
+
+dichloromethane; free carrier lifetime; germanium; Silicon; sonochemical; surface passivation; surface photo-voltage; ultrasonic frequency
