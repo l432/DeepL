@@ -1,0 +1,13 @@
+cd D:/Literat/
+cd D:/DeepL/
+cd D:/NFDU/
+cd D:/IVcharacteristics/
+cd D:/NMK/
+cd D:/Pyton/
+cd D:/metaH/
+cd D:/porousSi/
+cd D:/DeepL2026/
+
+cd D:/Shcottky/
+cd D:/IVchar/
+
