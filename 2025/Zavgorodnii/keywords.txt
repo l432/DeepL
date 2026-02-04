@@ -54,3 +54,23 @@ Annealing; Carrier mobility; Chemical bonds; Degrees of freedom (mechanics); Haf
 Photovoltaic Performance of Si and SiGe Surfaces Sonochemically Acti-vated in Dichloromethane
 
 dichloromethane; free carrier lifetime; germanium; Silicon; sonochemical; surface passivation; surface photo-voltage; ultrasonic frequency
+
+-------------------------------------------------------------------------------
+Tartachnyk, Volodymyr P.
+
+
+PROPERTIES OF ORIGINAL AND IRRADIATED PHOSPHIDE-GALLIUM LEDs
+current-voltage characteristics; electroluminescent characteristics; GaP; irradiation; light emitting diodes; spectral characteristics
+
+Current-voltage characteristics; Exposure; GaAsP; GaP; InGaN; LEDs; Spectral characteristics
+
+AIT-YAG; gamma-irradiation; InGaN; spectral characteristics of white LEDs; white LEDs
+
+The Emission Spectra of Pristine and Electron-Irradiated InGaN UV LEDs at Different Temperatures and Injection Currents
+Defects; Electroluminescence; Electron irradiation; InGaN; LED
+
+DEGRADATION AND RECOVERY FEATURES OF IRRADIATED GAP LEDs
+current-voltage characteristics; electrical and optical characteristics; GaP; light-emitting diode (LED)
+
+
+Electrophysical characteristics
