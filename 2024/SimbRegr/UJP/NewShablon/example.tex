@@ -1,0 +1,392 @@
+\documentclass[fleqn,twoside,twocolumn,nofootinbib,showkeys]{revtex4} % Specifies the document class %,unsortedaddress
+\usepackage[web,sec,doi,cit]{ujp} % \usepackage[cyr]{ujp} for cyrillic
+
+\begin{document}
+\title[Mechanism of Defect Formation in Heavily Y-doped $n$-ZrNiSn]%колонтитул
+{MECHANISM OF DEFECT\\ FORMATION IN HEAVILY Y-DOPED \boldmath$n$-ZrNiSn.\\
+II.~ELECTRO-TRANSPORT STUDIES}%
+
+%\newcommand{\firstauthor}{author NAME name}
+%\author{\firstauthor}
+
+\author{V.A.~Romaka}%1 автор
+\affiliation{Ya.~Pidstryhach Institute for Applied Problems of
+Mechanics
+and Mathematics,\\ Nat. Acad. of Sci. of Ukraine}%институт
+\address{3b, Naukova Str., Lviv 79060, Ukraine}%адрес
+\email{vromaka@polynet.lviv.ua}%e-mail
+\affiliation{National University ``Lvivska Politechnika''}%
+\address{12, Bandera Str., Lviv 79013, Ukraine}%
+\author{D.~Fruchart}
+\affiliation{Laboratoire de N\'{e}el, CNRS}%
+\address{BP 166, 38042 Grenoble Cedex 9, France}%
+\author{L.P.~Romaka}%
+\affiliation{Ivan Franko Lviv National University}%
+\address{6, Kyrylo and Mefodii Str., Lviv 79005, Ukraine}%
+\author{A.M.~Horyn}%
+\affiliation{Ivan Franko Lviv National University}%
+\address{6, Kyrylo and Mefodii Str., Lviv 79005, Ukraine}%
+\author{O.V.~Bovgyra}%
+\affiliation{Ivan Franko Lviv National University}%
+\address{6, Kyrylo and Mefodii Str., Lviv 79005, Ukraine}%
+\author{R.V.~Krayovskyy}%
+\affiliation{National University ``Lvivska Politechnika''}%
+\address{12, Bandera Str., Lviv 79013, Ukraine}%
+
+\udk{539} \pacs{71.20.Nr, 72.20.Pa} \razd{\secvii}
+
+\autorcol{V.A.\hspace*{0.7mm}Romaka, D.\hspace*{0.7mm}Fruchart, L.P.\hspace*{0.7mm}Romaka \etal}
+
+\cit{Romaka~V.A., Fruchart~D., Romaka~L.P., Horyn~A.M., Bovgyra~O.V., Krayovskyy~R.V. Mechanism of defect formation in heavily Y-doped $n$-ZrNiSn. II.~Electro-transport studies.}{\selectlanguage{ukrainian} Ромака~В.А., Фрушарт~Д., Бовгира~О.В., Ромака~Л.П., Горинь~А.М., Крайовський~Р.В. Механізм дефектоутворення у сильнолегованому атомами Y $n$-ZrNiSn. II.~Електрокінетичні дослідження.}
+
+\setcounter{page}{53}
+%\setcounter{jnumber}{5}
+
+\begin{abstract}
+The temperature and concentration dependences of the resistivity $\rho$
+and the thermopower coefficient $\alpha$ of a
+Zr$_{1-x}$Y$_{x}$NiSn intermetallic semiconductor heavily doped with
+an acceptor Y impurity have been studied in
+the ranges $T=80\div380~\mathrm{K}$ and $N_{\rm A}^{Y}=3.8\times10^{10}%
+$~\textrm{cm}$^{-3}$
+($x=0.02)\div4.8\times10^{21}$~\textrm{cm}$^{-3}$ ($x=0.25$). A
+conclusion on the mechanisms of conductivity in this compound is
+made. The dependences between the impurity concentration and the
+parameters of the modulation amplitude of the continuous energy
+bands have been established. The results obtained are
+discussed in the framework of the Shklovskii--Efros model for a
+heavily doped and strongly compensated semiconductor.
+\end{abstract}
+
+\keywords{mechanism of defect formation, Shklovskii--Efros model,
+strongly compensated semiconductor, heavily doped semiconductor.}
+
+\maketitle
+
+\section{Introduction}
+
+In the previous work \cite{1}, the structure characteristics of the intermetallic
+semiconductor $n$-ZrNiSn heavily doped with an Y impurity have been studied,
+and the corresponding calculations of the electron density distribution and
+the band structure have been carried out. The doping of $n$-ZrNiSn was
+demonstrated to be accompanied by the ordering of its crystal structure, when
+the impurity atoms occupy only the positions of Zr ones and generate
+acceptor-type defects. By detecting the conductivity transition
+insulator--metal, the existence range of the solid solution Zr$_{1-x}$Y$_{x}%
+$NiSn and the dependences between the impurity concentration, on the one hand,
+and the direction and the rate of Fermi level drift, on the other hand, have
+been established. In particular, the introduction of an acceptor Y impurity into
+the $n$-ZrNiSn crystal structure is accompanied by a redistribution of
+the electron concentration, a monotonous motion of the Fermi level from the
+conduction band edge to the valence band, and its intersection at $x=0.137$. A
+conclusion was drawn that the mechanism of hopping conductivity in Zr$_{1-x}%
+$Y$_{x}$NiSn takes place at concentrations of the Y impurity, when
+the Fermi level is located below the percolation levels in the
+conduction band or the valence band ($x<0.137$).
+
+This work is a sequel of work \cite{1}. Here, we report the results
+of our researches concerning the electro-transport and energy
+characteristics of $n$-ZrNiSn heavily doped with an acceptor Y
+impurity. The temperature dependences of the electroresistivity
+$\rho$ and the thermopower coefficient $\alpha$ were measured. The
+impurity concentration was changed in the range from $N_{\rm
+A}^{Y}=3.8\times10^{20}$~\textrm{cm}$^{-3}$ (at $x=0.02$) to
+$4.8\times10^{21}~\mathrm{cm}^{-2}$ (at $x=0.25$). The techniques
+applied for the measurements of the electroresistivity and the
+thermopower coefficient relative to copper in the temperature
+interval $T=80\div380~\mathrm{K}$ are discussed in work~\cite{2}.
+
+%Fig.~1
+\begin{figure*}% figure* for wide figure, [h] [!] to change the placement
+%\includegraphics[width=15cm]{1_e}
+\caption{Temperature dependences of the resistivity $\rho$ and the
+thermopower coefficient $\alpha$ for Zr$_{1-x}$Y$_{x}$NiSn at
+$x=0.02$ ({\it 1}), 0 ({\it 2}), 0.08 ({\it 3}), and 0.2
+({\it 4})  }
+\end{figure*}
+
+\section{Electro-Transport\\ Researches of Zr\boldmath$_{1-x}$Y\boldmath$_{x}$NiSn}
+
+The temperature dependences of the electrical resistivity $\ln\rho(1/T)$ and
+the thermopower coefficient $\alpha(1/T)$ of Zr$_{1-x}$Y$_{x}$NiSn are
+depicted in Fig.~1. They demonstrate that Zr$_{1-x}$Y$_{x}$NiSn specimens with
+$x=0\div0.08$ reveal semiconducting properties: the resistivity decreases with
+the temperature growth, and the dependences $\ln\rho(1/T)$ and $\alpha(1/T)$
+manifest high- and low-temperature activation sections. The specimen with
+$x=0.08$ is an exception: its dependence $\ln\rho(1/T)$ contains no
+low-temperature activation section. For specimens with the content of Y
+impurity $x\geq0.2$, the conductivity has a metallic character, and their
+electroresistance grows, as the temperature increases. The dependences
+$\ln\rho(1/T)$ can be approximated with a high accuracy by the known
+relation
+%1
+\begin{equation}
+\rho^{-1}(T)=\rho_{1}^{-1}\exp\left(  -\frac{\varepsilon_{1}^{\rho}}{k_{\rm B}%
+T}\right)  +\rho_{3}^{-1}\left(  -\frac{\varepsilon_{3}^{\rho}}{k_{\rm B}%
+T}\right)  ,\label{GrindEQ__1_}%
+\end{equation}
+where the first high-temperature term describes the charge carrier activation
+from the Fermi level onto the percolation level in the continuous energy
+bands, and the second low-temperature term describes hopping conduction
+\cite{3}.
+
+In turn, the temperature dependences $\alpha(1/T)$ of the
+Zr$_{1-x}$Y$_{x} $NiSn thermopower coefficient can be approximated
+by the following formula:
+%2
+\begin{equation}
+\alpha=\frac{k_{\rm B}}{e}\left(  \frac{\varepsilon_{V}^{\alpha}}{k_{\rm B}T}%
+-\gamma+1\right)  ,\label{GrindEQ__2_}%
+\end{equation}
+where $\gamma$ is a parameter dependent on the scattering origin, and, in the
+case of $n$-ZrNiSn, it equals 1.04.
+
+
+
+The introduction of the lowest concentrations of Y impurity is accompanied by
+a reduction of the electroconductivity $\sigma(x)$ (see Fig.~2). For instance, at
+$T=80~\mathrm{K}$, the conductivity diminishes from $\sigma=7.6\times
+10^{-3}~(\mu\Omega\times\mathrm{m)}^{-1}$ at $x=0$ to $1.2\times10^{-4}%
+~(\mu\Omega\times\mathrm{m)}^{-1}$ at $x=0.02$. Such a behavior of
+$\sigma(x)$ is connected with a reduction of the density of states
+at the Fermi level, when the compensation degree in a semiconductor
+of the electron conductivity type changes owing to the introduction
+of an acceptor impurity. The minimum in the dependence $\sigma(x)$
+corresponds to a state close to the complete compensation of
+the semiconductor: the concentrations of donor- and acceptor-type
+defects are almost in equilibrium, and the electroconductivity is caused
+by free electrons and holes simultaneously, as well as by the hops
+of charge carriers between localized states. We associate the
+increase of $\sigma(x)$ at $x\geq0.02$ with the intersection of the
+energy gap midpoint by the Fermi level $\varepsilon_{\rm F}$ and
+with increase in the concentration of free holes by their
+thermal throwing from the Fermi level onto the percolation level in
+the valence band.
+
+
+\begin{table}[b]
+\noindent\caption{Concentration and energy\\ characteristics of
+Zr\boldmath$_{1-x}$Y$_{x}$NiSn alloys }\vskip3mm\tabcolsep4.5pt
+
+\noindent{\footnotesize\begin{tabular}{|c|c|c|c|c|c|}
+ \hline \multicolumn{1}{|c}
+{\rule{0pt}{5mm}$x$} & \multicolumn{1}{|c}{$N_{\rm A}$, cm$^{-3}$}&
+\multicolumn{1}{|c}{$\varepsilon _{1}^{\rho }$, meV}&
+\multicolumn{1}{|c}{$\varepsilon _{1}^{\alpha }$, meV}&
+\multicolumn{1}{|c}{$\varepsilon _{3}^{\rho }$, meV}&
+\multicolumn{1}{|c|}{$\varepsilon _{3}^{\alpha }$, meV}\\[2mm]%
+\hline%
+\rule{0pt}{5mm}0& --& 28.9& 44.6& 1.6& 11.5 \\%
+0.02& 3.8\,$\times $\,10$^{20}$& 61.8& 133.4& 2.3& 2.4 \\%
+0.05& 9.5\,$\times $\,10$^{20}$& 16.3& 21.1& 1.7& 2.2 \\%
+0.08& 1.5\,$\times $\,10$^{21}$& 12.9& 17.3& 1.1& 0.8 \\%
+0.12& 2.3\,$\times $\,10$^{21}$& 8.3& 7.9& 0& 0.7 \\%
+0.2& 3.8\,$\times $\,10$^{21}$& 0& 8.6& 0& 0.5 \\%
+0.25& 4.8\,$\times $\,10$^{21}$& 0& 8.4& 0& 0.3 \\[2mm]%
+\hline
+\end{tabular}}
+\end{table}
+
+The character of variations of the thermopower coefficient $\alpha(x)$ in Zr$_{1-x}%
+$Y$_{x}$NiSn agrees with the arguments given above on the
+simultaneous participation of charge carriers of several types in
+the electroconductivity. The charge carrier concentration changes as
+either the number of introduced Y atoms or the temperature varies;
+this occurs through the variation of the number of ionized
+acceptors. We connected the decrease of $\sigma(x)$ in the interval
+$x=0\div0.02$ with a reduction of the contribution made by free
+electrons of the semiconductor, due to their capture by acceptors.
+In the same concentration range, the values of $\alpha(x)$ are
+negative, which testifies to the electron type of conductivity of
+the semiconductor, whereas a reduction of $\alpha(x)$-values
+indicates a reduction of the electron contribution to the
+Zr$_{1-x}$Y$_{x}$NiSn conductivity. The minimum in the dependences
+$\sigma(x),$ when the concentrations of electrons and holes become
+close, is associated with the conductivity type change, and the
+values of $\alpha(x)$ are close to zero there. At Y contents
+$x>0.02$ in Zr$_{1-x}$Y$_{x}$NiSn, free holes determine the
+conductivity of the semiconductor, and the positive sign of the
+thermopower coefficient evidences for that. A practical invariance
+of $\alpha(x)$-values in Zr$_{1-x}$Y$_{x}$NiSn at $x\geq0.12$
+testifies to the intersection between the Fermi level
+$\varepsilon_{\rm F}$ and the percolation level in the valence band,
+i.e. the electroconductivity transition insulator--metal is
+realized.
+
+
+%Fig.~2
+\begin{figure}% figure* for wide figure, [h] [!] to change the placement
+%\includegraphics[width=\column]{2_e}
+\vskip-3mm\caption{Y-content dependences of the specific
+conductivity $\sigma$ ($a$) and the thermopower coefficient $\alpha$
+($b$) of Zr$_{1-x}$Y$_{x}$NiSn at various temperatures: $T=80$ ({\it
+1}), 250 ({\it 2}), and 370$~\mathrm{K}$ ({\it 3})  }
+\end{figure}
+
+Analyzing the high- and low-temperature activation sections in the
+dependences $\ln\rho(1/T)$ and $\alpha(1/T)$ for Zr$_{1-x}$Y$_{x}$NiSn and using the
+relations (\ref{GrindEQ__1_}) and (\ref{GrindEQ__2_}), we
+calculated the activation energies (see Table). In particular, we
+determined the energies of activation $\varepsilon_{1}^{\rho}$ from the Fermi
+level onto the percolation level in the conduction (valence) band from the
+high-temperature activation sections in the dependences $\ln\rho(1/T)$ and
+the activation energies $\varepsilon_{3}^{\rho}$
+of hopping conduction from the low-temperature ones. Similarly, from the analogous activation sections in
+the dependences $\alpha(1/T)$, we calculated the activation energies
+$\varepsilon_{1}^{\alpha}$ and $\varepsilon_{3}^{\alpha}$. In work \cite{4},
+it was shown that the values for $\varepsilon_{1}^{\rho}$ and $\varepsilon
+_{1}^{\alpha}$ determined from the activation sections of the dependences
+$\ln\rho(1/T)$ and $\alpha(1/T)$, respectively, are substantially different:
+$\varepsilon_{1}^{\rho}$ gives the difference between the Fermi and
+percolation levels, whereas $\varepsilon_{1}^{\alpha}$ evaluates the amplitude
+of continuous energy band fluctuations. The activation energies $\varepsilon
+_{3}^{\rho}$ and $\varepsilon_{3}^{\alpha}$ are related to the occupation
+degree and the amplitude of a small-scale fluctuation, respectively (Fig.~3). On
+the one hand, the results obtained confirm the conclusions made above on the
+role of carriers of different types and the mechanisms of conductivity in
+Zr$_{1-x}$Y$_{x}$NiSn. On the other hand, they evaluate the drift rate of
+$\varepsilon_{\mathrm{F}}$ and determine the modulation amplitudes and
+the \textquotedblleft fine structure\textquotedblright\ parameters of the
+energy bands \cite{5,6}.
+
+
+
+%Fig.~3
+\begin{figure}% figure* for wide figure, [h] [!] to change the placement
+%\includegraphics[width=\column]{3_e}
+\vskip-3mm\caption{Y-content dependences of the activation energies in Zr$_{1-x}$Y$_{x}%
+$NiSn: ($a$)~$\varepsilon_{1}^{\alpha}$ ({\it 1}) and $\varepsilon
+_{1}^{\rho}$ ({\it 2}), ($b$)~$\varepsilon_{3}^{\alpha}$ ({\it 1})
+and $\varepsilon_{3}^{\rho}$ ({\it 2})  }
+\end{figure}
+
+The value $\varepsilon_{1}^{\rho}(x=0)=28.9$~meV estimates a
+remoteness of the Fermi level from the mobility edge of the
+conduction band in $n$-ZrNiSn, which is evidenced by the
+negative values of $\alpha(x)$. The introduction of the lowest
+experimental concentration of the Y impurity moves the Fermi level away
+from the percolation one in the conduction band. The value
+$\varepsilon _{1}^{\rho}(x=0.02)$ reflects the position of the
+Fermi level in a practically completely compensated semiconductor --
+close to the energy gap mid-point. However, in our specimen, there
+is an insignificant overcompensation by acceptors, which is evidenced by the
+positive values of $\alpha(x)$.
+In this case, the value $\varepsilon_{1}^{\rho}(x=0.02)=61.8$%
+~meV corresponds to the remoteness of the Fermi level from the percolation
+level in the valence band. A drastic recession in the dependence
+$\varepsilon_{1}^{\rho}(x)$ in the interval $x=0.02\div0.05$, together with a
+practically linear reduction in the interval $x=0.05\div0.2$, describes the
+dynamics of the Fermi level drift toward the percolation level in the valence
+band of Zr$_{1-x}$Y$_{x}$NiSn. Basing on the linear character of the
+dependence $\varepsilon_{1}^{\rho}(x)$ in the interval $x=0.05\div0.2$, we
+determined the drift rate of $\varepsilon_{\mathrm{F}}$ toward the conduction
+band to be $\Delta\varepsilon_{\mathrm{F}}/\Delta x=1.1\mathrm{~meV/at.\%}$.
+The fact that $\varepsilon_{1}^{\rho}(x)=0$ at $x\geq0.2$ testifies to the
+intersection between the Fermi level and the percolation level in the valence
+band. For such specimens, no high-temperature activation sections would be
+observed in the dependences $\ln\rho(1/T)$ (Fig.~1).
+
+The behavior of $\varepsilon_{1}^{\alpha}(x)$ agrees completely with the
+Shklovskii--Efros model describing the energy state of a heavily doped and
+compensated semiconductor \cite{5,6}. Really, in a completely compensated
+semiconductor, the amplitude of a large-scale fluctuation is maximum, being
+equal to the activation energy from the Fermi level onto the percolation one,
+and the Fermi level $\varepsilon_{\mathrm{F}}$ is located in the middle of the
+energy gap. As is seen from Fig.~3, the dependence $\varepsilon_{1}^{\alpha
+}(x)$ is maximum at the Zr$_{1-x}$Y$_{x}$NiSn content, $x\approx0.02$, close to
+the complete compensation state. In the latter case, in accordance with the
+conclusions of work \cite{6}, the activation energies $\varepsilon_{1}^{\rho}$
+and $\varepsilon_{1}^{\alpha}$ coincide. In our case, the values
+$\varepsilon_{1}^{\rho}(x=0.02)=61.8$~meV and $\varepsilon_{1}^{\alpha
+}(x=0.02)=133.4$~meV are maximum but substantially different. This fact is
+related to the slight overcompensation of a Zr$_{1-x}$Y$_{x}$NiSn specimen
+with $x=0.02$. Above the overcompensation of Zr$_{1-x}$Y$_{x}$NiSn (at $x>0.02$), the
+reduction of $\varepsilon_{1}^{\alpha}(x)$-values testifies to a decrease of
+the continuous energy band modulation amplitude, which is accompanied by the
+ordering of the semiconductor crystal structure.
+
+From Fig.~3, it also follows that the behaviors of the
+Zr$_{1-x}$Y$_{x}$NiSn dependences $\varepsilon_{1}^{\rho}(x)$ and
+$\varepsilon_{1}^{\alpha}(x)$ correlate with each other. It is also
+true for the potential well depth of a small-scale fluctuation
+$\varepsilon_{3}^{\alpha}(x)$ and the occupation degree of this
+potential well, the latter being proportional to the energy of
+hopping conduction $\varepsilon_{3}^{\rho}(x)$. As soon as the
+potential well depth becomes less than 0.8~meV ($x=0.12$), the
+activation energy of hopping conduction is nullified---the
+small-scale relief of the valence band becomes \textquotedblleft
+flooded\textquotedblright\ with holes, and electrons are activated
+from the Fermi level onto the percolation one in the valence band
+only.
+
+\section{Conclusions}
+
+Thus, the results of electro-transport researches dealing with the doping of
+$n$-ZrNiSn with an acceptor Y impurity agree with the results of structural
+researches and the calculations of the electron density distribution and the band
+structure of the semiconductor. It is shown that the doping of $n$-ZrNiSn
+with an Y impurity allows a predictable control over the fabrication of
+thermoelectric and thermometric substances with preassigned properties. On the
+basis of the results given above, we may assert that the obtained
+semiconductor solid solution Zr$_{1-x}$Y$_{x}$NiSn is a promising
+thermoelectric substance.
+
+\vskip3mm \textit{The work was sponsored by the National Academy of
+Sciences of Ukraine (grant No.~0106U000594) and the Ministry of
+Education and Science of Ukraine (grants Nos.~0109U002069 and
+0109U001151).}
+
+\begin{thebibliography}{9}                                                                                                %
+
+
+\bibitem {1}V.V.~Romaka, E.K.~Hlil, O.V.~Bovgyra, L.P.~Romaka, V.M.~Davydov,
+R.V.~Krayovskyy. Mechanism of defect formation in heavily Y-doped
+$n$-ZrNiSn. I. Crystal and electronic structures. \textit{Ukr. J.
+Phys.} \textbf{54}, 1119 (2009).
+
+\bibitem {2}L.~Romaka, Yu.~Stadnyk, M.G.~Shelyapina {\it et~al.}
+Electronic structure of the Ti$_{1-x}$Sc$_x$NiSn and
+Zr$_{1-x}$Sc$_x$NiSn solid solutions. \textit{J.~Alloys Comp.}
+\textbf{396}, 64 (2005).
+
+\bibitem {3}B.I.~Shklovskii, A.L.~Efros. \textit{Electronic Properties of
+Doped Semiconductors} (Springer,  1984) [ISBN: 978-3-662-02403-4].
+
+\bibitem {4}V.A.~Romaka, Yu.V.~Stadnyk, D.~Fruchart {\it et~al.}
+Features of electrical conductivity in the n-ZrNiSn intermetallic
+semiconductor heavily doped with the In acceptor impurity.
+\textit{Semiconductors} \textbf{41}, 1041 (2007).
+
+\bibitem {5}B.I.~Shklovski\u{i}, A.L.~\'{E}fros.
+Transition from metallic to activation conductivity in compensated
+semiconductors.  \textit{Sov. Phys. JETP} \textbf{34}, 435 (1972).
+
+\bibitem {6}B.I.~Shklovski\u{i}, A.L.~\'{E}fros.
+Completely compensated crystalline semiconductors as a model of an
+amorphous semiconductor. \textit{Zh. \`{E}ksp. Teor. Fiz.}
+\textbf{62}, 1156 (1972).
+
+\begin{flushright}
+{\footnotesize Received 22.01.22}
+\end{flushright}
+\end{thebibliography}
+
+\vspace*{-5mm} \rezume{%
+В.А. Ромака, Д. Фрушарт, О.В. Бовгира,\\ Л.П. Ромака, А.М. Горинь,
+Р.В. Крайовський} {МЕХАНІЗМ ДЕФЕКТОУТВОРЕННЯ \\У СИЛЬНОЛЕГОВАНОМУ АТОМАМИ Y\\
+$n$-ZrNiSn.  II. ЕЛЕКТРОКІНЕТИЧНІ ДОСЛІДЖЕННЯ} {Досліджено вплив
+акцепторної домішки Y на зміну питомого електроопору ($\rho $),
+коефіцієнта термо-ерс ($\alpha $), енергетичних характеристик
+інтерметалічного напівпровідника $n$-ZrNiSn у діапазонах: $T = 80
+-380$ К, $N_{\rm A}^{Y}\approx 3,8\cdot 10^{20}$ см$^{-3}$ ($x =
+0{,}02)$--$4{,}8\cdot 10^{21}$~см$^{-3 }$ ($x = 0{,}25$). Зроблено
+висновки про механізми електропровідності Zr$_{1-x}$Y$_{x}$NiSn.
+Встановлено залежності між концентрацією домішки та характеристиками
+амплітуди модуляції зон неперервних енергій. Обговорення результатів
+проводиться у межах моделі сильнолегованого і сильнокомпенсованого
+напівпровідника Шкловського--Ефроса.}{\textit{К\,л\,ю\,ч\,о\,в\,і\,
+с\,л\,о\,в\,а:} механізм дефектоутворення, модель
+Шкловського--Ефроса, сильнокомпенсований напівпровідник,
+сильнолегований напівпровідник.}
+
+\end{document}

@@ -1,0 +1,108 @@
+\documentclass[fleqn,twoside,twocolumn,nofootinbib,showkeys]{revtex4} % Specifies the document class %,unsortedaddress
+\usepackage[sec]{ujp} % \usepackage[cyr]{ujp} for cyrillic
+
+\begin{document}
+\title[Колонтитул: Назва роботи (3-5 слів)/Headline: paper title (3-5 words)]%колонтитул
+{НАЗВА РОБОТИ/PAPER TITLE}%
+\author{Прізвище автора 1/Name of Author 1}%1
+\affiliation{Bogolyubov Institute for Theoretical Physics, Nat. Acad. of Sci. of Ukraine}%інститут 1
+\address{14b, Metrolohichna Str., Kyiv 03143, Ukraine}%адреса 1
+\email{ujp@bitp.kiev.ua}%e-mail 1
+\author{Прізвище автора 2/Name of Author 2}%2
+\affiliation{Department of Mathematics and Computer science, Universiteit Antwerpen}%інститут 2
+\address{Middelheimlaan 1, Antwerpen 2020, Belgium}%адреса 2
+
+\udk{№ УДК/UDC} \razd{\secix}
+
+\autorcol{N.N.\hspace*{0.7mm}Author1, N.N.\hspace*{0.7mm}Author2, N.N.\hspace*{0.7mm}Author3 et al.}%
+
+\setcounter{page}{1}%
+
+\begin{abstract}
+Аннотація/Abstract
+\end{abstract}
+
+\keywords{Ключові слова/Keywords.}
+
+\maketitle
+
+\section{Вступ/Introduction}
+
+Текст роботи/Paper text...
+
+\section{Розділ/Section}
+
+Для всіх формул вирівнювання ліворуч./All formulas should be shifted to the left.
+
+Для формул з номером:/For numbered formulas:
+\begin{equation}
+\end{equation}
+Для формул без номерів:/For unnumbered formulas:
+\[
+\]
+
+Для рисунків:/For figures:%
+
+%Fig.~1
+\begin{figure}% figure* for wide figure, [h] [!] to change the placement
+\vskip1mm
+\includegraphics[width=\column]{1_e}
+\vskip-3mm\caption{  }
+\end{figure}
+
+Для таблиць:/For tables:% Таблиця 5х4
+
+\begin{table}[b]
+\noindent\caption{Назва таблиці/Table title}\vskip3mm\tabcolsep4.5pt
+
+\noindent{\footnotesize
+\begin{tabular}{|c|c|c|c|c}
+ \hline%
+ \multicolumn{1}{|c}{\rule{0pt}{5mm}Назва 1-ї колонки/Title of 1st column}%
+ & \multicolumn{1}{|c}{Назва 2-ї колонки/Title of 2nd column}
+ & \multicolumn{1}{|c}{Назва 3-ї колонки/Title of 3d column}
+ & \multicolumn{1}{|c}{Назва 4-ї колонки/Title of 4th column}
+ & \multicolumn{1}{|c|}{Назва 5-ї колонки/Title of 5th column}\\[2mm]%
+\hline%
+\rule{0pt}{5mm}&&&&\\ % Приклад/Example: 1&2&3&4&5\\
+&&&&\\%
+&&&&\\[2mm]%
+\hline
+\end{tabular}
+}
+\end{table}
+
+\section{Висновки/Conclusions}
+
+\vskip3mm \textit{Подяка/Acknowledgement.}
+
+\begin{thebibliography}{99}
+
+\bibitem{RoSmo} C.~Rovelli, L.~Smolin. Spin networks and quantum
+gravity. \textit{Phys. Phys. D}  {\bf 52}, 5743 (1995). [DOI: https://doi.org].%1
+
+\bibitem{Sho90} B.W.~Shore. \textit{The Theory of Coherent Atomic Excitation}
+(Wiley,  1990) [ISBN: 978-0471524175].%2
+
+\bibitem{3}
+\bibitem{4}
+
+\begin{flushright}
+{\footnotesize Received 26.01.18}
+\end{flushright}
+\end{thebibliography}
+
+Якщо стаття англ. мовою/For papers in English:
+
+\vspace*{-5mm}\rezume{%Резюме укр. мовою
+А.А. Автор1, А.А. Автор2, А.А. Автор3 та ін.}{НАЗВА СТАТТІ УКР.
+МОВОЮ} {Текст резюме укр. мовою.}{\textit{К\,л\,ю\,ч\,о\,в\,і\,
+с\,л\,о\,в\,а:} ключові слова.}
+
+Якщо стаття укр. мовою/For papers in Ukrainian:
+
+\rezumang{%Резюме англ. мовою
+N.N. Author1, N.N. Author2, N.N. Author3 et al.}{PAPER TITLE IN
+ENGLISH}{Annotation text.}{\textit{Keywords:} keywords.}
+
+\end{document}
