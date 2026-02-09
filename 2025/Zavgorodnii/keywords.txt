@@ -74,3 +74,16 @@ current-voltage characteristics; electrical and optical characteristics; GaP; li
 
 
 Electrophysical characteristics
+-------------------------------------------------------------------------------------------------
+Smertenko, Petro S.
+
+
+Impact of titanium and copper buffer layers on the structure and I-V characteristics of TiO2/CuxO thin film solar cells
+Differential approach; Nanoparticles buffer layers; PV applications; Thin film solar cells
+
+
+Self-Organized Heterocyclic Amines Films on Carbon Substrates for Photovoltaic Applications
+carbon black; carbon substrate; chemical bath; heterocyclic amines; injection property; morphology; photovoltaics; self-organization
+
+Impact of molecular layer on emergent photovoltaic response in silicon unraveled by photoelectron spectroscopy
+Adsorption; Band bending; Molecular overlayer; Silicon; Silicon oxide; Work function
