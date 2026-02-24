@@ -1,15 +1,52 @@
-\begin{thebibliography}{0}
-\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
-\expandafter\ifx\csname bibnamefont\endcsname\relax
-  \def\bibnamefont#1{#1}\fi
-\expandafter\ifx\csname bibfnamefont\endcsname\relax
-  \def\bibfnamefont#1{#1}\fi
-\expandafter\ifx\csname citenamefont\endcsname\relax
-  \def\citenamefont#1{#1}\fi
-\expandafter\ifx\csname url\endcsname\relax
-  \def\url#1{\texttt{#1}}\fi
-\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
-\providecommand{\bibinfo}[2]{#2}
-\providecommand{\eprint}[2][]{\url{#2}}
+\begin{thebibliography}{1}
+\def\selectlanguageifdefined#1{
+\expandafter\ifx\csname date#1\endcsname\relax
+\else\language\csname l@#1\endcsname\fi}
+\ifx\undefined\url\def\url#1{{\small #1}}\else\fi
+\ifx\undefined\BibUrl\def\BibUrl#1{\url{#1}}\else\fi
+\ifx\undefined\BibAnnote\long\def\BibAnnote#1{}\else\fi
+\ifx\undefined\BibEmph\def\BibEmph#1{\emph{#1}}\else\fi
+
+\bibitem{Seeger2004}
+\selectlanguageifdefined{english}
+\BibEmph{Seeger,~Karlheinz}. Semiconductor Physics. An Introduction~/
+  Karlheinz~Seeger. Advanced Texts in Physics. ---
+\newblock 9 edition. ---
+\newblock Springer Berlin, Heidelberg, 2004. --- Jun.
+
+\bibitem{Fletcher1957}
+\selectlanguageifdefined{english}
+\BibEmph{Fletcher,~Neville~H.} The High Current Limit for Semiconductor
+  Junction Devices~/ Neville~H.~Fletcher~// \BibEmph{Proc. IRE}. ---
+\newblock 1957. ---
+\newblock Vol.~45, no.~6. ---
+\newblock Pp.~862--872.
+
+\bibitem{Choo1972}
+\selectlanguageifdefined{english}
+\BibEmph{Choo,~Seok~Cheow}. Theory of a forward-biased diffused-junction P-L-N
+  rectifier—Part I: Exact numerical solutions~/ Seok~Cheow~Choo~//
+  \BibEmph{IEEE Trans. Electron Devices}. ---
+\newblock 1972. ---
+\newblock Vol.~19, no.~8. ---
+\newblock Pp.~954--966.
+
+\bibitem{Dorkel1981}
+\selectlanguageifdefined{english}
+\BibEmph{Dorkel,~J.M.} Carrier mobilities in silicon semi-empirically related
+  to temperature, doping and injection level~/ J.M.~Dorkel, Ph.~Leturcq~//
+  \BibEmph{Solid-State Electron.} ---
+\newblock 1981. ---
+\newblock Vol.~24, no.~9. ---
+\newblock Pp.~821--825.
+
+\bibitem{KLAASSEN953}
+\selectlanguageifdefined{english}
+\BibEmph{Klaassen,~D.B.M.} A unified mobility model for device simulation ---
+  {I}. Model equations and concentration dependence~/ D.B.M.~Klaassen~//
+  \BibEmph{Solid-State Electron.} ---
+\newblock 1992. --- Jul. ---
+\newblock Vol.~35, no.~7. ---
+\newblock Pp.~953-- 959.
 
 \end{thebibliography}
