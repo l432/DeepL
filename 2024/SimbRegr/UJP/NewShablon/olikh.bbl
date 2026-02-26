@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 \def\selectlanguageifdefined#1{
 \expandafter\ifx\csname date#1\endcsname\relax
 \else\language\csname l@#1\endcsname\fi}
@@ -22,6 +22,156 @@
 \newblock Vol.~45, no.~6. ---
 \newblock Pp.~862--872.
 
+\bibitem{Caughey1967}
+\selectlanguageifdefined{english}
+\BibEmph{Caughey,~D.M.} Carrier mobilities in silicon empirically related to
+  doping and field~/ D.M.~Caughey, R.E.~Thomas~// \BibEmph{Proc. IEEE}. ---
+\newblock 1967. ---
+\newblock Vol.~55, no.~12. ---
+\newblock Pp.~2192--2193.
+
+\bibitem{Masetti1983}
+\selectlanguageifdefined{english}
+\BibEmph{Masetti,~G.} Modeling of carrier mobility against carrier
+  concentration in arsenic-, phosphorus-, and boron-doped silicon~/ G.~Masetti,
+  M.~Severi, S.~Solmi~// \BibEmph{IEEE Trans. Electron Devices}. ---
+\newblock 1983. ---
+\newblock Vol.~30, no.~7. ---
+\newblock Pp.~764--769.
+
+\bibitem{Arora1982}
+\selectlanguageifdefined{english}
+\BibEmph{Arora,~N.D.} Electron and hole mobilities in silicon as a function of
+  concentration and temperature~/ N.D.~Arora, J.R.~Hauser, D.J.~Roulston~//
+  \BibEmph{IEEE Trans. Electron Devices}. ---
+\newblock 1982. ---
+\newblock Vol.~29, no.~2. ---
+\newblock Pp.~292--295.
+
+\bibitem{KLAASSEN953}
+\selectlanguageifdefined{english}
+\BibEmph{Klaassen,~D.B.M.} A unified mobility model for device simulation ---
+  {I}. Model equations and concentration dependence~/ D.B.M.~Klaassen~//
+  \BibEmph{Solid-State Electron.} ---
+\newblock 1992. --- Jul. ---
+\newblock Vol.~35, no.~7. ---
+\newblock Pp.~953-- 959.
+
+\bibitem{Swirhun1986}
+\selectlanguageifdefined{english}
+\BibEmph{Swirhun,~S.E.} Measurement of electron lifetime, electron mobility and
+  band-gap narrowing in heavily doped p-type silicon~/ S.E.~Swirhun,
+  Y.-H.~Kwark, R.M.~Swanson~// 1986 International Electron Devices Meeting. ---
+\newblock 1986. ---
+\newblock Pp.~24--27.
+
+\bibitem{Alamo1985}
+\selectlanguageifdefined{english}
+\BibEmph{del Alamo,~J.} Simultaneous measurement of hole lifetime, hole
+  mobility and bandgap narrowing in heavily doped n-type silicon~/
+  J.~del~Alamo, S.~Swirhun, R.M.~Swanson~// 1985 International Electron Devices
+  Meeting. ---
+\newblock 1985. ---
+\newblock Pp.~290--293.
+
+\bibitem{Cummings2010}
+\selectlanguageifdefined{english}
+Mobility Modeling Considerations for Radiation Effects Simulations in Silicon~/
+  Daniel~J.~Cummings, Arthur~F.~Witulski, Hyunwoo~Park et~al.~// \BibEmph{IEEE
+  Trans. Nucl. Sci.} ---
+\newblock 2010. ---
+\newblock Vol.~57, no.~4. ---
+\newblock Pp.~2318--2326.
+
+\bibitem{NoorMohammad1993}
+\selectlanguageifdefined{english}
+Temperature, electric field, and doping dependent mobilities of electrons and
+  holes in semiconductors~/ S.~{Noor Mohammad}, Andrew~V.~Bemis,
+  Ronald~L.~Carter, Robert~B.~Renbeck~// \BibEmph{Solid-State Electron.} ---
+\newblock 1993. ---
+\newblock Vol.~36, no.~12. ---
+\newblock Pp.~1677--1683.
+
+\bibitem{Si_ni_Couderc}
+\selectlanguageifdefined{english}
+\BibEmph{Couderc,~Romain}. Reassessment of the intrinsic carrier density
+  temperature dependence in crystalline silicon~/ Romain~Couderc,
+  Mohamed~Amara, Mustapha~Lemiti~// \BibEmph{J. Appl. Phys.} ---
+\newblock 2014. --- Mar. ---
+\newblock Vol. 115, no.~9. ---
+\newblock P.~093705.
+
+\bibitem{Passler2002}
+\selectlanguageifdefined{english}
+\BibEmph{P\"assler,~Roland}. Dispersion-related description of temperature
+  dependencies of band gaps in semiconductors~/ Roland~P\"assler~//
+  \BibEmph{Phys. Rev. B}. ---
+\newblock 2002. --- Aug. ---
+\newblock Vol.~66. ---
+\newblock P.~085201.
+
+\bibitem{AlQurashi2018}
+\selectlanguageifdefined{english}
+\BibEmph{AlQurashi,~Ahmed}. A new approximation of Fermi-Dirac integrals of
+  order 1/2 for degenerate semiconductor devices~/ Ahmed~AlQurashi,
+  C.R.~Selvakumar~// \BibEmph{Superlattices Microstruct.} ---
+\newblock 2018. ---
+\newblock Vol. 118. ---
+\newblock Pp.~308--318.
+
+\bibitem{Angelis2023}
+\selectlanguageifdefined{english}
+\BibEmph{Angelis,~Dimitrios}. Artificial Intelligence in Physical Sciences:
+  Symbolic Regression Trends and Perspectives~/ Dimitrios~Angelis,
+  Filippos~Sofos, Theodoros~E.~Karakasidis~// \BibEmph{Arch. Comput. Methods
+  Eng.} ---
+\newblock 2023. --- Jul. ---
+\newblock Vol.~30, no.~6. ---
+\newblock Pp.~3845--3865.
+
+\bibitem{Hruska2025}
+\selectlanguageifdefined{english}
+\BibEmph{Hruška,~Viktor}. Analytical formulae for design of one-dimensional
+  sonic crystals with smooth geometry based on symbolic regression~/
+  Viktor~Hruška, Aneta~Furmanová, Michal~Bednařík~// \BibEmph{J. Sound
+  Vibration}. ---
+\newblock 2025. ---
+\newblock Vol. 597. ---
+\newblock P.~118821.
+
+\bibitem{Davis2023}
+\selectlanguageifdefined{english}
+\BibEmph{Davis,~Benjamin~L.} Discovery of a Planar Black Hole Mass Scaling
+  Relation for Spiral Galaxies~/ Benjamin~L.~Davis, Zehao~Jin~//
+  \BibEmph{Astrophys. J. Lett.} ---
+\newblock 2023. --- oct. ---
+\newblock Vol. 956, no.~1. ---
+\newblock P.~L22.
+
+\bibitem{Mengel2023}
+\selectlanguageifdefined{english}
+Interpretable machine learning methods applied to jet background subtraction in
+  heavy-ion collisions~/ Tanner~Mengel, Patrick~Steffanic, Charles~Hughes
+  et~al.~// \BibEmph{Phys. Rev. C}. ---
+\newblock 2023. --- Aug. ---
+\newblock Vol. 108. ---
+\newblock P.~L021901.
+
+\bibitem{Li2023}
+\selectlanguageifdefined{english}
+Electron transfer rules of minerals under pressure informed by machine
+  learning~/ Yanzhang~Li, Hongyu~Wang, Yan~Li et~al.~// \BibEmph{Nat. Commun.}
+  ---
+\newblock 2023. --- Mar. ---
+\newblock Vol.~14, no.~1. ---
+\newblock P.~1815.
+
+\bibitem{cranmer2023}
+\selectlanguageifdefined{english}
+\BibEmph{Cranmer,~Miles}. Interpretable Machine Learning for Science with PySR
+  and SymbolicRegression.jl. ---
+\newblock 2023.
+
 \bibitem{Choo1972}
 \selectlanguageifdefined{english}
 \BibEmph{Choo,~Seok~Cheow}. Theory of a forward-biased diffused-junction P-L-N
@@ -39,14 +189,5 @@
 \newblock 1981. ---
 \newblock Vol.~24, no.~9. ---
 \newblock Pp.~821--825.
-
-\bibitem{KLAASSEN953}
-\selectlanguageifdefined{english}
-\BibEmph{Klaassen,~D.B.M.} A unified mobility model for device simulation ---
-  {I}. Model equations and concentration dependence~/ D.B.M.~Klaassen~//
-  \BibEmph{Solid-State Electron.} ---
-\newblock 1992. --- Jul. ---
-\newblock Vol.~35, no.~7. ---
-\newblock Pp.~953-- 959.
 
 \end{thebibliography}
