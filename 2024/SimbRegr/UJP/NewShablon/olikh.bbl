@@ -172,6 +172,25 @@ Electron transfer rules of minerals under pressure informed by machine
   and SymbolicRegression.jl. ---
 \newblock 2023.
 
+\bibitem{Hanif2024}
+\selectlanguageifdefined{english}
+Enhancing Solar Forecasting Accuracy with Sequential Deep Artificial Neural
+  Network and Hybrid Random Forest and Gradient Boosting Models across Varied
+  Terrains~/ Muhammad~Farhan~Hanif, Muhammad~Umar~Siddique, Jicang~Si et~al.~//
+  \BibEmph{Advanced Theory and Simulations}. ---
+\newblock 2024. ---
+\newblock Vol.~7, no.~7. ---
+\newblock P.~2301289.
+
+\bibitem{Akiba2019}
+\selectlanguageifdefined{english}
+Optuna: A Next-generation Hyperparameter Optimization Framework~/ Takuya~Akiba,
+  Shotaro~Sano, Toshihiko~Yanase et~al.~// Proceedings of the 25th ACM SIGKDD
+  International Conference on Knowledge Discovery \& Data Mining. ---
+\newblock KDD '19. ---
+\newblock New York, NY, USA: Association for Computing Machinery, 2019. ---
+\newblock P.~2623–2631.
+
 \bibitem{Choo1972}
 \selectlanguageifdefined{english}
 \BibEmph{Choo,~Seok~Cheow}. Theory of a forward-biased diffused-junction P-L-N
