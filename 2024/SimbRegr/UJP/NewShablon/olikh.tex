@@ -15,7 +15,7 @@
 %\Asbuk{\value{AppendixCount}}
 
 %\usepackage{cite}
-\bibliographystyle{utf8gost780u}
+%\bibliographystyle{utf8gost780u}
 
 \begin{document}
 \title[Застосування моделей машинного навчання для оцінки рухливості носіїв у Si]%колонтитул
@@ -35,27 +35,26 @@
 %\setcounter{jnumber}{5}
 
 \begin{abstract}
-The temperature and concentration dependences of the resistivity $\rho$
-and the thermopower coefficient $\alpha$ of a
-Zr$_{1-x}$Y$_{x}$NiSn intermetallic semiconductor heavily doped with
-an acceptor Y impurity have been studied in
-the ranges $T=80\div380~\mathrm{K}$ and $N_{\rm A}^{Y}=3.8\times10^{10}%
-$~\textrm{cm}$^{-3}$
-($x=0.02)\div4.8\times10^{21}$~\textrm{cm}$^{-3}$ ($x=0.25$). A
-conclusion on the mechanisms of conductivity in this compound is
-made. The dependences between the impurity concentration and the
-parameters of the modulation amplitude of the continuous energy
-bands have been established. The results obtained are
-discussed in the framework of the Shklovskii--Efros model for a
-heavily doped and strongly compensated semiconductor.
+У роботі досліджено застосування моделей машинного навчання (RF, GB, SVR, DNN) 
+та символьної регресії (SR) для оцінки рухливості носіїв у монокристалічному кремнії
+($T=200-500$~K, $N_D=10^{13}-10^{19}$~см$^{-3}$). 
+Отримані за допомогою SR компактні аналітичні вирази мають удвічі менше параметрів порівняно 
+з моделлю Klaassen і не потребують попереднього розрахунку іонізації домішок, 
+забезпечуючи при цьому відносну похибку менше 0,1\% для більшості випадків.
+Порівняльний аналіз показав, що моделі SR та SVR суттєво переважають наближення Arora за точністю, 
+особливо для неосновних носіїв. 
+Запропонований підхід є перспективним для TCAD-систем, оскільки дозволяє значно знизити обчислювальні 
+витрати при збереженні високої достовірності моделювання.
 \end{abstract}
 
-\keywords{mechanism of defect formation, Shklovskii--Efros model,
-strongly compensated semiconductor, heavily doped semiconductor.}
+\keywords{
+рухливість, кремній, модель Klaasen, 
+символьна регресія, машинне навчання.
+}
 
 \maketitle
 
-\section{Вступ}
+\section{Вступ}\label{Vstup}
 
 Рухливість носіїв заряду є одним із ключових транспортних параметрів напівпровідників,
 що безпосередньо визначає ефективність перенесення електричного струму під дією зовнішнього електричного поля.
@@ -131,7 +130,7 @@ $\mu_i$ --- рухливість носіїв за наявності лише $
 підхід Arora (\ref{eqArora})-(\ref{eqArora2}), незважаючи на його меншу точність.
 Зауважимо, що у оригінальній роботі \cite{Arora1982} вирази отримані та визначені значення констант
 на основі аналізу експериментальних даних щодо рухливості основних носіїв при різних значеннях температури та ступеню легування.
-Проте нерідко формули поширюють і на випадок неосновних носіїв, використовуючи значення констант (Табл.~\ref{tblArora}),
+Нерідко формули поширюють і на випадок неосновних носіїв, використовуючи значення констант (Табл.~\ref{tblArora}),
 отримані в роботах \cite{Swirhun1986} (електрони) та \cite{Alamo1985} (дірки).
 Проте у вказаних роботах приведені дані лише для однієї температури і тому поширення виразів на широкий температурний діапазон є дещо самовпевненим.
 
@@ -329,6 +328,9 @@ MSE використовувалося для оцінки якості моде
 
 \subsection{Символьна регресія}
 
+Для опису рухливості електронів, коли вони є основними носіями у монокристалічному кремнії в результаті застосування SR був отриманий
+наступний вираз:
+
 \begin{subequations} \label{eqNN}
     \begin{align}
       \mu_{nn}& =\frac{N_{Dn}+1413,2}{T_n^{2,2508}+\frac{a_{nn}\cdot b_{nn}}{a_{nn}+b_{nn}}}\,, \label{eqNNa} \\
@@ -337,19 +339,34 @@ MSE використовувалося для оцінки якості моде
     \end{align}
 \end{subequations}
 
+Найбільш цікавим є знаменник формули~(\ref{eqNNa}).
+Температурна залежність першого доданку надзвичайно близька до залежності рухливості, пов'язаної з розсіянням на фононах.
+Форма другого збігається з виразом, який очікується відповідно до правила Маттісена за наявності двох механізмів розсіяння.
+Загалом, вираз~(\ref{eqNN}) містить всього 9 параметрів і є набагато простішим ніж той, який пропонується в теорії Klaasen.
+Водночас похибка виразу~(\ref{eqNN}) порівняно з формулами~(\ref{eqK1})-(\ref{eqK9}) не перевищує 1.2~\% --- див. рис.~\ref{fig2}a.
+Проте навіть таке досить невелике відхилення спостерігаються лише при $T\sim200$~K та $N_d\sim10^{18}$~см$^{-3}$,
+для переважної ж більшості значень температури та рівня легування АРЕ не перевищує 0,15~\%.
+
 
 \begin{figure*}% figure* for wide figure, [h] [!] to change the placement
 \includegraphics[width=0.4\linewidth]{Fig2a} \kern 20pt
 \includegraphics[width=0.4\linewidth]{Fig2b}
 \includegraphics[width=0.4\linewidth]{Fig2c} \kern 20pt
 \includegraphics[width=0.4\linewidth]{Fig2d}
-\caption{Температурні та концентраційні залежності величини відносної похибки при оцінці рухливості носіїв заряду
+\caption{Температурні та концентраційні залежності величини абсолютної відносної похибки при оцінці рухливості носіїв заряду
 у кремнії за допомогою виразів (\ref{eqNN}) -- (\ref{eqPN}).
 Представлені випадки оцінки рухливості електронів (а, б) та дірок (в, г), коли вони є
 основними (а, в) та неосновними (б, г) носіями заряду.}
 \label{fig2}
 \end{figure*}
 
+Отриманий аналітичний вираз для опису рухливості неосновних електронів у кремнії наведено у формулі~(\ref{eqNP}),
+тоді як APE порівняно з результатами моделі Klaassen як функцію температури та концентрації акцепторів подано на рис.~\ref{fig2},б.
+В цьому випадку максимальні розбіжності, які проте не перевищують 1,1~\%, спостерігаються при
+концентрації легуючої домішки $10^{19}$~см$^{-3}$ та температурі близько 500~K.
+Додаткові області підвищеної похибки відповідають інтервалам
+$T=230-270$~K при $N_a=(3-6)\cdot 10^{17}$~см$^{-3}$, а також $T\simeq200$~K при $N_a=10^{19}$~см$^{-3}$.
+Загалом похибка оцінювання рухливості електронів як неосновних носіїв є дещо меншою, ніж у випадку, коли вони виступають основними носіями заряду.
 
 \begin{subequations} \label{eqNP}
     \begin{align}
@@ -359,6 +376,11 @@ MSE використовувалося для оцінки якості моде
     \end{align}
 \end{subequations}
 
+Вираз для опису рухливості дірок у p-Si (формула (\ref{eqPP})) містить найменшу кількість параметрів з усіх отриманих виразів.
+Проте і максимальні похибки в цьому випадку найбільші, хоча вони спостерігаються у достатньо вузькому діапазоні
+параметрів --- див. Рис.~\ref{fig2},в.
+
+
 \begin{subequations} \label{eqPP}
     \begin{align}
       \mu_{pp}& =N_{Dn}^{0,448}+\frac{470}{T_n^{2,2505}+\frac{a_{pp}\cdot b_{pp}}{a_{pp}+b_{pp}}}\,, \label{eqPPa} \\
@@ -367,17 +389,50 @@ MSE використовувалося для оцінки якості моде
     \end{align}
 \end{subequations}
 
+Для неосновних дірок досягнуто найкращої узгодженості між значеннями,
+обчисленими за допомогою отриманої формули (\ref{eqPN}), та результатами моделі Klaassen,
+що ілюструє рис.~\ref{fig2},г.
+З рисунка видно, що в більшості досліджених інтервалів температури та концентрації легуючої домішки відносна похибка не перевищує 0,08\%.
+
 
 \begin{subequations} \label{eqPN}
     \begin{align}
      \begin{split}
       \mu_{pn}& =\frac{0,0226\cdot N_{Dn}\cdot\ln T_n}{\ln T_n+0,63}+\\
-      &+\frac{113,56}{0.2414\!\cdot\!\left[T_n^{2,94}+\left(\frac{a_{pn}\cdot b_{pn}}{a_{pn}+ b_{pn}}\right)^{1,177}\right]^{0,76547}}\,, \label{eqPNa} 
+      &+\frac{113,56}{0.2414\!\cdot\!\left[T_n^{2,94}+\left(\frac{a_{pn}\cdot b_{pn}}{a_{pn}+ b_{pn}}\right)^{1,177}\right]^{0,76547}}\,, \label{eqPNa}
      \end{split}\\
       a_{pn} &=1,151\cdot N_{Dn}^{0,6085}\,, \label{eqPNb} \\
       b_{pn}& =4,21\cdot T_n^{1,143}\,. \label{eqPNc}
     \end{align}
 \end{subequations}
+
+
+Як видно, всі отримані вирази (\ref{eqNN})–(\ref{eqPN}) мають подібну структуру
+та є суттєво простішими за формули (\ref{eqK1})–(\ref{eqK9}) з точки зору глибини вкладення, загальної кількості операторів і числа параметрів.
+Водночас вони забезпечують практично ідентичну точність відтворення результатів.
+Крім того, запропоновані вирази зручніші для використання не лише через свою меншу ускладненість,
+але й через можливість використання як розрахункового параметра концентрації легуючої домішки, яка є паспортною характеристикою матеріалу,
+замість концентрацій носіїв та іонізованих домішок, які потребують додаткових розрахунків, проте фігурують у формулах теорії Klaassen.
+Звичайно, як це часто буває, остання перевага має наслідком зменшення точності отриманих формул для кремнію,
+легованого домішкою з енергією іонізації відмінною від 45~меВ при температурах, коли ще не спостерігається виснаження домішки.
+Проте це обмеження не є надто жорстким, так як
+1)~саме таку енергетичну структуру мають найуживаніші для забезпечення домішкової провідності у кремнії атоми бору та фосфору;
+2)~температура виснаження для інших можливих легантів (алюміній, миш'як, галій) вища за 200~K
+(нижню границю діапазону застосовності отриманих формул) лише при $N_D\geq10^{18}$~см$^{-3}$;
+3)~відповідні похибки не перевищують 1\%.
+Тобто, фактично, запропоновані формули  будуть справедливі для будь-яких варіантів легування.
+
+\subsection{Класичні регресійні алгоритми, порівняння ефективності різних підходів}
+
+Типові результати застосування оптимізованих та натренованих регресійних моделей до тестового набору даних наведено на Рис.~\ref{fig3}.
+Значення метрик, отримані при розрахунках рухливості різними методами узагальнені в Табл.~\ref{tblSum}.
+Видно, що похибки прогнозів зростають при збільшенні величини рухливості, причому ця тенденція спостерігається
+незалежно від вибраного алгоритму, попередньої підготовки даних чи типу носіїв заряду.
+Нормалізація даних фактично не впливає на точність прогнозів у випадку використання Random Forest та Gradient Boosting,
+що, загалом, є типовим для деревоподібних алгоритмів.
+У випадку глибоких нейронних мереж додаткова попередня обробка має сенс,
+як це можна бачити при порівнянні результатів DNN\_S та DNN\_N мереж у Табл.~\ref{tblSum}.
+
 
 
 \begin{figure*}% figure* for wide figure, [h] [!] to change the placement
@@ -399,7 +454,7 @@ MSE використовувалося для оцінки якості моде
 %\setlength{\tabcolsep}{3pt}
 \renewcommand{\arraystretch}{1.5}
 \centering
-\caption{Метрики передбачень величини рухливості носіїв заряду у кремнії, отримані при використанні різних моделей.
+\caption{Метрики передбачень величини рухливості носіїв заряду у кремнії, отримані при використанні різних моделей на тестовому наборі.
 Жирним виділено найкращі результати для кожної метрики при передбаченнях рухливості носіїв різних типів (електронів та дірок, основних та неосновних).}
 \label{tblSum}
 \vspace{2mm}
@@ -412,8 +467,6 @@ MSE використовувалося для оцінки якості моде
 \cline{2-17}
 &$\mu_{nn}$&$\mu_{np}$&$\mu_{pp}$&$\mu_{pn}$&$\mu_{nn}$&$\mu_{np}$&$\mu_{pp}$&$\mu_{pn}$
 &$\mu_{nn}$&$\mu_{np}$&$\mu_{pp}$&$\mu_{pn}$&$\mu_{nn}$&$\mu_{np}$&$\mu_{pp}$&$\mu_{pn}$\\
-\hline
-Arora \cite{Arora1982}&5,35&20,3&5,62&37,8&38,2&70,7&17,6&111&3,67&16,3&5,01&32,6&45,7&103&16,0&82,6\\
 \hline
 RF\_N &1,29&1,69&1,52&1,47&9,33&14,5&4,60&10,9&0,805&0,994&0,264&0,913&11,0&13,5&4,50&4,76\\
 \hline
@@ -434,8 +487,100 @@ DNN\_S&0,374&0,623&0,655&0,671&2,23&3,75&5,96&2,97&0,323&0,392&0,556&0,631&3,58&
 SR&\textbf{0,094}&0,137&0,140&\textbf{0,050}&\textbf{1,19}&\textbf{0,992}&\textbf{1,48}&\textbf{0,596}&\textbf{0,044}&0,077&0,079&\textbf{0,026}&\textbf{0,475}
    &\textbf{0,708}&\textbf{0,314}&\textbf{0,115}\\
 \hline
+Arora \cite{Arora1982}&5,35&20,3&5,62&37,8&38,2&70,7&17,6&111&3,67&16,3&5,01&32,6&45,7&103&16,0&82,6\\
+\hline
 \end{tabular}}
 \end{table*}
+
+Якщо порівнювати показники різних регресійних моделей, то
+катастрофічні за своєю якістю результати демонструють моделі SVR\_N.
+У цьому випадку лише медіанна відносна похибка перебуває на прийнятному рівні, близько 15~\%.
+Водночас значення інших метрик свідчать про те, що для більшості досліджених температур і концентрацій леганта
+відхилення розрахованої рухливості є надзвичайно значними.
+Для інших моделей характерним є те, що великі похибки спостерігаються лише при небагатьох комбінаціях аргументів
+($\mathrm{APE}_\mathrm{MAX}$ та MAPE або $\mathrm{APE}_\mathrm{MED}$ суттєво відрізняються).
+При цьому найгірші показники спостерігаються при використанні алгоритму Gradient Boosting.
+Трохи кращі кількісні характеристики у випадку застосування алгоритму Random Forest,
+але відмінності від GB досить незначні.
+Далі у рейтингу точності розташовуються моделі DNN\_N (за виключенням максимальної помилки, яка співмірна з
+показниками попередньо згаданих моделей) та DNN\_S, для якої практично всі показники приблизно у 1,5 рази кращі.
+Найкращі результати продемонстрували моделі SVR\_S.
+
+У Табл.~\ref{tblSum} також наведено метрики застосування виразів, отриманих за допомогою SR.
+Видно, що показники SR моделі перевищує лише SVR\_S, та й то лише
+за значеннями MAPE та $\mathrm{APE}_\mathrm{MED}$ для кремнію з дірковою провідністю.
+Для решти 12 метрик з 16 найкращі показники у SR.
+Тобто, формули (\ref{eqNN})--(\ref{eqPN}) переважають за точністю регресійні моделі, що використовують алгоритми
+випадкового лісу, градієнтного бустингу та глибоких нейронних мереж.
+Порівняно з алгоритмом опорних векторів перевага в точності не настільки велика, але
+практичне використання SVR моделей (як і інших класичних підходів до вирішення регресійних задач)
+вимагає самих натренованих моделей, використання відповідного програмного забезпечення та попередньої підготовки даних
+(коефіцієнти лінійних перетворень, які використовуються при нормалізації залежать тренувального нобору).
+Такий процес не є занадто складним та критичним для реалізації, проте виглядає дещо більш утрудненим ніж розрахунки за відомою формулою.
+Крім того, наявність аналітичного виразу має низку переваг порівняно з
+``чорним ящиком'' регресійної моделі, згаданих у Вступі.
+
+Окрім порівняння точності передбачень рухливості при використанні різних МН моделей,
+доцільно зіставити результати теорії Klaassen з іншими, більш спрощеними підходами до визначення $\mu$.
+В роботі було зосереджено увагу на теорії Arora, як найбільш популярного наближення, що зустрічається в літературі,
+та проведено розрахунки відповідно до виразів (\ref{eqArora})-(\ref{eqArora2}).
+Отримані метрики та відносні похибки представлені в Табл.~\ref{tblSum} та на рис.~\ref{fig4}, відповідно.
+На рисунку для порівняння також приведені похибки для деяких МН моделей. 
+Зазначимо, що наведені результати для n-Si є подібними до отриманих і для кремнію з дірковою провідністю.
+
+\begin{figure}% figure* for wide figure, [h] [!] to change the placement
+\includegraphics[width=0.9\linewidth]{Fig4a}
+\includegraphics[width=0.9\linewidth]{Fig4b}
+\caption{Температурні та концентраційні залежності помилки розрахунків рухливості основних (а) та
+неосновних (б) носіїв за допомогою
+різних моделей відносно теорії Klaassen.
+Модель: SVR\_S (поверхня 1), Arora (2, 5), SR (3, 6), GB\_N (4).
+}
+\label{fig4}
+\end{figure}
+
+
+Вирази (\ref{eqArora})-(\ref{eqArora2}) за своєю структурною складністю та кількістю параметрів цілком співмірні з 
+формулами (\ref{eqNN})–(\ref{eqPN}), проте дозволяють отримати суттєво гірші результати, особливо для випадку
+неосновних носіїв.
+Тобто, заміна теорії Klaassen більш простими виразами теорії Arora
+призводить до значно більших помилок ніж використання будь-якої з моделей машинного навчання
+(за виключенням SVR\_N).
+
+
+Відомо, що модель Arora, на відміну від підходу Klaassen, не враховує розсіяння носій–носій. 
+Тому для тестових наборів даних додатково обчислено значення $\mu$ в припущенні, 
+що окремі внески до повної рухливості описуються співвідношеннями Arora (\ref{eqArora}) та Dorkel (\ref{eqDorkel}), 
+а їх поєднання здійснюється відповідно до правила Матіссена.
+Виявилося, що за розглянутих умов розсіяння носій--носій надзвичайно малий:
+максимальні відхилення значень, отриманих відповідно до підходу  Arora-Dorkel від теорія Arora
+не перевищують 0,059\% для $\mu_{n,n}$, 0,068\% для $\mu_{n,p}$, 0,023\% для $\mu_{p,p}$ та
+0,028\% для $\mu_{p,n}$.
+Тобто, врахування додаткового механізму не дозволяє наблизити значення рухливості,
+що обчислюються за теорією Arora, до більш точних величин, які можуть бути отримані з використанням теорії Klaasen
+та запропонованих в роботі апроксимаційних наближень.
+
+\section{Висновки}
+
+Розроблено та налаштовано регресійні моделі машинного навчання для оцінки рухливості електронів та дірок у n-Si та p-Si 
+з використанням алгоритмів випадкового лісу, градієнтного бустинга, 
+опорних векторів та глибоких нейронних мереж.
+Проведенно порівняння точності прогнозів вказаних моделей у порівнянні з теорією Klaassen та 
+показано доцільність застосування алгоритмів Support Vector Regression
+  та Deep Neural Network з попередньою нормалізацією вхідних даних.
+
+Використовуючи алгоритм символьної регресії отримано аналітичні вирази 
+для опису рухливості електронів і дірок у монокристалічному кремнії в інтервалі температур $200-500$~K 
+та концентрацій легуючої домішки $10^{13}-10^{19}$~см$^{-3}$.
+Порівняно з моделлю Klaassen, запропоновані формули містять більш ніж удвічі меншу кількість параметрів, 
+не потребують попереднього визначення ступеня іонізації легантів і мають простішу структурну форму. 
+Водночас втрата точності є мінімальною: 
+приблизно для 50\% усіх комбінацій температури та ступеня легування
+відносна похибка не перевищує  0,044\%, 0,077\%, 0,079\% та 0,026\% при обчисленні
+$\mu_{n,n}$, $\mu_{n,p}$, $\mu_{p,p}$ та $\mu_{p,n}$, відповідно.
+Порівняно з моделлю Arora, отримані вирази характеризуються співмірною складністю, 
+проте забезпечують істотно вищу точність. 
+Це свідчить про доцільність і перспективність їхнього практичного застосування.
 
 \appendix
 
@@ -747,74 +892,139 @@ $r_1$&$r_2$&$r_3$&$r_4$&$r_5$&\multicolumn{2}{c|}{$r_6$}\\
 
 
 
+%\bibliography{olikh}
 
-%\stepcounter{AppendixCount}
-%\renewcommand{\thetable}{\Asbuk{\value{AppendixCount}}.\arabic{table}}
-%\renewcommand{\theequation}{\Asbuk{\value{AppendixCount}}.\arabic{equation}}
-%
-%\section*{ДОДАТОК~\Asbuk{\value{AppendixCount}}. Вирази для опису рухливості при врахуванні одного механізму рухливостіОцінка рухливості відповідно до моделі Klaassen (Philips)}
-%
-%
-%\stepcounter{AppendixCount}
-%
-%
-%\section*{ДОДАТОК~\Asbuk{\value{AppendixCount}}. Оцінка рухливості відповідно до моделі Klaassen (Philips)}
+\begin{thebibliography}{99}                                                                                                %
 
 
-%\setcounter{equation}{0} % скидаємо лічильник формул
-%\setcounter{table}{0} % скидаємо лічильник таблиць
+\bibitem{Seeger2004}
+K.~Seeger. \textit{Semiconductor Physics. An Introduction}
+(Springer, Berlin, Heidelberg, 2004).
+
+\bibitem{Fletcher1957}
+N.H.~Fletcher. The high current limit for semiconductor junction devices.
+\textit{Proc. IRE} \textbf{45}, 862 (1957).
+
+\bibitem{Caughey1967}
+D.M.~Caughey, R.E.~Thomas. Carrier mobilities in silicon empirically related to doping and field.
+\textit{Proc. IEEE} \textbf{55}, 2192 (1967).
+
+\bibitem{Masetti1983}
+G.~Masetti, M.~Severi, S.~Solmi. Modeling of carrier mobility against carrier concentration in arsenic-, phosphorus-, and boron-doped silicon.
+\textit{IEEE Trans. Electron Devices} \textbf{30}, 764 (1983).
+
+\bibitem{Arora1982}
+N.D.~Arora, J.R.~Hauser, D.J.~Roulston. Electron and hole mobilities in silicon as a function of concentration and temperature.
+\textit{IEEE Trans. Electron Devices} \textbf{29}, 292 (1982).
+
+\bibitem{KLAASSEN953}
+D.B.M.~Klaassen. A unified mobility model for device simulation. I. Model equations and concentration dependence.
+\textit{Solid-State Electron.} \textbf{35}, 953 (1992).
+
+\bibitem{Swirhun1986}
+S.E.~Swirhun, Y.-H.~Kwark, R.M.~Swanson. Measurement of electron lifetime, electron mobility and band-gap narrowing in heavily doped p-type silicon.
+In: \textit{1986 International Electron Devices Meeting}, 24 (1986).
+
+\bibitem{Alamo1985}
+J.~del~Alamo, S.~Swirhun, R.M.~Swanson. Simultaneous measurement of hole lifetime, hole mobility and bandgap narrowing in heavily doped n-type silicon.
+In: \textit{1985 International Electron Devices Meeting}, 290 (1985).
+
+\bibitem{Cummings2010}
+D.J.~Cummings, A.F.~Witulski, H.~Park {\it et~al.}
+Mobility modeling considerations for radiation effects simulations in silicon.
+\textit{IEEE Trans. Nucl. Sci.} \textbf{57}, 2318 (2010).
+
+\bibitem{NoorMohammad1993}
+S.~Noor~Mohammad, A.V.~Bemis, R.L.~Carter, R.B.~Renbeck.
+Temperature, electric field, and doping dependent mobilities of electrons and holes in semiconductors.
+\textit{Solid-State Electron.} \textbf{36}, 1677 (1993).
+
+\bibitem{Si_ni_Couderc}
+R.~Couderc, M.~Amara, M.~Lemiti.
+Reassessment of the intrinsic carrier density temperature dependence in crystalline silicon.
+\textit{J. Appl. Phys.} \textbf{115}, 093705 (2014).
+
+\bibitem{Passler2002}
+R.~P\"assler. Dispersion-related description of temperature dependencies of band gaps in semiconductors.
+\textit{Phys. Rev. B} \textbf{66}, 085201 (2002).
+
+\bibitem{AlQurashi2018}
+A.~AlQurashi, C.R.~Selvakumar.
+A new approximation of Fermi-Dirac integrals of order 1/2 for degenerate semiconductor devices.
+\textit{Superlattices Microstruct.} \textbf{118}, 308 (2018).
+
+\bibitem{Angelis2023}
+D.~Angelis, F.~Sofos, T.E.~Karakasidis.
+Artificial intelligence in physical sciences: Symbolic regression trends and perspectives.
+\textit{Arch. Comput. Methods Eng.} \textbf{30}, 3845 (2023).
+
+\bibitem{Hruska2025}
+V.~Hruška, A.~Furmanová, M.~Bednařík.
+Analytical formulae for design of one-dimensional sonic crystals with smooth geometry based on symbolic regression.
+\textit{J. Sound Vibration} \textbf{597}, 118821 (2025).
+
+\bibitem{Davis2023}
+B.L.~Davis, Z.~Jin.
+Discovery of a planar black hole mass scaling relation for spiral galaxies.
+\textit{Astrophys. J. Lett.} \textbf{956}, L22 (2023).
+
+\bibitem{Mengel2023}
+T.~Mengel, P.~Steffanic, C.~Hughes {\it et~al.}
+Interpretable machine learning methods applied to jet background subtraction in heavy-ion collisions.
+\textit{Phys. Rev. C} \textbf{108}, L021901 (2023).
+
+\bibitem{Li2023}
+Y.~Li, H.~Wang, Y.~Li {\it et~al.}
+Electron transfer rules of minerals under pressure informed by machine learning.
+\textit{Nat. Commun.} \textbf{14}, 1815 (2023).
+
+\bibitem{cranmer2023}
+M.~Cranmer. Interpretable machine learning for science with PySR and SymbolicRegression.jl 
+\textit{arXiv} (2023).
+
+\bibitem{Hanif2024}
+M.F.~Hanif, M.U.~Siddique, J.~Si {\it et~al.}
+Enhancing solar forecasting accuracy with sequential deep artificial neural network and hybrid random forest and gradient boosting models across varied terrains.
+\textit{Advanced Theory and Simulations} \textbf{7}, 2301289 (2024).
+
+\bibitem{Akiba2019}
+T.~Akiba, S.~Sano, T.~Yanase {\it et~al.}
+Optuna: A next-generation hyperparameter optimization framework.
+In: \textit{Proc. 25th ACM SIGKDD Int. Conf. Knowledge Discovery \& Data Mining}, 2623 (2019).
+
+\bibitem{Choo1972}
+S.C.~Choo. Theory of a forward-biased diffused-junction P-L-N rectifier. Part I: Exact numerical solutions.
+\textit{IEEE Trans. Electron Devices} \textbf{19}, 954 (1972).
+
+\bibitem{Dorkel1981}
+J.M.~Dorkel, Ph.~Leturcq.
+Carrier mobilities in silicon semi-empirically related to temperature, doping and injection level.
+\textit{Solid-State Electron.} \textbf{24}, 821 (1981).
 
 
-
-\bibliography{olikh}
-
-%\begin{thebibliography}{9}                                                                                                %
-%
-%
-%\bibitem {1}V.V.~Romaka, E.K.~Hlil, O.V.~Bovgyra, L.P.~Romaka, V.M.~Davydov,
-%R.V.~Krayovskyy. Mechanism of defect formation in heavily Y-doped
-%$n$-ZrNiSn. I. Crystal and electronic structures. \textit{Ukr. J.
-%Phys.} \textbf{54}, 1119 (2009).
-%
-%\bibitem {2}L.~Romaka, Yu.~Stadnyk, M.G.~Shelyapina {\it et~al.}
-%Electronic structure of the Ti$_{1-x}$Sc$_x$NiSn and
-%Zr$_{1-x}$Sc$_x$NiSn solid solutions. \textit{J.~Alloys Comp.}
-%\textbf{396}, 64 (2005).
-%
-%\bibitem {3}B.I.~Shklovskii, A.L.~Efros. \textit{Electronic Properties of
-%Doped Semiconductors} (Springer,  1984) [ISBN: 978-3-662-02403-4].
-%
-%\bibitem {4}V.A.~Romaka, Yu.V.~Stadnyk, D.~Fruchart {\it et~al.}
-%Features of electrical conductivity in the n-ZrNiSn intermetallic
-%semiconductor heavily doped with the In acceptor impurity.
-%\textit{Semiconductors} \textbf{41}, 1041 (2007).
-%
-%\bibitem {5}B.I.~Shklovski\u{i}, A.L.~\'{E}fros.
-%Transition from metallic to activation conductivity in compensated
-%semiconductors.  \textit{Sov. Phys. JETP} \textbf{34}, 435 (1972).
-%
-%\bibitem {6}B.I.~Shklovski\u{i}, A.L.~\'{E}fros.
-%Completely compensated crystalline semiconductors as a model of an
-%amorphous semiconductor. \textit{Zh. \`{E}ksp. Teor. Fiz.}
-%\textbf{62}, 1156 (1972).
-%
-%\begin{flushright}
-%{\footnotesize Received 22.01.22}
-%\end{flushright}
-%\end{thebibliography}
+\begin{flushright}
+{\footnotesize Received 05.03.26}
+\end{flushright}
+\end{thebibliography}
 
 \vspace*{-5mm} \rezume{%
-O.Ya. Olikh} {MACHINE LEARNING MODELS FOR EFFICIENT MOBILITY ESTIMATION IN SILICON} {Досліджено вплив
-акцепторної домішки Y на зміну питомого електроопору ($\rho $),
-коефіцієнта термо-ерс ($\alpha $), енергетичних характеристик
-інтерметалічного напівпровідника $n$-ZrNiSn у діапазонах: $T = 80
--380$ К, $N_{\rm A}^{Y}\approx 3,8\cdot 10^{20}$ см$^{-3}$ ($x =
-0{,}02)$--$4{,}8\cdot 10^{21}$~см$^{-3 }$ ($x = 0{,}25$). Зроблено
-висновки про механізми електропровідності Zr$_{1-x}$Y$_{x}$NiSn.
-Встановлено залежності між концентрацією домішки та характеристиками
-амплітуди модуляції зон неперервних енергій. Обговорення результатів
-проводиться у межах моделі сильнолегованого і сильнокомпенсованого
-напівпровідника Шкловського--Ефроса.}{\textit{K\,e\,y\,w\,o\,r\,d\,s:} механізм дефектоутворення, модель
-Шкловського--Ефроса, сильнокомпенсований напівпровідник,
-сильнолегований напівпровідник.}
+O.Ya. Olikh} {MACHINE LEARNING MODELS FOR EFFICIENT MOBILITY ESTIMATION IN SILICON} 
+{
+This study evaluates the application of machine learning (ML) models—specifically 
+Random Forest (RF), Gradient Boosting (GB), Support Vector Regression (SVR), 
+and Deep Neural Networks (DNN) --- alongside Symbolic Regression (SR) for predicting carrier mobility in monocrystalline silicon 
+over a wide range of temperatures ($200-500$~K) and doping concentrations ($10^{13}-10^{19}$~cm$^{-3}$).
+The analytical expressions derived via SR are notably more parsimonious, 
+requiring 50\% fewer parameters than the Klaassen model. 
+Furthermore, these expressions bypass the need for preliminary impurity ionization calculations 
+while maintaining a relative error below 0.1\% in most cases. 
+Comparative analysis demonstrates that SR and SVR models significantly outperform the Arora approximation in terms of accuracy, 
+particularly for minority carriers. 
+The proposed approach offers a robust framework for TCAD systems, 
+substantially reducing computational overhead while ensuring high modeling fidelity.
+}
+{\textit{K\,e\,y\,w\,o\,r\,d\,s:} 
+mobility, silicon, Klaasen model,
+symbolic regression, machine learning.
+}
 \end{document}
