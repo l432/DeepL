@@ -1,4 +1,5 @@
 \documentclass[fleqn,twoside,twocolumn,nofootinbib,showkeys]{revtex4} % Specifies the document class %,unsortedaddress
+%\documentclass[fleqn,twoside,twocolumn,nofootinbib,showkeys,draft]{revtex4}
 \usepackage[sec,doi,cyr]{ujp_UTF8}
 %\usepackage[cyr]{ujp_UTF8} %for cyrillic
 \usepackage{multirow}
@@ -16,6 +17,8 @@
 
 %\usepackage{cite}
 %\bibliographystyle{utf8gost780u}
+%\bibliographystyle{nature}
+%\bibliographystyle{ieeetr}
 
 \begin{document}
 \title[Застосування моделей машинного навчання для оцінки рухливості носіїв у Si]%колонтитул
@@ -135,10 +138,30 @@ $\mu_i$ --- рухливість носіїв за наявності лише $
 Проте у вказаних роботах приведені дані лише для однієї температури і тому поширення виразів на широкий температурний діапазон є дещо самовпевненим.
 
 Зазначимо, що питання опису рухливості продовжує привертати увагу і періодично з'являються нові моделі.
-Одні з них уточнюють підходи до опису розсіяння відповідно до певного механізму \cite{Rode2023} або в структурах з обмеженою розмірністю \cite{Sadi2019},
+Одні з них уточнюють підходи до опису розсіяння відповідно до певного механізму \cite{Rode2023} або в структурах з обмеженою розмірністю \cite{Sadi2019,Wang2020},
 інші --- пропонують універсальні вирази, які дозволяють врахувати додаткові механізми розсіяння за рахунок модифікації існуючих моделей \cite{Abenante2023, Cummings2010, Wu2025},
 використовують апроксимаційні поліноми \cite{NoorMohammad1993}, чи базуються на перших принципах \cite{Leveillee2023,Wu2016}.
-Метою даної роботи є створення регресійних моделей машинного навчання (МН), здатних забезпечити оцінку рухливості носіїв заряду у монокристалічному кремнії
+
+
+Як і для більшості аспектів фізики напівпровідників \cite{Liu2022a}, задача вивчення рухливості носіїв заряду
+останнім часом часто розв’язується із застосуванням методів машинного навчання (МН),
+серед яких можна виокремити кілька ключових напрямів.
+По-перше, використання обчислювально ефективних сурогатних моделей дає змогу суттєво спростити ресурсомісткі розрахунки
+процесів перенесення з перших принципів або розв’язання рівняння Больцмана;
+зокрема застосовують глибокі \cite{Li2020} та фізично інформовані нейронні мережі \cite{Li2023a,Li2024b}, причому в останньому випадку структура
+диференціальних рівнянь безпосередньо інтегрується в процес навчання.
+По-друге, точне визначення рухливості є не менш складним завданням, ніж її моделювання,
+у зв’язку з чим запропоновано ряд МН-підходів для аналізу результатів вимірювань \cite{Fai2022} і вдосконалення процедур їхнього проведення \cite{Xu2022}.
+По-третє, підхід перенесення знань дозволяє залучати великий масив даних щодо добре досліджених об’ємних матеріалів
+(наприклад, кремнію) для прогнозування властивостей нових систем, зокрема двовимірних кристалів \cite{Chen2024},
+для яких обчислення рухливості з перших принципів є надзвичайно складним.
+Нарешті, розробляються МН-моделі, спрямовані на передбачення рухливості \cite{Hong2026,Nematiaram2025,Reiser2021,Pimachev2021,Bhat2024,Tan2023} на основі набору фізичних дескрипторів
+(симетрія ґратки, об’ємна геометрія молекул, кількість валентних електронів, константа електрон-фононної взаємодії,
+ширина забороненої зони тощо).
+Останній варіант відповідає поширеному підходу до моделювання й оптимізації різноманітних напівпровідникових матеріалів і пристроїв \cite{Mamun2025, Raut2025,Khatua2024}.
+
+
+Метою даної роботи є створення регресійних МН моделей, здатних забезпечити оцінку рухливості носіїв заряду у монокристалічному кремнії
 залежно від температури $T$ та концентрації легуючої домішки $N_D$.
 Такі моделі поєднують простоту обчислень, характерну для підходу Arora, з високою точністю передбачень, що є основною перевагою моделі Klaassen.
 Запропонований підхід може бути адаптований до конкретного набору експериментальних даних або до результатів фундаментальних розрахунків,
@@ -242,7 +265,7 @@ $F_\frac{1}{2}$ --- інтеграл Фермі--Дірака ступеня 1/2
 Формування функціональної залежності та підбір її числових параметрів здійснюються із застосуванням еволюційних метаевристичних алгоритмів \cite{Angelis2023}.
 SR є методом, що поєднує експериментальні дані, моделі машинного навчання та наукові теорії,
 забезпечуючи отримання інтерпретованих аналітичних виразів, які потребують менших обчислювальних витрат порівняно
-з класичними моделями МН і простіше інтегруються у розв’язання широкого кола фізичних задач \cite{Angelis2023,Hruska2025,Davis2023,Mengel2023,Li2023}.
+з класичними моделями МН і простіше інтегруються у розв’язання широкого кола фізичних задач \cite{Angelis2023,Hruska2025,Davis2023,Kuryliuk2026,Mengel2023,Li2023}.
 
 Алгоритм реалізовувався на мові Python з використанням пакету PySR\cite{cranmer2023}.
 Для побудови рівнянь використовувалися стандартні математичні функції
@@ -893,120 +916,175 @@ $r_1$&$r_2$&$r_3$&$r_4$&$r_5$&\multicolumn{2}{c|}{$r_6$}\\
 
 
 
-\bibliography{olikh}
+%\bibliography{olikh}
 
-%\begin{thebibliography}{99}                                                                                                %
-%
-%
-%\bibitem{Seeger2004}
-%K.~Seeger. \textit{Semiconductor Physics. An Introduction}
-%(Springer, Berlin, Heidelberg, 2004).
-%
-%\bibitem{Fletcher1957}
-%N.H.~Fletcher. The high current limit for semiconductor junction devices.
-%\textit{Proc. IRE} \textbf{45}, 862 (1957).
-%
-%\bibitem{Caughey1967}
-%D.M.~Caughey, R.E.~Thomas. Carrier mobilities in silicon empirically related to doping and field.
-%\textit{Proc. IEEE} \textbf{55}, 2192 (1967).
-%
-%\bibitem{Masetti1983}
-%G.~Masetti, M.~Severi, S.~Solmi. Modeling of carrier mobility against carrier concentration in arsenic-, phosphorus-, and boron-doped silicon.
-%\textit{IEEE Trans. Electron Devices} \textbf{30}, 764 (1983).
-%
-%\bibitem{Arora1982}
-%N.D.~Arora, J.R.~Hauser, D.J.~Roulston. Electron and hole mobilities in silicon as a function of concentration and temperature.
-%\textit{IEEE Trans. Electron Devices} \textbf{29}, 292 (1982).
-%
-%\bibitem{KLAASSEN953}
-%D.B.M.~Klaassen. A unified mobility model for device simulation. I. Model equations and concentration dependence.
-%\textit{Solid-State Electron.} \textbf{35}, 953 (1992).
-%
-%\bibitem{Swirhun1986}
-%S.E.~Swirhun, Y.-H.~Kwark, R.M.~Swanson. Measurement of electron lifetime, electron mobility and band-gap narrowing in heavily doped p-type silicon.
-%In: \textit{1986 International Electron Devices Meeting}, 24 (1986).
-%
-%\bibitem{Alamo1985}
-%J.~del~Alamo, S.~Swirhun, R.M.~Swanson. Simultaneous measurement of hole lifetime, hole mobility and bandgap narrowing in heavily doped n-type silicon.
-%In: \textit{1985 International Electron Devices Meeting}, 290 (1985).
-%
-%\bibitem{Cummings2010}
-%D.J.~Cummings, A.F.~Witulski, H.~Park {\it et~al.}
-%Mobility modeling considerations for radiation effects simulations in silicon.
-%\textit{IEEE Trans. Nucl. Sci.} \textbf{57}, 2318 (2010).
-%
-%\bibitem{NoorMohammad1993}
-%S.~Noor~Mohammad, A.V.~Bemis, R.L.~Carter, R.B.~Renbeck.
-%Temperature, electric field, and doping dependent mobilities of electrons and holes in semiconductors.
-%\textit{Solid-State Electron.} \textbf{36}, 1677 (1993).
-%
-%\bibitem{Si_ni_Couderc}
-%R.~Couderc, M.~Amara, M.~Lemiti.
-%Reassessment of the intrinsic carrier density temperature dependence in crystalline silicon.
-%\textit{J. Appl. Phys.} \textbf{115}, 093705 (2014).
-%
-%\bibitem{Passler2002}
-%R.~P\"assler. Dispersion-related description of temperature dependencies of band gaps in semiconductors.
-%\textit{Phys. Rev. B} \textbf{66}, 085201 (2002).
-%
-%\bibitem{AlQurashi2018}
-%A.~AlQurashi, C.R.~Selvakumar.
-%A new approximation of Fermi-Dirac integrals of order 1/2 for degenerate semiconductor devices.
-%\textit{Superlattices Microstruct.} \textbf{118}, 308 (2018).
-%
-%\bibitem{Angelis2023}
-%D.~Angelis, F.~Sofos, T.E.~Karakasidis.
-%Artificial intelligence in physical sciences: Symbolic regression trends and perspectives.
-%\textit{Arch. Comput. Methods Eng.} \textbf{30}, 3845 (2023).
-%
-%\bibitem{Hruska2025}
-%V.~Hruška, A.~Furmanová, M.~Bednařík.
-%Analytical formulae for design of one-dimensional sonic crystals with smooth geometry based on symbolic regression.
-%\textit{J. Sound Vibration} \textbf{597}, 118821 (2025).
-%
-%\bibitem{Davis2023}
-%B.L.~Davis, Z.~Jin.
-%Discovery of a planar black hole mass scaling relation for spiral galaxies.
-%\textit{Astrophys. J. Lett.} \textbf{956}, L22 (2023).
-%
-%\bibitem{Mengel2023}
-%T.~Mengel, P.~Steffanic, C.~Hughes {\it et~al.}
-%Interpretable machine learning methods applied to jet background subtraction in heavy-ion collisions.
-%\textit{Phys. Rev. C} \textbf{108}, L021901 (2023).
-%
-%\bibitem{Li2023}
-%Y.~Li, H.~Wang, Y.~Li {\it et~al.}
-%Electron transfer rules of minerals under pressure informed by machine learning.
-%\textit{Nat. Commun.} \textbf{14}, 1815 (2023).
-%
-%\bibitem{cranmer2023}
-%M.~Cranmer. Interpretable machine learning for science with PySR and SymbolicRegression.jl
-%\textit{arXiv} (2023).
-%
-%\bibitem{Hanif2024}
-%M.F.~Hanif, M.U.~Siddique, J.~Si {\it et~al.}
-%Enhancing solar forecasting accuracy with sequential deep artificial neural network and hybrid random forest and gradient boosting models across varied terrains.
-%\textit{Advanced Theory and Simulations} \textbf{7}, 2301289 (2024).
-%
-%\bibitem{Akiba2019}
-%T.~Akiba, S.~Sano, T.~Yanase {\it et~al.}
-%Optuna: A next-generation hyperparameter optimization framework.
-%In: \textit{Proc. 25th ACM SIGKDD Int. Conf. Knowledge Discovery \& Data Mining}, 2623 (2019).
-%
-%\bibitem{Choo1972}
-%S.C.~Choo. Theory of a forward-biased diffused-junction P-L-N rectifier. Part I: Exact numerical solutions.
-%\textit{IEEE Trans. Electron Devices} \textbf{19}, 954 (1972).
-%
-%\bibitem{Dorkel1981}
-%J.M.~Dorkel, Ph.~Leturcq.
-%Carrier mobilities in silicon semi-empirically related to temperature, doping and injection level.
-%\textit{Solid-State Electron.} \textbf{24}, 821 (1981).
 
-%
-%\begin{flushright}
-%{\footnotesize Received 05.03.26}
-%\end{flushright}
-%\end{thebibliography}
+
+\begin{thebibliography}{99}                                                                                                %
+
+\bibitem{Hamaguchi2023}
+C.~Hamaguchi. \textit{Basic Semiconductor Physics} (Springer Cham, 4~ed., 2023) [ISBN: 978-3-031-25510-6].
+
+\bibitem{Leveillee2023}
+J.~Leveillee, X.~Zhang, E.~Kioupakis \textit{et~al.} Ab initio calculation of carrier mobility in semiconductors including ionized-impurity scattering. \textit{Phys. Rev. B} \textbf{107}, 125207 (2023).
+
+\bibitem{Seeger2004}
+K.~Seeger. \textit{Semiconductor Physics. An Introduction} (Springer Berlin, Heidelberg, 9~ed., 2004) [ISBN: 978-3-540-21957-6].
+
+\bibitem{Boeer2023}
+K.~W. B\"oer, U.~W. Pohl. \textit{Semiconductor Physics} (Springer Cham, 2~ed., 2023) [ISBN: 978-3-031-18285-3].
+
+\bibitem{Bourbaba2025}
+E.~Bourbaba, S.~Kadri, M.~Bensafi \textit{et~al.} Empirical model integration for accurate charge carrier mobility simulation in silicon mosfets. \textit{Open Physics} \textbf{23}, 20250248 (2025).
+
+\bibitem{Fletcher1957}
+N.~H. Fletcher. The high current limit for semiconductor junction devices. \textit{Proc. IRE} \textbf{45}, 862 (1957).
+
+\bibitem{Rudra2024}
+S.~Rudra, D.~Rao, S.~Ponc{\'e} \textit{et~al.} Dominant scattering mechanisms in limiting the electron mobility of scandium nitride. \textit{Nano Lett.} \textbf{24}, 11529 (2024).
+
+\bibitem{Caughey1967}
+D.~Caughey, R.~Thomas. Carrier mobilities in silicon empirically related to doping and field. \textit{Proc. IEEE} \textbf{55}, 2192 (1967).
+
+\bibitem{Masetti1983}
+G.~Masetti, M.~Severi, S.~Solmi. Modeling of carrier mobility against carrier concentration in arsenic-, phosphorus-, and boron-doped silicon. \textit{IEEE Trans. Electron Devices} \textbf{30}, 764 (1983).
+
+\bibitem{Berrada2020}
+S.~Berrada, H.~Carrillo-Nunez, J.~Lee \textit{et~al.} Nano-electronic simulation software (ness): a flexible nano-device simulation platform. \textit{J. Comput. Electron.} \textbf{19}, 1031 (2020).
+
+\bibitem{Arora1982}
+N.~Arora, J.~Hauser, D.~Roulston. Electron and hole mobilities in silicon as a function of concentration and temperature. \textit{IEEE Trans. Electron Devices} \textbf{29}, 292 (1982).
+
+\bibitem{KLAASSEN953}
+D.~Klaassen. A unified mobility model for device simulation --- I. model equations and concentration dependence. \textit{Solid-State Electron.} \textbf{35}, 953 (1992).
+
+\bibitem{Swirhun1986}
+S.~Swirhun, Y.-H. Kwark, R.~Swanson. Measurement of electron lifetime, electron mobility and band-gap narrowing in heavily doped p-type silicon. \textit{1986 International Electron Devices Meeting}, 24 (1986).
+
+\bibitem{Alamo1985}
+J.~del Alamo, S.~Swirhun, R.~Swanson. Simultaneous measurement of hole lifetime, hole mobility and bandgap narrowing in heavily doped n-type silicon. \textit{1985 International Electron Devices Meeting}, 290 (1985).
+
+\bibitem{Rode2023}
+D.~L. Rode, J.~S. Cetnar. Electron mobility of heavily doped semiconductors including multiple scattering by ionized impurities. \textit{J. Appl. Phys.} \textbf{134}, 075701 (2023).
+
+\bibitem{Sadi2019}
+T.~Sadi, C.~Medina-Bailon, M.~Nedjalkov \textit{et~al.} Simulation of the impact of ionized impurity scattering on the total mobility in si nanowire transistors. \textit{Materials} \textbf{12}, 124 (2019).
+
+\bibitem{Wang2020}
+Z.~Wang, Z.~Tang, A.~Guo \textit{et~al.} Temperature-driven gate geometry effects in nanoscale cryogenic mosfets. \textit{IEEE Electron Device Lett.} \textbf{41}, 661 (2020).
+
+\bibitem{Abenante2023}
+L.~Abenante. Incomplete activation and ionization of dopants in si at room temperature. \textit{AIP Adv.} \textbf{13}, 015109 (2023).
+
+\bibitem{Cummings2010}
+D.~J. Cummings, A.~F. Witulski, H.~Park \textit{et~al.} Mobility modeling considerations for radiation effects simulations in silicon. \textit{IEEE Trans. Nucl. Sci.} \textbf{57}, 2318 (2010).
+
+\bibitem{Wu2025}
+Q.~Wu, A.~Sojka, B.~D. Price \textit{et~al.} Two-fluid mobility model from coupled hydrodynamic equations for simulating laser-driven semiconductor switches. \textit{Phys. Rev. Appl.} \textbf{24}, 014007 (2025).
+
+\bibitem{NoorMohammad1993}
+S.~Noor Mohammad, A.~V. Bemis, R.~L. Carter \textit{et~al.} Temperature, electric field, and doping dependent mobilities of electrons and holes in semiconductors. \textit{Solid-State Electron.} \textbf{36}, 1677 (1993).
+
+\bibitem{Wu2016}
+Y.-N. Wu, X.-G. Zhang, S.~T. Pantelides. First-principles calculations reveal controlling principles for carrier mobilities in semiconductors. \textit{Semicond. Sci. Technol.} \textbf{31}, 115016 (2016).
+
+\bibitem{Liu2022a}
+D.-Y. Liu, L.-M. Xu, X.-M. Lin \textit{et~al.} Machine learning for semiconductors. \textit{Chip} \textbf{1}, 100033 (2022).
+
+\bibitem{Li2020}
+R.~Li, E.~Lee, T.~Luo. A unified deep neural network potential capable of predicting thermal conductivity of silicon in different phases. \textit{Mater. Today Phys.} \textbf{12}, 100181 (2020).
+
+\bibitem{Li2023a}
+R.~Li, E.~Lee, T.~Luo. Physics-informed deep learning for solving coupled electron and phonon boltzmann transport equations. \textit{Phys. Rev. Appl.} \textbf{19}, 064049 (2023).
+
+\bibitem{Li2024b}
+R.~Li, J.~Zhou, J.-X. Wang \textit{et~al.} Physics-informed bayesian neural networks for solving phonon boltzmann transport equation in forward and inverse problems with sparse and noisy data. \textit{ASME Journal of Heat and Mass Transfer} \textbf{147}, 032501 (2024).
+
+\bibitem{Fai2022}
+C.~Fai, A.~J. Ladd, C.~J. Hages. Machine learning for enhanced semiconductor characterization from time-resolved photoluminescence. \textit{Joule} \textbf{6}, 2585 (2022).
+
+\bibitem{Xu2022}
+Y.~Xu, A.~V. Lalwani, K.~Arora \textit{et~al.} Hall-effect sensor design with physics-informed gaussian process modeling. \textit{IEEE Sensors J.} \textbf{22}, 22519 (2022).
+
+\bibitem{Chen2024}
+X.~Chen \textit{et~al.} From bulk effective mass to 2d carrier mobility accurate prediction via adversarial transfer learning. \textit{Nat. Commun.} \textbf{15}, 5391 (2024).
+
+\bibitem{Hong2026}
+J.~H. Hong, C.-H. Lee, H.~W. Kim \textit{et~al.} Ai-driven quantitative review of mobility--stability trade-off in oxide semiconductors. \textit{Nano Convergence} \textbf{13}, 4 (2026).
+
+\bibitem{Nematiaram2025}
+T.~Nematiaram, Z.~Lamprou, Y.~Moshfeghi. Accelerating the discovery of high-mobility molecular semiconductors: a machine learning approach. \textit{Chem. Commun.} \textbf{61}, 3676 (2025).
+
+\bibitem{Reiser2021}
+P.~Reiser, M.~Konrad, A.~Fediai \textit{et~al.} Analyzing dynamical disorder for charge transport in organic semiconductors via machine learning. \textit{J. Chem. Theory Comput.} \textbf{17}, 3750 (2021).
+
+\bibitem{Pimachev2021}
+A.~K. Pimachev, S.~Neogi. First-principles prediction of electronic transport in fabricated semiconductor heterostructures via physics-aware machine learning. \textit{npj Comput. Mater.} \textbf{7}, 93 (2021).
+
+\bibitem{Bhat2024}
+V.~Bhat, B.~Ganapathysubramanian, C.~Risko. Rapid estimation of the intermolecular electronic couplings and charge-carrier mobilities of crystalline molecular organic semiconductors through a machine learning pipeline. \textit{J. Phys. Chem. Lett.} \textbf{15}, 7206 (2024).
+
+\bibitem{Tan2023}
+T.~Tan, D.~Wang. Machine learning based charge mobility prediction for organic semiconductors. \textit{J. Chem. Phys.} \textbf{158}, 094102 (2023).
+
+\bibitem{Mamun2025}
+K.~M. Mamun, N.~Pala, M.~S.~A. Shawkat. A comprehensive review of machine learning approaches for semiconductor device modeling and simulation. \textit{IEEE Access} \textbf{13}, 162969 (2025).
+
+\bibitem{Raut2025}
+P.~Raut, D.~K. Panda, A.~K. Goyal. A comprehensive review on next-generation modeling and optimization for semiconductor devices. \textit{IEEE Access} \textbf{13}, 123724 (2025).
+
+\bibitem{Khatua2024}
+R.~Khatua, B.~Das, A.~Mondal. Physics-informed machine learning with data-driven equations for predicting organic solar cell performance. \textit{ACS Appl. Mater. Interfaces} \textbf{16}, 57467 (2024).
+
+\bibitem{Si_ni_Couderc}
+R.~Couderc, M.~Amara, M.~Lemiti. Reassessment of the intrinsic carrier density temperature dependence in crystalline silicon. \textit{J. Appl. Phys.} \textbf{115}, 093705 (2014).
+
+\bibitem{Passler2002}
+R.~P\"assler. Dispersion-related description of temperature dependencies of band gaps in semiconductors. \textit{Phys. Rev. B} \textbf{66}, 085201 (2002).
+
+\bibitem{AlQurashi2018}
+A.~AlQurashi, C.~Selvakumar. A new approximation of fermi-dirac integrals of order 1/2 for degenerate semiconductor devices. \textit{Superlattices Microstruct.} \textbf{118}, 308 (2018).
+
+\bibitem{Tonda2024}
+A.~Tonda. Review of pysr: high-performance symbolic regression in python and julia. \textit{Genet. Program. Evol. M.} \textbf{26}, 7 (2024).
+
+\bibitem{Angelis2023}
+D.~Angelis, F.~Sofos, T.~E. Karakasidis. Artificial intelligence in physical sciences: Symbolic regression trends and perspectives. \textit{Arch. Comput. Methods Eng.} \textbf{30}, 3845 (2023).
+
+\bibitem{Hruska2025}
+V.~Hruška, A.~Furmanová, M.~Bednařík. Analytical formulae for design of one-dimensional sonic crystals with smooth geometry based on symbolic regression. \textit{J. Sound Vibration} \textbf{597}, 118821 (2025).
+
+\bibitem{Davis2023}
+B.~L. Davis, Z.~Jin. Discovery of a planar black hole mass scaling relation for spiral galaxies. \textit{Astrophys. J. Lett.} \textbf{956}, L22 (2023).
+
+\bibitem{Kuryliuk2026}
+V.~V. Kuryliuk, O.~Y. Olikh. Thermal conductivity of nanoporous silicon: Molecular dynamics simulations and machine learning prediction. \textit{Low Temp. Phys.} \textbf{52}, 50 (2026).
+
+\bibitem{Mengel2023}
+T.~Mengel, P.~Steffanic, C.~Hughes \textit{et~al.} Interpretable machine learning methods applied to jet background subtraction in heavy-ion collisions. \textit{Phys. Rev. C} \textbf{108}, L021901 (2023).
+
+\bibitem{Li2023}
+Y.~Li, H.~Wang, Y.~Li \textit{et~al.} Electron transfer rules of minerals under pressure informed by machine learning. \textit{Nat. Commun.} \textbf{14}, 1815 (2023).
+
+\bibitem{cranmer2023}
+M.~Cranmer. Interpretable machine learning for science with pysr and symbolicregression.jl. Preprint (2023).
+
+\bibitem{Hanif2024}
+M.~F. Hanif, M.~U. Siddique, J.~Si \textit{et~al.} Enhancing solar forecasting accuracy with sequential deep artificial neural network and hybrid random forest and gradient boosting models across varied terrains. \textit{Advanced Theory and Simulations} \textbf{7}, 2301289 (2024).
+
+\bibitem{Akiba2019}
+T.~Akiba, S.~Sano, T.~Yanase \textit{et~al.} Optuna: A next-generation hyperparameter optimization framework. \textit{Proc. 25th ACM SIGKDD Int. Conf. Knowl. Discov. Data Mining}, 2623 (2019).
+
+\bibitem{Choo1972}
+S.~C. Choo. Theory of a forward-biased diffused-junction p-l-n rectifier—part i: Exact numerical solutions. \textit{IEEE Trans. Electron Devices} \textbf{19}, 954 (1972).
+
+\bibitem{Dorkel1981}
+J.~Dorkel, P.~Leturcq. Carrier mobilities in silicon semi-empirically related to temperature, doping and injection level. \textit{Solid-State Electron.} \textbf{24}, 821 (1981).
+
+\begin{flushright}
+{\footnotesize Received 05.03.26}
+\end{flushright}
+\end{thebibliography}
 
 \vspace*{-5mm} \rezume{%
 O.Ya. Olikh} {MACHINE LEARNING MODELS FOR EFFICIENT MOBILITY ESTIMATION IN SILICON}

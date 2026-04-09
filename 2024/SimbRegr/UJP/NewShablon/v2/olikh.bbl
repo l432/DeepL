@@ -1,311 +1,282 @@
-\begin{thebibliography}{35}
-\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
-\expandafter\ifx\csname bibnamefont\endcsname\relax
-  \def\bibnamefont#1{#1}\fi
-\expandafter\ifx\csname bibfnamefont\endcsname\relax
-  \def\bibfnamefont#1{#1}\fi
-\expandafter\ifx\csname citenamefont\endcsname\relax
-  \def\citenamefont#1{#1}\fi
-\expandafter\ifx\csname url\endcsname\relax
-  \def\url#1{\texttt{#1}}\fi
-\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
-\providecommand{\bibinfo}[2]{#2}
-\providecommand{\eprint}[2][]{\url{#2}}
+\begin{thebibliography}{10}
 
-\bibitem[{\citenamefont{Hamaguchi}(2023)}]{Hamaguchi2023}
-\bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Hamaguchi}},
-  \emph{\bibinfo{title}{Basic Semiconductor Physics}}, Graduate Texts in
-  Physics (\bibinfo{publisher}{Springer Cham}, \bibinfo{year}{2023}),
-  \bibinfo{edition}{4th} ed., ISBN \bibinfo{isbn}{978-3-031-25510-6}.
+\bibitem{Hamaguchi2023}
+C.~Hamaguchi, {\em Basic Semiconductor Physics}.
+\newblock Graduate Texts in Physics, Springer Cham, 4~ed., 2023.
 
-\bibitem[{\citenamefont{Leveillee et~al.}(2023)\citenamefont{Leveillee, Zhang,
-  Kioupakis, and Giustino}}]{Leveillee2023}
-\bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Leveillee}},
-  \bibinfo{author}{\bibfnamefont{X.}~\bibnamefont{Zhang}},
-  \bibinfo{author}{\bibfnamefont{E.}~\bibnamefont{Kioupakis}},
-  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{F.}~\bibnamefont{Giustino}},
-  \bibinfo{journal}{Phys. Rev. B} \textbf{\bibinfo{volume}{107}},
-  \bibinfo{pages}{125207} (\bibinfo{year}{2023}).
+\bibitem{Leveillee2023}
+J.~Leveillee, X.~Zhang, E.~Kioupakis, and F.~Giustino, ``Ab initio calculation
+  of carrier mobility in semiconductors including ionized-impurity
+  scattering,'' {\em Phys. Rev. B}, vol.~107, p.~125207, Mar 2023.
 
-\bibitem[{\citenamefont{Seeger}(2004)}]{Seeger2004}
-\bibinfo{author}{\bibfnamefont{K.}~\bibnamefont{Seeger}},
-  \emph{\bibinfo{title}{Semiconductor Physics. An Introduction}}, Advanced
-  Texts in Physics (\bibinfo{publisher}{Springer Berlin, Heidelberg},
-  \bibinfo{year}{2004}), \bibinfo{edition}{9th} ed., ISBN
-  \bibinfo{isbn}{978-3-540-21957-6}.
+\bibitem{Seeger2004}
+K.~Seeger, {\em Semiconductor Physics. An Introduction}.
+\newblock Advanced Texts in Physics, Springer Berlin, Heidelberg, 9~ed., Jun
+  2004.
 
-\bibitem[{\citenamefont{B\"oer and Pohl}(2023)}]{Boeer2023}
-\bibinfo{author}{\bibfnamefont{K.~W.} \bibnamefont{B\"oer}} \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{U.~W.} \bibnamefont{Pohl}},
-  \emph{\bibinfo{title}{Semiconductor Physics}} (\bibinfo{publisher}{Springer
-  Cham}, \bibinfo{year}{2023}), \bibinfo{edition}{2nd} ed., ISBN
-  \bibinfo{isbn}{978-3-031-18285-3}.
+\bibitem{Boeer2023}
+K.~W. B\"oer and U.~W. Pohl, {\em Semiconductor Physics}.
+\newblock Springer Cham, 2~ed., 2023.
 
-\bibitem[{\citenamefont{Bourbaba et~al.}(2025)\citenamefont{Bourbaba, Kadri,
-  Bensafi, Larguech, Menni, Alshammari, and Kolsi}}]{Bourbaba2025}
-\bibinfo{author}{\bibfnamefont{E.}~\bibnamefont{Bourbaba}},
-  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Kadri}},
-  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Bensafi}},
-  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Larguech}},
-  \bibinfo{author}{\bibfnamefont{Y.}~\bibnamefont{Menni}},
-  \bibinfo{author}{\bibfnamefont{B.~M.} \bibnamefont{Alshammari}},
-  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{L.}~\bibnamefont{Kolsi}},
-  \bibinfo{journal}{Open Physics} \textbf{\bibinfo{volume}{23}},
-  \bibinfo{pages}{20250248} (\bibinfo{year}{2025}).
+\bibitem{Bourbaba2025}
+E.~Bourbaba, S.~Kadri, M.~Bensafi, S.~Larguech, Y.~Menni, B.~M. Alshammari, and
+  L.~Kolsi, ``Empirical model integration for accurate charge carrier mobility
+  simulation in silicon mosfets,'' {\em Open Physics}, vol.~23, no.~1,
+  p.~20250248, 2025.
 
-\bibitem[{\citenamefont{Fletcher}(1957)}]{Fletcher1957}
-\bibinfo{author}{\bibfnamefont{N.~H.} \bibnamefont{Fletcher}},
-  \bibinfo{journal}{Proc. IRE} \textbf{\bibinfo{volume}{45}},
-  \bibinfo{pages}{862} (\bibinfo{year}{1957}).
+\bibitem{Fletcher1957}
+N.~H. Fletcher, ``The high current limit for semiconductor junction devices,''
+  {\em Proc. IRE}, vol.~45, no.~6, pp.~862--872, 1957.
 
-\bibitem[{\citenamefont{Rudra et~al.}(2024)\citenamefont{Rudra, Rao, Ponc{\'e},
-  and Saha}}]{Rudra2024}
-\bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Rudra}},
-  \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Rao}},
-  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Ponc{\'e}}},
-  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Saha}},
-  \bibinfo{journal}{Nano Lett.} \textbf{\bibinfo{volume}{24}},
-  \bibinfo{pages}{11529} (\bibinfo{year}{2024}).
+\bibitem{Rudra2024}
+S.~Rudra, D.~Rao, S.~Ponc{\'e}, and B.~Saha, ``Dominant scattering mechanisms
+  in limiting the electron mobility of scandium nitride,'' {\em Nano Lett.},
+  vol.~24, pp.~11529--11536, Sep 2024.
 
-\bibitem[{\citenamefont{Caughey and Thomas}(1967)}]{Caughey1967}
-\bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Caughey}} \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Thomas}},
-  \bibinfo{journal}{Proc. IEEE} \textbf{\bibinfo{volume}{55}},
-  \bibinfo{pages}{2192} (\bibinfo{year}{1967}).
+\bibitem{Caughey1967}
+D.~Caughey and R.~Thomas, ``Carrier mobilities in silicon empirically related
+  to doping and field,'' {\em Proc. IEEE}, vol.~55, no.~12, pp.~2192--2193,
+  1967.
 
-\bibitem[{\citenamefont{Masetti et~al.}(1983)\citenamefont{Masetti, Severi, and
-  Solmi}}]{Masetti1983}
-\bibinfo{author}{\bibfnamefont{G.}~\bibnamefont{Masetti}},
-  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Severi}}, \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Solmi}},
-  \bibinfo{journal}{IEEE Trans. Electron Devices}
-  \textbf{\bibinfo{volume}{30}}, \bibinfo{pages}{764} (\bibinfo{year}{1983}).
+\bibitem{Masetti1983}
+G.~Masetti, M.~Severi, and S.~Solmi, ``Modeling of carrier mobility against
+  carrier concentration in arsenic-, phosphorus-, and boron-doped silicon,''
+  {\em IEEE Trans. Electron Devices}, vol.~30, no.~7, pp.~764--769, 1983.
 
-\bibitem[{\citenamefont{Berrada et~al.}(2020)\citenamefont{Berrada,
-  Carrillo-Nunez, Lee, Medina-Bailon, Dutta, Badami, Adamu-Lema,
-  Thirunavukkarasu, Georgiev, and Asenov}}]{Berrada2020}
-\bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Berrada}},
-  \bibinfo{author}{\bibfnamefont{H.}~\bibnamefont{Carrillo-Nunez}},
-  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Lee}},
-  \bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Medina-Bailon}},
-  \bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Dutta}},
-  \bibinfo{author}{\bibfnamefont{O.}~\bibnamefont{Badami}},
-  \bibinfo{author}{\bibfnamefont{F.}~\bibnamefont{Adamu-Lema}},
-  \bibinfo{author}{\bibfnamefont{V.}~\bibnamefont{Thirunavukkarasu}},
-  \bibinfo{author}{\bibfnamefont{V.}~\bibnamefont{Georgiev}}, \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Asenov}},
-  \bibinfo{journal}{J. Comput. Electron.} \textbf{\bibinfo{volume}{19}},
-  \bibinfo{pages}{1031} (\bibinfo{year}{2020}).
+\bibitem{Berrada2020}
+S.~Berrada, H.~Carrillo-Nunez, J.~Lee, C.~Medina-Bailon, T.~Dutta, O.~Badami,
+  F.~Adamu-Lema, V.~Thirunavukkarasu, V.~Georgiev, and A.~Asenov,
+  ``Nano-electronic simulation software (ness): a flexible nano-device
+  simulation platform,'' {\em J. Comput. Electron.}, vol.~19, pp.~1031--1046,
+  Sep 2020.
 
-\bibitem[{\citenamefont{Arora et~al.}(1982)\citenamefont{Arora, Hauser, and
-  Roulston}}]{Arora1982}
-\bibinfo{author}{\bibfnamefont{N.}~\bibnamefont{Arora}},
-  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Hauser}}, \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Roulston}},
-  \bibinfo{journal}{IEEE Trans. Electron Devices}
-  \textbf{\bibinfo{volume}{29}}, \bibinfo{pages}{292} (\bibinfo{year}{1982}).
+\bibitem{Arora1982}
+N.~Arora, J.~Hauser, and D.~Roulston, ``Electron and hole mobilities in silicon
+  as a function of concentration and temperature,'' {\em IEEE Trans. Electron
+  Devices}, vol.~29, no.~2, pp.~292--295, 1982.
 
-\bibitem[{\citenamefont{Klaassen}(1992)}]{KLAASSEN953}
-\bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Klaassen}},
-  \bibinfo{journal}{Solid-State Electron.} \textbf{\bibinfo{volume}{35}},
-  \bibinfo{pages}{953} (\bibinfo{year}{1992}).
+\bibitem{KLAASSEN953}
+D.~Klaassen, ``A unified mobility model for device simulation --- {I}. model
+  equations and concentration dependence,'' {\em Solid-State Electron.},
+  vol.~35, pp.~953-- 959, Jul 1992.
 
-\bibitem[{\citenamefont{Swirhun et~al.}(1986)\citenamefont{Swirhun, Kwark, and
-  Swanson}}]{Swirhun1986}
-\bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Swirhun}},
-  \bibinfo{author}{\bibfnamefont{Y.-H.} \bibnamefont{Kwark}}, \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Swanson}}, in
-  \emph{\bibinfo{booktitle}{1986 International Electron Devices Meeting}}
-  (\bibinfo{year}{1986}), pp. \bibinfo{pages}{24--27}.
+\bibitem{Swirhun1986}
+S.~Swirhun, Y.-H. Kwark, and R.~Swanson, ``Measurement of electron lifetime,
+  electron mobility and band-gap narrowing in heavily doped p-type silicon,''
+  in {\em 1986 International Electron Devices Meeting}, pp.~24--27, 1986.
 
-\bibitem[{\citenamefont{del Alamo et~al.}(1985)\citenamefont{del Alamo,
-  Swirhun, and Swanson}}]{Alamo1985}
-\bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{del Alamo}},
-  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Swirhun}}, \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Swanson}}, in
-  \emph{\bibinfo{booktitle}{1985 International Electron Devices Meeting}}
-  (\bibinfo{year}{1985}), pp. \bibinfo{pages}{290--293}.
+\bibitem{Alamo1985}
+J.~del Alamo, S.~Swirhun, and R.~Swanson, ``Simultaneous measurement of hole
+  lifetime, hole mobility and bandgap narrowing in heavily doped n-type
+  silicon,'' in {\em 1985 International Electron Devices Meeting},
+  pp.~290--293, 1985.
 
-\bibitem[{\citenamefont{Rode and Cetnar}(2023)}]{Rode2023}
-\bibinfo{author}{\bibfnamefont{D.~L.} \bibnamefont{Rode}} \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{J.~S.} \bibnamefont{Cetnar}},
-  \bibinfo{journal}{J. Appl. Phys.} \textbf{\bibinfo{volume}{134}},
-  \bibinfo{pages}{075701} (\bibinfo{year}{2023}).
+\bibitem{Rode2023}
+D.~L. Rode and J.~S. Cetnar, ``Electron mobility of heavily doped
+  semiconductors including multiple scattering by ionized impurities,'' {\em J.
+  Appl. Phys.}, vol.~134, p.~075701, 08 2023.
 
-\bibitem[{\citenamefont{Sadi et~al.}(2019)\citenamefont{Sadi, Medina-Bailon,
-  Nedjalkov, Lee, Badami, Berrada, Carrillo-Nunez, Georgiev, Selberherr, and
-  Asenov}}]{Sadi2019}
-\bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Sadi}},
-  \bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Medina-Bailon}},
-  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Nedjalkov}},
-  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Lee}},
-  \bibinfo{author}{\bibfnamefont{O.}~\bibnamefont{Badami}},
-  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Berrada}},
-  \bibinfo{author}{\bibfnamefont{H.}~\bibnamefont{Carrillo-Nunez}},
-  \bibinfo{author}{\bibfnamefont{V.}~\bibnamefont{Georgiev}},
-  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Selberherr}},
-  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Asenov}},
-  \bibinfo{journal}{Materials} \textbf{\bibinfo{volume}{12}},
-  \bibinfo{pages}{124} (\bibinfo{year}{2019}).
+\bibitem{Sadi2019}
+T.~Sadi, C.~Medina-Bailon, M.~Nedjalkov, J.~Lee, O.~Badami, S.~Berrada,
+  H.~Carrillo-Nunez, V.~Georgiev, S.~Selberherr, and A.~Asenov, ``Simulation of
+  the impact of ionized impurity scattering on the total mobility in si
+  nanowire transistors,'' {\em Materials}, vol.~12, no.~1, p.~124, 2019.
 
-\bibitem[{\citenamefont{Abenante}(2023)}]{Abenante2023}
-\bibinfo{author}{\bibfnamefont{L.}~\bibnamefont{Abenante}},
-  \bibinfo{journal}{AIP Adv.} \textbf{\bibinfo{volume}{13}},
-  \bibinfo{pages}{015109} (\bibinfo{year}{2023}).
+\bibitem{Wang2020}
+Z.~Wang, Z.~Tang, A.~Guo, X.~Luo, C.~Cao, Y.~Yuan, X.~Zhang, L.~Liu, J.~Li,
+  Y.~Cao, Q.~Shao, S.~Hu, S.~Chen, Y.~Zhao, and X.~Kou, ``Temperature-driven
+  gate geometry effects in nanoscale cryogenic mosfets,'' {\em IEEE Electron
+  Device Lett.}, vol.~41, no.~5, pp.~661--664, 2020.
 
-\bibitem[{\citenamefont{Cummings et~al.}(2010)\citenamefont{Cummings, Witulski,
-  Park, Schrimpf, Thompson, and Law}}]{Cummings2010}
-\bibinfo{author}{\bibfnamefont{D.~J.} \bibnamefont{Cummings}},
-  \bibinfo{author}{\bibfnamefont{A.~F.} \bibnamefont{Witulski}},
-  \bibinfo{author}{\bibfnamefont{H.}~\bibnamefont{Park}},
-  \bibinfo{author}{\bibfnamefont{R.~D.} \bibnamefont{Schrimpf}},
-  \bibinfo{author}{\bibfnamefont{S.~E.} \bibnamefont{Thompson}},
-  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{M.~E.} \bibnamefont{Law}},
-  \bibinfo{journal}{IEEE Trans. Nucl. Sci.} \textbf{\bibinfo{volume}{57}},
-  \bibinfo{pages}{2318} (\bibinfo{year}{2010}).
+\bibitem{Abenante2023}
+L.~Abenante, ``Incomplete activation and ionization of dopants in si at room
+  temperature,'' {\em AIP Adv.}, vol.~13, p.~015109, 01 2023.
 
-\bibitem[{\citenamefont{Wu et~al.}(2025)\citenamefont{Wu, Sojka, Price,
-  Agladze, Yadav, Pain, Murphy, Niewelt, and Sherwin}}]{Wu2025}
-\bibinfo{author}{\bibfnamefont{Q.}~\bibnamefont{Wu}},
-  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Sojka}},
-  \bibinfo{author}{\bibfnamefont{B.~D.} \bibnamefont{Price}},
-  \bibinfo{author}{\bibfnamefont{N.~I.} \bibnamefont{Agladze}},
-  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Yadav}},
-  \bibinfo{author}{\bibfnamefont{S.~L.} \bibnamefont{Pain}},
-  \bibinfo{author}{\bibfnamefont{J.~D.} \bibnamefont{Murphy}},
-  \bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Niewelt}}, \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{M.~S.} \bibnamefont{Sherwin}},
-  \bibinfo{journal}{Phys. Rev. Appl.} \textbf{\bibinfo{volume}{24}},
-  \bibinfo{pages}{014007} (\bibinfo{year}{2025}).
+\bibitem{Cummings2010}
+D.~J. Cummings, A.~F. Witulski, H.~Park, R.~D. Schrimpf, S.~E. Thompson, and
+  M.~E. Law, ``Mobility modeling considerations for radiation effects
+  simulations in silicon,'' {\em IEEE Trans. Nucl. Sci.}, vol.~57, no.~4,
+  pp.~2318--2326, 2010.
 
-\bibitem[{\citenamefont{{Noor Mohammad} et~al.}(1993)\citenamefont{{Noor
-  Mohammad}, Bemis, Carter, and Renbeck}}]{NoorMohammad1993}
-\bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{{Noor Mohammad}}},
-  \bibinfo{author}{\bibfnamefont{A.~V.} \bibnamefont{Bemis}},
-  \bibinfo{author}{\bibfnamefont{R.~L.} \bibnamefont{Carter}},
-  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{R.~B.}
-  \bibnamefont{Renbeck}}, \bibinfo{journal}{Solid-State Electron.}
-  \textbf{\bibinfo{volume}{36}}, \bibinfo{pages}{1677} (\bibinfo{year}{1993}).
+\bibitem{Wu2025}
+Q.~Wu, A.~Sojka, B.~D. Price, N.~I. Agladze, A.~Yadav, S.~L. Pain, J.~D.
+  Murphy, T.~Niewelt, and M.~S. Sherwin, ``Two-fluid mobility model from
+  coupled hydrodynamic equations for simulating laser-driven semiconductor
+  switches,'' {\em Phys. Rev. Appl.}, vol.~24, p.~014007, Jul 2025.
 
-\bibitem[{\citenamefont{Wu et~al.}(2016)\citenamefont{Wu, Zhang, and
-  Pantelides}}]{Wu2016}
-\bibinfo{author}{\bibfnamefont{Y.-N.} \bibnamefont{Wu}},
-  \bibinfo{author}{\bibfnamefont{X.-G.} \bibnamefont{Zhang}}, \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{S.~T.} \bibnamefont{Pantelides}},
-  \bibinfo{journal}{Semicond. Sci. Technol.} \textbf{\bibinfo{volume}{31}},
-  \bibinfo{pages}{115016} (\bibinfo{year}{2016}).
+\bibitem{NoorMohammad1993}
+S.~{Noor Mohammad}, A.~V. Bemis, R.~L. Carter, and R.~B. Renbeck,
+  ``Temperature, electric field, and doping dependent mobilities of electrons
+  and holes in semiconductors,'' {\em Solid-State Electron.}, vol.~36, no.~12,
+  pp.~1677--1683, 1993.
 
-\bibitem[{\citenamefont{Couderc et~al.}(2014)\citenamefont{Couderc, Amara, and
-  Lemiti}}]{Si_ni_Couderc}
-\bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Couderc}},
-  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Amara}}, \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Lemiti}},
-  \bibinfo{journal}{J. Appl. Phys.} \textbf{\bibinfo{volume}{115}},
-  \bibinfo{pages}{093705} (\bibinfo{year}{2014}).
+\bibitem{Wu2016}
+Y.-N. Wu, X.-G. Zhang, and S.~T. Pantelides, ``First-principles calculations
+  reveal controlling principles for carrier mobilities in semiconductors,''
+  {\em Semicond. Sci. Technol.}, vol.~31, p.~115016, Oct 2016.
 
-\bibitem[{\citenamefont{P\"assler}(2002)}]{Passler2002}
-\bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{P\"assler}},
-  \bibinfo{journal}{Phys. Rev. B} \textbf{\bibinfo{volume}{66}},
-  \bibinfo{pages}{085201} (\bibinfo{year}{2002}).
+\bibitem{Liu2022a}
+D.-Y. Liu, L.-M. Xu, X.-M. Lin, X.~Wei, W.-J. Yu, Y.~Wang, and Z.-M. Wei,
+  ``Machine learning for semiconductors,'' {\em Chip}, vol.~1, no.~4,
+  p.~100033, 2022.
 
-\bibitem[{\citenamefont{AlQurashi and Selvakumar}(2018)}]{AlQurashi2018}
-\bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{AlQurashi}} \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Selvakumar}},
-  \bibinfo{journal}{Superlattices Microstruct.} \textbf{\bibinfo{volume}{118}},
-  \bibinfo{pages}{308} (\bibinfo{year}{2018}).
+\bibitem{Li2020}
+R.~Li, E.~Lee, and T.~Luo, ``A unified deep neural network potential capable of
+  predicting thermal conductivity of silicon in different phases,'' {\em Mater.
+  Today Phys.}, vol.~12, p.~100181, 2020.
 
-\bibitem[{\citenamefont{Tonda}(2024)}]{Tonda2024}
-\bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Tonda}},
-  \bibinfo{journal}{Genet. Program. Evol. M.} \textbf{\bibinfo{volume}{26}},
-  \bibinfo{pages}{7} (\bibinfo{year}{2024}).
+\bibitem{Li2023a}
+R.~Li, E.~Lee, and T.~Luo, ``Physics-informed deep learning for solving coupled
+  electron and phonon boltzmann transport equations,'' {\em Phys. Rev. Appl.},
+  vol.~19, p.~064049, Jun 2023.
 
-\bibitem[{\citenamefont{Angelis et~al.}(2023)\citenamefont{Angelis, Sofos, and
-  Karakasidis}}]{Angelis2023}
-\bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Angelis}},
-  \bibinfo{author}{\bibfnamefont{F.}~\bibnamefont{Sofos}}, \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{T.~E.} \bibnamefont{Karakasidis}},
-  \bibinfo{journal}{Arch. Comput. Methods Eng.} \textbf{\bibinfo{volume}{30}},
-  \bibinfo{pages}{3845} (\bibinfo{year}{2023}).
+\bibitem{Li2024b}
+R.~Li, J.~Zhou, J.-X. Wang, and T.~Luo, ``Physics-informed bayesian neural
+  networks for solving phonon boltzmann transport equation in forward and
+  inverse problems with sparse and noisy data,'' {\em ASME Journal of Heat and
+  Mass Transfer}, vol.~147, p.~032501, 12 2024.
 
-\bibitem[{\citenamefont{Hruška et~al.}(2025)\citenamefont{Hruška, Furmanová,
-  and Bednařík}}]{Hruska2025}
-\bibinfo{author}{\bibfnamefont{V.}~\bibnamefont{Hruška}},
-  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Furmanová}},
-  \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Bednařík}},
-  \bibinfo{journal}{J. Sound Vibration} \textbf{\bibinfo{volume}{597}},
-  \bibinfo{pages}{118821} (\bibinfo{year}{2025}).
+\bibitem{Fai2022}
+C.~Fai, A.~J. Ladd, and C.~J. Hages, ``Machine learning for enhanced
+  semiconductor characterization from time-resolved photoluminescence,'' {\em
+  Joule}, vol.~6, no.~11, pp.~2585--2610, 2022.
 
-\bibitem[{\citenamefont{Davis and Jin}(2023)}]{Davis2023}
-\bibinfo{author}{\bibfnamefont{B.~L.} \bibnamefont{Davis}} \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{Z.}~\bibnamefont{Jin}},
-  \bibinfo{journal}{Astrophys. J. Lett.} \textbf{\bibinfo{volume}{956}},
-  \bibinfo{pages}{L22} (\bibinfo{year}{2023}).
+\bibitem{Xu2022}
+Y.~Xu, A.~V. Lalwani, K.~Arora, Z.~Zheng, A.~Renteria, D.~G. Senesky, and
+  P.~Wang, ``Hall-effect sensor design with physics-informed gaussian process
+  modeling,'' {\em IEEE Sensors J.}, vol.~22, no.~23, pp.~22519--22528, 2022.
 
-\bibitem[{\citenamefont{Mengel et~al.}(2023)\citenamefont{Mengel, Steffanic,
-  Hughes, da~Silva, and Nattrass}}]{Mengel2023}
-\bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Mengel}},
-  \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Steffanic}},
-  \bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Hughes}},
-  \bibinfo{author}{\bibfnamefont{A.~C.~O.} \bibnamefont{da~Silva}},
-  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Nattrass}},
-  \bibinfo{journal}{Phys. Rev. C} \textbf{\bibinfo{volume}{108}},
-  \bibinfo{pages}{L021901} (\bibinfo{year}{2023}).
+\bibitem{Chen2024}
+X.~Chen {\em et~al.}, ``From bulk effective mass to 2d carrier mobility
+  accurate prediction via adversarial transfer learning,'' {\em Nat. Commun.},
+  vol.~15, no.~1, p.~5391, 2024.
 
-\bibitem[{\citenamefont{Li et~al.}(2023)\citenamefont{Li, Wang, Li, Ye, Zhang,
-  Yin, Jia, Hou, Wang, Ding et~al.}}]{Li2023}
-\bibinfo{author}{\bibfnamefont{Y.}~\bibnamefont{Li}},
-  \bibinfo{author}{\bibfnamefont{H.}~\bibnamefont{Wang}},
-  \bibinfo{author}{\bibfnamefont{Y.}~\bibnamefont{Li}},
-  \bibinfo{author}{\bibfnamefont{H.}~\bibnamefont{Ye}},
-  \bibinfo{author}{\bibfnamefont{Y.}~\bibnamefont{Zhang}},
-  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Yin}},
-  \bibinfo{author}{\bibfnamefont{H.}~\bibnamefont{Jia}},
-  \bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Hou}},
-  \bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Wang}},
-  \bibinfo{author}{\bibfnamefont{H.}~\bibnamefont{Ding}}, \bibnamefont{et~al.},
-  \bibinfo{journal}{Nat. Commun.} \textbf{\bibinfo{volume}{14}},
-  \bibinfo{pages}{1815} (\bibinfo{year}{2023}).
+\bibitem{Hong2026}
+J.~H. Hong, C.-H. Lee, H.~W. Kim, D.~W. Jeon, J.~H. Kang, Y.-S. Kim, J.-S. Bae,
+  S.~Heo, S.~Lee, J.~Na, J.~You, S.~Hong, H.~Cho, J.-S. Park, and S.~B. Cho,
+  ``Ai-driven quantitative review of mobility--stability trade-off in oxide
+  semiconductors,'' {\em Nano Convergence}, vol.~13, p.~4, Jan 2026.
 
-\bibitem[{\citenamefont{Cranmer}(2023)}]{cranmer2023}
-\bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Cranmer}},
-  \emph{\bibinfo{title}{Interpretable machine learning for science with pysr
-  and symbolicregression.jl}} (\bibinfo{year}{2023}), \eprint{2305.01582}.
+\bibitem{Nematiaram2025}
+T.~Nematiaram, Z.~Lamprou, and Y.~Moshfeghi, ``Accelerating the discovery of
+  high-mobility molecular semiconductors: a machine learning approach,'' {\em
+  Chem. Commun.}, vol.~61, pp.~3676--3679, 2025.
 
-\bibitem[{\citenamefont{Hanif et~al.}(2024)\citenamefont{Hanif, Siddique, Si,
-  Naveed, Liu, and Mi}}]{Hanif2024}
-\bibinfo{author}{\bibfnamefont{M.~F.} \bibnamefont{Hanif}},
-  \bibinfo{author}{\bibfnamefont{M.~U.} \bibnamefont{Siddique}},
-  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Si}},
-  \bibinfo{author}{\bibfnamefont{M.~S.} \bibnamefont{Naveed}},
-  \bibinfo{author}{\bibfnamefont{X.}~\bibnamefont{Liu}}, \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Mi}},
-  \bibinfo{journal}{Advanced Theory and Simulations}
-  \textbf{\bibinfo{volume}{7}}, \bibinfo{pages}{2301289}
-  (\bibinfo{year}{2024}).
+\bibitem{Reiser2021}
+P.~Reiser, M.~Konrad, A.~Fediai, S.~L{\'e}on, W.~Wenzel, and P.~Friederich,
+  ``Analyzing dynamical disorder for charge transport in organic semiconductors
+  via machine learning,'' {\em J. Chem. Theory Comput.}, vol.~17,
+  pp.~3750--3759, Jun 2021.
 
-\bibitem[{\citenamefont{Akiba et~al.}(2019)\citenamefont{Akiba, Sano, Yanase,
-  Ohta, and Koyama}}]{Akiba2019}
-\bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Akiba}},
-  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Sano}},
-  \bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Yanase}},
-  \bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Ohta}}, \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Koyama}}, in
-  \emph{\bibinfo{booktitle}{Proceedings of the 25th ACM SIGKDD International
-  Conference on Knowledge Discovery \& Data Mining}}
-  (\bibinfo{publisher}{Association for Computing Machinery},
-  \bibinfo{address}{New York, NY, USA}, \bibinfo{year}{2019}), KDD '19, p.
-  \bibinfo{pages}{2623–2631}.
+\bibitem{Pimachev2021}
+A.~K. Pimachev and S.~Neogi, ``First-principles prediction of electronic
+  transport in fabricated semiconductor heterostructures via physics-aware
+  machine learning,'' {\em npj Comput. Mater.}, vol.~7, p.~93, Jun 2021.
 
-\bibitem[{\citenamefont{Choo}(1972)}]{Choo1972}
-\bibinfo{author}{\bibfnamefont{S.~C.} \bibnamefont{Choo}},
-  \bibinfo{journal}{IEEE Trans. Electron Devices}
-  \textbf{\bibinfo{volume}{19}}, \bibinfo{pages}{954} (\bibinfo{year}{1972}).
+\bibitem{Bhat2024}
+V.~Bhat, B.~Ganapathysubramanian, and C.~Risko, ``Rapid estimation of the
+  intermolecular electronic couplings and charge-carrier mobilities of
+  crystalline molecular organic semiconductors through a machine learning
+  pipeline,'' {\em The Journal of Physical Chemistry Letters}, vol.~15,
+  pp.~7206--7213, Jul 2024.
 
-\bibitem[{\citenamefont{Dorkel and Leturcq}(1981)}]{Dorkel1981}
-\bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Dorkel}} \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Leturcq}},
-  \bibinfo{journal}{Solid-State Electron.} \textbf{\bibinfo{volume}{24}},
-  \bibinfo{pages}{821} (\bibinfo{year}{1981}).
+\bibitem{Tan2023}
+T.~Tan and D.~Wang, ``Machine learning based charge mobility prediction for
+  organic semiconductors,'' {\em J. Chem. Phys.}, vol.~158, no.~9, p.~094102,
+  2023.
+
+\bibitem{Mamun2025}
+K.~M. Mamun, N.~Pala, and M.~S.~A. Shawkat, ``A comprehensive review of machine
+  learning approaches for semiconductor device modeling and simulation,'' {\em
+  IEEE Access}, vol.~13, pp.~162969--162991, 2025.
+
+\bibitem{Raut2025}
+P.~Raut, D.~K. Panda, and A.~K. Goyal, ``A comprehensive review on
+  next-generation modeling and optimization for semiconductor devices,'' {\em
+  IEEE Access}, vol.~13, pp.~123724--123742, 2025.
+
+\bibitem{Khatua2024}
+R.~Khatua, B.~Das, and A.~Mondal, ``Physics-informed machine learning with
+  data-driven equations for predicting organic solar cell performance,'' {\em
+  ACS Appl. Mater. Interfaces}, vol.~16, pp.~57467--57480, Oct 2024.
+
+\bibitem{Si_ni_Couderc}
+R.~Couderc, M.~Amara, and M.~Lemiti, ``Reassessment of the intrinsic carrier
+  density temperature dependence in crystalline silicon,'' {\em J. Appl.
+  Phys.}, vol.~115, p.~093705, Mar 2014.
+
+\bibitem{Passler2002}
+R.~P\"assler, ``Dispersion-related description of temperature dependencies of
+  band gaps in semiconductors,'' {\em Phys. Rev. B}, vol.~66, p.~085201, Aug
+  2002.
+
+\bibitem{AlQurashi2018}
+A.~AlQurashi and C.~Selvakumar, ``A new approximation of fermi-dirac integrals
+  of order 1/2 for degenerate semiconductor devices,'' {\em Superlattices
+  Microstruct.}, vol.~118, pp.~308--318, 2018.
+
+\bibitem{Tonda2024}
+A.~Tonda, ``Review of pysr: high-performance symbolic regression in python and
+  julia,'' {\em Genet. Program. Evol. M.}, vol.~26, p.~7, Dec 2024.
+
+\bibitem{Angelis2023}
+D.~Angelis, F.~Sofos, and T.~E. Karakasidis, ``Artificial intelligence in
+  physical sciences: Symbolic regression trends and perspectives,'' {\em Arch.
+  Comput. Methods Eng.}, vol.~30, pp.~3845--3865, Jul 2023.
+
+\bibitem{Hruska2025}
+V.~Hruška, A.~Furmanová, and M.~Bednařík, ``Analytical formulae for design
+  of one-dimensional sonic crystals with smooth geometry based on symbolic
+  regression,'' {\em J. Sound Vibration}, vol.~597, p.~118821, 2025.
+
+\bibitem{Davis2023}
+B.~L. Davis and Z.~Jin, ``Discovery of a planar black hole mass scaling
+  relation for spiral galaxies,'' {\em Astrophys. J. Lett.}, vol.~956, p.~L22,
+  oct 2023.
+
+\bibitem{Kuryliuk2026}
+V.~V. Kuryliuk and O.~Y. Olikh, ``Thermal conductivity of nanoporous silicon:
+  Molecular dynamics simulations and machine learning prediction,'' {\em Low
+  Temp. Phys.}, vol.~52, pp.~50--59, 01 2026.
+
+\bibitem{Mengel2023}
+T.~Mengel, P.~Steffanic, C.~Hughes, A.~C.~O. da~Silva, and C.~Nattrass,
+  ``Interpretable machine learning methods applied to jet background
+  subtraction in heavy-ion collisions,'' {\em Phys. Rev. C}, vol.~108,
+  p.~L021901, Aug 2023.
+
+\bibitem{Li2023}
+Y.~Li, H.~Wang, Y.~Li, H.~Ye, Y.~Zhang, R.~Yin, H.~Jia, B.~Hou, C.~Wang,
+  H.~Ding, X.~Bai, and A.~Lu, ``Electron transfer rules of minerals under
+  pressure informed by machine learning,'' {\em Nat. Commun.}, vol.~14,
+  p.~1815, Mar 2023.
+
+\bibitem{cranmer2023}
+M.~Cranmer, ``Interpretable machine learning for science with pysr and
+  symbolicregression.jl,'' 2023.
+
+\bibitem{Hanif2024}
+M.~F. Hanif, M.~U. Siddique, J.~Si, M.~S. Naveed, X.~Liu, and J.~Mi,
+  ``Enhancing solar forecasting accuracy with sequential deep artificial neural
+  network and hybrid random forest and gradient boosting models across varied
+  terrains,'' {\em Advanced Theory and Simulations}, vol.~7, no.~7, p.~2301289,
+  2024.
+
+\bibitem{Akiba2019}
+T.~Akiba, S.~Sano, T.~Yanase, T.~Ohta, and M.~Koyama, ``Optuna: A
+  next-generation hyperparameter optimization framework,'' in {\em Proceedings
+  of the 25th ACM SIGKDD International Conference on Knowledge Discovery \&
+  Data Mining}, KDD '19, (New York, NY, USA), p.~2623–2631, Association for
+  Computing Machinery, 2019.
+
+\bibitem{Choo1972}
+S.~C. Choo, ``Theory of a forward-biased diffused-junction p-l-n
+  rectifier—part i: Exact numerical solutions,'' {\em IEEE Trans. Electron
+  Devices}, vol.~19, no.~8, pp.~954--966, 1972.
+
+\bibitem{Dorkel1981}
+J.~Dorkel and P.~Leturcq, ``Carrier mobilities in silicon semi-empirically
+  related to temperature, doping and injection level,'' {\em Solid-State
+  Electron.}, vol.~24, no.~9, pp.~821--825, 1981.
 
 \end{thebibliography}
