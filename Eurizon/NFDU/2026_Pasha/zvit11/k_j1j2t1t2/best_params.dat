@@ -1,0 +1,15 @@
+GPR
+  Підібране ядро: 1.1**2 * Matern(length_scale=[0.304, 0.31, 100, 1.61], nu=2.5) + WhiteKernel(noise_level=0.127)
+  Log-marginal-likelihood: -14.9331
+
+SVR
+  Гіперпараметри: {'kernel': 'linear', 'C': 9.494150009663104, 'gamma': 0.002914297173486107, 'epsilon': 0.002056416105979835}
+
+NuSVR
+  Гіперпараметри: {'kernel': 'rbf', 'C': 272.10396133026074, 'gamma': 0.04484131248633127, 'nu': 0.9480985429637087}
+
+RF
+  Гіперпараметри: {'max_depth': 8, 'min_samples_leaf': 1, 'max_features': 0.25}
+
+Ridge
+  Гіперпараметри: {'alpha': 0.00010057051352897455}

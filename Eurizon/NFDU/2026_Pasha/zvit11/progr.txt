@@ -1,0 +1,210 @@
+# ----------------------------------------------------------------------
+# 2. ФАБРИКИ МОДЕЛЕЙ
+# ----------------------------------------------------------------------
+# Кожна функція повертає ГОТОВИЙ об'єкт, який:
+#   - приймає "сирі" X (без попередньої обробки),
+#   - всередині масштабує X (StandardScaler),
+#   - повертає прогноз в оригінальних одиницях y.
+# Саме такий об'єкт ми потім зберігаємо у файл.
+
+def wrap(estimator):
+    """Pipeline(StandardScaler -> модель) + масштабування y.
+
+    TransformedTargetRegressor під час fit масштабує y, а під час predict
+    автоматично повертає прогноз в оригінальний масштаб.
+    Масштабування y потрібне, щоб epsilon у SVR мав однаковий сенс
+    незалежно від одиниць вимірювання y.
+    """
+    return TransformedTargetRegressor(
+        regressor=make_pipeline(StandardScaler(), estimator),
+        transformer=StandardScaler(),
+    )
+
+def build_ridge(alpha):
+    return wrap(Ridge(alpha=alpha))
+
+def build_svr(kernel, C, gamma, epsilon):
+    return wrap(SVR(kernel=kernel, C=C, gamma=gamma, epsilon=epsilon))
+
+def build_nusvr(kernel, C, gamma, nu):
+    return wrap(NuSVR(kernel=kernel, C=C, gamma=gamma, nu=nu))
+
+def build_rf(max_depth, min_samples_leaf, max_features):
+    return wrap(RandomForestRegressor(
+        n_estimators=200,            # фіксуємо: більше дерев не шкодить, лише повільніше
+        max_depth=max_depth,
+        min_samples_leaf=min_samples_leaf,
+        max_features=max_features,
+        random_state=SEED,
+        n_jobs=-1,
+    ))
+
+def build_gpr():
+    """GPR не потребує Optuna: гіперпараметри ядра підбираються всередині fit()
+    через маргінальну правдоподібність. Тут normalize_y=True замінює масштабування y,
+    тому TransformedTargetRegressor не використовуємо (так зручніше брати std)."""
+    kernel = (
+        ConstantKernel(1.0, (1e-2, 1e2))                          # амплітуда
+        * Matern(length_scale=np.ones(n_features),                # ARD: по одному масштабу на ознаку
+                 length_scale_bounds=(1e-1, 1e2), nu=2.5)
+        + WhiteKernel(noise_level=0.1, noise_level_bounds=(1e-5, 1e0))  # шум
+    )
+    return make_pipeline(
+        StandardScaler(),
+        GaussianProcessRegressor(kernel=kernel, normalize_y=True,
+                                 n_restarts_optimizer=15, random_state=SEED),
+    )
+
+# ----------------------------------------------------------------------
+# 3. ПРОСТОРИ ПОШУКУ ДЛЯ OPTUNA
+# ----------------------------------------------------------------------
+# Кожна функція отримує trial і повертає словник параметрів для build_*.
+# Діапазони навмисно вузькі: на 12 точках широкий пошук лише підганяє шум.
+
+def space_ridge(t):
+    return {"alpha": t.suggest_float("alpha", 1e-4, 1e3, log=True)}
+
+def space_svr(t):
+    return {
+        "kernel": t.suggest_categorical('kernel', ['linear', 'rbf']),
+        "C": t.suggest_float("C", 1e-1, 1e3, log=True),
+        "gamma": t.suggest_float("gamma", 1e-3, 1e1, log=True),
+        "epsilon": t.suggest_float("epsilon", 1e-3, 0.5, log=True),
+    }
+
+def space_nusvr(t):
+    return {
+        "kernel": t.suggest_categorical('kernel', ['linear', 'rbf']),
+        "C": t.suggest_float("C", 1e-1, 1e3, log=True),
+        "gamma": t.suggest_float("gamma", 1e-3, 1e1, log=True),
+        "nu": t.suggest_float("nu", 0.1, 1.0),   # частка опорних векторів
+    }
+
+def space_rf(t):
+    return {
+        "max_depth": t.suggest_int("max_depth", 2, 8),
+        "min_samples_leaf": t.suggest_int("min_samples_leaf", 1, 2),
+        "max_features": t.suggest_categorical("max_features", [0.25, 0.5, 0.75, 1.0]),
+    }
+
+ Реєстр моделей: фабрика, простір пошуку (None = Optuna не потрібна), кількість trials.
+# RF найповільніша, тому для неї trials менше.
+MODELS = {
+    "GPR":   {"build": build_gpr,   "space": None,         "n_trials": 0},
+    "SVR":   {"build": build_svr,   "space": space_svr,    "n_trials": 40},
+    "NuSVR": {"build": build_nusvr, "space": space_nusvr,  "n_trials": 40},
+    "RF":    {"build": build_rf,    "space": space_rf,     "n_trials": 30},
+    "Ridge": {"build": build_ridge, "space": space_ridge,  "n_trials": 40},
+}
+
+# ----------------------------------------------------------------------
+# 4. ПІДБІР ГІПЕРПАРАМЕТРІВ (Optuna + внутрішній LOO)
+# ----------------------------------------------------------------------
+def tune(cfg, X_tr, y_tr):
+    """Повертає найкращі параметри, підібрані ЛИШЕ на переданих даних (X_tr, y_tr)."""
+    if cfg["space"] is None:           # GPR: нічого підбирати зовні
+        return {}
+
+    def objective(trial):
+        model = cfg["build"](**cfg["space"](trial))
+        scores = cross_val_score(
+            model, X_tr, y_tr,
+            cv=LeaveOneOut(),
+            scoring="neg_mean_squared_error",
+        )
+        return -scores.mean()          # Optuna мінімізує LOO-MSE
+
+    study = optuna.create_study(
+        direction="minimize",
+        sampler=optuna.samplers.TPESampler(seed=SEED),  # відтворюваність
+        pruner = optuna.pruners.HyperbandPruner()
+    )
+    study.optimize(objective, n_trials=cfg["n_trials"])
+
+  
+    return study.best_params
+
+# ----------------------------------------------------------------------
+# 5. ЧЕСНА ОЦІНКА: NESTED LOO
+# ----------------------------------------------------------------------
+# Зовнішній LOO відкладає зразок; підбір параметрів (внутрішній LOO + Optuna)
+# бачить лише решту n-1 зразків. Так оцінка не завищена підбором.
+def nested_loo(cfg):
+    y_pred = np.empty(n_samples)
+    for tr, te in LeaveOneOut().split(X):
+        params = tune(cfg, X[tr], y[tr])
+        model = cfg["build"](**params).fit(X[tr], y[tr])
+        y_pred[te] = model.predict(X[te])
+    return y_pred
+
+def wape(y_true, y_hat):
+    """Weighted Absolute Percentage Error, у відсотках.
+
+    Сума абсолютних похибок, поділена на суму абсолютних фактичних значень.
+    На відміну від MAPE, один зразок із малим y не може "вибухнути" метрику.
+    """
+    y_true = np.asarray(y_true, dtype=float)
+    y_hat = np.asarray(y_hat, dtype=float)
+    return 100 * np.sum(np.abs(y_true - y_hat)) / np.sum(np.abs(y_true))
+    
+def metrics(y_true, y_hat):
+    return {
+        "RMSE": np.sqrt(mean_squared_error(y_true, y_hat)),
+        "MAE": mean_absolute_error(y_true, y_hat),
+        # sklearn повертає частку (0.05 = 5%), тому множимо на 100, щоб отримати відсотки
+        "MAPE_%": 100 * mean_absolute_percentage_error(y_true, y_hat),
+        "WAPE_%": wape(y_true, y_hat),
+        "R2": r2_score(y_true, y_hat),
+    }
+ ----------------------------------------------------------------------
+# 6. ОСНОВНИЙ ЦИКЛ: оцінка -> фінальний підбір -> навчання -> збереження
+# ----------------------------------------------------------------------
+summary = [] 
+params_log = []# підсумкова таблиця метрик
+final_predictions = {"y_true": y}              # прогнози фінальних моделей на всіх даних
+nested_predictions = {"y_true": y}             # прогнози з nested LOO (чесні)
+# all_params = {}                                # знайдені гіперпараметри для json
+
+for name, cfg in MODELS.items():
+    print(f"\n{'=' * 60}\n{name}\n{'=' * 60}")
+
+    # 6.1 Чесна оцінка якості всього процесу (підбір + навчання)
+    y_nested = nested_loo(cfg)
+    nested_predictions[name] = y_nested
+    m = metrics(y, y_nested)
+    summary.append({"model": name, **m})
+
+    # Спочатку nested_loo збирає в масив y_nested 12 прогнозів, по одному для кожного відкладеного зразка. 
+    # Кожен із них зроблено моделлю, яка цього зразка не бачила. 
+    # Потім metrics(y, y_nested) порівнює ці 12 прогнозів із 12 фактичними значеннями й повертає по одному числу для кожної метрики.
+    
+    print(f"Nested LOO: RMSE={m['RMSE']:.4f}  MAE={m['MAE']:.4f}  "
+      f"MAPE={m['MAPE_%']:.2f}%  WAPE={m['WAPE_%']:.2f}%  R²={m['R2']:.4f}")
+
+    # 6.2 Фінальний підбір параметрів на ВСІХ 12 зразках
+    best_params = tune(cfg, X, y)
+
+    # 6.3 Фінальна модель: навчаємо на всіх даних
+    final_model = cfg["build"](**best_params).fit(X, y)
+
+    # 6.4 Вивід оптимізованих гіперпараметрів (на екран і в журнал)
+    if name == "GPR":
+        gpr = final_model[-1]                  # останній крок pipeline = GaussianProcessRegressor
+        block = (f"{name}\n"
+                 f"  Підібране ядро: {gpr.kernel_}\n"
+                 f"  Log-marginal-likelihood: {gpr.log_marginal_likelihood_value_:.4f}")
+    else:
+        block = (f"{name}\n"
+                 f"  Гіперпараметри: {best_params}")
+
+    print(block)                               # те саме, що й раніше, на екран
+    params_log.append(block)                   # і в журнал для файлу
+
+
+    # 6.5 Прогноз фінальної моделі на тренувальних даних
+    # Увага: це НЕ оцінка якості (модель бачила ці точки), лише перевірка підгонки.
+    final_predictions[name] = final_model.predict(X)
+
+    # 6.6 Збереження: pipeline (скейлер X + модель [+ скейлер y]) в одному файлі
+    joblib.dump(final_model, OUT_DIR / f"{name}.joblib")
+    print(f"Збережено: {OUT_DIR / (name + '.joblib')}")
